@@ -1336,6 +1336,18 @@ class QsciScintillaCompat(QsciScintilla):
             
             return pos
     
+    elif QSCINTILLA_VERSION() >= 0x020800:
+        def positionFromLineIndex(self, line, index):
+            """
+            Public method to convert line and index to an absolute position.
+            
+            @param line line number (integer)
+            @param index index number (integer)
+            @return absolute position in the editor (integer)
+            """
+            pos = self.SendScintilla(QsciScintilla.SCI_POSITIONFROMLINE, line)
+            return pos + index
+    
     if "lineIndexFromPosition" not in QsciScintilla.__dict__:
         def lineIndexFromPosition(self, pos):
             """
@@ -1363,6 +1375,19 @@ class QsciScintillaCompat(QsciScintilla):
                 indx += 1
             
             return lin, indx
+    
+    elif QSCINTILLA_VERSION() >= 0x020800:
+        def lineIndexFromPosition(self, pos):
+            """
+            Public method to convert an absolute position to line and index.
+            
+            @param pos absolute position in the editor (integer)
+            @return tuple of line number (integer) and index number (integer)
+            """
+            lin = self.SendScintilla(QsciScintilla.SCI_LINEFROMPOSITION, pos)
+            linpos = self.SendScintilla(
+                QsciScintilla.SCI_POSITIONFROMLINE, lin)
+            return lin, pos - linpos
     
     if "contractedFolds" not in QsciScintilla.__dict__:
         def contractedFolds(self):
