@@ -575,7 +575,7 @@ class Hg(VersionControl):
         args = self.initCommand("update")
         if "-v" not in args and "--verbose" not in args:
             args.append("-v")
-        if revision is not None:
+        if revision:
             args.append("-r")
             args.append(revision)
         
