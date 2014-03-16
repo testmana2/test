@@ -103,8 +103,8 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
         
         super().show()
         
-        msh = self.minimumSizeHint()
-        self.resize(max(self.width(), msh.width()), msh.height())
+        sh = self.sizeHint()
+        self.resize(max(self.width(), sh.width()), sh.height())
     
     def mousePressEvent(self, evt):
         """
