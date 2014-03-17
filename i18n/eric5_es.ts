@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1925,8 +1926,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2167,8 +2168,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -6234,7 +6235,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebuggerInterfaceRuby.py" line="149"/>
         <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;No se ha encontrado un intérprete de Ruby configurado.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -11476,7 +11477,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSearchPage.ui" line="139"/>
         <source>Select the colour for the search markers.</source>
-        <translation>Seleccionar el color para los marcadores de búsqueda.</translation>
+        <translation>Seleccionar el color para la marca de color para búsqueda.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSearchPage.ui" line="52"/>
@@ -12462,97 +12463,97 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1561"/>
         <source>Marker Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa de marcas de color</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1567"/>
         <source>Errors:</source>
-        <translation type="unfinished">Errores:</translation>
+        <translation>Errores:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1580"/>
         <source>Select the colour for error markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para errores</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1590"/>
         <source>Warnings:</source>
-        <translation type="unfinished"></translation>
+        <translation>Advertencias:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1603"/>
         <source>Select the colour for warning markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para advertencias</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1613"/>
         <source>Bookmarks:</source>
-        <translation type="unfinished">Marcadores:</translation>
+        <translation>Marcadores:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1626"/>
         <source>Select the colour for bookmark markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para marcadores</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1636"/>
         <source>Breakpoints:</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntos de interrupción (Breakpoints):</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1649"/>
         <source>Select the colour for breakpoint markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para breakpoints</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1659"/>
         <source>Tasks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tareas:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1672"/>
         <source>Select the colour for task markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para tareas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1682"/>
         <source>Changes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1695"/>
         <source>Select the colour for change markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para cambios</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1705"/>
         <source>Coverage:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cobertura:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1718"/>
         <source>Select the colour for coverage markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color para cobertura</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1728"/>
         <source>Current Line:</source>
-        <translation type="unfinished"></translation>
+        <translation>Línea Actual:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1741"/>
         <source>Select the colour for the current line marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color para la marca de color de línea actual</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1751"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fondo:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1764"/>
         <source>Select the background colour for the marker map</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de fondo para el mapa de marcas de color</translation>
     </message>
 </context>
 <context>
@@ -14925,22 +14926,23 @@ selección completa.&lt;/li&gt;
         <location filename="../UI/FindFileDialog.py" line="491"/>
         <source>{0} / {1}</source>
         <comment>occurrences / files</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>ocurrencias / archivos</translatorcomment>
+        <translation>{0} / {1}</translation>
     </message>
     <message numerus="yes">
         <location filename="../UI/FindFileDialog.py" line="492"/>
         <source>%n occurrence(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n ocurrencia</numerusform>
+            <numerusform>%n ocurrencias</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../UI/FindFileDialog.py" line="492"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n archivo</numerusform>
+            <numerusform>%n archivos</numerusform>
         </translation>
     </message>
 </context>
@@ -15677,7 +15679,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -19409,7 +19411,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2155"/>
         <source>Created new branch &lt;{0}&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Creada nueva branch &lt;{0}&gt;.</translation>
     </message>
 </context>
 <context>
@@ -20167,27 +20169,27 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="14"/>
         <source>Create Branch</source>
-        <translation type="unfinished">Crear Branch</translation>
+        <translation>Crear Branch</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="23"/>
         <source>Enter branch name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir nombre de branch:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="30"/>
         <source>Enter the new branch name (spaces will be converted to _)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nuevo nombre de branch (los espacios se convertirán a _)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="40"/>
         <source>Select to commit the branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para hacer commit de branch</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="43"/>
         <source>Commit Branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Commit Branch</translation>
     </message>
 </context>
 <context>
@@ -21631,27 +21633,27 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1561"/>
         <source>Switch</source>
-        <translation type="unfinished">Hacer switch</translation>
+        <translation>Hacer switch</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="161"/>
         <source>Switch the working directory to the selected revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer switch del directorio de trabajo a la revisión seleccionada</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="165"/>
         <source>Pull Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer pull de archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="167"/>
         <source>Pull large files for selected revisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer pull de archivos grandes para revisiones seleccionadas</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="898"/>
         <source>{0} (large file)</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} (archivo grande)</translation>
     </message>
 </context>
 <context>
@@ -22128,12 +22130,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="114"/>
         <source>Download all versions of all large files</source>
-        <translation type="unfinished"></translation>
+        <translation>Descargar todas las versiones de todos los archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="121"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; This option increases the download time and volume.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; Esta opción incrementa el tiempo y volumen de descarga.</translation>
     </message>
 </context>
 <context>
@@ -22343,7 +22345,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="244"/>
         <source>Extensions</source>
-        <translation type="unfinished">Extensiones</translation>
+        <translation>Extensiones</translation>
     </message>
 </context>
 <context>
@@ -23516,7 +23518,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1010"/>
         <source>Administration</source>
-        <translation type="unfinished"></translation>
+        <translation>Administración</translation>
     </message>
 </context>
 <context>
@@ -23612,7 +23614,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="239"/>
         <source>Do you really want to remove the selected guards?</source>
-        <translation>¿Desea realmente eleminar los guards seleccionados?</translation>
+        <translation>¿Desea realmente eliminar los guards seleccionados?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesDefineGuardsDialog.py" line="308"/>
@@ -24342,32 +24344,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="151"/>
         <source>Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="157"/>
         <source>Minimum file size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño mínimo de archivo:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="164"/>
         <source>Enter the minimum file size in MB for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el tamaño mínimo de archivo en MB para que los archivos sean tratados como Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="170"/>
         <source> MB</source>
-        <translation type="unfinished"> MB</translation>
+        <translation> MB</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="196"/>
         <source>Patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Patrones:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="203"/>
         <source>Enter file patterns (space separated) for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir patrones de archivo (separados por espacios) para que los archivos sean tratados como Archivos Grandes</translation>
     </message>
 </context>
 <context>
@@ -24649,52 +24651,52 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="14"/>
         <source>Mercurial Shelve Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Navegador de Mercurial Shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="45"/>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="50"/>
         <source>Age</source>
-        <translation type="unfinished"></translation>
+        <translation>Edad</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="55"/>
         <source>Message</source>
-        <translation type="unfinished">Mensaje</translation>
+        <translation>Mensaje</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="69"/>
         <source>Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Estadísticas</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="94"/>
         <source>File</source>
-        <translation type="unfinished">Archivo</translation>
+        <translation>Archivo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="99"/>
         <source>Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="104"/>
         <source>Lines added</source>
-        <translation type="unfinished"></translation>
+        <translation>Líneas añadidas</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="109"/>
         <source>Lines deleted</source>
-        <translation type="unfinished"></translation>
+        <translation>Líneas borradas</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="156"/>
         <source>Errors</source>
-        <translation type="unfinished">Errores</translation>
+        <translation>Errores</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="162"/>
@@ -24704,106 +24706,106 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="178"/>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation>Input</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="200"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para enviar el input al proceso de hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="203"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Enviar</translation>
+        <translation>&amp;Enviar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="206"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+E</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="213"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished">Introduzca los datos a enviar al proceso de hg</translation>
+        <translation>Introducir los datos a enviar al proceso de hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="220"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Seleccionar para cambiar el campo de input a modo contraseña</translation>
+        <translation>Seleccionar para cambiar el campo de input a modo contraseña</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="223"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">&amp;Modo de contraseña</translation>
+        <translation>&amp;Modo de contraseña</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="226"/>
         <source>Alt+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+M</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="47"/>
         <source>&amp;Refresh</source>
-        <translation type="unfinished">Actualiza&amp;r</translation>
+        <translation>Actualiza&amp;r</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="49"/>
         <source>Press to refresh the list of shelves</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para actualizar la lista de shelves</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="66"/>
         <source>Restore selected shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar shelve seleccionado</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="68"/>
         <source>Delete selected shelves</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar shelves seleccionados</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="70"/>
         <source>Delete all shelves</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar todos los shelves</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="178"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Error de Generación de Proceso</translation>
+        <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="178"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+        <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="361"/>
         <source>%n file(s) changed</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n archivo cambiado</numerusform>
+            <numerusform>%n archivo cambiados</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="363"/>
         <source>%n line(s) inserted</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n línea insertada</numerusform>
+            <numerusform>%n líneas insertadas</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="365"/>
         <source>%n line(s) deleted</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n línea borrada</numerusform>
+            <numerusform>%n líneas borradas</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="162"/>
         <source>&lt;b&gt;Mercurial shelve errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg shelve command.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Errores de Mercurial shelve&lt;/b&gt;&lt;p&gt;Muestra los posibles mensajes de error del comando hg shelve.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -24811,47 +24813,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="14"/>
         <source>Shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="23"/>
         <source>Name:</source>
-        <translation type="unfinished">Nombre:</translation>
+        <translation>Nombre:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="30"/>
         <source>Enter a name for the shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir un nombre para el shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="37"/>
         <source>Date, Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha, Hora:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="46"/>
         <source>Enter the commit date and time for the shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la fecha y hora del commit para el shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="74"/>
         <source>Message:</source>
-        <translation type="unfinished">Mensaje:</translation>
+        <translation>Mensaje:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="84"/>
         <source>Enter a message for the shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir un mensaje para el shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="91"/>
         <source>Mark new/missing files as added/removed</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar archivos nuevos/perdidos como añadidos/eliminados</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="49"/>
         <source>yyyy-MM-dd HH:mm</source>
-        <translation type="unfinished"></translation>
+        <translation>yyyy-MM-dd HH:mm</translation>
     </message>
 </context>
 <context>
@@ -24859,7 +24861,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.ui" line="14"/>
         <source>Mercurial Shelve Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selección de Mercurial Shelve</translation>
     </message>
 </context>
 <context>
@@ -25184,12 +25186,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="121"/>
         <source>Add as Large File</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir como Archivo Grande</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="124"/>
         <source>Add as Normal File</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir como Archivo Normal</translation>
     </message>
 </context>
 <context>
@@ -25471,20 +25473,20 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="460"/>
         <source>No files to upload</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin archivos para subir</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="462"/>
         <source>%n file(s) to upload</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n archivo para subir</numerusform>
+            <numerusform>%n archivos para subir</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="464"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Large Files&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Archivos Grandes&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
 </context>
 <context>
@@ -25713,27 +25715,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="23"/>
         <source>Name:</source>
-        <translation type="unfinished">Nombre:</translation>
+        <translation>Nombre:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="36"/>
         <source>Enter the name of the shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nombre del shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="46"/>
         <source>Select to keep the shelved change</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para conservar el cambio del shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="49"/>
         <source>Keep shelved change</source>
-        <translation type="unfinished"></translation>
+        <translation>Conservar el cambio del shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="14"/>
         <source>Mercurial Unshelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Mercurial Unshelve</translation>
     </message>
 </context>
 <context>
@@ -25856,47 +25858,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="150"/>
         <source>Select to activate the shelve extension</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para activar la extensión de shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="153"/>
         <source>Shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="110"/>
         <source>Select to activate the largefiles extension</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para activar la extensión de archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="176"/>
         <source>Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="182"/>
         <source>Minimum file size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño mínimo de archivo:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="189"/>
         <source>Enter the minimum file size in MB for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el tamaño mínimo de archivo en MB para que los archivos sean tratados como Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="195"/>
         <source> MB</source>
-        <translation type="unfinished"> MB</translation>
+        <translation> MB</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="221"/>
         <source>Patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Patrones:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="228"/>
         <source>Enter file patterns (space separated) for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir patrones de archivo (separados por espacios) para que los archivos sean tratados como Archivos Grandes</translation>
     </message>
 </context>
 <context>
@@ -29945,27 +29947,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py" line="71"/>
         <source>Convert Project - Converting</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir Proyecto - Convirtiendo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py" line="82"/>
         <source>Convert Project - Extracting</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir Proyecto - Extrayendo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py" line="131"/>
         <source>Adding files to the Mercurial repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadiendo archivos al repositorio Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py" line="168"/>
         <source>Pulling large files</source>
-        <translation type="unfinished"></translation>
+        <translation>Haciendo pull de archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py" line="197"/>
         <source>Verifying the integrity of large files</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificando la integridad de archivos grandes</translation>
     </message>
 </context>
 <context>
@@ -29973,27 +29975,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py" line="47"/>
         <source>Add as Large File</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir como Archivo Grande</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py" line="52"/>
         <source>Add as Normal File</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir como Archivo Normal</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py" line="61"/>
         <source>Add as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir como Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py" line="66"/>
         <source>Add as Normal Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir como Archivos Normales</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py" line="83"/>
         <source>Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Grandes</translation>
     </message>
 </context>
 <context>
@@ -30001,147 +30003,147 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="33"/>
         <source>Convert repository to largefiles</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir repositorio a archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="33"/>
         <source>Convert repository to largefiles...</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir repositorio a archivos grandes...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="37"/>
         <source>Convert the repository of the project to a largefiles repository.</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir el repositorio del proyecto a un repositorio de archivos grandes.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="40"/>
         <source>&lt;b&gt;Convert repository to largefiles&lt;/b&gt;&lt;p&gt;This converts the repository of the project to a largefiles repository. A new project  is created. The current one is kept as a backup.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Convertir repositorio a archivos grandes&lt;/b&gt;&lt;p&gt;Convierte el repositorio del proyecto a un repositorio de archivos grandes. Se crea un nuevo proyecto. El proyecto actual se conserva como backup.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="50"/>
         <source>Convert repository to normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir repositorio a normal</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="50"/>
         <source>Convert repository to normal...</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir repositorio a normal...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="54"/>
         <source>Convert the repository of the project to a normal repository.</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir el repositorio del proyecto a un repositorio normal.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="57"/>
         <source>&lt;b&gt;Convert repository to normal&lt;/b&gt;&lt;p&gt;This converts the repository of the project to a normal repository. A new project is created. The current one is kept as a backup.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Convertir repositorio a normal&lt;/b&gt;&lt;p&gt;Convierte el repositorio del proyecto a un repositorio normal. Se crea un nuevo proyecto. El proyecto actual se conserva como backup.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="67"/>
         <source>Pull Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer pull de Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="72"/>
         <source>Pull large files from a remote repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer pull de archivos grandes desde un repositorio remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="75"/>
         <source>&lt;b&gt;Pull Large Files&lt;/b&gt;&lt;p&gt;This pulls missing large files from a remote repository into the local repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Hacer pull Archivos Grandes&lt;/b&gt;&lt;p&gt;Hace pull de archivos grandes ausentes desde un repositorio remoto al repositorio local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="83"/>
         <source>Show Summary</source>
-        <translation type="unfinished">Mostrar Sumario</translation>
+        <translation>Mostrar Sumario</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="83"/>
         <source>Show summary...</source>
-        <translation type="unfinished">Mostrar Sumario...</translation>
+        <translation>Mostrar Sumario...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="88"/>
         <source>Show summary information of the working directory status</source>
-        <translation type="unfinished">Mostrar información sumarial del estado del directorio de trabajo</translation>
+        <translation>Mostrar información sumarial del estado del directorio de trabajo</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="91"/>
         <source>&lt;b&gt;Show summary&lt;/b&gt;&lt;p&gt;This shows some summary information of the working directory status.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar sumario&lt;/b&gt;&lt;p&gt;Muestra información sumarial del estado del directorio de trabajo.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar sumario&lt;/b&gt;&lt;p&gt;Muestra información sumarial del estado del directorio de trabajo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="99"/>
         <source>Verify large files of current revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar archivos grandes de la revisión actual</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="99"/>
         <source>Verify large files of current revision...</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar archivos grandes de la revisión actual...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="103"/>
         <source>Verify that all large files in the current revision exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar que todos los archivos grandes en la revisión actual existen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="106"/>
         <source>&lt;b&gt;Verify large files of current revision&lt;/b&gt;&lt;p&gt;This verifies that all large files in the current revision exist.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Verificar archivos grandes de la revisión actual&lt;/b&gt;&lt;p&gt;Verifica que todos los archivos grandes en la revisión actual existen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="115"/>
         <source>Verify large files of all revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar archivos grandes de todas las revisiones</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="115"/>
         <source>Verify large files of all revision...</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar archivos grandes de todas las revisiones...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="119"/>
         <source>Verify that all large files in all revisions exist</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar que todos los archivos grandes en todas las revisiones existen</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="122"/>
         <source>&lt;b&gt;Verify large files of all revision&lt;/b&gt;&lt;p&gt;This verifies that all large files in all revisions exist.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Verificar archivos grandes de todas las revisiones&lt;/b&gt;&lt;p&gt;Verifica que todos los archivos grandes de todas las revisiones existen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="131"/>
         <source>Verify large files contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar contenido de archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="131"/>
         <source>Verify large files contents...</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar contenido de archivos grandes...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="135"/>
         <source>Verify the contents of all large files</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificar contenido de todos los archivos grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="138"/>
         <source>&lt;b&gt;Verify large files contents&lt;/b&gt;&lt;p&gt;This verifies the contents of all large files.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Verificar contenido de archivos grandes&lt;/b&gt;&lt;p&gt;Verifica los contenidos de todos los archivos grandes.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="156"/>
         <source>Administration</source>
-        <translation type="unfinished"></translation>
+        <translation>Administración</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py" line="179"/>
         <source>Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Grandes</translation>
     </message>
 </context>
 <context>
@@ -30988,52 +30990,52 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="14"/>
         <source>Convert Repository Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Convertir Formato de Repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="26"/>
         <source>New project directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo directorio de proyecto:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="33"/>
         <source>Enter the directory name of the new project directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el nombre del directorio para el nuevo proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="40"/>
         <source>Press to select the new project directory name via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para seleccionar el nombre del directorio para el nuevo proyecto vía un diálogo de selección de directorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="47"/>
         <source>Minimum file size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño mínimo de archivo:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="54"/>
         <source>Enter the minimum file size in MB for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el tamaño mínimo de archivo en MB para que los archivos sean tratados como Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="60"/>
         <source> MB</source>
-        <translation type="unfinished"> MB</translation>
+        <translation> MB</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="86"/>
         <source>Patterns:</source>
-        <translation type="unfinished"></translation>
+        <translation>Patrones:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="93"/>
         <source>Enter file patterns (space separated) for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir patrones de archivo (separados por espacios) para que los archivos sean tratados como Archivos Grandes</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py" line="75"/>
         <source>New Project Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo Directorio de Proyecto</translation>
     </message>
 </context>
 <context>
@@ -31041,17 +31043,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui" line="14"/>
         <source>Revisions Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Input de Revisiones</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui" line="23"/>
         <source>Enter revisions to pull large files for (one per line):</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir revisiones para las que hacer pull de archivos grandes (una por línea):</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui" line="33"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished">Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
+        <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
 </context>
 <context>
@@ -31362,32 +31364,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="37"/>
         <source>Global Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones Globales</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="43"/>
         <source>Encoding:</source>
-        <translation type="unfinished">Codificación:</translation>
+        <translation>Codificación:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="56"/>
         <source>Select the encoding to be used by Mercurial</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar la codificación a utilizar por Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="63"/>
         <source>Encoding Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de Codificación:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="76"/>
         <source>Select the encoding mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el modo de codificación</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="83"/>
         <source>Consider hidden changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Tener en cuenta changesets ocultos</translation>
     </message>
 </context>
 <context>
@@ -37918,12 +37920,12 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="952"/>
         <source> The process has crashed.</source>
-        <translation type="unfinished"></translation>
+        <translation> El proceso ha dejado de funcionar.</translation>
     </message>
     <message>
         <location filename="../Project/ProjectTranslationsBrowser.py" line="956"/>
         <source>The generation of the translation files (*.ts) has failed.{0}</source>
-        <translation type="unfinished"></translation>
+        <translation>La generación de archivos de traducción (*.ts) ha fallado {0}</translation>
     </message>
 </context>
 <context>
@@ -44335,47 +44337,47 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="122"/>
         <source>Shelve current changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios actuales de shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="172"/>
         <source>Restore shelved changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar cambios de shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="197"/>
         <source>Abort restore operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Abortar operación de restore</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="224"/>
         <source>Continue restore operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuar operación de restores</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="248"/>
         <source>Select the shelves to be deleted:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar los shelves a borrar:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="268"/>
         <source>Delete shelves</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar shelves</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="258"/>
         <source>Do you really want to delete these shelves?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Desea realmente eliminar estos shelves?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="294"/>
         <source>Delete all shelves</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar todos los shelves</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py" line="286"/>
         <source>Do you really want to delete all shelved changes?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Desea realmente eliminar todos los cambios en shelve?</translation>
     </message>
 </context>
 <context>
@@ -44383,17 +44385,17 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="58"/>
         <source>Shelve changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios en shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="114"/>
         <source>Shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="93"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
+        <translation>El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
     </message>
 </context>
 <context>
@@ -44401,152 +44403,152 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="32"/>
         <source>Shelve changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Shelve de cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="32"/>
         <source>Shelve changes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Shelve de cambios...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="36"/>
         <source>Shelve all current changes of the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer shelve de todos los cambios actuales del proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="39"/>
         <source>&lt;b&gt;Shelve changes&lt;/b&gt;&lt;p&gt;This shelves all current changes of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Shelve de cambios&lt;/b&gt;&lt;p&gt;Hace shelve de todos los cambios actuales en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="46"/>
         <source>Show shelve browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar navegador de shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="46"/>
         <source>Show shelve browser...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar navegador de shelve...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="50"/>
         <source>Show a dialog with all shelves</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un diálogo con todos los shelves</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="53"/>
         <source>&lt;b&gt;Show shelve browser...&lt;/b&gt;&lt;p&gt;This shows a dialog listing all available shelves. Actions on these shelves may be executed via the context menu.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar navegador de shelve...&lt;/b&gt;&lt;p&gt;Muestra un diálogo con un listado de todos los shelves disponibles. A través del menú de  contexto, se pueden ejecutar acciones sobre estos shelves.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="63"/>
         <source>Restore shelved change</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar cambio en shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="63"/>
         <source>Restore shelved change...</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar cambio en shelve...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="67"/>
         <source>Restore a shelved change to the project directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurar un cambio en shelve al directorio de proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="70"/>
         <source>&lt;b&gt;Restore shelved change&lt;/b&gt;&lt;p&gt;This restore a shelved change to the project directory.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Restaurar cambio en shelve&lt;/b&gt;&lt;p&gt;Restaura un cambio en shelve al directorio de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="78"/>
         <source>Abort restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Abortar restore</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="78"/>
         <source>Abort restore...</source>
-        <translation type="unfinished"></translation>
+        <translation>Abortar restore...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="82"/>
         <source>Abort the restore operation in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Abortar la operación de restore en progreso</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="85"/>
         <source>&lt;b&gt;Abort restore&lt;/b&gt;&lt;p&gt;This aborts the restore operation in progress and reverts already applied changes.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Abortar restore&lt;/b&gt;&lt;p&gt;Aborta la operación de restore en progreso y revierte los cambios que ya se hayan aplicado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="93"/>
         <source>Continue restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuar restore</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="93"/>
         <source>Continue restore...</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuar restore...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="97"/>
         <source>Continue the restore operation in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuar la operación de restore en curso</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="100"/>
         <source>&lt;b&gt;Continue restore&lt;/b&gt;&lt;p&gt;This continues the restore operation in progress.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Continuar restore&lt;/b&gt;&lt;p&gt;Reanuda la operación de restore en curso.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="108"/>
         <source>Delete shelved changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar cambios en shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="108"/>
         <source>Delete shelved changes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar cambios en shelve...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="112"/>
         <source>&lt;b&gt;Delete shelved changes...&lt;/b&gt;&lt;p&gt;This opens a dialog to select the shelved changes to delete and deletes the selected ones.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Borrar cambios en shelve...&lt;/b&gt;&lt;p&gt;Abre un diálogo para seleccionar cambios en shelve y borrarlos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="121"/>
         <source>Delete ALL shelved changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar TODOS los cambios en shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="125"/>
         <source>&lt;b&gt;Delete ALL shelved changes&lt;/b&gt;&lt;p&gt;This deletes all shelved changes.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Borrar TODOS los cambios en shelve&lt;/b&gt;&lt;p&gt;Borra todos los cambios en shelve.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="187"/>
         <source>Shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Shelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="173"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
+        <translation>El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="202"/>
         <source>Unshelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Unshelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="210"/>
         <source>Abort Unshelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Abortar Unshelve</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="218"/>
         <source>Continue Unshelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Continuar Unshelve</translation>
     </message>
 </context>
 <context>
