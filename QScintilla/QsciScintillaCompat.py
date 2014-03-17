@@ -1333,7 +1333,7 @@ class QsciScintillaCompat(QsciScintilla):
             
             return pos
     
-    elif QSCINTILLA_VERSION() >= 0x020800:
+    elif QSCINTILLA_VERSION() >= 0x020700:
         def positionFromLineIndex(self, line, index):
             """
             Public method to convert line and index to an absolute position.
@@ -1373,7 +1373,7 @@ class QsciScintillaCompat(QsciScintilla):
             
             return lin, indx
     
-    elif QSCINTILLA_VERSION() >= 0x020800:
+    elif QSCINTILLA_VERSION() >= 0x020700:
         def lineIndexFromPosition(self, pos):
             """
             Public method to convert an absolute position to line and index.
