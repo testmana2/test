@@ -24,14 +24,14 @@ class SyntaxCheckService(QObject):
     Plugins can add other languages to the syntax check by calling addLanguage
     and support of an extra checker module on the client side which has to
     connect directly to the background service.
+    
+    @signal syntaxChecked(str, dict) emited when the syntax check was done.
     """
-    syntaxChecked = pyqtSignal(str, bool, int, int, str, str, list)
-
+    syntaxChecked = pyqtSignal(str, dict)
+    
     def __init__(self):
         """
         Contructor of SyntaxCheckService.
-        
-        @param backgroundService to connect to (BackgroundService class)
         """
         super(SyntaxCheckService, self).__init__()
         self.backgroundService = e5App().getObject("BackgroundService")
@@ -41,6 +41,8 @@ class SyntaxCheckService(QObject):
         """
         Private methode to determine the language of the file.
         
+        @param filename of the sourcefile (str)
+        @param source code of the file (str)
         @return language of the file or None if not found (str or None)
         """
         pyVer = determinePythonVersion(filename, source)
@@ -103,7 +105,7 @@ class SyntaxCheckService(QObject):
                 extensions.add(ext)
         return extensions
 
-    def syntaxCheck(self, lang, filename, source=""):
+    def syntaxCheck(self, lang, filename, source):
         """
         Method to prepare to compile one Python source file to Python bytecode
         and to perform a pyflakes check in another task.
@@ -111,7 +113,7 @@ class SyntaxCheckService(QObject):
         @param lang language of the file or None to determine by internal
             algorithm (str or None)
         @param filename source filename (string)
-        @keyparam source string containing the code to check (string)
+        @param source string containing the code to check (string)
         """
         if not lang:
             lang = self.__determineLanguage(filename, source)

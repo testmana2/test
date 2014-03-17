@@ -67,6 +67,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
         self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+        self.filename = None
         
     def __resort(self):
         """
@@ -215,38 +216,34 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         self.syntaxCheckService.syntaxCheck(None, self.filename, self.source)
 
-    def __processResult(
-            self, fn, nok, line, index, code, error, warnings):
+    def __processResult(self, fn, problems):
         """
         Slot to display the reported messages.
         
-        If checkFlakes is True, warnings contains a list of strings containing
-        the warnings (marker, file name, line number, message)
-        The values are only valid, if nok is False.
-        
         @param fn filename of the checked file (str)
-        @param nok flag if an error in the source was found (boolean)
-        @param line number where the error occured (int)
-        @param index the column where the error occured (int)
-        @param code the part of the code where the error occured (str)
-        @param error the name of the error (str)
-        @param warnings a list of strings containing the warnings
-            (marker, file name, line number, col, message)
+        @param problems dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message) (dict)
         """
         # Check if it's the requested file, otherwise ignore signal
         if fn != self.filename:
             return
-        
-        if nok:
+
+        error = problems.get('error')
+        if error:
             self.noResults = False
-            self.__createResultItem(
-                fn, line, index, error, code.strip(), False)
-        else:
+            _fn, lineno, col, code, msg = error
+            self.__createResultItem(_fn, lineno, col, msg, code, False)
+        
+        warnings = problems.get('warnings', [])
+        if warnings:
             source = self.source.splitlines()
-            for marker, _fn, lineno, col, msg in warnings:
-                self.noResults = False
-                scr_line = source[lineno - 1].strip()
-                self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
+        for _fn, lineno, col, code, msg in warnings:
+            self.noResults = False
+            scr_line = source[lineno - 1].strip()
+            self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
+
         self.progress += 1
         self.checkProgress.setValue(self.progress)
         QApplication.processEvents()
@@ -341,7 +338,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             editor = vm.getOpenEditor(fn)
             
             if itm.data(0, self.warningRole):
-                editor.toggleWarning(lineno, True, error)
+                editor.toggleWarning(lineno, 0, True, error)
             else:
                 editor.toggleSyntaxError(lineno, index, True, error, show=True)
         else:
@@ -355,7 +352,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 index = citm.data(0, self.indexRole)
                 error = citm.data(0, self.errorRole)
                 if citm.data(0, self.warningRole):
-                    editor.toggleWarning(lineno, True, error)
+                    editor.toggleWarning(lineno, 0, True, error)
                 else:
                     editor.toggleSyntaxError(
                         lineno, index, True, error, show=True)
@@ -386,7 +383,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 index = citm.data(0, self.indexRole)
                 error = citm.data(0, self.errorRole)
                 if citm.data(0, self.warningRole):
-                    editor.toggleWarning(lineno, True, error)
+                    editor.toggleWarning(lineno, 0, True, error)
                 else:
                     editor.toggleSyntaxError(
                         lineno, index, True, error, show=True)

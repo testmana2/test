@@ -71,23 +71,21 @@ def extractLineFlags(line, startComment="#", endComment=""):
     return flags
 
 
-def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
+def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
                            ignoreStarImportWarnings=False):
     """
     Function to compile one Python source file to Python bytecode
     and to perform a pyflakes check.
     
     @param filename source filename (string)
-    @keyparam codestring string containing the code to compile (string)
+    @param codestring string containing the code to compile (string)
     @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
     @keyparam ignoreStarImportWarnings flag indicating to
         ignore 'star import' warnings (boolean)
-    @return A tuple indicating status (True = an error was found), the
-        file name, the line number, the index number, the code string
-        and the error message (boolean, string, string, string, string,
-        string). If checkFlakes is True, a list of strings containing the
-        warnings (marker, file name, line number, message)
-        The values are only valid, if the status is True.
+    @return dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message, a list with arguments for the message)
     """
     try:
         import builtins
@@ -100,7 +98,7 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
         else:
             file_enc = filename
         
-        # It also encoded the code back to avoid 'Encoding declaration in
+        # It also encode the code back to avoid 'Encoding declaration in
         # unicode string' exception on Python2
         codestring = normalizeCode(codestring)
         
@@ -108,13 +106,13 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
             try:
                 import quixote.ptl_compile
             except ImportError:
-                return (True, filename, 0, 0, '',
-                        'Quixote plugin not found.', [])
+                return [{'error': (filename, 0, 0, '',
+                        'Quixote plugin not found.')}]
             template = quixote.ptl_compile.Template(codestring, file_enc)
             template.compile()
-        
-        # ast.PyCF_ONLY_AST = 1024, speed optimisation
-        module = builtins.compile(codestring, file_enc, 'exec',  1024)
+        else:
+            # ast.PyCF_ONLY_AST = 1024, speed optimisation
+            module = builtins.compile(codestring, file_enc, 'exec', 1024)
     except SyntaxError as detail:
         index = 0
         code = ""
@@ -139,7 +137,7 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
             fn = detail.filename
             line = detail.lineno or 1
             error = detail.msg
-        return (True, fn, int(line), index, code, error, [])
+        return [{'error': (fn, int(line), index, code.strip(), error)}]
     except ValueError as detail:
         try:
             fn = detail.filename
@@ -149,21 +147,21 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
             fn = filename
             line = 1
             error = str(detail)
-        return (True, fn, line, 0, "", error, [])
+        return [{'error': (fn, line, 0, "", error)}]
     except Exception as detail:
         try:
             fn = detail.filename
             line = detail.lineno
             error = detail.msg
-            return (True, fn, line, 0, "", error, [])
+            return [{'error': (fn, line, 0, "", error)}]
         except:         # this catchall is intentional
             pass
     
     # pyflakes
     if not checkFlakes:
-        return (False, "", -1, -1, "", "", [])
+        return [{}]
     
-    strings = []
+    results = []
     lines = codestring.splitlines()
     try:
         warnings = Checker(module, filename)
@@ -176,13 +174,12 @@ def syntaxAndPyflakesCheck(filename, codestring="", checkFlakes=True,
             _fn, lineno, col, message, msg_args = warning.getMessageData()
             if "__IGNORE_WARNING__" not in extractLineFlags(
                     lines[lineno - 1].strip()):
-                strings.append([
-                    "FLAKES_WARNING", _fn, lineno, col, message, msg_args])
+                results.append((_fn, lineno, col, "", message, msg_args))
     except SyntaxError as err:
         if err.text.strip():
             msg = err.text.strip()
         else:
             msg = err.msg
-        strings.append(["FLAKES_ERROR", filename, err.lineno, 0, msg, ()])
+        results.append((filename, err.lineno, 0, "FLAKES_ERROR", msg, []))
     
-    return (False, "", -1, -1, "", "", strings)
+    return [{'warnings': results}]

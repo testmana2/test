@@ -4972,23 +4972,15 @@ class Editor(QsciScintillaCompat):
             self.syntaxCheckService.syntaxCheck(
                 self.filetype, self.fileName or "(Unnamed)", self.text())
 
-    def __processResult(
-            self, fn, nok, line, index, code, error, warnings):
+    def __processResult(self, fn, problems):
         """
         Slot to report the resulting messages.
         
-        If checkFlakes is True, warnings contains a list of strings containing
-        the warnings (marker, file name, line number, message)
-        The values are only valid, if nok is False.
-        
         @param fn filename of the checked file (str)
-        @param nok flag if an error in the source was found (boolean)
-        @param line number where the error occured (int)
-        @param index the column where the error occured (int)
-        @param code the part of the code where the error occured (str)
-        @param error the name of the error (str)
-        @param warnings a list of strings containing the warnings
-            (marker, file name, line number, col, message)
+        @param problems dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message) (dict)
         """
         # Check if it's the requested file, otherwise ignore signal
         if fn != self.fileName and (
@@ -4998,12 +4990,15 @@ class Editor(QsciScintillaCompat):
         self.clearSyntaxError()
         self.clearFlakesWarnings()
         
-        if nok:
-            self.toggleSyntaxError(line, index, True, error)
-        else:
-            for marker, _fn, lineno, col, msg in warnings:
-                self.toggleWarning(lineno, True, msg)
-
+        error = problems.get('error')
+        if error:
+            _fn, lineno, col, code, msg = error
+            self.toggleSyntaxError(lineno, col, True, msg)
+        
+        warnings = problems.get('warnings', [])
+        for _fn, lineno, col, code, msg in warnings:
+            self.toggleWarning(lineno, col, True, msg)
+ 
     def __initOnlineSyntaxCheck(self):
         """
         Private slot to initialize the online syntax check.
@@ -5387,13 +5382,15 @@ class Editor(QsciScintillaCompat):
     ## Warning handling methods below
     ###########################################################################
     
-    def toggleWarning(self, line, warning, msg="", warningType=WarningCode):
+    def toggleWarning(
+            self, line, col, warning, msg="", warningType=WarningCode):
         """
         Public method to toggle a warning indicator.
         
         Note: This method is used to set pyflakes and code style warnings.
         
         @param line line number of the warning
+        @param col column of the warning
         @param warning flag indicating if the warning marker should be
             set or deleted (boolean)
         @param msg warning message (string)

@@ -61,21 +61,23 @@ class SyntaxCheckerPlugin(QObject):
         path = os.path.join(ericPath, 'Plugins', 'CheckerPlugins',
                             'SyntaxChecker')
         
-        self.syntaxCheckService.addLanguage('Python2', path, 'SyntaxCheck',
-                self.__getPythonOptions,
-                lambda: Preferences.getPython("PythonExtensions"),
-                self.__translateSyntaxCheck,
-                lambda fx, lng, fn, msg: \
-                    self.syntaxCheckService.syntaxChecked.emit(
-                        fn, True, fn, 0, 0, '', msg, []))
+        self.syntaxCheckService.addLanguage(
+            'Python2', path, 'SyntaxCheck',
+            self.__getPythonOptions,
+            lambda: Preferences.getPython("PythonExtensions"),
+            self.__translateSyntaxCheck,
+            lambda fx, lng, fn, msg:
+                self.syntaxCheckService.syntaxChecked.emit(
+                    fn, {'error': (fn, 0, 0, '', msg)}))
         
-        self.syntaxCheckService.addLanguage('Python3', path, 'SyntaxCheck',
-                self.__getPythonOptions,
-                lambda: Preferences.getPython("Python3Extensions"),
-                self.__translateSyntaxCheck,
-                lambda fx, lng, fn, msg: \
-                    self.syntaxCheckService.syntaxChecked.emit(
-                        fn, True, fn, 0, 0, '', msg, []))
+        self.syntaxCheckService.addLanguage(
+            'Python3', path, 'SyntaxCheck',
+            self.__getPythonOptions,
+            lambda: Preferences.getPython("Python3Extensions"),
+            self.__translateSyntaxCheck,
+            lambda fx, lng, fn, msg:
+                self.syntaxCheckService.syntaxChecked.emit(
+                    fn, {'error': (fn, 0, 0, '', msg)}))
 
     def __initialize(self):
         """
@@ -103,8 +105,7 @@ class SyntaxCheckerPlugin(QObject):
             "IgnoreStarImportWarnings")
         return checkFlakes, ignoreStarImportWarnings
 
-    def __translateSyntaxCheck(
-            self, fn, nok, fname, line, index, code, error, warnings):
+    def __translateSyntaxCheck(self, fn, problems):
         """
         Slot to translate the resulting messages.
         
@@ -113,15 +114,12 @@ class SyntaxCheckerPlugin(QObject):
         The values are only valid, if nok is False.
         
         @param fn filename of the checked file (str)
-        @param nok flag if an error in the source was found (boolean)
-        @param fname filename of the checked file (str)  # TODO: remove dubl.
-        @param line number where the error occured (int)
-        @param index the column where the error occured (int)
-        @param code the part of the code where the error occured (str)
-        @param error the name of the error (str)
-        @param warnings a list of strings containing the warnings
-            (marker, file name, line number, col, message, list(msg_args))
+        @param problems dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message, a list with arguments for the message)
         """
+        warnings = problems.get('warnings', [])
         for warning in warnings:
             # Translate messages
             msg_args = warning.pop()
@@ -132,8 +130,8 @@ class SyntaxCheckerPlugin(QObject):
                 translated = translated[1:]
             warning[4] = translated.replace(" u'", " '")
         
-        self.syntaxCheckService.syntaxChecked.emit(
-            fn, nok, line, index, code, error, warnings)
+        problems['warnings'] = warnings
+        self.syntaxCheckService.syntaxChecked.emit(fn, problems)
 
     def activate(self):
         """
