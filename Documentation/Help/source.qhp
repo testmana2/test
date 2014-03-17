@@ -9369,6 +9369,7 @@
       <keyword name="QsciScintillaCompat (Module)" id="QsciScintillaCompat (Module)" ref="eric5.QScintilla.QsciScintillaCompat.html" />
       <keyword name="QsciScintillaCompat.__completionListSelected" id="QsciScintillaCompat.__completionListSelected" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__completionListSelected" />
       <keyword name="QsciScintillaCompat.__doSearchTarget" id="QsciScintillaCompat.__doSearchTarget" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__doSearchTarget" />
+      <keyword name="QsciScintillaCompat.__modificationChanged" id="QsciScintillaCompat.__modificationChanged" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__modificationChanged" />
       <keyword name="QsciScintillaCompat.__setFoldMarker" id="QsciScintillaCompat.__setFoldMarker" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.__setFoldMarker" />
       <keyword name="QsciScintillaCompat._encodeString" id="QsciScintillaCompat._encodeString" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat._encodeString" />
       <keyword name="QsciScintillaCompat.byteAt" id="QsciScintillaCompat.byteAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.byteAt" />
@@ -9425,6 +9426,7 @@
       <keyword name="QsciScintillaCompat.indicatorDefine" id="QsciScintillaCompat.indicatorDefine" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.indicatorDefine" />
       <keyword name="QsciScintillaCompat.inputMethodEvent" id="QsciScintillaCompat.inputMethodEvent" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.inputMethodEvent" />
       <keyword name="QsciScintillaCompat.inputMethodQuery" id="QsciScintillaCompat.inputMethodQuery" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.inputMethodQuery" />
+      <keyword name="QsciScintillaCompat.isModified" id="QsciScintillaCompat.isModified" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.isModified" />
       <keyword name="QsciScintillaCompat.lineAt" id="QsciScintillaCompat.lineAt" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineAt" />
       <keyword name="QsciScintillaCompat.lineEndPosition" id="QsciScintillaCompat.lineEndPosition" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineEndPosition" />
       <keyword name="QsciScintillaCompat.lineIndexFromPosition" id="QsciScintillaCompat.lineIndexFromPosition" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.lineIndexFromPosition" />
@@ -9454,6 +9456,7 @@
       <keyword name="QsciScintillaCompat.setIndicator" id="QsciScintillaCompat.setIndicator" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicator" />
       <keyword name="QsciScintillaCompat.setIndicatorRange" id="QsciScintillaCompat.setIndicatorRange" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setIndicatorRange" />
       <keyword name="QsciScintillaCompat.setLexer" id="QsciScintillaCompat.setLexer" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setLexer" />
+      <keyword name="QsciScintillaCompat.setModified" id="QsciScintillaCompat.setModified" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setModified" />
       <keyword name="QsciScintillaCompat.setRectangularSelection" id="QsciScintillaCompat.setRectangularSelection" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setRectangularSelection" />
       <keyword name="QsciScintillaCompat.setStyleBits" id="QsciScintillaCompat.setStyleBits" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyleBits" />
       <keyword name="QsciScintillaCompat.setStyling" id="QsciScintillaCompat.setStyling" ref="eric5.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.setStyling" />

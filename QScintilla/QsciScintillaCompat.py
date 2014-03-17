@@ -68,7 +68,36 @@ class QsciScintillaCompat(QsciScintilla):
         self.__targetSearchEnd = -1
         self.__targetSearchActive = False
         
+        self.__modified = False
+        
         self.userListActivated.connect(self.__completionListSelected)
+        self.modificationChanged.connect(self.__modificationChanged)
+    
+    def __modificationChanged(self, m):
+        """
+        Private slot to handle the modificationChanged signal.
+        
+        @param m modification status (boolean)
+        """
+        self.__modified = m
+    
+    def isModified(self):
+        """
+        Public method to return the modification status.
+        
+        @return flag indicating the modification status (boolean)
+        """
+        return self.__modified
+    
+    def setModified(self, m):
+        """
+        Public slot to set the modification status.
+        
+        @param m new modification status (boolean)
+        """
+        self.__modified = m
+        super().setModified(m)
+        self.modificationChanged.emit(m)
     
     def setLexer(self, lex=None):
         """
