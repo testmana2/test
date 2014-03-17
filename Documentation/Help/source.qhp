@@ -4372,6 +4372,7 @@
       <keyword name="Editor.__initContextMenuGraphics" id="Editor.__initContextMenuGraphics" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuGraphics" />
       <keyword name="Editor.__initContextMenuLanguages" id="Editor.__initContextMenuLanguages" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuLanguages" />
       <keyword name="Editor.__initContextMenuMargins" id="Editor.__initContextMenuMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuMargins" />
+      <keyword name="Editor.__initContextMenuReopenWithEncoding" id="Editor.__initContextMenuReopenWithEncoding" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuReopenWithEncoding" />
       <keyword name="Editor.__initContextMenuResources" id="Editor.__initContextMenuResources" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuResources" />
       <keyword name="Editor.__initContextMenuSeparateMargins" id="Editor.__initContextMenuSeparateMargins" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuSeparateMargins" />
       <keyword name="Editor.__initContextMenuShow" id="Editor.__initContextMenuShow" ref="eric5.QScintilla.Editor.html#Editor.__initContextMenuShow" />
@@ -4411,6 +4412,7 @@
       <keyword name="Editor.__reinitOnlineChangeTrace" id="Editor.__reinitOnlineChangeTrace" ref="eric5.QScintilla.Editor.html#Editor.__reinitOnlineChangeTrace" />
       <keyword name="Editor.__removeFromSpellingDictionary" id="Editor.__removeFromSpellingDictionary" ref="eric5.QScintilla.Editor.html#Editor.__removeFromSpellingDictionary" />
       <keyword name="Editor.__removeTrailingWhitespace" id="Editor.__removeTrailingWhitespace" ref="eric5.QScintilla.Editor.html#Editor.__removeTrailingWhitespace" />
+      <keyword name="Editor.__reopenWithEncodingMenuTriggered" id="Editor.__reopenWithEncodingMenuTriggered" ref="eric5.QScintilla.Editor.html#Editor.__reopenWithEncodingMenuTriggered" />
       <keyword name="Editor.__resetLanguage" id="Editor.__resetLanguage" ref="eric5.QScintilla.Editor.html#Editor.__resetLanguage" />
       <keyword name="Editor.__resetOnlineChangeTraceInfo" id="Editor.__resetOnlineChangeTraceInfo" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceInfo" />
       <keyword name="Editor.__resetOnlineChangeTraceTimer" id="Editor.__resetOnlineChangeTraceTimer" ref="eric5.QScintilla.Editor.html#Editor.__resetOnlineChangeTraceTimer" />
@@ -13580,6 +13582,7 @@
       <keyword name="read" id="read" ref="eric5.DebugClients.Ruby.AsyncFile.html#read" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.Utilities.__init__.html#readEncodedFile" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric5.UtilitiesPython2.Tools.html#readEncodedFile" />
+      <keyword name="readEncodedFileWithEncoding" id="readEncodedFileWithEncoding" ref="eric5.Utilities.__init__.html#readEncodedFileWithEncoding" />
       <keyword name="readEncodedFileWithHash" id="readEncodedFileWithHash" ref="eric5.Utilities.__init__.html#readEncodedFileWithHash" />
       <keyword name="readModule" id="readModule" ref="eric5.Utilities.ModuleParser.html#readModule" />
       <keyword name="readPlist" id="readPlist" ref="eric5.Utilities.binplistlib.html#readPlist" />

@@ -205,6 +205,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#readEncodedFile">readEncodedFile</a></td>
 <td>Function to read a file and decode its contents into proper text.</td>
 </tr><tr>
+<td><a href="#readEncodedFileWithEncoding">readEncodedFileWithEncoding</a></td>
+<td>Function to read a file and decode its contents into proper text.</td>
+</tr><tr>
 <td><a href="#readEncodedFileWithHash">readEncodedFileWithHash</a></td>
 <td>Function to read a file, calculate a hash value and decode its contents into proper text.</td>
 </tr><tr>
@@ -1403,6 +1406,27 @@ A tuple indicating status (True = an error was found), the
 <dt><i>filename</i></dt>
 <dd>
 name of the file to read (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of decoded text and encoding (string, string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readEncodedFileWithEncoding" ID="readEncodedFileWithEncoding"></a>
+<h2>readEncodedFileWithEncoding</h2>
+<b>readEncodedFileWithEncoding</b>(<i>filename, encoding</i>)
+<p>
+    Function to read a file and decode its contents into proper text.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file to read (string)
+</dd><dt><i>encoding=</i></dt>
+<dd>
+encoding to be used to read the file (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

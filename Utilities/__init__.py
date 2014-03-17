@@ -252,6 +252,34 @@ def decode(text):
     return str(text, "utf-8", "ignore"), 'utf-8-ignore'
 
 
+def readEncodedFileWithEncoding(filename, encoding):
+    """
+    Function to read a file and decode its contents into proper text.
+    
+    @param filename name of the file to read (string)
+    @keyparam encoding encoding to be used to read the file (string)
+    @return tuple of decoded text and encoding (string, string)
+    """
+    f = open(filename, "rb")
+    text = f.read()
+    f.close()
+    if encoding:
+        try:
+            return str(text, encoding), '{0}-selected'.format(encoding)
+        except (UnicodeError, LookupError):
+            pass
+        # Try default encoding
+        try:
+            codec = Preferences.getEditor("DefaultEncoding")
+            return str(text, codec), '{0}-default'.format(codec)
+        except (UnicodeError, LookupError):
+            pass
+        # Assume UTF-8 loosing information
+        return str(text, "utf-8", "ignore"), 'utf-8-ignore'
+    else:
+        return decode(text)
+
+
 def writeEncodedFile(filename, text, orig_coding):
     """
     Function to write a file with properly encoded text.

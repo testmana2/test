@@ -326,6 +326,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__initContextMenuMargins">__initContextMenuMargins</a></td>
 <td>Private method used to setup the context menu for the margins.</td>
 </tr><tr>
+<td><a href="#Editor.__initContextMenuReopenWithEncoding">__initContextMenuReopenWithEncoding</a></td>
+<td>Private method used to setup the Reopen With Encoding context sub menu.</td>
+</tr><tr>
 <td><a href="#Editor.__initContextMenuResources">__initContextMenuResources</a></td>
 <td>Private method used to setup the Resources context sub menu.</td>
 </tr><tr>
@@ -442,6 +445,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__removeTrailingWhitespace">__removeTrailingWhitespace</a></td>
 <td>Private method to remove trailing whitespace.</td>
+</tr><tr>
+<td><a href="#Editor.__reopenWithEncodingMenuTriggered">__reopenWithEncodingMenuTriggered</a></td>
+<td>Private method to handle the rereading of the file with a selected encoding.</td>
 </tr><tr>
 <td><a href="#Editor.__resetLanguage">__resetLanguage</a></td>
 <td>Private method used to reset the language selection.</td>
@@ -1734,7 +1740,17 @@ reference to the generated menu (QMenu)
 <b>__initContextMenuMargins</b>(<i></i>)
 <p>
         Private method used to setup the context menu for the margins.
-</p><a NAME="Editor.__initContextMenuResources" ID="Editor.__initContextMenuResources"></a>
+</p><a NAME="Editor.__initContextMenuReopenWithEncoding" ID="Editor.__initContextMenuReopenWithEncoding"></a>
+<h4>Editor.__initContextMenuReopenWithEncoding</h4>
+<b>__initContextMenuReopenWithEncoding</b>(<i></i>)
+<p>
+        Private method used to setup the Reopen With Encoding context sub menu.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuResources" ID="Editor.__initContextMenuResources"></a>
 <h4>Editor.__initContextMenuResources</h4>
 <b>__initContextMenuResources</b>(<i></i>)
 <p>
@@ -2091,7 +2107,18 @@ string containing the command parameters (string)
 <b>__removeTrailingWhitespace</b>(<i></i>)
 <p>
         Private method to remove trailing whitespace.
-</p><a NAME="Editor.__resetLanguage" ID="Editor.__resetLanguage"></a>
+</p><a NAME="Editor.__reopenWithEncodingMenuTriggered" ID="Editor.__reopenWithEncodingMenuTriggered"></a>
+<h4>Editor.__reopenWithEncodingMenuTriggered</h4>
+<b>__reopenWithEncodingMenuTriggered</b>(<i>act</i>)
+<p>
+        Private method to handle the rereading of the file with a selected
+        encoding.
+</p><dl>
+<dt><i>act</i></dt>
+<dd>
+reference to the action that was triggered (QAction)
+</dd>
+</dl><a NAME="Editor.__resetLanguage" ID="Editor.__resetLanguage"></a>
 <h4>Editor.__resetLanguage</h4>
 <b>__resetLanguage</b>(<i>propagate=True</i>)
 <p>
@@ -3584,17 +3611,21 @@ properties for the breakpoint (tuple)
         Public slot to handle the opening of a project.
 </p><a NAME="Editor.readFile" ID="Editor.readFile"></a>
 <h4>Editor.readFile</h4>
-<b>readFile</b>(<i>fn, createIt=False</i>)
+<b>readFile</b>(<i>fn, createIt=False, encoding=""</i>)
 <p>
         Public slot to read the text from a file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to read from (string)
-</dd><dt><i>createIt</i></dt>
+</dd><dt><i>createIt=</i></dt>
 <dd>
 flag indicating the creation of a new file, if the
             given one doesn't exist (boolean)
+</dd><dt><i>encoding=</i></dt>
+<dd>
+encoding to be used to read the file (string)
+            (Note: this parameter overrides encoding detection)
 </dd>
 </dl><a NAME="Editor.readSettings" ID="Editor.readSettings"></a>
 <h4>Editor.readSettings</h4>

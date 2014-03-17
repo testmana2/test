@@ -735,6 +735,8 @@ class Editor(QsciScintillaCompat):
             UI.PixmapCache.getIcon("close.png"),
             self.tr('Close'), self.__contextClose)
         self.menu.addSeparator()
+        self.reopenEncodingMenu = self.__initContextMenuReopenWithEncoding()
+        self.menuActs["Reopen"] = self.menu.addMenu(self.reopenEncodingMenu)
         self.menuActs["Save"] = self.menu.addAction(
             UI.PixmapCache.getIcon("fileSave.png"),
             self.tr('Save'), self.__contextSave)
@@ -926,6 +928,23 @@ class Editor(QsciScintillaCompat):
         
         menu.triggered.connect(self.__encodingsMenuTriggered)
         menu.aboutToShow.connect(self.__showContextMenuEncodings)
+        
+        return menu
+        
+    def __initContextMenuReopenWithEncoding(self):
+        """
+        Private method used to setup the Reopen With Encoding context sub menu.
+        
+        @return reference to the generated menu (QMenu)
+        """
+        menu = QMenu(self.tr("Re-Open With Encoding"))
+        menu.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
+        for encoding in sorted(Utilities.supportedCodecs):
+            act = menu.addAction(encoding)
+            act.setData(encoding)
+        
+        menu.triggered.connect(self.__reopenWithEncodingMenuTriggered)
         
         return menu
         
@@ -2812,13 +2831,15 @@ class Editor(QsciScintillaCompat):
                     break
                     # Couldn't find the unmodified state
     
-    def readFile(self, fn, createIt=False):
+    def readFile(self, fn, createIt=False, encoding=""):
         """
         Public slot to read the text from a file.
         
         @param fn filename to read from (string)
-        @param createIt flag indicating the creation of a new file, if the
+        @keyparam createIt flag indicating the creation of a new file, if the
             given one doesn't exist (boolean)
+        @keyparam encoding encoding to be used to read the file (string)
+            (Note: this parameter overrides encoding detection)
         """
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         
@@ -2826,7 +2847,11 @@ class Editor(QsciScintillaCompat):
             if createIt and not os.path.exists(fn):
                 f = open(fn, "w")
                 f.close()
-            txt, self.encoding = Utilities.readEncodedFile(fn)
+            if encoding:
+                txt, self.encoding = Utilities.readEncodedFileWithEncoding(
+                    fn, encoding)
+            else:
+                txt, self.encoding = Utilities.readEncodedFile(fn)
         except (UnicodeDecodeError, IOError) as why:
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(
@@ -4675,6 +4700,7 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the aboutToShow signal of the context menu.
         """
+        # TODO: set enable status of self.menuActs["Reopen"]
         self.menuActs["Save"].setEnabled(self.isModified())
         self.menuActs["Undo"].setEnabled(self.isUndoAvailable())
         self.menuActs["Redo"].setEnabled(self.isRedoAvailable())
@@ -4929,6 +4955,16 @@ class Editor(QsciScintillaCompat):
         menu.
         """
         self.showMenu.emit("Tools", self.toolsMenu, self)
+        
+    def __reopenWithEncodingMenuTriggered(self, act):
+        """
+        Private method to handle the rereading of the file with a selected
+        encoding.
+        
+        @param act reference to the action that was triggered (QAction)
+        """
+        encoding = act.data()
+        self.readFile(self.fileName, encoding=encoding)
         
     def __contextSave(self):
         """
