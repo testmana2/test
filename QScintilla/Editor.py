@@ -1375,6 +1375,7 @@ class Editor(QsciScintillaCompat):
         @param act reference to the action that was triggered (QAction)
         """
         encoding = act.data()
+        self.setModified(True)
         self.__encodingChanged("{0}-selected".format(encoding))
         
     def __checkEncoding(self):
@@ -1402,15 +1403,18 @@ class Editor(QsciScintillaCompat):
             self.encodingChanged.emit(self.encoding)
             self.inEncodingChanged = False
         
-    def __normalizedEncoding(self):
+    def __normalizedEncoding(self, encoding=""):
         """
         Private method to calculate the normalized encoding string.
         
+        @param encoding encoding to be normalized (string)
         @return normalized encoding (string)
         """
-        return self.encoding.replace("-default", "")\
-                            .replace("-guessed", "")\
-                            .replace("-selected", "")
+        if not encoding:
+            encoding = self.encoding
+        return encoding.replace("-default", "")\
+                       .replace("-guessed", "")\
+                       .replace("-selected", "")
         
     def __showContextMenuEol(self):
         """

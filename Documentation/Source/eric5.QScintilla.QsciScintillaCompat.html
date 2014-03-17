@@ -79,6 +79,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.__doSearchTarget">__doSearchTarget</a></td>
 <td>Private method to perform the search in target.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.__modificationChanged">__modificationChanged</a></td>
+<td>Private slot to handle the modificationChanged signal.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.__setFoldMarker">__setFoldMarker</a></td>
 <td>Private method to define a fold marker.</td>
 </tr><tr>
@@ -247,6 +250,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.inputMethodQuery">inputMethodQuery</a></td>
 <td>Protected method to cope with a glitch in some Qscintilla versions handling input events.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.isModified">isModified</a></td>
+<td>Public method to return the modification status.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.lineAt">lineAt</a></td>
 <td>Public method to calculate the line at a position.</td>
 </tr><tr>
@@ -334,6 +340,9 @@ QsciScintilla
 <td><a href="#QsciScintillaCompat.setLexer">setLexer</a></td>
 <td>Public method to set the lexer.</td>
 </tr><tr>
+<td><a href="#QsciScintillaCompat.setModified">setModified</a></td>
+<td>Public slot to set the modification status.</td>
+</tr><tr>
 <td><a href="#QsciScintillaCompat.setRectangularSelection">setRectangularSelection</a></td>
 <td>Public method to set a rectangular selection.</td>
 </tr><tr>
@@ -409,6 +418,16 @@ the selected text (string)
 <dt>Returns:</dt>
 <dd>
 flag indicating a successful search (boolean)
+</dd>
+</dl><a NAME="QsciScintillaCompat.__modificationChanged" ID="QsciScintillaCompat.__modificationChanged"></a>
+<h4>QsciScintillaCompat.__modificationChanged</h4>
+<b>__modificationChanged</b>(<i>m</i>)
+<p>
+        Private slot to handle the modificationChanged signal.
+</p><dl>
+<dt><i>m</i></dt>
+<dd>
+modification status (boolean)
 </dd>
 </dl><a NAME="QsciScintillaCompat.__setFoldMarker" ID="QsciScintillaCompat.__setFoldMarker"></a>
 <h4>QsciScintillaCompat.__setFoldMarker</h4>
@@ -1073,6 +1092,16 @@ reference to the input method query object
 <dd>
 object containing the requested information
 </dd>
+</dl><a NAME="QsciScintillaCompat.isModified" ID="QsciScintillaCompat.isModified"></a>
+<h4>QsciScintillaCompat.isModified</h4>
+<b>isModified</b>(<i></i>)
+<p>
+        Public method to return the modification status.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the modification status (boolean)
+</dd>
 </dl><a NAME="QsciScintillaCompat.lineAt" ID="QsciScintillaCompat.lineAt"></a>
 <h4>QsciScintillaCompat.lineAt</h4>
 <b>lineAt</b>(<i>pos</i>)
@@ -1421,6 +1450,16 @@ length of the indicator (integer)
 <dt><i>lex</i></dt>
 <dd>
 the lexer to be set or None to reset it.
+</dd>
+</dl><a NAME="QsciScintillaCompat.setModified" ID="QsciScintillaCompat.setModified"></a>
+<h4>QsciScintillaCompat.setModified</h4>
+<b>setModified</b>(<i>m</i>)
+<p>
+        Public slot to set the modification status.
+</p><dl>
+<dt><i>m</i></dt>
+<dd>
+new modification status (boolean)
 </dd>
 </dl><a NAME="QsciScintillaCompat.setRectangularSelection" ID="QsciScintillaCompat.setRectangularSelection"></a>
 <h4>QsciScintillaCompat.setRectangularSelection</h4>
