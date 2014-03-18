@@ -4700,7 +4700,8 @@ class Editor(QsciScintillaCompat):
         """
         Private slot handling the aboutToShow signal of the context menu.
         """
-        # TODO: set enable status of self.menuActs["Reopen"]
+        self.menuActs["Reopen"].setEnabled(
+            not self.isModified() and bool(self.fileName))
         self.menuActs["Save"].setEnabled(self.isModified())
         self.menuActs["Undo"].setEnabled(self.isUndoAvailable())
         self.menuActs["Redo"].setEnabled(self.isRedoAvailable())
