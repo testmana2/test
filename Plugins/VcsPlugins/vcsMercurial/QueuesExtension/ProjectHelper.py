@@ -222,7 +222,20 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         self.hgQueueStatusAct.triggered.connect(self.__hgQueueStatus)
         self.actions.append(self.hgQueueStatusAct)
         
-        # TODO: add support for hg summary --mq
+        self.hgQueueSummaryAct = E5Action(
+            self.tr('Show Summary'),
+            self.tr('Show summary...'),
+            0, 0, self, 'mercurial_queues_summary')
+        self.hgQueueSummaryAct.setStatusTip(self.tr(
+            'Show summary information of the queue repository'
+        ))
+        self.hgQueueSummaryAct.setWhatsThis(self.tr(
+            """<b>Show summary</b>"""
+            """<p>This shows some summary information of the queue"""
+            """ repository.</p>"""
+        ))
+        self.hgQueueSummaryAct.triggered.connect(self.__hgQueueSummary)
+        self.actions.append(self.hgQueueSummaryAct)
         
         self.__initPushPopActions()
         self.__initPushPopForceActions()
@@ -734,6 +747,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         menu.addAction(self.hgQueueFinishAct)
         menu.addSeparator()
         menu.addAction(self.hgQueueStatusAct)
+        menu.addAction(self.hgQueueSummaryAct)
         menu.addSeparator()
         menu.addAction(self.hgQueueDiffAct)
         menu.addAction(self.hgQueueHeaderAct)
@@ -1095,3 +1109,9 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         """
         self.vcs.getExtensionObject("mq")\
             .hgQueueStatus(self.project.getProjectPath())
+    
+    def __hgQueueSummary(self):
+        """
+        Private slot to show a summary of the queue repository.
+        """
+        self.vcs.hgSummary(mq=True)

@@ -74,7 +74,8 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         self.__largefiles = largefiles
         
         args = self.vcs.initCommand("summary")
-        args.append("--remote")
+        if self.vcs.canPull():
+            args.append("--remote")
         if self.__mq:
             args.append("--mq")
         if self.__largefiles:
