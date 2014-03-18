@@ -17,8 +17,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgQueuesListDialog import Ui_HgQueuesListDialog
 
-import Preferences
-
 
 class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
     """
