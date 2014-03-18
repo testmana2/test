@@ -10,6 +10,7 @@ It uses the JavaScript parser contained in the jasy web framework.
 """
 
 import ThirdParty.Jasy.jasy.js.parse.Parser as jsParser
+import ThirdParty.Jasy.jasy.js.tokenize.Tokenizer as jsTokenizer
 
 import Utilities
 import Utilities.ClassBrowsers as ClassBrowsers
@@ -105,7 +106,10 @@ class Visitor(object):
             self.__root = jsParser.parse(self.__source)
             self.__visit(self.__root)
         except jsParser.SyntaxError:
-            # ignore syntax errors
+            # ignore syntax errors of the parser
+            pass
+        except jsTokenizer.ParseError:
+            # ignore syntax errors of the tokenizer
             pass
         
         return self.__dict
