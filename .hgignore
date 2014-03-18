@@ -1,0 +1,16 @@
+glob:.eric5project
+glob:_eric5project
+glob:.ropeproject
+glob:_ropeproject
+glob:.directory
+glob:**.pyc
+glob:**.orig
+glob:**.bak
+glob:**Ui_*.py
+glob:**.rej
+glob:**~
+glob:cur
+glob:tmp
+glob:__pycache__
+glob:**.DS_Store
+glob:**.coverage
