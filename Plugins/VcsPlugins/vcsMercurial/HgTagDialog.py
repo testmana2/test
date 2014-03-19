@@ -53,7 +53,7 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         
         @return tuple of string and int (tag, tag operation)
         """
-        tag = self.tagCombo.currentText()
+        tag = self.tagCombo.currentText().replace(" ", "_")
         tagOp = 0
         if self.createRegularButton.isChecked():
             tagOp = HgTagDialog.CreateRegularTag

@@ -200,8 +200,8 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
             rev = ""
         
         if self.__mode == self.MOVE_MODE:
-            name = self.nameCombo.currentText()
+            name = self.nameCombo.currentText().replace(" ", "_")
         else:
-            name = self.nameEdit.text()
+            name = self.nameEdit.text().replace(" ", "_")
         
         return rev, name

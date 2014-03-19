@@ -81,4 +81,4 @@ class HgQueuesRenamePatchDialog(QDialog, Ui_HgQueuesRenamePatchDialog):
         if self.namedButton.isChecked():
             selectedPatch = self.nameCombo.currentText()
         
-        return self.nameEdit.text(), selectedPatch
+        return self.nameEdit.text().replace(" ", "_"), selectedPatch
