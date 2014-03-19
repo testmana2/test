@@ -111,6 +111,9 @@ class Visitor(object):
         except jsTokenizer.ParseError:
             # ignore syntax errors of the tokenizer
             pass
+        except Exception:
+            # ignore syntax errors of the tokenizer and parser
+            pass
         
         return self.__dict
     
