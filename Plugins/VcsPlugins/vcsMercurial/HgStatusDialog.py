@@ -75,16 +75,18 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.lfActions = []
         self.menu = QMenu()
         if not mq:
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Commit changes to repository..."), self.__commit))
+            self.__commitAct = self.menu.addAction(
+                self.tr("Commit changes to repository..."), self.__commit)
+            self.menuactions.append(self.__commitAct)
             self.menuactions.append(self.menu.addAction(
                 self.tr("Select all for commit"), self.__commitSelectAll))
             self.menuactions.append(self.menu.addAction(
                 self.tr("Deselect all from commit"),
                 self.__commitDeselectAll))
             self.menu.addSeparator()
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Add to repository"), self.__add))
+            self.__addAct = self.menu.addAction(
+                self.tr("Add to repository"), self.__add)
+            self.menuactions.append(self.__addAct)
             if self.vcs.version >= (2, 0):
                 self.lfActions.append(self.menu.addAction(
                     self.tr("Add as Large File"),
@@ -92,16 +94,21 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.lfActions.append(self.menu.addAction(
                     self.tr("Add as Normal File"),
                     lambda: self.__lfAdd("normal")))
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Show differences"), self.__diff))
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Show differences side-by-side"), self.__sbsDiff))
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Remove from repository"), self.__forget))
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Revert changes"), self.__revert))
-            self.menuactions.append(self.menu.addAction(
-                self.tr("Restore missing"), self.__restoreMissing))
+            self.__diffAct = self.menu.addAction(
+                self.tr("Show differences"), self.__diff)
+            self.menuactions.append(self.__diffAct)
+            self.__sbsDiffAct = self.menu.addAction(
+                self.tr("Show differences side-by-side"), self.__sbsDiff)
+            self.menuactions.append(self.__sbsDiffAct)
+            self.__revertAct = self.menu.addAction(
+                self.tr("Revert changes"), self.__revert)
+            self.menuactions.append(self.__revertAct)
+            self.__forgetAct = self.menu.addAction(
+                self.tr("Forget missing"), self.__forget)
+            self.menuactions.append(self.__forgetAct)
+            self.__restoreAct = self.menu.addAction(
+                self.tr("Restore missing"), self.__restoreMissing)
+            self.menuactions.append(self.__restoreAct)
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
                 self.tr("Adjust column sizes"), self.__resizeColumns))
@@ -598,7 +605,19 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         @param coord the position of the mouse pointer (QPoint)
         """
-        # TODO: set status of menu entries according to their conditions
+        modified = len(self.__getModifiedItems())
+        unversioned = len(self.__getUnversionedItems())
+        missing = len(self.__getMissingItems())
+        commitable = len(self.__getCommitableItems())
+
+        self.__addAct.setEnabled(unversioned)
+        self.__diffAct.setEnabled(modified)
+        self.__sbsDiffAct.setEnabled(modified == 1)
+        self.__revertAct.setEnabled(modified)
+        self.__forgetAct.setEnabled(missing)
+        self.__restoreAct.setEnabled(missing)
+        self.__commitAct.setEnabled(commitable)
+        
         if self.vcs.isExtensionActive("largefiles"):
             enable = len(self.__getUnversionedItems()) > 0
         else:
