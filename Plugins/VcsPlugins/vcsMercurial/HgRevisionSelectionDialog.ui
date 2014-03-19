@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>372</width>
-    <height>276</height>
+    <height>250</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -177,6 +177,13 @@
         <property name="text">
          <string>TIP</string>
         </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="3">
+       <widget class="QRadioButton" name="noneButton">
+        <property name="text">
+         <string>No revision selected</string>
+        </property>
         <property name="checked">
          <bool>true</bool>
         </property>
@@ -209,6 +216,7 @@
   <tabstop>bookmarkButton</tabstop>
   <tabstop>bookmarkCombo</tabstop>
   <tabstop>tipButton</tabstop>
+  <tabstop>noneButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

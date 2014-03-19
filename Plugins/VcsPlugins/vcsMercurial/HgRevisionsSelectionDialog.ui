@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>371</width>
-    <height>565</height>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -186,6 +186,13 @@
         </property>
        </widget>
       </item>
+      <item row="7" column="0" colspan="3">
+       <widget class="QRadioButton" name="none1Button">
+        <property name="text">
+         <string>No revision selected</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -352,6 +359,13 @@
         </property>
        </widget>
       </item>
+      <item row="7" column="0" colspan="3">
+       <widget class="QRadioButton" name="none2Button">
+        <property name="text">
+         <string>No revision selected</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -382,6 +396,7 @@
   <tabstop>bookmark1Combo</tabstop>
   <tabstop>tip1Button</tabstop>
   <tabstop>prev1Button</tabstop>
+  <tabstop>none1Button</tabstop>
   <tabstop>number2Button</tabstop>
   <tabstop>number2SpinBox</tabstop>
   <tabstop>id2Button</tabstop>
@@ -394,6 +409,7 @@
   <tabstop>bookmark2Combo</tabstop>
   <tabstop>tip2Button</tabstop>
   <tabstop>prev2Button</tabstop>
+  <tabstop>none2Button</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

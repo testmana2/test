@@ -175,7 +175,7 @@
          <string>Select to not specify a specific revision</string>
         </property>
         <property name="text">
-         <string>No revision selected</string>
+         <string>Parent</string>
         </property>
         <property name="checked">
          <bool>true</bool>

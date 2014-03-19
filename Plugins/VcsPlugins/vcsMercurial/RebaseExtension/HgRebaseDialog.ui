@@ -370,7 +370,7 @@
            <string>Select tip revision of repository</string>
           </property>
           <property name="text">
-           <string>TIP</string>
+           <string>Current branch tip</string>
           </property>
           <property name="checked">
            <bool>true</bool>

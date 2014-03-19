@@ -1083,7 +1083,8 @@ class Hg(VersionControl):
         from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
         dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                         self.hgGetBranchesList(repodir),
-                                        bookmarksList)
+                                        bookmarksList,
+                                        self.tr("Current branch tip"))
         if dlg.exec_() == QDialog.Accepted:
             rev = dlg.getRevision()
             return self.vcsUpdate(name, revision=rev)
@@ -2659,8 +2660,7 @@ class Hg(VersionControl):
             from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
             dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                             self.hgGetBranchesList(repodir),
-                                            bookmarksList,
-                                            showNone=True)
+                                            bookmarksList)
             if dlg.exec_() == QDialog.Accepted:
                 rev = dlg.getRevision()
             else:

@@ -237,6 +237,7 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             bookmarkCombo = self.bookmark1Combo
             tipButton = self.tip1Button
             prevButton = self.prev1Button
+            noneButton = self.none1Button
         else:
             numberButton = self.number2Button
             numberSpinBox = self.number2SpinBox
@@ -250,6 +251,7 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             bookmarkCombo = self.bookmark2Combo
             tipButton = self.tip2Button
             prevButton = self.prev2Button
+            noneButton = self.none2Button
         
         if numberButton.isChecked():
             return "rev({0})".format(numberSpinBox.value())
@@ -265,6 +267,8 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             return "tip"
         elif prevButton.isChecked():
             return "."
+        elif noneButton.isChecked():
+            return ""
     
     def getRevisions(self):
         """

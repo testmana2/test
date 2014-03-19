@@ -4674,7 +4674,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelect
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog.on_idEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog.on_tagButton_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog.on_tagCombo_editTextChanged?4(txt)
-eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog?1(tagsList, branchesList, bookmarksList=None, showNone=False, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionSelectionDialog.HgRevisionSelectionDialog?1(tagsList, branchesList, bookmarksList=None, noneLabel="", parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.HgRevisionsSelectionDialog.getRevisions?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.HgRevisionsSelectionDialog.on_bookmark1Button_toggled?4(checked)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgRevisionsSelectionDialog.HgRevisionsSelectionDialog.on_bookmark1Combo_editTextChanged?4(txt)
