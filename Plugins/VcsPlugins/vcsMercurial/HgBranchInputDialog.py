@@ -52,5 +52,5 @@ class HgBranchInputDialog(QDialog, Ui_HgBranchInputDialog):
         @return tuple of branch name (string) and a flag indicating to
             commit the branch (boolean)
         """
-        return (self.branchComboBox.currentText(),
+        return (self.branchComboBox.currentText().replace(" ", "_"),
                 self.commitCheckBox.isChecked())

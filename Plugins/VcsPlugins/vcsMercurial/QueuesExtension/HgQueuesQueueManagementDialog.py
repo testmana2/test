@@ -174,7 +174,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         """
         name = ""
         if self.__mode == HgQueuesQueueManagementDialog.NAME_INPUT:
-            name = self.nameEdit.text()
+            name = self.nameEdit.text().replace(" ", "_")
         elif self.__mode == HgQueuesQueueManagementDialog.QUEUE_INPUT:
             selItems = self.queuesList.selectedItems()
             if selItems:

@@ -45,7 +45,7 @@ class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
         else:
             dateTime = QDateTime()
         return (
-            self.nameEdit.text(),
+            self.nameEdit.text().replace(" ", "_"),
             dateTime,
             self.messageEdit.text(),
             self.addRemoveCheckBox.isChecked(),

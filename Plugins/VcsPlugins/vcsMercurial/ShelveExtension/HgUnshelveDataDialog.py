@@ -45,6 +45,6 @@ class HgUnshelveDataDialog(QDialog, Ui_HgUnshelveDataDialog):
             to keep the shelved change (boolean)
         """
         return (
-            self.nameComboBox.currentText(),
+            self.nameComboBox.currentText().replace(" ", "_"),
             self.keepCheckBox.isChecked()
         )

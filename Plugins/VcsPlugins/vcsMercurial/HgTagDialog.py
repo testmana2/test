@@ -91,7 +91,7 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         
         @return tuple of two strings and int (tag, revision, tag operation)
         """
-        tag = self.tagCombo.currentText()
+        tag = self.tagCombo.currentText().replace(" ", "_")
         tagOp = 0
         if self.createTagButton.isChecked():
             if self.globalTagButton.isChecked():
