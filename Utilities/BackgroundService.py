@@ -291,7 +291,9 @@ class BackgroundService(QTcpServer):
         """
         Cleanup the connections and processes when Eric is shuting down.
         """
-        for connection in self.connections.values():
+        # Make copy of dictionary values because the list is changed by
+        # on_disconnectSocket
+        for connection in list(self.connections.values()):
             if connection:
                 connection.close()
         
