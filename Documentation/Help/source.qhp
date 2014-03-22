@@ -6327,6 +6327,7 @@
       <keyword name="HgProjectBrowserHelper.showContextMenuMulti" id="HgProjectBrowserHelper.showContextMenuMulti" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.showContextMenuMulti" />
       <keyword name="HgProjectHelper" id="HgProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper" />
       <keyword name="HgProjectHelper (Constructor)" id="HgProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__init__" />
+      <keyword name="HgProjectHelper.__checkActions" id="HgProjectHelper.__checkActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__checkActions" />
       <keyword name="HgProjectHelper.__hgAddSubrepository" id="HgProjectHelper.__hgAddSubrepository" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgAddSubrepository" />
       <keyword name="HgProjectHelper.__hgArchive" id="HgProjectHelper.__hgArchive" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgArchive" />
       <keyword name="HgProjectHelper.__hgBackout" id="HgProjectHelper.__hgBackout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBackout" />

@@ -76,6 +76,8 @@ class HgProjectHelper(VcsProjectHelper):
         
         for extension in self.__extensions.values():
             extension.setObjects(vcsObject, projectObject)
+        
+        self.vcs.iniFileChanged.connect(self.__checkActions)
     
     def getProject(self):
         """
@@ -997,6 +999,18 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgArchiveAct.triggered.connect(self.__hgArchive)
         self.actions.append(self.hgArchiveAct)
     
+    def __checkActions(self):
+        """
+        Private slot to set the enabled status of actions.
+        """
+        self.hgPullAct.setEnabled(self.vcs.canPull())
+        self.hgIncomingAct.setEnabled(self.vcs.canPull())
+        
+        self.hgPushAct.setEnabled(self.vcs.canPush())
+        self.hgPushBranchAct.setEnabled(self.vcs.canPush())
+        self.hgPushForcedAct.setEnabled(self.vcs.canPush())
+        self.hgOutgoingAct.setEnabled(self.vcs.canPush())
+    
     def initMenu(self, menu):
         """
         Public method to generate the VCS menu.
@@ -1165,19 +1179,14 @@ class HgProjectHelper(VcsProjectHelper):
         """
         super().showMenu()
         
-        self.hgPullAct.setEnabled(self.vcs.canPull())
-        self.hgIncomingAct.setEnabled(self.vcs.canPull())
-        
-        self.hgPushAct.setEnabled(self.vcs.canPush())
-        self.hgPushBranchAct.setEnabled(self.vcs.canPush())
-        self.hgPushForcedAct.setEnabled(self.vcs.canPush())
-        self.hgOutgoingAct.setEnabled(self.vcs.canPush())
+        self.__checkActions()
     
     def shutdown(self):
         """
         Public method to perform shutdown actions.
         """
         self.vcs.activeExtensionsChanged.disconnect(self.__showExtensionMenu)
+        self.vcs.iniFileChanged.disconnect(self.__checkActions)
         
         # close torn off sub menus
         for menu in self.subMenus:

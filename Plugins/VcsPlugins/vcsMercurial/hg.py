@@ -35,9 +35,12 @@ class Hg(VersionControl):
     @signal committed() emitted after the commit action has completed
     @signal activeExtensionsChanged() emitted when the list of active
         extensions has changed
+    @signal iniFileChanged() emitted when a Mercurial/repo configuration file
+        has changed
     """
     committed = pyqtSignal()
     activeExtensionsChanged = pyqtSignal()
+    iniFileChanged = pyqtSignal()
     
     IgnoreFileName = ".hgignore"
     
@@ -2255,6 +2258,7 @@ class Hg(VersionControl):
                                 "\n  ".join(lfPattern)))
                 cfg.close()
                 self.__monitorRepoIniFile(repodir)
+                self.__iniFileChanged(cfgFile)
             except IOError:
                 pass
         self.repoEditor = MiniEditor(cfgFile, "Properties")
@@ -3242,9 +3246,9 @@ class Hg(VersionControl):
         else:
             output, error = self.__client.runcommand(args)
         
+        self.__defaultConfigured = False
+        self.__defaultPushConfigured = False
         if output:
-            self.__defaultConfigured = False
-            self.__defaultPushConfigured = False
             for line in output.splitlines():
                 if line.startswith("paths.default=") and \
                         not line.strip().endswith("="):
@@ -3290,6 +3294,8 @@ class Hg(VersionControl):
         
         if self.__repoIniFile and path == self.__repoIniFile:
             self.__checkDefaults()
+        
+        self.iniFileChanged.emit()
     
     def __monitorRepoIniFile(self, name):
         """

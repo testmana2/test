@@ -5025,6 +5025,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgShowPaths?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgSummary?4(mq=False, largefiles=False)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgUnbundle?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgVerify?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.iniFileChanged?7
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.initCommand?4(command)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.isExtensionActive?4(extensionName)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.vcsAdd?4(name, isDir=False, noDialog=False)
