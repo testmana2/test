@@ -50,7 +50,7 @@ class SyntaxCheckService(QObject):
             return 'Python{0}'.format(pyVer)
         
         for lang, (getArgs, getExt) in self.__supportedLanguages.items():
-            if filename.endswith(getExt()):
+            if filename.endswith(tuple(getExt())):
                 return lang
         
         return None
