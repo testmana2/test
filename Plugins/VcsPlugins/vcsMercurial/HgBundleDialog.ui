@@ -29,7 +29,7 @@
          <string>Select to specify multiple revisions</string>
         </property>
         <property name="text">
-         <string>Multiple</string>
+         <string>Revisions:</string>
         </property>
        </widget>
       </item>

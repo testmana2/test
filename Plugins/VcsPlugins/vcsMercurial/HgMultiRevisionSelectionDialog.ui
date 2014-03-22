@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>330</height>
+    <height>338</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,10 +26,10 @@
       <item row="0" column="0">
        <widget class="QRadioButton" name="changesetsButton">
         <property name="toolTip">
-         <string>Select to specify a list of changesets</string>
+         <string>Select to specify multiple revisions</string>
         </property>
         <property name="text">
-         <string>Changesets:</string>
+         <string>Revisions:</string>
         </property>
         <property name="checked">
          <bool>true</bool>
