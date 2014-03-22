@@ -38,10 +38,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     fixableRole = Qt.UserRole + 5
     codeRole = Qt.UserRole + 6
     
-    def __init__(self, parent=None):
+    def __init__(self, styleCheckService, parent=None):
         """
         Constructor
         
+        @param styleCheckService reference to the service
+            (CodeStyleCheckService)
         @param parent reference to the parent widget (QWidget)
         """
         super(CodeStyleCheckerDialog, self).__init__(parent)
@@ -70,8 +72,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
         
-        self.internalServices = e5App().getObject('InternalServices')
-        self.internalServices.styleChecked.connect(self.__processResult)
+        self.styleCheckService = styleCheckService
+        self.styleCheckService.styleChecked.connect(self.__processResult)
+        self.filename = None
         
         self.noResults = True
         self.cancelled = False
@@ -392,8 +395,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         eol = self.__getEol(self.filename)
         args = self.__options + [errors, eol, encoding]
-        self.internalServices.styleCheck(
-            self.filename, self.source, args)
+        self.styleCheckService.styleCheck(
+            None, self.filename, self.source, args)
 
     def __processResult(self, fn, codeStyleCheckerStats, fixes, results):
         """
@@ -587,7 +590,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 editor.toggleSyntaxError(lineno, 0, True, message, True)
             else:
                 editor.toggleWarning(
-                    lineno, True, message, warningType=editor.WarningStyle)
+                    lineno, 0, True, message, warningType=editor.WarningStyle)
     
     @pyqtSlot()
     def on_resultList_itemSelectionChanged(self):
@@ -620,7 +623,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 lineno = citm.data(0, self.lineRole)
                 message = citm.data(0, self.messageRole)
                 editor.toggleWarning(
-                    lineno, True, message, warningType=editor.WarningStyle)
+                    lineno, 0, True, message, warningType=editor.WarningStyle)
         
         # go through the list again to clear warning markers for files,
         # that are ok

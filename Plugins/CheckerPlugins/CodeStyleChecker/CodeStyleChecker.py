@@ -56,12 +56,8 @@ class CodeStyleCheckerReport(pep8.BaseReport):
         code = super(CodeStyleCheckerReport, self).error_args(
             line_number, offset, code, check, *args)
         if code and (self.counters[code] == 1 or self.__repeat):
-            if code in NamingStyleChecker.Codes:
-                text = NamingStyleChecker.getMessage(code, *args)
-            else:
-                text = pep8.getMessage(code, *args)
             self.errors.append(
-                (self.filename, line_number, offset, text)
+                (self.filename, line_number, offset, (code, args))
             )
         return code
 
@@ -159,8 +155,7 @@ def codeStyleCheck(filename, source, args):
     
     deferredFixes = {}
     results = []
-    for error in errors:
-        fname, lineno, position, text = error
+    for fname, lineno, position, text in errors:
         if lineno > len(source):
             lineno = len(source)
         if "__IGNORE_WARNING__" not in \
@@ -182,6 +177,11 @@ def codeStyleCheck(filename, source, args):
             fixed, msg = deferredResults[id_]
             itm = deferredFixes[id_]
             itm.extend([fixed == 1, fixed == 1, msg])
-        fixer.saveFile(encoding)
+            results.append(itm)
+
+        errMsg = fixer.saveFile(encoding)
+        if errMsg:
+            for result in results:
+                result[-1] = errMsg
 
     return stats, results
