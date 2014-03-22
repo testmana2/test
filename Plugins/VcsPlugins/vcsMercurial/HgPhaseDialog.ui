@@ -30,7 +30,7 @@
    <item row="0" column="1">
     <widget class="QPlainTextEdit" name="revisionsEdit">
      <property name="toolTip">
-      <string>Enter changesets by number, id, range or revset expression one per line</string>
+      <string>Enter revisions by number, id, range or revset expression one per line</string>
      </property>
      <property name="tabChangesFocus">
       <bool>true</bool>
