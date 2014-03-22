@@ -12,13 +12,15 @@ checkers and other python interpreter dependent functions.
 from __future__ import unicode_literals
 try:
     bytes = unicode
+    import StringIO as io   # __IGNORE_EXCEPTION__
 except NameError:
-    pass
+    import io       # __IGNORE_WARNING__
 
 import json
 import socket
 import struct
 import sys
+import traceback
 from zlib import adler32
 
 
@@ -38,7 +40,6 @@ class BackgroundClient(object):
         self.connection = socket.create_connection((host, port))
         ver = b'Python2' if sys.version_info[0] == 2 else b'Python3'
         self.connection.sendall(ver)
-        self.connection.settimeout(0.25)
 
     def __initClientService(self, fn, path, module):
         """
@@ -77,54 +78,53 @@ class BackgroundClient(object):
         """
         Implement the main loop of the client.
         """
-        while True:
-            try:
-                header = self.connection.recv(8)  # __IGNORE_EXCEPTION__
-            except socket.timeout:
-                continue
-            except socket.error:
+        try:
+            while True:
+                try:
+                    header = b''
+                    while len(header) < 8:
+                        header += self.connection.recv(8 - len(header))
+                except socket.error:
+                    # Leave main loop if connection was closed.
+                    break
                 # Leave main loop if connection was closed.
-                break
-            # Leave main loop if connection was closed.
-            if not header:
-                break
-            
-            length, datahash = struct.unpack(b'!II', header)
-            packedData = b''
-            while len(packedData) < length:
-                packedData += self.connection.recv(length - len(packedData))
-            
-            assert adler32(packedData) & 0xffffffff == datahash, \
-                'Hashes not equal'
-            if sys.version_info[0] == 3:
-                packedData = packedData.decode('utf-8')
-            
-            fx, fn, data = json.loads(packedData)
-            if fx == 'INIT':
-                ret = self.__initClientService(fn, *data)
-            else:
-                callback = self.services.get(fx)
-                if callback:
-                    ret = callback(fn, *data)
+                if not header:
+                    break
+                
+                length, datahash = struct.unpack(b'!II', header)
+                packedData = b''
+                while len(packedData) < length:
+                    packedData += self.connection.recv(
+                        length - len(packedData))
+                
+                assert adler32(packedData) & 0xffffffff == datahash, \
+                    'Hashes not equal'
+                if sys.version_info[0] == 3:
+                    packedData = packedData.decode('utf-8')
+                
+                fx, fn, data = json.loads(packedData)
+                if fx == 'INIT':
+                    ret = self.__initClientService(fn, *data)
                 else:
-                    ret = 'Unknown service.'
-            
-            self.__send(fx, fn, ret)
-            
-        self.connection.close()
-        sys.exit()
+                    callback = self.services.get(fx)
+                    if callback:
+                        ret = callback(fn, *data)
+                    else:
+                        ret = 'Unknown service.'
+                
+                self.__send(fx, fn, ret)
+        except:
+            exctype, excval, exctb = sys.exc_info()
+            tbinfofile = io.StringIO()
+            traceback.print_tb(exctb, None, tbinfofile)
+            tbinfofile.seek(0)
+            tbinfo = tbinfofile.read()
+            del exctb
+            self.__send(
+                'EXCEPTION', '?', [str(exctype), str(excval), tbinfo])
 
-    def __unhandled_exception(self, exctype, excval, exctb):
-        """
-        Private method called to report an uncaught exception.
-        
-        @param exctype the type of the exception
-        @param excval data about the exception
-        @param exctb traceback for the exception
-        """
-        # TODO: Wrap arguments so they can be serialized by JSON
-        self.__send(
-            'EXCEPTION', '?', [str(exctype), str(excval), str(exctb)])
+        self.connection.shutdown(socket.SHUT_RDWR)
+        self.connection.close()
 
 if __name__ == '__main__':
     if len(sys.argv) != 3:
@@ -133,8 +133,5 @@ if __name__ == '__main__':
     
     host, port = sys.argv[1:]
     backgroundClient = BackgroundClient(host, int(port))
-    # set the system exception handling function to ensure, that
-    # we report on all unhandled exceptions
-    sys.excepthook = backgroundClient._BackgroundClient__unhandled_exception
     # Start the main loop
     backgroundClient.run()

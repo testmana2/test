@@ -19,6 +19,7 @@ import threading
 from zlib import adler32
 
 from PyQt4.QtCore import QProcess, pyqtSignal
+from PyQt4.QtGui import QApplication
 from PyQt4.QtNetwork import QTcpServer, QHostAddress
 
 import Preferences
@@ -54,6 +55,7 @@ class BackgroundService(QTcpServer):
         self.listen(QHostAddress(self.hostAddress))
 
         self.newConnection.connect(self.on_newConnection)
+        
         port = self.serverPort()
         ## NOTE: Need the port if started external in debugger:
         print('BackgroundService listening on: %i' % port)
@@ -170,8 +172,8 @@ class BackgroundService(QTcpServer):
         elif fx == 'EXCEPTION':
             # Call sys.excepthook(type, value, traceback) to emulate the
             # exception which was caught on the client
-            #sys.excepthook(*data)
-            print(data)
+            sys.excepthook(*data)
+            QApplication.processEvents()
         elif data == 'Unknown service.':
             callback = self.services.get((fx, lang))
             if callback:
@@ -257,12 +259,34 @@ class BackgroundService(QTcpServer):
         self.connections[lang] = connection
         connection.readyRead.connect(
             lambda x=lang: self.__receive(x))
-        
+        connection.disconnected.connect(
+            lambda x=lang: self.on_disconnectSocket(x))
+            
         for (fx, lng), args in self.services.items():
             if lng == lang:
                 # Register service with modulepath and module
                 self.enqueueRequest('INIT', lng, fx, args[:2])
 
+    def on_disconnectSocket(self, lang):
+        """
+        Slot when connection to a client is lost.
+        
+        @param lang client language which connection is lost (str)
+        """
+        self.connections.pop(lang)
+        # Maybe the task is killed while ideling
+        if self.isWorking == lang:
+            self.isWorking = None
+        # Remove pending jobs and send warning to the waiting caller
+        # Make a copy of the list because it's modified in the loop
+        for args in self.__queue[:]:
+            fx, lng, fn, data = args
+            if lng == lang:
+                # Call onErrorCallback with error message
+                self.__queue.remove(args)
+                self.services[(fx, lng)][3](fx, fn, lng, self.tr(
+                    'Error in Erics background service stopped service.'))
+        
     def shutdown(self):
         """
         Cleanup the connections and processes when Eric is shuting down.
