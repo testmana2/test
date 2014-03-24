@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1925,8 +1926,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2167,8 +2168,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -9562,7 +9563,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="945"/>
         <source>Re-Open With Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Reabrir Con Codificación</translation>
     </message>
 </context>
 <context>
@@ -15649,7 +15650,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -19376,7 +19377,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1095"/>
         <source>Current branch tip</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip branch actual</translation>
     </message>
 </context>
 <context>
@@ -19793,7 +19794,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
 </context>
 <context>
@@ -19916,7 +19917,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
 </context>
 <context>
@@ -20277,12 +20278,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="32"/>
         <source>Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revisiones:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="42"/>
         <source>Enter revisions by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir revisiones por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
 </context>
 <context>
@@ -20984,7 +20985,7 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
         <source>Parent</source>
-        <translation type="unfinished">Padre</translation>
+        <translation>Padre</translation>
     </message>
 </context>
 <context>
@@ -22039,12 +22040,12 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="32"/>
         <source>Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revisiones:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="42"/>
         <source>Enter revisions by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir revisiones por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
 </context>
 <context>
@@ -22232,7 +22233,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="33"/>
         <source>Enter revisions by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir revisiones por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
 </context>
 <context>
@@ -24228,7 +24229,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="373"/>
         <source>Current branch tip</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip branch actual</translation>
     </message>
 </context>
 <context>
@@ -24580,7 +24581,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="365"/>
         <source>No revision selected</source>
-        <translation type="unfinished">No se ha seleccionado revisión</translation>
+        <translation>No se ha seleccionado revisión</translation>
     </message>
 </context>
 <context>
@@ -25141,7 +25142,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="248"/>
         <source>Mercurial Queue Repository Status</source>
-        <translation>Estado de Cola del Repositorio Mercurial</translation>
+        <translation>Estado de Cola Repositorio Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.ui" line="137"/>
@@ -25181,7 +25182,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="106"/>
         <source>Forget missing</source>
-        <translation type="unfinished"></translation>
+        <translation>Olvidar elementos perdidos</translation>
     </message>
 </context>
 <context>
@@ -42794,7 +42795,7 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py" line="922"/>
         <source>Initializing new queue repository</source>
-        <translation>Inicializando nueva cola de repositorio</translation>
+        <translation>Inicializando nueva cola repositorio</translation>
     </message>
 </context>
 <context>
@@ -43417,17 +43418,17 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="34"/>
         <source>Init Queue Repository</source>
-        <translation>Iniciar Cola de Repositorio</translation>
+        <translation>Iniciar Cola Repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="38"/>
         <source>Initialize a new versioned queue repository</source>
-        <translation>Inicializar nueva cola versionada de repositorio</translation>
+        <translation>Inicializar nueva cola repositorio versionada</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="41"/>
         <source>&lt;b&gt;Init Queue Repository&lt;/b&gt;&lt;p&gt;This initializes a new versioned queue repository inside the current repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Inciar Cola de Repositorio&lt;/b&gt;&lt;p&gt;Inicializa una nueva cola versionada de repositorio dentro del repositorio actual.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Inciar Cola Repositorio&lt;/b&gt;&lt;p&gt;Inicializa una nueva cola repositorio versionada dentro del repositorio actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="49"/>
@@ -43442,12 +43443,12 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="53"/>
         <source>Commit changes in the queue repository</source>
-        <translation>Hacer commit de los cambios en la cola de repositorio</translation>
+        <translation>Hacer commit de los cambios en la cola repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="56"/>
         <source>&lt;b&gt;Commit changes...&lt;/b&gt;&lt;p&gt;This commits changes in the queue repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Hacer commit de cambios...&lt;/b&gt;&lt;p&gt;Hace un commit de los cambios en la cola de repositorio.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Hacer commit de cambios...&lt;/b&gt;&lt;p&gt;Hace un commit de los cambios en la cola repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="211"/>
@@ -43462,32 +43463,32 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="215"/>
         <source>Show the status of the queue repository</source>
-        <translation>Mostrar el estado de la cola de repositorio</translation>
+        <translation>Mostrar el estado de la cola repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="218"/>
         <source>&lt;b&gt;Show Status&lt;/b&gt;&lt;p&gt;This shows the status of the queue repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostrar Estado&lt;/b&gt;&lt;p&gt;Muestra el estado de la cola de repositorio.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar Estado&lt;/b&gt;&lt;p&gt;Muestra el estado de la cola repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="225"/>
         <source>Show Summary</source>
-        <translation type="unfinished">Mostrar Sumario</translation>
+        <translation>Mostrar Sumario</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="225"/>
         <source>Show summary...</source>
-        <translation type="unfinished">Mostrar Sumario...</translation>
+        <translation>Mostrar Sumario...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="229"/>
         <source>Show summary information of the queue repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar información sumarial de la cola repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="232"/>
         <source>&lt;b&gt;Show summary&lt;/b&gt;&lt;p&gt;This shows some summary information of the queue repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar sumario&lt;/b&gt;&lt;p&gt;Muestra información sumarial de la cola repositorio.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -50083,7 +50084,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="95"/>
         <source>Restore missing</source>
-        <translation>Restaurar perdidas</translation>
+        <translation>Restore sobre elementos perdidos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="514"/>
