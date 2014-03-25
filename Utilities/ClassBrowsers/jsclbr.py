@@ -9,8 +9,8 @@ Parse a JavaScript file and retrieve variables and functions.
 It uses the JavaScript parser contained in the jasy web framework.
 """
 
-import ThirdParty.Jasy.jasy.js.parse.Parser as jsParser
-import ThirdParty.Jasy.jasy.js.tokenize.Tokenizer as jsTokenizer
+import jasy.js.parse.Parser as jsParser
+import jasy.js.tokenize.Tokenizer as jsTokenizer
 
 import Utilities
 import Utilities.ClassBrowsers as ClassBrowsers
@@ -103,16 +103,13 @@ class Visitor(object):
         @return dictionary containing the parsed information
         """
         try:
-            self.__root = jsParser.parse(self.__source)
+            self.__root = jsParser.parse(self.__source, self.__file)
             self.__visit(self.__root)
         except jsParser.SyntaxError:
             # ignore syntax errors of the parser
             pass
         except jsTokenizer.ParseError:
             # ignore syntax errors of the tokenizer
-            pass
-        except Exception:
-            # ignore syntax errors of the tokenizer and parser
             pass
         
         return self.__dict
