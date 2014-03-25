@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1936,8 +1935,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2178,8 +2177,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -15656,7 +15655,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -20244,11 +20243,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Seleccionar para especificar múltiples revisiones</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="32"/>
-        <source>Multiple</source>
-        <translation type="obsolete">Múltiple</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="155"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
         <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
@@ -21911,16 +21905,6 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>Revisión</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="29"/>
-        <source>Select to specify a list of changesets</source>
-        <translation type="obsolete">Seleccionar para especificar una lista de changesets</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="32"/>
-        <source>Changesets:</source>
-        <translation type="obsolete">Changesets:</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="42"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
         <translation>Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
@@ -22748,26 +22732,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="565"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary Mercurial command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ejecutar comando&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir un comando Mercurial arbitrario.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="573"/>
-        <source>Command options</source>
-        <translation type="obsolete">Opciones de comando</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="573"/>
-        <source>Command &amp;options...</source>
-        <translation type="obsolete">&amp;Opciones de comando...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="577"/>
-        <source>Show the Mercurial command options</source>
-        <translation type="obsolete">Mostrar opciones de comando Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="579"/>
-        <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the Mercurial command options.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Opciones de comando...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las opciones de comando Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="573"/>
