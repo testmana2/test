@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1926,8 +1925,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2168,8 +2167,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -15650,7 +15649,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -19722,11 +19721,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Seleccionar para no especificar una revisión específica</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
-        <source>No revision selected</source>
-        <translation type="obsolete">No se ha seleccionado revisión</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="191"/>
         <source>Commit data</source>
         <translation>Hacer commit de los datos</translation>
@@ -19903,11 +19897,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="206"/>
         <source>Select tip revision of repository</source>
         <translation>Seleccionar revisión tip del repositorio</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui" line="209"/>
-        <source>TIP</source>
-        <translation type="obsolete">TIP</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py" line="43"/>
@@ -20254,11 +20243,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="29"/>
         <source>Select to specify multiple revisions</source>
         <translation>Seleccionar para especificar múltiples revisiones</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="32"/>
-        <source>Multiple</source>
-        <translation type="obsolete">Múltiple</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="155"/>
@@ -20926,11 +20910,6 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="175"/>
         <source>Select tip revision of repository</source>
         <translation>Seleccionar revisión tip del repositorio</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
-        <source>TIP</source>
-        <translation type="obsolete">TIP</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="191"/>
@@ -21973,16 +21952,6 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>Seleccionar para especificar una lista de changesets</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="32"/>
-        <source>Changesets:</source>
-        <translation type="obsolete">Changesets:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="42"/>
-        <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="obsolete">Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="55"/>
         <source>Select to specify a revision by a tag</source>
         <translation>Seleccionar para especificar una revisión por tag</translation>
@@ -22189,11 +22158,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="23"/>
         <source>&amp;Revisions:</source>
         <translation>&amp;Revisiones:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="33"/>
-        <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="obsolete">Introducir changesets por número, id, rango o expresión de revset, uno por línea</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="46"/>
@@ -24182,11 +24146,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccionar revisión tip del repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="373"/>
-        <source>TIP</source>
-        <translation type="obsolete">TIP</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="386"/>
         <source>Select to collapse the rebased changesets</source>
         <translation>Seleccionar para colapsar los changesets con rebase</translation>
@@ -24444,11 +24403,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="185"/>
         <source>No revision selected</source>
         <translation>No se ha seleccionado revisión</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.py" line="47"/>
-        <source>Select to not specify a specific revision</source>
-        <translation type="obsolete">Seleccionar para no especificar una revisión específica</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="146"/>
@@ -25018,11 +24972,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="775"/>
         <source>Revert</source>
         <translation>Revertir</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="99"/>
-        <source>Remove from repository</source>
-        <translation type="obsolete">Eliminar de repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="734"/>
