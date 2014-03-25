@@ -5825,7 +5825,6 @@
       <keyword name="Hg.hgGraft" id="Hg.hgGraft" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGraft" />
       <keyword name="Hg.hgGraftContinue" id="Hg.hgGraftContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGraftContinue" />
       <keyword name="Hg.hgIdentify" id="Hg.hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentify" />
-      <keyword name="Hg.hgIdentifyBundle" id="Hg.hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIdentifyBundle" />
       <keyword name="Hg.hgImport" id="Hg.hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgImport" />
       <keyword name="Hg.hgIncoming" id="Hg.hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIncoming" />
       <keyword name="Hg.hgInfo" id="Hg.hgInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgInfo" />
@@ -6349,7 +6348,6 @@
       <keyword name="HgProjectHelper.__hgGraftContinue" id="HgProjectHelper.__hgGraftContinue" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgGraftContinue" />
       <keyword name="HgProjectHelper.__hgHeads" id="HgProjectHelper.__hgHeads" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgHeads" />
       <keyword name="HgProjectHelper.__hgIdentify" id="HgProjectHelper.__hgIdentify" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentify" />
-      <keyword name="HgProjectHelper.__hgIdentifyBundle" id="HgProjectHelper.__hgIdentifyBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIdentifyBundle" />
       <keyword name="HgProjectHelper.__hgImport" id="HgProjectHelper.__hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgImport" />
       <keyword name="HgProjectHelper.__hgIncoming" id="HgProjectHelper.__hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgIncoming" />
       <keyword name="HgProjectHelper.__hgOutgoing" id="HgProjectHelper.__hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgOutgoing" />

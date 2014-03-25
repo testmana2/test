@@ -5001,7 +5001,6 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGetTagsList?4(repodir, withType=Fa
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGraft?4(path, revs=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgGraftContinue?4(path)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgIdentify?4(name)
-eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgIdentifyBundle?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgImport?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgIncoming?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgInfo?4(ppath, mode="heads")
