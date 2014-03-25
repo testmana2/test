@@ -1809,3 +1809,5 @@ def win32_getRealName():
     nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
     GetUserNameEx(NameDisplay, nameBuffer, size)
     return nameBuffer.value
+
+# TODO: add support for JavaScript syntac check using jasy
