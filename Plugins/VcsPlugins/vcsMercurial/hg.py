@@ -2483,7 +2483,6 @@ class Hg(VersionControl):
                 self.log.show()
                 self.log.start(name)
     
-
     def hgUnbundle(self, name):
         """
         Public method to apply changegroup files.

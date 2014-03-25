@@ -19185,7 +19185,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Recuperando de transacción interrumpida</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2562"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2530"/>
         <source>Shall the working directory be updated?</source>
         <translation>¿Debe ser actualizado el directorio de trabajo?</translation>
     </message>
@@ -19200,22 +19200,22 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Crear changegroup</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2575"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2543"/>
         <source>Apply changegroups</source>
         <translation>Aplicar changegroups</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2593"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2561"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation>Subcomando bisect ({0}) inválido.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2631"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2599"/>
         <source>Mercurial Bisect ({0})</source>
         <translation>Mercurial Bisect ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2519"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2484"/>
         <source>Preview changegroup</source>
         <translation>Previsualizar changegroup</translation>
     </message>
@@ -19235,7 +19235,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2665"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2633"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation>Eliminando archivos unicamente del repositorio Mercurial</translation>
     </message>
@@ -19245,22 +19245,22 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Archivos Changegroup de Mercurial (*.hg)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2554"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2522"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation>Archivos Changegroup de Mercurial (*.hg);;Todos los Archivos (*)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2531"/>
         <source>Identifying changegroup file</source>
-        <translation>Identificando archivo de changegroup</translation>
+        <translation type="obsolete">Identificando archivo de changegroup</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2726"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2694"/>
         <source>Backing out changeset</source>
         <translation>Haciendo respaldo de changeset</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2705"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2673"/>
         <source>No revision given. Aborting...</source>
         <translation>No se ha proporcionado revisión. Abortando...</translation>
     </message>
@@ -19270,12 +19270,12 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;p&gt;El archivo changegroup de Mercurial &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2753"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2721"/>
         <source>Rollback last transaction</source>
         <translation>Hacer Rollback de la última transacción</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2746"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2714"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation>¿Está seguro de que quiere aplicar un rollback a la última transacción?</translation>
     </message>
@@ -19285,72 +19285,72 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Haciendo commit de cambios al repositorio Mercurial</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3340"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3308"/>
         <source>Mercurial Command Server</source>
         <translation>Servidor de Comandos de Mercurial</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3198"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3166"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El Servidor de Comandos de Mercurial no ha podido reiniciarse.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3340"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3308"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El Servidor de Comandos de Mercurial no ha podido iniciarse.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2822"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2790"/>
         <source>Import Patch</source>
         <translation>Importar Patch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2870"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2838"/>
         <source>Export Patches</source>
         <translation>Exportar Patches</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2918"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2886"/>
         <source>Change Phase</source>
         <translation>Cambiar Fase</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2972"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2940"/>
         <source>Copy Changesets</source>
         <translation>Copiar Changesets</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2999"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2967"/>
         <source>Copy Changesets (Continue)</source>
         <translation>Copiar Changesets (Continuar)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3085"/>
         <source>Add Sub-repository</source>
         <translation>Añadir Sub-repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3150"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3118"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido leer el archivo .hgsub de sub-repositorios.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3098"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3066"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo .hgsub de sub-repositorios ya contiene una entrada.&lt;/p&gt;&lt;p&gt;Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3169"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3137"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido escribir al archivo .hgsub de sub-repositorios.&lt;/p&gt;&lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3169"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3137"/>
         <source>Remove Sub-repositories</source>
         <translation>Eliminar Sub-repositorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3138"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3106"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de subrepositorios .hgsub no existe. Abortando...&lt;/p&gt;</translation>
     </message>
@@ -19380,7 +19380,7 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>¿Realmente desea revertir todos los cambios del proyecto?</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3035"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3003"/>
         <source>Create Unversioned Archive</source>
         <translation>Crear Archivo Sin Versionar</translation>
     </message>
@@ -22829,7 +22829,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Crear .hgignore&lt;/b&gt;&lt;p&gt;Crea un archivo .hgignore con valores por defecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1006"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="991"/>
         <source>Repository Administration</source>
         <translation>Administración del Repositorio</translation>
     </message>
@@ -22849,22 +22849,22 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Crea un archivo de changegroup recogiendo changesets</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1385"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1363"/>
         <source>Apply changegroups</source>
         <translation>Aplicar changegroups</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="748"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Apply changegroups...</source>
         <translation>Aplicar changegroups...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="752"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="737"/>
         <source>Apply one or several changegroup files</source>
         <translation>Aplicar uno o varios archivos de changegroup</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1038"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1023"/>
         <source>Changegroup Management</source>
         <translation>Gestión de Chagegroup</translation>
     </message>
@@ -22874,7 +22874,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Crear changegroup&lt;/b&gt;&lt;p&gt;Crea un archivo de changegroup recogiendo los changeset seleccionados (hg bundle).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="755"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="740"/>
         <source>&lt;b&gt;Apply changegroups&lt;/b&gt;&lt;p&gt;This applies one or several changegroup files generated by the &apos;Create changegroup&apos; action (hg unbundle).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aplicar changegroups&lt;/b&gt;&lt;p&gt;Aplica uno o varios archivos de changegroup generados por la acción &apos;Crear changegroup&apos; (hg unbundle).&lt;/p&gt;</translation>
     </message>
@@ -22894,67 +22894,67 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Mostrar branch actual&lt;/b&gt;&lt;p&gt;Muestra la branch actual del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="763"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="748"/>
         <source>Mark as &quot;good&quot;</source>
         <translation>Marcar como &quot;bueno&quot;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="767"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="752"/>
         <source>Mark a selectable changeset as good</source>
         <translation>Marcar un changeset seleccionable como bueno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="770"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="755"/>
         <source>&lt;b&gt;Mark as good&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as good.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Marcar como bueno&lt;/b&gt;&lt;p&gt;Marca un changeset seleccionable como bueno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="777"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="762"/>
         <source>Mark as &quot;bad&quot;</source>
         <translation>Marcar como &quot;malo&quot;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="781"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="766"/>
         <source>Mark a selectable changeset as bad</source>
         <translation>Marcar un changeset seleccionable como malo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="784"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="769"/>
         <source>&lt;b&gt;Mark as bad&lt;/b&gt;&lt;p&gt;This marks a selectable changeset as bad.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Marcar como malo&lt;/b&gt;&lt;p&gt;Marca un changeset seleccionable como malo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="791"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="776"/>
         <source>Skip</source>
         <translation>Saltar</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="805"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="790"/>
         <source>Reset</source>
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="809"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="794"/>
         <source>Reset the bisect search data</source>
         <translation>Reiniciar los datos de búsqueda de bisect</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="812"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="797"/>
         <source>&lt;b&gt;Reset&lt;/b&gt;&lt;p&gt;This resets the bisect search data.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Reiniciar&lt;/b&gt;&lt;p&gt;Reinicia los datos de búsqueda de bisect.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1052"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1036"/>
         <source>Bisect</source>
         <translation>Bisect</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="763"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="748"/>
         <source>Mark as &quot;good&quot;...</source>
         <translation>Marcar como &quot;bueno&quot;...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="777"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="762"/>
         <source>Mark as &quot;bad&quot;...</source>
         <translation>Marcar como &quot;malo&quot;...</translation>
     </message>
@@ -23001,35 +23001,35 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Identify changegroup</source>
-        <translation>Identificar changegroup</translation>
+        <translation type="obsolete">Identificar changegroup</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="733"/>
         <source>Identify changegroup...</source>
-        <translation>Identificar changegroup...</translation>
+        <translation type="obsolete">Identificar changegroup...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="737"/>
         <source>Identify a changegroup file containing a collection of changesets</source>
-        <translation>Identificar un archivo de changegroup conteniendo una colección de changesets</translation>
+        <translation type="obsolete">Identificar un archivo de changegroup conteniendo una colección de changesets</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="740"/>
         <source>&lt;b&gt;Identify changegroup&lt;/b&gt;&lt;p&gt;This identifies a changegroup file containing a collection of changesets.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Identificar changegroup&lt;/b&gt;&lt;p&gt;Identifica un archivo de changegroup conteniendo una colección de changesets.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Identificar changegroup&lt;/b&gt;&lt;p&gt;Identifica un archivo de changegroup conteniendo una colección de changesets.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="819"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="804"/>
         <source>Back out changeset</source>
         <translation>Hacer respaldo de changeset</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="823"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="808"/>
         <source>Back out changes of an earlier changeset</source>
         <translation>Hacer respaldo de cambios de un changeset anterior</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="826"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="811"/>
         <source>&lt;b&gt;Back out changeset&lt;/b&gt;&lt;p&gt;This backs out changes of an earlier changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hacer respaldo de changeset&lt;/b&gt;&lt;p&gt;Hace un respaldo de cambios de un changeset anterior.&lt;/p&gt;</translation>
     </message>
@@ -23049,37 +23049,37 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Hacer push de cambios (force)&lt;/b&gt;&lt;p&gt;Se hace un push de los cambios desde el repositorio local a un repositorio remoto utilizando la opción &apos;force&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1029"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1014"/>
         <source>Specials</source>
         <translation>Especial</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="860"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="845"/>
         <source>Serve project repository</source>
         <translation>Servir repositorio de proyecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="860"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="845"/>
         <source>Serve project repository...</source>
         <translation>Servir repositorio de proyecto...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="864"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="849"/>
         <source>Serve the project repository</source>
         <translation>Servir el repositorio de proyecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="867"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="852"/>
         <source>&lt;b&gt;Serve project repository&lt;/b&gt;&lt;p&gt;This serves the project repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Servir repositorio de proyecto&lt;/b&gt;&lt;p&gt;Esto sirve el repositorio de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1222"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1206"/>
         <source>Pull</source>
         <translation>Hacer Pull</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1496"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1474"/>
         <source>The project should be reread. Do this now?</source>
         <translation>El proyecto debería ser cargado de nuevo. ¿Desea hacerlo ahora?</translation>
     </message>
@@ -23099,17 +23099,17 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Hacer push de nueva rama&lt;/b&gt;&lt;p&gt;Hace un push de la rama actual del proyecto local como una nueva rama con nombre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="833"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="818"/>
         <source>Rollback last transaction</source>
         <translation>Rollback de última transacción</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="837"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="822"/>
         <source>Rollback the last transaction</source>
         <translation>Rollback de la última transacción</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1060"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1044"/>
         <source>Extensions</source>
         <translation>Extensiones</translation>
     </message>
@@ -23174,127 +23174,127 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Mostrar ajustes de configuración combinados&lt;/b&gt;&lt;p&gt;Muestra los ajustes de configuración combinados de todos los archivos de configuración.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="791"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="776"/>
         <source>Skip...</source>
         <translation>Ignorar...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="795"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="780"/>
         <source>Skip a selectable changeset</source>
         <translation>Ignorar un changeset seleccionable</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="798"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="783"/>
         <source>&lt;b&gt;Skip&lt;/b&gt;&lt;p&gt;This skips a selectable changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ignorar&lt;/b&gt;&lt;p&gt;Ignora un changeset seleccionable.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1441"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1419"/>
         <source>Import Patch</source>
         <translation>Importar Patch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="874"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="859"/>
         <source>Import Patch...</source>
         <translation>Importar Patch...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="878"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="863"/>
         <source>Import a patch from a patch file</source>
         <translation>Importar un patch desde un archivo de patch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="881"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="866"/>
         <source>&lt;b&gt;Import Patch&lt;/b&gt;&lt;p&gt;This imports a patch from a patch file into the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Importar Patch&lt;/b&gt;&lt;p&gt;Importa un patch desde un archivo de patch al proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1046"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1030"/>
         <source>Patch Management</source>
         <translation>Gestión de Patch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1461"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1439"/>
         <source>Revert Changes</source>
         <translation>Revertir cambios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="889"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="874"/>
         <source>Export Patches</source>
         <translation>Exportar Patches</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="889"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="874"/>
         <source>Export Patches...</source>
         <translation>Exportar Patches...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="893"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="878"/>
         <source>Export revisions to patch files</source>
         <translation>Exportar revisiones a archivos de patch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="896"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="881"/>
         <source>&lt;b&gt;Export Patches&lt;/b&gt;&lt;p&gt;This exports revisions of the project to patch files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Exportar Patches&lt;/b&gt;&lt;p&gt;Exporta revisiones del proyecto a archivos de patch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="903"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="888"/>
         <source>Change Phase</source>
         <translation>Cambiar Fase</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="903"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="888"/>
         <source>Change Phase...</source>
         <translation>Cambiar Fase...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="907"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="892"/>
         <source>Change the phase of revisions</source>
         <translation>Cambiar la fase de revisiones</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="910"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="895"/>
         <source>&lt;b&gt;Change Phase&lt;/b&gt;&lt;p&gt;This changes the phase of revisions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cambiar Fase&lt;/b&gt;&lt;p&gt;Cambia la fase de revisiones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1481"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1459"/>
         <source>Copy Changesets</source>
         <translation>Copiar Changesets</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="922"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="907"/>
         <source>Copies changesets from another branch</source>
         <translation>Copiar changesets de otra branch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="925"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="910"/>
         <source>&lt;b&gt;Copy Changesets&lt;/b&gt;&lt;p&gt;This copies changesets from another branch on top of the current working directory with the user, date and description of the original changeset.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Copiar Changesets&lt;/b&gt;&lt;p&gt;Copia changesets de otra branch encima del directorio de trabajo actual con el usuario, fecha y descripción del changeset original.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="934"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="919"/>
         <source>Continue Copying Session</source>
         <translation>Continuar Sesión de Copia</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="938"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="923"/>
         <source>Continue the last copying session after conflicts were resolved</source>
         <translation>Continuar la última sesión de copia despues de resolver los conflictos</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="941"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="926"/>
         <source>&lt;b&gt;Continue Copying Session&lt;/b&gt;&lt;p&gt;This continues the last copying session after conflicts were resolved.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Continuar Sesión de C opia&lt;/b&gt;&lt;p&gt;Continua la última sesión de copia despues de resolver los conflictos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1072"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1056"/>
         <source>Graft</source>
         <translation>Graft</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1496"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1474"/>
         <source>Copy Changesets (Continue)</source>
         <translation>Copiar Changesets (Continuar)</translation>
     </message>
@@ -23319,47 +23319,47 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Conflictos resueltos&lt;/b&gt;&lt;p&gt;Marca todos los conflictos del proyecto local como resueltos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="949"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="934"/>
         <source>Add</source>
         <translation>Añadir</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="949"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="934"/>
         <source>Add...</source>
         <translation>Añadir...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="954"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="939"/>
         <source>Add a sub-repository</source>
         <translation>Añadir un sub-repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="957"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="942"/>
         <source>&lt;b&gt;Add...&lt;/b&gt;&lt;p&gt;Add a sub-repository to the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir...&lt;/b&gt;&lt;p&gt;Añadir un sub-repositorio al proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="964"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="949"/>
         <source>Remove</source>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="964"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="949"/>
         <source>Remove...</source>
         <translation>Eliminar...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="969"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="954"/>
         <source>Remove sub-repositories</source>
         <translation>Eliminar sub-repositorios</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="972"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="957"/>
         <source>&lt;b&gt;Remove...&lt;/b&gt;&lt;p&gt;Remove sub-repositories from the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Eliminar...&lt;/b&gt;&lt;p&gt;Eliminar sub-repositorios del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1081"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1065"/>
         <source>Sub-Repository</source>
         <translation>Sub-repositorio</translation>
     </message>
@@ -23389,27 +23389,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Mostrar sumario&lt;/b&gt;&lt;p&gt;Muestra información sumarial del estado del directorio de trabajo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="980"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="965"/>
         <source>Create unversioned archive</source>
         <translation>Crear archivo sin versionar</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="980"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="965"/>
         <source>Create unversioned archive...</source>
         <translation>Crear archivo sin versionar...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="985"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="970"/>
         <source>Create an unversioned archive from the repository</source>
         <translation>Crear un archivo sin versionar a partir del repositorio</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="988"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="973"/>
         <source>&lt;b&gt;Create unversioned archive...&lt;/b&gt;&lt;p&gt;This creates an unversioned archive from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear archivo sin versionar...&lt;/b&gt;&lt;p&gt;Crea un archivo sin versionar a partir del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="840"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="825"/>
         <source>&lt;b&gt;Rollback last transaction&lt;/b&gt;&lt;p&gt;This performs a rollback of the last transaction. Transactions are used to encapsulate the effects of all commands that create new changesets or propagate existing changesets into a repository. For example, the following commands are transactional, and their effects can be rolled back:&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (with this repository as the destination)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This command is dangerous. Please use with care. &lt;/strong&gt;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rollback de última transacción&lt;/b&gt;&lt;p&gt;Lleva a cabo un rollback de la última transacción. Las transactiones se utilizan para encapsular los efectos de todos los comandos que crean nuevos changesets or propagan changesets existentes hacia un repository. Por ejemplo, los siguientes comandos son transaccionales, y sus efectos pueden ser revertidos (rollback):&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (con este repositorio como destino)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Este comando es peligroso. Utiliícelo por favor con cuidado.&lt;/strong&gt;&lt;/p&gt;</translation>
     </message>
