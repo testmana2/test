@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="cs_CZ" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="cs_CZ">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -2063,8 +2064,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Otevřít nový &amp;Tab<byte value="x9"/></translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Otevřít nový &amp;Tab	</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2305,8 +2306,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Otevřít nový &amp;Tab<byte value="x9"/><byte value="x9"/></translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Otevřít nový &amp;Tab		</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -16186,8 +16187,8 @@ Reason: {0}</source>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Otevřít odkaz v novém tab okně<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Otevřít odkaz v novém tab okně	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="655"/>
@@ -61655,7 +61656,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="1184"/>
         <source>Enter</source>
-        <translation></translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="1194"/>
