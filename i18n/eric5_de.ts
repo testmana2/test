@@ -60458,7 +60458,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="1183"/>
         <source>Enter</source>
-        <translation>Eingabe</translation>
+        <translation>Enter</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1302"/>
