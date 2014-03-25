@@ -822,7 +822,7 @@ class DebugClientBase(object):
                 return
             
             if cmd == DebugProtocol.RequestCapabilities:
-                self.write('%s%d, "Python"\n' % (
+                self.write('%s%d, "Python2"\n' % (
                     DebugProtocol.ResponseCapabilities,
                     self.__clientCapabilities()))
                 return
