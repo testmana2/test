@@ -2483,38 +2483,7 @@ class Hg(VersionControl):
                 self.log.show()
                 self.log.start(name)
     
-    def hgIdentifyBundle(self, name):
-        """
-        Public method used to identify a changegroup file.
-        
-        @param name directory name on which to base the changegroup (string)
-        """
-        dname, fname = self.splitPath(name)
-        
-        # find the root of the repo
-        repodir = dname
-        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
-            repodir = os.path.dirname(repodir)
-            if os.path.splitdrive(repodir)[1] == os.sep:
-                return
-        
-        file = E5FileDialog.getOpenFileName(
-            None,
-            self.trUtf8("Preview changegroup"),
-            self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
-        if file:
-            self.__lastChangeGroupPath = os.path.dirname(file)
-            
-            args = []
-            args.append('identify')
-            args.append(file)
-            
-            dia = HgDialog(self.trUtf8('Identifying changegroup file'), self)
-            res = dia.startProcess(args, repodir, False)
-            if res:
-                dia.exec_()
-    
+
     def hgUnbundle(self, name):
         """
         Public method to apply changegroup files.
