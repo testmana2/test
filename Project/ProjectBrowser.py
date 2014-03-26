@@ -297,6 +297,7 @@ class ProjectBrowser(E5TabWidget):
                     icon = UI.PixmapCache.getIcon("projectSourcesRbMixed.png")
                 else:
                     icon = UI.PixmapCache.getIcon("projectSourcesRb.png")
+            # TODO: add icon for JavaScript
             else:
                 icon = UI.PixmapCache.getIcon("projectSources.png")
         self.setTabIcon(self.indexOf(self.psBrowser), icon)

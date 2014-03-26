@@ -155,6 +155,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             for ext in Preferences.getPython("PythonExtensions"):
                 files.extend(
                     Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            files.extend(Utilities.direntries(fn, 1, '*.js', 0))
         else:
             files = [fn]
         
@@ -166,15 +167,19 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         py2files = [f for f in files
                     if f.endswith(
                         tuple(Preferences.getPython("PythonExtensions")))]
+        jsfiles = [f for f in files if f.endswith(".js")]
         
         if (codestring and len(py3files) == 1) or \
            (codestring and len(py2files) == 1) or \
-           (not codestring and len(py3files) + len(py2files) > 0):
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
+           (codestring and len(jsfiles) == 1) or \
+           (not codestring and 
+                len(py3files) + len(py2files) + len(jsfiles) > 0):
+            self.checkProgress.setMaximum(
+                len(py3files) + len(py2files) + len(jsfiles))
             self.checkProgressLabel.setVisible(
-                len(py3files) + len(py2files) > 1)
+                len(py3files) + len(py2files) + len(jsfiles) > 1)
             self.checkProgress.setVisible(
-                len(py3files) + len(py2files) > 1)
+                len(py3files) + len(py2files) + len(jsfiles) > 1)
             QApplication.processEvents()
             
             ignoreStarImportWarnings = \
@@ -182,7 +187,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             
             # now go through all the files
             progress = 0
-            for file in py3files + py2files:
+            for file in py3files + py2files + jsfiles:
                 self.checkProgress.setValue(progress)
                 self.checkProgressLabel.setPath(file)
                 QApplication.processEvents()
@@ -226,6 +231,11 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                             file,
                             checkFlakes=Preferences.getFlakes(
                                 "IncludeInSyntaxCheck"))
+                elif file in jsfiles:
+                    nok, fname, line, error = \
+                        Utilities.jsCheckSyntax(file, source)
+                    index = 0
+                    code = source[line - 1]
                 else:
                     isPy3 = True
                     nok, fname, line, index, code, error = \
@@ -234,7 +244,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     self.noResults = False
                     self.__createResultItem(fname, line, index, error, code)
                 else:
-                    if Preferences.getFlakes("IncludeInSyntaxCheck"):
+                    if file not in jsfiles and \
+                            Preferences.getFlakes("IncludeInSyntaxCheck"):
                         if isPy3:
                             try:
                                 from Utilities.pyflakes.checker import Checker

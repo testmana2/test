@@ -108,6 +108,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.__createPythonPopupMenus()
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.__createRubyPopupMenus()
+        # TODO: add JavaScript menu
         
     def __createPythonPopupMenus(self):
         """

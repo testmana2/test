@@ -538,6 +538,8 @@ class Editor(QsciScintillaCompat):
                 bindName = "dummy.d"
             elif self.filetype == "Properties":
                 bindName = "dummy.ini"
+            elif self.filetype == "JavaScript":
+                bindName = "dummy.js"
         
         # #! marker detection
         if not bindName and line0.startswith("#!"):
@@ -1878,6 +1880,23 @@ class Editor(QsciScintillaCompat):
                os.path.splitext(self.fileName)[1] in \
                     self.dbs.getExtensions('Ruby'):
                 self.filetype = "Ruby"
+                return True
+        
+        return False
+
+    def isJavascriptFile(self):
+        """
+        Public method to return a flag indicating a Javascript file.
+        
+        @return flag indicating a Javascript file (boolean)
+        """
+        if self.filetype == "JavaScript":
+            return True
+        
+        if self.filetype == "":
+            if self.fileName is not None and \
+               os.path.splitext(self.fileName)[1] == ".js":
+                self.filetype = "JavaScript"
                 return True
         
         return False
@@ -5176,6 +5195,13 @@ class Editor(QsciScintillaCompat):
                         else:
                             msg = warning[2]
                         self.toggleWarning(int(warning[1]), True, msg)
+            elif self.isJavascriptFile():
+                syntaxError, _fn, errorline, _error = \
+                    Utilities.jsCheckSyntax(self.fileName or "(Unnamed)",
+                                            self.text())
+                if syntaxError:
+                    self.toggleSyntaxError(
+                        int(errorline), 0, True, _error)
         
     def __initOnlineSyntaxCheck(self):
         """

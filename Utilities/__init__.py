@@ -1810,4 +1810,45 @@ def win32_getRealName():
     GetUserNameEx(NameDisplay, nameBuffer, size)
     return nameBuffer.value
 
-# TODO: add support for JavaScript syntac check using jasy
+###############################################################################
+# Javascript related functions below
+###############################################################################
+
+
+def jsCheckSyntax(file, codestring=""):
+    """
+    Function to check a Javascript source file for syntax errors.
+    
+    @param file source filename (string)
+    @param codestring string containing the code to check (string)
+    @return A tuple indicating status (True = an error was found), the
+        file name, the line number and the error message (boolean, string,
+        string, string). The values are only valid, if the status is True.
+    """
+    import jasy.js.parse.Parser as jsParser
+    import jasy.js.tokenize.Tokenizer as jsTokenizer
+    
+    if not codestring:
+        try:
+            codestring = readEncodedFile(file)[0]
+        except (UnicodeDecodeError, IOError):
+            return (False, None, None, None)
+    
+    # normalize line endings
+    codestring = codestring.replace("\r\n", "\n")
+    codestring = codestring.replace("\r", "\n")
+    
+    # ensure source ends with an eol
+    if codestring and codestring[-1] != '\n':
+        codestring = codestring + '\n'
+    
+    try:
+        jsParser.parse(codestring, file)
+    except (jsParser.SyntaxError, jsTokenizer.ParseError) as exc:
+        details = exc.args[0]
+        error, details = details.splitlines()
+        fn, line = details.strip().rsplit(":", 1)
+        error = error.split(":", 1)[1].strip()
+        return (True, fn, line, error)
+    
+    return (False, None, None, None)

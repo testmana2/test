@@ -150,7 +150,7 @@ class SyntaxCheckerPlugin(QObject):
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() in
-                ["Python3", "Python2", "Python"])
+                ["Python3", "Python2", "Python", "JavaScript"])
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -162,7 +162,7 @@ class SyntaxCheckerPlugin(QObject):
         """
         if menuName == "Checks" and \
            e5App().getObject("Project").getProjectLanguage() in \
-                ["Python3", "Python2", "Python"]:
+                ["Python3", "Python2", "Python", "JavaScript"]:
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
@@ -189,7 +189,8 @@ class SyntaxCheckerPlugin(QObject):
                  for file in project.pdata["SOURCES"]
                  if file.endswith(
                      tuple(Preferences.getPython("Python3Extensions")) +
-                     tuple(Preferences.getPython("PythonExtensions")))]
+                     tuple(Preferences.getPython("PythonExtensions")) +
+                     (".js", ))]
         
         from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
             SyntaxCheckerDialog
@@ -252,7 +253,10 @@ class SyntaxCheckerPlugin(QObject):
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
             self.__editorAct.setEnabled(
-                editor.isPy3File() or editor.isPy2File())
+                editor.isPy3File() or 
+                editor.isPy2File() or 
+                editor.isJavascriptFile()
+            )
     
     def __editorSyntaxCheck(self):
         """
@@ -261,9 +265,13 @@ class SyntaxCheckerPlugin(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
-                from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
-                    SyntaxCheckerDialog
-                self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
-                self.__editorSyntaxCheckerDialog.show()
-                self.__editorSyntaxCheckerDialog.start(
-                    editor.getFileName() or "Unnamed.py", editor.text())
+            from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
+                SyntaxCheckerDialog
+            self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
+            self.__editorSyntaxCheckerDialog.show()
+            if editor.isJavascriptFile():
+                unnamed = "Unnamed.js"
+            else:
+                unnamed = "Unnamed.py"
+            self.__editorSyntaxCheckerDialog.start(
+                editor.getFileName() or unnamed, editor.text())

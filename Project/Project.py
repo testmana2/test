@@ -168,12 +168,14 @@ class Project(QObject):
         
         self.ui = parent
         
+        # TODO: add JavaScript below
         self.__progLanguages = [
             "Python2",
             "Python3",
             "Ruby",
         ]
         
+        # TODO: add JavaScript below
         self.sourceExtensions = {
             "Python2": Preferences.getPython("PythonExtensions"),
             "Python3": Preferences.getPython("Python3Extensions"),

@@ -53,7 +53,7 @@ class ProfileTreeWidgetItem(QTreeWidgetItem):
 
 class PyProfileDialog(QDialog, Ui_PyProfileDialog):
     """
-    Class implementing a dialog to display the results of a syntax check run.
+    Class implementing a dialog to display the results of a profiling run.
     """
     def __init__(self, parent=None):
         """
