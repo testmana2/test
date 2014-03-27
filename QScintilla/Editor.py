@@ -333,9 +333,8 @@ class Editor(QsciScintillaCompat):
                     if not res:
                         raise IOError()
                 self.readFile(self.fileName, True)
-                bindName = self.__bindName(self.text(0))
-                self.__bindLexer(bindName)
-                self.__bindCompleter(bindName)
+                self.__bindLexer(self.fileName)
+                self.__bindCompleter(self.fileName)
                 self.__autoSyntaxCheck()
                 self.isResourcesFile = self.fileName.endswith(".qrc")
                 
@@ -1452,28 +1451,24 @@ class Editor(QsciScintillaCompat):
             self.SCN_STYLENEEDED.disconnect(self.__styleNeeded)
         
         language = ""
+        basename = os.path.basename(filename)
         if self.project.isOpen() and self.project.isProjectFile(filename):
-            language = self.project.getEditorLexerAssoc(
-                os.path.basename(filename))
+            language = self.project.getEditorLexerAssoc(basename)
         if not language:
-            ext = os.path.splitext(filename)[1]
-            if ext in [".py", ".pyw"]:
-                if self.isPy3File():
-                    language = "Python3"
-                elif self.isPy2File():
-                    language = "Python2"
-                else:
-                    # default is Python 3
-                    language = "Python3"
-            else:
-                filename = os.path.basename(filename)
-                language = Preferences.getEditorLexerAssoc(filename)
-                if language == "Python":
-                    # correction for Python
-                    if self.isPy2File():
-                        language = "Python2"
-                    else:
-                        language = "Python3"
+            language = Preferences.getEditorLexerAssoc(basename)
+        if not language:
+            bindName = self.__bindName(self.text(0))
+            language = Preferences.getEditorLexerAssoc(bindName)
+        if language == "Python":
+            # correction for Python
+            pyVer = Utilities.determinePythonVersion(
+                filename, self.text(0), self)
+            language = "Python{0}".format(pyVer)
+        if language in ['Python2', 'Python3']:
+            self.filetype = language
+        else:
+            self.filetype = ""
+        
         if language.startswith("Pygments|"):
             pyname = language.split("|", 1)[1]
             language = ""
@@ -1581,10 +1576,9 @@ class Editor(QsciScintillaCompat):
         filename = os.path.basename(filename)
         apiLanguage = Preferences.getEditorLexerAssoc(filename)
         if apiLanguage == "":
-            if self.isPy3File():
-                apiLanguage = "Python3"
-            elif self.isPy2File():
-                apiLanguage = "Python2"
+            pyVer = self.getPyVersion()
+            if pyVer:
+                apiLanguage = "Python{0}".format(pyVer)
             elif self.isRubyFile():
                 apiLanguage = "Ruby"
         
@@ -1713,12 +1707,9 @@ class Editor(QsciScintillaCompat):
         """
         ftype = self.filetype
         if not ftype:
-            ftype = self.getFileTypeByFlag()
-        if not ftype:
-            if self.isPy3File():
-                ftype = "Python3"
-            elif self.isPy2File():
-                ftype = "Python2"
+            pyVer = self.getPyVersion()
+            if pyVer:
+                ftype = "Python{0}".format(pyVer)
             elif self.isRubyFile():
                 ftype = "Ruby"
             else:
@@ -1733,51 +1724,24 @@ class Editor(QsciScintillaCompat):
         @return current encoding (string)
         """
         return self.encoding
+    
+    def getPyVersion(self):
+        """
+        Public methode to return the Python main version (2 or 3) or 0 if it's
+        not a Python file at all.
         
+        @return Python version (2 or 3) or 0 if it's not a Python file (int)
+        """
+        return Utilities.determinePythonVersion(
+            self.fileName, self.text(0), self)
+
     def isPy2File(self):
         """
         Public method to return a flag indicating a Python file.
         
         @return flag indicating a Python file (boolean)
         """
-        if self.filetype in ["Python", "Python2"]:
-            return True
-        
-        if self.filetype == "":
-            # 1) Determine by first line
-            line0 = self.text(0)
-            if line0.startswith("#!") and \
-               ("python2" in line0 or
-                    ("python" in line0 and not "python3" in line0)):
-                self.filetype = "Python2"
-                return True
-            
-            if self.fileName is not None:
-                ext = os.path.splitext(self.fileName)[1]
-                if ext in [".py", ".pyw"]:
-                    # 2) .py and .pyw are ambiguous; determine from project
-                    if Preferences.getProject("DeterminePyFromProject") and \
-                       self.project.isOpen() and \
-                       self.project.isProjectFile(self.fileName):
-                        isProjectPy2 = \
-                            self.project.getProjectLanguage() in ["Python",
-                                                                  "Python2"]
-                        if isProjectPy2:
-                            self.filetype = "Python2"
-                        return isProjectPy2
-#                    else:
-#                        # 3) determine by compiling the sources
-#                        syntaxError = Utilities.compile(
-#                            self.fileName, self.text(), True)[0]
-#                        if not syntaxError:
-#                            self.filetype = "Python2"
-#                            return True
-                
-                if ext in self.dbs.getExtensions('Python2'):
-                    self.filetype = "Python2"
-                    return True
-        
-        return False
+        return self.getPyVersion() == 2
 
     def isPy3File(self):
         """
@@ -1785,42 +1749,7 @@ class Editor(QsciScintillaCompat):
         
         @return flag indicating a Python3 file (boolean)
         """
-        if self.filetype in ["Python3"]:
-            return True
-        
-        if self.filetype == "":
-            # 1) Determine by first line
-            line0 = self.text(0)
-            if line0.startswith("#!") and \
-               "python3" in line0:
-                self.filetype = "Python3"
-                return True
-            
-            if self.fileName is not None:
-                ext = os.path.splitext(self.fileName)[1]
-                if ext in [".py", ".pyw"]:
-                    # 2) .py and .pyw are ambiguous; determine from project
-                    if Preferences.getProject("DeterminePyFromProject") and \
-                       self.project.isOpen() and \
-                       self.project.isProjectFile(self.fileName):
-                        isProjectPy3 = \
-                            self.project.getProjectLanguage() in ["Python3"]
-                        if isProjectPy3:
-                            self.filetype = "Python3"
-                        return isProjectPy3
-#                    else:
-#                        # 3) determine by compiling the sources
-#                        syntaxError = Utilities.compile(
-#                            self.fileName, self.text(), False)[0]
-#                        if not syntaxError:
-#                            self.filetype = "Python3"
-#                            return True
-                
-                if ext in self.dbs.getExtensions('Python3'):
-                    self.filetype = "Python3"
-                    return True
-        
-        return False
+        return self.getPyVersion() == 3
 
     def isRubyFile(self):
         """
@@ -2073,7 +2002,7 @@ class Editor(QsciScintillaCompat):
         @param temporary flag indicating a temporary breakpoint (boolean)
         """
         if self.fileName and \
-           (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
+           (self.getPyVersion() or self.isRubyFile()):
             self.breakpointModel.addBreakPoint(
                 self.fileName, line, ('', temporary, True, 0))
             self.breakpointToggled.emit(self)
@@ -3757,7 +3686,7 @@ class Editor(QsciScintillaCompat):
         
         @param goUp flag indicating the move direction (boolean)
         """
-        if self.isPy3File() or self.isPy2File() or self.isRubyFile():
+        if self.getPyVersion() or self.isRubyFile():
             lineNo = self.getCursorPosition()[0]
             line = self.text(lineNo)
             if line.strip().startswith(("class ", "def ", "module ")):
@@ -4591,13 +4520,12 @@ class Editor(QsciScintillaCompat):
             self.menuActs["Cut"].setEnabled(self.hasSelectedText())
             self.menuActs["Copy"].setEnabled(self.hasSelectedText())
         if not self.isResourcesFile:
-            if self.fileName and \
-               (self.isPy3File() or self.isPy2File()):
+            if self.fileName and self.getPyVersion():
                 self.menuActs["Show"].setEnabled(True)
             else:
                 self.menuActs["Show"].setEnabled(False)
             if self.fileName and \
-               (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
+               (self.getPyVersion() or self.isRubyFile()):
                 self.menuActs["Diagrams"].setEnabled(True)
             else:
                 self.menuActs["Diagrams"].setEnabled(False)
@@ -4731,8 +4659,7 @@ class Editor(QsciScintillaCompat):
         Private slot handling the aboutToShow signal of the margins context
         menu.
         """
-        if self.fileName and \
-           (self.isPy3File() or self.isPy2File() or self.isRubyFile()):
+        if self.fileName and (self.getPyVersion() or self.isRubyFile()):
             self.marginMenuActs["Breakpoint"].setEnabled(True)
             self.marginMenuActs["TempBreakpoint"].setEnabled(True)
             if self.markersAtLine(self.line) & self.breakpointMask:

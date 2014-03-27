@@ -5377,8 +5377,7 @@ class UserInterface(E5MainWindow):
                     self.utEditorOpen = cap & HasUnittest
                     return
             
-            if self.viewmanager.getOpenEditor(fn).isPy3File() or \
-               self.viewmanager.getOpenEditor(fn).isPy2File():
+            if self.viewmanager.getOpenEditor(fn).getPyVersion():
                 self.utScriptAct.setEnabled(True)
                 self.utEditorOpen = True
         
@@ -5404,7 +5403,7 @@ class UserInterface(E5MainWindow):
                     self.utEditorOpen = cap & HasUnittest
                     return
             
-            if editor.isPy3File() or editor.isPy2File():
+            if editor.getPyVersion():
                 self.utScriptAct.setEnabled(True)
                 self.utEditorOpen = True
                 return

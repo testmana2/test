@@ -871,7 +871,7 @@ class DebugUI(QObject):
         if editor is None:
             return
         
-        if editor.isPy3File() or editor.isPy2File() or editor.isRubyFile():
+        if editor.getPyVersion() or editor.isRubyFile():
             if editor.curLineHasBreakpoint():
                 self.dbgEditBpAct.setEnabled(True)
             else:
