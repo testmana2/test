@@ -632,6 +632,7 @@ class BrowserModel(QAbstractItemModel):
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
+        parentItem._populated = True
 
     def populateClassItem(self, parentItem, repopulate=False):
         """
