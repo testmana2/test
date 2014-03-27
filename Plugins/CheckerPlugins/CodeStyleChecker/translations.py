@@ -501,6 +501,23 @@ _messages = {
         "Could not save the file! Skipping it. Reason: {0}"),
 }
 
+_messages_sample_args = {
+    "E201": ["([{"],
+    "E202": ["}])"],
+    "E203": [",;:"],
+    "E211": ["(["],
+    "E231": [",;:"],
+    "E241": [",;:"],
+    "E242": [",;:"],
+    "E302": [1],
+    "E303": [3],
+    "E501": [85, 79],
+    "E711": ["None", "'if cond is None:'"],
+    "E712": ["True", "'if cond is True:' or 'if cond:'"],
+    "E901": ["SyntaxError", "Invalid Syntax"],
+    "D901": ["SyntaxError", "Invalid Syntax"],
+}
+
 
 def getTranslatedMessage(message):
     """
