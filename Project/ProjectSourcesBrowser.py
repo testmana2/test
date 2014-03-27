@@ -108,7 +108,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.__createPythonPopupMenus()
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.__createRubyPopupMenus()
-        # TODO: add JavaScript menu
+        elif self.project.pdata["PROGLANGUAGE"][0] == "JavaScript":
+            self.__createJavaScriptPopupMenus()
         
     def __createPythonPopupMenus(self):
         """
@@ -410,6 +411,188 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.tr('Add source directory...'), self.__addSourceDirectory)
         self.dirMenu.addSeparator()
         act = self.dirMenu.addMenu(self.graphicsMenu)
+        self.dirMenu.addSeparator()
+        self.dirMenu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.dirMenu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.dirMenu.addSeparator()
+        self.dirMenu.addAction(self.tr('Configure...'), self._configure)
+        
+        self.dirMultiMenu = QMenu(self)
+        self.dirMultiMenu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.dirMultiMenu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.dirMultiMenu.addSeparator()
+        self.dirMultiMenu.addAction(
+            self.tr('Configure...'), self._configure)
+        
+        self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
+        self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
+        self.dirMenu.aboutToShow.connect(self.__showContextMenuDir)
+        self.dirMultiMenu.aboutToShow.connect(self.__showContextMenuDirMulti)
+        self.backMenu.aboutToShow.connect(self.__showContextMenuBack)
+        self.mainMenu = self.sourceMenu
+        
+    def __createJavaScriptPopupMenus(self):
+        """
+        Privat method to generate the popup menus for a Python project.
+        """
+        self.checksMenu = QMenu(self.tr('Check'))
+        self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
+        
+##        self.menuShow = QMenu(self.tr('Show'))
+##        self.menuShow.addAction(
+##            self.tr('Code metrics...'), self.__showCodeMetrics)
+##        self.coverageMenuAction = self.menuShow.addAction(
+##            self.tr('Code coverage...'), self.__showCodeCoverage)
+##        self.profileMenuAction = self.menuShow.addAction(
+##            self.tr('Profile data...'), self.__showProfileData)
+##        self.menuShow.aboutToShow.connect(self.__showContextMenuShow)
+##        
+##        self.graphicsMenu = QMenu(self.tr('Diagrams'))
+##        self.classDiagramAction = self.graphicsMenu.addAction(
+##            self.tr("Class Diagram..."), self.__showClassDiagram)
+##        self.graphicsMenu.addAction(
+##            self.tr("Package Diagram..."), self.__showPackageDiagram)
+##        self.importsDiagramAction = self.graphicsMenu.addAction(
+##            self.tr("Imports Diagram..."), self.__showImportsDiagram)
+##        self.graphicsMenu.addAction(
+##            self.tr("Application Diagram..."),
+##            self.__showApplicationDiagram)
+##        self.graphicsMenu.addSeparator()
+##        self.graphicsMenu.addAction(
+##            UI.PixmapCache.getIcon("open.png"),
+##            self.tr("Load Diagram..."), self.__loadDiagram)
+##        self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
+##        
+##        self.unittestAction = self.sourceMenu.addAction(
+##            self.tr('Run unittest...'), self.handleUnittest)
+        self.sourceMenu.addSeparator()
+        act = self.sourceMenu.addAction(
+            self.tr('Rename file'), self._renameFile)
+        self.menuActions.append(act)
+        act = self.sourceMenu.addAction(
+            self.tr('Remove from project'), self._removeFile)
+        self.menuActions.append(act)
+        act = self.sourceMenu.addAction(
+            self.tr('Delete'), self.__deleteFile)
+        self.menuActions.append(act)
+        self.sourceMenu.addSeparator()
+##        self.sourceMenu.addAction(
+##            self.tr('New package...'), self.__addNewPackage)
+        self.sourceMenu.addAction(
+            self.tr('Add source files...'), self.__addSourceFiles)
+        self.sourceMenu.addAction(
+            self.tr('Add source directory...'), self.__addSourceDirectory)
+        self.sourceMenu.addSeparator()
+##        act = self.sourceMenu.addMenu(self.graphicsMenu)
+##        self.sourceMenu.addSeparator()
+        self.sourceMenu.addMenu(self.checksMenu)
+        self.sourceMenu.addSeparator()
+##        self.sourceMenuActions["Show"] = self.sourceMenu.addMenu(self.menuShow)
+##        self.sourceMenu.addSeparator()
+        self.sourceMenu.addAction(
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
+        self.sourceMenu.addSeparator()
+        self.sourceMenu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.sourceMenu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.sourceMenu.addSeparator()
+        self.sourceMenu.addAction(self.tr('Configure...'), self._configure)
+
+        self.menu.addSeparator()
+##        self.menu.addAction(
+##            self.tr('New package...'), self.__addNewPackage)
+        self.menu.addAction(
+            self.tr('Add source files...'), self.__addSourceFiles)
+        self.menu.addAction(
+            self.tr('Add source directory...'), self.__addSourceDirectory)
+        self.menu.addSeparator()
+        self.menu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.menu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.menu.addSeparator()
+        self.menu.addAction(self.tr('Configure...'), self._configure)
+
+        # create the attribute menu
+        self.gotoMenu = QMenu(self.tr("Goto"), self)
+        self.gotoMenu.aboutToShow.connect(self._showGotoMenu)
+        self.gotoMenu.triggered.connect(self._gotoAttribute)
+        
+        self.attributeMenu = QMenu(self)
+        self.attributeMenu.addMenu(self.gotoMenu)
+        self.attributeMenu.addSeparator()
+##        self.attributeMenu.addAction(
+##            self.tr('New package...'), self.__addNewPackage)
+        self.attributeMenu.addAction(
+            self.tr('Add source files...'), self.project.addSourceFiles)
+        self.attributeMenu.addAction(
+            self.tr('Add source directory...'), self.project.addSourceDir)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.attributeMenu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.attributeMenu.addSeparator()
+        self.attributeMenu.addAction(
+            self.tr('Configure...'), self._configure)
+        
+        self.backMenu = QMenu(self)
+##        self.backMenu.addAction(
+##            self.tr('New package...'), self.__addNewPackage)
+        self.backMenu.addAction(
+            self.tr('Add source files...'), self.project.addSourceFiles)
+        self.backMenu.addAction(
+            self.tr('Add source directory...'), self.project.addSourceDir)
+        self.backMenu.addSeparator()
+        self.backMenu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.backMenu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.backMenu.addSeparator()
+        self.backMenu.addAction(self.tr('Configure...'), self._configure)
+        self.backMenu.setEnabled(False)
+        
+        self.multiMenu.addSeparator()
+        act = self.multiMenu.addAction(
+            self.tr('Remove from project'), self._removeFile)
+        self.multiMenuActions.append(act)
+        act = self.multiMenu.addAction(
+            self.tr('Delete'), self.__deleteFile)
+        self.multiMenuActions.append(act)
+        self.multiMenu.addSeparator()
+        self.multiMenu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.multiMenu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.multiMenu.addSeparator()
+        self.multiMenu.addAction(self.tr('Configure...'), self._configure)
+        
+        self.dirMenu = QMenu(self)
+        act = self.dirMenu.addAction(
+            self.tr('Remove from project'), self._removeDir)
+        self.dirMenuActions.append(act)
+        act = self.dirMenu.addAction(
+            self.tr('Delete'), self._deleteDirectory)
+        self.dirMenuActions.append(act)
+        self.dirMenu.addSeparator()
+##        self.dirMenu.addAction(
+##            self.tr('New package...'), self.__addNewPackage)
+        self.dirMenu.addAction(
+            self.tr('Add source files...'), self.__addSourceFiles)
+        self.dirMenu.addAction(
+            self.tr('Add source directory...'), self.__addSourceDirectory)
+        self.dirMenu.addSeparator()
+##        act = self.dirMenu.addMenu(self.graphicsMenu)
+##        self.dirMenu.addSeparator()
+        self.dirMenu.addMenu(self.checksMenu)
+        self.dirMenu.addSeparator()
+        self.dirMenu.addAction(
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
             self.tr('Expand all directories'), self._expandAllDirs)
