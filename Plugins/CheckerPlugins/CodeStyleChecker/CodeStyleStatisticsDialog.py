@@ -25,7 +25,7 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
     Class implementing a dialog showing statistical data for the last
     code style checker run.
     """
-    def __init__ (self, statistics, parent=None):
+    def __init__(self, statistics, parent=None):
         """
         Constructor
         
