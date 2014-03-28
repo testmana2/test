@@ -235,7 +235,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     nok, fname, line, error = \
                         Utilities.jsCheckSyntax(file, source)
                     index = 0
-                    code = source[line - 1]
+                    code = source.splitlines()[int(line) - 1] if nok else ""
                 else:
                     isPy3 = True
                     nok, fname, line, index, code, error = \

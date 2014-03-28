@@ -5511,9 +5511,9 @@ class Editor(QsciScintillaCompat):
         if error:
             # set a new syntax error marker
             markers = self.markersAtLine(line - 1)
+            index += self.indentation(line - 1)
             if not (markers & (1 << self.syntaxerror)):
                 handle = self.markerAdd(line - 1, self.syntaxerror)
-                index += self.indentation(line - 1)
                 self.syntaxerrors[handle] = [(msg, index)]
                 self.syntaxerrorToggled.emit(self)
             else:

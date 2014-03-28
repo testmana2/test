@@ -92,9 +92,16 @@ class Visitor(object):
         self.__root = None
         self.__stack = []
         
-        self.__source = src
         self.__module = module
         self.__file = filename
+        self.__source = src
+        
+        # normalize line endings
+        self.__source = self.__source.replace("\r\n", "\n").replace("\r", "\n")
+        
+        # ensure source ends with an eol
+        if self.__source[-1] != '\n':
+            self.__source = self.__source + '\n'
     
     def parse(self):
         """

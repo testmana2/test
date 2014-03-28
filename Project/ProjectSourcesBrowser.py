@@ -115,6 +115,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Privat method to generate the popup menus for a Python project.
         """
+        # TODO: add this to the multi files menu
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
@@ -439,36 +440,10 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Privat method to generate the popup menus for a Python project.
         """
+        # TODO: add this to the multi files menu
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
-##        self.menuShow = QMenu(self.tr('Show'))
-##        self.menuShow.addAction(
-##            self.tr('Code metrics...'), self.__showCodeMetrics)
-##        self.coverageMenuAction = self.menuShow.addAction(
-##            self.tr('Code coverage...'), self.__showCodeCoverage)
-##        self.profileMenuAction = self.menuShow.addAction(
-##            self.tr('Profile data...'), self.__showProfileData)
-##        self.menuShow.aboutToShow.connect(self.__showContextMenuShow)
-##        
-##        self.graphicsMenu = QMenu(self.tr('Diagrams'))
-##        self.classDiagramAction = self.graphicsMenu.addAction(
-##            self.tr("Class Diagram..."), self.__showClassDiagram)
-##        self.graphicsMenu.addAction(
-##            self.tr("Package Diagram..."), self.__showPackageDiagram)
-##        self.importsDiagramAction = self.graphicsMenu.addAction(
-##            self.tr("Imports Diagram..."), self.__showImportsDiagram)
-##        self.graphicsMenu.addAction(
-##            self.tr("Application Diagram..."),
-##            self.__showApplicationDiagram)
-##        self.graphicsMenu.addSeparator()
-##        self.graphicsMenu.addAction(
-##            UI.PixmapCache.getIcon("open.png"),
-##            self.tr("Load Diagram..."), self.__loadDiagram)
-##        self.graphicsMenu.aboutToShow.connect(self.__showContextMenuGraphics)
-##        
-##        self.unittestAction = self.sourceMenu.addAction(
-##            self.tr('Run unittest...'), self.handleUnittest)
         self.sourceMenu.addSeparator()
         act = self.sourceMenu.addAction(
             self.tr('Rename file'), self._renameFile)
@@ -480,19 +455,13 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.tr('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.sourceMenu.addSeparator()
-##        self.sourceMenu.addAction(
-##            self.tr('New package...'), self.__addNewPackage)
         self.sourceMenu.addAction(
             self.tr('Add source files...'), self.__addSourceFiles)
         self.sourceMenu.addAction(
             self.tr('Add source directory...'), self.__addSourceDirectory)
         self.sourceMenu.addSeparator()
-##        act = self.sourceMenu.addMenu(self.graphicsMenu)
-##        self.sourceMenu.addSeparator()
         self.sourceMenu.addMenu(self.checksMenu)
         self.sourceMenu.addSeparator()
-##        self.sourceMenuActions["Show"] = self.sourceMenu.addMenu(self.menuShow)
-##        self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(
             self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.sourceMenu.addSeparator()
@@ -504,8 +473,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.sourceMenu.addAction(self.tr('Configure...'), self._configure)
 
         self.menu.addSeparator()
-##        self.menu.addAction(
-##            self.tr('New package...'), self.__addNewPackage)
         self.menu.addAction(
             self.tr('Add source files...'), self.__addSourceFiles)
         self.menu.addAction(
@@ -526,8 +493,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.attributeMenu = QMenu(self)
         self.attributeMenu.addMenu(self.gotoMenu)
         self.attributeMenu.addSeparator()
-##        self.attributeMenu.addAction(
-##            self.tr('New package...'), self.__addNewPackage)
         self.attributeMenu.addAction(
             self.tr('Add source files...'), self.project.addSourceFiles)
         self.attributeMenu.addAction(
@@ -542,8 +507,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.tr('Configure...'), self._configure)
         
         self.backMenu = QMenu(self)
-##        self.backMenu.addAction(
-##            self.tr('New package...'), self.__addNewPackage)
         self.backMenu.addAction(
             self.tr('Add source files...'), self.project.addSourceFiles)
         self.backMenu.addAction(
@@ -580,15 +543,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             self.tr('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
-##        self.dirMenu.addAction(
-##            self.tr('New package...'), self.__addNewPackage)
         self.dirMenu.addAction(
             self.tr('Add source files...'), self.__addSourceFiles)
         self.dirMenu.addAction(
             self.tr('Add source directory...'), self.__addSourceDirectory)
         self.dirMenu.addSeparator()
-##        act = self.dirMenu.addMenu(self.graphicsMenu)
-##        self.dirMenu.addSeparator()
         self.dirMenu.addMenu(self.checksMenu)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
