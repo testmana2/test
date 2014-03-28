@@ -74,28 +74,34 @@ class BackgroundClient(object):
         self.connection.sendall(header)
         self.connection.sendall(packedData)
 
+    def __receive(self, length):
+        """
+        Private methode to receive the given length of bytes.
+        
+        @param length bytes to receive (int)
+        @return received bytes or None if connection closed (str)
+        """
+        data = b''
+        while len(data) < length:
+            newData = self.connection.recv(length - len(data))
+            if not newData:
+                return None
+            data += newData
+        return data
+    
     def run(self):
         """
         Implement the main loop of the client.
         """
         try:
             while True:
-                try:
-                    header = b''
-                    while len(header) < 8:
-                        header += self.connection.recv(8 - len(header))
-                except socket.error:
-                    # Leave main loop if connection was closed.
-                    break
+                header = self.__receive(8)
                 # Leave main loop if connection was closed.
                 if not header:
                     break
                 
                 length, datahash = struct.unpack(b'!II', header)
-                packedData = b''
-                while len(packedData) < length:
-                    packedData += self.connection.recv(
-                        length - len(packedData))
+                packedData = self.__receive(length)
                 
                 assert adler32(packedData) & 0xffffffff == datahash, \
                     'Hashes not equal'
