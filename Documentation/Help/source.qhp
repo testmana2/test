@@ -4360,6 +4360,7 @@
       <keyword name="Editor.__getCharacter" id="Editor.__getCharacter" ref="eric5.QScintilla.Editor.html#Editor.__getCharacter" />
       <keyword name="Editor.__getCodeCoverageFile" id="Editor.__getCodeCoverageFile" ref="eric5.QScintilla.Editor.html#Editor.__getCodeCoverageFile" />
       <keyword name="Editor.__getMacroName" id="Editor.__getMacroName" ref="eric5.QScintilla.Editor.html#Editor.__getMacroName" />
+      <keyword name="Editor.__getPyVersion" id="Editor.__getPyVersion" ref="eric5.QScintilla.Editor.html#Editor.__getPyVersion" />
       <keyword name="Editor.__ignoreSpellingAlways" id="Editor.__ignoreSpellingAlways" ref="eric5.QScintilla.Editor.html#Editor.__ignoreSpellingAlways" />
       <keyword name="Editor.__indentLine" id="Editor.__indentLine" ref="eric5.QScintilla.Editor.html#Editor.__indentLine" />
       <keyword name="Editor.__indentSelection" id="Editor.__indentSelection" ref="eric5.QScintilla.Editor.html#Editor.__indentSelection" />
@@ -4554,9 +4555,11 @@
       <keyword name="Editor.highlight" id="Editor.highlight" ref="eric5.QScintilla.Editor.html#Editor.highlight" />
       <keyword name="Editor.highlightVisible" id="Editor.highlightVisible" ref="eric5.QScintilla.Editor.html#Editor.highlightVisible" />
       <keyword name="Editor.indentLineOrSelection" id="Editor.indentLineOrSelection" ref="eric5.QScintilla.Editor.html#Editor.indentLineOrSelection" />
+      <keyword name="Editor.isJavascriptFile" id="Editor.isJavascriptFile" ref="eric5.QScintilla.Editor.html#Editor.isJavascriptFile" />
       <keyword name="Editor.isLastEditPositionAvailable" id="Editor.isLastEditPositionAvailable" ref="eric5.QScintilla.Editor.html#Editor.isLastEditPositionAvailable" />
       <keyword name="Editor.isPy2File" id="Editor.isPy2File" ref="eric5.QScintilla.Editor.html#Editor.isPy2File" />
       <keyword name="Editor.isPy3File" id="Editor.isPy3File" ref="eric5.QScintilla.Editor.html#Editor.isPy3File" />
+      <keyword name="Editor.isPyFile" id="Editor.isPyFile" ref="eric5.QScintilla.Editor.html#Editor.isPyFile" />
       <keyword name="Editor.isRubyFile" id="Editor.isRubyFile" ref="eric5.QScintilla.Editor.html#Editor.isRubyFile" />
       <keyword name="Editor.isSpellCheckRegion" id="Editor.isSpellCheckRegion" ref="eric5.QScintilla.Editor.html#Editor.isSpellCheckRegion" />
       <keyword name="Editor.joinLines" id="Editor.joinLines" ref="eric5.QScintilla.Editor.html#Editor.joinLines" />
@@ -9222,6 +9225,7 @@
       <keyword name="ProjectSourcesBrowser.__addSourceDirectory" id="ProjectSourcesBrowser.__addSourceDirectory" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__addSourceDirectory" />
       <keyword name="ProjectSourcesBrowser.__addSourceFiles" id="ProjectSourcesBrowser.__addSourceFiles" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__addSourceFiles" />
       <keyword name="ProjectSourcesBrowser.__closeAllWindows" id="ProjectSourcesBrowser.__closeAllWindows" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__closeAllWindows" />
+      <keyword name="ProjectSourcesBrowser.__createJavaScriptPopupMenus" id="ProjectSourcesBrowser.__createJavaScriptPopupMenus" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__createJavaScriptPopupMenus" />
       <keyword name="ProjectSourcesBrowser.__createPythonPopupMenus" id="ProjectSourcesBrowser.__createPythonPopupMenus" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__createPythonPopupMenus" />
       <keyword name="ProjectSourcesBrowser.__createRubyPopupMenus" id="ProjectSourcesBrowser.__createRubyPopupMenus" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__createRubyPopupMenus" />
       <keyword name="ProjectSourcesBrowser.__deleteFile" id="ProjectSourcesBrowser.__deleteFile" ref="eric5.Project.ProjectSourcesBrowser.html#ProjectSourcesBrowser.__deleteFile" />
@@ -13207,6 +13211,7 @@
       <keyword name="decodeBytes" id="decodeBytes" ref="eric5.Utilities.__init__.html#decodeBytes" />
       <keyword name="decodeString" id="decodeString" ref="eric5.Utilities.__init__.html#decodeString" />
       <keyword name="decryptData" id="decryptData" ref="eric5.Utilities.crypto.py3AES.html#decryptData" />
+      <keyword name="determinePythonVersion" id="determinePythonVersion" ref="eric5.Utilities.__init__.html#determinePythonVersion" />
       <keyword name="direntries" id="direntries" ref="eric5.Utilities.__init__.html#direntries" />
       <keyword name="displayString" id="displayString" ref="eric5.Plugins.PluginVcsMercurial.html#displayString" />
       <keyword name="displayString" id="displayString" ref="eric5.Plugins.PluginVcsPySvn.html#displayString" />
@@ -13468,6 +13473,7 @@
       <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.Utilities.pyflakes.checker.html#iter_child_nodes" />
       <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.pyflakes.checker.html#iter_child_nodes" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
+      <keyword name="jsCheckSyntax" id="jsCheckSyntax" ref="eric5.Utilities.__init__.html#jsCheckSyntax" />
       <keyword name="jsclbr (Module)" id="jsclbr (Module)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html" />
       <keyword name="largefiles (Module)" id="largefiles (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />

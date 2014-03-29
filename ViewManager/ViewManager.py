@@ -6323,7 +6323,7 @@ class ViewManager(QObject):
             else:
                 self.autoCompleteFromAPIsAct.setEnabled(False)
             
-            if editor.isPy3File() or editor.isPy2File() or editor.isRubyFile():
+            if editor.isPyFile() or editor.isRubyFile():
                 self.gotoPreviousDefAct.setEnabled(True)
                 self.gotoNextDefAct.setEnabled(True)
             else:

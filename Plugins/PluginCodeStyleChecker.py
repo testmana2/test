@@ -266,8 +266,7 @@ class CodeStyleCheckerPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(
-                editor.isPy3File() or editor.isPy2File())
+            self.__editorAct.setEnabled(editor.isPyFile())
     
     def __editorCodeStyleCheck(self):
         """

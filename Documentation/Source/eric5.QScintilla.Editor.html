@@ -290,6 +290,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__getMacroName">__getMacroName</a></td>
 <td>Private method to select a macro name from the list of macros.</td>
 </tr><tr>
+<td><a href="#Editor.__getPyVersion">__getPyVersion</a></td>
+<td>Private method to return the Python main version (2 or 3) or 0 if it's not a Python file at all.</td>
+</tr><tr>
 <td><a href="#Editor.__ignoreSpellingAlways">__ignoreSpellingAlways</a></td>
 <td>Private to always ignore the word below the spelling context menu.</td>
 </tr><tr>
@@ -872,14 +875,20 @@ QsciScintillaCompat
 <td><a href="#Editor.indentLineOrSelection">indentLineOrSelection</a></td>
 <td>Public slot to indent the current line or current selection.</td>
 </tr><tr>
+<td><a href="#Editor.isJavascriptFile">isJavascriptFile</a></td>
+<td>Public method to return a flag indicating a Javascript file.</td>
+</tr><tr>
 <td><a href="#Editor.isLastEditPositionAvailable">isLastEditPositionAvailable</a></td>
 <td>Public method to check, if a last edit position is available.</td>
 </tr><tr>
 <td><a href="#Editor.isPy2File">isPy2File</a></td>
-<td>Public method to return a flag indicating a Python file.</td>
+<td>Public method to return a flag indicating a Python2 file.</td>
 </tr><tr>
 <td><a href="#Editor.isPy3File">isPy3File</a></td>
 <td>Public method to return a flag indicating a Python3 file.</td>
+</tr><tr>
+<td><a href="#Editor.isPyFile">isPyFile</a></td>
+<td>Public method to return a flag indicating a Python (2 or 3) file.</td>
 </tr><tr>
 <td><a href="#Editor.isRubyFile">isRubyFile</a></td>
 <td>Public method to return a flag indicating a Ruby file.</td>
@@ -1630,6 +1639,17 @@ filename of the coverage file (string)
 <dd>
 Tuple of macro name and a flag, indicating, if the user
             pressed ok or canceled the operation. (string, boolean)
+</dd>
+</dl><a NAME="Editor.__getPyVersion" ID="Editor.__getPyVersion"></a>
+<h4>Editor.__getPyVersion</h4>
+<b>__getPyVersion</b>(<i></i>)
+<p>
+        Private method to return the Python main version (2 or 3) or 0 if it's
+        not a Python file at all.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+Python version (2 or 3) or 0 if it's not a Python file (int)
 </dd>
 </dl><a NAME="Editor.__ignoreSpellingAlways" ID="Editor.__ignoreSpellingAlways"></a>
 <h4>Editor.__ignoreSpellingAlways</h4>
@@ -3379,7 +3399,17 @@ flag indicating a syntax error (boolean)
 <b>indentLineOrSelection</b>(<i></i>)
 <p>
         Public slot to indent the current line or current selection.
-</p><a NAME="Editor.isLastEditPositionAvailable" ID="Editor.isLastEditPositionAvailable"></a>
+</p><a NAME="Editor.isJavascriptFile" ID="Editor.isJavascriptFile"></a>
+<h4>Editor.isJavascriptFile</h4>
+<b>isJavascriptFile</b>(<i></i>)
+<p>
+        Public method to return a flag indicating a Javascript file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a Javascript file (boolean)
+</dd>
+</dl><a NAME="Editor.isLastEditPositionAvailable" ID="Editor.isLastEditPositionAvailable"></a>
 <h4>Editor.isLastEditPositionAvailable</h4>
 <b>isLastEditPositionAvailable</b>(<i></i>)
 <p>
@@ -3393,11 +3423,11 @@ flag indicating availability (boolean)
 <h4>Editor.isPy2File</h4>
 <b>isPy2File</b>(<i></i>)
 <p>
-        Public method to return a flag indicating a Python file.
+        Public method to return a flag indicating a Python2 file.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating a Python file (boolean)
+flag indicating a Python2 file (boolean)
 </dd>
 </dl><a NAME="Editor.isPy3File" ID="Editor.isPy3File"></a>
 <h4>Editor.isPy3File</h4>
@@ -3408,6 +3438,16 @@ flag indicating a Python file (boolean)
 <dt>Returns:</dt>
 <dd>
 flag indicating a Python3 file (boolean)
+</dd>
+</dl><a NAME="Editor.isPyFile" ID="Editor.isPyFile"></a>
+<h4>Editor.isPyFile</h4>
+<b>isPyFile</b>(<i></i>)
+<p>
+        Public method to return a flag indicating a Python (2 or 3) file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a Python (2 or 3) file (boolean)
 </dd>
 </dl><a NAME="Editor.isRubyFile" ID="Editor.isRubyFile"></a>
 <h4>Editor.isRubyFile</h4>

@@ -831,7 +831,7 @@ class DebugUI(QObject):
                     break
             else:
                 if editor.isPy2File():
-                    cap = self.debugServer.getClientCapabilities('Python')
+                    cap = self.debugServer.getClientCapabilities('Python2')
                 elif editor.isPy3File():
                     cap = self.debugServer.getClientCapabilities('Python3')
                 elif editor.isRubyFile():
@@ -869,7 +869,7 @@ class DebugUI(QObject):
         if editor is None:
             return
         
-        if editor.isPy3File() or editor.isPy2File() or editor.isRubyFile():
+        if editor.isPyFile() or editor.isRubyFile():
             if editor.curLineHasBreakpoint():
                 self.dbgEditBpAct.setEnabled(True)
             else:
