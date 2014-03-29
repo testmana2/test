@@ -172,7 +172,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if (codestring and len(py3files) == 1) or \
            (codestring and len(py2files) == 1) or \
            (codestring and len(jsfiles) == 1) or \
-           (not codestring and 
+           (not codestring and
                 len(py3files) + len(py2files) + len(jsfiles) > 0):
             self.checkProgress.setMaximum(
                 len(py3files) + len(py2files) + len(jsfiles))

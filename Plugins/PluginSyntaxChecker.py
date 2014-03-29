@@ -253,7 +253,7 @@ class SyntaxCheckerPlugin(QObject):
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
             self.__editorAct.setEnabled(
-                editor.isPyFile() or 
+                editor.isPyFile() or
                 editor.isJavascriptFile()
             )
     

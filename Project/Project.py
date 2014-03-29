@@ -180,8 +180,8 @@ class Project(QObject):
             "Python3": Preferences.getPython("Python3Extensions"),
             "Ruby": ['.rb'],
             "JavaScript": ['.js'],
-            "Mixed": Preferences.getPython("Python3Extensions") + \
-                ['.rb', '.js'],
+            "Mixed": (Preferences.getPython("Python3Extensions") +
+                      ['.rb', '.js']),
         }
         
         self.dbgFilters = {
