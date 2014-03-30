@@ -1462,7 +1462,6 @@
   </Resources>
   <Interfaces/>
   <Others>
-    <Other>README-PyXML.txt</Other>
     <Other>THANKS</Other>
     <Other>pylint.rc</Other>
     <Other>README-i18n.txt</Other>
@@ -1585,73 +1584,97 @@
           <string>add</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>checkout</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>commit</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>diff</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>export</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>global</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>history</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>log</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>remove</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>status</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>tag</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>update</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
       </dict>
     </VcsOptions>
