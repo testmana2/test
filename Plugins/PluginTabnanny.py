@@ -12,8 +12,9 @@ import os
 from PyQt4.QtCore import QObject
 
 from E5Gui.E5Application import e5App
-
 from E5Gui.E5Action import E5Action
+
+from Project.ProjectBrowserModel import ProjectBrowserFileItem
 
 import Preferences
 
@@ -206,11 +207,16 @@ class TabnannyPlugin(QObject):
         """
         browser = e5App().getObject("ProjectBrowser").getProjectBrowser(
             "sources")
-        itm = browser.model().item(browser.currentIndex())
-        try:
-            fn = itm.fileName()
-        except AttributeError:
-            fn = itm.dirName()
+        if browser.getSelectedItemsCount([ProjectBrowserFileItem]) > 1:
+            fn = []
+            for itm in browser.getSelectedItems([ProjectBrowserFileItem]):
+                fn.append(itm.fileName())
+        else:
+            itm = browser.model().item(browser.currentIndex())
+            try:
+                fn = itm.fileName()
+            except AttributeError:
+                fn = itm.dirName()
         
         from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
         self.__projectBrowserTabnannyDialog = TabnannyDialog()

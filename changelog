@@ -8,6 +8,7 @@ Version 5.5.0-xxx:
 - Checkers
   -- updated pyflakes to version 0.7.3
   -- added syntax checker for JavaScript files
+  -- added capability to check multiple files from the project sources browser
 - Editor
   -- added a scrolling map like display showing all markers
   -- added a context menu entry to reload a file with a given encoding
