@@ -1489,7 +1489,6 @@
   </Resources>
   <Interfaces/>
   <Others>
-    <Other>README-PyXML.txt</Other>
     <Other>THANKS</Other>
     <Other>pylint.rc</Other>
     <Other>README-i18n.txt</Other>
