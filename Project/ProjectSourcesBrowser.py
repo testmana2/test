@@ -441,7 +441,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Privat method to generate the popup menus for a Python project.
         """
-        # TODO: add this to the multi files menu
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
