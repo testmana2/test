@@ -7,6 +7,7 @@ Version 5.5.0-xxx:
      and pixmaps provided by Thimo Kraemer.
 - Checkers
   -- updated pyflakes to version 0.7.3
+  -- added syntax checker for JavaScript files
 - Editor
   -- added a scrolling map like display showing all markers
   -- added a context menu entry to reload a file with a given encoding
@@ -16,6 +17,8 @@ Version 5.5.0-xxx:
 - Plugin Manager
   -- extended the plugin repository dialog to allow to hide unwanted entries
      and cleanup the plugin downloads area
+- Project
+  -- added support for JavaScript projects
 - Version Control System Interfaces
   -- All
      --- made the status LED (right lower corner) clickable (depending on
