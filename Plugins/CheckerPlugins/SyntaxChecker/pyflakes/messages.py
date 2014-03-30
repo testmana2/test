@@ -2,25 +2,17 @@
 
 # Copyright (c) 2010 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# Original (c) 2005 Divmod, Inc.  See LICENSE file for details
+# Original (c) 2005 Divmod, Inc.  See __init__.py file for details
 #
-# This module is based on pyflakes for Python2 but was heavily hacked to
+# This module is based on pyflakes but was heavily hacked to
 # work within Eric5 and Qt (translatable messages)
 
 """
-Module implementing the messages for py2flakes.
+Provide the class Message and its subclasses.
 """
 
-
-def QT_TRANSLATE_NOOP(mod, txt):
-    """
-    Function to tell 'lupdate' which strings to keep for translation.
-    
-    @param mod module name
-    @param txt translatable string
-    @return the untranslated! string
-    """
-    return txt
+# Tell 'lupdate' which strings to keep for translation.
+QT_TRANSLATE_NOOP = lambda mod, txt: txt
 
 
 class Message(object):
@@ -29,25 +21,26 @@ class Message(object):
     """
     message = ''
     message_args = ()
-    
-    def __init__(self, filename, lineno):
+
+    def __init__(self, filename, loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         """
         self.filename = filename
-        self.lineno = lineno
-    
+        self.lineno = loc.lineno
+        self.col = getattr(loc, 'col_offset', 0)
+
     def __str__(self):
         """
         Special method return a string representation of the instance object.
         
         @return string representation of the object (string)
         """
-        return '%s:%s: %s' % (
-            self.filename, self.lineno, self.message % self.message_args)
+        return '%s:%s: %s' % (self.filename, self.lineno,
+                              self.message % self.message_args)
     
     def getMessageData(self):
         """
@@ -56,7 +49,8 @@ class Message(object):
         @return tuple containing file name, line number and message
             (string, integer, string)
         """
-        return (self.filename, self.lineno, self.message, self.message_args)
+        return (self.filename, self.lineno, self.col, self.message,
+                self.message_args)
 
 
 class UnusedImport(Message):
@@ -66,16 +60,16 @@ class UnusedImport(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         '{0!r} imported but unused.')
-    
-    def __init__(self, filename, lineno, name):
+
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the unused import (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
 
 
@@ -87,17 +81,17 @@ class RedefinedWhileUnused(Message):
         'py3Flakes',
         'Redefinition of unused {0!r} from line {1!r}.')
 
-    def __init__(self, filename, lineno, name, orig_lineno):
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the redefined object (string)
-        @param orig_lineno line number of the original definition (integer)
+        @param orig_loc location of the original definition (object)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class RedefinedInListComp(Message):
@@ -108,17 +102,17 @@ class RedefinedInListComp(Message):
         'py3Flakes',
         'List comprehension redefines {0!r} from line {1!r}.')
 
-    def __init__(self, filename, lineno, name, orig_lineno):
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the redefined object (string)
-        @param orig_lineno line number of the original definition (integer)
+        @param orig_loc location of the original definition (object)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class ImportShadowedByLoopVar(Message):
@@ -128,18 +122,18 @@ class ImportShadowedByLoopVar(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         'Import {0!r} from line {1!r} shadowed by loop variable.')
-    
-    def __init__(self, filename, lineno, name, orig_lineno):
+
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the shadowed import (string)
-        @param orig_lineno line number of the import (integer)
+        @param orig_loc location of the import (object)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class ImportStarUsed(Message):
@@ -149,16 +143,16 @@ class ImportStarUsed(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         "'from {0} import *' used; unable to detect undefined names.")
-    
-    def __init__(self, filename, lineno, modname):
+
+    def __init__(self, filename, loc, modname):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param modname name of the module imported using star import (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (modname,)
 
 
@@ -167,17 +161,37 @@ class UndefinedName(Message):
     Class defining the "Undefined Name" message.
     """
     message = QT_TRANSLATE_NOOP('py3Flakes', 'Undefined name {0!r}.')
-    
-    def __init__(self, filename, lineno, name):
+
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name undefined name (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
+
+
+class DoctestSyntaxError(Message):
+    """
+    Class defining the "Syntax error in doctest" message.
+    """
+    message = QT_TRANSLATE_NOOP('py3Flakes', 'Syntax error in doctest.')
+
+    def __init__(self, filename, loc, position=None):
+        """
+        Constructor
+        
+        @param filename name of the file (string)
+        @param loc location of warning (object)
+        @keyparam position of warning if existent (object)
+        """
+        Message.__init__(self, filename, loc)
+        if position:
+            (self.lineno, self.col) = position
+        self.message_args = ()
 
 
 class UndefinedExport(Message):
@@ -187,16 +201,16 @@ class UndefinedExport(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         'Undefined name {0!r} in __all__.')
-    
-    def __init__(self, filename, lineno, name):
+
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name undefined exported name (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
 
 
@@ -208,18 +222,18 @@ class UndefinedLocal(Message):
         'py3Flakes',
         "Local variable {0!r} (defined in enclosing scope on line {1!r})"
         " referenced before assignment.")
-    
-    def __init__(self, filename, lineno, name, orig_lineno):
+
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the prematurely referenced variable (string)
-        @param orig_lineno line number of the variable definition (integer)
+        @param orig_loc location of the variable definition (object)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class DuplicateArgument(Message):
@@ -229,16 +243,16 @@ class DuplicateArgument(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         'Duplicate argument {0!r} in function definition.')
-    
-    def __init__(self, filename, lineno, name):
+
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the duplicate argument (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
 
 
@@ -249,18 +263,18 @@ class Redefined(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         'Redefinition of {0!r} from line {1!r}.')
-    
-    def __init__(self, filename, lineno, name, orig_lineno):
+
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param name name of the redefined function (string)
-        @param orig_lineno line number of the original definition (integer)
+        @param orig_loc location of the original definition (object)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class LateFutureImport(Message):
@@ -270,16 +284,16 @@ class LateFutureImport(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         'Future import(s) {0!r} after other statements.')
-    
-    def __init__(self, filename, lineno, names):
+
+    def __init__(self, filename, loc, names):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param names names of the imported futures (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (names,)
 
 
@@ -293,17 +307,14 @@ class UnusedVariable(Message):
     message = QT_TRANSLATE_NOOP(
         'py3Flakes',
         'Local variable {0!r} is assigned to but never used.')
-    
-    def __init__(self, filename, lineno, names):
+
+    def __init__(self, filename, loc, names):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location of warning (object)
         @param names names of the unused variable (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (names,)
-    
-#
-# eflag: FileType = Python2

@@ -7,8 +7,6 @@
 Module implementing a checker for documentation string conventions.
 """
 
-from __future__ import unicode_literals
-
 #
 # The routines of the checker class are modeled after the ones found in
 # pep257.py (version 0.2.4).
@@ -23,10 +21,6 @@ except ImportError:
 import tokenize
 import ast
 import sys
-
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
-
-PyCF_ONLY_AST = 1024
 
 
 class DocStyleContext(object):
@@ -123,128 +117,7 @@ class DocStyleChecker(object):
         
         "D901",
     ]
-    
-    Messages = {
-        "D101": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "module is missing a docstring"),
-        "D102": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "public function/method is missing a docstring"),
-        "D103": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "private function/method may be missing a docstring"),
-        "D104": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "public class is missing a docstring"),
-        "D105": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "private class may be missing a docstring"),
-        "D111": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", 'docstring not surrounded by """'),
-        "D112": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            'docstring containing \\ not surrounded by r"""'),
-        "D113": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            'docstring containing unicode character not surrounded by u"""'),
-        "D121": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "one-liner docstring on multiple lines"),
-        "D122": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "docstring has wrong indentation"),
-        "D130": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "docstring does not contain a summary"),
-        "D131": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "docstring summary does not end with a period"),
-        "D132": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring summary is not in imperative mood"
-            " (Does instead of Do)"),
-        "D133": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring summary looks like a function's/method's signature"),
-        "D134": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring does not mention the return value type"),
-        "D141": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "function/method docstring is separated by a blank line"),
-        "D142": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "class docstring is not preceded by a blank line"),
-        "D143": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "class docstring is not followed by a blank line"),
-        "D144": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring summary is not followed by a blank line"),
-        "D145": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "last paragraph of docstring is not followed by a blank line"),
-        
-        "D203": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "private function/method is missing a docstring"),
-        "D205": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "private class is missing a docstring"),
-        "D221": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "leading quotes of docstring not on separate line"),
-        "D222": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "trailing quotes of docstring not on separate line"),
-        "D231": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "docstring summary does not end with a period"),
-        "D234": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring does not contain a @return line but function/method"
-            " returns something"),
-        "D235": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring contains a @return line but function/method doesn't"
-            " return anything"),
-        "D236": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring does not contain enough @param/@keyparam lines"),
-        "D237": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring contains too many @param/@keyparam lines"),
-        "D238": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "keyword only arguments must be documented with @keyparam lines"),
-        "D239": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "order of @param/@keyparam lines does"
-            " not match the function/method signature"),
-        "D242": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "class docstring is preceded by a blank line"),
-        "D243": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "class docstring is followed by a blank line"),
-        "D244": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "function/method docstring is preceded by a blank line"),
-        "D245": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "function/method docstring is followed by a blank line"),
-        "D246": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring summary is not followed by a blank line"),
-        "D247": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "last paragraph of docstring is followed by a blank line"),
-        "D250": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring does not contain a @exception line but function/method"
-            " raises an exception"),
-        "D251": QT_TRANSLATE_NOOP(
-            "DocStyleChecker",
-            "docstring contains a @exception line but function/method doesn't"
-            " raise an exception"),
-        
-        "D901": QT_TRANSLATE_NOOP(
-            "DocStyleChecker", "{0}: {1}"),
-    }
 
-    MessagesSampleArgs = {
-        "D901": ["SyntaxError", "Invalid Syntax"],
-    }
-    
     def __init__(self, source, filename, select, ignore, expected, repeat,
                  maxLineLength=79, docType="pep257"):
         """
@@ -401,13 +274,9 @@ class DocStyleChecker(object):
             return
         
         if code and (self.counters[code] == 1 or self.__repeat):
-            if code in DocStyleChecker.Codes:
-                text = self.getMessage(code, *args)
-            else:
-                text = code + " " + QCoreApplication.translate(
-                    "DocStyleChecker", "no message for this code defined")
             # record the issue with one based line number
-            self.errors.append((self.__filename, lineNumber + 1, offset, text))
+            self.errors.append(
+                (self.__filename, lineNumber + 1, offset, (code, args)))
     
     def __reportInvalidSyntax(self):
         """
@@ -422,24 +291,6 @@ class DocStyleChecker(object):
             offset = (1, 0)
         self.__error(offset[0] - 1, offset[1] or 0,
                      'D901', exc_type.__name__, exc.args[0])
-    
-    @classmethod
-    def getMessage(cls, code, *args):
-        """
-        Class method to get a translated and formatted message for a
-        given code.
-        
-        @param code message code (string)
-        @param args arguments for a formatted message (list)
-        @return translated and formatted message (string)
-        """
-        if code in DocStyleChecker.Messages:
-            return code + " " + QCoreApplication.translate(
-                "DocStyleChecker",
-                DocStyleChecker.Messages[code]).format(*args)
-        else:
-            return code + " " + QCoreApplication.translate(
-                "DocStyleChecker", "no message for this code defined")
     
     def __resetReadline(self):
         """
@@ -472,7 +323,7 @@ class DocStyleChecker(object):
             return
         
         try:
-            compile(''.join(self.__source), '', 'exec', PyCF_ONLY_AST)
+            compile(''.join(self.__source), '', 'exec', ast.PyCF_ONLY_AST)
         except (SyntaxError, TypeError):
             self.__reportInvalidSyntax()
             return

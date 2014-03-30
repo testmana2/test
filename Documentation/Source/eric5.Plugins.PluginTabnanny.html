@@ -43,7 +43,14 @@ Module implementing the Tabnanny plugin.
 <h2>TabnannyPlugin</h2>
 <p>
     Class implementing the Tabnanny plugin.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>indentChecked(str, bool, str, str)</dt>
+<dd>
+emited when the indent
+        check was done.
+</dd>
+</dl>
 <h3>Derived from</h3>
 QObject
 <h3>Class Attributes</h3>
@@ -92,6 +99,9 @@ QObject
 </tr><tr>
 <td><a href="#TabnannyPlugin.deactivate">deactivate</a></td>
 <td>Public method to deactivate this plugin.</td>
+</tr><tr>
+<td><a href="#TabnannyPlugin.indentCheck">indentCheck</a></td>
+<td>Method to prepare a style check on one Python source file in another task.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -209,7 +219,25 @@ tuple of None and activation status (boolean)
 <b>deactivate</b>(<i></i>)
 <p>
         Public method to deactivate this plugin.
-</p>
+</p><a NAME="TabnannyPlugin.indentCheck" ID="TabnannyPlugin.indentCheck"></a>
+<h4>TabnannyPlugin.indentCheck</h4>
+<b>indentCheck</b>(<i>lang, filename, source</i>)
+<p>
+        Method to prepare a style check on one Python source file in another
+        task.
+</p><dl>
+<dt><i>lang</i></dt>
+<dd>
+language of the file or None to determine by internal
+            algorithm (str or None)
+</dd><dt><i>filename</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>source</i></dt>
+<dd>
+string containing the code to check (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

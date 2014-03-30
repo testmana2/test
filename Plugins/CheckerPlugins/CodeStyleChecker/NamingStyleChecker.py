@@ -7,14 +7,11 @@
 Module implementing a checker for naming conventions.
 """
 
-from __future__ import unicode_literals
-
 import collections
 import ast
 import re
 import os
-
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, QCoreApplication
+import sys
 
 
 class NamingStyleChecker(object):
@@ -30,51 +27,6 @@ class NamingStyleChecker(object):
         "N801", "N802", "N803", "N804", "N805", "N806", "N807", "N808",
         "N811", "N812", "N813", "N814", "N821", "N831"
     ]
-    Messages = {
-        "N801": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "class names should use CapWords convention"),
-        "N802": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "function name should be lowercase"),
-        "N803": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "argument name should be lowercase"),
-        "N804": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "first argument of a class method should be named 'cls'"),
-        "N805": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "first argument of a method should be named 'self'"),
-        "N806": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "first argument of a static method should not be named"
-            " 'self' or 'cls"),
-        "N807": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "module names should be lowercase"),
-        "N808": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "package names should be lowercase"),
-        "N811": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "constant imported as non constant"),
-        "N812": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "lowercase imported as non lowercase"),
-        "N813": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "camelcase imported as lowercase"),
-        "N814": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "camelcase imported as constant"),
-        "N821": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "variable in function should be lowercase"),
-        "N831": QT_TRANSLATE_NOOP(
-            "NamingStyleChecker",
-            "names 'l', 'O' and 'I' should be avoided"),
-    }
     
     def __init__(self, tree, filename, options):
         """
@@ -131,25 +83,6 @@ class NamingStyleChecker(object):
             return self.__visitTree(self.__tree)
         else:
             return ()
-    
-    @classmethod
-    def getMessage(cls, code, *args):
-        """
-        Class method to get a translated and formatted message for a
-        given code.
-        
-        @param code message code (string)
-        @param args arguments for a formatted message (list)
-        @return translated and formatted message (string)
-        """
-        if code in cls.Messages:
-            return code + " " + QCoreApplication.translate(
-                "NamingStyleChecker",
-                cls.Messages[code]).format(*args)
-        else:
-            return code + " " + QCoreApplication.translate(
-                "NamingStyleChecker",
-                "no message for this code defined")
     
     def __visitTree(self, node):
         """
@@ -249,9 +182,27 @@ class NamingStyleChecker(object):
         @param node AST node to extract arguments names from
         @return list of argument names (list of string)
         """
-        posArgs = [arg.arg for arg in node.args.args]
-        kwOnly = [arg.arg for arg in node.args.kwonlyargs]
-        return posArgs + kwOnly
+        if sys.version_info[0] == 3:
+            posArgs = [arg.arg for arg in node.args.args]
+            kwOnly = [arg.arg for arg in node.args.kwonlyargs]
+            return posArgs + kwOnly
+        else:
+            def unpackArgs(args):
+                """
+                Local helper function to unpack function argument names.
+                
+                @param args list of AST node arguments
+                @return list of argument names (list of string)
+                """
+                ret = []
+                for arg in args:
+                    if isinstance(arg, ast.Tuple):
+                        ret.extend(unpackArgs(arg.elts))
+                    else:
+                        ret.append(arg.id)
+                return ret
+           
+            return unpackArgs(node.args.args)
     
     def __error(self, node, code):
         """

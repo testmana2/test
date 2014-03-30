@@ -61,22 +61,26 @@ from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 # import these methods into the Utilities namespace
-from Globals import (isWindowsPlatform, isLinuxPlatform,  # __IGNORE_WARNING__
-    isMacPlatform, getConfigDir, setConfigDir, getPythonModulesDirectory,
-    getPyQt4ModulesDirectory, getQtBinariesPath)
+from Globals import (  # __IGNORE_WARNING__
+    isWindowsPlatform, isLinuxPlatform, isMacPlatform, getConfigDir,
+    setConfigDir, getPythonModulesDirectory, getPyQt4ModulesDirectory,
+    getQtBinariesPath)
 
 from E5Gui.E5Application import e5App
 
 from UI.Info import Program, Version
 
 import Preferences
-from .SyntaxCheck import (readEncodedFile, decode,  # __IGNORE_WARNING__
-    extractLineFlags, normalizeCode, compile_and_check)
+from Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck import normalizeCode
 
 from eric5config import getConfig
 
 configDir = None
 
+codingBytes_regexps = [
+    (2, re.compile(br'''coding[:=]\s*([-\w_.]+)''')),
+    (1, re.compile(br'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')),
+]
 coding_regexps = [
     (2, re.compile(r'''coding[:=]\s*([-\w_.]+)''')),
     (1, re.compile(r'''<\?xml.*\bencoding\s*=\s*['"]([-\w_.]+)['"]\?>''')),
@@ -134,6 +138,24 @@ class CodingError(Exception):
         return str(self.errorMessage)
     
 
+def get_codingBytes(text):
+    """
+    Function to get the coding of a bytes text.
+    
+    @param text bytes text to inspect (bytes)
+    @return coding string
+    """
+    lines = text.splitlines()
+    for coding in codingBytes_regexps:
+        coding_re = coding[1]
+        head = lines[:coding[0]]
+        for l in head:
+            m = coding_re.search(l)
+            if m:
+                return str(m.group(1), "ascii").lower()
+    return None
+
+
 def get_coding(text):
     """
     Function to get the coding of a text.
@@ -152,6 +174,19 @@ def get_coding(text):
     return None
 
 
+def readEncodedFile(filename):
+    """
+    Function to read a file and decode its contents into proper text.
+    
+    @param filename name of the file to read (string)
+    @return tuple of decoded text and encoding (string, string)
+    """
+    f = open(filename, "rb")
+    text = f.read()
+    f.close()
+    return decode(text)
+
+
 def readEncodedFileWithHash(filename):
     """
     Function to read a file, calculate a hash value and decode its contents
@@ -168,6 +203,70 @@ def readEncodedFileWithHash(filename):
                QByteArray(text), QCryptographicHash.Md5).toHex(),
                encoding="ASCII")
     return decode(text) + (hash, )
+
+
+def decode(text):
+    """
+    Function to decode some byte text into a string.
+    
+    @param text byte text to decode (bytes)
+    @return tuple of decoded text and encoding (string, string)
+    """
+    try:
+        if text.startswith(BOM_UTF8):
+            # UTF-8 with BOM
+            return str(text[len(BOM_UTF8):], 'utf-8'), 'utf-8-bom'
+        elif text.startswith(BOM_UTF16):
+            # UTF-16 with BOM
+            return str(text[len(BOM_UTF16):], 'utf-16'), 'utf-16'
+        elif text.startswith(BOM_UTF32):
+            # UTF-32 with BOM
+            return str(text[len(BOM_UTF32):], 'utf-32'), 'utf-32'
+        coding = get_codingBytes(text)
+        if coding:
+            return str(text, coding), coding
+    except (UnicodeError, LookupError):
+        pass
+    
+    # Assume UTF-8
+    try:
+        return str(text, 'utf-8'), 'utf-8-guessed'
+    except (UnicodeError, LookupError):
+        pass
+    
+    guess = None
+    if Preferences.getEditor("AdvancedEncodingDetection"):
+        # Try the universal character encoding detector
+        try:
+            import ThirdParty.CharDet.chardet
+            guess = ThirdParty.CharDet.chardet.detect(text)
+            if guess and guess['confidence'] > 0.95 and \
+                    guess['encoding'] is not None:
+                codec = guess['encoding'].lower()
+                return str(text, codec), '{0}-guessed'.format(codec)
+        except (UnicodeError, LookupError):
+            pass
+        except ImportError:
+            pass
+    
+    # Try default encoding
+    try:
+        codec = Preferences.getEditor("DefaultEncoding")
+        return str(text, codec), '{0}-default'.format(codec)
+    except (UnicodeError, LookupError):
+        pass
+    
+    if Preferences.getEditor("AdvancedEncodingDetection"):
+        # Use the guessed one even if confifence level is low
+        if guess and guess['encoding'] is not None:
+            try:
+                codec = guess['encoding'].lower()
+                return str(text, codec), '{0}-guessed'.format(codec)
+            except (UnicodeError, LookupError):
+                pass
+    
+    # Assume UTF-8 loosing information
+    return str(text, "utf-8", "ignore"), 'utf-8-ignore'
 
 
 def writeEncodedFile(filename, text, orig_coding):
@@ -521,6 +620,28 @@ def extractFlagsFromFile(filename):
         return {}
     
     return extractFlags(source)
+
+
+def extractLineFlags(line, startComment="#", endComment=""):
+    """
+    Function to extract flags starting and ending with '__' from a line
+    comment.
+    
+    @param line line to extract flags from (string)
+    @keyparam startComment string identifying the start of the comment (string)
+    @keyparam endComment string identifying the end of a comment (string)
+    @return list containing the extracted flags (list of strings)
+    """
+    flags = []
+    
+    pos = line.rfind(startComment)
+    if pos >= 0:
+        comment = line[pos + len(startComment):].strip()
+        if endComment:
+            comment = comment.replace("endComment", "")
+        flags = [f.strip() for f in comment.split()
+                 if (f.startswith("__") and f.endswith("__"))]
+    return flags
 
 
 def toNativeSeparators(path):
@@ -1173,127 +1294,68 @@ def getPythonVersion():
     @return An integer representing major and minor version number (integer)
     """
     return sys.hexversion >> 16
-    
-
-def compile(file, codestring="", isPy2=False):
-    """
-    Function to compile one Python source file to Python bytecode.
-    
-    @param file source filename (string)
-    @param codestring string containing the code to compile (string)
-    @param isPy2 shows which interperter to use (boolean)
-    @return A tuple indicating status (True = an error was found), the
-        file name, the line number, the index number, the code string
-        and the error message (boolean, string, string, string, string,
-        string). The values are only valid, if the status is True.
-    """
-    from PyQt4.QtCore import QCoreApplication
-    
-    interpreter_name = 'Python' if isPy2 else 'Python3'
-    interpreter = Preferences.getDebugger(
-        interpreter_name + "Interpreter")
-    checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
-    ignoreStarImportWarnings = Preferences.getFlakes(
-        "IgnoreStarImportWarnings")
-    if samefilepath(interpreter, sys.executable):
-        ret = compile_and_check(
-            file, codestring, checkFlakes, ignoreStarImportWarnings)
-    else:
-        #TODO: create temporary file if only a codestring is given
-        ret = compile_extern(
-            file, isPy2, checkFlakes, ignoreStarImportWarnings)
-    
-    # Translate messages
-    for warning in ret[6]:
-        msg_args = warning.pop()
-        translated = QCoreApplication.translate(
-            'py3Flakes', warning[-1]).format(*msg_args)
-        # Avoid leading "u" at Python2 unicode strings
-        if translated.startswith("u'"):
-            translated = translated[1:]
-        warning[3] = translated.replace(" u'", " '")
-    
-    return ret
 
 
-def compile_extern(
-        file, isPy2, checkFlakes=True, ignoreStarImportWarnings=False):
+def determinePythonVersion(filename, source, editor=None):
     """
-    Function to compile one Python source file to Python bytecode.
+    Determine the python version of a given file.
     
-    @param file source filename (string)
-    @param isPy2 flag indicating if it's a Python 2 or 3 file (boolean)
-    @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
-    @keyparam ignoreStarImportWarnings flag if star import warnings should be
-        suppressed (boolean)
-    @return A tuple indicating status (True = an error was found), the
-        file name, the line number, the index number, the code string,
-        the error message and a list of tuples of pyflakes warnings indicating
-        file name, line number and message (boolean, string, string, string,
-        string, string, list of (string, string, string)). The syntax error
-        values are only valid, if the status is True. The pyflakes list will
-        be empty, if a syntax error was detected by the syntax checker.
+    @param filename name of the file with extension (str)
+    @param source of the file (str)
+    @keyparam editor if the file is opened already (Editor object)
+    @return Python version if file is Python2 or Python3 (int)
     """
-    interpreter_name = 'Python' if isPy2 else 'Python3'
-    interpreter = Preferences.getDebugger(interpreter_name + "Interpreter")
-    if interpreter == "" or not isinpath(interpreter):
-        return (True, file, 1, 0, "",
-                QCoreApplication.translate(
-                    "Utilities",
-                    "{0} interpreter not configured.")
-                .format(interpreter_name), [])
-    syntaxChecker = os.path.join(getConfig('ericDir'),
-                                 "Utilities", "SyntaxCheck.py")
-    args = [syntaxChecker]
-    if checkFlakes:
-        if ignoreStarImportWarnings:
-            args.append("-fi")
-        else:
-            args.append("-fs")
-    args.append(file)
-    proc = QProcess()
-    proc.setProcessChannelMode(QProcess.MergedChannels)
-    proc.start(interpreter, args)
-    finished = proc.waitForFinished(30000)
-    if finished:
-        output = codecs.decode(
-            proc.readAllStandardOutput(),
-            sys.getfilesystemencoding(), 'strict').splitlines()
-        
-        if output:
-            syntaxerror = output[0] == "ERROR"
-            if syntaxerror:
-                fn = output[1]
-                line = int(output[2])
-                index = int(output[3])
-                code = output[4]
-                error = output[5]
-                return (True, fn, line, index, code, error, [])
-            else:
-                index = 6
-                warnings = []
-                while len(output) - index > 3:
-                    if output[index] == "FLAKES_ERROR":
-                        return (True, output[index + 1],
-                                int(output[index + 2]), -1,
-                                '', output[index + 3], [])
-                    else:
-                        msg_args = output[index + 4].split('#')
-                        warnings.append([
-                            output[index], output[index + 1],
-                            int(output[index + 2]), output[index + 3],
-                            msg_args])
-                        index += 5
-                
-                return (False, None, None, None, None, None, warnings)
-        else:
-            return (False, "", -1, -1, "", "", [])
+    pyAssignment = {"Python": 2, "Python2": 2, "Python3": 3}
     
-    return (True, file, 1, 0, "",
-            QCoreApplication.translate(
-                "Utilities",
-                "{0} interpreter did not finish within 30s.").format(
-                interpreter_name), [])
+    if not editor:
+        viewManager = e5App().getObject('ViewManager')
+        editor = viewManager.getOpenEditor(filename)
+    
+    # Maybe the user has changed the language
+    if editor and editor.getFileType() in pyAssignment:
+        return pyAssignment[editor.getFileType()]
+
+    pyVer = 0
+    flags = extractFlags(source)
+    ext = os.path.splitext(filename)[1]
+    py2Ext = Preferences.getPython("PythonExtensions")
+    py3Ext = Preferences.getPython("Python3Extensions")
+    project = e5App().getObject('Project')
+    basename = os.path.basename(filename)
+    
+    if "FileType" in flags:
+        pyVer = pyAssignment.get(flags["FileType"], 0)
+    elif project.isOpen() and project.isProjectFile(filename):
+        language = project.getEditorLexerAssoc(basename)
+        if not language:
+            language = Preferences.getEditorLexerAssoc(basename)
+        if language in ['Python2', 'Python3']:
+            pyVer = pyAssignment[language]
+    
+    if pyVer:
+        # Skip the next tests
+        pass
+    elif (Preferences.getProject("DeterminePyFromProject") and
+          project.isOpen() and
+          project.isProjectFile(filename)):
+                pyVer = pyAssignment.get(project.getProjectLanguage(), 0)
+    elif ext in py2Ext and ext not in py3Ext:
+        pyVer = 2
+    elif ext in py3Ext and ext not in py2Ext:
+        pyVer = 3
+    elif source.startswith("#!"):
+        line0 = source.splitlines()[0]
+        if "python3" in line0:
+            pyVer = 3
+        elif "python" in line0:
+            pyVer = 2
+    
+    if pyVer == 0 and ext in py2Ext + py3Ext:
+        pyVer = sys.version_info[0]
+    
+    if editor and pyVer:
+        editor.filetype = "Python{0}".format(pyVer)
+    return pyVer
 
 
 ###############################################################################

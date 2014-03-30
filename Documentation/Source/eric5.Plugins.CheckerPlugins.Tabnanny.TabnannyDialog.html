@@ -67,8 +67,14 @@ QDialog, Ui_TabnannyDialog
 <td><a href="#TabnannyDialog.__finish">__finish</a></td>
 <td>Private slot called when the action or the user pressed the button.</td>
 </tr><tr>
+<td><a href="#TabnannyDialog.__processResult">__processResult</a></td>
+<td>Privat slot called after perfoming a style check on one file.</td>
+</tr><tr>
 <td><a href="#TabnannyDialog.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
+</tr><tr>
+<td><a href="#TabnannyDialog.check">check</a></td>
+<td>Start a style check for one file.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -92,11 +98,14 @@ QDialog, Ui_TabnannyDialog
 </table>
 <a NAME="TabnannyDialog.__init__" ID="TabnannyDialog.__init__"></a>
 <h4>TabnannyDialog (Constructor)</h4>
-<b>TabnannyDialog</b>(<i>parent=None</i>)
+<b>TabnannyDialog</b>(<i>indentCheckService, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>indentCheckService</i></dt>
+<dd>
+reference to the service (IndentCheckService)
+</dd><dt><i>parent</i></dt>
 <dd>
 The parent widget (QWidget).
 </dd>
@@ -121,12 +130,43 @@ faulty line of code (string)
 <b>__finish</b>(<i></i>)
 <p>
         Private slot called when the action or the user pressed the button.
-</p><a NAME="TabnannyDialog.__resort" ID="TabnannyDialog.__resort"></a>
+</p><a NAME="TabnannyDialog.__processResult" ID="TabnannyDialog.__processResult"></a>
+<h4>TabnannyDialog.__processResult</h4>
+<b>__processResult</b>(<i>fn, nok, line, error</i>)
+<p>
+        Privat slot called after perfoming a style check on one file.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the just checked file (str)
+</dd><dt><i>nok</i></dt>
+<dd>
+flag if a problem was found (bool)
+</dd><dt><i>line</i></dt>
+<dd>
+line number (str)
+</dd><dt><i>error</i></dt>
+<dd>
+text of the problem (str)
+</dd>
+</dl><a NAME="TabnannyDialog.__resort" ID="TabnannyDialog.__resort"></a>
 <h4>TabnannyDialog.__resort</h4>
 <b>__resort</b>(<i></i>)
 <p>
         Private method to resort the tree.
-</p><a NAME="TabnannyDialog.on_buttonBox_clicked" ID="TabnannyDialog.on_buttonBox_clicked"></a>
+</p><a NAME="TabnannyDialog.check" ID="TabnannyDialog.check"></a>
+<h4>TabnannyDialog.check</h4>
+<b>check</b>(<i>codestring=''</i>)
+<p>
+        Start a style check for one file.
+</p><p>
+        The results are reported to the __processResult slot.
+</p><dl>
+<dt><i>codestring=</i></dt>
+<dd>
+optional sourcestring (str)
+</dd>
+</dl><a NAME="TabnannyDialog.on_buttonBox_clicked" ID="TabnannyDialog.on_buttonBox_clicked"></a>
 <h4>TabnannyDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>

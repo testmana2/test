@@ -11,12 +11,12 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject
+from PyQt4.QtCore import QObject, pyqtSignal
 
 from E5Gui.E5Application import e5App
-
 from E5Gui.E5Action import E5Action
 
+from Utilities import determinePythonVersion
 import Preferences
 
 # Start-Of-Header
@@ -40,7 +40,12 @@ error = ""
 class TabnannyPlugin(QObject):
     """
     Class implementing the Tabnanny plugin.
+    
+    @signal indentChecked(str, bool, str, str) emited when the indent
+        check was done.
     """
+    indentChecked = pyqtSignal(str, bool, str, str)
+    
     def __init__(self, ui):
         """
         Constructor
@@ -50,6 +55,17 @@ class TabnannyPlugin(QObject):
         super(TabnannyPlugin, self).__init__(ui)
         self.__ui = ui
         self.__initialize()
+        
+        self.backgroundService = e5App().getObject("BackgroundService")
+        
+        path = os.path.join(
+            os.path.dirname(__file__), 'CheckerPlugins', 'Tabnanny')
+        for lang in ['Python2', 'Python3']:
+            self.backgroundService.serviceConnect(
+                'indent', lang, path, 'Tabnanny',
+                lambda *args: self.indentChecked.emit(*args),
+                lambda fx, fn, ver, msg: self.indentChecked.emit(
+                    fn, True, "1", msg))
         
     def __initialize(self):
         """
@@ -65,6 +81,24 @@ class TabnannyPlugin(QObject):
         self.__editors = []
         self.__editorAct = None
         self.__editorTabnannyDialog = None
+
+    def indentCheck(self, lang, filename, source):
+        """
+        Method to prepare a style check on one Python source file in another
+        task.
+
+        @param lang language of the file or None to determine by internal
+            algorithm (str or None)
+        @param filename source filename (string)
+        @param source string containing the code to check (string)
+        """
+        if lang is None:
+            lang = 'Python{0}'.format(determinePythonVersion(filename, source))
+        if lang not in ['Python2', 'Python3']:
+            return
+        
+        self.backgroundService.enqueueRequest(
+            'indent', lang, filename, [source])
 
     def activate(self):
         """
@@ -197,7 +231,7 @@ class TabnannyPlugin(QObject):
                      tuple(Preferences.getPython("PythonExtensions")))]
         
         from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
-        self.__projectTabnannyDialog = TabnannyDialog()
+        self.__projectTabnannyDialog = TabnannyDialog(self)
         self.__projectTabnannyDialog.show()
         self.__projectTabnannyDialog.prepare(files, project)
     
@@ -215,7 +249,7 @@ class TabnannyPlugin(QObject):
             fn = itm.dirName()
         
         from CheckerPlugins.Tabnanny.TabnannyDialog import TabnannyDialog
-        self.__projectBrowserTabnannyDialog = TabnannyDialog()
+        self.__projectBrowserTabnannyDialog = TabnannyDialog(self)
         self.__projectBrowserTabnannyDialog.show()
         self.__projectBrowserTabnannyDialog.start(fn)
     
@@ -254,8 +288,7 @@ class TabnannyPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(
-                editor.isPy3File() or editor.isPy2File())
+            self.__editorAct.setEnabled(editor.getPyVersion())
     
     def __editorTabnanny(self):
         """
@@ -266,6 +299,6 @@ class TabnannyPlugin(QObject):
             if editor.checkDirty() and editor.getFileName() is not None:
                 from CheckerPlugins.Tabnanny.TabnannyDialog import \
                     TabnannyDialog
-                self.__editorTabnannyDialog = TabnannyDialog()
+                self.__editorTabnannyDialog = TabnannyDialog(self)
                 self.__editorTabnannyDialog.show()
                 self.__editorTabnannyDialog.start(editor.getFileName())

@@ -10,7 +10,7 @@ process.
 
 from __future__ import unicode_literals
 try:
-    str = unicode   # __IGNORE_WARNING__
+    str = unicode
 except (NameError):
     pass
 
@@ -33,10 +33,11 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
     Class implementing a dialog to show the results of the tabnanny check run.
     """
-    def __init__(self, parent=None):
+    def __init__(self, indentCheckService, parent=None):
         """
         Constructor
         
+        @param indentCheckService reference to the service (IndentCheckService)
         @param parent The parent widget (QWidget).
         """
         super(TabnannyDialog, self).__init__(parent)
@@ -47,6 +48,10 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         self.resultList.headerItem().setText(self.resultList.columnCount(), "")
         self.resultList.header().setSortIndicator(0, Qt.AscendingOrder)
+        
+        self.indentCheckService = indentCheckService
+        self.indentCheckService.indentChecked.connect(self.__processResult)
+        self.filename = None
         
         self.noResults = True
         self.cancelled = False
@@ -120,61 +125,91 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         QApplication.processEvents()
         
         if isinstance(fn, list):
-            files = fn
+            self.files = fn
         elif os.path.isdir(fn):
-            files = []
+            self.files = []
             extensions = set(Preferences.getPython("PythonExtensions") +
                              Preferences.getPython("Python3Extensions"))
             for ext in extensions:
-                files.extend(
+                self.files.extend(
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
-            files = [fn]
+            self.files = [fn]
         
-        if len(files) > 0:
-            self.checkProgress.setMaximum(len(files))
-            self.checkProgress.setVisible(len(files) > 1)
-            self.checkProgressLabel.setVisible(len(files) > 1)
+        if len(self.files) > 0:
+            self.checkProgress.setMaximum(len(self.files))
+            self.checkProgress.setVisible(len(self.files) > 1)
+            self.checkProgressLabel.setVisible(len(self.files) > 1)
             QApplication.processEvents()
-            
-            # now go through all the files
-            progress = 0
-            for file in files:
-                self.checkProgress.setValue(progress)
-                self.checkProgressLabel.setPath(file)
-                QApplication.processEvents()
-                self.__resort()
-                
-                if self.cancelled:
-                    return
-                
-                try:
-                    source = Utilities.readEncodedFile(file)[0]
-                    source = Utilities.normalizeCode(source)
-                except (UnicodeError, IOError) as msg:
-                    self.noResults = False
-                    self.__createResultItem(
-                        file, 1,
-                        "Error: {0}".format(str(msg)).rstrip()[1:-1])
-                    progress += 1
-                    continue
+        
+        # now go through all the files
+        self.progress = 0
+        self.check()
 
-                from . import Tabnanny
-                nok, fname, line, error = Tabnanny.check(file, source)
-                if nok:
-                    self.noResults = False
-                    self.__createResultItem(fname, line, error.rstrip())
-                progress += 1
-                
-            self.checkProgress.setValue(progress)
+    def check(self, codestring=''):
+        """
+        Start a style check for one file.
+        
+        The results are reported to the __processResult slot.
+        @keyparam codestring optional sourcestring (str)
+        """
+        if not self.files:
             self.checkProgressLabel.setPath("")
-            QApplication.processEvents()
-            self.__resort()
-        else:
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
-        self.__finish()
+            self.__finish()
+            return
         
+        self.filename = self.files.pop(0)
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.filename)
+        QApplication.processEvents()
+        self.__resort()
+        
+        if self.cancelled:
+            return
+        
+        try:
+            self.source = Utilities.readEncodedFile(self.filename)[0]
+            self.source = Utilities.normalizeCode(self.source)
+        except (UnicodeError, IOError) as msg:
+            self.noResults = False
+            self.__createResultItem(
+                self.filename, 1,
+                "Error: {0}".format(str(msg)).rstrip())
+            self.progress += 1
+            # Continue with next file
+            self.check()
+            return
+
+        self.indentCheckService.indentCheck(
+            None, self.filename, self.source)
+
+    def __processResult(self, fn, nok, line, error):
+        """
+        Privat slot called after perfoming a style check on one file.
+        
+        @param fn filename of the just checked file (str)
+        @param nok flag if a problem was found (bool)
+        @param line line number (str)
+        @param error text of the problem (str)
+        """
+        # Check if it's the requested file, otherwise ignore signal
+        if fn != self.filename:
+            return
+        
+        if nok:
+            self.noResults = False
+            self.__createResultItem(fn, line, error.rstrip())
+        self.progress += 1
+        
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath("")
+        QApplication.processEvents()
+        self.__resort()
+        
+        self.check()
+
     def __finish(self):
         """
         Private slot called when the action or the user pressed the button.
