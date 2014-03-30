@@ -1329,7 +1329,8 @@ def determinePythonVersion(filename, source, editor=None):
         pass
     elif (Preferences.getProject("DeterminePyFromProject") and
           project.isOpen() and
-          project.isProjectFile(filename)):
+          project.isProjectFile(filename) and
+          ext in py2Ext + py3Ext):
                 pyVer = pyAssignment.get(project.getProjectLanguage(), 0)
     elif ext in py2Ext and ext not in py3Ext:
         pyVer = 2
