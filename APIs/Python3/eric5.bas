@@ -529,7 +529,8 @@ PreferencesLexer QsciLexer
 PreferencesLexerError Exception
 PreferencesLexerLanguageError PreferencesLexerError
 PreviewProcessingThread QThread
-Previewer QWidget Ui_Previewer
+Previewer QStackedWidget
+PreviewerHTML QWidget Ui_PreviewerHTML
 Printer QsciPrinter
 PrinterPage ConfigurationPageBase Ui_PrinterPage
 ProfileTreeWidgetItem QTreeWidgetItem

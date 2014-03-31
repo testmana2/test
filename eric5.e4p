@@ -1130,6 +1130,8 @@
     <Source>E5Gui/E5MapWidget.py</Source>
     <Source>QScintilla/EditorMarkerMap.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.py</Source>
+    <Source>UI/Previewers/__init__.py</Source>
+    <Source>UI/Previewers/PreviewerHTML.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1434,7 +1436,6 @@
     <Form>Network/IRC/IrcIdentitiesEditDialog.ui</Form>
     <Form>E5Gui/E5ZoomWidget.ui</Form>
     <Form>E5Network/E5SslCertificatesDialog.ui</Form>
-    <Form>UI/Previewer.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoDialog.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
     <Form>QScintilla/SortOptionsDialog.ui</Form>
@@ -1457,6 +1458,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui</Form>
+    <Form>UI/Previewers/PreviewerHTML.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

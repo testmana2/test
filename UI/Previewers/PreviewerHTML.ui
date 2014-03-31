@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Previewer</class>
- <widget class="QWidget" name="Previewer">
+ <class>PreviewerHTML</class>
+ <widget class="QWidget" name="PreviewerHTML">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -65,7 +65,7 @@
   <customwidget>
    <class>QWebView</class>
    <extends>QWidget</extends>
-   <header>QtWebKit/QWebView</header>
+   <header>QtWebKitWidgets/QWebView</header>
   </customwidget>
  </customwidgets>
  <resources/>

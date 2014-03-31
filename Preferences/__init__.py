@@ -373,6 +373,7 @@ class Prefs(object):
         "PreviewHtmlFileNameExtensions": ["html", "htm", "svg", "asp", "kid"],
         "PreviewMarkdownFileNameExtensions": ["md", "markdown"],
         "PreviewRestFileNameExtensions": ["rst"],
+        "PreviewQssFileNameExtensions": ["qss"],
         
         "VirtualSpaceOptions": QsciScintilla.SCVS_NONE,
         
