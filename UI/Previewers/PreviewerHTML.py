@@ -4,7 +4,7 @@
 #
 
 """
-
+Module implementing a previewer widget for HTML, Markdown and ReST files.
 """
 
 import os

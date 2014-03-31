@@ -1132,6 +1132,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.py</Source>
     <Source>UI/Previewers/__init__.py</Source>
     <Source>UI/Previewers/PreviewerHTML.py</Source>
+    <Source>UI/Previewers/PreviewerQSS.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1459,6 +1460,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui</Form>
     <Form>UI/Previewers/PreviewerHTML.ui</Form>
+    <Form>UI/Previewers/PreviewerQSS.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

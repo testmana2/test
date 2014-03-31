@@ -36,6 +36,7 @@ class Previewer(QStackedWidget):
         self.__firstShow = True
         
         self.__htmlPreviewer = None
+        self.__qssPreviewer = None
         
         # Don't update too often because the UI might become sluggish
         self.__typingTimer = QTimer()
@@ -147,8 +148,9 @@ class Previewer(QStackedWidget):
                     Preferences.getEditor("PreviewHtmlFileNameExtensions") + \
                     Preferences.getEditor(
                         "PreviewMarkdownFileNameExtensions") + \
-                    Preferences.getEditor("PreviewRestFileNameExtensions")
-            elif editor.getLanguage() == "HTML":
+                    Preferences.getEditor("PreviewRestFileNameExtensions") + \
+                    Preferences.getEditor("PreviewQssFileNameExtensions")
+            elif editor.getLanguage() in ["HTML", "QSS"]:
                 return True
         
         return False
@@ -191,5 +193,9 @@ class Previewer(QStackedWidget):
                 self.setCurrentWidget(self.__htmlPreviewer)
                 self.__htmlPreviewer.processEditor(editor)
             elif language == "QSS":
-                # TODO: add QSS
-                pass
+                if self.__qssPreviewer is None:
+                    from .Previewers.PreviewerQSS import PreviewerQSS
+                    self.__qssPreviewer = PreviewerQSS()
+                    self.addWidget(self.__qssPreviewer)
+                self.setCurrentWidget(self.__qssPreviewer)
+                self.__qssPreviewer.processEditor(editor)

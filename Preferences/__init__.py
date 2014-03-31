@@ -1710,7 +1710,8 @@ def getEditor(key, prefClass=Prefs):
     elif key in ["AdditionalOpenFilters", "AdditionalSaveFilters",
                  "PreviewMarkdownFileNameExtensions",
                  "PreviewRestFileNameExtensions",
-                 "PreviewHtmlFileNameExtensions"]:
+                 "PreviewHtmlFileNameExtensions",
+                 "PreviewQssFileNameExtensions"]:
         return toList(prefClass.settings.value(
             "Editor/" + key, prefClass.editorDefaults[key]))
     else:
