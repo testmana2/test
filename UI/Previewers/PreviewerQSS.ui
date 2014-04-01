@@ -47,7 +47,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>464</width>
+        <width>463</width>
         <height>538</height>
        </rect>
       </property>
@@ -64,9 +64,9 @@
           <attribute name="title">
            <string notr="true">Tab 1</string>
           </attribute>
-          <layout class="QGridLayout" name="gridLayout_7">
-           <item row="0" column="0" colspan="2">
-            <layout class="QGridLayout" name="gridLayout_6">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_4">
              <item row="0" column="0">
               <widget class="QRadioButton" name="radioButton">
                <property name="text">
@@ -81,16 +81,6 @@
                </property>
                <property name="tristate">
                 <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QProgressBar" name="progressBar">
-               <property name="maximum">
-                <number>20</number>
-               </property>
-               <property name="value">
-                <number>0</number>
                </property>
               </widget>
              </item>
@@ -123,8 +113,51 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="2">
-              <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item row="2" column="0">
+              <widget class="QSpinBox" name="spinBox"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+             </item>
+             <item row="3" column="0">
+              <widget class="QTimeEdit" name="timeEdit"/>
+             </item>
+             <item row="3" column="1">
+              <widget class="QDateEdit" name="dateEdit"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLCDNumber" name="lcdNumber">
+               <property name="digitCount">
+                <number>10</number>
+               </property>
+               <property name="intValue" stdset="0">
+                <number>1234567890</number>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string notr="true">Label with &lt;a href=&quot;http://google.com&quot;&gt;link&lt;/a&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <widget class="QProgressBar" name="progressBar">
+               <property name="maximum">
+                <number>20</number>
+               </property>
+               <property name="value">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
                 <widget class="QComboBox" name="readOnlyComboBox">
                  <property name="sizePolicy">
@@ -180,14 +213,8 @@
                </item>
               </layout>
              </item>
-             <item row="2" column="0">
-              <widget class="QSpinBox" name="spinBox"/>
-             </item>
-             <item row="2" column="1">
-              <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
-             </item>
-             <item row="2" column="2">
-              <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
                <item>
                 <widget class="QLineEdit" name="lineEdit">
                  <property name="text">
@@ -207,33 +234,10 @@
                </item>
               </layout>
              </item>
-             <item row="3" column="0">
-              <widget class="QTimeEdit" name="timeEdit"/>
-             </item>
-             <item row="3" column="1">
-              <widget class="QDateEdit" name="dateEdit"/>
-             </item>
-             <item row="3" column="2">
+             <item>
               <widget class="QDateTimeEdit" name="dateTimeEdit"/>
              </item>
-             <item row="4" column="0">
-              <widget class="QLCDNumber" name="lcdNumber">
-               <property name="digitCount">
-                <number>10</number>
-               </property>
-               <property name="intValue" stdset="0">
-                <number>1234567890</number>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string notr="true">Label with &lt;a href=&quot;http://google.com&quot;&gt;link&lt;/a&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="2">
+             <item>
               <widget class="QCommandLinkButton" name="commandLinkButton">
                <property name="text">
                 <string notr="true">CommandLinkButton</string>
@@ -242,77 +246,94 @@
              </item>
             </layout>
            </item>
-           <item row="2" column="0">
-            <layout class="QGridLayout" name="gridLayout_5">
-             <item row="0" column="0" rowspan="3">
-              <widget class="Line" name="verticalLine">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1" rowspan="3">
-              <widget class="QSlider" name="verticalSlider">
-               <property name="value">
-                <number>30</number>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="tickPosition">
-                <enum>QSlider::TicksAbove</enum>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QSlider" name="horizontalSlider">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="value">
-                <number>30</number>
-               </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <spacer name="horizontalSpacer">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
-               <property name="tickPosition">
-                <enum>QSlider::TicksBelow</enum>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
                </property>
-              </widget>
+              </spacer>
              </item>
-             <item row="1" column="2">
-              <widget class="Line" name="horizontalLine">
+             <item>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="2">
+                <widget class="Line" name="horizontalLine">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" rowspan="2">
+                <widget class="Line" name="verticalLine">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1" rowspan="2">
+                <widget class="QSlider" name="verticalSlider">
+                 <property name="value">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="tickPosition">
+                  <enum>QSlider::TicksAbove</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSlider" name="horizontalSlider">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="value">
+                  <number>30</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="tickPosition">
+                  <enum>QSlider::TicksAbove</enum>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="2">
+                <widget class="QDial" name="dial">
+                 <property name="notchesVisible">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
-              </widget>
-             </item>
-             <item row="2" column="2">
-              <widget class="QDial" name="dial">
-               <property name="notchesVisible">
-                <bool>true</bool>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>0</width>
+                 <height>20</height>
+                </size>
                </property>
-              </widget>
+              </spacer>
              </item>
             </layout>
            </item>
-           <item row="2" column="1">
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>0</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="0">
+           <item>
             <spacer name="verticalSpacer">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -334,6 +355,12 @@
           <layout class="QGridLayout" name="gridLayout_2">
            <item row="0" column="0">
             <widget class="QListWidget" name="listWidget">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
              <item>
               <property name="text">
                <string notr="true">I1</string>
@@ -445,43 +472,25 @@
            </item>
            <item row="0" column="1">
             <widget class="QListWidget" name="iconsListWidget">
-             <property name="flow">
-              <enum>QListView::LeftToRight</enum>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
              </property>
              <property name="viewMode">
               <enum>QListView::IconMode</enum>
              </property>
-             <item>
-              <property name="text">
-               <string notr="true">I1</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>:/images/battery.png</normaloff>:/images/battery.png</iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">I2</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>:/images/image-sunset.png</normaloff>:/images/image-sunset.png</iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">I3</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
-              </property>
-             </item>
+             <property name="sortingEnabled">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item row="1" column="0">
             <widget class="QTableWidget" name="table">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
              <property name="sortingEnabled">
               <bool>true</bool>
              </property>
@@ -556,6 +565,12 @@
            </item>
            <item row="1" column="1">
             <widget class="QTreeWidget" name="tree">
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
              <property name="allColumnsShowFocus">
               <bool>true</bool>
              </property>
@@ -645,8 +660,8 @@
               <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;Text &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;&quot;&gt;browser&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-style:italic;&quot;&gt;with&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; text-decoration: underline;&quot;&gt;some&lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600; font-style:italic;&quot;&gt;text &lt;/span&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;and &lt;/span&gt;&lt;a href=&quot;http://google.com&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; text-decoration: underline; color:#0000ff;&quot;&gt;links&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Text &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;browser&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-style:italic;&quot;&gt;with&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline;&quot;&gt;some&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; font-style:italic;&quot;&gt;text &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;and &lt;/span&gt;&lt;a href=&quot;http://google.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0000ff;&quot;&gt;links&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="openLinks">
               <bool>false</bool>
@@ -659,8 +674,8 @@ p, li { white-space: pre-wrap; }
               <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Liberation Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt;&quot;&gt;Text edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Text edit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>
@@ -689,8 +704,8 @@ p, li { white-space: pre-wrap; }
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>392</width>
-                   <height>253</height>
+                   <width>399</width>
+                   <height>275</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_9">
@@ -742,8 +757,8 @@ p, li { white-space: pre-wrap; }
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>68</width>
-                       <height>171</height>
+                       <width>69</width>
+                       <height>203</height>
                       </rect>
                      </property>
                      <attribute name="label">
@@ -755,8 +770,8 @@ p, li { white-space: pre-wrap; }
                       <rect>
                        <x>0</x>
                        <y>0</y>
-                       <width>68</width>
-                       <height>237</height>
+                       <width>100</width>
+                       <height>30</height>
                       </rect>
                      </property>
                      <attribute name="label">

@@ -9,11 +9,13 @@ Module implementing a previewer widget for Qt style sheet files.
 
 import os
 
-from PyQt4.QtGui import QWidget, QMenu
+from PyQt4.QtCore import qVersion
+from PyQt4.QtGui import QWidget, QMenu, QLabel, QHeaderView, QListWidgetItem
 
 from .Ui_PreviewerQSS import Ui_PreviewerQSS
 
 import Preferences
+import UI.PixmapCache
 
 
 class PreviewerQSS(QWidget, Ui_PreviewerQSS):
@@ -29,14 +31,38 @@ class PreviewerQSS(QWidget, Ui_PreviewerQSS):
         super().__init__(parent)
         self.setupUi(self)
         
-        # menu for toolbutton
+        # menu for the tool button
         self.__toolButtonMenu = QMenu(self);
-        self.__toolButtonMenu.addAction("Item1")
+        self.__toolButtonMenu.addAction(self.tr("Action 1"))
         self.__toolButtonMenu.addSeparator()
-        self.__toolButtonMenu.addAction("Item2")
+        self.__toolButtonMenu.addAction(self.tr("Action 2"))
         self.toolButton.setMenu(self.__toolButtonMenu)
         
-        # TODO: some more initialisation
+        # a MDI window
+        self.__mdi = self.mdiArea.addSubWindow(QLabel(self.tr("MDI")))
+        self.__mdi.resize(160, 80)
+        
+        # tree and table widgets
+        if qVersion() >= "5.0.0":
+            self.tree.header().setSectionResizeMode(
+                QHeaderView.ResizeToContents)
+            self.table.horizontalHeader().setSectionResizeMode(
+                QHeaderView.ResizeToContents)
+        else:
+            self.tree.header().setResizeMode(
+                QHeaderView.ResizeToContents)
+            self.table.horizontalHeader().setResizeMode(
+                QHeaderView.ResizeToContents)
+        self.tree.topLevelItem(0).setExpanded(True)
+        
+        # icon list widget
+        for iconName, labelText in (
+            ("filePython.png", self.tr("Python")),
+            ("fileRuby.png", self.tr("Ruby")),
+            ("fileJavascript.png", self.tr("JavaScript")),
+        ):
+            self.iconsListWidget.addItem(QListWidgetItem(
+                UI.PixmapCache.getIcon(iconName), labelText))
     
     def processEditor(self, editor=None):
         """
