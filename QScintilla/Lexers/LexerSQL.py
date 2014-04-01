@@ -13,7 +13,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerSQL(QsciLexerSQL, Lexer):
+class LexerSQL(Lexer, QsciLexerSQL):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -23,7 +23,7 @@ class LexerSQL(QsciLexerSQL, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerSQL.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "--"

@@ -13,7 +13,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerVHDL(QsciLexerVHDL, Lexer):
+class LexerVHDL(Lexer, QsciLexerVHDL):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -23,7 +23,7 @@ class LexerVHDL(QsciLexerVHDL, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerVHDL.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "--"

@@ -12,7 +12,7 @@ from PyQt4.Qsci import QsciLexerOctave
 from .Lexer import Lexer
 
 
-class LexerOctave(QsciLexerOctave, Lexer):
+class LexerOctave(Lexer, QsciLexerOctave):
     """
     Subclass to implement some additional lexer dependent methods.
     """
@@ -22,7 +22,7 @@ class LexerOctave(QsciLexerOctave, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerOctave.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

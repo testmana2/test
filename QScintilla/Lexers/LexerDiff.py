@@ -12,7 +12,7 @@ from PyQt4.Qsci import QsciLexerDiff
 from .Lexer import Lexer
 
 
-class LexerDiff(QsciLexerDiff, Lexer):
+class LexerDiff(Lexer, QsciLexerDiff):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -22,7 +22,7 @@ class LexerDiff(QsciLexerDiff, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerDiff.__init__(self, parent)
         Lexer.__init__(self)
     
     def isCommentStyle(self, style):

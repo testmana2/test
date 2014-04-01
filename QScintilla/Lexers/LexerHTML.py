@@ -13,7 +13,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerHTML(QsciLexerHTML, Lexer):
+class LexerHTML(Lexer, QsciLexerHTML):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -23,7 +23,7 @@ class LexerHTML(QsciLexerHTML, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerHTML.__init__(self, parent)
         Lexer.__init__(self)
         
         self.streamCommentString = {
