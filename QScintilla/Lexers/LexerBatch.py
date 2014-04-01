@@ -12,7 +12,7 @@ from PyQt4.Qsci import QsciLexerBatch
 from .Lexer import Lexer
 
 
-class LexerBatch(QsciLexerBatch, Lexer):
+class LexerBatch(Lexer, QsciLexerBatch):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -22,7 +22,7 @@ class LexerBatch(QsciLexerBatch, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerBatch.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "REM "

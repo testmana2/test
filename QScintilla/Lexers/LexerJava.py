@@ -13,7 +13,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerJava(QsciLexerJava, Lexer):
+class LexerJava(Lexer, QsciLexerJava):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -23,7 +23,7 @@ class LexerJava(QsciLexerJava, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerJava.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "//"

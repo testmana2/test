@@ -13,7 +13,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerPostScript(QsciLexerPostScript, Lexer):
+class LexerPostScript(Lexer, QsciLexerPostScript):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -23,7 +23,7 @@ class LexerPostScript(QsciLexerPostScript, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super().__init__(parent)
+        QsciLexerPostScript.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "%"

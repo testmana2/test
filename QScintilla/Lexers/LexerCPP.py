@@ -13,7 +13,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerCPP(QsciLexerCPP, Lexer):
+class LexerCPP(Lexer, QsciLexerCPP):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerCPP(QsciLexerCPP, Lexer):
         @param caseInsensitiveKeywords flag indicating keywords are case
             insensitive (boolean)
         """
-        super().__init__(parent, caseInsensitiveKeywords)
+        QsciLexerCPP.__init__(self, parent, caseInsensitiveKeywords)
         Lexer.__init__(self)
         
         self.commentString = "//"
