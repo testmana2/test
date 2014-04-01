@@ -33,6 +33,8 @@ class LexerQSS(Lexer, QsciLexerCSS):
         }
         
         # TODO: add QSS API generation
+        
+        # TODO: fix styling, it uses CSS styles
     
     def initProperties(self):
         """
