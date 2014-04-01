@@ -124,6 +124,8 @@ def getSupportedLanguages():
                     "lexerPython.png"],
         "Python3": [QApplication.translate('Lexers', "Python3"), 'dummy.py',
                     "lexerPython3.png"],
+        "QSS": [QApplication.translate('Lexers', "QSS"), 'dummy.qss',
+                "lexerCSS.png"],
         "Ruby": [QApplication.translate('Lexers', "Ruby"), 'dummy.rb',
                  "lexerRuby.png"],
         "SQL": [QApplication.translate('Lexers', "SQL"), 'dummy.sql',
@@ -284,6 +286,9 @@ def getLexer(language, parent=None, pyname=""):
             elif language == "Octave":
                 from .LexerOctave import LexerOctave
                 return LexerOctave(parent)
+            elif language == "QSS":
+                from .LexerQSS import LexerQSS
+                return LexerQSS(parent)
             
             elif language in LexerRegistry:
                 return LexerRegistry[language][2](parent)
@@ -685,7 +690,7 @@ def getDefaultLexerAssociations():
         '*.ctest': "CMake",
         '*.ctest.in': "CMake",
         '*.css': "CSS",
-        '*.qss': "CSS",
+        '*.qss': "QSS",
         "*.d": "D",
         "*.di": "D",
         "*.diff": "Diff",

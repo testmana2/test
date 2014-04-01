@@ -869,6 +869,7 @@
               <section title="eric5.QScintilla.Lexers.LexerProperties" ref="eric5.QScintilla.Lexers.LexerProperties.html" />
               <section title="eric5.QScintilla.Lexers.LexerPygments" ref="eric5.QScintilla.Lexers.LexerPygments.html" />
               <section title="eric5.QScintilla.Lexers.LexerPython" ref="eric5.QScintilla.Lexers.LexerPython.html" />
+              <section title="eric5.QScintilla.Lexers.LexerQSS" ref="eric5.QScintilla.Lexers.LexerQSS.html" />
               <section title="eric5.QScintilla.Lexers.LexerRuby" ref="eric5.QScintilla.Lexers.LexerRuby.html" />
               <section title="eric5.QScintilla.Lexers.LexerSQL" ref="eric5.QScintilla.Lexers.LexerSQL.html" />
               <section title="eric5.QScintilla.Lexers.LexerTCL" ref="eric5.QScintilla.Lexers.LexerTCL.html" />
@@ -940,6 +941,7 @@
           <section title="eric5.UI" ref="index-eric5.UI.html">
             <section title="eric5.UI.Previewers" ref="index-eric5.UI.Previewers.html">
               <section title="eric5.UI.Previewers.PreviewerHTML" ref="eric5.UI.Previewers.PreviewerHTML.html" />
+              <section title="eric5.UI.Previewers.PreviewerQSS" ref="eric5.UI.Previewers.PreviewerQSS.html" />
             </section>
             <section title="eric5.UI.AuthenticationDialog" ref="eric5.UI.AuthenticationDialog.html" />
             <section title="eric5.UI.Browser" ref="eric5.UI.Browser.html" />
@@ -7653,6 +7655,14 @@
       <keyword name="LexerPython.isCommentStyle" id="LexerPython.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerPython.html#LexerPython.isCommentStyle" />
       <keyword name="LexerPython.isStringStyle" id="LexerPython.isStringStyle" ref="eric5.QScintilla.Lexers.LexerPython.html#LexerPython.isStringStyle" />
       <keyword name="LexerPython.language" id="LexerPython.language" ref="eric5.QScintilla.Lexers.LexerPython.html#LexerPython.language" />
+      <keyword name="LexerQSS" id="LexerQSS" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS" />
+      <keyword name="LexerQSS (Constructor)" id="LexerQSS (Constructor)" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.__init__" />
+      <keyword name="LexerQSS (Module)" id="LexerQSS (Module)" ref="eric5.QScintilla.Lexers.LexerQSS.html" />
+      <keyword name="LexerQSS.defaultKeywords" id="LexerQSS.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.defaultKeywords" />
+      <keyword name="LexerQSS.initProperties" id="LexerQSS.initProperties" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.initProperties" />
+      <keyword name="LexerQSS.isCommentStyle" id="LexerQSS.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.isCommentStyle" />
+      <keyword name="LexerQSS.isStringStyle" id="LexerQSS.isStringStyle" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.isStringStyle" />
+      <keyword name="LexerQSS.language" id="LexerQSS.language" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.language" />
       <keyword name="LexerRuby" id="LexerRuby" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby" />
       <keyword name="LexerRuby (Constructor)" id="LexerRuby (Constructor)" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.__init__" />
       <keyword name="LexerRuby (Module)" id="LexerRuby (Module)" ref="eric5.QScintilla.Lexers.LexerRuby.html" />
@@ -8794,6 +8804,10 @@
       <keyword name="PreviewerHTML.on_ssiCheckBox_clicked" id="PreviewerHTML.on_ssiCheckBox_clicked" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.on_ssiCheckBox_clicked" />
       <keyword name="PreviewerHTML.processEditor" id="PreviewerHTML.processEditor" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.processEditor" />
       <keyword name="PreviewerHTML.shutdown" id="PreviewerHTML.shutdown" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.shutdown" />
+      <keyword name="PreviewerQSS" id="PreviewerQSS" ref="eric5.UI.Previewers.PreviewerQSS.html#PreviewerQSS" />
+      <keyword name="PreviewerQSS (Constructor)" id="PreviewerQSS (Constructor)" ref="eric5.UI.Previewers.PreviewerQSS.html#PreviewerQSS.__init__" />
+      <keyword name="PreviewerQSS (Module)" id="PreviewerQSS (Module)" ref="eric5.UI.Previewers.PreviewerQSS.html" />
+      <keyword name="PreviewerQSS.processEditor" id="PreviewerQSS.processEditor" ref="eric5.UI.Previewers.PreviewerQSS.html#PreviewerQSS.processEditor" />
       <keyword name="Previewers (Package)" id="Previewers (Package)" ref="index-eric5.UI.Previewers.html" />
       <keyword name="Printer" id="Printer" ref="eric5.QScintilla.Printer.html#Printer" />
       <keyword name="Printer (Constructor)" id="Printer (Constructor)" ref="eric5.QScintilla.Printer.html#Printer.__init__" />
@@ -14462,6 +14476,7 @@
       <file>eric5.QScintilla.Lexers.LexerProperties.html</file>
       <file>eric5.QScintilla.Lexers.LexerPygments.html</file>
       <file>eric5.QScintilla.Lexers.LexerPython.html</file>
+      <file>eric5.QScintilla.Lexers.LexerQSS.html</file>
       <file>eric5.QScintilla.Lexers.LexerRuby.html</file>
       <file>eric5.QScintilla.Lexers.LexerSQL.html</file>
       <file>eric5.QScintilla.Lexers.LexerTCL.html</file>
@@ -14528,6 +14543,7 @@
       <file>eric5.UI.PixmapCache.html</file>
       <file>eric5.UI.Previewer.html</file>
       <file>eric5.UI.Previewers.PreviewerHTML.html</file>
+      <file>eric5.UI.Previewers.PreviewerQSS.html</file>
       <file>eric5.UI.SearchWidget.html</file>
       <file>eric5.UI.SplashScreen.html</file>
       <file>eric5.UI.SymbolsWidget.html</file>

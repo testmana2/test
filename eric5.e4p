@@ -1133,6 +1133,7 @@
     <Source>UI/Previewers/__init__.py</Source>
     <Source>UI/Previewers/PreviewerHTML.py</Source>
     <Source>UI/Previewers/PreviewerQSS.py</Source>
+    <Source>QScintilla/Lexers/LexerQSS.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
