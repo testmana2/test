@@ -31,10 +31,6 @@ class LexerQSS(Lexer, QsciLexerCSS):
             'start': '/* ',
             'end': ' */'
         }
-        
-        # TODO: add QSS API generation
-        
-        # TODO: fix styling, it uses CSS styles
     
     def initProperties(self):
         """
@@ -150,5 +146,13 @@ class LexerQSS(Lexer, QsciLexerCSS):
         Public method to return the lexer language.
         
         @return lexer language (string)
+        """
+        return "QSS"
+    
+    def lexerName(self):
+        """
+        Public method to return the lexer name.
+        
+        @return lexer name (string)
         """
         return "QSS"

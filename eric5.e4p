@@ -1606,6 +1606,7 @@
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikia.xml</Other>
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikipedia.xml</Other>
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wiktionary.xml</Other>
+    <Other>APIs/QSS/qss.api</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

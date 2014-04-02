@@ -7444,6 +7444,7 @@
       <keyword name="Lexer.isCommentStyle" id="Lexer.isCommentStyle" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.isCommentStyle" />
       <keyword name="Lexer.isStringStyle" id="Lexer.isStringStyle" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.isStringStyle" />
       <keyword name="Lexer.keywords" id="Lexer.keywords" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.keywords" />
+      <keyword name="Lexer.lexerName" id="Lexer.lexerName" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.lexerName" />
       <keyword name="Lexer.smartIndentLine" id="Lexer.smartIndentLine" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.smartIndentLine" />
       <keyword name="Lexer.smartIndentSelection" id="Lexer.smartIndentSelection" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.smartIndentSelection" />
       <keyword name="Lexer.streamCommentStr" id="Lexer.streamCommentStr" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.streamCommentStr" />
@@ -7663,6 +7664,7 @@
       <keyword name="LexerQSS.isCommentStyle" id="LexerQSS.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.isCommentStyle" />
       <keyword name="LexerQSS.isStringStyle" id="LexerQSS.isStringStyle" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.isStringStyle" />
       <keyword name="LexerQSS.language" id="LexerQSS.language" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.language" />
+      <keyword name="LexerQSS.lexerName" id="LexerQSS.lexerName" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.lexerName" />
       <keyword name="LexerRuby" id="LexerRuby" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby" />
       <keyword name="LexerRuby (Constructor)" id="LexerRuby (Constructor)" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.__init__" />
       <keyword name="LexerRuby (Module)" id="LexerRuby (Module)" ref="eric5.QScintilla.Lexers.LexerRuby.html" />

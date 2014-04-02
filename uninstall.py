@@ -23,7 +23,7 @@ from eric5config import getConfig
 # Define the globals.
 progName = None
 pyModDir = None
-progLanguages = ["Python", "Ruby"]
+progLanguages = ["Python", "Ruby", "QSS"]
 
 
 def exit(rcode=0):
