@@ -7236,6 +7236,7 @@
       <keyword name="Lexer.isCommentStyle" id="Lexer.isCommentStyle" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.isCommentStyle" />
       <keyword name="Lexer.isStringStyle" id="Lexer.isStringStyle" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.isStringStyle" />
       <keyword name="Lexer.keywords" id="Lexer.keywords" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.keywords" />
+      <keyword name="Lexer.lexerName" id="Lexer.lexerName" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.lexerName" />
       <keyword name="Lexer.smartIndentLine" id="Lexer.smartIndentLine" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.smartIndentLine" />
       <keyword name="Lexer.smartIndentSelection" id="Lexer.smartIndentSelection" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.smartIndentSelection" />
       <keyword name="Lexer.streamCommentStr" id="Lexer.streamCommentStr" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.streamCommentStr" />
