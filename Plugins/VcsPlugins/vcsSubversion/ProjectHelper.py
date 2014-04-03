@@ -135,7 +135,7 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.vcsDiffAct.setWhatsThis(self.tr(
             """<b>Show differences</b>"""
-            """<p>This shows the difference of the local project to the"""
+            """<p>This shows differences of the local project to the"""
             """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered.connect(self._vcsDiff)
@@ -151,7 +151,7 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.svnExtDiffAct.setWhatsThis(self.tr(
             """<b>Show differences (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of"""
+            """<p>This shows differences of selectable revisions of"""
             """ the project.</p>"""
         ))
         self.svnExtDiffAct.triggered.connect(self.__svnExtendedDiff)
@@ -167,7 +167,7 @@ class SvnProjectHelper(VcsProjectHelper):
         ))
         self.svnUrlDiffAct.setWhatsThis(self.tr(
             """<b>Show differences (URLs)</b>"""
-            """<p>This shows the difference of the project between"""
+            """<p>This shows differences of the project between"""
             """ two repository URLs.</p>"""
         ))
         self.svnUrlDiffAct.triggered.connect(self.__svnUrlDiff)

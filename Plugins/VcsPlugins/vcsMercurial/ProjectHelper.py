@@ -287,7 +287,7 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsDiffAct.setWhatsThis(self.tr(
             """<b>Show differences</b>"""
-            """<p>This shows the difference of the local project to the"""
+            """<p>This shows differences of the local project to the"""
             """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered.connect(self._vcsDiff)
@@ -303,7 +303,7 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.hgExtDiffAct.setWhatsThis(self.tr(
             """<b>Show differences (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of the"""
+            """<p>This shows differences of selectable revisions of the"""
             """ project.</p>"""
         ))
         self.hgExtDiffAct.triggered.connect(self.__hgExtendedDiff)
