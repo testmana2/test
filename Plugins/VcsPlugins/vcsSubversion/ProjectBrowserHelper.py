@@ -263,25 +263,25 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side'), self.__SVNSbsDiff)
+            self.trUtf8('Show differences side-by-side'), self.__SVNSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side (extended)'),
+            self.trUtf8('Show differences side-by-side (extended)'),
             self.__SVNSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.trUtf8('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsMenuActions.append(act)
         self.blameAct = menu.addAction(
@@ -406,16 +406,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.trUtf8('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -576,16 +576,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.trUtf8('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -685,16 +685,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.trUtf8('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()

@@ -237,20 +237,20 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side'), self.__HgSbsDiff)
+            self.trUtf8('Show differences side-by-side'), self.__HgSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.trUtf8('Show difference side-by-side (extended)'),
+            self.trUtf8('Show differences side-by-side (extended)'),
             self.__HgSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         self.annotateAct = menu.addAction(
@@ -330,11 +330,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -453,11 +453,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -530,11 +530,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference'), self._VCSDiff)
+            self.trUtf8('Show differences'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()

@@ -272,7 +272,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
-            self.trUtf8('Show difference'),
+            self.trUtf8('Show differences'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show &difference'),
             0, 0, self, 'mercurial_diff')
@@ -280,24 +280,24 @@ class HgProjectHelper(VcsProjectHelper):
             'Show the difference of the local project to the repository'
         ))
         self.vcsDiffAct.setWhatsThis(self.trUtf8(
-            """<b>Show difference</b>"""
-            """<p>This shows the difference of the local project to the"""
+            """<b>Show differences</b>"""
+            """<p>This shows differences of the local project to the"""
             """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered[()].connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
         self.hgExtDiffAct = E5Action(
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             0, 0, self, 'mercurial_extendeddiff')
         self.hgExtDiffAct.setStatusTip(self.trUtf8(
             'Show the difference of revisions of the project to the repository'
         ))
         self.hgExtDiffAct.setWhatsThis(self.trUtf8(
-            """<b>Show difference (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of the"""
+            """<b>Show differences (extended)</b>"""
+            """<p>This shows differences of selectable revisions of the"""
             """ project.</p>"""
         ))
         self.hgExtDiffAct.triggered[()].connect(self.__hgExtendedDiff)

@@ -20151,12 +20151,12 @@ Hai %n schede aperta.</numerusform>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="140"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="140"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
@@ -22854,12 +22854,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="531"/>
         <source>Show difference</source>
-        <translation>Mostra differenza</translation>
+        <translation type="obsolete">Mostra differenza</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="535"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="256"/>
@@ -22927,13 +22927,23 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="531"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="242"/>
-        <source>Show difference side-by-side</source>
+        <source>Show differences side-by-side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="535"/>
+        <source>Show differences (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="251"/>
-        <source>Show difference side-by-side (extended)</source>
+        <source>Show differences side-by-side (extended)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -23172,7 +23182,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="274"/>
         <source>Show difference</source>
-        <translation>Mostra differenza</translation>
+        <translation type="obsolete">Mostra differenza</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="274"/>
@@ -23187,12 +23197,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="282"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="290"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="295"/>
@@ -23202,7 +23212,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="298"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="306"/>
@@ -24232,6 +24242,26 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="825"/>
         <source>&lt;b&gt;Rollback last transaction&lt;/b&gt;&lt;p&gt;This performs a rollback of the last transaction. Transactions are used to encapsulate the effects of all commands that create new changesets or propagate existing changesets into a repository. For example, the following commands are transactional, and their effects can be rolled back:&lt;ul&gt;&lt;li&gt;commit&lt;/li&gt;&lt;li&gt;import&lt;/li&gt;&lt;li&gt;pull&lt;/li&gt;&lt;li&gt;push (with this repository as the destination)&lt;/li&gt;&lt;li&gt;unbundle&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;This command is dangerous. Please use with care. &lt;/strong&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="274"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="282"/>
+        <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="290"/>
+        <source>Show differences (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="298"/>
+        <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -49807,12 +49837,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="690"/>
         <source>Show difference</source>
-        <translation>Mostra differenza</translation>
+        <translation type="obsolete">Mostra differenza</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="694"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="705"/>
@@ -49907,7 +49937,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="699"/>
         <source>Show difference (URLs)</source>
-        <translation>Mostra differenze (URL)</translation>
+        <translation type="obsolete">Mostra differenze (URL)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="568"/>
@@ -49945,13 +49975,28 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="690"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="274"/>
-        <source>Show difference side-by-side</source>
+        <source>Show differences side-by-side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="694"/>
+        <source>Show differences (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="283"/>
-        <source>Show difference side-by-side (extended)</source>
+        <source>Show differences side-by-side (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="699"/>
+        <source>Show differences (URLs)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -50080,7 +50125,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
         <source>Show difference</source>
-        <translation>Mostra differenze</translation>
+        <translation type="obsolete">Mostra differenze</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
@@ -50095,12 +50140,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="136"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="144"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="149"/>
@@ -50110,7 +50155,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="152"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="176"/>
@@ -50485,7 +50530,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="160"/>
         <source>Show difference (URLs)</source>
-        <translation>Mostra differenze (URLs)</translation>
+        <translation type="obsolete">Mostra differenze (URLs)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="165"/>
@@ -50495,7 +50540,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
         <source>&lt;b&gt;Show difference (URLs)&lt;/b&gt;&lt;p&gt;This shows the difference of the project between two repository URLs.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra le differenze (URLs)&lt;/b&gt;&lt;p&gt;Mostra le differenze del progetto tra due URLs di repostitory.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra le differenze (URLs)&lt;/b&gt;&lt;p&gt;Mostra le differenze del progetto tra due URLs di repostitory.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="111"/>
@@ -50605,6 +50650,36 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="492"/>
         <source>&lt;b&gt;Upgrade&lt;/b&gt;&lt;p&gt;Upgrades the working copy to the current format.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="136"/>
+        <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="144"/>
+        <source>Show differences (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="152"/>
+        <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="160"/>
+        <source>Show differences (URLs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
+        <source>&lt;b&gt;Show differences (URLs)&lt;/b&gt;&lt;p&gt;This shows differences of the project between two repository URLs.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

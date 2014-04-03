@@ -126,7 +126,7 @@ class SvnProjectHelper(VcsProjectHelper):
         self.actions.append(self.svnLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
-            self.trUtf8('Show difference'),
+            self.trUtf8('Show differences'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.trUtf8('Show &difference'),
             0, 0, self, 'subversion_diff')
@@ -134,40 +134,40 @@ class SvnProjectHelper(VcsProjectHelper):
             'Show the difference of the local project to the repository'
         ))
         self.vcsDiffAct.setWhatsThis(self.trUtf8(
-            """<b>Show difference</b>"""
-            """<p>This shows the difference of the local project to the"""
+            """<b>Show differences</b>"""
+            """<p>This shows differences of the local project to the"""
             """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered[()].connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
         self.svnExtDiffAct = E5Action(
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (extended)'),
+            self.trUtf8('Show differences (extended)'),
             0, 0, self, 'subversion_extendeddiff')
         self.svnExtDiffAct.setStatusTip(self.trUtf8(
             'Show the difference of revisions of the project to the repository'
         ))
         self.svnExtDiffAct.setWhatsThis(self.trUtf8(
-            """<b>Show difference (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of"""
+            """<b>Show differences (extended)</b>"""
+            """<p>This shows differences of selectable revisions of"""
             """ the project.</p>"""
         ))
         self.svnExtDiffAct.triggered[()].connect(self.__svnExtendedDiff)
         self.actions.append(self.svnExtDiffAct)
         
         self.svnUrlDiffAct = E5Action(
-            self.trUtf8('Show difference (URLs)'),
+            self.trUtf8('Show differences (URLs)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.trUtf8('Show difference (URLs)'),
+            self.trUtf8('Show differences (URLs)'),
             0, 0, self, 'subversion_urldiff')
         self.svnUrlDiffAct.setStatusTip(self.trUtf8(
             'Show the difference of the project between two repository URLs'
         ))
         self.svnUrlDiffAct.setWhatsThis(self.trUtf8(
-            """<b>Show difference (URLs)</b>"""
-            """<p>This shows the difference of the project between"""
+            """<b>Show differences (URLs)</b>"""
+            """<p>This shows differences of the project between"""
             """ two repository URLs.</p>"""
         ))
         self.svnUrlDiffAct.triggered[()].connect(self.__svnUrlDiff)
