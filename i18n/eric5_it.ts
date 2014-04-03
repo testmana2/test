@@ -20331,12 +20331,12 @@ Hai %n schede aperta.</numerusform>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="132"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAnnotateDialog.py" line="132"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
@@ -23132,12 +23132,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="620"/>
         <source>Show difference</source>
-        <translation>Mostra differenza</translation>
+        <translation type="obsolete">Mostra differenza</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="624"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="342"/>
@@ -23192,7 +23192,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="634"/>
         <source>Conflict resolved</source>
-        <translation>Conflitto risolto</translation>
+        <translation type="obsolete">Conflitto risolto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="523"/>
@@ -23207,17 +23207,42 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="328"/>
         <source>Show difference side-by-side</source>
-        <translation>Mostra differenze fianco a fianco</translation>
+        <translation type="obsolete">Mostra differenze fianco a fianco</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="337"/>
         <source>Show difference side-by-side (extended)</source>
-        <translation>Mostra differenze fianco a fianco (esteso)</translation>
+        <translation type="obsolete">Mostra differenze fianco a fianco (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="244"/>
         <source>Extensions</source>
         <translation>Estensioni</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="620"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="328"/>
+        <source>Show differences side-by-side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="624"/>
+        <source>Show differences (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="337"/>
+        <source>Show differences side-by-side (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="634"/>
+        <source>Conflicts resolved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -23455,7 +23480,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show difference</source>
-        <translation>Mostra differenza</translation>
+        <translation type="obsolete">Mostra differenza</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
@@ -23470,12 +23495,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="288"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="296"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="301"/>
@@ -23485,7 +23510,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="304"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="312"/>
@@ -24520,6 +24545,26 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1009"/>
         <source>Administration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="296"/>
+        <source>Show differences (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="288"/>
+        <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="304"/>
+        <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -31711,302 +31756,302 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Proprietà</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="127"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="129"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="129"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="131"/>
         <source>SQL</source>
         <translation>SQL</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="133"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="135"/>
         <source>TeX</source>
         <translation>TeX</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="135"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="137"/>
         <source>VHDL</source>
         <translation>VHDL</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="498"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="503"/>
         <source>Pyrex Files (*.pyx)</source>
         <translation>File Pyrex (*.pyx)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="501"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="506"/>
         <source>Quixote Template Files (*.ptl)</source>
         <translation>File template Quixote</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="504"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="509"/>
         <source>Ruby Files (*.rb)</source>
         <translation>File Ruby (*.rb)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="507"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="512"/>
         <source>IDL Files (*.idl)</source>
         <translation>File IDL (*.idl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="348"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="353"/>
         <source>C Files (*.h *.c)</source>
         <translation>File C (*.h *.c)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="351"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="356"/>
         <source>C++ Files (*.h *.hpp *.hh *.cxx *.cpp *.cc)</source>
         <translation>File C++ (*.h *.hpp *.hh *.cxx *.cpp *.cc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="519"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="524"/>
         <source>C# Files (*.cs)</source>
         <translation>File C# (*.cs)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="357"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="362"/>
         <source>HTML Files (*.html *.htm *.asp *.shtml)</source>
         <translation>File HTML (*.html *.htm *.asp *.shtml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="531"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="536"/>
         <source>CSS Files (*.css)</source>
         <translation>File CSS (*.css)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="534"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="539"/>
         <source>QSS Files (*.qss)</source>
         <translation>File QSS (*.qss)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="366"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="371"/>
         <source>PHP Files (*.php *.php3 *.php4 *.php5 *.phtml)</source>
         <translation>File PHP (*.php *.php3 *.php4 *.php5 *.phtml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="546"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="551"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>File Risorse Qt (*.qrc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="375"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="380"/>
         <source>D Files (*.d *.di)</source>
         <translation>File D (*.d *.di)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="555"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="560"/>
         <source>Java Files (*.java)</source>
         <translation>File Java (*.java)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="558"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="563"/>
         <source>JavaScript Files (*.js)</source>
         <translation>File JavaScript (*.js)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="561"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="566"/>
         <source>SQL Files (*.sql)</source>
         <translation>File SQL (*.sql)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="564"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="569"/>
         <source>Docbook Files (*.docbook)</source>
         <translation>File Docbook (*.docbook)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="390"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="395"/>
         <source>Perl Files (*.pl *.pm *.ph)</source>
         <translation>File Perl (*.pl *.pm *.ph)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="573"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="578"/>
         <source>Lua Files (*.lua)</source>
         <translation>File Lua (*.lua)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="396"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="401"/>
         <source>Tex Files (*.tex *.sty *.aux *.toc *.idx)</source>
         <translation>File TeX (*.tex *.sty *.aux *.toc *.idx)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="576"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="581"/>
         <source>Shell Files (*.sh)</source>
         <translation>File Shell (*.sh)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="402"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="407"/>
         <source>Batch Files (*.bat *.cmd)</source>
         <translation>File Batch (*.bat *.cmd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="405"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="410"/>
         <source>Diff Files (*.diff *.patch)</source>
         <translation>File Diff (*.diff *.patch)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="408"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="413"/>
         <source>Makefiles (*.mak)</source>
         <translation>Makefile (*,mak)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="411"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="416"/>
         <source>Properties Files (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</source>
         <translation>File proprietà (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="600"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="605"/>
         <source>Povray Files (*.pov)</source>
         <translation>File Povray (*.pov)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="418"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="423"/>
         <source>CMake Files (CMakeLists.txt *.cmake *.ctest)</source>
         <translation>File CMake (CMakeLists.txt *.cmake *.ctest)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="421"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="426"/>
         <source>VHDL Files (*.vhd *.vhdl)</source>
         <translation>File VHDL (*.vhd *.vhdl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="655"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="660"/>
         <source>All Files (*)</source>
         <translation>Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="131"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="133"/>
         <source>TCL</source>
         <translation>TCL</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="424"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="429"/>
         <source>TCL/Tk Files (*.tcl *.tk)</source>
         <translation>File TCL/Tk (*.tcl *.tk)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="510"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="515"/>
         <source>C Files (*.c)</source>
         <translation>File C (*.c)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="513"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="518"/>
         <source>C++ Files (*.cpp)</source>
         <translation>File C++ (*.cpp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="516"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="521"/>
         <source>C++/C Header Files (*.h)</source>
         <translation>File Header C/C++ (*.h)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="522"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="527"/>
         <source>HTML Files (*.html)</source>
         <translation>File HTML (*.html)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="525"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="530"/>
         <source>PHP Files (*.php)</source>
         <translation>File PHP (*.php)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="528"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="533"/>
         <source>ASP Files (*.asp)</source>
         <translation>File ASP (*.asp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="537"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="542"/>
         <source>XML Files (*.xml)</source>
         <translation>File XML (*.xml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="540"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="545"/>
         <source>XSL Files (*.xsl)</source>
         <translation>File XSL (*.xsl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="543"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="548"/>
         <source>DTD Files (*.dtd)</source>
         <translation>File DTD (*.dtd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="549"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="554"/>
         <source>D Files (*.d)</source>
         <translation>File D (*.d)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="552"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="557"/>
         <source>D Interface Files (*.di)</source>
         <translation>File interfaccia D (*.di)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="567"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="572"/>
         <source>Perl Files (*.pl)</source>
         <translation>File Perl (*.pl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="570"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="575"/>
         <source>Perl Module Files (*.pm)</source>
         <translation>File moduli Perl (*.pm)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="579"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="584"/>
         <source>Batch Files (*.bat)</source>
         <translation>File Batch (*.bat)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="582"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="587"/>
         <source>TeX Files (*.tex)</source>
         <translation>File TeX (*.tex)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="585"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="590"/>
         <source>TeX Template Files (*.sty)</source>
         <translation>File Template TeX (*.sty)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="588"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="593"/>
         <source>Diff Files (*.diff)</source>
         <translation>File Diff (*.diff)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="591"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="596"/>
         <source>Make Files (*.mak)</source>
         <translation>File Make (*.mak)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="594"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="599"/>
         <source>Properties Files (*.ini)</source>
         <translation>File proprietà (*.ini)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="597"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="602"/>
         <source>Configuration Files (*.cfg)</source>
         <translation>File configurazione (*.cfg)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="603"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="608"/>
         <source>CMake Files (CMakeLists.txt)</source>
         <translation>File CMake (CMakeList.txt)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="606"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="611"/>
         <source>CMake Macro Files (*.cmake)</source>
         <translation>File Macro CMake (*.cmake)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="609"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="614"/>
         <source>VHDL Files (*.vhd)</source>
         <translation>File VHDL (*.vhd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="612"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="617"/>
         <source>TCL Files (*.tcl)</source>
         <translation>File TCL (*.tcl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="615"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="620"/>
         <source>Tk Files (*.tk)</source>
         <translation>File Tk (*.tk)</translation>
     </message>
@@ -32031,97 +32076,97 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>PostScript</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="137"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="139"/>
         <source>XML</source>
         <translation>XML</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="139"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="141"/>
         <source>YAML</source>
         <translation>YAML</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="369"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="374"/>
         <source>XML Files (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</source>
         <translation>File XML (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="427"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="432"/>
         <source>Fortran Files (*.f90 *.f95 *.f2k)</source>
         <translation>File Fortran (*.f90 *.f95 *.f2k)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="430"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="435"/>
         <source>Fortran77 Files (*.f *.for)</source>
         <translation>File Fortran77 (*.f *.for)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="433"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="438"/>
         <source>Pascal Files (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</source>
         <translation>File Pascal (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="627"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="632"/>
         <source>PostScript Files (*.ps)</source>
         <translation>File PostScript (*.ps)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="439"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="444"/>
         <source>YAML Files (*.yaml *.yml)</source>
         <translation>File YAML (*.yaml *.yml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="618"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="623"/>
         <source>Fortran Files (*.f95)</source>
         <translation>File Fortran (*.f95)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="621"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="626"/>
         <source>Fortran77 Files (*.f)</source>
         <translation>File Fortran77 (*.f)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="624"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="629"/>
         <source>Pascal Files (*.pas)</source>
         <translation>File Pascal (*.pas)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="630"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="635"/>
         <source>YAML Files (*.yml)</source>
         <translation>File YAML (*.yaml *.yml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="157"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="159"/>
         <source>Pygments</source>
         <translation>Pygments</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="330"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="335"/>
         <source>Python Files (*.py *.py2 *.py3)</source>
         <translation>Python Files (*.py *.py2 *.py3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="333"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="338"/>
         <source>Python GUI Files (*.pyw *.pyw2 *.pyw3)</source>
         <translation>Python GUI Files (*.pyw *.pyw2 *.pyw3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="489"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="494"/>
         <source>Python3 Files (*.py)</source>
         <translation>Python3 Files (*.py)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="495"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="500"/>
         <source>Python3 GUI Files (*.pyw)</source>
         <translation>Python3 GUI Files (*.pyw)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="486"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="491"/>
         <source>Python2 Files (*.py2)</source>
         <translation>Python Files (*.py2)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="492"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="497"/>
         <source>Python2 GUI Files (*.pyw2)</source>
         <translation>Python GUI Files (*.pyw2)</translation>
     </message>
@@ -32136,34 +32181,39 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="144"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="146"/>
         <source>Matlab</source>
         <translation>Matlab</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="144"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="146"/>
         <source>Octave</source>
         <translation>Octave</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="450"/>
         <source>Matlab Files (*.m *.m.matlab)</source>
         <translation>File Matlab (*.m *.m.matlab)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="450"/>
         <source>Octave Files (*.m *.m.octave)</source>
         <translation>File Octave (*.m *.m.octave)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="636"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="641"/>
         <source>Matlab Files (*.m)</source>
         <translation>File Matlab (*.m)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="636"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="641"/>
         <source>Octave Files (*.m.octave)</source>
         <translation>File Octave (*.m.octave)</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Lexers/__init__.py" line="127"/>
+        <source>QSS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -37006,6 +37056,44 @@ Selezionare Aggiorna.</translation>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="169"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PreviewerQSS</name>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.ui" line="27"/>
+        <source>Preview Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.py" line="36"/>
+        <source>Action 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.py" line="38"/>
+        <source>Action 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.py" line="42"/>
+        <source>MDI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.py" line="59"/>
+        <source>Python</source>
+        <translation type="unfinished">Python</translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.py" line="59"/>
+        <source>Ruby</source>
+        <translation type="unfinished">Ruby</translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerQSS.py" line="59"/>
+        <source>JavaScript</source>
+        <translation type="unfinished">JavaScript</translation>
     </message>
 </context>
 <context>
@@ -51381,12 +51469,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="690"/>
         <source>Show difference</source>
-        <translation>Mostra differenza</translation>
+        <translation type="obsolete">Mostra differenza</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="694"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="705"/>
@@ -51481,7 +51569,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="699"/>
         <source>Show difference (URLs)</source>
-        <translation>Mostra differenze (URL)</translation>
+        <translation type="obsolete">Mostra differenze (URL)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="568"/>
@@ -51506,7 +51594,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="713"/>
         <source>Conflict resolved</source>
-        <translation type="unfinished">Conflitto risolto</translation>
+        <translation type="obsolete">Conflitto risolto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="549"/>
@@ -51521,12 +51609,42 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="274"/>
         <source>Show difference side-by-side</source>
-        <translation type="unfinished">Mostra differenze fianco a fianco</translation>
+        <translation type="obsolete">Mostra differenze fianco a fianco</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="283"/>
         <source>Show difference side-by-side (extended)</source>
-        <translation type="unfinished">Mostra differenze fianco a fianco (esteso)</translation>
+        <translation type="obsolete">Mostra differenze fianco a fianco (esteso)</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="690"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="274"/>
+        <source>Show differences side-by-side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="694"/>
+        <source>Show differences (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="283"/>
+        <source>Show differences side-by-side (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="699"/>
+        <source>Show differences (URLs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="713"/>
+        <source>Conflicts resolved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -51654,7 +51772,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
         <source>Show difference</source>
-        <translation>Mostra differenze</translation>
+        <translation type="obsolete">Mostra differenze</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
@@ -51669,12 +51787,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="136"/>
         <source>&lt;b&gt;Show difference&lt;/b&gt;&lt;p&gt;This shows the difference of the local project to the repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze&lt;/b&gt;&lt;p&gt;Mostra le differenze tra il progetto locale e il repository.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="144"/>
         <source>Show difference (extended)</source>
-        <translation>Mostra differenza (esteso)</translation>
+        <translation type="obsolete">Mostra differenza (esteso)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="149"/>
@@ -51684,7 +51802,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="152"/>
         <source>&lt;b&gt;Show difference (extended)&lt;/b&gt;&lt;p&gt;This shows the difference of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra differenze (esteso)&lt;/b&gt;&lt;p&gt;Mostra le differenze di una revisione selezionabile del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="176"/>
@@ -52059,7 +52177,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="160"/>
         <source>Show difference (URLs)</source>
-        <translation>Mostra differenze (URLs)</translation>
+        <translation type="obsolete">Mostra differenze (URLs)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="165"/>
@@ -52069,7 +52187,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
         <source>&lt;b&gt;Show difference (URLs)&lt;/b&gt;&lt;p&gt;This shows the difference of the project between two repository URLs.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mostra le differenze (URLs)&lt;/b&gt;&lt;p&gt;Mostra le differenze del progetto tra due URLs di repostitory.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Mostra le differenze (URLs)&lt;/b&gt;&lt;p&gt;Mostra le differenze del progetto tra due URLs di repostitory.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="111"/>
@@ -52179,6 +52297,36 @@ a messo in questa directory.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="492"/>
         <source>&lt;b&gt;Upgrade&lt;/b&gt;&lt;p&gt;Upgrades the working copy to the current format.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
+        <source>Show differences</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="144"/>
+        <source>Show differences (extended)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="160"/>
+        <source>Show differences (URLs)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="136"/>
+        <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="152"/>
+        <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
+        <source>&lt;b&gt;Show differences (URLs)&lt;/b&gt;&lt;p&gt;This shows differences of the project between two repository URLs.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
