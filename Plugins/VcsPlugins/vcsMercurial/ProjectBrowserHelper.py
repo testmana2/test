@@ -323,20 +323,20 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.tr('Show difference side-by-side'), self.__HgSbsDiff)
+            self.tr('Show differences side-by-side'), self.__HgSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.tr('Show difference side-by-side (extended)'),
+            self.tr('Show differences side-by-side (extended)'),
             self.__HgSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         self.annotateAct = menu.addAction(
@@ -349,7 +349,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -417,11 +417,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -430,7 +430,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -541,11 +541,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -554,7 +554,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -619,11 +619,11 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__HgExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
@@ -632,7 +632,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),

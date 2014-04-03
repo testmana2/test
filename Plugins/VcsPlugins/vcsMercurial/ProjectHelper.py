@@ -278,7 +278,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
-            self.tr('Show difference'),
+            self.tr('Show differences'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.tr('Show &difference'),
             0, 0, self, 'mercurial_diff')
@@ -286,7 +286,7 @@ class HgProjectHelper(VcsProjectHelper):
             'Show the difference of the local project to the repository'
         ))
         self.vcsDiffAct.setWhatsThis(self.tr(
-            """<b>Show difference</b>"""
+            """<b>Show differences</b>"""
             """<p>This shows the difference of the local project to the"""
             """ repository.</p>"""
         ))
@@ -294,15 +294,15 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.vcsDiffAct)
         
         self.hgExtDiffAct = E5Action(
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             0, 0, self, 'mercurial_extendeddiff')
         self.hgExtDiffAct.setStatusTip(self.tr(
             'Show the difference of revisions of the project to the repository'
         ))
         self.hgExtDiffAct.setWhatsThis(self.tr(
-            """<b>Show difference (extended)</b>"""
+            """<b>Show differences (extended)</b>"""
             """<p>This shows the difference of selectable revisions of the"""
             """ project.</p>"""
         ))

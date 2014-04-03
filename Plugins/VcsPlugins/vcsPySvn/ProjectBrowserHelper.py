@@ -269,25 +269,25 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.tr('Show difference side-by-side'), self.__SVNSbsDiff)
+            self.tr('Show differences side-by-side'), self.__SVNSbsDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsSbsDiff.png"),
-            self.tr('Show difference side-by-side (extended)'),
+            self.tr('Show differences side-by-side (extended)'),
             self.__SVNSbsExtendedDiff)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (URLs)'),
+            self.tr('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsMenuActions.append(act)
         self.blameAct = menu.addAction(
@@ -304,7 +304,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Merge changes'), self._VCSMerge)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflicts resolved'), self.__SVNResolve)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
@@ -410,16 +410,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (URLs)'),
+            self.tr('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
@@ -428,7 +428,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self._VCSRevert)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflicts resolved'), self.__SVNResolve)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(
@@ -581,16 +581,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (URLs)'),
+            self.tr('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
@@ -603,7 +603,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Merge changes'), self._VCSMerge)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflicts resolved'), self.__SVNResolve)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.tr('Set Property'), self.__SVNSetProp)
@@ -689,16 +689,16 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addSeparator()
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference'), self._VCSDiff)
+            self.tr('Show differences'), self._VCSDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             self.__SVNExtendedDiff)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (URLs)'),
+            self.tr('Show differences (URLs)'),
             self.__SVNUrlDiff)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
@@ -711,7 +711,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Merge changes'), self._VCSMerge)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflict resolved'), self.__SVNResolve)
+            self.tr('Conflicts resolved'), self.__SVNResolve)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         act = menu.addAction(self.tr('Set Property'), self.__SVNSetProp)
