@@ -848,6 +848,8 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgRollbackAct.triggered.connect(self.__hgRollback)
         self.actions.append(self.hgRollbackAct)
         
+        # TODO: add support for hg update --clean to revert a failed/aborted merge
+        
         self.hgServeAct = E5Action(
             self.tr('Serve project repository'),
             self.tr('Serve project repository...'),
@@ -1023,6 +1025,7 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgRecoverAct)
         adminMenu.addSeparator()
+        # TODO: add support for hg update --clean to revert a failed/aborted merge
         adminMenu.addAction(self.hgBackoutAct)
         adminMenu.addAction(self.hgRollbackAct)
         adminMenu.addSeparator()
@@ -1425,6 +1428,8 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to rollback the last transaction.
         """
         self.vcs.hgRollback(self.project.ppath)
+    
+    # TODO: add support for hg update --clean to revert a failed/aborted merge
     
     def __hgServe(self):
         """

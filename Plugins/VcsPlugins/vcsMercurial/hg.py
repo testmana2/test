@@ -2768,6 +2768,8 @@ class Hg(VersionControl):
             if res:
                 dia.exec_()
 
+    # TODO: add support for hg update --clean to revert a failed/aborted merge
+    
     def hgServe(self, name):
         """
         Public method used to serve the project.
