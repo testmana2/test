@@ -31,10 +31,10 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
         self.setupUi(self)
         
         self.typeCombo.addItem("", Task.TypeNone)
-        self.typeCombo.addItem(self.trUtf8("Bugfix"), Task.TypeFixme)
-        self.typeCombo.addItem(self.trUtf8("Warning"), Task.TypeWarning)
-        self.typeCombo.addItem(self.trUtf8("ToDo"), Task.TypeTodo)
-        self.typeCombo.addItem(self.trUtf8("Note"), Task.TypeNote)
+        self.typeCombo.addItem(self.tr("Bugfix"), Task.TypeFixme)
+        self.typeCombo.addItem(self.tr("Warning"), Task.TypeWarning)
+        self.typeCombo.addItem(self.tr("ToDo"), Task.TypeTodo)
+        self.typeCombo.addItem(self.tr("Note"), Task.TypeNote)
         
         if taskFilter.summaryFilter is None or \
            not taskFilter.summaryFilter.pattern():
@@ -93,6 +93,9 @@ class TaskFilterConfigDialog(QDialog, Ui_TaskFilterConfigDialog):
                 1 in taskFilter.prioritiesFilter)
             self.priorityLowCheckBox.setChecked(
                 2 in taskFilter.prioritiesFilter)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def configureTaskFilter(self, taskFilter):
         """

@@ -11,7 +11,7 @@ process.
 from __future__ import unicode_literals
 try:
     str = unicode
-except (NameError):
+except NameError:
     pass
 
 import os
@@ -221,7 +221,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         if self.noResults:
             self.__createResultItem(
-                self.trUtf8('No indentation errors found.'), "", "")
+                self.tr('No indentation errors found.'), "", "")
             QApplication.processEvents()
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)

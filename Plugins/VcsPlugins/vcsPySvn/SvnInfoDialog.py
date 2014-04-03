@@ -68,109 +68,109 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
             for path, info in entries:
                 if sys.version_info[0] == 2:
                     path = path.decode('utf-8')
-                infoStr += self.trUtf8(
+                infoStr += self.tr(
                     "<tr><td><b>Path (relative to project):</b></td>"
                     "<td>{0}</td></tr>").format(path)
                 if info['URL']:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Url:</b></td><td>{0}</td></tr>")\
                         .format(info['URL'])
                 if info['rev']:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Revision:</b></td><td>{0}</td></tr>")\
                         .format(info['rev'].number)
                 if info['repos_root_URL']:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Repository root URL:</b></td>"
                         "<td>{0}</td></tr>").format(info['repos_root_URL'])
                 if info['repos_UUID']:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Repository UUID:</b></td>"
                         "<td>{0}</td></tr>").format(info['repos_UUID'])
                 if info['last_changed_author']:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Last changed author:</b></td>"
                         "<td>{0}</td></tr>")\
                         .format(info['last_changed_author'])
                 if info['last_changed_date']:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Last Changed Date:</b></td>"
                         "<td>{0}</td></tr>")\
                         .format(formatTime(info['last_changed_date']))
                 if info['last_changed_rev'] and \
                         info['last_changed_rev'].kind == \
                         pysvn.opt_revision_kind.number:
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Last changed revision:</b></td>"
                         "<td>{0}</td></tr>")\
                         .format(info['last_changed_rev'].number)
                 if info['kind']:
                     if info['kind'] == pysvn.node_kind.file:
-                        nodeKind = self.trUtf8("file")
+                        nodeKind = self.tr("file")
                     elif info['kind'] == pysvn.node_kind.dir:
-                        nodeKind = self.trUtf8("directory")
+                        nodeKind = self.tr("directory")
                     elif info['kind'] == pysvn.node_kind.none:
-                        nodeKind = self.trUtf8("none")
+                        nodeKind = self.tr("none")
                     else:
-                        nodeKind = self.trUtf8("unknown")
-                    infoStr += self.trUtf8(
+                        nodeKind = self.tr("unknown")
+                    infoStr += self.tr(
                         "<tr><td><b>Node kind:</b></td><td>{0}</td></tr>")\
                         .format(nodeKind)
                 if info['lock']:
                     lockInfo = info['lock']
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Lock Owner:</b></td><td>{0}</td></tr>")\
                         .format(lockInfo['owner'])
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Lock Creation Date:</b></td>"
                         "<td>{0}</td></tr>")\
                         .format(formatTime(lockInfo['creation_date']))
                     if lockInfo['expiration_date'] is not None:
-                        infoStr += self.trUtf8(
+                        infoStr += self.tr(
                             "<tr><td><b>Lock Expiration Date:</b></td>"
                             "<td>{0}</td></tr>")\
                             .format(formatTime(lockInfo['expiration_date']))
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Lock Token:</b></td><td>{0}</td></tr>")\
                         .format(lockInfo['token'])
-                    infoStr += self.trUtf8(
+                    infoStr += self.tr(
                         "<tr><td><b>Lock Comment:</b></td><td>{0}</td></tr>")\
                         .format(lockInfo['comment'])
                 if info['wc_info']:
                     wcInfo = info['wc_info']
                     if wcInfo['schedule']:
                         if wcInfo['schedule'] == pysvn.wc_schedule.normal:
-                            schedule = self.trUtf8("normal")
+                            schedule = self.tr("normal")
                         elif wcInfo['schedule'] == pysvn.wc_schedule.add:
-                            schedule = self.trUtf8("add")
+                            schedule = self.tr("add")
                         elif wcInfo['schedule'] == pysvn.wc_schedule.delete:
-                            schedule = self.trUtf8("delete")
+                            schedule = self.tr("delete")
                         elif wcInfo['schedule'] == pysvn.wc_schedule.replace:
-                            schedule = self.trUtf8("replace")
-                        infoStr += self.trUtf8(
+                            schedule = self.tr("replace")
+                        infoStr += self.tr(
                             "<tr><td><b>Schedule:</b></td><td>{0}</td></tr>")\
                             .format(schedule)
                     if wcInfo['copyfrom_url']:
-                        infoStr += self.trUtf8(
+                        infoStr += self.tr(
                             "<tr><td><b>Copied From URL:</b></td>"
                             "<td>{0}</td></tr>")\
                             .format(wcInfo['copyfrom_url'])
-                        infoStr += self.trUtf8(
+                        infoStr += self.tr(
                             "<tr><td><b>Copied From Rev:</b></td>"
                             "<td>{0}</td></tr>")\
                             .format(wcInfo['copyfrom_rev'].number)
                     if wcInfo['text_time']:
-                        infoStr += self.trUtf8(
+                        infoStr += self.tr(
                             "<tr><td><b>Text Last Updated:</b></td>"
                             "<td>{0}</td></tr>")\
                             .format(formatTime(wcInfo['text_time']))
                     if wcInfo['prop_time']:
-                        infoStr += self.trUtf8(
+                        infoStr += self.tr(
                             "<tr><td><b>Properties Last Updated:</b></td>"
                             "<td>{0}</td></tr>")\
                             .format(formatTime(wcInfo['prop_time']))
                     if wcInfo['checksum']:
-                        infoStr += self.trUtf8(
+                        infoStr += self.tr(
                             "<tr><td><b>Checksum:</b></td><td>{0}</td></tr>")\
                             .format(wcInfo['checksum'])
             infoStr += "</table>"

@@ -41,7 +41,10 @@ def getRegistryData():
     @return list of the following data. Client type (string), client
         capabilities (integer), client type association (list of strings)
     """
-    return ["Ruby", ClientDefaultCapabilities, ClientTypeAssociations]
+    if Preferences.getDebugger("RubyInterpreter"):
+        return ["Ruby", ClientDefaultCapabilities, ClientTypeAssociations]
+    else:
+        return ["", 0, []]
 
 
 class DebuggerInterfaceRuby(QObject):
@@ -140,12 +143,18 @@ class DebuggerInterfaceRuby(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
         interpreter = Preferences.getDebugger("RubyInterpreter")
         if interpreter == "":
-            interpreter = "/usr/bin/ruby"
+            E5MessageBox.critical(
+                None,
+                self.tr("Start Debugger"),
+                self.tr("""<p>No Ruby interpreter configured.</p>"""))
+            return None, False, ""
+        
         debugClient = os.path.join(
             getConfig('ericDir'), "DebugClients", "Ruby", "DebugClient.rb")
         
@@ -166,8 +175,8 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 
@@ -180,7 +189,7 @@ class DebuggerInterfaceRuby(QObject):
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
-                return process, self.__isNetworked
+                return process, self.__isNetworked, ""
         
         # set translation function
         self.translate = self.__identityTranslation
@@ -213,11 +222,11 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
-                return process, self.__isNetworked
+                return process, self.__isNetworked, interpreter
         
         process = self.__startProcess(
             interpreter,
@@ -226,10 +235,10 @@ class DebuggerInterfaceRuby(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
-        return process, self.__isNetworked
+        return process, self.__isNetworked, interpreter
 
     def startRemoteForProject(self, port, runInConsole):
         """
@@ -238,12 +247,13 @@ class DebuggerInterfaceRuby(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return pid of the client process (integer) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
         project = e5App().getObject("Project")
         if not project.isDebugPropertiesLoaded():
-            return None, self.__isNetworked
+            return None, self.__isNetworked, ""
         
         # start debugger with project specific settings
         interpreter = project.getDebugProperty("INTERPRETER")
@@ -266,8 +276,8 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 # set translation function
@@ -279,7 +289,7 @@ class DebuggerInterfaceRuby(QObject):
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
-                return process, self.__isNetworked
+                return process, self.__isNetworked, ""
         
         # set translation function
         self.translate = self.__identityTranslation
@@ -313,11 +323,11 @@ class DebuggerInterfaceRuby(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
-                return process, self.__isNetworked
+                return process, self.__isNetworked, interpreter
         
         process = self.__startProcess(
             interpreter,
@@ -326,10 +336,10 @@ class DebuggerInterfaceRuby(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
-        return process, self.__isNetworked
+        return process, self.__isNetworked, interpreter
 
     def getClientCapabilities(self):
         """
@@ -351,8 +361,8 @@ class DebuggerInterfaceRuby(QObject):
         if self.qsock is not None:
             return False
         
-        sock.disconnected[()].connect(self.debugServer.startClient)
-        sock.readyRead[()].connect(self.__parseClientLine)
+        sock.disconnected.connect(self.debugServer.startClient)
+        sock.readyRead.connect(self.__parseClientLine)
         
         self.qsock = sock
         
@@ -382,7 +392,7 @@ class DebuggerInterfaceRuby(QObject):
         
         # do not want any slots called during shutdown
         self.qsock.disconnected.disconnect(self.debugServer.startClient)
-        self.qsock.readyRead[()].disconnect(self.__parseClientLine)
+        self.qsock.readyRead.disconnect(self.__parseClientLine)
         
         # close down socket, and shut down client as well.
         self.__sendCommand('{0}\n'.format(DebugProtocol.RequestShutdown))

@@ -54,8 +54,8 @@ Plist parsing example:
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 #

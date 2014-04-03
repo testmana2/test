@@ -12,7 +12,7 @@
 from __future__ import unicode_literals
 try: 
     chr = unichr
-except (NameError):
+except NameError:
     pass
 
 import re

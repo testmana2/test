@@ -65,9 +65,9 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
             QCompleter.UnfilteredPopupCompletion)
         self.__completer.setWidget(self)
         
-        self.__searchButton.clicked[()].connect(self.__searchButtonClicked)
+        self.__searchButton.clicked.connect(self.__searchButtonClicked)
         self.textEdited.connect(self.__textEdited)
-        self.returnPressed[()].connect(self.__searchNow)
+        self.returnPressed.connect(self.__searchNow)
         self.__completer.activated[QModelIndex].connect(
             self.__completerActivated)
         self.__completer.highlighted[QModelIndex].connect(
@@ -129,7 +129,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
             if self.__model.rowCount() == 0:
                 if not self.__suggestionsItem:
                     self.__suggestionsItem = QStandardItem(
-                        self.trUtf8("Suggestions"))
+                        self.tr("Suggestions"))
                     self.__suggestionsItem.setFont(boldFont)
                 self.__model.appendRow(self.__suggestionsItem)
             
@@ -138,12 +138,12 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         
         if not self.__recentSearches:
             self.__recentSearchesItem = QStandardItem(
-                self.trUtf8("No Recent Searches"))
+                self.tr("No Recent Searches"))
             self.__recentSearchesItem.setFont(boldFont)
             self.__model.appendRow(self.__recentSearchesItem)
         else:
             self.__recentSearchesItem = QStandardItem(
-                self.trUtf8("Recent Searches"))
+                self.tr("Recent Searches"))
             self.__recentSearchesItem.setFont(boldFont)
             self.__model.appendRow(self.__recentSearchesItem)
             for recentSearch in self.__recentSearches:
@@ -239,7 +239,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
             engine = self.__openSearchManager.engine(engineName)
             action = OpenSearchEngineAction(engine, self.__enginesMenu)
             action.setData(engineName)
-            action.triggered[()].connect(self.__changeCurrentEngine)
+            action.triggered.connect(self.__changeCurrentEngine)
             self.__enginesMenu.addAction(action)
             
             if self.__openSearchManager.currentEngineName() == engineName:
@@ -272,7 +272,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
                     title = ct.title()
             
             action = self.__enginesMenu.addAction(
-                self.trUtf8("Add '{0}'").format(title),
+                self.tr("Add '{0}'").format(title),
                 self.__addEngineFromUrl)
             action.setData(url)
             action.setIcon(ct.icon())
@@ -281,7 +281,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
         self.__enginesMenu.addAction(self.__mw.searchEnginesAction())
         
         if self.__recentSearches:
-            self.__enginesMenu.addAction(self.trUtf8("Clear Recent Searches"),
+            self.__enginesMenu.addAction(self.tr("Clear Recent Searches"),
                                          self.clear)
     
     def __changeCurrentEngine(self):

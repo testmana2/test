@@ -50,7 +50,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         except AttributeError:
             self.extsep = "."
         
-        self.extras = ["-----------", self.trUtf8("Alternative")]
+        self.extras = ["-----------", self.tr("Alternative")]
         languages = [''] + sorted(lexers.keys()) + self.extras
         self.editorLexerCombo.addItems(languages)
         
@@ -139,7 +139,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
             if lexer.startswith("Pygments|"):
                 pygmentsLexer = lexer.split("|")[1]
                 pygmentsIndex = self.pygmentsLexerCombo.findText(pygmentsLexer)
-                lexer = self.trUtf8("Alternative")
+                lexer = self.tr("Alternative")
             else:
                 pygmentsIndex = 0
             index = self.editorLexerCombo.findText(lexer)

@@ -30,9 +30,9 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
         super(SyncEncryptionPage, self).__init__(parent)
         self.setupUi(self)
         
-        self.keySizeComboBox.addItem(self.trUtf8("128 Bits"), 16)
-        self.keySizeComboBox.addItem(self.trUtf8("192 Bits"), 24)
-        self.keySizeComboBox.addItem(self.trUtf8("256 Bits"), 32)
+        self.keySizeComboBox.addItem(self.tr("128 Bits"), 16)
+        self.keySizeComboBox.addItem(self.tr("192 Bits"), 24)
+        self.keySizeComboBox.addItem(self.tr("256 Bits"), 32)
         
         self.registerField("ReencryptData", self.reencryptCheckBox)
         
@@ -96,14 +96,14 @@ class SyncEncryptionPage(QWizardPage, Ui_SyncEncryptionPage):
                 self.reencryptCheckBox.isChecked())
             
             if self.encryptionKeyEdit.text() == "":
-                error = error or self.trUtf8(
+                error = error or self.tr(
                     "Encryption key must not be empty.")
             
             if self.encryptionKeyEdit.text() != "" and \
                     self.reencryptCheckBox.isChecked() and \
                     (self.encryptionKeyEdit.text() !=
                      self.encryptionKeyAgainEdit.text()):
-                error = error or self.trUtf8(
+                error = error or self.tr(
                     "Repeated encryption key is wrong.")
         
         self.errorLabel.setText(error)

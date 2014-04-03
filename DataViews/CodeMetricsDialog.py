@@ -48,9 +48,9 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.cancelled = False
         
         self.__menu = QMenu(self)
-        self.__menu.addAction(self.trUtf8("Collapse all"),
+        self.__menu.addAction(self.tr("Collapse all"),
                               self.__resultCollapse)
-        self.__menu.addAction(self.trUtf8("Expand all"), self.__resultExpand)
+        self.__menu.addAction(self.tr("Expand all"), self.__resultExpand)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
         self.resultList.customContextMenuRequested.connect(
             self.__showContextMenu)
@@ -187,19 +187,19 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         # now do the summary stuff
         docstrings = total['lines'] - total['comments'] - \
             total['empty lines'] - total['non-commentary lines']
-        self.__createSummaryItem(self.trUtf8("files"),
+        self.__createSummaryItem(self.tr("files"),
                                  loc.toString(total['files']))
-        self.__createSummaryItem(self.trUtf8("lines"),
+        self.__createSummaryItem(self.tr("lines"),
                                  loc.toString(total['lines']))
-        self.__createSummaryItem(self.trUtf8("bytes"),
+        self.__createSummaryItem(self.tr("bytes"),
                                  loc.toString(total['bytes']))
-        self.__createSummaryItem(self.trUtf8("comments"),
+        self.__createSummaryItem(self.tr("comments"),
                                  loc.toString(total['comments']))
-        self.__createSummaryItem(self.trUtf8("empty lines"),
+        self.__createSummaryItem(self.tr("empty lines"),
                                  loc.toString(total['empty lines']))
-        self.__createSummaryItem(self.trUtf8("non-commentary lines"),
+        self.__createSummaryItem(self.tr("non-commentary lines"),
                                  loc.toString(total['non-commentary lines']))
-        self.__createSummaryItem(self.trUtf8("documentation lines"),
+        self.__createSummaryItem(self.tr("documentation lines"),
                                  loc.toString(docstrings))
         self.__resizeSummaryColumns()
         self.__finish()

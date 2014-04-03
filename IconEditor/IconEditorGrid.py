@@ -9,7 +9,7 @@ Module implementing the icon editor grid.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QPoint, QRect, QSize
+from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QPoint, QRect, QSize
 from PyQt4.QtGui import QUndoCommand, QImage, QWidget, QColor, QPixmap, \
     QSizePolicy, QUndoStack, qRgba, QPainter, QApplication, QCursor, \
     QBrush, QDialog, qGray, qAlpha
@@ -202,16 +202,16 @@ class IconEditorGrid(QWidget):
         for the various drawing tools.
         """
         self.__undoTexts = {
-            self.Pencil: self.trUtf8("Set Pixel"),
-            self.Rubber: self.trUtf8("Erase Pixel"),
-            self.Line: self.trUtf8("Draw Line"),
-            self.Rectangle: self.trUtf8("Draw Rectangle"),
-            self.FilledRectangle: self.trUtf8("Draw Filled Rectangle"),
-            self.Circle: self.trUtf8("Draw Circle"),
-            self.FilledCircle: self.trUtf8("Draw Filled Circle"),
-            self.Ellipse: self.trUtf8("Draw Ellipse"),
-            self.FilledEllipse: self.trUtf8("Draw Filled Ellipse"),
-            self.Fill: self.trUtf8("Fill Region"),
+            self.Pencil: self.tr("Set Pixel"),
+            self.Rubber: self.tr("Erase Pixel"),
+            self.Line: self.tr("Draw Line"),
+            self.Rectangle: self.tr("Draw Rectangle"),
+            self.FilledRectangle: self.tr("Draw Filled Rectangle"),
+            self.Circle: self.tr("Draw Circle"),
+            self.FilledCircle: self.tr("Draw Filled Circle"),
+            self.Ellipse: self.tr("Draw Ellipse"),
+            self.FilledEllipse: self.tr("Draw Filled Ellipse"),
+            self.Fill: self.tr("Fill Region"),
         }
     
     def isDirty(self):
@@ -836,7 +836,7 @@ class IconEditorGrid(QWidget):
         @return image of the selection (QImage)
         """
         if cut:
-            cmd = IconEditCommand(self, self.trUtf8("Cut Selection"),
+            cmd = IconEditCommand(self, self.tr("Cut Selection"),
                                   self.__image)
         
         img = QImage(self.__selRect.size(), QImage.Format_ARGB32)
@@ -881,6 +881,7 @@ class IconEditorGrid(QWidget):
             img = self.__getSelectionImage(True)
             QApplication.clipboard().setImage(img)
     
+    @pyqtSlot()
     def editPaste(self, pasting=False):
         """
         Public slot to paste an image from the clipboard.
@@ -894,8 +895,8 @@ class IconEditorGrid(QWidget):
                     img.height() > self.__image.height():
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Paste"),
-                    self.trUtf8(
+                    self.tr("Paste"),
+                    self.tr(
                         """<p>The clipboard image is larger than the"""
                         """ current image.<br/>Paste as new image?</p>"""))
                 if res:
@@ -905,7 +906,7 @@ class IconEditorGrid(QWidget):
                 self.__isPasting = True
                 self.__clipboardSize = img.size()
             else:
-                cmd = IconEditCommand(self, self.trUtf8("Paste Clipboard"),
+                cmd = IconEditCommand(self, self.tr("Paste Clipboard"),
                                       self.__image)
                 self.__markImage.fill(self.NoMarkColor.rgba())
                 painter = QPainter(self.__image)
@@ -925,8 +926,8 @@ class IconEditorGrid(QWidget):
         else:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Pasting Image"),
-                self.trUtf8("""Invalid image data in clipboard."""))
+                self.tr("Pasting Image"),
+                self.tr("""Invalid image data in clipboard."""))
     
     def editPasteAsNew(self):
         """
@@ -935,7 +936,7 @@ class IconEditorGrid(QWidget):
         img, ok = self.__clipboardImage()
         if ok:
             cmd = IconEditCommand(
-                self, self.trUtf8("Paste Clipboard as New Image"),
+                self, self.tr("Paste Clipboard as New Image"),
                 self.__image)
             self.setIconImage(img)
             self.setDirty(True)
@@ -963,7 +964,7 @@ class IconEditorGrid(QWidget):
         """
         self.__unMark()
         
-        cmd = IconEditCommand(self, self.trUtf8("Clear Image"), self.__image)
+        cmd = IconEditCommand(self, self.tr("Clear Image"), self.__image)
         self.__image.fill(qRgba(0, 0, 0, 0))
         self.update()
         self.setDirty(True)
@@ -981,7 +982,7 @@ class IconEditorGrid(QWidget):
             newWidth, newHeight = dlg.getData()
             if newWidth != self.__image.width() or \
                     newHeight != self.__image.height():
-                cmd = IconEditCommand(self, self.trUtf8("Resize Image"),
+                cmd = IconEditCommand(self, self.tr("Resize Image"),
                                       self.__image)
                 img = self.__image.scaled(
                     newWidth, newHeight, Qt.IgnoreAspectRatio,
@@ -1008,7 +1009,7 @@ class IconEditorGrid(QWidget):
         """
         Public slot to convert the image to gray preserving transparency.
         """
-        cmd = IconEditCommand(self, self.trUtf8("Convert to Grayscale"),
+        cmd = IconEditCommand(self, self.tr("Convert to Grayscale"),
                               self.__image)
         for x in range(self.__image.width()):
             for y in range(self.__image.height()):

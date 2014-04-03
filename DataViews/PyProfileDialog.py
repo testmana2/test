@@ -55,7 +55,7 @@ class ProfileTreeWidgetItem(QTreeWidgetItem):
 
 class PyProfileDialog(QDialog, Ui_PyProfileDialog):
     """
-    Class implementing a dialog to display the results of a syntax check run.
+    Class implementing a dialog to display the results of a profiling run.
     """
     def __init__(self, parent=None):
         """
@@ -82,15 +82,15 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         
         self.__menu = QMenu(self)
         self.filterItm = self.__menu.addAction(
-            self.trUtf8('Exclude Python Library'),
+            self.tr('Exclude Python Library'),
             self.__filter)
         self.__menu.addSeparator()
         self.__menu.addAction(
-            self.trUtf8('Erase Profiling Info'), self.__eraseProfile)
+            self.tr('Erase Profiling Info'), self.__eraseProfile)
         self.__menu.addAction(
-            self.trUtf8('Erase Timing Info'), self.__eraseTiming)
+            self.tr('Erase Timing Info'), self.__eraseTiming)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8('Erase All Infos'), self.__eraseAll)
+        self.__menu.addAction(self.tr('Erase All Infos'), self.__eraseAll)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
         self.resultList.customContextMenuRequested.connect(
             self.__showContextMenu)
@@ -210,12 +210,12 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         self.__resortResultList()
         
         # now do the summary stuff
-        self.__createSummaryItem(self.trUtf8("function calls"),
+        self.__createSummaryItem(self.tr("function calls"),
                                  str(total_calls))
         if total_calls != prim_calls:
-            self.__createSummaryItem(self.trUtf8("primitive calls"),
+            self.__createSummaryItem(self.tr("primitive calls"),
                                      str(prim_calls))
-        self.__createSummaryItem(self.trUtf8("CPU seconds"),
+        self.__createSummaryItem(self.tr("CPU seconds"),
                                  "{0:.3f}".format(total_tt))
         
     def start(self, pfn, fn=None):
@@ -231,9 +231,9 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         if not os.path.exists(fname):
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Profile Results"),
-                self.trUtf8("""<p>There is no profiling data"""
-                            """ available for <b>{0}</b>.</p>""")
+                self.tr("Profile Results"),
+                self.tr("""<p>There is no profiling data"""
+                        """ available for <b>{0}</b>.</p>""")
                 .format(pfn))
             self.close()
             return
@@ -244,9 +244,9 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         except (EnvironmentError, pickle.PickleError, EOFError):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Loading Profiling Data"),
-                self.trUtf8("""<p>The profiling data could not be"""
-                            """ read from file <b>{0}</b>.</p>""")
+                self.tr("Loading Profiling Data"),
+                self.tr("""<p>The profiling data could not be"""
+                        """ read from file <b>{0}</b>.</p>""")
                 .format(fname))
             self.close()
             return
@@ -329,10 +329,10 @@ class PyProfileDialog(QDialog, Ui_PyProfileDialog):
         self.__unfinish()
         if self.exclude:
             self.exclude = False
-            self.filterItm.setText(self.trUtf8('Include Python Library'))
+            self.filterItm.setText(self.tr('Include Python Library'))
             self.__populateLists(True)
         else:
             self.exclude = True
-            self.filterItm.setText(self.trUtf8('Exclude Python Library'))
+            self.filterItm.setText(self.tr('Exclude Python Library'))
             self.__populateLists(False)
         self.__finish()

@@ -102,13 +102,16 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         super(CompareDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.file1Button.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.file2Button.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.file1Completer = E5FileCompleter(self.file1Edit)
         self.file2Completer = E5FileCompleter(self.file2Edit)
         
         self.diffButton = self.buttonBox.addButton(
-            self.trUtf8("Compare"), QDialogButtonBox.ActionRole)
+            self.tr("Compare"), QDialogButtonBox.ActionRole)
         self.diffButton.setToolTip(
-            self.trUtf8("Press to perform the comparison of the two files"))
+            self.tr("Press to perform the comparison of the two files"))
         self.diffButton.setEnabled(False)
         self.diffButton.setDefault(True)
         
@@ -117,10 +120,10 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.downButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))
         self.lastButton.setIcon(UI.PixmapCache.getIcon("2downarrow.png"))
         
-        self.totalLabel.setText(self.trUtf8('Total: {0}').format(0))
-        self.changedLabel.setText(self.trUtf8('Changed: {0}').format(0))
-        self.addedLabel.setText(self.trUtf8('Added: {0}').format(0))
-        self.deletedLabel.setText(self.trUtf8('Deleted: {0}').format(0))
+        self.totalLabel.setText(self.tr('Total: {0}').format(0))
+        self.changedLabel.setText(self.tr('Changed: {0}').format(0))
+        self.addedLabel.setText(self.tr('Added: {0}').format(0))
+        self.deletedLabel.setText(self.tr('Deleted: {0}').format(0))
         
         self.updateInterval = 20    # update every 20 lines
         
@@ -149,8 +152,6 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         # connect some of our widgets explicitly
         self.file1Edit.textChanged.connect(self.__fileChanged)
         self.file2Edit.textChanged.connect(self.__fileChanged)
-        self.synchronizeCheckBox.toggled[bool].connect(
-            self.on_synchronizeCheckBox_toggled)
         self.vsb1.valueChanged.connect(self.__scrollBarMoved)
         self.vsb1.valueChanged.connect(self.vsb2.setValue)
         self.vsb2.valueChanged.connect(self.vsb1.setValue)
@@ -237,8 +238,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         except IOError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Compare Files"),
-                self.trUtf8(
+                self.tr("Compare Files"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
                 .format(filename1))
             return
@@ -251,8 +252,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         except IOError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Compare Files"),
-                self.trUtf8(
+                self.tr("Compare Files"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be read.</p>""")
                 .format(filename2))
             return
@@ -354,11 +355,11 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             len(self.diffParas) > 0 and
             (self.vsb1.isVisible() or self.vsb2.isVisible()))
         
-        self.totalLabel.setText(self.trUtf8('Total: {0}')
+        self.totalLabel.setText(self.tr('Total: {0}')
                                     .format(added + deleted + changed))
-        self.changedLabel.setText(self.trUtf8('Changed: {0}').format(changed))
-        self.addedLabel.setText(self.trUtf8('Added: {0}').format(added))
-        self.deletedLabel.setText(self.trUtf8('Deleted: {0}').format(deleted))
+        self.changedLabel.setText(self.tr('Changed: {0}').format(changed))
+        self.addedLabel.setText(self.tr('Added: {0}').format(added))
+        self.deletedLabel.setText(self.tr('Deleted: {0}').format(deleted))
 
     def __moveTextToCurrentDiffPos(self):
         """
@@ -444,7 +445,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         filename = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select file to compare"),
+            self.tr("Select file to compare"),
             lineEdit.text(),
             "")
             

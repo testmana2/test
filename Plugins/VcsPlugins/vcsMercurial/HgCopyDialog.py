@@ -20,6 +20,7 @@ from E5Gui import E5FileDialog
 from .Ui_HgCopyDialog import Ui_HgCopyDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class HgCopyDialog(QDialog, Ui_HgCopyDialog):
@@ -27,17 +28,18 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
     Class implementing a dialog to enter the data for a copy or rename
     operation.
     """
-    def __init__(self, source, parent=None, move=False, force=False):
+    def __init__(self, source, parent=None, move=False):
         """
         Constructor
         
         @param source name of the source file/directory (string)
         @param parent parent widget (QWidget)
         @param move flag indicating a move operation (boolean)
-        @param force flag indicating a forced operation (boolean)
         """
         super(HgCopyDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
        
         self.source = source
         if os.path.isdir(self.source):
@@ -46,14 +48,16 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
             self.targetCompleter = E5FileCompleter(self.targetEdit)
         
         if move:
-            self.setWindowTitle(self.trUtf8('Mercurial Move'))
+            self.setWindowTitle(self.tr('Mercurial Move'))
         else:
             self.forceCheckBox.setEnabled(False)
-        self.forceCheckBox.setChecked(force)
         
         self.sourceEdit.setText(source)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """
@@ -78,13 +82,13 @@ class HgCopyDialog(QDialog, Ui_HgCopyDialog):
         if os.path.isdir(self.source):
             target = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         else:
             target = E5FileDialog.getSaveFileName(
                 self,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))

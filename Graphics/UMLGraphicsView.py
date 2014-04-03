@@ -78,87 +78,87 @@ class UMLGraphicsView(E5GraphicsView):
         
         self.deleteShapeAct = \
             QAction(UI.PixmapCache.getIcon("deleteShape.png"),
-                    self.trUtf8("Delete shapes"), self)
-        self.deleteShapeAct.triggered[()].connect(self.__deleteShape)
+                    self.tr("Delete shapes"), self)
+        self.deleteShapeAct.triggered.connect(self.__deleteShape)
         
         self.incWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthInc.png"),
-                    self.trUtf8("Increase width by {0} points").format(
+                    self.tr("Increase width by {0} points").format(
                         self.deltaSize),
                     self)
-        self.incWidthAct.triggered[()].connect(self.__incWidth)
+        self.incWidthAct.triggered.connect(self.__incWidth)
         
         self.incHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightInc.png"),
-                    self.trUtf8("Increase height by {0} points").format(
+                    self.tr("Increase height by {0} points").format(
                         self.deltaSize),
                     self)
-        self.incHeightAct.triggered[()].connect(self.__incHeight)
+        self.incHeightAct.triggered.connect(self.__incHeight)
         
         self.decWidthAct = \
             QAction(UI.PixmapCache.getIcon("sceneWidthDec.png"),
-                    self.trUtf8("Decrease width by {0} points").format(
+                    self.tr("Decrease width by {0} points").format(
                         self.deltaSize),
                     self)
-        self.decWidthAct.triggered[()].connect(self.__decWidth)
+        self.decWidthAct.triggered.connect(self.__decWidth)
         
         self.decHeightAct = \
             QAction(UI.PixmapCache.getIcon("sceneHeightDec.png"),
-                    self.trUtf8("Decrease height by {0} points").format(
+                    self.tr("Decrease height by {0} points").format(
                         self.deltaSize),
                     self)
-        self.decHeightAct.triggered[()].connect(self.__decHeight)
+        self.decHeightAct.triggered.connect(self.__decHeight)
         
         self.setSizeAct = \
             QAction(UI.PixmapCache.getIcon("sceneSize.png"),
-                    self.trUtf8("Set size"), self)
-        self.setSizeAct.triggered[()].connect(self.__setSize)
+                    self.tr("Set size"), self)
+        self.setSizeAct.triggered.connect(self.__setSize)
         
         self.rescanAct = \
             QAction(UI.PixmapCache.getIcon("rescan.png"),
-                    self.trUtf8("Re-Scan"), self)
-        self.rescanAct.triggered[()].connect(self.__rescan)
+                    self.tr("Re-Scan"), self)
+        self.rescanAct.triggered.connect(self.__rescan)
         
         self.relayoutAct = \
             QAction(UI.PixmapCache.getIcon("relayout.png"),
-                    self.trUtf8("Re-Layout"), self)
-        self.relayoutAct.triggered[()].connect(self.__relayout)
+                    self.tr("Re-Layout"), self)
+        self.relayoutAct.triggered.connect(self.__relayout)
         
         self.alignLeftAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignLeft.png"),
-                    self.trUtf8("Align Left"), self)
+                    self.tr("Align Left"), self)
         self.alignMapper.setMapping(self.alignLeftAct, Qt.AlignLeft)
-        self.alignLeftAct.triggered[()].connect(self.alignMapper.map)
+        self.alignLeftAct.triggered.connect(self.alignMapper.map)
         
         self.alignHCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignHCenter.png"),
-                    self.trUtf8("Align Center Horizontal"), self)
+                    self.tr("Align Center Horizontal"), self)
         self.alignMapper.setMapping(self.alignHCenterAct, Qt.AlignHCenter)
-        self.alignHCenterAct.triggered[()].connect(self.alignMapper.map)
+        self.alignHCenterAct.triggered.connect(self.alignMapper.map)
         
         self.alignRightAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignRight.png"),
-                    self.trUtf8("Align Right"), self)
+                    self.tr("Align Right"), self)
         self.alignMapper.setMapping(self.alignRightAct, Qt.AlignRight)
-        self.alignRightAct.triggered[()].connect(self.alignMapper.map)
+        self.alignRightAct.triggered.connect(self.alignMapper.map)
         
         self.alignTopAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignTop.png"),
-                    self.trUtf8("Align Top"), self)
+                    self.tr("Align Top"), self)
         self.alignMapper.setMapping(self.alignTopAct, Qt.AlignTop)
-        self.alignTopAct.triggered[()].connect(self.alignMapper.map)
+        self.alignTopAct.triggered.connect(self.alignMapper.map)
         
         self.alignVCenterAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignVCenter.png"),
-                    self.trUtf8("Align Center Vertical"), self)
+                    self.tr("Align Center Vertical"), self)
         self.alignMapper.setMapping(self.alignVCenterAct, Qt.AlignVCenter)
-        self.alignVCenterAct.triggered[()].connect(self.alignMapper.map)
+        self.alignVCenterAct.triggered.connect(self.alignMapper.map)
         
         self.alignBottomAct = \
             QAction(UI.PixmapCache.getIcon("shapesAlignBottom.png"),
-                    self.trUtf8("Align Bottom"), self)
+                    self.tr("Align Bottom"), self)
         self.alignMapper.setMapping(self.alignBottomAct, Qt.AlignBottom)
-        self.alignBottomAct.triggered[()].connect(self.alignMapper.map)
+        self.alignBottomAct.triggered.connect(self.alignMapper.map)
         
     def __checkSizeActions(self):
         """
@@ -206,7 +206,7 @@ class UMLGraphicsView(E5GraphicsView):
         
         @return the populated toolBar (QToolBar)
         """
-        toolBar = QToolBar(self.trUtf8("Graphics"), self)
+        toolBar = QToolBar(self.tr("Graphics"), self)
         toolBar.setIconSize(UI.Config.ToolBarIconSize)
         toolBar.addAction(self.deleteShapeAct)
         toolBar.addSeparator()
@@ -330,10 +330,10 @@ class UMLGraphicsView(E5GraphicsView):
         """
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save Diagram"),
+            self.tr("Save Diagram"),
             "",
-            self.trUtf8("Portable Network Graphics (*.png);;"
-                        "Scalable Vector Graphics (*.svg)"),
+            self.tr("Portable Network Graphics (*.png);;"
+                    "Scalable Vector Graphics (*.svg)"),
             "",
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if fname:
@@ -345,9 +345,9 @@ class UMLGraphicsView(E5GraphicsView):
             if QFileInfo(fname).exists():
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Save Diagram"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fname),
+                    self.tr("Save Diagram"),
+                    self.tr("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return
@@ -357,8 +357,8 @@ class UMLGraphicsView(E5GraphicsView):
             if not success:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Save Diagram"),
-                    self.trUtf8(
+                    self.tr("Save Diagram"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be saved.</p>""")
                     .format(fname))
         

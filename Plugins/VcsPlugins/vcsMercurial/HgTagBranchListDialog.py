@@ -9,8 +9,8 @@ Module implementing a dialog to show a list of tags or branches.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -22,8 +22,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
 from E5Gui import E5MessageBox
 
 from .Ui_HgTagBranchListDialog import Ui_HgTagBranchListDialog
-
-import Preferences
 
 
 class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
@@ -93,8 +91,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.intercept = False
         self.tagsMode = tags
         if not tags:
-            self.setWindowTitle(self.trUtf8("Mercurial Branches List"))
-            self.tagList.headerItem().setText(2, self.trUtf8("Status"))
+            self.setWindowTitle(self.tr("Mercurial Branches List"))
+            self.tagList.headerItem().setText(2, self.tr("Status"))
         self.activateWindow()
         
         self.tagsList = tagsList
@@ -108,12 +106,11 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
         if self.tagsMode:
-            args.append('tags')
+            args = self.vcs.initCommand("tags")
             args.append('--verbose')
         else:
-            args.append('branches')
+            args = self.vcs.initCommand("branches")
             args.append('--closed')
         
         if self.__hgClient:
@@ -140,8 +137,8 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -240,8 +237,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -257,12 +253,12 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
             if self.tagsMode:
                 status = ""
             else:
-                status = self.trUtf8("active")
+                status = self.tr("active")
             rev, changeset = li[-1].split(":", 1)
             del li[-1]
         else:
             if self.tagsMode:
-                status = self.trUtf8("yes")
+                status = self.tr("yes")
             else:
                 status = li[-1][1:-1]
             rev, changeset = li[-2].split(":", 1)
@@ -284,8 +280,7 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

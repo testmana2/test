@@ -48,10 +48,10 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         """
         pname = self.project.getProjectName()
         if pname and self.project.isProjectSource(self.file):
-            name = self.trUtf8("Class Diagram {0}: {1}").format(
+            name = self.tr("Class Diagram {0}: {1}").format(
                 pname, self.project.getRelativePath(self.file))
         else:
-            name = self.trUtf8("Class Diagram: {0}").format(self.file)
+            name = self.tr("Class Diagram: {0}").format(self.file)
         self.umlView.setDiagramName(name)
         
     def __getCurrentShape(self, name):
@@ -82,7 +82,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
         except ImportError:
             ct = QGraphicsTextItem(None)
             ct.setHtml(
-                self.trUtf8("The module <b>'{0}'</b> could not be found.")
+                self.tr("The module <b>'{0}'</b> could not be found.")
                     .format(self.file))
             self.scene.addItem(ct)
             return
@@ -143,7 +143,7 @@ class UMLClassDiagramBuilder(UMLDiagramBuilder):
             self.umlView.autoAdjustSceneSize(limit=True)
         else:
             ct = QGraphicsTextItem(None)
-            ct.setHtml(self.trUtf8(
+            ct.setHtml(self.tr(
                 "The module <b>'{0}'</b> does not contain any classes.")
                 .format(self.file))
             self.scene.addItem(ct)

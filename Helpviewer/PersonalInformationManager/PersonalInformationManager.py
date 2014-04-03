@@ -78,22 +78,22 @@ class PersonalInformationManager(QObject):
         self.__allInfo[self.Special3] = Preferences.getHelp("PimSpecial3")
         self.__allInfo[self.Special4] = Preferences.getHelp("PimSpecial4")
         
-        self.__translations[self.FullName] = self.trUtf8("Full Name")
-        self.__translations[self.LastName] = self.trUtf8("Last Name")
-        self.__translations[self.FirstName] = self.trUtf8("First Name")
-        self.__translations[self.Email] = self.trUtf8("E-mail")
-        self.__translations[self.Mobile] = self.trUtf8("Mobile")
-        self.__translations[self.Phone] = self.trUtf8("Phone")
-        self.__translations[self.Address] = self.trUtf8("Address")
-        self.__translations[self.City] = self.trUtf8("City")
-        self.__translations[self.Zip] = self.trUtf8("ZIP Code")
-        self.__translations[self.State] = self.trUtf8("State/Region")
-        self.__translations[self.Country] = self.trUtf8("Country")
-        self.__translations[self.HomePage] = self.trUtf8("Home Page")
-        self.__translations[self.Special1] = self.trUtf8("Custom 1")
-        self.__translations[self.Special2] = self.trUtf8("Custom 2")
-        self.__translations[self.Special3] = self.trUtf8("Custom 3")
-        self.__translations[self.Special4] = self.trUtf8("Custom 4")
+        self.__translations[self.FullName] = self.tr("Full Name")
+        self.__translations[self.LastName] = self.tr("Last Name")
+        self.__translations[self.FirstName] = self.tr("First Name")
+        self.__translations[self.Email] = self.tr("E-mail")
+        self.__translations[self.Mobile] = self.tr("Mobile")
+        self.__translations[self.Phone] = self.tr("Phone")
+        self.__translations[self.Address] = self.tr("Address")
+        self.__translations[self.City] = self.tr("City")
+        self.__translations[self.Zip] = self.tr("ZIP Code")
+        self.__translations[self.State] = self.tr("State/Region")
+        self.__translations[self.Country] = self.tr("Country")
+        self.__translations[self.HomePage] = self.tr("Home Page")
+        self.__translations[self.Special1] = self.tr("Custom 1")
+        self.__translations[self.Special2] = self.tr("Custom 2")
+        self.__translations[self.Special3] = self.tr("Custom 3")
+        self.__translations[self.Special4] = self.tr("Custom 4")
         
         self.__infoMatches[self.FullName] = ["fullname", "realname"]
         self.__infoMatches[self.LastName] = ["lastname", "surname"]
@@ -138,7 +138,7 @@ class PersonalInformationManager(QObject):
         if not self.__loaded:
             self.__loadSettings()
         
-        submenu = QMenu(self.trUtf8("Insert Personal Information"), menu)
+        submenu = QMenu(self.tr("Insert Personal Information"), menu)
         submenu.setIcon(UI.PixmapCache.getIcon("pim.png"))
         
         for key, info in sorted(self.__allInfo.items()):
@@ -148,7 +148,7 @@ class PersonalInformationManager(QObject):
                 act.setData(info)
         
         submenu.addSeparator()
-        submenu.addAction(self.trUtf8("Edit Personal Information"),
+        submenu.addAction(self.tr("Edit Personal Information"),
                           self.showConfigurationDialog)
         
         menu.addMenu(submenu)

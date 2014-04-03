@@ -68,9 +68,9 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
         """
         fileName = E5FileDialog.getSaveFileName(
             self,
-            self.trUtf8("Save Page Screen"),
-            self.trUtf8("screen.png"),
-            self.trUtf8("Portable Network Graphics File (*.png)"),
+            self.tr("Save Page Screen"),
+            self.tr("screen.png"),
+            self.tr("Portable Network Graphics File (*.png)"),
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         if not fileName:
             return False
@@ -78,9 +78,9 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
         if QFileInfo(fileName).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save Page Screen"),
-                self.trUtf8("<p>The file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fileName),
+                self.tr("Save Page Screen"),
+                self.tr("<p>The file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fileName),
                 icon=E5MessageBox.Warning)
             if not res:
                 return False
@@ -89,8 +89,8 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
         if not file.open(QFile.WriteOnly):
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Save Page Screen"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                self.tr("Save Page Screen"),
+                self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return False
         
@@ -100,8 +100,8 @@ class PageScreenDialog(QDialog, Ui_PageScreenDialog):
         if not res:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Save Page Screen"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                self.tr("Save Page Screen"),
+                self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return False
         

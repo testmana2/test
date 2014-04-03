@@ -17,6 +17,7 @@ from .Ui_HelpInterfacePage import Ui_HelpInterfacePage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
@@ -31,6 +32,8 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         super(HelpInterfacePage, self).__init__()
         self.setupUi(self)
         self.setObjectName("InterfacePage")
+        
+        self.styleSheetButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
         
@@ -56,7 +59,7 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         """
         curStyle = Preferences.getUI("Style")
         styles = sorted(list(QStyleFactory.keys()))
-        self.styleComboBox.addItem(self.trUtf8('System'), "System")
+        self.styleComboBox.addItem(self.tr('System'), "System")
         for style in styles:
             self.styleComboBox.addItem(style, style)
         currentIndex = self.styleComboBox.findData(curStyle)
@@ -71,9 +74,9 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select style sheet file"),
+            self.tr("Select style sheet file"),
             self.styleSheetEdit.text(),
-            self.trUtf8(
+            self.tr(
                 "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
                 "All files (*)"))
         

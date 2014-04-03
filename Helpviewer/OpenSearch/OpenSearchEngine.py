@@ -317,7 +317,7 @@ class OpenSearchEngine(QObject):
         
         reply = self.__networkAccessManager.get(
             QNetworkRequest(QUrl.fromEncoded(self._imageUrl)))
-        reply.finished[()].connect(self.__imageObtained)
+        reply.finished.connect(self.__imageObtained)
         self.__replies.append(reply)
     
     def __imageObtained(self):
@@ -441,7 +441,7 @@ class OpenSearchEngine(QObject):
             data = "&".join(parameters)
             self.__suggestionsReply = self.networkAccessManager().post(
                 QNetworkRequest(self.suggestionsUrl(searchTerm)), data)
-        self.__suggestionsReply.finished[()].connect(
+        self.__suggestionsReply.finished.connect(
             self.__suggestionsObtained)
     
     def __suggestionsObtained(self):

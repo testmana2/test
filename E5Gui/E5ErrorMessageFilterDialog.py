@@ -41,8 +41,8 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.filterList.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.filterList.removeAll)
+        self.removeButton.clicked.connect(self.filterList.removeSelected)
+        self.removeAllButton.clicked.connect(self.filterList.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -51,8 +51,8 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
         """
         filter, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Error Messages Filter"),
-            self.trUtf8("Enter message filter to add to the list:"),
+            self.tr("Error Messages Filter"),
+            self.tr("Enter message filter to add to the list:"),
             QLineEdit.Normal)
         if ok and filter != "" and filter not in self.__model.stringList():
             self.__model.insertRow(self.__model.rowCount())

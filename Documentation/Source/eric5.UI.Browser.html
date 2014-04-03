@@ -159,6 +159,9 @@ QTreeView
 <td><a href="#Browser.getSelectedItemsCountCategorized">getSelectedItemsCountCategorized</a></td>
 <td>Public method to get a categorized count of selected items.</td>
 </tr><tr>
+<td><a href="#Browser.handleInterpreterChanged">handleInterpreterChanged</a></td>
+<td>Public slot to handle a change of the debug client's interpreter.</td>
+</tr><tr>
 <td><a href="#Browser.handlePreferencesChanged">handlePreferencesChanged</a></td>
 <td>Public slot used to handle the preferencesChanged signal.</td>
 </tr><tr>
@@ -345,6 +348,16 @@ a dictionary containing the counts of items belonging
             filter (i.e. unicode(filterClass)). The dictionary contains
             an additional entry with key "sum", that stores the sum of
             all selected entries fulfilling the filter criteria.
+</dd>
+</dl><a NAME="Browser.handleInterpreterChanged" ID="Browser.handleInterpreterChanged"></a>
+<h4>Browser.handleInterpreterChanged</h4>
+<b>handleInterpreterChanged</b>(<i>interpreter</i>)
+<p>
+        Public slot to handle a change of the debug client's interpreter.
+</p><dl>
+<dt><i>interpreter</i></dt>
+<dd>
+interpreter of the debug client (string)
 </dd>
 </dl><a NAME="Browser.handlePreferencesChanged" ID="Browser.handlePreferencesChanged"></a>
 <h4>Browser.handlePreferencesChanged</h4>

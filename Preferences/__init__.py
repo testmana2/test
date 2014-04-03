@@ -69,7 +69,7 @@ class Prefs(object):
         "BreakAlways": False,
         "PythonInterpreter": "",
         "Python3Interpreter": "",
-        "RubyInterpreter": "/usr/bin/ruby",
+        "RubyInterpreter": "",
         "DebugClientType": "standard",
         # supported "standard", "threaded", "custom"
         "DebugClient": "",
@@ -476,6 +476,16 @@ class Prefs(object):
         "WhitespaceBackground": QColor(Qt.white),
         "OnlineChangeTraceMarkerUnsaved": QColor("#ff8888"),
         "OnlineChangeTraceMarkerSaved": QColor("#88ff88"),
+        # colors for the marker map
+        "BookmarksMap": QColor("#f8c700"),
+        "ErrorsMap": QColor("#dd0000"),
+        "WarningsMap": QColor("#606000"),
+        "BreakpointsMap": QColor("#f55c07"),
+        "TasksMap": QColor("#2278f8"),
+        "CoverageMap": QColor("#ad3636"),
+        "ChangesMap": QColor("#00b000"),
+        "CurrentMap": QColor("#000000"),
+        "MarkerMapBackground": QColor("#e7e7e7"),
     }
     
     editorOtherFontsDefaults = {
@@ -910,6 +920,11 @@ class Prefs(object):
         # 2 = weekly
         # 3 = monthly
         "CheckInstalledOnly": True,
+        # list of plug-ins not to shown in the repo dialog
+        "HiddenPlugins": [],
+        # parameters for housekeeping
+        "KeepGenerations": 2,
+        "KeepHidden": False,
     }
     
     # defaults for the printer settings
@@ -922,8 +937,8 @@ class Prefs(object):
         "IconEditorState": QByteArray(),
     }
     
-    # defaults for py3flakes
-    py3flakesDefaults = {
+    # defaults for pyflakes
+    pyflakesDefaults = {
         "IncludeInSyntaxCheck": True,
         "IgnoreStarImportWarnings": True,
     }
@@ -2543,8 +2558,11 @@ def getPluginManager(key, prefClass=Prefs):
     if key in ["DownloadPath"]:
         return prefClass.settings.value(
             "PluginManager/" + key, prefClass.pluginManagerDefaults[key])
-    elif key in ["UpdatesCheckInterval"]:
+    elif key in ["UpdatesCheckInterval", "KeepGenerations"]:
         return int(prefClass.settings.value(
+            "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
+    elif key in ["HiddenPlugins"]:
+        return toList(prefClass.settings.value(
             "PluginManager/" + key, prefClass.pluginManagerDefaults[key]))
     else:
         return toBool(prefClass.settings.value(
@@ -2624,7 +2642,7 @@ def setIconEditor(key, value, prefClass=Prefs):
 
 def getFlakes(key, prefClass=Prefs):
     """
-    Module function to retrieve the py3flakes related settings.
+    Module function to retrieve the pyflakes related settings.
     
     @param key the key of the value to get
     @param prefClass preferences class used as the storage area
@@ -2632,15 +2650,15 @@ def getFlakes(key, prefClass=Prefs):
     """
     if key in ["IncludeInSyntaxCheck", "IgnoreStarImportWarnings"]:
         return toBool(prefClass.settings.value("Py3Flakes/" + key,
-                      prefClass.py3flakesDefaults[key]))
+                      prefClass.pyflakesDefaults[key]))
     else:
         return prefClass.settings.value(
-            "Py3Flakes/" + key, prefClass.py3flakesDefaults[key])
+            "Py3Flakes/" + key, prefClass.pyflakesDefaults[key])
     
 
 def setFlakes(key, value, prefClass=Prefs):
     """
-    Module function to store the py3flakes related settings.
+    Module function to store the pyflakes related settings.
     
     @param key the key of the setting to be set
     @param value the value to be set

@@ -8,7 +8,7 @@ Module implementing some common configuration stuf for the XML package.
 """
 
 # version number of the multi project file
-multiProjectFileFormatVersion = "4.2"
+multiProjectFileFormatVersion = "5.0"
 
 # version number of the project file
 projectFileFormatVersion = "5.1"

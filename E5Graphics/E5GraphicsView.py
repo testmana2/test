@@ -53,7 +53,7 @@ class E5GraphicsView(QGraphicsView):
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.setViewportUpdateMode(QGraphicsView.SmartViewportUpdate)
         
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             "<b>Graphics View</b>\n"
             "<p>This graphics view is used to show a diagram. \n"
             "There are various actions available to manipulate the \n"
@@ -368,7 +368,7 @@ class E5GraphicsView(QGraphicsView):
             painter.drawPixmap(marginX, marginY, diagram,
                                offsetX, offsetY, widthX, heightY)
             # write a foot note
-            s = self.trUtf8("{0}, Page {1}").format(diagramName, page + 1)
+            s = self.tr("{0}, Page {1}").format(diagramName, page + 1)
             tc = QColor(50, 50, 50)
             painter.setPen(tc)
             painter.drawRect(marginX, marginY, width, height)

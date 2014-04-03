@@ -20,15 +20,14 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
     Class implementing a dialog to select a revision.
     """
     def __init__(self, tagsList, branchesList, bookmarksList=None,
-                 showNone=False, parent=None):
+                 noneLabel="", parent=None):
         """
         Constructor
         
         @param tagsList list of tags (list of strings)
         @param branchesList list of branches (list of strings)
         @param bookmarksList list of bookmarks (list of strings)
-        @param showNone flag influencing the label of the 'None' selection
-            (boolean)
+        @param noneLabel labeltext for "no revision selected" (string)
         @param parent parent widget (QWidget)
         """
         super(HgRevisionSelectionDialog, self).__init__(parent)
@@ -44,10 +43,11 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
             self.bookmarkButton.setHidden(True)
             self.bookmarkCombo.setHidden(True)
         
-        if showNone:
-            self.tipButton.setText(self.trUtf8("No revision selected"))
-            self.tipButton.setToolTip(self.trUtf8(
-                "Select to not specify a specific revision"))
+        if noneLabel:
+            self.noneButton.setText(noneLabel)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """
@@ -144,15 +144,17 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
         @return selected revision (string)
         """
         if self.numberButton.isChecked():
-            rev = str(self.numberSpinBox.value())
+            rev = "rev({0})".format(self.numberSpinBox.value())
         elif self.idButton.isChecked():
-            rev = self.idEdit.text()
+            rev = "id({0})".format(self.idEdit.text())
         elif self.tagButton.isChecked():
             rev = self.tagCombo.currentText()
         elif self.branchButton.isChecked():
             rev = self.branchCombo.currentText()
         elif self.bookmarkButton.isChecked():
             rev = self.bookmarkCombo.currentText()
+        elif self.tipButton.isChecked():
+            rev = "tip"
         else:
             rev = ""
         

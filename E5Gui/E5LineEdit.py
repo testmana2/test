@@ -299,7 +299,7 @@ class E5ClearableLineEdit(E5LineEdit):
         self.addWidget(self.__clearButton, side)
         self.__clearButton.setVisible(False)
         
-        self.__clearButton.clicked[()].connect(self.clear)
+        self.__clearButton.clicked.connect(self.clear)
         self.textChanged.connect(self.__textChanged)
     
     def __textChanged(self, txt):

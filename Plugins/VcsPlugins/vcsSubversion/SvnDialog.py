@@ -9,8 +9,8 @@ Module implementing a dialog starting a process and showing its output.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -152,8 +152,8 @@ class SvnDialog(QDialog, Ui_SvnDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))

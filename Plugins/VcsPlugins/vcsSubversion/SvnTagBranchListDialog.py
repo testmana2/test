@@ -9,8 +9,8 @@ Module implementing a dialog to show a list of tags or branches.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -88,7 +88,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         self.intercept = False
         if not tags:
-            self.setWindowTitle(self.trUtf8("Subversion Branches List"))
+            self.setWindowTitle(self.tr("Subversion Branches List"))
         self.activateWindow()
         
         self.tagsList = tagsList
@@ -101,8 +101,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         if reposURL is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Subversion Error"),
-                self.trUtf8(
+                self.tr("Subversion Error"),
+                self.tr(
                     """The URL of the project repository could not be"""
                     """ retrieved from the working copy. The list operation"""
                     """ will be aborted"""))
@@ -120,8 +120,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             if not rx_base.exactMatch(reposURL):
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Subversion Error"),
-                    self.trUtf8(
+                    self.tr("Subversion Error"),
+                    self.tr(
                         """The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
                         """ be aborted"""))
@@ -137,9 +137,9 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         else:
             reposPath, ok = QInputDialog.getText(
                 self,
-                self.trUtf8("Subversion List"),
-                self.trUtf8("Enter the repository URL containing the tags"
-                            " or branches"),
+                self.tr("Subversion List"),
+                self.tr("Enter the repository URL containing the tags"
+                        " or branches"),
                 QLineEdit.Normal,
                 self.vcs.svnNormalizeURL(reposURL))
             if not ok:
@@ -148,9 +148,9 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             if not reposPath:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Subversion List"),
-                    self.trUtf8("""The repository URL is empty."""
-                                """ Aborting..."""))
+                    self.tr("Subversion List"),
+                    self.tr("""The repository URL is empty."""
+                            """ Aborting..."""))
                 self.close()
                 return
             args.append(reposPath)
@@ -165,8 +165,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))

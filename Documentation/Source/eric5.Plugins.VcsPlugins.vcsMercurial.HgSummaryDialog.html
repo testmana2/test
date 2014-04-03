@@ -200,7 +200,7 @@ button that was clicked (QAbstractButton)
         Private slot to refresh the status display.
 </p><a NAME="HgSummaryDialog.start" ID="HgSummaryDialog.start"></a>
 <h4>HgSummaryDialog.start</h4>
-<b>start</b>(<i>path, mq=False</i>)
+<b>start</b>(<i>path, mq=False, largefiles=False</i>)
 <p>
         Public slot to start the hg summary command.
 </p><dl>
@@ -210,6 +210,10 @@ path name of the working directory (string)
 </dd><dt><i>mq</i></dt>
 <dd>
 flag indicating to show the queue status as well (boolean)
+</dd><dt><i>largefiles</i></dt>
+<dd>
+flag indicating to show the largefiles status as
+            well (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

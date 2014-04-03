@@ -18,6 +18,7 @@ from E5Gui.E5Completers import E5FileCompleter
 from .Ui_HgImportDialog import Ui_HgImportDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class HgImportDialog(QDialog, Ui_HgImportDialog):
@@ -32,6 +33,8 @@ class HgImportDialog(QDialog, Ui_HgImportDialog):
         """
         super(HgImportDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.patchFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
@@ -66,9 +69,9 @@ class HgImportDialog(QDialog, Ui_HgImportDialog):
         """
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select patch file"),
+            self.tr("Select patch file"),
             self.patchFileEdit.text(),
-            self.trUtf8("Patch Files (*.diff *.patch);;All Files (*)"))
+            self.tr("Patch Files (*.diff *.patch);;All Files (*)"))
         
         if fn:
             self.patchFileEdit.setText(Utilities.toNativeSeparators(fn))

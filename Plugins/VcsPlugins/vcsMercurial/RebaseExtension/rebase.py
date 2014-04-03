@@ -58,8 +58,7 @@ class Rebase(HgExtension):
             (indicator, sourceRev, destRev, collapse, keep, keepBranches,
              detach) = dlg.getData()
             
-            args = []
-            args.append("rebase")
+            args = self.vcs.initCommand("rebase")
             if indicator == "S":
                 args.append("--source")
                 args.append(sourceRev)
@@ -79,7 +78,7 @@ class Rebase(HgExtension):
                 args.append("--detach")
             args.append("--verbose")
             
-            dia = HgDialog(self.trUtf8('Rebase Changesets'), self.vcs)
+            dia = HgDialog(self.tr('Rebase Changesets'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -101,12 +100,11 @@ class Rebase(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
-        args.append("rebase")
+        args = self.vcs.initCommand("rebase")
         args.append("--continue")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Rebase Changesets (Continue)'), self.vcs)
+        dia = HgDialog(self.tr('Rebase Changesets (Continue)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -128,12 +126,11 @@ class Rebase(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
-        args.append("rebase")
+        args = self.vcs.initCommand("rebase")
         args.append("--abort")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Rebase Changesets (Abort)'), self.vcs)
+        dia = HgDialog(self.tr('Rebase Changesets (Abort)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()

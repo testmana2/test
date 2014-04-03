@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>456</width>
-    <height>299</height>
+    <height>301</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,16 +28,6 @@
      </item>
      <item row="0" column="1">
       <widget class="QLineEdit" name="directoryEdit"/>
-     </item>
-     <item row="0" column="2">
-      <widget class="QPushButton" name="directoryButton">
-       <property name="toolTip">
-        <string>Press to select the export directory via a directory selection dialog</string>
-       </property>
-       <property name="text">
-        <string notr="true">...</string>
-       </property>
-      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
@@ -86,6 +76,13 @@ here. Valid recognized patterns are:&lt;/p&gt;
        </property>
        <property name="lineWrapMode">
         <enum>QPlainTextEdit::NoWrap</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QToolButton" name="directoryButton">
+       <property name="toolTip">
+        <string>Press to select the export directory via a directory selection dialog</string>
        </property>
       </widget>
      </item>

@@ -65,7 +65,7 @@ class SnapshotFreehandGrabber(QWidget):
         self.__selectionBeforeDrag = QPolygon()
         
         self.__helpTextRect = QRect()
-        self.__helpText = self.trUtf8(
+        self.__helpText = self.tr(
             "Select a region using the mouse. To take the snapshot,"
             " press the Enter key or double click. Press Esc to quit.")
         

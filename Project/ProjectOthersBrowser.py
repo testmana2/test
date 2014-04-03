@@ -51,9 +51,9 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
                                     ProjectBrowserDirectoryItem]
         self.specialMenuEntries = [1]
 
-        self.setWindowTitle(self.trUtf8('Others'))
+        self.setWindowTitle(self.tr('Others'))
 
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>Project Others Browser</b>"""
             """<p>This allows to easily see all other files and directories"""
             """ contained in the current project. Several actions can be"""
@@ -71,62 +71,62 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         ProjectBaseBrowser._createPopupMenus(self)
         
         self.editPixmapAct = self.menu.addAction(
-            self.trUtf8('Open in Icon Editor'), self._editPixmap)
+            self.tr('Open in Icon Editor'), self._editPixmap)
         self.menu.addSeparator()
         self.renameFileAct = self.menu.addAction(
-            self.trUtf8('Rename file'), self._renameFile)
+            self.tr('Rename file'), self._renameFile)
         self.menuActions.append(self.renameFileAct)
         act = self.menu.addAction(
-            self.trUtf8('Remove from project'), self.__removeItem)
+            self.tr('Remove from project'), self.__removeItem)
         self.menuActions.append(act)
-        act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteItem)
+        act = self.menu.addAction(self.tr('Delete'), self.__deleteItem)
         self.menuActions.append(act)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Add files...'), self.project.addOthersFiles)
+            self.tr('Add files...'), self.project.addOthersFiles)
         self.menu.addAction(
-            self.trUtf8('Add directory...'), self.project.addOthersDir)
+            self.tr('Add directory...'), self.project.addOthersDir)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Refresh'), self.__refreshItem)
-        self.menu.addSeparator()
-        self.menu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+        self.menu.addAction(self.tr('Refresh'), self.__refreshItem)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
-        self.menu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.menu.addAction(
+            self.tr('Expand all directories'), self._expandAllDirs)
+        self.menu.addAction(
+            self.tr('Collapse all directories'), self._collapseAllDirs)
+        self.menu.addSeparator()
+        self.menu.addAction(self.tr('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
         self.backMenu.addAction(
-            self.trUtf8('Add files...'), self.project.addOthersFiles)
+            self.tr('Add files...'), self.project.addOthersFiles)
         self.backMenu.addAction(
-            self.trUtf8('Add directory...'), self.project.addOthersDir)
+            self.tr('Add directory...'), self.project.addOthersDir)
         self.backMenu.addSeparator()
         self.backMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.backMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.backMenu.addAction(self.tr('Configure...'), self._configure)
         self.backMenu.setEnabled(False)
 
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(
-            self.trUtf8('Remove from project'), self.__removeItem)
+            self.tr('Remove from project'), self.__removeItem)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
-            self.trUtf8('Delete'), self.__deleteItem)
+            self.tr('Delete'), self.__deleteItem)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.multiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.multiMenu.addAction(self.tr('Configure...'), self._configure)
         
         self.menu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -295,8 +295,8 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
             DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(
             self.parent(),
-            self.trUtf8("Delete files/directories"),
-            self.trUtf8(
+            self.tr("Delete files/directories"),
+            self.tr(
                 "Do you really want to delete these entries from the"
                 " project?"),
             names)

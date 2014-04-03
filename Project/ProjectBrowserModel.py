@@ -227,9 +227,9 @@ class ProjectBrowserModel(BrowserModel):
         """
         super(ProjectBrowserModel, self).__init__(parent, nopopulate=True)
         
-        rootData = self.trUtf8("Name")
+        rootData = self.tr("Name")
         self.rootItem = BrowserItem(None, rootData)
-        self.rootItem.itemData.append(self.trUtf8("VCS Status"))
+        self.rootItem.itemData.append(self.tr("VCS Status"))
         
         self.progDir = None
         self.project = parent
@@ -373,7 +373,7 @@ class ProjectBrowserModel(BrowserModel):
                         self.project.clearStatusMonitorCachedState(
                             f.absoluteFilePath())
                     else:
-                        node.addVcsStatus(self.trUtf8("local"))
+                        node.addVcsStatus(self.tr("local"))
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
@@ -446,7 +446,7 @@ class ProjectBrowserModel(BrowserModel):
                             self.project.vcs.canBeCommitted:
                         itm.addVcsStatus(self.project.vcs.vcsName())
                     else:
-                        itm.addVcsStatus(self.trUtf8("local"))
+                        itm.addVcsStatus(self.tr("local"))
                 else:
                     itm.addVcsStatus("")
         self.inRefresh = False
@@ -706,7 +706,7 @@ class ProjectBrowserModel(BrowserModel):
                     if state == self.project.vcs.canBeCommitted:
                         node.addVcsStatus(self.project.vcs.vcsName())
                     else:
-                        node.addVcsStatus(self.trUtf8("local"))
+                        node.addVcsStatus(self.tr("local"))
                 self.endInsertRows()
             
             # step 2: check for removed entries
@@ -741,7 +741,7 @@ class ProjectBrowserModel(BrowserModel):
             if state == self.project.vcs.canBeCommitted:
                 item.addVcsStatus(self.project.vcs.vcsName())
             else:
-                item.addVcsStatus(self.trUtf8("local"))
+                item.addVcsStatus(self.tr("local"))
         else:
             item.addVcsStatus("")
     
@@ -759,7 +759,7 @@ class ProjectBrowserModel(BrowserModel):
             if state == self.project.vcs.canBeCommitted:
                 item.setVcsStatus(self.project.vcs.vcsName())
             else:
-                item.setVcsStatus(self.trUtf8("local"))
+                item.setVcsStatus(self.tr("local"))
             if recursive:
                 name = os.path.dirname(name)
                 parentItem = item.parent()
@@ -820,10 +820,10 @@ class ProjectBrowserModel(BrowserModel):
                 self.beginRemoveRows(index, 0, itm.childCount() - 1)
                 itm.removeChildren()
                 self.endRemoveRows()
-                Utilities.ModuleParser.resetParsedModule(
-                    os.path.join(self.project.ppath, name))
-                
-                self.populateItem(itm, True)
+            Utilities.ModuleParser.resetParsedModule(
+                os.path.join(self.project.ppath, name))
+            
+            self.populateItem(itm, True)
     
     def projectPropertiesChanged(self):
         """

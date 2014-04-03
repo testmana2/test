@@ -20,6 +20,7 @@ from E5Gui import E5FileDialog
 from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
@@ -48,6 +49,8 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         if name:
             self.setObjectName(name)
         self.setModal(modal)
+        
+        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.filenameCompleter = E5FileCompleter(self.filenameCombo)
@@ -87,7 +90,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             self.linenoSpinBox.setEnabled(False)
             self.conditionCombo.setFocus()
         else:
-            self.setWindowTitle(self.trUtf8("Add Breakpoint"))
+            self.setWindowTitle(self.tr("Add Breakpoint"))
             # set the filename
             if fn is None:
                 fn = ""
@@ -112,6 +115,9 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             if not fn:
                 self.okButton.setEnabled(False)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_fileButton_clicked(self):
         """
@@ -119,7 +125,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select filename of the breakpoint"),
+            self.tr("Select filename of the breakpoint"),
             self.filenameCombo.currentText(),
             "")
             

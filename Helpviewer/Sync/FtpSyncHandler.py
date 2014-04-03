@@ -263,7 +263,7 @@ class FtpSyncHandler(SyncHandler):
                         .toTime_t())
             else:
                 self.syncStatus.emit(
-                    type_, self.trUtf8("No synchronization required."))
+                    type_, self.tr("No synchronization required."))
                 self.syncFinished.emit(type_, True, True)
         else:
             if self._remoteFiles[type_] not in self.__remoteFilesFound:
@@ -333,7 +333,7 @@ class FtpSyncHandler(SyncHandler):
             ok = self.__connectAndLogin()
             if not ok:
                 self.syncStatus.emit(
-                    type_, self.trUtf8("Cannot log in to FTP host."))
+                    type_, self.tr("Cannot log in to FTP host."))
                 return
         
         # upload the changed file
@@ -341,7 +341,7 @@ class FtpSyncHandler(SyncHandler):
         self.syncStatus.emit(type_, self._messages[type_]["Uploading"])
         if self.__uploadFile(type_, fileName):
             self.syncStatus.emit(
-                type_, self.trUtf8("Synchronization finished."))
+                type_, self.tr("Synchronization finished."))
         self.__state = "idle"
     
     def syncBookmarks(self):

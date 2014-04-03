@@ -9,8 +9,8 @@ Module implementing a widget controlling a download.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, \
@@ -140,11 +140,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__url = self.__reply.url()
         self.__reply.setParent(self)
         self.__reply.setReadBufferSize(16 * 1024 * 1024)
-        self.__reply.readyRead[()].connect(self.__readyRead)
+        self.__reply.readyRead.connect(self.__readyRead)
         self.__reply.error.connect(self.__networkError)
         self.__reply.downloadProgress.connect(self.__downloadProgress)
         self.__reply.metaDataChanged.connect(self.__metaDataChanged)
-        self.__reply.finished[()].connect(self.__finished)
+        self.__reply.finished.connect(self.__finished)
         
         # reset info
         self.infoLabel.clear()
@@ -191,7 +191,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__reply.close()
                 self.on_stopButton_clicked()
                 self.filenameLabel.setText(
-                    self.trUtf8("Download canceled: {0}").format(
+                    self.tr("Download canceled: {0}").format(
                         QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
@@ -203,7 +203,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__reply.close()
                 self.on_stopButton_clicked()
                 self.filenameLabel.setText(
-                    self.trUtf8("VirusTotal scan scheduled: {0}").format(
+                    self.tr("VirusTotal scan scheduled: {0}").format(
                         QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
@@ -217,7 +217,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             self.__gettingFileName = True
             fileName = E5FileDialog.getSaveFileName(
                 None,
-                self.trUtf8("Save File"),
+                self.tr("Save File"),
                 defaultFileName,
                 "")
             self.__gettingFileName = False
@@ -226,7 +226,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__reply.close()
                 self.on_stopButton_clicked()
                 self.filenameLabel.setText(
-                    self.trUtf8("Download canceled: {0}")
+                    self.tr("Download canceled: {0}")
                         .format(QFileInfo(defaultFileName).fileName()))
                 self.__canceledFileSelect = True
                 return
@@ -245,7 +245,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             if not saveDirPath.mkpath(saveDirPath.absolutePath()):
                 self.progressBar.setVisible(False)
                 self.on_stopButton_clicked()
-                self.infoLabel.setText(self.trUtf8(
+                self.infoLabel.setText(self.tr(
                     "Download directory ({0}) couldn't be created.")
                     .format(saveDirPath.absolutePath()))
                 return
@@ -354,10 +354,10 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @param checked flag indicating the state of the button (boolean)
         """
         if checked:
-            self.__reply.readyRead[()].disconnect(self.__readyRead)
+            self.__reply.readyRead.disconnect(self.__readyRead)
             self.__reply.setReadBufferSize(16 * 1024)
         else:
-            self.__reply.readyRead[()].connect(self.__readyRead)
+            self.__reply.readyRead.connect(self.__readyRead)
             self.__reply.setReadBufferSize(16 * 1024 * 1024)
             self.__readyRead()
     
@@ -423,7 +423,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__getFileName()
             if not self.__output.open(QIODevice.WriteOnly):
                 self.infoLabel.setText(
-                    self.trUtf8("Error opening save file: {0}")
+                    self.tr("Error opening save file: {0}")
                     .format(self.__output.errorString()))
                 self.on_stopButton_clicked()
                 self.statusChanged.emit()
@@ -435,7 +435,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__md5Hash.addData(buffer)
         bytesWritten = self.__output.write(buffer)
         if bytesWritten == -1:
-            self.infoLabel.setText(self.trUtf8("Error saving: {0}")
+            self.infoLabel.setText(self.tr("Error saving: {0}")
                 .format(self.__output.errorString()))
             self.on_stopButton_clicked()
         else:
@@ -447,7 +447,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to handle a network error.
         """
-        self.infoLabel.setText(self.trUtf8("Network Error: {0}")
+        self.infoLabel.setText(self.tr("Network Error: {0}")
             .format(self.__reply.errorString()))
         self.tryAgainButton.setEnabled(True)
         self.tryAgainButton.setVisible(True)
@@ -558,16 +558,16 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             if bytesTotal > 0:
                 remaining = timeString(timeRemaining)
             
-            info = self.trUtf8("{0} of {1} ({2}/sec)\n{3}")\
+            info = self.tr("{0} of {1} ({2}/sec)\n{3}")\
                 .format(
                     dataString(self.__bytesReceived),
-                    bytesTotal == -1 and self.trUtf8("?")
+                    bytesTotal == -1 and self.tr("?")
                     or dataString(bytesTotal),
                     dataString(int(speed)),
                     remaining)
         else:
             if self.__bytesReceived == bytesTotal or bytesTotal == -1:
-                info = self.trUtf8("{0} downloaded\nSHA1: {1}\nMD5: {2}")\
+                info = self.tr("{0} downloaded\nSHA1: {1}\nMD5: {2}")\
                     .format(dataString(self.__output.size()),
                             str(self.__sha1Hash.result().toHex(),
                                 encoding="ascii"),
@@ -575,7 +575,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                                 encoding="ascii")
                             )
             else:
-                info = self.trUtf8("{0} of {1} - Stopped")\
+                info = self.tr("{0} of {1} - Stopped")\
                     .format(dataString(self.__bytesReceived),
                             dataString(bytesTotal))
         self.infoLabel.setText(info)

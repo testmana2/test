@@ -104,6 +104,9 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__getUnversionedItems">__getUnversionedItems</a></td>
 <td>Private method to retrieve all entries, that have an unversioned status.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__lfAdd">__lfAdd</a></td>
+<td>Private slot to add a file to the repository.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
 </tr><tr>
@@ -130,6 +133,9 @@ QWidget, Ui_HgStatusDialog
 </tr><tr>
 <td><a href="#HgStatusDialog.__sbsDiff">__sbsDiff</a></td>
 <td>Private slot to handle the Diff context menu entry.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__showAddMenu">__showAddMenu</a></td>
+<td>Private slot to prepare the Add button menu before it is shown.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__showContextMenu">__showContextMenu</a></td>
 <td>Protected slot to show the context menu of the status list.</td>
@@ -323,6 +329,16 @@ list of all items with a modified status
 <dd>
 list of all items with an unversioned status
 </dd>
+</dl><a NAME="HgStatusDialog.__lfAdd" ID="HgStatusDialog.__lfAdd"></a>
+<h4>HgStatusDialog.__lfAdd</h4>
+<b>__lfAdd</b>(<i>mode</i>)
+<p>
+        Private slot to add a file to the repository.
+</p><dl>
+<dt><i>mode</i></dt>
+<dd>
+add mode (string one of 'normal' or 'large')
+</dd>
 </dl><a NAME="HgStatusDialog.__procFinished" ID="HgStatusDialog.__procFinished"></a>
 <h4>HgStatusDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
@@ -387,6 +403,11 @@ output line to be processed (string)
 <b>__sbsDiff</b>(<i></i>)
 <p>
         Private slot to handle the Diff context menu entry.
+</p><a NAME="HgStatusDialog.__showAddMenu" ID="HgStatusDialog.__showAddMenu"></a>
+<h4>HgStatusDialog.__showAddMenu</h4>
+<b>__showAddMenu</b>(<i></i>)
+<p>
+        Private slot to prepare the Add button menu before it is shown.
 </p><a NAME="HgStatusDialog.__showContextMenu" ID="HgStatusDialog.__showContextMenu"></a>
 <h4>HgStatusDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)

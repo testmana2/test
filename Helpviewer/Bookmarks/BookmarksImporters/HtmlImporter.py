@@ -82,7 +82,7 @@ class HtmlImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' does not exist.")\
+            self._errorString = self.tr("File '{0}' does not exist.")\
                 .format(self.__fileName)
             return False
         return True
@@ -101,8 +101,8 @@ class HtmlImporter(BookmarksImporter):
         
         importRootNode.setType(BookmarkNode.Folder)
         if self._id == "html":
-            importRootNode.title = self.trUtf8("HTML Import")
+            importRootNode.title = self.tr("HTML Import")
         else:
-            importRootNode.title = self.trUtf8("Imported {0}")\
+            importRootNode.title = self.tr("Imported {0}")\
                 .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
         return importRootNode

@@ -9,8 +9,8 @@
     :license: BSD, see LICENSE for details.
 """
 try:
-    str = unicode   # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     basestring = str
 
 import re, itertools

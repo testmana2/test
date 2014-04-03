@@ -22,6 +22,7 @@ from . import BookmarksImporters
 
 import Utilities
 import Globals
+import UI.PixmapCache
 
 
 class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
@@ -38,6 +39,8 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         """
         super(BookmarksImportDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.chooseButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.sourcesList.setIconSize(QSize(48, 48))
         for icon, displayText, idText in BookmarksImporters.getImporters():
@@ -87,7 +90,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         if self.__selectedSource == "ie":
             path = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Choose Directory ..."),
+                self.tr("Choose Directory ..."),
                 self.__sourceDir,
                 E5FileDialog.Options(E5FileDialog.Option(0)))
         else:
@@ -97,7 +100,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
                 filter = self.__sourceFile
             path = E5FileDialog.getOpenFileName(
                 self,
-                self.trUtf8("Choose File ..."),
+                self.tr("Choose File ..."),
                 self.__sourceDir,
                 filter)
         
@@ -121,13 +124,13 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
             
             self.iconLabel.setPixmap(pixmap)
             self.importingFromLabel.setText(
-                self.trUtf8("<b>Importing from {0}</b>").format(sourceName))
+                self.tr("<b>Importing from {0}</b>").format(sourceName))
             self.fileLabel1.setText(info)
             self.fileLabel2.setText(prompt)
             self.standardDirLabel.setText(
                 "<i>{0}</i>".format(self.__sourceDir))
             
-            self.nextButton.setText(self.trUtf8("Finish"))
+            self.nextButton.setText(self.tr("Finish"))
             
             self.__currentPage += 1
             self.pagesWidget.setCurrentIndex(self.__currentPage)
@@ -144,7 +147,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
             if importer.error():
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Error importing bookmarks"),
+                    self.tr("Error importing bookmarks"),
                     importer.errorString())
                 return
             

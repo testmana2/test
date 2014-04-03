@@ -9,8 +9,8 @@ Module implementing a dialog to show a list of applied and unapplied patches.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -22,8 +22,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
 from E5Gui import E5MessageBox
 
 from .Ui_HgQueuesListDialog import Ui_HgQueuesListDialog
-
-import Preferences
 
 
 class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
@@ -55,10 +53,10 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.__statusDict = {
-            "A": self.trUtf8("applied"),
-            "U": self.trUtf8("not applied"),
-            "G": self.trUtf8("guarded"),
-            "D": self.trUtf8("missing"),
+            "A": self.tr("applied"),
+            "U": self.tr("not applied"),
+            "G": self.tr("guarded"),
+            "D": self.tr("missing"),
         }
         
         self.show()
@@ -118,8 +116,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         else:
             self.__mode = "qseries"
         
-        args = []
-        args.append('qseries')
+        args = self.vcs.initCommand("qseries")
         args.append('--summary')
         args.append('--verbose')
         if missing:
@@ -155,8 +152,8 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -170,8 +167,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         """
         self.__mode = "qtop"
         
-        args = []
-        args.append('qtop')
+        args = self.vcs.initCommand("qtop")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -197,8 +193,8 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -231,7 +227,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         if self.patchesList.topLevelItemCount() == 0:
             # no patches present
             self.__generateItem(
-                0, "", self.trUtf8("no patches found"), "", True)
+                0, "", self.tr("no patches found"), "", True)
         self.__resizeColumns()
         self.__resort()
     
@@ -302,7 +298,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
             try:
                 statusStr = self.__statusDict[status]
             except KeyError:
-                statusStr = self.trUtf8("unknown")
+                statusStr = self.tr("unknown")
             itm = QTreeWidgetItem(self.patchesList)
             itm.setData(0, Qt.DisplayRole, index)
             itm.setData(1, Qt.DisplayRole, name)
@@ -344,8 +340,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -382,8 +377,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

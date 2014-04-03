@@ -56,7 +56,7 @@ class E5ModelToolBar(QToolBar):
         @param model reference to the model (QAbstractItemModel)
         """
         if self.__model is not None:
-            self.__model.modelReset[()].disconnect(self._build)
+            self.__model.modelReset.disconnect(self._build)
             self.__model.rowsInserted[QModelIndex, int, int].disconnect(
                 self._build)
             self.__model.rowsRemoved[QModelIndex, int, int].disconnect(
@@ -67,7 +67,7 @@ class E5ModelToolBar(QToolBar):
         self.__model = model
         
         if self.__model is not None:
-            self.__model.modelReset[()].connect(self._build)
+            self.__model.modelReset.connect(self._build)
             self.__model.rowsInserted[QModelIndex, int, int].connect(
                 self._build)
             self.__model.rowsRemoved[QModelIndex, int, int].connect(

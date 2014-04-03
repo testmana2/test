@@ -10,8 +10,8 @@ API class.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import json
@@ -86,9 +86,9 @@ class VirusTotalAPI(QObject):
         self.GetUrlReportUrl = self.GetUrlReportPattern.format(protocol)
         
         self.errorMessages = {
-            -2: self.trUtf8("Request limit has been reached."),
-            -1: self.trUtf8("Invalid key given."),
-            0: self.trUtf8("Requested item is not present.")
+            -2: self.tr("Request limit has been reached."),
+            -1: self.tr("Invalid key given."),
+            0: self.tr("Requested item is not present.")
         }
     
     def preferencesChanged(self):

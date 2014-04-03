@@ -9,8 +9,8 @@ Module implementing a dialog used by the queue management functions.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QCoreApplication
@@ -18,8 +18,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, \
     QListWidgetItem, QAbstractButton
 
 from .Ui_HgQueuesQueueManagementDialog import Ui_HgQueuesQueueManagementDialog
-
-import Preferences
 
 
 class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
@@ -57,6 +55,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         self.__repodir = repodir
         self.__suppressActive = suppressActive
         self.__hgClient = vcs.getClient()
+        self.vcs = vcs
         
         self.inputFrame.setHidden(
             mode != HgQueuesQueueManagementDialog.NAME_INPUT)
@@ -71,9 +70,9 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             self.buttonBox.removeButton(
                 self.buttonBox.button(QDialogButtonBox.Cancel))
             self.refreshButton = self.buttonBox.addButton(
-                self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
+                self.tr("Refresh"), QDialogButtonBox.ActionRole)
             self.refreshButton.setToolTip(
-                self.trUtf8("Press to refresh the queues list"))
+                self.tr("Press to refresh the queues list"))
             self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         else:
             self.buttonBox.removeButton(
@@ -99,15 +98,13 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         queuesList = []
         activeQueue = ""
         
-        args = []
-        args.append("qqueue")
+        args = self.vcs.initCommand("qqueue")
         args.append("--list")
         
         output = ""
         if self.__hgClient:
             output = self.__hgClient.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(self.__repodir)
             process.start('hg', args)
@@ -115,8 +112,8 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         for queue in output.splitlines():
             queue = queue.strip()
@@ -183,7 +180,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         """
         name = ""
         if self.__mode == HgQueuesQueueManagementDialog.NAME_INPUT:
-            name = self.nameEdit.text()
+            name = self.nameEdit.text().replace(" ", "_")
         elif self.__mode == HgQueuesQueueManagementDialog.QUEUE_INPUT:
             selItems = self.queuesList.selectedItems()
             if selItems:

@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_SvnCommandDialog import Ui_SvnCommandDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
@@ -40,6 +41,8 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         super(SvnCommandDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.workdirCompleter = E5DirCompleter(self.workdirCombo)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
@@ -61,6 +64,9 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
             t += Utilities.getPercentReplacementHelp()
             self.commandCombo.setWhatsThis(t)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """
@@ -71,7 +77,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
             cwd = self.projectDirLabel.text()
         d = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Working directory"),
+            self.tr("Working directory"),
             cwd,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         

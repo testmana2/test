@@ -10,8 +10,8 @@ of the project.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -75,9 +75,9 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
         
-        self.setWindowTitle(self.trUtf8('Interfaces (IDL)'))
+        self.setWindowTitle(self.tr('Interfaces (IDL)'))
         
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>Project Interfaces Browser</b>"""
             """<p>This allows to easily see all interfaces (CORBA IDL files)"""
             """ contained in the current project. Several actions can be"""
@@ -99,159 +99,159 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         self.sourceMenu = QMenu(self)
         if self.omniidl is not None:
             self.sourceMenu.addAction(
-                self.trUtf8('Compile interface'), self.__compileInterface)
+                self.tr('Compile interface'), self.__compileInterface)
             self.sourceMenu.addAction(
-                self.trUtf8('Compile all interfaces'),
+                self.tr('Compile all interfaces'),
                 self.__compileAllInterfaces)
-        self.sourceMenu.addAction(self.trUtf8('Open'), self._openItem)
+        self.sourceMenu.addAction(self.tr('Open'), self._openItem)
         self.sourceMenu.addSeparator()
         act = self.sourceMenu.addAction(
-            self.trUtf8('Rename file'), self._renameFile)
+            self.tr('Rename file'), self._renameFile)
         self.menuActions.append(act)
         act = self.sourceMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.menuActions.append(act)
         act = self.sourceMenu.addAction(
-            self.trUtf8('Delete'), self.__deleteFile)
+            self.tr('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(
-            self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
+            self.tr('Add interfaces...'), self.__addInterfaceFiles)
         self.sourceMenu.addAction(
-            self.trUtf8('Add interfaces directory...'),
+            self.tr('Add interfaces directory...'),
             self.__addInterfacesDirectory)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.sourceMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.sourceMenu.addSeparator()
-        self.sourceMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.sourceMenu.addAction(self.tr('Configure...'), self._configure)
         self.sourceMenu.addAction(
-            self.trUtf8('Configure CORBA...'), self.__configureCorba)
+            self.tr('Configure CORBA...'), self.__configureCorba)
 
         self.menu = QMenu(self)
         if self.omniidl is not None:
             self.menu.addAction(
-                self.trUtf8('Compile interface'), self.__compileInterface)
+                self.tr('Compile interface'), self.__compileInterface)
             self.menu.addAction(
-                self.trUtf8('Compile all interfaces'),
+                self.tr('Compile all interfaces'),
                 self.__compileAllInterfaces)
-        self.menu.addAction(self.trUtf8('Open'), self._openItem)
+        self.menu.addAction(self.tr('Open'), self._openItem)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
+            self.tr('Add interfaces...'), self.__addInterfaceFiles)
         self.menu.addAction(
-            self.trUtf8('Add interfaces directory...'),
+            self.tr('Add interfaces directory...'),
             self.__addInterfacesDirectory)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.menu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.menu.addAction(self.tr('Configure...'), self._configure)
         self.menu.addAction(
-            self.trUtf8('Configure CORBA...'), self.__configureCorba)
+            self.tr('Configure CORBA...'), self.__configureCorba)
 
         self.backMenu = QMenu(self)
         if self.omniidl is not None:
             self.backMenu.addAction(
-                self.trUtf8('Compile all interfaces'),
+                self.tr('Compile all interfaces'),
                 self.__compileAllInterfaces)
             self.backMenu.addSeparator()
         self.backMenu.addAction(
-            self.trUtf8('Add interfaces...'), self.project.addIdlFiles)
+            self.tr('Add interfaces...'), self.project.addIdlFiles)
         self.backMenu.addAction(
-            self.trUtf8('Add interfaces directory...'), self.project.addIdlDir)
+            self.tr('Add interfaces directory...'), self.project.addIdlDir)
         self.backMenu.addSeparator()
         self.backMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.backMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.backMenu.addAction(self.tr('Configure...'), self._configure)
         self.backMenu.addAction(
-            self.trUtf8('Configure CORBA...'), self.__configureCorba)
+            self.tr('Configure CORBA...'), self.__configureCorba)
         self.backMenu.setEnabled(False)
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.omniidl is not None:
             self.multiMenu.addAction(
-                self.trUtf8('Compile interfaces'),
+                self.tr('Compile interfaces'),
                 self.__compileSelectedInterfaces)
-        self.multiMenu.addAction(self.trUtf8('Open'), self._openItem)
+        self.multiMenu.addAction(self.tr('Open'), self._openItem)
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
-            self.trUtf8('Delete'), self.__deleteFile)
+            self.tr('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.multiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.multiMenu.addAction(self.tr('Configure...'), self._configure)
         self.multiMenu.addAction(
-            self.trUtf8('Configure CORBA...'), self.__configureCorba)
+            self.tr('Configure CORBA...'), self.__configureCorba)
 
         self.dirMenu = QMenu(self)
         if self.omniidl is not None:
             self.dirMenu.addAction(
-                self.trUtf8('Compile all interfaces'),
+                self.tr('Compile all interfaces'),
                 self.__compileAllInterfaces)
             self.dirMenu.addSeparator()
         act = self.dirMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.dirMenuActions.append(act)
         act = self.dirMenu.addAction(
-            self.trUtf8('Delete'), self._deleteDirectory)
+            self.tr('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Add interfaces...'), self.__addInterfaceFiles)
+            self.tr('Add interfaces...'), self.__addInterfaceFiles)
         self.dirMenu.addAction(
-            self.trUtf8('Add interfaces directory...'),
+            self.tr('Add interfaces directory...'),
             self.__addInterfacesDirectory)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.dirMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMenu.addAction(self.tr('Configure...'), self._configure)
         self.dirMenu.addAction(
-            self.trUtf8('Configure CORBA...'), self.__configureCorba)
+            self.tr('Configure CORBA...'), self.__configureCorba)
         
         self.dirMultiMenu = QMenu(self)
         if self.omniidl is not None:
             self.dirMultiMenu.addAction(
-                self.trUtf8('Compile all interfaces'),
+                self.tr('Compile all interfaces'),
                 self.__compileAllInterfaces)
             self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Add interfaces...'), self.project.addIdlFiles)
+            self.tr('Add interfaces...'), self.project.addIdlFiles)
         self.dirMultiMenu.addAction(
-            self.trUtf8('Add interfaces directory...'), self.project.addIdlDir)
+            self.tr('Add interfaces directory...'), self.project.addIdlDir)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.dirMultiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Configure...'), self._configure)
-        self.dirMultiMenu.addAction(self.trUtf8('Configure CORBA...'),
+            self.tr('Configure...'), self._configure)
+        self.dirMultiMenu.addAction(self.tr('Configure CORBA...'),
                                     self.__configureCorba)
         
         self.sourceMenu.aboutToShow.connect(self.__showContextMenu)
@@ -424,9 +424,9 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(
             self.parent(),
-            self.trUtf8("Delete interfaces"),
-            self.trUtf8("Do you really want to delete these interfaces from"
-                        " the project?"),
+            self.tr("Delete interfaces"),
+            self.tr("Do you really want to delete these interfaces from"
+                    " the project?"),
             files)
         
         if dlg.exec_() == QDialog.Accepted:
@@ -493,29 +493,29 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
             if not self.noDialog and not ui.notificationsEnabled():
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Interface Compilation"),
-                    self.trUtf8(
+                    self.tr("Interface Compilation"),
+                    self.tr(
                         "The compilation of the interface file was"
                         " successful."))
             else:
                 ui.showNotification(
                     UI.PixmapCache.getPixmap("corba48.png"),
-                    self.trUtf8("Interface Compilation"),
-                    self.trUtf8(
+                    self.tr("Interface Compilation"),
+                    self.tr(
                         "The compilation of the interface file was"
                         " successful."))
         else:
             if not self.noDialog:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Interface Compilation"),
-                    self.trUtf8(
+                    self.tr("Interface Compilation"),
+                    self.tr(
                         "The compilation of the interface file failed."))
             else:
                 ui.showNotification(
                     UI.PixmapCache.getPixmap("corba48.png"),
-                    self.trUtf8("Interface Compilation"),
-                    self.trUtf8(
+                    self.tr("Interface Compilation"),
+                    self.tr(
                         "The compilation of the interface file failed."))
         self.compileProc = None
         
@@ -555,8 +555,8 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 progress.cancel()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     '<p>Could not start {0}.<br>'
                     'Ensure that it is in the search path.</p>'
                 ).format(self.omniidl))
@@ -579,9 +579,9 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         if self.omniidl is not None:
             numIDLs = len(self.project.pdata["INTERFACES"])
             progress = E5ProgressDialog(
-                self.trUtf8("Compiling interfaces..."),
-                self.trUtf8("Abort"), 0, numIDLs,
-                self.trUtf8("%v/%m Interfaces"), self)
+                self.tr("Compiling interfaces..."),
+                self.tr("Abort"), 0, numIDLs,
+                self.tr("%v/%m Interfaces"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -613,9 +613,9 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                      for itm in items]
             numIDLs = len(files)
             progress = E5ProgressDialog(
-                self.trUtf8("Compiling interfaces..."),
-                self.trUtf8("Abort"), 0, numIDLs,
-                self.trUtf8("%v/%m Interfaces"), self)
+                self.tr("Compiling interfaces..."),
+                self.tr("Abort"), 0, numIDLs,
+                self.tr("%v/%m Interfaces"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0

@@ -24,7 +24,7 @@ name = "Tabnanny Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "TabnannyPlugin"
 packageName = "__core__"
 shortDescription = "Show the Tabnanny dialog."
@@ -109,30 +109,30 @@ class TabnannyPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
             self.__projectAct = E5Action(
-                self.trUtf8('Check Indentations'),
-                self.trUtf8('&Indentations...'), 0, 0,
+                self.tr('Check Indentations'),
+                self.tr('&Indentations...'), 0, 0,
                 self, 'project_check_indentations')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Check indentations using tabnanny.'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+                self.tr('Check indentations using tabnanny.'))
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Check Indentations...</b>"""
                 """<p>This checks Python files"""
                 """ for bad indentations using tabnanny.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__projectTabnanny)
+            self.__projectAct.triggered.connect(self.__projectTabnanny)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
         self.__editorAct = E5Action(
-            self.trUtf8('Check Indentations'),
-            self.trUtf8('&Indentations...'), 0, 0,
+            self.tr('Check Indentations'),
+            self.tr('&Indentations...'), 0, 0,
             self, "")
-        self.__editorAct.setWhatsThis(self.trUtf8(
+        self.__editorAct.setWhatsThis(self.tr(
             """<b>Check Indentations...</b>"""
             """<p>This checks Python files"""
             """ for bad indentations using tabnanny.</p>"""
         ))
-        self.__editorAct.triggered[()].connect(self.__editorTabnanny)
+        self.__editorAct.triggered.connect(self.__editorTabnanny)
         
         e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
@@ -204,15 +204,15 @@ class TabnannyPlugin(QObject):
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
-                    self.trUtf8('Check Indentations'),
-                    self.trUtf8('&Indentations...'), 0, 0,
+                    self.tr('Check Indentations'),
+                    self.tr('&Indentations...'), 0, 0,
                     self, "")
-                self.__projectBrowserAct.setWhatsThis(self.trUtf8(
+                self.__projectBrowserAct.setWhatsThis(self.tr(
                     """<b>Check Indentations...</b>"""
                     """<p>This checks Python files"""
                     """ for bad indentations using tabnanny.</p>"""
                 ))
-                self.__projectBrowserAct.triggered[()].connect(
+                self.__projectBrowserAct.triggered.connect(
                     self.__projectBrowserTabnanny)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
@@ -288,7 +288,7 @@ class TabnannyPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.getPyVersion())
+            self.__editorAct.setEnabled(editor.isPyFile())
     
     def __editorTabnanny(self):
         """

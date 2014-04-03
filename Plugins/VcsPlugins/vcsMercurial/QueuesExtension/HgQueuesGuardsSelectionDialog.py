@@ -42,7 +42,7 @@ class HgQueuesGuardsSelectionDialog(QDialog, Ui_HgQueuesGuardsSelectionDialog):
         if listOnly:
             self.buttonBox.button(QDialogButtonBox.Cancel).hide()
             self.guardsList.setSelectionMode(QAbstractItemView.NoSelection)
-            self.setWindowTitle(self.trUtf8("Active Guards"))
+            self.setWindowTitle(self.tr("Active Guards"))
     
     def getData(self):
         """

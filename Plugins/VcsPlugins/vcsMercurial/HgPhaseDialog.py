@@ -30,9 +30,9 @@ class HgPhaseDialog(QDialog, Ui_HgPhaseDialog):
         self.setupUi(self)
         
         self.phaseCombo.addItem("", "")
-        self.phaseCombo.addItem(self.trUtf8("Public"), "p")
-        self.phaseCombo.addItem(self.trUtf8("Draft"), "d")
-        self.phaseCombo.addItem(self.trUtf8("Secret"), "s")
+        self.phaseCombo.addItem(self.tr("Public"), "p")
+        self.phaseCombo.addItem(self.tr("Draft"), "d")
+        self.phaseCombo.addItem(self.tr("Secret"), "s")
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
     

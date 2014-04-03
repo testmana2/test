@@ -19,6 +19,7 @@ from .Ui_DebuggerPython3Page import Ui_DebuggerPython3Page
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
@@ -32,6 +33,9 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         super(DebuggerPython3Page, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerPython3Page")
+        
+        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
@@ -89,7 +93,7 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Python interpreter for Debug Client"),
+            self.tr("Select Python interpreter for Debug Client"),
             self.interpreterEdit.text(),
             "")
             
@@ -104,9 +108,9 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         file = E5FileDialog.getOpenFileName(
             None,
-            self.trUtf8("Select Debug Client"),
+            self.tr("Select Debug Client"),
             self.debugClientEdit.text(),
-            self.trUtf8("Python Files (*.py *.py3)"))
+            self.tr("Python Files (*.py *.py3)"))
             
         if file:
             self.debugClientEdit.setText(

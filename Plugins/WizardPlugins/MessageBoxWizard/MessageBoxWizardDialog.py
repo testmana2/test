@@ -35,25 +35,25 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         
         # keep the following three lists in sync
         self.buttonsList = [
-            self.trUtf8("No button"),
-            self.trUtf8("Abort"),
-            self.trUtf8("Apply"),
-            self.trUtf8("Cancel"),
-            self.trUtf8("Close"),
-            self.trUtf8("Discard"),
-            self.trUtf8("Help"),
-            self.trUtf8("Ignore"),
-            self.trUtf8("No"),
-            self.trUtf8("No to all"),
-            self.trUtf8("Ok"),
-            self.trUtf8("Open"),
-            self.trUtf8("Reset"),
-            self.trUtf8("Restore defaults"),
-            self.trUtf8("Retry"),
-            self.trUtf8("Save"),
-            self.trUtf8("Save all"),
-            self.trUtf8("Yes"),
-            self.trUtf8("Yes to all"),
+            self.tr("No button"),
+            self.tr("Abort"),
+            self.tr("Apply"),
+            self.tr("Cancel"),
+            self.tr("Close"),
+            self.tr("Discard"),
+            self.tr("Help"),
+            self.tr("Ignore"),
+            self.tr("No"),
+            self.tr("No to all"),
+            self.tr("Ok"),
+            self.tr("Open"),
+            self.tr("Reset"),
+            self.tr("Restore defaults"),
+            self.tr("Retry"),
+            self.tr("Save"),
+            self.tr("Save all"),
+            self.tr("Yes"),
+            self.tr("Yes to all"),
         ]
         self.buttonsCodeListBinary = [
             QMessageBox.NoButton,
@@ -101,7 +101,7 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         self.defaultCombo.addItems(self.buttonsList)
         
         self.bTest = self.buttonBox.addButton(
-            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+            self.tr("Test"), QDialogButtonBox.ActionRole)
     
     def __testQt42(self):
         """
@@ -342,15 +342,15 @@ class MessageBoxWizardDialog(QDialog, Ui_MessageBoxWizardDialog):
         if self.rAboutQt.isChecked():
             if self.eCaption.text():
                 msgdlg += '{0}{1}{2}'.format(os.linesep, istring, parent)
-                msgdlg += ',{0}{1}self.trUtf8("{2}")'.format(
+                msgdlg += ',{0}{1}self.tr("{2}")'.format(
                     os.linesep, istring, self.eCaption.text())
             else:
                 msgdlg += parent
         else:
             msgdlg += '{0}{1}{2}'.format(os.linesep, istring, parent)
-            msgdlg += ',{0}{1}self.trUtf8("{2}")'.format(
+            msgdlg += ',{0}{1}self.tr("{2}")'.format(
                 os.linesep, istring, self.eCaption.text())
-            msgdlg += ',{0}{1}self.trUtf8("""{2}""")'.format(
+            msgdlg += ',{0}{1}self.tr("""{2}""")'.format(
                 os.linesep, istring, self.eMessage.toPlainText())
             if not self.rAbout.isChecked() and not self.rAboutQt.isChecked():
                 msgdlg += self.__getButtonCode(istring, indString)

@@ -15,7 +15,7 @@ from PyQt4.QtGui import QColor, QApplication
 from UI.Browser import Browser
 
 from E5Gui.E5TabWidget import E5TabWidget
-from E5Gui.E5Led import E5Led
+from E5Gui.E5Led import E5ClickableLed
 
 import UI.PixmapCache
 import Preferences
@@ -54,8 +54,10 @@ class ProjectBrowser(E5TabWidget):
         
         self.setUsesScrollButtons(True)
         
-        self.vcsStatusIndicator = E5Led(self)
+        self.vcsStatusIndicator = E5ClickableLed(self)
         self.setCornerWidget(self.vcsStatusIndicator, Qt.TopLeftCorner)
+        self.vcsStatusIndicator.clicked.connect(
+            self.__vcsStatusIndicatorClicked)
         self.vcsStatusColorNames = {
             "A": "VcsAdded",
             "M": "VcsModified",
@@ -65,13 +67,13 @@ class ProjectBrowser(E5TabWidget):
             "Z": "VcsConflict",
         }
         self.vcsStatusText = {
-            " ": self.trUtf8("up to date"),
-            "A": self.trUtf8("files added"),
-            "M": self.trUtf8("local modifications"),
-            "O": self.trUtf8("files removed"),
-            "R": self.trUtf8("files replaced"),
-            "U": self.trUtf8("update required"),
-            "Z": self.trUtf8("conflict"),
+            " ": self.tr("up to date"),
+            "A": self.tr("files added"),
+            "M": self.tr("local modifications"),
+            "O": self.tr("files removed"),
+            "R": self.tr("files replaced"),
+            "U": self.tr("update required"),
+            "Z": self.tr("conflict"),
         }
         self.__vcsStateChanged(" ")
         
@@ -297,6 +299,7 @@ class ProjectBrowser(E5TabWidget):
                     icon = UI.PixmapCache.getIcon("projectSourcesRbMixed.png")
                 else:
                     icon = UI.PixmapCache.getIcon("projectSourcesRb.png")
+            # TODO: add icon for JavaScript
             else:
                 icon = UI.PixmapCache.getIcon("projectSources.png")
         self.setTabIcon(self.indexOf(self.psBrowser), icon)
@@ -381,6 +384,21 @@ class ProjectBrowser(E5TabWidget):
                 Preferences.getProjectBrowserColour(
                     self.vcsStatusColorNames[state]))
         if state not in self.vcsStatusText:
-            self.vcsStatusIndicator.setToolTip(self.trUtf8("unknown status"))
+            self.vcsStatusIndicator.setToolTip(self.tr("unknown status"))
         else:
             self.vcsStatusIndicator.setToolTip(self.vcsStatusText[state])
+    
+    def __vcsStatusIndicatorClicked(self, pos):
+        """
+        Private slot to react upon clicks on the VCS indicator LED.
+        
+        @param pos position of the click (QPoint)
+        """
+        vcs = self.project.getVcs()
+        if vcs:
+            if self.currentVcsStatus == " ":
+                # call log browser dialog
+                vcs.vcsLogBrowser(self.project.getProjectPath())
+            else:
+                # call status dialog
+                vcs.vcsStatus(self.project.getProjectPath())

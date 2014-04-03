@@ -23,6 +23,7 @@ from .Config import ConfigSvnProtocols
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
@@ -40,6 +41,9 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         super(SvnNewProjectOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.projectDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         self.vcsProjectDirCompleter = E5DirCompleter(self.vcsProjectDirEdit)
         
@@ -55,9 +59,32 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         self.networkPath = "localhost/"
         self.localProtocol = True
         
-        self.vcsProjectDirEdit.setText(Utilities.toNativeSeparators(
-            Preferences.getMultiProject("Workspace") or
-            Utilities.getHomeDir()))
+        ipath = Preferences.getMultiProject("Workspace") or \
+            Utilities.getHomeDir()
+        self.__initPaths = [
+            Utilities.fromNativeSeparators(ipath),
+            Utilities.fromNativeSeparators(ipath) + "/",
+        ]
+        self.vcsProjectDirEdit.setText(
+            Utilities.toNativeSeparators(self.__initPaths[0]))
+        
+        self.resize(self.width(), self.minimumSizeHint().height())
+        
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+    
+    @pyqtSlot(str)
+    def on_vcsProjectDirEdit_textChanged(self, txt):
+        """
+        Private slot to handle a change of the project directory.
+        
+        @param txt name of the project directory (string)
+        """
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
+            bool(txt) and
+            Utilities.fromNativeSeparators(txt) not in self.__initPaths)
         
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
@@ -67,7 +94,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         if self.protocolCombo.currentText() == "file://":
             directory = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select Repository-Directory"),
+                self.tr("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -95,7 +122,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Project Directory"),
+            self.tr("Select Project Directory"),
             self.vcsProjectDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
@@ -124,13 +151,13 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         if protocol == "file://":
             self.networkPath = self.vcsUrlEdit.text()
             self.vcsUrlEdit.setText(self.localPath)
-            self.vcsUrlLabel.setText(self.trUtf8("Pat&h:"))
+            self.vcsUrlLabel.setText(self.tr("Pat&h:"))
             self.localProtocol = True
         else:
             if self.localProtocol:
                 self.localPath = self.vcsUrlEdit.text()
                 self.vcsUrlEdit.setText(self.networkPath)
-                self.vcsUrlLabel.setText(self.trUtf8("&URL:"))
+                self.vcsUrlLabel.setText(self.tr("&URL:"))
                 self.localProtocol = False
     
     @pyqtSlot(str)

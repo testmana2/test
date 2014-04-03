@@ -54,16 +54,16 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         self.copyPreviewButton.setIcon(UI.PixmapCache.getIcon("editCopy.png"))
         self.setWindowIcon(UI.PixmapCache.getIcon("ericSnap.png"))
         
-        self.modeCombo.addItem(self.trUtf8("Fullscreen"),
+        self.modeCombo.addItem(self.tr("Fullscreen"),
                                SnapWidget.ModeFullscreen)
-        self.modeCombo.addItem(self.trUtf8("Rectangular Selection"),
+        self.modeCombo.addItem(self.tr("Rectangular Selection"),
                                SnapWidget.ModeRectangle)
-        self.modeCombo.addItem(self.trUtf8("Ellipical Selection"),
+        self.modeCombo.addItem(self.tr("Ellipical Selection"),
                                SnapWidget.ModeEllipse)
-        self.modeCombo.addItem(self.trUtf8("Freehand Selection"),
+        self.modeCombo.addItem(self.tr("Freehand Selection"),
                                SnapWidget.ModeFreehand)
         if QApplication.desktop().numScreens() > 1:
-            self.modeCombo.addItem(self.trUtf8("Current Screen"),
+            self.modeCombo.addItem(self.tr("Current Screen"),
                                    SnapWidget.ModeScreen)
         self.__mode = int(Preferences.Prefs.settings.value("Snapshot/Mode", 0))
         index = self.modeCombo.findData(self.__mode)
@@ -80,7 +80,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             os.path.join(
                 QDesktopServices.storageLocation(
                     QDesktopServices.PicturesLocation),
-                self.trUtf8("snapshot") + "1.png"))
+                self.tr("snapshot") + "1.png"))
         
         self.__grabber = None
         self.__snapshot = QPixmap()
@@ -112,22 +112,22 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         Private method to define the supported image file filters.
         """
         filters = {
-            'bmp': self.trUtf8("Windows Bitmap File (*.bmp)"),
-            'gif': self.trUtf8("Graphic Interchange Format File (*.gif)"),
-            'ico': self.trUtf8("Windows Icon File (*.ico)"),
-            'jpg': self.trUtf8("JPEG File (*.jpg)"),
-            'mng': self.trUtf8("Multiple-Image Network Graphics File (*.mng)"),
-            'pbm': self.trUtf8("Portable Bitmap File (*.pbm)"),
-            'pcx': self.trUtf8("Paintbrush Bitmap File (*.pcx)"),
-            'pgm': self.trUtf8("Portable Graymap File (*.pgm)"),
-            'png': self.trUtf8("Portable Network Graphics File (*.png)"),
-            'ppm': self.trUtf8("Portable Pixmap File (*.ppm)"),
-            'sgi': self.trUtf8("Silicon Graphics Image File (*.sgi)"),
-            'svg': self.trUtf8("Scalable Vector Graphics File (*.svg)"),
-            'tga': self.trUtf8("Targa Graphic File (*.tga)"),
-            'tif': self.trUtf8("TIFF File (*.tif)"),
-            'xbm': self.trUtf8("X11 Bitmap File (*.xbm)"),
-            'xpm': self.trUtf8("X11 Pixmap File (*.xpm)"),
+            'bmp': self.tr("Windows Bitmap File (*.bmp)"),
+            'gif': self.tr("Graphic Interchange Format File (*.gif)"),
+            'ico': self.tr("Windows Icon File (*.ico)"),
+            'jpg': self.tr("JPEG File (*.jpg)"),
+            'mng': self.tr("Multiple-Image Network Graphics File (*.mng)"),
+            'pbm': self.tr("Portable Bitmap File (*.pbm)"),
+            'pcx': self.tr("Paintbrush Bitmap File (*.pcx)"),
+            'pgm': self.tr("Portable Graymap File (*.pgm)"),
+            'png': self.tr("Portable Network Graphics File (*.png)"),
+            'ppm': self.tr("Portable Pixmap File (*.ppm)"),
+            'sgi': self.tr("Silicon Graphics Image File (*.sgi)"),
+            'svg': self.tr("Scalable Vector Graphics File (*.svg)"),
+            'tga': self.tr("Targa Graphic File (*.tga)"),
+            'tif': self.tr("TIFF File (*.tif)"),
+            'xbm': self.tr("X11 Bitmap File (*.xbm)"),
+            'xpm': self.tr("X11 Pixmap File (*.xpm)"),
         }
         
         outputFormats = []
@@ -193,7 +193,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             
             fileName, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Save Snapshot"),
+                self.tr("Save Snapshot"),
                 self.__filename,
                 self.__outputFilter,
                 self.__defaultFilter,
@@ -223,9 +223,9 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if QFileInfo(fileName).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save Snapshot"),
-                self.trUtf8("<p>The file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fileName),
+                self.tr("Save Snapshot"),
+                self.tr("<p>The file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fileName),
                 icon=E5MessageBox.Warning)
             if not res:
                 return False
@@ -233,8 +233,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
             E5MessageBox.warning(
-                self, self.trUtf8("Save Snapshot"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                self, self.tr("Save Snapshot"),
+                self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return False
         
@@ -243,8 +243,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         
         if not ok:
             E5MessageBox.warning(
-                self, self.trUtf8("Save Snapshot"),
-                self.trUtf8("Cannot write file '{0}:\n{1}.")
+                self, self.tr("Save Snapshot"),
+                self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
         
         return ok
@@ -442,7 +442,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         Private slot to update the preview picture.
         """
-        self.preview.setToolTip(self.trUtf8(
+        self.preview.setToolTip(self.tr(
             "Preview of the snapshot image ({0:n} x {1:n})").format(
             self.__snapshot.width(), self.__snapshot.height()))
         self.preview.setPreview(self.__snapshot)
@@ -493,8 +493,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if self.__modified:
             res = E5MessageBox.question(
                 self,
-                self.trUtf8("eric5 Snapshot"),
-                self.trUtf8(
+                self.tr("eric5 Snapshot"),
+                self.tr(
                     """The application contains an unsaved snapshot."""),
                 E5MessageBox.StandardButtons(
                     E5MessageBox.Abort |
@@ -521,6 +521,6 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         self.setWindowTitle("{0}[*] - {1}".format(
             os.path.basename(self.__filename),
-            self.trUtf8("eric5 Snapshot")))
+            self.tr("eric5 Snapshot")))
         self.setWindowModified(self.__modified)
         self.pathNameEdit.setText(os.path.dirname(self.__filename))

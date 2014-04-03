@@ -28,7 +28,7 @@ name = "Subversion Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = False
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 pluginType = "version_control"
 pluginTypename = "Subversion"
 className = "VcsSubversionPlugin"
@@ -160,7 +160,7 @@ class VcsSubversionPlugin(QObject):
         
         self.__subversionDefaults = {
             "StopLogOnCopy": True,
-            "LogLimit": 100,
+            "LogLimit": 20,
             "CommitMessages": 20,
         }
         

@@ -35,7 +35,7 @@ class FollowRedirectReply(QObject):
         self.__redirectCount = 0
         
         self.__reply = self.__manager.get(QNetworkRequest(url))
-        self.__reply.finished[()].connect(self.__replyFinished)
+        self.__reply.finished.connect(self.__replyFinished)
     
     def reply(self):
         """
@@ -111,4 +111,4 @@ class FollowRedirectReply(QObject):
         self.__reply = None
         
         self.__reply = self.__manager.get(QNetworkRequest(redirectUrl))
-        self.__reply.finished[()].connect(self.__replyFinished)
+        self.__reply.finished.connect(self.__replyFinished)

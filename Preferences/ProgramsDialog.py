@@ -9,8 +9,8 @@ Module implementing the Programs page.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -48,9 +48,9 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             self.programsList.columnCount(), "")
         
         self.searchButton = self.buttonBox.addButton(
-            self.trUtf8("Search"), QDialogButtonBox.ActionRole)
+            self.tr("Search"), QDialogButtonBox.ActionRole)
         self.searchButton.setToolTip(
-            self.trUtf8("Press to search for programs"))
+            self.tr("Press to search for programs"))
         
     def show(self):
         """
@@ -89,7 +89,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             Utilities.generateQtToolName("lrelease")
         exe = os.path.join(Utilities.getQtBinariesPath(), exe)
         version = self.__createProgramEntry(
-            self.trUtf8("Translation Converter (Qt)"), exe, '-version',
+            self.tr("Translation Converter (Qt)"), exe, '-version',
             'lrelease', -1)
         # 1b. Qt Designer
         if Utilities.isWindowsPlatform():
@@ -103,7 +103,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                 Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("designer"))
         self.__createProgramEntry(
-            self.trUtf8("Qt Designer"), exe, version=version)
+            self.tr("Qt Designer"), exe, version=version)
         # 1c. Qt Linguist
         if Utilities.isWindowsPlatform():
             exe = os.path.join(
@@ -116,7 +116,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                 Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("linguist"))
         self.__createProgramEntry(
-            self.trUtf8("Qt Linguist"), exe, version=version)
+            self.tr("Qt Linguist"), exe, version=version)
         # 1d. Qt Assistant
         if Utilities.isWindowsPlatform():
             exe = os.path.join(
@@ -129,66 +129,66 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                 Utilities.getQtBinariesPath(),
                 Utilities.generateQtToolName("assistant"))
         self.__createProgramEntry(
-            self.trUtf8("Qt Assistant"), exe, version=version)
+            self.tr("Qt Assistant"), exe, version=version)
         
         # 2. do the PyQt programs
         # 2a. Translation Extractor PyQt4
         self.__createProgramEntry(
-            self.trUtf8("Translation Extractor (Python, PyQt4)"),
+            self.tr("Translation Extractor (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pylupdate4.exe" or "pylupdate4",
             '-version', 'pylupdate', -1)
         # 2b. Forms Compiler PyQt4
         self.__createProgramEntry(
-            self.trUtf8("Forms Compiler (Python, PyQt4)"),
+            self.tr("Forms Compiler (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pyuic4.bat" or "pyuic4",
             '--version', 'Python User', 4)
         # 2c. Resource Compiler PyQt4
         self.__createProgramEntry(
-            self.trUtf8("Resource Compiler (Python, PyQt4)"),
+            self.tr("Resource Compiler (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pyrcc4.exe" or "pyrcc4",
             '-version', 'Resource Compiler', -1)
         # 2d. Translation Extractor PyQt5
         self.__createProgramEntry(
-            self.trUtf8("Translation Extractor (Python, PyQt5)"),
+            self.tr("Translation Extractor (Python, PyQt5)"),
             Utilities.isWindowsPlatform() and "pylupdate5.exe" or "pylupdate5",
             '-version', 'pylupdate', -1)
-        # 2e. Forms Compiler PyQt4
+        # 2e. Forms Compiler PyQt5
         self.__createProgramEntry(
-            self.trUtf8("Forms Compiler (Python, PyQt5)"),
+            self.tr("Forms Compiler (Python, PyQt5)"),
             Utilities.isWindowsPlatform() and "pyuic5.bat" or "pyuic5",
             '--version', 'Python User', 4)
-        # 2f. Resource Compiler PyQt4
+        # 2f. Resource Compiler PyQt5
         self.__createProgramEntry(
-            self.trUtf8("Resource Compiler (Python, PyQt5)"),
+            self.tr("Resource Compiler (Python, PyQt5)"),
             Utilities.isWindowsPlatform() and "pyrcc5.exe" or "pyrcc5",
             '-version', 'Resource Compiler', -1)
         
         # 3. do the PySide programs
         # 3a. Translation Extractor PySide
         self.__createProgramEntry(
-            self.trUtf8("Translation Extractor (Python, PySide)"),
+            self.tr("Translation Extractor (Python, PySide)"),
             Utilities.generatePySideToolPath("pyside-lupdate"),
             '-version', '', -1, versionRe='lupdate')
         # 3b. Forms Compiler PySide
         self.__createProgramEntry(
-            self.trUtf8("Forms Compiler (Python, PySide)"),
+            self.tr("Forms Compiler (Python, PySide)"),
             Utilities.generatePySideToolPath("pyside-uic"),
             '--version', 'PySide User', 5, versionCleanup=(0, -1))
         # 3.c Resource Compiler PySide
         self.__createProgramEntry(
-            self.trUtf8("Resource Compiler (Python, PySide)"),
+            self.tr("Resource Compiler (Python, PySide)"),
             Utilities.generatePySideToolPath("pyside-rcc"),
             '-version', 'Resource Compiler', -1)
         
         # 4. do the Ruby programs
         # 4a. Forms Compiler for Qt4
         self.__createProgramEntry(
-            self.trUtf8("Forms Compiler (Ruby, Qt4)"),
+            self.tr("Forms Compiler (Ruby, Qt4)"),
             Utilities.isWindowsPlatform() and "rbuic4.exe" or "rbuic4",
             '-version', 'Qt', -1)
         # 4b. Resource Compiler for Qt4
         self.__createProgramEntry(
-            self.trUtf8("Resource Compiler (Ruby, Qt4)"),
+            self.tr("Resource Compiler (Ruby, Qt4)"),
             Utilities.isWindowsPlatform() and "rbrcc.exe" or "rbrcc",
             '-version', 'Ruby Resource Compiler', -1)
         
@@ -198,7 +198,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         if Utilities.isWindowsPlatform():
             exe += ".exe"
         self.__createProgramEntry(
-            self.trUtf8("CORBA IDL Compiler"), exe, '-V', 'omniidl', -1)
+            self.tr("CORBA IDL Compiler"), exe, '-V', 'omniidl', -1)
         
         # 6. do the spell checking entry
         try:
@@ -210,12 +210,12 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             try:
                 version = enchant.__version__
             except AttributeError:
-                version = self.trUtf8("(unknown)")
+                version = self.tr("(unknown)")
         except (ImportError, AttributeError, OSError):
             text = "enchant"
             version = ""
         self.__createEntry(
-            self.trUtf8("Spell Checker - PyEnchant"), text, version)
+            self.tr("Spell Checker - PyEnchant"), text, version)
         
         # 7. do the pygments entry
         try:
@@ -227,12 +227,12 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             try:
                 version = pygments.__version__
             except AttributeError:
-                version = self.trUtf8("(unknown)")
+                version = self.tr("(unknown)")
         except (ImportError, AttributeError, OSError):
             text = "pygments"
             version = ""
         self.__createEntry(
-            self.trUtf8("Source Highlighter - Pygments"), text, version)
+            self.tr("Source Highlighter - Pygments"), text, version)
         
         # do the plugin related programs
         pm = e5App().getObject("PluginManager")
@@ -291,7 +291,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         font.setBold(True)
         itm.setFont(0, font)
         if not exe:
-            itm.setText(1, self.trUtf8("(not configured)"))
+            itm.setText(1, self.tr("(not configured)"))
         else:
             if os.path.isabs(exe):
                 if not Utilities.isExecutable(exe):
@@ -325,13 +325,15 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
                                         ]
                                     break
                                 except IndexError:
-                                    version = self.trUtf8("(unknown)")
+                                    version = self.tr("(unknown)")
+                        else:
+                            version = self.tr("(unknown)")
                     else:
-                        version = self.trUtf8("(not executable)")
+                        version = self.tr("(not executable)")
                 QTreeWidgetItem(itm, [exe, version])
                 itm.setExpanded(True)
             else:
-                itm.setText(1, self.trUtf8("(not found)"))
+                itm.setText(1, self.tr("(not found)"))
         QApplication.processEvents()
         self.programsList.header().resizeSections(QHeaderView.ResizeToContents)
         self.programsList.header().setStretchLastSection(True)
@@ -354,7 +356,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             QTreeWidgetItem(itm, [entryText, entryVersion])
             itm.setExpanded(True)
         else:
-            itm.setText(1, self.trUtf8("(not found)"))
+            itm.setText(1, self.tr("(not found)"))
         QApplication.processEvents()
         self.programsList.header().resizeSections(QHeaderView.ResizeToContents)
         self.programsList.header().setStretchLastSection(True)

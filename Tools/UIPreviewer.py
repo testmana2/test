@@ -50,11 +50,10 @@ class UIPreviewer(E5MainWindow):
                       Preferences.getUI("StyleSheet"))
         
         self.resize(QSize(600, 480).expandedTo(self.minimumSizeHint()))
-        self.setAttribute(Qt.WA_DeleteOnClose)
         self.statusBar()
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
-        self.setWindowTitle(self.trUtf8("UI Previewer"))
+        self.setWindowTitle(self.tr("UI Previewer"))
 
         self.cw = QWidget(self)
         self.cw.setObjectName("centralWidget")
@@ -69,14 +68,14 @@ class UIPreviewer(E5MainWindow):
         self.styleLayout.setSpacing(6)
         self.styleLayout.setObjectName("styleLayout")
 
-        self.styleLabel = QLabel(self.trUtf8("Select GUI Theme"), self.cw)
+        self.styleLabel = QLabel(self.tr("Select GUI Theme"), self.cw)
         self.styleLabel.setObjectName("styleLabel")
         self.styleLayout.addWidget(self.styleLabel)
 
         self.styleCombo = QComboBox(self.cw)
         self.styleCombo.setObjectName("styleCombo")
         self.styleCombo.setEditable(False)
-        self.styleCombo.setToolTip(self.trUtf8("Select the GUI Theme"))
+        self.styleCombo.setToolTip(self.tr("Select the GUI Theme"))
         self.styleLayout.addWidget(self.styleCombo)
         self.styleCombo.addItems(list(QStyleFactory().keys()))
         currentStyle = Preferences.Prefs.settings.value('UIPreviewer/style')
@@ -128,81 +127,81 @@ class UIPreviewer(E5MainWindow):
         """
         self.openAct = QAction(
             UI.PixmapCache.getIcon("openUI.png"),
-            self.trUtf8('&Open File'), self)
+            self.tr('&Open File'), self)
         self.openAct.setShortcut(
-            QKeySequence(self.trUtf8("Ctrl+O", "File|Open")))
-        self.openAct.setStatusTip(self.trUtf8('Open a UI file for display'))
-        self.openAct.setWhatsThis(self.trUtf8(
+            QKeySequence(self.tr("Ctrl+O", "File|Open")))
+        self.openAct.setStatusTip(self.tr('Open a UI file for display'))
+        self.openAct.setWhatsThis(self.tr(
             """<b>Open File</b>"""
             """<p>This opens a new UI file for display.</p>"""
         ))
-        self.openAct.triggered[()].connect(self.__openFile)
+        self.openAct.triggered.connect(self.__openFile)
         
         self.printAct = QAction(
             UI.PixmapCache.getIcon("print.png"),
-            self.trUtf8('&Print'), self)
+            self.tr('&Print'), self)
         self.printAct.setShortcut(
-            QKeySequence(self.trUtf8("Ctrl+P", "File|Print")))
-        self.printAct.setStatusTip(self.trUtf8('Print a screen capture'))
-        self.printAct.setWhatsThis(self.trUtf8(
+            QKeySequence(self.tr("Ctrl+P", "File|Print")))
+        self.printAct.setStatusTip(self.tr('Print a screen capture'))
+        self.printAct.setWhatsThis(self.tr(
             """<b>Print</b>"""
             """<p>Print a screen capture.</p>"""
         ))
-        self.printAct.triggered[()].connect(self.__printImage)
+        self.printAct.triggered.connect(self.__printImage)
         
         self.printPreviewAct = QAction(
             UI.PixmapCache.getIcon("printPreview.png"),
-            self.trUtf8('Print Preview'), self)
-        self.printPreviewAct.setStatusTip(self.trUtf8(
+            self.tr('Print Preview'), self)
+        self.printPreviewAct.setStatusTip(self.tr(
             'Print preview a screen capture'))
-        self.printPreviewAct.setWhatsThis(self.trUtf8(
+        self.printPreviewAct.setWhatsThis(self.tr(
             """<b>Print Preview</b>"""
             """<p>Print preview a screen capture.</p>"""
         ))
-        self.printPreviewAct.triggered[()].connect(self.__printPreviewImage)
+        self.printPreviewAct.triggered.connect(self.__printPreviewImage)
         
         self.imageAct = QAction(
             UI.PixmapCache.getIcon("screenCapture.png"),
-            self.trUtf8('&Screen Capture'), self)
+            self.tr('&Screen Capture'), self)
         self.imageAct.setShortcut(
-            QKeySequence(self.trUtf8("Ctrl+S", "File|Screen Capture")))
-        self.imageAct.setStatusTip(self.trUtf8(
+            QKeySequence(self.tr("Ctrl+S", "File|Screen Capture")))
+        self.imageAct.setStatusTip(self.tr(
             'Save a screen capture to an image file'))
-        self.imageAct.setWhatsThis(self.trUtf8(
+        self.imageAct.setWhatsThis(self.tr(
             """<b>Screen Capture</b>"""
             """<p>Save a screen capture to an image file.</p>"""
         ))
-        self.imageAct.triggered[()].connect(self.__saveImage)
+        self.imageAct.triggered.connect(self.__saveImage)
         
         self.exitAct = QAction(
-            UI.PixmapCache.getIcon("exit.png"), self.trUtf8('&Quit'), self)
+            UI.PixmapCache.getIcon("exit.png"), self.tr('&Quit'), self)
         self.exitAct.setShortcut(
-            QKeySequence(self.trUtf8("Ctrl+Q", "File|Quit")))
-        self.exitAct.setStatusTip(self.trUtf8('Quit the application'))
-        self.exitAct.setWhatsThis(self.trUtf8(
+            QKeySequence(self.tr("Ctrl+Q", "File|Quit")))
+        self.exitAct.setStatusTip(self.tr('Quit the application'))
+        self.exitAct.setWhatsThis(self.tr(
             """<b>Quit</b>"""
             """<p>Quit the application.</p>"""
         ))
-        self.exitAct.triggered[()].connect(qApp.closeAllWindows)
+        self.exitAct.triggered.connect(qApp.closeAllWindows)
         
         self.copyAct = QAction(
-            UI.PixmapCache.getIcon("editCopy.png"), self.trUtf8('&Copy'), self)
+            UI.PixmapCache.getIcon("editCopy.png"), self.tr('&Copy'), self)
         self.copyAct.setShortcut(
-            QKeySequence(self.trUtf8("Ctrl+C", "Edit|Copy")))
+            QKeySequence(self.tr("Ctrl+C", "Edit|Copy")))
         self.copyAct.setStatusTip(
-            self.trUtf8('Copy screen capture to clipboard'))
-        self.copyAct.setWhatsThis(self.trUtf8(
+            self.tr('Copy screen capture to clipboard'))
+        self.copyAct.setWhatsThis(self.tr(
             """<b>Copy</b>"""
             """<p>Copy screen capture to clipboard.</p>"""
         ))
-        self.copyAct.triggered[()].connect(self.__copyImageToClipboard)
+        self.copyAct.triggered.connect(self.__copyImageToClipboard)
         
         self.whatsThisAct = QAction(
             UI.PixmapCache.getIcon("whatsThis.png"),
-            self.trUtf8('&What\'s This?'), self)
-        self.whatsThisAct.setShortcut(QKeySequence(self.trUtf8("Shift+F1")))
-        self.whatsThisAct.setStatusTip(self.trUtf8('Context sensitive help'))
-        self.whatsThisAct.setWhatsThis(self.trUtf8(
+            self.tr('&What\'s This?'), self)
+        self.whatsThisAct.setShortcut(QKeySequence(self.tr("Shift+F1")))
+        self.whatsThisAct.setStatusTip(self.tr('Context sensitive help'))
+        self.whatsThisAct.setWhatsThis(self.tr(
             """<b>Display context sensitive help</b>"""
             """<p>In What's This? mode, the mouse cursor shows an arrow"""
             """ with a question mark, and you can click on the interface"""
@@ -210,25 +209,25 @@ class UIPreviewer(E5MainWindow):
             """ how to use them. In dialogs, this feature can be accessed"""
             """ using the context help button in the titlebar.</p>"""
         ))
-        self.whatsThisAct.triggered[()].connect(self.__whatsThis)
+        self.whatsThisAct.triggered.connect(self.__whatsThis)
 
-        self.aboutAct = QAction(self.trUtf8('&About'), self)
-        self.aboutAct.setStatusTip(self.trUtf8(
+        self.aboutAct = QAction(self.tr('&About'), self)
+        self.aboutAct.setStatusTip(self.tr(
             'Display information about this software'))
-        self.aboutAct.setWhatsThis(self.trUtf8(
+        self.aboutAct.setWhatsThis(self.tr(
             """<b>About</b>"""
             """<p>Display some information about this software.</p>"""
         ))
-        self.aboutAct.triggered[()].connect(self.__about)
+        self.aboutAct.triggered.connect(self.__about)
                      
-        self.aboutQtAct = QAction(self.trUtf8('About &Qt'), self)
+        self.aboutQtAct = QAction(self.tr('About &Qt'), self)
         self.aboutQtAct.setStatusTip(
-            self.trUtf8('Display information about the Qt toolkit'))
-        self.aboutQtAct.setWhatsThis(self.trUtf8(
+            self.tr('Display information about the Qt toolkit'))
+        self.aboutQtAct.setWhatsThis(self.tr(
             """<b>About Qt</b>"""
             """<p>Display some information about the Qt toolkit.</p>"""
         ))
-        self.aboutQtAct.triggered[()].connect(self.__aboutQt)
+        self.aboutQtAct.triggered.connect(self.__aboutQt)
 
     def __initMenus(self):
         """
@@ -236,7 +235,7 @@ class UIPreviewer(E5MainWindow):
         """
         mb = self.menuBar()
 
-        menu = mb.addMenu(self.trUtf8('&File'))
+        menu = mb.addMenu(self.tr('&File'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.openAct)
         menu.addAction(self.imageAct)
@@ -246,13 +245,13 @@ class UIPreviewer(E5MainWindow):
         menu.addSeparator()
         menu.addAction(self.exitAct)
         
-        menu = mb.addMenu(self.trUtf8("&Edit"))
+        menu = mb.addMenu(self.tr("&Edit"))
         menu.setTearOffEnabled(True)
         menu.addAction(self.copyAct)
         
         mb.addSeparator()
         
-        menu = mb.addMenu(self.trUtf8('&Help'))
+        menu = mb.addMenu(self.tr('&Help'))
         menu.setTearOffEnabled(True)
         menu.addAction(self.aboutAct)
         menu.addAction(self.aboutQtAct)
@@ -263,7 +262,7 @@ class UIPreviewer(E5MainWindow):
         """
         Private method to create the toolbars.
         """
-        filetb = self.addToolBar(self.trUtf8("File"))
+        filetb = self.addToolBar(self.tr("File"))
         filetb.setIconSize(UI.Config.ToolBarIconSize)
         filetb.addAction(self.openAct)
         filetb.addAction(self.imageAct)
@@ -273,11 +272,11 @@ class UIPreviewer(E5MainWindow):
         filetb.addSeparator()
         filetb.addAction(self.exitAct)
         
-        edittb = self.addToolBar(self.trUtf8("Edit"))
+        edittb = self.addToolBar(self.tr("Edit"))
         edittb.setIconSize(UI.Config.ToolBarIconSize)
         edittb.addAction(self.copyAct)
         
-        helptb = self.addToolBar(self.trUtf8("Help"))
+        helptb = self.addToolBar(self.tr("Help"))
         helptb.setIconSize(UI.Config.ToolBarIconSize)
         helptb.addAction(self.whatsThisAct)
 
@@ -302,8 +301,8 @@ class UIPreviewer(E5MainWindow):
         """
         E5MessageBox.about(
             self,
-            self.trUtf8("UI Previewer"),
-            self.trUtf8(
+            self.tr("UI Previewer"),
+            self.tr(
                 """<h3> About UI Previewer </h3>"""
                 """<p>The UI Previewer loads and displays Qt User-Interface"""
                 """ files with various styles, which are selectable via a"""
@@ -315,7 +314,7 @@ class UIPreviewer(E5MainWindow):
         """
         Private slot to show info about Qt.
         """
-        E5MessageBox.aboutQt(self, self.trUtf8("UI Previewer"))
+        E5MessageBox.aboutQt(self, self.tr("UI Previewer"))
 
     def __openFile(self):
         """
@@ -323,9 +322,9 @@ class UIPreviewer(E5MainWindow):
         """
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select UI file"),
+            self.tr("Select UI file"),
             self.currentFile,
-            self.trUtf8("Qt User-Interface Files (*.ui)"))
+            self.tr("Qt User-Interface Files (*.ui)"))
         if fn:
             self.__loadFile(fn)
         
@@ -360,8 +359,8 @@ class UIPreviewer(E5MainWindow):
         else:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Load UI File"),
-                self.trUtf8(
+                self.tr("Load UI File"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be loaded.</p>""")
                 .format(fn))
         self.__updateActions()
@@ -449,8 +448,8 @@ class UIPreviewer(E5MainWindow):
         if self.mainWidget is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save Image"),
-                self.trUtf8("""There is no UI file loaded."""))
+                self.tr("Save Image"),
+                self.tr("""There is no UI file loaded."""))
             return
         
         defaultExt = "PNG"
@@ -459,11 +458,11 @@ class UIPreviewer(E5MainWindow):
         for format in formats:
             filters = "{0}*.{1} ".format(
                 filters, bytes(format).decode().lower())
-        filter = self.trUtf8("Images ({0})").format(filters[:-1])
+        filter = self.tr("Images ({0})").format(filters[:-1])
         
         fname = E5FileDialog.getSaveFileName(
             self,
-            self.trUtf8("Save Image"),
+            self.tr("Save Image"),
             "",
             filter)
         if not fname:
@@ -482,8 +481,8 @@ class UIPreviewer(E5MainWindow):
         if not pix.save(fname, str(ext)):
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save Image"),
-                self.trUtf8(
+                self.tr("Save Image"),
+                self.tr(
                     """<p>The file <b>{0}</b> could not be saved.</p>""")
                 .format(fname))
 
@@ -494,8 +493,8 @@ class UIPreviewer(E5MainWindow):
         if self.mainWidget is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Save Image"),
-                self.trUtf8("""There is no UI file loaded."""))
+                self.tr("Save Image"),
+                self.tr("""There is no UI file loaded."""))
             return
         
         cb = QApplication.clipboard()
@@ -512,8 +511,8 @@ class UIPreviewer(E5MainWindow):
         if self.mainWidget is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Print Image"),
-                self.trUtf8("""There is no UI file loaded."""))
+                self.tr("Print Image"),
+                self.tr("""There is no UI file loaded."""))
             return
         
         settings = Preferences.Prefs.settings
@@ -534,7 +533,7 @@ class UIPreviewer(E5MainWindow):
         
         printDialog = QPrintDialog(printer, self)
         if printDialog.exec_() == QDialog.Accepted:
-            self.statusBar().showMessage(self.trUtf8("Printing the image..."))
+            self.statusBar().showMessage(self.tr("Printing the image..."))
             self.__print(printer)
             
             settings.setValue("UIPreviewer/printername", printer.printerName())
@@ -544,7 +543,7 @@ class UIPreviewer(E5MainWindow):
             settings.setValue("UIPreviewer/colormode", printer.colorMode())
         
         self.statusBar().showMessage(
-            self.trUtf8("Image sent to printer..."), 2000)
+            self.tr("Image sent to printer..."), 2000)
 
     def __printPreviewImage(self):
         """
@@ -555,8 +554,8 @@ class UIPreviewer(E5MainWindow):
         if self.mainWidget is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Print Preview"),
-                self.trUtf8("""There is no UI file loaded."""))
+                self.tr("Print Preview"),
+                self.tr("""There is no UI file loaded."""))
             return
         
         settings = Preferences.Prefs.settings

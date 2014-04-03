@@ -290,6 +290,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__getMacroName">__getMacroName</a></td>
 <td>Private method to select a macro name from the list of macros.</td>
 </tr><tr>
+<td><a href="#Editor.__getPyVersion">__getPyVersion</a></td>
+<td>Private method to return the Python main version (2 or 3) or 0 if it's not a Python file at all.</td>
+</tr><tr>
 <td><a href="#Editor.__ignoreSpellingAlways">__ignoreSpellingAlways</a></td>
 <td>Private to always ignore the word below the spelling context menu.</td>
 </tr><tr>
@@ -325,6 +328,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__initContextMenuMargins">__initContextMenuMargins</a></td>
 <td>Private method used to setup the context menu for the margins.</td>
+</tr><tr>
+<td><a href="#Editor.__initContextMenuReopenWithEncoding">__initContextMenuReopenWithEncoding</a></td>
+<td>Private method used to setup the Reopen With Encoding context sub menu.</td>
 </tr><tr>
 <td><a href="#Editor.__initContextMenuResources">__initContextMenuResources</a></td>
 <td>Private method used to setup the Resources context sub menu.</td>
@@ -445,6 +451,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__removeTrailingWhitespace">__removeTrailingWhitespace</a></td>
 <td>Private method to remove trailing whitespace.</td>
+</tr><tr>
+<td><a href="#Editor.__reopenWithEncodingMenuTriggered">__reopenWithEncodingMenuTriggered</a></td>
+<td>Private method to handle the rereading of the file with a selected encoding.</td>
 </tr><tr>
 <td><a href="#Editor.__resetLanguage">__resetLanguage</a></td>
 <td>Private method used to reset the language selection.</td>
@@ -734,11 +743,23 @@ QsciScintillaCompat
 <td><a href="#Editor.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
 </tr><tr>
+<td><a href="#Editor.getBookmarkLines">getBookmarkLines</a></td>
+<td>Public method to get the lines containing a bookmark.</td>
+</tr><tr>
 <td><a href="#Editor.getBookmarks">getBookmarks</a></td>
 <td>Public method to retrieve the bookmarks.</td>
 </tr><tr>
+<td><a href="#Editor.getBreakpointLines">getBreakpointLines</a></td>
+<td>Public method to get the lines containing a breakpoint.</td>
+</tr><tr>
+<td><a href="#Editor.getChangeLines">getChangeLines</a></td>
+<td>Public method to get the lines containing a change.</td>
+</tr><tr>
 <td><a href="#Editor.getCompleter">getCompleter</a></td>
 <td>Public method to retrieve a reference to the completer object.</td>
+</tr><tr>
+<td><a href="#Editor.getCoverageLines">getCoverageLines</a></td>
+<td>Public method to get the lines containing a coverage marker.</td>
 </tr><tr>
 <td><a href="#Editor.getCurrentWord">getCurrentWord</a></td>
 <td>Public method to get the word at the current position.</td>
@@ -773,17 +794,23 @@ QsciScintillaCompat
 <td><a href="#Editor.getNoName">getNoName</a></td>
 <td>Public method to get the display string for an unnamed editor.</td>
 </tr><tr>
-<td><a href="#Editor.getPyVersion">getPyVersion</a></td>
-<td>Public methode to return the Python main version (2 or 3) or 0 if it's not a Python file at all.</td>
-</tr><tr>
 <td><a href="#Editor.getSearchText">getSearchText</a></td>
 <td>Public method to determine the selection or the current word for the next search operation.</td>
 </tr><tr>
 <td><a href="#Editor.getSharingStatus">getSharingStatus</a></td>
 <td>Public method to get some share status info.</td>
 </tr><tr>
+<td><a href="#Editor.getSyntaxErrorLines">getSyntaxErrorLines</a></td>
+<td>Public method to get the lines containing a syntax error.</td>
+</tr><tr>
 <td><a href="#Editor.getSyntaxErrors">getSyntaxErrors</a></td>
 <td>Public method to retrieve the syntax error markers.</td>
+</tr><tr>
+<td><a href="#Editor.getTaskLines">getTaskLines</a></td>
+<td>Public method to get the lines containing a task.</td>
+</tr><tr>
+<td><a href="#Editor.getWarningLines">getWarningLines</a></td>
+<td>Public method to get the lines containing a warning.</td>
 </tr><tr>
 <td><a href="#Editor.getWarnings">getWarnings</a></td>
 <td>Public method to retrieve the warning markers.</td>
@@ -851,14 +878,20 @@ QsciScintillaCompat
 <td><a href="#Editor.indentLineOrSelection">indentLineOrSelection</a></td>
 <td>Public slot to indent the current line or current selection.</td>
 </tr><tr>
+<td><a href="#Editor.isJavascriptFile">isJavascriptFile</a></td>
+<td>Public method to return a flag indicating a Javascript file.</td>
+</tr><tr>
 <td><a href="#Editor.isLastEditPositionAvailable">isLastEditPositionAvailable</a></td>
 <td>Public method to check, if a last edit position is available.</td>
 </tr><tr>
 <td><a href="#Editor.isPy2File">isPy2File</a></td>
-<td>Public method to return a flag indicating a Python file.</td>
+<td>Public method to return a flag indicating a Python2 file.</td>
 </tr><tr>
 <td><a href="#Editor.isPy3File">isPy3File</a></td>
 <td>Public method to return a flag indicating a Python3 file.</td>
+</tr><tr>
+<td><a href="#Editor.isPyFile">isPyFile</a></td>
+<td>Public method to return a flag indicating a Python (2 or 3) file.</td>
 </tr><tr>
 <td><a href="#Editor.isRubyFile">isRubyFile</a></td>
 <td>Public method to return a flag indicating a Ruby file.</td>
@@ -977,6 +1010,9 @@ QsciScintillaCompat
 <td><a href="#Editor.removeClone">removeClone</a></td>
 <td>Public method to remove a clone from our list.</td>
 </tr><tr>
+<td><a href="#Editor.resizeEvent">resizeEvent</a></td>
+<td>Protected method handling resize events.</td>
+</tr><tr>
 <td><a href="#Editor.revertToUnmodified">revertToUnmodified</a></td>
 <td>Public method to revert back to the last saved state.</td>
 </tr><tr>
@@ -1090,6 +1126,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.unsetCallTipHook">unsetCallTipHook</a></td>
 <td>Public method to unset a calltip hook.</td>
+</tr><tr>
+<td><a href="#Editor.viewportEvent">viewportEvent</a></td>
+<td>Protected method handling event of the viewport.</td>
 </tr><tr>
 <td><a href="#Editor.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
@@ -1597,6 +1636,17 @@ filename of the coverage file (string)
 Tuple of macro name and a flag, indicating, if the user
             pressed ok or canceled the operation. (string, boolean)
 </dd>
+</dl><a NAME="Editor.__getPyVersion" ID="Editor.__getPyVersion"></a>
+<h4>Editor.__getPyVersion</h4>
+<b>__getPyVersion</b>(<i></i>)
+<p>
+        Private method to return the Python main version (2 or 3) or 0 if it's
+        not a Python file at all.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+Python version (2 or 3) or 0 if it's not a Python file (int)
+</dd>
 </dl><a NAME="Editor.__ignoreSpellingAlways" ID="Editor.__ignoreSpellingAlways"></a>
 <h4>Editor.__ignoreSpellingAlways</h4>
 <b>__ignoreSpellingAlways</b>(<i></i>)
@@ -1706,7 +1756,17 @@ reference to the generated menu (QMenu)
 <b>__initContextMenuMargins</b>(<i></i>)
 <p>
         Private method used to setup the context menu for the margins.
-</p><a NAME="Editor.__initContextMenuResources" ID="Editor.__initContextMenuResources"></a>
+</p><a NAME="Editor.__initContextMenuReopenWithEncoding" ID="Editor.__initContextMenuReopenWithEncoding"></a>
+<h4>Editor.__initContextMenuReopenWithEncoding</h4>
+<b>__initContextMenuReopenWithEncoding</b>(<i></i>)
+<p>
+        Private method used to setup the Reopen With Encoding context sub menu.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the generated menu (QMenu)
+</dd>
+</dl><a NAME="Editor.__initContextMenuResources" ID="Editor.__initContextMenuResources"></a>
 <h4>Editor.__initContextMenuResources</h4>
 <b>__initContextMenuResources</b>(<i></i>)
 <p>
@@ -1953,10 +2013,15 @@ number of added/deleted annotation lines
         Private slot to create a new view to an open document.
 </p><a NAME="Editor.__normalizedEncoding" ID="Editor.__normalizedEncoding"></a>
 <h4>Editor.__normalizedEncoding</h4>
-<b>__normalizedEncoding</b>(<i></i>)
+<b>__normalizedEncoding</b>(<i>encoding=""</i>)
 <p>
         Private method to calculate the normalized encoding string.
 </p><dl>
+<dt><i>encoding</i></dt>
+<dd>
+encoding to be normalized (string)
+</dd>
+</dl><dl>
 <dt>Returns:</dt>
 <dd>
 normalized encoding (string)
@@ -2074,7 +2139,18 @@ string containing the command parameters (string)
 <b>__removeTrailingWhitespace</b>(<i></i>)
 <p>
         Private method to remove trailing whitespace.
-</p><a NAME="Editor.__resetLanguage" ID="Editor.__resetLanguage"></a>
+</p><a NAME="Editor.__reopenWithEncodingMenuTriggered" ID="Editor.__reopenWithEncodingMenuTriggered"></a>
+<h4>Editor.__reopenWithEncodingMenuTriggered</h4>
+<b>__reopenWithEncodingMenuTriggered</b>(<i>act</i>)
+<p>
+        Private method to handle the rereading of the file with a selected
+        encoding.
+</p><dl>
+<dt><i>act</i></dt>
+<dd>
+reference to the action that was triggered (QAction)
+</dd>
+</dl><a NAME="Editor.__resetLanguage" ID="Editor.__resetLanguage"></a>
 <h4>Editor.__resetLanguage</h4>
 <b>__resetLanguage</b>(<i>propagate=True</i>)
 <p>
@@ -2820,6 +2896,16 @@ the event object (QFocusEvent)
 <dd>
 reference to the gesture event (QGestureEvent
 </dd>
+</dl><a NAME="Editor.getBookmarkLines" ID="Editor.getBookmarkLines"></a>
+<h4>Editor.getBookmarkLines</h4>
+<b>getBookmarkLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a bookmark.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a bookmark (list of integer)
+</dd>
 </dl><a NAME="Editor.getBookmarks" ID="Editor.getBookmarks"></a>
 <h4>Editor.getBookmarks</h4>
 <b>getBookmarks</b>(<i></i>)
@@ -2831,6 +2917,26 @@ reference to the gesture event (QGestureEvent
 sorted list of all lines containing a bookmark
             (list of integer)
 </dd>
+</dl><a NAME="Editor.getBreakpointLines" ID="Editor.getBreakpointLines"></a>
+<h4>Editor.getBreakpointLines</h4>
+<b>getBreakpointLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a breakpoint.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a breakpoint (list of integer)
+</dd>
+</dl><a NAME="Editor.getChangeLines" ID="Editor.getChangeLines"></a>
+<h4>Editor.getChangeLines</h4>
+<b>getChangeLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a change.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a change (list of integer)
+</dd>
 </dl><a NAME="Editor.getCompleter" ID="Editor.getCompleter"></a>
 <h4>Editor.getCompleter</h4>
 <b>getCompleter</b>(<i></i>)
@@ -2840,6 +2946,16 @@ sorted list of all lines containing a bookmark
 <dt>Returns:</dt>
 <dd>
 the completer object (CompleterBase)
+</dd>
+</dl><a NAME="Editor.getCoverageLines" ID="Editor.getCoverageLines"></a>
+<h4>Editor.getCoverageLines</h4>
+<b>getCoverageLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a coverage marker.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a coverage marker (list of integer)
 </dd>
 </dl><a NAME="Editor.getCurrentWord" ID="Editor.getCurrentWord"></a>
 <h4>Editor.getCurrentWord</h4>
@@ -2969,17 +3085,6 @@ reference to the requested menu (QMenu) or None
 <dd>
 display string for this unnamed editor (string)
 </dd>
-</dl><a NAME="Editor.getPyVersion" ID="Editor.getPyVersion"></a>
-<h4>Editor.getPyVersion</h4>
-<b>getPyVersion</b>(<i></i>)
-<p>
-        Public methode to return the Python main version (2 or 3) or 0 if it's
-        not a Python file at all.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-Python version (2 or 3) or 0 if it's not a Python file (int)
-</dd>
 </dl><a NAME="Editor.getSearchText" ID="Editor.getSearchText"></a>
 <h4>Editor.getSearchText</h4>
 <b>getSearchText</b>(<i>selectionOnly=False</i>)
@@ -3010,6 +3115,16 @@ tuple indicating, if the editor is sharable, the sharing
             and if it is inside a remotely initiated shared edit session
             (boolean, boolean, boolean, boolean)
 </dd>
+</dl><a NAME="Editor.getSyntaxErrorLines" ID="Editor.getSyntaxErrorLines"></a>
+<h4>Editor.getSyntaxErrorLines</h4>
+<b>getSyntaxErrorLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a syntax error.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a syntax error (list of integer)
+</dd>
 </dl><a NAME="Editor.getSyntaxErrors" ID="Editor.getSyntaxErrors"></a>
 <h4>Editor.getSyntaxErrors</h4>
 <b>getSyntaxErrors</b>(<i></i>)
@@ -3020,6 +3135,26 @@ tuple indicating, if the editor is sharable, the sharing
 <dd>
 sorted list of all lines containing a syntax error
             (list of integer)
+</dd>
+</dl><a NAME="Editor.getTaskLines" ID="Editor.getTaskLines"></a>
+<h4>Editor.getTaskLines</h4>
+<b>getTaskLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a task.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a task (list of integer)
+</dd>
+</dl><a NAME="Editor.getWarningLines" ID="Editor.getWarningLines"></a>
+<h4>Editor.getWarningLines</h4>
+<b>getWarningLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a warning.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a warning (list of integer)
 </dd>
 </dl><a NAME="Editor.getWarnings" ID="Editor.getWarnings"></a>
 <h4>Editor.getWarnings</h4>
@@ -3276,7 +3411,17 @@ flag indicating a syntax error (boolean)
 <b>indentLineOrSelection</b>(<i></i>)
 <p>
         Public slot to indent the current line or current selection.
-</p><a NAME="Editor.isLastEditPositionAvailable" ID="Editor.isLastEditPositionAvailable"></a>
+</p><a NAME="Editor.isJavascriptFile" ID="Editor.isJavascriptFile"></a>
+<h4>Editor.isJavascriptFile</h4>
+<b>isJavascriptFile</b>(<i></i>)
+<p>
+        Public method to return a flag indicating a Javascript file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a Javascript file (boolean)
+</dd>
+</dl><a NAME="Editor.isLastEditPositionAvailable" ID="Editor.isLastEditPositionAvailable"></a>
 <h4>Editor.isLastEditPositionAvailable</h4>
 <b>isLastEditPositionAvailable</b>(<i></i>)
 <p>
@@ -3290,11 +3435,11 @@ flag indicating availability (boolean)
 <h4>Editor.isPy2File</h4>
 <b>isPy2File</b>(<i></i>)
 <p>
-        Public method to return a flag indicating a Python file.
+        Public method to return a flag indicating a Python2 file.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-flag indicating a Python file (boolean)
+flag indicating a Python2 file (boolean)
 </dd>
 </dl><a NAME="Editor.isPy3File" ID="Editor.isPy3File"></a>
 <h4>Editor.isPy3File</h4>
@@ -3305,6 +3450,16 @@ flag indicating a Python file (boolean)
 <dt>Returns:</dt>
 <dd>
 flag indicating a Python3 file (boolean)
+</dd>
+</dl><a NAME="Editor.isPyFile" ID="Editor.isPyFile"></a>
+<h4>Editor.isPyFile</h4>
+<b>isPyFile</b>(<i></i>)
+<p>
+        Public method to return a flag indicating a Python (2 or 3) file.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a Python (2 or 3) file (boolean)
 </dd>
 </dl><a NAME="Editor.isRubyFile" ID="Editor.isRubyFile"></a>
 <h4>Editor.isRubyFile</h4>
@@ -3508,17 +3663,21 @@ properties for the breakpoint (tuple)
         Public slot to handle the opening of a project.
 </p><a NAME="Editor.readFile" ID="Editor.readFile"></a>
 <h4>Editor.readFile</h4>
-<b>readFile</b>(<i>fn, createIt=False</i>)
+<b>readFile</b>(<i>fn, createIt=False, encoding=""</i>)
 <p>
         Public slot to read the text from a file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to read from (string)
-</dd><dt><i>createIt</i></dt>
+</dd><dt><i>createIt=</i></dt>
 <dd>
 flag indicating the creation of a new file, if the
             given one doesn't exist (boolean)
+</dd><dt><i>encoding=</i></dt>
+<dd>
+encoding to be used to read the file (string)
+            (Note: this parameter overrides encoding detection)
 </dd>
 </dl><a NAME="Editor.readSettings" ID="Editor.readSettings"></a>
 <h4>Editor.readSettings</h4>
@@ -3559,6 +3718,16 @@ command string (string)
 <dt><i>editor</i></dt>
 <dd>
 reference to the cloned editor (Editor)
+</dd>
+</dl><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
+<h4>Editor.resizeEvent</h4>
+<b>resizeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling resize events.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the resize event (QResizeEvent)
 </dd>
 </dl><a NAME="Editor.revertToUnmodified" ID="Editor.revertToUnmodified"></a>
 <h4>Editor.revertToUnmodified</h4>
@@ -3908,7 +4077,22 @@ type of warning message (integer)
 <b>unsetCallTipHook</b>(<i></i>)
 <p>
         Public method to unset a calltip hook.
-</p><a NAME="Editor.wheelEvent" ID="Editor.wheelEvent"></a>
+</p><a NAME="Editor.viewportEvent" ID="Editor.viewportEvent"></a>
+<h4>Editor.viewportEvent</h4>
+<b>viewportEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling event of the viewport.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+reference to the event (QEvent)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indiating that the event was handled (boolean)
+</dd>
+</dl><a NAME="Editor.wheelEvent" ID="Editor.wheelEvent"></a>
 <h4>Editor.wheelEvent</h4>
 <b>wheelEvent</b>(<i>evt</i>)
 <p>

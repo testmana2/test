@@ -42,8 +42,8 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.whitelist.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.whitelist.removeAll)
+        self.removeButton.clicked.connect(self.whitelist.removeSelected)
+        self.removeAllButton.clicked.connect(self.whitelist.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -52,8 +52,8 @@ class SendRefererWhitelistDialog(QDialog, Ui_SendRefererWhitelistDialog):
         """
         host, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Send Referer Whitelist"),
-            self.trUtf8("Enter host name to add to the whitelist:"),
+            self.tr("Send Referer Whitelist"),
+            self.tr("Enter host name to add to the whitelist:"),
             QLineEdit.Normal)
         if ok and host != "" and host not in self.__model.stringList():
             self.__model.insertRow(self.__model.rowCount())

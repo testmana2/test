@@ -11,9 +11,9 @@
 
 from __future__ import unicode_literals
 try:
-    str = unicode   # __IGNORE_WARNING__
+    str = unicode
     import urllib2 as request
-except (NameError):
+except NameError:
     import urllib.request as request    # __IGNORE_WARNING__
 
 import re

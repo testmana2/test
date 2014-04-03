@@ -44,8 +44,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         if len(QSqlDatabase.drivers()) == 0:
             E5MessageBox.information(
                 self,
-                self.trUtf8("No database drivers found"),
-                self.trUtf8(
+                self.tr("No database drivers found"),
+                self.tr(
                     """This tool requires at least one Qt database driver. """
                     """Please check the Qt documentation how to build the """
                     """Qt SQL plugins."""))
@@ -56,7 +56,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
             self.on_connections_schemaRequested)
         self.connections.cleared.connect(self.on_connections_cleared)
         
-        self.statusMessage.emit(self.trUtf8("Ready"))
+        self.statusMessage.emit(self.tr("Ready"))
     
     @pyqtSlot()
     def on_clearButton_clicked(self):
@@ -161,8 +161,8 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
             if err.type() != QSqlError.NoError:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Unable to open database"),
-                    self.trUtf8(
+                    self.tr("Unable to open database"),
+                    self.tr(
                         """An error occurred while opening the connection."""))
     
     def showTable(self, table):
@@ -301,10 +301,10 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
         if model.lastError().type() != QSqlError.NoError:
             self.statusMessage.emit(model.lastError().text())
         elif model.query().isSelect():
-            self.statusMessage.emit(self.trUtf8("Query OK."))
+            self.statusMessage.emit(self.tr("Query OK."))
         else:
             self.statusMessage.emit(
-                self.trUtf8("Query OK, number of affected rows: {0}")
+                self.tr("Query OK, number of affected rows: {0}")
                     .format(model.query().numRowsAffected()))
         
         self.table.resizeColumnsToContents()

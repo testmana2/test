@@ -9,8 +9,8 @@ Module implementing a class representing a peer connection.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
@@ -76,8 +76,8 @@ class Connection(QTcpSocket):
         """
         super(Connection, self).__init__(parent)
         
-        self.__greetingMessage = self.trUtf8("undefined")
-        self.__username = self.trUtf8("unknown")
+        self.__greetingMessage = self.tr("undefined")
+        self.__username = self.tr("unknown")
         self.__serverPort = 0
         self.__state = Connection.WaitingForGreeting
         self.__currentDataType = Connection.Undefined
@@ -204,7 +204,7 @@ class Connection(QTcpSocket):
             )
             Preferences.syncPreferences()
             if bannedName in Preferences.getCooperation("BannedUsers"):
-                self.rejected.emit(self.trUtf8(
+                self.rejected.emit(self.tr(
                     "* Connection attempted by banned user '{0}'.")
                     .format(bannedName))
                 self.abort()
@@ -216,9 +216,9 @@ class Connection(QTcpSocket):
                 # if we shall accept automatically
                 res = E5MessageBox.yesNo(
                     None,
-                    self.trUtf8("New Connection"),
-                    self.trUtf8("""<p>Accept connection from """
-                                """<strong>{0}@{1}</strong>?</p>""").format(
+                    self.tr("New Connection"),
+                    self.tr("""<p>Accept connection from """
+                            """<strong>{0}@{1}</strong>?</p>""").format(
                         user, hostInfo.hostName()),
                     yesDefault=True)
                 if not res:
@@ -451,6 +451,6 @@ class Connection(QTcpSocket):
         """
         self.__pingTimer.stop()
         if self.__state == Connection.WaitingForGreeting:
-            self.rejected.emit(self.trUtf8(
+            self.rejected.emit(self.tr(
                 "* Connection to {0}:{1} refused.").format(
                 self.peerName(), self.peerPort()))

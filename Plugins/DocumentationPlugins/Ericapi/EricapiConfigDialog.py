@@ -21,6 +21,7 @@ from E5Gui import E5FileDialog
 
 from .Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
 import Utilities
+import UI.PixmapCache
 import DocumentationTools
 
 from eric5config import getConfig
@@ -40,6 +41,9 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         """
         super(EricapiConfigDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.outputFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         for language in sorted(
@@ -182,11 +186,14 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It displays a file selection dialog to
         select the file the api is written to.
         """
+        startFile = Utilities.fromNativeSeparators(self.outputFileEdit.text())
+        if not startFile:
+            startFile = self.project.getProjectName() + ".api"
         filename = E5FileDialog.getSaveFileName(
             self,
-            self.trUtf8("Select output file"),
-            self.outputFileEdit.text(),
-            self.trUtf8("API files (*.api);;All files (*)"))
+            self.tr("Select output file"),
+            startFile,
+            self.tr("API files (*.api);;All files (*)"))
             
         if filename:
             # make it relative, if it is in a subdirectory of the project path
@@ -210,12 +217,12 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         It displays a directory selection dialog to
         select a directory to be ignored.
         """
-        startDir = self.ignoreDirEdit.text()
+        startDir = Utilities.fromNativeSeparators(self.ignoreDirEdit.text())
         if not startDir:
             startDir = self.ppath
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory to exclude"),
+            self.tr("Select directory to exclude"),
             startDir,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

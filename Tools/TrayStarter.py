@@ -56,97 +56,97 @@ class TrayStarter(QSystemTrayIcon):
         
         self.activated.connect(self.__activated)
         
-        self.__menu = QMenu(self.trUtf8("Eric5 tray starter"))
+        self.__menu = QMenu(self.tr("Eric5 tray starter"))
         
         self.recentProjectsMenu = QMenu(
-            self.trUtf8('Recent Projects'), self.__menu)
+            self.tr('Recent Projects'), self.__menu)
         self.recentProjectsMenu.aboutToShow.connect(
             self.__showRecentProjectsMenu)
         self.recentProjectsMenu.triggered.connect(self.__openRecent)
         
         self.recentMultiProjectsMenu = \
-            QMenu(self.trUtf8('Recent Multiprojects'), self.__menu)
+            QMenu(self.tr('Recent Multiprojects'), self.__menu)
         self.recentMultiProjectsMenu.aboutToShow.connect(
             self.__showRecentMultiProjectsMenu)
         self.recentMultiProjectsMenu.triggered.connect(self.__openRecent)
         
-        self.recentFilesMenu = QMenu(self.trUtf8('Recent Files'), self.__menu)
+        self.recentFilesMenu = QMenu(self.tr('Recent Files'), self.__menu)
         self.recentFilesMenu.aboutToShow.connect(self.__showRecentFilesMenu)
         self.recentFilesMenu.triggered.connect(self.__openRecent)
         
         act = self.__menu.addAction(
-            self.trUtf8("Eric5 tray starter"), self.__about)
+            self.tr("Eric5 tray starter"), self.__about)
         font = act.font()
         font.setBold(True)
         act.setFont(font)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
-            self.trUtf8("QRegExp editor"), self.__startQRegExp)
+            self.tr("QRegExp editor"), self.__startQRegExp)
         self.__menu.addAction(
-            self.trUtf8("Python re editor"), self.__startPyRe)
+            self.tr("Python re editor"), self.__startPyRe)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("uiPreviewer.png"),
-            self.trUtf8("UI Previewer"), self.__startUIPreviewer)
+            self.tr("UI Previewer"), self.__startUIPreviewer)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("trPreviewer.png"),
-            self.trUtf8("Translations Previewer"), self.__startTRPreviewer)
+            self.tr("Translations Previewer"), self.__startTRPreviewer)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("unittest.png"),
-            self.trUtf8("Unittest"), self.__startUnittest)
+            self.tr("Unittest"), self.__startUnittest)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("ericWeb.png"),
-            self.trUtf8("eric5 Web Browser"), self.__startHelpViewer)
+            self.tr("eric5 Web Browser"), self.__startHelpViewer)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("diffFiles.png"),
-            self.trUtf8("Compare Files"), self.__startDiff)
+            self.tr("Compare Files"), self.__startDiff)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("compareFiles.png"),
-            self.trUtf8("Compare Files side by side"), self.__startCompare)
+            self.tr("Compare Files side by side"), self.__startCompare)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("sqlBrowser.png"),
-            self.trUtf8("SQL Browser"), self.__startSqlBrowser)
+            self.tr("SQL Browser"), self.__startSqlBrowser)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("ericSnap.png"),
-            self.trUtf8("Snapshot"), self.__startSnapshot)
+            self.tr("Snapshot"), self.__startSnapshot)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("iconEditor.png"),
-            self.trUtf8("Icon Editor"), self.__startIconEditor)
+            self.tr("Icon Editor"), self.__startIconEditor)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("pluginInstall.png"),
-            self.trUtf8("Install Plugin"), self.__startPluginInstall)
+            self.tr("Install Plugin"), self.__startPluginInstall)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("pluginUninstall.png"),
-            self.trUtf8("Uninstall Plugin"), self.__startPluginUninstall)
+            self.tr("Uninstall Plugin"), self.__startPluginUninstall)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("pluginRepository.png"),
-            self.trUtf8("Plugin Repository"), self.__startPluginRepository)
+            self.tr("Plugin Repository"), self.__startPluginRepository)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("configure.png"),
-            self.trUtf8('Preferences'), self.__startPreferences)
+            self.tr('Preferences'), self.__startPreferences)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("erict.png"),
-            self.trUtf8("eric5 IDE"), self.__startEric)
+            self.tr("eric5 IDE"), self.__startEric)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("editor.png"),
-            self.trUtf8("eric5 Mini Editor"), self.__startMiniEditor)
+            self.tr("eric5 Mini Editor"), self.__startMiniEditor)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("configure.png"),
-            self.trUtf8('Configure Tray Starter'), self.__showPreferences)
+            self.tr('Configure Tray Starter'), self.__showPreferences)
         self.__menu.addSeparator()
         
         # recent files
@@ -161,7 +161,7 @@ class TrayStarter(QSystemTrayIcon):
         
         self.__menu.addAction(
             UI.PixmapCache.getIcon("exit.png"),
-            self.trUtf8('Quit'), qApp.quit)
+            self.tr('Quit'), qApp.quit)
     
     def __loadRecentProjects(self):
         """
@@ -241,12 +241,12 @@ class TrayStarter(QSystemTrayIcon):
                 not proc.startDetached(sys.executable, args):
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     '<p>Could not start the process.<br>'
                     'Ensure that it is available as <b>{0}</b>.</p>'
                 ).format(applPath),
-                self.trUtf8('OK'))
+                self.tr('OK'))
     
     def __startMiniEditor(self):
         """

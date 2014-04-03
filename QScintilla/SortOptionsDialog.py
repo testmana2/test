@@ -26,6 +26,9 @@ class SortOptionsDialog(QDialog, Ui_SortOptionsDialog):
         """
         super(SortOptionsDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def getData(self):
         """

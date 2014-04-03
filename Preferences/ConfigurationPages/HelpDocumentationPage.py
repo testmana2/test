@@ -19,6 +19,7 @@ from .Ui_HelpDocumentationPage import Ui_HelpDocumentationPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
@@ -33,9 +34,18 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.setupUi(self)
         self.setObjectName("HelpDocumentationPage")
         
+        self.python2DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pythonDocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.qt4DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.qt5DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pyqt4DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pyqt5DocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pysideDocDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.python2DocDirCompleter = E5FileCompleter(self.python2DocDirEdit)
         self.pythonDocDirCompleter = E5FileCompleter(self.pythonDocDirEdit)
         self.qt4DocDirCompleter = E5FileCompleter(self.qt4DocDirEdit)
+        self.qt5DocDirCompleter = E5FileCompleter(self.qt5DocDirEdit)
         self.pyqt4DocDirCompleter = E5FileCompleter(self.pyqt4DocDirEdit)
         self.pyqt5DocDirCompleter = E5FileCompleter(self.pyqt5DocDirEdit)
         self.pysideDocDirCompleter = E5FileCompleter(self.pysideDocDirEdit)
@@ -100,9 +110,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Python 2 documentation entry"),
+            self.tr("Select Python 2 documentation entry"),
             QUrl(self.python2DocDirEdit.text()).path(),
-            self.trUtf8(
+            self.tr(
                 "HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
                 "All Files (*)"))
@@ -117,9 +127,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Python 3 documentation entry"),
+            self.tr("Select Python 3 documentation entry"),
             QUrl(self.pythonDocDirEdit.text()).path(),
-            self.trUtf8(
+            self.tr(
                 "HTML Files (*.html *.htm);;"
                 "Compressed Help Files (*.chm);;"
                 "All Files (*)"))
@@ -134,9 +144,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Qt4 documentation entry"),
+            self.tr("Select Qt4 documentation entry"),
             QUrl(self.qt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.tr("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.qt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -148,9 +158,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Qt5 documentation entry"),
+            self.tr("Select Qt5 documentation entry"),
             QUrl(self.qt5DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.tr("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.qt5DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -162,9 +172,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select PyQt4 documentation entry"),
+            self.tr("Select PyQt4 documentation entry"),
             QUrl(self.pyqt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.tr("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.pyqt4DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -176,9 +186,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select PyQt5 documentation entry"),
+            self.tr("Select PyQt5 documentation entry"),
             QUrl(self.pyqt4DocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.tr("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.pyqt5DocDirEdit.setText(Utilities.toNativeSeparators(entry))
@@ -190,9 +200,9 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select PySide documentation entry"),
+            self.tr("Select PySide documentation entry"),
             QUrl(self.pysideDocDirEdit.text()).path(),
-            self.trUtf8("HTML Files (*.html *.htm);;All Files (*)"))
+            self.tr("HTML Files (*.html *.htm);;All Files (*)"))
         
         if entry:
             self.pysideDocDirEdit.setText(Utilities.toNativeSeparators(entry))

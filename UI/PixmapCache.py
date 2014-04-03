@@ -11,6 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
+from PyQt4.QtCore import Qt, QSize
 from PyQt4.QtGui import QPixmap, QIcon, QPainter
 
 
@@ -97,6 +98,37 @@ def getSymlinkIcon(key, cache=pixCache):
     painter.drawPixmap(0, 10, pix2)
     painter.end()
     return QIcon(pix1)
+
+
+def getCombinedIcon(keys, cache=pixCache):
+    """
+    Module function to retrieve a symbolic link icon.
+
+    @param keys list of names of icons (string)
+    @param cache reference to the pixmap cache object (PixmapCache)
+    @return the requested icon (QIcon)
+    """
+    height = width = 0
+    pixmaps = []
+    for key in keys:
+        pix = cache.getPixmap(key)
+        if not pix.isNull():
+            height = max(height, pix.height())
+            width = max(width, pix.width())
+            pixmaps.append(pix)
+    if pixmaps:
+        pix = QPixmap(len(pixmaps) * width, height)
+        pix.fill(Qt.transparent)
+        painter = QPainter(pix)
+        x = 0
+        for pixmap in pixmaps:
+            painter.drawPixmap(x, 0, pixmap.scaled(QSize(width, height)))
+            x += width
+        painter.end()
+        icon = QIcon(pix)
+    else:
+        icon = QIcon()
+    return icon
 
 
 def addSearchPath(path, cache=pixCache):

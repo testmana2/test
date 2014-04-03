@@ -10,8 +10,8 @@ process.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -50,9 +50,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.__lastColumn = self.statusList.columnCount()
         
         self.refreshButton = self.buttonBox.addButton(
-            self.trUtf8("Refresh"), QDialogButtonBox.ActionRole)
+            self.tr("Refresh"), QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
-            self.trUtf8("Press to refresh the status display"))
+            self.tr("Press to refresh the status display"))
         self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -78,60 +78,90 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.restoreButton.setVisible(False)
         
         self.menuactions = []
+        self.lfActions = []
         self.menu = QMenu()
         if not mq:
+            self.__commitAct = self.menu.addAction(
+                self.tr("Commit changes to repository..."), self.__commit)
+            self.menuactions.append(self.__commitAct)
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Commit changes to repository..."), self.__commit))
+                self.tr("Select all for commit"), self.__commitSelectAll))
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Select all for commit"), self.__commitSelectAll))
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Deselect all from commit"),
+                self.tr("Deselect all from commit"),
                 self.__commitDeselectAll))
             self.menu.addSeparator()
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Add to repository"), self.__add))
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Show differences"), self.__diff))
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Show differences side-by-side"), self.__sbsDiff))
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Remove from repository"), self.__forget))
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Revert changes"), self.__revert))
-            self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Restore missing"), self.__restoreMissing))
+            self.__addAct = self.menu.addAction(
+                self.tr("Add to repository"), self.__add)
+            self.menuactions.append(self.__addAct)
+            if self.vcs.version >= (2, 0):
+                self.lfActions.append(self.menu.addAction(
+                    self.tr("Add as Large File"),
+                    lambda: self.__lfAdd("large")))
+                self.lfActions.append(self.menu.addAction(
+                    self.tr("Add as Normal File"),
+                    lambda: self.__lfAdd("normal")))
+            self.__diffAct = self.menu.addAction(
+                self.tr("Show differences"), self.__diff)
+            self.menuactions.append(self.__diffAct)
+            self.__sbsDiffAct = self.menu.addAction(
+                self.tr("Show differences side-by-side"), self.__sbsDiff)
+            self.menuactions.append(self.__sbsDiffAct)
+            self.__revertAct = self.menu.addAction(
+                self.tr("Revert changes"), self.__revert)
+            self.menuactions.append(self.__revertAct)
+            self.__forgetAct = self.menu.addAction(
+                self.tr("Forget missing"), self.__forget)
+            self.menuactions.append(self.__forgetAct)
+            self.__restoreAct = self.menu.addAction(
+                self.tr("Restore missing"), self.__restoreMissing)
+            self.menuactions.append(self.__restoreAct)
             self.menu.addSeparator()
             self.menuactions.append(self.menu.addAction(
-                self.trUtf8("Adjust column sizes"), self.__resizeColumns))
+                self.tr("Adjust column sizes"), self.__resizeColumns))
             for act in self.menuactions:
+                act.setEnabled(False)
+            for act in self.lfActions:
                 act.setEnabled(False)
             
             self.statusList.setContextMenuPolicy(Qt.CustomContextMenu)
             self.statusList.customContextMenuRequested.connect(
                 self.__showContextMenu)
         
+        if not mq and self.vcs.version >= (2, 0):
+            self.__lfAddActions = []
+            self.__addButtonMenu = QMenu()
+            self.__addButtonMenu.addAction(self.tr("Add"), self.__add)
+            self.__lfAddActions.append(
+                self.__addButtonMenu.addAction(self.tr("Add as Large File"),
+                                               lambda: self.__lfAdd("large")))
+            self.__lfAddActions.append(
+                self.__addButtonMenu.addAction(self.tr("Add as Normal File"),
+                                               lambda: self.__lfAdd("normal")))
+            self.addButton.setMenu(self.__addButtonMenu)
+            self.__addButtonMenu.aboutToShow.connect(self.__showAddMenu)
+        
         self.modifiedIndicators = [
-            self.trUtf8('added'),
-            self.trUtf8('modified'),
-            self.trUtf8('removed'),
+            self.tr('added'),
+            self.tr('modified'),
+            self.tr('removed'),
         ]
         
         self.unversionedIndicators = [
-            self.trUtf8('not tracked'),
+            self.tr('not tracked'),
         ]
         
         self.missingIndicators = [
-            self.trUtf8('missing')
+            self.tr('missing')
         ]
         
         self.status = {
-            'A': self.trUtf8('added'),
-            'C': self.trUtf8('normal'),
-            'I': self.trUtf8('ignored'),
-            'M': self.trUtf8('modified'),
-            'R': self.trUtf8('removed'),
-            '?': self.trUtf8('not tracked'),
-            '!': self.trUtf8('missing'),
+            'A': self.tr('added'),
+            'C': self.tr('normal'),
+            'I': self.tr('ignored'),
+            'M': self.tr('modified'),
+            'R': self.tr('removed'),
+            '?': self.tr('not tracked'),
+            '!': self.tr('missing'),
         }
     
     def __resort(self):
@@ -206,6 +236,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         for act in self.menuactions:
             act.setEnabled(False)
+        for act in self.lfActions:
+            act.setEnabled(False)
         
         self.addButton.setEnabled(False)
         self.commitButton.setEnabled(False)
@@ -220,13 +252,11 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         if self.__mq:
             self.setWindowTitle(
-                self.trUtf8("Mercurial Queue Repository Status"))
+                self.tr("Mercurial Queue Repository Status"))
         else:
-            self.setWindowTitle(self.trUtf8('Mercurial Status'))
+            self.setWindowTitle(self.tr('Mercurial Status'))
         
-        args = []
-        args.append('status')
-        self.vcs.addArguments(args, self.vcs.options['global'])
+        args = self.vcs.initCommand("status")
         if self.__mq:
             args.append('--mq')
             if isinstance(fn, list):
@@ -234,8 +264,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             else:
                 self.dname, fname = self.vcs.splitPath(fn)
         else:
-            self.vcs.addArguments(args, self.vcs.options['status'])
-            
             if self.vcs.hasSubrepositories():
                 args.append("--subrepos")
             
@@ -284,8 +312,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -315,7 +343,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             Qt.OtherFocusReason)
         
         self.__statusFilters.sort()
-        self.__statusFilters.insert(0, "<{0}>".format(self.trUtf8("all")))
+        self.__statusFilters.insert(0, "<{0}>".format(self.tr("all")))
         self.statusFilterCombo.addItems(self.__statusFilters)
         
         for act in self.menuactions:
@@ -365,10 +393,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.process.setReadChannel(QProcess.StandardOutput)
             
             while self.process.canReadLine():
-                line = str(
-                    self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                line = str(self.process.readLine(), self.vcs.getEncoding(),
+                           'replace')
                 self.__processOutputLine(line)
     
     def __processOutputLine(self, line):
@@ -390,8 +416,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):
@@ -500,7 +525,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         @param txt selected status filter (string)
         """
-        if txt == "<{0}>".format(self.trUtf8("all")):
+        if txt == "<{0}>".format(self.tr("all")):
             for topIndex in range(self.statusList.topLevelItemCount()):
                 topItem = self.statusList.topLevelItem(topIndex)
                 topItem.setHidden(False)
@@ -586,7 +611,34 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         @param coord the position of the mouse pointer (QPoint)
         """
+        modified = len(self.__getModifiedItems())
+        unversioned = len(self.__getUnversionedItems())
+        missing = len(self.__getMissingItems())
+        commitable = len(self.__getCommitableItems())
+
+        self.__addAct.setEnabled(unversioned)
+        self.__diffAct.setEnabled(modified)
+        self.__sbsDiffAct.setEnabled(modified == 1)
+        self.__revertAct.setEnabled(modified)
+        self.__forgetAct.setEnabled(missing)
+        self.__restoreAct.setEnabled(missing)
+        self.__commitAct.setEnabled(commitable)
+        
+        if self.vcs.isExtensionActive("largefiles"):
+            enable = len(self.__getUnversionedItems()) > 0
+        else:
+            enable = False
+        for act in self.lfActions:
+            act.setEnabled(enable)
         self.menu.popup(self.mapToGlobal(coord))
+    
+    def __showAddMenu(self):
+        """
+        Private slot to prepare the Add button menu before it is shown.
+        """
+        enable = self.vcs.isExtensionActive("largefiles")
+        for act in self.__lfAddActions:
+            act.setEnabled(enable)
     
     def __commit(self):
         """
@@ -600,9 +652,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             if not names:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Commit"),
-                    self.trUtf8("""There are no entries selected to be"""
-                                """ committed."""))
+                    self.tr("Commit"),
+                    self.tr("""There are no entries selected to be"""
+                            """ committed."""))
                 return
             
             if Preferences.getVCS("AutoSaveFiles"):
@@ -640,12 +692,37 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Add"),
-                self.trUtf8("""There are no unversioned entries"""
-                            """ available/selected."""))
+                self.tr("Add"),
+                self.tr("""There are no unversioned entries"""
+                        """ available/selected."""))
             return
         
         self.vcs.vcsAdd(names)
+        self.on_refreshButton_clicked()
+        
+        project = e5App().getObject("Project")
+        for name in names:
+            project.getModel().updateVCSStatus(name)
+        self.vcs.checkVCSStatus()
+    
+    def __lfAdd(self, mode):
+        """
+        Private slot to add a file to the repository.
+        
+        @param mode add mode (string one of 'normal' or 'large')
+        """
+        names = [os.path.join(self.dname, itm.text(self.__pathColumn))
+                 for itm in self.__getUnversionedItems()]
+        if not names:
+            E5MessageBox.information(
+                self,
+                self.tr("Add"),
+                self.tr("""There are no unversioned entries"""
+                        """ available/selected."""))
+            return
+        
+        self.vcs.getExtensionObject("largefiles").hgAdd(
+            names, mode)
         self.on_refreshButton_clicked()
         
         project = e5App().getObject("Project")
@@ -662,9 +739,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Remove"),
-                self.trUtf8("""There are no missing entries"""
-                            """ available/selected."""))
+                self.tr("Remove"),
+                self.tr("""There are no missing entries"""
+                        """ available/selected."""))
             return
         
         self.vcs.hgForget(names)
@@ -679,9 +756,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Revert"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.tr("Revert"),
+                self.tr("""There are no uncommitted changes"""
+                        """ available/selected."""))
             return
         
         self.vcs.hgRevert(names)
@@ -703,9 +780,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Revert"),
-                self.trUtf8("""There are no missing entries"""
-                            """ available/selected."""))
+                self.tr("Revert"),
+                self.tr("""There are no missing entries"""
+                        """ available/selected."""))
             return
         
         self.vcs.hgRevert(names)
@@ -721,9 +798,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Differences"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.tr("Differences"),
+                self.tr("""There are no uncommitted changes"""
+                        """ available/selected."""))
             return
         
         if self.diff is None:
@@ -741,16 +818,16 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if not names:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Side-by-Side Diff"),
-                self.trUtf8("""There are no uncommitted changes"""
-                            """ available/selected."""))
+                self.tr("Side-by-Side Diff"),
+                self.tr("""There are no uncommitted changes"""
+                        """ available/selected."""))
             return
         elif len(names) > 1:
             E5MessageBox.information(
                 self,
-                self.trUtf8("Side-by-Side Diff"),
-                self.trUtf8("""Only one file with uncommitted changes"""
-                            """ must be selected."""))
+                self.tr("Side-by-Side Diff"),
+                self.tr("""Only one file with uncommitted changes"""
+                        """ must be selected."""))
             return
         
         self.vcs.hgSbsDiff(names[0])

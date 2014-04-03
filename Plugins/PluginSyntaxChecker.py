@@ -12,7 +12,6 @@ from __future__ import unicode_literals
 import os
 
 from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Action import E5Action
 from E5Gui.E5Application import e5App
@@ -25,7 +24,7 @@ name = "Syntax Checker Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "SyntaxCheckerPlugin"
 packageName = "__core__"
 shortDescription = "Show the Syntax Checker dialog."
@@ -119,16 +118,13 @@ class SyntaxCheckerPlugin(QObject):
             (file name, line number, column, codestring (only at syntax
             errors), the message, a list with arguments for the message)
         """
+        from CheckerPlugins.SyntaxChecker.pyflakes.translations import \
+            getTranslatedFlakesMessage
         warnings = problems.get('warnings', [])
         for warning in warnings:
             # Translate messages
             msg_args = warning.pop()
-            translated = QApplication.translate(
-                'py3Flakes', warning[4]).format(*msg_args)
-            # Avoid leading "u" at Python2 unicode strings
-            if translated.startswith("u'"):
-                translated = translated[1:]
-            warning[4] = translated.replace(" u'", " '")
+            warning[4] = getTranslatedFlakesMessage(warning[4], msg_args)
         
         problems['warnings'] = warnings
         self.syntaxCheckService.syntaxChecked.emit(fn, problems)
@@ -142,28 +138,28 @@ class SyntaxCheckerPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
             self.__projectAct = E5Action(
-                self.trUtf8('Check Syntax'),
-                self.trUtf8('&Syntax...'), 0, 0,
+                self.tr('Check Syntax'),
+                self.tr('&Syntax...'), 0, 0,
                 self, 'project_check_syntax')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Check syntax.'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+                self.tr('Check syntax.'))
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Check Syntax...</b>"""
                 """<p>This checks Python files for syntax errors.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__projectSyntaxCheck)
+            self.__projectAct.triggered.connect(self.__projectSyntaxCheck)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
         self.__editorAct = E5Action(
-            self.trUtf8('Check Syntax'),
-            self.trUtf8('&Syntax...'), 0, 0,
+            self.tr('Check Syntax'),
+            self.tr('&Syntax...'), 0, 0,
             self, "")
-        self.__editorAct.setWhatsThis(self.trUtf8(
+        self.__editorAct.setWhatsThis(self.tr(
             """<b>Check Syntax...</b>"""
             """<p>This checks Python files for syntax errors.</p>"""
         ))
-        self.__editorAct.triggered[()].connect(self.__editorSyntaxCheck)
+        self.__editorAct.triggered.connect(self.__editorSyntaxCheck)
         
         e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
@@ -235,14 +231,14 @@ class SyntaxCheckerPlugin(QObject):
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
-                    self.trUtf8('Check Syntax'),
-                    self.trUtf8('&Syntax...'), 0, 0,
+                    self.tr('Check Syntax'),
+                    self.tr('&Syntax...'), 0, 0,
                     self, "")
-                self.__projectBrowserAct.setWhatsThis(self.trUtf8(
+                self.__projectBrowserAct.setWhatsThis(self.tr(
                     """<b>Check Syntax...</b>"""
                     """<p>This checks Python files for syntax errors.</p>"""
                 ))
-                self.__projectBrowserAct.triggered[()].connect(
+                self.__projectBrowserAct.triggered.connect(
                     self.__projectBrowserSyntaxCheck)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
@@ -329,9 +325,13 @@ class SyntaxCheckerPlugin(QObject):
         """
         editor = e5App().getObject("ViewManager").activeWindow()
         if editor is not None:
-                from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
-                    SyntaxCheckerDialog
-                self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
-                self.__editorSyntaxCheckerDialog.show()
-                self.__editorSyntaxCheckerDialog.start(
-                    editor.getFileName() or "Unnamed.py", editor.text())
+            from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
+                SyntaxCheckerDialog
+            self.__editorSyntaxCheckerDialog = SyntaxCheckerDialog()
+            self.__editorSyntaxCheckerDialog.show()
+            if editor.isJavascriptFile():
+                unnamed = "Unnamed.js"
+            else:
+                unnamed = "Unnamed.py"
+            self.__editorSyntaxCheckerDialog.start(
+                editor.getFileName() or unnamed, editor.text())

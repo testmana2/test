@@ -26,7 +26,7 @@ name = "PySvn Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = False
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 pluginType = "version_control"
 pluginTypename = "PySvn"
 className = "VcsPySvnPlugin"
@@ -153,7 +153,7 @@ class VcsPySvnPlugin(QObject):
         
         self.__subversionDefaults = {
             "StopLogOnCopy": 1,
-            "LogLimit": 100,
+            "LogLimit": 20,
             "CommitMessages": 20,
         }
         

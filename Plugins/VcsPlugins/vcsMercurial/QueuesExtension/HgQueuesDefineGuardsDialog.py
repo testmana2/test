@@ -9,8 +9,8 @@ Module implementing a dialog to define guards for patches.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -23,7 +23,6 @@ from E5Gui import E5MessageBox
 
 from .Ui_HgQueuesDefineGuardsDialog import Ui_HgQueuesDefineGuardsDialog
 
-import Preferences
 import UI.PixmapCache
 
 
@@ -79,9 +78,9 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         if self.__dirtyList:
             res = E5MessageBox.question(
                 self,
-                self.trUtf8("Unsaved Changes"),
-                self.trUtf8("""The guards list has been changed."""
-                            """ Shall the changes be applied?"""),
+                self.tr("Unsaved Changes"),
+                self.tr("""The guards list has been changed."""
+                        """ Shall the changes be applied?"""),
                 E5MessageBox.StandardButtons(
                     E5MessageBox.Apply |
                     E5MessageBox.Discard),
@@ -122,9 +121,9 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         if self.__dirtyList:
             res = E5MessageBox.question(
                 self,
-                self.trUtf8("Unsaved Changes"),
-                self.trUtf8("""The guards list has been changed."""
-                            """ Shall the changes be applied?"""),
+                self.tr("Unsaved Changes"),
+                self.tr("""The guards list has been changed."""
+                        """ Shall the changes be applied?"""),
                 E5MessageBox.StandardButtons(
                     E5MessageBox.Apply |
                     E5MessageBox.Discard),
@@ -142,8 +141,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         self.guardCombo.addItems(guardsList)
         self.guardCombo.setEditText("")
         
-        args = []
-        args.append("qguard")
+        args = self.vcs.initCommand("qguard")
         if patch:
             args.append(patch)
         
@@ -151,7 +149,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         if self.__hgClient:
             output = self.__hgClient.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(self.__repodir)
             process.start('hg', args)
@@ -159,8 +156,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(process.readAllStandardOutput(), ioEncoding,
-                                 'replace').strip()
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace').strip()
         
         if output:
             patchName, guards = output.split(":", 1)
@@ -245,8 +242,8 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         """
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Remove Guards"),
-            self.trUtf8(
+            self.tr("Remove Guards"),
+            self.tr(
                 """Do you really want to remove the selected guards?"""))
         if res:
             for guardItem in self.guardsList.selectedItems():
@@ -280,8 +277,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                 guard = itm.data(Qt.UserRole) + itm.text()
                 guardsList.append(guard)
             
-            args = []
-            args.append("qguard")
+            args = self.vcs.initCommand("qguard")
             args.append(self.patchNameLabel.text())
             if guardsList:
                 args.append("--")
@@ -293,7 +289,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
             if self.__hgClient:
                 error = self.__hgClient.runcommand(args)[1]
             else:
-                ioEncoding = Preferences.getSystem("IOEncoding")
                 process = QProcess()
                 process.setWorkingDirectory(self.__repodir)
                 process.start('hg', args)
@@ -302,23 +297,22 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
                     finished = process.waitForFinished(30000)
                     if finished:
                         if process.exitCode() != 0:
-                            error = str(
-                                process.readAllStandardError(), ioEncoding,
-                                'replace')
+                            error = str(process.readAllStandardError(),
+                                        self.vcs.getEncoding(), 'replace')
                     else:
                         E5MessageBox.warning(
                             self,
-                            self.trUtf8("Apply Guard Definitions"),
-                            self.trUtf8(
+                            self.tr("Apply Guard Definitions"),
+                            self.tr(
                                 """The Mercurial process did not finish"""
                                 """ in time."""))
             
             if error:
                 E5MessageBox.warning(
                     self,
-                    self.trUtf8("Apply Guard Definitions"),
-                    self.trUtf8("""<p>The defined guards could not be"""
-                                """ applied.</p><p>Reason: {0}</p>""")
+                    self.tr("Apply Guard Definitions"),
+                    self.tr("""<p>The defined guards could not be"""
+                            """ applied.</p><p>Reason: {0}</p>""")
                     .format(error))
             else:
                             self.__dirtyList = False

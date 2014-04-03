@@ -25,9 +25,21 @@
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QStackedWidget" name="pagesWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
      <widget class="QWidget" name="sourcePage">
       <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item>
@@ -48,7 +60,16 @@
      </widget>
      <widget class="QWidget" name="filePage">
       <layout class="QGridLayout" name="gridLayout">
-       <property name="margin">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
         <number>0</number>
        </property>
        <item row="0" column="0">
@@ -126,11 +147,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="chooseButton">
-           <property name="text">
-            <string notr="true">...</string>
-           </property>
-          </widget>
+          <widget class="QToolButton" name="chooseButton"/>
          </item>
         </layout>
        </item>

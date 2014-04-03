@@ -29,7 +29,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         super(NetworkProtocolUnknownErrorReply, self).__init__(parent)
         self.setError(
             QNetworkReply.ProtocolUnknownError,
-            self.trUtf8("Protocol '{0}' not supported.").format(protocol))
+            self.tr("Protocol '{0}' not supported.").format(protocol))
         QTimer.singleShot(0, self.__fireSignals)
     
     def __fireSignals(self):
@@ -37,7 +37,7 @@ class NetworkProtocolUnknownErrorReply(QNetworkReply):
         Private method to send some signals to end the connection.
         """
         self.error.emit(QNetworkReply.ProtocolUnknownError)
-        self.finished[()].emit()
+        self.finished.emit()
     
     def abort(self):
         """

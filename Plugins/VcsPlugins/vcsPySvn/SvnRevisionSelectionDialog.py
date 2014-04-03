@@ -32,6 +32,9 @@ class SvnRevisionSelectionDialog(QDialog, Ui_SvnRevisionSelectionDialog):
         self.date1Edit.setDate(QDate.currentDate())
         self.date2Edit.setDate(QDate.currentDate())
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def __getRevision(self, no):
         """
         Private method to generate the revision.

@@ -48,13 +48,13 @@ class PluginManager(QObject):
     @signal shutdown() emitted at shutdown of the IDE
     @signal pluginAboutToBeActivated(modulName, pluginObject) emitted just
         before a plugin is activated
-    @signal pluginActivated(modulName, pluginObject) emitted just after
+    @signal pluginActivated(moduleName, pluginObject) emitted just after
         a plugin was activated
     @signal allPlugginsActivated() emitted at startup after all plugins have
         been activated
-    @signal pluginAboutToBeDeactivated(modulName, pluginObject) emitted just
+    @signal pluginAboutToBeDeactivated(moduleName, pluginObject) emitted just
         before a plugin is deactivated
-    @signal pluginDeactivated(modulName, pluginObject) emitted just after
+    @signal pluginDeactivated(moduleName, pluginObject) emitted just after
         a plugin was deactivated
     """
     shutdown = pyqtSignal()
@@ -186,7 +186,7 @@ class PluginManager(QObject):
                 except IOError:
                     return (
                         False,
-                        self.trUtf8("Could not create a package for {0}.")
+                        self.tr("Could not create a package for {0}.")
                             .format(self.__develPluginFile))
         
         if Preferences.getPluginManager("ActivateExternal"):
@@ -221,7 +221,7 @@ class PluginManager(QObject):
         if not os.path.exists(self.pluginDirs["eric5"]):
             return (
                 False,
-                self.trUtf8(
+                self.tr(
                     "The internal plugin directory <b>{0}</b>"
                     " does not exits.").format(self.pluginDirs["eric5"]))
         
@@ -338,7 +338,7 @@ class PluginManager(QObject):
             fname = "{0}.py".format(os.path.join(directory, name))
             module = imp.load_source(name, fname)
             if not hasattr(module, "autoactivate"):
-                module.error = self.trUtf8(
+                module.error = self.tr(
                     "Module is missing the 'autoactivate' attribute.")
                 self.__failedModules[name] = module
                 raise PluginLoadError(name)
@@ -348,8 +348,8 @@ class PluginManager(QObject):
                 if not hasattr(module, "pluginType") or \
                    not hasattr(module, "pluginTypename"):
                     module.error = \
-                        self.trUtf8("Module is missing the 'pluginType' "
-                                    "and/or 'pluginTypename' attributes.")
+                        self.tr("Module is missing the 'pluginType' "
+                                "and/or 'pluginTypename' attributes.")
                     self.__failedModules[name] = module
                     raise PluginLoadError(name)
                 else:
@@ -363,7 +363,7 @@ class PluginManager(QObject):
             print("Error loading plugin module:", name)
         except Exception as err:
             module = imp.new_module(name)
-            module.error = self.trUtf8(
+            module.error = self.tr(
                 "Module failed to load. Error: {0}").format(str(err))
             self.__failedModules[name] = module
             print("Error loading plugin module:", name)
@@ -518,7 +518,7 @@ class PluginManager(QObject):
             try:
                 obj, ok = pluginObject.activate()
             except TypeError:
-                module.error = self.trUtf8(
+                module.error = self.tr(
                     "Incompatible plugin activation method.")
                 obj = None
                 ok = True
@@ -1002,7 +1002,11 @@ class PluginManager(QObject):
         for name, module in list(self.__onDemandActiveModules.items()):
             if getattr(module, "pluginType") == "version_control":
                 self.deactivatePlugin(name, True)
-
+    
+    ########################################################################
+    ## Methods creation of the plug-ins download directory
+    ########################################################################
+    
     def __checkPluginsDownloadDirectory(self):
         """
         Private slot to check for the existence of the plugins download
@@ -1024,8 +1028,8 @@ class PluginManager(QObject):
                     except (OSError, IOError) as err:
                         E5MessageBox.critical(
                             self.__ui,
-                            self.trUtf8("Plugin Manager Error"),
-                            self.trUtf8(
+                            self.tr("Plugin Manager Error"),
+                            self.tr(
                                 """<p>The plugin download directory"""
                                 """ <b>{0}</b> could not be created. Please"""
                                 """ configure it via the configuration"""
@@ -1052,18 +1056,20 @@ class PluginManager(QObject):
         period = Preferences.getPluginManager("UpdatesCheckInterval")
         if period == 0:
             return
-        elif period in [2, 3, 4]:
+        elif period in [1, 2, 3]:
             lastModified = QFileInfo(self.pluginRepositoryFile).lastModified()
             if lastModified.isValid() and lastModified.date().isValid():
                 lastModifiedDate = lastModified.date()
                 now = QDate.currentDate()
-                if period == 2 and lastModifiedDate.day() == now.day():
+                if period == 1 and lastModifiedDate.day() == now.day():
                     # daily
                     return
-                elif period == 3 and lastModifiedDate.daysTo(now) < 7:
+                elif period == 2 and lastModifiedDate.daysTo(now) < 7:
                     # weekly
                     return
-                elif period == 4 and lastModifiedDate.month() == now.month():
+                elif period == 3 and \
+                    (lastModifiedDate.daysTo(now) <
+                     lastModifiedDate.daysInMonth()):
                     # monthly
                     return
         
@@ -1074,7 +1080,7 @@ class PluginManager(QObject):
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
         reply = self.__networkManager.get(request)
-        reply.finished[()].connect(self.__downloadRepositoryFileDone)
+        reply.finished.connect(self.__downloadRepositoryFileDone)
         self.__replies.append(reply)
     
     def __downloadRepositoryFileDone(self):
@@ -1087,8 +1093,8 @@ class PluginManager(QObject):
         if reply.error() != QNetworkReply.NoError:
             E5MessageBox.warning(
                 None,
-                self.trUtf8("Error downloading file"),
-                self.trUtf8(
+                self.tr("Error downloading file"),
+                self.tr(
                     """<p>Could not download the requested file"""
                     """ from {0}.</p><p>Error: {1}</p>"""
                 ).format(Preferences.getUI("PluginRepositoryUrl5"),
@@ -1122,10 +1128,10 @@ class PluginManager(QObject):
                 if self.__updateAvailable:
                     res = E5MessageBox.information(
                         None,
-                        self.trUtf8("New plugin versions available"),
-                        self.trUtf8("<p>There are new plug-ins or plug-in"
-                                    " updates available. Use the plug-in"
-                                    " repository dialog to get them.</p>"),
+                        self.tr("New plugin versions available"),
+                        self.tr("<p>There are new plug-ins or plug-in"
+                                " updates available. Use the plug-in"
+                                " repository dialog to get them.</p>"),
                         E5MessageBox.StandardButtons(
                             E5MessageBox.Ignore |
                             E5MessageBox.Open),
@@ -1147,11 +1153,15 @@ class PluginManager(QObject):
         @param filename data for the filename field (string)
         @param status status of the plugin (string [stable, unstable, unknown])
         """
+        # ignore hidden plug-ins
+        pluginName = os.path.splitext(url.rsplit("/", 1)[1])[0]
+        if pluginName in Preferences.getPluginManager("HiddenPlugins"):
+            return
+        
         archive = os.path.join(Preferences.getPluginManager("DownloadPath"),
                                filename)
         
         # Check against installed/loaded plug-ins
-        pluginName = os.path.splitext(url.rsplit("/", 1)[1])[0]
         pluginDetails = self.getPluginDetails(pluginName)
         if pluginDetails is None:
             if not Preferences.getPluginManager("CheckInstalledOnly"):

@@ -59,6 +59,9 @@ class VcsCommandOptionsDialog(QDialog, Ui_VcsCommandOptionsDialog):
                 t += Utilities.getPercentReplacementHelp()
                 widget.setWhatsThis(t)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getOptions(self):
         """
         Public method used to retrieve the entered options.

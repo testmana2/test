@@ -9,24 +9,25 @@ Module implementing a dialog to browse the log history.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
+import re
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
     QSize, QPoint
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
+from PyQt4.QtGui import QWidget, QDialogButtonBox, QHeaderView, \
     QTreeWidgetItem, QApplication, QCursor, QLineEdit, QColor, \
-    QPixmap, QPainter, QPen, QBrush, QIcon
+    QPixmap, QPainter, QPen, QBrush, QIcon, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 
-import Preferences
+import UI.PixmapCache
 
 COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
               "cyan", "olive", "magenta", "darkred", "darkmagenta",
@@ -34,7 +35,7 @@ COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
 COLORS = [str(QColor(x).name()) for x in COLORNAMES]
 
 
-class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
+class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
@@ -47,26 +48,29 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
     MessageColumn = 6
     TagsColumn = 7
     
-    def __init__(self, vcs, mode="log", bundle=None, isFile=False,
-                 parent=None):
+    LargefilesCacheL = ".hglf/"
+    LargefilesCacheW = ".hglf\\"
+    PathSeparatorRe = re.compile(r"/|\\")
+    
+    def __init__(self, vcs, mode="log", parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
-        @param bundle name of a bundle file (string)
-        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super(HgLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.__position = QPoint()
+        
         if mode == "log":
-            self.setWindowTitle(self.trUtf8("Mercurial Log"))
+            self.setWindowTitle(self.tr("Mercurial Log"))
         elif mode == "incoming":
-            self.setWindowTitle(self.trUtf8("Mercurial Log (Incoming)"))
+            self.setWindowTitle(self.tr("Mercurial Log (Incoming)"))
         elif mode == "outgoing":
-            self.setWindowTitle(self.trUtf8("Mercurial Log (Outgoing)"))
+            self.setWindowTitle(self.tr("Mercurial Log (Outgoing)"))
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -75,13 +79,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
         self.refreshButton = self.buttonBox.addButton(
-            self.trUtf8("&Refresh"), QDialogButtonBox.ActionRole)
+            self.tr("&Refresh"), QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(
-            self.trUtf8("Press to refresh the list of changesets"))
+            self.tr("Press to refresh the list of changesets"))
         self.refreshButton.setEnabled(False)
-        
-        self.sbsCheckBox.setEnabled(isFile)
-        self.sbsCheckBox.setVisible(isFile)
         
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
@@ -89,27 +90,20 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.initialCommandMode = mode
         else:
             self.commandMode = "log"
-        self.bundle = bundle
+            self.initialCommandMode = "log"
         self.__hgClient = vcs.getClient()
+        
+        self.__bundle = ""
+        self.__filename = ""
+        self.__isFile = False
         
         self.__initData()
         
-        self.__allBranchesFilter = self.trUtf8("All")
+        self.__allBranchesFilter = self.tr("All")
         
         self.fromDate.setDisplayFormat("yyyy-MM-dd")
         self.toDate.setDisplayFormat("yyyy-MM-dd")
-        self.fromDate.setDate(QDate.currentDate())
-        self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
-            self.trUtf8("Message")))
-        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
-            "LogLimit"))
-        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
-            "StopLogOnCopy"))
-        
-        if mode in ("incoming", "outgoing"):
-            self.nextButton.setEnabled(False)
-            self.limitSpinBox.setEnabled(False)
+        self.__resetUI()
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
@@ -125,9 +119,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.flags = {
-            'A': self.trUtf8('Added'),
-            'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified'),
+            'A': self.tr('Added'),
+            'D': self.tr('Deleted'),
+            'M': self.tr('Modified'),
         }
         
         self.__dotRadius = 8
@@ -137,17 +131,51 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             QSize(100 * self.__rowHeight, self.__rowHeight))
         if self.vcs.version >= (1, 8):
             self.logTree.headerItem().setText(
-                self.logTree.columnCount(), self.trUtf8("Bookmarks"))
+                self.logTree.columnCount(), self.tr("Bookmarks"))
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
-            self.phaseLine.hide()
-            self.phaseButton.hide()
-        if self.vcs.version < (2, 0):
-            self.graftButton.setEnabled(False)
-            self.graftButton.hide()
-        if self.phaseButton.isHidden() and \
-           self.graftButton.isHidden():
-            self.phaseLine.hide()
+        
+        self.__actionsMenu = QMenu()
+        if self.vcs.version >= (2, 0):
+            self.__graftAct = self.__actionsMenu.addAction(
+                self.tr("Copy Changesets"), self.__graftActTriggered)
+            self.__graftAct.setToolTip(self.tr(
+                "Copy the selected changesets to the current branch"))
+        else:
+            self.__graftAct = None
+        
+        if self.vcs.version >= (2, 1):
+            self.__phaseAct = self.__actionsMenu.addAction(
+                self.tr("Change Phase"), self.__phaseActTriggered)
+            self.__phaseAct.setToolTip(self.tr(
+                "Change the phase of the selected revisions"))
+            self.__phaseAct.setWhatsThis(self.tr(
+                """<b>Change Phase</b>\n<p>This changes the phase of the"""
+                """ selected revisions. The selected revisions have to have"""
+                """ the same current phase.</p>"""))
+        else:
+            self.__phaseAct = None
+        
+        self.__tagAct = self.__actionsMenu.addAction(
+            self.tr("Tag"), self.__tagActTriggered)
+        self.__tagAct.setToolTip(self.tr("Tag the selected revision"))
+        
+        self.__switchAct = self.__actionsMenu.addAction(
+            self.tr("Switch"), self.__switchActTriggered)
+        self.__switchAct.setToolTip(self.tr(
+            "Switch the working directory to the selected revision"))
+        
+        if self.vcs.version >= (2, 0):
+            self.__lfPullAct = self.__actionsMenu.addAction(
+                self.tr("Pull Large Files"), self.__lfPullActTriggered)
+            self.__lfPullAct.setToolTip(self.tr(
+                "Pull large files for selected revisions"))
+        else:
+            self.__lfPullAct = None
+        
+        self.actionsButton.setIcon(
+            UI.PixmapCache.getIcon("actionsToolButton.png"))
+        self.actionsButton.setMenu(self.__actionsMenu)
     
     def __initData(self):
         """
@@ -189,7 +217,44 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 QTimer.singleShot(2000, self.process.kill)
                 self.process.waitForFinished(3000)
         
+        self.__position = self.pos()
+        
         e.accept()
+    
+    def show(self):
+        """
+        Public slot to show the dialog.
+        """
+        if not self.__position.isNull():
+            self.move(self.__position)
+        self.__resetUI()
+        
+        super(HgLogBrowserDialog, self).show()
+    
+    def __resetUI(self):
+        """
+        Private method to reset the user interface.
+        """
+        self.branchCombo.clear()
+        self.fromDate.setDate(QDate.currentDate())
+        self.toDate.setDate(QDate.currentDate())
+        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
+            self.tr("Message")))
+        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
+            "LogLimit"))
+        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
+            "StopLogOnCopy"))
+        
+        if self.initialCommandMode in ("incoming", "outgoing"):
+            self.nextButton.setEnabled(False)
+            self.limitSpinBox.setEnabled(False)
+        else:
+            self.nextButton.setEnabled(True)
+            self.limitSpinBox.setEnabled(True)
+        
+        self.logTree.clear()
+        
+        self.commandMode = self.initialCommandMode
     
     def __resizeColumnsLog(self):
         """
@@ -390,12 +455,11 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         parents = [-1]
         
         if int(rev) > 0:
-            args = []
-            args.append("parents")
+            args = self.vcs.initCommand("parents")
             if self.commandMode == "incoming":
-                if self.bundle:
+                if self.__bundle:
                     args.append("--repository")
-                    args.append(self.bundle)
+                    args.append(self.__bundle)
                 elif self.vcs.bundleFile and \
                         os.path.exists(self.vcs.bundleFile):
                     args.append("--repository")
@@ -405,7 +469,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             args.append("-r")
             args.append(rev)
             if not self.projectMode:
-                args.append(self.filename)
+                args.append(self.__filename)
             
             output = ""
             if self.__hgClient:
@@ -418,21 +482,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = \
-                            str(process.readAllStandardOutput(),
-                                Preferences.getSystem("IOEncoding"),
-                                'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.vcs.getEncoding(), 'replace')
                     else:
                         if not finished:
-                            errMsg = self.trUtf8(
+                            errMsg = self.tr(
                                 "The hg process did not finish within 30s.")
                 else:
-                    errMsg = self.trUtf8("Could not start the hg executable.")
+                    errMsg = self.tr("Could not start the hg executable.")
             
             if errMsg:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Mercurial Error"),
+                    self.tr("Mercurial Error"),
                     errMsg)
             
             if output:
@@ -446,8 +508,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         errMsg = ""
         
-        args = []
-        args.append("identify")
+        args = self.vcs.initCommand("identify")
         args.append("-nb")
         
         output = ""
@@ -461,21 +522,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
                 else:
                     if not finished:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "The hg process did not finish within 30s.")
             else:
-                errMsg = self.trUtf8("Could not start the hg executable.")
+                errMsg = self.tr("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Mercurial Error"),
+                self.tr("Mercurial Error"),
                 errMsg)
         
         if output:
@@ -493,8 +552,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__closedBranchesRevs = []
         errMsg = ""
         
-        args = []
-        args.append("branches")
+        args = self.vcs.initCommand("branches")
         args.append("--closed")
         
         output = ""
@@ -508,21 +566,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
                 else:
                     if not finished:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "The hg process did not finish within 30s.")
             else:
-                errMsg = self.trUtf8("Could not start the hg executable.")
+                errMsg = self.tr("Could not start the hg executable.")
         
         if errMsg:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Mercurial Error"),
+                self.tr("Mercurial Error"),
                 errMsg)
         
         if output:
@@ -556,7 +612,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         
         rev, node = revision.split(":")
         if rev in self.__closedBranchesRevs:
-            closedStr = "--"
+            closedStr = " \u2612"
         else:
             closedStr = ""
         msgtxt = msg[0]
@@ -588,7 +644,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         itm.setData(0, self.__messageRole, message)
         itm.setData(0, self.__changesRole, changedPaths)
         itm.setData(0, self.__edgesRole, edges)
-        itm.setData(0, self.__parentsRole, parents)
+        if parents == [-1]:
+            itm.setData(0, self.__parentsRole, [])
+        else:
+            itm.setData(0, self.__parentsRole, parents)
         
         if self.logTree.topLevelItemCount() > 1:
             topedges = \
@@ -647,10 +706,8 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.errors.clear()
         self.intercept = False
         
-        args = []
-        args.append(self.commandMode)
-        self.vcs.addArguments(args, self.vcs.options['global'])
-        self.vcs.addArguments(args, self.vcs.options['log'])
+        preargs = []
+        args = self.vcs.initCommand(self.commandMode)
         args.append('--verbose')
         if self.commandMode not in ("incoming", "outgoing"):
             args.append('--limit')
@@ -682,26 +739,41 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                                      "styles",
                                      "logBrowser.style"))
         if self.commandMode == "incoming":
-            if self.bundle:
-                args.append(self.bundle)
+            if self.__bundle:
+                args.append(self.__bundle)
             elif not self.vcs.hasSubrepositories():
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
                     project.getProjectManagementDir(), "hg-bundle.hg")
-                args.append('--bundle')
+                if os.path.exists(self.vcs.bundleFile):
+                    os.remove(self.vcs.bundleFile)
+                preargs = args[:]
+                preargs.append("--quiet")
+                preargs.append('--bundle')
+                preargs.append(self.vcs.bundleFile)
                 args.append(self.vcs.bundleFile)
         if not self.projectMode:
-            args.append(self.filename)
+            args.append(self.__filename)
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
             
-            out, err = self.__hgClient.runcommand(args)
-            self.buf = out.splitlines(True)
+            if preargs:
+                out, err = self.__hgClient.runcommand(preargs)
+            else:
+                err = ""
             if err:
                 self.__showError(err)
-            self.__processBuffer()
+            elif self.commandMode != "incoming" or \
+                (self.vcs.bundleFile and
+                 os.path.exists(self.vcs.bundleFile)) or \
+                    self.__bundle:
+                out, err = self.__hgClient.runcommand(args)
+                self.buf = out.splitlines(True)
+                if err:
+                    self.__showError(err)
+                self.__processBuffer()
             self.__finish()
         else:
             self.process.kill()
@@ -711,29 +783,54 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.inputGroup.setEnabled(True)
             self.inputGroup.show()
             
-            self.process.start('hg', args)
-            procStarted = self.process.waitForStarted(5000)
-            if not procStarted:
-                self.inputGroup.setEnabled(False)
-                self.inputGroup.hide()
-                E5MessageBox.critical(
-                    self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
-                        'The process {0} could not be started. '
-                        'Ensure, that it is in the search path.'
-                    ).format('hg'))
+            if preargs:
+                process = QProcess()
+                process.setWorkingDirectory(self.repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted(5000)
+                if procStarted:
+                    process.waitForFinished(30000)
+            
+            if self.commandMode != "incoming" or \
+                (self.vcs.bundleFile and
+                 os.path.exists(self.vcs.bundleFile)) or \
+                    self.__bundle:
+                self.process.start('hg', args)
+                procStarted = self.process.waitForStarted(5000)
+                if not procStarted:
+                    self.inputGroup.setEnabled(False)
+                    self.inputGroup.hide()
+                    E5MessageBox.critical(
+                        self,
+                        self.tr('Process Generation Error'),
+                        self.tr(
+                            'The process {0} could not be started. '
+                            'Ensure, that it is in the search path.'
+                        ).format('hg'))
+            else:
+                self.__finish()
     
-    def start(self, fn):
+    def start(self, fn, bundle=None, isFile=False):
         """
         Public slot to start the hg log command.
         
         @param fn filename to show the log for (string)
+        @keyparam bundle name of a bundle file (string)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
         """
+        self.__bundle = bundle
+        self.__isFile = isFile
+        
+        self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
+        
         self.errorGroup.hide()
         QApplication.processEvents()
         
-        self.filename = fn
+        self.__initData()
+        
+        self.__filename = fn
         self.dname, self.fname = self.vcs.splitPath(fn)
         
         # find the root of the repo
@@ -785,6 +882,19 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.inputGroup.hide()
         self.refreshButton.setEnabled(True)
     
+    def __modifyForLargeFiles(self, filename):
+        """
+        Private method to convert the displayed file name for a large file.
+        
+        @param filename file name to be processed (string)
+        @return processed file name (string)
+        """
+        if filename.startswith((self.LargefilesCacheL, self.LargefilesCacheW)):
+            return self.tr("{0} (large file)").format(
+                self.PathSeparatorRe.split(filename, 1)[1])
+        else:
+            return filename
+    
     def __processBuffer(self):
         """
         Private method to process the buffered output of the hg log command.
@@ -820,13 +930,14 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                             if f in fileCopies:
                                 changedPaths.append({
                                     "action": "A",
-                                    "path": f,
-                                    "copyfrom": fileCopies[f],
+                                    "path": self.__modifyForLargeFiles(f),
+                                    "copyfrom": self.__modifyForLargeFiles(
+                                        fileCopies[f]),
                                 })
                             else:
                                 changedPaths.append({
                                     "action": "A",
-                                    "path": f,
+                                    "path": self.__modifyForLargeFiles(f),
                                     "copyfrom": "",
                                 })
                 elif key == "files_mods":
@@ -834,7 +945,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         for f in value.strip().split(", "):
                             changedPaths.append({
                                 "action": "M",
-                                "path": f,
+                                "path": self.__modifyForLargeFiles(f),
                                 "copyfrom": "",
                             })
                 elif key == "file_dels":
@@ -842,7 +953,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                         for f in value.strip().split(", "):
                             changedPaths.append({
                                 "action": "D",
-                                "path": f,
+                                "path": self.__modifyForLargeFiles(f),
                                 "copyfrom": "",
                             })
                 elif key == "file_copies":
@@ -926,8 +1037,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.__filterLogs()
         
         self.__updateDiffButtons()
-        self.__updatePhaseButton()
-        self.__updateGraftButton()
+        self.__updateToolMenuActions()
     
     def __readStdout(self):
         """
@@ -938,8 +1048,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            line = str(self.process.readLine(),
-                       Preferences.getSystem("IOEncoding"),
+            line = str(self.process.readLine(), self.vcs.getEncoding(),
                        'replace')
             self.buf.append(line)
     
@@ -952,8 +1061,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):
@@ -974,14 +1082,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         @param rev2 second revision number (integer)
         """
         if self.sbsCheckBox.isEnabled() and self.sbsCheckBox.isChecked():
-            self.vcs.hgSbsDiff(self.filename, revisions=(str(rev1), str(rev2)))
+            self.vcs.hgSbsDiff(self.__filename,
+                               revisions=(str(rev1), str(rev2)))
         else:
             if self.diff is None:
                 from .HgDiffDialog import HgDiffDialog
                 self.diff = HgDiffDialog(self.vcs)
             self.diff.show()
             self.diff.raise_()
-            self.diff.start(self.filename, [rev1, rev2], self.bundle)
+            self.diff.start(self.__filename, [rev1, rev2], self.__bundle)
     
     def on_buttonBox_clicked(self, button):
         """
@@ -1027,40 +1136,35 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             
             self.diffRevisionsButton.setEnabled(False)
     
-    def __updatePhaseButton(self):
+    def __updateToolMenuActions(self):
         """
-        Private slot to update the status of the phase button.
+        Private slot to update the status of the tool menu actions and
+        the tool menu button.
         """
-        if self.initialCommandMode == "log":
-            # step 1: count entries with changeable phases
-            secret = 0
-            draft = 0
-            public = 0
-            for itm in self.logTree.selectedItems():
-                phase = itm.text(self.PhaseColumn)
-                if phase == "draft":
-                    draft += 1
-                elif phase == "secret":
-                    secret += 1
+        if self.initialCommandMode == "log" and self.projectMode:
+            if self.__phaseAct is not None:
+                # step 1: count entries with changeable phases
+                secret = 0
+                draft = 0
+                public = 0
+                for itm in self.logTree.selectedItems():
+                    phase = itm.text(self.PhaseColumn)
+                    if phase == "draft":
+                        draft += 1
+                    elif phase == "secret":
+                        secret += 1
+                    else:
+                        public += 1
+                
+                # step 2: set the status of the phase button
+                if public == 0 and \
+                   ((secret > 0 and draft == 0) or
+                        (secret == 0 and draft > 0)):
+                    self.__phaseAct.setEnabled(True)
                 else:
-                    public += 1
+                    self.__phaseAct.setEnabled(False)
             
-            # step 2: set the status of the phase button
-            if public == 0 and \
-               ((secret > 0 and draft == 0) or
-                    (secret == 0 and draft > 0)):
-                self.phaseButton.setEnabled(True)
-            else:
-                self.phaseButton.setEnabled(False)
-        else:
-            self.phaseButton.setEnabled(False)
-    
-    def __updateGraftButton(self):
-        """
-        Private slot to update the status of the graft button.
-        """
-        if self.graftButton.isVisible():
-            if self.initialCommandMode == "log":
+            if self.__graftAct is not None:
                 # step 1: count selected entries not belonging to the
                 #         current branch
                 otherBranches = 0
@@ -1069,14 +1173,26 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     if branch != self.__projectBranch:
                         otherBranches += 1
                 
-                # step 2: set the status of the graft button
-                self.graftButton.setEnabled(otherBranches > 0)
-            else:
-                self.graftButton.setEnabled(False)
+                # step 2: set the status of the graft action
+                self.__graftAct.setEnabled(otherBranches > 0)
+            
+            self.__tagAct.setEnabled(len(self.logTree.selectedItems()) == 1)
+            self.__switchAct.setEnabled(len(self.logTree.selectedItems()) == 1)
+            
+            if self.__lfPullAct is not None:
+                if self.vcs.isExtensionActive("largefiles"):
+                    self.__lfPullAct.setEnabled(bool(
+                        self.logTree.selectedItems()))
+                else:
+                    self.__lfPullAct.setEnabled(False)
+            
+            self.actionsButton.setEnabled(True)
+        else:
+            self.actionsButton.setEnabled(False)
     
     def __updateGui(self, itm):
         """
-        Private slot to update GUI elements except the diff and phase buttons.
+        Private slot to update GUI elements except tool menu actions.
         
         @param itm reference to the item the update should be based on
             (QTreeWidgetItem)
@@ -1106,8 +1222,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         """
         self.__updateGui(current)
         self.__updateDiffButtons()
-        self.__updatePhaseButton()
-        self.__updateGraftButton()
+        self.__updateToolMenuActions()
     
     @pyqtSlot()
     def on_logTree_itemSelectionChanged(self):
@@ -1118,8 +1233,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             self.__updateGui(self.logTree.selectedItems()[0])
         
         self.__updateDiffButtons()
-        self.__updatePhaseButton()
-        self.__updateGraftButton()
+        self.__updateToolMenuActions()
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -1239,10 +1353,10 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             closedBranch = branch + '--'
             
             txt = self.fieldCombo.currentText()
-            if txt == self.trUtf8("Author"):
+            if txt == self.tr("Author"):
                 fieldIndex = self.AuthorColumn
                 searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-            elif txt == self.trUtf8("Revision"):
+            elif txt == self.tr("Revision"):
                 fieldIndex = self.RevisionColumn
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):
@@ -1297,10 +1411,15 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         self.inputGroup.show()
         self.refreshButton.setEnabled(False)
         
-        self.__initData()
+        if self.initialCommandMode in ("incoming", "outgoing"):
+            self.nextButton.setEnabled(False)
+            self.limitSpinBox.setEnabled(False)
+        else:
+            self.nextButton.setEnabled(True)
+            self.limitSpinBox.setEnabled(True)
         
         self.commandMode = self.initialCommandMode
-        self.start(self.filename)
+        self.start(self.__filename, isFile=self.__isFile)
     
     def on_passwordCheckBox_toggled(self, isOn):
         """
@@ -1354,9 +1473,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
         super(HgLogBrowserDialog, self).keyPressEvent(evt)
     
     @pyqtSlot()
-    def on_phaseButton_clicked(self):
+    def __phaseActTriggered(self):
         """
-        Private slot to handle the Change Phase button.
+        Private slot to handle the Change Phase action.
         """
         currentPhase = self.logTree.selectedItems()[0].text(self.PhaseColumn)
         revs = []
@@ -1366,7 +1485,7 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                     itm.text(self.RevisionColumn).split(":")[0].strip())
         
         if not revs:
-            self.phaseButton.setEnabled(False)
+            self.__phaseAct.setEnabled(False)
             return
         
         if currentPhase == "draft":
@@ -1381,9 +1500,9 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
                 itm.setText(self.PhaseColumn, newPhase)
     
     @pyqtSlot()
-    def on_graftButton_clicked(self):
+    def __graftActTriggered(self):
         """
-        Private slot to handle the Copy Changesets button.
+        Private slot to handle the Copy Changesets action.
         """
         revs = []
         
@@ -1398,11 +1517,63 @@ class HgLogBrowserDialog(QDialog, Ui_HgLogBrowserDialog):
             if shouldReopen:
                 res = E5MessageBox.yesNo(
                     None,
-                    self.trUtf8("Copy Changesets"),
-                    self.trUtf8(
+                    self.tr("Copy Changesets"),
+                    self.tr(
                         """The project should be reread. Do this now?"""),
                     yesDefault=True)
                 if res:
                     e5App().getObject("Project").reopenProject()
-            else:
+                    return
+            
+            self.on_refreshButton_clicked()
+    
+    @pyqtSlot()
+    def __tagActTriggered(self):
+        """
+        Private slot to tag the selected revision.
+        """
+        if len(self.logTree.selectedItems()) == 1:
+            itm = self.logTree.selectedItems()[0]
+            rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+            tag = itm.text(self.TagsColumn).strip().split(", ", 1)[0]
+            res = self.vcs.vcsTag(self.repodir, revision=rev, tagName=tag)
+            if res:
                 self.on_refreshButton_clicked()
+    
+    @pyqtSlot()
+    def __switchActTriggered(self):
+        """
+        Private slot to switch the working directory to the
+        selected revision.
+        """
+        if len(self.logTree.selectedItems()) == 1:
+            itm = self.logTree.selectedItems()[0]
+            rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+            if rev:
+                shouldReopen = self.vcs.vcsUpdate(self.repodir, revision=rev)
+                if shouldReopen:
+                    res = E5MessageBox.yesNo(
+                        None,
+                        self.tr("Switch"),
+                        self.tr(
+                            """The project should be reread. Do this now?"""),
+                        yesDefault=True)
+                    if res:
+                        e5App().getObject("Project").reopenProject()
+                        return
+                
+                self.on_refreshButton_clicked()
+    
+    def __lfPullActTriggered(self):
+        """
+        Private slot to pull large files of selected revisions.
+        """
+        revs = []
+        for itm in self.logTree.selectedItems():
+            rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+            if rev:
+                revs.append(rev)
+        
+        if revs:
+            self.vcs.getExtensionObject("largefiles").hgLfPull(
+                self.repodir, revisions=revs)

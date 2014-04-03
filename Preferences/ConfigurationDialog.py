@@ -121,191 +121,191 @@ class ConfigurationWidget(QWidget):
                 # create the configuration page. This must have the method
                 # save to save the settings.
                 "applicationPage":
-                [self.trUtf8("Application"), "preferences-application.png",
+                [self.tr("Application"), "preferences-application.png",
                  "ApplicationPage", None, None],
                 "cooperationPage":
-                [self.trUtf8("Cooperation"), "preferences-cooperation.png",
+                [self.tr("Cooperation"), "preferences-cooperation.png",
                  "CooperationPage", None, None],
                 "corbaPage":
-                [self.trUtf8("CORBA"), "preferences-orbit.png",
+                [self.tr("CORBA"), "preferences-orbit.png",
                  "CorbaPage", None, None],
                 "emailPage":
-                [self.trUtf8("Email"), "preferences-mail_generic.png",
+                [self.tr("Email"), "preferences-mail_generic.png",
                  "EmailPage", None, None],
                 "graphicsPage":
-                [self.trUtf8("Graphics"), "preferences-graphics.png",
+                [self.tr("Graphics"), "preferences-graphics.png",
                  "GraphicsPage", None, None],
                 "iconsPage":
-                [self.trUtf8("Icons"), "preferences-icons.png",
+                [self.tr("Icons"), "preferences-icons.png",
                  "IconsPage", None, None],
                 "ircPage":
-                [self.trUtf8("IRC"), "irc.png",
+                [self.tr("IRC"), "irc.png",
                  "IrcPage", None, None],
                 "networkPage":
-                [self.trUtf8("Network"), "preferences-network.png",
+                [self.tr("Network"), "preferences-network.png",
                  "NetworkPage", None, None],
                 "notificationsPage":
-                [self.trUtf8("Notifications"),
+                [self.tr("Notifications"),
                  "preferences-notifications.png",
                  "NotificationsPage", None, None],
                 "pluginManagerPage":
-                [self.trUtf8("Plugin Manager"),
+                [self.tr("Plugin Manager"),
                  "preferences-pluginmanager.png",
                  "PluginManagerPage", None, None],
                 "printerPage":
-                [self.trUtf8("Printer"), "preferences-printer.png",
+                [self.tr("Printer"), "preferences-printer.png",
                  "PrinterPage", None, None],
                 "pythonPage":
-                [self.trUtf8("Python"), "preferences-python.png",
+                [self.tr("Python"), "preferences-python.png",
                  "PythonPage", None, None],
                 "qtPage":
-                [self.trUtf8("Qt"), "preferences-qtlogo.png",
+                [self.tr("Qt"), "preferences-qtlogo.png",
                  "QtPage", None, None],
                 "securityPage":
-                [self.trUtf8("Security"), "preferences-security.png",
+                [self.tr("Security"), "preferences-security.png",
                  "SecurityPage", None, None],
                 "shellPage":
-                [self.trUtf8("Shell"), "preferences-shell.png",
+                [self.tr("Shell"), "preferences-shell.png",
                  "ShellPage", None, None],
                 "tasksPage":
-                [self.trUtf8("Tasks"), "task.png",
+                [self.tr("Tasks"), "task.png",
                  "TasksPage", None, None],
                 "templatesPage":
-                [self.trUtf8("Templates"), "preferences-template.png",
+                [self.tr("Templates"), "preferences-template.png",
                  "TemplatesPage", None, None],
                 "trayStarterPage":
-                [self.trUtf8("Tray Starter"), "erict.png",
+                [self.tr("Tray Starter"), "erict.png",
                  "TrayStarterPage", None, None],
                 "vcsPage":
-                [self.trUtf8("Version Control Systems"),
+                [self.tr("Version Control Systems"),
                  "preferences-vcs.png",
                  "VcsPage", None, None],
                 
                 "0debuggerPage":
-                [self.trUtf8("Debugger"), "preferences-debugger.png",
+                [self.tr("Debugger"), "preferences-debugger.png",
                  None, None, None],
                 "debuggerGeneralPage":
-                [self.trUtf8("General"), "preferences-debugger.png",
+                [self.tr("General"), "preferences-debugger.png",
                  "DebuggerGeneralPage", "0debuggerPage", None],
                 "debuggerPythonPage":
-                [self.trUtf8("Python"), "preferences-pyDebugger.png",
+                [self.tr("Python"), "preferences-pyDebugger.png",
                  "DebuggerPythonPage", "0debuggerPage", None],
                 "debuggerPython3Page":
-                [self.trUtf8("Python3"), "preferences-pyDebugger.png",
+                [self.tr("Python3"), "preferences-pyDebugger.png",
                  "DebuggerPython3Page", "0debuggerPage", None],
                 "debuggerRubyPage":
-                [self.trUtf8("Ruby"), "preferences-rbDebugger.png",
+                [self.tr("Ruby"), "preferences-rbDebugger.png",
                  "DebuggerRubyPage", "0debuggerPage", None],
                 
                 "0editorPage":
-                [self.trUtf8("Editor"), "preferences-editor.png",
+                [self.tr("Editor"), "preferences-editor.png",
                  None, None, None],
                 "editorAPIsPage":
-                [self.trUtf8("APIs"), "preferences-api.png",
+                [self.tr("APIs"), "preferences-api.png",
                  "EditorAPIsPage", "0editorPage", None],
                 "editorAutocompletionPage":
-                [self.trUtf8("Autocompletion"),
+                [self.tr("Autocompletion"),
                  "preferences-autocompletion.png",
                  "EditorAutocompletionPage", "0editorPage", None],
                 "editorAutocompletionQScintillaPage":
-                [self.trUtf8("QScintilla"), "qscintilla.png",
+                [self.tr("QScintilla"), "qscintilla.png",
                  "EditorAutocompletionQScintillaPage",
                  "editorAutocompletionPage", None],
                 "editorCalltipsPage":
-                [self.trUtf8("Calltips"), "preferences-calltips.png",
+                [self.tr("Calltips"), "preferences-calltips.png",
                  "EditorCalltipsPage", "0editorPage", None],
                 "editorCalltipsQScintillaPage":
-                [self.trUtf8("QScintilla"), "qscintilla.png",
+                [self.tr("QScintilla"), "qscintilla.png",
                  "EditorCalltipsQScintillaPage", "editorCalltipsPage", None],
                 "editorGeneralPage":
-                [self.trUtf8("General"), "preferences-general.png",
+                [self.tr("General"), "preferences-general.png",
                  "EditorGeneralPage", "0editorPage", None],
                 "editorFilePage":
-                [self.trUtf8("Filehandling"),
+                [self.tr("Filehandling"),
                  "preferences-filehandling.png",
                  "EditorFilePage", "0editorPage", None],
                 "editorSearchPage":
-                [self.trUtf8("Searching"), "preferences-search.png",
+                [self.tr("Searching"), "preferences-search.png",
                  "EditorSearchPage", "0editorPage", None],
                 "editorSpellCheckingPage":
-                [self.trUtf8("Spell checking"),
+                [self.tr("Spell checking"),
                  "preferences-spellchecking.png",
                  "EditorSpellCheckingPage", "0editorPage", None],
                 "editorStylesPage":
-                [self.trUtf8("Style"), "preferences-styles.png",
+                [self.tr("Style"), "preferences-styles.png",
                  "EditorStylesPage", "0editorPage", None],
                 "editorSyntaxPage":
-                [self.trUtf8("Code Checkers"), "preferences-debugger.png",
+                [self.tr("Code Checkers"), "preferences-debugger.png",
                  "EditorSyntaxPage", "0editorPage", None],
                 "editorTypingPage":
-                [self.trUtf8("Typing"), "preferences-typing.png",
+                [self.tr("Typing"), "preferences-typing.png",
                  "EditorTypingPage", "0editorPage", None],
                 "editorExportersPage":
-                [self.trUtf8("Exporters"), "preferences-exporters.png",
+                [self.tr("Exporters"), "preferences-exporters.png",
                  "EditorExportersPage", "0editorPage", None],
                 
                 "1editorLexerPage":
-                [self.trUtf8("Highlighters"),
+                [self.tr("Highlighters"),
                  "preferences-highlighting-styles.png",
                  None, "0editorPage", None],
                 "editorHighlightersPage":
-                [self.trUtf8("Filetype Associations"),
+                [self.tr("Filetype Associations"),
                  "preferences-highlighter-association.png",
                  "EditorHighlightersPage", "1editorLexerPage", None],
                 "editorHighlightingStylesPage":
-                [self.trUtf8("Styles"),
+                [self.tr("Styles"),
                  "preferences-highlighting-styles.png",
                  "EditorHighlightingStylesPage", "1editorLexerPage", None],
                 "editorKeywordsPage":
-                [self.trUtf8("Keywords"), "preferences-keywords.png",
+                [self.tr("Keywords"), "preferences-keywords.png",
                  "EditorKeywordsPage", "1editorLexerPage", None],
                 "editorPropertiesPage":
-                [self.trUtf8("Properties"), "preferences-properties.png",
+                [self.tr("Properties"), "preferences-properties.png",
                  "EditorPropertiesPage", "1editorLexerPage", None],
                 
                 "0helpPage":
-                [self.trUtf8("Help"), "preferences-help.png",
+                [self.tr("Help"), "preferences-help.png",
                  None, None, None],
                 "helpAppearancePage":
-                [self.trUtf8("Appearance"), "preferences-styles.png",
+                [self.tr("Appearance"), "preferences-styles.png",
                  "HelpAppearancePage", "0helpPage", None],
                 "helpDocumentationPage":
-                [self.trUtf8("Help Documentation"),
+                [self.tr("Help Documentation"),
                  "preferences-helpdocumentation.png",
                  "HelpDocumentationPage", "0helpPage", None],
                 "helpViewersPage":
-                [self.trUtf8("Help Viewers"),
+                [self.tr("Help Viewers"),
                  "preferences-helpviewers.png",
                  "HelpViewersPage", "0helpPage", None],
                 "helpVirusTotalPage":
-                [self.trUtf8("VirusTotal Interface"), "virustotal.png",
+                [self.tr("VirusTotal Interface"), "virustotal.png",
                  "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage":
-                [self.trUtf8("eric5 Web Browser"), "ericWeb.png",
+                [self.tr("eric5 Web Browser"), "ericWeb.png",
                  "HelpWebBrowserPage", "0helpPage", None],
                 
                 "0projectPage":
-                [self.trUtf8("Project"), "preferences-project.png",
+                [self.tr("Project"), "preferences-project.png",
                  None, None, None],
                 "projectBrowserPage":
-                [self.trUtf8("Project Viewer"), "preferences-project.png",
+                [self.tr("Project Viewer"), "preferences-project.png",
                  "ProjectBrowserPage", "0projectPage", None],
                 "projectPage":
-                [self.trUtf8("Project"), "preferences-project.png",
+                [self.tr("Project"), "preferences-project.png",
                  "ProjectPage", "0projectPage", None],
                 "multiProjectPage":
-                [self.trUtf8("Multiproject"),
+                [self.tr("Multiproject"),
                  "preferences-multiproject.png",
                  "MultiProjectPage", "0projectPage", None],
                 
                 "0interfacePage":
-                [self.trUtf8("Interface"), "preferences-interface.png",
+                [self.tr("Interface"), "preferences-interface.png",
                  None, None, None],
                 "interfacePage":
-                [self.trUtf8("Interface"), "preferences-interface.png",
+                [self.tr("Interface"), "preferences-interface.png",
                  "InterfacePage", "0interfacePage", None],
                 "viewmanagerPage":
-                [self.trUtf8("Viewmanager"), "preferences-viewmanager.png",
+                [self.tr("Viewmanager"), "preferences-viewmanager.png",
                  "ViewmanagerPage", "0interfacePage", None],
             }
             
@@ -320,33 +320,33 @@ class ConfigurationWidget(QWidget):
                 # create the configuration page. This must have the method
                 # save to save the settings.
                 "interfacePage":
-                [self.trUtf8("Interface"), "preferences-interface.png",
+                [self.tr("Interface"), "preferences-interface.png",
                  "HelpInterfacePage", None, None],
                 "networkPage":
-                [self.trUtf8("Network"), "preferences-network.png",
+                [self.tr("Network"), "preferences-network.png",
                  "NetworkPage", None, None],
                 "printerPage":
-                [self.trUtf8("Printer"), "preferences-printer.png",
+                [self.tr("Printer"), "preferences-printer.png",
                  "PrinterPage", None, None],
                 "securityPage":
-                [self.trUtf8("Security"), "preferences-security.png",
+                [self.tr("Security"), "preferences-security.png",
                  "SecurityPage", None, None],
                 
                 "0helpPage":
-                [self.trUtf8("Help"), "preferences-help.png",
+                [self.tr("Help"), "preferences-help.png",
                  None, None, None],
                 "helpAppearancePage":
-                [self.trUtf8("Appearance"), "preferences-styles.png",
+                [self.tr("Appearance"), "preferences-styles.png",
                  "HelpAppearancePage", "0helpPage", None],
                 "helpDocumentationPage":
-                [self.trUtf8("Help Documentation"),
+                [self.tr("Help Documentation"),
                  "preferences-helpdocumentation.png",
                  "HelpDocumentationPage", "0helpPage", None],
                 "helpVirusTotalPage":
-                [self.trUtf8("VirusTotal Interface"), "virustotal.png",
+                [self.tr("VirusTotal Interface"), "virustotal.png",
                  "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage":
-                [self.trUtf8("eric5 Web Browser"), "ericWeb.png",
+                [self.tr("eric5 Web Browser"), "ericWeb.png",
                  "HelpWebBrowserPage", "0helpPage", None],
             }
         elif displayMode == ConfigurationWidget.TrayStarterMode:
@@ -358,7 +358,7 @@ class ConfigurationWidget(QWidget):
                 # create the configuration page. This must have the method
                 # save to save the settings.
                 "trayStarterPage":
-                [self.trUtf8("Tray Starter"), "erict.png",
+                [self.tr("Tray Starter"), "erict.png",
                  "TrayStarterPage", None, None],
             }
         else:
@@ -420,7 +420,7 @@ class ConfigurationWidget(QWidget):
         self.leftVBoxLayout.setSpacing(0)
         self.leftVBoxLayout.setObjectName("leftVBoxLayout")
         self.configListFilter = E5ClearableLineEdit(
-            self, self.trUtf8("Enter filter text..."))
+            self, self.tr("Enter filter text..."))
         self.configListFilter.setObjectName("configListFilter")
         self.leftVBoxLayout.addWidget(self.configListFilter)
         self.configList = QTreeWidget()
@@ -481,14 +481,14 @@ class ConfigurationWidget(QWidget):
         self.buttonBox.button(QDialogButtonBox.Reset).setEnabled(False)
         self.verticalLayout_2.addWidget(self.buttonBox)
 
-        self.setWindowTitle(self.trUtf8("Preferences"))
+        self.setWindowTitle(self.tr("Preferences"))
         
         self.configList.header().hide()
         self.configList.header().setSortIndicator(0, Qt.AscendingOrder)
         self.configList.setSortingEnabled(True)
         self.textLabel1.setText(
-            self.trUtf8("Please select an entry of the list \n"
-                        "to display the configuration page."))
+            self.tr("Please select an entry of the list \n"
+                    "to display the configuration page."))
         
         QMetaObject.connectSlotsByName(self)
         self.setTabOrder(self.configList, self.configStack)
@@ -560,9 +560,9 @@ class ConfigurationWidget(QWidget):
         except ImportError:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Configuration Page Error"),
-                self.trUtf8("""<p>The configuration page <b>{0}</b>"""
-                            """ could not be loaded.</p>""").format(name))
+                self.tr("Configuration Page Error"),
+                self.tr("""<p>The configuration page <b>{0}</b>"""
+                        """ could not be loaded.</p>""").format(name))
             return None
         
     def __showConfigurationPage(self, itm, column):
@@ -781,9 +781,10 @@ class ConfigurationDialog(QDialog):
         size = self.cw.size()
         self.layout.addWidget(self.cw)
         self.resize(size)
+        self.setWindowTitle(self.cw.windowTitle())
         
-        self.cw.accepted[()].connect(self.accept)
-        self.cw.rejected[()].connect(self.reject)
+        self.cw.accepted.connect(self.accept)
+        self.cw.rejected.connect(self.reject)
         self.cw.preferencesChanged.connect(self.__preferencesChanged)
         self.cw.masterPasswordChanged.connect(self.__masterPasswordChanged)
         
@@ -848,12 +849,13 @@ class ConfigurationWindow(E5MainWindow):
         size = self.cw.size()
         self.setCentralWidget(self.cw)
         self.resize(size)
+        self.setWindowTitle(self.cw.windowTitle())
         
         self.setStyle(Preferences.getUI("Style"),
                       Preferences.getUI("StyleSheet"))
         
-        self.cw.accepted[()].connect(self.accept)
-        self.cw.rejected[()].connect(self.close)
+        self.cw.accepted.connect(self.accept)
+        self.cw.rejected.connect(self.close)
         
     def showConfigurationPageByName(self, pageName):
         """

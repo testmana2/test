@@ -23,6 +23,7 @@ from .Ui_FindFileDialog import Ui_FindFileDialog
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class FindFileDialog(QDialog, Ui_FindFileDialog):
@@ -58,22 +59,24 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.setupUi(self)
         self.setWindowFlags(Qt.WindowFlags(Qt.Window))
         
+        self.dirSelectButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.__replaceMode = replaceMode
         
         self.stopButton = \
-            self.buttonBox.addButton(self.trUtf8("Stop"),
+            self.buttonBox.addButton(self.tr("Stop"),
                                      QDialogButtonBox.ActionRole)
         self.stopButton.setEnabled(False)
         
         self.findButton = \
-            self.buttonBox.addButton(self.trUtf8("Find"),
+            self.buttonBox.addButton(self.tr("Find"),
                                      QDialogButtonBox.ActionRole)
         self.findButton.setEnabled(False)
         self.findButton.setDefault(True)
         
         if self.__replaceMode:
             self.replaceButton.setEnabled(False)
-            self.setWindowTitle(self.trUtf8("Replace in Files"))
+            self.setWindowTitle(self.tr("Replace in Files"))
         else:
             self.replaceLabel.hide()
             self.replacetextCombo.hide()
@@ -101,11 +104,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.__section0Size = self.findList.header().sectionSize(0)
         self.findList.setExpandsOnDoubleClick(False)
         if self.__replaceMode:
-            font = self.findList.font()
-            if Utilities.isWindowsPlatform():
-                font.setFamily("Lucida Console")
-            else:
-                font.setFamily("Monospace")
+            font = Preferences.getEditorOtherFonts("MonospacedFont")
             self.findList.setFont(font)
 
         # Qt Designer form files
@@ -372,9 +371,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         except re.error as why:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Invalid search expression"),
-                self.trUtf8("""<p>The search expression is not valid.</p>"""
-                            """<p>Error: {0}</p>""").format(str(why)))
+                self.tr("Invalid search expression"),
+                self.tr("""<p>The search expression is not valid.</p>"""
+                        """<p>Error: {0}</p>""").format(str(why)))
             self.stopButton.setEnabled(False)
             self.findButton.setEnabled(True)
             self.findButton.setDefault(True)
@@ -421,8 +420,11 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.findList.setUpdatesEnabled(False)
         progress = 0
         breakSearch = False
+        occurrences = 0
+        fileOccurrences = 0
         for file in files:
             self.__lastFileItem = None
+            found = False
             if self.__cancelSearch or breakSearch:
                 break
             
@@ -450,6 +452,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 count += 1
                 contains = search.search(line)
                 if contains:
+                    occurrences += 1
+                    found = True
                     start = contains.start()
                     end = contains.end()
                     if self.__replaceMode:
@@ -476,6 +480,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 
                 QApplication.processEvents()
             
+            if found:
+                fileOccurrences += 1
             progress += 1
             self.findProgress.setValue(progress)
         
@@ -483,7 +489,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.findProgress.setMaximum(1)
             self.findProgress.setValue(1)
         
-        self.findProgressLabel.setPath("")
+        resultFormat = self.tr("{0} / {1}", "occurrences / files")
+        self.findProgressLabel.setPath(resultFormat.format(
+            self.tr("%n occurrence(s)", "", occurrences),
+            self.tr("%n file(s)", "", fileOccurrences)))
         
         self.findList.setUpdatesEnabled(True)
         self.findList.sortItems(self.findList.sortColumn(),
@@ -538,7 +547,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory"),
+            self.tr("Select directory"),
             self.dirCombo.currentText(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -608,8 +617,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 except (UnicodeError, IOError) as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Replace in Files"),
-                        self.trUtf8(
+                        self.tr("Replace in Files"),
+                        self.tr(
                             """<p>Could not read the file <b>{0}</b>."""
                             """ Skipping it.</p><p>Reason: {1}</p>""")
                         .format(fn, str(err))
@@ -623,8 +632,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 if origHash != hash:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Replace in Files"),
-                        self.trUtf8(
+                        self.tr("Replace in Files"),
+                        self.tr(
                             """<p>The current and the original hash of the"""
                             """ file <b>{0}</b> are different. Skipping it."""
                             """</p><p>Hash 1: {1}</p><p>Hash 2: {2}</p>""")
@@ -649,8 +658,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 except (IOError, Utilities.CodingError, UnicodeError) as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Replace in Files"),
-                        self.trUtf8(
+                        self.tr("Replace in Files"),
+                        self.tr(
                             """<p>Could not save the file <b>{0}</b>."""
                             """ Skipping it.</p><p>Reason: {1}</p>""")
                         .format(fn, str(err))
@@ -674,8 +683,8 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         menu = QMenu(self)
         
-        menu.addAction(self.trUtf8("Open"), self.__openFile)
-        menu.addAction(self.trUtf8("Copy Path to Clipboard"),
+        menu.addAction(self.tr("Open"), self.__openFile)
+        menu.addAction(self.tr("Copy Path to Clipboard"),
                        self.__copyToClipboard)
         
         menu.exec_(QCursor.pos())

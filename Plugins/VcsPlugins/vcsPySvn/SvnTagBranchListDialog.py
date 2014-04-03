@@ -69,7 +69,7 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         self.errorGroup.hide()
         
         if not tags:
-            self.setWindowTitle(self.trUtf8("Subversion Branches List"))
+            self.setWindowTitle(self.tr("Subversion Branches List"))
         self.activateWindow()
         QApplication.processEvents()
         
@@ -79,8 +79,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         if reposURL is None:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Subversion Error"),
-                self.trUtf8(
+                self.tr("Subversion Error"),
+                self.tr(
                     """The URL of the project repository could not be"""
                     """ retrieved from the working copy. The list operation"""
                     """ will be aborted"""))
@@ -93,8 +93,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
             if not rx_base.exactMatch(reposURL):
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Subversion Error"),
-                    self.trUtf8(
+                    self.tr("Subversion Error"),
+                    self.tr(
                         """The URL of the project repository has an"""
                         """ invalid format. The list operation will"""
                         """ be aborted"""))
@@ -109,9 +109,9 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         else:
             reposPath, ok = QInputDialog.getText(
                 self,
-                self.trUtf8("Subversion List"),
-                self.trUtf8("Enter the repository URL containing the"
-                            " tags or branches"),
+                self.tr("Subversion List"),
+                self.tr("Enter the repository URL containing the"
+                        " tags or branches"),
                 QLineEdit.Normal,
                 self.vcs.svnNormalizeURL(reposURL))
             if not ok:
@@ -120,8 +120,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
             if not reposPath:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Subversion List"),
-                    self.trUtf8(
+                    self.tr("Subversion List"),
+                    self.tr(
                         """The repository URL is empty. Aborting..."""))
                 self.close()
                 return False
@@ -153,8 +153,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
             res = False
         except AttributeError:
             self.__showError(
-                self.trUtf8("The installed version of PySvn should be"
-                            " 1.4.0 or better."))
+                self.tr("The installed version of PySvn should be"
+                        " 1.4.0 or better."))
             res = False
         locker.unlock()
         self.__finish()

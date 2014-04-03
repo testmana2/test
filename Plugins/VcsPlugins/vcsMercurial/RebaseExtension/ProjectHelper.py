@@ -34,46 +34,46 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgRebaseAct = E5Action(
-            self.trUtf8('Rebase Changesets'),
+            self.tr('Rebase Changesets'),
             UI.PixmapCache.getIcon("vcsRebase.png"),
-            self.trUtf8('Rebase Changesets'),
+            self.tr('Rebase Changesets'),
             0, 0, self, 'mercurial_rebase')
-        self.hgRebaseAct.setStatusTip(self.trUtf8(
+        self.hgRebaseAct.setStatusTip(self.tr(
             'Rebase changesets to another branch'
         ))
-        self.hgRebaseAct.setWhatsThis(self.trUtf8(
+        self.hgRebaseAct.setWhatsThis(self.tr(
             """<b>Rebase Changesets</b>"""
             """<p>This rebases changesets to another branch.</p>"""
         ))
-        self.hgRebaseAct.triggered[()].connect(self.__hgRebase)
+        self.hgRebaseAct.triggered.connect(self.__hgRebase)
         self.actions.append(self.hgRebaseAct)
         
         self.hgRebaseContinueAct = E5Action(
-            self.trUtf8('Continue Rebase Session'),
-            self.trUtf8('Continue Rebase Session'),
+            self.tr('Continue Rebase Session'),
+            self.tr('Continue Rebase Session'),
             0, 0, self, 'mercurial_rebase_continue')
-        self.hgRebaseContinueAct.setStatusTip(self.trUtf8(
+        self.hgRebaseContinueAct.setStatusTip(self.tr(
             'Continue the last rebase session after repair'
         ))
-        self.hgRebaseContinueAct.setWhatsThis(self.trUtf8(
+        self.hgRebaseContinueAct.setWhatsThis(self.tr(
             """<b>Continue Rebase Session</b>"""
             """<p>This continues the last rebase session after repair.</p>"""
         ))
-        self.hgRebaseContinueAct.triggered[()].connect(self.__hgRebaseContinue)
+        self.hgRebaseContinueAct.triggered.connect(self.__hgRebaseContinue)
         self.actions.append(self.hgRebaseContinueAct)
         
         self.hgRebaseAbortAct = E5Action(
-            self.trUtf8('Abort Rebase Session'),
-            self.trUtf8('Abort Rebase Session'),
+            self.tr('Abort Rebase Session'),
+            self.tr('Abort Rebase Session'),
             0, 0, self, 'mercurial_rebase_abort')
-        self.hgRebaseAbortAct.setStatusTip(self.trUtf8(
+        self.hgRebaseAbortAct.setStatusTip(self.tr(
             'Abort the last rebase session'
         ))
-        self.hgRebaseAbortAct.setWhatsThis(self.trUtf8(
+        self.hgRebaseAbortAct.setWhatsThis(self.tr(
             """<b>Abort Rebase Session</b>"""
             """<p>This aborts the last rebase session.</p>"""
         ))
-        self.hgRebaseAbortAct.triggered[()].connect(self.__hgRebaseAbort)
+        self.hgRebaseAbortAct.triggered.connect(self.__hgRebaseAbort)
         self.actions.append(self.hgRebaseAbortAct)
     
     def initMenu(self, mainMenu):
@@ -99,7 +99,7 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         
         @return title of the menu (string)
         """
-        return self.trUtf8("Rebase")
+        return self.tr("Rebase")
     
     def __hgRebase(self):
         """
@@ -110,8 +110,8 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Rebase Changesets"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Rebase Changesets"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -125,8 +125,8 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Rebase Changesets (Continue)"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Rebase Changesets (Continue)"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()
@@ -140,8 +140,8 @@ class RebaseProjectHelper(HgExtensionProjectHelper):
         if shouldReopen:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Rebase Changesets (Abort)"),
-                self.trUtf8("""The project should be reread. Do this now?"""),
+                self.tr("Rebase Changesets (Abort)"),
+                self.tr("""The project should be reread. Do this now?"""),
                 yesDefault=True)
             if res:
                 self.project.reopenProject()

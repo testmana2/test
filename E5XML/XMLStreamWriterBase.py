@@ -9,8 +9,8 @@ Module implementing a base class for all of eric5s XML stream writers.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import sys

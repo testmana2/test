@@ -43,7 +43,7 @@ class HelpIndexWidget(QWidget):
         self.__index = None
         
         self.__layout = QVBoxLayout(self)
-        label = QLabel(self.trUtf8("&Look for:"))
+        label = QLabel(self.tr("&Look for:"))
         self.__layout.addWidget(label)
         
         self.__searchEdit = QLineEdit()
@@ -142,8 +142,8 @@ class HelpIndexWidget(QWidget):
             idx = self.__index.indexAt(event.pos())
             if idx.isValid():
                 menu = QMenu()
-                curTab = menu.addAction(self.trUtf8("Open Link"))
-                newTab = menu.addAction(self.trUtf8("Open Link in New Tab"))
+                curTab = menu.addAction(self.tr("Open Link"))
+                newTab = menu.addAction(self.tr("Open Link in New Tab"))
                 menu.move(self.__index.mapToGlobal(event.pos()))
                 
                 act = menu.exec_()

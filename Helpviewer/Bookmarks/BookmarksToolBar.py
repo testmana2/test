@@ -87,26 +87,26 @@ class BookmarksToolBar(E5ModelToolBar):
             
             if act.menu() is None:
                 menuAction = menu.addAction(
-                    self.trUtf8("&Open"), self.__openBookmark)
+                    self.tr("&Open"), self.__openBookmark)
                 menuAction.setData(v)
                 menuAction = menu.addAction(
-                    self.trUtf8("Open in New &Tab\tCtrl+LMB"),
+                    self.tr("Open in New &Tab\tCtrl+LMB"),
                     self.__openBookmarkInNewTab)
                 menuAction.setData(v)
                 menu.addSeparator()
             
             menuAction = menu.addAction(
-                self.trUtf8("&Remove"), self.__removeBookmark)
+                self.tr("&Remove"), self.__removeBookmark)
             menuAction.setData(v)
             menu.addSeparator()
             
             menuAction = menu.addAction(
-                self.trUtf8("&Properties..."), self.__edit)
+                self.tr("&Properties..."), self.__edit)
             menuAction.setData(v)
             menu.addSeparator()
         
-        menu.addAction(self.trUtf8("Add &Bookmark..."), self.__newBookmark)
-        menu.addAction(self.trUtf8("Add &Folder..."), self.__newFolder)
+        menu.addAction(self.tr("Add &Bookmark..."), self.__newBookmark)
+        menu.addAction(self.tr("Add &Folder..."), self.__newFolder)
         
         menu.exec_(QCursor.pos())
     

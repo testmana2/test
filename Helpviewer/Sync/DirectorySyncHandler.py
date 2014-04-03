@@ -72,7 +72,7 @@ class DirectorySyncHandler(SyncHandler):
                 os.makedirs(Preferences.getHelp("SyncDirectoryPath"))
             except OSError as err:
                 self.syncError.emit(
-                    self.trUtf8("Error creating the shared directory.\n{0}")
+                    self.tr("Error creating the shared directory.\n{0}")
                     .format(str(err)))
                 return
         
@@ -98,7 +98,7 @@ class DirectorySyncHandler(SyncHandler):
         except IOError as err:
             self.syncStatus.emit(
                 type_,
-                self.trUtf8("Cannot read remote file.\n{0}").format(str(err)))
+                self.tr("Cannot read remote file.\n{0}").format(str(err)))
             self.syncFinished.emit(type_, False, True)
             return
         
@@ -133,7 +133,7 @@ class DirectorySyncHandler(SyncHandler):
             except IOError as err:
                 self.syncStatus.emit(
                     type_,
-                    self.trUtf8("Cannot write remote file.\n{0}").format(
+                    self.tr("Cannot write remote file.\n{0}").format(
                         str(err)))
                 self.syncFinished.emit(type_, False, False)
                 return
@@ -216,7 +216,7 @@ class DirectorySyncHandler(SyncHandler):
                 Helpviewer.HelpWindow.HelpWindow.speedDial().getFileName())
         
         self.__forceUpload = False
-        self.syncMessage.emit(self.trUtf8("Synchronization finished"))
+        self.syncMessage.emit(self.tr("Synchronization finished"))
     
     def __syncFile(self, type_, fileName):
         """

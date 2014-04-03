@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
@@ -31,6 +32,8 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         super(MultiProjectPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("MultiProjectPage")
+        
+        self.workspaceButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         # set initial values
         self.openMasterAutomaticallyCheckBox.setChecked(
@@ -71,7 +74,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             default = Utilities.getHomeDir()
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Workspace Directory"),
+            self.tr("Select Workspace Directory"),
             default,
             E5FileDialog.Options(0))
         

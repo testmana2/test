@@ -40,9 +40,9 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
         if showMode:
             self.icon.hide()
             self.label.hide()
-            self.deleteButton.setText(self.trUtf8("Delete"))
-            self.keepButton.setText(self.trUtf8("Close"))
-            self.setWindowTitle(self.trUtf8("Error Log"))
+            self.deleteButton.setText(self.tr("Delete"))
+            self.keepButton.setText(self.tr("Close"))
+            self.setWindowTitle(self.tr("Error Log"))
         
         self.__ui = parent
         self.__logFile = logFile

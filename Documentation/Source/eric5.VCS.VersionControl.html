@@ -193,6 +193,9 @@ QObject
 <td><a href="#VersionControl.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory in the vcs.</td>
 </tr><tr>
+<td><a href="#VersionControl.vcsLogBrowser">vcsLogBrowser</a></td>
+<td>Public method used to view the log of a file/directory in the vcs with a log browser dialog.</td>
+</tr><tr>
 <td><a href="#VersionControl.vcsMerge">vcsMerge</a></td>
 <td>Public method used to merge a tag/branch into the local project.</td>
 </tr><tr>
@@ -237,6 +240,9 @@ QObject
 </tr><tr>
 <td><a href="#VersionControl.vcsStatus">vcsStatus</a></td>
 <td>Public method used to view the status of a file/directory in the vcs.</td>
+</tr><tr>
+<td><a href="#VersionControl.vcsSupportCommandOptions">vcsSupportCommandOptions</a></td>
+<td>Public method to signal the support of user settable command options.</td>
 </tr><tr>
 <td><a href="#VersionControl.vcsSwitch">vcsSwitch</a></td>
 <td>Public method used to switch a directory to a different tag/branch.</td>
@@ -899,6 +905,27 @@ file/directory name to show the log for (string)
 to indicate that this method must be
             implemented by a subclass
 </dd>
+</dl><a NAME="VersionControl.vcsLogBrowser" ID="VersionControl.vcsLogBrowser"></a>
+<h4>VersionControl.vcsLogBrowser</h4>
+<b>vcsLogBrowser</b>(<i>name, isFile=False</i>)
+<p>
+        Public method used to view the log of a file/directory in the vcs
+        with a log browser dialog.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to show the log for (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+to indicate that this method must be
+            implemented by a subclass
+</dd>
 </dl><a NAME="VersionControl.vcsMerge" ID="VersionControl.vcsMerge"></a>
 <h4>VersionControl.vcsMerge</h4>
 <b>vcsMerge</b>(<i>name</i>)
@@ -1160,6 +1187,17 @@ file/directory name to show the status for (string)
 <dd>
 to indicate that this method must be
             implemented by a subclass
+</dd>
+</dl><a NAME="VersionControl.vcsSupportCommandOptions" ID="VersionControl.vcsSupportCommandOptions"></a>
+<h4>VersionControl.vcsSupportCommandOptions</h4>
+<b>vcsSupportCommandOptions</b>(<i></i>)
+<p>
+        Public method to signal the support of user settable command options.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the support  of user settable command options
+            (boolean)
 </dd>
 </dl><a NAME="VersionControl.vcsSwitch" ID="VersionControl.vcsSwitch"></a>
 <h4>VersionControl.vcsSwitch</h4>

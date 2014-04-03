@@ -42,16 +42,19 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
         if mode == self.MOVE_MODE:
             self.nameEdit.hide()
             self.nameCombo.addItems([""] + sorted(bookmarksList))
-            self.setWindowTitle(self.trUtf8("Move Bookmark"))
+            self.setWindowTitle(self.tr("Move Bookmark"))
         else:
             self.nameCombo.hide()
-            self.setWindowTitle(self.trUtf8("Define Bookmark"))
+            self.setWindowTitle(self.tr("Define Bookmark"))
         
         self.__bookmarksList = bookmarksList[:]
         
         self.tagCombo.addItems(sorted(tagsList))
         self.branchCombo.addItems(["default"] + sorted(branchesList))
         self.bookmarkCombo.addItems(sorted(bookmarksList))
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """
@@ -189,9 +192,9 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
             (string, string)
         """
         if self.numberButton.isChecked():
-            rev = str(self.numberSpinBox.value())
+            rev = "rev({0})".format(self.numberSpinBox.value())
         elif self.idButton.isChecked():
-            rev = self.idEdit.text()
+            rev = "id({0})".format(self.idEdit.text())
         elif self.tagButton.isChecked():
             rev = self.tagCombo.currentText()
         elif self.branchButton.isChecked():
@@ -202,8 +205,8 @@ class HgBookmarkDialog(QDialog, Ui_HgBookmarkDialog):
             rev = ""
         
         if self.__mode == self.MOVE_MODE:
-            name = self.nameCombo.currentText()
+            name = self.nameCombo.currentText().replace(" ", "_")
         else:
-            name = self.nameEdit.text()
+            name = self.nameEdit.text().replace(" ", "_")
         
         return rev, name

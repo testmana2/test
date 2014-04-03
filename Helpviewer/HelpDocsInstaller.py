@@ -149,7 +149,7 @@ class HelpDocsInstaller(QThread):
                 
                 if not engine.registerDocumentation(fi.absoluteFilePath()):
                     self.errorMessage.emit(
-                        self.trUtf8(
+                        self.tr(
                             """<p>The file <b>{0}</b> could not be"""
                             """ registered. <br/>Reason: {1}</p>""")
                         .format(fi.absoluteFilePath, engine.error())
@@ -210,7 +210,7 @@ class HelpDocsInstaller(QThread):
                 
                 if not engine.registerDocumentation(fi.absoluteFilePath()):
                     self.errorMessage.emit(
-                        self.trUtf8(
+                        self.tr(
                             """<p>The file <b>{0}</b> could not be"""
                             """ registered. <br/>Reason: {1}</p>""")
                         .format(fi.absoluteFilePath, engine.error())

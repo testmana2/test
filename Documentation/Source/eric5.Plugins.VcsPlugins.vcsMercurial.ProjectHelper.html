@@ -60,6 +60,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__init__">HgProjectHelper</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__checkActions">__checkActions</a></td>
+<td>Private slot to set the enabled status of actions.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgAddSubrepository">__hgAddSubrepository</a></td>
 <td>Private slot used to add a sub-repository.</td>
 </tr><tr>
@@ -123,17 +126,11 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgIdentify">__hgIdentify</a></td>
 <td>Private slot used to identify the project directory.</td>
 </tr><tr>
-<td><a href="#HgProjectHelper.__hgIdentifyBundle">__hgIdentifyBundle</a></td>
-<td>Private slot used to identify a changegroup file.</td>
-</tr><tr>
 <td><a href="#HgProjectHelper.__hgImport">__hgImport</a></td>
 <td>Private slot used to import a patch file.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgIncoming">__hgIncoming</a></td>
 <td>Private slot used to show the log of changes coming into the repository.</td>
-</tr><tr>
-<td><a href="#HgProjectHelper.__hgLogBrowser">__hgLogBrowser</a></td>
-<td>Private slot used to browse the log of the current project.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgOutgoing">__hgOutgoing</a></td>
 <td>Private slot used to show the log of changes going out of the repository.</td>
@@ -219,6 +216,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.setObjects">setObjects</a></td>
 <td>Public method to set references to the vcs and project objects.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.showMenu">showMenu</a></td>
+<td>Public slot called before the vcs menu is shown.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.shutdown">shutdown</a></td>
 <td>Public method to perform shutdown actions.</td>
 </tr>
@@ -246,7 +246,12 @@ parent widget (QWidget)
 <dd>
 name of this object (string)
 </dd>
-</dl><a NAME="HgProjectHelper.__hgAddSubrepository" ID="HgProjectHelper.__hgAddSubrepository"></a>
+</dl><a NAME="HgProjectHelper.__checkActions" ID="HgProjectHelper.__checkActions"></a>
+<h4>HgProjectHelper.__checkActions</h4>
+<b>__checkActions</b>(<i></i>)
+<p>
+        Private slot to set the enabled status of actions.
+</p><a NAME="HgProjectHelper.__hgAddSubrepository" ID="HgProjectHelper.__hgAddSubrepository"></a>
 <h4>HgProjectHelper.__hgAddSubrepository</h4>
 <b>__hgAddSubrepository</b>(<i></i>)
 <p>
@@ -352,11 +357,6 @@ name of this object (string)
 <b>__hgIdentify</b>(<i></i>)
 <p>
         Private slot used to identify the project directory.
-</p><a NAME="HgProjectHelper.__hgIdentifyBundle" ID="HgProjectHelper.__hgIdentifyBundle"></a>
-<h4>HgProjectHelper.__hgIdentifyBundle</h4>
-<b>__hgIdentifyBundle</b>(<i></i>)
-<p>
-        Private slot used to identify a changegroup file.
 </p><a NAME="HgProjectHelper.__hgImport" ID="HgProjectHelper.__hgImport"></a>
 <h4>HgProjectHelper.__hgImport</h4>
 <b>__hgImport</b>(<i></i>)
@@ -368,11 +368,6 @@ name of this object (string)
 <p>
         Private slot used to show the log of changes coming into the
         repository.
-</p><a NAME="HgProjectHelper.__hgLogBrowser" ID="HgProjectHelper.__hgLogBrowser"></a>
-<h4>HgProjectHelper.__hgLogBrowser</h4>
-<b>__hgLogBrowser</b>(<i></i>)
-<p>
-        Private slot used to browse the log of the current project.
 </p><a NAME="HgProjectHelper.__hgOutgoing" ID="HgProjectHelper.__hgOutgoing"></a>
 <h4>HgProjectHelper.__hgOutgoing</h4>
 <b>__hgOutgoing</b>(<i></i>)
@@ -538,7 +533,12 @@ reference to the vcs object
 <dd>
 reference to the project object
 </dd>
-</dl><a NAME="HgProjectHelper.shutdown" ID="HgProjectHelper.shutdown"></a>
+</dl><a NAME="HgProjectHelper.showMenu" ID="HgProjectHelper.showMenu"></a>
+<h4>HgProjectHelper.showMenu</h4>
+<b>showMenu</b>(<i></i>)
+<p>
+        Public slot called before the vcs menu is shown.
+</p><a NAME="HgProjectHelper.shutdown" ID="HgProjectHelper.shutdown"></a>
 <h4>HgProjectHelper.shutdown</h4>
 <b>shutdown</b>(<i></i>)
 <p>

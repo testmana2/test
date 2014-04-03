@@ -44,7 +44,7 @@ class ExporterBase(QObject):
         filter_ += QApplication.translate('Exporter', "All Files (*)")
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.editor,
-            self.trUtf8("Export source"),
+            self.tr("Export source"),
             "",
             filter_,
             "",
@@ -59,9 +59,9 @@ class ExporterBase(QObject):
             if QFileInfo(fn).exists():
                 res = E5MessageBox.yesNo(
                     self.editor,
-                    self.trUtf8("Export source"),
-                    self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fn),
+                    self.tr("Export source"),
+                    self.tr("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fn),
                     icon=E5MessageBox.Warning)
                 if not res:
                     return ""

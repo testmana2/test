@@ -36,6 +36,9 @@ class ZoomDialog(QDialog, Ui_ZoomDialog):
         self.zoomSpinBox.setValue(zoom)
         self.zoomSpinBox.selectAll()
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getZoomSize(self):
         """
         Public method to retrieve the zoom size.

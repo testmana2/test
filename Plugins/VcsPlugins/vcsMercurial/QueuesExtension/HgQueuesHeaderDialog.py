@@ -9,8 +9,8 @@ Module implementing a dialog to show the commit message of the current patch.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -21,8 +21,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 from E5Gui import E5MessageBox
 
 from .Ui_HgQueuesHeaderDialog import Ui_HgQueuesHeaderDialog
-
-import Preferences
 
 
 class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
@@ -89,13 +87,9 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('qheader')
+        args = self.vcs.initCommand("qheader")
         
         if self.__hgClient:
-            self.inputGroup.setEnabled(False)
-            self.inputGroup.hide()
-            
             out, err = self.__hgClient.runcommand(
                 args, output=self.__showOutput, error=self.__showError)
             if err:
@@ -112,8 +106,8 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
             if not procStarted:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -169,8 +163,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showOutput(s)
     
     def __showOutput(self, out):
@@ -190,8 +183,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):
@@ -200,5 +192,5 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         
         @param out error to be shown (string)
         """
-        self.messageEdit.appendPlainText(self.trUtf8("Error: "))
+        self.messageEdit.appendPlainText(self.tr("Error: "))
         self.messageEdit.appendPlainText(out)

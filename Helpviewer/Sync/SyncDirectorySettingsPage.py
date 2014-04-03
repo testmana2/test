@@ -18,6 +18,7 @@ from .Ui_SyncDirectorySettingsPage import Ui_SyncDirectorySettingsPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
@@ -32,6 +33,8 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         """
         super(SyncDirectorySettingsPage, self).__init__(parent)
         self.setupUi(self)
+        
+        self.directoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.directoryEdit.setText(Preferences.getHelp("SyncDirectoryPath"))
         
@@ -67,7 +70,7 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Shared Directory"),
+            self.tr("Shared Directory"),
             self.directoryEdit.text(),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         

@@ -93,7 +93,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
                 self.__findBackwards,
                 self.wrapCheckBox.isChecked(),
                 False):
-            self.infoLabel.setText(self.trUtf8("Expression was not found."))
+            self.infoLabel.setText(self.tr("Expression was not found."))
             self.__setFindtextComboBackground(True)
     
     @pyqtSlot(bool)

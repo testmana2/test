@@ -52,7 +52,7 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         self.saveButton.setIcon(UI.PixmapCache.getIcon("fileSave.png"))
         
         self.__headerItem = QTreeWidgetItem(
-            ["", self.trUtf8("From"), self.trUtf8("To")])
+            ["", self.tr("From"), self.tr("To")])
         self.__headerItem.setIcon(0, UI.PixmapCache.getIcon("callReturn.png"))
         self.callTrace.setHeaderItem(self.__headerItem)
         
@@ -122,9 +122,9 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
         if self.callTrace.topLevelItemCount() > 0:
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Save Call Trace Info"),
+                self.tr("Save Call Trace Info"),
                 "",
-                self.trUtf8("Text Files (*.txt);;All Files (*)"),
+                self.tr("Text Files (*.txt);;All Files (*)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             if fname:
@@ -136,9 +136,9 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
                 if QFileInfo(fname).exists():
                     res = E5MessageBox.yesNo(
                         self,
-                        self.trUtf8("Save Call Trace Info"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                    " Overwrite it?</p>").format(fname),
+                        self.tr("Save Call Trace Info"),
+                        self.tr("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fname),
                         icon=E5MessageBox.Warning)
                     if not res:
                         return
@@ -161,10 +161,10 @@ class CallTraceViewer(QWidget, Ui_CallTraceViewer):
                 except IOError as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Error saving Call Trace Info"),
-                        self.trUtf8("""<p>The call trace info could not"""
-                                    """ be written to <b>{0}</b></p>"""
-                                    """<p>Reason: {1}</p>""")
+                        self.tr("Error saving Call Trace Info"),
+                        self.tr("""<p>The call trace info could not"""
+                                """ be written to <b>{0}</b></p>"""
+                                """<p>Reason: {1}</p>""")
                         .format(fname, str(err)))
     
     @pyqtSlot(QTreeWidgetItem, int)

@@ -145,6 +145,7 @@ E5ArrowItem QAbstractGraphicsShapeItem
 E5ClearableComboBox E5ComboBox
 E5ClearableLineEdit E5LineEdit
 E5ClickableLabel QLabel
+E5ClickableLed E5Led
 E5ComboBox QComboBox
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
@@ -161,6 +162,7 @@ E5LineEditButton QAbstractButton
 E5LineEditSideWidget QWidget
 E5ListView QListView
 E5MainWindow QMainWindow
+E5MapWidget QWidget
 E5MessageBox QMessageBox
 E5MessageBoxWizard QObject
 E5MessageBoxWizardDialog QDialog Ui_E5MessageBoxWizardDialog
@@ -210,6 +212,7 @@ EditorGeneralPage ConfigurationPageBase Ui_EditorGeneralPage
 EditorHighlightersPage ConfigurationPageBase Ui_EditorHighlightersPage
 EditorHighlightingStylesPage ConfigurationPageBase Ui_EditorHighlightingStylesPage
 EditorKeywordsPage ConfigurationPageBase Ui_EditorKeywordsPage
+EditorMarkerMap E5MapWidget
 EditorPropertiesPage ConfigurationPageBase Ui_EditorPropertiesPage
 EditorSearchPage ConfigurationPageBase Ui_EditorSearchPage
 EditorSpellCheckingPage ConfigurationPageBase Ui_EditorSpellCheckingPage
@@ -303,6 +306,7 @@ HgBookmarkDialog QDialog Ui_HgBookmarkDialog
 HgBookmarkRenameDialog QDialog Ui_HgBookmarkRenameDialog
 HgBookmarksInOutDialog QDialog Ui_HgBookmarksInOutDialog
 HgBookmarksListDialog QDialog Ui_HgBookmarksListDialog
+HgBranchInputDialog QDialog Ui_HgBranchInputDialog
 HgBundleDialog QDialog Ui_HgBundleDialog
 HgClient QObject
 HgClientPromptDialog QDialog Ui_HgClientPromptDialog
@@ -313,13 +317,14 @@ HgDialog QDialog Ui_HgDialog
 HgDiffDialog QWidget Ui_HgDiffDialog
 HgExportDialog QDialog Ui_HgExportDialog
 HgExtension QObject
+HgExtensionProjectBrowserHelper QObject
 HgExtensionProjectHelper QObject
 HgFetchDialog QDialog Ui_HgFetchDialog
 HgGpgSignDialog QDialog Ui_HgGpgSignDialog
 HgGpgSignaturesDialog QDialog Ui_HgGpgSignaturesDialog
 HgGraftDialog QDialog Ui_HgGraftDialog
 HgImportDialog QDialog Ui_HgImportDialog
-HgLogBrowserDialog QDialog Ui_HgLogBrowserDialog
+HgLogBrowserDialog QWidget Ui_HgLogBrowserDialog
 HgLogDialog QWidget Ui_HgLogDialog
 HgMergeDialog QDialog Ui_HgMergeDialog
 HgMultiRevisionSelectionDialog QDialog Ui_HgMultiRevisionSelectionDialog
@@ -341,14 +346,20 @@ HgQueuesQueueManagementDialog QDialog Ui_HgQueuesQueueManagementDialog
 HgQueuesRenamePatchDialog QDialog Ui_HgQueuesRenamePatchDialog
 HgRebaseDialog QDialog Ui_HgRebaseDialog
 HgRemoveSubrepositoriesDialog QDialog Ui_HgRemoveSubrepositoriesDialog
+HgRepoConfigDataDialog QDialog Ui_HgRepoConfigDataDialog
 HgRevisionSelectionDialog QDialog Ui_HgRevisionSelectionDialog
 HgRevisionsSelectionDialog QDialog Ui_HgRevisionsSelectionDialog
 HgServeDialog E5MainWindow
+HgShelveBrowserDialog QWidget Ui_HgShelveBrowserDialog
+HgShelveDataDialog QDialog Ui_HgShelveDataDialog
+HgShelvesSelectionDialog QDialog Ui_HgShelvesSelectionDialog
 HgStatusDialog QWidget Ui_HgStatusDialog
 HgStatusMonitorThread VcsStatusMonitorThread
 HgSummaryDialog QDialog Ui_HgSummaryDialog
 HgTagBranchListDialog QDialog Ui_HgTagBranchListDialog
 HgTagDialog QDialog Ui_HgTagDialog
+HgUnshelveDataDialog QDialog Ui_HgUnshelveDataDialog
+HgUserConfigDataDialog QDialog Ui_HgUserConfigDataDialog
 HighlightingStylesReader XMLStreamReaderBase
 HighlightingStylesWriter XMLStreamWriterBase
 HistoryCompleter QCompleter
@@ -396,6 +407,9 @@ IrcUserItem QListWidgetItem
 IrcWidget QWidget Ui_IrcWidget
 JavaScriptEricObject QObject
 JavaScriptExternalObject QObject
+Largefiles HgExtension
+LargefilesProjectBrowserHelper HgExtensionProjectBrowserHelper
+LargefilesProjectHelper HgExtensionProjectHelper
 LateFutureImport Message
 LexerAssociationDialog QDialog Ui_LexerAssociationDialog
 LexerBash Lexer QsciLexerBash
@@ -431,12 +445,13 @@ LexerTeX Lexer QsciLexerTeX
 LexerVHDL Lexer QsciLexerVHDL
 LexerXML Lexer QsciLexerXML
 LexerYAML Lexer QsciLexerYAML
+LfConvertDataDialog QDialog Ui_LfConvertDataDialog
+LfRevisionsInputDialog QDialog Ui_LfRevisionsInputDialog
 Listspace QSplitter ViewManager
 LogViewer QWidget
 LogViewerEdit QTextEdit
 MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
-MercurialUserDataDialog QDialog Ui_MercurialUserDataDialog
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
 MiniEditor E5MainWindow
@@ -446,7 +461,7 @@ ModuleItem UMLItem
 ModuleModel UMLModel
 ModuleScope Scope
 MultiProject QObject
-MultiProjectBrowser QListWidget
+MultiProjectBrowser QTreeWidget
 MultiProjectPage ConfigurationPageBase Ui_MultiProjectPage
 MultiProjectReader XMLStreamReaderBase
 MultiProjectWriter XMLStreamWriterBase
@@ -595,6 +610,9 @@ Shell QsciScintillaCompat
 ShellAssembly QWidget
 ShellHistoryDialog QDialog Ui_ShellHistoryDialog
 ShellPage ConfigurationPageBase Ui_ShellPage
+Shelve HgExtension
+ShelveProjectBrowserHelper HgExtensionProjectBrowserHelper
+ShelveProjectHelper HgExtensionProjectHelper
 ShortcutDialog QDialog Ui_ShortcutDialog
 ShortcutsDialog QDialog Ui_ShortcutsDialog
 ShortcutsReader XMLStreamReaderBase
@@ -626,7 +644,7 @@ StackedUrlBar QStackedWidget
 StackedWidget QStackedWidget
 StandardReport BaseReport
 StartDialog QDialog
-StatusMonitorLed E5Led
+StatusMonitorLed E5ClickableLed
 Subversion VersionControl
 SubversionPage ConfigurationPageBase Ui_SubversionPage
 SvgDiagram E5MainWindow
@@ -638,7 +656,7 @@ SvnCopyDialog QDialog Ui_SvnCopyDialog
 SvnDialog QDialog Ui_SvnDialog
 SvnDiffDialog QWidget Ui_SvnDiffDialog
 SvnInfoDialog QDialog SvnDialogMixin Ui_VcsRepositoryInfoDialog
-SvnLogBrowserDialog QDialog Ui_SvnLogBrowserDialog
+SvnLogBrowserDialog QWidget Ui_SvnLogBrowserDialog
 SvnLogDialog QWidget Ui_SvnLogDialog
 SvnLoginDialog QDialog Ui_SvnLoginDialog
 SvnMergeDialog QDialog Ui_SvnMergeDialog

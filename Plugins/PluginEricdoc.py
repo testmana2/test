@@ -27,7 +27,7 @@ name = "Ericdoc Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "EricdocPlugin"
 packageName = "__core__"
 shortDescription = "Show the Ericdoc dialogs."
@@ -130,16 +130,16 @@ class EricdocPlugin(QObject):
         if menu:
             self.__projectAct = \
                 E5Action(
-                    self.trUtf8('Generate documentation (eric5_doc)'),
-                    self.trUtf8('Generate &documentation (eric5_doc)'), 0, 0,
+                    self.tr('Generate documentation (eric5_doc)'),
+                    self.tr('Generate &documentation (eric5_doc)'), 0, 0,
                     self, 'doc_eric5_doc')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Generate API documentation using eric5_doc'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+                self.tr('Generate API documentation using eric5_doc'))
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Generate documentation</b>"""
                 """<p>Generate API documentation using eric5_doc.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__doEricdoc)
+            self.__projectAct.triggered.connect(self.__doEricdoc)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         

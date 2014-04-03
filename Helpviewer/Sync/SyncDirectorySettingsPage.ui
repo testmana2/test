@@ -41,12 +41,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="directoryButton">
+       <widget class="QToolButton" name="directoryButton">
         <property name="toolTip">
          <string>Select the shared directory via a directory selection dialog</string>
-        </property>
-        <property name="text">
-         <string>...</string>
         </property>
        </widget>
       </item>

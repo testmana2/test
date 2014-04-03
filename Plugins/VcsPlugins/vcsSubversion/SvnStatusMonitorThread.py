@@ -9,8 +9,8 @@ Module implementing the VCS status monitor thread class for Subversion.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import QRegExp, QProcess
@@ -115,7 +115,7 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
                     if name not in states:
                         self.statusList.append("  {0}".format(name))
                 self.reportedStates = states
-                return True, self.trUtf8(
+                return True, self.tr(
                     "Subversion status checked successfully (using svn)")
             else:
                 process.kill()
@@ -127,5 +127,5 @@ class SvnStatusMonitorThread(VcsStatusMonitorThread):
         else:
             process.kill()
             process.waitForFinished()
-            return False, self.trUtf8(
+            return False, self.tr(
                 "Could not start the Subversion process.")

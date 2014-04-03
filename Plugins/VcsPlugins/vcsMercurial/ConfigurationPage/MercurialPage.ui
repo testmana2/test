@@ -6,11 +6,11 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>406</width>
-    <height>582</height>
+    <width>609</width>
+    <height>751</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -29,6 +29,62 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="title">
+      <string>Global Options</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Encoding:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="encodingComboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Select the encoding to be used by Mercurial</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Encoding Mode:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QComboBox" name="encodingModeComboBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Select the encoding mode</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QCheckBox" name="hiddenChangesetsCheckBox">
+        <property name="text">
+         <string>Consider hidden changesets</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </item>
    <item>
@@ -171,6 +227,29 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="title">
+      <string>Merge</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QCheckBox" name="internalMergeCheckBox">
+        <property name="toolTip">
+         <string>Select to enforce usage of the Mercural internal merge tool</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;b&gt;Internal Merge Tool&lt;/b&gt;
+&lt;p&gt;Select to enforce usage of the Mercural internal merge tool,which leaves conflict markers in the file in case of conflicting changes.&lt;/p&gt;</string>
+        </property>
+        <property name="text">
+         <string>Use internal merge with conflict markers</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_6">
      <property name="title">
       <string>Revert</string>
@@ -238,11 +317,15 @@
   </layout>
  </widget>
  <tabstops>
+  <tabstop>encodingComboBox</tabstop>
+  <tabstop>encodingModeComboBox</tabstop>
+  <tabstop>hiddenChangesetsCheckBox</tabstop>
   <tabstop>logSpinBox</tabstop>
   <tabstop>commitSpinBox</tabstop>
   <tabstop>logBrowserCheckBox</tabstop>
   <tabstop>pullUpdateCheckBox</tabstop>
   <tabstop>preferUnbundleCheckBox</tabstop>
+  <tabstop>internalMergeCheckBox</tabstop>
   <tabstop>backupCheckBox</tabstop>
   <tabstop>cleanupPatternEdit</tabstop>
   <tabstop>configButton</tabstop>

@@ -32,6 +32,9 @@ class QRegularExpressionWizardRepeatDialog(
         
         self.unlimitedButton.setChecked(True)
         self.greedyButton.setChecked(True)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(int)
     def on_lowerSpin_valueChanged(self, value):

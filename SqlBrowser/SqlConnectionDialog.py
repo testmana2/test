@@ -19,6 +19,7 @@ from E5Gui import E5FileDialog
 from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
@@ -33,6 +34,8 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         super(SqlConnectionDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.databaseFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.databaseFileCompleter = E5FileCompleter()
         
@@ -55,6 +58,9 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         self.driverCombo.addItems(drivers)
         
         self.__updateDialog()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateDialog(self):
         """
@@ -99,9 +105,9 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         startdir = self.databaseEdit.text()
         dbFile = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Database File"),
+            self.tr("Select Database File"),
             startdir,
-            self.trUtf8("All Files (*)"))
+            self.tr("All Files (*)"))
         
         if dbFile:
             self.databaseEdit.setText(Utilities.toNativeSeparators(dbFile))

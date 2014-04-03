@@ -147,8 +147,8 @@ class HelpTocWidget(QWidget):
             return
         
         menu = QMenu()
-        curTab = menu.addAction(self.trUtf8("Open Link"))
-        newTab = menu.addAction(self.trUtf8("Open Link in New Tab"))
+        curTab = menu.addAction(self.tr("Open Link"))
+        newTab = menu.addAction(self.tr("Open Link in New Tab"))
         menu.move(self.__tocWidget.mapToGlobal(pos))
         
         model = self.__tocWidget.model()

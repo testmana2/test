@@ -14,8 +14,8 @@ import sys
 
 import pysvn
 
-from PyQt4.QtCore import QMutexLocker, QDate, QRegExp, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, \
+from PyQt4.QtCore import QMutexLocker, QDate, QRegExp, Qt, pyqtSlot, QPoint
+from PyQt4.QtGui import QCursor, QHeaderView, QWidget, QApplication, \
     QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
@@ -26,21 +26,22 @@ from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnLogBrowserDialog import Ui_SvnLogBrowserDialog
 
 
-class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
+class SvnLogBrowserDialog(QWidget, SvnDialogMixin, Ui_SvnLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
     """
-    def __init__(self, vcs, isFile=False, parent=None):
+    def __init__(self, vcs, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
-        @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
         super(SvnLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
+        
+        self.__position = QPoint()
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -48,38 +49,23 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         self.filesTree.headerItem().setText(self.filesTree.columnCount(), "")
         self.filesTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
-        self.sbsCheckBox.setEnabled(isFile)
-        self.sbsCheckBox.setVisible(isFile)
-        
         self.vcs = vcs
         
-        self.__maxDate = QDate()
-        self.__minDate = QDate()
-        self.__filterLogsEnabled = True
+        self.__initData()
         
         self.fromDate.setDisplayFormat("yyyy-MM-dd")
         self.toDate.setDisplayFormat("yyyy-MM-dd")
-        self.fromDate.setDate(QDate.currentDate())
-        self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(
-            self.fieldCombo.findText(self.trUtf8("Message")))
-        self.limitSpinBox.setValue(
-            self.vcs.getPlugin().getPreferences("LogLimit"))
-        self.stopCheckBox.setChecked(
-            self.vcs.getPlugin().getPreferences("StopLogOnCopy"))
+        self.__resetUI()
         
         self.__messageRole = Qt.UserRole
         self.__changesRole = Qt.UserRole + 1
         
         self.flags = {
-            'A': self.trUtf8('Added'),
-            'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified'),
-            'R': self.trUtf8('Replaced'),
+            'A': self.tr('Added'),
+            'D': self.tr('Deleted'),
+            'M': self.tr('Modified'),
+            'R': self.tr('Replaced'),
         }
-        
-        self.diff = None
-        self.__lastRev = 0
         
         self.client = self.vcs.getClient()
         self.client.callback_cancel = \
@@ -89,6 +75,55 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         self.client.callback_ssl_server_trust_prompt = \
             self._clientSslServerTrustPromptCallback
     
+    def __initData(self):
+        """
+        Private method to (re-)initialize some data.
+        """
+        self.__maxDate = QDate()
+        self.__minDate = QDate()
+        self.__filterLogsEnabled = True
+        
+        self.diff = None
+        self.__lastRev = 0
+    
+    def closeEvent(self, e):
+        """
+        Private slot implementing a close event handler.
+        
+        @param e close event (QCloseEvent)
+        """
+        self.__position = self.pos()
+        
+        e.accept()
+    
+    def show(self):
+        """
+        Public slot to show the dialog.
+        """
+        if not self.__position.isNull():
+            self.move(self.__position)
+        self.__resetUI()
+        
+        super(SvnLogBrowserDialog, self).show()
+    
+    def __resetUI(self):
+        """
+        Private method to reset the user interface.
+        """
+        self.fromDate.setDate(QDate.currentDate())
+        self.toDate.setDate(QDate.currentDate())
+        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
+            self.tr("Message")))
+        self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
+            "LogLimit"))
+        self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
+            "StopLogOnCopy"))
+        
+        self.logTree.clear()
+        
+        self.nextButton.setEnabled(True)
+        self.limitSpinBox.setEnabled(True)
+
     def _reset(self):
         """
         Protected method to reset the internal state of the dialog.
@@ -300,12 +335,19 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         os.chdir(cwd)
         self.__finish()
     
-    def start(self, fn):
+    def start(self, fn, isFile=False):
         """
         Public slot to start the svn log command.
         
         @param fn filename to show the log for (string)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
         """
+        self.sbsCheckBox.setEnabled(isFile)
+        self.sbsCheckBox.setVisible(isFile)
+        
+        self.__initData()
+        
         self.filename = fn
         self.dname, self.fname = self.vcs.splitPath(fn)
         
@@ -368,17 +410,18 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param current reference to the new current item (QTreeWidgetItem)
         @param previous reference to the old current item (QTreeWidgetItem)
         """
-        self.messageEdit.setPlainText(current.data(0, self.__messageRole))
-        
-        self.filesTree.clear()
-        changes = current.data(0, self.__changesRole)
-        if len(changes) > 0:
-            for change in changes:
-                self.__generateFileItem(
-                    change["action"], change["path"],
-                    change["copyfrom_path"], change["copyfrom_revision"])
-            self.__resizeColumnsFiles()
-            self.__resortFiles()
+        if current is not None:
+            self.messageEdit.setPlainText(current.data(0, self.__messageRole))
+            
+            self.filesTree.clear()
+            changes = current.data(0, self.__changesRole)
+            if len(changes) > 0:
+                for change in changes:
+                    self.__generateFileItem(
+                        change["action"], change["path"],
+                        change["copyfrom_path"], change["copyfrom_revision"])
+                self.__resizeColumnsFiles()
+                self.__resortFiles()
         
         self.diffPreviousButton.setEnabled(
             current != self.logTree.topLevelItem(
@@ -455,7 +498,7 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         """
         E5MessageBox.critical(
             self,
-            self.trUtf8("Subversion Error"),
+            self.tr("Subversion Error"),
             msg)
     
     @pyqtSlot(QDate)
@@ -502,10 +545,10 @@ class SvnLogBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             from_ = self.fromDate.date().toString("yyyy-MM-dd")
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
             txt = self.fieldCombo.currentText()
-            if txt == self.trUtf8("Author"):
+            if txt == self.tr("Author"):
                 fieldIndex = 1
                 searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-            elif txt == self.trUtf8("Revision"):
+            elif txt == self.tr("Revision"):
                 fieldIndex = 0
                 txt = self.rxEdit.text()
                 if txt.startswith("^"):

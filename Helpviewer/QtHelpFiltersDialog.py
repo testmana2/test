@@ -13,8 +13,10 @@ import sqlite3
 
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem, QListWidgetItem, \
-    QInputDialog, QLineEdit
+    QInputDialog, QLineEdit, QItemSelectionModel
 from PyQt4.QtHelp import QHelpEngineCore
+
+from E5Gui import E5MessageBox
 
 from .Ui_QtHelpFiltersDialog import Ui_QtHelpFiltersDialog
 
@@ -33,9 +35,10 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         super(QtHelpFiltersDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.__engine = engine
+        self.removeButton.setEnabled(False)
+        self.removeAttributeButton.setEnabled(False)
         
-        self.attributesList.header().hide()
+        self.__engine = engine
         
         self.filtersList.clear()
         self.attributesList.clear()
@@ -57,6 +60,7 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         self.filtersList.addItems(sorted(self.__filterMap.keys()))
         for attr in help.filterAttributes():
             QTreeWidgetItem(self.attributesList, [attr])
+        self.attributesList.sortItems(0, Qt.AscendingOrder)
         
         if self.__filterMap:
             self.filtersList.setCurrentRow(0)
@@ -79,6 +83,14 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
                 itm.setCheckState(0, Qt.Checked)
             else:
                 itm.setCheckState(0, Qt.Unchecked)
+    
+    @pyqtSlot()
+    def on_filtersList_itemSelectionChanged(self):
+        """
+        Private slot handling a change of selected filters.
+        """
+        self.removeButton.setEnabled(
+            len(self.filtersList.selectedItems()) > 0)
     
     @pyqtSlot(QTreeWidgetItem, int)
     def on_attributesList_itemChanged(self, item, column):
@@ -103,14 +115,22 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         self.__filterMap[filter] = newAtts
     
     @pyqtSlot()
+    def on_attributesList_itemSelectionChanged(self):
+        """
+        Private slot handling the selection of attributes.
+        """
+        self.removeAttributeButton.setEnabled(
+            len(self.attributesList.selectedItems()) != 0)
+    
+    @pyqtSlot()
     def on_addButton_clicked(self):
         """
         Private slot to add a new filter.
         """
         filter, ok = QInputDialog.getText(
             None,
-            self.trUtf8("Add Filter"),
-            self.trUtf8("Filter name:"),
+            self.tr("Add Filter"),
+            self.tr("Filter name:"),
             QLineEdit.Normal)
         if not filter:
             return
@@ -125,37 +145,76 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
     @pyqtSlot()
     def on_removeButton_clicked(self):
         """
-        Private slot to remove a filter.
+        Private slot to remove the selected filters.
         """
-        row = self.filtersList.currentRow()
-        itm = self.filtersList.takeItem(row)
-        if itm is None:
+        ok = E5MessageBox.yesNo(
+            self,
+            self.tr("Remove Filters"),
+            self.tr(
+                """Do you really want to remove the selected filters """
+                """from the database?"""))
+        if not ok:
             return
         
-        del self.__filterMap[itm.text()]
-        self.__removedFilters.append(itm.text())
-        del itm
+        items = self.filtersList.selectedItems()
+        for item in items:
+            itm = self.filtersList.takeItem(self.filtersList.row(item))
+            if itm is None:
+                continue
+            
+            del self.__filterMap[itm.text()]
+            self.__removedFilters.append(itm.text())
+            del itm
+        
         if self.filtersList.count():
-            self.filtersList.setCurrentRow(row)
+            self.filtersList.setCurrentRow(
+                0, QItemSelectionModel.ClearAndSelect)
     
     @pyqtSlot()
     def on_removeAttributeButton_clicked(self):
         """
-        Private slot to remove a filter attribute.
+        Private slot to remove the selected filter attributes.
         """
-        itm = self.attributesList.takeTopLevelItem(
-            self.attributesList.indexOfTopLevelItem(
-                self.attributesList.currentItem()))
-        if itm is None:
+        ok = E5MessageBox.yesNo(
+            self,
+            self.tr("Remove Attributes"),
+            self.tr(
+                """Do you really want to remove the selected attributes """
+                """from the database?"""))
+        if not ok:
             return
         
-        attr = itm.text(0)
-        self.__removedAttributes.append(attr)
+        items = self.attributesList.selectedItems()
+        for item in items:
+            itm = self.attributesList.takeTopLevelItem(
+                self.attributesList.indexOfTopLevelItem(item))
+            if itm is None:
+                continue
+            
+            attr = itm.text(0)
+            self.__removedAttributes.append(attr)
+            for filter in self.__filterMap:
+                if attr in self.__filterMap[filter]:
+                    self.__filterMap[filter].remove(attr)
+            
+            del itm
+    
+    @pyqtSlot()
+    def on_unusedAttributesButton_clicked(self):
+        """
+        Private slot to select all unused attributes.
+        """
+        # step 1: determine all used attributes
+        attributes = set()
         for filter in self.__filterMap:
-            if attr in self.__filterMap[filter]:
-                self.__filterMap[filter].remove(attr)
+            attributes |= set(self.__filterMap[filter])
         
-        del itm
+        # step 2: select all unused attribute items
+        self.attributesList.clearSelection()
+        for row in range(self.attributesList.topLevelItemCount()):
+            itm = self.attributesList.topLevelItem(row)
+            if itm.text(0) not in attributes:
+                itm.setSelected(True)
     
     def __removeAttributes(self):
         """

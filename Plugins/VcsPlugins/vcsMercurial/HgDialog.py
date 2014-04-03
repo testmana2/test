@@ -9,8 +9,8 @@ Module implementing a dialog starting a process and showing its output.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -33,12 +33,14 @@ class HgDialog(QDialog, Ui_HgDialog):
     shows the output of the process. The dialog is modal,
     which causes a synchronized execution of the process.
     """
-    def __init__(self, text, hg=None, parent=None):
+    def __init__(self, text, hg=None, useClient=True, parent=None):
         """
         Constructor
         
         @param text text to be shown by the label (string)
         @param hg reference to the Mercurial interface object (Hg)
+        @param useClient flag indicating to use the command server client
+            if possible (boolean)
         @param parent parent widget (QWidget)
         """
         super(HgDialog, self).__init__(parent)
@@ -50,7 +52,11 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.proc = None
         self.username = ''
         self.password = ''
-        self.__hgClient = hg.getClient()
+        if useClient:
+            self.__hgClient = hg.getClient()
+        else:
+            self.__hgClient = None
+        self.vcs = hg
         
         self.outputGroup.setTitle(text)
         
@@ -124,7 +130,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         self.__hasAddOrDelete = False
         if args[0] in ["fetch", "qpush", "qpop", "qgoto", "rebase",
                        "transplant", "update", "import", "revert",
-                       "graft"] or \
+                       "graft", "shelve", "unshelve"] or \
            (args[0] in ["pull", "unbundle"] and
                 ("--update" in args[1:] or "--rebase" in args[1:])):
             self.__updateCommand = True
@@ -151,8 +157,8 @@ class HgDialog(QDialog, Ui_HgDialog):
                 self.inputGroup.setEnabled(False)
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -204,7 +210,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         """
         if self.proc is not None:
             s = str(self.proc.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
+                    self.vcs.getEncoding(),
                     'replace')
             self.__showOutput(s)
     
@@ -235,7 +241,7 @@ class HgDialog(QDialog, Ui_HgDialog):
         """
         if self.proc is not None:
             s = str(self.proc.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
+                    self.vcs.getEncoding(),
                     'replace')
             self.__showError(s)
     

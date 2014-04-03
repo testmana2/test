@@ -38,6 +38,9 @@ class IrcServerEditDialog(QDialog, Ui_IrcServerEditDialog):
             self.sslCheckBox.setChecked(server.useSSL())
         
         self.__updateOkButton()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOkButton(self):
         """

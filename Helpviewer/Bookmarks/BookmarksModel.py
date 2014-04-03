@@ -44,8 +44,8 @@ class BookmarksModel(QAbstractItemModel):
         manager.entryChanged.connect(self.entryChanged)
         
         self.__headers = [
-            self.trUtf8("Title"),
-            self.trUtf8("Address"),
+            self.tr("Title"),
+            self.tr("Address"),
         ]
     
     def bookmarksManager(self):

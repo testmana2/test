@@ -27,16 +27,19 @@ class HgCommitDialog(QWidget, Ui_HgCommitDialog):
     accepted = pyqtSignal()
     rejected = pyqtSignal()
     
-    def __init__(self, vcs, mq, parent=None):
+    def __init__(self, vcs, msg, mq, parent=None):
         """
         Constructor
         
         @param vcs reference to the vcs object
+        @param msg initial message (string)
         @param mq flag indicating a queue commit (boolean)
         @param parent parent widget (QWidget)
         """
         super(HgCommitDialog, self).__init__(parent, Qt.WindowFlags(Qt.Window))
         self.setupUi(self)
+        
+        self.logEdit.setPlainText(msg)
         
         if mq:
             self.amendCheckBox.setVisible(False)

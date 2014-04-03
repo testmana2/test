@@ -46,6 +46,9 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             self.bookmark1Combo.setHidden(True)
             self.bookmark2Button.setHidden(True)
             self.bookmark2Combo.setHidden(True)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOK(self):
         """
@@ -236,6 +239,7 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             bookmarkCombo = self.bookmark1Combo
             tipButton = self.tip1Button
             prevButton = self.prev1Button
+            noneButton = self.none1Button
         else:
             numberButton = self.number2Button
             numberSpinBox = self.number2SpinBox
@@ -249,11 +253,12 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             bookmarkCombo = self.bookmark2Combo
             tipButton = self.tip2Button
             prevButton = self.prev2Button
+            noneButton = self.none2Button
         
         if numberButton.isChecked():
-            return str(numberSpinBox.value())
+            return "rev({0})".format(numberSpinBox.value())
         elif idButton.isChecked():
-            return idEdit.text()
+            return "id({0})".format(idEdit.text())
         elif tagButton.isChecked():
             return tagCombo.currentText()
         elif branchButton.isChecked():
@@ -264,6 +269,8 @@ class HgRevisionsSelectionDialog(QDialog, Ui_HgRevisionsSelectionDialog):
             return "tip"
         elif prevButton.isChecked():
             return "."
+        elif noneButton.isChecked():
+            return ""
     
     def getRevisions(self):
         """

@@ -20,6 +20,7 @@ from E5Gui.E5Completers import E5DirCompleter
 from .Ui_HgExportDialog import Ui_HgExportDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class HgExportDialog(QDialog, Ui_HgExportDialog):
@@ -34,6 +35,8 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         """
         super(HgExportDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.directoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
@@ -74,7 +77,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         """
         dn = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Export Patches"),
+            self.tr("Export Patches"),
             self.directoryEdit.text(),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         

@@ -43,10 +43,10 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         self.noCheck = False
         self.objectType = ""
         
-        self.primaryClearButton.clicked[()].connect(self.__clear)
-        self.alternateClearButton.clicked[()].connect(self.__clear)
-        self.primaryButton.clicked[()].connect(self.__typeChanged)
-        self.alternateButton.clicked[()].connect(self.__typeChanged)
+        self.primaryClearButton.clicked.connect(self.__clear)
+        self.alternateClearButton.clicked.connect(self.__clear)
+        self.primaryButton.clicked.connect(self.__typeChanged)
+        self.alternateButton.clicked.connect(self.__typeChanged)
         
         self.shortcutsGroup.installEventFilter(self)
         self.primaryButton.installEventFilter(self)
@@ -58,6 +58,9 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         
         self.buttonBox.button(QDialogButtonBox.Ok).installEventFilter(self)
         self.buttonBox.button(QDialogButtonBox.Cancel).installEventFilter(self)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
 
     def setKeys(self, key, alternateKey,  noCheck, objectType):
         """

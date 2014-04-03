@@ -80,7 +80,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         self.__resetButton = self.buttonBox.button(QDialogButtonBox.Reset)
         
         self.actionsTree.header().hide()
-        self.__separatorText = self.trUtf8("--Separator--")
+        self.__separatorText = self.tr("--Separator--")
         itm = QTreeWidgetItem(self.actionsTree,  [self.__separatorText])
         self.actionsTree.setCurrentItem(itm)
         
@@ -135,16 +135,16 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         """
         name, ok = QInputDialog.getText(
             self,
-            self.trUtf8("New Toolbar"),
-            self.trUtf8("Toolbar Name:"),
+            self.tr("New Toolbar"),
+            self.tr("Toolbar Name:"),
             QLineEdit.Normal)
         if ok and name:
             if self.toolbarComboBox.findText(name) != -1:
                 # toolbar with this name already exists
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("New Toolbar"),
-                    self.trUtf8(
+                    self.tr("New Toolbar"),
+                    self.tr(
                         """A toolbar with the name <b>{0}</b> already"""
                         """ exists.""")
                     .format(name))
@@ -168,8 +168,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         name = self.toolbarComboBox.currentText()
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Remove Toolbar"),
-            self.trUtf8(
+            self.tr("Remove Toolbar"),
+            self.tr(
                 """Should the toolbar <b>{0}</b> really be removed?""")
             .format(name))
         if res:
@@ -193,8 +193,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         oldName = self.toolbarComboBox.currentText()
         newName, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Rename Toolbar"),
-            self.trUtf8("New Toolbar Name:"),
+            self.tr("Rename Toolbar"),
+            self.tr("New Toolbar Name:"),
             QLineEdit.Normal,
             oldName)
         if ok and newName:
@@ -204,8 +204,8 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
                 # toolbar with this name already exists
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Rename Toolbar"),
-                    self.trUtf8(
+                    self.tr("Rename Toolbar"),
+                    self.tr(
                         """A toolbar with the name <b>{0}</b> already"""
                         """ exists.""")
                     .format(newName))

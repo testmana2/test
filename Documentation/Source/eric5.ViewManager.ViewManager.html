@@ -474,6 +474,9 @@ QObject
 <td><a href="#ViewManager.__nextWarning">__nextWarning</a></td>
 <td>Private method to handle the next warning action.</td>
 </tr><tr>
+<td><a href="#ViewManager.__openFiles">__openFiles</a></td>
+<td>Private slot to open some files.</td>
+</tr><tr>
 <td><a href="#ViewManager.__openSourceFile">__openSourceFile</a></td>
 <td>Private method to open a file from the list of recently opened files.</td>
 </tr><tr>
@@ -570,8 +573,17 @@ QObject
 <td><a href="#ViewManager.__showEditSpellingMenu">__showEditSpellingMenu</a></td>
 <td>Private method to set up the edit dictionaries menu.</td>
 </tr><tr>
+<td><a href="#ViewManager.__showEncodingsMenu">__showEncodingsMenu</a></td>
+<td>Private slot to show the Encodings menu of the current editor.</td>
+</tr><tr>
+<td><a href="#ViewManager.__showEolMenu">__showEolMenu</a></td>
+<td>Private slot to show the EOL menu of the current editor.</td>
+</tr><tr>
 <td><a href="#ViewManager.__showFileMenu">__showFileMenu</a></td>
 <td>Private method to set up the file menu.</td>
+</tr><tr>
+<td><a href="#ViewManager.__showLanguagesMenu">__showLanguagesMenu</a></td>
+<td>Private slot to show the Languages menu of the current editor.</td>
 </tr><tr>
 <td><a href="#ViewManager.__showRecentMenu">__showRecentMenu</a></td>
 <td>Private method to set up recent files menu.</td>
@@ -600,6 +612,9 @@ QObject
 <td><a href="#ViewManager.__toggleCurrent">__toggleCurrent</a></td>
 <td>Private method to handle the toggle current fold action.</td>
 </tr><tr>
+<td><a href="#ViewManager.__unhighlight">__unhighlight</a></td>
+<td>Privat slot to switch of all highlights.</td>
+</tr><tr>
 <td><a href="#ViewManager.__zoom">__zoom</a></td>
 <td>Private method to handle the zoom action.</td>
 </tr><tr>
@@ -611,6 +626,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__zoomReset">__zoomReset</a></td>
 <td>Private method to reset the zoom factor.</td>
+</tr><tr>
+<td><a href="#ViewManager.__zoomTo">__zoomTo</a></td>
+<td>Private slot to zoom to a given value.</td>
 </tr><tr>
 <td><a href="#ViewManager._addView">_addView</a></td>
 <td>Protected method to add a view (i.e.</td>
@@ -919,7 +937,7 @@ QObject
 <td>Public method to tile the managed windows.</td>
 </tr><tr>
 <td><a href="#ViewManager.unhighlight">unhighlight</a></td>
-<td>Public method to switch off all highlights.</td>
+<td>Public method to switch off all highlights or the highlight of the current editor.</td>
 </tr><tr>
 <td><a href="#ViewManager.zoomValueChanged">zoomValueChanged</a></td>
 <td>Public slot to handle changes of the zoom value.</td>
@@ -1481,6 +1499,11 @@ reference to the generated menu (QMenu)
 <b>__nextWarning</b>(<i></i>)
 <p>
         Private method to handle the next warning action.
+</p><a NAME="ViewManager.__openFiles" ID="ViewManager.__openFiles"></a>
+<h4>ViewManager.__openFiles</h4>
+<b>__openFiles</b>(<i></i>)
+<p>
+        Private slot to open some files.
 </p><a NAME="ViewManager.__openSourceFile" ID="ViewManager.__openSourceFile"></a>
 <h4>ViewManager.__openSourceFile</h4>
 <b>__openSourceFile</b>(<i>act</i>)
@@ -1694,12 +1717,42 @@ zoom value (integer)
 <b>__showEditSpellingMenu</b>(<i></i>)
 <p>
         Private method to set up the edit dictionaries menu.
-</p><a NAME="ViewManager.__showFileMenu" ID="ViewManager.__showFileMenu"></a>
+</p><a NAME="ViewManager.__showEncodingsMenu" ID="ViewManager.__showEncodingsMenu"></a>
+<h4>ViewManager.__showEncodingsMenu</h4>
+<b>__showEncodingsMenu</b>(<i>pos</i>)
+<p>
+        Private slot to show the Encodings menu of the current editor.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position the menu should be shown at (QPoint)
+</dd>
+</dl><a NAME="ViewManager.__showEolMenu" ID="ViewManager.__showEolMenu"></a>
+<h4>ViewManager.__showEolMenu</h4>
+<b>__showEolMenu</b>(<i>pos</i>)
+<p>
+        Private slot to show the EOL menu of the current editor.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position the menu should be shown at (QPoint)
+</dd>
+</dl><a NAME="ViewManager.__showFileMenu" ID="ViewManager.__showFileMenu"></a>
 <h4>ViewManager.__showFileMenu</h4>
 <b>__showFileMenu</b>(<i></i>)
 <p>
         Private method to set up the file menu.
-</p><a NAME="ViewManager.__showRecentMenu" ID="ViewManager.__showRecentMenu"></a>
+</p><a NAME="ViewManager.__showLanguagesMenu" ID="ViewManager.__showLanguagesMenu"></a>
+<h4>ViewManager.__showLanguagesMenu</h4>
+<b>__showLanguagesMenu</b>(<i>pos</i>)
+<p>
+        Private slot to show the Languages menu of the current editor.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position the menu should be shown at (QPoint)
+</dd>
+</dl><a NAME="ViewManager.__showRecentMenu" ID="ViewManager.__showRecentMenu"></a>
 <h4>ViewManager.__showRecentMenu</h4>
 <b>__showRecentMenu</b>(<i></i>)
 <p>
@@ -1756,17 +1809,17 @@ editor that sent the signal
 <b>__toggleCurrent</b>(<i></i>)
 <p>
         Private method to handle the toggle current fold action.
+</p><a NAME="ViewManager.__unhighlight" ID="ViewManager.__unhighlight"></a>
+<h4>ViewManager.__unhighlight</h4>
+<b>__unhighlight</b>(<i></i>)
+<p>
+        Privat slot to switch of all highlights.
 </p><a NAME="ViewManager.__zoom" ID="ViewManager.__zoom"></a>
 <h4>ViewManager.__zoom</h4>
-<b>__zoom</b>(<i>value=None</i>)
+<b>__zoom</b>(<i></i>)
 <p>
         Private method to handle the zoom action.
-</p><dl>
-<dt><i>value=</i></dt>
-<dd>
-zoom value to be set (integer)
-</dd>
-</dl><a NAME="ViewManager.__zoomIn" ID="ViewManager.__zoomIn"></a>
+</p><a NAME="ViewManager.__zoomIn" ID="ViewManager.__zoomIn"></a>
 <h4>ViewManager.__zoomIn</h4>
 <b>__zoomIn</b>(<i></i>)
 <p>
@@ -1781,7 +1834,17 @@ zoom value to be set (integer)
 <b>__zoomReset</b>(<i></i>)
 <p>
         Private method to reset the zoom factor.
-</p><a NAME="ViewManager._addView" ID="ViewManager._addView"></a>
+</p><a NAME="ViewManager.__zoomTo" ID="ViewManager.__zoomTo"></a>
+<h4>ViewManager.__zoomTo</h4>
+<b>__zoomTo</b>(<i>value</i>)
+<p>
+        Private slot to zoom to a given value.
+</p><dl>
+<dt><i>value</i></dt>
+<dd>
+zoom value to be set (integer)
+</dd>
+</dl><a NAME="ViewManager._addView" ID="ViewManager._addView"></a>
 <h4>ViewManager._addView</h4>
 <b>_addView</b>(<i>win, fn=None, noName=""</i>)
 <p>
@@ -2585,7 +2648,7 @@ type of the source file (string)
         Public slot used to move to the next split.
 </p><a NAME="ViewManager.openFiles" ID="ViewManager.openFiles"></a>
 <h4>ViewManager.openFiles</h4>
-<b>openFiles</b>(<i>prog=None</i>)
+<b>openFiles</b>(<i>prog</i>)
 <p>
         Public slot to open some files.
 </p><dl>
@@ -3007,7 +3070,8 @@ Not implemented
 <h4>ViewManager.unhighlight</h4>
 <b>unhighlight</b>(<i>current=False</i>)
 <p>
-        Public method to switch off all highlights.
+        Public method to switch off all highlights or the highlight of
+        the current editor.
 </p><dl>
 <dt><i>current</i></dt>
 <dd>

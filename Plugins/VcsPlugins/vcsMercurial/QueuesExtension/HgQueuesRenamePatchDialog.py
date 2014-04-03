@@ -31,10 +31,13 @@ class HgQueuesRenamePatchDialog(QDialog, Ui_HgQueuesRenamePatchDialog):
         self.setupUi(self)
         
         self.currentButton.setText(
-            self.trUtf8("Current Patch ({0})").format(currentPatch))
+            self.tr("Current Patch ({0})").format(currentPatch))
         self.nameCombo.addItems([""] + patchesList)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateUI(self):
         """
@@ -83,4 +86,4 @@ class HgQueuesRenamePatchDialog(QDialog, Ui_HgQueuesRenamePatchDialog):
         if self.namedButton.isChecked():
             selectedPatch = self.nameCombo.currentText()
         
-        return self.nameEdit.text(), selectedPatch
+        return self.nameEdit.text().replace(" ", "_"), selectedPatch

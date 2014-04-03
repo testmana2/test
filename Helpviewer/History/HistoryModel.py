@@ -38,8 +38,8 @@ class HistoryModel(QAbstractTableModel):
         self.__historyManager = historyManager
         
         self.__headers = [
-            self.trUtf8("Title"),
-            self.trUtf8("Address"),
+            self.tr("Title"),
+            self.tr("Address"),
         ]
         
         self.__historyManager.historyReset.connect(self.historyReset)

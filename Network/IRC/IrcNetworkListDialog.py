@@ -82,22 +82,22 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         identityName = network.getIdentityName()
         if identityName == IrcIdentity.DefaultIdentityName:
             identityName = IrcIdentity.DefaultIdentityDisplay
-        autoConnect = self.trUtf8("Yes") if network.autoConnect() \
-            else self.trUtf8("No")
+        autoConnect = self.tr("Yes") if network.autoConnect() \
+            else self.tr("No")
         
         QTreeWidgetItem(
             itm,
-            [self.trUtf8("Identity"), identityName])
+            [self.tr("Identity"), identityName])
         QTreeWidgetItem(
             itm,
-            [self.trUtf8("Server"), "{0}:{1}".format(
+            [self.tr("Server"), "{0}:{1}".format(
              server.getName(), server.getPort())])
         QTreeWidgetItem(
             itm,
-            [self.trUtf8("Channels"), ", ".join(network.getChannelNames())])
+            [self.tr("Channels"), ", ".join(network.getChannelNames())])
         QTreeWidgetItem(
             itm,
-            [self.trUtf8("Auto-Connect"), autoConnect])
+            [self.tr("Auto-Connect"), autoConnect])
         
         self.__resizeColumns()
     
@@ -162,8 +162,8 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
             networkName = itm.text(0)
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Delete Irc Network"),
-                self.trUtf8(
+                self.tr("Delete Irc Network"),
+                self.tr(
                     """Do you really want to delete IRC network <b>{0}</b>?""")
                 .format(networkName))
             if res:
@@ -235,10 +235,10 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
         @param itm reference to the network item (QTreeWidgetItem)
         @param on flag indicating the auto-connect state (boolean)
         """
-        autoConnect = self.trUtf8("Yes") if on else self.trUtf8("No")
+        autoConnect = self.tr("Yes") if on else self.tr("No")
         for index in range(itm.childCount()):
             citm = itm.child(index)
-            if citm.text(0) == self.trUtf8("Auto-Connect"):
+            if citm.text(0) == self.tr("Auto-Connect"):
                 citm.setText(1, autoConnect)
     
     @pyqtSlot()

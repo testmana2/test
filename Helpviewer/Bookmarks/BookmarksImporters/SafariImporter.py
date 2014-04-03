@@ -89,7 +89,7 @@ class SafariImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' does not exist.")\
+            self._errorString = self.tr("File '{0}' does not exist.")\
                 .format(self.__fileName)
             return False
         return True
@@ -104,7 +104,7 @@ class SafariImporter(BookmarksImporter):
             bookmarksDict = binplistlib.readPlist(self.__fileName)
         except binplistlib.InvalidPlistException as err:
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 "Bookmarks file cannot be read.\nReason: {0}".format(str(err)))
             return None
         
@@ -115,9 +115,9 @@ class SafariImporter(BookmarksImporter):
             self.__processChildren(bookmarksDict["Children"], importRootNode)
         
         if self._id == "safari":
-            importRootNode.title = self.trUtf8("Apple Safari Import")
+            importRootNode.title = self.tr("Apple Safari Import")
         else:
-            importRootNode.title = self.trUtf8("Imported {0}")\
+            importRootNode.title = self.tr("Imported {0}")\
                 .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
         return importRootNode
     

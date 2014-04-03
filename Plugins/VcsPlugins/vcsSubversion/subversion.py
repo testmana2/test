@@ -9,8 +9,8 @@ Module implementing the version control systems interface to Subversion.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -100,6 +100,7 @@ class Subversion(VersionControl):
         self.tagbranchList = None
         self.blame = None
         self.repoBrowser = None
+        self.logBrowser = None
         
         # regular expression object for evaluation of the status output
         self.rx_status1 = QRegExp(
@@ -141,6 +142,8 @@ class Subversion(VersionControl):
             self.blame.close()
         if self.repoBrowser is not None:
             self.repoBrowser.close()
+        if self.logBrowser is not None:
+            self.logBrowser.close()
         
     def vcsExists(self):
         """
@@ -175,14 +178,14 @@ class Subversion(VersionControl):
                 return True, errMsg
             else:
                 if finished:
-                    errMsg = self.trUtf8(
+                    errMsg = self.tr(
                         "The svn process finished with the exit code {0}")\
                         .format(process.exitCode())
                 else:
-                    errMsg = self.trUtf8(
+                    errMsg = self.tr(
                         "The svn process did not finish within 30s.")
         else:
-            errMsg = self.trUtf8("Could not start the svn executable.")
+            errMsg = self.tr("Could not start the svn executable.")
         
         return False, errMsg
         
@@ -212,8 +215,8 @@ class Subversion(VersionControl):
         if not success:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Create project in repository"),
-                self.trUtf8(
+                self.tr("Create project in repository"),
+                self.tr(
                     """The project could not be created in the repository."""
                     """ Maybe the given repository doesn't exist or the"""
                     """ repository server is down."""))
@@ -236,8 +239,8 @@ class Subversion(VersionControl):
             if not os.path.isfile(pfn):
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("New project"),
-                    self.trUtf8(
+                    self.tr("New project"),
+                    self.tr(
                         """The project could not be checked out of the"""
                         """ repository.<br />"""
                         """Restoring the original contents."""))
@@ -311,7 +314,7 @@ class Subversion(VersionControl):
                 QProcess(), "svn", args, os.path.join(tmpDir, project))
         else:
             dia = SvnDialog(
-                self.trUtf8('Importing project into Subversion repository'))
+                self.tr('Importing project into Subversion repository'))
             res = dia.startProcess(args, os.path.join(tmpDir, project))
             if res:
                 dia.exec_()
@@ -349,8 +352,8 @@ class Subversion(VersionControl):
                         not tag.startswith('branches'):
                     type, ok = QInputDialog.getItem(
                         None,
-                        self.trUtf8("Subversion Checkout"),
-                        self.trUtf8(
+                        self.tr("Subversion Checkout"),
+                        self.tr(
                             "The tag must be a normal tag (tags) or"
                             " a branch tag (branches)."
                             " Please select from the list."),
@@ -374,7 +377,7 @@ class Subversion(VersionControl):
             return self.startSynchronizedProcess(QProcess(), 'svn', args)
         else:
             dia = SvnDialog(
-                self.trUtf8('Checking project out of Subversion repository'))
+                self.tr('Checking project out of Subversion repository'))
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -405,8 +408,8 @@ class Subversion(VersionControl):
                         not tag.startswith('branches'):
                     type, ok = QInputDialog.getItem(
                         None,
-                        self.trUtf8("Subversion Export"),
-                        self.trUtf8(
+                        self.tr("Subversion Export"),
+                        self.tr(
                             "The tag must be a normal tag (tags) or"
                             " a branch tag (branches)."
                             " Please select from the list."),
@@ -427,7 +430,7 @@ class Subversion(VersionControl):
         args.append(projectDir)
         
         dia = SvnDialog(
-            self.trUtf8('Exporting project from Subversion repository'))
+            self.tr('Exporting project from Subversion repository'))
         res = dia.startProcess(args)
         if res:
             dia.exec_()
@@ -497,8 +500,8 @@ class Subversion(VersionControl):
             if not ok:
                 res = E5MessageBox.yesNo(
                     self.__ui,
-                    self.trUtf8("Commit Changes"),
-                    self.trUtf8(
+                    self.tr("Commit Changes"),
+                    self.tr(
                         """The commit affects files, that have unsaved"""
                         """ changes. Shall the commit be continued?"""),
                     icon=E5MessageBox.Warning)
@@ -546,7 +549,7 @@ class Subversion(VersionControl):
             self.startSynchronizedProcess(QProcess(), "svn", args, dname)
         else:
             dia = SvnDialog(
-                self.trUtf8('Commiting changes to Subversion repository'))
+                self.tr('Commiting changes to Subversion repository'))
             res = dia.startProcess(args, dname)
             if res:
                 dia.exec_()
@@ -583,7 +586,7 @@ class Subversion(VersionControl):
             res = False
         else:
             dia = SvnDialog(
-                self.trUtf8('Synchronizing with the Subversion repository'))
+                self.tr('Synchronizing with the Subversion repository'))
             res = dia.startProcess(args, dname, True)
             if res:
                 dia.exec_()
@@ -679,8 +682,8 @@ class Subversion(VersionControl):
             self.startSynchronizedProcess(QProcess(), "svn", args, wdir)
         else:
             dia = SvnDialog(
-                self.trUtf8('Adding files/directories to the Subversion'
-                            ' repository'))
+                self.tr('Adding files/directories to the Subversion'
+                        ' repository'))
             res = dia.startProcess(args, wdir)
             if res:
                 dia.exec_()
@@ -769,7 +772,7 @@ class Subversion(VersionControl):
             args.append(path)
         
         dia = SvnDialog(
-            self.trUtf8('Adding directory trees to the Subversion repository'))
+            self.tr('Adding directory trees to the Subversion repository'))
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -804,8 +807,8 @@ class Subversion(VersionControl):
             res = self.startSynchronizedProcess(QProcess(), "svn", args)
         else:
             dia = SvnDialog(
-                self.trUtf8('Removing files/directories from the Subversion'
-                            ' repository'))
+                self.tr('Removing files/directories from the Subversion'
+                        ' repository'))
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -863,7 +866,7 @@ class Subversion(VersionControl):
             if noDialog:
                 res = self.startSynchronizedProcess(QProcess(), "svn", args)
             else:
-                dia = SvnDialog(self.trUtf8('Moving {0}')
+                dia = SvnDialog(self.tr('Moving {0}')
                                 .format(name))
                 res = dia.startProcess(args)
                 if res:
@@ -892,8 +895,8 @@ class Subversion(VersionControl):
         isFile = os.path.isfile(name)
         noEntries, ok = QInputDialog.getInt(
             None,
-            self.trUtf8("Subversion Log"),
-            self.trUtf8("Select number of entries to show."),
+            self.tr("Subversion Log"),
+            self.tr("Select number of entries to show."),
             self.getPlugin().getPreferences("LogLimit"), 1, 999999, 1)
         if ok:
             from .SvnLogDialog import SvnLogDialog
@@ -958,8 +961,8 @@ class Subversion(VersionControl):
         if reposURL is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Subversion Error"),
-                self.trUtf8(
+                self.tr("Subversion Error"),
+                self.tr(
                     """The URL of the project repository could not be"""
                     """ retrieved from the working copy. The tag operation"""
                     """ will be aborted"""))
@@ -985,8 +988,8 @@ class Subversion(VersionControl):
             if not rx_base.exactMatch(reposURL):
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Subversion Error"),
-                    self.trUtf8(
+                    self.tr("Subversion Error"),
+                    self.tr(
                         """The URL of the project repository has an"""
                         """ invalid format. The tag operation will"""
                         """ be aborted"""))
@@ -1018,7 +1021,7 @@ class Subversion(VersionControl):
             args.append('Deleted tag <{0}>'.format(tag))
             args.append(url)
         
-        dia = SvnDialog(self.trUtf8('Tagging {0} in the Subversion repository')
+        dia = SvnDialog(self.tr('Tagging {0} in the Subversion repository')
                         .format(name))
         res = dia.startProcess(args)
         if res:
@@ -1049,19 +1052,19 @@ class Subversion(VersionControl):
                 DeleteFilesConfirmationDialog
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Revert changes"),
-                self.trUtf8("Do you really want to revert all changes to"
-                            " these files or directories?"),
+                self.tr("Revert changes"),
+                self.tr("Do you really want to revert all changes to"
+                        " these files or directories?"),
                 names)
             yes = dlg.exec_() == QDialog.Accepted
         else:
             yes = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Revert changes"),
-                self.trUtf8("""Do you really want to revert all changes of"""
-                            """ the project?"""))
+                self.tr("Revert changes"),
+                self.tr("""Do you really want to revert all changes of"""
+                        """ the project?"""))
         if yes:
-            dia = SvnDialog(self.trUtf8('Reverting changes'))
+            dia = SvnDialog(self.tr('Reverting changes'))
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -1080,8 +1083,8 @@ class Subversion(VersionControl):
         if reposURL is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Subversion Error"),
-                self.trUtf8(
+                self.tr("Subversion Error"),
+                self.tr(
                     """The URL of the project repository could not be"""
                     """ retrieved from the working copy. The switch"""
                     """ operation will be aborted"""))
@@ -1107,8 +1110,8 @@ class Subversion(VersionControl):
             if not rx_base.exactMatch(reposURL):
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Subversion Error"),
-                    self.trUtf8(
+                    self.tr("Subversion Error"),
+                    self.tr(
                         """The URL of the project repository has an"""
                         """ invalid format. The switch operation will"""
                         """ be aborted"""))
@@ -1136,7 +1139,7 @@ class Subversion(VersionControl):
         args.append(url)
         args.append(name)
         
-        dia = SvnDialog(self.trUtf8('Switching to {0}')
+        dia = SvnDialog(self.tr('Switching to {0}')
                         .format(tn))
         res = dia.startProcess(args, setLanguage=True)
         if res:
@@ -1201,7 +1204,7 @@ class Subversion(VersionControl):
             args.append(self.__svnURL(urlrev2))
         args.append(fname)
         
-        dia = SvnDialog(self.trUtf8('Merging {0}').format(name))
+        dia = SvnDialog(self.tr('Merging {0}').format(name))
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -1467,7 +1470,7 @@ class Subversion(VersionControl):
         self.addArguments(args, self.options['global'])
         args.append(name)
         
-        dia = SvnDialog(self.trUtf8('Cleaning up {0}')
+        dia = SvnDialog(self.tr('Cleaning up {0}')
                         .format(name))
         res = dia.startProcess(args)
         if res:
@@ -1497,7 +1500,7 @@ class Subversion(VersionControl):
             args = []
             self.addArguments(args, commandList)
             
-            dia = SvnDialog(self.trUtf8('Subversion command'))
+            dia = SvnDialog(self.tr('Subversion command'))
             res = dia.startProcess(args, wd)
             if res:
                 dia.exec_()
@@ -1667,7 +1670,7 @@ class Subversion(VersionControl):
                 args.append('--recursive')
             args.append(name)
         
-        dia = SvnDialog(self.trUtf8('Resolving conficts'))
+        dia = SvnDialog(self.tr('Resolving conficts'))
         res = dia.startProcess(args)
         if res:
             dia.exec_()
@@ -1698,7 +1701,7 @@ class Subversion(VersionControl):
             args.append(name)
             args.append(target)
             
-            dia = SvnDialog(self.trUtf8('Copying {0}')
+            dia = SvnDialog(self.tr('Copying {0}')
                             .format(name))
             res = dia.startProcess(args)
             if res:
@@ -1739,9 +1742,9 @@ class Subversion(VersionControl):
             if not propName:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Subversion Set Property"),
-                    self.trUtf8("""You have to supply a property name."""
-                                """ Aborting."""))
+                    self.tr("Subversion Set Property"),
+                    self.tr("""You have to supply a property name."""
+                            """ Aborting."""))
                 return
             
             args = []
@@ -1760,7 +1763,7 @@ class Subversion(VersionControl):
                 dname, fname = self.splitPath(name)
                 args.append(fname)
             
-            dia = SvnDialog(self.trUtf8('Subversion Set Property'))
+            dia = SvnDialog(self.tr('Subversion Set Property'))
             res = dia.startProcess(args, dname)
             if res:
                 dia.exec_()
@@ -1774,8 +1777,8 @@ class Subversion(VersionControl):
         """
         propName, ok = QInputDialog.getText(
             None,
-            self.trUtf8("Subversion Delete Property"),
-            self.trUtf8("Enter property name"),
+            self.tr("Subversion Delete Property"),
+            self.tr("Enter property name"),
             QLineEdit.Normal)
         
         if not ok:
@@ -1784,9 +1787,9 @@ class Subversion(VersionControl):
         if not propName:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Subversion Delete Property"),
-                self.trUtf8("""You have to supply a property name."""
-                            """ Aborting."""))
+                self.tr("Subversion Delete Property"),
+                self.tr("""You have to supply a property name."""
+                        """ Aborting."""))
             return
         
         args = []
@@ -1802,7 +1805,7 @@ class Subversion(VersionControl):
             dname, fname = self.splitPath(name)
             args.append(fname)
         
-        dia = SvnDialog(self.trUtf8('Subversion Delete Property'))
+        dia = SvnDialog(self.tr('Subversion Delete Property'))
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -1959,10 +1962,10 @@ class Subversion(VersionControl):
                         process.readAllStandardError(),
                         Preferences.getSystem("IOEncoding"), 'replace')
             else:
-                error = self.trUtf8(
+                error = self.tr(
                     "The svn process did not finish within 30s.")
         else:
-            error = self.trUtf8(
+            error = self.tr(
                 'The process {0} could not be started. '
                 'Ensure, that it is in the search path.').format('svn')
         
@@ -1999,7 +2002,7 @@ class Subversion(VersionControl):
         if error:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Subversion Side-by-Side Difference"),
+                self.tr("Subversion Side-by-Side Difference"),
                 error)
             return
         name1 = "{0} (rev. {1})".format(name, rev1 and rev1 or ".")
@@ -2009,7 +2012,7 @@ class Subversion(VersionControl):
             if error:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Subversion Side-by-Side Difference"),
+                    self.tr("Subversion Side-by-Side Difference"),
                     error)
                 return
             name2 = "{0} (rev. {1})".format(name, rev2)
@@ -2022,8 +2025,8 @@ class Subversion(VersionControl):
             except IOError:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Subversion Side-by-Side Difference"),
-                    self.trUtf8(
+                    self.tr("Subversion Side-by-Side Difference"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(name))
                 return
@@ -2034,18 +2037,19 @@ class Subversion(VersionControl):
         self.sbsDiff.show()
         self.sbsDiff.compare(output1, output2, name1, name2)
     
-    def svnLogBrowser(self, path, isFile=False):
+    def vcsLogBrowser(self, name, isFile=False):
         """
         Public method used to browse the log of a file/directory from the
         Subversion repository.
         
-        @param path file/directory name to show the log of (string)
+        @param name file/directory name to show the log of (string)
         @param isFile flag indicating log for a file is to be shown (boolean)
         """
-        from .SvnLogBrowserDialog import SvnLogBrowserDialog
-        self.logBrowser = SvnLogBrowserDialog(self, isFile=isFile)
+        if self.logBrowser is None:
+            from .SvnLogBrowserDialog import SvnLogBrowserDialog
+            self.logBrowser = SvnLogBrowserDialog(self)
         self.logBrowser.show()
-        self.logBrowser.start(path)
+        self.logBrowser.start(name, isFile=isFile)
         
     def svnLock(self, name, stealIt=False, parent=None):
         """
@@ -2070,7 +2074,7 @@ class Subversion(VersionControl):
             args.append(fname)
         
         dia = SvnDialog(
-            self.trUtf8('Locking in the Subversion repository'), parent)
+            self.tr('Locking in the Subversion repository'), parent)
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -2098,7 +2102,7 @@ class Subversion(VersionControl):
             args.append(fname)
         
         dia = SvnDialog(
-            self.trUtf8('Unlocking in the Subversion repository'), parent)
+            self.tr('Unlocking in the Subversion repository'), parent)
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -2122,7 +2126,7 @@ class Subversion(VersionControl):
             args.append(newUrl)
             args.append(projectPath)
             
-            dia = SvnDialog(self.trUtf8('Relocating'))
+            dia = SvnDialog(self.tr('Relocating'))
             res = dia.startProcess(args)
             if res:
                 dia.exec_()
@@ -2141,8 +2145,8 @@ class Subversion(VersionControl):
         if url is None:
             url, ok = QInputDialog.getText(
                 None,
-                self.trUtf8("Repository Browser"),
-                self.trUtf8("Enter the repository URL."),
+                self.tr("Repository Browser"),
+                self.tr("Enter the repository URL."),
                 QLineEdit.Normal)
             if not ok or not url:
                 return
@@ -2173,7 +2177,7 @@ class Subversion(VersionControl):
             dname, fname = self.splitPath(names)
             args.append(fname)
         
-        dia = SvnDialog(self.trUtf8('Remove from changelist'))
+        dia = SvnDialog(self.tr('Remove from changelist'))
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -2189,8 +2193,8 @@ class Subversion(VersionControl):
         """
         clname, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("Add to changelist"),
-            self.trUtf8("Enter name of the changelist:"),
+            self.tr("Add to changelist"),
+            self.tr("Enter name of the changelist:"),
             sorted(self.svnGetChangelists()),
             0, True)
         if not ok or not clname:
@@ -2208,7 +2212,7 @@ class Subversion(VersionControl):
             dname, fname = self.splitPath(names)
             args.append(fname)
         
-        dia = SvnDialog(self.trUtf8('Remove from changelist'))
+        dia = SvnDialog(self.tr('Remove from changelist'))
         res = dia.startProcess(args, dname)
         if res:
             dia.exec_()
@@ -2273,7 +2277,7 @@ class Subversion(VersionControl):
         args.append("upgrade")
         args.append(".")
         
-        dia = SvnDialog(self.trUtf8('Upgrade'))
+        dia = SvnDialog(self.tr('Upgrade'))
         res = dia.startProcess(args, path)
         if res:
             dia.exec_()

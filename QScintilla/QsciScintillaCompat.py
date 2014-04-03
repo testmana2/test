@@ -69,6 +69,37 @@ class QsciScintillaCompat(QsciScintilla):
         self.__targetSearchStart = 0
         self.__targetSearchEnd = -1
         self.__targetSearchActive = False
+        
+        self.__modified = False
+        
+        self.userListActivated.connect(self.__completionListSelected)
+        self.modificationChanged.connect(self.__modificationChanged)
+    
+    def __modificationChanged(self, m):
+        """
+        Private slot to handle the modificationChanged signal.
+        
+        @param m modification status (boolean)
+        """
+        self.__modified = m
+    
+    def isModified(self):
+        """
+        Public method to return the modification status.
+        
+        @return flag indicating the modification status (boolean)
+        """
+        return self.__modified
+    
+    def setModified(self, m):
+        """
+        Public slot to set the modification status.
+        
+        @param m new modification status (boolean)
+        """
+        self.__modified = m
+        super(QsciScintillaCompat, self).setModified(m)
+        self.modificationChanged.emit(m)
     
     def setLexer(self, lex=None):
         """
@@ -1181,7 +1212,20 @@ class QsciScintillaCompat(QsciScintilla):
         @param event event object (QFocusEvent)
         """
         if self.isListActive():
-            self.cancelList()
+            if event.reason() == Qt.ActiveWindowFocusReason:
+                aw = QApplication.activeWindow()
+                if aw is None or aw.parent() is not self:
+                    self.cancelList()
+            else:
+                self.cancelList()
+        
+        if self.isCallTipActive():
+            if event.reason() == Qt.ActiveWindowFocusReason:
+                aw = QApplication.activeWindow()
+                if aw is None or aw.parent() is not self:
+                    self.SendScintilla(QsciScintilla.SCI_CALLTIPCANCEL)
+            else:
+                self.SendScintilla(QsciScintilla.SCI_CALLTIPCANCEL)
         
         super(QsciScintillaCompat, self).focusOutEvent(event)
     
@@ -1197,9 +1241,8 @@ class QsciScintillaCompat(QsciScintilla):
         """
         return QsciScintillaBase.event(self, evt)
     
-    # TODO: adjust this once we have a working QScintilla version
     if "inputMethodEvent" in QsciScintillaBase.__dict__ and \
-            QSCINTILLA_VERSION() < 0x020900:
+            QSCINTILLA_VERSION() < 0x020801:
         def inputMethodEvent(self, evt):
             """
             Protected method to cope with a glitch in some Qscintilla versions
@@ -1248,20 +1291,41 @@ class QsciScintillaCompat(QsciScintilla):
     ## replacements for buggy methods
     ###########################################################################
     
-    def showUserList(self, id, lst):
+    if "showUserList" not in QsciScintilla.__dict__:
+        def showUserList(self, id, lst):
+            """
+            Public method to show a user supplied list.
+            
+            @param id id of the list (integer)
+            @param lst list to be show (list of strings)
+            """
+            if id <= 0:
+                return
+            
+            self.SendScintilla(
+                QsciScintilla.SCI_AUTOCSETSEPARATOR,
+                ord(self.UserSeparator))
+            self.SendScintilla(
+                QsciScintilla.SCI_USERLISTSHOW, id,
+                self._encodeString(self.UserSeparator.join(lst)))
+    
+    ###########################################################################
+    ## work-arounds for buggy behavior
+    ###########################################################################
+    
+    def __completionListSelected(self, id, txt):
         """
-        Public method to show a user supplied list.
+        Private slot to handle the selection from the completion list.
         
-        @param id id of the list (integer)
-        @param lst list to be show (list of strings)
+        Note: This works around an issue of some window managers taking
+        focus away from the application when clicked inside a completion
+        list but not giving it back when an item is selected via a
+        double-click.
+        
+        @param id the ID of the user list (integer)
+        @param txt the selected text (string)
         """
-        if id <= 0:
-            return
-        
-        self.SendScintilla(QsciScintilla.SCI_AUTOCSETSEPARATOR,
-                           ord(self.UserSeparator))
-        self.SendScintilla(QsciScintilla.SCI_USERLISTSHOW, id,
-                           self._encodeString(self.UserSeparator.join(lst)))
+        self.activateWindow()
     
     ###########################################################################
     ## utility methods
@@ -1303,6 +1367,18 @@ class QsciScintillaCompat(QsciScintilla):
             
             return pos
     
+    elif QSCINTILLA_VERSION() >= 0x020700:
+        def positionFromLineIndex(self, line, index):
+            """
+            Public method to convert line and index to an absolute position.
+            
+            @param line line number (integer)
+            @param index index number (integer)
+            @return absolute position in the editor (integer)
+            """
+            pos = self.SendScintilla(QsciScintilla.SCI_POSITIONFROMLINE, line)
+            return pos + index
+    
     if "lineIndexFromPosition" not in QsciScintilla.__dict__:
         def lineIndexFromPosition(self, pos):
             """
@@ -1330,6 +1406,19 @@ class QsciScintillaCompat(QsciScintilla):
                 indx += 1
             
             return lin, indx
+    
+    elif QSCINTILLA_VERSION() >= 0x020700:
+        def lineIndexFromPosition(self, pos):
+            """
+            Public method to convert an absolute position to line and index.
+            
+            @param pos absolute position in the editor (integer)
+            @return tuple of line number (integer) and index number (integer)
+            """
+            lin = self.SendScintilla(QsciScintilla.SCI_LINEFROMPOSITION, pos)
+            linpos = self.SendScintilla(
+                QsciScintilla.SCI_POSITIONFROMLINE, lin)
+            return lin, pos - linpos
     
     if "contractedFolds" not in QsciScintilla.__dict__:
         def contractedFolds(self):

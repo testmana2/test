@@ -110,9 +110,6 @@
 The following example could clarify the regexp which match a valid date: &lt;/p&gt;
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -122,9 +119,6 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
        </property>
        <property name="whatsThis">
         <string>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -140,9 +134,6 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 E.g. 'gr.y' matches 'gray', 'grey', 'gr%y', etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -154,9 +145,6 @@ character class is faster and more precise.&lt;/p&gt;</string>
        <property name="whatsThis">
         <string>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -171,9 +159,6 @@ character class is faster and more precise.&lt;/p&gt;</string>
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. '?' or '+') to the entire
 group of characters inside the brakets. E.g. the regex 'Set(?:Value)?' matches 'Set' or 'SetValue'. The '?:' inside the brakets
 means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -191,9 +176,6 @@ the backreference matched inside the brakets is stored for further use (i.e. 'Va
 One can access the backereference with the '\1' expression. &lt;/p&gt;
 &lt;p&gt;E.g. '([a-c])x\1x\1' will match 'axaxa', 'bxbxb' and 'cxcxc'.&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -209,9 +191,6 @@ backreference is also stored for further usage. The difference is that a name is
 the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
 E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches 'axaxax','bxbxbx' or 'cxcxcx' ('foo' is the group name)&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -225,9 +204,6 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches 'axaxax','bxbxbx' or 'cxcxc
 &lt;p&gt;Select to insert a reference to named group previously declared. Each reference group refers to the match
  found by the corresponding named group. In the following example, (?P=foo) may refer to the charaters 'a','b' or 'c'.&lt;/p&gt;
 &lt;p&gt;E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches 'axaxax','bxbxbx' or 'cxcxcx'.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -244,9 +220,6 @@ several possible regular expressions. E.g. 'cat|dog|mouse|fish' matches words co
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words 'cat', 'dog', ... you should express the fact that you only want to match complete words: '\b(cat|dog|mouse|fish)\b'&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -260,9 +233,6 @@ Be aware that in the above example, the alternatives refer to whole or part of w
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. '^[A-Z]' match lines starting with a capitalized character. &lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -274,9 +244,6 @@ E.g. '^[A-Z]' match lines starting with a capitalized character. &lt;/p&gt;</str
        <property name="whatsThis">
         <string>&lt;b&gt;End of line: '$'&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -291,9 +258,6 @@ E.g. '^[A-Z]' match lines starting with a capitalized character. &lt;/p&gt;</str
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. '\bcat\b' matches exactly the word 'cat' while 'concatenation' is ignored.&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -306,9 +270,6 @@ must begin or end at this position. E.g. '\bcat\b' matches exactly the word 'cat
         <string>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -324,9 +285,6 @@ does not. Effectively, \B matches at any position between two word characters as
 Writting 'q(?=u)' means that you want to match the 'q' character only if it is followed by 'u'. In this statement 'u' is a trivial 
 regexp which may be replaced by a more complex expression; q(?=[abc])' will match a 'q' if followed by either 'a', 'b' or 'c'.&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -340,9 +298,6 @@ regexp which may be replaced by a more complex expression; q(?=[abc])' will matc
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting 'q(?!u)' means that you want to match 'q' only if it is not followed by 'u'. In this statement, 'u' is a
 trivial regexp which may be replaced by a more complex expression; 'q(?![abc])' will match a 'q' if it is followed by anything else than 'a', 'b' or 'c'.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -358,9 +313,6 @@ trivial regexp which may be replaced by a more complex expression; 'q(?![abc])' 
 It is used to match a character only if preceded by another one. Writting '(?&amp;lt;=u)q' means that you want to match the 'q' character 
 only if it is preceded by 'u'. As with lookhead, 'u' may be replaced by a more complex expression; '(?&amp;lt;=[abc])q' will match a 'q' if preceded by either 'a', 'b' or 'c'.&lt;/p&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
@@ -375,9 +327,6 @@ only if it is preceded by 'u'. As with lookhead, 'u' may be replaced by a more c
 but works backwards. It is used to match a character only if not preceded by another one. Writting '(?&amp;lt;!u)q' means that you want to match the 'q' 
 character only if it is not preceded by 'u'. As other lookaround, 'u' may be replaced by a more complex 
 expression; '(?&amp;lt;![abc])q' will match a 'q' only if not preceded by either 'a', 'b' nor 'c'.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>
@@ -402,18 +351,12 @@ expression; '(?&amp;lt;![abc])q' will match a 'q' only if not preceded by either
        <property name="toolTip">
         <string>&lt;b&gt;Undo last edit&lt;/b&gt;</string>
        </property>
-       <property name="text">
-        <string>...</string>
-       </property>
       </widget>
      </item>
      <item>
       <widget class="QToolButton" name="redoButton">
        <property name="toolTip">
         <string>&lt;b&gt;Redo last edit&lt;/b&gt;</string>
-       </property>
-       <property name="text">
-        <string>...</string>
        </property>
       </widget>
      </item>

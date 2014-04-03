@@ -57,13 +57,13 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
             totalIssues += stats[code]
         
         self.totalIssues.setText(
-            self.trUtf8("%n issue(s) found", "", totalIssues))
+            self.tr("%n issue(s) found", "", totalIssues))
         self.fixedIssues.setText(
-            self.trUtf8("%n issue(s) fixed", "", fixesCount))
+            self.tr("%n issue(s) fixed", "", fixesCount))
         self.filesChecked.setText(
-            self.trUtf8("%n file(s) checked", "", filesCount))
+            self.tr("%n file(s) checked", "", filesCount))
         self.filesIssues.setText(
-            self.trUtf8("%n file(s) with issues found", "", filesIssues))
+            self.tr("%n file(s) with issues found", "", filesIssues))
         
         self.statisticsList.resizeColumnToContents(0)
         self.statisticsList.resizeColumnToContents(1)

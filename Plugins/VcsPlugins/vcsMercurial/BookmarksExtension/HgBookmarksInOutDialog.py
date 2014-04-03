@@ -9,8 +9,8 @@ Module implementing a dialog to show a list of incoming or outgoing bookmarks.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -22,8 +22,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
 from E5Gui import E5MessageBox
 
 from .Ui_HgBookmarksInOutDialog import Ui_HgBookmarksInOutDialog
-
-import Preferences
 
 
 class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
@@ -53,9 +51,9 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         if mode not in [self.INCOMING, self.OUTGOING]:
             raise ValueError("Bad value for mode")
         if mode == self.INCOMING:
-            self.setWindowTitle(self.trUtf8("Mercurial Incoming Bookmarks"))
+            self.setWindowTitle(self.tr("Mercurial Incoming Bookmarks"))
         elif mode == self.OUTGOING:
-            self.setWindowTitle(self.trUtf8("Mercurial Outgoing Bookmarks"))
+            self.setWindowTitle(self.tr("Mercurial Outgoing Bookmarks"))
         
         self.process = QProcess()
         self.vcs = vcs
@@ -112,11 +110,10 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
         if self.mode == self.INCOMING:
-            args.append('incoming')
+            args = self.vcs.initCommand("incoming")
         elif self.mode == self.OUTGOING:
-            args.append('outgoing')
+            args = self.vcs.initCommand("outgoing")
         else:
             raise ValueError("Bad value for mode")
         args.append('--bookmarks')
@@ -145,8 +142,8 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -178,7 +175,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
-            self.__generateItem(self.trUtf8("no bookmarks found"), "")
+            self.__generateItem(self.tr("no bookmarks found"), "")
         self.__resizeColumns()
         self.__resort()
     
@@ -242,9 +239,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+            s = str(self.process.readLine(), self.vcs.getEncoding(), 'replace')
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):
@@ -269,8 +264,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

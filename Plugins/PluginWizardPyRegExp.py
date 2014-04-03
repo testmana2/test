@@ -21,7 +21,7 @@ name = "Python re Wizard Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "PyRegExpWizard"
 packageName = "__core__"
 shortDescription = "Show the Python re wizard."
@@ -70,17 +70,17 @@ class PyRegExpWizard(QObject):
         Private method to initialize the action.
         """
         self.action = E5Action(
-            self.trUtf8('Python re Wizard'),
-            self.trUtf8('&Python re Wizard...'), 0, 0, self,
+            self.tr('Python re Wizard'),
+            self.tr('&Python re Wizard...'), 0, 0, self,
             'wizards_python_re')
-        self.action.setStatusTip(self.trUtf8('Python re Wizard'))
-        self.action.setWhatsThis(self.trUtf8(
+        self.action.setStatusTip(self.tr('Python re Wizard'))
+        self.action.setWhatsThis(self.tr(
             """<b>Python re Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
             """ needed to create a Python re string. The generated code is"""
             """ inserted at the current cursor position.</p>"""
         ))
-        self.action.triggered[()].connect(self.__handle)
+        self.action.triggered.connect(self.__handle)
         
         self.__ui.addE5Actions([self.action], 'wizards')
 
@@ -122,8 +122,8 @@ class PyRegExpWizard(QObject):
         if editor is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8('No current editor'),
-                self.trUtf8('Please open or create a file first.'))
+                self.tr('No current editor'),
+                self.tr('Please open or create a file first.'))
         else:
             code, ok = self.__callForm(editor)
             if ok:

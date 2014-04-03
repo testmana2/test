@@ -15,13 +15,12 @@ import sys
 import pysvn
 
 from PyQt4.QtCore import QMutexLocker, Qt
-from PyQt4.QtGui import QHeaderView, QDialog, QDialogButtonBox, QFont, \
-    QTreeWidgetItem
+from PyQt4.QtGui import QHeaderView, QDialog, QDialogButtonBox, QTreeWidgetItem
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 
-import Utilities
+import Preferences
 
 
 class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
@@ -45,11 +44,7 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         self.vcs = vcs
         
         self.blameList.headerItem().setText(self.blameList.columnCount(), "")
-        font = QFont(self.blameList.font())
-        if Utilities.isWindowsPlatform():
-            font.setFamily("Lucida Console")
-        else:
-            font.setFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.blameList.setFont(font)
         
         self.client = self.vcs.getClient()

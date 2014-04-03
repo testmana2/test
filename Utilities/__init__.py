@@ -9,7 +9,7 @@ Package implementing various functions/classes needed everywhere within eric5.
 
 from __future__ import unicode_literals
 try:
-    str = unicode   # __IGNORE_WARNING__
+    str = unicode
     import urllib
 
     def quote(url):
@@ -20,7 +20,7 @@ try:
         @return quoted url (string)
         """
         return urllib.quote(url.encode('utf-8'))
-except (NameError):
+except NameError:
     basestring = str
     from urllib.parse import quote    # __IGNORE_WARNING__
 
@@ -71,7 +71,8 @@ from E5Gui.E5Application import e5App
 from UI.Info import Program, Version
 
 import Preferences
-from Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck import normalizeCode
+from Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck import (  # __IGNORE_WARNING__
+    normalizeCode)
 
 from eric5config import getConfig
 
@@ -267,6 +268,34 @@ def decode(text):
     
     # Assume UTF-8 loosing information
     return str(text, "utf-8", "ignore"), 'utf-8-ignore'
+
+
+def readEncodedFileWithEncoding(filename, encoding):
+    """
+    Function to read a file and decode its contents into proper text.
+    
+    @param filename name of the file to read (string)
+    @keyparam encoding encoding to be used to read the file (string)
+    @return tuple of decoded text and encoding (string, string)
+    """
+    f = open(filename, "rb")
+    text = f.read()
+    f.close()
+    if encoding:
+        try:
+            return str(text, encoding), '{0}-selected'.format(encoding)
+        except (UnicodeError, LookupError):
+            pass
+        # Try default encoding
+        try:
+            codec = Preferences.getEditor("DefaultEncoding")
+            return str(text, codec), '{0}-default'.format(codec)
+        except (UnicodeError, LookupError):
+            pass
+        # Assume UTF-8 loosing information
+        return str(text, "utf-8", "ignore"), 'utf-8-ignore'
+    else:
+        return decode(text)
 
 
 def writeEncodedFile(filename, text, orig_coding):
@@ -1298,11 +1327,12 @@ def getPythonVersion():
 
 def determinePythonVersion(filename, source, editor=None):
     """
-    Determine the python version of a given file.
+    Function to determine the python version of a given file.
     
     @param filename name of the file with extension (str)
     @param source of the file (str)
-    @keyparam editor if the file is opened already (Editor object)
+    @keyparam editor reference to the editor, if the file is opened
+        already (Editor object)
     @return Python version if file is Python2 or Python3 (int)
     """
     pyAssignment = {"Python": 2, "Python2": 2, "Python3": 3}
@@ -1355,6 +1385,7 @@ def determinePythonVersion(filename, source, editor=None):
     
     if editor and pyVer:
         editor.filetype = "Python{0}".format(pyVer)
+    
     return pyVer
 
 
@@ -1705,3 +1736,46 @@ def win32_getRealName():
     nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
     GetUserNameEx(NameDisplay, nameBuffer, size)
     return nameBuffer.value
+
+###############################################################################
+# Javascript related functions below
+###############################################################################
+
+
+def jsCheckSyntax(file, codestring=""):
+    """
+    Function to check a Javascript source file for syntax errors.
+    
+    @param file source filename (string)
+    @param codestring string containing the code to check (string)
+    @return A tuple indicating status (True = an error was found), the
+        file name, the line number and the error message (boolean, string,
+        string, string). The values are only valid, if the status is True.
+    """
+    import jasy.js.parse.Parser as jsParser
+    import jasy.js.tokenize.Tokenizer as jsTokenizer
+    
+    if not codestring:
+        try:
+            codestring = readEncodedFile(file)[0]
+        except (UnicodeDecodeError, IOError):
+            return (False, None, None, None)
+    
+    # normalize line endings
+    codestring = codestring.replace("\r\n", "\n")
+    codestring = codestring.replace("\r", "\n")
+    
+    # ensure source ends with an eol
+    if codestring and codestring[-1] != '\n':
+        codestring = codestring + '\n'
+    
+    try:
+        jsParser.parse(codestring, file)
+    except (jsParser.SyntaxError, jsTokenizer.ParseError) as exc:
+        details = exc.args[0]
+        error, details = details.splitlines()
+        fn, line = details.strip().rsplit(":", 1)
+        error = error.split(":", 1)[1].strip()
+        return (True, fn, line, error)
+    
+    return (False, None, None, None)

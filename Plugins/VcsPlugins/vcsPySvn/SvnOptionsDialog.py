@@ -22,6 +22,7 @@ from .Ui_SvnOptionsDialog import Ui_SvnOptionsDialog
 from .Config import ConfigSvnProtocols
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
@@ -40,6 +41,8 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         super(SvnOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         
         self.project = project
@@ -56,6 +59,9 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         self.networkPath = "localhost/"
         self.localProtocol = True
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
         """
@@ -64,7 +70,7 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         if self.protocolCombo.currentText() == "file://":
             directory = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select Repository-Directory"),
+                self.tr("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -95,13 +101,13 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         if protocol == "file://":
             self.networkPath = self.vcsUrlEdit.text()
             self.vcsUrlEdit.setText(self.localPath)
-            self.vcsUrlLabel.setText(self.trUtf8("Pat&h:"))
+            self.vcsUrlLabel.setText(self.tr("Pat&h:"))
             self.localProtocol = True
         else:
             if self.localProtocol:
                 self.localPath = self.vcsUrlEdit.text()
                 self.vcsUrlEdit.setText(self.networkPath)
-                self.vcsUrlLabel.setText(self.trUtf8("&URL:"))
+                self.vcsUrlLabel.setText(self.tr("&URL:"))
                 self.localProtocol = False
     
     @pyqtSlot(str)

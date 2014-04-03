@@ -152,17 +152,18 @@ class DebuggerInterfacePython(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
         interpreter = Preferences.getDebugger("PythonInterpreter")
         if interpreter == "":
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>No Python2 interpreter configured.</p>"""))
-            return None, False
+            return None, False, ""
         
         debugClientType = Preferences.getDebugger("DebugClientType")
         if debugClientType == "standard":
@@ -199,8 +200,8 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 
@@ -213,7 +214,7 @@ class DebuggerInterfacePython(QObject):
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
-                return process, self.__isNetworked
+                return process, self.__isNetworked, ""
         
         # set translation function
         self.translate = self.__identityTranslation
@@ -246,11 +247,11 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
-                return process, self.__isNetworked
+                return process, self.__isNetworked, interpreter
         
         process = self.__startProcess(
             interpreter,
@@ -259,10 +260,10 @@ class DebuggerInterfacePython(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
-        return process, self.__isNetworked
+        return process, self.__isNetworked, interpreter
 
     def startRemoteForProject(self, port, runInConsole):
         """
@@ -271,12 +272,13 @@ class DebuggerInterfacePython(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
         project = e5App().getObject("Project")
         if not project.isDebugPropertiesLoaded():
-            return None, self.__isNetworked
+            return None, self.__isNetworked, ""
         
         # start debugger with project specific settings
         interpreter = project.getDebugProperty("INTERPRETER")
@@ -301,8 +303,8 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
                 # set translation function
@@ -314,7 +316,7 @@ class DebuggerInterfacePython(QObject):
                     self.translate = self.__remoteTranslation
                 else:
                     self.translate = self.__identityTranslation
-                return process, self.__isNetworked
+                return process, self.__isNetworked, ""
         
         # set translation function
         self.translate = self.__identityTranslation
@@ -348,11 +350,11 @@ class DebuggerInterfacePython(QObject):
                 if process is None:
                     E5MessageBox.critical(
                         None,
-                        self.trUtf8("Start Debugger"),
-                        self.trUtf8(
+                        self.tr("Start Debugger"),
+                        self.tr(
                             """<p>The debugger backend could not be"""
                             """ started.</p>"""))
-                return process, self.__isNetworked
+                return process, self.__isNetworked, interpreter
         
         process = self.__startProcess(
             interpreter,
@@ -361,10 +363,10 @@ class DebuggerInterfacePython(QObject):
         if process is None:
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Start Debugger"),
-                self.trUtf8(
+                self.tr("Start Debugger"),
+                self.tr(
                     """<p>The debugger backend could not be started.</p>"""))
-        return process, self.__isNetworked
+        return process, self.__isNetworked, interpreter
 
     def getClientCapabilities(self):
         """
@@ -386,8 +388,8 @@ class DebuggerInterfacePython(QObject):
         if self.qsock is not None:
             return False
         
-        sock.disconnected[()].connect(self.debugServer.startClient)
-        sock.readyRead[()].connect(self.__parseClientLine)
+        sock.disconnected.connect(self.debugServer.startClient)
+        sock.readyRead.connect(self.__parseClientLine)
         
         self.qsock = sock
         
@@ -417,7 +419,7 @@ class DebuggerInterfacePython(QObject):
         
         # do not want any slots called during shutdown
         self.qsock.disconnected.disconnect(self.debugServer.startClient)
-        self.qsock.readyRead[()].disconnect(self.__parseClientLine)
+        self.qsock.readyRead.disconnect(self.__parseClientLine)
         
         # close down socket, and shut down client as well.
         self.__sendCommand('{0}\n'.format(DebugProtocol.RequestShutdown))
@@ -800,12 +802,12 @@ class DebuggerInterfacePython(QObject):
         """
         Private method to ask the user which branch of a fork to follow.
         """
-        selections = [self.trUtf8("Parent Process"),
-                      self.trUtf8("Child process")]
+        selections = [self.tr("Parent Process"),
+                      self.tr("Child process")]
         res, ok = QInputDialog.getItem(
             None,
-            self.trUtf8("Client forking"),
-            self.trUtf8("Select the fork branch to follow."),
+            self.tr("Client forking"),
+            self.tr("Select the fork branch to follow."),
             selections,
             0, False)
         if not ok or res == selections[0]:

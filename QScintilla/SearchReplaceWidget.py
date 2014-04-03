@@ -54,7 +54,7 @@ class SearchReplaceWidget(QWidget):
             from .Ui_ReplaceWidget import Ui_ReplaceWidget
             self.replaceHistory = vm.getSRHistory('replace')
             self.ui = Ui_ReplaceWidget()
-            whatsThis = self.trUtf8(
+            whatsThis = self.tr(
 r"""<b>Find and Replace</b>
 <p>This dialog is used to find some text and replace it with another text.
 By checking the various checkboxes, the search can be made more specific.
@@ -65,7 +65,7 @@ special characters interpreted are:</p>
         else:
             from .Ui_SearchWidget import Ui_SearchWidget
             self.ui = Ui_SearchWidget()
-            whatsThis = self.trUtf8(
+            whatsThis = self.tr(
 r"""<b>Find</b>
 <p>This dialog is used to find some text. By checking the various checkboxes,
 the search can be made more specific. The search string might be a regular
@@ -76,7 +76,7 @@ expression. In a regular expression, special characters interpreted are:</p>
         if not replace:
             self.ui.wrapCheckBox.setChecked(True)
         
-        whatsThis += self.trUtf8(
+        whatsThis += self.tr(
 r"""<table border="0">
 <tr><td><code>.</code></td><td>Matches any character</td></tr>
 <tr><td><code>\(</code></td><td>This marks the start of a region for tagging a
@@ -142,18 +142,18 @@ and so on.</td></tr>
                 self.on_replaceButton_clicked)
         
         self.findNextAct = E5Action(
-            self.trUtf8('Find Next'),
-            self.trUtf8('Find Next'),
+            self.tr('Find Next'),
+            self.tr('Find Next'),
             0, 0, self, 'search_widget_find_next')
-        self.findNextAct.triggered[()].connect(self.on_findNextButton_clicked)
+        self.findNextAct.triggered.connect(self.on_findNextButton_clicked)
         self.findNextAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findNextAct)
         
         self.findPrevAct = E5Action(
-            self.trUtf8('Find Prev'),
-            self.trUtf8('Find Prev'),
+            self.tr('Find Prev'),
+            self.tr('Find Prev'),
             0, 0, self, 'search_widget_find_prev')
-        self.findPrevAct.triggered[()].connect(self.on_findPrevButton_clicked)
+        self.findPrevAct.triggered.connect(self.on_findPrevButton_clicked)
         self.findPrevAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findPrevAct)
         
@@ -247,7 +247,7 @@ and so on.</td></tr>
         else:
             E5MessageBox.information(
                 self, self.windowTitle(),
-                self.trUtf8("'{0}' was not found.").format(txt))
+                self.tr("'{0}' was not found.").format(txt))
 
     @pyqtSlot()
     def on_findPrevButton_clicked(self):
@@ -284,7 +284,7 @@ and so on.</td></tr>
         else:
             E5MessageBox.information(
                 self, self.windowTitle(),
-                self.trUtf8("'{0}' was not found.").format(txt))
+                self.tr("'{0}' was not found.").format(txt))
     
     def __findByReturnPressed(self):
         """
@@ -644,7 +644,7 @@ and so on.</td></tr>
                 self.ui.replaceSearchButton.setEnabled(False)
                 E5MessageBox.information(
                     self, self.windowTitle(),
-                    self.trUtf8("'{0}' was not found.").format(ftxt))
+                    self.tr("'{0}' was not found.").format(ftxt))
         else:
             self.ui.replaceButton.setEnabled(False)
             self.ui.replaceSearchButton.setEnabled(False)
@@ -766,12 +766,12 @@ and so on.</td></tr>
         if found:
             E5MessageBox.information(
                 self, self.windowTitle(),
-                self.trUtf8("Replaced {0} occurrences.")
+                self.tr("Replaced {0} occurrences.")
                 .format(replacements))
         else:
             E5MessageBox.information(
                 self, self.windowTitle(),
-                self.trUtf8("Nothing replaced because '{0}' was not found.")
+                self.tr("Nothing replaced because '{0}' was not found.")
                 .format(ftxt))
         
         aw.setCursorPosition(cline, cindex)
@@ -923,8 +923,8 @@ class SearchReplaceSlidingWidget(QWidget):
         
         self.__searchReplaceWidget.searchListChanged.connect(
             self.searchListChanged)
-        self.__leftButton.clicked[()].connect(self.__slideLeft)
-        self.__rightButton.clicked[()].connect(self.__slideRight)
+        self.__leftButton.clicked.connect(self.__slideLeft)
+        self.__rightButton.clicked.connect(self.__slideRight)
     
     def findNext(self):
         """

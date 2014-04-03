@@ -9,8 +9,8 @@ Module implementing a class used to display the resources part of the project.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -64,9 +64,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.selectedItemsFilter = \
             [ProjectBrowserFileItem, ProjectBrowserSimpleDirectoryItem]
         
-        self.setWindowTitle(self.trUtf8('Resources'))
+        self.setWindowTitle(self.tr('Resources'))
 
-        self.setWhatsThis(self.trUtf8(
+        self.setWhatsThis(self.tr(
             """<b>Project Resources Browser</b>"""
             """<p>This allows to easily see all resources contained in the"""
             """ current project. Several actions can be executed via the"""
@@ -89,10 +89,10 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             self.menu.addAction(
-                self.trUtf8('Compile resource'),
+                self.tr('Compile resource'),
                 self.__compileResource)
             self.menu.addAction(
-                self.trUtf8('Compile all resources'),
+                self.tr('Compile all resources'),
                 self.__compileAllResources)
             self.menu.addSeparator()
         else:
@@ -100,89 +100,89 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
                         "compileResource",
-                        self.trUtf8('Compile resource')),
+                        self.tr('Compile resource')),
                     self.__compileResource)
             if self.hooks["compileAllResources"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllResources",
-                        self.trUtf8('Compile all resources')),
+                        self.tr('Compile all resources')),
                     self.__compileAllResources)
             if self.hooks["compileResource"] is not None or \
                self.hooks["compileAllResources"] is not None:
                 self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Open'), self.__openFile)
+        self.menu.addAction(self.tr('Open'), self.__openFile)
         self.menu.addSeparator()
-        act = self.menu.addAction(self.trUtf8('Rename file'), self._renameFile)
+        act = self.menu.addAction(self.tr('Rename file'), self._renameFile)
         self.menuActions.append(act)
         act = self.menu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.menuActions.append(act)
-        act = self.menu.addAction(self.trUtf8('Delete'), self.__deleteFile)
+        act = self.menu.addAction(self.tr('Delete'), self.__deleteFile)
         self.menuActions.append(act)
         self.menu.addSeparator()
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             self.menu.addAction(
-                self.trUtf8('New resource...'), self.__newResource)
+                self.tr('New resource...'), self.__newResource)
         else:
             if self.hooks["newResource"] is not None:
                 self.menu.addAction(
                     self.hooksMenuEntries.get(
                         "newResource",
-                        self.trUtf8('New resource...')), self.__newResource)
+                        self.tr('New resource...')), self.__newResource)
         self.menu.addAction(
-            self.trUtf8('Add resources...'), self.__addResourceFiles)
+            self.tr('Add resources...'), self.__addResourceFiles)
         self.menu.addAction(
-            self.trUtf8('Add resources directory...'),
+            self.tr('Add resources directory...'),
             self.__addResourcesDirectory)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.menu.addSeparator()
         self.menu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.menu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.menu.addSeparator()
-        self.menu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.menu.addAction(self.tr('Configure...'), self._configure)
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             self.backMenu.addAction(
-                self.trUtf8('Compile all resources'),
+                self.tr('Compile all resources'),
                 self.__compileAllResources)
             self.backMenu.addSeparator()
             self.backMenu.addAction(
-                self.trUtf8('New resource...'), self.__newResource)
+                self.tr('New resource...'), self.__newResource)
         else:
             if self.hooks["compileAllResources"] is not None:
                 self.backMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllResources",
-                        self.trUtf8('Compile all resources')),
+                        self.tr('Compile all resources')),
                     self.__compileAllResources)
                 self.backMenu.addSeparator()
             if self.hooks["newResource"] is not None:
                 self.backMenu.addAction(
                     self.hooksMenuEntries.get(
                         "newResource",
-                        self.trUtf8('New resource...')), self.__newResource)
+                        self.tr('New resource...')), self.__newResource)
         self.backMenu.addAction(
-            self.trUtf8('Add resources...'), self.project.addResourceFiles)
+            self.tr('Add resources...'), self.project.addResourceFiles)
         self.backMenu.addAction(
-            self.trUtf8('Add resources directory...'),
+            self.tr('Add resources directory...'),
             self.project.addResourceDir)
         self.backMenu.addSeparator()
         self.backMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.backMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.backMenu.addSeparator()
-        self.backMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.backMenu.addAction(self.tr('Configure...'), self._configure)
         self.backMenu.setEnabled(False)
 
         # create the menu for multiple selected files
@@ -191,7 +191,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             act = self.multiMenu.addAction(
-                self.trUtf8('Compile resources'),
+                self.tr('Compile resources'),
                 self.__compileSelectedResources)
             self.multiMenu.addSeparator()
         else:
@@ -199,31 +199,31 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 act = self.multiMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileSelectedResources",
-                        self.trUtf8('Compile resources')),
+                        self.tr('Compile resources')),
                     self.__compileSelectedResources)
                 self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Open'), self.__openFile)
+        self.multiMenu.addAction(self.tr('Open'), self.__openFile)
         self.multiMenu.addSeparator()
         act = self.multiMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeFile)
+            self.tr('Remove from project'), self._removeFile)
         self.multiMenuActions.append(act)
         act = self.multiMenu.addAction(
-            self.trUtf8('Delete'), self.__deleteFile)
+            self.tr('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.multiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.multiMenu.addSeparator()
-        self.multiMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.multiMenu.addAction(self.tr('Configure...'), self._configure)
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             self.dirMenu.addAction(
-                self.trUtf8('Compile all resources'),
+                self.tr('Compile all resources'),
                 self.__compileAllResources)
             self.dirMenu.addSeparator()
         else:
@@ -231,40 +231,40 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.dirMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllResources",
-                        self.trUtf8('Compile all resources')),
+                        self.tr('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMenu.addSeparator()
         act = self.dirMenu.addAction(
-            self.trUtf8('Remove from project'), self._removeDir)
+            self.tr('Remove from project'), self._removeDir)
         self.dirMenuActions.append(act)
         act = self.dirMenu.addAction(
-            self.trUtf8('Delete'), self._deleteDirectory)
+            self.tr('Delete'), self._deleteDirectory)
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('New resource...'), self.__newResource)
+            self.tr('New resource...'), self.__newResource)
         self.dirMenu.addAction(
-            self.trUtf8('Add resources...'), self.__addResourceFiles)
+            self.tr('Add resources...'), self.__addResourceFiles)
         self.dirMenu.addAction(
-            self.trUtf8('Add resources directory...'),
+            self.tr('Add resources directory...'),
             self.__addResourcesDirectory)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Copy Path to Clipboard'), self._copyToClipboard)
+            self.tr('Copy Path to Clipboard'), self._copyToClipboard)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.dirMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.dirMenu.addSeparator()
-        self.dirMenu.addAction(self.trUtf8('Configure...'), self._configure)
+        self.dirMenu.addAction(self.tr('Configure...'), self._configure)
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in \
                 ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                  "PySide", "PySideC"]:
             self.dirMultiMenu.addAction(
-                self.trUtf8('Compile all resources'),
+                self.tr('Compile all resources'),
                 self.__compileAllResources)
             self.dirMultiMenu.addSeparator()
         else:
@@ -272,23 +272,23 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.dirMultiMenu.addAction(
                     self.hooksMenuEntries.get(
                         "compileAllResources",
-                        self.trUtf8('Compile all resources')),
+                        self.tr('Compile all resources')),
                     self.__compileAllResources)
                 self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Add resources...'),
+            self.tr('Add resources...'),
             self.project.addResourceFiles)
         self.dirMultiMenu.addAction(
-            self.trUtf8('Add resources directory...'),
+            self.tr('Add resources directory...'),
             self.project.addResourceDir)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Expand all directories'), self._expandAllDirs)
+            self.tr('Expand all directories'), self._expandAllDirs)
         self.dirMultiMenu.addAction(
-            self.trUtf8('Collapse all directories'), self._collapseAllDirs)
+            self.tr('Collapse all directories'), self._collapseAllDirs)
         self.dirMultiMenu.addSeparator()
         self.dirMultiMenu.addAction(
-            self.trUtf8('Configure...'), self._configure)
+            self.tr('Configure...'), self._configure)
         
         self.menu.aboutToShow.connect(self.__showContextMenu)
         self.multiMenu.aboutToShow.connect(self.__showContextMenuMulti)
@@ -443,9 +443,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("New Resource"),
+                self.tr("New Resource"),
                 path,
-                self.trUtf8("Qt Resource Files (*.qrc)"),
+                self.tr("Qt Resource Files (*.qrc)"),
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
@@ -462,8 +462,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             if os.path.exists(fname):
                 res = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("New Resource"),
-                    self.trUtf8("The file already exists! Overwrite it?"),
+                    self.tr("New Resource"),
+                    self.tr("The file already exists! Overwrite it?"),
                     icon=E5MessageBox.Warning)
                 if not res:
                     # user selected to not overwrite
@@ -484,8 +484,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             except IOError as e:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("New Resource"),
-                    self.trUtf8(
+                    self.tr("New Resource"),
+                    self.tr(
                         "<p>The new resource file <b>{0}</b> could not"
                         " be created.<br>Problem: {1}</p>")
                     .format(fname, str(e)))
@@ -512,8 +512,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             DeleteFilesConfirmationDialog
         dlg = DeleteFilesConfirmationDialog(
             self.parent(),
-            self.trUtf8("Delete resources"),
-            self.trUtf8(
+            self.tr("Delete resources"),
+            self.tr(
                 "Do you really want to delete these resources from the"
                 " project?"),
             files)
@@ -585,35 +585,35 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 if not self.noDialog and not ui.notificationsEnabled():
                     E5MessageBox.information(
                         self,
-                        self.trUtf8("Resource Compilation"),
-                        self.trUtf8("The compilation of the resource file"
-                                    " was successful."))
+                        self.tr("Resource Compilation"),
+                        self.tr("The compilation of the resource file"
+                                " was successful."))
                 else:
                     ui.showNotification(
                         UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
-                        self.trUtf8("Resource Compilation"),
-                        self.trUtf8("The compilation of the resource file"
-                                    " was successful."))
+                        self.tr("Resource Compilation"),
+                        self.tr("The compilation of the resource file"
+                                " was successful."))
             except IOError as msg:
                 if not self.noDialog:
                     E5MessageBox.information(
                         self,
-                        self.trUtf8("Resource Compilation"),
-                        self.trUtf8(
+                        self.tr("Resource Compilation"),
+                        self.tr(
                             "<p>The compilation of the resource file"
                             " failed.</p><p>Reason: {0}</p>").format(str(msg)))
         else:
             if not self.noDialog:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Resource Compilation"),
-                    self.trUtf8(
+                    self.tr("Resource Compilation"),
+                    self.tr(
                         "The compilation of the resource file failed."))
             else:
                 ui.showNotification(
                     UI.PixmapCache.getPixmap("resourcesCompiler48.png"),
-                    self.trUtf8("Resource Compilation"),
-                    self.trUtf8(
+                    self.tr("Resource Compilation"),
+                    self.tr(
                         "The compilation of the resource file failed."))
         self.compileProc = None
         
@@ -698,8 +698,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 progress.cancel()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'Could not start {0}.<br>'
                     'Ensure that it is in the search path.'
                 ).format(self.rccCompiler))
@@ -726,9 +726,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             numResources = len(self.project.pdata["RESOURCES"])
             progress = E5ProgressDialog(
-                self.trUtf8("Compiling resources..."),
-                self.trUtf8("Abort"), 0, numResources,
-                self.trUtf8("%v/%m Resources"), self)
+                self.tr("Compiling resources..."),
+                self.tr("Abort"), 0, numResources,
+                self.tr("%v/%m Resources"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -762,9 +762,9 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         else:
             numResources = len(files)
             progress = E5ProgressDialog(
-                self.trUtf8("Compiling resources..."),
-                self.trUtf8("Abort"), 0, numResources,
-                self.trUtf8("%v/%m Resources"), self)
+                self.tr("Compiling resources..."),
+                self.tr("Abort"), 0, numResources,
+                self.tr("%v/%m Resources"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
             i = 0
@@ -832,8 +832,8 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.project.pdata["RESOURCES"])
         else:
             progress = E5ProgressDialog(
-                self.trUtf8("Determining changed resources..."),
-                None, 0, 100, self.trUtf8("%v/%m Resources"))
+                self.tr("Determining changed resources..."),
+                None, 0, 100, self.tr("%v/%m Resources"))
             progress.setMinimumDuration(0)
             i = 0
             
@@ -866,7 +866,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
             
             if changedResources:
                 progress.setLabelText(
-                    self.trUtf8("Compiling changed resources..."))
+                    self.tr("Compiling changed resources..."))
                 progress.setMaximum(len(changedResources))
                 i = 0
                 progress.setValue(i)

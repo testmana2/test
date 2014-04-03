@@ -9,8 +9,8 @@ Module implementing a dialog to show the guards of a selected patch.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -20,7 +20,6 @@ from PyQt4.QtGui import QDialog, QListWidgetItem
 
 from .Ui_HgQueuesListGuardsDialog import Ui_HgQueuesListGuardsDialog
 
-import Preferences
 import UI.PixmapCache
 
 
@@ -94,8 +93,7 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         self.guardsList.clear()
         self.patchNameLabel.setText("")
         
-        args = []
-        args.append("qguard")
+        args = self.vcs.initCommand("qguard")
         if patch:
             args.append(patch)
         
@@ -103,7 +101,6 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         if self.__hgClient:
             output = self.__hgClient.runcommand(args)[0].strip()
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(self.__repodir)
             process.start('hg', args)
@@ -111,9 +108,8 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            ioEncoding, 'replace').strip()
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace').strip()
         
         if output:
             patchName, guards = output.split(":", 1)
@@ -128,7 +124,7 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
                     guard = guard[1:]
                 else:
                     icon = None
-                    guard = self.trUtf8("Unguarded")
+                    guard = self.tr("Unguarded")
                 itm = QListWidgetItem(guard, self.guardsList)
                 if icon:
                     itm.setIcon(icon)

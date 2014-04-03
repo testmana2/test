@@ -9,8 +9,8 @@ Module implementing a dialog to show all guards for all patches.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -20,7 +20,6 @@ from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
 from .Ui_HgQueuesListAllGuardsDialog import Ui_HgQueuesListAllGuardsDialog
 
-import Preferences
 import UI.PixmapCache
 
 
@@ -59,15 +58,13 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qguard")
+        args = self.vcs.initCommand("qguard")
         args.append("--list")
         
         output = ""
         if self.__hgClient:
             output = self.__hgClient.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -75,8 +72,8 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         if output:
             guardsDict = {}
@@ -96,9 +93,9 @@ class HgQueuesListAllGuardsDialog(QDialog, Ui_HgQueuesListAllGuardsDialog):
                         guard = guard[1:]
                     else:
                         icon = None
-                        guard = self.trUtf8("Unguarded")
+                        guard = self.tr("Unguarded")
                     itm = QTreeWidgetItem(patchItm, [guard])
                     if icon:
                         itm.setIcon(0, icon)
         else:
-            QTreeWidgetItem(self.guardsTree, [self.trUtf8("no patches found")])
+            QTreeWidgetItem(self.guardsTree, [self.tr("no patches found")])

@@ -14,7 +14,7 @@
 from __future__ import unicode_literals
 try: 
     chr = unichr
-except (NameError):
+except NameError:
     pass
 
 from pygments.util import u_prefix

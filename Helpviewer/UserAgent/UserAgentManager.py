@@ -67,8 +67,8 @@ class UserAgentManager(QObject):
         if not writer.write(agentFile, self.__agents):
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Saving user agent data"),
-                self.trUtf8(
+                self.tr("Saving user agent data"),
+                self.tr(
                     """<p>User agent data could not be saved to"""
                     """ <b>{0}</b></p>""").format(agentFile))
         else:
@@ -88,9 +88,9 @@ class UserAgentManager(QObject):
             if reader.error() != QXmlStreamReader.NoError:
                 E5MessageBox.warning(
                     None,
-                    self.trUtf8("Loading user agent data"),
-                    self.trUtf8("""Error when loading user agent data on"""
-                                """ line {0}, column {1}:\n{2}""")
+                    self.tr("Loading user agent data"),
+                    self.tr("""Error when loading user agent data on"""
+                            """ line {0}, column {1}:\n{2}""")
                     .format(reader.lineNumber(),
                             reader.columnNumber(),
                             reader.errorString()))
@@ -114,10 +114,10 @@ class UserAgentManager(QObject):
             except IOError as err:
                 E5MessageBox.critical(
                     None,
-                    self.trUtf8("Loading user agent data"),
-                    self.trUtf8("""<p>User agent data could not be loaded """
-                                """from <b>{0}</b></p>"""
-                                """<p>Reason: {1}</p>""")
+                    self.tr("Loading user agent data"),
+                    self.tr("""<p>User agent data could not be loaded """
+                            """from <b>{0}</b></p>"""
+                            """<p>Reason: {1}</p>""")
                     .format(agentFile, str(err)))
                 return
             

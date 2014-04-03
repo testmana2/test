@@ -9,8 +9,8 @@ Module implementing the subversion repository browser dialog.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -190,8 +190,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             QApplication.restoreOverrideCursor()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
@@ -263,8 +263,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))

@@ -19,6 +19,7 @@ from .Ui_QtPage import Ui_QtPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class QtPage(ConfigurationPageBase, Ui_QtPage):
@@ -32,6 +33,8 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         super(QtPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("QtPage")
+        
+        self.qt4TransButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.qt4TransCompleter = E5DirCompleter(self.qt4TransEdit)
         
@@ -56,7 +59,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         dir = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Qt4 Translations Directory"),
+            self.tr("Select Qt4 Translations Directory"),
             self.qt4TransEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

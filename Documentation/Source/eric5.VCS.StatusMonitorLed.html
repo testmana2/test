@@ -47,7 +47,7 @@ thread.
     thread.
 </p>
 <h3>Derived from</h3>
-E5Led
+E5ClickableLed
 <h3>Class Attributes</h3>
 <table>
 <tr><td>None</td></tr>
@@ -68,6 +68,9 @@ E5Led
 <td><a href="#StatusMonitorLed.__checkStatus">__checkStatus</a></td>
 <td>Private slot to initiate a new status check.</td>
 </tr><tr>
+<td><a href="#StatusMonitorLed.__ledClicked">__ledClicked</a></td>
+<td>Private slot to react upon clicks on the LED.</td>
+</tr><tr>
 <td><a href="#StatusMonitorLed.__projectVcsMonitorStatus">__projectVcsMonitorStatus</a></td>
 <td>Private method to receive the status monitor status.</td>
 </tr><tr>
@@ -79,6 +82,9 @@ E5Led
 </tr><tr>
 <td><a href="#StatusMonitorLed.__switchOn">__switchOn</a></td>
 <td>Private slot to switch the status monitor thread to On.</td>
+</tr><tr>
+<td><a href="#StatusMonitorLed.__vcsStateChanged">__vcsStateChanged</a></td>
+<td>Private slot to handle a change in the vcs state.</td>
 </tr><tr>
 <td><a href="#StatusMonitorLed._showContextMenu">_showContextMenu</a></td>
 <td>Protected slot to show the context menu.</td>
@@ -111,7 +117,17 @@ reference to the parent object (QWidget)
 <b>__checkStatus</b>(<i></i>)
 <p>
         Private slot to initiate a new status check.
-</p><a NAME="StatusMonitorLed.__projectVcsMonitorStatus" ID="StatusMonitorLed.__projectVcsMonitorStatus"></a>
+</p><a NAME="StatusMonitorLed.__ledClicked" ID="StatusMonitorLed.__ledClicked"></a>
+<h4>StatusMonitorLed.__ledClicked</h4>
+<b>__ledClicked</b>(<i>pos</i>)
+<p>
+        Private slot to react upon clicks on the LED.
+</p><dl>
+<dt><i>pos</i></dt>
+<dd>
+position of the click (QPoint)
+</dd>
+</dl><a NAME="StatusMonitorLed.__projectVcsMonitorStatus" ID="StatusMonitorLed.__projectVcsMonitorStatus"></a>
 <h4>StatusMonitorLed.__projectVcsMonitorStatus</h4>
 <b>__projectVcsMonitorStatus</b>(<i>status, statusMsg</i>)
 <p>
@@ -139,7 +155,17 @@ explanotory text for the signaled status (string)
 <b>__switchOn</b>(<i></i>)
 <p>
         Private slot to switch the status monitor thread to On.
-</p><a NAME="StatusMonitorLed._showContextMenu" ID="StatusMonitorLed._showContextMenu"></a>
+</p><a NAME="StatusMonitorLed.__vcsStateChanged" ID="StatusMonitorLed.__vcsStateChanged"></a>
+<h4>StatusMonitorLed.__vcsStateChanged</h4>
+<b>__vcsStateChanged</b>(<i>state</i>)
+<p>
+        Private slot to handle a change in the vcs state.
+</p><dl>
+<dt><i>state</i></dt>
+<dd>
+new vcs state (string)
+</dd>
+</dl><a NAME="StatusMonitorLed._showContextMenu" ID="StatusMonitorLed._showContextMenu"></a>
 <h4>StatusMonitorLed._showContextMenu</h4>
 <b>_showContextMenu</b>(<i>coord</i>)
 <p>

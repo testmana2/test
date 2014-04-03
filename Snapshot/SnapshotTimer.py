@@ -38,7 +38,7 @@ class SnapshotTimer(QWidget):
         
         # text is taken from paintEvent with maximum number plus some margin
         self.resize(
-            self.fontMetrics().width(self.trUtf8(
+            self.fontMetrics().width(self.tr(
                 "Snapshot will be taken in %n seconds", "", 99)) + 6,
             self.fontMetrics().height() + 4)
         
@@ -99,8 +99,8 @@ class SnapshotTimer(QWidget):
                 textColor = pal.color(QPalette.Active, QPalette.Base)
             painter.setPen(textColor)
             painter.setBrush(textBackgroundColor)
-            helpText = self.trUtf8("Snapshot will be taken in %n seconds", "",
-                                   self.__length - self.__time)
+            helpText = self.tr("Snapshot will be taken in %n seconds", "",
+                               self.__length - self.__time)
             textRect = painter.boundingRect(
                 self.rect().adjusted(2, 2, -2, -2),
                 Qt.AlignHCenter | Qt.TextSingleLine, helpText)

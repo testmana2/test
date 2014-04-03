@@ -20,6 +20,7 @@ from E5Gui import E5FileDialog
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
@@ -39,6 +40,8 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         super(SvnCopyDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.source = source
         if os.path.isdir(self.source):
             self.targetCompleter = E5DirCompleter(self.targetEdit)
@@ -46,7 +49,7 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
             self.targetCompleter = E5FileCompleter(self.targetEdit)
         
         if move:
-            self.setWindowTitle(self.trUtf8('Subversion Move'))
+            self.setWindowTitle(self.tr('Subversion Move'))
         else:
             self.forceCheckBox.setEnabled(False)
         self.forceCheckBox.setChecked(force)
@@ -54,6 +57,9 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         self.sourceEdit.setText(source)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
         
     def getData(self):
         """
@@ -78,13 +84,13 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         if os.path.isdir(self.source):
             target = E5FileDialog.getExistingDirectory(
                 None,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         else:
             target = E5FileDialog.getSaveFileName(
                 None,
-                self.trUtf8("Select target"),
+                self.tr("Select target"),
                 self.targetEdit.text(),
                 "",
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))

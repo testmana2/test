@@ -96,16 +96,16 @@ class SvnDialogMixin(object):
         parent = isinstance(self, QWidget) and self or None
         msgBox = E5MessageBox.E5MessageBox(
             E5MessageBox.Question,
-            self.trUtf8("Subversion SSL Server Certificate"),
-            self.trUtf8("""<p>Accept the following SSL certificate?</p>"""
-                        """<table>"""
-                        """<tr><td>Realm:</td><td>{0}</td></tr>"""
-                        """<tr><td>Hostname:</td><td>{1}</td></tr>"""
-                        """<tr><td>Fingerprint:</td><td>{2}</td></tr>"""
-                        """<tr><td>Valid from:</td><td>{3}</td></tr>"""
-                        """<tr><td>Valid until:</td><td>{4}</td></tr>"""
-                        """<tr><td>Issuer name:</td><td>{5}</td></tr>"""
-                        """</table>""")
+            self.tr("Subversion SSL Server Certificate"),
+            self.tr("""<p>Accept the following SSL certificate?</p>"""
+                    """<table>"""
+                    """<tr><td>Realm:</td><td>{0}</td></tr>"""
+                    """<tr><td>Hostname:</td><td>{1}</td></tr>"""
+                    """<tr><td>Fingerprint:</td><td>{2}</td></tr>"""
+                    """<tr><td>Valid from:</td><td>{3}</td></tr>"""
+                    """<tr><td>Valid until:</td><td>{4}</td></tr>"""
+                    """<tr><td>Issuer name:</td><td>{5}</td></tr>"""
+                    """</table>""")
                 .format(trust_dict["realm"],
                         trust_dict["hostname"],
                         trust_dict["finger_print"],
@@ -113,11 +113,11 @@ class SvnDialogMixin(object):
                         trust_dict["valid_until"],
                         trust_dict["issuer_dname"]),
             modal=True, parent=parent)
-        permButton = msgBox.addButton(self.trUtf8("&Permanent accept"),
+        permButton = msgBox.addButton(self.tr("&Permanent accept"),
                                       E5MessageBox.AcceptRole)
-        tempButton = msgBox.addButton(self.trUtf8("&Temporary accept"),
+        tempButton = msgBox.addButton(self.tr("&Temporary accept"),
                                       E5MessageBox.AcceptRole)
-        msgBox.addButton(self.trUtf8("&Reject"), E5MessageBox.RejectRole)
+        msgBox.addButton(self.tr("&Reject"), E5MessageBox.RejectRole)
         msgBox.exec_()
         if cursor is not None:
             QApplication.setOverrideCursor(cursor)

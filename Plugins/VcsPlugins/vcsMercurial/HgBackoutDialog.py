@@ -153,9 +153,9 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
             (string, boolean, string, string, string)
         """
         if self.numberButton.isChecked():
-            rev = str(self.numberSpinBox.value())
+            rev = "rev({0})".format(self.numberSpinBox.value())
         elif self.idButton.isChecked():
-            rev = self.idEdit.text()
+            rev = "id({0})".format(self.idEdit.text())
         elif self.tagButton.isChecked():
             rev = self.tagCombo.currentText()
         elif self.branchButton.isChecked():
@@ -173,7 +173,7 @@ class HgBackoutDialog(QDialog, Ui_HgBackoutDialog):
         if self.messageEdit.toPlainText():
             msg = self.messageEdit.toPlainText()
         else:
-            msg = self.trUtf8("Backed out changeset <{0}>.").format(rev)
+            msg = self.tr("Backed out changeset <{0}>.").format(rev)
         
         return (rev,
                 self.mergeCheckBox.isChecked,

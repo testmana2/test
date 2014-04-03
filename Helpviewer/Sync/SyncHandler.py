@@ -58,74 +58,74 @@ class SyncHandler(QObject):
         
         self._messages = {
             "bookmarks": {
-                "RemoteExists": self.trUtf8(
+                "RemoteExists": self.tr(
                     "Remote bookmarks file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
+                "RemoteMissing": self.tr(
                     "Remote bookmarks file does NOT exists. Exporting"
                     " local copy..."),
-                "LocalNewer": self.trUtf8(
+                "LocalNewer": self.tr(
                     "Local bookmarks file is NEWER. Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
+                "LocalMissing": self.tr(
                     "Local bookmarks file does NOT exist. Skipping"
                     " synchronization!"),
-                "Uploading": self.trUtf8("Uploading local bookmarks file..."),
+                "Uploading": self.tr("Uploading local bookmarks file..."),
             },
             "history": {
-                "RemoteExists": self.trUtf8(
+                "RemoteExists": self.tr(
                     "Remote history file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
+                "RemoteMissing": self.tr(
                     "Remote history file does NOT exists. Exporting"
                     " local copy..."),
-                "LocalNewer": self.trUtf8(
+                "LocalNewer": self.tr(
                     "Local history file is NEWER. Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
+                "LocalMissing": self.tr(
                     "Local history file does NOT exist. Skipping"
                     " synchronization!"),
-                "Uploading": self.trUtf8("Uploading local history file..."),
+                "Uploading": self.tr("Uploading local history file..."),
             },
             "passwords": {
-                "RemoteExists": self.trUtf8(
+                "RemoteExists": self.tr(
                     "Remote logins file exists! Syncing local copy..."),
-                "RemoteMissing": self.trUtf8(
+                "RemoteMissing": self.tr(
                     "Remote logins file does NOT exists. Exporting"
                     " local copy..."),
-                "LocalNewer": self.trUtf8(
+                "LocalNewer": self.tr(
                     "Local logins file is NEWER. Exporting local copy..."),
-                "LocalMissing": self.trUtf8(
+                "LocalMissing": self.tr(
                     "Local logins file does NOT exist. Skipping"
                     " synchronization!"),
-                "Uploading": self.trUtf8("Uploading local logins file..."),
+                "Uploading": self.tr("Uploading local logins file..."),
             },
             "useragents": {
-                "RemoteExists": self.trUtf8(
+                "RemoteExists": self.tr(
                     "Remote user agent settings file exists! Syncing local"
                     " copy..."),
-                "RemoteMissing": self.trUtf8(
+                "RemoteMissing": self.tr(
                     "Remote user agent settings file does NOT exists."
                     " Exporting local copy..."),
-                "LocalNewer": self.trUtf8(
+                "LocalNewer": self.tr(
                     "Local user agent settings file is NEWER. Exporting"
                     " local copy..."),
-                "LocalMissing": self.trUtf8(
+                "LocalMissing": self.tr(
                     "Local user agent settings file does NOT exist."
                     " Skipping synchronization!"),
-                "Uploading": self.trUtf8(
+                "Uploading": self.tr(
                     "Uploading local user agent settings file..."),
             },
             "speeddial": {
-                "RemoteExists": self.trUtf8(
+                "RemoteExists": self.tr(
                     "Remote speed dial settings file exists! Syncing local"
                     " copy..."),
-                "RemoteMissing": self.trUtf8(
+                "RemoteMissing": self.tr(
                     "Remote speed dial settings file does NOT exists."
                     " Exporting local copy..."),
-                "LocalNewer": self.trUtf8(
+                "LocalNewer": self.tr(
                     "Local speed dial settings file is NEWER. Exporting"
                     " local copy..."),
-                "LocalMissing": self.trUtf8(
+                "LocalMissing": self.tr(
                     "Local speed dial settings file does NOT exist."
                     " Skipping synchronization!"),
-                "Uploading": self.trUtf8(
+                "Uploading": self.tr(
                     "Uploading local speed dial settings file..."),
             },
         }
@@ -259,13 +259,13 @@ class SyncHandler(QObject):
                   type_ == "passwords")):
             key = Preferences.getHelp("SyncEncryptionKey")
             if not key:
-                return False, self.trUtf8("Invalid encryption key given.")
+                return False, self.tr("Invalid encryption key given.")
             
             data, ok = dataDecrypt(
                 data, key,
                 keyLength=Preferences.getHelp("SyncEncryptionKeyLength"))
             if not ok:
-                return False, self.trUtf8("Data cannot be decrypted.")
+                return False, self.tr("Data cannot be decrypted.")
         
         try:
             outputFile = open(fileName, "wb")

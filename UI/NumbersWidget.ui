@@ -7,14 +7,23 @@
     <x>0</x>
     <y>0</y>
     <width>749</width>
-    <height>147</height>
+    <height>160</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Numbers Formats</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item row="0" column="0" colspan="2">
@@ -25,16 +34,22 @@
         <string>Binary</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
          <number>2</number>
         </property>
         <item>
          <widget class="QToolButton" name="binInButton">
           <property name="toolTip">
            <string>Press to import the selected binary number</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>
@@ -53,9 +68,6 @@
           <property name="toolTip">
            <string>Press to send the binary number to the current editor</string>
           </property>
-          <property name="text">
-           <string>...</string>
-          </property>
          </widget>
         </item>
        </layout>
@@ -67,16 +79,22 @@
         <string>Octal</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
          <number>2</number>
         </property>
         <item>
          <widget class="QToolButton" name="octInButton">
           <property name="toolTip">
            <string>Press to import the selected octal number</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>
@@ -95,9 +113,6 @@
           <property name="toolTip">
            <string>Press to send the octal number to the current editor</string>
           </property>
-          <property name="text">
-           <string>...</string>
-          </property>
          </widget>
         </item>
        </layout>
@@ -109,16 +124,22 @@
         <string>Decimal</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
          <number>2</number>
         </property>
         <item>
          <widget class="QToolButton" name="decInButton">
           <property name="toolTip">
            <string>Press to import the selected decimal number</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>
@@ -137,9 +158,6 @@
           <property name="toolTip">
            <string>Press to send the decimal number to the current editor</string>
           </property>
-          <property name="text">
-           <string>...</string>
-          </property>
          </widget>
         </item>
        </layout>
@@ -151,16 +169,22 @@
         <string>Hexadecimal</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>2</number>
+        </property>
+        <property name="topMargin">
+         <number>2</number>
+        </property>
+        <property name="rightMargin">
+         <number>2</number>
+        </property>
+        <property name="bottomMargin">
          <number>2</number>
         </property>
         <item>
          <widget class="QToolButton" name="hexInButton">
           <property name="toolTip">
            <string>Press to import the selected hex number</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>
@@ -178,9 +202,6 @@
          <widget class="QToolButton" name="hexOutButton">
           <property name="toolTip">
            <string>Press to send the hex number to the current editor</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>
@@ -215,9 +236,6 @@
      <property name="cornerButtonEnabled">
       <bool>false</bool>
      </property>
-     <attribute name="verticalHeaderVisible">
-      <bool>false</bool>
-     </attribute>
      <attribute name="verticalHeaderVisible">
       <bool>false</bool>
      </attribute>

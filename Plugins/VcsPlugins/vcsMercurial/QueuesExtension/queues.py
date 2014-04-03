@@ -9,8 +9,8 @@ Module implementing the queues extension interface.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -22,8 +22,6 @@ from E5Gui import E5MessageBox
 
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog
-
-import Preferences
 
 
 class Queues(HgExtension):
@@ -93,13 +91,12 @@ class Queues(HgExtension):
         """
         patchesList = []
         
-        args = []
         if listType == Queues.APPLIED_LIST:
-            args.append("qapplied")
+            args = self.vcs.initCommand("qapplied")
         elif listType == Queues.UNAPPLIED_LIST:
-            args.append("qunapplied")
+            args = self.vcs.initCommand("qunapplied")
         elif listType == Queues.SERIES_LIST:
-            args.append("qseries")
+            args = self.vcs.initCommand("qseries")
         else:
             raise ValueError("illegal value for listType")
         if withSummary:
@@ -110,7 +107,6 @@ class Queues(HgExtension):
         if client:
             output = client.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -118,8 +114,8 @@ class Queues(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         for line in output.splitlines():
             if withSummary:
@@ -143,14 +139,12 @@ class Queues(HgExtension):
         """
         currentPatch = ""
         
-        args = []
-        args.append("qtop")
+        args = self.vcs.initCommand("qtop")
         
         client = self.vcs.getClient()
         if client:
             currentPatch = client.runcommand(args)[0].strip()
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -158,9 +152,9 @@ class Queues(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    currentPatch = str(
-                        process.readAllStandardOutput(),
-                        ioEncoding, 'replace').strip()
+                    currentPatch = str(process.readAllStandardOutput(),
+                                       self.vcs.getEncoding(),
+                                       'replace').strip()
         
         return currentPatch
     
@@ -173,14 +167,12 @@ class Queues(HgExtension):
         """
         message = ""
         
-        args = []
-        args.append("qheader")
+        args = self.vcs.initCommand("qheader")
         
         client = self.vcs.getClient()
         if client:
             message = client.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -188,9 +180,8 @@ class Queues(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    message = str(
-                        process.readAllStandardOutput(),
-                        ioEncoding, 'replace')
+                    message = str(process.readAllStandardOutput(),
+                                  self.vcs.getEncoding(), 'replace')
         
         return message
     
@@ -204,8 +195,7 @@ class Queues(HgExtension):
         """
         guardsList = []
         
-        args = []
-        args.append("qselect")
+        args = self.vcs.initCommand("qselect")
         if all:
             args.append("--series")
         
@@ -214,7 +204,6 @@ class Queues(HgExtension):
         if client:
             output = client.runcommand(args)[0]
         else:
-            ioEncoding = Preferences.getSystem("IOEncoding")
             process = QProcess()
             process.setWorkingDirectory(repodir)
             process.start('hg', args)
@@ -222,8 +211,8 @@ class Queues(HgExtension):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(), ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         for guard in output.splitlines():
             guard = guard.strip()
@@ -253,8 +242,7 @@ class Queues(HgExtension):
             name, message, (userData, currentUser, userName), \
                 (dateData, currentDate, dateStr) = dlg.getData()
             
-            args = []
-            args.append("qnew")
+            args = self.vcs.initCommand("qnew")
             if message != "":
                 args.append("--message")
                 args.append(message)
@@ -272,7 +260,7 @@ class Queues(HgExtension):
                     args.append(dateStr)
             args.append(name)
             
-            dia = HgDialog(self.trUtf8('New Patch'), self.vcs)
+            dia = HgDialog(self.tr('New Patch'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -293,8 +281,7 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qrefresh")
+        args = self.vcs.initCommand("qrefresh")
         
         if editMessage:
             currentMessage = self.__getCommitMessage(repodir)
@@ -322,7 +309,7 @@ class Queues(HgExtension):
             else:
                 return
         
-        dia = HgDialog(self.trUtf8('Update Current Patch'), self.vcs)
+        dia = HgDialog(self.tr('Update Current Patch'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -375,18 +362,17 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        args = []
         if operation == Queues.POP:
-            args.append("qpop")
-            title = self.trUtf8("Pop Patches")
+            args = self.vcs.initCommand("qpop")
+            title = self.tr("Pop Patches")
             listType = Queues.APPLIED_LIST
         elif operation == Queues.PUSH:
-            args.append("qpush")
-            title = self.trUtf8("Push Patches")
+            args = self.vcs.initCommand("qpush")
+            title = self.tr("Push Patches")
             listType = Queues.UNAPPLIED_LIST
         elif operation == Queues.GOTO:
-            args.append("qgoto")
-            title = self.trUtf8("Go to Patch")
+            args = self.vcs.initCommand("qgoto")
+            title = self.tr("Go to Patch")
             listType = Queues.SERIES_LIST
         else:
             raise ValueError("illegal value for operation")
@@ -400,8 +386,8 @@ class Queues(HgExtension):
             if patchnames:
                 patch, ok = QInputDialog.getItem(
                     None,
-                    self.trUtf8("Select Patch"),
-                    self.trUtf8("Select the target patch name:"),
+                    self.tr("Select Patch"),
+                    self.tr("Select the target patch name:"),
                     patchnames,
                     0, False)
                 if ok and patch:
@@ -411,8 +397,8 @@ class Queues(HgExtension):
             else:
                 E5MessageBox.information(
                     None,
-                    self.trUtf8("Select Patch"),
-                    self.trUtf8("""No patches to select from."""))
+                    self.tr("Select Patch"),
+                    self.tr("""No patches to select from."""))
                 return False
         
         dia = HgDialog(title, self.vcs)
@@ -447,11 +433,10 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qfinish")
+        args = self.vcs.initCommand("qfinish")
         args.append("--applied")
         
-        dia = HgDialog(self.trUtf8('Finish Applied Patches'), self.vcs)
+        dia = HgDialog(self.tr('Finish Applied Patches'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -470,8 +455,7 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qrename")
+        args = self.vcs.initCommand("qrename")
         patchnames = sorted(self.__getPatchesList(repodir, Queues.SERIES_LIST))
         if patchnames:
             currentPatch = self.__getCurrentPatch(repodir)
@@ -485,7 +469,7 @@ class Queues(HgExtension):
                         args.append(selectedPatch)
                     args.append(newName)
                     
-                    dia = HgDialog(self.trUtf8("Rename Patch"), self.vcs)
+                    dia = HgDialog(self.tr("Rename Patch"), self.vcs)
                     res = dia.startProcess(args, repodir)
                     if res:
                         dia.exec_()
@@ -503,29 +487,28 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qdelete")
+        args = self.vcs.initCommand("qdelete")
         patchnames = sorted(self.__getPatchesList(repodir,
                                                   Queues.UNAPPLIED_LIST))
         if patchnames:
             patch, ok = QInputDialog.getItem(
                 None,
-                self.trUtf8("Select Patch"),
-                self.trUtf8("Select the patch to be deleted:"),
+                self.tr("Select Patch"),
+                self.tr("Select the patch to be deleted:"),
                 patchnames,
                 0, False)
             if ok and patch:
                 args.append(patch)
                 
-                dia = HgDialog(self.trUtf8("Delete Patch"), self.vcs)
+                dia = HgDialog(self.tr("Delete Patch"), self.vcs)
                 res = dia.startProcess(args, repodir)
                 if res:
                     dia.exec_()
         else:
             E5MessageBox.information(
                 None,
-                self.trUtf8("Select Patch"),
-                self.trUtf8("""No patches to select from."""))
+                self.tr("Select Patch"),
+                self.tr("""No patches to select from."""))
     
     def hgQueueFoldUnappliedPatches(self, name):
         """
@@ -540,8 +523,7 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qfold")
+        args = self.vcs.initCommand("qfold")
         patchnames = sorted(
             self.__getPatchesList(repodir, Queues.UNAPPLIED_LIST,
                                   withSummary=True))
@@ -556,20 +538,20 @@ class Queues(HgExtension):
                 if patchesList:
                     args.extend(patchesList)
                     
-                    dia = HgDialog(self.trUtf8("Fold Patches"), self.vcs)
+                    dia = HgDialog(self.tr("Fold Patches"), self.vcs)
                     res = dia.startProcess(args, repodir)
                     if res:
                         dia.exec_()
                 else:
                     E5MessageBox.information(
                         None,
-                        self.trUtf8("Fold Patches"),
-                        self.trUtf8("""No patches selected."""))
+                        self.tr("Fold Patches"),
+                        self.tr("""No patches selected."""))
         else:
             E5MessageBox.information(
                 None,
-                self.trUtf8("Fold Patches"),
-                self.trUtf8("""No patches available to be folded."""))
+                self.tr("Fold Patches"),
+                self.tr("""No patches available to be folded."""))
     
     def hgQueueGuardsList(self, name):
         """
@@ -595,8 +577,8 @@ class Queues(HgExtension):
         else:
             E5MessageBox.information(
                 None,
-                self.trUtf8("List Guards"),
-                self.trUtf8("""No patches available to list guards for."""))
+                self.tr("List Guards"),
+                self.tr("""No patches available to list guards for."""))
     
     def hgQueueGuardsListAll(self, name):
         """
@@ -633,8 +615,8 @@ class Queues(HgExtension):
         else:
             E5MessageBox.information(
                 None,
-                self.trUtf8("Define Guards"),
-                self.trUtf8("""No patches available to define guards for."""))
+                self.tr("Define Guards"),
+                self.tr("""No patches available to define guards for."""))
     
     def hgQueueGuardsDropAll(self, name):
         """
@@ -654,14 +636,13 @@ class Queues(HgExtension):
         if patchnames:
             patch, ok = QInputDialog.getItem(
                 None,
-                self.trUtf8("Drop All Guards"),
-                self.trUtf8("Select the patch to drop guards for"
-                            " (leave empty for the current patch):"),
+                self.tr("Drop All Guards"),
+                self.tr("Select the patch to drop guards for"
+                        " (leave empty for the current patch):"),
                 [""] + patchnames,
                 0, False)
             if ok:
-                args = []
-                args.append("qguard")
+                args = self.vcs.initCommand("qguard")
                 if patch:
                     args.append(patch)
                 args.append("--none")
@@ -679,8 +660,8 @@ class Queues(HgExtension):
         else:
             E5MessageBox.information(
                 None,
-                self.trUtf8("Drop All Guards"),
-                self.trUtf8("""No patches available to define guards for."""))
+                self.tr("Drop All Guards"),
+                self.tr("""No patches available to define guards for."""))
     
     def hgQueueGuardsSetActive(self, name):
         """
@@ -705,19 +686,18 @@ class Queues(HgExtension):
             if dlg.exec_() == QDialog.Accepted:
                 guards = dlg.getData()
                 if guards:
-                    args = []
-                    args.append("qselect")
+                    args = self.vcs.initCommand("qselect")
                     args.extend(guards)
                     
-                    dia = HgDialog(self.trUtf8('Set Active Guards'), self.vcs)
+                    dia = HgDialog(self.tr('Set Active Guards'), self.vcs)
                     res = dia.startProcess(args, repodir)
                     if res:
                         dia.exec_()
         else:
             E5MessageBox.information(
                 None,
-                self.trUtf8("Set Active Guards"),
-                self.trUtf8("""No guards available to select from."""))
+                self.tr("Set Active Guards"),
+                self.tr("""No guards available to select from."""))
             return
     
     def hgQueueGuardsDeactivate(self, name):
@@ -733,11 +713,10 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("qselect")
+        args = self.vcs.initCommand("qselect")
         args.append("--none")
         
-        dia = HgDialog(self.trUtf8('Deactivate Guards'), self.vcs)
+        dia = HgDialog(self.tr('Deactivate Guards'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -777,9 +756,9 @@ class Queues(HgExtension):
                 return
         
         if isCreate:
-            title = self.trUtf8("Create New Queue")
+            title = self.tr("Create New Queue")
         else:
-            title = self.trUtf8("Rename Active Queue")
+            title = self.tr("Rename Active Queue")
         from .HgQueuesQueueManagementDialog import \
             HgQueuesQueueManagementDialog
         dlg = HgQueuesQueueManagementDialog(
@@ -788,8 +767,7 @@ class Queues(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             queueName = dlg.getData()
             if queueName:
-                args = []
-                args.append("qqueue")
+                args = self.vcs.initCommand("qqueue")
                 if isCreate:
                     args.append("--create")
                 else:
@@ -801,7 +779,6 @@ class Queues(HgExtension):
                 if client:
                     error = client.runcommand(args)[1]
                 else:
-                    ioEncoding = Preferences.getSystem("IOEncoding")
                     process = QProcess()
                     process.setWorkingDirectory(repodir)
                     process.start('hg', args)
@@ -810,16 +787,15 @@ class Queues(HgExtension):
                         finished = process.waitForFinished(30000)
                         if finished:
                             if process.exitCode() != 0:
-                                error = \
-                                    str(process.readAllStandardError(),
-                                        ioEncoding, 'replace')
+                                error = str(process.readAllStandardError(),
+                                            self.vcs.getEncoding(), 'replace')
                 
                 if error:
                     if isCreate:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "Error while creating a new queue.")
                     else:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "Error while renaming the active queue.")
                     E5MessageBox.warning(
                         None,
@@ -848,11 +824,11 @@ class Queues(HgExtension):
                 return
         
         if operation == Queues.QUEUE_PURGE:
-            title = self.trUtf8("Purge Queue")
+            title = self.tr("Purge Queue")
         elif operation == Queues.QUEUE_DELETE:
-            title = self.trUtf8("Delete Queue")
+            title = self.tr("Delete Queue")
         elif operation == Queues.QUEUE_ACTIVATE:
-            title = self.trUtf8("Activate Queue")
+            title = self.tr("Activate Queue")
         else:
             raise ValueError("illegal value for operation")
         
@@ -864,8 +840,7 @@ class Queues(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             queueName = dlg.getData()
             if queueName:
-                args = []
-                args.append("qqueue")
+                args = self.vcs.initCommand("qqueue")
                 if operation == Queues.QUEUE_PURGE:
                     args.append("--purge")
                 elif operation == Queues.QUEUE_DELETE:
@@ -877,7 +852,6 @@ class Queues(HgExtension):
                 if client:
                     error = client.runcommand(args)[1]
                 else:
-                    ioEncoding = Preferences.getSystem("IOEncoding")
                     process = QProcess()
                     process.setWorkingDirectory(repodir)
                     process.start('hg', args)
@@ -886,17 +860,16 @@ class Queues(HgExtension):
                         finished = process.waitForFinished(30000)
                         if finished:
                             if process.exitCode() != 0:
-                                error = \
-                                    str(process.readAllStandardError(),
-                                        ioEncoding, 'replace')
+                                error = str(process.readAllStandardError(),
+                                            self.vcs.getEncoding(), 'replace')
                 
                 if error:
                     if operation == Queues.QUEUE_PURGE:
-                        errMsg = self.trUtf8("Error while purging the queue.")
+                        errMsg = self.tr("Error while purging the queue.")
                     elif operation == Queues.QUEUE_DELETE:
-                        errMsg = self.trUtf8("Error while deleting the queue.")
+                        errMsg = self.tr("Error while deleting the queue.")
                     elif operation == Queues.QUEUE_ACTIVATE:
-                        errMsg = self.trUtf8(
+                        errMsg = self.tr(
                             "Error while setting the active queue.")
                     E5MessageBox.warning(
                         None,
@@ -924,7 +897,7 @@ class Queues(HgExtension):
             HgQueuesQueueManagementDialog
         self.queuesListQueuesDialog = HgQueuesQueueManagementDialog(
             HgQueuesQueueManagementDialog.NO_INPUT,
-            self.trUtf8("Available Queues"),
+            self.tr("Available Queues"),
             False, repodir, self.vcs)
         self.queuesListQueuesDialog.show()
     
@@ -941,13 +914,12 @@ class Queues(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('init')
+        args = self.vcs.initCommand("init")
         args.append('--mq')
         args.append(repodir)
         # init is not possible with the command server
         dia = HgDialog(
-            self.trUtf8('Initializing new queue repository'), self.vcs)
+            self.tr('Initializing new queue repository'), self.vcs)
         res = dia.startProcess(args)
         if res:
             dia.exec_()

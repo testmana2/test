@@ -19,6 +19,7 @@ from .Ui_DebuggerPythonPage import Ui_DebuggerPythonPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
@@ -32,6 +33,9 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         super(DebuggerPythonPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerPythonPage")
+        
+        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
@@ -89,7 +93,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Python interpreter for Debug Client"),
+            self.tr("Select Python interpreter for Debug Client"),
             self.interpreterEdit.text(),
             "")
             
@@ -104,9 +108,9 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         file = E5FileDialog.getOpenFileName(
             None,
-            self.trUtf8("Select Debug Client"),
+            self.tr("Select Debug Client"),
             self.debugClientEdit.text(),
-            self.trUtf8("Python Files (*.py *.py2)"))
+            self.tr("Python Files (*.py *.py2)"))
             
         if file:
             self.debugClientEdit.setText(

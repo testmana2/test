@@ -43,13 +43,16 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
         for row in range(len(self.__availableFeeds)):
             feed = self.__availableFeeds[row]
             button = QPushButton(self)
-            button.setText(self.trUtf8("Add"))
+            button.setText(self.tr("Add"))
             button.feed = feed
             label = QLabel(self)
             label.setText(feed[0])
             self.feedsLayout.addWidget(label, row, 0)
             self.feedsLayout.addWidget(button, row, 1)
-            button.clicked[()].connect(self.__addFeed)
+            button.clicked.connect(self.__addFeed)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __addFeed(self):
         """
@@ -82,17 +85,17 @@ class FeedsDialog(QDialog, Ui_FeedsDialog):
             if Helpviewer.HelpWindow.HelpWindow.notificationsEnabled():
                 Helpviewer.HelpWindow.HelpWindow.showNotification(
                     UI.PixmapCache.getPixmap("rss48.png"),
-                    self.trUtf8("Add RSS Feed"),
-                    self.trUtf8("""The feed was added successfully."""))
+                    self.tr("Add RSS Feed"),
+                    self.tr("""The feed was added successfully."""))
             else:
                 E5MessageBox.information(
                     self,
-                    self.trUtf8("Add RSS Feed"),
-                    self.trUtf8("""The feed was added successfully."""))
+                    self.tr("Add RSS Feed"),
+                    self.tr("""The feed was added successfully."""))
         else:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Add RSS Feed"),
-                self.trUtf8("""The feed was already added before."""))
+                self.tr("Add RSS Feed"),
+                self.tr("""The feed was already added before."""))
             
         self.close()

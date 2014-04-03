@@ -178,6 +178,9 @@ E5MainWindow
 <td><a href="#HelpWindow.__currentChanged">__currentChanged</a></td>
 <td>Private slot to handle the currentChanged signal.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__del__">__del__</a></td>
+<td>Special method called during object destruction.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__docsInstalled">__docsInstalled</a></td>
 <td>Private slot handling the end of documentation installation.</td>
 </tr><tr>
@@ -859,7 +862,16 @@ reference to the browser window (QWidget)
 <dd>
 index of the current tab (integer)
 </dd>
-</dl><a NAME="HelpWindow.__docsInstalled" ID="HelpWindow.__docsInstalled"></a>
+</dl><a NAME="HelpWindow.__del__" ID="HelpWindow.__del__"></a>
+<h4>HelpWindow.__del__</h4>
+<b>__del__</b>(<i></i>)
+<p>
+        Special method called during object destruction.
+</p><p>
+        Note: This empty variant seems to get rid of the Qt message
+        'Warning: QBasicTimer::start: QBasicTimer can only be used with
+        threads started with QThread'
+</p><a NAME="HelpWindow.__docsInstalled" ID="HelpWindow.__docsInstalled"></a>
 <h4>HelpWindow.__docsInstalled</h4>
 <b>__docsInstalled</b>(<i>installed</i>)
 <p>

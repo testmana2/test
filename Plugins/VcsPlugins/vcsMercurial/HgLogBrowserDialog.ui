@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>HgLogBrowserDialog</class>
- <widget class="QDialog" name="HgLogBrowserDialog">
+ <widget class="QWidget" name="HgLogBrowserDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -12,9 +12,6 @@
   </property>
   <property name="windowTitle">
    <string>Mercurial Log</string>
-  </property>
-  <property name="sizeGripEnabled">
-   <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -276,16 +273,6 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QCheckBox" name="stopCheckBox">
-       <property name="toolTip">
-        <string>Select to stop listing log messages at a copy or move</string>
-       </property>
-       <property name="text">
-        <string>Stop on Copy/Move</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="3" rowspan="2">
       <widget class="Line" name="line">
        <property name="frameShadow">
@@ -296,6 +283,16 @@
        </property>
        <property name="orientation">
         <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QCheckBox" name="stopCheckBox">
+       <property name="toolTip">
+        <string>Select to stop listing log messages at a copy or move</string>
+       </property>
+       <property name="text">
+        <string>Stop on Copy/Move</string>
        </property>
       </widget>
      </item>
@@ -342,31 +339,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="8">
-      <widget class="QPushButton" name="graftButton">
-       <property name="toolTip">
-        <string>Press to copy the selected changesets to the current branch</string>
-       </property>
-       <property name="text">
-        <string>Copy Changesets</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="9">
-      <widget class="QPushButton" name="phaseButton">
-       <property name="toolTip">
-        <string>Change the phase of the selected revisions</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Change Phase&lt;/b&gt;
-&lt;p&gt;This changes the phase of the selected revisions. The selected revisions have to have the same current phase.&lt;/p&gt;</string>
-       </property>
-       <property name="text">
-        <string>Change Phase</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="10">
       <spacer>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -386,6 +359,16 @@
        </property>
        <property name="text">
         <string>Show differences side-by-side</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QToolButton" name="actionsButton">
+       <property name="toolTip">
+        <string>Select action from menu</string>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::InstantPopup</enum>
        </property>
       </widget>
      </item>
@@ -512,8 +495,6 @@
   <tabstop>diffP2Button</tabstop>
   <tabstop>diffRevisionsButton</tabstop>
   <tabstop>sbsCheckBox</tabstop>
-  <tabstop>graftButton</tabstop>
-  <tabstop>phaseButton</tabstop>
   <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>

@@ -56,7 +56,7 @@ class E5SideBar(QWidget):
             UI.PixmapCache.getIcon("autoHideOff.png"))
         self.__autoHideButton.setChecked(True)
         self.__autoHideButton.setToolTip(
-            self.trUtf8("Deselect to activate automatic collapsing"))
+            self.tr("Deselect to activate automatic collapsing"))
         self.barLayout = QBoxLayout(QBoxLayout.LeftToRight)
         self.barLayout.setContentsMargins(0, 0, 0, 0)
         self.layout = QBoxLayout(QBoxLayout.TopToBottom)

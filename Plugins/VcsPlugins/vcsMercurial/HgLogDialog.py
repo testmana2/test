@@ -9,8 +9,8 @@ Module implementing a dialog to show the output of the hg log command process.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -25,7 +25,6 @@ from E5Gui import E5MessageBox
 from .Ui_HgLogDialog import Ui_HgLogDialog
 
 import Utilities
-import Preferences
 
 
 class HgLogDialog(QWidget, Ui_HgLogDialog):
@@ -62,7 +61,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.__hgClient = self.vcs.getClient()
         
         self.contents.setHtml(
-            self.trUtf8('<b>Processing your request, please wait...</b>'))
+            self.tr('<b>Processing your request, please wait...</b>'))
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -71,7 +70,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.revisions = []  # stack of remembered revisions
-        self.revString = self.trUtf8('Revision')
+        self.revString = self.tr('Revision')
         self.projectMode = False
         
         self.logEntries = []        # list of log entries
@@ -130,10 +129,8 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.activateWindow()
         self.raise_()
         
-        args = []
-        args.append(self.mode)
-        self.vcs.addArguments(args, self.vcs.options['global'])
-        self.vcs.addArguments(args, self.vcs.options['log'])
+        preargs = []
+        args = self.vcs.initCommand(self.mode)
         if noEntries and self.mode == "log":
             args.append('--limit')
             args.append(str(noEntries))
@@ -160,7 +157,12 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 project = e5App().getObject("Project")
                 self.vcs.bundleFile = os.path.join(
                     project.getProjectManagementDir(), "hg-bundle.hg")
-                args.append('--bundle')
+                if os.path.exists(self.vcs.bundleFile):
+                    os.remove(self.vcs.bundleFile)
+                preargs = args[:]
+                preargs.append("--quiet")
+                preargs.append('--bundle')
+                preargs.append(self.vcs.bundleFile)
                 args.append(self.vcs.bundleFile)
         if revisions:
             for rev in revisions:
@@ -173,34 +175,56 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
             
-            out, err = self.__hgClient.runcommand(args)
-            
+            if preargs:
+                out, err = self.__hgClient.runcommand(preargs)
+            else:
+                err = ""
             if err:
                 self.__showError(err)
-            if out and self.isVisible():
-                for line in out.splitlines(True):
-                    self.__processOutputLine(line)
-                    if self.__hgClient.wasCanceled():
-                        break
-            
+            elif self.mode != "incoming" or \
+                (self.vcs.bundleFile and
+                 os.path.exists(self.vcs.bundleFile)) or \
+                    self.bundle:
+                out, err = self.__hgClient.runcommand(args)
+                if err:
+                    self.__showError(err)
+                if out and self.isVisible():
+                    for line in out.splitlines(True):
+                        self.__processOutputLine(line)
+                        if self.__hgClient.wasCanceled():
+                            break
             self.__finish()
         else:
             self.process.kill()
             
             self.process.setWorkingDirectory(self.repodir)
             
-            self.process.start('hg', args)
-            procStarted = self.process.waitForStarted(5000)
-            if not procStarted:
-                self.inputGroup.setEnabled(False)
-                self.inputGroup.hide()
-                E5MessageBox.critical(
-                    self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
-                        'The process {0} could not be started. '
-                        'Ensure, that it is in the search path.'
-                    ).format('hg'))
+            if preargs:
+                process = QProcess()
+                process.setWorkingDirectory(self.repodir)
+                process.start('hg', args)
+                procStarted = process.waitForStarted(5000)
+                if procStarted:
+                    process.waitForFinished(30000)
+            
+            if self.mode != "incoming" or \
+                (self.vcs.bundleFile and
+                 os.path.exists(self.vcs.bundleFile)) or \
+                    self.bundle:
+                self.process.start('hg', args)
+                procStarted = self.process.waitForStarted(5000)
+                if not procStarted:
+                    self.inputGroup.setEnabled(False)
+                    self.inputGroup.hide()
+                    E5MessageBox.critical(
+                        self,
+                        self.tr('Process Generation Error'),
+                        self.tr(
+                            'The process {0} could not be started. '
+                            'Ensure, that it is in the search path.'
+                        ).format('hg'))
+            else:
+                self.__finish()
     
     def __getParents(self, rev):
         """
@@ -214,8 +238,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         parents = []
         
         if int(rev) > 0:
-            args = []
-            args.append("parents")
+            args = self.vcs.initCommand("parents")
             if self.mode == "incoming":
                 if self.bundle:
                     args.append("--repository")
@@ -242,21 +265,19 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = \
-                            str(process.readAllStandardOutput(),
-                                Preferences.getSystem("IOEncoding"),
-                                'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.vcs.getEncoding(), 'replace')
                     else:
                         if not finished:
-                            errMsg = self.trUtf8(
+                            errMsg = self.tr(
                                 "The hg process did not finish within 30s.")
                 else:
-                    errMsg = self.trUtf8("Could not start the hg executable.")
+                    errMsg = self.tr("Could not start the hg executable.")
             
             if errMsg:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Mercurial Error"),
+                    self.tr("Mercurial Error"),
                     errMsg)
             
             if output:
@@ -284,7 +305,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.contents.clear()
         
         if not self.logEntries:
-            self.errors.append(self.trUtf8("No log available for '{0}'")
+            self.errors.append(self.tr("No log available for '{0}'")
                                .format(self.filename))
             self.errorGroup.show()
             return
@@ -320,32 +341,32 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 dstr += ' [<a href="{0}" name="{1}" id="{1}">{2}</a>]'.format(
                     url.toString(),
                     str(query, encoding="ascii"),
-                    self.trUtf8('diff to {0}').format(parent),
+                    self.tr('diff to {0}').format(parent),
                 )
             dstr += '<br />\n'
             html += dstr
             
             if "phase" in entry:
-                html += self.trUtf8("Phase: {0}<br />\n")\
+                html += self.tr("Phase: {0}<br />\n")\
                     .format(entry["phase"])
             
-            html += self.trUtf8("Branches: {0}<br />\n")\
+            html += self.tr("Branches: {0}<br />\n")\
                 .format(entry["branches"])
             
-            html += self.trUtf8("Tags: {0}<br />\n").format(entry["tags"])
+            html += self.tr("Tags: {0}<br />\n").format(entry["tags"])
             
             if "bookmarks" in entry:
-                html += self.trUtf8("Bookmarks: {0}<br />\n")\
+                html += self.tr("Bookmarks: {0}<br />\n")\
                     .format(entry["bookmarks"])
             
-            html += self.trUtf8("Parents: {0}<br />\n")\
+            html += self.tr("Parents: {0}<br />\n")\
                 .format(entry["parents"])
             
-            html += self.trUtf8('<i>Author: {0}</i><br />\n')\
+            html += self.tr('<i>Author: {0}</i><br />\n')\
                 .format(entry["user"])
             
             date, time = entry["date"].split()[:2]
-            html += self.trUtf8('<i>Date: {0}, {1}</i><br />\n')\
+            html += self.tr('<i>Date: {0}, {1}</i><br />\n')\
                 .format(date, time)
             
             for line in entry["description"]:
@@ -356,24 +377,24 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 html += '<br />\n'
                 for f in entry["file_adds"].strip().split(", "):
                     if f in fileCopies:
-                        html += self.trUtf8(
+                        html += self.tr(
                             'Added {0} (copied from {1})<br />\n')\
                             .format(Utilities.html_encode(f),
                                     Utilities.html_encode(fileCopies[f]))
                     else:
-                        html += self.trUtf8('Added {0}<br />\n')\
+                        html += self.tr('Added {0}<br />\n')\
                             .format(Utilities.html_encode(f))
             
             if entry["files_mods"]:
                 html += '<br />\n'
                 for f in entry["files_mods"].strip().split(", "):
-                    html += self.trUtf8('Modified {0}<br />\n')\
+                    html += self.tr('Modified {0}<br />\n')\
                         .format(Utilities.html_encode(f))
             
             if entry["file_dels"]:
                 html += '<br />\n'
                 for f in entry["file_dels"].strip().split(", "):
-                    html += self.trUtf8('Deleted {0}<br />\n')\
+                    html += self.tr('Deleted {0}<br />\n')\
                         .format(Utilities.html_encode(f))
             
             html += '</p>{0}<br/>\n'.format(80 * "=")
@@ -393,9 +414,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+            s = str(self.process.readLine(), self.vcs.getEncoding(), 'replace')
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):
@@ -416,10 +435,15 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 value = line
             if key == "change":
                 self.endInitialText = True
-            if key in ("change", "branches", "tags", "parents", "user",
-                       "date", "file_copies", "file_adds", "files_mods",
-                       "file_dels", "bookmarks", "phase"):
+            if key in ("change", "tags", "parents", "user", "date",
+                       "file_copies", "file_adds", "files_mods", "file_dels",
+                       "bookmarks", "phase"):
                 self.lastLogEntry[key] = value.strip()
+            elif key == "branches":
+                if value.strip():
+                    self.lastLogEntry[key] = value.strip()
+                else:
+                    self.lastLogEntry[key] = "default"
             elif key == "description":
                 self.lastLogEntry[key] = [value.strip()]
             else:
@@ -437,8 +461,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

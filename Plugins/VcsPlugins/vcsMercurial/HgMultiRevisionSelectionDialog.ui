@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>450</width>
-    <height>330</height>
+    <height>338</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
          <string>Select to specify a list of changesets</string>
         </property>
         <property name="text">
-         <string>Changesets:</string>
+         <string>Revisions:</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -39,7 +39,7 @@
       <item row="0" column="1">
        <widget class="QPlainTextEdit" name="changesetsEdit">
         <property name="toolTip">
-         <string>Enter changesets by number, id, range or revset expression one per line</string>
+         <string>Enter revisions by number, id, range or revset expression one per line</string>
         </property>
         <property name="tabChangesFocus">
          <bool>true</bool>

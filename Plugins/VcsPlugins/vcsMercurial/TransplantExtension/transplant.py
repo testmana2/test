@@ -50,8 +50,7 @@ class Transplant(HgExtension):
             revs, sourceRepo, branch, all, pruneRevs, mergeRevs, log = \
                 dlg.getData()
             
-            args = []
-            args.append("transplant")
+            args = self.vcs.initCommand("transplant")
             args.append("--verbose")
             if sourceRepo:
                 args.append("--source")
@@ -71,7 +70,7 @@ class Transplant(HgExtension):
                 args.append("--log")
             args.extend(revs)
             
-            dia = HgDialog(self.trUtf8('Transplant Changesets'), self.vcs)
+            dia = HgDialog(self.tr('Transplant Changesets'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -93,13 +92,12 @@ class Transplant(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("transplant")
+        args = self.vcs.initCommand("transplant")
         args.append("--continue")
         args.append("--verbose")
         
         dia = HgDialog(
-            self.trUtf8('Transplant Changesets (Continue)'), self.vcs)
+            self.tr('Transplant Changesets (Continue)'), self.vcs)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()

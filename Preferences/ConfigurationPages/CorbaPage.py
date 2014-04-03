@@ -19,6 +19,7 @@ from .Ui_CorbaPage import Ui_CorbaPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
@@ -32,6 +33,8 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         super(CorbaPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("CorbaPage")
+        
+        self.idlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.idlCompleter = E5FileCompleter(self.idlEdit)
         
@@ -51,7 +54,7 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select IDL compiler"),
+            self.tr("Select IDL compiler"),
             self.idlEdit.text(),
             "")
         

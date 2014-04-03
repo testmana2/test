@@ -294,12 +294,12 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
             self.connectButton.setIcon(
                 UI.PixmapCache.getIcon("ircDisconnect.png"))
             self.connectButton.setToolTip(
-                self.trUtf8("Press to disconnect from the network"))
+                self.tr("Press to disconnect from the network"))
         else:
             self.connectButton.setIcon(
                 UI.PixmapCache.getIcon("ircConnect.png"))
             self.connectButton.setToolTip(
-                self.trUtf8("Press to connect to the selected network"))
+                self.tr("Press to connect to the selected network"))
     
     def isConnected(self):
         """
@@ -371,9 +371,9 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 htmlExtension = "html"
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Save Messages"),
+                self.tr("Save Messages"),
                 "",
-                self.trUtf8(
+                self.tr(
                     "HTML Files (*.{0});;Text Files (*.txt);;All Files (*)")
                 .format(htmlExtension),
                 None,
@@ -388,9 +388,9 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 if QFileInfo(fname).exists():
                     res = E5MessageBox.yesNo(
                         self,
-                        self.trUtf8("Save Messages"),
-                        self.trUtf8("<p>The file <b>{0}</b> already exists."
-                                    " Overwrite it?</p>").format(fname),
+                        self.tr("Save Messages"),
+                        self.tr("<p>The file <b>{0}</b> already exists."
+                                " Overwrite it?</p>").format(fname),
                         icon=E5MessageBox.Warning)
                     if not res:
                         return
@@ -407,8 +407,8 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
                 except IOError as err:
                     E5MessageBox.critical(
                         self,
-                        self.trUtf8("Error saving Messages"),
-                        self.trUtf8(
+                        self.tr("Error saving Messages"),
+                        self.tr(
                             """<p>The messages contents could not be written"""
                             """ to <b>{0}</b></p><p>Reason: {1}</p>""")
                         .format(fname, str(err)))
@@ -421,26 +421,26 @@ class IrcNetworkWidget(QWidget, Ui_IrcNetworkWidget):
         self.__copyMessagesAct = \
             self.__messagesMenu.addAction(
                 UI.PixmapCache.getIcon("editCopy.png"),
-                self.trUtf8("Copy"), self.__copyMessages)
+                self.tr("Copy"), self.__copyMessages)
         self.__messagesMenu.addSeparator()
         self.__cutAllMessagesAct = \
             self.__messagesMenu.addAction(
                 UI.PixmapCache.getIcon("editCut.png"),
-                self.trUtf8("Cut all"), self.__cutAllMessages)
+                self.tr("Cut all"), self.__cutAllMessages)
         self.__copyAllMessagesAct = \
             self.__messagesMenu.addAction(
                 UI.PixmapCache.getIcon("editCopy.png"),
-                self.trUtf8("Copy all"), self.__copyAllMessages)
+                self.tr("Copy all"), self.__copyAllMessages)
         self.__messagesMenu.addSeparator()
         self.__clearMessagesAct = \
             self.__messagesMenu.addAction(
                 UI.PixmapCache.getIcon("editDelete.png"),
-                self.trUtf8("Clear"), self.__clearMessages)
+                self.tr("Clear"), self.__clearMessages)
         self.__messagesMenu.addSeparator()
         self.__saveMessagesAct = \
             self.__messagesMenu.addAction(
                 UI.PixmapCache.getIcon("fileSave.png"),
-                self.trUtf8("Save"), self.__saveMessages)
+                self.tr("Save"), self.__saveMessages)
         
         self.on_messages_copyAvailable(False)
     

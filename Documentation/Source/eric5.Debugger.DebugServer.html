@@ -86,6 +86,10 @@ emitted with the exit status after the client has
 <dd>
 emitted if the client went away (planned or
         unplanned)
+</dd><dt>clientInterpreterChanged(str)</dt>
+<dd>
+emitted to signal a change of the
+        client interpreter
 </dd><dt>clientLine(filename, lineno, forStack)</dt>
 <dd>
 emitted after the
@@ -312,6 +316,9 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.getClientCapabilities">getClientCapabilities</a></td>
 <td>Public method to retrieve the debug clients capabilities.</td>
+</tr><tr>
+<td><a href="#DebugServer.getClientInterpreter">getClientInterpreter</a></td>
+<td>Public method to get the interpreter of the debug client.</td>
 </tr><tr>
 <td><a href="#DebugServer.getExtensions">getExtensions</a></td>
 <td>Public slot to get the extensions associated with the given language.</td>
@@ -955,6 +962,16 @@ debug client type (string)
 <dt>Returns:</dt>
 <dd>
 debug client capabilities (integer)
+</dd>
+</dl><a NAME="DebugServer.getClientInterpreter" ID="DebugServer.getClientInterpreter"></a>
+<h4>DebugServer.getClientInterpreter</h4>
+<b>getClientInterpreter</b>(<i></i>)
+<p>
+        Public method to get the interpreter of the debug client.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+interpreter of the debug client (string)
 </dd>
 </dl><a NAME="DebugServer.getExtensions" ID="DebugServer.getExtensions"></a>
 <h4>DebugServer.getExtensions</h4>

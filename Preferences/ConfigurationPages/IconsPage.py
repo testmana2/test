@@ -20,6 +20,7 @@ from .Ui_IconsPage import Ui_IconsPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class IconsPage(ConfigurationPageBase, Ui_IconsPage):
@@ -33,6 +34,8 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         super(IconsPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("IconsPage")
+        
+        self.iconDirectoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.iconDirectoryCompleter = E5DirCompleter(self.iconDirectoryEdit)
         
@@ -128,7 +131,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         dir = E5FileDialog.getExistingDirectory(
             None,
-            self.trUtf8("Select icon directory"),
+            self.tr("Select icon directory"),
             "",
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

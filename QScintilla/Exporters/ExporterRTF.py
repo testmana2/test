@@ -116,7 +116,7 @@ class ExporterRTF(ExporterBase):
         """
         Public method performing the export.
         """
-        filename = self._getFileName(self.trUtf8("RTF Files (*.rtf)"))
+        filename = self._getFileName(self.tr("RTF Files (*.rtf)"))
         if not filename:
             return
         
@@ -350,8 +350,8 @@ class ExporterRTF(ExporterBase):
                 QApplication.restoreOverrideCursor()
                 E5MessageBox.critical(
                     self.editor,
-                    self.trUtf8("Export source"),
-                    self.trUtf8(
+                    self.tr("Export source"),
+                    self.tr(
                         """<p>The source could not be exported to"""
                         """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
                     .format(filename, str(err)))

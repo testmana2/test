@@ -118,7 +118,7 @@ class XbelImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' does not exist.")\
+            self._errorString = self.tr("File '{0}' does not exist.")\
                 .format(self.__fileName)
             return False
         return True
@@ -136,7 +136,7 @@ class XbelImporter(BookmarksImporter):
         
         if reader.error() != QXmlStreamReader.NoError:
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 """Error when importing bookmarks on line {0},"""
                 """ column {1}:\n{2}""")\
                 .format(reader.lineNumber(),
@@ -147,12 +147,12 @@ class XbelImporter(BookmarksImporter):
         from ..BookmarkNode import BookmarkNode
         importRootNode.setType(BookmarkNode.Folder)
         if self._id == "e5browser":
-            importRootNode.title = self.trUtf8("eric5 Web Browser Import")
+            importRootNode.title = self.tr("eric5 Web Browser Import")
         elif self._id == "konqueror":
-            importRootNode.title = self.trUtf8("Konqueror Import")
+            importRootNode.title = self.tr("Konqueror Import")
         elif self._id == "xbel":
-            importRootNode.title = self.trUtf8("XBEL Import")
+            importRootNode.title = self.tr("XBEL Import")
         else:
-            importRootNode.title = self.trUtf8("Imported {0}")\
+            importRootNode.title = self.tr("Imported {0}")\
                 .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
         return importRootNode

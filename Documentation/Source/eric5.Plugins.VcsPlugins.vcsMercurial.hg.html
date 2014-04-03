@@ -52,6 +52,10 @@ emitted when the list of active
 </dd><dt>committed()</dt>
 <dd>
 emitted after the commit action has completed
+</dd><dt>iniFileChanged()</dt>
+<dd>
+emitted when a Mercurial/repo configuration file
+        has changed
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -69,6 +73,9 @@ VersionControl
 <tr>
 <td><a href="#Hg.__init__">Hg</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#Hg.__checkDefaults">__checkDefaults</a></td>
+<td>Private method to check, if the default and default-push URLs have been configured.</td>
 </tr><tr>
 <td><a href="#Hg.__getExtensionsInfo">__getExtensionsInfo</a></td>
 <td>Private method to get the active extensions from Mercurial.</td>
@@ -91,11 +98,20 @@ VersionControl
 <td><a href="#Hg._createStatusMonitorThread">_createStatusMonitorThread</a></td>
 <td>Protected method to create an instance of the VCS status monitor thread.</td>
 </tr><tr>
+<td><a href="#Hg.canPull">canPull</a></td>
+<td>Public method to check, if pull is possible.</td>
+</tr><tr>
+<td><a href="#Hg.canPush">canPush</a></td>
+<td>Public method to check, if push is possible.</td>
+</tr><tr>
 <td><a href="#Hg.clearStatusCache">clearStatusCache</a></td>
 <td>Public method to clear the status cache.</td>
 </tr><tr>
 <td><a href="#Hg.getClient">getClient</a></td>
 <td>Public method to get a reference to the command server interface.</td>
+</tr><tr>
+<td><a href="#Hg.getEncoding">getEncoding</a></td>
+<td>Public method to get the encoding to be used by Mercurial.</td>
 </tr><tr>
 <td><a href="#Hg.getExtensionObject">getExtensionObject</a></td>
 <td>Public method to get a reference to an extension object.</td>
@@ -166,9 +182,6 @@ VersionControl
 <td><a href="#Hg.hgIdentify">hgIdentify</a></td>
 <td>Public method to identify the current working directory.</td>
 </tr><tr>
-<td><a href="#Hg.hgIdentifyBundle">hgIdentifyBundle</a></td>
-<td>Public method used to identify a changegroup file.</td>
-</tr><tr>
 <td><a href="#Hg.hgImport">hgImport</a></td>
 <td>Public method to import a patch file.</td>
 </tr><tr>
@@ -180,9 +193,6 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgListTagBranch">hgListTagBranch</a></td>
 <td>Public method used to list the available tags or branches.</td>
-</tr><tr>
-<td><a href="#Hg.hgLogBrowser">hgLogBrowser</a></td>
-<td>Public method used to browse the log of a file/directory from the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.hgNormalizeURL">hgNormalizeURL</a></td>
 <td>Public method to normalize a url for Mercurial.</td>
@@ -241,6 +251,9 @@ VersionControl
 <td><a href="#Hg.hgVerify">hgVerify</a></td>
 <td>Public method to verify the integrity of the repository.</td>
 </tr><tr>
+<td><a href="#Hg.initCommand">initCommand</a></td>
+<td>Public method to initialize a command arguments list.</td>
+</tr><tr>
 <td><a href="#Hg.isExtensionActive">isExtensionActive</a></td>
 <td>Public method to check, if an extension is active.</td>
 </tr><tr>
@@ -298,6 +311,9 @@ VersionControl
 <td><a href="#Hg.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory from the Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.vcsLogBrowser">vcsLogBrowser</a></td>
+<td>Public method used to browse the log of a file/directory from the Mercurial repository.</td>
+</tr><tr>
 <td><a href="#Hg.vcsMerge">vcsMerge</a></td>
 <td>Public method used to merge a URL/revision into the local project.</td>
 </tr><tr>
@@ -328,11 +344,14 @@ VersionControl
 <td><a href="#Hg.vcsStatus">vcsStatus</a></td>
 <td>Public method used to view the status of files/directories in the Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.vcsSupportCommandOptions">vcsSupportCommandOptions</a></td>
+<td>Public method to signal the support of user settable command options.</td>
+</tr><tr>
 <td><a href="#Hg.vcsSwitch">vcsSwitch</a></td>
 <td>Public method used to switch a working directory to a different revision.</td>
 </tr><tr>
 <td><a href="#Hg.vcsTag">vcsTag</a></td>
-<td>Public method used to set the tag in the Mercurial repository.</td>
+<td>Public method used to set/remove a tag in the Mercurial repository.</td>
 </tr><tr>
 <td><a href="#Hg.vcsUpdate">vcsUpdate</a></td>
 <td>Public method used to update a file/directory with the Mercurial repository.</td>
@@ -358,7 +377,13 @@ parent widget (QWidget)
 <dd>
 name of this object (string)
 </dd>
-</dl><a NAME="Hg.__getExtensionsInfo" ID="Hg.__getExtensionsInfo"></a>
+</dl><a NAME="Hg.__checkDefaults" ID="Hg.__checkDefaults"></a>
+<h4>Hg.__checkDefaults</h4>
+<b>__checkDefaults</b>(<i></i>)
+<p>
+        Private method to check, if the default and default-push URLs
+        have been configured.
+</p><a NAME="Hg.__getExtensionsInfo" ID="Hg.__getExtensionsInfo"></a>
 <h4>Hg.__getExtensionsInfo</h4>
 <b>__getExtensionsInfo</b>(<i></i>)
 <p>
@@ -443,6 +468,26 @@ reference to the project object (Project)
 <dd>
 reference to the monitor thread (QThread)
 </dd>
+</dl><a NAME="Hg.canPull" ID="Hg.canPull"></a>
+<h4>Hg.canPull</h4>
+<b>canPull</b>(<i></i>)
+<p>
+        Public method to check, if pull is possible.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating pull capability (boolean)
+</dd>
+</dl><a NAME="Hg.canPush" ID="Hg.canPush"></a>
+<h4>Hg.canPush</h4>
+<b>canPush</b>(<i></i>)
+<p>
+        Public method to check, if push is possible.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating push capability (boolean)
+</dd>
 </dl><a NAME="Hg.clearStatusCache" ID="Hg.clearStatusCache"></a>
 <h4>Hg.clearStatusCache</h4>
 <b>clearStatusCache</b>(<i></i>)
@@ -457,6 +502,16 @@ reference to the monitor thread (QThread)
 <dt>Returns:</dt>
 <dd>
 reference to the client (HgClient)
+</dd>
+</dl><a NAME="Hg.getEncoding" ID="Hg.getEncoding"></a>
+<h4>Hg.getEncoding</h4>
+<b>getEncoding</b>(<i></i>)
+<p>
+        Public method to get the encoding to be used by Mercurial.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+encoding (string)
 </dd>
 </dl><a NAME="Hg.getExtensionObject" ID="Hg.getExtensionObject"></a>
 <h4>Hg.getExtensionObject</h4>
@@ -612,13 +667,21 @@ flag indicating success
 </dd>
 </dl><a NAME="Hg.hgEditConfig" ID="Hg.hgEditConfig"></a>
 <h4>Hg.hgEditConfig</h4>
-<b>hgEditConfig</b>(<i>name</i>)
+<b>hgEditConfig</b>(<i>name, withLargefiles=True, largefilesData=None</i>)
 <p>
         Public method used to edit the repository configuration file.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd><dt><i>withLargefiles</i></dt>
+<dd>
+flag indicating to configure the largefiles
+            section (boolean)
+</dd><dt><i>largefilesData</i></dt>
+<dd>
+dictionary with data for the largefiles
+            section of the data dialog (dict)
 </dd>
 </dl><a NAME="Hg.hgEditUserConfig" ID="Hg.hgEditUserConfig"></a>
 <h4>Hg.hgEditUserConfig</h4>
@@ -683,18 +746,23 @@ list of branches (list of string)
 </dd>
 </dl><a NAME="Hg.hgGetTagsList" ID="Hg.hgGetTagsList"></a>
 <h4>Hg.hgGetTagsList</h4>
-<b>hgGetTagsList</b>(<i>repodir</i>)
+<b>hgGetTagsList</b>(<i>repodir, withType=False</i>)
 <p>
         Public method to get the list of tags.
 </p><dl>
 <dt><i>repodir</i></dt>
 <dd>
 directory name of the repository (string)
+</dd><dt><i>withType</i></dt>
+<dd>
+flag indicating to get the tag type as well (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-list of tags (list of string)
+list of tags (list of string) or list of tuples of
+            tag name and flag indicating a local tag (list of tuple of string
+            and boolean), if withType is True
 </dd>
 </dl><a NAME="Hg.hgGraft" ID="Hg.hgGraft"></a>
 <h4>Hg.hgGraft</h4>
@@ -739,16 +807,6 @@ flag indicating that the project should be reread (boolean)
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
-</dd>
-</dl><a NAME="Hg.hgIdentifyBundle" ID="Hg.hgIdentifyBundle"></a>
-<h4>Hg.hgIdentifyBundle</h4>
-<b>hgIdentifyBundle</b>(<i>name</i>)
-<p>
-        Public method used to identify a changegroup file.
-</p><dl>
-<dt><i>name</i></dt>
-<dd>
-directory name on which to base the changegroup (string)
 </dd>
 </dl><a NAME="Hg.hgImport" ID="Hg.hgImport"></a>
 <h4>Hg.hgImport</h4>
@@ -804,21 +862,6 @@ directory name of the project (string)
 <dd>
 flag indicating listing of branches or tags
                 (False = branches, True = tags)
-</dd>
-</dl><a NAME="Hg.hgLogBrowser" ID="Hg.hgLogBrowser"></a>
-<h4>Hg.hgLogBrowser</h4>
-<b>hgLogBrowser</b>(<i>path, isFile=False</i>)
-<p>
-        Public method used to browse the log of a file/directory from the
-        Mercurial repository.
-</p><dl>
-<dt><i>path</i></dt>
-<dd>
-file/directory name to show the log of (string)
-</dd><dt><i>isFile=</i></dt>
-<dd>
-flag indicating log for a file is to be shown
-            (boolean)
 </dd>
 </dl><a NAME="Hg.hgNormalizeURL" ID="Hg.hgNormalizeURL"></a>
 <h4>Hg.hgNormalizeURL</h4>
@@ -1028,7 +1071,7 @@ file/directory name (string)
 </dd>
 </dl><a NAME="Hg.hgSummary" ID="Hg.hgSummary"></a>
 <h4>Hg.hgSummary</h4>
-<b>hgSummary</b>(<i>mq=False</i>)
+<b>hgSummary</b>(<i>mq=False, largefiles=False</i>)
 <p>
         Public method used to show some summary information of the
         working directory state.
@@ -1036,6 +1079,10 @@ file/directory name (string)
 <dt><i>mq</i></dt>
 <dd>
 flag indicating to show the queue status as well (boolean)
+</dd><dt><i>largefiles</i></dt>
+<dd>
+flag indicating to show the largefiles status as
+            well (boolean)
 </dd>
 </dl><a NAME="Hg.hgUnbundle" ID="Hg.hgUnbundle"></a>
 <h4>Hg.hgUnbundle</h4>
@@ -1062,6 +1109,21 @@ flag indicating, that the update contained an add
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd>
+</dl><a NAME="Hg.initCommand" ID="Hg.initCommand"></a>
+<h4>Hg.initCommand</h4>
+<b>initCommand</b>(<i>command</i>)
+<p>
+        Public method to initialize a command arguments list.
+</p><dl>
+<dt><i>command</i></dt>
+<dd>
+command name (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of command options (list of string)
 </dd>
 </dl><a NAME="Hg.isExtensionActive" ID="Hg.isExtensionActive"></a>
 <h4>Hg.isExtensionActive</h4>
@@ -1377,6 +1439,21 @@ reference to the project (Project)
 <dd>
 file/directory name to show the log of (string)
 </dd>
+</dl><a NAME="Hg.vcsLogBrowser" ID="Hg.vcsLogBrowser"></a>
+<h4>Hg.vcsLogBrowser</h4>
+<b>vcsLogBrowser</b>(<i>name, isFile=False</i>)
+<p>
+        Public method used to browse the log of a file/directory from the
+        Mercurial repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to show the log of (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown
+            (boolean)
+</dd>
 </dl><a NAME="Hg.vcsMerge" ID="Hg.vcsMerge"></a>
 <h4>Hg.vcsMerge</h4>
 <b>vcsMerge</b>(<i>name</i>)
@@ -1536,6 +1613,17 @@ string with ready formated info for display (string)
 file/directory name(s) to show the status of
             (string or list of strings)
 </dd>
+</dl><a NAME="Hg.vcsSupportCommandOptions" ID="Hg.vcsSupportCommandOptions"></a>
+<h4>Hg.vcsSupportCommandOptions</h4>
+<b>vcsSupportCommandOptions</b>(<i></i>)
+<p>
+        Public method to signal the support of user settable command options.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the support  of user settable command options
+            (boolean)
+</dd>
 </dl><a NAME="Hg.vcsSwitch" ID="Hg.vcsSwitch"></a>
 <h4>Hg.vcsSwitch</h4>
 <b>vcsSwitch</b>(<i>name</i>)
@@ -1555,13 +1643,25 @@ flag indicating, that the switch contained an add
 </dd>
 </dl><a NAME="Hg.vcsTag" ID="Hg.vcsTag"></a>
 <h4>Hg.vcsTag</h4>
-<b>vcsTag</b>(<i>name</i>)
+<b>vcsTag</b>(<i>name, revision=None, tagName=None</i>)
 <p>
-        Public method used to set the tag in the Mercurial repository.
+        Public method used to set/remove a tag in the Mercurial repository.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
-file/directory name to be tagged (string)
+file/directory name to determine the repo root from
+            (string)
+</dd><dt><i>revision</i></dt>
+<dd>
+revision to set tag for (string)
+</dd><dt><i>tagName</i></dt>
+<dd>
+name of the tag (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a performed tag action (boolean)
 </dd>
 </dl><a NAME="Hg.vcsUpdate" ID="Hg.vcsUpdate"></a>
 <h4>Hg.vcsUpdate</h4>

@@ -31,9 +31,9 @@ class UserAgentsDialog(QDialog, Ui_UserAgentsDialog):
         super(UserAgentsDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.removeButton.clicked[()].connect(
+        self.removeButton.clicked.connect(
             self.userAgentsTable.removeSelected)
-        self.removeAllButton.clicked[()].connect(
+        self.removeAllButton.clicked.connect(
             self.userAgentsTable.removeAll)
         
         self.userAgentsTable.verticalHeader().hide()

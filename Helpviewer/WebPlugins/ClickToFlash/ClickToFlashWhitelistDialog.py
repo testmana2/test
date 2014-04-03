@@ -44,8 +44,8 @@ class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.whitelist.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.whitelist.removeAll)
+        self.removeButton.clicked.connect(self.whitelist.removeSelected)
+        self.removeAllButton.clicked.connect(self.whitelist.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -54,8 +54,8 @@ class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
         """
         host, ok = QInputDialog.getText(
             self,
-            self.trUtf8("ClickToFlash Whitelist"),
-            self.trUtf8("Enter host name to add to whitelist:"),
+            self.tr("ClickToFlash Whitelist"),
+            self.tr("Enter host name to add to whitelist:"),
             QLineEdit.Normal)
         if ok and host != "" and host not in self.__model.stringList():
             self.__model.insertRow(self.__model.rowCount())

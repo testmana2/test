@@ -110,7 +110,7 @@ class ChromeImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 "File '{0}' does not exist.").format(self.__fileName)
             return False
         return True
@@ -127,7 +127,7 @@ class ChromeImporter(BookmarksImporter):
             f.close()
         except IOError as err:
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 "File '{0}' cannot be read.\nReason: {1}")\
                 .format(self.__fileName, str(err))
             return None
@@ -138,11 +138,11 @@ class ChromeImporter(BookmarksImporter):
             self.__processRoots(contents["roots"], importRootNode)
         
         if self._id == "chrome":
-            importRootNode.title = self.trUtf8("Google Chrome Import")
+            importRootNode.title = self.tr("Google Chrome Import")
         elif self._id == "chromium":
-            importRootNode.title = self.trUtf8("Chromium Import")
+            importRootNode.title = self.tr("Chromium Import")
         else:
-            importRootNode.title = self.trUtf8("Imported {0}")\
+            importRootNode.title = self.tr("Imported {0}")\
                 .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
         return importRootNode
     

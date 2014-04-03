@@ -9,8 +9,8 @@ Module implementing a class to read Netscape HTML bookmark files.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import QObject, QIODevice, QFile, QRegExp, Qt, QDateTime

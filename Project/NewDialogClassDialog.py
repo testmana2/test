@@ -19,6 +19,8 @@ from E5Gui import E5FileDialog
 
 from .Ui_NewDialogClassDialog import Ui_NewDialogClassDialog
 
+import UI.PixmapCache
+
 
 class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
     """
@@ -37,6 +39,8 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         super(NewDialogClassDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.pathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)
         
@@ -46,6 +50,9 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         self.filenameEdit.setText(defaultFile)
         self.pathnameEdit.setText(QDir.toNativeSeparators(defaultPath))
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_pathButton_clicked(self):
         """
@@ -53,7 +60,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         path = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select source directory"),
+            self.tr("Select source directory"),
             QDir.fromNativeSeparators(self.pathnameEdit.text()))
         if path:
             self.pathnameEdit.setText(QDir.toNativeSeparators(path))

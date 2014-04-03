@@ -17,6 +17,7 @@ from E5Gui import E5FileDialog
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class StartDialog(QDialog):
@@ -77,9 +78,10 @@ class StartDialog(QDialog):
             from .Ui_StartProfileDialog import Ui_StartProfileDialog
             self.ui = Ui_StartProfileDialog()
         self.ui.setupUi(self)
+        self.ui.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.clearButton = self.ui.buttonBox.addButton(
-            self.trUtf8("Clear Histories"), QDialogButtonBox.ActionRole)
+            self.tr("Clear Histories"), QDialogButtonBox.ActionRole)
         
         self.workdirCompleter = E5DirCompleter(self.ui.workdirCombo)
         
@@ -116,6 +118,9 @@ class StartDialog(QDialog):
         
         self.__clearHistoryLists = False
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """
@@ -124,7 +129,7 @@ class StartDialog(QDialog):
         cwd = self.ui.workdirCombo.currentText()
         d = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Working directory"),
+            self.tr("Working directory"),
             cwd,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

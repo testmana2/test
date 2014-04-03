@@ -75,7 +75,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         if iconName:
             self.loadFlashButton.setIcon(UI.PixmapCache.getIcon(iconName))
         else:
-            self.loadFlashButton.setText(self.trUtf8("Load"))
+            self.loadFlashButton.setText(self.tr("Load"))
     
     @pyqtSlot()
     def on_loadFlashButton_clicked(self):
@@ -89,28 +89,28 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         Private slot to show the context menu.
         """
         menu = QMenu()
-        act = menu.addAction(self.trUtf8("Object blocked by ClickToFlash"))
+        act = menu.addAction(self.tr("Object blocked by ClickToFlash"))
         font = act.font()
         font.setBold(True)
         act.setFont(font)
         menu.addAction(
-            self.trUtf8("Show information about object"), self.__showInfo)
+            self.tr("Show information about object"), self.__showInfo)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Load"), self.__load)
-        menu.addAction(self.trUtf8("Delete object"), self.__hideAdBlocked)
+        menu.addAction(self.tr("Load"), self.__load)
+        menu.addAction(self.tr("Delete object"), self.__hideAdBlocked)
         menu.addSeparator()
         host = self.__url.host()
         add = menu.addAction(
-            self.trUtf8("Add '{0}' to Whitelist").format(host),
+            self.tr("Add '{0}' to Whitelist").format(host),
             self.__addToWhitelist)
         remove = menu.addAction(
-            self.trUtf8("Remove '{0}' from Whitelist").format(host),
+            self.tr("Remove '{0}' from Whitelist").format(host),
             self.__removeFromWhitelist)
         onWhitelist = self.__plugin.onWhitelist(host)
         add.setEnabled(not onWhitelist)
         remove.setEnabled(onWhitelist)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Configure Whitelist"), self.__configure)
+        menu.addAction(self.tr("Configure Whitelist"), self.__configure)
         menu.actions()[0].setEnabled(False)
         
         menu.exec_(QCursor.pos())
@@ -258,11 +258,11 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
         Private slot to show information about the blocked object.
         """
         dlg = QDialog()
-        dlg.setWindowTitle(self.trUtf8("Flash Object"))
+        dlg.setWindowTitle(self.tr("Flash Object"))
         dlg.setSizeGripEnabled(True)
         layout = QFormLayout(dlg)
-        layout.addRow(QLabel(self.trUtf8("<b>Attribute Name</b>")),
-                      QLabel(self.trUtf8("<b>Value</b>")))
+        layout.addRow(QLabel(self.tr("<b>Attribute Name</b>")),
+                      QLabel(self.tr("<b>Value</b>")))
         
         index = 0
         for name in self.__argumentNames:
@@ -276,7 +276,7 @@ class ClickToFlash(QWidget, Ui_ClickToFlash):
             index += 1
         
         if index == 0:
-            layout.addRow(QLabel(self.trUtf8("No information available.")))
+            layout.addRow(QLabel(self.tr("No information available.")))
         
         dlg.setMaximumHeight(500)
         dlg.setMaximumWidth(500)

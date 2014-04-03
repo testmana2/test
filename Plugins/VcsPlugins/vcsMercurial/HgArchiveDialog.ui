@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>145</height>
+    <height>167</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,16 +28,6 @@
     <widget class="QLineEdit" name="archiveEdit">
      <property name="toolTip">
       <string>Enter the file name of the archive</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="2">
-    <widget class="QPushButton" name="archiveButton">
-     <property name="toolTip">
-      <string>Press to select the archive file name via a file selection dialog</string>
-     </property>
-     <property name="text">
-      <string>...</string>
      </property>
     </widget>
    </item>
@@ -86,6 +76,13 @@
      </property>
      <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QToolButton" name="archiveButton">
+     <property name="toolTip">
+      <string>Press to select the archive file name via a file selection dialog</string>
      </property>
     </widget>
    </item>

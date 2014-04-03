@@ -70,7 +70,10 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.cFilters.toggled[bool].connect(self.__toggleGroupsAndTest)
         
         self.bTest = self.buttonBox.addButton(
-            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+            self.tr("Test"), QDialogButtonBox.ActionRole)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __adjustOptions(self, options):
         """
@@ -299,7 +302,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                code += 'self.tr("{0}"),{1}{2}'.format(
                     self.eCaption.text(), os.linesep, istring)
             if not self.eStartWith.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -307,7 +310,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cStartWith.isChecked():
                     fmt = '{0},{1}{2}'
                 else:
-                    fmt = 'self.trUtf8("{0}"),{1}{2}'
+                    fmt = 'self.tr("{0}"),{1}{2}'
                 code += fmt.format(self.eStartWith.text(), os.linesep, istring)
             if self.eFilters.text() == "":
                 code += '""'
@@ -315,7 +318,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cFilters.isChecked():
                     fmt = '{0}'
                 else:
-                    fmt = 'self.trUtf8("{0}")'
+                    fmt = 'self.tr("{0}")'
                 code += fmt.format(self.eFilters.text())
             if self.rfOpenFile.isChecked() or self.__pyqtVariant == 5:
                 if self.eInitialFilter.text() == "":
@@ -324,7 +327,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                     if self.cInitialFilter.isChecked():
                         fmt = '{0}'
                     else:
-                        fmt = 'self.trUtf8("{0}")'
+                        fmt = 'self.tr("{0}")'
                     filter = fmt.format(self.eInitialFilter.text())
                 code += ',{0}{1}{2}'.format(os.linesep, istring, filter)
             if not self.cSymlinks.isChecked():
@@ -343,7 +346,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                code += 'self.tr("{0}"),{1}{2}'.format(
                     self.eCaption.text(), os.linesep, istring)
             if not self.eStartWith.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -351,7 +354,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cStartWith.isChecked():
                     fmt = '{0},{1}{2}'
                 else:
-                    fmt = 'self.trUtf8("{0}"),{1}{2}'
+                    fmt = 'self.tr("{0}"),{1}{2}'
                 code += fmt.format(self.eStartWith.text(), os.linesep, istring)
             if not self.eFilters.text():
                 code += '""'
@@ -359,7 +362,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cFilters.isChecked():
                     fmt = '{0}'
                 else:
-                    fmt = 'self.trUtf8("{0}")'
+                    fmt = 'self.tr("{0}")'
                 code += fmt.format(self.eFilters.text())
             if self.rfOpenFiles.isChecked() or self.__pyqtVariant == 5:
                 if self.eInitialFilter.text() == "":
@@ -368,7 +371,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                     if self.cInitialFilter.isChecked():
                         fmt = '{0}'
                     else:
-                        fmt = 'self.trUtf8("{0}")'
+                        fmt = 'self.tr("{0}")'
                     filter = fmt.format(self.eInitialFilter.text())
                 code += ',{0}{1}{2}'.format(os.linesep, istring, filter)
             if not self.cSymlinks.isChecked():
@@ -387,7 +390,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                code += 'self.tr("{0}"),{1}{2}'.format(
                     self.eCaption.text(), os.linesep, istring)
             if not self.eStartWith.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
@@ -395,7 +398,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cStartWith.isChecked():
                     fmt = '{0},{1}{2}'
                 else:
-                    fmt = 'self.trUtf8("{0}"),{1}{2}'
+                    fmt = 'self.tr("{0}"),{1}{2}'
                 code += fmt.format(self.eStartWith.text(), os.linesep, istring)
             if not self.eFilters.text():
                 code += '""'
@@ -403,7 +406,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cFilters.isChecked():
                     fmt = '{0}'
                 else:
-                    fmt = 'self.trUtf8("{0}")'
+                    fmt = 'self.tr("{0}")'
                 code += fmt.format(self.eFilters.text())
             if self.rfSaveFile.isChecked() or self.__pyqtVariant == 5:
                 if self.eInitialFilter.text() == "":
@@ -412,7 +415,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                     if self.cInitialFilter.isChecked():
                         fmt = '{0}'
                     else:
-                        fmt = 'self.trUtf8("{0}")'
+                        fmt = 'self.tr("{0}")'
                     filter = fmt.format(self.eInitialFilter.text())
                 code += ',{0}{1}{2}'.format(os.linesep, istring, filter)
             if (not self.cSymlinks.isChecked()) or \
@@ -434,7 +437,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             if not self.eCaption.text():
                 code += '"",{0}{1}'.format(os.linesep, istring)
             else:
-                code += 'self.trUtf8("{0}"),{1}{2}'.format(
+                code += 'self.tr("{0}"),{1}{2}'.format(
                     self.eCaption.text(), os.linesep, istring)
             if not self.eWorkDir.text():
                 code += '""'
@@ -442,7 +445,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 if self.cWorkDir.isChecked():
                     fmt = '{0}'
                 else:
-                    fmt = 'self.trUtf8("{0}")'
+                    fmt = 'self.tr("{0}")'
                 code += fmt.format(self.eWorkDir.text())
             code += ',{0}{1}QFileDialog.Options('.format(os.linesep, istring)
             if not self.cSymlinks.isChecked():

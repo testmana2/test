@@ -9,8 +9,8 @@ Module implementing a network reply class for directory resources.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import Qt, QByteArray, QTimer, QDir, QIODevice, QUrl, QBuffer
@@ -212,7 +212,7 @@ class FileReply(QNetworkReply):
             icon = UI.PixmapCache.getIcon("up.png")
             linkClasses["link_parent"] = \
                 self.__cssLinkClass(icon, iconSize).format("link_parent")
-            parentStr = self.trUtf8(
+            parentStr = self.tr(
                 """  <p><a class="link_parent" href="{0}">"""
                 """Change to parent directory</a></p>"""
             ).format(parent.toString())
@@ -225,7 +225,7 @@ class FileReply(QNetworkReply):
             """<td class="size">{4}</td>"""\
             """<td class="modified">{5}</td>"""\
             """</tr>\n"""
-        table = self.trUtf8(
+        table = self.tr(
             """    <tr>"""
             """<th align="left">Name</th>"""
             """<th>Size</th>"""
@@ -251,7 +251,7 @@ class FileReply(QNetworkReply):
                     else:
                         break
                 
-                sizeStr = self.trUtf8("{0} {1}", "size unit")\
+                sizeStr = self.tr("{0} {1}", "size unit")\
                     .format(size, self.__units[unit])
                 linkClass = "link_file"
                 if linkClass not in linkClasses:
@@ -278,7 +278,7 @@ class FileReply(QNetworkReply):
         content = dirListPage_html.format(
             Utilities.html_encode(baseUrl),
             "".join(linkClasses.values()),
-            self.trUtf8("Listing of {0}").format(basePath),
+            self.tr("Listing of {0}").format(basePath),
             parentStr,
             table
         )

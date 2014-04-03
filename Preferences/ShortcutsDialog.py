@@ -123,56 +123,56 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
         pm.initOnDemandPlugins()
         
         # populate the various lists
-        self.projectItem = self.__generateCategoryItem(self.trUtf8("Project"))
+        self.projectItem = self.__generateCategoryItem(self.tr("Project"))
         for act in e5App().getObject("Project").getActions():
             self.__generateShortcutItem(self.projectItem, act)
         
-        self.uiItem = self.__generateCategoryItem(self.trUtf8("General"))
+        self.uiItem = self.__generateCategoryItem(self.tr("General"))
         for act in e5App().getObject("UserInterface").getActions('ui'):
             self.__generateShortcutItem(self.uiItem, act)
         
-        self.wizardsItem = self.__generateCategoryItem(self.trUtf8("Wizards"))
+        self.wizardsItem = self.__generateCategoryItem(self.tr("Wizards"))
         for act in e5App().getObject("UserInterface").getActions('wizards'):
             self.__generateShortcutItem(self.wizardsItem, act)
         
-        self.debugItem = self.__generateCategoryItem(self.trUtf8("Debug"))
+        self.debugItem = self.__generateCategoryItem(self.tr("Debug"))
         for act in e5App().getObject("DebugUI").getActions():
             self.__generateShortcutItem(self.debugItem, act)
         
-        self.editItem = self.__generateCategoryItem(self.trUtf8("Edit"))
+        self.editItem = self.__generateCategoryItem(self.tr("Edit"))
         for act in e5App().getObject("ViewManager").getActions('edit'):
             self.__generateShortcutItem(self.editItem, act)
         
-        self.fileItem = self.__generateCategoryItem(self.trUtf8("File"))
+        self.fileItem = self.__generateCategoryItem(self.tr("File"))
         for act in e5App().getObject("ViewManager").getActions('file'):
             self.__generateShortcutItem(self.fileItem, act)
         
-        self.searchItem = self.__generateCategoryItem(self.trUtf8("Search"))
+        self.searchItem = self.__generateCategoryItem(self.tr("Search"))
         for act in e5App().getObject("ViewManager").getActions('search'):
             self.__generateShortcutItem(self.searchItem, act)
         
-        self.viewItem = self.__generateCategoryItem(self.trUtf8("View"))
+        self.viewItem = self.__generateCategoryItem(self.tr("View"))
         for act in e5App().getObject("ViewManager").getActions('view'):
             self.__generateShortcutItem(self.viewItem, act)
         
-        self.macroItem = self.__generateCategoryItem(self.trUtf8("Macro"))
+        self.macroItem = self.__generateCategoryItem(self.tr("Macro"))
         for act in e5App().getObject("ViewManager").getActions('macro'):
             self.__generateShortcutItem(self.macroItem, act)
         
         self.bookmarkItem = self.__generateCategoryItem(
-            self.trUtf8("Bookmarks"))
+            self.tr("Bookmarks"))
         for act in e5App().getObject("ViewManager").getActions('bookmark'):
             self.__generateShortcutItem(self.bookmarkItem, act)
         
         self.spellingItem = self.__generateCategoryItem(
-            self.trUtf8("Spelling"))
+            self.tr("Spelling"))
         for act in e5App().getObject("ViewManager").getActions('spelling'):
             self.__generateShortcutItem(self.spellingItem, act)
         
         actions = e5App().getObject("ViewManager").getActions('window')
         if actions:
             self.windowItem = self.__generateCategoryItem(
-                self.trUtf8("Window"))
+                self.tr("Window"))
             for act in actions:
                 self.__generateShortcutItem(self.windowItem, act)
         
@@ -187,7 +187,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 self.pluginCategoryItems.append(categoryItem)
         
         self.helpViewerItem = self.__generateCategoryItem(
-            self.trUtf8("eric5 Web Browser"))
+            self.tr("eric5 Web Browser"))
         for act in e5App().getObject("DummyHelpViewer").getActions():
             self.__generateShortcutItem(self.helpViewerItem, act, True)
         
@@ -312,8 +312,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         if keystr == itmseq:
                             res = E5MessageBox.yesNo(
                                 self,
-                                self.trUtf8("Edit shortcuts"),
-                                self.trUtf8(
+                                self.tr("Edit shortcuts"),
+                                self.tr(
                                     """<p><b>{0}</b> has already been"""
                                     """ allocated to the <b>{1}</b> action. """
                                     """Remove this binding?</p>""")
@@ -332,8 +332,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         if itmseq.startswith("{0}+".format(keystr)):
                             res = E5MessageBox.yesNo(
                                 self,
-                                self.trUtf8("Edit shortcuts"),
-                                self.trUtf8(
+                                self.tr("Edit shortcuts"),
+                                self.tr(
                                     """<p><b>{0}</b> hides the <b>{1}</b>"""
                                     """ action. Remove this binding?</p>""")
                                 .format(keystr, itm.text(0)),
@@ -349,8 +349,8 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                         if keystr.startswith("{0}+".format(itmseq)):
                             res = E5MessageBox.yesNo(
                                 self,
-                                self.trUtf8("Edit shortcuts"),
-                                self.trUtf8(
+                                self.tr("Edit shortcuts"),
+                                self.tr(
                                     """<p><b>{0}</b> is hidden by the """
                                     """<b>{1}</b> action. """
                                     """Remove this binding?</p>""")

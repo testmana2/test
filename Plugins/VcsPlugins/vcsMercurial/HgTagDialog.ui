@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>391</width>
-    <height>189</height>
+    <height>255</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,14 +16,11 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QGridLayout">
-   <item row="2" column="0" colspan="2">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="TextLabel1">
+     <property name="text">
+      <string>Name:</string>
      </property>
     </widget>
    </item>
@@ -53,30 +50,37 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="TextLabel1">
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>Name:</string>
+      <string>Revision:</string>
      </property>
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QGroupBox" name="TagActionGroup">
+    <widget class="QLineEdit" name="revisionEdit">
+     <property name="toolTip">
+      <string>Enter a revision to set a tag for</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QGroupBox" name="tagActionGroup">
      <property name="title">
       <string>Tag Action</string>
      </property>
-     <layout class="QVBoxLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QRadioButton" name="createRegularButton">
+       <widget class="QRadioButton" name="createTagButton">
         <property name="toolTip">
-         <string>Select to create a regular tag</string>
+         <string>Select to create a tag</string>
         </property>
         <property name="whatsThis">
-         <string>&lt;b&gt;Create Regular Tag&lt;/b&gt;
-&lt;p&gt;Select this entry in order to create a regular tag.&lt;/p&gt;</string>
+         <string>&lt;b&gt;Create Tag&lt;/b&gt;
+&lt;p&gt;Select this entry in order to create a tag.&lt;/p&gt;</string>
         </property>
         <property name="text">
-         <string>Create Regular Tag</string>
+         <string>Create Tag</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -84,21 +88,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="createLocalButton">
-        <property name="toolTip">
-         <string>Select to create a local tag</string>
-        </property>
-        <property name="whatsThis">
-         <string>&lt;b&gt;Create Local Tag&lt;/b&gt;
-&lt;p&gt;Select this entry in order to create a local tag.&lt;/p&gt;</string>
-        </property>
-        <property name="text">
-         <string>Create Local Tag</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="deleteButton">
+       <widget class="QRadioButton" name="deleteTagButton">
         <property name="toolTip">
          <string>Select to delete a tag</string>
         </property>
@@ -114,15 +104,60 @@
      </layout>
     </widget>
    </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QGroupBox" name="tagTypeGroup">
+     <property name="title">
+      <string>Tag Type</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="globalTagButton">
+        <property name="toolTip">
+         <string>Select to create/delete a global tag</string>
+        </property>
+        <property name="text">
+         <string>Global Tag</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="localTagButton">
+        <property name="toolTip">
+         <string>Select to create/delete a local tag</string>
+        </property>
+        <property name="text">
+         <string>Local Tag</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
  <tabstops>
   <tabstop>tagCombo</tabstop>
-  <tabstop>createRegularButton</tabstop>
-  <tabstop>createLocalButton</tabstop>
-  <tabstop>deleteButton</tabstop>
+  <tabstop>revisionEdit</tabstop>
+  <tabstop>createTagButton</tabstop>
+  <tabstop>deleteTagButton</tabstop>
+  <tabstop>globalTagButton</tabstop>
+  <tabstop>localTagButton</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -133,8 +168,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>85</x>
-     <y>192</y>
+     <x>94</x>
+     <y>226</y>
     </hint>
     <hint type="destinationlabel">
      <x>25</x>
@@ -149,12 +184,28 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>122</x>
-     <y>193</y>
+     <x>131</x>
+     <y>226</y>
     </hint>
     <hint type="destinationlabel">
      <x>128</x>
      <y>210</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteTagButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>revisionEdit</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>49</y>
     </hint>
    </hints>
   </connection>

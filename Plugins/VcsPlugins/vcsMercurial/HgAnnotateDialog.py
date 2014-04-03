@@ -9,22 +9,21 @@ Module implementing a dialog to show the output of the hg annotate command.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QFont, QHeaderView, \
-    QTreeWidgetItem, QLineEdit
+from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QLineEdit, \
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
 from .Ui_HgAnnotateDialog import Ui_HgAnnotateDialog
 
 import Preferences
-import Utilities
 
 
 class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
@@ -49,14 +48,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         self.annotateList.headerItem().setText(
             self.annotateList.columnCount(), "")
-        font = QFont(self.annotateList.font())
-        if Utilities.isWindowsPlatform():
-            font.setFamily("Lucida Console")
-        else:
-            font.setFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.annotateList.setFont(font)
-        
-        self.__ioEncoding = Preferences.getSystem("IOEncoding")
         
         if self.__hgClient:
             self.process = None
@@ -107,8 +100,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('annotate')
+        args = self.vcs.initCommand("annotate")
         args.append('--follow')
         args.append('--user')
         args.append('--date')
@@ -141,8 +133,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -231,8 +223,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(), self.__ioEncoding, 'replace')\
-                .strip()
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
+                    'replace').strip()
             self.__processOutputLine(s)
     
     def __processOutputLine(self, line):
@@ -258,8 +250,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

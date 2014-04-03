@@ -52,7 +52,6 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         """
         if cls._monitor is None:
             cls._monitor = E5NetworkMonitor(networkAccessManager)
-            cls._monitor.setAttribute(Qt.WA_DeleteOnClose, True)
         
         return cls._monitor
     
@@ -77,14 +76,14 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         
         self.__requestHeaders = QStandardItemModel(self)
         self.__requestHeaders.setHorizontalHeaderLabels(
-            [self.trUtf8("Name"), self.trUtf8("Value")])
+            [self.tr("Name"), self.tr("Value")])
         self.requestHeadersList.setModel(self.__requestHeaders)
         self.requestHeadersList.horizontalHeader().setStretchLastSection(True)
         self.requestHeadersList.doubleClicked.connect(self.__showHeaderDetails)
         
         self.__replyHeaders = QStandardItemModel(self)
         self.__replyHeaders.setHorizontalHeaderLabels(
-            [self.trUtf8("Name"), self.trUtf8("Value")])
+            [self.tr("Name"), self.tr("Value")])
         self.responseHeadersList.setModel(self.__replyHeaders)
         self.responseHeadersList.horizontalHeader().setStretchLastSection(True)
         self.responseHeadersList.doubleClicked.connect(
@@ -98,8 +97,8 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.requestsList.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.requestsList.removeAll)
+        self.removeButton.clicked.connect(self.requestsList.removeSelected)
+        self.removeAllButton.clicked.connect(self.requestsList.removeAll)
         
         self.__model = E5RequestModel(networkAccessManager, self)
         self.__proxyModel.setSourceModel(self.__model)
@@ -217,12 +216,12 @@ class E5RequestModel(QAbstractTableModel):
         super(E5RequestModel, self).__init__(parent)
         
         self.__headerData = [
-            self.trUtf8("Method"),
-            self.trUtf8("Address"),
-            self.trUtf8("Response"),
-            self.trUtf8("Length"),
-            self.trUtf8("Content Type"),
-            self.trUtf8("Info"),
+            self.tr("Method"),
+            self.tr("Address"),
+            self.tr("Response"),
+            self.tr("Length"),
+            self.tr("Content Type"),
+            self.tr("Info"),
         ]
         
         self.__operations = {
@@ -258,7 +257,7 @@ class E5RequestModel(QAbstractTableModel):
         self.beginInsertRows(
             QModelIndex(), len(self.requests), len(self.requests))
         self.requests.append(req)
-        req.reply.finished[()].connect(self.__addReply)
+        req.reply.finished.connect(self.__addReply)
         self.endInsertRows()
     
     def __addReply(self):
@@ -296,7 +295,7 @@ class E5RequestModel(QAbstractTableModel):
             target = reply.attribute(
                 QNetworkRequest.RedirectionTargetAttribute) or QUrl()
             self.requests[offset].info = \
-                self.trUtf8("Redirect: {0}").format(target.toString())
+                self.tr("Redirect: {0}").format(target.toString())
     
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
@@ -329,7 +328,7 @@ class E5RequestModel(QAbstractTableModel):
                 try:
                     return self.__operations[self.requests[index.row()].op]
                 except KeyError:
-                    return self.trUtf8("Unknown")
+                    return self.tr("Unknown")
             elif col == 1:
                 return self.requests[index.row()].request.url().toEncoded()
             elif col == 2:

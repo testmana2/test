@@ -1,5 +1,40 @@
 Change Log
 ----------
+Version 5.5.0-xxx:
+- bug fixes
+- General
+  -- changed the eric mascot to be a Python (i.e. the snake). New icons
+     and pixmaps provided by Thimo Kraemer.
+- Checkers
+  -- updated pyflakes to version 0.7.3
+- Editor
+  -- added a scrolling map like display showing all markers
+  -- added a context menu entry to reload a file with a given encoding
+- Multi Project
+  -- added support for the categorisation of projects and changed the
+     multi project file format
+- Plugin Manager
+  -- extended the plugin repository dialog to allow to hide unwanted entries
+     and cleanup the plugin downloads area
+- Version Control System Interfaces
+  -- All
+     --- made the status LED (right lower corner) clickable (depending on
+         overall VCS status it will show the log browser or the status dialog)
+  -- Mercurial
+     --- enhanced the tag dialog and extended the log browser to allow
+         tagging of a specific revision
+     --- added dialogs to enter the contents for initial .hgrc/mercurial.ini
+         and .hg/hgrc files
+     --- added a configuration option to enforce the usage of the internal
+         merge tool
+     --- made availablity of push/pull related actions dependent on configured
+         remote repository (default/default-push in .hg/hgrc)
+     --- extended the log browser by an action to switch to the selected
+         revision
+     --- added support for the shelve extension (as of Mercurial 2.8)
+     --- added support for the largefiles extension (as of Mercurial 2.0)
+     --- added support for Mercurial queues summary
+
 Version 5.4.0:
 - bug fixes
 

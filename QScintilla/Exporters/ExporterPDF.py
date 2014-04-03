@@ -415,7 +415,7 @@ class ExporterPDF(ExporterBase):
         """
         self.pr = PDFRender()
         
-        filename = self._getFileName(self.trUtf8("PDF Files (*.pdf)"))
+        filename = self._getFileName(self.tr("PDF Files (*.pdf)"))
         if not filename:
             return
         
@@ -598,8 +598,8 @@ class ExporterPDF(ExporterBase):
                 QApplication.restoreOverrideCursor()
                 E5MessageBox.critical(
                     self.editor,
-                    self.trUtf8("Export source"),
-                    self.trUtf8(
+                    self.tr("Export source"),
+                    self.tr(
                         """<p>The source could not be exported to"""
                         """ <b>{0}</b>.</p><p>Reason: {1}</p>""")
                     .format(filename, str(err)))

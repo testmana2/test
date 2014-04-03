@@ -9,22 +9,21 @@ Module implementing a dialog to show the output of the svn blame command.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
 
 from PyQt4.QtCore import QTimer, QProcess, Qt, pyqtSlot
 from PyQt4.QtGui import QHeaderView, QLineEdit, QDialog, QDialogButtonBox, \
-    QFont, QTreeWidgetItem
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 
 from .Ui_SvnBlameDialog import Ui_SvnBlameDialog
 
 import Preferences
-import Utilities
 
 
 class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
@@ -48,11 +47,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.vcs = vcs
         
         self.blameList.headerItem().setText(self.blameList.columnCount(), "")
-        font = QFont(self.blameList.font())
-        if Utilities.isWindowsPlatform():
-            font.setFamily("Lucida Console")
-        else:
-            font.setFamily("Monospace")
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.blameList.setFont(font)
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
@@ -104,8 +99,8 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))

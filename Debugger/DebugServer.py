@@ -9,8 +9,8 @@ Module implementing the debug server.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -90,6 +90,8 @@ class DebugServer(QTcpServer):
         connected in passive debug mode
     @signal clientGone(bool) emitted if the client went away (planned or
         unplanned)
+    @signal clientInterpreterChanged(str) emitted to signal a change of the
+        client interpreter
     @signal utPrepared(nrTests, exc_type, exc_value) emitted after the client
         has loaded a unittest suite
     @signal utFinished() emitted after the client signalled the end of the
@@ -134,6 +136,7 @@ class DebugServer(QTcpServer):
     clientBanner = pyqtSignal(str, str, str)
     clientCapabilities = pyqtSignal(int, str)
     clientCompletionList = pyqtSignal(list, str)
+    clientInterpreterChanged = pyqtSignal(str)
     utPrepared = pyqtSignal(int, str, str)
     utStartTest = pyqtSignal(str, str)
     utStopTest = pyqtSignal()
@@ -156,9 +159,9 @@ class DebugServer(QTcpServer):
         self.breakpointModel = BreakPointModel(self)
         self.watchpointModel = WatchPointModel(self)
         self.watchSpecialCreated = \
-            self.trUtf8("created", "must be same as in EditWatchpointDialog")
+            self.tr("created", "must be same as in EditWatchpointDialog")
         self.watchSpecialChanged = \
-            self.trUtf8("changed", "must be same as in EditWatchpointDialog")
+            self.tr("changed", "must be same as in EditWatchpointDialog")
         
         self.networkInterface = Preferences.getDebugger("NetworkInterface")
         if self.networkInterface == "all":
@@ -185,7 +188,7 @@ class DebugServer(QTcpServer):
         self.debugging = False
         self.running = False
         self.clientProcess = None
-        
+        self.clientInterpreter = ""
         self.clientType = \
             Preferences.Prefs.settings.value('DebugClient/Type')
         if self.clientType is None:
@@ -208,7 +211,7 @@ class DebugServer(QTcpServer):
         
         self.clientClearBreak.connect(self.__clientClearBreakPoint)
         self.clientClearWatch.connect(self.__clientClearWatchPoint)
-        self.newConnection[()].connect(self.__newConnection)
+        self.newConnection.connect(self.__newConnection)
         
         self.breakpointModel.rowsAboutToBeRemoved.connect(
             self.__deleteBreakPoints)
@@ -409,15 +412,15 @@ class DebugServer(QTcpServer):
             if forProject:
                 project = e5App().getObject("Project")
                 if not project.isDebugPropertiesLoaded():
-                    self.clientProcess, isNetworked = \
+                    self.clientProcess, isNetworked, clientInterpreter = \
                         self.debuggerInterface.startRemote(self.serverPort(),
                                                            runInConsole)
                 else:
-                    self.clientProcess, isNetworked = \
+                    self.clientProcess, isNetworked, clientInterpreter = \
                         self.debuggerInterface.startRemoteForProject(
                             self.serverPort(), runInConsole)
             else:
-                self.clientProcess, isNetworked = \
+                self.clientProcess, isNetworked, clientInterpreter = \
                     self.debuggerInterface.startRemote(
                         self.serverPort(), runInConsole)
             
@@ -427,19 +430,23 @@ class DebugServer(QTcpServer):
                 self.clientProcess.readyReadStandardOutput.connect(
                     self.__clientProcessOutput)
                 
-                if not isNetworked:
-                    # the client is connected through stdin and stdout
-                    # Perform actions necessary, if client type has changed
-                    if self.lastClientType != self.clientType:
-                        self.lastClientType = self.clientType
-                        self.remoteBanner()
-                    elif self.__autoClearShell:
-                        self.__autoClearShell = False
-                        self.remoteBanner()
-                    
-                    self.debuggerInterface.flush()
+                # Perform actions necessary, if client type has changed
+                if self.lastClientType != self.clientType:
+                    self.lastClientType = self.clientType
+                    self.remoteBanner()
+                elif self.__autoClearShell:
+                    self.__autoClearShell = False
+                    self.remoteBanner()
+            else:
+                if clType and self.lastClientType:
+                    self.__setClientType(self.lastClientType)
         else:
             self.__createDebuggerInterface("None")
+            clientInterpreter = ""
+        
+        if clientInterpreter != self.clientInterpreter:
+            self.clientInterpreter = clientInterpreter
+            self.clientInterpreterChanged.emit(clientInterpreter)
 
     def __clientProcessOutput(self):
         """
@@ -646,6 +653,14 @@ class DebugServer(QTcpServer):
         except KeyError:
             return 0    # no capabilities
         
+    def getClientInterpreter(self):
+        """
+        Public method to get the interpreter of the debug client.
+        
+        @return interpreter of the debug client (string)
+        """
+        return self.clientInterpreter
+        
     def __newConnection(self):
         """
         Private slot to handle a new connection.
@@ -656,8 +671,8 @@ class DebugServer(QTcpServer):
             # the peer is not allowed to connect
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Connection from illegal host"),
-                self.trUtf8(
+                self.tr("Connection from illegal host"),
+                self.tr(
                     """<p>A connection was attempted by the illegal host"""
                     """ <b>{0}</b>. Accept this connection?</p>""")
                 .format(peerAddress),
@@ -1256,7 +1271,7 @@ class DebugServer(QTcpServer):
             self.startClient(False)
         if self.passive:
             self.__createDebuggerInterface("None")
-            self.signalClientOutput(self.trUtf8('\nNot connected\n'))
+            self.signalClientOutput(self.tr('\nNot connected\n'))
             self.signalClientStatement(False)
         self.running = False
         
@@ -1436,7 +1451,7 @@ class DebugServer(QTcpServer):
         @param fn filename of the debugged script (string)
         @param exc flag to enable exception reporting of the IDE (boolean)
         """
-        print(self.trUtf8("Passive debug connection received"))
+        print(self.tr("Passive debug connection received"))
         self.passiveClientExited = False
         self.debugging = True
         self.running = True
@@ -1450,7 +1465,7 @@ class DebugServer(QTcpServer):
         """
         self.passiveClientExited = True
         self.shutdownServer()
-        print(self.trUtf8("Passive debug connection closed"))
+        print(self.tr("Passive debug connection closed"))
         
     def __restoreBreakpoints(self):
         """

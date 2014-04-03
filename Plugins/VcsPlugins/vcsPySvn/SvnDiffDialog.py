@@ -163,8 +163,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         else:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Subversion Diff"),
-                self.trUtf8("""There is no temporary directory available."""))
+                self.tr("Subversion Diff"),
+                self.tr("""There is no temporary directory available."""))
             return
         
         tmpdir = os.path.join(tmpdir, 'svn_tmp')
@@ -205,7 +205,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                 dname += "/"
             for name in fnames:
                 self.__showError(
-                    self.trUtf8("Processing file '{0}'...\n").format(name))
+                    self.tr("Processing file '{0}'...\n").format(name))
                 if urls is not None:
                     url1 = "{0}/{1}{2}".format(urls[0], dname, name)
                     url2 = "{0}/{1}{2}".format(urls[1], dname, name)
@@ -268,7 +268,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
         if self.paras == 0:
             self.contents.insertPlainText(
-                self.trUtf8('There is no difference.'))
+                self.tr('There is no difference.'))
             return
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
@@ -337,8 +337,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.contents.setTextCursor(tc)
         self.contents.ensureCursorVisible()
         
-        self.filesCombo.addItem(self.trUtf8("<Start>"), 0)
-        self.filesCombo.addItem(self.trUtf8("<End>"), -1)
+        self.filesCombo.addItem(self.tr("<Start>"), 0)
+        self.filesCombo.addItem(self.tr("<End>"), -1)
         for oldFile, newFile, pos in sorted(self.__fileSeparators):
             if oldFile != newFile:
                 self.filesCombo.addItem(
@@ -417,9 +417,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
         fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self,
-            self.trUtf8("Save Diff"),
+            self.tr("Save Diff"),
             fname,
-            self.trUtf8("Patch Files (*.diff)"),
+            self.tr("Patch Files (*.diff)"),
             None,
             E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
         
@@ -434,9 +434,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         if QFileInfo(fname).exists():
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Save Diff"),
-                self.trUtf8("<p>The patch file <b>{0}</b> already exists."
-                            " Overwrite it?</p>").format(fname),
+                self.tr("Save Diff"),
+                self.tr("<p>The patch file <b>{0}</b> already exists."
+                        " Overwrite it?</p>").format(fname),
                 icon=E5MessageBox.Warning)
             if not res:
                 return
@@ -449,8 +449,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             f.close()
         except IOError as why:
             E5MessageBox.critical(
-                self, self.trUtf8('Save Diff'),
-                self.trUtf8(
+                self, self.tr('Save Diff'),
+                self.tr(
                     '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                 .format(fname, str(why)))

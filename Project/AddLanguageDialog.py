@@ -30,6 +30,9 @@ class AddLanguageDialog(QDialog, Ui_AddLanguageDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getSelectedLanguage(self):
         """
         Public method to retrieve the selected language.

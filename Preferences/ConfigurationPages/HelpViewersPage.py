@@ -20,6 +20,7 @@ from .Ui_HelpViewersPage import Ui_HelpViewersPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
@@ -33,6 +34,9 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         super(HelpViewersPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("HelpViewersPage")
+        
+        self.customViewerSelectionButton.setIcon(
+            UI.PixmapCache.getIcon("open.png"))
         
         self.helpViewerGroup = QButtonGroup()
         self.helpViewerGroup.addButton(self.helpBrowserButton)
@@ -79,7 +83,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Custom Viewer"),
+            self.tr("Select Custom Viewer"),
             self.customViewerEdit.text(),
             "")
         
@@ -93,7 +97,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Web-Browser"),
+            self.tr("Select Web-Browser"),
             self.webbrowserEdit.text(),
             "")
         
@@ -107,7 +111,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select PDF-Viewer"),
+            self.tr("Select PDF-Viewer"),
             self.pdfviewerEdit.text(),
             "")
         
@@ -121,7 +125,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select CHM-Viewer"),
+            self.tr("Select CHM-Viewer"),
             self.chmviewerEdit.text(),
             "")
         

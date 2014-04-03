@@ -27,7 +27,7 @@ name = "Ericapi Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "EricapiPlugin"
 packageName = "__core__"
 shortDescription = "Show the Ericapi dialogs."
@@ -95,16 +95,16 @@ class EricapiPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = E5Action(
-                self.trUtf8('Generate API file (eric5_api)'),
-                self.trUtf8('Generate &API file (eric5_api)'), 0, 0,
+                self.tr('Generate API file (eric5_api)'),
+                self.tr('Generate &API file (eric5_api)'), 0, 0,
                 self, 'doc_eric5_api')
-            self.__projectAct.setStatusTip(self.trUtf8(
+            self.__projectAct.setStatusTip(self.tr(
                 'Generate an API file using eric5_api'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Generate API file</b>"""
                 """<p>Generate an API file using eric5_api.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(self.__doEricapi)
+            self.__projectAct.triggered.connect(self.__doEricapi)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         

@@ -21,7 +21,7 @@ name = "QRegularExpression Wizard Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "QRegularExpressionWizard"
 packageName = "__core__"
 shortDescription = "Show the QRegularExpression wizard."
@@ -70,17 +70,17 @@ class QRegularExpressionWizard(QObject):
         Private method to initialize the action.
         """
         self.action = E5Action(
-            self.trUtf8('QRegularExpression Wizard'),
-            self.trUtf8('QRegularE&xpression Wizard...'), 0, 0, self,
+            self.tr('QRegularExpression Wizard'),
+            self.tr('QRegularE&xpression Wizard...'), 0, 0, self,
             'wizards_qregularexpression')
-        self.action.setStatusTip(self.trUtf8('QRegularExpression Wizard'))
-        self.action.setWhatsThis(self.trUtf8(
+        self.action.setStatusTip(self.tr('QRegularExpression Wizard'))
+        self.action.setWhatsThis(self.tr(
             """<b>QRegularExpression Wizard</b>"""
             """<p>This wizard opens a dialog for entering all the parameters"""
             """ needed to create a QRegularExpression string. The generated"""
             """ code is inserted at the current cursor position.</p>"""
         ))
-        self.action.triggered[()].connect(self.__handle)
+        self.action.triggered.connect(self.__handle)
         
         self.__ui.addE5Actions([self.action], 'wizards')
 
@@ -123,8 +123,8 @@ class QRegularExpressionWizard(QObject):
         if editor is None:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8('No current editor'),
-                self.trUtf8('Please open or create a file first.'))
+                self.tr('No current editor'),
+                self.tr('Please open or create a file first.'))
         else:
             code, ok = self.__callForm(editor)
             if ok:

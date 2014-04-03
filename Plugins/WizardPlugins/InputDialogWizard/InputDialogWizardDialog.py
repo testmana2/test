@@ -43,7 +43,10 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             QDoubleValidator(-2147483647, 2147483647, 99, self.eDoubleTo))
         
         self.bTest = self.buttonBox.addButton(
-            self.trUtf8("Test"), QDialogButtonBox.ActionRole)
+            self.tr("Test"), QDialogButtonBox.ActionRole)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
         
     @pyqtSlot(bool)
     def on_rItem_toggled(self, checked):
@@ -142,9 +145,9 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         if self.rText.isChecked():
             code += 'getText({0}{1}'.format(os.linesep, istring)
             code += '{0},{1}{2}'.format(parent, os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eLabel.text(), os.linesep, istring)
             if self.rEchoNormal.isChecked():
                 code += 'QLineEdit.Normal'
@@ -153,15 +156,15 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
             else:
                 code += 'QLineEdit.Password'
             if self.eTextDefault.text():
-                code += ',{0}{1}self.trUtf8("{2}")'.format(
+                code += ',{0}{1}self.tr("{2}")'.format(
                     os.linesep, istring, self.eTextDefault.text())
             code += '){0}'.format(estring)
         elif self.rInteger.isChecked():
             code += 'getInt({0}{1}'.format(os.linesep, istring)
             code += '{0},{1}{2}'.format(parent, os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eLabel.text(), os.linesep, istring)
             code += '{0:d}, {1:d}, {2:d}, {3:d}){4}'.format(
                 self.sIntDefault.value(), self.sIntFrom.value(),
@@ -181,9 +184,9 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
                 doubleTo = 2147483647
             code += 'getDouble({0}{1}'.format(os.linesep, istring)
             code += '{0},{1}{2}'.format(parent, os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eLabel.text(), os.linesep, istring)
             code += '{0}, {1}, {2}, {3:d}){4}'.format(
                 doubleDefault, doubleFrom, doubleTo,
@@ -191,9 +194,9 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         elif self.rItem.isChecked():
             code += 'getItem({0}{1}'.format(os.linesep, istring)
             code += '{0},{1}{2}'.format(parent, os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eCaption.text(), os.linesep, istring)
-            code += 'self.trUtf8("{0}"),{1}{2}'.format(
+            code += 'self.tr("{0}"),{1}{2}'.format(
                 self.eLabel.text(), os.linesep, istring)
             code += '{0},{1}{2}'.format(
                 self.eVariable.text(), os.linesep, istring)

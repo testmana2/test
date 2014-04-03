@@ -181,11 +181,11 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
         self.hexInButton.setIcon(UI.PixmapCache.getIcon("2downarrow.png"))
         self.hexOutButton.setIcon(UI.PixmapCache.getIcon("2uparrow.png"))
         
-        self.formatBox.addItem(self.trUtf8("Auto"), 0)
-        self.formatBox.addItem(self.trUtf8("Dec"), 10)
-        self.formatBox.addItem(self.trUtf8("Hex"), 16)
-        self.formatBox.addItem(self.trUtf8("Oct"), 8)
-        self.formatBox.addItem(self.trUtf8("Bin"), 2)
+        self.formatBox.addItem(self.tr("Auto"), 0)
+        self.formatBox.addItem(self.tr("Dec"), 10)
+        self.formatBox.addItem(self.tr("Hex"), 16)
+        self.formatBox.addItem(self.tr("Oct"), 8)
+        self.formatBox.addItem(self.tr("Bin"), 2)
         
         self.sizeBox.addItem("8", 8)
         self.sizeBox.addItem("16", 16)

@@ -35,6 +35,9 @@ class NewPythonPackageDialog(QDialog, Ui_NewPythonPackageDialog):
         
         rp = relPath.replace("/", ".").replace("\\", ".")
         self.packageEdit.setText(rp)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_packageEdit_textChanged(self, txt):

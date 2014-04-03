@@ -9,8 +9,8 @@ Module implementing the version control systems interface to Mercurial.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -18,7 +18,7 @@ import shutil
 import re
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
-from PyQt4.QtGui import QApplication, QDialog, QInputDialog
+from PyQt4.QtGui import QApplication, QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -30,7 +30,6 @@ from VCS.RepositoryInfoDialog import VcsRepositoryInfoDialog
 
 from .HgDialog import HgDialog
 
-import Preferences
 import Utilities
 
 
@@ -41,9 +40,12 @@ class Hg(VersionControl):
     @signal committed() emitted after the commit action has completed
     @signal activeExtensionsChanged() emitted when the list of active
         extensions has changed
+    @signal iniFileChanged() emitted when a Mercurial/repo configuration file
+        has changed
     """
     committed = pyqtSignal()
     activeExtensionsChanged = pyqtSignal()
+    iniFileChanged = pyqtSignal()
     
     IgnoreFileName = ".hgignore"
     
@@ -57,18 +59,18 @@ class Hg(VersionControl):
         """
         VersionControl.__init__(self, parent, name)
         self.defaultOptions = {
-            'global':   [''],
-            'commit':   [''],
+            'global': [''],
+            'commit': [''],
             'checkout': [''],
-            'update':   [''],
-            'add':      [''],
-            'remove':   [''],
-            'diff':     [''],
-            'log':      [''],
-            'history':  [''],
-            'status':   [''],
-            'tag':      [''],
-            'export':   ['']
+            'update': [''],
+            'add': [''],
+            'remove': [''],
+            'diff': [''],
+            'log': [''],
+            'history': [''],
+            'status': [''],
+            'tag': [''],
+            'export': ['']
         }
         
         self.__plugin = plugin
@@ -95,6 +97,8 @@ class Hg(VersionControl):
         
         self.log = None
         self.logBrowser = None
+        self.logBrowserIncoming = None
+        self.logBrowserOutgoing = None
         self.diff = None
         self.sbsDiff = None
         self.status = None
@@ -126,6 +130,11 @@ class Hg(VersionControl):
         
         self.__client = None
         
+        self.__repoDir = ""
+        self.__repoIniFile = ""
+        self.__defaultConfigured = False
+        self.__defaultPushConfigured = False
+        
         # instantiate the extensions
         from .BookmarksExtension.bookmarks import Bookmarks
         from .QueuesExtension.queues import Queues
@@ -134,6 +143,8 @@ class Hg(VersionControl):
         from .GpgExtension.gpg import Gpg
         from .TransplantExtension.transplant import Transplant
         from .RebaseExtension.rebase import Rebase
+        from .ShelveExtension.shelve import Shelve
+        from .LargefilesExtension.largefiles import Largefiles
         self.__extensions = {
             "bookmarks": Bookmarks(self),
             "mq": Queues(self),
@@ -142,6 +153,8 @@ class Hg(VersionControl):
             "gpg": Gpg(self),
             "transplant": Transplant(self),
             "rebase": Rebase(self),
+            "shelve": Shelve(self),
+            "largefiles": Largefiles(self)
         }
     
     def getPlugin(self):
@@ -152,6 +165,14 @@ class Hg(VersionControl):
         """
         return self.__plugin
     
+    def getEncoding(self):
+        """
+        Public method to get the encoding to be used by Mercurial.
+        
+        @return encoding (string)
+        """
+        return self.__plugin.getPreferences("Encoding")
+    
     def vcsShutdown(self):
         """
         Public method used to shutdown the Mercurial interface.
@@ -160,6 +181,10 @@ class Hg(VersionControl):
             self.log.close()
         if self.logBrowser is not None:
             self.logBrowser.close()
+        if self.logBrowserIncoming is not None:
+            self.logBrowserIncoming.close()
+        if self.logBrowserOutgoing is not None:
+            self.logBrowserOutgoing.close()
         if self.diff is not None:
             self.diff.close()
         if self.sbsDiff is not None:
@@ -196,6 +221,17 @@ class Hg(VersionControl):
         """
         return self.__client
     
+    def initCommand(self, command):
+        """
+        Public method to initialize a command arguments list.
+        
+        @param command command name (string)
+        @return list of command options (list of string)
+        """
+        args = [command]
+        self.addArguments(args, self.__plugin.getGlobalOptions())
+        return args
+    
     def vcsExists(self):
         """
         Public method used to test for the presence of the hg executable.
@@ -205,16 +241,16 @@ class Hg(VersionControl):
         """
         self.versionStr = ''
         errMsg = ""
-        ioEncoding = Preferences.getSystem("IOEncoding")
         
+        args = self.initCommand("version")
         process = QProcess()
-        process.start('hg', ['version'])
+        process.start('hg', args)
         procStarted = process.waitForStarted(5000)
         if procStarted:
             finished = process.waitForFinished(30000)
             if finished and process.exitCode() == 0:
-                output = \
-                    str(process.readAllStandardOutput(), ioEncoding, 'replace')
+                output = str(process.readAllStandardOutput(),
+                             self.getEncoding(), 'replace')
                 self.versionStr = output.splitlines()[0].split()[-1][0:-1]
                 v = list(re.match(r'.*?(\d+)\.(\d+)\.?(\d+)?(\+[0-9a-f-]+)?',
                                   self.versionStr).groups())
@@ -230,14 +266,14 @@ class Hg(VersionControl):
                 return True, errMsg
             else:
                 if finished:
-                    errMsg = self.trUtf8(
+                    errMsg = self.tr(
                         "The hg process finished with the exit code {0}")\
                         .format(process.exitCode())
                 else:
-                    errMsg = self.trUtf8(
+                    errMsg = self.tr(
                         "The hg process did not finish within 30s.")
         else:
-            errMsg = self.trUtf8("Could not start the hg executable.")
+            errMsg = self.tr("Could not start the hg executable.")
         
         return False, errMsg
     
@@ -267,8 +303,8 @@ class Hg(VersionControl):
         if not success:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Create project repository"),
-                self.trUtf8(
+                self.tr("Create project repository"),
+                self.tr(
                     """The project repository could not be created."""))
         else:
             pfn = project.pfile
@@ -291,11 +327,10 @@ class Hg(VersionControl):
         if not msg:
             msg = '***'
         
-        args = []
-        args.append('init')
+        args = self.initCommand("init")
         args.append(projectDir)
         # init is not possible with the command server
-        dia = HgDialog(self.trUtf8('Creating Mercurial repository'), self)
+        dia = HgDialog(self.tr('Creating Mercurial repository'), self)
         res = dia.startProcess(args)
         if res:
             dia.exec_()
@@ -307,13 +342,12 @@ class Hg(VersionControl):
                 status = self.hgCreateIgnoreFile(projectDir)
             
             if status:
-                args = []
-                args.append('commit')
+                args = self.initCommand("commit")
                 args.append('--addremove')
                 args.append('--message')
                 args.append(msg)
                 dia = HgDialog(
-                    self.trUtf8('Initial commit to Mercurial repository'),
+                    self.tr('Initial commit to Mercurial repository'),
                     self)
                 res = dia.startProcess(args, projectDir)
                 if res:
@@ -343,13 +377,12 @@ class Hg(VersionControl):
         elif vcsUrl[1] in ['|', ':']:
             vcsUrl = 'file:///{0}'.format(vcsUrl)
         
-        args = []
-        args.append('clone')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['checkout'])
+        args = self.initCommand("clone")
         if rev:
             args.append("--rev")
             args.append(rev)
+        if vcsDataDict["largefiles"]:
+            args.append("--all-largefiles")
         args.append(self.__hgURL(vcsUrl))
         args.append(projectDir)
         
@@ -361,7 +394,7 @@ class Hg(VersionControl):
                 return err == ""
         else:
             dia = HgDialog(
-                self.trUtf8('Cloning project from a Mercurial repository'),
+                self.tr('Cloning project from a Mercurial repository'),
                 self)
             res = dia.startProcess(args)
             if res:
@@ -378,8 +411,8 @@ class Hg(VersionControl):
         """
         status = self.vcsCheckout(vcsDataDict, projectDir)
         shutil.rmtree(os.path.join(projectDir, self.adminDir), True)
-        if os.path.exists(os.path.join(projectDir, '.hgignore')):
-            os.remove(os.path.join(projectDir, '.hgignore'))
+        if os.path.exists(os.path.join(projectDir, Hg.IgnoreFileName)):
+            os.remove(os.path.join(projectDir, Hg.IgnoreFileName))
         return status
     
     def vcsCommit(self, name, message, noDialog=False, closeBranch=False,
@@ -401,11 +434,11 @@ class Hg(VersionControl):
             # ensure dialog is shown for a queue commit
             noDialog = False
         
-        if not noDialog and not msg:
+        if not noDialog:
             # call CommitDialog and get message from there
             if self.__commitDialog is None:
                 from .HgCommitDialog import HgCommitDialog
-                self.__commitDialog = HgCommitDialog(self, mq, self.__ui)
+                self.__commitDialog = HgCommitDialog(self, msg, mq, self.__ui)
                 self.__commitDialog.accepted.connect(self.__vcsCommit_Step2)
             self.__commitDialog.show()
             self.__commitDialog.raise_()
@@ -458,8 +491,8 @@ class Hg(VersionControl):
             if not ok:
                 res = E5MessageBox.yesNo(
                     self.__ui,
-                    self.trUtf8("Commit Changes"),
-                    self.trUtf8(
+                    self.tr("Commit Changes"),
+                    self.tr(
                         """The commit affects files, that have unsaved"""
                         """ changes. Shall the commit be continued?"""),
                     icon=E5MessageBox.Warning)
@@ -479,10 +512,7 @@ class Hg(VersionControl):
         if not msg and not amend:
             msg = '***'
         
-        args = []
-        args.append('commit')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['commit'])
+        args = self.initCommand("commit")
         args.append("-v")
         if mq:
             args.append("--mq")
@@ -525,7 +555,7 @@ class Hg(VersionControl):
             self.startSynchronizedProcess(QProcess(), "hg", args, dname)
         else:
             dia = HgDialog(
-                self.trUtf8('Committing changes to Mercurial repository'),
+                self.tr('Committing changes to Mercurial repository'),
                 self)
             res = dia.startProcess(args, dname)
             if res:
@@ -550,13 +580,10 @@ class Hg(VersionControl):
         @return flag indicating, that the update contained an add
             or delete (boolean)
         """
-        args = []
-        args.append('update')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['update'])
+        args = self.initCommand("update")
         if "-v" not in args and "--verbose" not in args:
             args.append("-v")
-        if revision is not None:
+        if revision:
             args.append("-r")
             args.append(revision)
         
@@ -579,7 +606,7 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
             res = False
         else:
-            dia = HgDialog(self.trUtf8(
+            dia = HgDialog(self.tr(
                 'Synchronizing with the Mercurial repository'),
                 self)
             res = dia.startProcess(args, repodir)
@@ -597,10 +624,7 @@ class Hg(VersionControl):
         @param isDir flag indicating name is a directory (boolean)
         @param noDialog flag indicating quiet operations
         """
-        args = []
-        args.append('add')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['add'])
+        args = self.initCommand("add")
         args.append("-v")
         
         if isinstance(name, list):
@@ -633,7 +657,7 @@ class Hg(VersionControl):
                 out, err = self.__client.runcommand(args)
         else:
             dia = HgDialog(
-                self.trUtf8(
+                self.tr(
                     'Adding files/directories to the Mercurial repository'),
                 self)
             res = dia.startProcess(args, repodir)
@@ -674,10 +698,7 @@ class Hg(VersionControl):
         @param noDialog flag indicating quiet operations
         @return flag indicating successfull operation (boolean)
         """
-        args = []
-        args.append('remove')
-        self.addArguments(args, self.options['global'])
-        self.addArguments(args, self.options['remove'])
+        args = self.initCommand("remove")
         args.append("-v")
         if noDialog and '--force' not in args:
             args.append('--force')
@@ -705,7 +726,7 @@ class Hg(VersionControl):
                 res = err == ""
         else:
             dia = HgDialog(
-                self.trUtf8(
+                self.tr(
                     'Removing files/directories from the Mercurial'
                     ' repository'),
                 self)
@@ -727,10 +748,6 @@ class Hg(VersionControl):
         @return flag indicating successfull operation (boolean)
         """
         isDir = os.path.isdir(name)
-        opts = self.options['global'][:]
-        force = '--force' in opts
-        if force:
-            opts.remove('--force')
         
         res = False
         if noDialog:
@@ -740,15 +757,13 @@ class Hg(VersionControl):
             accepted = True
         else:
             from .HgCopyDialog import HgCopyDialog
-            dlg = HgCopyDialog(name, None, True, force)
+            dlg = HgCopyDialog(name, None, True)
             accepted = dlg.exec_() == QDialog.Accepted
             if accepted:
                 target, force = dlg.getData()
         
         if accepted:
-            args = []
-            args.append('rename')
-            self.addArguments(args, opts)
+            args = self.initCommand("rename")
             args.append("-v")
             if force:
                 args.append('--force')
@@ -771,7 +786,7 @@ class Hg(VersionControl):
                     out, err = self.__client.runcommand(args)
                     res = err == ""
             else:
-                dia = HgDialog(self.trUtf8('Renaming {0}').format(name), self)
+                dia = HgDialog(self.tr('Renaming {0}').format(name), self)
                 res = dia.startProcess(args, repodir)
                 if res:
                     dia.exec_()
@@ -873,24 +888,30 @@ class Hg(VersionControl):
         self.status.show()
         self.status.start(name)
     
-    def hgSummary(self, mq=False):
+    def hgSummary(self, mq=False, largefiles=False):
         """
         Public method used to show some summary information of the
         working directory state.
         
         @param mq flag indicating to show the queue status as well (boolean)
+        @param largefiles flag indicating to show the largefiles status as
+            well (boolean)
         """
         from .HgSummaryDialog import HgSummaryDialog
         self.summary = HgSummaryDialog(self)
         self.summary.show()
         self.summary.start(self.__projectHelper.getProject().getProjectPath(),
-                           mq=mq)
+                           mq=mq, largefiles=largefiles)
     
-    def vcsTag(self, name):
+    def vcsTag(self, name, revision=None, tagName=None):
         """
-        Public method used to set the tag in the Mercurial repository.
+        Public method used to set/remove a tag in the Mercurial repository.
         
-        @param name file/directory name to be tagged (string)
+        @param name file/directory name to determine the repo root from
+            (string)
+        @param revision revision to set tag for (string)
+        @param tagName name of the tag (string)
+        @return flag indicating a performed tag action (boolean)
         """
         dname, fname = self.splitPath(name)
         
@@ -902,30 +923,41 @@ class Hg(VersionControl):
                 return
         
         from .HgTagDialog import HgTagDialog
-        dlg = HgTagDialog(self.hgGetTagsList(repodir))
+        dlg = HgTagDialog(self.hgGetTagsList(repodir, withType=True),
+                          revision, tagName)
         if dlg.exec_() == QDialog.Accepted:
-            tag, tagOp = dlg.getParameters()
+            tag, revision, tagOp = dlg.getParameters()
         else:
-            return
+            return False
         
-        args = []
-        args.append('tag')
-        if tagOp == HgTagDialog.CreateLocalTag:
+        args = self.initCommand("tag")
+        msgPart = ""
+        if tagOp in [HgTagDialog.CreateLocalTag, HgTagDialog.DeleteLocalTag]:
             args.append('--local')
-        elif tagOp == HgTagDialog.DeleteTag:
-            args.append('--remove')
-        args.append('--message')
-        if tagOp != HgTagDialog.DeleteTag:
-            tag = tag.strip().replace(" ", "_")
-            args.append("Created tag <{0}>.".format(tag))
+            msgPart = "local "
         else:
-            args.append("Removed tag <{0}>.".format(tag))
+            msgPart = "global "
+        if tagOp in [HgTagDialog.DeleteGlobalTag, HgTagDialog.DeleteLocalTag]:
+            args.append('--remove')
+        if tagOp in [HgTagDialog.CreateGlobalTag, HgTagDialog.CreateLocalTag]:
+            if revision:
+                args.append("--rev")
+                args.append(revision)
+        args.append('--message')
+        if tagOp in [HgTagDialog.CreateGlobalTag, HgTagDialog.CreateLocalTag]:
+            tag = tag.strip().replace(" ", "_")
+            args.append("Created {1}tag <{0}>.".format(tag, msgPart))
+        else:
+            args.append("Removed {1}tag <{0}>.".format(tag, msgPart))
         args.append(tag)
         
-        dia = HgDialog(self.trUtf8('Taging in the Mercurial repository'), self)
+        dia = HgDialog(self.tr('Tagging in the Mercurial repository'),
+                       self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
+        
+        return True
     
     def hgRevert(self, name):
         """
@@ -935,9 +967,7 @@ class Hg(VersionControl):
         @return flag indicating, that the update contained an add
             or delete (boolean)
         """
-        args = []
-        args.append('revert')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("revert")
         if not self.getPlugin().getPreferences("CreateBackup"):
             args.append("--no-backup")
         args.append("-v")
@@ -964,8 +994,8 @@ class Hg(VersionControl):
                 DeleteFilesConfirmationDialog
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Revert changes"),
-                self.trUtf8(
+                self.tr("Revert changes"),
+                self.tr(
                     "Do you really want to revert all changes to these files"
                     " or directories?"),
                 names)
@@ -973,11 +1003,11 @@ class Hg(VersionControl):
         else:
             yes = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Revert changes"),
-                self.trUtf8("""Do you really want to revert all changes of"""
-                            """ the project?"""))
+                self.tr("Revert changes"),
+                self.tr("""Do you really want to revert all changes of"""
+                        """ the project?"""))
         if yes:
-            dia = HgDialog(self.trUtf8('Reverting changes'), self)
+            dia = HgDialog(self.tr('Reverting changes'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1003,11 +1033,6 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        opts = self.options['global'][:]
-        force = '--force' in opts
-        if force:
-            del opts[opts.index('--force')]
-        
         if self.isExtensionActive("bookmarks"):
             bookmarksList = \
                 self.getExtensionObject("bookmarks")\
@@ -1015,7 +1040,7 @@ class Hg(VersionControl):
         else:
             bookmarksList = None
         from .HgMergeDialog import HgMergeDialog
-        dlg = HgMergeDialog(force, self.hgGetTagsList(repodir),
+        dlg = HgMergeDialog(self.hgGetTagsList(repodir),
                             self.hgGetBranchesList(repodir),
                             bookmarksList)
         if dlg.exec_() == QDialog.Accepted:
@@ -1023,16 +1048,17 @@ class Hg(VersionControl):
         else:
             return
         
-        args = []
-        args.append('merge')
-        self.addArguments(args, opts)
+        args = self.initCommand("merge")
         if force:
             args.append("--force")
+        if self.getPlugin().getPreferences("InternalMerge"):
+            args.append("--tool")
+            args.append("internal:merge")
         if rev:
             args.append("--rev")
             args.append(rev)
         
-        dia = HgDialog(self.trUtf8('Merging').format(name), self)
+        dia = HgDialog(self.tr('Merging').format(name), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1065,7 +1091,8 @@ class Hg(VersionControl):
         from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
         dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                         self.hgGetBranchesList(repodir),
-                                        bookmarksList)
+                                        bookmarksList,
+                                        self.tr("Current branch tip"))
         if dlg.exec_() == QDialog.Accepted:
             rev = dlg.getRevision()
             return self.vcsUpdate(name, revision=rev)
@@ -1097,8 +1124,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return 0
         
-        args = []
-        args.append('status')
+        args = self.initCommand("status")
         args.append('--all')
         args.append('--noninteractive')
         
@@ -1111,10 +1137,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1167,8 +1191,7 @@ class Hg(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return names
         
-            args = []
-            args.append('status')
+            args = self.initCommand("status")
             args.append('--all')
             args.append('--noninteractive')
             
@@ -1181,10 +1204,8 @@ class Hg(VersionControl):
                 if procStarted:
                     finished = process.waitForFinished(30000)
                     if finished and process.exitCode() == 0:
-                        output = str(
-                            process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.getEncoding(), 'replace')
             else:
                 output, error = self.__client.runcommand(args)
             
@@ -1290,7 +1311,7 @@ class Hg(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return
             
-            dia = HgDialog(self.trUtf8('Mercurial command'), self)
+            dia = HgDialog(self.tr('Mercurial command'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1328,8 +1349,7 @@ class Hg(VersionControl):
         @param ppath local path to get the repository infos (string)
         @return string with ready formated info for display (string)
         """
-        args = []
-        args.append('parents')
+        args = self.initCommand("parents")
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
                     '{date|isodate}@@@{branches}@@@{bookmarks}\n')
@@ -1343,9 +1363,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1391,8 +1410,7 @@ class Hg(VersionControl):
             infoStr = ""
         
         url = ""
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append('paths.default')
         
         output = ""
@@ -1403,9 +1421,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1424,7 +1441,16 @@ class Hg(VersionControl):
             """{2}"""
             """</table></p>\n"""
         ).format(self.versionStr, url, infoStr)
-
+    
+    def vcsSupportCommandOptions(self):
+        """
+        Public method to signal the support of user settable command options.
+        
+        @return flag indicating the support  of user settable command options
+            (boolean)
+        """
+        return False
+    
     ###########################################################################
     ## Private Mercurial specific methods are below.
     ###########################################################################
@@ -1487,9 +1513,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             target, force = dlg.getData()
             
-            args = []
-            args.append('copy')
-            self.addArguments(args, self.options['global'])
+            args = self.initCommand("copy")
             args.append("-v")
             args.append(name)
             args.append(target)
@@ -1503,7 +1527,7 @@ class Hg(VersionControl):
                     return False
             
             dia = HgDialog(
-                self.trUtf8('Copying {0}').format(name), self)
+                self.tr('Copying {0}').format(name), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -1516,15 +1540,17 @@ class Hg(VersionControl):
                         project.appendFile(target)
         return res
     
-    def hgGetTagsList(self, repodir):
+    def hgGetTagsList(self, repodir, withType=False):
         """
         Public method to get the list of tags.
         
         @param repodir directory name of the repository (string)
-        @return list of tags (list of string)
+        @param withType flag indicating to get the tag type as well (boolean)
+        @return list of tags (list of string) or list of tuples of
+            tag name and flag indicating a local tag (list of tuple of string
+            and boolean), if withType is True
         """
-        args = []
-        args.append('tags')
+        args = self.initCommand("tags")
         args.append('--verbose')
         
         output = ""
@@ -1536,27 +1562,35 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
+        tagsList = []
         if output:
-            self.tagsList = []
             for line in output.splitlines():
                 li = line.strip().split()
                 if li[-1][0] in "1234567890":
                     # last element is a rev:changeset
                     del li[-1]
+                    isLocal = False
                 else:
                     del li[-2:]
+                    isLocal = True
                 name = " ".join(li)
                 if name not in ["tip", "default"]:
-                    self.tagsList.append(name)
+                    if withType:
+                        tagsList.append((name, isLocal))
+                    else:
+                        tagsList.append(name)
         
-        return self.tagsList[:]
+        if withType:
+            return tagsList
+        else:
+            if tagsList:
+                self.tagsList = tagsList
+            return self.tagsList[:]
     
     def hgGetBranchesList(self, repodir):
         """
@@ -1565,8 +1599,7 @@ class Hg(VersionControl):
         @param repodir directory name of the repository (string)
         @return list of branches (list of string)
         """
-        args = []
-        args.append('branches')
+        args = self.initCommand("branches")
         args.append('--closed')
         
         output = ""
@@ -1578,10 +1611,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = \
-                        str(process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"),
-                            'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -1705,8 +1736,7 @@ class Hg(VersionControl):
         @keyparam rev revision to retrieve (string)
         @return contents of the file (string) and an error message (string)
         """
-        args = []
-        args.append("cat")
+        args = self.initCommand("cat")
         if rev:
             args.append("--rev")
             args.append(rev)
@@ -1731,24 +1761,23 @@ class Hg(VersionControl):
                 finished = process.waitForFinished(30000)
                 if finished:
                     if process.exitCode() == 0:
-                        output = str(
-                            process.readAllStandardOutput(),
-                            Preferences.getSystem("IOEncoding"), 'replace')
+                        output = str(process.readAllStandardOutput(),
+                                     self.getEncoding(), 'replace')
                     else:
-                        error = str(
-                            process.readAllStandardError(),
-                            Preferences.getSystem("IOEncoding"), 'replace')
+                        error = str(process.readAllStandardError(),
+                                    self.getEncoding(), 'replace')
                 else:
-                    error = self.trUtf8(
+                    error = self.tr(
                         "The hg process did not finish within 30s.")
             else:
-                error = self.trUtf8(
+                error = self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.').format('hg')
         else:
             output, error = self.__client.runcommand(args)
         
-        return output, error
+        # return file contents with 'universal newlines'
+        return output.replace('\r\n', '\n').replace('\r', '\n'), error
     
     def hgSbsDiff(self, name, extended=False, revisions=None):
         """
@@ -1793,7 +1822,7 @@ class Hg(VersionControl):
         if error:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Mercurial Side-by-Side Difference"),
+                self.tr("Mercurial Side-by-Side Difference"),
                 error)
             return
         name1 = "{0} (rev. {1})".format(name, rev1 and rev1 or ".")
@@ -1803,7 +1832,7 @@ class Hg(VersionControl):
             if error:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Mercurial Side-by-Side Difference"),
+                    self.tr("Mercurial Side-by-Side Difference"),
                     error)
                 return
             name2 = "{0} (rev. {1})".format(name, rev2)
@@ -1816,8 +1845,8 @@ class Hg(VersionControl):
             except IOError:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Mercurial Side-by-Side Difference"),
-                    self.trUtf8(
+                    self.tr("Mercurial Side-by-Side Difference"),
+                    self.tr(
                         """<p>The file <b>{0}</b> could not be read.</p>""")
                     .format(name))
                 return
@@ -1828,19 +1857,20 @@ class Hg(VersionControl):
         self.sbsDiff.show()
         self.sbsDiff.compare(output1, output2, name1, name2)
     
-    def hgLogBrowser(self, path, isFile=False):
+    def vcsLogBrowser(self, name, isFile=False):
         """
         Public method used to browse the log of a file/directory from the
         Mercurial repository.
         
-        @param path file/directory name to show the log of (string)
+        @param name file/directory name to show the log of (string)
         @keyparam isFile flag indicating log for a file is to be shown
             (boolean)
         """
-        from .HgLogBrowserDialog import HgLogBrowserDialog
-        self.logBrowser = HgLogBrowserDialog(self, isFile=isFile)
+        if self.logBrowser is None:
+            from .HgLogBrowserDialog import HgLogBrowserDialog
+            self.logBrowser = HgLogBrowserDialog(self)
         self.logBrowser.show()
-        self.logBrowser.start(path)
+        self.logBrowser.start(name, isFile=isFile)
     
     def hgIncoming(self, name):
         """
@@ -1850,10 +1880,12 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         if self.getPlugin().getPreferences("UseLogBrowser"):
-            from .HgLogBrowserDialog import HgLogBrowserDialog
-            self.logBrowser = HgLogBrowserDialog(self, mode="incoming")
-            self.logBrowser.show()
-            self.logBrowser.start(name)
+            if self.logBrowserIncoming is None:
+                from .HgLogBrowserDialog import HgLogBrowserDialog
+                self.logBrowserIncoming = HgLogBrowserDialog(
+                    self, mode="incoming")
+            self.logBrowserIncoming.show()
+            self.logBrowserIncoming.start(name)
         else:
             from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self, mode="incoming")
@@ -1868,10 +1900,12 @@ class Hg(VersionControl):
         @param name file/directory name to show the log of (string)
         """
         if self.getPlugin().getPreferences("UseLogBrowser"):
-            from .HgLogBrowserDialog import HgLogBrowserDialog
-            self.logBrowser = HgLogBrowserDialog(self, mode="outgoing")
-            self.logBrowser.show()
-            self.logBrowser.start(name)
+            if self.logBrowserOutgoing is None:
+                from .HgLogBrowserDialog import HgLogBrowserDialog
+                self.logBrowserOutgoing = HgLogBrowserDialog(
+                    self, mode="outgoing")
+            self.logBrowserOutgoing.show()
+            self.logBrowserOutgoing.start(name)
         else:
             from .HgLogDialog import HgLogDialog
             self.log = HgLogDialog(self, mode="outgoing")
@@ -1890,14 +1924,12 @@ class Hg(VersionControl):
            self.bundleFile and \
            os.path.exists(self.bundleFile):
             command = "unbundle"
-            title = self.trUtf8('Apply changegroups')
+            title = self.tr('Apply changegroups')
         else:
             command = "pull"
-            title = self.trUtf8('Pulling from a remote Mercurial repository')
+            title = self.tr('Pulling from a remote Mercurial repository')
         
-        args = []
-        args.append(command)
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand(command)
         args.append('-v')
         if self.getPlugin().getPreferences("PullUpdate"):
             args.append('--update')
@@ -1916,7 +1948,8 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
             res = dia.hasAddOrDelete()
-        if command == "unbundle":
+        if self.bundleFile and \
+           os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
             self.bundleFile = None
         self.checkVCSStatus()
@@ -1930,9 +1963,7 @@ class Hg(VersionControl):
         @keyparam force flag indicating a forced push (boolean)
         @keyparam newBranch flag indicating to push a new branch (boolean)
         """
-        args = []
-        args.append('push')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("push")
         args.append('-v')
         if force:
             args.append('-f')
@@ -1947,7 +1978,7 @@ class Hg(VersionControl):
                 return
         
         dia = HgDialog(
-            self.trUtf8('Pushing to a remote Mercurial repository'), self)
+            self.tr('Pushing to a remote Mercurial repository'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -1967,8 +1998,7 @@ class Hg(VersionControl):
         
         info = []
         
-        args = []
-        args.append(mode)
+        args = self.initCommand(mode)
         args.append('--template')
         args.append('{rev}:{node|short}@@@{tags}@@@{author|xmlescape}@@@'
                     '{date|isodate}@@@{branches}@@@{parents}@@@{bookmarks}\n')
@@ -1989,9 +2019,8 @@ class Hg(VersionControl):
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -2058,9 +2087,7 @@ class Hg(VersionControl):
         
         @param name file/directory name to be resolved (string)
         """
-        args = []
-        args.append('resolve')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("resolve")
         args.append("--mark")
         
         if isinstance(name, list):
@@ -2077,7 +2104,7 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        dia = HgDialog(self.trUtf8('Resolving files/directories'), self)
+        dia = HgDialog(self.tr('Resolving files/directories'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2098,23 +2125,25 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        name, ok = QInputDialog.getItem(
-            None,
-            self.trUtf8("Create Branch"),
-            self.trUtf8("Enter branch name"),
-            sorted(self.hgGetBranchesList(repodir)),
-            0, True)
-        if ok and name:
-            args = []
-            args.append('branch')
-            args.append(name.strip().replace(" ", "_"))
+        from .HgBranchInputDialog import HgBranchInputDialog
+        dlg = HgBranchInputDialog(self.hgGetBranchesList(repodir))
+        if dlg.exec_() == QDialog.Accepted:
+            name, commit = dlg.getData()
+            name = name.strip().replace(" ", "_")
+            args = self.initCommand("branch")
+            args.append(name)
             
             dia = HgDialog(
-                self.trUtf8('Creating branch in the Mercurial repository'),
+                self.tr('Creating branch in the Mercurial repository'),
                 self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
+                if commit:
+                    self.vcsCommit(
+                        repodir,
+                        self.tr("Created new branch <{0}>.").format(
+                            name))
     
     def hgShowBranch(self, name):
         """
@@ -2131,10 +2160,9 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("branch")
+        args = self.initCommand("branch")
         
-        dia = HgDialog(self.trUtf8('Showing current branch'), self)
+        dia = HgDialog(self.tr('Showing current branch'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2146,10 +2174,33 @@ class Hg(VersionControl):
         from .HgUtilities import getConfigPath
         cfgFile = getConfigPath()
         if not os.path.exists(cfgFile):
+            # open dialog to enter the initial data
+            from .HgUserConfigDataDialog import HgUserConfigDataDialog
+            dlg = HgUserConfigDataDialog(version=self.version)
+            if dlg.exec_() == QDialog.Accepted:
+                firstName, lastName, email, extensions, extensionsData = \
+                    dlg.getData()
+            else:
+                firstName, lastName, email, extensions, extensionsData = (
+                    "Firstname", "Lastname", "email_address", [], {})
             try:
                 f = open(cfgFile, "w")
-                f.write("[ui]\nusername = Firstname Lastname"
-                        " <email_address>\n")
+                f.write("[ui]\n")
+                f.write("username = {0} {1} <{2}>\n".format(
+                    firstName, lastName, email))
+                if extensions:
+                    f.write("\n[extensions]\n")
+                    f.write(" =\n".join(extensions))
+                    f.write(" =\n")     # complete the last line
+                if "largefiles" in extensionsData:
+                    dataDict = extensionsData["largefiles"]
+                    f.write("\n[largefiles]\n")
+                    if "minsize" in dataDict:
+                        f.write("minsize = {0}\n".format(dataDict["minsize"]))
+                    if "patterns" in dataDict:
+                        f.write("patterns =\n")
+                        f.write("  {0}\n".format(
+                            "\n  ".join(dataDict["patterns"])))
                 f.close()
             except (IOError, OSError):
                 # ignore these
@@ -2157,11 +2208,15 @@ class Hg(VersionControl):
         self.userEditor = MiniEditor(cfgFile, "Properties")
         self.userEditor.show()
     
-    def hgEditConfig(self, name):
+    def hgEditConfig(self, name, withLargefiles=True, largefilesData=None):
         """
         Public method used to edit the repository configuration file.
         
         @param name file/directory name (string)
+        @param withLargefiles flag indicating to configure the largefiles
+            section (boolean)
+        @param largefilesData dictionary with data for the largefiles
+            section of the data dialog (dict)
         """
         dname, fname = self.splitPath(name)
         
@@ -2174,10 +2229,41 @@ class Hg(VersionControl):
         
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if not os.path.exists(cfgFile):
+            # open dialog to enter the initial data
+            withLargefiles = (self.isExtensionActive("largefiles") and
+                              withLargefiles)
+            from .HgRepoConfigDataDialog import HgRepoConfigDataDialog
+            dlg = HgRepoConfigDataDialog(withLargefiles=withLargefiles,
+                                         largefilesData=largefilesData)
+            if dlg.exec_() == QDialog.Accepted:
+                createContents = True
+                defaultUrl, defaultPushUrl = dlg.getData()
+                if withLargefiles:
+                    lfMinSize, lfPattern = dlg.getLargefilesData()
+            else:
+                createContents = False
             try:
                 cfg = open(cfgFile, "w")
+                if createContents:
+                    # write the data entered
+                    cfg.write("[paths]\n")
+                    if defaultUrl:
+                        cfg.write("default = {0}\n".format(defaultUrl))
+                    if defaultPushUrl:
+                        cfg.write("default-push = {0}\n".format(
+                            defaultPushUrl))
+                    if withLargefiles and \
+                            (lfMinSize, lfPattern) != (None, None):
+                        cfg.write("\n[largefiles]\n")
+                        if lfMinSize is not None:
+                            cfg.write("minsize = {0}\n".format(lfMinSize))
+                        if lfPattern is not None:
+                            cfg.write("patterns =\n")
+                            cfg.write("  {0}\n".format(
+                                "\n  ".join(lfPattern)))
                 cfg.close()
                 self.__monitorRepoIniFile(repodir)
+                self.__iniFileChanged(cfgFile)
             except IOError:
                 pass
         self.repoEditor = MiniEditor(cfgFile, "Properties")
@@ -2198,11 +2284,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('verify')
+        args = self.initCommand("verify")
         
         dia = HgDialog(
-            self.trUtf8('Verifying the integrity of the Mercurial repository'),
+            self.tr('Verifying the integrity of the Mercurial repository'),
             self)
         res = dia.startProcess(args, repodir)
         if res:
@@ -2223,12 +2308,11 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append("--untrusted")
         
         dia = HgDialog(
-            self.trUtf8('Showing the combined configuration settings'),
+            self.tr('Showing the combined configuration settings'),
             self)
         res = dia.startProcess(args, repodir, False)
         if res:
@@ -2249,11 +2333,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('paths')
+        args = self.initCommand("paths")
         
         dia = HgDialog(
-            self.trUtf8('Showing aliases for remote repositories'),
+            self.tr('Showing aliases for remote repositories'),
             self)
         res = dia.startProcess(args, repodir, False)
         if res:
@@ -2274,11 +2357,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('recover')
+        args = self.initCommand("recover")
         
         dia = HgDialog(
-            self.trUtf8('Recovering from interrupted transaction'),
+            self.tr('Recovering from interrupted transaction'),
             self)
         res = dia.startProcess(args, repodir, False)
         if res:
@@ -2299,10 +2381,9 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('identify')
+        args = self.initCommand("identify")
         
-        dia = HgDialog(self.trUtf8('Identifying project directory'), self)
+        dia = HgDialog(self.tr('Identifying project directory'), self)
         res = dia.startProcess(args, repodir, False)
         if res:
             dia.exec_()
@@ -2340,9 +2421,9 @@ class Hg(VersionControl):
         if os.path.exists(ignoreName):
             res = E5MessageBox.yesNo(
                 self.__ui,
-                self.trUtf8("Create .hgignore file"),
-                self.trUtf8("""<p>The file <b>{0}</b> exists already."""
-                            """ Overwrite it?</p>""").format(ignoreName),
+                self.tr("Create .hgignore file"),
+                self.tr("""<p>The file <b>{0}</b> exists already."""
+                        """ Overwrite it?</p>""").format(ignoreName),
                 icon=E5MessageBox.Warning)
         else:
             res = True
@@ -2394,9 +2475,9 @@ class Hg(VersionControl):
             
             fname, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 None,
-                self.trUtf8("Create changegroup"),
+                self.tr("Create changegroup"),
                 self.__lastChangeGroupPath or repodir,
-                self.trUtf8("Mercurial Changegroup Files (*.hg)"),
+                self.tr("Mercurial Changegroup Files (*.hg)"),
                 None,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             
@@ -2411,9 +2492,9 @@ class Hg(VersionControl):
             if QFileInfo(fname).exists():
                 res = E5MessageBox.yesNo(
                     self.__ui,
-                    self.trUtf8("Create changegroup"),
-                    self.trUtf8("<p>The Mercurial changegroup file <b>{0}</b> "
-                                "already exists. Overwrite it?</p>")
+                    self.tr("Create changegroup"),
+                    self.tr("<p>The Mercurial changegroup file <b>{0}</b> "
+                            "already exists. Overwrite it?</p>")
                         .format(fname),
                     icon=E5MessageBox.Warning)
                 if not res:
@@ -2421,8 +2502,7 @@ class Hg(VersionControl):
             fname = Utilities.toNativeSeparators(fname)
             self.__lastChangeGroupPath = os.path.dirname(fname)
             
-            args = []
-            args.append('bundle')
+            args = self.initCommand("bundle")
             if all:
                 args.append("--all")
             for rev in revs:
@@ -2436,7 +2516,7 @@ class Hg(VersionControl):
                 args.append(compression)
             args.append(fname)
             
-            dia = HgDialog(self.trUtf8('Create changegroup'), self)
+            dia = HgDialog(self.tr('Create changegroup'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2459,55 +2539,24 @@ class Hg(VersionControl):
         
         file = E5FileDialog.getOpenFileName(
             None,
-            self.trUtf8("Preview changegroup"),
+            self.tr("Preview changegroup"),
             self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.tr("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if file:
             self.__lastChangeGroupPath = os.path.dirname(file)
             
             if self.getPlugin().getPreferences("UseLogBrowser"):
-                from .HgLogBrowserDialog import HgLogBrowserDialog
-                self.logBrowser = \
-                    HgLogBrowserDialog(self, mode="incoming", bundle=file)
-                self.logBrowser.show()
-                self.logBrowser.start(name)
+                if self.logBrowserIncoming is None:
+                    from .HgLogBrowserDialog import HgLogBrowserDialog
+                    self.logBrowserIncoming = \
+                        HgLogBrowserDialog(self, mode="incoming")
+                self.logBrowserIncoming.show()
+                self.logBrowserIncoming.start(name, bundle=file)
             else:
                 from .HgLogDialog import HgLogDialog
                 self.log = HgLogDialog(self, mode="incoming", bundle=file)
                 self.log.show()
                 self.log.start(name)
-    
-    def hgIdentifyBundle(self, name):
-        """
-        Public method used to identify a changegroup file.
-        
-        @param name directory name on which to base the changegroup (string)
-        """
-        dname, fname = self.splitPath(name)
-        
-        # find the root of the repo
-        repodir = dname
-        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
-            repodir = os.path.dirname(repodir)
-            if os.path.splitdrive(repodir)[1] == os.sep:
-                return
-        
-        file = E5FileDialog.getOpenFileName(
-            None,
-            self.trUtf8("Preview changegroup"),
-            self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
-        if file:
-            self.__lastChangeGroupPath = os.path.dirname(file)
-            
-            args = []
-            args.append('identify')
-            args.append(file)
-            
-            dia = HgDialog(self.trUtf8('Identifying changegroup file'), self)
-            res = dia.startProcess(args, repodir, False)
-            if res:
-                dia.exec_()
     
     def hgUnbundle(self, name):
         """
@@ -2529,26 +2578,25 @@ class Hg(VersionControl):
         res = False
         files = E5FileDialog.getOpenFileNames(
             None,
-            self.trUtf8("Apply changegroups"),
+            self.tr("Apply changegroups"),
             self.__lastChangeGroupPath or repodir,
-            self.trUtf8("Mercurial Changegroup Files (*.hg);;All Files (*)"))
+            self.tr("Mercurial Changegroup Files (*.hg);;All Files (*)"))
         if files:
             self.__lastChangeGroupPath = os.path.dirname(files[0])
             
             update = E5MessageBox.yesNo(
                 self.__ui,
-                self.trUtf8("Apply changegroups"),
-                self.trUtf8("""Shall the working directory be updated?"""),
+                self.tr("Apply changegroups"),
+                self.tr("""Shall the working directory be updated?"""),
                 yesDefault=True)
             
-            args = []
-            args.append('unbundle')
+            args = self.initCommand("unbundle")
             if update:
                 args.append("--update")
                 args.append("--verbose")
             args.extend(files)
             
-            dia = HgDialog(self.trUtf8('Apply changegroups'), self)
+            dia = HgDialog(self.tr('Apply changegroups'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2567,7 +2615,7 @@ class Hg(VersionControl):
         """
         if subcommand not in ("good", "bad", "skip", "reset"):
             raise ValueError(
-                self.trUtf8("Bisect subcommand ({0}) invalid.")
+                self.tr("Bisect subcommand ({0}) invalid.")
                     .format(subcommand))
         
         dname, fname = self.splitPath(name)
@@ -2590,21 +2638,19 @@ class Hg(VersionControl):
             from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
             dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                             self.hgGetBranchesList(repodir),
-                                            bookmarksList,
-                                            showNone=True)
+                                            bookmarksList)
             if dlg.exec_() == QDialog.Accepted:
                 rev = dlg.getRevision()
             else:
                 return
         
-        args = []
-        args.append("bisect")
+        args = self.initCommand("bisect")
         args.append("--{0}".format(subcommand))
         if rev:
             args.append(rev)
         
         dia = HgDialog(
-            self.trUtf8('Mercurial Bisect ({0})').format(subcommand), self)
+            self.tr('Mercurial Bisect ({0})').format(subcommand), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2618,9 +2664,7 @@ class Hg(VersionControl):
         @param name file/directory name to be removed (string or list of
             strings))
         """
-        args = []
-        args.append('forget')
-        self.addArguments(args, self.options['global'])
+        args = self.initCommand("forget")
         args.append('-v')
         
         if isinstance(name, list):
@@ -2638,7 +2682,7 @@ class Hg(VersionControl):
                 return
         
         dia = HgDialog(
-            self.trUtf8('Removing files from the Mercurial repository only'),
+            self.tr('Removing files from the Mercurial repository only'),
             self)
         res = dia.startProcess(args, repodir)
         if res:
@@ -2679,12 +2723,11 @@ class Hg(VersionControl):
             if not rev:
                 E5MessageBox.warning(
                     self.__ui,
-                    self.trUtf8("Backing out changeset"),
-                    self.trUtf8("""No revision given. Aborting..."""))
+                    self.tr("Backing out changeset"),
+                    self.tr("""No revision given. Aborting..."""))
                 return
             
-            args = []
-            args.append('backout')
+            args = self.initCommand("backout")
             args.append('-v')
             if merge:
                 args.append('--merge')
@@ -2698,7 +2741,7 @@ class Hg(VersionControl):
             args.append(message)
             args.append(rev)
             
-            dia = HgDialog(self.trUtf8('Backing out changeset'), self)
+            dia = HgDialog(self.tr('Backing out changeset'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2720,12 +2763,12 @@ class Hg(VersionControl):
         
         res = E5MessageBox.yesNo(
             None,
-            self.trUtf8("Rollback last transaction"),
-            self.trUtf8("""Are you sure you want to rollback the last"""
-                        """ transaction?"""),
+            self.tr("Rollback last transaction"),
+            self.tr("""Are you sure you want to rollback the last"""
+                    """ transaction?"""),
             icon=E5MessageBox.Warning)
         if res:
-            dia = HgDialog(self.trUtf8('Rollback last transaction'), self)
+            dia = HgDialog(self.tr('Rollback last transaction'), self)
             res = dia.startProcess(["rollback"], repodir)
             if res:
                 dia.exec_()
@@ -2772,8 +2815,7 @@ class Hg(VersionControl):
             patchFile, noCommit, message, date, user, stripCount, force = \
                 dlg.getParameters()
             
-            args = []
-            args.append("import")
+            args = self.initCommand("import")
             args.append("--verbose")
             if noCommit:
                 args.append("--no-commit")
@@ -2794,7 +2836,7 @@ class Hg(VersionControl):
                 args.append("--force")
             args.append(patchFile)
             
-            dia = HgDialog(self.trUtf8("Import Patch"), self)
+            dia = HgDialog(self.tr("Import Patch"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2826,8 +2868,7 @@ class Hg(VersionControl):
             filePattern, revisions, switchParent, allText, noDates, git = \
                 dlg.getParameters()
             
-            args = []
-            args.append("export")
+            args = self.initCommand("export")
             args.append("--output")
             args.append(filePattern)
             args.append("--verbose")
@@ -2842,7 +2883,7 @@ class Hg(VersionControl):
             for rev in revisions:
                 args.append(rev)
             
-            dia = HgDialog(self.trUtf8("Export Patches"), self)
+            dia = HgDialog(self.tr("Export Patches"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2875,8 +2916,7 @@ class Hg(VersionControl):
         if data:
             revs, phase, force = data
             
-            args = []
-            args.append("phase")
+            args = self.initCommand("phase")
             if phase == "p":
                 args.append("--public")
             elif phase == "d":
@@ -2890,7 +2930,7 @@ class Hg(VersionControl):
             for rev in revs:
                 args.append(rev)
             
-            dia = HgDialog(self.trUtf8("Change Phase"), self)
+            dia = HgDialog(self.tr("Change Phase"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2923,8 +2963,7 @@ class Hg(VersionControl):
             revs, (userData, currentUser, userName), \
                 (dateData, currentDate, dateStr), log, dryrun = dlg.getData()
             
-            args = []
-            args.append("graft")
+            args = self.initCommand("graft")
             args.append("--verbose")
             if userData:
                 if currentUser:
@@ -2944,7 +2983,7 @@ class Hg(VersionControl):
                 args.append("--dry-run")
             args.extend(revs)
             
-            dia = HgDialog(self.trUtf8('Copy Changesets'), self)
+            dia = HgDialog(self.tr('Copy Changesets'), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -2966,12 +3005,11 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append("graft")
+        args = self.initCommand("graft")
         args.append("--continue")
         args.append("--verbose")
         
-        dia = HgDialog(self.trUtf8('Copy Changesets (Continue)'), self)
+        dia = HgDialog(self.tr('Copy Changesets (Continue)'), self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
@@ -2995,8 +3033,7 @@ class Hg(VersionControl):
         if dlg.exec_() == QDialog.Accepted:
             archive, type_, prefix, subrepos = dlg.getData()
             
-            args = []
-            args.append("archive")
+            args = self.initCommand("archive")
             if type_:
                 args.append("--type")
                 args.append(type_)
@@ -3007,7 +3044,7 @@ class Hg(VersionControl):
                 args.append("--subrepos")
             args.append(archive)
             
-            dia = HgDialog(self.trUtf8("Create Unversioned Archive"), self)
+            dia = HgDialog(self.tr("Create Unversioned Archive"), self)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -3062,8 +3099,8 @@ class Hg(VersionControl):
                 except IOError as err:
                     E5MessageBox.critical(
                         self.__ui,
-                        self.trUtf8("Add Sub-repository"),
-                        self.trUtf8(
+                        self.tr("Add Sub-repository"),
+                        self.tr(
                             """<p>The sub-repositories file .hgsub could not"""
                             """ be read.</p><p>Reason: {0}</p>""")
                         .format(str(err)))
@@ -3072,8 +3109,8 @@ class Hg(VersionControl):
                 if entry in contents:
                     E5MessageBox.critical(
                         self.__ui,
-                        self.trUtf8("Add Sub-repository"),
-                        self.trUtf8(
+                        self.tr("Add Sub-repository"),
+                        self.tr(
                             """<p>The sub-repositories file .hgsub already"""
                             """ contains an entry <b>{0}</b>."""
                             """ Aborting...</p>""").format(entry))
@@ -3091,8 +3128,8 @@ class Hg(VersionControl):
             except IOError as err:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Add Sub-repository"),
-                    self.trUtf8(
+                    self.tr("Add Sub-repository"),
+                    self.tr(
                         """<p>The sub-repositories file .hgsub could not"""
                         """ be written to.</p><p>Reason: {0}</p>""")
                     .format(str(err)))
@@ -3112,9 +3149,9 @@ class Hg(VersionControl):
         if not os.path.isfile(hgsub):
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Remove Sub-repositories"),
-                self.trUtf8("""<p>The sub-repositories file .hgsub does not"""
-                            """ exist. Aborting...</p>"""))
+                self.tr("Remove Sub-repositories"),
+                self.tr("""<p>The sub-repositories file .hgsub does not"""
+                        """ exist. Aborting...</p>"""))
             return
             
         try:
@@ -3124,9 +3161,9 @@ class Hg(VersionControl):
         except IOError as err:
             E5MessageBox.critical(
                 self.__ui,
-                self.trUtf8("Remove Sub-repositories"),
-                self.trUtf8("""<p>The sub-repositories file .hgsub could not"""
-                            """ be read.</p><p>Reason: {0}</p>""")
+                self.tr("Remove Sub-repositories"),
+                self.tr("""<p>The sub-repositories file .hgsub could not"""
+                        """ be read.</p><p>Reason: {0}</p>""")
                 .format(str(err)))
             return
         
@@ -3143,8 +3180,8 @@ class Hg(VersionControl):
             except IOError as err:
                 E5MessageBox.critical(
                     self.__ui,
-                    self.trUtf8("Remove Sub-repositories"),
-                    self.trUtf8(
+                    self.tr("Remove Sub-repositories"),
+                    self.tr(
                         """<p>The sub-repositories file .hgsub could not"""
                         """ be written to.</p><p>Reason: {0}</p>""")
                     .format(str(err)))
@@ -3158,8 +3195,57 @@ class Hg(VersionControl):
                     shutil.rmtree(subrepoAbsPath, True)
     
     ###########################################################################
-    ## Methods to handle extensions are below.
+    ## Methods to handle configuration dependent stuff are below.
     ###########################################################################
+    
+    def __checkDefaults(self):
+        """
+        Private method to check, if the default and default-push URLs
+        have been configured.
+        """
+        args = self.initCommand("showconfig")
+        args.append('paths')
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            self.__repoDir and process.setWorkingDirectory(self.__repoDir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        self.__defaultConfigured = False
+        self.__defaultPushConfigured = False
+        if output:
+            for line in output.splitlines():
+                if line.startswith("paths.default=") and \
+                        not line.strip().endswith("="):
+                    self.__defaultConfigured = True
+                if line.startswith("paths.default-push=") and \
+                        not line.strip().endswith("="):
+                    self.__defaultPushConfigured = True
+    
+    def canPull(self):
+        """
+        Public method to check, if pull is possible.
+        
+        @return flag indicating pull capability (boolean)
+        """
+        return self.__defaultConfigured
+    
+    def canPush(self):
+        """
+        Public method to check, if push is possible.
+        
+        @return flag indicating push capability (boolean)
+        """
+        return self.__defaultPushConfigured or self.__defaultConfigured
     
     def __iniFileChanged(self, path):
         """
@@ -3167,18 +3253,23 @@ class Hg(VersionControl):
         
         @param path name of the changed file (string)
         """
-        self.__getExtensionsInfo()
-        
         if self.__client:
             ok, err = self.__client.restartServer()
             if not ok:
                 E5MessageBox.warning(
                     None,
-                    self.trUtf8("Mercurial Command Server"),
-                    self.trUtf8(
+                    self.tr("Mercurial Command Server"),
+                    self.tr(
                         """<p>The Mercurial Command Server could not be"""
                         """ restarted.</p><p>Reason: {0}</p>""").format(err))
                 self.__client = None
+        
+        self.__getExtensionsInfo()
+        
+        if self.__repoIniFile and path == self.__repoIniFile:
+            self.__checkDefaults()
+        
+        self.iniFileChanged.emit()
     
     def __monitorRepoIniFile(self, name):
         """
@@ -3199,6 +3290,12 @@ class Hg(VersionControl):
         cfgFile = os.path.join(repodir, self.adminDir, "hgrc")
         if os.path.exists(cfgFile):
             self.__iniWatcher.addPath(cfgFile)
+            self.__repoIniFile = cfgFile
+            self.__checkDefaults()
+    
+    ###########################################################################
+    ## Methods to handle extensions are below.
+    ###########################################################################
     
     def __getExtensionsInfo(self):
         """
@@ -3207,21 +3304,20 @@ class Hg(VersionControl):
         activeExtensions = sorted(self.__activeExtensions)
         self.__activeExtensions = []
         
-        args = []
-        args.append('showconfig')
+        args = self.initCommand("showconfig")
         args.append('extensions')
         
         output = ""
         if self.__client is None:
             process = QProcess()
+            self.__repoDir and process.setWorkingDirectory(self.__repoDir)
             process.start('hg', args)
             procStarted = process.waitForStarted(5000)
             if procStarted:
                 finished = process.waitForFinished(30000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        Preferences.getSystem("IOEncoding"), 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
         else:
             output, error = self.__client.runcommand(args)
         
@@ -3248,9 +3344,19 @@ class Hg(VersionControl):
         extensionName = extensionName.strip()
         isActive = extensionName in self.__activeExtensions
         if isActive and \
-                extensionName == "transplant" and \
+            extensionName == "transplant" and \
                 self.version >= (2, 3):
             # transplant extension is deprecated as of Mercurial 2.3.0
+            isActive = False
+        if isActive and \
+            extensionName == "shelve" and \
+                self.version < (2, 8):
+            # shelve extension was added as of Mercurial 2.8.0
+            isActive = False
+        if isActive and \
+            extensionName == "largefiles" and \
+                self.version < (2, 0):
+            # largefiles extension was added as of Mercurial 2.0.0
             isActive = False
         
         return isActive
@@ -3291,31 +3397,35 @@ class Hg(VersionControl):
         @param project reference to the project object
         @return the project helper object
         """
+        # find the root of the repo
+        repodir = project.getProjectPath()
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if not repodir or os.path.splitdrive(repodir)[1] == os.sep:
+                repodir = ""
+                break
+        if repodir:
+            self.__repoDir = repodir
+        
         self.__projectHelper = self.__plugin.getProjectHelper()
         self.__projectHelper.setObjects(self, project)
         self.__monitorRepoIniFile(project.getProjectPath())
         
-        if not Utilities.isMacPlatform() and self.version >= (1, 9):
-            # find the root of the repo
-            repodir = project.getProjectPath()
-            while not os.path.isdir(os.path.join(repodir, self.adminDir)):
-                repodir = os.path.dirname(repodir)
-                if not repodir or os.path.splitdrive(repodir)[1] == os.sep:
-                    repodir = ""
-                    break
-            if repodir:
-                from .HgClient import HgClient
-                client = HgClient(repodir, "utf-8", self)
-                ok, err = client.startServer()
-                if ok:
-                    self.__client = client
-                else:
-                    E5MessageBox.warning(
-                        None,
-                        self.trUtf8("Mercurial Command Server"),
-                        self.trUtf8(
-                            """<p>The Mercurial Command Server could not be"""
-                            """ started.</p><p>Reason: {0}</p>""").format(err))
+        if not Utilities.isMacPlatform() and \
+            self.version >= (1, 9) and \
+                repodir:
+            from .HgClient import HgClient
+            client = HgClient(repodir, "utf-8", self)
+            ok, err = client.startServer()
+            if ok:
+                self.__client = client
+            else:
+                E5MessageBox.warning(
+                    None,
+                    self.tr("Mercurial Command Server"),
+                    self.tr(
+                        """<p>The Mercurial Command Server could not be"""
+                        """ started.</p><p>Reason: {0}</p>""").format(err))
         
         return self.__projectHelper
 

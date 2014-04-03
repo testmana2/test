@@ -9,8 +9,8 @@ Module implementing a dialog to show a list of bookmarks.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -22,8 +22,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
 from E5Gui import E5MessageBox
 
 from .Ui_HgBookmarksListDialog import Ui_HgBookmarksListDialog
-
-import Preferences
 
 
 class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
@@ -100,8 +98,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('bookmarks')
+        args = self.vcs.initCommand("bookmarks")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -127,8 +124,8 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -161,7 +158,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
             self.__generateItem(
-                self.trUtf8("no bookmarks defined"), "", "", "")
+                self.tr("no bookmarks defined"), "", "", "")
         self.__resizeColumns()
         self.__resort()
     
@@ -232,8 +229,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -267,8 +263,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):

@@ -32,6 +32,9 @@ class HgBookmarkRenameDialog(QDialog, Ui_HgBookmarkRenameDialog):
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
        
         self.bookmarkCombo.addItems(sorted(bookmarksList))
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateUI(self):
         """
@@ -67,4 +70,7 @@ class HgBookmarkRenameDialog(QDialog, Ui_HgBookmarkRenameDialog):
         @return tuple naming the new and old bookmark names
             (string, string)
         """
-        return self.nameEdit.text(), self.bookmarkCombo.currentText()
+        return (
+            self.nameEdit.text().replace(" ", "_"),
+            self.bookmarkCombo.currentText().replace(" ", "_")
+        )

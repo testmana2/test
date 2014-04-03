@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>450</height>
+    <height>518</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,9 +43,6 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignRight</set>
-        </property>
-        <property name="minimum">
-         <number>1</number>
         </property>
         <property name="maximum">
          <number>999999999</number>
@@ -178,7 +175,7 @@
          <string>Select tip revision of repository</string>
         </property>
         <property name="text">
-         <string>TIP</string>
+         <string>Parent</string>
         </property>
         <property name="checked">
          <bool>true</bool>

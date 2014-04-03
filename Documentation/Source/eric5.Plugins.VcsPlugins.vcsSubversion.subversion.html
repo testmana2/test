@@ -126,9 +126,6 @@ VersionControl
 <td><a href="#Subversion.svnLock">svnLock</a></td>
 <td>Public method used to lock a file in the Subversion repository.</td>
 </tr><tr>
-<td><a href="#Subversion.svnLogBrowser">svnLogBrowser</a></td>
-<td>Public method used to browse the log of a file/directory from the Subversion repository.</td>
-</tr><tr>
 <td><a href="#Subversion.svnNormalizeURL">svnNormalizeURL</a></td>
 <td>Public method to normalize a url for subversion.</td>
 </tr><tr>
@@ -215,6 +212,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Subversion.vcsLog">vcsLog</a></td>
 <td>Public method used to view the log of a file/directory from the Subversion repository.</td>
+</tr><tr>
+<td><a href="#Subversion.vcsLogBrowser">vcsLogBrowser</a></td>
+<td>Public method used to browse the log of a file/directory from the Subversion repository.</td>
 </tr><tr>
 <td><a href="#Subversion.vcsMerge">vcsMerge</a></td>
 <td>Public method used to merge a URL/revision into the local project.</td>
@@ -591,20 +591,6 @@ flag indicating a forced operation (boolean)
 <dd>
 reference to the parent object of the subversion dialog
             (QWidget)
-</dd>
-</dl><a NAME="Subversion.svnLogBrowser" ID="Subversion.svnLogBrowser"></a>
-<h4>Subversion.svnLogBrowser</h4>
-<b>svnLogBrowser</b>(<i>path, isFile=False</i>)
-<p>
-        Public method used to browse the log of a file/directory from the
-        Subversion repository.
-</p><dl>
-<dt><i>path</i></dt>
-<dd>
-file/directory name to show the log of (string)
-</dd><dt><i>isFile</i></dt>
-<dd>
-flag indicating log for a file is to be shown (boolean)
 </dd>
 </dl><a NAME="Subversion.svnNormalizeURL" ID="Subversion.svnNormalizeURL"></a>
 <h4>Subversion.svnNormalizeURL</h4>
@@ -1050,6 +1036,20 @@ reference to the project (Project)
 <dt><i>name</i></dt>
 <dd>
 file/directory name to show the log of (string)
+</dd>
+</dl><a NAME="Subversion.vcsLogBrowser" ID="Subversion.vcsLogBrowser"></a>
+<h4>Subversion.vcsLogBrowser</h4>
+<b>vcsLogBrowser</b>(<i>name, isFile=False</i>)
+<p>
+        Public method used to browse the log of a file/directory from the
+        Subversion repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to show the log of (string)
+</dd><dt><i>isFile</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
 </dd>
 </dl><a NAME="Subversion.vcsMerge" ID="Subversion.vcsMerge"></a>
 <h4>Subversion.vcsMerge</h4>

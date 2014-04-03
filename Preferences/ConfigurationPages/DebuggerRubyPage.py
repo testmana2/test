@@ -19,6 +19,7 @@ from .Ui_DebuggerRubyPage import Ui_DebuggerRubyPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
@@ -32,6 +33,8 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         super(DebuggerRubyPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerRubyPage")
+        
+        self.rubyInterpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.rubyInterpreterCompleter = E5FileCompleter(
             self.rubyInterpreterEdit)
@@ -60,7 +63,7 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Ruby interpreter for Debug Client"),
+            self.tr("Select Ruby interpreter for Debug Client"),
             self.rubyInterpreterEdit.text())
             
         if file:

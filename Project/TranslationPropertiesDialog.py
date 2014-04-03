@@ -20,6 +20,7 @@ from E5Gui import E5FileDialog
 from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
@@ -36,6 +37,9 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         super(TranslationPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.transBinPathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.transPatternButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.project = project
         self.parent = parent
@@ -59,11 +63,11 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             if filetype in patterns:
                 patterns[filetype].append(pattern)
-        self.filters = self.trUtf8("Source Files ({0});;")\
+        self.filters = self.tr("Source Files ({0});;")\
             .format(" ".join(patterns["SOURCES"]))
-        self.filters += self.trUtf8("Forms Files ({0});;")\
+        self.filters += self.tr("Forms Files ({0});;")\
             .format(" ".join(patterns["FORMS"]))
-        self.filters += self.trUtf8("All Files (*)")
+        self.filters += self.tr("All Files (*)")
         
     def initDialog(self):
         """
@@ -98,7 +102,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
                 os.path.join(self.project.ppath, tp))
         tsfile = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select translation file"),
+            self.tr("Select translation file"),
             tp,
             "")
         
@@ -127,7 +131,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
                 os.path.join(self.project.ppath, tbp))
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory for binary translations"),
+            self.tr("Select directory for binary translations"),
             tbp)
         
         if directory:
@@ -170,7 +174,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         texcept = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Exempt file from translation"),
+            self.tr("Exempt file from translation"),
             self.project.ppath,
             self.filters)
         if texcept:
@@ -183,7 +187,7 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         texcept = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Exempt directory from translation"),
+            self.tr("Exempt directory from translation"),
             self.project.ppath,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         if texcept:

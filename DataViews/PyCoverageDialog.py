@@ -55,15 +55,15 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         self.__menu = QMenu(self)
         self.__menu.addSeparator()
         self.openAct = self.__menu.addAction(
-            self.trUtf8("Open"), self.__openFile)
+            self.tr("Open"), self.__openFile)
         self.__menu.addSeparator()
         self.annotate = self.__menu.addAction(
-            self.trUtf8('Annotate'), self.__annotate)
-        self.__menu.addAction(self.trUtf8('Annotate all'), self.__annotateAll)
+            self.tr('Annotate'), self.__annotate)
+        self.__menu.addAction(self.tr('Annotate all'), self.__annotateAll)
         self.__menu.addAction(
-            self.trUtf8('Delete annotated files'), self.__deleteAnnotated)
+            self.tr('Delete annotated files'), self.__deleteAnnotated)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8('Erase Coverage Info'), self.__erase)
+        self.__menu.addAction(self.tr('Erase Coverage Info'), self.__erase)
         self.resultList.setContextMenuPolicy(Qt.CustomContextMenu)
         self.resultList.customContextMenuRequested.connect(
             self.__showContextMenu)
@@ -242,10 +242,10 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         if total_exceptions:
             E5MessageBox.warning(
                 self,
-                self.trUtf8("Parse Error"),
-                self.trUtf8("""%n file(s) could not be parsed. Coverage"""
-                            """ info for these is not available.""", "",
-                            total_exceptions))
+                self.tr("Parse Error"),
+                self.tr("""%n file(s) could not be parsed. Coverage"""
+                        """ info for these is not available.""", "",
+                        total_exceptions))
         
         self.__finish()
         
@@ -345,8 +345,8 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         # now process them
         progress = E5ProgressDialog(
-            self.trUtf8("Annotating files..."), self.trUtf8("Abort"),
-            0, len(files), self.trUtf8("%v/%m Files"), self)
+            self.tr("Annotating files..."), self.tr("Abort"),
+            0, len(files), self.tr("%v/%m Files"), self)
         progress.setMinimumDuration(0)
         count = 0
         

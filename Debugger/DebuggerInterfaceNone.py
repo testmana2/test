@@ -55,10 +55,11 @@ class DebuggerInterfaceNone(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
-        return None, True
+        return None, True, ""
 
     def startRemoteForProject(self, port, runInConsole):
         """
@@ -67,10 +68,11 @@ class DebuggerInterfaceNone(QObject):
         @param port portnumber the debug server is listening on (integer)
         @param runInConsole flag indicating to start the debugger in a
             console window (boolean)
-        @return client process object (QProcess) and a flag to indicate
-            a network connection (boolean)
+        @return client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
         """
-        return None, True
+        return None, True, ""
 
     def getClientCapabilities(self):
         """

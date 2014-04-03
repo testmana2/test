@@ -8,8 +8,8 @@ Module implementing an interface to the Mercurial command server.
 """
 
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import struct
@@ -20,8 +20,6 @@ from PyQt4.QtCore import QProcess, QObject, QByteArray, QCoreApplication, \
 from PyQt4.QtGui import QDialog
 
 from .HgUtilities import prepareProcess
-
-import Preferences
 
 
 class HgClient(QObject):
@@ -48,14 +46,13 @@ class HgClient(QObject):
         self.__server = None
         self.__started = False
         self.__version = None
-        self.__encoding = Preferences.getSystem("IOEncoding")
+        self.__encoding = parent.getEncoding()
         self.__cancel = False
         self.__commandRunning = False
         self.__repoPath = repoPath
         
         # generate command line and environment
-        self.__serverArgs = []
-        self.__serverArgs.append("serve")
+        self.__serverArgs = parent.initCommand("serve")  # parent is hg
         self.__serverArgs.append("--cmdserver")
         self.__serverArgs.append("pipe")
         self.__serverArgs.append("--config")
@@ -66,6 +63,10 @@ class HgClient(QObject):
         
         if encoding:
             self.__encoding = encoding
+            if "--encoding" in self.__serverArgs:
+                # use the defined encoding via the environment
+                index = self.__serverArgs.index("--encoding")
+                del self.__serverArgs[index:index + 2]
     
     def startServer(self):
         """
@@ -85,7 +86,7 @@ class HgClient(QObject):
         self.__server.start('hg', self.__serverArgs)
         serverStarted = self.__server.waitForStarted(5000)
         if not serverStarted:
-            return False, self.trUtf8(
+            return False, self.tr(
                 'The process {0} could not be started. '
                 'Ensure, that it is in the search path.'
             ).format('hg')
@@ -132,33 +133,33 @@ class HgClient(QObject):
         """
         ch, msg = self.__readChannel()
         if not ch:
-            return False, self.trUtf8("Did not receive the 'hello' message.")
+            return False, self.tr("Did not receive the 'hello' message.")
         elif ch != "o":
-            return False, self.trUtf8("Received data on unexpected channel.")
+            return False, self.tr("Received data on unexpected channel.")
         
         msg = msg.split("\n")
         
         if not msg[0].startswith("capabilities: "):
-            return False, self.trUtf8(
+            return False, self.tr(
                 "Bad 'hello' message, expected 'capabilities: '"
                 " but got '{0}'.").format(msg[0])
         self.__capabilities = msg[0][len('capabilities: '):]
         if not self.__capabilities:
-            return False, self.trUtf8("'capabilities' message did not contain"
-                                      " any capability.")
+            return False, self.tr("'capabilities' message did not contain"
+                                  " any capability.")
         
         self.__capabilities = set(self.__capabilities.split())
         if "runcommand" not in self.__capabilities:
             return False, "'capabilities' did not contain 'runcommand'."
         
         if not msg[1].startswith("encoding: "):
-            return False, self.trUtf8(
+            return False, self.tr(
                 "Bad 'hello' message, expected 'encoding: '"
                 " but got '{0}'.").format(msg[1])
         encoding = msg[1][len('encoding: '):]
         if not encoding:
-            return False, self.trUtf8("'encoding' message did not contain"
-                                      " any encoding.")
+            return False, self.tr("'encoding' message did not contain"
+                                  " any encoding.")
         self.__encoding = encoding
         
         return True, ""
@@ -338,7 +339,7 @@ class HgClient(QObject):
         else:
             def myprompt(size):
                 if outputBuffer is None:
-                    msg = self.trUtf8("For message see output dialog.")
+                    msg = self.tr("For message see output dialog.")
                 else:
                     msg = outputBuffer.getvalue()
                 reply = self.__prompt(size, msg)

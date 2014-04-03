@@ -76,7 +76,7 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         """
         self.testResultLabel.setHidden(False)
         self.testResultLabel.setText(
-            self.trUtf8("Checking validity of the service key..."))
+            self.tr("Checking validity of the service key..."))
         if self.vtSecureCheckBox.isChecked():
             protocol = "https"
         else:
@@ -94,14 +94,14 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         """
         if result:
             self.testResultLabel.setText(
-                self.trUtf8("The service key is valid."))
+                self.tr("The service key is valid."))
         else:
             if msg == "":
-                self.testResultLabel.setText(self.trUtf8(
+                self.testResultLabel.setText(self.tr(
                     '<font color="#FF0000">The service key is'
                     ' not valid.</font>'))
             else:
-                self.testResultLabel.setText(self.trUtf8(
+                self.testResultLabel.setText(self.tr(
                     '<font color="#FF0000"><b>Error:</b> {0}</font>')
                     .format(msg))
     

@@ -117,8 +117,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             self.__initError = True
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Create Dialog Code"),
-                self.trUtf8(
+                self.tr("Create Dialog Code"),
+                self.tr(
                     """The file <b>{0}</b> exists but does not contain"""
                     """ any classes.""").format(self.srcFile))
         
@@ -146,8 +146,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("uic error"),
-                self.trUtf8(
+                self.tr("uic error"),
+                self.tr(
                     """<p>There was an error loading the form <b>{0}</b>"""
                     """.</p><p>{1}</p>""").format(self.formFile, str(err)))
             return ""
@@ -164,8 +164,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("uic error"),
-                self.trUtf8(
+                self.tr("uic error"),
+                self.tr(
                     """<p>There was an error loading the form <b>{0}</b>"""
                     """.</p><p>{1}</p>""").format(self.formFile, str(err)))
             return ""
@@ -328,8 +328,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("uic error"),
-                self.trUtf8(
+                self.tr("uic error"),
+                self.tr(
                     """<p>There was an error loading the form <b>{0}</b>"""
                     """.</p><p>{1}</p>""").format(self.formFile, str(err)))
         
@@ -397,8 +397,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             except IOError as why:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Code Generation"),
-                    self.trUtf8(
+                    self.tr("Code Generation"),
+                    self.tr(
                         """<p>Could not open the code template file"""
                         """ "{0}".</p><p>Reason: {1}</p>""")
                     .format(tmplName, str(why)))
@@ -433,8 +433,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             except IOError as why:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Code Generation"),
-                    self.trUtf8(
+                    self.tr("Code Generation"),
+                    self.tr(
                         """<p>Could not open the source file "{0}".</p>"""
                         """<p>Reason: {1}</p>""")
                     .format(self.srcFile, str(why)))
@@ -512,9 +512,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         except IOError as why:
             E5MessageBox.critical(
                 self,
-                self.trUtf8("Code Generation"),
-                self.trUtf8("""<p>Could not write the source file "{0}".</p>"""
-                            """<p>Reason: {1}</p>""")
+                self.tr("Code Generation"),
+                self.tr("""<p>Could not write the source file "{0}".</p>"""
+                        """<p>Reason: {1}</p>""")
                 .format(self.filenameEdit.text(), str(why)))
             return
         

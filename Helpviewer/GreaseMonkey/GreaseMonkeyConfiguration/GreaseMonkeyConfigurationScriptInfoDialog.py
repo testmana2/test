@@ -41,7 +41,7 @@ class GreaseMonkeyConfigurationScriptInfoDialog(
         self.__scriptFileName = script.fileName()
         
         self.setWindowTitle(
-            self.trUtf8("Script Details of {0}").format(script.name()))
+            self.tr("Script Details of {0}").format(script.name()))
         
         self.nameLabel.setText(script.fullName())
         self.versionLabel.setText(script.version())

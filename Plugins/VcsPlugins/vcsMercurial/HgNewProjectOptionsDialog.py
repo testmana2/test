@@ -23,6 +23,7 @@ from .Config import ConfigHgProtocols
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
@@ -40,6 +41,9 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         super(HgNewProjectOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.projectDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
         self.vcsProjectDirCompleter = E5DirCompleter(self.vcsProjectDirEdit)
         
@@ -55,10 +59,35 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         self.networkPath = "localhost/"
         self.localProtocol = True
         
+        ipath = Preferences.getMultiProject("Workspace") or \
+            Utilities.getHomeDir()
+        self.__initPaths = [
+            Utilities.fromNativeSeparators(ipath),
+            Utilities.fromNativeSeparators(ipath) + "/",
+        ]
         self.vcsProjectDirEdit.setText(
-            Utilities.toNativeSeparators(
-                Preferences.getMultiProject("Workspace") or
-                Utilities.getHomeDir()))
+            Utilities.toNativeSeparators(self.__initPaths[0]))
+        
+        self.lfNoteLabel.setVisible(self.vcs.isExtensionActive("largefiles"))
+        self.largeCheckBox.setVisible(self.vcs.isExtensionActive("largefiles"))
+        
+        self.resize(self.width(), self.minimumSizeHint().height())
+        
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+    
+    @pyqtSlot(str)
+    def on_vcsProjectDirEdit_textChanged(self, txt):
+        """
+        Private slot to handle a change of the project directory.
+        
+        @param txt name of the project directory (string)
+        """
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
+            bool(txt) and
+            Utilities.fromNativeSeparators(txt) not in self.__initPaths)
     
     @pyqtSlot()
     def on_vcsUrlButton_clicked(self):
@@ -68,7 +97,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         if self.protocolCombo.currentText() == "file://":
             directory = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select Repository-Directory"),
+                self.tr("Select Repository-Directory"),
                 self.vcsUrlEdit.text(),
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -83,7 +112,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select Project Directory"),
+            self.tr("Select Project Directory"),
             self.vcsProjectDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
@@ -133,5 +162,6 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         vcsdatadict = {
             "url": '{0}{1}'.format(scheme, url),
             "revision": self.vcsRevisionEdit.text(),
+            "largefiles": self.largeCheckBox.isChecked(),
         }
         return (self.vcsProjectDirEdit.text(), vcsdatadict)

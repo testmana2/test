@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 
 from PyQt4.QtCore import QDir, pyqtSlot
-from PyQt4.QtGui import QDialog
+from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
@@ -22,6 +22,7 @@ from .Ui_PropertiesDialog import Ui_PropertiesDialog
 
 import Utilities
 import Preferences
+import UI.PixmapCache
 
 
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
@@ -42,6 +43,9 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
+        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.mainscriptButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.project = project
         self.newProject = new
         self.transPropertiesDlg = None
@@ -57,6 +61,13 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         for projectType in sorted(projectTypes.keys()):
             self.projectTypeComboBox.addItem(
                 projectTypes[projectType], projectType)
+        
+        ipath = Preferences.getMultiProject("Workspace") or \
+            Utilities.getHomeDir()
+        self.__initPaths = [
+            Utilities.fromNativeSeparators(ipath),
+            Utilities.fromNativeSeparators(ipath) + "/",
+        ]
         
         if not new:
             name = os.path.splitext(self.project.pfile)[0]
@@ -108,13 +119,13 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 except KeyError:
                     vcsSystemDisplay = "None"
                 self.vcsLabel.setText(
-                    self.trUtf8(
+                    self.tr(
                         "The project is version controlled by <b>{0}</b>.")
                     .format(vcsSystemDisplay))
                 self.vcsInfoButton.show()
             else:
                 self.vcsLabel.setText(
-                    self.trUtf8("The project is not version controlled."))
+                    self.tr("The project is not version controlled."))
                 self.vcsInfoButton.hide()
             self.vcsCheckBox.hide()
         else:
@@ -122,14 +133,17 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
                 self.projectTypeComboBox.findData("Qt4"))
-            hp = Preferences.getMultiProject("Workspace") or \
-                Utilities.getHomeDir()
-            self.dirEdit.setText(hp)
+            self.dirEdit.setText(self.__initPaths[0])
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()
             self.vcsInfoButton.hide()
             if not self.project.vcsSoftwareAvailable():
                 self.vcsCheckBox.hide()
+        
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
+            bool(self.dirEdit.text()) and
+            Utilities.fromNativeSeparators(self.dirEdit.text()) not in
+            self.__initPaths)
     
     @pyqtSlot(str)
     def on_languageComboBox_currentIndexChanged(self, language):
@@ -149,6 +163,17 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.projectTypeComboBox.setCurrentIndex(
             self.projectTypeComboBox.findData(curProjectType))
     
+    @pyqtSlot(str)
+    def on_dirEdit_textChanged(self, txt):
+        """
+        Private slot to handle a change of the project directory.
+        
+        @param txt name of the project directory (string)
+        """
+        self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
+            bool(txt) and
+            Utilities.fromNativeSeparators(txt) not in self.__initPaths)
+    
     @pyqtSlot()
     def on_dirButton_clicked(self):
         """
@@ -156,7 +181,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select project directory"),
+            self.tr("Select project directory"),
             self.dirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         
@@ -205,11 +230,11 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
             if filetype == "SOURCES":
                 patterns.append(pattern)
-        filters = self.trUtf8("Source Files ({0});;All Files (*)")\
+        filters = self.tr("Source Files ({0});;All Files (*)")\
             .format(" ".join(patterns))
         fn = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select main script file"),
+            self.tr("Select main script file"),
             dir,
             filters)
         

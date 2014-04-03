@@ -48,6 +48,9 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
             flags |= Qt.ToolTip
         self.setWindowFlags(flags)
         
+        self.frame.layout().setAlignment(
+            self.verticalLayout, Qt.AlignLeft | Qt.AlignVCenter)
+        
         self.__timer = QTimer(self)
         self.__timer.setSingleShot(True)
         self.__timer.timeout.connect(self.close)
@@ -101,6 +104,9 @@ class NotificationWidget(QWidget, Ui_NotificationWidget):
             self.__timer.start()
         
         super(NotificationWidget, self).show()
+        
+        sh = self.sizeHint()
+        self.resize(max(self.width(), sh.width()), sh.height())
     
     def mousePressEvent(self, evt):
         """

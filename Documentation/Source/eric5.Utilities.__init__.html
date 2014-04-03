@@ -62,7 +62,7 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td>Function to decode a string containing Unicode encoded characters.</td>
 </tr><tr>
 <td><a href="#determinePythonVersion">determinePythonVersion</a></td>
-<td>Determine the python version of a given file.</td>
+<td>Function to determine the python version of a given file.</td>
 </tr><tr>
 <td><a href="#direntries">direntries</a></td>
 <td>Function returning a list of all files and directories.</td>
@@ -169,6 +169,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#joinext">joinext</a></td>
 <td>Function to join a file extension to a path.</td>
 </tr><tr>
+<td><a href="#jsCheckSyntax">jsCheckSyntax</a></td>
+<td>Function to check a Javascript source file for syntax errors.</td>
+</tr><tr>
 <td><a href="#linesep">linesep</a></td>
 <td>Function to return the lineseparator used by the editor.</td>
 </tr><tr>
@@ -203,6 +206,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td>Replacement for the urllib.quote function because of unicode problems.</td>
 </tr><tr>
 <td><a href="#readEncodedFile">readEncodedFile</a></td>
+<td>Function to read a file and decode its contents into proper text.</td>
+</tr><tr>
+<td><a href="#readEncodedFileWithEncoding">readEncodedFileWithEncoding</a></td>
 <td>Function to read a file and decode its contents into proper text.</td>
 </tr><tr>
 <td><a href="#readEncodedFileWithHash">readEncodedFileWithHash</a></td>
@@ -481,7 +487,7 @@ decoded text (string)
 <h2>determinePythonVersion</h2>
 <b>determinePythonVersion</b>(<i>filename, source, editor=None</i>)
 <p>
-    Determine the python version of a given file.
+    Function to determine the python version of a given file.
 </p><dl>
 <dt><i>filename</i></dt>
 <dd>
@@ -491,7 +497,8 @@ name of the file with extension (str)
 of the file (str)
 </dd><dt><i>editor=</i></dt>
 <dd>
-if the file is opened already (Editor object)
+reference to the editor, if the file is opened
+        already (Editor object)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -1173,6 +1180,29 @@ the complete filename (string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="jsCheckSyntax" ID="jsCheckSyntax"></a>
+<h2>jsCheckSyntax</h2>
+<b>jsCheckSyntax</b>(<i>file, codestring=""</i>)
+<p>
+    Function to check a Javascript source file for syntax errors.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+string containing the code to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+A tuple indicating status (True = an error was found), the
+        file name, the line number and the error message (boolean, string,
+        string, string). The values are only valid, if the status is True.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="linesep" ID="linesep"></a>
 <h2>linesep</h2>
 <b>linesep</b>(<i></i>)
@@ -1394,6 +1424,27 @@ quoted url (string)
 <dt><i>filename</i></dt>
 <dd>
 name of the file to read (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of decoded text and encoding (string, string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readEncodedFileWithEncoding" ID="readEncodedFileWithEncoding"></a>
+<h2>readEncodedFileWithEncoding</h2>
+<b>readEncodedFileWithEncoding</b>(<i>filename, encoding</i>)
+<p>
+    Function to read a file and decode its contents into proper text.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file to read (string)
+</dd><dt><i>encoding=</i></dt>
+<dd>
+encoding to be used to read the file (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

@@ -39,14 +39,14 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         self.setupUi(self)
 
         self.defaultButton = self.buttonBox.addButton(
-            self.trUtf8("Save Default"), QDialogButtonBox.ActionRole)
+            self.tr("Save Default"), QDialogButtonBox.ActionRole)
         
         lDefaultFilter, gDefaultFilter = Preferences.getVarFilters()
         
         #populate the listboxes and set the default selection
         for lb in self.localsList, self.globalsList:
             for ts in ConfigVarTypeDispStrings:
-                lb.addItem(self.trUtf8(ts))
+                lb.addItem(self.tr(ts))
                 
         for filterIndex in lDefaultFilter:
             itm = self.localsList.item(filterIndex)

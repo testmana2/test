@@ -34,9 +34,9 @@ class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
         self.exceptionList.addItems(excList)
         
         if ignore:
-            self.setWindowTitle(self.trUtf8("Ignored Exceptions"))
+            self.setWindowTitle(self.tr("Ignored Exceptions"))
             self.exceptionList.setToolTip(
-                self.trUtf8("List of ignored exceptions"))
+                self.tr("List of ignored exceptions"))
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
     

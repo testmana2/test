@@ -269,8 +269,8 @@ class AdBlockSubscription(QObject):
             if not f.open(QIODevice.ReadOnly):
                 E5MessageBox.warning(
                     None,
-                    self.trUtf8("Load subscription rules"),
-                    self.trUtf8(
+                    self.tr("Load subscription rules"),
+                    self.tr(
                         """Unable to open adblock file '{0}' for reading.""")
                     .format(fileName))
             else:
@@ -279,9 +279,9 @@ class AdBlockSubscription(QObject):
                 if not header.startswith("[Adblock"):
                     E5MessageBox.warning(
                         None,
-                        self.trUtf8("Load subscription rules"),
-                        self.trUtf8("""AdBlock file '{0}' does not start"""
-                                    """ with [Adblock.""")
+                        self.tr("Load subscription rules"),
+                        self.tr("""AdBlock file '{0}' does not start"""
+                                """ with [Adblock.""")
                         .format(fileName))
                     f.close()
                     f.remove()
@@ -360,7 +360,7 @@ class AdBlockSubscription(QObject):
         self.__downloading = FollowRedirectReply(
             self.location(),
             Helpviewer.HelpWindow.HelpWindow.networkAccessManager())
-        self.__downloading.finished[()].connect(self.__rulesDownloaded)
+        self.__downloading.finished.connect(self.__rulesDownloaded)
     
     def __rulesDownloaded(self):
         """
@@ -377,8 +377,8 @@ class AdBlockSubscription(QObject):
                 # don't show error if we try to load the default
                 E5MessageBox.warning(
                     None,
-                    self.trUtf8("Downloading subscription rules"),
-                    self.trUtf8(
+                    self.tr("Downloading subscription rules"),
+                    self.tr(
                         """<p>Subscription rules could not be"""
                         """ downloaded.</p><p>Error: {0}</p>""")
                     .format(reply.errorString()))
@@ -390,8 +390,8 @@ class AdBlockSubscription(QObject):
         if response.isEmpty():
             E5MessageBox.warning(
                 None,
-                self.trUtf8("Downloading subscription rules"),
-                self.trUtf8("""Got empty subscription rules."""))
+                self.tr("Downloading subscription rules"),
+                self.tr("""Got empty subscription rules."""))
             return
         
         fileName = self.rulesFileName()
@@ -400,8 +400,8 @@ class AdBlockSubscription(QObject):
         if not f.open(QIODevice.ReadWrite):
             E5MessageBox.warning(
                 None,
-                self.trUtf8("Downloading subscription rules"),
-                self.trUtf8(
+                self.tr("Downloading subscription rules"),
+                self.tr(
                     """Unable to open adblock file '{0}' for writing.""")
                 .file(fileName))
             return
@@ -452,8 +452,8 @@ class AdBlockSubscription(QObject):
         else:
             res = E5MessageBox.yesNo(
                 None,
-                self.trUtf8("Downloading subscription rules"),
-                self.trUtf8(
+                self.tr("Downloading subscription rules"),
+                self.tr(
                     """<p>AdBlock subscription <b>{0}</b> has a wrong"""
                     """ checksum.<br/>"""
                     """Found: {1}<br/>"""
@@ -475,8 +475,8 @@ class AdBlockSubscription(QObject):
         if not f.open(QIODevice.ReadWrite | QIODevice.Truncate):
             E5MessageBox.warning(
                 None,
-                self.trUtf8("Saving subscription rules"),
-                self.trUtf8(
+                self.tr("Saving subscription rules"),
+                self.tr(
                     """Unable to open adblock file '{0}' for writing.""")
                 .format(fileName))
             return

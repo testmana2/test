@@ -104,14 +104,14 @@ class LogViewerEdit(QTextEdit):
         
         # create the context menu
         self.__menu = QMenu(self)
-        self.__menu.addAction(self.trUtf8('Clear'), self.clear)
-        self.__menu.addAction(self.trUtf8('Copy'), self.copy)
+        self.__menu.addAction(self.tr('Clear'), self.clear)
+        self.__menu.addAction(self.tr('Copy'), self.copy)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8('Find'), self.__find)
+        self.__menu.addAction(self.tr('Find'), self.__find)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8('Select All'), self.selectAll)
+        self.__menu.addAction(self.tr('Select All'), self.selectAll)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.trUtf8("Configure..."), self.__configure)
+        self.__menu.addAction(self.tr("Configure..."), self.__configure)
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__handleShowContextMenu)

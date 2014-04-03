@@ -37,7 +37,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         
         self.updateSpinBox.setValue(Preferences.getHelp("AdBlockUpdatePeriod"))
         
-        self.searchEdit.setInactiveText(self.trUtf8("Search..."))
+        self.searchEdit.setInactiveText(self.tr("Search..."))
         
         import Helpviewer.HelpWindow
         self.__manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()
@@ -121,32 +121,32 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         menu = self.actionButton.menu()
         menu.clear()
         
-        menu.addAction(self.trUtf8("Add Rule"), self.__addCustomRule)\
+        menu.addAction(self.tr("Add Rule"), self.__addCustomRule)\
             .setEnabled(subscriptionEditable)
-        menu.addAction(self.trUtf8("Remove Rule"), self.__removeCustomRule)\
+        menu.addAction(self.tr("Remove Rule"), self.__removeCustomRule)\
             .setEnabled(subscriptionEditable)
         menu.addSeparator()
         menu.addAction(
-            self.trUtf8("Browse Subscriptions..."), self.__browseSubscriptions)
+            self.tr("Browse Subscriptions..."), self.__browseSubscriptions)
         menu.addAction(
-            self.trUtf8("Remove Subscription"), self.__removeSubscription)\
+            self.tr("Remove Subscription"), self.__removeSubscription)\
             .setEnabled(subscriptionRemovable)
         if self.__currentSubscription:
             menu.addSeparator()
             if subscriptionEnabled:
-                txt = self.trUtf8("Disable Subscription")
+                txt = self.tr("Disable Subscription")
             else:
-                txt = self.trUtf8("Enable Subscription")
+                txt = self.tr("Enable Subscription")
             menu.addAction(txt, self.__switchSubscriptionEnabled)
         menu.addSeparator()
         menu.addAction(
-            self.trUtf8("Update Subscription"), self.__updateSubscription)\
+            self.tr("Update Subscription"), self.__updateSubscription)\
             .setEnabled(not subscriptionEditable)
         menu.addAction(
-            self.trUtf8("Update All Subscriptions"),
+            self.tr("Update All Subscriptions"),
             self.__updateAllSubscriptions)
         menu.addSeparator()
-        menu.addAction(self.trUtf8("Learn more about writing rules..."),
+        menu.addAction(self.tr("Learn more about writing rules..."),
                        self.__learnAboutWritingFilters)
     
     def addCustomRule(self, filter):
@@ -211,19 +211,19 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         for subscription in requiresSubscriptions:
             requiresTitles.append(subscription.title())
         if requiresTitles:
-            message = self.trUtf8(
+            message = self.tr(
                 "<p>Do you really want to remove subscription"
                 " <b>{0}</b> and all subscriptions requiring it?</p>"
                 "<ul><li>{1}</li></ul>").format(
                 self.__currentSubscription.title(),
                 "</li><li>".join(requiresTitles))
         else:
-            message = self.trUtf8(
+            message = self.tr(
                 "<p>Do you really want to remove subscription"
                 " <b>{0}</b>?</p>").format(self.__currentSubscription.title())
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Remove Subscription"),
+            self.tr("Remove Subscription"),
             message)
         
         if res:

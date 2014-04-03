@@ -41,6 +41,9 @@ class UMLSceneSizeDialog(QDialog, Ui_UMLSceneSizeDialog):
         self.widthSpinBox.selectAll()
         self.widthSpinBox.setFocus()
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def getData(self):
         """
         Method to retrieve the entered data.

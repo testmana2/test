@@ -90,7 +90,7 @@ class FirefoxImporter(BookmarksImporter):
         """
         if not os.path.exists(self.__fileName):
             self._error = True
-            self._errorString = self.trUtf8("File '{0}' does not exist.")\
+            self._errorString = self.tr("File '{0}' does not exist.")\
                 .format(self.__fileName)
             return False
         
@@ -98,7 +98,7 @@ class FirefoxImporter(BookmarksImporter):
             self.__db = sqlite3.connect(self.__fileName)
         except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 "Unable to open database.\nReason: {0}").format(str(err))
             return False
         
@@ -133,7 +133,7 @@ class FirefoxImporter(BookmarksImporter):
                 folders[id_] = folder
         except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 "Unable to open database.\nReason: {0}").format(str(err))
             return None
         
@@ -168,14 +168,14 @@ class FirefoxImporter(BookmarksImporter):
                     bookmark.title = title.replace("&", "&&")
         except sqlite3.DatabaseError as err:
             self._error = True
-            self._errorString = self.trUtf8(
+            self._errorString = self.tr(
                 "Unable to open database.\nReason: {0}").format(str(err))
             return None
         
         importRootNode.setType(BookmarkNode.Folder)
         if self._id == "firefox":
-            importRootNode.title = self.trUtf8("Mozilla Firefox Import")
+            importRootNode.title = self.tr("Mozilla Firefox Import")
         else:
-            importRootNode.title = self.trUtf8("Imported {0}")\
+            importRootNode.title = self.tr("Imported {0}")\
                 .format(QDate.currentDate().toString(Qt.SystemLocaleShortDate))
         return importRootNode

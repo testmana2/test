@@ -9,8 +9,8 @@ Module implementing a network reply class for FTP resources.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import ftplib
@@ -274,11 +274,11 @@ class FtpReply(QNetworkReply):
                         # found a not supported proxy
                         self.setError(
                             QNetworkReply.ProxyConnectionRefusedError,
-                            self.trUtf8("The proxy type seems to be wrong."
-                                        " If it is not in the list of"
-                                        " supported proxy types please report"
-                                        " it with the instructions given by"
-                                        " the proxy.\n{0}").format(
+                            self.tr("The proxy type seems to be wrong."
+                                    " If it is not in the list of"
+                                    " supported proxy types please report"
+                                    " it with the instructions given by"
+                                    " the proxy.\n{0}").format(
                                 "\n".join(lines[1:])))
                         self.error.emit(
                             QNetworkReply.ProxyConnectionRefusedError)
@@ -286,7 +286,7 @@ class FtpReply(QNetworkReply):
                     else:
                         from UI.AuthenticationDialog import \
                             AuthenticationDialog
-                        info = self.trUtf8(
+                        info = self.tr(
                             "<b>Connect to proxy '{0}' using:</b>")\
                             .format(Utilities.html_encode(
                                 Preferences.getUI("ProxyHost/Ftp")))
@@ -421,7 +421,7 @@ class FtpReply(QNetworkReply):
             icon = UI.PixmapCache.getIcon("up.png")
             linkClasses["link_parent"] = \
                 self.__cssLinkClass(icon, iconSize).format("link_parent")
-            parentStr = self.trUtf8(
+            parentStr = self.tr(
                 """  <p><a class="link_parent" href="{0}">"""
                 """Change to parent directory</a></p>"""
             ).format(parent.toString())
@@ -434,7 +434,7 @@ class FtpReply(QNetworkReply):
             """<td class="size">{4}</td>"""\
             """<td class="modified">{5}</td>"""\
             """</tr>\n"""
-        table = self.trUtf8(
+        table = self.tr(
             """    <tr>"""
             """<th align="left">Name</th>"""
             """<th>Size</th>"""
@@ -460,7 +460,7 @@ class FtpReply(QNetworkReply):
                     else:
                         break
                 
-                sizeStr = self.trUtf8("{0} {1}", "size unit")\
+                sizeStr = self.tr("{0} {1}", "size unit")\
                     .format(size, self.__units[unit])
                 linkClass = "link_file"
                 if linkClass not in linkClasses:
@@ -487,7 +487,7 @@ class FtpReply(QNetworkReply):
         content = ftpListPage_html.format(
             Utilities.html_encode(baseUrl),
             "".join(linkClasses.values()),
-            self.trUtf8("Listing of {0}").format(basePath),
+            self.tr("Listing of {0}").format(basePath),
             parentStr,
             table
         )

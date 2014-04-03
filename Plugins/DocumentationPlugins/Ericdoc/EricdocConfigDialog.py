@@ -23,6 +23,7 @@ from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
 from DocumentationTools.Config import eric5docDefaultColors, \
     eric5docColorParameterNames
 import Utilities
+import UI.PixmapCache
 
 from eric5config import getConfig
 
@@ -42,11 +43,16 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         super(EricdocConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.outputDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.cssButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.qtHelpDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
         self.__initializeDefaults()
         
-        self.sampleText = self.trUtf8(
+        self.sampleText = self.tr(
             '''<?xml version="1.0" encoding="utf-8"?>'''
             '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"'''
             '''"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'''
@@ -289,10 +295,13 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select the directory the documentations is written to.
         """
+        startDir = Utilities.fromNativeSeparators(self.outputDirEdit.text())
+        if not startDir:
+            startDir = Utilities.fromNativeSeparators(self.ppath)
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select output directory"),
-            self.outputDirEdit.text(),
+            self.tr("Select output directory"),
+            startDir,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
         if directory:
@@ -311,12 +320,12 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         It displays a directory selection dialog to
         select a directory to be ignored.
         """
-        startDir = self.ignoreDirEdit.text()
+        startDir = Utilities.fromNativeSeparators(self.ignoreDirEdit.text())
         if not startDir:
             startDir = self.ppath
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory to exclude"),
+            self.tr("Select directory to exclude"),
             startDir,
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             
@@ -356,9 +365,9 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         cssFile = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select CSS style sheet"),
+            self.tr("Select CSS style sheet"),
             getConfig('ericCSSDir'),
-            self.trUtf8("Style sheet (*.css);;All files (*)"))
+            self.tr("Style sheet (*.css);;All files (*)"))
             
         if cssFile:
             # make it relative, if it is in a subdirectory of the project path
@@ -505,7 +514,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select output directory for QtHelp files"),
+            self.tr("Select output directory for QtHelp files"),
             self.qtHelpDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

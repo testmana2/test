@@ -67,6 +67,9 @@ class EditWatchpointDialog(QDialog, Ui_EditWatchpointDialog):
         else:
             self.specialEdit.setFocus()
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     def __textChanged(self, txt):
         """
         Private slot to handle the text changed signal of the condition line

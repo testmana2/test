@@ -34,7 +34,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         self.setupUi(self)
         
         if not groupMode:
-            self.nameEdit.setWhatsThis(self.trUtf8(
+            self.nameEdit.setWhatsThis(self.tr(
                 """<b>Template name<b><p>Enter the name of the template."""
                 """ Templates may be autocompleted upon this name."""
                 """ In order to support autocompletion. the template name"""
@@ -46,7 +46,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
             self.nameEdit.setValidator(self.__nameValidator)
         
         import QScintilla.Lexers
-        self.languages = [("All", self.trUtf8("All"))]
+        self.languages = [("All", self.tr("All"))]
         supportedLanguages = QScintilla.Lexers.getSupportedLanguages()
         languages = sorted(supportedLanguages.keys())
         for language in languages:
@@ -58,11 +58,11 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
             for lang, langDisp in self.languages:
                 langList.append(langDisp)
             
-            self.groupLabel.setText(self.trUtf8("Language:"))
+            self.groupLabel.setText(self.tr("Language:"))
             self.groupCombo.addItems(langList)
             self.templateLabel.setEnabled(False)
             self.templateEdit.setEnabled(False)
-            self.templateEdit.setPlainText(self.trUtf8("GROUP"))
+            self.templateEdit.setPlainText(self.tr("GROUP"))
             self.helpButton.setEnabled(False)
             self.descriptionLabel.hide()
             self.descriptionEdit.hide()
@@ -96,8 +96,8 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         if ev.key() == Qt.Key_Escape:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Close dialog"),
-                self.trUtf8("""Do you really want to close the dialog?"""))
+                self.tr("Close dialog"),
+                self.tr("""Do you really want to close the dialog?"""))
             if not res:
                 self.reject()
     
@@ -108,8 +108,8 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         """
         E5MessageBox.information(
             self,
-            self.trUtf8("Template Help"),
-            self.trUtf8(
+            self.tr("Template Help"),
+            self.tr(
                 """<p>To use variables in a template, you just have to"""
                 """ enclose the variablename with $-characters. When you"""
                 """ use the template, you will then be asked for a value"""

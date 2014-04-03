@@ -45,7 +45,7 @@ class IconEditorPalette(QWidget):
         self.__preview.setFrameStyle(QFrame.Panel | QFrame.Sunken)
         self.__preview.setFixedHeight(64)
         self.__preview.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        self.__preview.setWhatsThis(self.trUtf8(
+        self.__preview.setWhatsThis(self.tr(
             """<b>Preview</b>"""
             """<p>This is a 1:1 preview of the current icon.</p>"""
         ))
@@ -55,7 +55,7 @@ class IconEditorPalette(QWidget):
         self.__color.setFrameStyle(QFrame.Panel | QFrame.Sunken)
         self.__color.setFixedHeight(24)
         self.__color.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        self.__color.setWhatsThis(self.trUtf8(
+        self.__color.setWhatsThis(self.tr(
             """<b>Current Color</b>"""
             """<p>This is the currently selected color used for drawing.</p>"""
         ))
@@ -63,25 +63,25 @@ class IconEditorPalette(QWidget):
         
         self.__colorTxt = QLabel(self)
         self.__colorTxt.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        self.__colorTxt.setWhatsThis(self.trUtf8(
+        self.__colorTxt.setWhatsThis(self.tr(
             """<b>Current Color Value</b>"""
             """<p>This is the currently selected color value used for"""
             """ drawing.</p>"""
         ))
         self.__layout.addWidget(self.__colorTxt)
         
-        self.__colorButton = QPushButton(self.trUtf8("Select Color"), self)
-        self.__colorButton.setWhatsThis(self.trUtf8(
+        self.__colorButton = QPushButton(self.tr("Select Color"), self)
+        self.__colorButton.setWhatsThis(self.tr(
             """<b>Select Color</b>"""
             """<p>Select the current drawing color via a color selection"""
             """ dialog.</p>"""
         ))
-        self.__colorButton.clicked[()].connect(self.__selectColor)
+        self.__colorButton.clicked.connect(self.__selectColor)
         self.__layout.addWidget(self.__colorButton)
         
         self.__colorAlpha = QSpinBox(self)
         self.__colorAlpha.setRange(0, 255)
-        self.__colorAlpha.setWhatsThis(self.trUtf8(
+        self.__colorAlpha.setWhatsThis(self.tr(
             """<b>Select alpha channel value</b>"""
             """<p>Select the value for the alpha channel of the current"""
             """ color.</p>"""
@@ -89,20 +89,20 @@ class IconEditorPalette(QWidget):
         self.__layout.addWidget(self.__colorAlpha)
         self.__colorAlpha.valueChanged[int].connect(self.__alphaChanged)
         
-        self.__compositingGroup = QGroupBox(self.trUtf8("Compositing"), self)
+        self.__compositingGroup = QGroupBox(self.tr("Compositing"), self)
         self.__compositingGroupLayout = QVBoxLayout(self.__compositingGroup)
         self.__compositingGroup.setLayout(self.__compositingGroupLayout)
-        self.__sourceButton = QRadioButton(self.trUtf8("Replace"),
+        self.__sourceButton = QRadioButton(self.tr("Replace"),
                                            self.__compositingGroup)
-        self.__sourceButton.setWhatsThis(self.trUtf8(
+        self.__sourceButton.setWhatsThis(self.tr(
             """<b>Replace</b>"""
             """<p>Replace the existing pixel with a new color.</p>"""
         ))
         self.__sourceButton.clicked[bool].connect(self.__compositingChanged)
         self.__compositingGroupLayout.addWidget(self.__sourceButton)
-        self.__sourceOverButton = QRadioButton(self.trUtf8("Blend"),
+        self.__sourceOverButton = QRadioButton(self.tr("Blend"),
                                                self.__compositingGroup)
-        self.__sourceOverButton.setWhatsThis(self.trUtf8(
+        self.__sourceOverButton.setWhatsThis(self.tr(
             """<b>Blend</b>"""
             """<p>Blend the new color over the existing pixel.</p>"""
         ))

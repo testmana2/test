@@ -72,9 +72,6 @@ VcsProjectBrowserHelper
 <td><a href="#HgProjectBrowserHelper.__HgForget">__HgForget</a></td>
 <td>Private slot called by the context menu to remove the selected file from the Mercurial repository leaving a copy in the project directory.</td>
 </tr><tr>
-<td><a href="#HgProjectBrowserHelper.__HgLogBrowser">__HgLogBrowser</a></td>
-<td>Private slot called by the context menu to show the log browser for a file.</td>
-</tr><tr>
 <td><a href="#HgProjectBrowserHelper.__HgMove">__HgMove</a></td>
 <td>Private slot called by the context menu to move the selected file.</td>
 </tr><tr>
@@ -89,6 +86,12 @@ VcsProjectBrowserHelper
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper.__HgSbsExtendedDiff">__HgSbsExtendedDiff</a></td>
 <td>Private slot called by the context menu to show the difference of a file to the repository side-by-side.</td>
+</tr><tr>
+<td><a href="#HgProjectBrowserHelper.__addExtensionsMenu">__addExtensionsMenu</a></td>
+<td>Private method to add an extension menu entry.</td>
+</tr><tr>
+<td><a href="#HgProjectBrowserHelper.__showExtensionMenu">__showExtensionMenu</a></td>
+<td>Private slot showing the extensions menu.</td>
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper._addVCSMenu">_addVCSMenu</a></td>
 <td>Protected method used to add the VCS menu to all project browsers.</td>
@@ -173,12 +176,6 @@ name of this object (string)
 <p>
         Private slot called by the context menu to remove the selected file
         from the Mercurial repository leaving a copy in the project directory.
-</p><a NAME="HgProjectBrowserHelper.__HgLogBrowser" ID="HgProjectBrowserHelper.__HgLogBrowser"></a>
-<h4>HgProjectBrowserHelper.__HgLogBrowser</h4>
-<b>__HgLogBrowser</b>(<i></i>)
-<p>
-        Private slot called by the context menu to show the log browser for a
-        file.
 </p><a NAME="HgProjectBrowserHelper.__HgMove" ID="HgProjectBrowserHelper.__HgMove"></a>
 <h4>HgProjectBrowserHelper.__HgMove</h4>
 <b>__HgMove</b>(<i></i>)
@@ -208,7 +205,42 @@ name of this object (string)
         file to the repository side-by-side.
 </p><p>
         It allows the selection of revisions to compare.
-</p><a NAME="HgProjectBrowserHelper._addVCSMenu" ID="HgProjectBrowserHelper._addVCSMenu"></a>
+</p><a NAME="HgProjectBrowserHelper.__addExtensionsMenu" ID="HgProjectBrowserHelper.__addExtensionsMenu"></a>
+<h4>HgProjectBrowserHelper.__addExtensionsMenu</h4>
+<b>__addExtensionsMenu</b>(<i>menu, key</i>)
+<p>
+        Private method to add an extension menu entry.
+</p><dl>
+<dt><i>menu</i></dt>
+<dd>
+menu to add it to (QMenu)
+</dd><dt><i>key</i></dt>
+<dd>
+menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the menu action (QAction)
+</dd>
+</dl><a NAME="HgProjectBrowserHelper.__showExtensionMenu" ID="HgProjectBrowserHelper.__showExtensionMenu"></a>
+<h4>HgProjectBrowserHelper.__showExtensionMenu</h4>
+<b>__showExtensionMenu</b>(<i>key, controlled</i>)
+<p>
+        Private slot showing the extensions menu.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+menu key (string, one of 'mainMenu', 'multiMenu',
+            'backMenu', 'dirMenu' or 'dirMultiMenu')
+</dd><dt><i>controlled</i></dt>
+<dd>
+flag indicating to show the menu for a
+            version controlled entry or a non-version controlled entry
+            (boolean)
+</dd>
+</dl><a NAME="HgProjectBrowserHelper._addVCSMenu" ID="HgProjectBrowserHelper._addVCSMenu"></a>
 <h4>HgProjectBrowserHelper._addVCSMenu</h4>
 <b>_addVCSMenu</b>(<i>mainMenu</i>)
 <p>

@@ -276,7 +276,7 @@ class HistoryMenu(E5ModelMenu):
         self.__initialActions = []
         self.__mostVisitedMenu = None
         
-        self.__closedTabsMenu = QMenu(self.trUtf8("Closed Tabs"))
+        self.__closedTabsMenu = QMenu(self.tr("Closed Tabs"))
         self.__closedTabsMenu.aboutToShow.connect(
             self.__aboutToShowClosedTabsMenu)
         self.__tabWidget.closedTabsManager().closedTabAvailable.connect(
@@ -334,7 +334,7 @@ class HistoryMenu(E5ModelMenu):
         
         if self.__mostVisitedMenu is None:
             self.__mostVisitedMenu = HistoryMostVisitedMenu(10, self)
-            self.__mostVisitedMenu.setTitle(self.trUtf8("Most Visited"))
+            self.__mostVisitedMenu.setTitle(self.tr("Most Visited"))
             self.__mostVisitedMenu.openUrl.connect(self.openUrl)
             self.__mostVisitedMenu.newUrl.connect(self.newUrl)
         self.addMenu(self.__mostVisitedMenu)
@@ -344,11 +344,11 @@ class HistoryMenu(E5ModelMenu):
         self.addSeparator()
         
         act = self.addAction(UI.PixmapCache.getIcon("history.png"),
-                             self.trUtf8("Show All History..."))
-        act.triggered[()].connect(self.__showHistoryDialog)
+                             self.tr("Show All History..."))
+        act.triggered.connect(self.__showHistoryDialog)
         act = self.addAction(UI.PixmapCache.getIcon("historyClear.png"),
-                             self.trUtf8("Clear History..."))
-        act.triggered[()].connect(self.__clearHistoryDialog)
+                             self.tr("Clear History..."))
+        act.triggered.connect(self.__clearHistoryDialog)
     
     def setInitialActions(self, actions):
         """
@@ -367,7 +367,6 @@ class HistoryMenu(E5ModelMenu):
         """
         from .HistoryDialog import HistoryDialog
         dlg = HistoryDialog(self)
-        dlg.setAttribute(Qt.WA_DeleteOnClose)
         dlg.newUrl.connect(self.newUrl)
         dlg.openUrl.connect(self.openUrl)
         dlg.show()
@@ -378,8 +377,8 @@ class HistoryMenu(E5ModelMenu):
         """
         if self.__historyManager is not None and E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Clear History"),
-                self.trUtf8("""Do you want to clear the history?""")):
+                self.tr("Clear History"),
+                self.tr("""Do you want to clear the history?""")):
             self.__historyManager.clear()
     
     def __aboutToShowClosedTabsMenu(self):
@@ -400,10 +399,10 @@ class HistoryMenu(E5ModelMenu):
             index += 1
         self.__closedTabsMenu.addSeparator()
         self.__closedTabsMenu.addAction(
-            self.trUtf8("Restore All Closed Tabs"),
+            self.tr("Restore All Closed Tabs"),
             self.__tabWidget.restoreAllClosedTabs)
         self.__closedTabsMenu.addAction(
-            self.trUtf8("Clear List"),
+            self.tr("Clear List"),
             self.__tabWidget.clearClosedTabsList)
     
     def __closedTabAvailable(self, avail):

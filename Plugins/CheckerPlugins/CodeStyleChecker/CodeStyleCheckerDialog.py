@@ -49,18 +49,27 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         super(CodeStyleCheckerDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.docTypeComboBox.addItem(self.trUtf8("PEP-257"), "pep257")
-        self.docTypeComboBox.addItem(self.trUtf8("Eric"), "eric")
+        self.excludeMessagesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        self.includeMessagesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        self.fixIssuesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        self.noFixIssuesSelectButton.setIcon(
+            UI.PixmapCache.getIcon("select.png"))
+        
+        self.docTypeComboBox.addItem(self.tr("PEP-257"), "pep257")
+        self.docTypeComboBox.addItem(self.tr("Eric"), "eric")
         
         self.statisticsButton = self.buttonBox.addButton(
-            self.trUtf8("Statistics..."), QDialogButtonBox.ActionRole)
+            self.tr("Statistics..."), QDialogButtonBox.ActionRole)
         self.statisticsButton.setToolTip(
-            self.trUtf8("Press to show some statistics for the last run"))
+            self.tr("Press to show some statistics for the last run"))
         self.statisticsButton.setEnabled(False)
         self.showButton = self.buttonBox.addButton(
-            self.trUtf8("Show"), QDialogButtonBox.ActionRole)
+            self.tr("Show"), QDialogButtonBox.ActionRole)
         self.showButton.setToolTip(
-            self.trUtf8("Press to show all files containing an issue"))
+            self.tr("Press to show all files containing an issue"))
         self.showButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -379,7 +388,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 self.noResults = False
                 self.__createResultItem(
                     self.filename, 1, 1,
-                    self.trUtf8("Error: {0}").format(str(msg))
+                    self.tr("Error: {0}").format(str(msg))
                     .rstrip()[1:-1], False, False)
                 self.progress += 1
                 # Continue with next file
@@ -462,7 +471,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.startButton.setEnabled(True)
         
         if self.noResults:
-            QTreeWidgetItem(self.resultList, [self.trUtf8('No issues found.')])
+            QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
             QApplication.processEvents()
             self.statisticsButton.setEnabled(False)
             self.showButton.setEnabled(False)

@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
@@ -40,6 +41,9 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
+        self.sourceDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.targetDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.sourceDirCompleter = E5DirCompleter(self.sourceDirEdit)
         self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
         
@@ -50,32 +54,35 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         # enable all dialog elements
         if filter == 'source':  # it is a source file
             self.filterComboBox.addItem(
-                self.trUtf8("Source Files"), "SOURCES")
+                self.tr("Source Files"), "SOURCES")
         elif filter == 'form':
             self.filterComboBox.addItem(
-                self.trUtf8("Forms Files"), "FORMS")
+                self.tr("Forms Files"), "FORMS")
         elif filter == 'resource':
             self.filterComboBox.addItem(
-                self.trUtf8("Resource Files"), "RESOURCES")
+                self.tr("Resource Files"), "RESOURCES")
         elif filter == 'interface':
             self.filterComboBox.addItem(
-                self.trUtf8("Interface Files"), "INTERFACES")
+                self.tr("Interface Files"), "INTERFACES")
         elif filter == 'others':
             self.filterComboBox.addItem(
-                self.trUtf8("Other Files (*)"), "OTHERS")
+                self.tr("Other Files (*)"), "OTHERS")
             self.on_filterComboBox_highlighted('(*)')
         else:
             self.filterComboBox.addItem(
-                self.trUtf8("Source Files"), "SOURCES")
+                self.tr("Source Files"), "SOURCES")
             self.filterComboBox.addItem(
-                self.trUtf8("Forms Files"), "FORMS")
+                self.tr("Forms Files"), "FORMS")
             self.filterComboBox.addItem(
-                self.trUtf8("Resource Files"), "RESOURCES")
+                self.tr("Resource Files"), "RESOURCES")
             self.filterComboBox.addItem(
-                self.trUtf8("Interface Files"), "INTERFACES")
+                self.tr("Interface Files"), "INTERFACES")
             self.filterComboBox.addItem(
-                self.trUtf8("Other Files (*)"), "OTHERS")
+                self.tr("Other Files (*)"), "OTHERS")
         self.filterComboBox.setCurrentIndex(0)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
         
     @pyqtSlot(str)
     def on_filterComboBox_highlighted(self, fileType):
@@ -108,7 +115,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select directory"),
+            self.tr("Select directory"),
             startdir)
         
         if directory:

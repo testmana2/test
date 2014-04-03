@@ -9,12 +9,12 @@ Module implementing the browser model.
 
 from __future__ import unicode_literals
 
-import sys
 import os
 import fnmatch
+import json
 
 from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, \
-    QFileSystemWatcher, Qt
+    QFileSystemWatcher, Qt, QProcess
 from PyQt4.QtGui import QImageReader, QApplication, QFont
 
 import UI.PixmapCache
@@ -50,6 +50,9 @@ class BrowserModel(QAbstractItemModel):
         self.watchedItems = {}
         self.watcher = QFileSystemWatcher(self)
         self.watcher.directoryChanged.connect(self.directoryChanged)
+        
+        self.__sysPathInterpreter = ""
+        self.__sysPathItem = None
         
         if not nopopulate:
             rootData = QApplication.translate("BrowserModel", "Name")
@@ -352,8 +355,6 @@ class BrowserModel(QAbstractItemModel):
         """
         Private method to populate the browser model.
         """
-        self._addItem(BrowserSysPathItem(self.rootItem), self.rootItem)
-        
         self.toplevelDirs = []
         tdp = Preferences.Prefs.settings.value('BrowserModel/ToplevelDirs')
         if tdp:
@@ -368,6 +369,41 @@ class BrowserModel(QAbstractItemModel):
         for d in self.toplevelDirs:
             itm = BrowserDirectoryItem(self.rootItem, d)
             self._addItem(itm, self.rootItem)
+    
+    def interpreterChanged(self, interpreter):
+        """
+        Public method to handle a change of the debug client's interpreter.
+        
+        @param interpreter interpreter of the debug client (string)
+        """
+        if interpreter and "python" in interpreter.lower():
+            if interpreter.endswith("w.exe"):
+                interpreter = interpreter.replace("w.exe", ".exe")
+            if self.__sysPathInterpreter != interpreter:
+                self.__sysPathInterpreter = interpreter
+                # step 1: remove sys.path entry
+                if self.__sysPathItem is not None:
+                    self.beginRemoveRows(
+                        QModelIndex(), self.__sysPathItem.row(),
+                        self.__sysPathItem.row())
+                    self.rootItem.removeChild(self.__sysPathItem)
+                    self.endRemoveRows()
+                    self.__sysPathItem = None
+                
+                if self.__sysPathInterpreter:
+                    # step 2: add a new one
+                    self.__sysPathItem = BrowserSysPathItem(self.rootItem)
+                    self.addItem(self.__sysPathItem)
+        else:
+            # remove sys.path entry
+            if self.__sysPathItem is not None:
+                self.beginRemoveRows(
+                    QModelIndex(), self.__sysPathItem.row(),
+                    self.__sysPathItem.row())
+                self.rootItem.removeChild(self.__sysPathItem)
+                self.endRemoveRows()
+                self.__sysPathItem = None
+            self.__sysPathInterpreter = ""
     
     def programChange(self, dirname):
         """
@@ -524,19 +560,31 @@ class BrowserModel(QAbstractItemModel):
         @param parentItem reference to the sys.path item to be populated
         @param repopulate flag indicating a repopulation (boolean)
         """
-        if len(sys.path) > 0:
-            if repopulate:
-                self.beginInsertRows(
-                    self.createIndex(parentItem.row(), 0, parentItem),
-                    0, len(sys.path) - 1)
-            for p in sys.path:
-                if p == '':
-                    p = os.getcwd()
-                
-                node = BrowserDirectoryItem(parentItem, p)
-                self._addItem(node, parentItem)
-            if repopulate:
-                self.endInsertRows()
+        if self.__sysPathInterpreter:
+            script = "import sys, json; print(json.dumps(sys.path))"
+            proc = QProcess()
+            proc.start(self.__sysPathInterpreter, ["-c", script])
+            finished = proc.waitForFinished(3000)
+            if finished:
+                procOutput = str(proc.readAllStandardOutput(),
+                                 Preferences.getSystem("IOEncoding"),
+                                 'replace')
+                syspath = [p for p in json.loads(procOutput) if p]
+                if len(syspath) > 0:
+                    if repopulate:
+                        self.beginInsertRows(
+                            self.createIndex(parentItem.row(), 0, parentItem),
+                            0, len(syspath) - 1)
+                    for p in syspath:
+                        if os.path.isdir(p):
+                            node = BrowserDirectoryItem(parentItem, p)
+                        else:
+                            node = BrowserFileItem(parentItem, p)
+                        self._addItem(node, parentItem)
+                    if repopulate:
+                        self.endInsertRows()
+            else:
+                proc.kill()
 
     def populateFileItem(self, parentItem, repopulate=False):
         """
@@ -586,6 +634,7 @@ class BrowserModel(QAbstractItemModel):
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
+        parentItem._populated = True
 
     def populateClassItem(self, parentItem, repopulate=False):
         """

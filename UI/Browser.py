@@ -257,7 +257,7 @@ class Browser(QTreeView):
                 self.__configure)
         
         # create the attribute menu
-        self.gotoMenu = QMenu(self.trUtf8("Goto"), self)
+        self.gotoMenu = QMenu(self.tr("Goto"), self)
         self.gotoMenu.aboutToShow.connect(self._showGotoMenu)
         self.gotoMenu.triggered.connect(self._gotoAttribute)
         
@@ -362,7 +362,7 @@ class Browser(QTreeView):
         
         for lineno in sorted(linenos):
             act = self.gotoMenu.addAction(
-                self.trUtf8("Line {0}".format(lineno)))
+                self.tr("Line {0}".format(lineno)))
             act.setData([fileName, lineno])
         
     def _gotoAttribute(self, act):
@@ -545,6 +545,14 @@ class Browser(QTreeView):
         @param fn file name (string)
         """
         self.__model.programChange(os.path.dirname(fn))
+        
+    def handleInterpreterChanged(self, interpreter):
+        """
+        Public slot to handle a change of the debug client's interpreter.
+        
+        @param interpreter interpreter of the debug client (string)
+        """
+        self.__model.interpreterChanged(interpreter)
         
     def wantedItem(self, itm, filter=None):
         """

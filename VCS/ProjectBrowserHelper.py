@@ -270,8 +270,8 @@ class VcsProjectBrowserHelper(QObject):
             
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Remove from repository (and disk)"),
-                self.trUtf8(
+                self.tr("Remove from repository (and disk)"),
+                self.tr(
                     "Do you really want to remove these translation files from"
                     " the repository (and disk)?"),
                 names)
@@ -290,8 +290,8 @@ class VcsProjectBrowserHelper(QObject):
             
             dlg = DeleteFilesConfirmationDialog(
                 self.parent(),
-                self.trUtf8("Remove from repository (and disk)"),
-                self.trUtf8(
+                self.tr("Remove from repository (and disk)"),
+                self.tr(
                     "Do you really want to remove these files/directories"
                     " from the repository (and disk)?"),
                 files)
@@ -316,6 +316,20 @@ class VcsProjectBrowserHelper(QObject):
         except AttributeError:
             fn = itm.dirName()
         self.vcs.vcsLog(fn)
+    
+    def _VCSLogBrowser(self):
+        """
+        Protected slot called by the context menu to show the log browser for a
+        file.
+        """
+        itm = self.browser.currentItem()
+        try:
+            fn = itm.fileName()
+            isFile = True
+        except AttributeError:
+            fn = itm.dirName()
+            isFile = False
+        self.vcs.vcsLogBrowser(fn, isFile=isFile)
         
     def _VCSDiff(self):
         """

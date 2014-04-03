@@ -64,10 +64,10 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         
         pname = self.project.getProjectName()
         if pname:
-            name = self.trUtf8("Imports Diagramm {0}: {1}").format(
+            name = self.tr("Imports Diagramm {0}: {1}").format(
                 pname, self.project.getRelativePath(self.packagePath))
         else:
-            name = self.trUtf8("Imports Diagramm: {0}").format(
+            name = self.tr("Imports Diagramm: {0}").format(
                 self.packagePath)
         self.umlView.setDiagramName(name)
     
@@ -90,8 +90,8 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         
         tot = len(modules)
         progress = E5ProgressDialog(
-            self.trUtf8("Parsing modules..."),
-            None, 0, tot, self.trUtf8("%v/%m Modules"), self.parent())
+            self.tr("Parsing modules..."),
+            None, 0, tot, self.tr("%v/%m Modules"), self.parent())
         try:
             prog = 0
             progress.show()
@@ -123,7 +123,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         if len(initlist) == 0:
             ct = QGraphicsTextItem(None)
             ct.setHtml(
-                self.trUtf8(
+                self.tr(
                     "The directory <b>'{0}'</b> is not a Python package.")
                 .format(self.package))
             self.scene.addItem(ct)

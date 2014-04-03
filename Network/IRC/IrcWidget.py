@@ -9,8 +9,8 @@ Module implementing the IRC window.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import re
@@ -66,8 +66,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         self.__leaveButton.setIcon(
             UI.PixmapCache.getIcon("ircCloseChannel.png"))
         self.__leaveButton.setToolTip(
-            self.trUtf8("Press to leave the current channel"))
-        self.__leaveButton.clicked[()].connect(self.__leaveChannel)
+            self.tr("Press to leave the current channel"))
+        self.__leaveButton.clicked.connect(self.__leaveChannel)
         self.__leaveButton.setEnabled(False)
         self.channelsWidget.setCornerWidget(
             self.__leaveButton, Qt.BottomRightCorner)
@@ -143,8 +143,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             if Preferences.getIrc("AskOnShutdown"):
                 ok = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Disconnect from Server"),
-                    self.trUtf8(
+                    self.tr("Disconnect from Server"),
+                    self.tr(
                         """<p>Do you really want to disconnect from"""
                         """ <b>{0}</b>?</p><p>All channels will be closed."""
                         """</p>""").format(self.__server.getName()))
@@ -193,8 +193,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     if useSSL and not SSL_AVAILABLE:
                         E5MessageBox.critical(
                             self,
-                            self.trUtf8("SSL Connection"),
-                            self.trUtf8(
+                            self.tr("SSL Connection"),
+                            self.tr(
                                 """An encrypted connection to the IRC"""
                                 """ network was requested but SSL is not"""
                                 """ available. Please change the server"""
@@ -218,17 +218,17 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     self.__connectionState = IrcWidget.ServerConnecting
                     if useSSL:
                         self.networkWidget.addServerMessage(
-                            self.trUtf8("Info"),
-                            self.trUtf8("Looking for server {0} (port {1})"
-                                        " using an SSL encrypted connection"
-                                        "...").format(self.__server.getName(),
-                                                      self.__server.getPort()))
+                            self.tr("Info"),
+                            self.tr("Looking for server {0} (port {1})"
+                                    " using an SSL encrypted connection"
+                                    "...").format(self.__server.getName(),
+                                                  self.__server.getPort()))
                         self.__socket.connectToHostEncrypted(
                             self.__server.getName(), self.__server.getPort())
                     else:
                         self.networkWidget.addServerMessage(
-                            self.trUtf8("Info"),
-                            self.trUtf8(
+                            self.tr("Info"),
+                            self.tr(
                                 "Looking for server {0} (port {1})...").format(
                                 self.__server.getName(),
                                 self.__server.getPort()))
@@ -240,15 +240,15 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             else:
                 ok = E5MessageBox.yesNo(
                     self,
-                    self.trUtf8("Disconnect from Server"),
-                    self.trUtf8("""<p>Do you really want to disconnect from"""
-                                """ <b>{0}</b>?</p><p>All channels will be"""
-                                """ closed.</p>""")
+                    self.tr("Disconnect from Server"),
+                    self.tr("""<p>Do you really want to disconnect from"""
+                            """ <b>{0}</b>?</p><p>All channels will be"""
+                            """ closed.</p>""")
                     .format(self.__server.getName()))
             if ok:
                 self.networkWidget.addServerMessage(
-                    self.trUtf8("Info"),
-                    self.trUtf8("Disconnecting from server {0}...").format(
+                    self.tr("Info"),
+                    self.tr("Disconnecting from server {0}...").format(
                         self.__server.getName()))
                 self.__closeAllChannels()
                 self.__send("QUIT :" + self.__quitMessage)
@@ -445,8 +445,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         Private slot to indicate the host was found.
         """
         self.networkWidget.addServerMessage(
-            self.trUtf8("Info"),
-            self.trUtf8("Server found,connecting..."))
+            self.tr("Info"),
+            self.tr("Server found,connecting..."))
     
     def __hostConnected(self):
         """
@@ -454,8 +454,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         established.
         """
         self.networkWidget.addServerMessage(
-            self.trUtf8("Info"),
-            self.trUtf8("Connected,logging in..."))
+            self.tr("Info"),
+            self.tr("Connected,logging in..."))
         self.networkWidget.setConnected(True)
         
         self.__registering = True
@@ -488,8 +488,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         if self.networkWidget.isConnected():
             self.__closeAllChannels()
             self.networkWidget.addServerMessage(
-                self.trUtf8("Info"),
-                self.trUtf8("Server disconnected."))
+                self.tr("Info"),
+                self.tr("Server disconnected."))
             self.networkWidget.setRegistered(False)
             self.networkWidget.setConnected(False)
             self.__server = None
@@ -533,8 +533,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                             else:
                                 # Oops, the message wasn't handled
                                 self.networkWidget.addErrorMessage(
-                                    self.trUtf8("Message Error"),
-                                    self.trUtf8(
+                                    self.tr("Message Error"),
+                                    self.tr(
                                         "Unknown message received from server:"
                                         "<br/>{0}").format(line))
                 
@@ -557,7 +557,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             if "!" in match.group(1):
                 name = match.group(1).split("!", 1)[0]
                 msg = "-{0}- {1}".format(name, msg)
-            self.networkWidget.addServerMessage(self.trUtf8("Notice"), msg)
+            self.networkWidget.addServerMessage(self.tr("Notice"), msg)
             return True
         elif name == "MODE":
             self.__registering = False
@@ -568,22 +568,22 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                 if not self.isChannelName(name):
                     if name == self.__nickName:
                         if sourceNick == self.__nickName:
-                            msg = self.trUtf8(
+                            msg = self.tr(
                                 "You have set your personal modes to"
                                 " <b>[{0}]</b>.").format(modes)
                         else:
-                            msg = self.trUtf8(
+                            msg = self.tr(
                                 "{0} has changed your personal modes to"
                                 " <b>[{1}]</b>.").format(sourceNick, modes)
                         self.networkWidget.addServerMessage(
-                            self.trUtf8("Mode"), msg, filterMsg=False)
+                            self.tr("Mode"), msg, filterMsg=False)
                         return True
         elif name == "PART":
             nick = match.group(1).split("!", 1)[0]
             if nick == self.__nickName:
                 channel = match.group(3).split(None, 1)[0]
                 self.networkWidget.addMessage(
-                    self.trUtf8("You have left channel {0}.").format(channel))
+                    self.tr("You have left channel {0}.").format(channel))
                 return True
         elif name == "QUIT":
             # don't do anything with it here
@@ -594,17 +594,17 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             newNick = match.group(3).split(":", 1)[1]
             if oldNick == self.__nickName:
                 self.networkWidget.addMessage(
-                    self.trUtf8("You are now known as {0}.").format(newNick))
+                    self.tr("You are now known as {0}.").format(newNick))
                 self.__nickName = newNick
                 self.networkWidget.setNickName(newNick)
             else:
                 self.networkWidget.addMessage(
-                    self.trUtf8("User {0} is now known as {1}.").format(
+                    self.tr("User {0} is now known as {1}.").format(
                         oldNick, newNick))
             return True
         elif name == "ERROR":
             self.networkWidget.addErrorMessage(
-                self.trUtf8("Server Error"), match.group(3).split(":", 1)[1])
+                self.tr("Server Error"), match.group(3).split(":", 1)[1])
             return True
         
         return False
@@ -639,7 +639,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             else:
                 self.__handleNickInUse()
         else:
-            self.networkWidget.addServerMessage(self.trUtf8("Error"), message)
+            self.networkWidget.addServerMessage(self.tr("Error"), message)
         
         return True
     
@@ -654,43 +654,43 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         """
         # determine message type
         if code in [1, 2, 3, 4]:
-            msgType = self.trUtf8("Welcome")
+            msgType = self.tr("Welcome")
         elif code == 5:
-            msgType = self.trUtf8("Support")
+            msgType = self.tr("Support")
         elif code in [250, 251, 252, 253, 254, 255, 265, 266]:
-            msgType = self.trUtf8("User")
+            msgType = self.tr("User")
         elif code in [372, 375, 376]:
-            msgType = self.trUtf8("MOTD")
+            msgType = self.tr("MOTD")
         elif code in [305, 306]:
-            msgType = self.trUtf8("Away")
+            msgType = self.tr("Away")
         else:
-            msgType = self.trUtf8("Info ({0})").format(code)
+            msgType = self.tr("Info ({0})").format(code)
         
         # special treatment for some messages
         if code == 375:
-            message = self.trUtf8("Message of the day")
+            message = self.tr("Message of the day")
         elif code == 376:
-            message = self.trUtf8("End of message of the day")
+            message = self.tr("End of message of the day")
         elif code == 4:
             parts = message.strip().split()
-            message = self.trUtf8(
+            message = self.tr(
                 "Server {0} (Version {1}), User-Modes: {2},"
                 " Channel-Modes: {3}")\
                 .format(parts[1], parts[2], parts[3], parts[4])
         elif code == 265:
             parts = message.strip().split()
-            message = self.trUtf8(
+            message = self.tr(
                 "Current users on {0}: {1}, max. {2}").format(
                 server, parts[1], parts[2])
         elif code == 266:
             parts = message.strip().split()
-            message = self.trUtf8(
+            message = self.tr(
                 "Current users on the network: {0}, max. {1}").format(
                 parts[1], parts[2])
         elif code == 305:
-            message = self.trUtf8("You are no longer marked as being away.")
+            message = self.tr("You are no longer marked as being away.")
         elif code == 306:
-            message = self.trUtf8("You have been marked as being away.")
+            message = self.tr("You have been marked as being away.")
         else:
             first, message = message.split(None, 1)
             if message.startswith(":"):
@@ -752,39 +752,39 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             # ignore this one, it's a disconnect
             if self.__sslErrorLock:
                 self.networkWidget.addErrorMessage(
-                    self.trUtf8("SSL Error"),
-                    self.trUtf8(
+                    self.tr("SSL Error"),
+                    self.tr(
                         """Connection to server {0} (port {1}) lost while"""
                         """ waiting for user response to an SSL error.""")
                     .format(self.__server.getName(), self.__server.getPort()))
                 self.__connectionState = IrcWidget.ServerDisconnected
         elif error == QAbstractSocket.HostNotFoundError:
             self.networkWidget.addErrorMessage(
-                self.trUtf8("Socket Error"),
-                self.trUtf8(
+                self.tr("Socket Error"),
+                self.tr(
                     "The host was not found. Please check the host name"
                     " and port settings."))
         elif error == QAbstractSocket.ConnectionRefusedError:
             self.networkWidget.addErrorMessage(
-                self.trUtf8("Socket Error"),
-                self.trUtf8(
+                self.tr("Socket Error"),
+                self.tr(
                     "The connection was refused by the peer. Please check the"
                     " host name and port settings."))
         elif error == QAbstractSocket.SslHandshakeFailedError:
             self.networkWidget.addErrorMessage(
-                self.trUtf8("Socket Error"),
-                self.trUtf8("The SSL handshake failed."))
+                self.tr("Socket Error"),
+                self.tr("The SSL handshake failed."))
         else:
             if self.__socket:
                 self.networkWidget.addErrorMessage(
-                    self.trUtf8("Socket Error"),
-                    self.trUtf8(
+                    self.tr("Socket Error"),
+                    self.tr(
                         "The following network error occurred:<br/>{0}")
                     .format(self.__socket.errorString()))
             else:
                 self.networkWidget.addErrorMessage(
-                    self.trUtf8("Socket Error"),
-                    self.trUtf8("A network error occurred."))
+                    self.tr("Socket Error"),
+                    self.tr("A network error occurred."))
     
     def __sslErrors(self, errors):
         """
@@ -796,8 +796,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             errors, self.__server.getName(), self.__server.getPort())
         if ignored == E5SslErrorHandler.NotIgnored:
             self.networkWidget.addErrorMessage(
-                self.trUtf8("SSL Error"),
-                self.trUtf8(
+                self.tr("SSL Error"),
+                self.tr(
                     """Could not connect to {0} (port {1}) using an SSL"""
                     """ encrypted connection. Either the server does not"""
                     """ support SSL (did you use the correct port?) or"""
@@ -810,8 +810,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     QSslConfiguration.defaultConfiguration())
             if ignored == E5SslErrorHandler.UserIgnored:
                 self.networkWidget.addErrorMessage(
-                    self.trUtf8("SSL Error"),
-                    self.trUtf8(
+                    self.tr("SSL Error"),
+                    self.tr(
                         """The SSL certificate for the server {0} (port {1})"""
                         """ failed the authenticity check. SSL errors"""
                         """ were accepted by you.""")
@@ -868,22 +868,22 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     vers = " " + Version
                 msg = "Eric IRC client{0}, {1}".format(vers, Copyright)
                 self.networkWidget.addServerMessage(
-                    self.trUtf8("CTCP"),
-                    self.trUtf8("Received Version request from {0}.").format(
+                    self.tr("CTCP"),
+                    self.tr("Received Version request from {0}.").format(
                         match.group(1)))
                 self.__sendCtcpReply(match.group(1), "VERSION " + msg)
             elif ctcpRequest == "ping":
                 self.networkWidget.addServerMessage(
-                    self.trUtf8("CTCP"),
-                    self.trUtf8(
+                    self.tr("CTCP"),
+                    self.tr(
                         "Received CTCP-PING request from {0},"
                         " sending answer.").format(match.group(1)))
                 self.__sendCtcpReply(
                     match.group(1), "PING {0}".format(ctcpArg))
             elif ctcpRequest == "clientinfo":
                 self.networkWidget.addServerMessage(
-                    self.trUtf8("CTCP"),
-                    self.trUtf8(
+                    self.tr("CTCP"),
+                    self.tr(
                         "Received CTCP-CLIENTINFO request from {0},"
                         " sending answer.").format(match.group(1)))
                 self.__sendCtcpReply(
@@ -891,8 +891,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
                     "CLIENTINFO CLIENTINFO PING VERSION")
             else:
                 self.networkWidget.addServerMessage(
-                    self.trUtf8("CTCP"),
-                    self.trUtf8(
+                    self.tr("CTCP"),
+                    self.tr(
                         "Received unknown CTCP-{0} request from {1}.")
                     .format(ctcpRequest, match.group(1)))
             return True
@@ -907,7 +907,7 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             index = self.channelsWidget.indexOf(channel)
             self.channelsWidget.setTabText(
                 index,
-                self.trUtf8("{0} ({1})", "channel name, users count").format(
+                self.tr("{0} ({1})", "channel name, users count").format(
                     channel.name(), channel.getUsersCount()))
     
     def __handleNickInUseLogin(self):
@@ -921,8 +921,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
             self.__nickName = nick
         except IndexError:
             self.networkWidget.addServerMessage(
-                self.trUtf8("Critical"),
-                self.trUtf8(
+                self.tr("Critical"),
+                self.tr(
                     "No nickname acceptable to the server configured"
                     " for <b>{0}</b>. Disconnecting...")
                 .format(self.__userName),
@@ -940,8 +940,8 @@ class IrcWidget(QWidget, Ui_IrcWidget):
         Private method to handle a 443 server error.
         """
         self.networkWidget.addServerMessage(
-            self.trUtf8("Critical"),
-            self.trUtf8("The given nickname is already in use."))
+            self.tr("Critical"),
+            self.tr("The given nickname is already in use."))
     
     def __changeNick(self, nick):
         """

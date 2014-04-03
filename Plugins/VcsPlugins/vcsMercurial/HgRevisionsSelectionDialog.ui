@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>371</width>
-    <height>465</height>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -46,9 +46,6 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignRight</set>
-        </property>
-        <property name="minimum">
-         <number>1</number>
         </property>
         <property name="maximum">
          <number>999999999</number>
@@ -189,6 +186,13 @@
         </property>
        </widget>
       </item>
+      <item row="7" column="0" colspan="3">
+       <widget class="QRadioButton" name="none1Button">
+        <property name="text">
+         <string>No revision selected</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -218,9 +222,6 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignRight</set>
-        </property>
-        <property name="minimum">
-         <number>1</number>
         </property>
         <property name="maximum">
          <number>999999999</number>
@@ -358,6 +359,13 @@
         </property>
        </widget>
       </item>
+      <item row="7" column="0" colspan="3">
+       <widget class="QRadioButton" name="none2Button">
+        <property name="text">
+         <string>No revision selected</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -372,10 +380,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>rev1GroupBox</zorder>
-  <zorder>rev2GroupBox</zorder>
-  <zorder>buttonBox</zorder>
-  <zorder>prev2Button</zorder>
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
@@ -392,6 +396,7 @@
   <tabstop>bookmark1Combo</tabstop>
   <tabstop>tip1Button</tabstop>
   <tabstop>prev1Button</tabstop>
+  <tabstop>none1Button</tabstop>
   <tabstop>number2Button</tabstop>
   <tabstop>number2SpinBox</tabstop>
   <tabstop>id2Button</tabstop>
@@ -404,6 +409,7 @@
   <tabstop>bookmark2Combo</tabstop>
   <tabstop>tip2Button</tabstop>
   <tabstop>prev2Button</tabstop>
+  <tabstop>none2Button</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

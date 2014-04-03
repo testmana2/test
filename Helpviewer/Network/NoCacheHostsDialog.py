@@ -42,8 +42,8 @@ class NoCacheHostsDialog(QDialog, Ui_NoCacheHostsDialog):
         self.searchEdit.textChanged.connect(
             self.__proxyModel.setFilterFixedString)
         
-        self.removeButton.clicked[()].connect(self.noCacheList.removeSelected)
-        self.removeAllButton.clicked[()].connect(self.noCacheList.removeAll)
+        self.removeButton.clicked.connect(self.noCacheList.removeSelected)
+        self.removeAllButton.clicked.connect(self.noCacheList.removeAll)
     
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -52,8 +52,8 @@ class NoCacheHostsDialog(QDialog, Ui_NoCacheHostsDialog):
         """
         host, ok = QInputDialog.getText(
             self,
-            self.trUtf8("Not Cached Hosts"),
-            self.trUtf8("Enter host name to add to the list:"),
+            self.tr("Not Cached Hosts"),
+            self.tr("Enter host name to add to the list:"),
             QLineEdit.Normal)
         if ok and host != "" and host not in self.__model.stringList():
             self.__model.insertRow(self.__model.rowCount())

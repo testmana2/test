@@ -70,9 +70,9 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         for channelName in sorted(self.__network.getChannelNames()):
             channel = self.__network.getChannel(channelName)
             if channel.autoJoin():
-                autoJoin = self.trUtf8("Yes")
+                autoJoin = self.tr("Yes")
             else:
-                autoJoin = self.trUtf8("No")
+                autoJoin = self.tr("No")
             QTreeWidgetItem(self.channelList, [channelName, autoJoin])
         
         self.__updateOkButton()
@@ -185,8 +185,8 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
         if itm:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Delete Channel"),
-                self.trUtf8(
+                self.tr("Delete Channel"),
+                self.tr(
                     """Do you really want to delete channel <b>{0}</b>?""")
                 .format(itm.text(0)))
             if res:
@@ -246,15 +246,15 @@ class IrcNetworkEditDialog(QDialog, Ui_IrcNetworkEditDialog):
             channel.setAutoJoin(autoJoin)
             if itm:
                 if autoJoin:
-                    itm.setText(1, self.trUtf8("Yes"))
+                    itm.setText(1, self.tr("Yes"))
                 else:
-                    itm.setText(1, self.trUtf8("No"))
+                    itm.setText(1, self.tr("No"))
                 self.__network.setChannel(channel)
             else:
                 if autoJoin:
-                    autoJoinTxt = self.trUtf8("Yes")
+                    autoJoinTxt = self.tr("Yes")
                 else:
-                    autoJoinTxt = self.trUtf8("No")
+                    autoJoinTxt = self.tr("No")
                 QTreeWidgetItem(self.channelList, [name, autoJoinTxt])
                 self.__network.addChannel(channel)
     

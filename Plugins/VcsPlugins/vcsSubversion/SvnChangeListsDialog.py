@@ -9,8 +9,8 @@ Module implementing a dialog to browse the change lists.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -80,7 +80,7 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         self.changeListsDict = {}
         
         self.filesLabel.setText(
-            self.trUtf8("Files (relative to {0}):").format(path))
+            self.tr("Files (relative to {0}):").format(path))
         
         self.errorGroup.hide()
         self.intercept = False
@@ -116,8 +116,8 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
             self.inputGroup.hide()
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
@@ -144,7 +144,7 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         self.inputGroup.hide()
         
         if len(self.changeListsDict) == 0:
-            self.changeLists.addItem(self.trUtf8("No changelists found"))
+            self.changeLists.addItem(self.tr("No changelists found"))
             self.buttonBox.button(QDialogButtonBox.Close).setFocus(
                 Qt.OtherFocusReason)
         else:

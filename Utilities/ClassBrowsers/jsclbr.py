@@ -11,7 +11,8 @@ It uses the JavaScript parser contained in the jasy web framework.
 
 from __future__ import unicode_literals
 
-import ThirdParty.Jasy.jasy.js.parse.Parser as jsParser
+import jasy.js.parse.Parser as jsParser
+import jasy.js.tokenize.Tokenizer as jsTokenizer
 
 import Utilities
 import Utilities.ClassBrowsers as ClassBrowsers
@@ -93,9 +94,16 @@ class Visitor(object):
         self.__root = None
         self.__stack = []
         
-        self.__source = src
         self.__module = module
         self.__file = filename
+        self.__source = src
+        
+        # normalize line endings
+        self.__source = self.__source.replace("\r\n", "\n").replace("\r", "\n")
+        
+        # ensure source ends with an eol
+        if self.__source[-1] != '\n':
+            self.__source = self.__source + '\n'
     
     def parse(self):
         """
@@ -104,10 +112,13 @@ class Visitor(object):
         @return dictionary containing the parsed information
         """
         try:
-            self.__root = jsParser.parse(self.__source)
+            self.__root = jsParser.parse(self.__source, self.__file)
             self.__visit(self.__root)
         except jsParser.SyntaxError:
-            # ignore syntax errors
+            # ignore syntax errors of the parser
+            pass
+        except jsTokenizer.ParseError:
+            # ignore syntax errors of the tokenizer
             pass
         
         return self.__dict

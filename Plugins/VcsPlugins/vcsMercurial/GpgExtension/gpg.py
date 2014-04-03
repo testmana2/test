@@ -82,11 +82,10 @@ class Gpg(HgExtension):
         if rev is not None:
             if rev == "":
                 rev = "tip"
-            args = []
-            args.append("sigcheck")
+            args = self.vcs.initCommand("sigcheck")
             args.append(rev)
             
-            dia = HgDialog(self.trUtf8('Verify Signatures'), self.vcs)
+            dia = HgDialog(self.tr('Verify Signatures'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()
@@ -117,8 +116,7 @@ class Gpg(HgExtension):
         if dlg.exec_() == QDialog.Accepted:
             revision, noCommit, message, keyId, local, force = dlg.getData()
             
-            args = []
-            args.append("sign")
+            args = self.vcs.initCommand("sign")
             if noCommit:
                 args.append("--no-commit")
             if message:
@@ -134,7 +132,7 @@ class Gpg(HgExtension):
             if revision:
                 args.append(revision)
             
-            dia = HgDialog(self.trUtf8('Sign Revision'), self.vcs)
+            dia = HgDialog(self.tr('Sign Revision'), self.vcs)
             res = dia.startProcess(args, repodir)
             if res:
                 dia.exec_()

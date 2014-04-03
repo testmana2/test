@@ -19,6 +19,7 @@ from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class EditorSpellCheckingPage(ConfigurationPageBase,
@@ -33,6 +34,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         super(EditorSpellCheckingPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorSpellCheckingPage")
+        
+        self.pwlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pelButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         from QScintilla.SpellChecker import SpellChecker
         languages = sorted(SpellChecker.getAvailableLanguages())
@@ -110,9 +114,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select personal word list"),
+            self.tr("Select personal word list"),
             self.pwlEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.tr("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pwlEdit.setText(Utilities.toNativeSeparators(file))
@@ -124,9 +128,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select personal exclude list"),
+            self.tr("Select personal exclude list"),
             self.pelEdit.text(),
-            self.trUtf8("Dictionary File (*.dic);;All Files (*)"))
+            self.tr("Dictionary File (*.dic);;All Files (*)"))
             
         if file:
             self.pelEdit.setText(Utilities.toNativeSeparators(file))

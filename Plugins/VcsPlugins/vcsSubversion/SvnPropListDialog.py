@@ -10,8 +10,8 @@ process.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import QTimer, QProcess, QProcessEnvironment, QRegExp, Qt
@@ -131,8 +131,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         if not procStarted:
             E5MessageBox.critical(
                 self,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format('svn'))

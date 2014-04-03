@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the search box for the shel, terminal and log viewer.
+Module implementing the search box for the shell, terminal and log viewer.
 """
 
 from __future__ import unicode_literals
@@ -19,7 +19,7 @@ import UI.PixmapCache
 
 class SearchWidget(QWidget, Ui_SearchWidget):
     """
-    Class implementing the search box for the shel, terminal and log viewer.
+    Class implementing the search box for the shell, terminal and log viewer.
     
     @signal searchNext(text, caseSensitive, wholeWord) emitted when the user
         pressed the next button (string, boolean, boolean)
@@ -62,6 +62,9 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         
         self.findtextCombo.lineEdit().returnPressed.connect(
             self.__findByReturnPressed)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot()
     def on_closeButton_clicked(self):
@@ -177,4 +180,4 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         else:
             txt = self.findtextCombo.currentText()
             self.statusLabel.setText(
-                self.trUtf8("'{0}' was not found.").format(txt))
+                self.tr("'{0}' was not found.").format(txt))

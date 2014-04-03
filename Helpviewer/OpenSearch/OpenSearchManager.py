@@ -173,7 +173,7 @@ class OpenSearchManager(QObject):
         from Helpviewer.HelpWindow import HelpWindow
 
         reply = HelpWindow.networkAccessManager().get(QNetworkRequest(url))
-        reply.finished[()].connect(self.__engineFromUrlAvailable)
+        reply.finished.connect(self.__engineFromUrlAvailable)
         reply.setParent(self)
         self.__replies.append(reply)
         
@@ -402,7 +402,7 @@ class OpenSearchManager(QObject):
         res = E5MessageBox.yesNo(
             None,
             "",
-            self.trUtf8(
+            self.tr(
                 """<p>Do you want to add the following engine to your"""
                 """ list of search engines?<br/><br/>Name: {0}<br/>"""
                 """Searches on: {1}</p>""").format(engine.name(), host))

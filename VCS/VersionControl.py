@@ -255,6 +255,19 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
+    def vcsLogBrowser(self, name, isFile=False):
+        """
+        Public method used to view the log of a file/directory in the vcs
+        with a log browser dialog.
+        
+        @param name file/directory name to show the log for (string)
+        @keyparam isFile flag indicating log for a file is to be shown
+            (boolean)
+        @exception RuntimeError to indicate that this method must be
+            implemented by a subclass
+        """
+        raise RuntimeError('Not implemented')
+        
     def vcsDiff(self, name):
         """
         Public method used to view the diff of a file/directory in the vcs.
@@ -467,6 +480,15 @@ class VersionControl(QObject):
         """
         pass
         
+    def vcsSupportCommandOptions(self):
+        """
+        Public method to signal the support of user settable command options.
+        
+        @return flag indicating the support  of user settable command options
+            (boolean)
+        """
+        return True
+    
     def vcsDefaultOptions(self):
         """
         Public method used to retrieve the default options for the vcs.
@@ -486,11 +508,12 @@ class VersionControl(QObject):
         @param options a dictionary of option strings with keys as
                 defined by the default options
         """
-        for key in options:
-            try:
-                self.options[key] = options[key]
-            except KeyError:
-                pass
+        if self.vcsSupportCommandOptions():
+            for key in options:
+                try:
+                    self.options[key] = options[key]
+                except KeyError:
+                    pass
         
     def vcsGetOptions(self):
         """
@@ -499,7 +522,10 @@ class VersionControl(QObject):
         @return a dictionary of option strings that can be passed to
             vcsSetOptions.
         """
-        return self.options
+        if self.vcsSupportCommandOptions():
+            return self.options
+        else:
+            return self.defaultOptions
         
     def vcsSetOtherData(self, data):
         """
@@ -569,8 +595,8 @@ class VersionControl(QObject):
         if not procStarted:
             E5MessageBox.critical(
                 None,
-                self.trUtf8('Process Generation Error'),
-                self.trUtf8(
+                self.tr('Process Generation Error'),
+                self.tr(
                     'The process {0} could not be started. '
                     'Ensure, that it is in the search path.'
                 ).format(program))
@@ -700,7 +726,7 @@ class VersionControl(QObject):
             self.statusMonitorThread = None
             self.__statusMonitorStatus(
                 "off",
-                self.trUtf8("Repository status checking is switched off"))
+                self.tr("Repository status checking is switched off"))
     
     def setStatusMonitorInterval(self, interval, project):
         """

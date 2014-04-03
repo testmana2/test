@@ -18,24 +18,33 @@ from E5Gui import E5FileDialog
 from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class AddProjectDialog(QDialog, Ui_AddProjectDialog):
     """
     Class implementing the add project dialog.
     """
-    def __init__(self, parent=None, startdir=None, project=None):
+    def __init__(self, parent=None, startdir=None, project=None,
+                 categories=None):
         """
         Constructor
         
         @param parent parent widget of this dialog (QWidget)
         @param startdir start directory for the selection dialog (string)
         @param project dictionary containing project data
+        @param categories list of already used categories (list of string)
         """
         super(AddProjectDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.fileCompleter = E5FileCompleter(self.filenameEdit)
+        
+        if categories:
+            self.categoryComboBox.addItem("")
+            self.categoryComboBox.addItems(sorted(categories))
         
         self.startdir = startdir
         
@@ -43,7 +52,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         self.__okButton.setEnabled(False)
         
         if project is not None:
-            self.setWindowTitle(self.trUtf8("Project Properties"))
+            self.setWindowTitle(self.tr("Project Properties"))
             
             self.filenameEdit.setReadOnly(True)
             self.fileButton.setEnabled(False)
@@ -52,6 +61,10 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             self.filenameEdit.setText(project['file'])
             self.descriptionEdit.setPlainText(project['description'])
             self.masterCheckBox.setChecked(project['master'])
+            index = self.categoryComboBox.findText(project['category'])
+            if index == -1:
+                index = 0
+            self.categoryComboBox.setCurrentIndex(index)
     
     @pyqtSlot()
     def on_fileButton_clicked(self):
@@ -63,9 +76,9 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             startdir = self.startdir
             projectFile = E5FileDialog.getOpenFileName(
                 self,
-                self.trUtf8("Add Project"),
+                self.tr("Add Project"),
                 startdir,
-                self.trUtf8("Project Files (*.e4p)"))
+                self.tr("Project Files (*.e4p)"))
             
             if projectFile:
                 self.filenameEdit.setText(
@@ -75,14 +88,16 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         """
         Public slot to retrieve the dialogs data.
         
-        @return tuple of four values (string, string, boolean, string) giving
-            the project name, the name of the project file, a flag telling,
-            whether the project shall be the main project and a short
-            description for the project
+        @return tuple of five values (string, string, boolean, string, string)
+            giving the project name, the name of the project file, a flag
+            telling whether the project shall be the main project, a short
+            description for the project and the project category
         """
-        return (self.nameEdit.text(), self.filenameEdit.text(),
+        return (self.nameEdit.text(),
+                self.filenameEdit.text(),
                 self.masterCheckBox.isChecked(),
-                self.descriptionEdit.toPlainText())
+                self.descriptionEdit.toPlainText(),
+                self.categoryComboBox.currentText())
     
     @pyqtSlot(str)
     def on_nameEdit_textChanged(self, txt):

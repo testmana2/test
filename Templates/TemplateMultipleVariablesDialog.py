@@ -103,15 +103,15 @@ class TemplateMultipleVariablesDialog(QDialog):
         self.TemplateMultipleVariablesDialogLayout.addLayout(layout1)
 
         # set the texts of the standard widgets
-        self.setWindowTitle(self.trUtf8("Enter Template Variables"))
-        self.okButton.setText(self.trUtf8("&OK"))
-        self.cancelButton.setText(self.trUtf8("&Cancel"))
+        self.setWindowTitle(self.tr("Enter Template Variables"))
+        self.okButton.setText(self.tr("&OK"))
+        self.cancelButton.setText(self.tr("&Cancel"))
 
         # polish up the dialog
         self.resize(QSize(400, 480).expandedTo(self.minimumSizeHint()))
 
-        self.okButton.clicked[()].connect(self.accept)
-        self.cancelButton.clicked[()].connect(self.reject)
+        self.okButton.clicked.connect(self.accept)
+        self.cancelButton.clicked.connect(self.reject)
 
     def getVariables(self):
         """

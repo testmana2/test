@@ -9,15 +9,13 @@ Module implementing the VCS status monitor thread class for Mercurial.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import QProcess
 
 from VCS.StatusMonitorThread import VcsStatusMonitorThread
-
-import Preferences
 
 
 class HgStatusMonitorThread(VcsStatusMonitorThread):
@@ -34,8 +32,6 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         @param parent reference to the parent object (QObject)
         """
         VcsStatusMonitorThread.__init__(self, interval, project, vcs, parent)
-        
-        self.__ioEncoding = Preferences.getSystem("IOEncoding")
         
         self.__client = None
         self.__useCommandLine = False
@@ -78,8 +74,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 self.__useCommandLine = True
         
         # step 1: get overall status
-        args = []
-        args.append('status')
+        args = self.vcs.initCommand("status")
         args.append('--noninteractive')
         args.append('--all')
         
@@ -96,16 +91,16 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 finished = process.waitForFinished(300000)
                 if finished and process.exitCode() == 0:
                     output = str(process.readAllStandardOutput(),
-                                 self.__ioEncoding, 'replace')
+                                 self.vcs.getEncoding(), 'replace')
                 else:
                     process.kill()
                     process.waitForFinished()
                     error = str(process.readAllStandardError(),
-                                self.__ioEncoding, 'replace')
+                                self.vcs.getEncoding(), 'replace')
             else:
                 process.kill()
                 process.waitForFinished()
-                error = self.trUtf8("Could not start the Mercurial process.")
+                error = self.tr("Could not start the Mercurial process.")
         
         if error:
             return False, error
@@ -122,8 +117,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                     states[name] = status
         
         # step 2: get conflicting changes
-        args = []
-        args.append('resolve')
+        args = self.vcs.initCommand("resolve")
         args.append('--list')
         
         output = ""
@@ -137,9 +131,8 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
             if procStarted:
                 finished = process.waitForFinished(300000)
                 if finished and process.exitCode() == 0:
-                    output = str(
-                        process.readAllStandardOutput(),
-                        self.__ioEncoding, 'replace')
+                    output = str(process.readAllStandardOutput(),
+                                 self.vcs.getEncoding(), 'replace')
         
         for line in output.splitlines():
             flag, name = line.split(" ", 1)
@@ -160,7 +153,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
         self.reportedStates = states
         
         return True, \
-            self.trUtf8("Mercurial status checked successfully")
+            self.tr("Mercurial status checked successfully")
     
     def _shutdown(self):
         """

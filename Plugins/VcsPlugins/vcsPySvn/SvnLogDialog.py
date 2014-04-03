@@ -51,17 +51,17 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         self.vcs = vcs
         
         self.contents.setHtml(
-            self.trUtf8('<b>Processing your request, please wait...</b>'))
+            self.tr('<b>Processing your request, please wait...</b>'))
         
         self.contents.anchorClicked.connect(self.__sourceChanged)
         
         self.flags = {
-            'A': self.trUtf8('Added'),
-            'D': self.trUtf8('Deleted'),
-            'M': self.trUtf8('Modified')
+            'A': self.tr('Added'),
+            'D': self.tr('Deleted'),
+            'M': self.tr('Modified')
         }
         
-        self.revString = self.trUtf8('revision')
+        self.revString = self.tr('revision')
         self.diff = None
         
         self.sbsCheckBox.setEnabled(isFile)
@@ -145,7 +145,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                     url.setEncodedQuery(query)
                     dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
                         url.toString(), query,
-                        self.trUtf8('diff to {0}').format(lv)
+                        self.tr('diff to {0}').format(lv)
                     )
                 except IndexError:
                     pass
@@ -157,11 +157,11 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                 if sys.version_info[0] == 2:
                     author = author.decode('utf-8')
                     message = message.decode('utf-8')
-                dstr = self.trUtf8('<i>author: {0}</i><br />\n')\
+                dstr = self.tr('<i>author: {0}</i><br />\n')\
                     .format(author)
                 self.contents.insertHtml(dstr)
                 
-                dstr = self.trUtf8('<i>date: {0}</i><br />\n')\
+                dstr = self.tr('<i>date: {0}</i><br />\n')\
                     .format(formatTime(log["date"]))
                 self.contents.insertHtml(dstr)
                 
@@ -184,7 +184,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                             copyfrom_path = changeInfo["copyfrom_path"]
                             if sys.version_info[0] == 2:
                                 copyfrom_path = copyfrom_path.decode('utf-8')
-                            dstr += self.trUtf8(
+                            dstr += self.tr(
                                 " (copied from {0}, revision {1})")\
                                 .format(copyfrom_path,
                                         changeInfo["copyfrom_revision"].number)

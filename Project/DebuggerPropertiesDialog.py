@@ -21,6 +21,7 @@ from E5Gui import E5FileDialog
 from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
 import Utilities
+import UI.PixmapCache
 
 from eric5config import getConfig
 
@@ -42,6 +43,9 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         if name:
             self.setObjectName(name)
         self.setupUi(self)
+        
+        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
@@ -103,6 +107,9 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         self.noEncodingCheckBox.setChecked(
             self.project.debugProperties["NOENCODING"])
         
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
+        
     @pyqtSlot()
     def on_interpreterButton_clicked(self):
         """
@@ -110,7 +117,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select interpreter for Debug Client"),
+            self.tr("Select interpreter for Debug Client"),
             self.interpreterEdit.text(),
             "")
             
@@ -124,10 +131,10 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         """
         filters = self.project.dbgFilters[
             self.project.pdata["PROGLANGUAGE"][0]]
-        filters += self.trUtf8("All Files (*)")
+        filters += self.tr("All Files (*)")
         file = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Select Debug Client"),
+            self.tr("Select Debug Client"),
             self.debugClientEdit.text(),
             filters)
             

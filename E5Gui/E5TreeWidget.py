@@ -252,7 +252,7 @@ class E5TreeWidget(QTreeWidget):
            evt.buttons() == Qt.LeftButton:
             self.itemControlClicked.emit(self.itemAt(evt.pos()))
             return
-        elif evt.buttons() == Qt.MiddleButton:
+        elif evt.buttons() == Qt.MidButton:
             self.itemMiddleButtonClicked.emit(self.itemAt(evt.pos()))
             return
         else:

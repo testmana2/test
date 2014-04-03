@@ -18,9 +18,9 @@ class E5ClickableLabel(QLabel):
     Class implementing a clickable label.
     
     @signal clicked(QPoint) emitted upon a click on the label
-            with the left buton
+        with the left button
     @signal middleClicked(QPoint) emitted upon a click on the label
-            with the middle buton or CTRL and left button
+        with the middle button or CTRL and left button
     """
     clicked = pyqtSignal(QPoint)
     middleClicked = pyqtSignal(QPoint)
@@ -44,7 +44,7 @@ class E5ClickableLabel(QLabel):
                 self.middleClicked.emit(evt.globalPos())
             else:
                 self.clicked.emit(evt.globalPos())
-        elif evt.button() == Qt.MiddleButton and \
+        elif evt.button() == Qt.MidButton and \
                 self.rect().contains(evt.pos()):
             self.middleClicked.emit(evt.globalPos())
         else:

@@ -28,11 +28,11 @@ class WatchPointModel(QAbstractItemModel):
         
         self.watchpoints = []
         self.header = [
-            self.trUtf8("Condition"),
-            self.trUtf8("Special"),
-            self.trUtf8('Temporary'),
-            self.trUtf8('Enabled'),
-            self.trUtf8('Ignore Count'),
+            self.tr("Condition"),
+            self.tr("Special"),
+            self.tr('Temporary'),
+            self.tr('Enabled'),
+            self.tr('Ignore Count'),
         ]
         self.alignments = [Qt.Alignment(Qt.AlignLeft),
                            Qt.Alignment(Qt.AlignLeft),

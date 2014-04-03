@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-03-20, 21:27:03 -->
+<!-- Saved: 2014-04-01, 23:14:41 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -10,10 +10,8 @@
   <Hash>df7daa8781250f7664e6ecaeaf1361fa2efd39ee</Hash>
   <ProgLanguage mixed="1">Python3</ProgLanguage>
   <ProjectType>Qt4</ProjectType>
-  <Description>eric5 is an integrated development environment for
-the Python and Ruby language. It uses the PyQt4
-bindings and the QScintilla2 editor widget.</Description>
-  <Version>5.4.0</Version>
+  <Description>eric5 is an integrated development environment for the Python and Ruby language. It uses the PyQt4 bindings and the QScintilla2 editor widget.</Description>
+  <Version>5.5.x</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
@@ -1082,7 +1080,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/Tokenizer.py</Source>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/__init__.py</Source>
     <Source>ThirdParty/Jasy/jasy/js/tokenize/Lang.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/__init__.py</Source>
@@ -1108,6 +1105,27 @@ bindings and the QScintilla2 editor widget.</Description>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/__init__.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/translations.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgExtensionProjectBrowserHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/__init__.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/largefiles.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/ProjectBrowserHelper.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.py</Source>
+    <Source>E5Gui/E5MapWidget.py</Source>
+    <Source>QScintilla/EditorMarkerMap.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1260,7 +1278,6 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Preferences/ConfigurationPages/EditorFilePage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSearchPage.ui</Form>
     <Form>Plugins/VcsPlugins/vcsSubversion/SvnRelocateDialog.ui</Form>
-    <Form>Helpviewer/DownloadDialog.ui</Form>
     <Form>UI/AuthenticationDialog.ui</Form>
     <Form>QScintilla/ShellHistoryDialog.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpAppearancePage.ui</Form>
@@ -1422,12 +1439,20 @@ bindings and the QScintilla2 editor widget.</Description>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.ui</Form>
     <Form>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.ui</Form>
-    <Form>Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialUserDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui</Form>
     <Form>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelvesSelectionDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
@@ -1583,73 +1608,97 @@ bindings and the QScintilla2 editor widget.</Description>
           <string>add</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>checkout</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>commit</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>diff</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>export</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>global</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>history</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>log</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>remove</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>status</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>tag</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
         <key>
           <string>update</string>
         </key>
         <value>
-          <list/>
+          <list>
+            <string></string>
+          </list>
         </value>
       </dict>
     </VcsOptions>
@@ -1851,7 +1900,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>qtHelpFilterAttributes</string>
             </key>
             <value>
-              <string>eric5:ide:5.4</string>
+              <string>eric5:ide:5.5</string>
             </value>
             <key>
               <string>qtHelpFilterName</string>
@@ -1863,7 +1912,7 @@ bindings and the QScintilla2 editor widget.</Description>
               <string>qtHelpNamespace</string>
             </key>
             <value>
-              <string>org.eric5.ide.54</string>
+              <string>org.eric5.ide.55</string>
             </value>
             <key>
               <string>qtHelpOutputDirectory</string>

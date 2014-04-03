@@ -17,6 +17,7 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox
 from E5Gui import E5FileDialog, E5MessageBox
 
 import Utilities
+import UI.PixmapCache
 
 from .Ui_HgAddSubrepositoryDialog import Ui_HgAddSubrepositoryDialog
 
@@ -35,6 +36,8 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         super(HgAddSubrepositoryDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.pathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.__ok = self.buttonBox.button(QDialogButtonBox.Ok)
         self.__ok.setEnabled(False)
         
@@ -43,6 +46,9 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         self.typeCombo.addItem("Mercurial", "hg")
         self.typeCombo.addItem("GIT", "git")
         self.typeCombo.addItem("Subversion", "svn")
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def __updateOk(self):
         """
@@ -83,7 +89,7 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
         """
         path = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Add Sub-repository"),
+            self.tr("Add Sub-repository"),
             os.path.join(self.__projectPath, self.pathEdit.text()),
             E5FileDialog.Options(E5FileDialog.Option(0)))
         
@@ -95,9 +101,9 @@ class HgAddSubrepositoryDialog(QDialog, Ui_HgAddSubrepositoryDialog):
             else:
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8("Add Sub-repository"),
-                    self.trUtf8("""The sub-repository path must be inside"""
-                                """ the project."""))
+                    self.tr("Add Sub-repository"),
+                    self.tr("""The sub-repository path must be inside"""
+                            """ the project."""))
                 return
     
     def getData(self):

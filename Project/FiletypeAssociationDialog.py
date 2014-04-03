@@ -37,12 +37,12 @@ class FiletypeAssociationDialog(QDialog, Ui_FiletypeAssociationDialog):
         # keep these lists in sync
         self.filetypes = ["SOURCES", "FORMS", "TRANSLATIONS", "RESOURCES",
                           "INTERFACES", "OTHERS", "__IGNORE__"]
-        self.filetypeStrings = [self.trUtf8("Sources"), self.trUtf8("Forms"),
-                                self.trUtf8("Translations"),
-                                self.trUtf8("Resources"),
-                                self.trUtf8("Interfaces"),
-                                self.trUtf8("Others"),
-                                self.trUtf8("Ignore")]
+        self.filetypeStrings = [self.tr("Sources"), self.tr("Forms"),
+                                self.tr("Translations"),
+                                self.tr("Resources"),
+                                self.tr("Interfaces"),
+                                self.tr("Others"),
+                                self.tr("Ignore")]
         self.filetypeCombo.addItems(self.filetypeStrings)
         
         self.project = project

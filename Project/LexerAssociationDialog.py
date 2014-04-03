@@ -45,7 +45,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         except AttributeError:
             self.extsep = "."
         
-        self.extras = ["-----------", self.trUtf8("Alternative")]
+        self.extras = ["-----------", self.tr("Alternative")]
         
         import QScintilla.Lexers
         languages = [''] + \
@@ -128,7 +128,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
             if lexer.startswith("Pygments|"):
                 pygmentsLexer = lexer.split("|")[1]
                 pygmentsIndex = self.pygmentsLexerCombo.findText(pygmentsLexer)
-                lexer = self.trUtf8("Alternative")
+                lexer = self.tr("Alternative")
             else:
                 pygmentsIndex = 0
             index = self.editorLexerCombo.findText(lexer)

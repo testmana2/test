@@ -25,7 +25,7 @@ name = "Code Style Checker Plugin"
 author = "Detlev Offenbach <detlev@die-offenbachs.de>"
 autoactivate = True
 deactivateable = True
-version = "5.4.0"
+version = "5.5.0"
 className = "CodeStyleCheckerPlugin"
 packageName = "__core__"
 shortDescription = "Show the Python Code Style Checker dialog."
@@ -147,31 +147,31 @@ class CodeStyleCheckerPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Checks")
         if menu:
             self.__projectAct = E5Action(
-                self.trUtf8('Check Code Style'),
-                self.trUtf8('&Code Style...'), 0, 0,
+                self.tr('Check Code Style'),
+                self.tr('&Code Style...'), 0, 0,
                 self, 'project_check_pep8')
             self.__projectAct.setStatusTip(
-                self.trUtf8('Check code style.'))
-            self.__projectAct.setWhatsThis(self.trUtf8(
+                self.tr('Check code style.'))
+            self.__projectAct.setWhatsThis(self.tr(
                 """<b>Check Code Style...</b>"""
                 """<p>This checks Python files for compliance to the"""
                 """ code style conventions given in various PEPs.</p>"""
             ))
-            self.__projectAct.triggered[()].connect(
+            self.__projectAct.triggered.connect(
                 self.__projectCodeStyleCheck)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
             menu.addAction(self.__projectAct)
         
         self.__editorAct = E5Action(
-            self.trUtf8('Check Code Style'),
-            self.trUtf8('&Code Style...'), 0, 0,
+            self.tr('Check Code Style'),
+            self.tr('&Code Style...'), 0, 0,
             self, "")
-        self.__editorAct.setWhatsThis(self.trUtf8(
+        self.__editorAct.setWhatsThis(self.tr(
             """<b>Check Code Style...</b>"""
             """<p>This checks Python files for compliance to the"""
             """ code style conventions given in various PEPs.</p>"""
         ))
-        self.__editorAct.triggered[()].connect(self.__editorCodeStyleCheck)
+        self.__editorAct.triggered.connect(self.__editorCodeStyleCheck)
         
         e5App().getObject("Project").showMenu.connect(self.__projectShowMenu)
         e5App().getObject("ProjectBrowser").getProjectBrowser("sources")\
@@ -243,15 +243,15 @@ class CodeStyleCheckerPlugin(QObject):
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
-                    self.trUtf8('Check Code Style'),
-                    self.trUtf8('&Code Style...'), 0, 0,
+                    self.tr('Check Code Style'),
+                    self.tr('&Code Style...'), 0, 0,
                     self, "")
-                self.__projectBrowserAct.setWhatsThis(self.trUtf8(
+                self.__projectBrowserAct.setWhatsThis(self.tr(
                     """<b>Check Code Style...</b>"""
                     """<p>This checks Python files for compliance to the"""
                     """ code style conventions given in various PEPs.</p>"""
                 ))
-                self.__projectBrowserAct.triggered[()].connect(
+                self.__projectBrowserAct.triggered.connect(
                     self.__projectBrowserCodeStyleCheck)
             if not self.__projectBrowserAct in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
@@ -337,7 +337,7 @@ class CodeStyleCheckerPlugin(QObject):
         if menuName == "Checks":
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
-            self.__editorAct.setEnabled(editor.getPyVersion())
+            self.__editorAct.setEnabled(editor.isPyFile())
     
     def __editorCodeStyleCheck(self):
         """

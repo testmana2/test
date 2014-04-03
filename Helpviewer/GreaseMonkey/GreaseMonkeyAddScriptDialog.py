@@ -51,11 +51,11 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         exclude = script.exclude()
         
         if include:
-            runsAt = self.trUtf8("<p>runs at:<br/><i>{0}</i></p>").format(
+            runsAt = self.tr("<p>runs at:<br/><i>{0}</i></p>").format(
                 "<br/>".join(include))
         
         if exclude:
-            doesNotRunAt = self.trUtf8(
+            doesNotRunAt = self.tr(
                 "<p>does not run at:<br/><i>{0}</i></p>").format(
                 "<br/>".join(exclude))
         
@@ -85,22 +85,22 @@ class GreaseMonkeyAddScriptDialog(QDialog, Ui_GreaseMonkeyAddScriptDialog):
         Private slot handling the accepted signal.
         """
         if self.__manager.addScript(self.__script):
-            msg = self.trUtf8(
+            msg = self.tr(
                 "<p><b>{0}</b> installed successfully.</p>").format(
                 self.__script.name())
             success = True
         else:
-            msg = self.trUtf8("<p>Cannot install script.</p>")
+            msg = self.tr("<p>Cannot install script.</p>")
             success = False
         
         import Helpviewer.HelpWindow
         if success and Helpviewer.HelpWindow.HelpWindow.notificationsEnabled():
             Helpviewer.HelpWindow.HelpWindow.showNotification(
                 UI.PixmapCache.getPixmap("greaseMonkey48.png"),
-                self.trUtf8("GreaseMonkey Script Installation"),
+                self.tr("GreaseMonkey Script Installation"),
                 msg)
         else:
             E5MessageBox.information(
                 self,
-                self.trUtf8("GreaseMonkey Script Installation"),
+                self.tr("GreaseMonkey Script Installation"),
                 msg)

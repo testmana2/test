@@ -45,18 +45,18 @@ class PyRegExpWizardCharactersDialog(
         
         self.comboItems = []
         self.singleComboItems = []      # these are in addition to the above
-        self.comboItems.append(self.trUtf8("Normal character"))
+        self.comboItems.append(self.tr("Normal character"))
         self.comboItems.append(
-            self.trUtf8("Unicode character in hexadecimal notation"))
+            self.tr("Unicode character in hexadecimal notation"))
         self.comboItems.append(
-            self.trUtf8("Unicode character in octal notation"))
-        self.singleComboItems.append(self.trUtf8("---"))
-        self.singleComboItems.append(self.trUtf8("Bell character (\\a)"))
-        self.singleComboItems.append(self.trUtf8("Page break (\\f)"))
-        self.singleComboItems.append(self.trUtf8("Line feed (\\n)"))
-        self.singleComboItems.append(self.trUtf8("Carriage return (\\r)"))
-        self.singleComboItems.append(self.trUtf8("Horizontal tabulator (\\t)"))
-        self.singleComboItems.append(self.trUtf8("Vertical tabulator (\\v)"))
+            self.tr("Unicode character in octal notation"))
+        self.singleComboItems.append(self.tr("---"))
+        self.singleComboItems.append(self.tr("Bell character (\\a)"))
+        self.singleComboItems.append(self.tr("Page break (\\f)"))
+        self.singleComboItems.append(self.tr("Line feed (\\n)"))
+        self.singleComboItems.append(self.tr("Carriage return (\\r)"))
+        self.singleComboItems.append(self.tr("Horizontal tabulator (\\t)"))
+        self.singleComboItems.append(self.tr("Vertical tabulator (\\v)"))
         
         self.charValidator = QRegExpValidator(QRegExp(".{0,1}"), self)
         self.hexValidator = QRegExpValidator(QRegExp("[0-9a-fA-F]{0,4}"), self)
@@ -87,14 +87,14 @@ class PyRegExpWizardCharactersDialog(
         hlayout0.setSpacing(6)
         hlayout0.setObjectName("hlayout0")
         self.moreSinglesButton = QPushButton(
-            self.trUtf8("Additional Entries"), self.singlesBox)
+            self.tr("Additional Entries"), self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
         hspacer0 = QSpacerItem(
             30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
-        self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
+        self.moreSinglesButton.clicked.connect(self.__addSinglesLine)
         
         # generate dialog part for character ranges
         self.rangesBoxLayout = QVBoxLayout(self.rangesBox)
@@ -121,14 +121,14 @@ class PyRegExpWizardCharactersDialog(
         hlayout1.setSpacing(6)
         hlayout1.setObjectName("hlayout1")
         self.moreRangesButton = QPushButton(
-            self.trUtf8("Additional Entries"), self.rangesBox)
+            self.tr("Additional Entries"), self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
         hspacer1 = QSpacerItem(
             30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
-        self.moreRangesButton.clicked[()].connect(self.__addRangesLine)
+        self.moreRangesButton.clicked.connect(self.__addRangesLine)
         
     def __addSinglesLine(self):
         """
@@ -179,12 +179,12 @@ class PyRegExpWizardCharactersDialog(
         cb1.setEditable(False)
         cb1.addItems(self.comboItems)
         hboxLayout.addWidget(cb1)
-        l1 = QLabel(self.trUtf8("Between:"), hbox)
+        l1 = QLabel(self.tr("Between:"), hbox)
         hboxLayout.addWidget(l1)
         le1 = QLineEdit(hbox)
         le1.setValidator(self.charValidator)
         hboxLayout.addWidget(le1)
-        l2 = QLabel(self.trUtf8("And:"), hbox)
+        l2 = QLabel(self.tr("And:"), hbox)
         hboxLayout.addWidget(l2)
         le2 = QLineEdit(hbox)
         le2.setValidator(self.charValidator)

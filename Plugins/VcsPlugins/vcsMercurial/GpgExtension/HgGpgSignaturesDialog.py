@@ -9,8 +9,8 @@ Module implementing a dialog showing signed changesets.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 import os
@@ -23,8 +23,6 @@ from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, \
 from E5Gui import E5MessageBox
 
 from .Ui_HgGpgSignaturesDialog import Ui_HgGpgSignaturesDialog
-
-import Preferences
 
 
 class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
@@ -94,8 +92,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        args = []
-        args.append('sigs')
+        args = self.vcs.initCommand("sigs")
         
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
@@ -121,8 +118,8 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
                 self.inputGroup.hide()
                 E5MessageBox.critical(
                     self,
-                    self.trUtf8('Process Generation Error'),
-                    self.trUtf8(
+                    self.tr('Process Generation Error'),
+                    self.tr(
                         'The process {0} could not be started. '
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
@@ -154,7 +151,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         
         if self.signaturesList.topLevelItemCount() == 0:
             # no patches present
-            self.__generateItem("", "", self.trUtf8("no signatures found"))
+            self.__generateItem("", "", self.tr("no signatures found"))
         self.__resizeColumns()
         self.__resort()
     
@@ -233,8 +230,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         self.process.setReadChannel(QProcess.StandardOutput)
         
         while self.process.canReadLine():
-            s = str(self.process.readLine(),
-                    Preferences.getSystem("IOEncoding"),
+            s = str(self.process.readLine(), self.vcs.getEncoding(),
                     'replace').strip()
             self.__processOutputLine(s)
     
@@ -261,8 +257,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         if self.process is not None:
             s = str(self.process.readAllStandardError(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace')
+                    self.vcs.getEncoding(), 'replace')
             self.__showError(s)
     
     def __showError(self, out):
@@ -320,7 +315,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         Private method to filter the log entries.
         """
         searchRxText = self.rxEdit.text()
-        filterTop = self.categoryCombo.currentText() == self.trUtf8("Revision")
+        filterTop = self.categoryCombo.currentText() == self.tr("Revision")
         if filterTop and searchRxText.startswith("^"):
             searchRx = QRegExp(
                 "^\s*{0}".format(searchRxText[1:]), Qt.CaseInsensitive)

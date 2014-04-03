@@ -78,6 +78,9 @@ QObject
 </tr><tr>
 <td><a href="#HgExtensionProjectHelper.setObjects">setObjects</a></td>
 <td>Public method to set references to the vcs and project objects.</td>
+</tr><tr>
+<td><a href="#HgExtensionProjectHelper.shutdown">shutdown</a></td>
+<td>Public method to perform shutdown actions.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -110,7 +113,7 @@ list of all actions (list of E5Action)
 <dt>Raises <b>NotImplementedError</b>:</dt>
 <dd>
 raised if the class has not been
-            reimplemente
+            reimplemented
 </dd>
 </dl><a NAME="HgExtensionProjectHelper.initMenu" ID="HgExtensionProjectHelper.initMenu"></a>
 <h4>HgExtensionProjectHelper.initMenu</h4>
@@ -133,7 +136,7 @@ populated menu (QMenu)
 <dt>Raises <b>NotImplementedError</b>:</dt>
 <dd>
 raised if the class has not been
-            reimplemente
+            reimplemented
 </dd>
 </dl><a NAME="HgExtensionProjectHelper.menuTitle" ID="HgExtensionProjectHelper.menuTitle"></a>
 <h4>HgExtensionProjectHelper.menuTitle</h4>
@@ -151,7 +154,7 @@ title of the menu (string)
 <dt>Raises <b>NotImplementedError</b>:</dt>
 <dd>
 raised if the class has not been
-            reimplemente
+            reimplemented
 </dd>
 </dl><a NAME="HgExtensionProjectHelper.setObjects" ID="HgExtensionProjectHelper.setObjects"></a>
 <h4>HgExtensionProjectHelper.setObjects</h4>
@@ -166,7 +169,14 @@ reference to the vcs object
 <dd>
 reference to the project object
 </dd>
-</dl>
+</dl><a NAME="HgExtensionProjectHelper.shutdown" ID="HgExtensionProjectHelper.shutdown"></a>
+<h4>HgExtensionProjectHelper.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to perform shutdown actions.
+</p><p>
+        Note: Derived class may implement this method if needed.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

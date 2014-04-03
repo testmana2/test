@@ -18,6 +18,7 @@ from E5Gui import E5FileDialog
 from .Ui_HgArchiveDialog import Ui_HgArchiveDialog
 
 import Utilities
+import UI.PixmapCache
 
 
 class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
@@ -34,6 +35,8 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         super(HgArchiveDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.archiveButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.__archiveFileCompleter = E5FileCompleter()
         self.__archiveDirCompleter = E5DirCompleter()
         self.__activeCompleter = self.__archiveFileCompleter
@@ -41,28 +44,28 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         self.__activeCompleter.model().setNameFilters([])
         
         self.typeComboBox.addItem(
-            self.trUtf8("Detect Automatically"), "")
+            self.tr("Detect Automatically"), "")
         self.typeComboBox.addItem(
-            self.trUtf8("Directory of Files"), "files")
+            self.tr("Directory of Files"), "files")
         self.typeComboBox.addItem(
-            self.trUtf8("Uncompressed TAR-Archive"), "tar")
+            self.tr("Uncompressed TAR-Archive"), "tar")
         self.typeComboBox.addItem(
-            self.trUtf8("Bzip2 compressed TAR-Archive"), "tbz2")
+            self.tr("Bzip2 compressed TAR-Archive"), "tbz2")
         self.typeComboBox.addItem(
-            self.trUtf8("Gzip compressed TAR-Archive"), "tgz")
+            self.tr("Gzip compressed TAR-Archive"), "tgz")
         self.typeComboBox.addItem(
-            self.trUtf8("Uncompressed ZIP-Archive"), "uzip")
+            self.tr("Uncompressed ZIP-Archive"), "uzip")
         self.typeComboBox.addItem(
-            self.trUtf8("Compressed ZIP-Archive"), "zip")
+            self.tr("Compressed ZIP-Archive"), "zip")
         
         self.__unixFileFilters = [
-            self.trUtf8("Bzip2 compressed TAR-Archive (*.tar.bz2)"),
-            self.trUtf8("Gzip compressed TAR-Archive (*.tar.gz)"),
-            self.trUtf8("Uncompressed TAR-Archive (*.tar)"),
+            self.tr("Bzip2 compressed TAR-Archive (*.tar.bz2)"),
+            self.tr("Gzip compressed TAR-Archive (*.tar.gz)"),
+            self.tr("Uncompressed TAR-Archive (*.tar)"),
         ]
         self.__windowsFileFilters = [
-            self.trUtf8("Compressed ZIP-Archive (*.zip)"),
-            self.trUtf8("Uncompressed ZIP-Archive (*.uzip)")
+            self.tr("Compressed ZIP-Archive (*.zip)"),
+            self.tr("Uncompressed ZIP-Archive (*.uzip)")
         ]
         if Utilities.isWindowsPlatform():
             self.__fileFilters = ";;".join(
@@ -70,7 +73,7 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         else:
             self.__fileFilters = ";;".join(
                 self.__unixFileFilters + self.__windowsFileFilters)
-        self.__fileFilters += ";;" + self.trUtf8("All Files (*)")
+        self.__fileFilters += ";;" + self.tr("All Files (*)")
         
         self.__typeFilters = {
             "tar": ["*.tar"],
@@ -86,6 +89,9 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         
         self.__projectPath = \
             vcs.getPlugin().getProjectHelper().getProject().getProjectPath()
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
     def on_archiveEdit_textChanged(self, archive):
@@ -110,13 +116,13 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         if type_ == "files":
             archive = E5FileDialog.getExistingDirectory(
                 self,
-                self.trUtf8("Select Archive Directory"),
+                self.tr("Select Archive Directory"),
                 archive,
                 E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         else:
             archive, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
                 self,
-                self.trUtf8("Select Archive File"),
+                self.tr("Select Archive File"),
                 archive,
                 self.__fileFilters,
                 None,

@@ -116,7 +116,7 @@ QDialog, Ui_HgDialog
 </table>
 <a NAME="HgDialog.__init__" ID="HgDialog.__init__"></a>
 <h4>HgDialog (Constructor)</h4>
-<b>HgDialog</b>(<i>text, hg=None, parent=None</i>)
+<b>HgDialog</b>(<i>text, hg=None, useClient=True, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -126,6 +126,10 @@ text to be shown by the label (string)
 </dd><dt><i>hg</i></dt>
 <dd>
 reference to the Mercurial interface object (Hg)
+</dd><dt><i>useClient</i></dt>
+<dd>
+flag indicating to use the command server client
+            if possible (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)

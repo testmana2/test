@@ -78,10 +78,10 @@ class NotificationsPage(ConfigurationPageBase, Ui_NotificationsPage):
                 parent=self, setPosition=True)
             self.__notification.setPixmap(
                 UI.PixmapCache.getPixmap("notification48.png"))
-            self.__notification.setHeading(self.trUtf8("Visual Selection"))
+            self.__notification.setHeading(self.tr("Visual Selection"))
             self.__notification.setText(
-                self.trUtf8("Drag the notification window to"
-                            " the desired place and release the button."))
+                self.tr("Drag the notification window to"
+                        " the desired place and release the button."))
             self.__notification.move(
                 QPoint(self.xSpinBox.value(), self.ySpinBox.value()))
             self.__notification.show()

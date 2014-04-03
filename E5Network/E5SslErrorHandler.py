@@ -132,10 +132,10 @@ class E5SslErrorHandler(QObject):
         errorString = '.</li><li>'.join(errorStrings)
         ret = E5MessageBox.yesNo(
             None,
-            self.trUtf8("SSL Errors"),
-            self.trUtf8("""<p>SSL Errors for <br /><b>{0}</b>"""
-                        """<ul><li>{1}</li></ul></p>"""
-                        """<p>Do you want to ignore these errors?</p>""")
+            self.tr("SSL Errors"),
+            self.tr("""<p>SSL Errors for <br /><b>{0}</b>"""
+                    """<ul><li>{1}</li></ul></p>"""
+                    """<p>Do you want to ignore these errors?</p>""")
             .format(server, errorString),
             icon=E5MessageBox.Warning)
         
@@ -147,8 +147,8 @@ class E5SslErrorHandler(QObject):
                     certinfos.append(self.__certToString(cert))
                 caRet = E5MessageBox.yesNo(
                     None,
-                    self.trUtf8("Certificates"),
-                    self.trUtf8(
+                    self.tr("Certificates"),
+                    self.tr(
                         """<p>Certificates:<br/>{0}<br/>"""
                         """Do you want to accept all these certificates?"""
                         """</p>""")
@@ -192,32 +192,32 @@ class E5SslErrorHandler(QObject):
         result = "<p>"
         
         if qVersion() >= "5.0.0":
-            result += self.trUtf8("Name: {0}")\
+            result += self.tr("Name: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
                     ", ".join(cert.subjectInfo(QSslCertificate.CommonName)))))
             
-            result += self.trUtf8("<br/>Organization: {0}")\
+            result += self.tr("<br/>Organization: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
                     ", ".join(cert.subjectInfo(
                         QSslCertificate.Organization)))))
             
-            result += self.trUtf8("<br/>Issuer: {0}")\
+            result += self.tr("<br/>Issuer: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
                     ", ".join(cert.issuerInfo(QSslCertificate.CommonName)))))
         else:
-            result += self.trUtf8("Name: {0}")\
+            result += self.tr("Name: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
                     cert.subjectInfo(QSslCertificate.CommonName))))
             
-            result += self.trUtf8("<br/>Organization: {0}")\
+            result += self.tr("<br/>Organization: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
                     cert.subjectInfo(QSslCertificate.Organization))))
             
-            result += self.trUtf8("<br/>Issuer: {0}")\
+            result += self.tr("<br/>Issuer: {0}")\
                 .format(Utilities.html_encode(Utilities.decodeString(
                     cert.issuerInfo(QSslCertificate.CommonName))))
         
-        result += self.trUtf8(
+        result += self.tr(
             "<br/>Not valid before: {0}<br/>Valid Until: {1}")\
             .format(Utilities.html_encode(
                     cert.effectiveDate().toString("yyyy-MM-dd")),

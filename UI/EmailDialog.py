@@ -75,20 +75,20 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
         self.__mode = mode
         if self.__mode == "feature":
-            self.setWindowTitle(self.trUtf8("Send feature request"))
-            self.msgLabel.setText(self.trUtf8(
+            self.setWindowTitle(self.tr("Send feature request"))
+            self.msgLabel.setText(self.tr(
                 "Enter your &feature request below."
                 " Version information is added automatically."))
             self.__toAddress = FeatureAddress
         else:
             # default is bug
-            self.msgLabel.setText(self.trUtf8(
+            self.msgLabel.setText(self.tr(
                 "Enter your &bug description below."
                 " Version information is added automatically."))
             self.__toAddress = BugAddress
         
         self.sendButton = self.buttonBox.addButton(
-            self.trUtf8("Send"), QDialogButtonBox.ActionRole)
+            self.tr("Send"), QDialogButtonBox.ActionRole)
         self.sendButton.setEnabled(False)
         self.sendButton.setDefault(True)
         
@@ -122,8 +122,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         if ev.key() == Qt.Key_Escape:
             res = E5MessageBox.yesNo(
                 self,
-                self.trUtf8("Close dialog"),
-                self.trUtf8("""Do you really want to close the dialog?"""))
+                self.tr("Close dialog"),
+                self.tr("""Do you really want to close the dialog?"""))
             if res:
                 self.reject()
         
@@ -142,8 +142,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         res = E5MessageBox.yesNo(
             self,
-            self.trUtf8("Close dialog"),
-            self.trUtf8("""Do you really want to close the dialog?"""))
+            self.tr("Close dialog"),
+            self.tr("""Do you really want to close the dialog?"""))
         if res:
             self.reject()
         
@@ -289,8 +289,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 if not password:
                     password, ok = QInputDialog.getText(
                         self,
-                        self.trUtf8("Mail Server Password"),
-                        self.trUtf8("Enter your mail server password"),
+                        self.tr("Mail Server Password"),
+                        self.tr("Enter your mail server password"),
                         QLineEdit.Password)
                     if not ok:
                         # abort
@@ -307,8 +307,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                         errorStr = str(e)
                     res = E5MessageBox.retryAbort(
                         self,
-                        self.trUtf8("Send bug report"),
-                        self.trUtf8(
+                        self.tr("Send bug report"),
+                        self.tr(
                             """<p>Authentication failed.<br>Reason: {0}</p>""")
                         .format(errorStr),
                         E5MessageBox.Critical)
@@ -333,8 +333,8 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                 errorStr = str(e)
             res = E5MessageBox.retryAbort(
                 self,
-                self.trUtf8("Send bug report"),
-                self.trUtf8(
+                self.tr("Send bug report"),
+                self.tr(
                     """<p>Message could not be sent.<br>Reason: {0}</p>""")
                 .format(errorStr),
                 E5MessageBox.Critical)
@@ -351,7 +351,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         fname = E5FileDialog.getOpenFileName(
             self,
-            self.trUtf8("Attach file"))
+            self.tr("Attach file"))
         if fname:
             self.attachFile(fname, False)
         

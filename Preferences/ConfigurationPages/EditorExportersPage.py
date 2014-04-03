@@ -42,12 +42,12 @@ class EditorExportersPage(ConfigurationPageBase, Ui_EditorExportersPage):
         for exporter in exporters:
             self.exportersCombo.addItem(exporter, self.pageIds[exporter])
         
-        self.pdfFontCombo.addItem(self.trUtf8("Courier"), "Courier")
-        self.pdfFontCombo.addItem(self.trUtf8("Helvetica"), "Helvetica")
-        self.pdfFontCombo.addItem(self.trUtf8("Times"), "Times")
+        self.pdfFontCombo.addItem(self.tr("Courier"), "Courier")
+        self.pdfFontCombo.addItem(self.tr("Helvetica"), "Helvetica")
+        self.pdfFontCombo.addItem(self.tr("Times"), "Times")
         
-        self.pdfPageSizeCombo.addItem(self.trUtf8("A4"), "A4")
-        self.pdfPageSizeCombo.addItem(self.trUtf8("Letter"), "Letter")
+        self.pdfPageSizeCombo.addItem(self.tr("A4"), "A4")
+        self.pdfPageSizeCombo.addItem(self.tr("Letter"), "Letter")
         
         # HTML
         self.htmlWysiwygCheckBox.setChecked(

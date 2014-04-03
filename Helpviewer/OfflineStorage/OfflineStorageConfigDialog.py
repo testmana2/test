@@ -61,6 +61,9 @@ class OfflineStorageConfigDialog(QDialog, Ui_OfflineStorageConfigDialog):
                 Preferences.getHelp("LocalContentCanAccessFileUrls"))
         else:
             self.localFileUrlsCheckBox.setVisible(False)
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def storeData(self):
         """

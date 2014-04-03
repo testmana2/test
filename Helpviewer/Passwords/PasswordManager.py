@@ -145,8 +145,8 @@ class PasswordManager(QObject):
                 loginFile, self.__logins, self.__loginForms, self.__never):
             E5MessageBox.critical(
                 None,
-                self.trUtf8("Saving login data"),
-                self.trUtf8(
+                self.tr("Saving login data"),
+                self.tr(
                     """<p>Login data could not be saved to <b>{0}</b></p>"""
                 ).format(loginFile))
         else:
@@ -167,9 +167,9 @@ class PasswordManager(QObject):
             if reader.error() != QXmlStreamReader.NoError:
                 E5MessageBox.warning(
                     None,
-                    self.trUtf8("Loading login data"),
-                    self.trUtf8("""Error when loading login data on"""
-                                """ line {0}, column {1}:\n{2}""")
+                    self.tr("Loading login data"),
+                    self.tr("""Error when loading login data on"""
+                            """ line {0}, column {1}:\n{2}""")
                     .format(reader.lineNumber(),
                             reader.columnNumber(),
                             reader.errorString()))
@@ -193,10 +193,10 @@ class PasswordManager(QObject):
             except IOError as err:
                 E5MessageBox.critical(
                     None,
-                    self.trUtf8("Loading login data"),
-                    self.trUtf8("""<p>Login data could not be loaded """
-                                """from <b>{0}</b></p>"""
-                                """<p>Reason: {1}</p>""")
+                    self.tr("Loading login data"),
+                    self.tr("""<p>Login data could not be loaded """
+                            """from <b>{0}</b></p>"""
+                            """<p>Reason: {1}</p>""")
                     .format(loginFile, str(err)))
                 return
             
@@ -218,8 +218,8 @@ class PasswordManager(QObject):
                         if len(data) != 3:
                             E5MessageBox.critical(
                                 None,
-                                self.trUtf8("Loading login data"),
-                                self.trUtf8(
+                                self.tr("Loading login data"),
+                                self.tr(
                                     """<p>Login data could not be loaded """
                                     """from <b>{0}</b></p>"""
                                     """<p>Reason: Wrong input format</p>""")
@@ -386,18 +386,18 @@ class PasswordManager(QObject):
         if key not in self.__loginForms:
             mb = E5MessageBox.E5MessageBox(
                 E5MessageBox.Question,
-                self.trUtf8("Save password"),
-                self.trUtf8(
+                self.tr("Save password"),
+                self.tr(
                     """<b>Would you like to save this password?</b><br/>"""
                     """To review passwords you have saved and remove them, """
                     """use the password management dialog of the Settings"""
                     """ menu."""),
                 modal=True)
             neverButton = mb.addButton(
-                self.trUtf8("Never for this site"),
+                self.tr("Never for this site"),
                 E5MessageBox.DestructiveRole)
             noButton = mb.addButton(
-                self.trUtf8("Not now"), E5MessageBox.RejectRole)
+                self.tr("Not now"), E5MessageBox.RejectRole)
             mb.addButton(E5MessageBox.Yes)
             mb.exec_()
             if mb.clickedButton() == neverButton:
@@ -606,8 +606,8 @@ class PasswordManager(QObject):
             self.__load()
         
         progress = E5ProgressDialog(
-            self.trUtf8("Re-encoding saved passwords..."),
-            None, 0, len(self.__logins), self.trUtf8("%v/%m Passwords"),
+            self.tr("Re-encoding saved passwords..."),
+            None, 0, len(self.__logins), self.tr("%v/%m Passwords"),
             QApplication.activeModalWidget())
         progress.setMinimumDuration(0)
         count = 0

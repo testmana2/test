@@ -235,7 +235,7 @@ class Previewer(QWidget, Ui_Previewer):
                     Preferences.getEditor("PreviewRestFileNameExtensions"):
                 language = "ReST"
             else:
-                self.__setHtml(fn, self.trUtf8(
+                self.__setHtml(fn, self.tr(
                     "<p>No preview available for this type of file.</p>"))
                 return
             
@@ -275,9 +275,9 @@ class Previewer(QWidget, Ui_Previewer):
         @param title new title (string)
         """
         if title:
-            self.titleLabel.setText(self.trUtf8("Preview - {0}").format(title))
+            self.titleLabel.setText(self.tr("Preview - {0}").format(title))
         else:
-            self.titleLabel.setText(self.trUtf8("Preview"))
+            self.titleLabel.setText(self.tr("Preview"))
     
     def __saveScrollBarPositions(self):
         """
@@ -417,7 +417,7 @@ class PreviewProcessingThread(QThread):
         elif language == "ReST":
             return self.__convertReST(text)
         else:
-            return self.trUtf8(
+            return self.tr(
                 "<p>No preview available for this type of file.</p>")
     
     def __processSSI(self, txt, filename, root):
@@ -477,7 +477,7 @@ class PreviewProcessingThread(QThread):
         try:
             import docutils.core    # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
         except ImportError:
-            return self.trUtf8(
+            return self.tr(
                 """<p>ReStructuredText preview requires the"""
                 """ <b>python-docutils</b> package.<br/>Install it with"""
                 """ your package manager or see"""
@@ -497,7 +497,7 @@ class PreviewProcessingThread(QThread):
         try:
             import markdown     # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
         except ImportError:
-            return self.trUtf8(
+            return self.tr(
                 """<p>Markdown preview requires the <b>python-markdown</b> """
                 """package.<br/>Install it with your package manager or see """
                 """<a href="http://pythonhosted.org/Markdown/install.html">"""

@@ -45,10 +45,10 @@ Module implementing a dialog to browse the log history.
     Class implementing a dialog to browse the log history.
 </p>
 <h3>Derived from</h3>
-QDialog, Ui_HgLogBrowserDialog
+QWidget, Ui_HgLogBrowserDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>MessageColumn</td></tr><tr><td>PhaseColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
+<tr><td>AuthorColumn</td></tr><tr><td>BranchColumn</td></tr><tr><td>DateColumn</td></tr><tr><td>IconColumn</td></tr><tr><td>LargefilesCacheL</td></tr><tr><td>LargefilesCacheW</td></tr><tr><td>MessageColumn</td></tr><tr><td>PathSeparatorRe</td></tr><tr><td>PhaseColumn</td></tr><tr><td>RevisionColumn</td></tr><tr><td>TagsColumn</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -96,11 +96,23 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__getParents">__getParents</a></td>
 <td>Private method to get the parents of the currently viewed file/directory.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__graftActTriggered">__graftActTriggered</a></td>
+<td>Private slot to handle the Copy Changesets action.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__identifyProject">__identifyProject</a></td>
 <td>Private method to determine the revision of the project directory.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__initData">__initData</a></td>
 <td>Private method to (re-)initialize some data.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__lfPullActTriggered">__lfPullActTriggered</a></td>
+<td>Private slot to pull large files of selected revisions.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__modifyForLargeFiles">__modifyForLargeFiles</a></td>
+<td>Private method to convert the displayed file name for a large file.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__phaseActTriggered">__phaseActTriggered</a></td>
+<td>Private slot to handle the Change Phase action.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
@@ -114,6 +126,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStandardOutput signal.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__resetUI">__resetUI</a></td>
+<td>Private method to reset the user interface.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__resizeColumnsFiles">__resizeColumnsFiles</a></td>
 <td>Private method to resize the changed files tree columns.</td>
 </tr><tr>
@@ -126,17 +141,20 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__showError">__showError</a></td>
 <td>Private slot to show some error.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__switchActTriggered">__switchActTriggered</a></td>
+<td>Private slot to switch the working directory to the selected revision.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__tagActTriggered">__tagActTriggered</a></td>
+<td>Private slot to tag the selected revision.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__updateDiffButtons">__updateDiffButtons</a></td>
 <td>Private slot to update the enabled status of the diff buttons.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.__updateGraftButton">__updateGraftButton</a></td>
-<td>Private slot to update the status of the graft button.</td>
-</tr><tr>
 <td><a href="#HgLogBrowserDialog.__updateGui">__updateGui</a></td>
-<td>Private slot to update GUI elements except the diff and phase buttons.</td>
+<td>Private slot to update GUI elements except tool menu actions.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.__updatePhaseButton">__updatePhaseButton</a></td>
-<td>Private slot to update the status of the phase button.</td>
+<td><a href="#HgLogBrowserDialog.__updateToolMenuActions">__updateToolMenuActions</a></td>
+<td>Private slot to update the status of the tool menu actions and the tool menu button.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.closeEvent">closeEvent</a></td>
 <td>Private slot implementing a close event handler.</td>
@@ -168,9 +186,6 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_fromDate_dateChanged">on_fromDate_dateChanged</a></td>
 <td>Private slot called, when the from date changes.</td>
 </tr><tr>
-<td><a href="#HgLogBrowserDialog.on_graftButton_clicked">on_graftButton_clicked</a></td>
-<td>Private slot to handle the Copy Changesets button.</td>
-</tr><tr>
 <td><a href="#HgLogBrowserDialog.on_input_returnPressed">on_input_returnPressed</a></td>
 <td>Private slot to handle the press of the return key in the input field.</td>
 </tr><tr>
@@ -185,9 +200,6 @@ QDialog, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
 <td>Private slot to handle the password checkbox toggled.</td>
-</tr><tr>
-<td><a href="#HgLogBrowserDialog.on_phaseButton_clicked">on_phaseButton_clicked</a></td>
-<td>Private slot to handle the Change Phase button.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
 <td>Private slot to refresh the log.</td>
@@ -204,6 +216,9 @@ QDialog, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_toDate_dateChanged">on_toDate_dateChanged</a></td>
 <td>Private slot called, when the from date changes.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.show">show</a></td>
+<td>Public slot to show the dialog.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.start">start</a></td>
 <td>Public slot to start the hg log command.</td>
 </tr>
@@ -214,7 +229,7 @@ QDialog, Ui_HgLogBrowserDialog
 </table>
 <a NAME="HgLogBrowserDialog.__init__" ID="HgLogBrowserDialog.__init__"></a>
 <h4>HgLogBrowserDialog (Constructor)</h4>
-<b>HgLogBrowserDialog</b>(<i>vcs, mode="log", bundle=None, isFile=False, parent=None</i>)
+<b>HgLogBrowserDialog</b>(<i>vcs, mode="log", parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -224,12 +239,6 @@ reference to the vcs object
 </dd><dt><i>mode</i></dt>
 <dd>
 mode of the dialog (string; one of log, incoming, outgoing)
-</dd><dt><i>bundle</i></dt>
-<dd>
-name of a bundle file (string)
-</dd><dt><i>isFile</i></dt>
-<dd>
-flag indicating log for a file is to be shown (boolean)
 </dd><dt><i>parent</i></dt>
 <dd>
 parent widget (QWidget)
@@ -442,7 +451,12 @@ revision number to get parents for (string)
 <dd>
 list of parent revisions (list of integers)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.__identifyProject" ID="HgLogBrowserDialog.__identifyProject"></a>
+</dl><a NAME="HgLogBrowserDialog.__graftActTriggered" ID="HgLogBrowserDialog.__graftActTriggered"></a>
+<h4>HgLogBrowserDialog.__graftActTriggered</h4>
+<b>__graftActTriggered</b>(<i></i>)
+<p>
+        Private slot to handle the Copy Changesets action.
+</p><a NAME="HgLogBrowserDialog.__identifyProject" ID="HgLogBrowserDialog.__identifyProject"></a>
 <h4>HgLogBrowserDialog.__identifyProject</h4>
 <b>__identifyProject</b>(<i></i>)
 <p>
@@ -452,6 +466,31 @@ list of parent revisions (list of integers)
 <b>__initData</b>(<i></i>)
 <p>
         Private method to (re-)initialize some data.
+</p><a NAME="HgLogBrowserDialog.__lfPullActTriggered" ID="HgLogBrowserDialog.__lfPullActTriggered"></a>
+<h4>HgLogBrowserDialog.__lfPullActTriggered</h4>
+<b>__lfPullActTriggered</b>(<i></i>)
+<p>
+        Private slot to pull large files of selected revisions.
+</p><a NAME="HgLogBrowserDialog.__modifyForLargeFiles" ID="HgLogBrowserDialog.__modifyForLargeFiles"></a>
+<h4>HgLogBrowserDialog.__modifyForLargeFiles</h4>
+<b>__modifyForLargeFiles</b>(<i>filename</i>)
+<p>
+        Private method to convert the displayed file name for a large file.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+file name to be processed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed file name (string)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__phaseActTriggered" ID="HgLogBrowserDialog.__phaseActTriggered"></a>
+<h4>HgLogBrowserDialog.__phaseActTriggered</h4>
+<b>__phaseActTriggered</b>(<i></i>)
+<p>
+        Private slot to handle the Change Phase action.
 </p><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
 <h4>HgLogBrowserDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
@@ -485,6 +524,11 @@ exit status of the process (QProcess.ExitStatus)
         Private slot to handle the readyReadStandardOutput signal.
 </p><p>
         It reads the output of the process and inserts it into a buffer.
+</p><a NAME="HgLogBrowserDialog.__resetUI" ID="HgLogBrowserDialog.__resetUI"></a>
+<h4>HgLogBrowserDialog.__resetUI</h4>
+<b>__resetUI</b>(<i></i>)
+<p>
+        Private method to reset the user interface.
 </p><a NAME="HgLogBrowserDialog.__resizeColumnsFiles" ID="HgLogBrowserDialog.__resizeColumnsFiles"></a>
 <h4>HgLogBrowserDialog.__resizeColumnsFiles</h4>
 <b>__resizeColumnsFiles</b>(<i></i>)
@@ -510,32 +554,39 @@ exit status of the process (QProcess.ExitStatus)
 <dd>
 error to be shown (string)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.__updateDiffButtons" ID="HgLogBrowserDialog.__updateDiffButtons"></a>
+</dl><a NAME="HgLogBrowserDialog.__switchActTriggered" ID="HgLogBrowserDialog.__switchActTriggered"></a>
+<h4>HgLogBrowserDialog.__switchActTriggered</h4>
+<b>__switchActTriggered</b>(<i></i>)
+<p>
+        Private slot to switch the working directory to the
+        selected revision.
+</p><a NAME="HgLogBrowserDialog.__tagActTriggered" ID="HgLogBrowserDialog.__tagActTriggered"></a>
+<h4>HgLogBrowserDialog.__tagActTriggered</h4>
+<b>__tagActTriggered</b>(<i></i>)
+<p>
+        Private slot to tag the selected revision.
+</p><a NAME="HgLogBrowserDialog.__updateDiffButtons" ID="HgLogBrowserDialog.__updateDiffButtons"></a>
 <h4>HgLogBrowserDialog.__updateDiffButtons</h4>
 <b>__updateDiffButtons</b>(<i></i>)
 <p>
         Private slot to update the enabled status of the diff buttons.
-</p><a NAME="HgLogBrowserDialog.__updateGraftButton" ID="HgLogBrowserDialog.__updateGraftButton"></a>
-<h4>HgLogBrowserDialog.__updateGraftButton</h4>
-<b>__updateGraftButton</b>(<i></i>)
-<p>
-        Private slot to update the status of the graft button.
 </p><a NAME="HgLogBrowserDialog.__updateGui" ID="HgLogBrowserDialog.__updateGui"></a>
 <h4>HgLogBrowserDialog.__updateGui</h4>
 <b>__updateGui</b>(<i>itm</i>)
 <p>
-        Private slot to update GUI elements except the diff and phase buttons.
+        Private slot to update GUI elements except tool menu actions.
 </p><dl>
 <dt><i>itm</i></dt>
 <dd>
 reference to the item the update should be based on
             (QTreeWidgetItem)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.__updatePhaseButton" ID="HgLogBrowserDialog.__updatePhaseButton"></a>
-<h4>HgLogBrowserDialog.__updatePhaseButton</h4>
-<b>__updatePhaseButton</b>(<i></i>)
+</dl><a NAME="HgLogBrowserDialog.__updateToolMenuActions" ID="HgLogBrowserDialog.__updateToolMenuActions"></a>
+<h4>HgLogBrowserDialog.__updateToolMenuActions</h4>
+<b>__updateToolMenuActions</b>(<i></i>)
 <p>
-        Private slot to update the status of the phase button.
+        Private slot to update the status of the tool menu actions and
+        the tool menu button.
 </p><a NAME="HgLogBrowserDialog.closeEvent" ID="HgLogBrowserDialog.closeEvent"></a>
 <h4>HgLogBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
@@ -624,12 +675,7 @@ text of the selected field (string)
 <dd>
 new date (QDate)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_graftButton_clicked" ID="HgLogBrowserDialog.on_graftButton_clicked"></a>
-<h4>HgLogBrowserDialog.on_graftButton_clicked</h4>
-<b>on_graftButton_clicked</b>(<i></i>)
-<p>
-        Private slot to handle the Copy Changesets button.
-</p><a NAME="HgLogBrowserDialog.on_input_returnPressed" ID="HgLogBrowserDialog.on_input_returnPressed"></a>
+</dl><a NAME="HgLogBrowserDialog.on_input_returnPressed" ID="HgLogBrowserDialog.on_input_returnPressed"></a>
 <h4>HgLogBrowserDialog.on_input_returnPressed</h4>
 <b>on_input_returnPressed</b>(<i></i>)
 <p>
@@ -667,12 +713,7 @@ reference to the old current item (QTreeWidgetItem)
 <dd>
 flag indicating the status of the check box (boolean)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_phaseButton_clicked" ID="HgLogBrowserDialog.on_phaseButton_clicked"></a>
-<h4>HgLogBrowserDialog.on_phaseButton_clicked</h4>
-<b>on_phaseButton_clicked</b>(<i></i>)
-<p>
-        Private slot to handle the Change Phase button.
-</p><a NAME="HgLogBrowserDialog.on_refreshButton_clicked" ID="HgLogBrowserDialog.on_refreshButton_clicked"></a>
+</dl><a NAME="HgLogBrowserDialog.on_refreshButton_clicked" ID="HgLogBrowserDialog.on_refreshButton_clicked"></a>
 <h4>HgLogBrowserDialog.on_refreshButton_clicked</h4>
 <b>on_refreshButton_clicked</b>(<i></i>)
 <p>
@@ -712,15 +753,27 @@ flag indicating the state of the check box (boolean)
 <dd>
 new date (QDate)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.start" ID="HgLogBrowserDialog.start"></a>
+</dl><a NAME="HgLogBrowserDialog.show" ID="HgLogBrowserDialog.show"></a>
+<h4>HgLogBrowserDialog.show</h4>
+<b>show</b>(<i></i>)
+<p>
+        Public slot to show the dialog.
+</p><a NAME="HgLogBrowserDialog.start" ID="HgLogBrowserDialog.start"></a>
 <h4>HgLogBrowserDialog.start</h4>
-<b>start</b>(<i>fn</i>)
+<b>start</b>(<i>fn, bundle=None, isFile=False</i>)
 <p>
         Public slot to start the hg log command.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to show the log for (string)
+</dd><dt><i>bundle=</i></dt>
+<dd>
+name of a bundle file (string)
+</dd><dt><i>isFile=</i></dt>
+<dd>
+flag indicating log for a file is to be shown
+            (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

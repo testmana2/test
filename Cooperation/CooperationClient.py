@@ -85,7 +85,7 @@ class CooperationClient(QObject):
                 break
         
         if self.__username == "":
-            self.__username = self.trUtf8("unknown")
+            self.__username = self.tr("unknown")
         
         self.__listening = False
         self.__serversErrorString = ""
@@ -293,7 +293,7 @@ class CooperationClient(QObject):
             port = int(port)
             
             if port == 0:
-                msg = self.trUtf8("Illegal address: {0}@{1}\n").format(
+                msg = self.tr("Illegal address: {0}@{1}\n").format(
                     host, port)
                 self.connectionError.emit(msg)
             else:
@@ -386,7 +386,7 @@ class CooperationClient(QObject):
                 self.__serversErrorString = self.__servers[0].errorString()
         else:
             res = False
-            self.__serversErrorString = self.trUtf8("No servers present.")
+            self.__serversErrorString = self.tr("No servers present.")
         
         if res:
             self.__serversErrorString = ""

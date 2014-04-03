@@ -51,6 +51,9 @@ class CookiesConfigurationDialog(QDialog, Ui_CookiesConfigurationDialog):
         
         self.filterTrackingCookiesCheckbox.setChecked(
             jar.filterTrackingCookies())
+        
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()), msh.height())
     
     def accept(self):
         """

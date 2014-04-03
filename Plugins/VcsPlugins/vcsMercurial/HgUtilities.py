@@ -18,7 +18,7 @@ import Utilities
 
 def getConfigPath():
     """
-    Public method to get the filename of the config file.
+    Public function to get the filename of the config file.
     
     @return filename of the config file (string)
     """
@@ -32,7 +32,7 @@ def getConfigPath():
 
 def prepareProcess(proc, encoding="", language=""):
     """
-    Public method to prepare the given process.
+    Public function to prepare the given process.
     
     @param proc reference to the proces to be prepared (QProcess)
     @param encoding encoding to be used by the process (string)

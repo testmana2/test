@@ -132,7 +132,7 @@ class BackgroundService(QTcpServer):
         if connection is None:
             if fx != 'INIT':
                 self.serviceNotAvailable.emit(
-                    fx, lang, fn, self.trUtf8(
+                    fx, lang, fn, self.tr(
                         '{0} not configured.').format(lang))
             # Reset flag and continue processing queue
             self.isWorking = None

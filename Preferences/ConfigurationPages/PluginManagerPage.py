@@ -21,6 +21,7 @@ from .Ui_PluginManagerPage import Ui_PluginManagerPage
 
 import Preferences
 import Utilities
+import UI.PixmapCache
 
 
 class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
@@ -35,6 +36,8 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
         
+        self.downloadDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        
         self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
         
         # set initial values
@@ -42,6 +45,10 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
             Preferences.getPluginManager("ActivateExternal"))
         self.downloadDirEdit.setText(
             Preferences.getPluginManager("DownloadPath"))
+        self.generationsSpinBox.setValue(
+            Preferences.getPluginManager("KeepGenerations"))
+        self.keepHiddenCheckBox.setChecked(
+            Preferences.getPluginManager("KeepHidden"))
         
         period = Preferences.getPluginManager("UpdatesCheckInterval")
         if period == 0:
@@ -69,6 +76,12 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         Preferences.setPluginManager(
             "DownloadPath",
             self.downloadDirEdit.text())
+        Preferences.setPluginManager(
+            "KeepGenerations",
+            self.generationsSpinBox.value())
+        Preferences.setPluginManager(
+            "KeepHidden",
+            self.keepHiddenCheckBox.isChecked())
         
         if self.noCheckRadioButton.isChecked():
             period = 0
@@ -95,7 +108,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         """
         directory = E5FileDialog.getExistingDirectory(
             self,
-            self.trUtf8("Select plugins download directory"),
+            self.tr("Select plugins download directory"),
             self.downloadDirEdit.text(),
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
             

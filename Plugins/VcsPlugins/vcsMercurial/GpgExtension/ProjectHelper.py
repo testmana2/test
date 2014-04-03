@@ -33,49 +33,49 @@ class GpgProjectHelper(HgExtensionProjectHelper):
         Public method to generate the action objects.
         """
         self.hgGpgListAct = E5Action(
-            self.trUtf8('List Signed Changesets'),
+            self.tr('List Signed Changesets'),
             UI.PixmapCache.getIcon("changesetSignList.png"),
-            self.trUtf8('List Signed Changesets...'),
+            self.tr('List Signed Changesets...'),
             0, 0, self, 'mercurial_gpg_list')
-        self.hgGpgListAct.setStatusTip(self.trUtf8(
+        self.hgGpgListAct.setStatusTip(self.tr(
             'List signed changesets'
         ))
-        self.hgGpgListAct.setWhatsThis(self.trUtf8(
+        self.hgGpgListAct.setWhatsThis(self.tr(
             """<b>List Signed Changesets</b>"""
             """<p>This opens a dialog listing all signed changesets.</p>"""
         ))
-        self.hgGpgListAct.triggered[()].connect(self.__hgGpgSignatures)
+        self.hgGpgListAct.triggered.connect(self.__hgGpgSignatures)
         self.actions.append(self.hgGpgListAct)
         
         self.hgGpgVerifyAct = E5Action(
-            self.trUtf8('Verify Signatures'),
+            self.tr('Verify Signatures'),
             UI.PixmapCache.getIcon("changesetSignVerify.png"),
-            self.trUtf8('Verify Signatures'),
+            self.tr('Verify Signatures'),
             0, 0, self, 'mercurial_gpg_verify')
-        self.hgGpgVerifyAct.setStatusTip(self.trUtf8(
+        self.hgGpgVerifyAct.setStatusTip(self.tr(
             'Verify all signatures there may be for a particular revision'
         ))
-        self.hgGpgVerifyAct.setWhatsThis(self.trUtf8(
+        self.hgGpgVerifyAct.setWhatsThis(self.tr(
             """<b>Verify Signatures</b>"""
             """<p>This verifies all signatures there may be for a particular"""
             """ revision.</p>"""
         ))
-        self.hgGpgVerifyAct.triggered[()].connect(self.__hgGpgVerifySignatures)
+        self.hgGpgVerifyAct.triggered.connect(self.__hgGpgVerifySignatures)
         self.actions.append(self.hgGpgVerifyAct)
         
         self.hgGpgSignAct = E5Action(
-            self.trUtf8('Sign Revision'),
+            self.tr('Sign Revision'),
             UI.PixmapCache.getIcon("changesetSign.png"),
-            self.trUtf8('Sign Revision'),
+            self.tr('Sign Revision'),
             0, 0, self, 'mercurial_gpg_sign')
-        self.hgGpgSignAct.setStatusTip(self.trUtf8(
+        self.hgGpgSignAct.setStatusTip(self.tr(
             'Add a signature for a selected revision'
         ))
-        self.hgGpgSignAct.setWhatsThis(self.trUtf8(
+        self.hgGpgSignAct.setWhatsThis(self.tr(
             """<b>Sign Revision</b>"""
             """<p>This adds a signature for a selected revision.</p>"""
         ))
-        self.hgGpgSignAct.triggered[()].connect(self.__hgGpgSign)
+        self.hgGpgSignAct.triggered.connect(self.__hgGpgSign)
         self.actions.append(self.hgGpgSignAct)
     
     def initMenu(self, mainMenu):
@@ -101,7 +101,7 @@ class GpgProjectHelper(HgExtensionProjectHelper):
         
         @return title of the menu (string)
         """
-        return self.trUtf8("GPG")
+        return self.tr("GPG")
     
     def __hgGpgSignatures(self):
         """

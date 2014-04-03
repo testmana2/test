@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>589</width>
-    <height>698</height>
+    <width>591</width>
+    <height>769</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -54,12 +54,9 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="downloadDirButton">
+         <widget class="QToolButton" name="downloadDirButton">
           <property name="toolTip">
            <string>Select the download directory via a directory selection dialog</string>
-          </property>
-          <property name="text">
-           <string>...</string>
           </property>
          </widget>
         </item>

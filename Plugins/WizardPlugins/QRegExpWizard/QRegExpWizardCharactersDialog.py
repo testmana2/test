@@ -51,46 +51,46 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         
         self.comboItems = []
         self.singleComboItems = []      # these are in addition to the above
-        self.comboItems.append((self.trUtf8("Normal character"), "-c"))
+        self.comboItems.append((self.tr("Normal character"), "-c"))
         if mode == QRegExpWizardCharactersDialog.RegExpMode:
-            self.comboItems.append((self.trUtf8(
+            self.comboItems.append((self.tr(
                 "Unicode character in hexadecimal notation"), "-h"))
-            self.comboItems.append((self.trUtf8(
+            self.comboItems.append((self.tr(
                 "ASCII/Latin1 character in octal notation"), "-o"))
             self.singleComboItems.append(("---", "-i"))
             self.singleComboItems.append(
-                (self.trUtf8("Bell character (\\a)"), "\\a"))
+                (self.tr("Bell character (\\a)"), "\\a"))
             self.singleComboItems.append(
-                (self.trUtf8("Page break (\\f)"), "\\f"))
+                (self.tr("Page break (\\f)"), "\\f"))
             self.singleComboItems.append(
-                (self.trUtf8("Line feed (\\n)"), "\\n"))
+                (self.tr("Line feed (\\n)"), "\\n"))
             self.singleComboItems.append(
-                (self.trUtf8("Carriage return (\\r)"), "\\r"))
+                (self.tr("Carriage return (\\r)"), "\\r"))
             self.singleComboItems.append(
-                (self.trUtf8("Horizontal tabulator (\\t)"), "\\t"))
+                (self.tr("Horizontal tabulator (\\t)"), "\\t"))
             self.singleComboItems.append(
-                (self.trUtf8("Vertical tabulator (\\v)"), "\\v"))
+                (self.tr("Vertical tabulator (\\v)"), "\\v"))
         elif mode == QRegExpWizardCharactersDialog.W3CMode:
-            self.comboItems.append((self.trUtf8(
+            self.comboItems.append((self.tr(
                 "Unicode character in hexadecimal notation"), "-h"))
-            self.comboItems.append((self.trUtf8(
+            self.comboItems.append((self.tr(
                 "ASCII/Latin1 character in octal notation"), "-o"))
             self.singleComboItems.append(("---", "-i"))
             self.singleComboItems.append(
-                (self.trUtf8("Line feed (\\n)"), "\\n"))
+                (self.tr("Line feed (\\n)"), "\\n"))
             self.singleComboItems.append(
-                (self.trUtf8("Carriage return (\\r)"), "\\r"))
+                (self.tr("Carriage return (\\r)"), "\\r"))
             self.singleComboItems.append(
-                (self.trUtf8("Horizontal tabulator (\\t)"), "\\t"))
+                (self.tr("Horizontal tabulator (\\t)"), "\\t"))
             self.singleComboItems.append(("---", "-i"))
             self.singleComboItems.append(
-                (self.trUtf8("Character Category"), "-ccp"))
+                (self.tr("Character Category"), "-ccp"))
             self.singleComboItems.append(
-                (self.trUtf8("Character Block"), "-cbp"))
+                (self.tr("Character Block"), "-cbp"))
             self.singleComboItems.append(
-                (self.trUtf8("Not Character Category"), "-ccn"))
+                (self.tr("Not Character Category"), "-ccn"))
             self.singleComboItems.append(
-                (self.trUtf8("Not Character Block"), "-cbn"))
+                (self.tr("Not Character Block"), "-cbn"))
         
         self.charValidator = QRegExpValidator(QRegExp(".{0,1}"), self)
         self.hexValidator = QRegExpValidator(QRegExp("[0-9a-fA-F]{0,4}"), self)
@@ -122,14 +122,14 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         hlayout0.setSpacing(6)
         hlayout0.setObjectName("hlayout0")
         self.moreSinglesButton = QPushButton(
-            self.trUtf8("Additional Entries"), self.singlesBox)
+            self.tr("Additional Entries"), self.singlesBox)
         self.moreSinglesButton.setObjectName("moreSinglesButton")
         hlayout0.addWidget(self.moreSinglesButton)
         hspacer0 = QSpacerItem(
             30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout0.addItem(hspacer0)
         self.singlesBoxLayout.addLayout(hlayout0)
-        self.moreSinglesButton.clicked[()].connect(self.__addSinglesLine)
+        self.moreSinglesButton.clicked.connect(self.__addSinglesLine)
         
         # generate dialog part for character ranges
         self.rangesBoxLayout = QVBoxLayout(self.rangesBox)
@@ -157,14 +157,14 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         hlayout1.setSpacing(6)
         hlayout1.setObjectName("hlayout1")
         self.moreRangesButton = QPushButton(
-            self.trUtf8("Additional Entries"), self.rangesBox)
+            self.tr("Additional Entries"), self.rangesBox)
         self.moreSinglesButton.setObjectName("moreRangesButton")
         hlayout1.addWidget(self.moreRangesButton)
         hspacer1 = QSpacerItem(
             30, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         hlayout1.addItem(hspacer1)
         self.rangesBoxLayout.addLayout(hlayout1)
-        self.moreRangesButton.clicked[()].connect(self.__addRangesLine)
+        self.moreRangesButton.clicked.connect(self.__addRangesLine)
         
     def __initCharacterSelectors(self):
         """
@@ -172,230 +172,230 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         """
         self.__characterCategories = (
             # display name                              code
-            (self.trUtf8("Letter, Any"),                "L"),
-            (self.trUtf8("Letter, Uppercase"),          "Lu"),
-            (self.trUtf8("Letter, Lowercase"),          "Ll"),
-            (self.trUtf8("Letter, Titlecase"),          "Lt"),
-            (self.trUtf8("Letter, Modifier"),           "Lm"),
-            (self.trUtf8("Letter, Other"),              "Lo"),
-            (self.trUtf8("Mark, Any"),                  "M"),
-            (self.trUtf8("Mark, Nonspacing"),           "Mn"),
-            (self.trUtf8("Mark, Spacing Combining"),    "Mc"),
-            (self.trUtf8("Mark, Enclosing"),            "Me"),
-            (self.trUtf8("Number, Any"),                "N"),
-            (self.trUtf8("Number, Decimal Digit"),      "Nd"),
-            (self.trUtf8("Number, Letter"),             "Nl"),
-            (self.trUtf8("Number, Other"),              "No"),
-            (self.trUtf8("Punctuation, Any"),           "P"),
-            (self.trUtf8("Punctuation, Connector"),     "Pc"),
-            (self.trUtf8("Punctuation, Dash"),          "Pd"),
-            (self.trUtf8("Punctuation, Open"),          "Ps"),
-            (self.trUtf8("Punctuation, Close"),         "Pe"),
-            (self.trUtf8("Punctuation, Initial Quote"), "Pi"),
-            (self.trUtf8("Punctuation, Final Quote"),   "Pf"),
-            (self.trUtf8("Punctuation, Other"),         "Po"),
-            (self.trUtf8("Symbol, Any"),                "S"),
-            (self.trUtf8("Symbol, Math"),               "Sm"),
-            (self.trUtf8("Symbol, Currency"),           "Sc"),
-            (self.trUtf8("Symbol, Modifier"),           "Sk"),
-            (self.trUtf8("Symbol, Other"),              "So"),
-            (self.trUtf8("Separator, Any"),             "Z"),
-            (self.trUtf8("Separator, Space"),           "Zs"),
-            (self.trUtf8("Separator, Line"),            "Zl"),
-            (self.trUtf8("Separator, Paragraph"),       "Zp"),
-            (self.trUtf8("Other, Any"),                 "C"),
-            (self.trUtf8("Other, Control"),             "Cc"),
-            (self.trUtf8("Other, Format"),              "Cf"),
-            (self.trUtf8("Other, Private Use"),         "Co"),
-            (self.trUtf8("Other, Not Assigned"),        "Cn"),
+            (self.tr("Letter, Any"),                "L"),
+            (self.tr("Letter, Uppercase"),          "Lu"),
+            (self.tr("Letter, Lowercase"),          "Ll"),
+            (self.tr("Letter, Titlecase"),          "Lt"),
+            (self.tr("Letter, Modifier"),           "Lm"),
+            (self.tr("Letter, Other"),              "Lo"),
+            (self.tr("Mark, Any"),                  "M"),
+            (self.tr("Mark, Nonspacing"),           "Mn"),
+            (self.tr("Mark, Spacing Combining"),    "Mc"),
+            (self.tr("Mark, Enclosing"),            "Me"),
+            (self.tr("Number, Any"),                "N"),
+            (self.tr("Number, Decimal Digit"),      "Nd"),
+            (self.tr("Number, Letter"),             "Nl"),
+            (self.tr("Number, Other"),              "No"),
+            (self.tr("Punctuation, Any"),           "P"),
+            (self.tr("Punctuation, Connector"),     "Pc"),
+            (self.tr("Punctuation, Dash"),          "Pd"),
+            (self.tr("Punctuation, Open"),          "Ps"),
+            (self.tr("Punctuation, Close"),         "Pe"),
+            (self.tr("Punctuation, Initial Quote"), "Pi"),
+            (self.tr("Punctuation, Final Quote"),   "Pf"),
+            (self.tr("Punctuation, Other"),         "Po"),
+            (self.tr("Symbol, Any"),                "S"),
+            (self.tr("Symbol, Math"),               "Sm"),
+            (self.tr("Symbol, Currency"),           "Sc"),
+            (self.tr("Symbol, Modifier"),           "Sk"),
+            (self.tr("Symbol, Other"),              "So"),
+            (self.tr("Separator, Any"),             "Z"),
+            (self.tr("Separator, Space"),           "Zs"),
+            (self.tr("Separator, Line"),            "Zl"),
+            (self.tr("Separator, Paragraph"),       "Zp"),
+            (self.tr("Other, Any"),                 "C"),
+            (self.tr("Other, Control"),             "Cc"),
+            (self.tr("Other, Format"),              "Cf"),
+            (self.tr("Other, Private Use"),         "Co"),
+            (self.tr("Other, Not Assigned"),        "Cn"),
         )
         
         self.__characterBlocks = (
-            (self.trUtf8("Basic Latin"),
+            (self.tr("Basic Latin"),
              "IsBasicLatin"),
-            (self.trUtf8("Latin-1 Supplement"),
+            (self.tr("Latin-1 Supplement"),
              "IsLatin-1Supplement"),
-            (self.trUtf8("Latin Extended-A"),
+            (self.tr("Latin Extended-A"),
              "IsLatinExtended-A"),
-            (self.trUtf8("Latin Extended-B"),
+            (self.tr("Latin Extended-B"),
              "IsLatinExtended-B"),
-            (self.trUtf8("IPA Extensions"),
+            (self.tr("IPA Extensions"),
              "IsIPAExtensions"),
-            (self.trUtf8("Spacing Modifier Letters"),
+            (self.tr("Spacing Modifier Letters"),
              "IsSpacingModifierLetters"),
-            (self.trUtf8("Combining Diacritical Marks"),
+            (self.tr("Combining Diacritical Marks"),
              "IsCombiningDiacriticalMarks"),
-            (self.trUtf8("Greek"),
+            (self.tr("Greek"),
              "IsGreek"),
-            (self.trUtf8("Cyrillic"),
+            (self.tr("Cyrillic"),
              "IsCyrillic"),
-            (self.trUtf8("Armenian"),
+            (self.tr("Armenian"),
              "IsArmenian"),
-            (self.trUtf8("Hebrew"),
+            (self.tr("Hebrew"),
              "IsHebrew"),
-            (self.trUtf8("Arabic"),
+            (self.tr("Arabic"),
              "IsArabic"),
-            (self.trUtf8("Syriac"),
+            (self.tr("Syriac"),
              "IsSyriac"),
-            (self.trUtf8("Thaana"),
+            (self.tr("Thaana"),
              "IsThaana"),
-            (self.trUtf8("Devanagari"),
+            (self.tr("Devanagari"),
              "IsDevanagari"),
-            (self.trUtf8("Bengali"),
+            (self.tr("Bengali"),
              "IsBengali"),
-            (self.trUtf8("Gurmukhi"),
+            (self.tr("Gurmukhi"),
              "IsBengali"),
-            (self.trUtf8("Gujarati"),
+            (self.tr("Gujarati"),
              "IsGujarati"),
-            (self.trUtf8("Oriya"),
+            (self.tr("Oriya"),
              "IsOriya"),
-            (self.trUtf8("Tamil"),
+            (self.tr("Tamil"),
              "IsTamil"),
-            (self.trUtf8("Telugu"),
+            (self.tr("Telugu"),
              "IsTelugu"),
-            (self.trUtf8("Kannada"),
+            (self.tr("Kannada"),
              "IsKannada"),
-            (self.trUtf8("Malayalam"),
+            (self.tr("Malayalam"),
              "IsMalayalam"),
-            (self.trUtf8("Sinhala"),
+            (self.tr("Sinhala"),
              "IsSinhala"),
-            (self.trUtf8("Thai"),
+            (self.tr("Thai"),
              "IsThai"),
-            (self.trUtf8("Lao"),
+            (self.tr("Lao"),
              "IsLao"),
-            (self.trUtf8("Tibetan"),
+            (self.tr("Tibetan"),
              "IsTibetan"),
-            (self.trUtf8("Myanmar"),
+            (self.tr("Myanmar"),
              "IsMyanmar"),
-            (self.trUtf8("Georgian"),
+            (self.tr("Georgian"),
              "IsGeorgian"),
-            (self.trUtf8("Hangul Jamo"),
+            (self.tr("Hangul Jamo"),
              "IsHangulJamo"),
-            (self.trUtf8("Ethiopic"),
+            (self.tr("Ethiopic"),
              "IsEthiopic"),
-            (self.trUtf8("Cherokee"),
+            (self.tr("Cherokee"),
              "IsCherokee"),
-            (self.trUtf8("Unified Canadian Aboriginal Syllabics"),
+            (self.tr("Unified Canadian Aboriginal Syllabics"),
              "IsUnifiedCanadianAboriginalSyllabics"),
-            (self.trUtf8("Ogham"),
+            (self.tr("Ogham"),
              "IsOgham"),
-            (self.trUtf8("Runic"),
+            (self.tr("Runic"),
              "IsRunic"),
-            (self.trUtf8("Khmer"),
+            (self.tr("Khmer"),
              "IsKhmer"),
-            (self.trUtf8("Mongolian"),
+            (self.tr("Mongolian"),
              "IsMongolian"),
-            (self.trUtf8("Latin Extended Additional"),
+            (self.tr("Latin Extended Additional"),
              "IsLatinExtendedAdditional"),
-            (self.trUtf8("Greek Extended"),
+            (self.tr("Greek Extended"),
              "IsGreekExtended"),
-            (self.trUtf8("General Punctuation"),
+            (self.tr("General Punctuation"),
              "IsGeneralPunctuation"),
-            (self.trUtf8("Superscripts and Subscripts"),
+            (self.tr("Superscripts and Subscripts"),
              "IsSuperscriptsandSubscripts"),
-            (self.trUtf8("Currency Symbols"),
+            (self.tr("Currency Symbols"),
              "IsCurrencySymbols"),
-            (self.trUtf8("Combining Marks for Symbols"),
+            (self.tr("Combining Marks for Symbols"),
              "IsCombiningMarksforSymbols"),
-            (self.trUtf8("Letterlike Symbols"),
+            (self.tr("Letterlike Symbols"),
              "IsLetterlikeSymbols"),
-            (self.trUtf8("Number Forms"),
+            (self.tr("Number Forms"),
              "IsNumberForms"),
-            (self.trUtf8("Arrows"),
+            (self.tr("Arrows"),
              "IsArrows"),
-            (self.trUtf8("Mathematical Operators"),
+            (self.tr("Mathematical Operators"),
              "IsMathematicalOperators"),
-            (self.trUtf8("Miscellaneous Technical"),
+            (self.tr("Miscellaneous Technical"),
              "IsMiscellaneousTechnical"),
-            (self.trUtf8("Control Pictures"),
+            (self.tr("Control Pictures"),
              "IsControlPictures"),
-            (self.trUtf8("Optical Character Recognition"),
+            (self.tr("Optical Character Recognition"),
              "IsOpticalCharacterRecognition"),
-            (self.trUtf8("Enclosed Alphanumerics"),
+            (self.tr("Enclosed Alphanumerics"),
              "IsEnclosedAlphanumerics"),
-            (self.trUtf8("Box Drawing"),
+            (self.tr("Box Drawing"),
              "IsBoxDrawing"),
-            (self.trUtf8("Block Elements"),
+            (self.tr("Block Elements"),
              "IsBlockElements"),
-            (self.trUtf8("Geometric Shapes"),
+            (self.tr("Geometric Shapes"),
              "IsGeometricShapes"),
-            (self.trUtf8("Miscellaneous Symbols"),
+            (self.tr("Miscellaneous Symbols"),
              "IsMiscellaneousSymbols"),
-            (self.trUtf8("Dingbats"),
+            (self.tr("Dingbats"),
              "IsDingbats"),
-            (self.trUtf8("Braille Patterns"),
+            (self.tr("Braille Patterns"),
              "IsBraillePatterns"),
-            (self.trUtf8("CJK Radicals Supplement"),
+            (self.tr("CJK Radicals Supplement"),
              "IsCJKRadicalsSupplement"),
-            (self.trUtf8("KangXi Radicals"),
+            (self.tr("KangXi Radicals"),
              "IsKangXiRadicals"),
-            (self.trUtf8("Ideographic Description Chars"),
+            (self.tr("Ideographic Description Chars"),
              "IsIdeographicDescriptionChars"),
-            (self.trUtf8("CJK Symbols and Punctuation"),
+            (self.tr("CJK Symbols and Punctuation"),
              "IsCJKSymbolsandPunctuation"),
-            (self.trUtf8("Hiragana"),
+            (self.tr("Hiragana"),
              "IsHiragana"),
-            (self.trUtf8("Katakana"),
+            (self.tr("Katakana"),
              "IsKatakana"),
-            (self.trUtf8("Bopomofo"),
+            (self.tr("Bopomofo"),
              "IsBopomofo"),
-            (self.trUtf8("Hangul Compatibility Jamo"),
+            (self.tr("Hangul Compatibility Jamo"),
              "IsHangulCompatibilityJamo"),
-            (self.trUtf8("Kanbun"),
+            (self.tr("Kanbun"),
              "IsKanbun"),
-            (self.trUtf8("Bopomofo Extended"),
+            (self.tr("Bopomofo Extended"),
              "IsBopomofoExtended"),
-            (self.trUtf8("Enclosed CJK Letters and Months"),
+            (self.tr("Enclosed CJK Letters and Months"),
              "IsEnclosedCJKLettersandMonths"),
-            (self.trUtf8("CJK Compatibility"),
+            (self.tr("CJK Compatibility"),
              "IsCJKCompatibility"),
-            (self.trUtf8("CJK Unified Ideographs Extension A"),
+            (self.tr("CJK Unified Ideographs Extension A"),
              "IsCJKUnifiedIdeographsExtensionA"),
-            (self.trUtf8("CJK Unified Ideographs"),
+            (self.tr("CJK Unified Ideographs"),
              "IsCJKUnifiedIdeographs"),
-            (self.trUtf8("Yi Syllables"),
+            (self.tr("Yi Syllables"),
              "IsYiSyllables"),
-            (self.trUtf8("Yi Radicals"),
+            (self.tr("Yi Radicals"),
              "IsYiRadicals"),
-            (self.trUtf8("Hangul Syllables"),
+            (self.tr("Hangul Syllables"),
              "IsHangulSyllables"),
-            (self.trUtf8("Private Use"),
+            (self.tr("Private Use"),
              "IsPrivateUse"),
-            (self.trUtf8("CJK Compatibility Ideographs"),
+            (self.tr("CJK Compatibility Ideographs"),
              "IsCJKCompatibilityIdeographs"),
-            (self.trUtf8("Alphabetic Presentation Forms"),
+            (self.tr("Alphabetic Presentation Forms"),
              "IsAlphabeticPresentationForms"),
-            (self.trUtf8("Arabic Presentation Forms-A"),
+            (self.tr("Arabic Presentation Forms-A"),
              "IsArabicPresentationForms-A"),
-            (self.trUtf8("Combining Half Marks"),
+            (self.tr("Combining Half Marks"),
              "IsCombiningHalfMarks"),
-            (self.trUtf8("CJK Compatibility Forms"),
+            (self.tr("CJK Compatibility Forms"),
              "IsCJKCompatibilityForms"),
-            (self.trUtf8("Small Form Variants"),
+            (self.tr("Small Form Variants"),
              "IsSmallFormVariants"),
-            (self.trUtf8("Arabic Presentation Forms-B"),
+            (self.tr("Arabic Presentation Forms-B"),
              "IsArabicPresentationForms-B"),
-            (self.trUtf8("Halfwidth and Fullwidth Forms"),
+            (self.tr("Halfwidth and Fullwidth Forms"),
              "IsHalfwidthandFullwidthForms"),
-            (self.trUtf8("Specials"),
+            (self.tr("Specials"),
              "IsSpecials"),
-            (self.trUtf8("Old Italic"),
+            (self.tr("Old Italic"),
              "IsOldItalic"),
-            (self.trUtf8("Gothic"),
+            (self.tr("Gothic"),
              "IsGothic"),
-            (self.trUtf8("Deseret"),
+            (self.tr("Deseret"),
              "IsDeseret"),
-            (self.trUtf8("Byzantine Musical Symbols"),
+            (self.tr("Byzantine Musical Symbols"),
              "IsByzantineMusicalSymbols"),
-            (self.trUtf8("Musical Symbols"),
+            (self.tr("Musical Symbols"),
              "IsMusicalSymbols"),
-            (self.trUtf8("Mathematical Alphanumeric Symbols"),
+            (self.tr("Mathematical Alphanumeric Symbols"),
              "IsMathematicalAlphanumericSymbols"),
-            (self.trUtf8("CJK Unified Ideographic Extension B"),
+            (self.tr("CJK Unified Ideographic Extension B"),
              "IsCJKUnifiedIdeographicExtensionB"),
-            (self.trUtf8("CJK Compatapility Ideographic Supplement"),
+            (self.tr("CJK Compatapility Ideographic Supplement"),
              "IsCJKCompatapilityIdeographicSupplement"),
-            (self.trUtf8("Tags"),
+            (self.tr("Tags"),
              "IsTags"),
         )
         
@@ -469,12 +469,12 @@ class QRegExpWizardCharactersDialog(QDialog, Ui_QRegExpWizardCharactersDialog):
         cb1.setEditable(False)
         self.__populateCharTypeCombo(cb1, False)
         hboxLayout.addWidget(cb1)
-        l1 = QLabel(self.trUtf8("Between:"), hbox)
+        l1 = QLabel(self.tr("Between:"), hbox)
         hboxLayout.addWidget(l1)
         le1 = QLineEdit(hbox)
         le1.setValidator(self.charValidator)
         hboxLayout.addWidget(le1)
-        l2 = QLabel(self.trUtf8("And:"), hbox)
+        l2 = QLabel(self.tr("And:"), hbox)
         hboxLayout.addWidget(l2)
         le2 = QLineEdit(hbox)
         le2.setValidator(self.charValidator)

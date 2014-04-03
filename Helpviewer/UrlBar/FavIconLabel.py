@@ -9,8 +9,8 @@ Module implementing the label to show the web site icon.
 
 from __future__ import unicode_literals
 try:
-    str = unicode    # __IGNORE_WARNING__
-except (NameError):
+    str = unicode
+except NameError:
     pass
 
 from PyQt4.QtCore import Qt, QPoint, QUrl, QMimeData
