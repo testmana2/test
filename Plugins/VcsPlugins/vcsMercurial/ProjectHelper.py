@@ -413,6 +413,21 @@ class HgProjectHelper(VcsProjectHelper):
         self.vcsMergeAct.triggered.connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
         
+        self.hgCancelMergeAct = E5Action(
+            self.tr('Cancel uncommitted merge'),
+            self.tr('Cancel uncommitted merge'),
+            0, 0, self, 'mercurial_cancel_merge')
+        self.hgCancelMergeAct.setStatusTip(self.tr(
+            'Cancel an uncommitted merge and lose all changes'
+        ))
+        self.hgCancelMergeAct.setWhatsThis(self.tr(
+            """<b>Cancel uncommitted merge</b>"""
+            """<p>This cancels an uncommitted merge causing all changes"""
+            """ to be lost.</p>"""
+        ))
+        self.hgCancelMergeAct.triggered.connect(self.__hgCancelMerge)
+        self.actions.append(self.hgCancelMergeAct)
+        
         self.vcsResolveAct = E5Action(
             self.tr('Conflicts resolved'),
             self.tr('Con&flicts resolved'),
@@ -848,8 +863,6 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgRollbackAct.triggered.connect(self.__hgRollback)
         self.actions.append(self.hgRollbackAct)
         
-        # TODO: add support for hg update --clean to revert a failed/aborted merge
-        
         self.hgServeAct = E5Action(
             self.tr('Serve project repository'),
             self.tr('Serve project repository...'),
@@ -1025,7 +1038,6 @@ class HgProjectHelper(VcsProjectHelper):
         adminMenu.addSeparator()
         adminMenu.addAction(self.hgRecoverAct)
         adminMenu.addSeparator()
-        # TODO: add support for hg update --clean to revert a failed/aborted merge
         adminMenu.addAction(self.hgBackoutAct)
         adminMenu.addAction(self.hgRollbackAct)
         adminMenu.addSeparator()
@@ -1142,6 +1154,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsRevertAct)
         menu.addAction(self.vcsMergeAct)
         menu.addAction(self.vcsResolveAct)
+        menu.addAction(self.hgCancelMergeAct)
         menu.addSeparator()
         menu.addAction(self.vcsSwitchAct)
         menu.addSeparator()
@@ -1272,6 +1285,12 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to resolve conflicts of the local project.
         """
         self.vcs.hgResolve(self.project.ppath)
+    
+    def __hgCancelMerge(self):
+        """
+        Private slot used to cancel an uncommitted merge.
+        """
+        self.vcs.hgCancelMerge(self.project.ppath)
     
     def __hgTagList(self):
         """
@@ -1428,8 +1447,6 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to rollback the last transaction.
         """
         self.vcs.hgRollback(self.project.ppath)
-    
-    # TODO: add support for hg update --clean to revert a failed/aborted merge
     
     def __hgServe(self):
         """

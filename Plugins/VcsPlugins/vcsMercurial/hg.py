@@ -2105,6 +2105,36 @@ class Hg(VersionControl):
             dia.exec_()
         self.checkVCSStatus()
     
+    def hgCancelMerge(self, name):
+        """
+        Public method to cancel an uncommitted merge.
+        
+        @param name file/directory name (string)
+        @return flag indicating, that the cancellation contained an add
+            or delete (boolean)
+        """
+        dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        args = self.initCommand("update")
+        args.append("--clean")
+        
+        dia = HgDialog(
+            self.tr('Cancelling uncommitted merge'),
+            self)
+        res = dia.startProcess(args, repodir, False)
+        if res:
+            dia.exec_()
+            res = dia.hasAddOrDelete()
+        self.checkVCSStatus()
+        return res
+    
     def hgBranch(self, name):
         """
         Public method used to create a branch in the Mercurial repository.
@@ -2768,8 +2798,6 @@ class Hg(VersionControl):
             if res:
                 dia.exec_()
 
-    # TODO: add support for hg update --clean to revert a failed/aborted merge
-    
     def hgServe(self, name):
         """
         Public method used to serve the project.
