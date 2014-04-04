@@ -90,6 +90,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
         progress = E5ProgressDialog(
             self.tr("Parsing modules..."),
             None, 0, tot, self.tr("%v/%m Modules"), self.parent())
+        progress.setWindowTitle(self.tr("Imports Diagramm"))
         try:
             prog = 0
             progress.show()

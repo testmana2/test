@@ -5837,6 +5837,8 @@ class UserInterface(E5MainWindow):
                     "", self.tr("&Cancel"),
                     0, len(self.__httpAlternatives),
                     self.tr("%v/%m"), self)
+                self.__versionCheckProgress.setWindowTitle(
+                    self.tr("Version Check"))
                 self.__versionCheckProgress.setMinimumDuration(0)
                 self.__versionCheckProgress.canceled.connect(
                     self.__versionsDownloadCanceled)

@@ -725,6 +725,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.tr("%v/%m Resources"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Resources"))
             i = 0
             
             for fn in self.project.pdata["RESOURCES"]:
@@ -761,6 +762,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.tr("%v/%m Resources"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Resources"))
             i = 0
             
             for fn in files:
@@ -829,6 +831,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                 self.tr("Determining changed resources..."),
                 None, 0, 100, self.tr("%v/%m Resources"))
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Resources"))
             i = 0
             
             # get list of changed resources

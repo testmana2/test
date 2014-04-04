@@ -90,6 +90,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         progress = E5ProgressDialog(
             self.tr("Parsing modules..."),
             None, 0, tot, self.tr("%v/%m Modules"), self.parent())
+        progress.setWindowTitle(self.tr("Package Diagram"))
         try:
             prog = 0
             progress.show()
@@ -149,6 +150,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         progress = E5ProgressDialog(
             self.tr("Parsing modules..."),
             None, 0, tot, self.tr("%v/%m Modules"), self.parent())
+        progress.setWindowTitle(self.tr("Package Diagram"))
         try:
             prog = 0
             progress.show()
