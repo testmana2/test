@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1180,7 +1181,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="67"/>
         <source>Application Diagram</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de aplicación</translation>
     </message>
 </context>
 <context>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -10420,12 +10421,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="493"/>
         <source>Extensions of QSS files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Extensiones de archivos QSS:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="500"/>
         <source>Enter the filename extensions of Qt Stylesheet files that may be previewed (separated by a space)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir las extensiones de nombre de archivo para archivos de Hoja de Estilos de Qt que pueden ser previsualizados (separadas por un espacio)</translation>
     </message>
 </context>
 <context>
@@ -15664,7 +15665,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -19396,7 +19397,7 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2149"/>
         <source>Cancelling uncommitted merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelando merge sin commit</translation>
     </message>
 </context>
 <context>
@@ -22340,27 +22341,27 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="620"/>
         <source>Show differences</source>
-        <translation type="unfinished">Mostrar diferencias</translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="328"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished">Mostrar diferencias lado a lado</translation>
+        <translation>Mostrar diferencias lado a lado</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="624"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="337"/>
         <source>Show differences side-by-side (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias lado a lado (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="634"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished">Conflictos resueltos</translation>
+        <translation>Conflictos resueltos</translation>
     </message>
 </context>
 <context>
@@ -23513,37 +23514,37 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show differences</source>
-        <translation type="unfinished">Mostrar diferencias</translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="296"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="288"/>
         <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar diferencias&lt;/b&gt;&lt;p&gt;Muestra diferencias entre el proyecto local y el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="304"/>
         <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar diferencias (extendido)&lt;/b&gt;&lt;p&gt;Muestra diferencias entre revisiones seleccionables del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="416"/>
         <source>Cancel uncommitted merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar merge sin commit</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="420"/>
         <source>Cancel an uncommitted merge and lose all changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar un merge sin commit y perder todos los cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="423"/>
         <source>&lt;b&gt;Cancel uncommitted merge&lt;/b&gt;&lt;p&gt;This cancels an uncommitted merge causing all changes to be lost.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cancelar merge sin commit&lt;/b&gt;&lt;p&gt;Esto cancela un merge sin commit causando que todos los cambios se pierdan.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -27478,7 +27479,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="93"/>
         <source>Imports Diagramm</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagrama de Imports</translation>
     </message>
 </context>
 <context>
@@ -31007,7 +31008,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="127"/>
         <source>QSS</source>
-        <translation type="unfinished"></translation>
+        <translation>QSS</translation>
     </message>
 </context>
 <context>
@@ -33704,7 +33705,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../Graphics/PackageDiagramBuilder.py" line="153"/>
         <source>Package Diagram</source>
-        <translation type="unfinished">Digrama de paquetes</translation>
+        <translation>Digrama de paquetes</translation>
     </message>
 </context>
 <context>
@@ -33809,7 +33810,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../Helpviewer/Passwords/PasswordManager.py" line="614"/>
         <source>Passwords</source>
-        <translation type="unfinished">Contraseñas</translation>
+        <translation>Contraseñas</translation>
     </message>
 </context>
 <context>
@@ -35082,42 +35083,42 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.ui" line="37"/>
         <source>about:blank</source>
-        <translation type="unfinished">about:blank</translation>
+        <translation>about:blank</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.ui" line="45"/>
         <source>Select to enable JavaScript for HTML previews</source>
-        <translation type="unfinished">Seleccionar para habilitar JavaScript para las previsualizaciones de HTML</translation>
+        <translation>Seleccionar para habilitar JavaScript para las previsualizaciones de HTML</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.ui" line="48"/>
         <source>Enable JavaScript</source>
-        <translation type="unfinished">Habilitar JavaScript</translation>
+        <translation>Habilitar JavaScript</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.ui" line="55"/>
         <source>Select to enable support for Server Side Includes</source>
-        <translation type="unfinished">Seleccionar para habilitar soporte para includes del lado del Servidor</translation>
+        <translation>Seleccionar para habilitar soporte para includes del Lado del Servidor</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.ui" line="58"/>
         <source>Enable Server Side Includes</source>
-        <translation type="unfinished">Habilitar Includes del lado del Servidor</translation>
+        <translation>Habilitar Includes del Lado del Servidor</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="126"/>
         <source>&lt;p&gt;No preview available for this type of file.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;No hay vista previa disponible para este tipo de archivo.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;No hay vista previa disponible para este tipo de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="167"/>
         <source>Preview - {0}</source>
-        <translation type="unfinished">Previsualizar - {0}</translation>
+        <translation>Vista Previa - {0}</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="169"/>
         <source>Preview</source>
-        <translation type="unfinished">Vista Previa</translation>
+        <translation>Vista Previa</translation>
     </message>
 </context>
 <context>
@@ -35125,37 +35126,37 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.ui" line="27"/>
         <source>Preview Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estilo de Vista Previa</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="36"/>
         <source>Action 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción 1</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="38"/>
         <source>Action 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Acción 2</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="42"/>
         <source>MDI</source>
-        <translation type="unfinished"></translation>
+        <translation>MDI</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="59"/>
         <source>Python</source>
-        <translation type="unfinished">Python</translation>
+        <translation>Python</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="59"/>
         <source>Ruby</source>
-        <translation type="unfinished">Ruby</translation>
+        <translation>Ruby</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="59"/>
         <source>JavaScript</source>
-        <translation type="unfinished">JavaScript</translation>
+        <translation>JavaScript</translation>
     </message>
 </context>
 <context>
@@ -37178,7 +37179,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectInterfacesBrowser.py" line="616"/>
         <source>Interfaces</source>
-        <translation type="unfinished">Interfaces</translation>
+        <translation>Interfaces</translation>
     </message>
 </context>
 <context>
@@ -48822,32 +48823,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="690"/>
         <source>Show differences</source>
-        <translation type="unfinished">Mostrar diferencias</translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="274"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished">Mostrar diferencias lado a lado</translation>
+        <translation>Mostrar diferencias lado a lado</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="694"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="283"/>
         <source>Show differences side-by-side (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias lado a lado (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="699"/>
         <source>Show differences (URLs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias (URLs)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="713"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished">Conflictos resueltos</translation>
+        <translation>Conflictos resueltos</translation>
     </message>
 </context>
 <context>
@@ -49430,32 +49431,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="128"/>
         <source>Show differences</source>
-        <translation type="unfinished">Mostrar diferencias</translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="144"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="160"/>
         <source>Show differences (URLs)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar diferencias (URLs)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="136"/>
         <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar diferencias&lt;/b&gt;&lt;p&gt;Muestra diferencias entre el proyecto local y el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="152"/>
         <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar difefencias (extendido)&lt;/b&gt;&lt;p&gt;Muestra diferencias entre revisiones seleccionables del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
         <source>&lt;b&gt;Show differences (URLs)&lt;/b&gt;&lt;p&gt;This shows differences of the project between two repository URLs.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar diferencias (URLs)&lt;/b&gt;&lt;p&gt;Muestra diferencias para el proyecto entre dos URLs de repositorios.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -53408,7 +53409,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Tasks/TaskViewer.py" line="551"/>
         <source>Tasks</source>
-        <translation type="unfinished">Tareas</translation>
+        <translation>Tareas</translation>
     </message>
 </context>
 <context>
@@ -57903,7 +57904,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../UI/UserInterface.py" line="5849"/>
         <source>Version Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Verificación de Versión</translation>
     </message>
 </context>
 <context>
