@@ -9,12 +9,7 @@ Module implementing a dialog to select code style message codes.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
-
-from . import pep8
-from .NamingStyleChecker import NamingStyleChecker
-from .DocStyleChecker import DocStyleChecker
 
 from .Ui_CodeStyleCodeSelectionDialog import Ui_CodeStyleCodeSelectionDialog
 
@@ -39,33 +34,19 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
         
         codeList = [code.strip() for code in codes.split(",") if code.strip()]
         
+        from .translations import _messages, _messages_sample_args
+        
         if showFixCodes:
             from .CodeStyleFixer import FixableCodeStyleIssues
             selectableCodes = FixableCodeStyleIssues
         else:
-            selectableCodes = list(pep8.pep8_messages.keys())
-            selectableCodes.extend(NamingStyleChecker.Messages.keys())
-            selectableCodes.extend(DocStyleChecker.Messages.keys())
+            selectableCodes = [x for x in list(_messages.keys())
+                               if not x.startswith('F')]
         for code in sorted(selectableCodes):
-            if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate(
-                    "pep8", pep8.pep8_messages[code]).format(
-                    *pep8.pep8_messages_sample_args[code])
-            elif code in pep8.pep8_messages:
-                message = QCoreApplication.translate(
-                    "pep8", pep8.pep8_messages[code])
-            elif code in NamingStyleChecker.Messages:
-                message = QCoreApplication.translate(
-                    "NamingStyleChecker",
-                    NamingStyleChecker.Messages[code])
-            elif code in DocStyleChecker.MessagesSampleArgs:
-                message = QCoreApplication.translate(
-                    "DocStyleChecker",
-                    DocStyleChecker.Messages[code].format(
-                        *DocStyleChecker.MessagesSampleArgs[code]))
-            elif code in DocStyleChecker.Messages:
-                message = QCoreApplication.translate(
-                    "DocStyleChecker", DocStyleChecker.Messages[code])
+            if code in _messages_sample_args:
+                message = _messages[code].format(*_messages_sample_args[code])
+            elif code in _messages:
+                message = _messages[code]
             else:
                 continue
             itm = QTreeWidgetItem(self.codeTable, [code, message])
