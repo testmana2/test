@@ -342,6 +342,19 @@ entry will open an editor window and position the cursor at the respective line 
          </widget>
         </item>
         <item>
+         <widget class="QCheckBox" name="ignoredCheckBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>Select to show ignored issues</string>
+          </property>
+          <property name="text">
+           <string>Show ignored</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="horizontalSpacer">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -479,12 +492,14 @@ the respective line and position.&lt;/p&gt;</string>
   <tabstop>noFixIssuesEdit</tabstop>
   <tabstop>noFixIssuesSelectButton</tabstop>
   <tabstop>lineLengthSpinBox</tabstop>
+  <tabstop>docTypeComboBox</tabstop>
   <tabstop>hangClosingCheckBox</tabstop>
   <tabstop>repeatCheckBox</tabstop>
   <tabstop>fixIssuesCheckBox</tabstop>
-  <tabstop>storeDefaultButton</tabstop>
+  <tabstop>ignoredCheckBox</tabstop>
   <tabstop>resultList</tabstop>
   <tabstop>fixButton</tabstop>
+  <tabstop>storeDefaultButton</tabstop>
   <tabstop>resetDefaultButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
@@ -497,12 +512,28 @@ the respective line and position.&lt;/p&gt;</string>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>121</x>
-     <y>153</y>
+     <x>132</x>
+     <y>286</y>
     </hint>
     <hint type="destinationlabel">
-     <x>186</x>
-     <y>160</y>
+     <x>343</x>
+     <y>286</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>repeatCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ignoredCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>138</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>380</x>
+     <y>271</y>
     </hint>
    </hints>
   </connection>

@@ -51,7 +51,7 @@ Module implementing a dialog to show the results of the code style check.
 QDialog, Ui_CodeStyleCheckerDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>codeRole</td></tr><tr><td>filenameRole</td></tr><tr><td>fixableRole</td></tr><tr><td>lineRole</td></tr><tr><td>messageRole</td></tr><tr><td>positionRole</td></tr>
+<tr><td>codeRole</td></tr><tr><td>filenameRole</td></tr><tr><td>fixableRole</td></tr><tr><td>ignoredRole</td></tr><tr><td>lineRole</td></tr><tr><td>messageRole</td></tr><tr><td>positionRole</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -172,7 +172,7 @@ list of files to be checked (list of string)
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__createResultItem" ID="CodeStyleCheckerDialog.__createResultItem"></a>
 <h4>CodeStyleCheckerDialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, pos, message, fixed, autofixing</i>)
+<b>__createResultItem</b>(<i>file, line, pos, message, fixed, autofixing, ignored</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
@@ -195,6 +195,9 @@ flag indicating a fixed issue (boolean)
 <dd>
 flag indicating, that we are fixing issues
             automatically (boolean)
+</dd><dt><i>ignored</i></dt>
+<dd>
+flag indicating an ignored issue (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -285,7 +288,7 @@ reference to the code style fixer (CodeStyleFixer)
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__updateStatistics" ID="CodeStyleCheckerDialog.__updateStatistics"></a>
 <h4>CodeStyleCheckerDialog.__updateStatistics</h4>
-<b>__updateStatistics</b>(<i>statistics, fixer</i>)
+<b>__updateStatistics</b>(<i>statistics, fixer, ignoredErrors</i>)
 <p>
         Private method to update the collected statistics.
 </p><dl>
@@ -296,6 +299,9 @@ dictionary of statistical data with
 </dd><dt><i>fixer</i></dt>
 <dd>
 reference to the code style fixer (CodeStyleFixer)
+</dd><dt><i>ignoredErrors</i></dt>
+<dd>
+number of ignored errors (integer)
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.on_buttonBox_clicked" ID="CodeStyleCheckerDialog.on_buttonBox_clicked"></a>
 <h4>CodeStyleCheckerDialog.on_buttonBox_clicked</h4>

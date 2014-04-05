@@ -39,9 +39,11 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         filesCount = stats["_FilesCount"]
         filesIssues = stats["_FilesIssues"]
         fixesCount = stats["_IssuesFixed"]
+        ignoresCount = stats["_IgnoredErrors"]
         del stats["_FilesCount"]
         del stats["_FilesIssues"]
         del stats["_IssuesFixed"]
+        del stats["_IgnoredErrors"]
         
         totalIssues = 0
         
@@ -66,6 +68,8 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         
         self.totalIssues.setText(
             self.tr("%n issue(s) found", "", totalIssues))
+        self.ignoredIssues.setText(
+            self.tr("%n issue(s) ignored", "", ignoresCount))
         self.fixedIssues.setText(
             self.tr("%n issue(s) fixed", "", fixesCount))
         self.filesChecked.setText(

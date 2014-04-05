@@ -79,6 +79,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     messageRole = Qt.UserRole + 4
     fixableRole = Qt.UserRole + 5
     codeRole = Qt.UserRole + 6
+    ignoredRole = Qt.UserRole + 7
     
     def __init__(self, parent=None):
         """
@@ -141,7 +142,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                                   self.resultList.header().sortIndicatorOrder()
                                   )
     
-    def __createResultItem(self, file, line, pos, message, fixed, autofixing):
+    def __createResultItem(self, file, line, pos, message, fixed, autofixing,
+                           ignored):
         """
         Private method to create an entry in the result list.
         
@@ -152,6 +154,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         @param fixed flag indicating a fixed issue (boolean)
         @param autofixing flag indicating, that we are fixing issues
             automatically (boolean)
+        @param ignored flag indicating an ignored issue (boolean)
         @return reference to the created item (QTreeWidgetItem)
         """
         from .CodeStyleFixer import FixableCodeStyleIssues
@@ -195,6 +198,13 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         itm.setData(0, self.messageRole, message)
         itm.setData(0, self.fixableRole, fixable)
         itm.setData(0, self.codeRole, code)
+        itm.setData(0, self.ignoredRole, ignored)
+        
+        if ignored:
+            font = itm.font(0)
+            font.setItalic(True)
+            for col in range(itm.columnCount()):
+                itm.setFont(col, font)
         
         return itm
     
@@ -217,13 +227,14 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             itm.setIcon(0, QIcon())
         itm.setData(0, self.fixableRole, False)
     
-    def __updateStatistics(self, statistics, fixer):
+    def __updateStatistics(self, statistics, fixer, ignoredErrors):
         """
         Private method to update the collected statistics.
         
         @param statistics dictionary of statistical data with
             message code as key and message count as value
         @param fixer reference to the code style fixer (CodeStyleFixer)
+        @param ignoredErrors number of ignored errors (integer)
         """
         self.__statistics["_FilesCount"] += 1
         stats = {v: k for v, k in statistics.items() if v[0].isupper()}
@@ -236,6 +247,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     self.__statistics[key] = statistics[key]
         if fixer:
             self.__statistics["_IssuesFixed"] += fixer.fixed
+        self.__statistics["_IgnoredErrors"] += ignoredErrors
     
     def __updateFixerStatistics(self, fixer):
         """
@@ -253,6 +265,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.__statistics["_FilesCount"] = 0
         self.__statistics["_FilesIssues"] = 0
         self.__statistics["_IssuesFixed"] = 0
+        self.__statistics["_IgnoredErrors"] = 0
     
     def prepare(self, fileList, project):
         """
@@ -289,6 +302,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.__data["NoFixCodes"] = "E501"
         if "DocstringType" not in self.__data:
             self.__data["DocstringType"] = "pep257"
+        if "ShowIgnored" not in self.__data:
+            self.__data["ShowIgnored"] = False
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -297,6 +312,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.fixIssuesEdit.setText(self.__data["FixCodes"])
         self.noFixIssuesEdit.setText(self.__data["NoFixCodes"])
         self.fixIssuesCheckBox.setChecked(self.__data["FixIssues"])
+        self.ignoredCheckBox.setChecked(self.__data["ShowIgnored"])
         self.lineLengthSpinBox.setValue(self.__data["MaxLineLength"])
         self.hangClosingCheckBox.setChecked(self.__data["HangClosing"])
         self.docTypeComboBox.setCurrentIndex(
@@ -380,6 +396,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             fixCodes = self.fixIssuesEdit.text()
             noFixCodes = self.noFixIssuesEdit.text()
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
+            showIgnored = self.ignoredCheckBox.isChecked() and repeatMessages
             maxLineLength = self.lineLengthSpinBox.value()
             hangClosing = self.hangClosingCheckBox.isChecked()
             docType = self.docTypeComboBox.itemData(
@@ -411,7 +428,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         self.__createResultItem(
                             file, "1", "1",
                             self.tr("Error: {0}").format(str(msg))
-                            .rstrip()[1:-1], False, False)
+                            .rstrip()[1:-1], False, False, False)
                         progress += 1
                         continue
                     
@@ -480,6 +497,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         errors = report.errors + docStyleChecker.errors
                     
                     deferredFixes = {}
+                    ignoredErrors = 0
                     for error in errors:
                         fname, lineno, position, text = error
                         if lineno > len(source):
@@ -496,20 +514,28 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                                             self.tr("Fix: {0}").format(msg)
                                     self.__createResultItem(
                                         fname, lineno, position, text, True,
-                                        True)
+                                        True, False)
                                 elif res == 0:
                                     self.__createResultItem(
                                         fname, lineno, position, text, False,
-                                        True)
+                                        True, False)
                                 else:
                                     itm = self.__createResultItem(
                                         fname, lineno, position,
-                                        text, False, False)
+                                        text, False, False, False)
                                     deferredFixes[id_] = itm
                             else:
                                 self.__createResultItem(
                                     fname, lineno, position, text, False,
-                                    False)
+                                    False, False)
+                        else:
+                            ignoredErrors += 1
+                            if showIgnored:
+                                self.noResults = False
+                                self.__createResultItem(
+                                    fname, lineno, position,
+                                    self.tr("{0} (ignored)").format(text),
+                                    False, False, True)
                     if fixer:
                         deferredResults = fixer.finalize()
                         for id_ in deferredResults:
@@ -522,7 +548,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                             else:
                                 self.__modifyFixedResultItem(itm, "", False)
                         fixer.saveFile(encoding)
-                    self.__updateStatistics(stats, fixer)
+                    self.__updateStatistics(stats, fixer, ignoredErrors)
                     progress += 1
             finally:
                 # reenable updates of the list
@@ -578,6 +604,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 "FixCodes": self.fixIssuesEdit.text(),
                 "NoFixCodes": self.noFixIssuesEdit.text(),
                 "FixIssues": self.fixIssuesCheckBox.isChecked(),
+                "ShowIgnored": self.ignoredCheckBox.isChecked(),
                 "MaxLineLength": self.lineLengthSpinBox.value(),
                 "HangClosing": self.hangClosingCheckBox.isChecked(),
                 "DocstringType": self.docTypeComboBox.itemData(
@@ -740,6 +767,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             "PEP8/NoFixCodes", "E501"))
         self.fixIssuesCheckBox.setChecked(Preferences.toBool(
             Preferences.Prefs.settings.value("PEP8/FixIssues")))
+        self.ignoredCheckBox.setChecked(Preferences.toBool(
+            Preferences.Prefs.settings.value("PEP8/ShowIgnored")))
         self.lineLengthSpinBox.setValue(int(Preferences.Prefs.settings.value(
             "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)))
         self.hangClosingCheckBox.setChecked(Preferences.toBool(
@@ -768,6 +797,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Preferences.Prefs.settings.setValue(
             "PEP8/FixIssues", self.fixIssuesCheckBox.isChecked())
         Preferences.Prefs.settings.setValue(
+            "PEP8/ShowIgnored", self.ignoredCheckBox.isChecked())
+        Preferences.Prefs.settings.setValue(
             "PEP8/MaxLineLength", self.lineLengthSpinBox.value())
         Preferences.Prefs.settings.setValue(
             "PEP8/HangClosing", self.hangClosingCheckBox.isChecked())
@@ -788,6 +819,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Preferences.Prefs.settings.setValue("PEP8/FixCodes", "")
         Preferences.Prefs.settings.setValue("PEP8/NoFixCodes", "E501")
         Preferences.Prefs.settings.setValue("PEP8/FixIssues", False)
+        Preferences.Prefs.settings.setValue("PEP8/ShowIgnored", False)
         Preferences.Prefs.settings.setValue(
             "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)
         Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
@@ -927,4 +959,5 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         @param itm item to be checked (QTreeWidgetItem)
         @return flag indicating a fixable issue (boolean)
         """
-        return itm.data(0, self.fixableRole)
+        return (itm.data(0, self.fixableRole) and
+                not itm.data(0, self.ignoredRole))

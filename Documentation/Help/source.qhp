@@ -5821,6 +5821,7 @@
       <keyword name="Hg.hgBisect" id="Hg.hgBisect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBisect" />
       <keyword name="Hg.hgBranch" id="Hg.hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBranch" />
       <keyword name="Hg.hgBundle" id="Hg.hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBundle" />
+      <keyword name="Hg.hgCancelMerge" id="Hg.hgCancelMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCancelMerge" />
       <keyword name="Hg.hgCopy" id="Hg.hgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCopy" />
       <keyword name="Hg.hgCreateIgnoreFile" id="Hg.hgCreateIgnoreFile" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCreateIgnoreFile" />
       <keyword name="Hg.hgEditConfig" id="Hg.hgEditConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgEditConfig" />
@@ -6345,6 +6346,7 @@
       <keyword name="HgProjectHelper.__hgBranch" id="HgProjectHelper.__hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranch" />
       <keyword name="HgProjectHelper.__hgBranchList" id="HgProjectHelper.__hgBranchList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranchList" />
       <keyword name="HgProjectHelper.__hgBundle" id="HgProjectHelper.__hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBundle" />
+      <keyword name="HgProjectHelper.__hgCancelMerge" id="HgProjectHelper.__hgCancelMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCancelMerge" />
       <keyword name="HgProjectHelper.__hgCloseBranch" id="HgProjectHelper.__hgCloseBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCloseBranch" />
       <keyword name="HgProjectHelper.__hgConfigure" id="HgProjectHelper.__hgConfigure" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgConfigure" />
       <keyword name="HgProjectHelper.__hgCreateIgnore" id="HgProjectHelper.__hgCreateIgnore" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCreateIgnore" />

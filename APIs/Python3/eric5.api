@@ -3775,6 +3775,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerP
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.fixableRole?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.ignoredRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.lineRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.messageRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.on_buttonBox_clicked?4(button)
@@ -4989,6 +4990,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgBackout?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgBisect?4(name, subcommand)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgBranch?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgBundle?4(name)
+eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgCancelMerge?4(name)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgCopy?4(name, project)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgCreateIgnoreFile?4(name, autoAdd=False)
 eric5.Plugins.VcsPlugins.vcsMercurial.hg.Hg.hgEditConfig?4(name, withLargefiles=True, largefilesData=None)
