@@ -32,7 +32,7 @@ class PreviewerQSS(QWidget, Ui_PreviewerQSS):
         self.setupUi(self)
         
         # menu for the tool button
-        self.__toolButtonMenu = QMenu(self);
+        self.__toolButtonMenu = QMenu(self)
         self.__toolButtonMenu.addAction(self.tr("Action 1"))
         self.__toolButtonMenu.addSeparator()
         self.__toolButtonMenu.addAction(self.tr("Action 2"))
