@@ -959,6 +959,7 @@ class Prefs(object):
         "SingleDialog": False,
         "ShowTooltip": False,
         "SeparatorChar": "$",
+        "EditorFont": "Monospace,9,-1,5,50,0,0,0,0,0",
     }
     
     # defaults for plugin manager related stuff
@@ -2607,6 +2608,11 @@ def getTemplates(key, prefClass=Prefs):
     if key in ["SeparatorChar"]:
         return prefClass.settings.value(
             "Templates/" + key, prefClass.templatesDefaults[key])
+    elif key in ["EditorFont"]:
+        f = QFont()
+        f.fromString(prefClass.settings.value(
+            "Templates/" + key, prefClass.templatesDefaults[key]))
+        return f
     else:
         return toBool(prefClass.settings.value(
             "Templates/" + key, prefClass.templatesDefaults[key]))
@@ -2620,7 +2626,10 @@ def setTemplates(key, value, prefClass=Prefs):
     @param value the value to be set
     @param prefClass preferences class used as the storage area
     """
-    prefClass.settings.setValue("Templates/" + key, value)
+    if key in ["EditorFont"]:
+        prefClass.settings.setValue("Templates/" + key, value.toString())
+    else:
+        prefClass.settings.setValue("Templates/" + key, value)
     
 
 def getPluginManager(key, prefClass=Prefs):

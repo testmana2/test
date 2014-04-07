@@ -11787,6 +11787,7 @@
       <keyword name="TemplatesPage" id="TemplatesPage" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage" />
       <keyword name="TemplatesPage (Constructor)" id="TemplatesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage.__init__" />
       <keyword name="TemplatesPage (Module)" id="TemplatesPage (Module)" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html" />
+      <keyword name="TemplatesPage.on_editorFontButton_clicked" id="TemplatesPage.on_editorFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage.on_editorFontButton_clicked" />
       <keyword name="TemplatesPage.save" id="TemplatesPage.save" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage.save" />
       <keyword name="TemplatesReader" id="TemplatesReader" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader" />
       <keyword name="TemplatesReader (Constructor)" id="TemplatesReader (Constructor)" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader.__init__" />

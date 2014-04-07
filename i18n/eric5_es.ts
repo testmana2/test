@@ -34931,27 +34931,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1199"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select Python2 Interpreter</source>
         <translation>Seleccionar Intérprete de Python2</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python2 a utilizar:</translation>
     </message>
@@ -53358,72 +53358,72 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
 <context>
     <name>TemplatePropertiesDialog</name>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="13"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="14"/>
         <source>Template Properties</source>
         <translation>Propiedades de la Plantilla</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="66"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="67"/>
         <source>Template:</source>
         <translation>Plantilla:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="96"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="103"/>
         <source>&amp;Help</source>
         <translation>&amp;Ayuda</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="99"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="106"/>
         <source>Alt+H</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="76"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="83"/>
         <source>Enter the text of the template</source>
         <translation>Introduzca el texto de la plantilla</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="24"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="25"/>
         <source>Name:</source>
         <translation>Nombre:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="52"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="53"/>
         <source>Group:</source>
         <translation>Grupo:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="47"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="51"/>
         <source>All</source>
         <translation>Todo</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="59"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
         <source>Language:</source>
         <translation>Lenguaje:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="67"/>
         <source>GROUP</source>
         <translation>GROUP</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Close dialog</source>
         <translation>Cerrar diálogo</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Do you really want to close the dialog?</source>
         <translation>¿Realmente desea cerrar el diálogo?</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>Template Help</source>
         <translation>Ayuda de la Plantilla</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="79"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="86"/>
         <source>&lt;b&gt;Template Text&lt;/b&gt;
 &lt;p&gt;Enter the template text in this area. Every occurrence of $VAR$ will be replaced
 by the associated text when the template is applied.  Predefined variables may be used in the template. The separator character might
@@ -53435,27 +53435,27 @@ por el texto asociado cuando la plantilla se aplique. El carácter de separació
 cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para más información.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="31"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="32"/>
         <source>Enter the name of the template/group. Templates are autocompleted upon this name.</source>
         <translation>Introduzca el nombre de la plantilla/grupo. Las plantillas son autocompletadas en base a este nombre.</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="38"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="39"/>
         <source>Description:</source>
         <translation>Descripción:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="45"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="46"/>
         <source>Enter a description for the template</source>
         <translation>Introduzca una descripción para la plantilla</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="35"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="39"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de plantilla&lt;/b&gt;&lt;p&gt;Introduzca el nombre de la plantilla. Las plantillas pueden ser autocompletadas en base a este nombre. Para dar soporte a autocompletar, el nombre de plantilla debe consistir solamente en letras (a-z y A-Z) y guiones bajos (_).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Para utilizar variables en una plantilla, solamente tiene que delimitar el nombre de variable con carácteres $. Al utilizar la plantilla, se le solicitará un valor para esta variable.&lt;/p&gt;&lt;p&gt;Ejemplo de plantilla: esto es una $VAR$&lt;/p&gt;&lt;p&gt;Al utilizar esta plantilla se le solicitará un valor para la variable $VAR$. Todas las ocurrencias de $VAR$ serán entonces reemplazadas con el valor introducido.&lt;/p&gt;&lt;p&gt;Si necesita utilizar el caracter $ en una plantilla que no vaya a ser utilizado para delimitar una variable, teclee $$ (dos carácteres dólar). Se reemplazarán automáticamente con un carácter $ único al utilizar la plantilla.&lt;/p&gt;&lt;p&gt;Si desea tratar específicamente los contenidos de alguna variable, el nombre de variable debe ser seguido por un &apos;:&apos; y un especificador de formato.(por ejemplo $VAR:ml$). Los especificadores soportados son:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;A la primera línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla. Al resto de las líneas se les antepone la misma cantidad de espacios en blanco que la línea que contiene la variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Especifica un formato de repetición de líneas. A cada línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Las siguientes variables predefinidas se pueden utilizar en una plantilla:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;fecha actual formato ISO (AAAA-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;el año actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;el nombre del proyecto (si existe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;ruta completa del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;ruta completa del directorio padre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nombre del archivo actual (sin directorio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;como &lt;i&gt;file_name&lt;/i&gt;, pero sin extensión&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;la extensión del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;el texto seleccionado actualmente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Establece punto de inserción para el cursor despues de insertar la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;el texto del portapapeles&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Si desea cambiar el delimitador a otro distinto, por favor utilice el diálogo de configuración para hacerlo.&lt;/p&gt;</translation>
     </message>
@@ -53614,79 +53614,99 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
 <context>
     <name>TemplatesPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Templates&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configurar Plantillas&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="37"/>
         <source>Groups</source>
         <translation>Grupos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="42"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="43"/>
         <source>Select, if groups having entries should be opened automatically</source>
         <translation>Seleccionar si los grupos con entradas deben abrirse automáticamente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="45"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="46"/>
         <source>Expand groups automatically</source>
         <translation>Expandir grupos automaticamente</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="56"/>
         <source>Variables</source>
         <translation>Variables</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="64"/>
         <source>Separator:</source>
         <translation>Separador:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="77"/>
         <source>Enter the character that encloses variables</source>
         <translation>Introducir el carácter de delimitación de variables</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="105"/>
         <source>Input method for variables</source>
         <translation>Método de entrada para las variables</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="111"/>
         <source>Select, if a new dialog should be opened for every template variable</source>
         <translation>Seleccionar si se debe abrir un nuevo diálogo para cada variable de plantilla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="114"/>
         <source>One dialog per template variable</source>
         <translation>Un diálogo por variable de plantilla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="121"/>
         <source>Select, if only one dialog for all template variables should be shown</source>
         <translation>Seleccionar si se debe abrir un único diálogo para todas las variables de plantilla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="124"/>
         <source>One dialog for all template variables</source>
         <translation>Un diálogo para todas las variables de plantilla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="136"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="137"/>
         <source>Tooltips</source>
         <translation>Globos de ayuda (tooltips)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="143"/>
         <source>Select, if the template text should be shown in a tooltip</source>
         <translation>Seleccionar si el texto de la plantilla debe ser mostrado en un globo de ayuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="146"/>
         <source>Show template text in tooltip</source>
         <translation>Mostrar texto de la plantilla en un globo de ayuda</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="156"/>
+        <source>Template Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="162"/>
+        <source>Press to select the font to be used for the code editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="165"/>
+        <source>Editor Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="175"/>
+        <source>Template Code Editor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

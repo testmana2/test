@@ -36879,27 +36879,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1199"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56074,72 +56074,72 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TemplatePropertiesDialog</name>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="13"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="14"/>
         <source>Template Properties</source>
         <translation>Nastavení šablony</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="66"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="67"/>
         <source>Template:</source>
         <translation>Šablona:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="96"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="103"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="99"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="106"/>
         <source>Alt+H</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="76"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="83"/>
         <source>Enter the text of the template</source>
         <translation>Zadejte text šablony</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="24"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="25"/>
         <source>Name:</source>
         <translation>Jméno:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="52"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="53"/>
         <source>Group:</source>
         <translation>Skupina:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="47"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="51"/>
         <source>All</source>
         <translation>Vše</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="59"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
         <source>Language:</source>
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="67"/>
         <source>GROUP</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Close dialog</source>
         <translation>Zavřít dialog</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Do you really want to close the dialog?</source>
         <translation>Opravdu chcete zavřít dialog?</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>Template Help</source>
         <translation>Nápověda šablony</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="79"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="86"/>
         <source>&lt;b&gt;Template Text&lt;/b&gt;
 &lt;p&gt;Enter the template text in this area. Every occurrence of $VAR$ will be replaced
 by the associated text when the template is applied.  Predefined variables may be used in the template. The separator character might
@@ -56148,27 +56148,27 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>&lt;b&gt;Text šablony&lt;/b&gt;&lt;p&gt;Zadejte text šablony do tohoto prostoru. Při použití šablony bude každý výskyt $VAR$ nahrazen asociovaným textem. Oddělující znak lze nastavit přes dialog nastavení.&lt;/p&gt;&lt;p&gt;Pro více informací stiskněte tlačítko nápovědy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="31"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="32"/>
         <source>Enter the name of the template/group. Templates are autocompleted upon this name.</source>
         <translation>Zadejte název šablony/skupiny. Šablony jsou automaticky sestaveny na toto jméno.</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="38"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="39"/>
         <source>Description:</source>
         <translation>Popisek:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="45"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="46"/>
         <source>Enter a description for the template</source>
         <translation>Zadejte popisek šablony</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="35"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="39"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Název šablony&lt;/p&gt;&lt;p&gt;Zadejte název šablony. Šablony mohou být autoamticky sestaveny na toto jméno. Z důvodu podpory automatického sestavení musí název šablony obsahovat pouze písmena (a-z a A-Z), čísla (0-9) a podtržítka (_).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Proměnné se v šablonách používají tak, že se jejich jména vloží mezi $ znaky. Když je v šabloně použiteje, budete vyzváni k zadání hodnoty proměnné.&lt;/p&gt;&lt;p&gt;Příklad šablony: Toto je $VAR$&lt;/p&gt;&lt;p&gt;Když použiteje tuto šablonu, budete vyzváni k zadání hodnoty proměnné $VAR$. Všechny výskyty $VAR$ pak budou nahrazeny touto hodnotou.&lt;/p&gt;&lt;p&gt;Pokud chcete do šablony umístit pouze znak $, zadejte jej zdvojeně: $$. Takovýto výskyt bude automaticky nahrazen na jeden znak $.&lt;/p&gt;&lt;p&gt;Pokud chcete proměnnou nějak formátovat, zadejte &apos;:&apos; a pak název filtru. (např. $VAR:ml$) Podporované filtry jsou:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;ml&lt;/td&gt;    &lt;td&gt;Víceřádkové formátování. První řádek s hodnotou proměnné začíná s textem, který na tom samém řádku předcházel proměnnou. Všechny ostatní řádky dané hodnoty jsou zleva doplněny mezerami tak, aby byly zarovnány pod začátek hodnoty na prvním řádku.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;rl&lt;/td&gt;    &lt;td&gt;Formátování s opakováním. Každá řádka hodnoty začíná s textem, který na tom samém řádku předcházel proměnnou.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;V šablonách lze použít následující předdefinované proměnné:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;aktuální datum v ISO formátu (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;aktuální rok&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;jméno projektu (je-li nějaké)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;cesta k projektu (je-li nějaká)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;celá cesta k aktuálnímu souboru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;celá cesta k nadřazené složce&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;jméno aktuálního souboru (bez cesty)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;stejně jako &lt;i&gt;file_name&lt;/i&gt;, ale bez extenze&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;extenze aktuálního souboru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;kurzorem vybraný text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Nastaví pozici kurzoru po té, co je šablona vložena.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Nastaví span vybraného textu v šabloně po té, co je šablona vložena (používá se společně s &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Nastaví span vybraného textu v šabloně po té, co je šablona vložena (používá se společně s &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;obsah schránky&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Chcete-li změnit výchozí oddělovač na něco jiného, prosím, použijte dialog nastavení konfigurace.&lt;/p&gt;</translation>
     </message>
@@ -56338,79 +56338,99 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplatesPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Templates&lt;/b&gt;</source>
         <translation>&lt;b&gt;Konfigurace šablon&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="37"/>
         <source>Groups</source>
         <translation>Skupiny</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="42"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="43"/>
         <source>Select, if groups having entries should be opened automatically</source>
         <translation>Vybrat, jestliže skupiny mají vstupy, které mají být otevřeny automaticky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="45"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="46"/>
         <source>Expand groups automatically</source>
         <translation>Rozložit skupiny automaticky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="56"/>
         <source>Variables</source>
         <translation>Proměnné</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="64"/>
         <source>Separator:</source>
         <translation>Oddělovač:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="77"/>
         <source>Enter the character that encloses variables</source>
         <translation>Zadejte znak, který ohraničuje proměnné</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="105"/>
         <source>Input method for variables</source>
         <translation>Vstupní metoda pro proměnné</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="111"/>
         <source>Select, if a new dialog should be opened for every template variable</source>
         <translation>Vybrat, jestliže je otevřen nový dialog pro každou proměnnou šablony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="114"/>
         <source>One dialog per template variable</source>
         <translation>Na každou proměnnou šablony jeden dialog</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="121"/>
         <source>Select, if only one dialog for all template variables should be shown</source>
         <translation>Vybrat, má-li se zobrazit jen jeden dialog pro všechny proměnné šablony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="124"/>
         <source>One dialog for all template variables</source>
         <translation>Jeden dialog pro všechny proměnné šablony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="136"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="137"/>
         <source>Tooltips</source>
         <translation>Tooltipy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="143"/>
         <source>Select, if the template text should be shown in a tooltip</source>
         <translation>Vybrat, jestliže text šablony má být zobrazen v tooltipu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="146"/>
         <source>Show template text in tooltip</source>
         <translation>Zobrazit text šablony v tooltipech</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="156"/>
+        <source>Template Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="162"/>
+        <source>Press to select the font to be used for the code editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="165"/>
+        <source>Editor Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="175"/>
+        <source>Template Code Editor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

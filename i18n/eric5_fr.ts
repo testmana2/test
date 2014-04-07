@@ -38091,27 +38091,27 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1199"/>
         <source>Export Preferences</source>
         <translation>Export des préférences</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Import Preferences</source>
         <translation>Import des préférences</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -58908,72 +58908,72 @@ correspondante.&lt;/p&gt;</translation>
 <context>
     <name>TemplatePropertiesDialog</name>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="47"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="51"/>
         <source>All</source>
         <translation>Tous</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="59"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
         <source>Language:</source>
         <translation>Langue:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="67"/>
         <source>GROUP</source>
         <translation>GROUP</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>Template Help</source>
         <translation>Aide sur les gabarits</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="13"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="14"/>
         <source>Template Properties</source>
         <translation>Propriétés du gabarit</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="66"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="67"/>
         <source>Template:</source>
         <translation>Gabarit:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="96"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="103"/>
         <source>&amp;Help</source>
         <translation>A&amp;ide</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="99"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="106"/>
         <source>Alt+H</source>
         <translation>Alt+I</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="76"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="83"/>
         <source>Enter the text of the template</source>
         <translation>Entrer le texte du gabarit</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="24"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="25"/>
         <source>Name:</source>
         <translation>Nom:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="52"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="53"/>
         <source>Group:</source>
         <translation>Groupe:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Close dialog</source>
         <translation>Fermer la fenêtre</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Do you really want to close the dialog?</source>
         <translation>Voulez-vous réellement fermer cette fenêtre?</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="79"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="86"/>
         <source>&lt;b&gt;Template Text&lt;/b&gt;
 &lt;p&gt;Enter the template text in this area. Every occurrence of $VAR$ will be replaced
 by the associated text when the template is applied.  Predefined variables may be used in the template. The separator character might
@@ -58987,27 +58987,27 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Pour utiliser des variables dans un gabarit, il suffit d&apos;encadrer le nom de variable entre dux caractères &apos;$&apos;. Au moment de l&apos;utilisation du gabarit, des valeurs pour ces variables vous seront demandées.&lt;/p&gt;&lt;p&gt;Exemple de gabarit: Ceci est une $VAR$&lt;/p&gt;&lt;p&gt;Quand vous utiliserez ce gabarit,il vous sera demandé une valeur pour la variable VAR. Toutes les occurences de $VAR$ seront remplacées par la valeur que vous aurez indiquée.&lt;/p&gt;&lt;p&gt;Si vous souhaitez utiliser le caractère $ dans un gabarit, tapez deux fois le caractère dollar $$ à la place. Ils seront remplacés automatiquement par un seul dollar.&lt;/p&gt;&lt;p&gt;Le contenu d&apos;une variable peut être traité spécifiquement lorsque le nom de variable est suivi du caractère &apos;:&apos; et d&apos;un mot clé (e.g. $VAR:ml$). Les mots clés acceptés sont :&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;ml&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spécifie un contenu de variable sur plusieurs lignes. Dans ce cas, la portion de ligne précédant le nom de la variable dans le gabarit est répétée pour la première ligne. Pour les autres lignes de la variable, une chaîne d&apos;espaces de même longueur est reproduite comme préfixe.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;rl&lt;/b&gt;&lt;/td&gt;&lt;td&gt;Spécifie également un contenu sur plusieurs lignes. Dans ce cas, la portion de ligne précédant le nom de la variable est répété en préfixe à toutes les lignes.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Les variables suivantes peuvent être définie dans le gabarit:&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;date du jour au format ISO (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;year&lt;/b&gt;&lt;/td&gt;&lt;td&gt;année courante&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;project_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nom du projet (s&apos;il yen a un)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;path_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;chemin complet du fichier courant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;dir_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;chemin copmplet du répertoire&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;file_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;nom du fichier (sans le chemin)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;base_name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;comme &lt;i&gt;file_name&lt;/i&gt;, mais sans l&apos;extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;ext&lt;/b&gt;&lt;/td&gt;&lt;td&gt;extension du fichier courant&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Vous pouvez utiliser un autre délimiteur que le dollar en utilisant la fenêtre de configuration.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="31"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="32"/>
         <source>Enter the name of the template/group. Templates are autocompleted upon this name.</source>
         <translation>Entrer le nom du gabarit/groupe. Les gabarits sont auto-complétés à partir de ce nom.</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="38"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="39"/>
         <source>Description:</source>
         <translation>Description:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="45"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="46"/>
         <source>Enter a description for the template</source>
         <translation>Entrer une description pour le gabarit</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="35"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="39"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nom de gabarit&lt;/b&gt;&lt;p&gt;Entrer le nom du gabarit. Les gabarits peuvent être auto-complétés à partir de ce nom. Pour supporter l&apos;autocomplétion, le nom de gabarit ne doit contenir que des lettres (a-z et A-Z), des chiffres (0-9) et des underscores (_).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59206,79 +59206,99 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplatesPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="37"/>
         <source>Groups</source>
         <translation>Groupes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="42"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="43"/>
         <source>Select, if groups having entries should be opened automatically</source>
         <translation>Cocher, si les groupes ayant plusieurs entrées (gabarits) doivent être ouverts automatiquement</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="45"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="46"/>
         <source>Expand groups automatically</source>
         <translation>Déployer automatiquement les groupes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="56"/>
         <source>Variables</source>
         <translation>Variables</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="64"/>
         <source>Separator:</source>
         <translation>Séparateur:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="77"/>
         <source>Enter the character that encloses variables</source>
         <translation>Entrer le caractère encadrant les noms de variables</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="105"/>
         <source>Input method for variables</source>
         <translation>Mode de saisie des variables</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="111"/>
         <source>Select, if a new dialog should be opened for every template variable</source>
         <translation>Cocher, si une nouvelle fenêtre doit être ouverte pour chaque variable du gabarit</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="114"/>
         <source>One dialog per template variable</source>
         <translation>Une fenêtre par variable du gabarit</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="121"/>
         <source>Select, if only one dialog for all template variables should be shown</source>
         <translation>Cocher pour saisir toutes les variables du gabarit dans une seule fenêtre</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="124"/>
         <source>One dialog for all template variables</source>
         <translation>Un fenêtre pour toutes les variables du gabarit</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="136"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="137"/>
         <source>Tooltips</source>
         <translation>Aide contextuelle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="143"/>
         <source>Select, if the template text should be shown in a tooltip</source>
         <translation>Cocher, si le contenu du gabarit doit être indiqué dans une aide contexuelle, en passant la souris sur le nom du gabarit</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="146"/>
         <source>Show template text in tooltip</source>
         <translation>Afficher les gabarits dans une aide contexuelle</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Templates&lt;/b&gt;</source>
         <translation>&lt;b&gt;Configuration des gabarits&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="156"/>
+        <source>Template Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="162"/>
+        <source>Press to select the font to be used for the code editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="165"/>
+        <source>Editor Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="175"/>
+        <source>Template Code Editor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

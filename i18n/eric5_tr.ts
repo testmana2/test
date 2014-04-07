@@ -36620,27 +36620,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1199"/>
         <source>Export Preferences</source>
         <translation>Seçenekleri Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Import Preferences</source>
         <translation>Seçenekleri İçe Aktar</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1226"/>
+        <location filename="../Preferences/__init__.py" line="1227"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select Python2 Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1325"/>
+        <location filename="../Preferences/__init__.py" line="1326"/>
         <source>Select the Python2 interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -55457,47 +55457,47 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TemplatePropertiesDialog</name>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="13"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="14"/>
         <source>Template Properties</source>
         <translation>Şablon Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="24"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="25"/>
         <source>Name:</source>
         <translation>Adı:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="31"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="32"/>
         <source>Enter the name of the template/group. Templates are autocompleted upon this name.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="38"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="39"/>
         <source>Description:</source>
         <translation>Açıklama:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="45"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="46"/>
         <source>Enter a description for the template</source>
         <translation>Şablon için bir açıklama giriniz</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="52"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="53"/>
         <source>Group:</source>
         <translation>Grup:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="66"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="67"/>
         <source>Template:</source>
         <translation>Şablon:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="76"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="83"/>
         <source>Enter the text of the template</source>
         <translation>Şablonun metnini giriniz</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="79"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="86"/>
         <source>&lt;b&gt;Template Text&lt;/b&gt;
 &lt;p&gt;Enter the template text in this area. Every occurrence of $VAR$ will be replaced
 by the associated text when the template is applied.  Predefined variables may be used in the template. The separator character might
@@ -55506,52 +55506,52 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="96"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="103"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.ui" line="99"/>
+        <location filename="../Templates/TemplatePropertiesDialog.ui" line="106"/>
         <source>Alt+H</source>
         <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="35"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="39"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="47"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="51"/>
         <source>All</source>
         <translation>Hepsi</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="59"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
         <source>Language:</source>
         <translation>Dil:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="63"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="67"/>
         <source>GROUP</source>
         <translation>GRUP</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Close dialog</source>
         <translation>Diyaloğu kapat</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="95"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="99"/>
         <source>Do you really want to close the dialog?</source>
         <translation>Diyaloğu kapatmak istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>Template Help</source>
         <translation>Şablon Yardımı</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="107"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="111"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -55710,79 +55710,99 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplatesPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Templates&lt;/b&gt;</source>
         <translation>&lt;b&gt;Şablonları Ayarla&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="36"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="37"/>
         <source>Groups</source>
         <translation>Gruplar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="42"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="43"/>
         <source>Select, if groups having entries should be opened automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="45"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="46"/>
         <source>Expand groups automatically</source>
         <translation>Grupları otomatik olarak genişlet</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="56"/>
         <source>Variables</source>
         <translation>Değişkenler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="63"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="64"/>
         <source>Separator:</source>
         <translation>Ayırıcı:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="77"/>
         <source>Enter the character that encloses variables</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="105"/>
         <source>Input method for variables</source>
         <translation>Değişkenler için girdi yöntemi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="111"/>
         <source>Select, if a new dialog should be opened for every template variable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="114"/>
         <source>One dialog per template variable</source>
         <translation>Herbir şablon değişkenine bir diyalog</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="121"/>
         <source>Select, if only one dialog for all template variables should be shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="124"/>
         <source>One dialog for all template variables</source>
         <translation>Her diyalog için tüm şablon değişkenleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="136"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="137"/>
         <source>Tooltips</source>
         <translation>Araçyardımı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="143"/>
         <source>Select, if the template text should be shown in a tooltip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="146"/>
         <source>Show template text in tooltip</source>
         <translation>Şablon metnini ipucunda göster</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="156"/>
+        <source>Template Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="162"/>
+        <source>Press to select the font to be used for the code editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="165"/>
+        <source>Editor Font</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="175"/>
+        <source>Template Code Editor</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
