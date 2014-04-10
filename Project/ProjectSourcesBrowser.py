@@ -725,7 +725,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             coEnable = (coEnable or
                         os.path.isfile("{0}.coverage".format(basename)) or
                         os.path.isfile("{0}.coverage".format(tbasename))) and \
-                self.project.isPy3Project()
+                (self.project.isPy3Project() or self.project.isPy2Project())
         
         # now check the selected item
         itm = self.model().item(self.currentIndex())
@@ -736,7 +736,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 os.path.isfile("{0}.profile".format(basename))
             coEnable = (coEnable or
                         os.path.isfile("{0}.coverage".format(basename))) and \
-                itm.isPython3File()
+                (itm.isPython3File() or itm.isPython2File())
         
         self.profileMenuAction.setEnabled(prEnable)
         self.coverageMenuAction.setEnabled(coEnable)

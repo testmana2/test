@@ -4771,7 +4771,8 @@ class Editor(QsciScintillaCompat):
                     coEnable or
                     os.path.isfile("{0}.coverage".format(basename)) or
                     os.path.isfile("{0}.coverage".format(tbasename))) and \
-                    self.project.isPy3Project()
+                    (self.project.isPy3Project() or
+                        self.project.isPy2Project())
         
         # now check ourself
         fn = self.getFileName()
@@ -4786,7 +4787,7 @@ class Editor(QsciScintillaCompat):
                 coEnable or
                 os.path.isfile("{0}.coverage".format(basename)) or
                 os.path.isfile("{0}.coverage".format(tbasename))) and \
-                self.isPy3File()
+                self.isPyFile()
         
         # now check for syntax errors
         if self.hasSyntaxErrors():
