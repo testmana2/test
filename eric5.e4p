@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-04-01, 23:14:41 -->
+<!-- Saved: 2014-04-10, 22:54:10 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1126,6 +1126,14 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
+    <Source>DebugClients/Python/coverage/config.py</Source>
+    <Source>DebugClients/Python/coverage/debug.py</Source>
+    <Source>DebugClients/Python/coverage/version.py</Source>
+    <Source>DebugClients/Python/coverage/__main__.py</Source>
+    <Source>DebugClients/Python3/coverage/config.py</Source>
+    <Source>DebugClients/Python3/coverage/debug.py</Source>
+    <Source>DebugClients/Python3/coverage/version.py</Source>
+    <Source>DebugClients/Python3/coverage/__main__.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

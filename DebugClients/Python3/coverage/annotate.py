@@ -2,6 +2,7 @@
 
 import os, re
 
+from .backward import sorted                    # pylint: disable=W0622
 from .report import Reporter
 
 class AnnotateReporter(Reporter):
@@ -26,16 +27,20 @@ class AnnotateReporter(Reporter):
 
     """
 
-    def __init__(self, coverage, ignore_errors=False):
-        super(AnnotateReporter, self).__init__(coverage, ignore_errors)
+    def __init__(self, coverage, config):
+        super(AnnotateReporter, self).__init__(coverage, config)
         self.directory = None
 
     blank_re = re.compile(r"\s*(#|$)")
     else_re = re.compile(r"\s*else\s*:\s*(#|$)")
 
-    def report(self, morfs, directory=None, omit_prefixes=None):
-        """Run the report."""
-        self.report_files(self.annotate_file, morfs, directory, omit_prefixes)
+    def report(self, morfs, directory=None):
+        """Run the report.
+
+        See `coverage.report()` for arguments.
+
+        """
+        self.report_files(self.annotate_file, morfs, directory)
 
     def annotate_file(self, cu, analysis):
         """Annotate a single file.
@@ -55,9 +60,9 @@ class AnnotateReporter(Reporter):
             dest_file = filename + ",cover"
         dest = open(dest_file, 'w')
 
-        statements = analysis.statements
-        missing = analysis.missing
-        excluded = analysis.excluded
+        statements = sorted(analysis.statements)
+        missing = sorted(analysis.missing)
+        excluded = sorted(analysis.excluded)
 
         lineno = 0
         i = 0

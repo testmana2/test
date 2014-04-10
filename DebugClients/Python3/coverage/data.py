@@ -2,7 +2,9 @@
 
 import os
 
-from .backward import pickle, sorted    # pylint: disable-msg=W0622
+from .backward import iitems, pickle, sorted    # pylint: disable=W0622
+from .files import PathAliases
+from .misc import file_be_gone
 
 
 class CoverageData(object):
@@ -21,34 +23,24 @@ class CoverageData(object):
 
     """
 
-    # Name of the data file (unless environment variable is set).
-    filename_default = ".coverage"
-
-    # Environment variable naming the data file.
-    filename_env = "COVERAGE_FILE"
-
-    def __init__(self, basename=None, suffix=None, collector=None):
+    def __init__(self, basename=None, collector=None, debug=None):
         """Create a CoverageData.
 
         `basename` is the name of the file to use for storing data.
 
-        `suffix` is a suffix to append to the base file name. This can be used
-        for multiple or parallel execution, so that many coverage data files
-        can exist simultaneously.
-
         `collector` is a string describing the coverage measurement software.
 
+        `debug` is a `DebugControl` object for writing debug messages.
+
         """
-        self.collector = collector
+        self.collector = collector or 'unknown'
+        self.debug = debug
 
         self.use_file = True
 
         # Construct the filename that will be used for data file storage, if we
         # ever do any file storage.
-        self.filename = (basename or
-                os.environ.get(self.filename_env, self.filename_default))
-        if suffix:
-            self.filename += suffix
+        self.filename = basename or ".coverage"
         self.filename = os.path.abspath(self.filename)
 
         # A map from canonical Python source file name to a dictionary in
@@ -65,7 +57,10 @@ class CoverageData(object):
         # A map from canonical Python source file name to a dictionary with an
         # entry for each pair of line numbers forming an arc:
         #
-        # { filename: { (l1,l2): None, ... }, ...}
+        #   {
+        #       'filename1.py': { (12,14): None, (47,48): None, ... },
+        #       ...
+        #       }
         #
         self.arcs = {}
 
@@ -80,29 +75,39 @@ class CoverageData(object):
         else:
             self.lines, self.arcs = {}, {}
 
-    def write(self):
-        """Write the collected coverage data to a file."""
+    def write(self, suffix=None):
+        """Write the collected coverage data to a file.
+
+        `suffix` is a suffix to append to the base file name. This can be used
+        for multiple or parallel execution, so that many coverage data files
+        can exist simultaneously.  A dot will be used to join the base name and
+        the suffix.
+
+        """
         if self.use_file:
-            self.write_file(self.filename)
+            filename = self.filename
+            if suffix:
+                filename += "." + suffix
+            self.write_file(filename)
 
     def erase(self):
         """Erase the data, both in this object, and from its file storage."""
         if self.use_file:
-            if self.filename and os.path.exists(self.filename):
-                os.remove(self.filename)
+            if self.filename:
+                file_be_gone(self.filename)
         self.lines = {}
         self.arcs = {}
 
     def line_data(self):
         """Return the map from filenames to lists of line numbers executed."""
         return dict(
-            [(f, sorted(lmap.keys())) for f, lmap in self.lines.items()]
+            [(f, sorted(lmap.keys())) for f, lmap in iitems(self.lines)]
             )
 
     def arc_data(self):
         """Return the map from filenames to lists of line number pairs."""
         return dict(
-            [(f, sorted(amap.keys())) for f, amap in self.arcs.items()]
+            [(f, sorted(amap.keys())) for f, amap in iitems(self.arcs)]
             )
 
     def write_file(self, filename):
@@ -119,6 +124,9 @@ class CoverageData(object):
         if self.collector:
             data['collector'] = self.collector
 
+        if self.debug and self.debug.should('dataio'):
+            self.debug.write("Writing data to %r" % (filename,))
+
         # Write the pickle to the file.
         fdata = open(filename, 'wb')
         try:
@@ -132,6 +140,8 @@ class CoverageData(object):
 
     def raw_data(self, filename):
         """Return the raw pickled data from `filename`."""
+        if self.debug and self.debug.should('dataio'):
+            self.debug.write("Reading data from %r" % (filename,))
         fdata = open(filename, 'rb')
         try:
             data = pickle.load(fdata)
@@ -154,33 +164,42 @@ class CoverageData(object):
                 # Unpack the 'lines' item.
                 lines = dict([
                     (f, dict.fromkeys(linenos, None))
-                        for f, linenos in data.get('lines', {}).items()
+                        for f, linenos in iitems(data.get('lines', {}))
                     ])
                 # Unpack the 'arcs' item.
                 arcs = dict([
                     (f, dict.fromkeys(arcpairs, None))
-                        for f, arcpairs in data.get('arcs', {}).items()
+                        for f, arcpairs in iitems(data.get('arcs', {}))
                     ])
         except Exception:
             pass
         return lines, arcs
 
-    def combine_parallel_data(self):
+    def combine_parallel_data(self, aliases=None):
         """Combine a number of data files together.
 
         Treat `self.filename` as a file prefix, and combine the data from all
-        of the data files starting with that prefix.
+        of the data files starting with that prefix plus a dot.
+
+        If `aliases` is provided, it's a `PathAliases` object that is used to
+        re-map paths to match the local machine's.
 
         """
+        aliases = aliases or PathAliases()
         data_dir, local = os.path.split(self.filename)
+        localdot = local + '.'
         for f in os.listdir(data_dir or '.'):
-            if f.startswith(local):
+            if f.startswith(localdot):
                 full_path = os.path.join(data_dir, f)
                 new_lines, new_arcs = self._read_file(full_path)
-                for filename, file_data in new_lines.items():
+                for filename, file_data in iitems(new_lines):
+                    filename = aliases.map(filename)
                     self.lines.setdefault(filename, {}).update(file_data)
-                for filename, file_data in new_arcs.items():
+                for filename, file_data in iitems(new_arcs):
+                    filename = aliases.map(filename)
                     self.arcs.setdefault(filename, {}).update(file_data)
+                if f != local:
+                    os.remove(full_path)
 
     def add_line_data(self, line_data):
         """Add executed line data.
@@ -188,7 +207,7 @@ class CoverageData(object):
         `line_data` is { filename: { lineno: None, ... }, ...}
 
         """
-        for filename, linenos in line_data.items():
+        for filename, linenos in iitems(line_data):
             self.lines.setdefault(filename, {}).update(linenos)
 
     def add_arc_data(self, arc_data):
@@ -197,11 +216,15 @@ class CoverageData(object):
         `arc_data` is { filename: { (l1,l2): None, ... }, ...}
 
         """
-        for filename, arcs in arc_data.items():
+        for filename, arcs in iitems(arc_data):
             self.arcs.setdefault(filename, {}).update(arcs)
 
-    def executed_files(self):
-        """A list of all files that had been measured as executed."""
+    def touch_file(self, filename):
+        """Ensure that `filename` appears in the data, empty if needed."""
+        self.lines.setdefault(filename, {})
+
+    def measured_files(self):
+        """A list of all files that had been measured."""
         return list(self.lines.keys())
 
     def executed_lines(self, filename):
@@ -217,6 +240,11 @@ class CoverageData(object):
         """A map containing all the arcs executed in `filename`."""
         return self.arcs.get(filename) or {}
 
+    def add_to_hash(self, filename, hasher):
+        """Contribute `filename`'s data to the Md5Hash `hasher`."""
+        hasher.update(self.executed_lines(filename))
+        hasher.update(self.executed_arcs(filename))
+
     def summary(self, fullpath=False):
         """Return a dict summarizing the coverage data.
 
@@ -230,7 +258,7 @@ class CoverageData(object):
             filename_fn = lambda f: f
         else:
             filename_fn = os.path.basename
-        for filename, lines in self.lines.items():
+        for filename, lines in iitems(self.lines):
             summ[filename_fn(filename)] = len(lines)
         return summ
 
