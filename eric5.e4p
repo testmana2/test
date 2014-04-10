@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
+<!-- Saved: 2014-04-10, 22:54:10 -->
 <Project version="5.1">
   <Language>en_US</Language>
   <ProjectWordList>Dictionaries/words.dic</ProjectWordList>
@@ -1134,6 +1135,14 @@
     <Source>UI/Previewers/PreviewerHTML.py</Source>
     <Source>UI/Previewers/PreviewerQSS.py</Source>
     <Source>QScintilla/Lexers/LexerQSS.py</Source>
+    <Source>DebugClients/Python/coverage/config.py</Source>
+    <Source>DebugClients/Python/coverage/debug.py</Source>
+    <Source>DebugClients/Python/coverage/version.py</Source>
+    <Source>DebugClients/Python/coverage/__main__.py</Source>
+    <Source>DebugClients/Python3/coverage/config.py</Source>
+    <Source>DebugClients/Python3/coverage/debug.py</Source>
+    <Source>DebugClients/Python3/coverage/version.py</Source>
+    <Source>DebugClients/Python3/coverage/__main__.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

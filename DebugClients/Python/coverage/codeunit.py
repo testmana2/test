@@ -2,22 +2,20 @@
 
 import glob, os
 
-from .backward import string_class, StringIO
+from .backward import open_source, string_class, StringIO
 from .misc import CoverageException
 
 
-def code_unit_factory(morfs, file_locator, omit_prefixes=None):
+def code_unit_factory(morfs, file_locator):
     """Construct a list of CodeUnits from polymorphic inputs.
 
     `morfs` is a module or a filename, or a list of same.
+
     `file_locator` is a FileLocator that can help resolve filenames.
-    `omit_prefixes` is a list of prefixes.  CodeUnits that match those prefixes
-    will be omitted from the list.
 
     Returns a list of CodeUnit objects.
 
     """
-
     # Be sure we have a list.
     if not isinstance(morfs, (list, tuple)):
         morfs = [morfs]
@@ -33,19 +31,6 @@ def code_unit_factory(morfs, file_locator, omit_prefixes=None):
 
     code_units = [CodeUnit(morf, file_locator) for morf in morfs]
 
-    if omit_prefixes:
-        assert not isinstance(omit_prefixes, string_class) # common mistake
-        prefixes = [file_locator.abs_file(p) for p in omit_prefixes]
-        filtered = []
-        for cu in code_units:
-            for prefix in prefixes:
-                if cu.filename.startswith(prefix):
-                    break
-            else:
-                filtered.append(cu)
-
-        code_units = filtered
-
     return code_units
 
 
@@ -59,7 +44,6 @@ class CodeUnit(object):
     `relative` is a boolean.
 
     """
-
     def __init__(self, morf, file_locator):
         self.file_locator = file_locator
 
@@ -68,8 +52,10 @@ class CodeUnit(object):
         else:
             f = morf
         # .pyc files should always refer to a .py instead.
-        if f.endswith('.pyc'):
+        if f.endswith('.pyc') or f.endswith('.pyo'):
             f = f[:-1]
+        elif f.endswith('$py.class'): # Jython
+            f = f[:-9] + ".py"
         self.filename = self.file_locator.canonical_filename(f)
 
         if hasattr(morf, '__name__'):
@@ -95,19 +81,14 @@ class CodeUnit(object):
 
     def __lt__(self, other):
         return self.name < other.name
-
     def __le__(self, other):
         return self.name <= other.name
-
     def __eq__(self, other):
         return self.name == other.name
-
     def __ne__(self, other):
         return self.name != other.name
-
     def __gt__(self, other):
         return self.name > other.name
-
     def __ge__(self, other):
         return self.name >= other.name
 
@@ -124,14 +105,14 @@ class CodeUnit(object):
         if self.modname:
             return self.modname.replace('.', '_')
         else:
-            root = os.path.splitdrive(os.path.splitext(self.name)[0])[1]
-            return root.replace('\\', '_').replace('/', '_')
+            root = os.path.splitdrive(self.name)[1]
+            return root.replace('\\', '_').replace('/', '_').replace('.', '_')
 
     def source_file(self):
         """Return an open file for reading the source of the code unit."""
         if os.path.exists(self.filename):
             # A regular text file: open it.
-            return open(self.filename)
+            return open_source(self.filename)
 
         # Maybe it's in a zip file?
         source = self.file_locator.get_zip_data(self.filename)
@@ -140,8 +121,25 @@ class CodeUnit(object):
 
         # Couldn't find source.
         raise CoverageException(
-            "No source for code %r." % self.filename
+            "No source for code '%s'." % self.filename
             )
 
-#
-# eflag: FileType = Python2
+    def should_be_python(self):
+        """Does it seem like this file should contain Python?
+
+        This is used to decide if a file reported as part of the exection of
+        a program was really likely to have contained Python in the first
+        place.
+
+        """
+        # Get the file extension.
+        _, ext = os.path.splitext(self.filename)
+
+        # Anything named *.py* should be Python.
+        if ext.startswith('.py'):
+            return True
+        # A file with no extension should be Python.
+        if not ext:
+            return True
+        # Everything else is probably not Python.
+        return False
