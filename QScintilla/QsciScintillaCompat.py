@@ -264,6 +264,8 @@ class QsciScintillaCompat(QsciScintilla):
                 utf8Len = 3
             elif (ch[0] & 0xC0) == 0xC0:
                 utf8Len = 2
+            else:
+                utf8Len = 1
             while len(ch) < utf8Len:
                 pos += 1
                 ch += self.byteAt(pos)
