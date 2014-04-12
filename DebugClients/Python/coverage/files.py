@@ -307,3 +307,6 @@ def find_python_files(dirname):
             # characters that probably mean they are editor junk.
             if re.match(r"^[^.#~!$@%^&*()+=,]+\.pyw?$", filename):
                 yield os.path.join(dirpath, filename)
+
+#
+# eflag: FileType = Python2

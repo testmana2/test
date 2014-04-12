@@ -143,3 +143,6 @@ class CodeUnit(object):
             return True
         # Everything else is probably not Python.
         return False
+
+#
+# eflag: FileType = Python2

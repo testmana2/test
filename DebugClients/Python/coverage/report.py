@@ -90,3 +90,6 @@ class Reporter(object):
                 # explicitly suppress those errors.
                 if cu.should_be_python() and not self.config.ignore_errors:
                     raise
+
+#
+# eflag: FileType = Python2

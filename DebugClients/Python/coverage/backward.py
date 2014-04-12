@@ -182,3 +182,6 @@ try:
 except ImportError:
     import md5
     md5 = md5.new
+
+#
+# eflag: FileType = Python2

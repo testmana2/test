@@ -206,3 +206,6 @@ class Templite(object):
             if hasattr(value, '__call__'):
                 value = value()
         return value
+
+#
+# eflag: FileType = Python2

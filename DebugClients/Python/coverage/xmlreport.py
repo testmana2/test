@@ -153,3 +153,6 @@ class XmlReporter(Reporter):
         package[2] += class_lines
         package[3] += class_br_hits
         package[4] += class_branches
+
+#
+# eflag: FileType = Python2
