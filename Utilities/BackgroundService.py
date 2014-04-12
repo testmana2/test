@@ -15,7 +15,6 @@ import json
 import os
 import struct
 import sys
-import threading
 from zlib import adler32
 
 from PyQt4.QtCore import QProcess, pyqtSignal
@@ -24,7 +23,6 @@ from PyQt4.QtNetwork import QTcpServer, QHostAddress
 
 import Preferences
 import Utilities
-from Utilities.BackgroundClient import BackgroundClient
 
 from eric5config import getConfig
 
@@ -59,19 +57,10 @@ class BackgroundService(QTcpServer):
         port = self.serverPort()
         ## NOTE: Need the port if started external in debugger:
         print('BackgroundService listening on: %i' % port)
-        if sys.platform == 'win32':
-            interpreterCompare = Utilities.samefilepath
-        else:
-            interpreterCompare = Utilities.samepath
-        
         for pyName in ['Python', 'Python3']:
             interpreter = Preferences.getDebugger(
                 pyName + "Interpreter")
-            
-            if interpreterCompare(interpreter, sys.executable):
-                process = self.__startInternalClient(port)
-            else:
-                process = self.__startExternalClient(interpreter, port)
+            process = self.__startExternalClient(interpreter, port)
             if process:
                 self.processes.append(process)
 
@@ -95,19 +84,6 @@ class BackgroundService(QTcpServer):
         if not proc.waitForStarted(10000):
             proc = None
         return proc
-
-    def __startInternalClient(self, port):
-        """
-        Private method to start the background client as internal thread.
-        
-        @param port socket port to which the interpreter should connect (int)
-        @return the thread object (Thread) or None
-        """
-        backgroundClient = BackgroundClient(
-            self.hostAddress, port)
-        thread = threading.Thread(target=backgroundClient.run)
-        thread.start()
-        return thread
     
     def __processQueue(self):
         """
@@ -298,9 +274,5 @@ class BackgroundService(QTcpServer):
                 connection.close()
         
         for process in self.processes:
-            if isinstance(process, QProcess):
-                process.close()
-                process = None
-            elif isinstance(process, threading.Thread):
-                process.join(0.1)
-                process = None
+            process.close()
+            process = None
