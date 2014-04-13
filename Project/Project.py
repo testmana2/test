@@ -4313,7 +4313,8 @@ class Project(QObject):
             return
         
         files = [os.path.join(self.ppath, file)
-                 for file in self.pdata["SOURCES"] if file.endswith(".py")]
+                 for file in self.pdata["SOURCES"]
+                 if os.path.splitext(file)[1].startswith(".py")]
         from DataViews.PyCoverageDialog import PyCoverageDialog
         self.codecoverage = PyCoverageDialog()
         self.codecoverage.show()
