@@ -35,6 +35,7 @@ sourceDir = "eric"
 configName = 'eric5config.py'
 defaultMacAppBundleName = "eric5.app"
 macAppBundleName = "eric5.app"
+macAppBundlePath = "/Applications"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
     sys.exec_prefix)
 
@@ -90,8 +91,8 @@ def usage(rcode=2):
 
     @param rcode the return code passed back to the calling process.
     """
-    global progName, modDir, distDir, apisDir, macAppBundleName
-    global macPythonExe
+    global progName, modDir, distDir, apisDir
+    global macAppBundleName, macAppBundlePath, macPythonExe
 
     print()
     print("Usage:")
@@ -123,6 +124,9 @@ def usage(rcode=2):
     if sys.platform == "darwin":
         print("    -m name   name of the Mac app bundle")
         print("              (default: {0})".format(macAppBundleName))
+        print("    -n path   path of the directory the Mac app bundle will")
+        print("              be created in")
+        print("              (default: {0}".format(macAppBundlePath))
         print("    -p python name of the python executable")
         print("              (default: {0})".format(macPythonExe))
     print("    -x        don't perform dependency checks (use on your own"
@@ -307,7 +311,7 @@ def createGlobalPluginsDir():
     fname = os.path.join(pdir, "__init__.py")
     if not os.path.exists(fname):
         if not os.path.exists(pdir):
-            os.mkdir(pdir,  0o755)
+            os.mkdir(pdir, 0o755)
         f = open(fname, "w", encoding="utf-8")
         f.write(
 '''# -*- coding: utf-8 -*-
@@ -325,7 +329,7 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
-    global macAppBundleName, platBinDir
+    global macAppBundleName, macAppBundlePath, platBinDir
     
     try:
         from eric5config import getConfig
@@ -418,8 +422,10 @@ def cleanUp():
             # delete the Mac app bundle
             if os.path.exists("/Developer/Applications/Eric5"):
                 shutil.rmtree("/Developer/Applications/Eric5")
-            if os.path.exists("/Applications/" + macAppBundleName):
-                shutil.rmtree("/Applications/" + macAppBundleName)
+            if os.path.exists(
+                    os.path.join(macAppBundlePath, macAppBundleName)):
+                shutil.rmtree(
+                    os.path.join(macAppBundlePath, macAppBundleName))
         
     except (IOError, OSError) as msg:
         sys.stderr.write(
@@ -655,15 +661,19 @@ def createMacAppBundle(pydir):
     @param pydir the name of the directory where the Python script will
         eventually be installed (string)
     """
-    global cfg, sourceDir, macAppBundleName, macPythonExe
+    global cfg, sourceDir, macAppBundleName, macPythonExe, macAppBundlePath
     
-    dirs = {"contents": "/Applications/{0}/Contents/".format(macAppBundleName),
-            "exe": "/Applications/{0}/Contents/MacOS".format(macAppBundleName),
-            "icns": "/Applications/{0}/Contents/Resources".format(
-                macAppBundleName)}
+    dirs = {
+        "contents": "{0}/{1}/Contents/".format(
+            macAppBundlePath, macAppBundleName),
+        "exe": "{0}/{1}/Contents/MacOS".format(
+            macAppBundlePath, macAppBundleName),
+        "icns": "{0}/{1}/Contents/Resources".format(
+            macAppBundlePath, macAppBundleName)
+    }
     os.makedirs(dirs["contents"])
-    os.mkdir(dirs["exe"])
-    os.mkdir(dirs["icns"])
+    os.mkdirs(dirs["exe"])
+    os.mkdirs(dirs["icns"])
     
     if macAppBundleName == defaultMacAppBundleName:
         starter = os.path.join(dirs["exe"], "eric")
@@ -756,7 +766,7 @@ def createConfig():
     """
     Create a config file with the respective config entries.
     """
-    global cfg, sourceDir
+    global cfg, sourceDir, macAppBundlePath
     
     apis = []
     for progLanguage in progLanguages:
@@ -794,6 +804,8 @@ def createConfig():
         """    'mdir': r'{13}',\n"""
         """    'apidir': r'{14}',\n"""
         """    'apis': {15},\n"""
+        """    'macAppBundlePath': {16},\n"""
+        """    'macAppBundleName': {17},\n"""
         """}}\n"""
         """\n"""
         """def getConfig(name):\n"""
@@ -808,7 +820,8 @@ def createConfig():
         """        pass\n"""
         """\n"""
         """    raise AttributeError('"{{0}}" is not a valid configuration"""
-        """ value'.format(name))\n""").format(
+        """ value'.format(name))\n"""
+    ).format(
         cfg['ericDir'], cfg['ericPixDir'], cfg['ericIconDir'],
         cfg['ericDTDDir'], cfg['ericCSSDir'],
         cfg['ericStylesDir'], cfg['ericDocDir'],
@@ -816,7 +829,9 @@ def createConfig():
         cfg['ericTemplatesDir'],
         cfg['ericCodeTemplatesDir'], cfg['ericOthersDir'],
         cfg['bindir'], cfg['mdir'],
-        cfg['apidir'], apis)
+        cfg['apidir'], apis,
+        macAppBundlePath, macAppBundleName,
+    )
     copyToFile(fn, config)
 
 
@@ -1062,7 +1077,8 @@ def main(argv):
 
     # Parse the command line.
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
-    global sourceDir, configName, macAppBundleName, macPythonExe
+    global sourceDir, configName
+    global macAppBundlePath, macAppBundleName, macPythonExe
     
     if sys.version_info > (3, 9, 9) or sys.version_info < (3, 0, 0):
         print('Sorry, eric5 requires Python 3 for running.')
@@ -1117,6 +1133,8 @@ def main(argv):
                 cfg = {}
         elif opt == "-m":
             macAppBundleName = arg
+        elif opt == "-n":
+            macAppBundlePath = arg
         elif opt == "-p":
             macPythonExe = arg
     
