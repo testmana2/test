@@ -679,8 +679,8 @@ def createMacAppBundle(pydir):
             macAppBundlePath, macAppBundleName)
     }
     os.makedirs(dirs["contents"])
-    os.mkdirs(dirs["exe"])
-    os.mkdirs(dirs["icns"])
+    os.makedirs(dirs["exe"])
+    os.makedirs(dirs["icns"])
     
     if macAppBundleName == defaultMacAppBundleName:
         starter = os.path.join(dirs["exe"], "eric")
