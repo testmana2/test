@@ -8,6 +8,10 @@ Module implementing the browser model.
 """
 
 from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
 
 import os
 import fnmatch
