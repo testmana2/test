@@ -146,6 +146,9 @@ VersionControl
 <td><a href="#Hg.hgBundle">hgBundle</a></td>
 <td>Public method to create a changegroup file.</td>
 </tr><tr>
+<td><a href="#Hg.hgCancelMerge">hgCancelMerge</a></td>
+<td>Public method to cancel an uncommitted merge.</td>
+</tr><tr>
 <td><a href="#Hg.hgCopy">hgCopy</a></td>
 <td>Public method used to copy a file/directory.</td>
 </tr><tr>
@@ -628,6 +631,22 @@ file/directory name to be branched (string)
 <dt><i>name</i></dt>
 <dd>
 file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgCancelMerge" ID="Hg.hgCancelMerge"></a>
+<h4>Hg.hgCancelMerge</h4>
+<b>hgCancelMerge</b>(<i>name</i>)
+<p>
+        Public method to cancel an uncommitted merge.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, that the cancellation contained an add
+            or delete (boolean)
 </dd>
 </dl><a NAME="Hg.hgCopy" ID="Hg.hgCopy"></a>
 <h4>Hg.hgCopy</h4>

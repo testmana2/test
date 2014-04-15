@@ -35,7 +35,7 @@ def open(file, mode='r', buffering=-1, encoding=None,
     return File(file, mode, buffering,  encoding, errors, newline, closefd)
 
 
-class File(file):   #__IGNORE_WARNING__
+class File(file):   # __IGNORE_WARNING__
     """
     Facade for the original file class.
     """
@@ -74,7 +74,7 @@ class File(file):   #__IGNORE_WARNING__
         else:
             self.__errors = errors
 
-        file.__init__(self, filein,  mode,  buffering)    #__IGNORE_WARNING__
+        file.__init__(self, filein,  mode,  buffering)    # __IGNORE_WARNING__
 
     def read(self,  n=-1):
         """

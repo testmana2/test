@@ -348,6 +348,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             self.tr("Annotating files..."), self.tr("Abort"),
             0, len(files), self.tr("%v/%m Files"), self)
         progress.setMinimumDuration(0)
+        progress.setWindowTitle(self.tr("Coverage"))
         count = 0
         
         for file in files:

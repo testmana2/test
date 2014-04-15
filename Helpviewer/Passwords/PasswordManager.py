@@ -610,6 +610,7 @@ class PasswordManager(QObject):
             None, 0, len(self.__logins), self.tr("%v/%m Passwords"),
             QApplication.activeModalWidget())
         progress.setMinimumDuration(0)
+        progress.setWindowTitle(self.tr("Passwords"))
         count = 0
         
         for key in self.__logins:

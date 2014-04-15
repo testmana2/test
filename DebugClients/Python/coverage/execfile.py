@@ -169,3 +169,6 @@ def make_code_from_pyc(filename):
         fpyc.close()
 
     return code
+
+#
+# eflag: FileType = Python2

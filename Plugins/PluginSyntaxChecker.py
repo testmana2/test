@@ -17,6 +17,8 @@ from E5Gui.E5Action import E5Action
 from E5Gui.E5Application import e5App
 from eric5config import getConfig
 
+from Project.ProjectBrowserModel import ProjectBrowserFileItem
+
 import Preferences
 
 # Start-Of-Header
@@ -268,11 +270,16 @@ class SyntaxCheckerPlugin(QObject):
         """
         browser = e5App().getObject("ProjectBrowser").getProjectBrowser(
             "sources")
-        itm = browser.model().item(browser.currentIndex())
-        try:
-            fn = itm.fileName()
-        except AttributeError:
-            fn = itm.dirName()
+        if browser.getSelectedItemsCount([ProjectBrowserFileItem]) > 1:
+            fn = []
+            for itm in browser.getSelectedItems([ProjectBrowserFileItem]):
+                fn.append(itm.fileName())
+        else:
+            itm = browser.model().item(browser.currentIndex())
+            try:
+                fn = itm.fileName()
+            except AttributeError:
+                fn = itm.dirName()
         
         from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
             SyntaxCheckerDialog

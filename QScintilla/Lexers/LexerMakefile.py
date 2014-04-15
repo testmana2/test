@@ -14,7 +14,7 @@ from PyQt4.Qsci import QsciLexerMakefile
 from .Lexer import Lexer
 
 
-class LexerMakefile(QsciLexerMakefile, Lexer):
+class LexerMakefile(Lexer, QsciLexerMakefile):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -24,7 +24,7 @@ class LexerMakefile(QsciLexerMakefile, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerMakefile, self).__init__(parent)
+        QsciLexerMakefile.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

@@ -14,7 +14,7 @@ import os.path
 try:  # Py3
     from itertools import zip_longest
 except ImportError:
-    from itertools import izip_longest as zip_longest    #__IGNORE_WARNING__
+    from itertools import izip_longest as zip_longest    # __IGNORE_WARNING__
 
 from PyQt4.QtGui import QApplication, QGraphicsTextItem
 
@@ -95,6 +95,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         progress = E5ProgressDialog(
             self.tr("Parsing modules..."),
             None, 0, tot, self.tr("%v/%m Modules"), self.parent())
+        progress.setWindowTitle(self.tr("Package Diagram"))
         try:
             prog = 0
             progress.show()
@@ -154,6 +155,7 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         progress = E5ProgressDialog(
             self.tr("Parsing modules..."),
             None, 0, tot, self.tr("%v/%m Modules"), self.parent())
+        progress.setWindowTitle(self.tr("Package Diagram"))
         try:
             prog = 0
             progress.show()

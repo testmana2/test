@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerYAML(QsciLexerYAML, Lexer):
+class LexerYAML(Lexer, QsciLexerYAML):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerYAML(QsciLexerYAML, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerYAML, self).__init__(parent)
+        QsciLexerYAML.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "---"

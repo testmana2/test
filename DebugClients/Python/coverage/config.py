@@ -211,3 +211,6 @@ class CoverageConfig(object):
         if cp.has_option(section, option):
             method = getattr(cp, 'get'+type_)
             setattr(self, attr, method(section, option))
+
+#
+# eflag: FileType = Python2

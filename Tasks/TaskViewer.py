@@ -548,6 +548,7 @@ class TaskViewer(QTreeWidget):
             self.tr("Extracting project tasks..."),
             self.tr("Abort"), 0, len(files), self.tr("%v/%m Files"))
         progress.setMinimumDuration(0)
+        progress.setWindowTitle(self.tr("Tasks"))
         count = 0
         
         for file in files:

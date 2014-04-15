@@ -9,6 +9,8 @@ Module implementing the Templates configuration page.
 
 from __future__ import unicode_literals
 
+from PyQt4.QtCore import pyqtSlot
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_TemplatesPage import Ui_TemplatesPage
 
@@ -38,6 +40,8 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
             self.templatesMultiDialogButton.setChecked(True)
         self.templatesToolTipCheckBox.setChecked(
             Preferences.getTemplates("ShowTooltip"))
+        self.editorFont = Preferences.getTemplates("EditorFont")
+        self.editorFontSample.setFont(self.editorFont)
         
     def save(self):
         """
@@ -55,6 +59,15 @@ class TemplatesPage(ConfigurationPageBase, Ui_TemplatesPage):
         Preferences.setTemplates(
             "ShowTooltip",
             self.templatesToolTipCheckBox.isChecked())
+        Preferences.setTemplates("EditorFont", self.editorFont)
+    
+    @pyqtSlot()
+    def on_editorFontButton_clicked(self):
+        """
+        Private method used to select the font to be used by the code editor.
+        """
+        self.editorFont = self.selectFont(
+            self.editorFontSample, self.editorFont)
     
 
 def create(dlg):

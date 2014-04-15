@@ -877,6 +877,7 @@
               <section title="eric5.QScintilla.Lexers.LexerProperties" ref="eric5.QScintilla.Lexers.LexerProperties.html" />
               <section title="eric5.QScintilla.Lexers.LexerPygments" ref="eric5.QScintilla.Lexers.LexerPygments.html" />
               <section title="eric5.QScintilla.Lexers.LexerPython" ref="eric5.QScintilla.Lexers.LexerPython.html" />
+              <section title="eric5.QScintilla.Lexers.LexerQSS" ref="eric5.QScintilla.Lexers.LexerQSS.html" />
               <section title="eric5.QScintilla.Lexers.LexerRuby" ref="eric5.QScintilla.Lexers.LexerRuby.html" />
               <section title="eric5.QScintilla.Lexers.LexerSQL" ref="eric5.QScintilla.Lexers.LexerSQL.html" />
               <section title="eric5.QScintilla.Lexers.LexerTCL" ref="eric5.QScintilla.Lexers.LexerTCL.html" />
@@ -946,6 +947,10 @@
             <section title="eric5.Tools.UIPreviewer" ref="eric5.Tools.UIPreviewer.html" />
           </section>
           <section title="eric5.UI" ref="index-eric5.UI.html">
+            <section title="eric5.UI.Previewers" ref="index-eric5.UI.Previewers.html">
+              <section title="eric5.UI.Previewers.PreviewerHTML" ref="eric5.UI.Previewers.PreviewerHTML.html" />
+              <section title="eric5.UI.Previewers.PreviewerQSS" ref="eric5.UI.Previewers.PreviewerQSS.html" />
+            </section>
             <section title="eric5.UI.AuthenticationDialog" ref="eric5.UI.AuthenticationDialog.html" />
             <section title="eric5.UI.Browser" ref="eric5.UI.Browser.html" />
             <section title="eric5.UI.BrowserModel" ref="eric5.UI.BrowserModel.html" />
@@ -1492,7 +1497,6 @@
       <keyword name="BackgroundService.__receive" id="BackgroundService.__receive" ref="eric5.Utilities.BackgroundService.html#BackgroundService.__receive" />
       <keyword name="BackgroundService.__send" id="BackgroundService.__send" ref="eric5.Utilities.BackgroundService.html#BackgroundService.__send" />
       <keyword name="BackgroundService.__startExternalClient" id="BackgroundService.__startExternalClient" ref="eric5.Utilities.BackgroundService.html#BackgroundService.__startExternalClient" />
-      <keyword name="BackgroundService.__startInternalClient" id="BackgroundService.__startInternalClient" ref="eric5.Utilities.BackgroundService.html#BackgroundService.__startInternalClient" />
       <keyword name="BackgroundService.enqueueRequest" id="BackgroundService.enqueueRequest" ref="eric5.Utilities.BackgroundService.html#BackgroundService.enqueueRequest" />
       <keyword name="BackgroundService.on_disconnectSocket" id="BackgroundService.on_disconnectSocket" ref="eric5.Utilities.BackgroundService.html#BackgroundService.on_disconnectSocket" />
       <keyword name="BackgroundService.on_newConnection" id="BackgroundService.on_newConnection" ref="eric5.Utilities.BackgroundService.html#BackgroundService.on_newConnection" />
@@ -5690,6 +5694,7 @@
       <keyword name="Hg.hgBisect" id="Hg.hgBisect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBisect" />
       <keyword name="Hg.hgBranch" id="Hg.hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBranch" />
       <keyword name="Hg.hgBundle" id="Hg.hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBundle" />
+      <keyword name="Hg.hgCancelMerge" id="Hg.hgCancelMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCancelMerge" />
       <keyword name="Hg.hgCopy" id="Hg.hgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCopy" />
       <keyword name="Hg.hgCreateIgnoreFile" id="Hg.hgCreateIgnoreFile" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCreateIgnoreFile" />
       <keyword name="Hg.hgEditConfig" id="Hg.hgEditConfig" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgEditConfig" />
@@ -6214,6 +6219,7 @@
       <keyword name="HgProjectHelper.__hgBranch" id="HgProjectHelper.__hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranch" />
       <keyword name="HgProjectHelper.__hgBranchList" id="HgProjectHelper.__hgBranchList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranchList" />
       <keyword name="HgProjectHelper.__hgBundle" id="HgProjectHelper.__hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBundle" />
+      <keyword name="HgProjectHelper.__hgCancelMerge" id="HgProjectHelper.__hgCancelMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCancelMerge" />
       <keyword name="HgProjectHelper.__hgCloseBranch" id="HgProjectHelper.__hgCloseBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCloseBranch" />
       <keyword name="HgProjectHelper.__hgConfigure" id="HgProjectHelper.__hgConfigure" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgConfigure" />
       <keyword name="HgProjectHelper.__hgCreateIgnore" id="HgProjectHelper.__hgCreateIgnore" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgCreateIgnore" />
@@ -7306,6 +7312,7 @@
       <keyword name="Lexer.isCommentStyle" id="Lexer.isCommentStyle" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.isCommentStyle" />
       <keyword name="Lexer.isStringStyle" id="Lexer.isStringStyle" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.isStringStyle" />
       <keyword name="Lexer.keywords" id="Lexer.keywords" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.keywords" />
+      <keyword name="Lexer.lexerName" id="Lexer.lexerName" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.lexerName" />
       <keyword name="Lexer.smartIndentLine" id="Lexer.smartIndentLine" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.smartIndentLine" />
       <keyword name="Lexer.smartIndentSelection" id="Lexer.smartIndentSelection" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.smartIndentSelection" />
       <keyword name="Lexer.streamCommentStr" id="Lexer.streamCommentStr" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.streamCommentStr" />
@@ -7517,6 +7524,15 @@
       <keyword name="LexerPython.isCommentStyle" id="LexerPython.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerPython.html#LexerPython.isCommentStyle" />
       <keyword name="LexerPython.isStringStyle" id="LexerPython.isStringStyle" ref="eric5.QScintilla.Lexers.LexerPython.html#LexerPython.isStringStyle" />
       <keyword name="LexerPython.language" id="LexerPython.language" ref="eric5.QScintilla.Lexers.LexerPython.html#LexerPython.language" />
+      <keyword name="LexerQSS" id="LexerQSS" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS" />
+      <keyword name="LexerQSS (Constructor)" id="LexerQSS (Constructor)" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.__init__" />
+      <keyword name="LexerQSS (Module)" id="LexerQSS (Module)" ref="eric5.QScintilla.Lexers.LexerQSS.html" />
+      <keyword name="LexerQSS.defaultKeywords" id="LexerQSS.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.defaultKeywords" />
+      <keyword name="LexerQSS.initProperties" id="LexerQSS.initProperties" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.initProperties" />
+      <keyword name="LexerQSS.isCommentStyle" id="LexerQSS.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.isCommentStyle" />
+      <keyword name="LexerQSS.isStringStyle" id="LexerQSS.isStringStyle" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.isStringStyle" />
+      <keyword name="LexerQSS.language" id="LexerQSS.language" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.language" />
+      <keyword name="LexerQSS.lexerName" id="LexerQSS.lexerName" ref="eric5.QScintilla.Lexers.LexerQSS.html#LexerQSS.lexerName" />
       <keyword name="LexerRuby" id="LexerRuby" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby" />
       <keyword name="LexerRuby (Constructor)" id="LexerRuby (Constructor)" ref="eric5.QScintilla.Lexers.LexerRuby.html#LexerRuby.__init__" />
       <keyword name="LexerRuby (Module)" id="LexerRuby (Module)" ref="eric5.QScintilla.Lexers.LexerRuby.html" />
@@ -8595,14 +8611,14 @@
       <keyword name="PreferencesLexerLanguageError (Constructor)" id="PreferencesLexerLanguageError (Constructor)" ref="eric5.Preferences.PreferencesLexer.html#PreferencesLexerLanguageError.__init__" />
       <keyword name="Prefs" id="Prefs" ref="eric5.Preferences.__init__.html#Prefs" />
       <keyword name="Prefs.initWebSettingsDefaults" id="Prefs.initWebSettingsDefaults" ref="eric5.Preferences.__init__.html#Prefs.initWebSettingsDefaults" />
-      <keyword name="PreviewProcessingThread" id="PreviewProcessingThread" ref="eric5.UI.Previewer.html#PreviewProcessingThread" />
-      <keyword name="PreviewProcessingThread (Constructor)" id="PreviewProcessingThread (Constructor)" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__init__" />
-      <keyword name="PreviewProcessingThread.__convertMarkdown" id="PreviewProcessingThread.__convertMarkdown" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__convertMarkdown" />
-      <keyword name="PreviewProcessingThread.__convertReST" id="PreviewProcessingThread.__convertReST" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__convertReST" />
-      <keyword name="PreviewProcessingThread.__getHtml" id="PreviewProcessingThread.__getHtml" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__getHtml" />
-      <keyword name="PreviewProcessingThread.__processSSI" id="PreviewProcessingThread.__processSSI" ref="eric5.UI.Previewer.html#PreviewProcessingThread.__processSSI" />
-      <keyword name="PreviewProcessingThread.process" id="PreviewProcessingThread.process" ref="eric5.UI.Previewer.html#PreviewProcessingThread.process" />
-      <keyword name="PreviewProcessingThread.run" id="PreviewProcessingThread.run" ref="eric5.UI.Previewer.html#PreviewProcessingThread.run" />
+      <keyword name="PreviewProcessingThread" id="PreviewProcessingThread" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread" />
+      <keyword name="PreviewProcessingThread (Constructor)" id="PreviewProcessingThread (Constructor)" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__init__" />
+      <keyword name="PreviewProcessingThread.__convertMarkdown" id="PreviewProcessingThread.__convertMarkdown" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__convertMarkdown" />
+      <keyword name="PreviewProcessingThread.__convertReST" id="PreviewProcessingThread.__convertReST" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__convertReST" />
+      <keyword name="PreviewProcessingThread.__getHtml" id="PreviewProcessingThread.__getHtml" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__getHtml" />
+      <keyword name="PreviewProcessingThread.__processSSI" id="PreviewProcessingThread.__processSSI" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__processSSI" />
+      <keyword name="PreviewProcessingThread.process" id="PreviewProcessingThread.process" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.process" />
+      <keyword name="PreviewProcessingThread.run" id="PreviewProcessingThread.run" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.run" />
       <keyword name="Previewer" id="Previewer" ref="eric5.UI.Previewer.html#Previewer" />
       <keyword name="Previewer (Constructor)" id="Previewer (Constructor)" ref="eric5.UI.Previewer.html#Previewer.__init__" />
       <keyword name="Previewer (Module)" id="Previewer (Module)" ref="eric5.UI.Previewer.html" />
@@ -8611,19 +8627,29 @@
       <keyword name="Previewer.__editorTextChanged" id="Previewer.__editorTextChanged" ref="eric5.UI.Previewer.html#Previewer.__editorTextChanged" />
       <keyword name="Previewer.__isPreviewable" id="Previewer.__isPreviewable" ref="eric5.UI.Previewer.html#Previewer.__isPreviewable" />
       <keyword name="Previewer.__previewStateChanged" id="Previewer.__previewStateChanged" ref="eric5.UI.Previewer.html#Previewer.__previewStateChanged" />
-      <keyword name="Previewer.__restoreScrollBarPositions" id="Previewer.__restoreScrollBarPositions" ref="eric5.UI.Previewer.html#Previewer.__restoreScrollBarPositions" />
-      <keyword name="Previewer.__runProcessingThread" id="Previewer.__runProcessingThread" ref="eric5.UI.Previewer.html#Previewer.__runProcessingThread" />
-      <keyword name="Previewer.__saveScrollBarPositions" id="Previewer.__saveScrollBarPositions" ref="eric5.UI.Previewer.html#Previewer.__saveScrollBarPositions" />
-      <keyword name="Previewer.__setHtml" id="Previewer.__setHtml" ref="eric5.UI.Previewer.html#Previewer.__setHtml" />
-      <keyword name="Previewer.__setJavaScriptEnabled" id="Previewer.__setJavaScriptEnabled" ref="eric5.UI.Previewer.html#Previewer.__setJavaScriptEnabled" />
+      <keyword name="Previewer.__processEditor" id="Previewer.__processEditor" ref="eric5.UI.Previewer.html#Previewer.__processEditor" />
       <keyword name="Previewer.__splitterMoved" id="Previewer.__splitterMoved" ref="eric5.UI.Previewer.html#Previewer.__splitterMoved" />
       <keyword name="Previewer.hide" id="Previewer.hide" ref="eric5.UI.Previewer.html#Previewer.hide" />
-      <keyword name="Previewer.on_jsCheckBox_clicked" id="Previewer.on_jsCheckBox_clicked" ref="eric5.UI.Previewer.html#Previewer.on_jsCheckBox_clicked" />
-      <keyword name="Previewer.on_previewView_linkClicked" id="Previewer.on_previewView_linkClicked" ref="eric5.UI.Previewer.html#Previewer.on_previewView_linkClicked" />
-      <keyword name="Previewer.on_previewView_titleChanged" id="Previewer.on_previewView_titleChanged" ref="eric5.UI.Previewer.html#Previewer.on_previewView_titleChanged" />
-      <keyword name="Previewer.on_ssiCheckBox_clicked" id="Previewer.on_ssiCheckBox_clicked" ref="eric5.UI.Previewer.html#Previewer.on_ssiCheckBox_clicked" />
       <keyword name="Previewer.show" id="Previewer.show" ref="eric5.UI.Previewer.html#Previewer.show" />
       <keyword name="Previewer.shutdown" id="Previewer.shutdown" ref="eric5.UI.Previewer.html#Previewer.shutdown" />
+      <keyword name="PreviewerHTML" id="PreviewerHTML" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML" />
+      <keyword name="PreviewerHTML (Constructor)" id="PreviewerHTML (Constructor)" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.__init__" />
+      <keyword name="PreviewerHTML (Module)" id="PreviewerHTML (Module)" ref="eric5.UI.Previewers.PreviewerHTML.html" />
+      <keyword name="PreviewerHTML.__restoreScrollBarPositions" id="PreviewerHTML.__restoreScrollBarPositions" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.__restoreScrollBarPositions" />
+      <keyword name="PreviewerHTML.__saveScrollBarPositions" id="PreviewerHTML.__saveScrollBarPositions" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.__saveScrollBarPositions" />
+      <keyword name="PreviewerHTML.__setHtml" id="PreviewerHTML.__setHtml" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.__setHtml" />
+      <keyword name="PreviewerHTML.__setJavaScriptEnabled" id="PreviewerHTML.__setJavaScriptEnabled" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.__setJavaScriptEnabled" />
+      <keyword name="PreviewerHTML.on_jsCheckBox_clicked" id="PreviewerHTML.on_jsCheckBox_clicked" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.on_jsCheckBox_clicked" />
+      <keyword name="PreviewerHTML.on_previewView_linkClicked" id="PreviewerHTML.on_previewView_linkClicked" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.on_previewView_linkClicked" />
+      <keyword name="PreviewerHTML.on_previewView_titleChanged" id="PreviewerHTML.on_previewView_titleChanged" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.on_previewView_titleChanged" />
+      <keyword name="PreviewerHTML.on_ssiCheckBox_clicked" id="PreviewerHTML.on_ssiCheckBox_clicked" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.on_ssiCheckBox_clicked" />
+      <keyword name="PreviewerHTML.processEditor" id="PreviewerHTML.processEditor" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.processEditor" />
+      <keyword name="PreviewerHTML.shutdown" id="PreviewerHTML.shutdown" ref="eric5.UI.Previewers.PreviewerHTML.html#PreviewerHTML.shutdown" />
+      <keyword name="PreviewerQSS" id="PreviewerQSS" ref="eric5.UI.Previewers.PreviewerQSS.html#PreviewerQSS" />
+      <keyword name="PreviewerQSS (Constructor)" id="PreviewerQSS (Constructor)" ref="eric5.UI.Previewers.PreviewerQSS.html#PreviewerQSS.__init__" />
+      <keyword name="PreviewerQSS (Module)" id="PreviewerQSS (Module)" ref="eric5.UI.Previewers.PreviewerQSS.html" />
+      <keyword name="PreviewerQSS.processEditor" id="PreviewerQSS.processEditor" ref="eric5.UI.Previewers.PreviewerQSS.html#PreviewerQSS.processEditor" />
+      <keyword name="Previewers (Package)" id="Previewers (Package)" ref="index-eric5.UI.Previewers.html" />
       <keyword name="Printer" id="Printer" ref="eric5.QScintilla.Printer.html#Printer" />
       <keyword name="Printer (Constructor)" id="Printer (Constructor)" ref="eric5.QScintilla.Printer.html#Printer.__init__" />
       <keyword name="Printer (Module)" id="Printer (Module)" ref="eric5.QScintilla.Printer.html" />
@@ -11589,6 +11615,7 @@
       <keyword name="TemplatesPage" id="TemplatesPage" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage" />
       <keyword name="TemplatesPage (Constructor)" id="TemplatesPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage.__init__" />
       <keyword name="TemplatesPage (Module)" id="TemplatesPage (Module)" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html" />
+      <keyword name="TemplatesPage.on_editorFontButton_clicked" id="TemplatesPage.on_editorFontButton_clicked" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage.on_editorFontButton_clicked" />
       <keyword name="TemplatesPage.save" id="TemplatesPage.save" ref="eric5.Preferences.ConfigurationPages.TemplatesPage.html#TemplatesPage.save" />
       <keyword name="TemplatesReader" id="TemplatesReader" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader" />
       <keyword name="TemplatesReader (Constructor)" id="TemplatesReader (Constructor)" ref="eric5.E5XML.TemplatesReader.html#TemplatesReader.__init__" />
@@ -12844,8 +12871,8 @@
       <keyword name="_ClbrBase" id="_ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase" />
       <keyword name="_ClbrBase (Constructor)" id="_ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.__init__" />
       <keyword name="_ClbrBase.setEndLine" id="_ClbrBase.setEndLine" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.setEndLine" />
-      <keyword name="_StrikeThroughExtension" id="_StrikeThroughExtension" ref="eric5.UI.Previewer.html#_StrikeThroughExtension" />
-      <keyword name="_StrikeThroughExtension.extendMarkdown" id="_StrikeThroughExtension.extendMarkdown" ref="eric5.UI.Previewer.html#_StrikeThroughExtension.extendMarkdown" />
+      <keyword name="_StrikeThroughExtension" id="_StrikeThroughExtension" ref="eric5.UI.Previewers.PreviewerHTML.html#_StrikeThroughExtension" />
+      <keyword name="_StrikeThroughExtension.extendMarkdown" id="_StrikeThroughExtension.extendMarkdown" ref="eric5.UI.Previewers.PreviewerHTML.html#_StrikeThroughExtension.extendMarkdown" />
       <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric5.Utilities.crypto.__init__.html#__getMasterPassword" />
       <keyword name="__getPygmentsLexer" id="__getPygmentsLexer" ref="eric5.QScintilla.Lexers.__init__.html#__getPygmentsLexer" />
       <keyword name="__initChannelModesDict" id="__initChannelModesDict" ref="eric5.Network.IRC.IrcUtilities.html#__initChannelModesDict" />
@@ -14210,6 +14237,7 @@
       <file>eric5.QScintilla.Lexers.LexerProperties.html</file>
       <file>eric5.QScintilla.Lexers.LexerPygments.html</file>
       <file>eric5.QScintilla.Lexers.LexerPython.html</file>
+      <file>eric5.QScintilla.Lexers.LexerQSS.html</file>
       <file>eric5.QScintilla.Lexers.LexerRuby.html</file>
       <file>eric5.QScintilla.Lexers.LexerSQL.html</file>
       <file>eric5.QScintilla.Lexers.LexerTCL.html</file>
@@ -14275,6 +14303,8 @@
       <file>eric5.UI.NumbersWidget.html</file>
       <file>eric5.UI.PixmapCache.html</file>
       <file>eric5.UI.Previewer.html</file>
+      <file>eric5.UI.Previewers.PreviewerHTML.html</file>
+      <file>eric5.UI.Previewers.PreviewerQSS.html</file>
       <file>eric5.UI.SearchWidget.html</file>
       <file>eric5.UI.SplashScreen.html</file>
       <file>eric5.UI.SymbolsWidget.html</file>
@@ -14434,6 +14464,7 @@
       <file>index-eric5.Templates.html</file>
       <file>index-eric5.Toolbox.html</file>
       <file>index-eric5.Tools.html</file>
+      <file>index-eric5.UI.Previewers.html</file>
       <file>index-eric5.UI.html</file>
       <file>index-eric5.Utilities.ClassBrowsers.html</file>
       <file>index-eric5.Utilities.crypto.html</file>

@@ -584,6 +584,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 self.tr("%v/%m Interfaces"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Interfaces"))
             i = 0
             
             for fn in self.project.pdata["INTERFACES"]:
@@ -618,6 +619,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
                 self.tr("%v/%m Interfaces"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Interfaces"))
             i = 0
             
             for fn in files:

@@ -185,9 +185,9 @@ class APIs(QObject):
                     Globals.getPyQt4ModulesDirectory(), "qsci")
                 if os.path.exists(qsciPath):
                     # it's the installer
-                    if self.__lexer.lexer() is not None:
+                    if self.__lexer.lexerName() is not None:
                         apidir = os.path.join(qsciPath, "api",
-                                              self.__lexer.lexer())
+                                              self.__lexer.lexerName())
                         fnames = []
                         filist = QDir(apidir).entryInfoList(
                             ["*.api"], QDir.Files, QDir.IgnoreCase)

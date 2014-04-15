@@ -1346,45 +1346,47 @@ def determinePythonVersion(filename, source, editor=None):
         return pyAssignment[editor.getFileType()]
 
     pyVer = 0
-    flags = extractFlags(source)
-    ext = os.path.splitext(filename)[1]
-    py2Ext = Preferences.getPython("PythonExtensions")
-    py3Ext = Preferences.getPython("Python3Extensions")
-    project = e5App().getObject('Project')
-    basename = os.path.basename(filename)
-    
-    if "FileType" in flags:
-        pyVer = pyAssignment.get(flags["FileType"], 0)
-    elif project.isOpen() and project.isProjectFile(filename):
-        language = project.getEditorLexerAssoc(basename)
-        if not language:
-            language = Preferences.getEditorLexerAssoc(basename)
-        if language in ['Python2', 'Python3']:
-            pyVer = pyAssignment[language]
-    
-    if pyVer:
-        # Skip the next tests
-        pass
-    elif (Preferences.getProject("DeterminePyFromProject") and
-          project.isOpen() and
-          project.isProjectFile(filename)):
-                pyVer = pyAssignment.get(project.getProjectLanguage(), 0)
-    elif ext in py2Ext and ext not in py3Ext:
-        pyVer = 2
-    elif ext in py3Ext and ext not in py2Ext:
-        pyVer = 3
-    elif source.startswith("#!"):
-        line0 = source.splitlines()[0]
-        if "python3" in line0:
-            pyVer = 3
-        elif "python" in line0:
+    if filename:
+        flags = extractFlags(source)
+        ext = os.path.splitext(filename)[1]
+        py2Ext = Preferences.getPython("PythonExtensions")
+        py3Ext = Preferences.getPython("Python3Extensions")
+        project = e5App().getObject('Project')
+        basename = os.path.basename(filename)
+        
+        if "FileType" in flags:
+            pyVer = pyAssignment.get(flags["FileType"], 0)
+        elif project.isOpen() and project.isProjectFile(filename):
+            language = project.getEditorLexerAssoc(basename)
+            if not language:
+                language = Preferences.getEditorLexerAssoc(basename)
+            if language in ['Python2', 'Python3']:
+                pyVer = pyAssignment[language]
+        
+        if pyVer:
+            # Skip the next tests
+            pass
+        elif (Preferences.getProject("DeterminePyFromProject") and
+              project.isOpen() and
+              project.isProjectFile(filename) and
+              ext in py2Ext + py3Ext):
+                    pyVer = pyAssignment.get(project.getProjectLanguage(), 0)
+        elif ext in py2Ext and ext not in py3Ext:
             pyVer = 2
-    
-    if pyVer == 0 and ext in py2Ext + py3Ext:
-        pyVer = sys.version_info[0]
-    
-    if editor and pyVer:
-        editor.filetype = "Python{0}".format(pyVer)
+        elif ext in py3Ext and ext not in py2Ext:
+            pyVer = 3
+        elif source.startswith("#!"):
+            line0 = source.splitlines()[0]
+            if "python3" in line0:
+                pyVer = 3
+            elif "python" in line0:
+                pyVer = 2
+        
+        if pyVer == 0 and ext in py2Ext + py3Ext:
+            pyVer = sys.version_info[0]
+        
+        if editor and pyVer:
+            editor.filetype = "Python{0}".format(pyVer)
     
     return pyVer
 

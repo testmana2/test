@@ -208,3 +208,6 @@ def source_encoding(source):
         return encoding
 
     return default
+
+#
+# eflag: FileType = Python2

@@ -117,7 +117,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Privat method to generate the popup menus for a Python project.
         """
-        # TODO: add this to the multi files menu
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
@@ -243,6 +242,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(
             self.tr('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
+        self.multiMenu.addSeparator()
+        self.multiMenu.addMenu(self.checksMenu)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(
             self.tr('Expand all directories'), self._expandAllDirs)
@@ -442,7 +443,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         Privat method to generate the popup menus for a Python project.
         """
-        # TODO: add this to the multi files menu
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
         
@@ -529,6 +529,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         act = self.multiMenu.addAction(
             self.tr('Delete'), self.__deleteFile)
         self.multiMenuActions.append(act)
+        self.multiMenu.addSeparator()
+        self.multiMenu.addMenu(self.checksMenu)
         self.multiMenu.addSeparator()
         self.multiMenu.addAction(
             self.tr('Expand all directories'), self._expandAllDirs)

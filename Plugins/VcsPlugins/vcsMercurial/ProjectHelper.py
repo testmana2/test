@@ -280,7 +280,7 @@ class HgProjectHelper(VcsProjectHelper):
         self.actions.append(self.hgLogBrowserAct)
         
         self.vcsDiffAct = E5Action(
-            self.tr('Show difference'),
+            self.tr('Show differences'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.tr('Show &difference'),
             0, 0, self, 'mercurial_diff')
@@ -288,24 +288,24 @@ class HgProjectHelper(VcsProjectHelper):
             'Show the difference of the local project to the repository'
         ))
         self.vcsDiffAct.setWhatsThis(self.tr(
-            """<b>Show difference</b>"""
-            """<p>This shows the difference of the local project to the"""
+            """<b>Show differences</b>"""
+            """<p>This shows differences of the local project to the"""
             """ repository.</p>"""
         ))
         self.vcsDiffAct.triggered.connect(self._vcsDiff)
         self.actions.append(self.vcsDiffAct)
         
         self.hgExtDiffAct = E5Action(
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
-            self.tr('Show difference (extended)'),
+            self.tr('Show differences (extended)'),
             0, 0, self, 'mercurial_extendeddiff')
         self.hgExtDiffAct.setStatusTip(self.tr(
             'Show the difference of revisions of the project to the repository'
         ))
         self.hgExtDiffAct.setWhatsThis(self.tr(
-            """<b>Show difference (extended)</b>"""
-            """<p>This shows the difference of selectable revisions of the"""
+            """<b>Show differences (extended)</b>"""
+            """<p>This shows differences of selectable revisions of the"""
             """ project.</p>"""
         ))
         self.hgExtDiffAct.triggered.connect(self.__hgExtendedDiff)
@@ -414,6 +414,21 @@ class HgProjectHelper(VcsProjectHelper):
         ))
         self.vcsMergeAct.triggered.connect(self._vcsMerge)
         self.actions.append(self.vcsMergeAct)
+        
+        self.hgCancelMergeAct = E5Action(
+            self.tr('Cancel uncommitted merge'),
+            self.tr('Cancel uncommitted merge'),
+            0, 0, self, 'mercurial_cancel_merge')
+        self.hgCancelMergeAct.setStatusTip(self.tr(
+            'Cancel an uncommitted merge and lose all changes'
+        ))
+        self.hgCancelMergeAct.setWhatsThis(self.tr(
+            """<b>Cancel uncommitted merge</b>"""
+            """<p>This cancels an uncommitted merge causing all changes"""
+            """ to be lost.</p>"""
+        ))
+        self.hgCancelMergeAct.triggered.connect(self.__hgCancelMerge)
+        self.actions.append(self.hgCancelMergeAct)
         
         self.vcsResolveAct = E5Action(
             self.tr('Conflicts resolved'),
@@ -1141,6 +1156,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsRevertAct)
         menu.addAction(self.vcsMergeAct)
         menu.addAction(self.vcsResolveAct)
+        menu.addAction(self.hgCancelMergeAct)
         menu.addSeparator()
         menu.addAction(self.vcsSwitchAct)
         menu.addSeparator()
@@ -1271,6 +1287,12 @@ class HgProjectHelper(VcsProjectHelper):
         Private slot used to resolve conflicts of the local project.
         """
         self.vcs.hgResolve(self.project.ppath)
+    
+    def __hgCancelMerge(self):
+        """
+        Private slot used to cancel an uncommitted merge.
+        """
+        self.vcs.hgCancelMerge(self.project.ppath)
     
     def __hgTagList(self):
         """

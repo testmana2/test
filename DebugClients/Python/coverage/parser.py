@@ -670,8 +670,6 @@ class Chunk(object):
         return "<%d+%d @%d%s %r>" % (
             self.byte, self.length, self.line, bang, list(self.exits)
             )
-
-
 class CachedTokenizer(object):
     """A one-element cache around tokenize.generate_tokens.
 
@@ -698,3 +696,6 @@ class CachedTokenizer(object):
 
 # Create our generate_tokens cache as a callable replacement function.
 generate_tokens = CachedTokenizer().generate_tokens
+
+#
+# eflag: FileType = Python2

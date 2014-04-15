@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerCMake(QsciLexerCMake, Lexer):
+class LexerCMake(Lexer, QsciLexerCMake):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerCMake(QsciLexerCMake, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerCMake, self).__init__(parent)
+        QsciLexerCMake.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

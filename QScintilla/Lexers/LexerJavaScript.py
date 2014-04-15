@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerJavaScript(QsciLexerJavaScript, Lexer):
+class LexerJavaScript(Lexer, QsciLexerJavaScript):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerJavaScript(QsciLexerJavaScript, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerJavaScript, self).__init__(parent)
+        QsciLexerJavaScript.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "//"

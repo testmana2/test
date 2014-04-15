@@ -73,3 +73,6 @@ class CodeObjects(object):
                 if isinstance(c, types.CodeType):
                     self.stack.append(c)
             yield code
+
+#
+# eflag: FileType = Python2

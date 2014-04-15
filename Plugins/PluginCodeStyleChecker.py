@@ -16,8 +16,9 @@ from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action
-
+from Project.ProjectBrowserModel import ProjectBrowserFileItem
 from Utilities import determinePythonVersion
+
 import Preferences
 
 # Start-Of-Header
@@ -282,13 +283,19 @@ class CodeStyleCheckerPlugin(QObject):
         """
         browser = e5App().getObject("ProjectBrowser")\
             .getProjectBrowser("sources")
-        itm = browser.model().item(browser.currentIndex())
-        try:
-            fn = itm.fileName()
+        if browser.getSelectedItemsCount([ProjectBrowserFileItem]) > 1:
+            fn = []
+            for itm in browser.getSelectedItems([ProjectBrowserFileItem]):
+                fn.append(itm.fileName())
             isDir = False
-        except AttributeError:
-            fn = itm.dirName()
-            isDir = True
+        else:
+            itm = browser.model().item(browser.currentIndex())
+            try:
+                fn = itm.fileName()
+                isDir = False
+            except AttributeError:
+                fn = itm.dirName()
+                isDir = True
         
         from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
             CodeStyleCheckerDialog

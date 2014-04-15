@@ -87,6 +87,8 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
                 Preferences.getEditor("PreviewMarkdownFileNameExtensions")))
         self.previewRestExtensionsEdit.setText(
             " ".join(Preferences.getEditor("PreviewRestFileNameExtensions")))
+        self.previewQssExtensionsEdit.setText(
+            " ".join(Preferences.getEditor("PreviewQssFileNameExtensions")))
         
     def save(self):
         """
@@ -150,6 +152,10 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             "PreviewRestFileNameExtensions",
             [ext.strip() for ext in
              self.previewRestExtensionsEdit.text().split()])
+        Preferences.setEditor(
+            "PreviewQssFileNameExtensions",
+            [ext.strip() for ext in
+             self.previewQssExtensionsEdit.text().split()])
     
     def __setDefaultFiltersLists(self, keepSelection=False):
         """

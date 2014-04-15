@@ -777,3 +777,6 @@ def process_startup():
 
 # A hack for debugging testing in subprocesses.
 _TEST_NAME_FILE = "" #"/tmp/covtest.txt"
+
+#
+# eflag: FileType = Python2

@@ -17,7 +17,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerPython(QsciLexerPython, Lexer):
+class LexerPython(Lexer, QsciLexerPython):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -28,7 +28,7 @@ class LexerPython(QsciLexerPython, Lexer):
         @param variant name of the language variant (string)
         @param parent parent widget of this lexer
         """
-        super(LexerPython, self).__init__(parent)
+        QsciLexerPython.__init__(self, parent)
         Lexer.__init__(self)
         
         self.variant = variant

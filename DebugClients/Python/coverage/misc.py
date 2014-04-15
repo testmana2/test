@@ -165,3 +165,6 @@ class ExceptionDuringRun(CoverageException):
 
     """
     pass
+
+#
+# eflag: FileType = Python2

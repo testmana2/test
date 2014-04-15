@@ -96,8 +96,8 @@ def codeStyleCheck(filename, source, args):
         maxLineLength (int), hangClosing (bool), docType (str), errors
         (list of str), eol (str), encoding (str))
     @return tuple of stats (dict) and results (tuple for each found violation
-        of style (tuple of lineno (int), position (int), text (str), fixed
-            (bool), autofixing (bool), fixedMsg (str)))
+        of style (tuple of lineno (int), position (int), text (str), ignored
+            (bool), fixed (bool), autofixing (bool), fixedMsg (str)))
     """
     excludeMessages, includeMessages, \
         repeatMessages, fixCodes, noFixCodes, fixIssues, maxLineLength, \
@@ -166,10 +166,12 @@ def codeStyleCheck(filename, source, args):
                     itm = [lineno, position, text]
                     deferredFixes[id_] = itm
                 else:
-                    itm = [lineno, position, text, res == 1, True, msg]
+                    itm = [lineno, position, text, False, res == 1, True, msg]
             else:
-                itm = [lineno, position, text, False, False, '']
+                itm = [lineno, position, text, False, False, False, '']
             results.append(itm)
+        else:
+            results.append([lineno, position, text, True, False, False, ''])
     
     if fixer:
         deferredResults = fixer.finalize()

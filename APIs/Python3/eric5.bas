@@ -438,6 +438,7 @@ LexerPostScript Lexer QsciLexerPostScript
 LexerProperties Lexer QsciLexerProperties
 LexerPygments LexerContainer
 LexerPython Lexer QsciLexerPython
+LexerQSS Lexer QsciLexerCSS
 LexerRuby Lexer QsciLexerRuby
 LexerSQL Lexer QsciLexerSQL
 LexerTCL Lexer QsciLexerTCL
@@ -529,7 +530,9 @@ PreferencesLexer QsciLexer
 PreferencesLexerError Exception
 PreferencesLexerLanguageError PreferencesLexerError
 PreviewProcessingThread QThread
-Previewer QWidget Ui_Previewer
+Previewer QStackedWidget
+PreviewerHTML QWidget Ui_PreviewerHTML
+PreviewerQSS QWidget Ui_PreviewerQSS
 Printer QsciPrinter
 PrinterPage ConfigurationPageBase Ui_PrinterPage
 ProfileTreeWidgetItem QTreeWidgetItem

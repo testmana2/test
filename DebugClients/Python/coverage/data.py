@@ -276,3 +276,6 @@ if __name__ == '__main__':
     else:
         fname = covdata.filename
     pprint.pprint(covdata.raw_data(fname))
+
+#
+# eflag: FileType = Python2

@@ -289,7 +289,9 @@ class Collector(object):
 
     def stop(self):
         """Stop collecting trace information."""
-        #print >>sys.stderr, "Stopping: %r" % self._collectors
+        #print("Stopping: %r" % self._collectors, file=sys.stderr)
+        if not self._collectors:
+            return
         assert self._collectors
         assert self._collectors[-1] is self
 

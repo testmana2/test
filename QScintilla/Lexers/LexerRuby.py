@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerRuby(QsciLexerRuby, Lexer):
+class LexerRuby(Lexer, QsciLexerRuby):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerRuby(QsciLexerRuby, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerRuby, self).__init__(parent)
+        QsciLexerRuby.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

@@ -7,3 +7,6 @@ __url__ = "http://nedbatchelder.com/code/coverage"
 if max(__version__).isalpha():
     # For pre-releases, use a version-specific URL.
     __url__ += "/" + __version__
+
+#
+# eflag: FileType = Python2

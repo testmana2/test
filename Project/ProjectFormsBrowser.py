@@ -864,6 +864,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.tr("%v/%m Forms"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Forms"))
             i = 0
             
             for fn in self.project.pdata["FORMS"]:
@@ -901,6 +902,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.tr("%v/%m Forms"), self)
             progress.setModal(True)
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Forms"))
             i = 0
             
             for fn in files:
@@ -936,6 +938,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                 self.tr("Determining changed forms..."),
                 None, 0, 100, self.tr("%v/%m Forms"))
             progress.setMinimumDuration(0)
+            progress.setWindowTitle(self.tr("Forms"))
             i = 0
             
             # get list of changed forms

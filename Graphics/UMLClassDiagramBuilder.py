@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 try:  # Py3
     from itertools import zip_longest
 except ImportError:
-    from itertools import izip_longest as zip_longest    #__IGNORE_WARNING__
+    from itertools import izip_longest as zip_longest    # __IGNORE_WARNING__
 
 from PyQt4.QtGui import QGraphicsTextItem
 

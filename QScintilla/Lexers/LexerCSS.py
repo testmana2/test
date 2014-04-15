@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerCSS(QsciLexerCSS, Lexer):
+class LexerCSS(Lexer, QsciLexerCSS):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerCSS(QsciLexerCSS, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerCSS, self).__init__(parent)
+        QsciLexerCSS.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "#"

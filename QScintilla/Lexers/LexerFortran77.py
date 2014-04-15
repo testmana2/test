@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerFortran77(QsciLexerFortran77, Lexer):
+class LexerFortran77(Lexer, QsciLexerFortran77):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerFortran77(QsciLexerFortran77, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerFortran77, self).__init__(parent)
+        QsciLexerFortran77.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "c"

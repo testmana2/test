@@ -15,7 +15,7 @@ from .Lexer import Lexer
 import Preferences
 
 
-class LexerXML(QsciLexerXML, Lexer):
+class LexerXML(Lexer, QsciLexerXML):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerXML(QsciLexerXML, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerXML, self).__init__(parent)
+        QsciLexerXML.__init__(self, parent)
         Lexer.__init__(self)
         
         self.streamCommentString = {

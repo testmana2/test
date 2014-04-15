@@ -90,7 +90,7 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
     try:
         import builtins
     except ImportError:
-        import __builtin__ as builtins        #__IGNORE_WARNING__
+        import __builtin__ as builtins        # __IGNORE_WARNING__
     
     try:
         if sys.version_info[0] == 2:

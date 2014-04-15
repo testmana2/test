@@ -73,9 +73,6 @@ QTcpServer
 <td><a href="#BackgroundService.__startExternalClient">__startExternalClient</a></td>
 <td>Private method to start the background client as external process.</td>
 </tr><tr>
-<td><a href="#BackgroundService.__startInternalClient">__startInternalClient</a></td>
-<td>Private method to start the background client as internal thread.</td>
-</tr><tr>
 <td><a href="#BackgroundService.enqueueRequest">enqueueRequest</a></td>
 <td>Implement a queued processing of incomming events.</td>
 </tr><tr>
@@ -156,21 +153,6 @@ socket port to which the interpreter should connect (int)
 <dt>Returns:</dt>
 <dd>
 the process object (QProcess or None)
-</dd>
-</dl><a NAME="BackgroundService.__startInternalClient" ID="BackgroundService.__startInternalClient"></a>
-<h4>BackgroundService.__startInternalClient</h4>
-<b>__startInternalClient</b>(<i>port</i>)
-<p>
-        Private method to start the background client as internal thread.
-</p><dl>
-<dt><i>port</i></dt>
-<dd>
-socket port to which the interpreter should connect (int)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-the thread object (Thread) or None
 </dd>
 </dl><a NAME="BackgroundService.enqueueRequest" ID="BackgroundService.enqueueRequest"></a>
 <h4>BackgroundService.enqueueRequest</h4>

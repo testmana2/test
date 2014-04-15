@@ -608,8 +608,8 @@ class Browser(QTreeView):
         @param filter list of classes to check against
         @return a dictionary containing the counts of items belonging
             to the individual filter classes. The keys of the dictionary
-            are the unicode representation of the classes given in the
-            filter (i.e. unicode(filterClass)). The dictionary contains
+            are the string representation of the classes given in the
+            filter (i.e. str(filterClass)). The dictionary contains
             an additional entry with key "sum", that stores the sum of
             all selected entries fulfilling the filter criteria.
         """

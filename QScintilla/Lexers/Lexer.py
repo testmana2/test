@@ -225,3 +225,11 @@ class Lexer(object):
                 return kw
         else:
             return self.defaultKeywords(kwSet)
+    
+    def lexerName(self):
+        """
+        Public method to return the lexer name.
+        
+        @return lexer name (string)
+        """
+        return self.lexer()

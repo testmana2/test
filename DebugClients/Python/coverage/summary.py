@@ -84,3 +84,6 @@ class SummaryReporter(Reporter):
             outfile.write(fmt_coverage % args)
 
         return total.pc_covered
+
+#
+# eflag: FileType = Python2

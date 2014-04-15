@@ -16,6 +16,8 @@ from .Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
 
 from E5Gui import E5MessageBox
 
+import Preferences
+
 
 class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
     """
@@ -32,6 +34,8 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
         """
         super(TemplatePropertiesDialog, self).__init__(parent)
         self.setupUi(self)
+        
+        self.templateEdit.setFont(Preferences.getTemplates("EditorFont"))
         
         if not groupMode:
             self.nameEdit.setWhatsThis(self.tr(

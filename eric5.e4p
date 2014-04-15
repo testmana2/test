@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-04-10, 22:54:10 -->
+<!-- Saved: 2014-04-15, 22:29:23 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1047,12 +1047,10 @@
     <Source>E5Network/E5SslInfoWidget.py</Source>
     <Source>QScintilla/SortOptionsDialog.py</Source>
     <Source>Debugger/CallStackViewer.py</Source>
-    <Source>Utilities/compatibility_fixes.py</Source>
     <Source>Examples/hallo.py</Source>
     <Source>Examples/modpython.py</Source>
     <Source>Examples/modpython_dbg.py</Source>
     <Source>Examples/rhallo.py</Source>
-    <Source>Utilities/PySideImporter.py</Source>
     <Source>E5Gui/E5ErrorMessage.py</Source>
     <Source>Helpviewer/Network/NoCacheHostsDialog.py</Source>
     <Source>E5Gui/E5ErrorMessageFilterDialog.py</Source>
@@ -1097,14 +1095,8 @@
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
     <Source>E5Gui/E5ProgressDialog.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
-    <Source>Utilities/BackgroundClient.py</Source>
-    <Source>Utilities/BackgroundService.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/checker.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/__init__.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py</Source>
-    <Source>Plugins/CheckerPlugins/CodeStyleChecker/translations.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/__init__.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py</Source>
@@ -1123,9 +1115,10 @@
     <Source>E5Gui/E5MapWidget.py</Source>
     <Source>QScintilla/EditorMarkerMap.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.py</Source>
-    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
+    <Source>UI/Previewers/__init__.py</Source>
+    <Source>UI/Previewers/PreviewerHTML.py</Source>
+    <Source>UI/Previewers/PreviewerQSS.py</Source>
+    <Source>QScintilla/Lexers/LexerQSS.py</Source>
     <Source>DebugClients/Python/coverage/config.py</Source>
     <Source>DebugClients/Python/coverage/debug.py</Source>
     <Source>DebugClients/Python/coverage/version.py</Source>
@@ -1134,6 +1127,13 @@
     <Source>DebugClients/Python3/coverage/debug.py</Source>
     <Source>DebugClients/Python3/coverage/version.py</Source>
     <Source>DebugClients/Python3/coverage/__main__.py</Source>
+    <Source>Utilities/BackgroundClient.py</Source>
+    <Source>Utilities/BackgroundService.py</Source>
+    <Source>Utilities/compatibility_fixes.py</Source>
+    <Source>Utilities/PySideImporter.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/translations.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1438,7 +1438,6 @@
     <Form>Network/IRC/IrcIdentitiesEditDialog.ui</Form>
     <Form>E5Gui/E5ZoomWidget.ui</Form>
     <Form>E5Network/E5SslCertificatesDialog.ui</Form>
-    <Form>UI/Previewer.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoDialog.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
     <Form>QScintilla/SortOptionsDialog.ui</Form>
@@ -1461,6 +1460,8 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui</Form>
+    <Form>UI/Previewers/PreviewerHTML.ui</Form>
+    <Form>UI/Previewers/PreviewerQSS.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
@@ -1493,7 +1494,6 @@
   </Resources>
   <Interfaces/>
   <Others>
-    <Other>README-PyXML.txt</Other>
     <Other>THANKS</Other>
     <Other>pylint.rc</Other>
     <Other>README-i18n.txt</Other>
@@ -1606,6 +1606,7 @@
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikia.xml</Other>
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikipedia.xml</Other>
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wiktionary.xml</Other>
+    <Other>APIs/QSS/qss.api</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
@@ -2023,6 +2024,12 @@
             </value>
             <key>
               <string>RepeatMessages</string>
+            </key>
+            <value>
+              <bool>True</bool>
+            </value>
+            <key>
+              <string>ShowIgnored</string>
             </key>
             <value>
               <bool>True</bool>

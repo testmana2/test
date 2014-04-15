@@ -47,7 +47,7 @@ import tokenize
 try:
     import StringIO as io
 except (ImportError):
-    import io    # __IGNORE_WARNING__    
+    import io    # __IGNORE_WARNING__
 
 if not hasattr(tokenize, 'NL'):
     raise ValueError("tokenize.NL doesn't exist -- tokenize module too old")

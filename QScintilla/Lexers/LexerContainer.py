@@ -14,7 +14,7 @@ from PyQt4.Qsci import QsciLexer
 from .Lexer import Lexer
 
 
-class LexerContainer(QsciLexer, Lexer):
+class LexerContainer(Lexer, QsciLexer):
     """
     Subclass as a base for the implementation of custom lexers.
     """
@@ -24,7 +24,7 @@ class LexerContainer(QsciLexer, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerContainer, self).__init__(parent)
+        QsciLexer.__init__(self, parent)
         Lexer.__init__(self)
         
         self.editor = parent

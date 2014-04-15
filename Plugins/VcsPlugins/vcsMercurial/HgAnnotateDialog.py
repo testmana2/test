@@ -14,6 +14,7 @@ except NameError:
     pass
 
 import os
+import re
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer, Qt, QCoreApplication
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QHeaderView, QLineEdit, \
@@ -45,6 +46,9 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         
         self.vcs = vcs
         self.__hgClient = vcs.getClient()
+        
+        self.__annotateRe = re.compile(
+            r"""(.+)\s+(\d+)\s+([0-9a-fA-F]+)\s+([0-9-]+)\s+(.+)""")
         
         self.annotateList.headerItem().setText(
             self.annotateList.columnCount(), "")
@@ -238,8 +242,10 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         except ValueError:
             info = line[:-2]
             text = ""
-        author, rev, changeset, date, file = info.split()
-        self.__generateItem(rev, changeset, author, date, text)
+        match = self.__annotateRe.match(info)
+        author, rev, changeset, date, file = match.groups()
+        self.__generateItem(rev.strip(), changeset.strip(), author.strip(),
+                            date.strip(), text)
     
     def __readStderr(self):
         """

@@ -52,3 +52,6 @@ def info_formatter(info):
                 prefix = ""
         else:
             yield "%*s: %s" % (label_len, label, data)
+
+#
+# eflag: FileType = Python2

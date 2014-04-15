@@ -14,7 +14,7 @@ from PyQt4.Qsci import QsciLexerMatlab
 from .Lexer import Lexer
 
 
-class LexerMatlab(QsciLexerMatlab, Lexer):
+class LexerMatlab(Lexer, QsciLexerMatlab):
     """
     Subclass to implement some additional lexer dependent methods.
     """
@@ -24,7 +24,7 @@ class LexerMatlab(QsciLexerMatlab, Lexer):
         
         @param parent parent widget of this lexer
         """
-        super(LexerMatlab, self).__init__(parent)
+        QsciLexerMatlab.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "%~"

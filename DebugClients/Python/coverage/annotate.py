@@ -100,3 +100,6 @@ class AnnotateReporter(Reporter):
             dest.write(line)
         source.close()
         dest.close()
+
+#
+# eflag: FileType = Python2
