@@ -16,6 +16,8 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QApplication, \
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
+from Globals import isWindowsPlatform
+
 from .Ui_HgLogDialog import Ui_HgLogDialog
 
 import Utilities
@@ -53,7 +55,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         else:
             self.mode = "log"
         self.bundle = bundle
-        self.__hgClient = self.vcs.getClient()
+        if isWindowsPlatform():
+            self.__hgClient = None
+        else:
+            self.__hgClient = self.vcs.getClient()
         
         self.contents.setHtml(
             self.trUtf8('<b>Processing your request, please wait...</b>'))
