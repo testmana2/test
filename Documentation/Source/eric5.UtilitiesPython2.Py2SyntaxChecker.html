@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric5.UtilitiesPython2.Py2SyntaxChecker</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric5.UtilitiesPython2.Py2SyntaxChecker</h1>
+<p>
+Module implementing the syntax check for Python 2.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#compile">compile</a></td>
+<td>Function to compile one Python source file to Python bytecode.</td>
+</tr><tr>
+<td><a href="#flakesCheck">flakesCheck</a></td>
+<td>Function to perform a pyflakes check.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="compile" ID="compile"></a>
+<h2>compile</h2>
+<b>compile</b>(<i>file, codestring</i>)
+<p>
+    Function to compile one Python source file to Python bytecode.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+source code (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+A tuple indicating status (True = an error was found), the
+        file name, the line number, the index number, the code string
+        and the error message (boolean, string, string, string, string,
+        string). The values are only valid, if the status equals 1.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="flakesCheck" ID="flakesCheck"></a>
+<h2>flakesCheck</h2>
+<b>flakesCheck</b>(<i>fileName, codestring, ignoreStarImportWarnings</i>)
+<p>
+    Function to perform a pyflakes check.
+</p><dl>
+<dt><i>fileName</i></dt>
+<dd>
+name of the file (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+source code to be checked (string)
+</dd><dt><i>ignoreStarImportWarnings</i></dt>
+<dd>
+flag indicating to
+        ignore 'star import' warnings (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of lists containing the warnings
+        (marker, file name, line number, message)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
