@@ -175,24 +175,22 @@ class HgClient(QObject):
         @return tuple of channel designator and channel data
             (string, integer or string or bytes)
         """
-        additionalData = b""
-        
         if self.__server.bytesAvailable() > 0 or \
            self.__server.waitForReadyRead(10000):
-            while bytes(self.__server.peek(1)) not in HgClient.Channels:
-                additionalData += bytes(self.__server.read(1))
-            if additionalData:
-                return ("o", str(additionalData, self.__encoding, "replace"))
-            
-            data = bytes(self.__server.read(HgClient.OutputFormatSize))
-            if not data:
+            data = bytes(self.__server.peek(HgClient.OutputFormatSize))
+            if not data or len(data) < HgClient.OutputFormatSize:
                 return "", ""
             
             channel, length = struct.unpack(HgClient.OutputFormat, data)
             channel = channel.decode(self.__encoding)
             if channel in "IL":
+                self.__server.read(HgClient.OutputFormatSize)
                 return channel, length
             else:
+                if self.__server.bytesAvailable() < \
+                        HgClient.OutputFormatSize + length:
+                    return "", ""
+                self.__server.read(HgClient.OutputFormatSize)
                 data = self.__server.read(length)
                 if channel == "r":
                     return (channel, data)
@@ -271,7 +269,7 @@ class HgClient(QObject):
                 raise RuntimeError(
                     "Unexpected but required channel '{0}'.".format(channel))
             
-            # optional channels
+            # optional channels or no channel at all
             else:
                 pass
     

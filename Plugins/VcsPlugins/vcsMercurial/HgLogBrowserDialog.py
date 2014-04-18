@@ -19,8 +19,6 @@ from PyQt4.QtGui import QWidget, QDialogButtonBox, QHeaderView, \
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
-from Globals import isWindowsPlatform
-
 from .Ui_HgLogBrowserDialog import Ui_HgLogBrowserDialog
 
 import UI.PixmapCache
@@ -87,10 +85,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         else:
             self.commandMode = "log"
             self.initialCommandMode = "log"
-        if isWindowsPlatform():
-            self.__hgClient = None
-        else:
-            self.__hgClient = vcs.getClient()
+        self.__hgClient = vcs.getClient()
         
         self.__bundle = ""
         self.__filename = ""
