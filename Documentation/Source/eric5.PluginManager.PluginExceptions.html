@@ -50,6 +50,9 @@ Module implementing the exceptions raised by the plugin system.
 </tr><tr>
 <td><a href="#PluginPathError">PluginPathError</a></td>
 <td>Class defining an error raised, when the plugin paths were not found and could not be created.</td>
+</tr><tr>
+<td><a href="#PluginPy2IncompatibleError">PluginPy2IncompatibleError</a></td>
+<td>Class defining an error raised, when the plugin is incompatible with Python2.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -355,6 +358,46 @@ PluginError
 <dt><i>msg</i></dt>
 <dd>
 message to be used by the exception (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="PluginPy2IncompatibleError" ID="PluginPy2IncompatibleError"></a>
+<h2>PluginPy2IncompatibleError</h2>
+<p>
+    Class defining an error raised, when the plugin is incompatible
+    with Python2.
+</p>
+<h3>Derived from</h3>
+PluginError
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#PluginPy2IncompatibleError.__init__">PluginPy2IncompatibleError</a></td>
+<td>Constructor</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="PluginPy2IncompatibleError.__init__" ID="PluginPy2IncompatibleError.__init__"></a>
+<h4>PluginPy2IncompatibleError (Constructor)</h4>
+<b>PluginPy2IncompatibleError</b>(<i>name</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+name of the plugin module (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

@@ -143,3 +143,21 @@ class PluginClassFormatError(PluginError):
                 "PluginError",
                 "The plugin class {0} of module {1} is missing {2}.")\
             .format(class_, name, missing)
+
+
+class PluginPy2IncompatibleError(PluginError):
+    """
+    Class defining an error raised, when the plugin is incompatible
+    with Python2.
+    """
+    def __init__(self, name):
+        """
+        Constructor
+        
+        @param name name of the plugin module (string)
+        """
+        self._errorMessage = \
+            QApplication.translate(
+                "PluginError",
+                "The plugin module {0} is not compatible with Python2.")\
+            .format(name)

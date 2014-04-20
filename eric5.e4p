@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric5 project file for project eric5 -->
-<!-- Saved: 2014-04-15, 22:29:23 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1134,6 +1133,10 @@
     <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/translations.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/__init__.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/checker.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1882,6 +1885,7 @@
                 <string>_hg</string>
                 <string>.directory</string>
                 <string>.issues</string>
+                <string>pyflakes</string>
               </list>
             </value>
             <key>

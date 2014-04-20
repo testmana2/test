@@ -31,7 +31,7 @@ except ImportError:
 
 from .PluginExceptions import PluginPathError, PluginModulesError, \
     PluginLoadError, PluginActivationError, PluginModuleFormatError, \
-    PluginClassFormatError
+    PluginClassFormatError, PluginPy2IncompatibleError
 
 import UI.PixmapCache
 
@@ -342,6 +342,21 @@ class PluginManager(QObject):
                     "Module is missing the 'autoactivate' attribute.")
                 self.__failedModules[name] = module
                 raise PluginLoadError(name)
+            if sys.version_info[0] < 3:
+                if not hasattr(module, "python2Compatible"):
+                    module.error = self.tr(
+                        "Module is missing the Python2 compatibility flag."
+                        " Please update.")
+                    compatible = False
+                elif getattr(module, "python2Compatible"):
+                    module.error = self.tr(
+                        "Module is not Python2 compatible.")
+                    compatible = False
+                else:
+                    compatible = True
+                if not compatible:
+                    self.__failedModules[name] = module
+                    raise PluginPy2IncompatibleError(name)
             if getattr(module, "autoactivate"):
                 self.__inactiveModules[name] = module
             else:
@@ -360,13 +375,16 @@ class PluginManager(QObject):
             if reload_:
                 imp.reload(module)
         except PluginLoadError:
-            print("Error loading plugin module:", name)
+            print("Error loading plug-in module:", name)
+        except PluginPy2IncompatibleError:
+            print("Error loading plug-in module:", name)
+            print("Th plug-in is not Python2 compatible.")
         except Exception as err:
             module = imp.new_module(name)
             module.error = self.tr(
                 "Module failed to load. Error: {0}").format(str(err))
             self.__failedModules[name] = module
-            print("Error loading plugin module:", name)
+            print("Error loading plug-in module:", name)
             print(str(err))
     
     def unloadPlugin(self, name):

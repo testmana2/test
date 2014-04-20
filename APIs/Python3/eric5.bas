@@ -519,6 +519,7 @@ PluginManagerPage ConfigurationPageBase Ui_PluginManagerPage
 PluginModuleFormatError PluginError
 PluginModulesError PluginError
 PluginPathError PluginError
+PluginPy2IncompatibleError PluginError
 PluginRepositoryDialog QDialog
 PluginRepositoryReader XMLStreamReaderBase
 PluginRepositoryWidget QWidget Ui_PluginRepositoryDialog
