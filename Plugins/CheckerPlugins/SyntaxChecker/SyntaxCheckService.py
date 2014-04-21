@@ -49,18 +49,19 @@ class SyntaxCheckService(QObject):
         if pyVer:
             return 'Python{0}'.format(pyVer)
         
-        for lang, (getArgs, getExt) in self.__supportedLanguages.items():
+        for lang, (env, getArgs, getExt) in self.__supportedLanguages.items():
             if filename.endswith(tuple(getExt())):
                 return lang
         
         return None
 
     def addLanguage(
-            self, lang, path, module, getArgs, getExt, callback, onError):
+            self, lang, env, path, module, getArgs, getExt, callback, onError):
         """
         Register the new language to the supported languages.
         
         @param lang new language to check syntax (str)
+        @param env the environment in which the checker is implemented (str)
         @param path full path to the module (str)
         @param module name to import (str)
         @param getArgs function to collect the required arguments to call the
@@ -71,10 +72,10 @@ class SyntaxCheckService(QObject):
         @param onError callback function if client or service isn't available
             (function)
         """
-        self.__supportedLanguages[lang] = getArgs, getExt
+        self.__supportedLanguages[lang] = env, getArgs, getExt
         # Connect to the background service
         self.backgroundService.serviceConnect(
-            'syntax', lang, path, module, callback, onError)
+            '{0}Syntax'.format(lang), env, path, module, callback, onError)
 
     def getLanguages(self):
         """
@@ -91,7 +92,8 @@ class SyntaxCheckService(QObject):
         @param lang language to remove (str)
         """
         self.__supportedLanguages.pop(lang, None)
-        self.backgroundService.serviceDisconnect('syntax', lang)
+        self.backgroundService.serviceDisconnect(
+            '{0}Syntax'.format(lang), lang)
 
     def getExtensions(self):
         """
@@ -100,7 +102,7 @@ class SyntaxCheckService(QObject):
         @return set of all supported file extensions (set of str)
         """
         extensions = set()
-        for getArgs, getExt in self.__supportedLanguages.values():
+        for env, getArgs, getExt in self.__supportedLanguages.values():
             for ext in getExt():
                 extensions.add(ext)
         return extensions
@@ -121,6 +123,7 @@ class SyntaxCheckService(QObject):
             return
         data = [source]
         # Call the getArgs function to get the required arguments
-        args = self.__supportedLanguages[lang][0]()
-        data.extend(args)
-        self.backgroundService.enqueueRequest('syntax', lang, filename, data)
+        env, args, getExt = self.__supportedLanguages[lang]
+        data.extend(args())
+        self.backgroundService.enqueueRequest(
+            '{0}Syntax'.format(lang), env, filename, data)

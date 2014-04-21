@@ -1509,7 +1509,7 @@ class Editor(QsciScintillaCompat):
                 pyVer = Utilities.determinePythonVersion(
                     filename, self.text(0), self)
                 language = "Python{0}".format(pyVer)
-            if language in ['Python2', 'Python3']:
+            if language in ['Python2', 'Python3', 'Ruby', 'JavaScript']:
                 self.filetype = language
             else:
                 self.filetype = ""

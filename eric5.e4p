@@ -1137,6 +1137,7 @@
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/checker.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/jsCheckSyntax.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1768,6 +1769,7 @@
                 <string>.directory</string>
                 <string>.issues</string>
                 <string>data</string>
+                <string>pyflakes</string>
               </list>
             </value>
             <key>

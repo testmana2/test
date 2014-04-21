@@ -20,6 +20,7 @@ from __future__ import unicode_literals
 
 import os
 import imp
+import sys
 
 import Preferences
 
@@ -62,7 +63,7 @@ def readmodule(module, path=[], isPyFile=False):
         from . import rbclbr
         dict = rbclbr.readmodule_ex(module, path)
         rbclbr._modules.clear()
-    elif ext in __extensions["JavaScript"]:
+    elif ext in __extensions["JavaScript"] and sys.version_info[0] == 3:
         from . import jsclbr
         dict = jsclbr.readmodule_ex(module, path)
         jsclbr._modules.clear()

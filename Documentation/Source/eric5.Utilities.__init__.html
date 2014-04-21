@@ -169,9 +169,6 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#joinext">joinext</a></td>
 <td>Function to join a file extension to a path.</td>
 </tr><tr>
-<td><a href="#jsCheckSyntax">jsCheckSyntax</a></td>
-<td>Function to check a Javascript source file for syntax errors.</td>
-</tr><tr>
 <td><a href="#linesep">linesep</a></td>
 <td>Function to return the lineseparator used by the editor.</td>
 </tr><tr>
@@ -1176,29 +1173,6 @@ the extension part (string)
 <dt>Returns:</dt>
 <dd>
 the complete filename (string)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="jsCheckSyntax" ID="jsCheckSyntax"></a>
-<h2>jsCheckSyntax</h2>
-<b>jsCheckSyntax</b>(<i>file, codestring=""</i>)
-<p>
-    Function to check a Javascript source file for syntax errors.
-</p><dl>
-<dt><i>file</i></dt>
-<dd>
-source filename (string)
-</dd><dt><i>codestring</i></dt>
-<dd>
-string containing the code to check (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-A tuple indicating status (True = an error was found), the
-        file name, the line number and the error message (boolean, string,
-        string, string). The values are only valid, if the status is True.
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

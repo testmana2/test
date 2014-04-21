@@ -64,21 +64,33 @@ class SyntaxCheckerPlugin(QObject):
                             'SyntaxChecker')
         
         self.syntaxCheckService.addLanguage(
-            'Python2', path, 'SyntaxCheck',
+            'Python2', 'Python2', path, 'SyntaxCheck',
             self.__getPythonOptions,
             lambda: Preferences.getPython("PythonExtensions"),
             self.__translateSyntaxCheck,
             lambda fx, lng, fn, msg:
-                self.syntaxCheckService.syntaxChecked.emit(
+                self.syntaxCheckService.syntaxChecked.emit(  # __IGNORE_WARNING__
                     fn, {'error': (fn, 0, 0, '', msg)}))
         
         self.syntaxCheckService.addLanguage(
-            'Python3', path, 'SyntaxCheck',
+            'Python3', 'Python3', path, 'SyntaxCheck',
             self.__getPythonOptions,
             lambda: Preferences.getPython("Python3Extensions"),
             self.__translateSyntaxCheck,
             lambda fx, lng, fn, msg:
-                self.syntaxCheckService.syntaxChecked.emit(
+                self.syntaxCheckService.syntaxChecked.emit(  # __IGNORE_WARNING__
+                    fn, {'error': (fn, 0, 0, '', msg)}))
+        
+        # Jasy isn't yet compatible to Python2
+        self.syntaxCheckService.addLanguage(
+            'JavaScript', 'Python3', path,
+            'jsCheckSyntax',
+            lambda: [],  # No options
+            lambda: ['.js'],
+            lambda fn, problems:
+                self.syntaxCheckService.syntaxChecked.emit(fn, problems),  # __IGNORE_WARNING__
+            lambda fx, lng, fn, msg:
+                self.syntaxCheckService.syntaxChecked.emit(  # __IGNORE_WARNING__
                     fn, {'error': (fn, 0, 0, '', msg)}))
 
     def __initialize(self):

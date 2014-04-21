@@ -14,6 +14,7 @@ except NameError:
     pass
 
 import os
+import sys
 import fnmatch
 import json
 
@@ -1090,7 +1091,7 @@ class BrowserFileItem(BrowserItem):
         elif self.isJavaScriptFile():
             pixName = "fileJavascript.png"
             self._populated = False
-            self._lazyPopulation = True
+            self._lazyPopulation = sys.version_info[0] == 3
             self._moduleName = os.path.basename(finfo)
         else:
             pixName = "fileMisc.png"

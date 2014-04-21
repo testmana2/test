@@ -7,6 +7,7 @@
 """
 Module implementing the syntax check for Python 2/3.
 """
+import ast
 import re
 import sys
 import traceback
@@ -111,8 +112,8 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
             template = quixote.ptl_compile.Template(codestring, file_enc)
             template.compile()
         else:
-            # ast.PyCF_ONLY_AST = 1024, speed optimisation
-            module = builtins.compile(codestring, file_enc, 'exec', 1024)
+            module = builtins.compile(
+                codestring, file_enc, 'exec', ast.PyCF_ONLY_AST)
     except SyntaxError as detail:
         index = 0
         code = ""

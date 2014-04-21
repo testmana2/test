@@ -119,13 +119,16 @@ language of the file or None if not found (str or None)
 </dd>
 </dl><a NAME="SyntaxCheckService.addLanguage" ID="SyntaxCheckService.addLanguage"></a>
 <h4>SyntaxCheckService.addLanguage</h4>
-<b>addLanguage</b>(<i>lang, path, module, getArgs, getExt, callback, onError</i>)
+<b>addLanguage</b>(<i>lang, env, path, module, getArgs, getExt, callback, onError</i>)
 <p>
         Register the new language to the supported languages.
 </p><dl>
 <dt><i>lang</i></dt>
 <dd>
 new language to check syntax (str)
+</dd><dt><i>env</i></dt>
+<dd>
+the environment in which the checker is implemented (str)
 </dd><dt><i>path</i></dt>
 <dd>
 full path to the module (str)

@@ -469,6 +469,7 @@
                 <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html" />
                 <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html" />
                 <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html" />
+                <section title="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html" />
               </section>
               <section title="eric5.Plugins.CheckerPlugins.Tabnanny" ref="index-eric5.Plugins.CheckerPlugins.Tabnanny.html">
                 <section title="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html" />
@@ -13158,6 +13159,7 @@
       <keyword name="initRecentSettings" id="initRecentSettings" ref="eric5.Preferences.__init__.html#initRecentSettings" />
       <keyword name="initService" id="initService" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#initService" />
       <keyword name="initService" id="initService" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#initService" />
+      <keyword name="initService" id="initService" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#initService" />
       <keyword name="initService" id="initService" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#initService" />
       <keyword name="init_checks_registry" id="init_checks_registry" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#init_checks_registry" />
       <keyword name="initializeResourceSearchPath" id="initializeResourceSearchPath" ref="eric5.Toolbox.Startup.html#initializeResourceSearchPath" />
@@ -13177,7 +13179,8 @@
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="isinpath" id="isinpath" ref="eric5.Utilities.__init__.html#isinpath" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
-      <keyword name="jsCheckSyntax" id="jsCheckSyntax" ref="eric5.Utilities.__init__.html#jsCheckSyntax" />
+      <keyword name="jsCheckSyntax" id="jsCheckSyntax" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#jsCheckSyntax" />
+      <keyword name="jsCheckSyntax (Module)" id="jsCheckSyntax (Module)" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html" />
       <keyword name="jsclbr (Module)" id="jsclbr (Module)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html" />
       <keyword name="largefiles (Module)" id="largefiles (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />
@@ -13223,6 +13226,7 @@
       <keyword name="normabsjoinpath" id="normabsjoinpath" ref="eric5.Utilities.__init__.html#normabsjoinpath" />
       <keyword name="normabspath" id="normabspath" ref="eric5.Utilities.__init__.html#normabspath" />
       <keyword name="normalizeCode" id="normalizeCode" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#normalizeCode" />
+      <keyword name="normalizeCode" id="normalizeCode" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#normalizeCode" />
       <keyword name="normcaseabspath" id="normcaseabspath" ref="eric5.Utilities.__init__.html#normcaseabspath" />
       <keyword name="normcasepath" id="normcasepath" ref="eric5.Utilities.__init__.html#normcasepath" />
       <keyword name="normjoinpath" id="normjoinpath" ref="eric5.Utilities.__init__.html#normjoinpath" />
@@ -13797,9 +13801,7 @@
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html</file>
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html</file>
       <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html</file>
-      <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.checker.html</file>
-      <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.messages.html</file>
-      <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.translations.html</file>
+      <file>eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html</file>
       <file>eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html</file>
       <file>eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html</file>
       <file>eric5.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html</file>
@@ -14304,7 +14306,6 @@
       <file>index-eric5.Plugins.AboutPlugin.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.CodeStyleChecker.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.SyntaxChecker.html</file>
-      <file>index-eric5.Plugins.CheckerPlugins.SyntaxChecker.pyflakes.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.Tabnanny.html</file>
       <file>index-eric5.Plugins.CheckerPlugins.html</file>
       <file>index-eric5.Plugins.DocumentationPlugins.Ericapi.html</file>
