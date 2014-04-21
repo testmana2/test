@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1930,8 +1931,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="142"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="148"/>
@@ -2172,8 +2173,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="90"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="101"/>
@@ -3341,17 +3342,17 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="350"/>
         <source>Select to show ignored issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para mostrar problemas ignorados</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="353"/>
         <source>Show ignored</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar ignorados</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="536"/>
         <source>{0} (ignored)</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} (ignorado)</translation>
     </message>
 </context>
 <context>
@@ -3709,9 +3710,9 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="71"/>
         <source>%n issue(s) ignored</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n problema ignorado</numerusform>
+            <numerusform>%n problemas ignorados</numerusform>
         </translation>
     </message>
 </context>
@@ -15687,7 +15688,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1083"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -53691,22 +53692,22 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="156"/>
         <source>Template Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor de Plantillas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="162"/>
         <source>Press to select the font to be used for the code editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para seleccionar la fuente a utilizar por el editor de código</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="165"/>
         <source>Editor Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuente para el Editor</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/TemplatesPage.ui" line="175"/>
         <source>Template Code Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Editor de Código de Plantillas</translation>
     </message>
 </context>
 <context>
