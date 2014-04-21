@@ -106,36 +106,48 @@ class ProjectBrowser(E5TabWidget):
         self.project.projectOpened.connect(self.psBrowser._projectOpened)
         self.project.newProject.connect(self.psBrowser._newProject)
         self.project.reinitVCS.connect(self.psBrowser._initMenusAndVcs)
+        self.project.projectPropertiesChanged.connect(
+            self.psBrowser._initMenusAndVcs)
         
         # connect the forms browser
         self.project.projectClosed.connect(self.pfBrowser._projectClosed)
         self.project.projectOpened.connect(self.pfBrowser._projectOpened)
         self.project.newProject.connect(self.pfBrowser._newProject)
         self.project.reinitVCS.connect(self.pfBrowser._initMenusAndVcs)
+        self.project.projectPropertiesChanged.connect(
+            self.pfBrowser._initMenusAndVcs)
         
         # connect the resources browser
         self.project.projectClosed.connect(self.prBrowser._projectClosed)
         self.project.projectOpened.connect(self.prBrowser._projectOpened)
         self.project.newProject.connect(self.prBrowser._newProject)
         self.project.reinitVCS.connect(self.prBrowser._initMenusAndVcs)
+        self.project.projectPropertiesChanged.connect(
+            self.prBrowser._initMenusAndVcs)
         
         # connect the translations browser
         self.project.projectClosed.connect(self.ptBrowser._projectClosed)
         self.project.projectOpened.connect(self.ptBrowser._projectOpened)
         self.project.newProject.connect(self.ptBrowser._newProject)
         self.project.reinitVCS.connect(self.ptBrowser._initMenusAndVcs)
+        self.project.projectPropertiesChanged.connect(
+            self.ptBrowser._initMenusAndVcs)
         
         # connect the interfaces (IDL)  browser
         self.project.projectClosed.connect(self.piBrowser._projectClosed)
         self.project.projectOpened.connect(self.piBrowser._projectOpened)
         self.project.newProject.connect(self.piBrowser._newProject)
         self.project.reinitVCS.connect(self.piBrowser._initMenusAndVcs)
+        self.project.projectPropertiesChanged.connect(
+            self.piBrowser._initMenusAndVcs)
         
         # connect the others browser
         self.project.projectClosed.connect(self.poBrowser._projectClosed)
         self.project.projectOpened.connect(self.poBrowser._projectOpened)
         self.project.newProject.connect(self.poBrowser._newProject)
         self.project.reinitVCS.connect(self.poBrowser._initMenusAndVcs)
+        self.project.projectPropertiesChanged.connect(
+            self.poBrowser._initMenusAndVcs)
         
         # add signal connection to ourself
         self.project.projectOpened.connect(self.__projectOpened)
