@@ -8962,6 +8962,7 @@
       <keyword name="Project.initVCS" id="Project.initVCS" ref="eric5.Project.Project.html#Project.initVCS" />
       <keyword name="Project.isDebugPropertiesLoaded" id="Project.isDebugPropertiesLoaded" ref="eric5.Project.Project.html#Project.isDebugPropertiesLoaded" />
       <keyword name="Project.isDirty" id="Project.isDirty" ref="eric5.Project.Project.html#Project.isDirty" />
+      <keyword name="Project.isJavaScriptProject" id="Project.isJavaScriptProject" ref="eric5.Project.Project.html#Project.isJavaScriptProject" />
       <keyword name="Project.isOpen" id="Project.isOpen" ref="eric5.Project.Project.html#Project.isOpen" />
       <keyword name="Project.isProjectFile" id="Project.isProjectFile" ref="eric5.Project.Project.html#Project.isProjectFile" />
       <keyword name="Project.isProjectForm" id="Project.isProjectForm" ref="eric5.Project.Project.html#Project.isProjectForm" />
@@ -8970,6 +8971,7 @@
       <keyword name="Project.isProjectSource" id="Project.isProjectSource" ref="eric5.Project.Project.html#Project.isProjectSource" />
       <keyword name="Project.isPy2Project" id="Project.isPy2Project" ref="eric5.Project.Project.html#Project.isPy2Project" />
       <keyword name="Project.isPy3Project" id="Project.isPy3Project" ref="eric5.Project.Project.html#Project.isPy3Project" />
+      <keyword name="Project.isPythonProject" id="Project.isPythonProject" ref="eric5.Project.Project.html#Project.isPythonProject" />
       <keyword name="Project.isRubyProject" id="Project.isRubyProject" ref="eric5.Project.Project.html#Project.isRubyProject" />
       <keyword name="Project.moveDirectory" id="Project.moveDirectory" ref="eric5.Project.Project.html#Project.moveDirectory" />
       <keyword name="Project.newProjectAddFiles" id="Project.newProjectAddFiles" ref="eric5.Project.Project.html#Project.newProjectAddFiles" />

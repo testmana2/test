@@ -103,12 +103,11 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         ProjectBaseBrowser._createPopupMenus(self)
         self.sourceMenuActions = {}
         
-        if self.project.pdata["PROGLANGUAGE"][0] in \
-                ["Python", "Python2", "Python3"]:
+        if self.project.isPythonProject():
             self.__createPythonPopupMenus()
-        elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
+        elif self.project.isRubyProject():
             self.__createRubyPopupMenus()
-        elif self.project.pdata["PROGLANGUAGE"][0] == "JavaScript":
+        elif self.project.isJavaScriptProject():
             self.__createJavaScriptPopupMenus()
         
     def __createPythonPopupMenus(self):
@@ -358,8 +357,6 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         self.attributeMenu = QMenu(self)
         self.attributeMenu.addMenu(self.gotoMenu)
         self.attributeMenu.addSeparator()
-        self.attributeMenu.addAction(
-            self.tr('New package...'), self.__addNewPackage)
         self.attributeMenu.addAction(
             self.tr('Add source files...'), self.project.addSourceFiles)
         self.attributeMenu.addAction(
@@ -619,8 +616,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         itm = self.model().item(index)
                         if isinstance(itm, ProjectBrowserFileItem):
                             fn = itm.fileName()
-                            if self.project.pdata["PROGLANGUAGE"][0] in \
-                               ["Python", "Python2", "Python3"]:
+                            if self.project.isPythonProject():
                                 if fn.endswith('.ptl'):
                                     for act in self.sourceMenuActions.values():
                                         act.setEnabled(False)
@@ -637,6 +633,15 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                     self.importsDiagramAction.setEnabled(False)
                                     self.unittestAction.setEnabled(False)
                                     self.checksMenu.menuAction().setEnabled(
+                                        False)
+                                elif fn.endswith('.js'):  # entry for mixed
+                                                          # mode programs
+                                    for act in self.sourceMenuActions.values():
+                                        act.setEnabled(False)
+                                    self.unittestAction.setEnabled(False)
+                                    self.checksMenu.menuAction().setEnabled(
+                                        False)
+                                    self.graphicsMenu.menuAction().setEnabled(
                                         False)
                                 else:  # assume the source file is a
                                        # Python file

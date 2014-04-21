@@ -551,6 +551,9 @@ QObject
 <td><a href="#Project.isDirty">isDirty</a></td>
 <td>Public method to return the dirty state.</td>
 </tr><tr>
+<td><a href="#Project.isJavaScriptProject">isJavaScriptProject</a></td>
+<td>Public method to check, if this project is a JavaScript project.</td>
+</tr><tr>
 <td><a href="#Project.isOpen">isOpen</a></td>
 <td>Public method to return the opened state.</td>
 </tr><tr>
@@ -574,6 +577,9 @@ QObject
 </tr><tr>
 <td><a href="#Project.isPy3Project">isPy3Project</a></td>
 <td>Public method to check, if this project is a Python3 project.</td>
+</tr><tr>
+<td><a href="#Project.isPythonProject">isPythonProject</a></td>
+<td>Public method to check, if this project is a Python2 or Python3 project.</td>
 </tr><tr>
 <td><a href="#Project.isRubyProject">isRubyProject</a></td>
 <td>Public method to check, if this project is a Ruby project.</td>
@@ -1908,6 +1914,16 @@ load status of debug properties (boolean)
 <dd>
 dirty state (boolean)
 </dd>
+</dl><a NAME="Project.isJavaScriptProject" ID="Project.isJavaScriptProject"></a>
+<h4>Project.isJavaScriptProject</h4>
+<b>isJavaScriptProject</b>(<i></i>)
+<p>
+        Public method to check, if this project is a JavaScript project.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a JavaScript project (boolean)
+</dd>
 </dl><a NAME="Project.isOpen" ID="Project.isOpen"></a>
 <h4>Project.isOpen</h4>
 <b>isOpen</b>(<i></i>)
@@ -2017,6 +2033,17 @@ flag indicating a Python2 project (boolean)
 <dt>Returns:</dt>
 <dd>
 flag indicating a Python3 project (boolean)
+</dd>
+</dl><a NAME="Project.isPythonProject" ID="Project.isPythonProject"></a>
+<h4>Project.isPythonProject</h4>
+<b>isPythonProject</b>(<i></i>)
+<p>
+        Public method to check, if this project is a Python2 or Python3
+        project.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a Python project (boolean)
 </dd>
 </dl><a NAME="Project.isRubyProject" ID="Project.isRubyProject"></a>
 <h4>Project.isRubyProject</h4>

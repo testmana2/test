@@ -2957,6 +2957,16 @@ class Project(QObject):
         """
         return self.pdata["PROGLANGUAGE"][0]
         
+    def isPythonProject(self):
+        """
+        Public method to check, if this project is a Python2 or Python3
+        project.
+        
+        @return flag indicating a Python project (boolean)
+        """
+        return self.pdata["PROGLANGUAGE"][0] in ["Python", "Python2",
+                                                 "Python3"]
+        
     def isPy3Project(self):
         """
         Public method to check, if this project is a Python3 project.
@@ -2980,6 +2990,14 @@ class Project(QObject):
         @return flag indicating a Ruby project (boolean)
         """
         return self.pdata["PROGLANGUAGE"][0] == "Ruby"
+        
+    def isJavaScriptProject(self):
+        """
+        Public method to check, if this project is a JavaScript project.
+        
+        @return flag indicating a JavaScript project (boolean)
+        """
+        return self.pdata["PROGLANGUAGE"][0] == "JavaScript"
         
     def getProjectSpellLanguage(self):
         """

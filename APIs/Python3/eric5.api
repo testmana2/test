@@ -6487,6 +6487,7 @@ eric5.Project.Project.Project.initToolbar?4(toolbarManager)
 eric5.Project.Project.Project.initVCS?4(vcsSystem=None, nooverride=False)
 eric5.Project.Project.Project.isDebugPropertiesLoaded?4()
 eric5.Project.Project.Project.isDirty?4()
+eric5.Project.Project.Project.isJavaScriptProject?4()
 eric5.Project.Project.Project.isOpen?4()
 eric5.Project.Project.Project.isProjectFile?4(fn)
 eric5.Project.Project.Project.isProjectForm?4(fn)
@@ -6495,6 +6496,7 @@ eric5.Project.Project.Project.isProjectResource?4(fn)
 eric5.Project.Project.Project.isProjectSource?4(fn)
 eric5.Project.Project.Project.isPy2Project?4()
 eric5.Project.Project.Project.isPy3Project?4()
+eric5.Project.Project.Project.isPythonProject?4()
 eric5.Project.Project.Project.isRubyProject?4()
 eric5.Project.Project.Project.keynames?7
 eric5.Project.Project.Project.lexerAssociationsChanged?7
@@ -9308,6 +9310,7 @@ eric5.install.exit?4(rcode=0)
 eric5.install.initGlobals?4()
 eric5.install.installEric?4()
 eric5.install.macAppBundleName?7
+eric5.install.macAppBundlePath?7
 eric5.install.macPythonExe?7
 eric5.install.main?4(argv)
 eric5.install.modDir?7
