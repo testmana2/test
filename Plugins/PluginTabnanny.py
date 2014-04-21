@@ -33,6 +33,7 @@ longDescription = """This plugin implements the Tabnanny dialog.""" \
     """ Tabnanny is used to check Python source files for correct""" \
     """ indentations."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

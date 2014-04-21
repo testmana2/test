@@ -27,6 +27,7 @@ packageName = "__core__"
 shortDescription = "Show the QInputDialog wizard."
 longDescription = """This plugin shows the QInputDialog wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

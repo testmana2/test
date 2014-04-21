@@ -37,6 +37,7 @@ longDescription = """This plugin implements the Python Code Style""" \
     """ compliance to docstring conventions given in PEP-257 and an""" \
     """ eric5 variant is used to check against eric conventions."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 

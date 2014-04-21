@@ -27,6 +27,7 @@ packageName = "__core__"
 shortDescription = "Show the QRegExp wizard."
 longDescription = """This plugin shows the QRegExp wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

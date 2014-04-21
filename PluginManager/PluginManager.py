@@ -7,7 +7,7 @@
 Module implementing the Plugin Manager.
 """
 
-from __future__ import unicode_literals
+from __future__ import unicode_literals, print_function
 
 import os
 import sys
@@ -348,7 +348,7 @@ class PluginManager(QObject):
                         "Module is missing the Python2 compatibility flag."
                         " Please update.")
                     compatible = False
-                elif getattr(module, "python2Compatible"):
+                elif not getattr(module, "python2Compatible"):
                     module.error = self.tr(
                         "Module is not Python2 compatible.")
                     compatible = False
@@ -378,7 +378,7 @@ class PluginManager(QObject):
             print("Error loading plug-in module:", name)
         except PluginPy2IncompatibleError:
             print("Error loading plug-in module:", name)
-            print("Th plug-in is not Python2 compatible.")
+            print("The plug-in is not Python2 compatible.")
         except Exception as err:
             module = imp.new_module(name)
             module.error = self.tr(

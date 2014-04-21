@@ -27,6 +27,7 @@ packageName = "__core__"
 shortDescription = "Show the QFontDialog wizard."
 longDescription = """This plugin shows the QFontDialog wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

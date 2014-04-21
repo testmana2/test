@@ -35,6 +35,7 @@ longDescription = """This plugin implements the Ericapi dialogs.""" \
     """ Ericapi is used to generate a QScintilla API file for Python and""" \
     """ Ruby projects."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

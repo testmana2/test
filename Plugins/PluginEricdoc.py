@@ -35,6 +35,7 @@ longDescription = """This plugin implements the Ericdoc dialogs.""" \
     """ Ericdoc is used to generate a source code documentation""" \
     """ for Python and Ruby projects."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

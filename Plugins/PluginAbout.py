@@ -29,6 +29,7 @@ packageName = "__core__"
 shortDescription = "Show the About dialogs."
 longDescription = """This plugin shows the About dialogs."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

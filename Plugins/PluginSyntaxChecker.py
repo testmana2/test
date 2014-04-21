@@ -34,6 +34,7 @@ longDescription = """This plugin implements the Syntax Checker dialog.""" \
     """ Syntax Checker is used to check Python source files for correct""" \
     """ syntax."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

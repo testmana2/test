@@ -37,6 +37,7 @@ shortDescription = "Implements the Mercurial version control interface."
 longDescription = \
     """This plugin provides the Mercurial version control interface."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

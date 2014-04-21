@@ -28,6 +28,7 @@ packageName = "__core__"
 shortDescription = "Implements the Listspace view manager."
 longDescription = """This plugin provides the listspace view manager."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

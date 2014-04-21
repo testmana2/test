@@ -27,6 +27,7 @@ packageName = "__core__"
 shortDescription = "Show the QMessageBox wizard."
 longDescription = """This plugin shows the QMessageBox wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

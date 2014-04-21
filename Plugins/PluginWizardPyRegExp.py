@@ -27,6 +27,7 @@ packageName = "__core__"
 shortDescription = "Show the Python re wizard."
 longDescription = """This plugin shows the Python re wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""

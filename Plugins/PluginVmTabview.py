@@ -28,6 +28,7 @@ packageName = "__core__"
 shortDescription = "Implements the Tabview view manager."
 longDescription = """This plugin provides the tabbed view view manager."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
