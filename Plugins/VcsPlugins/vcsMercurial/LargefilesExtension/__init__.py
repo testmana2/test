@@ -8,6 +8,9 @@ Package implementing the largefiles extension support interface.
 """
 
 
+from __future__ import unicode_literals
+
+
 def getDefaults():
     """
     Function to get the default values of the extension.

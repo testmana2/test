@@ -4,6 +4,8 @@
 Module implementing a dialog to enter some user data.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_HgUserConfigDataDialog import Ui_HgUserConfigDataDialog
@@ -20,7 +22,7 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
         @param version Mercurial version info (tuple of two integers)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgUserConfigDataDialog, self).__init__(parent)
         self.setupUi(self)
         
         if version >= (1, 8):

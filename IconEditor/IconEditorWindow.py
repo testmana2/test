@@ -7,6 +7,8 @@
 Module implementing the icon editor main window.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, \
@@ -50,7 +52,7 @@ class IconEditorWindow(E5MainWindow):
             keyboard shortcuts (boolean)
         @keyparam project reference to the project object (Project)
         """
-        super().__init__(parent)
+        super(IconEditorWindow, self).__init__(parent)
         self.setObjectName("eric5_icon_editor")
         
         self.fromEric = fromEric
@@ -1331,7 +1333,7 @@ class IconEditorWindow(E5MainWindow):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(IconEditorWindow, self).wheelEvent(evt)
     
     def event(self, evt):
         """
@@ -1344,7 +1346,7 @@ class IconEditorWindow(E5MainWindow):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(IconEditorWindow, self).event(evt)
     
     def gestureEvent(self, evt):
         """

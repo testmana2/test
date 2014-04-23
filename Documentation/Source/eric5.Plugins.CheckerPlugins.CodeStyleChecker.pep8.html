@@ -23,7 +23,7 @@ a { color: #BA6D36; }
 
 <h3>Global Attributes</h3>
 <table>
-<tr><td>ARITHMETIC_OP</td></tr><tr><td>BENCHMARK_KEYS</td></tr><tr><td>COMMENT_WITH_NL</td></tr><tr><td>COMPARE_SINGLETON_REGEX</td></tr><tr><td>COMPARE_TYPE_REGEX</td></tr><tr><td>DEFAULT_EXCLUDE</td></tr><tr><td>DEFAULT_IGNORE</td></tr><tr><td>DOCSTRING_REGEX</td></tr><tr><td>ERRORCODE_REGEX</td></tr><tr><td>EXTRANEOUS_WHITESPACE_REGEX</td></tr><tr><td>HUNK_REGEX</td></tr><tr><td>INDENT_REGEX</td></tr><tr><td>KEYWORDS</td></tr><tr><td>KEYWORD_REGEX</td></tr><tr><td>LAMBDA_REGEX</td></tr><tr><td>MAX_LINE_LENGTH</td></tr><tr><td>OPERATOR_REGEX</td></tr><tr><td>PROJECT_CONFIG</td></tr><tr><td>RAISE_COMMA_REGEX</td></tr><tr><td>REPORT_FORMAT</td></tr><tr><td>RERAISE_COMMA_REGEX</td></tr><tr><td>SINGLETONS</td></tr><tr><td>SKIP_TOKENS</td></tr><tr><td>TESTSUITE_PATH</td></tr><tr><td>UNARY_OPERATORS</td></tr><tr><td>WHITESPACE</td></tr><tr><td>WHITESPACE_AFTER_COMMA_REGEX</td></tr><tr><td>WS_NEEDED_OPERATORS</td></tr><tr><td>WS_OPTIONAL_OPERATORS</td></tr><tr><td>__version__</td></tr><tr><td>_checks</td></tr><tr><td>noqa</td></tr><tr><td>pep8_messages</td></tr><tr><td>pep8_messages_sample_args</td></tr>
+<tr><td>ARITHMETIC_OP</td></tr><tr><td>BENCHMARK_KEYS</td></tr><tr><td>COMMENT_WITH_NL</td></tr><tr><td>COMPARE_SINGLETON_REGEX</td></tr><tr><td>COMPARE_TYPE_REGEX</td></tr><tr><td>DEFAULT_EXCLUDE</td></tr><tr><td>DEFAULT_IGNORE</td></tr><tr><td>DOCSTRING_REGEX</td></tr><tr><td>ERRORCODE_REGEX</td></tr><tr><td>EXTRANEOUS_WHITESPACE_REGEX</td></tr><tr><td>HUNK_REGEX</td></tr><tr><td>INDENT_REGEX</td></tr><tr><td>KEYWORDS</td></tr><tr><td>KEYWORD_REGEX</td></tr><tr><td>LAMBDA_REGEX</td></tr><tr><td>MAX_LINE_LENGTH</td></tr><tr><td>OPERATOR_REGEX</td></tr><tr><td>PROJECT_CONFIG</td></tr><tr><td>RAISE_COMMA_REGEX</td></tr><tr><td>REPORT_FORMAT</td></tr><tr><td>RERAISE_COMMA_REGEX</td></tr><tr><td>SINGLETONS</td></tr><tr><td>SKIP_TOKENS</td></tr><tr><td>TESTSUITE_PATH</td></tr><tr><td>UNARY_OPERATORS</td></tr><tr><td>WHITESPACE</td></tr><tr><td>WHITESPACE_AFTER_COMMA_REGEX</td></tr><tr><td>WS_NEEDED_OPERATORS</td></tr><tr><td>WS_OPTIONAL_OPERATORS</td></tr><tr><td>__version__</td></tr><tr><td>_checks</td></tr><tr><td>noqa</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -82,9 +82,6 @@ a { color: #BA6D36; }
 </tr><tr>
 <td><a href="#filename_match">filename_match</a></td>
 <td>Check if patterns contains a pattern that matches filename.</td>
-</tr><tr>
-<td><a href="#getMessage">getMessage</a></td>
-<td>Function to get a translated and formatted message for a given code.</td>
 </tr><tr>
 <td><a href="#get_parser">get_parser</a></td>
 <td></td>
@@ -838,27 +835,6 @@ Parse options and run checks on Python source.
     Check if patterns contains a pattern that matches filename.
     If patterns is unspecified, this always returns True.
 </p>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="getMessage" ID="getMessage"></a>
-<h2>getMessage</h2>
-<b>getMessage</b>(<i>code, *args</i>)
-<p>
-    Function to get a translated and formatted message for a given code.
-</p><dl>
-<dt><i>code</i></dt>
-<dd>
-message code (string)
-</dd><dt><i>args</i></dt>
-<dd>
-arguments for a formatted message (list)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-translated and formatted message (string)
-</dd>
-</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="get_parser" ID="get_parser"></a>

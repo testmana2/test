@@ -7,6 +7,8 @@
 Module implementing the project helper base for Mercurial extension interfaces.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 
 
@@ -22,7 +24,7 @@ class HgExtensionProjectHelper(QObject):
         """
         Constructor
         """
-        super().__init__()
+        super(HgExtensionProjectHelper, self).__init__()
         
         self.actions = []
         

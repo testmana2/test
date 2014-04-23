@@ -7,6 +7,8 @@
 Module implementing the PySvn version control plugin.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QObject
@@ -33,6 +35,7 @@ shortDescription = "Implements the PySvn version control interface."
 longDescription = \
     """This plugin provides the PySvn version control interface."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -146,7 +149,7 @@ class VcsPySvnPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(VcsPySvnPlugin, self).__init__(ui)
         self.__ui = ui
         
         self.__subversionDefaults = {

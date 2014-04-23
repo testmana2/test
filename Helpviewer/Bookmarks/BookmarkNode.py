@@ -7,6 +7,8 @@
 Module implementing the bookmark node.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QDateTime
 
 

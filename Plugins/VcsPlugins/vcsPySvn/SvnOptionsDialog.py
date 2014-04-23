@@ -8,6 +8,8 @@ Module implementing a dialog to enter options used to start a project in the
 VCS.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QDir, pyqtSlot
@@ -36,7 +38,7 @@ class SvnOptionsDialog(QDialog, Ui_SvnOptionsDialog):
         @param project reference to the project object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))

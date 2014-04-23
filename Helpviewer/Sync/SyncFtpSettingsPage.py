@@ -7,6 +7,8 @@
 Module implementing the synchronization FTP host settings wizard page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QWizardPage
 
 from .Ui_SyncFtpSettingsPage import Ui_SyncFtpSettingsPage
@@ -24,7 +26,7 @@ class SyncFtpSettingsPage(QWizardPage, Ui_SyncFtpSettingsPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SyncFtpSettingsPage, self).__init__(parent)
         self.setupUi(self)
         
         self.serverEdit.setText(Preferences.getHelp("SyncFtpServer"))

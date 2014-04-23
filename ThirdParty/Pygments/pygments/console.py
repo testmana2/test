@@ -9,6 +9,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals
+
 esc = "\x1b["
 
 codes = {}

@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the parameters for eric5_api.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import copy
@@ -37,7 +39,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
-        super().__init__(parent)
+        super(EricapiConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.outputFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
@@ -283,4 +285,4 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             self.parameters['languages'].append(itm.text())
         
         # call the accept slot of the base class
-        super().accept()
+        super(EricapiConfigDialog, self).accept()

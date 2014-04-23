@@ -7,6 +7,8 @@
 Module implementing a spinbox with textual entries.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QSpinBox
 
 
@@ -20,7 +22,7 @@ class E5TextSpinBox(QSpinBox):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5TextSpinBox, self).__init__(parent)
         
         self.__items = []
         

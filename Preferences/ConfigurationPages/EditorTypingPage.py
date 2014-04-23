@@ -7,6 +7,8 @@
 Module implementing the Editor Typing configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -23,7 +25,7 @@ class EditorTypingPage(ConfigurationPageBase, Ui_EditorTypingPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorTypingPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorTypingPage")
         

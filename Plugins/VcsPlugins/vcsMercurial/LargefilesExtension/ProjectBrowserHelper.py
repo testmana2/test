@@ -7,6 +7,8 @@
 Module implementing the largefiles extension project browser helper.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QMenu
 
 from ..HgExtensionProjectBrowserHelper import HgExtensionProjectBrowserHelper
@@ -26,7 +28,8 @@ class LargefilesProjectBrowserHelper(HgExtensionProjectBrowserHelper):
         @param browserObject reference to the project browser object
         @param projectObject reference to the project object
         """
-        super().__init__(vcsObject, browserObject, projectObject)
+        super(LargefilesProjectBrowserHelper, self).__init__(
+            vcsObject, browserObject, projectObject)
     
     def initMenus(self):
         """

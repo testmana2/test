@@ -16,6 +16,8 @@ This module is based on pyclbr.py as of Python 2.2.2
 </ul>
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import imp

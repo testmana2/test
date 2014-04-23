@@ -7,6 +7,8 @@
 Module implementing the Network configuration page.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -31,7 +33,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         Constructor
         """
-        super().__init__()
+        super(NetworkPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("NetworkPage")
         

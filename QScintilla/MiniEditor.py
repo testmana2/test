@@ -7,6 +7,8 @@
 Module implementing a minimalistic editor for simple editing tasks.
 """
 
+from __future__ import unicode_literals
+
 import os
 import re
 
@@ -43,7 +45,7 @@ class MiniScintilla(QsciScintillaCompat):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(MiniScintilla, self).__init__(parent)
         
         self.mw = parent
     
@@ -74,7 +76,7 @@ class MiniScintilla(QsciScintillaCompat):
         
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        super().focusInEvent(event)
+        super(MiniScintilla, self).focusInEvent(event)
     
     def focusOutEvent(self, event):
         """
@@ -85,7 +87,7 @@ class MiniScintilla(QsciScintillaCompat):
         self.mw.editorActGrp.setEnabled(False)
         self.setCaretWidth(0)
         
-        super().focusOutEvent(event)
+        super(MiniScintilla, self).focusOutEvent(event)
 
 
 class MiniEditor(E5MainWindow):
@@ -105,7 +107,7 @@ class MiniEditor(E5MainWindow):
         @param parent reference to the parent widget (QWidget)
         @param name object name of the window (string)
         """
-        super().__init__(parent)
+        super(MiniEditor, self).__init__(parent)
         if name is not None:
             self.setObjectName(name)
         self.setWindowIcon(UI.PixmapCache.getIcon("editor.png"))

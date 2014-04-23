@@ -12,6 +12,15 @@ this script that gets called via the API generation interface.
 This script can be used via the commandline as well.
 """
 
+from __future__ import unicode_literals
+try:  # Only for Py2
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+except (ImportError):
+    pass
+
 import glob
 import os
 import sys

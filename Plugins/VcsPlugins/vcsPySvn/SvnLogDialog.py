@@ -7,7 +7,10 @@
 Module implementing a dialog to show the output of the svn log command process.
 """
 
+from __future__ import unicode_literals
+
 import os
+import sys
 
 import pysvn
 
@@ -38,7 +41,7 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
         @param isFile flag indicating log for a file is to be shown (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnLogDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -149,8 +152,13 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                 dstr += '<br />\n'
                 self.contents.insertHtml(dstr)
                 
+                author = log["author"]
+                message = log["message"]
+                if sys.version_info[0] == 2:
+                    author = author.decode('utf-8')
+                    message = message.decode('utf-8')
                 dstr = self.tr('<i>author: {0}</i><br />\n')\
-                    .format(log["author"])
+                    .format(author)
                 self.contents.insertHtml(dstr)
                 
                 dstr = self.tr('<i>date: {0}</i><br />\n')\
@@ -159,20 +167,26 @@ class SvnLogDialog(QWidget, SvnDialogMixin, Ui_SvnLogDialog):
                 
                 self.contents.insertHtml('<br />\n')
                 
-                for line in log["message"].splitlines():
+                for line in message.splitlines():
                     self.contents.insertHtml(Utilities.html_encode(line))
                     self.contents.insertHtml('<br />\n')
                 
                 if len(log['changed_paths']) > 0:
                     self.contents.insertHtml('<br />\n')
                     for changeInfo in log['changed_paths']:
-                        dstr = '{0} {1}'\
-                               .format(self.flags[changeInfo["action"]],
-                                       changeInfo["path"])
+                        action = changeInfo["action"]
+                        path = changeInfo["path"]
+                        if sys.version_info[0] == 2:
+                            action = action.decode('utf-8')
+                            path = path.decode('utf-8')
+                        dstr = '{0} {1}'.format(self.flags[action], path)
                         if changeInfo["copyfrom_path"] is not None:
+                            copyfrom_path = changeInfo["copyfrom_path"]
+                            if sys.version_info[0] == 2:
+                                copyfrom_path = copyfrom_path.decode('utf-8')
                             dstr += self.tr(
                                 " (copied from {0}, revision {1})")\
-                                .format(changeInfo["copyfrom_path"],
+                                .format(copyfrom_path,
                                         changeInfo["copyfrom_revision"].number)
                         dstr += '<br />\n'
                         self.contents.insertHtml(dstr)

@@ -7,6 +7,8 @@
 Module implementing a graphics item subclass for an arrow.
 """
 
+from __future__ import unicode_literals
+
 import math
 
 from PyQt4.QtCore import QPointF, QRectF, QSizeF, QLineF, Qt
@@ -35,7 +37,7 @@ class E5ArrowItem(QAbstractGraphicsShapeItem):
         @param type arrow type (NormalArrow, WideArrow)
         @keyparam parent reference to the parent object (QGraphicsItem)
         """
-        super().__init__(parent)
+        super(E5ArrowItem, self).__init__(parent)
         
         self._origin = origin
         self._end = end

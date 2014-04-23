@@ -7,6 +7,8 @@
 Module implementing the viewmanager base class.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QSignalMapper, QTimer, \
@@ -70,7 +72,7 @@ class QuickSearchLineEdit(QLineEdit):
         if evt.key() == Qt.Key_Escape:
             self.escPressed.emit()
         else:
-            super().keyPressEvent(evt)  # pass it on
+            super(QuickSearchLineEdit, self).keyPressEvent(evt)  # pass it on
     
     def focusInEvent(self, evt):
         """
@@ -79,7 +81,7 @@ class QuickSearchLineEdit(QLineEdit):
         @param evt focus event (QFocusEvent)
         """
         self.gotFocus.emit()
-        super().focusInEvent(evt)   # pass it on
+        super(QuickSearchLineEdit, self).focusInEvent(evt)   # pass it on
 
 
 class ViewManager(QObject):
@@ -138,7 +140,7 @@ class ViewManager(QObject):
         """
         Constructor
         """
-        super().__init__()
+        super(ViewManager, self).__init__()
         
         # initialize the instance variables
         self.editors = []

@@ -7,6 +7,8 @@
 Module implementing the shelve extension project helper.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Action import E5Action
@@ -24,7 +26,7 @@ class LargefilesProjectHelper(HgExtensionProjectHelper):
         """
         Constructor
         """
-        super().__init__()
+        super(LargefilesProjectHelper, self).__init__()
     
     def initActions(self):
         """

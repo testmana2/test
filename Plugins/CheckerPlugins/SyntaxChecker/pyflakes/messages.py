@@ -2,7 +2,7 @@
 
 # Copyright (c) 2010 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# Original (c) 2005 Divmod, Inc.  See LICENSE file for details
+# Original (c) 2005 Divmod, Inc.  See __init__.py file for details
 #
 # This module is based on pyflakes for Python2 and Python3, but was modified to
 # be integrated into eric5
@@ -44,10 +44,11 @@ class Message(object):
         """
         Public method to get the individual message data elements.
         
-        @return tuple containing file name, line number, message ID and
-            message arguments (string, integer, string, list)
+        @return tuple containing file name, line number, column, message ID
+            and message arguments (string, integer, integer, string, list)
         """
-        return (self.filename, self.lineno, self.message_id, self.message_args)
+        return (self.filename, self.lineno, self.col, self.message_id,
+                self.message_args)
 
 
 class UnusedImport(Message):

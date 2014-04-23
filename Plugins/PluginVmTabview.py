@@ -7,6 +7,8 @@
 Module implementing the Tabview view manager plugin.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QT_TRANSLATE_NOOP, QObject
@@ -26,6 +28,7 @@ packageName = "__core__"
 shortDescription = "Implements the Tabview view manager."
 longDescription = """This plugin provides the tabbed view view manager."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -52,7 +55,7 @@ class VmTabviewPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(VmTabviewPlugin, self).__init__(ui)
         self.__ui = ui
 
     def activate(self):

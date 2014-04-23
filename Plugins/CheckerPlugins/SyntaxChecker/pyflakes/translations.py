@@ -7,6 +7,8 @@
 Module implementing message translations for pyflakes warning messages.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QCoreApplication
 
 __all__ = ["getTranslatedFlakesMessage"]
@@ -65,8 +67,10 @@ def getTranslatedFlakesMessage(message_id, message_args):
     @return translated and formatted message (string)
     """
     if message_id in _messages:
-        return QCoreApplication.translate(
-            "pyFlakes", _messages[message_id]).format(*message_args)
+        # Avoid leading "u" at Python2 unicode strings
+        msg = _messages[message_id].replace("{0!r}", "'{0}'")
+        msg = msg.replace("{1!r}", "'{1}'")
+        return msg.format(*message_args)
     else:
         return QCoreApplication.translate(
             "pyFlakes", "no message defined for code '{0}'")\

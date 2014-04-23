@@ -8,7 +8,10 @@ Module implementing a dialog to show the output of the svn status command
 process.
 """
 
+from __future__ import unicode_literals
+
 import os
+import sys
 
 import pysvn
 
@@ -40,7 +43,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnStatusDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -315,6 +318,9 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
                         depth = pysvn.depth.immediate
                     changelists = self.client.get_changelist(name, depth=depth)
                     for fpath, changelist in changelists:
+                        if sys.version_info[0] == 2:
+                            fpath = fpath.decode('utf-8')
+                            changelist = changelist.decode('utf-8')
                         fpath = Utilities.normcasepath(fpath)
                         changelistsDict[fpath] = changelist
                 hideChangelistColumn = hideChangelistColumn and \

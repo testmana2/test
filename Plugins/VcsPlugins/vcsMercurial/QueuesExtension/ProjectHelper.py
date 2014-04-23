@@ -7,6 +7,8 @@
 Module implementing the queues extension project helper.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QMenu
 
 from E5Gui.E5Action import E5Action
@@ -25,7 +27,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
         """
         Constructor
         """
-        super().__init__()
+        super(QueuesProjectHelper, self).__init__()
     
     def initActions(self):
         """

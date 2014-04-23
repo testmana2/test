@@ -7,12 +7,15 @@
 Module implementing the Syntax Checker plugin.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QObject
 
-from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action
+from E5Gui.E5Application import e5App
+from eric5config import getConfig
 
 from Project.ProjectBrowserModel import ProjectBrowserFileItem
 
@@ -31,6 +34,7 @@ longDescription = """This plugin implements the Syntax Checker dialog.""" \
     """ Syntax Checker is used to check Python source files for correct""" \
     """ syntax."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -46,10 +50,49 @@ class SyntaxCheckerPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(SyntaxCheckerPlugin, self).__init__(ui)
         self.__ui = ui
         self.__initialize()
         
+        from Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService import \
+            SyntaxCheckService
+        self.syntaxCheckService = SyntaxCheckService()
+        e5App().registerObject("SyntaxCheckService", self.syntaxCheckService)
+
+        ericPath = getConfig('ericDir')
+        path = os.path.join(ericPath, 'Plugins', 'CheckerPlugins',
+                            'SyntaxChecker')
+        
+        self.syntaxCheckService.addLanguage(
+            'Python2', 'Python2', path, 'SyntaxCheck',
+            self.__getPythonOptions,
+            lambda: Preferences.getPython("PythonExtensions"),
+            self.__translateSyntaxCheck,
+            lambda fx, lng, fn, msg:
+                self.syntaxCheckService.syntaxChecked.emit(  # __IGNORE_WARNING__
+                    fn, {'error': (fn, 0, 0, '', msg)}))
+        
+        self.syntaxCheckService.addLanguage(
+            'Python3', 'Python3', path, 'SyntaxCheck',
+            self.__getPythonOptions,
+            lambda: Preferences.getPython("Python3Extensions"),
+            self.__translateSyntaxCheck,
+            lambda fx, lng, fn, msg:
+                self.syntaxCheckService.syntaxChecked.emit(  # __IGNORE_WARNING__
+                    fn, {'error': (fn, 0, 0, '', msg)}))
+        
+        # Jasy isn't yet compatible to Python2
+        self.syntaxCheckService.addLanguage(
+            'JavaScript', 'Python3', path,
+            'jsCheckSyntax',
+            lambda: [],  # No options
+            lambda: ['.js'],
+            lambda fn, problems:
+                self.syntaxCheckService.syntaxChecked.emit(fn, problems),  # __IGNORE_WARNING__
+            lambda fx, lng, fn, msg:
+                self.syntaxCheckService.syntaxChecked.emit(  # __IGNORE_WARNING__
+                    fn, {'error': (fn, 0, 0, '', msg)}))
+
     def __initialize(self):
         """
         Private slot to (re)initialize the plugin.
@@ -64,6 +107,42 @@ class SyntaxCheckerPlugin(QObject):
         self.__editors = []
         self.__editorAct = None
         self.__editorSyntaxCheckerDialog = None
+
+    def __getPythonOptions(self):
+        """
+        Private methode to determine the syntax check options.
+        
+        @return state of checkFlakes and ignoreStarImportWarnings (bool, bool)
+        """
+        checkFlakes = Preferences.getFlakes("IncludeInSyntaxCheck")
+        ignoreStarImportWarnings = Preferences.getFlakes(
+            "IgnoreStarImportWarnings")
+        return checkFlakes, ignoreStarImportWarnings
+
+    def __translateSyntaxCheck(self, fn, problems):
+        """
+        Slot to translate the resulting messages.
+        
+        If checkFlakes is True, warnings contains a list of strings containing
+        the warnings (marker, file name, line number, message)
+        The values are only valid, if nok is False.
+        
+        @param fn filename of the checked file (str)
+        @param problems dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message, a list with arguments for the message)
+        """
+        from CheckerPlugins.SyntaxChecker.pyflakes.translations import \
+            getTranslatedFlakesMessage
+        warnings = problems.get('warnings', [])
+        for warning in warnings:
+            # Translate messages
+            msg_args = warning.pop()
+            warning[4] = getTranslatedFlakesMessage(warning[4], msg_args)
+        
+        problems['warnings'] = warnings
+        self.syntaxCheckService.syntaxChecked.emit(fn, problems)
 
     def activate(self):
         """
@@ -151,7 +230,7 @@ class SyntaxCheckerPlugin(QObject):
         if menuName == "Checks" and self.__projectAct is not None:
             self.__projectAct.setEnabled(
                 e5App().getObject("Project").getProjectLanguage() in
-                ["Python3", "Python2", "Python", "JavaScript"])
+                self.syntaxCheckService.getLanguages())
     
     def __projectBrowserShowMenu(self, menuName, menu):
         """
@@ -163,7 +242,7 @@ class SyntaxCheckerPlugin(QObject):
         """
         if menuName == "Checks" and \
            e5App().getObject("Project").getProjectLanguage() in \
-                ["Python3", "Python2", "Python", "JavaScript"]:
+                self.syntaxCheckService.getLanguages():
             self.__projectBrowserMenu = menu
             if self.__projectBrowserAct is None:
                 self.__projectBrowserAct = E5Action(
@@ -186,12 +265,10 @@ class SyntaxCheckerPlugin(QObject):
         project = e5App().getObject("Project")
         project.saveAllScripts()
         ppath = project.getProjectPath()
+        extensions = tuple(self.syntaxCheckService.getExtensions())
         files = [os.path.join(ppath, file)
                  for file in project.pdata["SOURCES"]
-                 if file.endswith(
-                     tuple(Preferences.getPython("Python3Extensions")) +
-                     tuple(Preferences.getPython("PythonExtensions")) +
-                     (".js", ))]
+                 if file.endswith(extensions)]
         
         from CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog import \
             SyntaxCheckerDialog
@@ -259,9 +336,7 @@ class SyntaxCheckerPlugin(QObject):
             if not self.__editorAct in menu.actions():
                 menu.addAction(self.__editorAct)
             self.__editorAct.setEnabled(
-                editor.isPyFile() or
-                editor.isJavascriptFile()
-            )
+                editor.getLanguage() in self.syntaxCheckService.getLanguages())
     
     def __editorSyntaxCheck(self):
         """

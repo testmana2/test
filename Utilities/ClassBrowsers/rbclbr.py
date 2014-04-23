@@ -12,6 +12,8 @@ and to find out the superclasses of a class as well as its attributes.
 It is based on the Python class browser found in this package.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 import Utilities

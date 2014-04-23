@@ -7,6 +7,8 @@
 Module implementing a simple Python syntax checker.
 """
 
+from __future__ import unicode_literals
+
 import os
 import fnmatch
 
@@ -19,7 +21,6 @@ from E5Gui.E5Application import e5App
 from .Ui_SyntaxCheckerDialog import Ui_SyntaxCheckerDialog
 
 import Utilities
-import Preferences
 import UI.PixmapCache
 
 
@@ -39,7 +40,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         @param parent The parent widget. (QWidget)
         """
-        super().__init__(parent)
+        super(SyntaxCheckerDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.showButton = self.buttonBox.addButton(
@@ -63,6 +64,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgress.setVisible(False)
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
+        
+        self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
+        self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+        self.filename = None
         
     def __resort(self):
         """
@@ -133,7 +138,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param fn file or list of files or directory to be checked
                 (string or list of strings)
         @param codestring string containing the code to be checked (string).
-            If this is given, file must be a single file name.
+            If this is given, fn must be a single file name.
         """
         if self.__project is None:
             self.__project = e5App().getObject("Project")
@@ -146,164 +151,104 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         QApplication.processEvents()
         
         if isinstance(fn, list):
-            files = fn
+            self.files = fn
         elif os.path.isdir(fn):
-            files = []
-            for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            files.extend(Utilities.direntries(fn, 1, '*.js', 0))
+            self.files = []
+            for ext in self.syntaxCheckService.getExtensions():
+                self.files.extend(
+                    Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
-            files = [fn]
+            self.files = [fn]
         
-        self.__clearErrors(files)
+        self.__clearErrors(self.files)
         
-        py3files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
-        jsfiles = [f for f in files if f.endswith(".js")]
-        
-        if (codestring and len(py3files) == 1) or \
-           (codestring and len(py2files) == 1) or \
-           (codestring and len(jsfiles) == 1) or \
-           (not codestring and
-                len(py3files) + len(py2files) + len(jsfiles) > 0):
-            self.checkProgress.setMaximum(
-                len(py3files) + len(py2files) + len(jsfiles))
-            self.checkProgressLabel.setVisible(
-                len(py3files) + len(py2files) + len(jsfiles) > 1)
-            self.checkProgress.setVisible(
-                len(py3files) + len(py2files) + len(jsfiles) > 1)
+        if codestring or len(self.files) > 0:
+            self.checkProgress.setMaximum(max(1, len(self.files)))
+            self.checkProgress.setVisible(len(self.files) > 1)
+            self.checkProgressLabel.setVisible(len(self.files) > 1)
             QApplication.processEvents()
-            
-            ignoreStarImportWarnings = \
-                Preferences.getFlakes("IgnoreStarImportWarnings")
-            
+
             # now go through all the files
-            progress = 0
-            for file in py3files + py2files + jsfiles:
-                self.checkProgress.setValue(progress)
-                self.checkProgressLabel.setPath(file)
-                QApplication.processEvents()
-                self.__resort()
-                
-                if self.cancelled:
-                    return
-                
-                self.__lastFileItem = None
-                
-                if codestring:
-                    source = codestring
-                else:
-                    try:
-                        source = Utilities.readEncodedFile(file)[0]
-                        # convert eols
-                        source = Utilities.convertLineEnds(source, "\n")
-                    except (UnicodeError, IOError) as msg:
-                        self.noResults = False
-                        self.__createResultItem(
-                            file, "1", 0,
-                            self.tr("Error: {0}").format(str(msg))
-                            .rstrip()[1:-1], "")
-                        progress += 1
-                        continue
-                
-                flags = Utilities.extractFlags(source)
-                ext = os.path.splitext(file)[1]
-                if ("FileType" in flags and
-                    flags["FileType"] in ["Python", "Python2"]) or \
-                   file in py2files or \
-                   (ext in [".py", ".pyw"] and
-                    Preferences.getProject("DeterminePyFromProject") and
-                    self.__project.isOpen() and
-                    self.__project.isProjectFile(file) and
-                    self.__project.getProjectLanguage() in ["Python",
-                                                            "Python2"]):
-                    isPy3 = False
-                    nok, fname, line, index, code, error, warnings = \
-                        Utilities.py2compile(
-                            file,
-                            checkFlakes=Preferences.getFlakes(
-                                "IncludeInSyntaxCheck"))
-                elif file in jsfiles:
-                    nok, fname, line, error = \
-                        Utilities.jsCheckSyntax(file, source)
-                    index = 0
-                    if nok:
-                        cline = min(len(source.splitlines()), int(line)) - 1
-                        code = source.splitlines()[cline]
-                    else:
-                        code = ""
-                else:
-                    isPy3 = True
-                    nok, fname, line, index, code, error = \
-                        Utilities.compile(file, source)
-                if nok:
-                    self.noResults = False
-                    self.__createResultItem(fname, line, index, error, code)
-                else:
-                    if file not in jsfiles and \
-                            Preferences.getFlakes("IncludeInSyntaxCheck"):
-                        if isPy3:
-                            try:
-                                from Utilities.pyflakes.checker import Checker
-                                from Utilities.pyflakes.messages import \
-                                    ImportStarUsed
-                                from Utilities.pyflakes.translations import \
-                                    getTranslatedFlakesMessage
-                                sourceLines = source.splitlines()
-                                warnings = Checker(source, file)
-                                warnings.messages.sort(key=lambda a: a.lineno)
-                                for warning in warnings.messages:
-                                    if ignoreStarImportWarnings and \
-                                       isinstance(warning, ImportStarUsed):
-                                        continue
-                                    fname, lineno, messageID, messageArgs = \
-                                        warning.getMessageData()
-                                    if "__IGNORE_WARNING__" not in \
-                                        Utilities.extractLineFlags(
-                                            sourceLines[lineno - 1].strip()):
-                                        self.noResults = False
-                                        self.__createResultItem(
-                                            fname, lineno, 0,
-                                            getTranslatedFlakesMessage(
-                                                messageID, messageArgs),
-                                            "", isWarning=True)
-                            except SyntaxError as err:
-                                if err.text.strip():
-                                    msg = err.text.strip()
-                                else:
-                                    msg = err.msg
-                                self.__createResultItem(
-                                    err.filename, err.lineno, 0, msg, "")
-                        else:
-                            from Utilities.pyflakes.translations import \
-                                getTranslatedFlakesMessage
-                            for warning in warnings:
-                                self.noResults = False
-                                if len(warning[2]) == 3:
-                                    msg = getTranslatedFlakesMessage(
-                                        warning[2], warning[3])
-                                else:
-                                    msg = warning[2]
-                                self.__createResultItem(
-                                    warning[0], int(warning[1]), 0,
-                                    msg, "", isWarning=True)
-                progress += 1
-            self.checkProgress.setValue(progress)
-            self.checkProgressLabel.setPath("")
-            QApplication.processEvents()
-            self.__resort()
+            self.progress = 0
+            self.check(codestring)
+    
+    def check(self, codestring=''):
+        """
+        Start a check for one file.
+        
+        The results are reported to the __processResult slot.
+        @keyparam codestring optional sourcestring (str)
+        """
+        self.filename = self.files.pop(0)
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.filename)
+        QApplication.processEvents()
+        self.__resort()
+        
+        if self.cancelled:
+            return
+        
+        self.__lastFileItem = None
+        
+        if codestring:
+            self.source = codestring
         else:
+            try:
+                self.source = Utilities.readEncodedFile(self.filename)[0]
+                self.source = Utilities.normalizeCode(self.source)
+            except (UnicodeError, IOError) as msg:
+                self.noResults = False
+                self.__createResultItem(
+                    self.filename, 1, 0,
+                    self.tr("Error: {0}").format(str(msg))
+                    .rstrip()[1:-1], "")
+                self.progress += 1
+                # Continue with next file
+                self.check()
+                return
+        
+        self.syntaxCheckService.syntaxCheck(None, self.filename, self.source)
+
+    def __processResult(self, fn, problems):
+        """
+        Slot to display the reported messages.
+        
+        @param fn filename of the checked file (str)
+        @param problems dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message) (dict)
+        """
+        # Check if it's the requested file, otherwise ignore signal
+        if fn != self.filename:
+            return
+
+        error = problems.get('error')
+        if error:
+            self.noResults = False
+            _fn, lineno, col, code, msg = error
+            self.__createResultItem(_fn, lineno, col, msg, code, False)
+        
+        warnings = problems.get('warnings', [])
+        if warnings:
+            source = self.source.splitlines()
+        for _fn, lineno, col, code, msg in warnings:
+            self.noResults = False
+            scr_line = source[lineno - 1].strip()
+            self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
+
+        self.progress += 1
+        self.checkProgress.setValue(self.progress)
+        QApplication.processEvents()
+        self.__resort()
+
+        if self.files:
+            self.check()
+        else:
+            self.checkProgressLabel.setPath("")
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
-        self.__finish()
+            self.__finish()
         
     def __finish(self):
         """
@@ -386,7 +331,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             editor = vm.getOpenEditor(fn)
             
             if itm.data(0, self.warningRole):
-                editor.toggleWarning(lineno, True, error)
+                editor.toggleWarning(lineno, 0, True, error)
             else:
                 editor.toggleSyntaxError(lineno, index, True, error, show=True)
         else:
@@ -400,7 +345,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 index = citm.data(0, self.indexRole)
                 error = citm.data(0, self.errorRole)
                 if citm.data(0, self.warningRole):
-                    editor.toggleWarning(lineno, True, error)
+                    editor.toggleWarning(lineno, 0, True, error)
                 else:
                     editor.toggleSyntaxError(
                         lineno, index, True, error, show=True)
@@ -431,7 +376,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 index = citm.data(0, self.indexRole)
                 error = citm.data(0, self.errorRole)
                 if citm.data(0, self.warningRole):
-                    editor.toggleWarning(lineno, True, error)
+                    editor.toggleWarning(lineno, 0, True, error)
                 else:
                     editor.toggleSyntaxError(
                         lineno, index, True, error, show=True)

@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a branch operation.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -25,7 +27,7 @@ class HgBranchInputDialog(QDialog, Ui_HgBranchInputDialog):
             (list of string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgBranchInputDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.branchComboBox.addItems(sorted(branches))

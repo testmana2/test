@@ -7,6 +7,8 @@
 Module implementing a dialog to show and edit all certificates.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, \
     QIODevice, qVersion
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
@@ -37,7 +39,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SslCertificatesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.serversViewButton.setIcon(

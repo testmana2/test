@@ -7,6 +7,8 @@
 Module implementing a widget to stack url bars.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QStackedWidget, QSizePolicy
 
 
@@ -20,7 +22,7 @@ class StackedUrlBar(QStackedWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(StackedUrlBar, self).__init__(parent)
         
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(6)

@@ -7,6 +7,8 @@
 Module implementing the base class for specific scheme access handlers.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 
 
@@ -20,7 +22,7 @@ class SchemeAccessHandler(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(SchemeAccessHandler, self).__init__(parent)
     
     def createRequest(self, op, request, outgoingData=None):
         """

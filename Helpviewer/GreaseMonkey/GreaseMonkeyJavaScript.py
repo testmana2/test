@@ -7,6 +7,8 @@
 Module containing some JavaScript resources.
 """
 
+from __future__ import unicode_literals
+
 bootstrap_js = """
 if(typeof GM_xmlhttpRequest === "undefined") {
     GM_xmlhttpRequest = function(/* object */ details) {

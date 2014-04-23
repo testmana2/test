@@ -7,6 +7,8 @@
 Module implementing an auto saver class.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject, QBasicTimer, QTime
 
 
@@ -25,7 +27,7 @@ class AutoSaver(QObject):
         @param save slot to be called to perform the save operation
         @exception RuntimeError raised, if no parent is given
         """
-        super().__init__(parent)
+        super(AutoSaver, self).__init__(parent)
         
         if parent is None:
             raise RuntimeError("AutoSaver: parent must not be None.")
@@ -56,7 +58,7 @@ class AutoSaver(QObject):
         if evt.timerId() == self.__timer.timerId():
             self.saveIfNeccessary()
         else:
-            super().timerEvent(evt)
+            super(AutoSaver, self).timerEvent(evt)
     
     def saveIfNeccessary(self):
         """

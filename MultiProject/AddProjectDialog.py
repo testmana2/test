@@ -7,6 +7,8 @@
 Module implementing the add project dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -33,7 +35,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         @param project dictionary containing project data
         @param categories list of already used categories (list of string)
         """
-        super().__init__(parent)
+        super(AddProjectDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))

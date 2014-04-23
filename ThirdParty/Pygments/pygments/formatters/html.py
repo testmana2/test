@@ -9,6 +9,11 @@
     :license: BSD, see LICENSE for details.
 """
 
+try:
+    basestring    # __IGNORE_WARNING__
+except NameError:
+    basestring = str
+
 import os
 import sys
 import os.path
@@ -453,7 +458,7 @@ class HtmlFormatter(Formatter):
         """
         if arg is None:
             arg = ('cssclass' in self.options and '.'+self.cssclass or '')
-        if isinstance(arg, str):
+        if isinstance(arg, basestring):
             args = [arg]
         else:
             args = list(arg)
@@ -505,8 +510,8 @@ class HtmlFormatter(Formatter):
                     cssfilename = os.path.join(os.path.dirname(filename),
                                                self.cssfile)
                 except AttributeError:
-                    print('Note: Cannot determine output file name, ' \
-                          'using current directory as base for the CSS file name', file=sys.stderr)
+                    sys.stderr.write('Note: Cannot determine output file name, ' \
+                          'using current directory as base for the CSS file name')
                     cssfilename = self.cssfile
             # write CSS file only if noclobber_cssfile isn't given as an option.
             try:

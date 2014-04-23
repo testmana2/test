@@ -7,7 +7,10 @@
 Module implementing a dialog to browse the log history.
 """
 
+from __future__ import unicode_literals
+
 import os
+import sys
 
 import pysvn
 
@@ -34,7 +37,7 @@ class SvnLogBrowserDialog(QWidget, SvnDialogMixin, Ui_SvnLogBrowserDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -101,7 +104,7 @@ class SvnLogBrowserDialog(QWidget, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             self.move(self.__position)
         self.__resetUI()
         
-        super().show()
+        super(SvnLogBrowserDialog, self).show()
     
     def __resetUI(self):
         """
@@ -293,8 +296,13 @@ class SvnLogBrowserDialog(QWidget, SvnDialogMixin, Ui_SvnLogBrowserDialog):
             locker.unlock()
             
             for log in logs:
+                author = log["author"]
+                message = log["message"]
+                if sys.version_info[0] == 2:
+                    author = author.decode('utf-8')
+                    message = message.decode('utf-8')
                 self.__generateLogItem(
-                    log["author"], log["date"], log["message"],
+                    author, log["date"], message,
                     log["revision"], log['changed_paths'])
                 dt = dateFromTime_t(log["date"])
                 if not self.__maxDate.isValid() and \

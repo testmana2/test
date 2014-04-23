@@ -7,6 +7,8 @@
 Module implementing the user specific project properties dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from E5Gui.E5Application import e5App
@@ -28,7 +30,7 @@ class UserPropertiesDialog(QDialog, Ui_UserPropertiesDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        super().__init__(parent)
+        super(UserPropertiesDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

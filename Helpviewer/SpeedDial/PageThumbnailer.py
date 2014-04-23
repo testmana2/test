@@ -7,6 +7,8 @@
 Module implementing an object to create a thumbnail image of a web site.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, QObject, QSize, Qt, QUrl
 from PyQt4.QtGui import QPixmap, QImage, QPainter
 from PyQt4.QtWebKit import QWebPage
@@ -29,7 +31,7 @@ class PageThumbnailer(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(PageThumbnailer, self).__init__(parent)
         
         self.__page = QWebPage(self)
         self.__size = QSize(231, 130)

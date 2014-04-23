@@ -7,6 +7,8 @@
 Module implementing the project properties dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QDir, pyqtSlot
@@ -36,7 +38,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         @param parent parent widget of this dialog (QWidget)
         @param name name of this dialog (string)
         """
-        super().__init__(parent)
+        super(PropertiesDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setupUi(self)

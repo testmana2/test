@@ -7,6 +7,8 @@
 Module implementing a dialog to add a new Python package.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 from PyQt4.QtCore import pyqtSlot
 
@@ -25,7 +27,7 @@ class NewPythonPackageDialog(QDialog, Ui_NewPythonPackageDialog):
             (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(NewPythonPackageDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

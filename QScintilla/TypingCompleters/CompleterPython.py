@@ -7,6 +7,12 @@
 Module implementing a typing completer for Python.
 """
 
+from __future__ import unicode_literals
+try:
+    chr = unichr
+except NameError:
+    pass
+
 import re
 
 from PyQt4.QtCore import QRegExp

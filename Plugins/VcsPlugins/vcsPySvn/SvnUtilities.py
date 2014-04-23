@@ -7,6 +7,8 @@
 Module implementing some common utility functions for the pysvn package.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QDateTime, Qt

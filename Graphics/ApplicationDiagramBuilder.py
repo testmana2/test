@@ -7,6 +7,8 @@
 Module implementing a dialog showing an imports diagram of the application.
 """
 
+from __future__ import unicode_literals
+
 import os
 import glob
 
@@ -35,7 +37,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
         @keyparam noModules flag indicating, that no module names should be
             shown (boolean)
         """
-        super().__init__(dialog, view, project)
+        super(ApplicationDiagramBuilder, self).__init__(dialog, view, project)
         self.setObjectName("ApplicationDiagram")
         
         self.noModules = noModules

@@ -7,6 +7,8 @@
 Module implementing a QNetworkCookieJar subclass with various accept policies.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QByteArray, QDataStream, QIODevice, \
@@ -48,7 +50,7 @@ class CookieJar(QNetworkCookieJar):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(CookieJar, self).__init__(parent)
         
         self.__loaded = False
         self.__acceptCookies = self.AcceptOnlyFromSitesNavigatedTo

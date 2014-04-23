@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the sort options for a line sort.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_SortOptionsDialog import Ui_SortOptionsDialog
@@ -22,7 +24,7 @@ class SortOptionsDialog(QDialog, Ui_SortOptionsDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SortOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
         msh = self.minimumSizeHint()

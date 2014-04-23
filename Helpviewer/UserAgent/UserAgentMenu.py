@@ -7,6 +7,8 @@
 Module implementing a menu to select the user agent string.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QXmlStreamReader, QFile, QIODevice
 from PyQt4.QtGui import QMenu, QAction, QActionGroup, QInputDialog, QLineEdit
 
@@ -25,7 +27,7 @@ class UserAgentMenu(QMenu):
         @param url URL to set user agent for (QUrl)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(title, parent)
+        super(UserAgentMenu, self).__init__(title, parent)
         
         self.__manager = None
         self.__url = url

@@ -7,6 +7,8 @@
 Module implementing a dialog showing a SVG graphic.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QSize, QEvent
 from PyQt4.QtGui import QPalette, QSizePolicy, QScrollArea, QAction, QMenu, \
     QToolBar, QPrinter, QPrintDialog, QPainter, QFont, QColor
@@ -41,7 +43,7 @@ class SvgDiagram(E5MainWindow):
         @param parent parent widget of the view (QWidget)
         @param name name of the view widget (string)
         """
-        super().__init__(parent)
+        super(SvgDiagram, self).__init__(parent)
         if name:
             self.setObjectName(name)
         else:
@@ -161,7 +163,7 @@ class SvgDiagram(E5MainWindow):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(SvgDiagram, self).wheelEvent(evt)
     
     def event(self, evt):
         """
@@ -174,7 +176,7 @@ class SvgDiagram(E5MainWindow):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(SvgDiagram, self).event(evt)
     
     def gestureEvent(self, evt):
         """

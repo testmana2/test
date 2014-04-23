@@ -7,6 +7,8 @@
 Module implementing a toolbar configuration dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, QColor, \
     QInputDialog, QLineEdit, QListWidgetItem, QAbstractButton
@@ -53,7 +55,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
             (E5ToolBarManager)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5ToolBarDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__manager = toolBarManager

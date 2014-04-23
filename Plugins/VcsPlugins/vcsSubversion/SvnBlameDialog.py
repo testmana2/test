@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the svn blame command.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtCore import QTimer, QProcess, Qt, pyqtSlot
@@ -31,7 +37,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnBlameDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -250,4 +256,4 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnBlameDialog, self).keyPressEvent(evt)

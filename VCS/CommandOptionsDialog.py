@@ -7,6 +7,8 @@
 Module implementing the VCS command options dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_CommandOptionsDialog import Ui_VcsCommandOptionsDialog
@@ -25,7 +27,7 @@ class VcsCommandOptionsDialog(QDialog, Ui_VcsCommandOptionsDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(VcsCommandOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
         if Utilities.isWindowsPlatform():

@@ -7,6 +7,8 @@
 Module implementing a specialized line edit for entering IRC messages.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 
 from E5Gui.E5LineEdit import E5LineEdit, E5ClearableLineEdit
@@ -28,7 +30,7 @@ class IrcMessageEdit(E5ClearableLineEdit):
         @keyparam side side the clear button should be shown at
             (E5LineEdit.RightSide, E5LineEdit.LeftSide)
         """
-        super().__init__(parent, inactiveText, side)
+        super(IrcMessageEdit, self).__init__(parent, inactiveText, side)
         
         self.__historyList = [""]   # initialize with one empty line
         self.__historyLine = 0
@@ -42,7 +44,7 @@ class IrcMessageEdit(E5ClearableLineEdit):
         
         @param text text to be set (string)
         """
-        super().setText(text)
+        super(IrcMessageEdit, self).setText(text)
         self.setCursorPosition(len(text))
     
     def keyPressEvent(self, evt):
@@ -65,7 +67,7 @@ class IrcMessageEdit(E5ClearableLineEdit):
             # ^U: clear the text
             self.setText("")
         
-        super().keyPressEvent(evt)
+        super(IrcMessageEdit, self).keyPressEvent(evt)
     
     def wheelEvent(self, evt):
         """
@@ -78,7 +80,7 @@ class IrcMessageEdit(E5ClearableLineEdit):
         elif evt.delta() < 0:
             self.__getHistory(False)
         
-        super().wheelEvent(evt)
+        super(IrcMessageEdit, self).wheelEvent(evt)
     
     def __addHistory(self, txt):
         """

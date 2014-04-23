@@ -9,8 +9,14 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+    import urllib2 as request
+except NameError:
+    import urllib.request as request    # __IGNORE_WARNING__
+
 import re
-import urllib.request, urllib.parse, urllib.error
 
 # One man's constant is another man's variable.
 SOURCE_URL = 'https://github.com/postgres/postgres/raw/master'
@@ -97,7 +103,7 @@ def parse_pseudos(f):
     return dt
 
 def fetch(url):
-    return urllib.request.urlopen(url)
+    return request.urlopen(url)
 
 def update_consts(filename, constname, content):
     f = open(filename)

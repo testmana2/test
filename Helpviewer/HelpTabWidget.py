@@ -7,6 +7,8 @@
 Module implementing the central widget showing the web pages.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QUrl

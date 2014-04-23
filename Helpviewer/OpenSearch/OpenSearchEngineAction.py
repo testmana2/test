@@ -7,6 +7,8 @@
 Module implementing a QAction subclass for open search.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QUrl
 from PyQt4.QtGui import QPixmap, QIcon, QAction
 
@@ -23,7 +25,7 @@ class OpenSearchEngineAction(QAction):
             (OpenSearchEngine)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(OpenSearchEngineAction, self).__init__(parent)
         
         self.__engine = engine
         if self.__engine.networkAccessManager() is None:

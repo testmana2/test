@@ -7,6 +7,8 @@
 Module implementing a dialog to enter personal data.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_PersonalDataDialog import Ui_PersonalDataDialog
@@ -25,7 +27,7 @@ class PersonalDataDialog(QDialog, Ui_PersonalDataDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PersonalDataDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("pim48.png"))

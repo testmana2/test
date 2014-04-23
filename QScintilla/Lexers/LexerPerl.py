@@ -7,6 +7,8 @@
 Module implementing a Perl lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerPerl
 
 from .Lexer import Lexer

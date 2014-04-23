@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the ericapi process.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os.path
 
 from PyQt4.QtCore import QProcess, QTimer
@@ -33,7 +39,7 @@ class EricapiExecDialog(QDialog, Ui_EricapiExecDialog):
         @param cmdname name of the ericapi generator (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(EricapiExecDialog, self).__init__(parent)
         self.setModal(True)
         self.setupUi(self)
         

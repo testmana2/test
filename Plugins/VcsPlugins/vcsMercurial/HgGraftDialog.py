@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a graft session.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, QDateTime
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -26,7 +28,7 @@ class HgGraftDialog(QDialog, Ui_HgGraftDialog):
             strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgGraftDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.dateTimeEdit.setDateTime(QDateTime.currentDateTime())

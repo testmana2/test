@@ -7,6 +7,8 @@
 Class implementing a specialized application class.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QCoreApplication
 from PyQt4.QtGui import QApplication
 
@@ -21,7 +23,7 @@ class E5Application(QApplication):
         
         @param argv command line arguments
         """
-        super().__init__(argv)
+        super(E5Application, self).__init__(argv)
         
         self.__objectRegistry = {}
         self.__pluginObjectRegistry = {}

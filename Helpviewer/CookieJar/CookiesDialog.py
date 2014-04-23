@@ -7,6 +7,8 @@
 Module implementing a dialog to show all cookies.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt, QDateTime, QByteArray
 from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 
@@ -26,7 +28,7 @@ class CookiesDialog(QDialog, Ui_CookiesDialog):
         @param cookieJar reference to the cookie jar (CookieJar)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CookiesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.addButton.setEnabled(False)

@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the archive data.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, QFileInfo
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -30,7 +32,7 @@ class HgArchiveDialog(QDialog, Ui_HgArchiveDialog):
         @param vcs reference to the Mercurial object (Hg)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgArchiveDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.archiveButton.setIcon(UI.PixmapCache.getIcon("open.png"))

@@ -7,6 +7,8 @@
 Module implementing a CMake lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerCMake
 
 from .Lexer import Lexer

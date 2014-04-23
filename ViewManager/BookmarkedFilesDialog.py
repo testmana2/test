@@ -7,6 +7,8 @@
 Module implementing a configuration dialog for the bookmarked files menu.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QFileInfo, Qt, pyqtSlot
 from PyQt4.QtGui import QListWidgetItem, QColor, QDialog
 
@@ -30,7 +32,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         @param bookmarks list of bookmarked files (list of strings)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(BookmarkedFilesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))

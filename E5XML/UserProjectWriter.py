@@ -8,6 +8,8 @@ Module implementing the writer class for writing an XML user project
 properties file.
 """
 
+from __future__ import unicode_literals
+
 import time
 
 from E5Gui.E5Application import e5App

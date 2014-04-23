@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data to relocate the workspace.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_SvnRelocateDialog import Ui_SvnRelocateDialog
@@ -23,7 +25,7 @@ class SvnRelocateDialog(QDialog, Ui_SvnRelocateDialog):
         @param currUrl current repository URL (string)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnRelocateDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.currUrlLabel.setText(currUrl)

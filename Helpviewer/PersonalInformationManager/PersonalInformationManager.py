@@ -8,6 +8,8 @@ Module implementing a personal information manager used to complete form
 fields.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QObject
 from PyQt4.QtGui import QDialog, QMenu
 
@@ -45,7 +47,7 @@ class PersonalInformationManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(PersonalInformationManager, self).__init__(parent)
         
         self.__loaded = False
         self.__allInfo = {}

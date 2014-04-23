@@ -7,6 +7,8 @@
 Module implementing the Editor Highlighter Associations configuration page.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from pygments.lexers import get_all_lexers
@@ -30,7 +32,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         
         @param lexers reference to the lexers dictionary
         """
-        super().__init__()
+        super(EditorHighlightersPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorHighlightersPage")
         

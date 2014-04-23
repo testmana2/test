@@ -7,6 +7,8 @@
 Module implementing the Printer configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -23,7 +25,7 @@ class PrinterPage(ConfigurationPageBase, Ui_PrinterPage):
         """
         Constructor
         """
-        super().__init__()
+        super(PrinterPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("PrinterPage")
         

@@ -7,6 +7,8 @@
 Module implementing the UMLItem base class.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QSizeF
 from PyQt4.QtGui import QGraphicsItem, QGraphicsRectItem, QStyle
 
@@ -50,7 +52,7 @@ class UMLItem(QGraphicsRectItem):
         @param rounded flag indicating a rounded corner (boolean)
         @keyparam parent reference to the parent object (QGraphicsItem)
         """
-        super().__init__(parent)
+        super(UMLItem, self).__init__(parent)
         self.model = model
         
         self.font = Preferences.getGraphics("Font")
@@ -139,7 +141,7 @@ class UMLItem(QGraphicsRectItem):
         @param dx relative movement in x-direction (float)
         @param dy relative movement in y-direction (float)
         """
-        super().moveBy(dx, dy)
+        super(UMLItem, self).moveBy(dx, dy)
         self.adjustAssociations()
     
     def setPos(self, x, y):
@@ -149,7 +151,7 @@ class UMLItem(QGraphicsRectItem):
         @param x absolute x-position (float)
         @param y absolute y-position (float)
         """
-        super().setPos(x, y)
+        super(UMLItem, self).setPos(x, y)
         self.adjustAssociations()
     
     def itemChange(self, change, value):

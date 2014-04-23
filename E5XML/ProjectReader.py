@@ -7,6 +7,8 @@
 Module implementing a class for reading an XML project file.
 """
 
+from __future__ import unicode_literals
+
 from .Config import projectFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 

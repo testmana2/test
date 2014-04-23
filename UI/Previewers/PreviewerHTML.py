@@ -7,6 +7,8 @@
 Module implementing a previewer widget for HTML, Markdown and ReST files.
 """
 
+from __future__ import unicode_literals
+
 import os
 import threading
 import re
@@ -33,7 +35,7 @@ class PreviewerHTML(QWidget, Ui_PreviewerHTML):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PreviewerHTML, self).__init__(parent)
         self.setupUi(self)
         
         self.jsCheckBox.setChecked(
@@ -233,7 +235,7 @@ class PreviewProcessingThread(QThread):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__()
+        super(PreviewProcessingThread, self).__init__()
         
         self.__lock = threading.Lock()
     

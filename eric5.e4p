@@ -788,13 +788,7 @@
     <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
-    <Source>UtilitiesPython2/__init__.py</Source>
-    <Source>UtilitiesPython2/Py2SyntaxChecker.py</Source>
-    <Source>UtilitiesPython2/Tools.py</Source>
-    <Source>UtilitiesPython2/Tabnanny.py</Source>
-    <Source>UtilitiesPython2/TabnannyChecker.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
-    <Source>UtilitiesPython2/pep8.py</Source>
     <Source>eric5_compare.py</Source>
     <Source>eric5_compare.pyw</Source>
     <Source>eric5_configure.py</Source>
@@ -884,7 +878,6 @@
     <Source>Utilities/crypto/py3AES.py</Source>
     <Source>Utilities/crypto/py3PBKDF2.py</Source>
     <Source>Preferences/ConfigurationPages/SecurityPage.py</Source>
-    <Source>UtilitiesPython2/PySideImporter.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgClient.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py</Source>
@@ -1096,23 +1089,13 @@
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/NamingStyleChecker.py</Source>
     <Source>Plugins/PluginCodeStyleChecker.py</Source>
-    <Source>UtilitiesPython2/CodeStyleChecker.py</Source>
-    <Source>UtilitiesPython2/DocStyleCheckerPy2.py</Source>
-    <Source>UtilitiesPython2/NamingStyleCheckerPy2.py</Source>
     <Source>Helpviewer/Bookmarks/DefaultBookmarks_rc.py</Source>
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/__init__.py</Source>
     <Source>Helpviewer/OpenSearch/DefaultSearchEngines/DefaultSearchEngines_rc.py</Source>
     <Source>Helpviewer/UserAgent/UserAgentDefaults_rc.py</Source>
     <Source>E5Gui/E5ProgressDialog.py</Source>
-    <Source>Utilities/pyflakes/__init__.py</Source>
-    <Source>Utilities/pyflakes/checker.py</Source>
-    <Source>Utilities/pyflakes/messages.py</Source>
-    <Source>Utilities/pyflakes/translations.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.py</Source>
-    <Source>UtilitiesPython2/pyflakes/__init__.py</Source>
-    <Source>UtilitiesPython2/pyflakes/checker.py</Source>
-    <Source>UtilitiesPython2/pyflakes/messages.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/__init__.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/shelve.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py</Source>
@@ -1143,6 +1126,18 @@
     <Source>DebugClients/Python3/coverage/debug.py</Source>
     <Source>DebugClients/Python3/coverage/version.py</Source>
     <Source>DebugClients/Python3/coverage/__main__.py</Source>
+    <Source>Utilities/BackgroundClient.py</Source>
+    <Source>Utilities/BackgroundService.py</Source>
+    <Source>Utilities/compatibility_fixes.py</Source>
+    <Source>Utilities/PySideImporter.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/translations.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/__init__.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/checker.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
+    <Source>Plugins/CheckerPlugins/SyntaxChecker/jsCheckSyntax.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1774,6 +1769,7 @@
                 <string>.directory</string>
                 <string>.issues</string>
                 <string>data</string>
+                <string>pyflakes</string>
               </list>
             </value>
             <key>
@@ -1891,6 +1887,7 @@
                 <string>_hg</string>
                 <string>.directory</string>
                 <string>.issues</string>
+                <string>pyflakes</string>
               </list>
             </value>
             <key>
@@ -2033,6 +2030,12 @@
             </value>
             <key>
               <string>RepeatMessages</string>
+            </key>
+            <value>
+              <bool>True</bool>
+            </value>
+            <key>
+              <string>ShowIgnored</string>
             </key>
             <value>
               <bool>True</bool>

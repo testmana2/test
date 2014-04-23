@@ -14,8 +14,11 @@ Module implementing a simple Python code metrics analyzer.
 @exception ValueError the tokenize module is too old
 """
 
+from __future__ import unicode_literals
+
 import os
 import io
+import sys
 import keyword
 import token
 import tokenize
@@ -65,7 +68,10 @@ class Parser(object):
         
         source = io.BytesIO(text.encode("utf-8"))
         try:
-            gen = tokenize.tokenize(source.readline)
+            if sys.version_info[0] == 2:
+                gen = tokenize.generate_tokens(source.readline)
+            else:
+                gen = tokenize.tokenize(source.readline)
             for toktype, toktext, start, end, line in gen:
                 (srow, scol) = start
                 (erow, ecol) = end

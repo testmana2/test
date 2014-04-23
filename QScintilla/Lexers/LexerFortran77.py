@@ -7,6 +7,8 @@
 Module implementing a Fortran lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerFortran77
 
 from .Lexer import Lexer

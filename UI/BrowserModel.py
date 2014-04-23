@@ -7,7 +7,14 @@
 Module implementing the browser model.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
+import sys
 import fnmatch
 import json
 
@@ -42,7 +49,7 @@ class BrowserModel(QAbstractItemModel):
         @keyparam nopopulate flag indicating to not populate the model
             (boolean)
         """
-        super().__init__(parent)
+        super(BrowserModel, self).__init__(parent)
         
         self.progDir = None
         self.watchedItems = {}
@@ -1084,7 +1091,7 @@ class BrowserFileItem(BrowserItem):
         elif self.isJavaScriptFile():
             pixName = "fileJavascript.png"
             self._populated = False
-            self._lazyPopulation = True
+            self._lazyPopulation = sys.version_info[0] == 3
             self._moduleName = os.path.basename(finfo)
         else:
             pixName = "fileMisc.png"

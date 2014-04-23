@@ -7,6 +7,8 @@
 Module implementing an UML like class item.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
 
 from .UMLItem import UMLModel, UMLItem
@@ -28,7 +30,7 @@ class ClassModel(UMLModel):
         @param attributes list of attribute names of the class
             (list of strings)
         """
-        super().__init__(name)
+        super(ClassModel, self).__init__(name)
         
         self.methods = methods
         self.attributes = attributes

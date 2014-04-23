@@ -7,6 +7,8 @@
 Module implementing the Python3 debugger interface for the debug server.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 
@@ -59,7 +61,7 @@ class DebuggerInterfacePython3(QObject):
         @param debugServer reference to the debug server (DebugServer)
         @param passive flag indicating passive connection mode (boolean)
         """
-        super().__init__()
+        super(DebuggerInterfacePython3, self).__init__()
         
         self.__isNetworked = True
         self.__autoContinue = not passive
@@ -151,12 +153,14 @@ class DebuggerInterfacePython3(QObject):
             a network connection (boolean) and the name of the interpreter
             in case of a local execution (string)
         """
-        if Preferences.getDebugger("CustomPython3Interpreter"):
-            interpreter = Preferences.getDebugger("Python3Interpreter")
-            if interpreter == "":
-                interpreter = sys.executable
-        else:
-            interpreter = sys.executable
+        interpreter = Preferences.getDebugger("Python3Interpreter")
+        if interpreter == "":
+            E5MessageBox.critical(
+                None,
+                self.tr("Start Debugger"),
+                self.tr(
+                    """<p>No Python3 interpreter configured.</p>"""))
+            return None, False, ""
         
         debugClientType = Preferences.getDebugger("DebugClientType3")
         if debugClientType == "standard":

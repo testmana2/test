@@ -7,6 +7,8 @@
 Module implementing the baseclass for the various project browsers.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QModelIndex, pyqtSignal, Qt

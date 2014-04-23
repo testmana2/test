@@ -7,6 +7,8 @@
 Module implementing the QFontDialog wizard plugin.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QDialog
 
@@ -25,6 +27,7 @@ packageName = "__core__"
 shortDescription = "Show the QFontDialog wizard."
 longDescription = """This plugin shows the QFontDialog wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -40,7 +43,7 @@ class FontDialogWizard(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(FontDialogWizard, self).__init__(ui)
         self.__ui = ui
 
     def activate(self):

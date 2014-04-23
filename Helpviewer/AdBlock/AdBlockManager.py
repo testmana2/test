@@ -7,6 +7,8 @@
 Module implementing the AdBlock manager.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QObject, QUrl, QFile
@@ -33,7 +35,7 @@ class AdBlockManager(QObject):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(AdBlockManager, self).__init__(parent)
         
         self.__loaded = False
         self.__subscriptionsLoaded = False

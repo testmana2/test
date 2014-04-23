@@ -7,14 +7,17 @@
 Module implementing the code style checker plug-in.
 """
 
+from __future__ import unicode_literals
+
 import os
 
-from PyQt4.QtCore import QObject
+from PyQt4.QtCore import QObject, pyqtSignal
+from PyQt4.QtGui import QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action
-
 from Project.ProjectBrowserModel import ProjectBrowserFileItem
+from Utilities import determinePythonVersion
 
 import Preferences
 
@@ -34,6 +37,7 @@ longDescription = """This plugin implements the Python Code Style""" \
     """ compliance to docstring conventions given in PEP-257 and an""" \
     """ eric5 variant is used to check against eric conventions."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 
@@ -43,17 +47,33 @@ error = ""
 class CodeStyleCheckerPlugin(QObject):
     """
     Class implementing the code style checker plug-in.
+    
+    @signal styleChecked(str, dict, int, list) emited when the style check was
+        done.
     """
+    styleChecked = pyqtSignal(str, dict, int, list)
+    
     def __init__(self, ui):
         """
         Constructor
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(CodeStyleCheckerPlugin, self).__init__(ui)
         self.__ui = ui
         self.__initialize()
         
+        self.backgroundService = e5App().getObject("BackgroundService")
+        
+        path = os.path.join(
+            os.path.dirname(__file__), 'CheckerPlugins', 'CodeStyleChecker')
+        for lang in ['Python2', 'Python3']:
+            self.backgroundService.serviceConnect(
+                'style', lang, path, 'CodeStyleChecker',
+                self.__translateStyleCheck,
+                lambda fx, fn, ver, msg: self.styleChecked.emit(
+                    fn, {}, 0, [[1, 1, '---- ' + msg, False, False]]))
+
     def __initialize(self):
         """
         Private slot to (re)initialize the plugin.
@@ -68,6 +88,57 @@ class CodeStyleCheckerPlugin(QObject):
         self.__editors = []
         self.__editorAct = None
         self.__editorCodeStyleCheckerDialog = None
+
+    def styleCheck(self, lang, filename, source, args):
+        """
+        Method to prepare a style check on one Python source file in another
+        task.
+
+        @param lang language of the file or None to determine by internal
+            algorithm (str or None)
+        @param filename source filename (string)
+        @param source string containing the code to check (string)
+        @param args arguments used by the codeStyleCheck function (list of
+            excludeMessages (str), includeMessages (str), repeatMessages
+            (bool), fixCodes (str), noFixCodes (str), fixIssues (bool),
+            maxLineLength (int), hangClosing (bool), docType (str), errors
+            (list of str), eol (str), encoding (str))
+        """
+        if lang is None:
+            lang = 'Python{0}'.format(determinePythonVersion(filename, source))
+        if lang not in ['Python2', 'Python3']:
+            return
+        
+        data = [source, args]
+        self.backgroundService.enqueueRequest('style', lang, filename, data)
+    
+    def __translateStyleCheck(self, fn, codeStyleCheckerStats, results):
+        """
+        Privat slot called after perfoming a style check on one file.
+        
+        @param fn filename of the just checked file (str)
+        @param codeStyleCheckerStats stats of style and name check (dict)
+        @param results tuple for each found violation of style (tuple of
+            lineno (int), position (int), text (str), fixed (bool),
+            autofixing (bool), fixedMsg (str))
+        """
+        from CheckerPlugins.CodeStyleChecker.translations import \
+            getTranslatedMessage
+            
+        fixes = 0
+        for result in results:
+            msg = getTranslatedMessage(result[2])
+        
+            fixedMsg = result.pop()
+            if fixedMsg:
+                fixes += 1
+                trFixedMsg = getTranslatedMessage(fixedMsg)
+                
+                msg += "\n" + QApplication.translate(
+                    'CodeStyleCheckerDialog', "Fix: {0}").format(trFixedMsg)
+            
+            result[2] = msg
+        self.styleChecked.emit(fn, codeStyleCheckerStats, fixes, results)
 
     def activate(self):
         """
@@ -202,7 +273,7 @@ class CodeStyleCheckerPlugin(QObject):
         
         from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
             CodeStyleCheckerDialog
-        self.__projectCodeStyleCheckerDialog = CodeStyleCheckerDialog()
+        self.__projectCodeStyleCheckerDialog = CodeStyleCheckerDialog(self)
         self.__projectCodeStyleCheckerDialog.show()
         self.__projectCodeStyleCheckerDialog.prepare(files, project)
     
@@ -229,7 +300,8 @@ class CodeStyleCheckerPlugin(QObject):
         
         from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog import \
             CodeStyleCheckerDialog
-        self.__projectBrowserCodeStyleCheckerDialog = CodeStyleCheckerDialog()
+        self.__projectBrowserCodeStyleCheckerDialog = CodeStyleCheckerDialog(
+            self)
         self.__projectBrowserCodeStyleCheckerDialog.show()
         if isDir:
             self.__projectBrowserCodeStyleCheckerDialog.start(
@@ -285,7 +357,8 @@ class CodeStyleCheckerPlugin(QObject):
             if editor.checkDirty() and editor.getFileName() is not None:
                 from CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog \
                     import CodeStyleCheckerDialog
-                self.__editorCodeStyleCheckerDialog = CodeStyleCheckerDialog()
+                self.__editorCodeStyleCheckerDialog = CodeStyleCheckerDialog(
+                    self)
                 self.__editorCodeStyleCheckerDialog.show()
                 self.__editorCodeStyleCheckerDialog.start(
                     editor.getFileName(),

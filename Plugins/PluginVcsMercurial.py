@@ -7,6 +7,8 @@
 Module implementing the Mercurial version control plugin.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QObject
@@ -35,6 +37,7 @@ shortDescription = "Implements the Mercurial version control interface."
 longDescription = \
     """This plugin provides the Mercurial version control interface."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -152,7 +155,7 @@ class VcsMercurialPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(VcsMercurialPlugin, self).__init__(ui)
         self.__ui = ui
         
         self.__mercurialDefaults = {

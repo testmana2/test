@@ -7,6 +7,8 @@
 Module implementing a base class for showing a document map.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QSize, QRect, QCoreApplication
 from PyQt4.QtGui import QWidget, QAbstractScrollArea, QColor, QBrush, QPainter
 
@@ -21,7 +23,7 @@ class E5MapWidget(QWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5MapWidget, self).__init__(parent)
         self.setAttribute(Qt.WA_OpaquePaintEvent)
         
         self.__width = 14
@@ -250,7 +252,7 @@ class E5MapWidget(QWidget):
             vsb = self._master.verticalScrollBar()
             posHeight = vsb.height() - delta - 1
             valHeight = vsb.maximum() - vsb.minimum() + vsb.pageStep()
-            return posHeight / valHeight
+            return float(posHeight) / valHeight
         else:
             return 1.0
     

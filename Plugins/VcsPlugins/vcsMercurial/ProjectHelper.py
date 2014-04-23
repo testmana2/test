@@ -7,6 +7,8 @@
 Module implementing the VCS project helper for Mercurial.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtGui import QMenu
@@ -1177,7 +1179,7 @@ class HgProjectHelper(VcsProjectHelper):
         """
         Public slot called before the vcs menu is shown.
         """
-        super().showMenu()
+        super(HgProjectHelper, self).showMenu()
         
         self.__checkActions()
     

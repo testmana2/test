@@ -7,6 +7,8 @@
 Module implementing a class for showing an editor marker map.
 """
 
+from __future__ import unicode_literals
+
 from E5Gui.E5MapWidget import E5MapWidget
 
 import Preferences
@@ -22,7 +24,7 @@ class EditorMarkerMap(E5MapWidget):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(EditorMarkerMap, self).__init__(parent)
         
         # initialize colors for various markers
         self.initColors()

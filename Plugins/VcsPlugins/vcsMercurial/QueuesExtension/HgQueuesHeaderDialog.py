@@ -7,6 +7,12 @@
 Module implementing a dialog to show the commit message of the current patch.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess, QTimer, Qt, QCoreApplication
@@ -29,7 +35,7 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         @param vcs reference to the vcs object
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesHeaderDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

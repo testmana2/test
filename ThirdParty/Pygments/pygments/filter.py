@@ -10,6 +10,8 @@
 """
 
 
+from __future__ import unicode_literals
+
 def apply_filters(stream, filters, lexer=None):
     """
     Use this method to apply an iterable of filters to

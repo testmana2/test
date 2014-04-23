@@ -7,6 +7,8 @@
 Module implementing the variables filter dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from Debugger.Config import ConfigVarTypeDispStrings
@@ -30,7 +32,7 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         @param name name of this dialog (string)
         @param modal flag to indicate a modal dialog (boolean)
         """
-        super().__init__(parent)
+        super(VariablesFilterDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)

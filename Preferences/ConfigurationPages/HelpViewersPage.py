@@ -7,6 +7,8 @@
 Module implementing the Help Viewers configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QButtonGroup
 
@@ -29,7 +31,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         """
         Constructor
         """
-        super().__init__()
+        super(HelpViewersPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("HelpViewersPage")
         

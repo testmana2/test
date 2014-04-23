@@ -7,6 +7,8 @@
 Module implementing a dialog to enter data for the Mercurial import command.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, QDateTime
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -29,7 +31,7 @@ class HgImportDialog(QDialog, Ui_HgImportDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgImportDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.patchFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))

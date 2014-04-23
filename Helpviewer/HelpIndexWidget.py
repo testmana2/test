@@ -7,6 +7,8 @@
 Module implementing a window for showing the QtHelp index.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, QUrl, QEvent
 from PyQt4.QtGui import QWidget, QVBoxLayout, QLabel, QLineEdit, QMenu, QDialog
 
@@ -32,7 +34,7 @@ class HelpIndexWidget(QWidget):
         @param mainWindow reference to the main window object (QMainWindow)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HelpIndexWidget, self).__init__(parent)
         
         self.__engine = engine
         self.__mw = mainWindow

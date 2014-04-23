@@ -7,6 +7,8 @@
 Module implementing the chat dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
 from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QApplication
 
@@ -53,7 +55,7 @@ class ChatWidget(QWidget, Ui_ChatWidget):
         @param port port to be used for the cooperation server (integer)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ChatWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.shareButton.setIcon(

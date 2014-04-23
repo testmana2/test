@@ -7,6 +7,8 @@
 Module implementing a dialog to select a revision.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -28,7 +30,7 @@ class HgRevisionSelectionDialog(QDialog, Ui_HgRevisionSelectionDialog):
         @param noneLabel labeltext for "no revision selected" (string)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgRevisionSelectionDialog, self).__init__(parent)
         self.setupUi(self)
        
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

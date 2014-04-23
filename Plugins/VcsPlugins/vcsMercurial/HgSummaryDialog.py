@@ -8,6 +8,12 @@ Module implementing a dialog to show some summary information of the working
 directory state.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QProcess, QTimer
@@ -32,7 +38,7 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgSummaryDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.refreshButton = self.buttonBox.addButton(

@@ -7,6 +7,8 @@
 Module implementing a special completer for the history.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QRegExp, QTimer
 from PyQt4.QtGui import QTableView, QAbstractItemView, QSortFilterProxyModel, \
     QCompleter
@@ -25,7 +27,7 @@ class HistoryCompletionView(QTableView):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HistoryCompletionView, self).__init__(parent)
         
         self.horizontalHeader().hide()
         self.verticalHeader().hide()
@@ -48,7 +50,7 @@ class HistoryCompletionView(QTableView):
         self.horizontalHeader().resizeSection(0, 0.65 * self.width())
         self.horizontalHeader().setStretchLastSection(True)
         
-        super().resizeEvent(evt)
+        super(HistoryCompletionView, self).resizeEvent(evt)
     
     def sizeHintForRow(self, row):
         """
@@ -73,7 +75,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(HistoryCompletionModel, self).__init__(parent)
         
         self.__searchString = ""
         self.__searchMatcher = QRegExp(
@@ -225,7 +227,7 @@ class HistoryCompleter(QCompleter):
         @param model reference to the model (QAbstractItemModel)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(model, parent)
+        super(HistoryCompleter, self).__init__(model, parent)
         
         self.setPopup(HistoryCompletionView())
         

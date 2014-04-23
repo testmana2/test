@@ -1797,7 +1797,7 @@ eric5.E5XML.XMLStreamWriterBase.XMLStreamWriterBase?1(device)
 eric5.Globals.AppInfo.makeAppInfo?4(argv, name, arg, description, options=[])
 eric5.Globals.checkBlacklistedVersions?4()
 eric5.Globals.configDir?7
-eric5.Globals.findPython2Interpreters?4()
+eric5.Globals.findPythonInterpreters?4(pyVersion)
 eric5.Globals.getConfigDir?4()
 eric5.Globals.getPyQt4ModulesDirectory?4()
 eric5.Globals.getPythonModulesDirectory?4()
@@ -3693,6 +3693,7 @@ eric5.PluginManager.PluginExceptions.PluginLoadError?1(name)
 eric5.PluginManager.PluginExceptions.PluginModuleFormatError?1(name, missing)
 eric5.PluginManager.PluginExceptions.PluginModulesError?1()
 eric5.PluginManager.PluginExceptions.PluginPathError?1(msg=None)
+eric5.PluginManager.PluginExceptions.PluginPy2IncompatibleError?1(name)
 eric5.PluginManager.PluginInfoDialog.PluginInfoDialog.on_pluginList_itemActivated?4(item, column)
 eric5.PluginManager.PluginInfoDialog.PluginInfoDialog?1(pluginManager, parent=None)
 eric5.PluginManager.PluginInstallDialog.PluginInstallDialog.restartNeeded?4()
@@ -3771,7 +3772,12 @@ eric5.Plugins.AboutPlugin.AboutDialog.authorsText?7
 eric5.Plugins.AboutPlugin.AboutDialog.licenseText?7
 eric5.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric5.Plugins.AboutPlugin.AboutDialog.titleText?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerPy2?1(filename, lines, repeat=False, select="", ignore="", max_line_length=79, hang_closing=False, docType="pep257")
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerReport.error_args?4(line_number, offset, code, check, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerReport?1(options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.codeStyleCheck?4(filename, source, args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.extractLineFlags?4(line, startComment=")
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initService?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='', onlyFixes={})
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.fixableRole?7
@@ -3795,16 +3801,14 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCh
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.positionRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.prepare?4(fileList, project)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.start?4(fn, save=False, repeat=None)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog?1(parent=None)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerReport.error_args?4(line_number, offset, code, check, *args)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerReport?1(options)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog?1(styleCheckService, parent=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCodeSelectionDialog.CodeStyleCodeSelectionDialog.getSelectedCodes?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCodeSelectionDialog.CodeStyleCodeSelectionDialog?1(codes, showFixCodes, parent=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.finalize?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.fixIssue?4(line, pos, message)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.mutualStartswith?4(b)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.saveFile?4(encoding)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer?1(project, filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer?1(filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace, eol)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.FixableCodeStyleIssues?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper.SKIP_TOKENS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper.pep8Expected?4()
@@ -3817,9 +3821,6 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter.run?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.Reindenter?1(sourceLines)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.CodeStyleStatisticsDialog?1(statistics, parent=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Codes?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.Messages?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.MessagesSampleArgs?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.run?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker.unpackArgs?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleChecker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
@@ -3833,11 +3834,10 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext?1(
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.CamelcaseRegexp?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Codes?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.LowercaseRegex?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Messages?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.MixedcaseRegexp?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.UppercaseRegexp?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.run?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.unpackArgs?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker?1(tree, filename, options)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.ARITHMETIC_OP?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BENCHMARK_KEYS?7
@@ -3920,7 +3920,6 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.expand_indent?4(line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.explicit_line_join?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.extraneous_whitespace?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.filename_match?4(filename, patterns, default=True)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.getMessage?4(code, *args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.get_parser?4(prog='pep8', version=__version__)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.imports_on_separate_lines?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
@@ -3932,8 +3931,6 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_whitespace_around_ope
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.mute_string?4(text)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.noqa?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.parse_udiff?4(diff, patterns=None, parent='.')
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.pep8_messages?7
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.pep8_messages_sample_args?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.process_options?4(arglist=None, parse_argv=False, config_file=None, parser=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_backticks?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_has_key?4(logical_line)
@@ -3953,6 +3950,21 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_named_param
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_operator?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_parameters?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages?8
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages_sample_args?8
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.translations.getTranslatedMessage?4(message)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.extractLineFlags?4(line, startComment=")
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.initService?4()
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.normalizeCode?4(codestring)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.syntaxAndPyflakesCheck?4(filename, codestring, checkFlakes=True, ignoreStarImportWarnings=False)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.addLanguage?4(lang, env, path, module, getArgs, getExt, callback, onError)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.getExtensions?4()
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.getLanguages?4()
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.removeLanguage?4(lang)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.syntaxCheck?4(lang, filename, source)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.syntaxChecked?7
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService?1()
+eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.check?4(codestring='')
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.errorRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.indexRole?7
@@ -3965,6 +3977,9 @@ eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDial
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.start?4(fn, codestring="")
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.warningRole?7
 eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog?1(parent=None)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.initService?4()
+eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.jsCheckSyntax?4(file, codestring)
+eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.normalizeCode?4(codestring)
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_line?4()
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_lineno?4()
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_msg?4()
@@ -3978,13 +3993,15 @@ eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.not_less_witness?4(oth
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace?1(ws)
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.check?4(file, text="")
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.format_witnesses?4(w)
+eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.initService?4()
 eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.process_tokens?4(tokens)
+eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.check?4(codestring='')
 eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_buttonBox_clicked?4(button)
 eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_resultList_itemActivated?4(itm, col)
 eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_startButton_clicked?4()
 eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.prepare?4(fileList, project)
 eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.start?4(fn)
-eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog?1(parent=None)
+eric5.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog?1(indentCheckService, parent=None)
 eric5.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.EricapiConfigDialog.accept?4()
 eric5.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.EricapiConfigDialog.generateParameters?4()
 eric5.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.EricapiConfigDialog.on_addButton_clicked?4()
@@ -4033,10 +4050,13 @@ eric5.Plugins.PluginAbout.longDescription?7
 eric5.Plugins.PluginAbout.name?7
 eric5.Plugins.PluginAbout.packageName?7
 eric5.Plugins.PluginAbout.pyqtApi?7
+eric5.Plugins.PluginAbout.python2Compatible?7
 eric5.Plugins.PluginAbout.shortDescription?7
 eric5.Plugins.PluginAbout.version?7
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.activate?4()
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.deactivate?4()
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleCheck?4(lang, filename, source, args)
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleChecked?7
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin?1(ui)
 eric5.Plugins.PluginCodeStyleChecker.author?7
 eric5.Plugins.PluginCodeStyleChecker.autoactivate?7
@@ -4047,6 +4067,7 @@ eric5.Plugins.PluginCodeStyleChecker.longDescription?7
 eric5.Plugins.PluginCodeStyleChecker.name?7
 eric5.Plugins.PluginCodeStyleChecker.packageName?7
 eric5.Plugins.PluginCodeStyleChecker.pyqtApi?7
+eric5.Plugins.PluginCodeStyleChecker.python2Compatible?7
 eric5.Plugins.PluginCodeStyleChecker.shortDescription?7
 eric5.Plugins.PluginCodeStyleChecker.version?7
 eric5.Plugins.PluginEricapi.EricapiPlugin.activate?4()
@@ -4062,6 +4083,7 @@ eric5.Plugins.PluginEricapi.longDescription?7
 eric5.Plugins.PluginEricapi.name?7
 eric5.Plugins.PluginEricapi.packageName?7
 eric5.Plugins.PluginEricapi.pyqtApi?7
+eric5.Plugins.PluginEricapi.python2Compatible?7
 eric5.Plugins.PluginEricapi.shortDescription?7
 eric5.Plugins.PluginEricapi.version?7
 eric5.Plugins.PluginEricdoc.EricdocPlugin.activate?4()
@@ -4077,6 +4099,7 @@ eric5.Plugins.PluginEricdoc.longDescription?7
 eric5.Plugins.PluginEricdoc.name?7
 eric5.Plugins.PluginEricdoc.packageName?7
 eric5.Plugins.PluginEricdoc.pyqtApi?7
+eric5.Plugins.PluginEricdoc.python2Compatible?7
 eric5.Plugins.PluginEricdoc.shortDescription?7
 eric5.Plugins.PluginEricdoc.version?7
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.activate?4()
@@ -4091,10 +4114,13 @@ eric5.Plugins.PluginSyntaxChecker.longDescription?7
 eric5.Plugins.PluginSyntaxChecker.name?7
 eric5.Plugins.PluginSyntaxChecker.packageName?7
 eric5.Plugins.PluginSyntaxChecker.pyqtApi?7
+eric5.Plugins.PluginSyntaxChecker.python2Compatible?7
 eric5.Plugins.PluginSyntaxChecker.shortDescription?7
 eric5.Plugins.PluginSyntaxChecker.version?7
 eric5.Plugins.PluginTabnanny.TabnannyPlugin.activate?4()
 eric5.Plugins.PluginTabnanny.TabnannyPlugin.deactivate?4()
+eric5.Plugins.PluginTabnanny.TabnannyPlugin.indentCheck?4(lang, filename, source)
+eric5.Plugins.PluginTabnanny.TabnannyPlugin.indentChecked?7
 eric5.Plugins.PluginTabnanny.TabnannyPlugin?1(ui)
 eric5.Plugins.PluginTabnanny.author?7
 eric5.Plugins.PluginTabnanny.autoactivate?7
@@ -4105,6 +4131,7 @@ eric5.Plugins.PluginTabnanny.longDescription?7
 eric5.Plugins.PluginTabnanny.name?7
 eric5.Plugins.PluginTabnanny.packageName?7
 eric5.Plugins.PluginTabnanny.pyqtApi?7
+eric5.Plugins.PluginTabnanny.python2Compatible?7
 eric5.Plugins.PluginTabnanny.shortDescription?7
 eric5.Plugins.PluginTabnanny.version?7
 eric5.Plugins.PluginVcsMercurial.VcsMercurialPlugin.activate?4()
@@ -4134,6 +4161,7 @@ eric5.Plugins.PluginVcsMercurial.pluginType?7
 eric5.Plugins.PluginVcsMercurial.pluginTypename?7
 eric5.Plugins.PluginVcsMercurial.prepareUninstall?4()
 eric5.Plugins.PluginVcsMercurial.pyqtApi?7
+eric5.Plugins.PluginVcsMercurial.python2Compatible?7
 eric5.Plugins.PluginVcsMercurial.shortDescription?7
 eric5.Plugins.PluginVcsMercurial.version?7
 eric5.Plugins.PluginVcsPySvn.VcsPySvnPlugin.activate?4()
@@ -4162,6 +4190,7 @@ eric5.Plugins.PluginVcsPySvn.pluginType?7
 eric5.Plugins.PluginVcsPySvn.pluginTypename?7
 eric5.Plugins.PluginVcsPySvn.prepareUninstall?4()
 eric5.Plugins.PluginVcsPySvn.pyqtApi?7
+eric5.Plugins.PluginVcsPySvn.python2Compatible?7
 eric5.Plugins.PluginVcsPySvn.shortDescription?7
 eric5.Plugins.PluginVcsPySvn.subversionCfgPluginObject?7
 eric5.Plugins.PluginVcsPySvn.version?7
@@ -4191,6 +4220,7 @@ eric5.Plugins.PluginVcsSubversion.pluginType?7
 eric5.Plugins.PluginVcsSubversion.pluginTypename?7
 eric5.Plugins.PluginVcsSubversion.prepareUninstall?4()
 eric5.Plugins.PluginVcsSubversion.pyqtApi?7
+eric5.Plugins.PluginVcsSubversion.python2Compatible?7
 eric5.Plugins.PluginVcsSubversion.shortDescription?7
 eric5.Plugins.PluginVcsSubversion.subversionCfgPluginObject?7
 eric5.Plugins.PluginVcsSubversion.version?7
@@ -4210,6 +4240,7 @@ eric5.Plugins.PluginVmListspace.pluginType?7
 eric5.Plugins.PluginVmListspace.pluginTypename?7
 eric5.Plugins.PluginVmListspace.previewPix?4()
 eric5.Plugins.PluginVmListspace.pyqtApi?7
+eric5.Plugins.PluginVmListspace.python2Compatible?7
 eric5.Plugins.PluginVmListspace.shortDescription?7
 eric5.Plugins.PluginVmListspace.version?7
 eric5.Plugins.PluginVmTabview.VmTabviewPlugin.activate?4()
@@ -4228,6 +4259,7 @@ eric5.Plugins.PluginVmTabview.pluginType?7
 eric5.Plugins.PluginVmTabview.pluginTypename?7
 eric5.Plugins.PluginVmTabview.previewPix?4()
 eric5.Plugins.PluginVmTabview.pyqtApi?7
+eric5.Plugins.PluginVmTabview.python2Compatible?7
 eric5.Plugins.PluginVmTabview.shortDescription?7
 eric5.Plugins.PluginVmTabview.version?7
 eric5.Plugins.PluginWizardE5MessageBox.E5MessageBoxWizard.activate?4()
@@ -4242,6 +4274,7 @@ eric5.Plugins.PluginWizardE5MessageBox.longDescription?7
 eric5.Plugins.PluginWizardE5MessageBox.name?7
 eric5.Plugins.PluginWizardE5MessageBox.packageName?7
 eric5.Plugins.PluginWizardE5MessageBox.pyqtApi?7
+eric5.Plugins.PluginWizardE5MessageBox.python2Compatible?7
 eric5.Plugins.PluginWizardE5MessageBox.shortDescription?7
 eric5.Plugins.PluginWizardE5MessageBox.version?7
 eric5.Plugins.PluginWizardPyRegExp.PyRegExpWizard.activate?4()
@@ -4256,6 +4289,7 @@ eric5.Plugins.PluginWizardPyRegExp.longDescription?7
 eric5.Plugins.PluginWizardPyRegExp.name?7
 eric5.Plugins.PluginWizardPyRegExp.packageName?7
 eric5.Plugins.PluginWizardPyRegExp.pyqtApi?7
+eric5.Plugins.PluginWizardPyRegExp.python2Compatible?7
 eric5.Plugins.PluginWizardPyRegExp.shortDescription?7
 eric5.Plugins.PluginWizardPyRegExp.version?7
 eric5.Plugins.PluginWizardQColorDialog.ColorDialogWizard.activate?4()
@@ -4270,6 +4304,7 @@ eric5.Plugins.PluginWizardQColorDialog.longDescription?7
 eric5.Plugins.PluginWizardQColorDialog.name?7
 eric5.Plugins.PluginWizardQColorDialog.packageName?7
 eric5.Plugins.PluginWizardQColorDialog.pyqtApi?7
+eric5.Plugins.PluginWizardQColorDialog.python2Compatible?7
 eric5.Plugins.PluginWizardQColorDialog.shortDescription?7
 eric5.Plugins.PluginWizardQColorDialog.version?7
 eric5.Plugins.PluginWizardQFileDialog.FileDialogWizard.activate?4()
@@ -4284,6 +4319,7 @@ eric5.Plugins.PluginWizardQFileDialog.longDescription?7
 eric5.Plugins.PluginWizardQFileDialog.name?7
 eric5.Plugins.PluginWizardQFileDialog.packageName?7
 eric5.Plugins.PluginWizardQFileDialog.pyqtApi?7
+eric5.Plugins.PluginWizardQFileDialog.python2Compatible?7
 eric5.Plugins.PluginWizardQFileDialog.shortDescription?7
 eric5.Plugins.PluginWizardQFileDialog.version?7
 eric5.Plugins.PluginWizardQFontDialog.FontDialogWizard.activate?4()
@@ -4298,6 +4334,7 @@ eric5.Plugins.PluginWizardQFontDialog.longDescription?7
 eric5.Plugins.PluginWizardQFontDialog.name?7
 eric5.Plugins.PluginWizardQFontDialog.packageName?7
 eric5.Plugins.PluginWizardQFontDialog.pyqtApi?7
+eric5.Plugins.PluginWizardQFontDialog.python2Compatible?7
 eric5.Plugins.PluginWizardQFontDialog.shortDescription?7
 eric5.Plugins.PluginWizardQFontDialog.version?7
 eric5.Plugins.PluginWizardQInputDialog.InputDialogWizard.activate?4()
@@ -4312,6 +4349,7 @@ eric5.Plugins.PluginWizardQInputDialog.longDescription?7
 eric5.Plugins.PluginWizardQInputDialog.name?7
 eric5.Plugins.PluginWizardQInputDialog.packageName?7
 eric5.Plugins.PluginWizardQInputDialog.pyqtApi?7
+eric5.Plugins.PluginWizardQInputDialog.python2Compatible?7
 eric5.Plugins.PluginWizardQInputDialog.shortDescription?7
 eric5.Plugins.PluginWizardQInputDialog.version?7
 eric5.Plugins.PluginWizardQMessageBox.MessageBoxWizard.activate?4()
@@ -4326,6 +4364,7 @@ eric5.Plugins.PluginWizardQMessageBox.longDescription?7
 eric5.Plugins.PluginWizardQMessageBox.name?7
 eric5.Plugins.PluginWizardQMessageBox.packageName?7
 eric5.Plugins.PluginWizardQMessageBox.pyqtApi?7
+eric5.Plugins.PluginWizardQMessageBox.python2Compatible?7
 eric5.Plugins.PluginWizardQMessageBox.shortDescription?7
 eric5.Plugins.PluginWizardQMessageBox.version?7
 eric5.Plugins.PluginWizardQRegExp.QRegExpWizard.activate?4()
@@ -4340,6 +4379,7 @@ eric5.Plugins.PluginWizardQRegExp.longDescription?7
 eric5.Plugins.PluginWizardQRegExp.name?7
 eric5.Plugins.PluginWizardQRegExp.packageName?7
 eric5.Plugins.PluginWizardQRegExp.pyqtApi?7
+eric5.Plugins.PluginWizardQRegExp.python2Compatible?7
 eric5.Plugins.PluginWizardQRegExp.shortDescription?7
 eric5.Plugins.PluginWizardQRegExp.version?7
 eric5.Plugins.PluginWizardQRegularExpression.QRegularExpressionWizard.activate?4()
@@ -4354,6 +4394,7 @@ eric5.Plugins.PluginWizardQRegularExpression.longDescription?7
 eric5.Plugins.PluginWizardQRegularExpression.name?7
 eric5.Plugins.PluginWizardQRegularExpression.packageName?7
 eric5.Plugins.PluginWizardQRegularExpression.pyqtApi?7
+eric5.Plugins.PluginWizardQRegularExpression.python2Compatible?7
 eric5.Plugins.PluginWizardQRegularExpression.shortDescription?7
 eric5.Plugins.PluginWizardQRegularExpression.version?7
 eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.HgBookmarkDialog.DEFINE_MODE?7
@@ -6201,7 +6242,6 @@ eric5.Preferences.Prefs.uiDefaults?7
 eric5.Preferences.Prefs.userDefaults?7
 eric5.Preferences.Prefs.varDefaults?7
 eric5.Preferences.Prefs.vcsDefaults?7
-eric5.Preferences.Prefs.viewProfilesLength?7
 eric5.Preferences.Prefs.webSettingsIntitialized?7
 eric5.Preferences.ProgramsDialog.ProgramsDialog.on_buttonBox_clicked?4(button)
 eric5.Preferences.ProgramsDialog.ProgramsDialog.on_programsSearchButton_clicked?4()
@@ -6993,7 +7033,7 @@ eric5.QScintilla.Editor.Editor.taskMarkersUpdated?7
 eric5.QScintilla.Editor.Editor.toggleBookmark?4(line)
 eric5.QScintilla.Editor.Editor.toggleCommentBlock?4()
 eric5.QScintilla.Editor.Editor.toggleSyntaxError?4(line, index, error, msg="", show=False)
-eric5.QScintilla.Editor.Editor.toggleWarning?4(line, warning, msg="", warningType=WarningCode)
+eric5.QScintilla.Editor.Editor.toggleWarning?4(line, col, warning, msg="", warningType=WarningCode)
 eric5.QScintilla.Editor.Editor.uncommentLine?4()
 eric5.QScintilla.Editor.Editor.uncommentLineOrSelection?4()
 eric5.QScintilla.Editor.Editor.uncommentSelection?4()
@@ -8231,6 +8271,17 @@ eric5.Utilities.AutoSaver.AutoSaver.changeOccurred?4()
 eric5.Utilities.AutoSaver.AutoSaver.saveIfNeccessary?4()
 eric5.Utilities.AutoSaver.AutoSaver.timerEvent?4(evt)
 eric5.Utilities.AutoSaver.AutoSaver?1(parent, save)
+eric5.Utilities.BackgroundClient.BackgroundClient.backgroundClient?7
+eric5.Utilities.BackgroundClient.BackgroundClient.run?4()
+eric5.Utilities.BackgroundClient.BackgroundClient?1(host, port)
+eric5.Utilities.BackgroundService.BackgroundService.enqueueRequest?4(fx, lang, fn, data)
+eric5.Utilities.BackgroundService.BackgroundService.on_disconnectSocket?4(lang)
+eric5.Utilities.BackgroundService.BackgroundService.on_newConnection?4()
+eric5.Utilities.BackgroundService.BackgroundService.serviceConnect?4(fx, lang, modulepath, module, callback, onErrorCallback=None)
+eric5.Utilities.BackgroundService.BackgroundService.serviceDisconnect?4(fx, lang)
+eric5.Utilities.BackgroundService.BackgroundService.serviceNotAvailable?7
+eric5.Utilities.BackgroundService.BackgroundService.shutdown?4()
+eric5.Utilities.BackgroundService.BackgroundService?1()
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Attribute.addAssignment?4(lineno)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Attribute?1(module, name, file, lineno)
 eric5.Utilities.ClassBrowsers.ClbrBaseClasses.Class?1(module, name, super, file, lineno)
@@ -8449,7 +8500,14 @@ eric5.Utilities.checkPyside?4()
 eric5.Utilities.codingBytes_regexps?7
 eric5.Utilities.coding_regexps?7
 eric5.Utilities.compactPath?4(path, width, measure=len)
-eric5.Utilities.compile?4(file, codestring="")
+eric5.Utilities.compatibility_fixes.File.fp?7
+eric5.Utilities.compatibility_fixes.File.next?4()
+eric5.Utilities.compatibility_fixes.File.read?4(n=-1)
+eric5.Utilities.compatibility_fixes.File.readline?4(limit=-1)
+eric5.Utilities.compatibility_fixes.File.readlines?4(hint=-1)
+eric5.Utilities.compatibility_fixes.File.write?4(txt)
+eric5.Utilities.compatibility_fixes.File?1(filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
+eric5.Utilities.compatibility_fixes.open?4(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
 eric5.Utilities.configDir?7
 eric5.Utilities.convertLineEnds?4(text, eol)
 eric5.Utilities.crypto.CryptoMarker?7
@@ -8526,7 +8584,6 @@ eric5.Utilities.html_uencode?4(text, pattern=_uescape)
 eric5.Utilities.isExecutable?4(exe)
 eric5.Utilities.isinpath?4(file)
 eric5.Utilities.joinext?4(prefix, ext)
-eric5.Utilities.jsCheckSyntax?4(file, codestring="")
 eric5.Utilities.linesep?4()
 eric5.Utilities.normabsjoinpath?4(a, *p)
 eric5.Utilities.normabspath?4(path)
@@ -8537,131 +8594,13 @@ eric5.Utilities.parseEnvironmentString?4(s)
 eric5.Utilities.parseOptionString?4(s)
 eric5.Utilities.parseString?4(s, rx)
 eric5.Utilities.prepareQtMacBundle?4(toolname, version, args)
-eric5.Utilities.py2compile?4(fileName, checkFlakes=False, txt="")
-eric5.Utilities.pyflakes.checker.Checker.AND?7
-eric5.Utilities.pyflakes.checker.Checker.ASSIGN?4(node)
-eric5.Utilities.pyflakes.checker.Checker.AUGASSIGN?4(node)
-eric5.Utilities.pyflakes.checker.Checker.BOOLOP?7
-eric5.Utilities.pyflakes.checker.Checker.CLASSDEF?4(node)
-eric5.Utilities.pyflakes.checker.Checker.COMPREHENSION?7
-eric5.Utilities.pyflakes.checker.Checker.CONTINUE?7
-eric5.Utilities.pyflakes.checker.Checker.DICTCOMP?4(node)
-eric5.Utilities.pyflakes.checker.Checker.EXCEPTHANDLER?4(node)
-eric5.Utilities.pyflakes.checker.Checker.FOR?4(node)
-eric5.Utilities.pyflakes.checker.Checker.FUNCTIONDEF?4(node)
-eric5.Utilities.pyflakes.checker.Checker.GENERATOREXP?4(node)
-eric5.Utilities.pyflakes.checker.Checker.GLOBAL?4(node)
-eric5.Utilities.pyflakes.checker.Checker.IMPORT?4(node)
-eric5.Utilities.pyflakes.checker.Checker.IMPORTFROM?4(node)
-eric5.Utilities.pyflakes.checker.Checker.LAMBDA?4(node)
-eric5.Utilities.pyflakes.checker.Checker.LISTCOMP?4(node)
-eric5.Utilities.pyflakes.checker.Checker.LOAD?7
-eric5.Utilities.pyflakes.checker.Checker.NAME?4(node)
-eric5.Utilities.pyflakes.checker.Checker.NONLOCAL?7
-eric5.Utilities.pyflakes.checker.Checker.NUM?7
-eric5.Utilities.pyflakes.checker.Checker.RETURN?7
-eric5.Utilities.pyflakes.checker.Checker.SETCOMP?7
-eric5.Utilities.pyflakes.checker.Checker.SLICE?7
-eric5.Utilities.pyflakes.checker.Checker.TRY?4(node)
-eric5.Utilities.pyflakes.checker.Checker.TRYEXCEPT?7
-eric5.Utilities.pyflakes.checker.Checker._customBuiltIns?8
-eric5.Utilities.pyflakes.checker.Checker._getDoctestExamples?8
-eric5.Utilities.pyflakes.checker.Checker.addArgs?4()
-eric5.Utilities.pyflakes.checker.Checker.addBinding?4(node, value, reportRedef=True)
-eric5.Utilities.pyflakes.checker.Checker.builtIns?7
-eric5.Utilities.pyflakes.checker.Checker.checkDeadScopes?4()
-eric5.Utilities.pyflakes.checker.Checker.checkUnusedAssignments?4()
-eric5.Utilities.pyflakes.checker.Checker.collectLoopVars?4()
-eric5.Utilities.pyflakes.checker.Checker.deferAssignment?4(callable)
-eric5.Utilities.pyflakes.checker.Checker.deferFunction?4(callable)
-eric5.Utilities.pyflakes.checker.Checker.descendantOf?4(node, ancestors, stop=None)
-eric5.Utilities.pyflakes.checker.Checker.differentForks?4(lnode, rnode)
-eric5.Utilities.pyflakes.checker.Checker.getCommonAncestor?4(lnode, rnode, stop=None)
-eric5.Utilities.pyflakes.checker.Checker.getDocstring?4(node)
-eric5.Utilities.pyflakes.checker.Checker.getNodeHandler?4(node_class)
-eric5.Utilities.pyflakes.checker.Checker.handleChildren?4(tree)
-eric5.Utilities.pyflakes.checker.Checker.handleDoctests?4(node)
-eric5.Utilities.pyflakes.checker.Checker.handleNode?4(node, parent)
-eric5.Utilities.pyflakes.checker.Checker.handleNodeDelete?4(node)
-eric5.Utilities.pyflakes.checker.Checker.handleNodeLoad?4(node)
-eric5.Utilities.pyflakes.checker.Checker.handleNodeStore?4(node)
-eric5.Utilities.pyflakes.checker.Checker.hasParent?4(node, kind)
-eric5.Utilities.pyflakes.checker.Checker.ignore?4(node)
-eric5.Utilities.pyflakes.checker.Checker.isDocstring?4(node)
-eric5.Utilities.pyflakes.checker.Checker.nodeDepth?7
-eric5.Utilities.pyflakes.checker.Checker.offset?7
-eric5.Utilities.pyflakes.checker.Checker.onFork?4(parent, lnode, rnode, items)
-eric5.Utilities.pyflakes.checker.Checker.popScope?4()
-eric5.Utilities.pyflakes.checker.Checker.pushClassScope?4()
-eric5.Utilities.pyflakes.checker.Checker.pushFunctionScope?4()
-eric5.Utilities.pyflakes.checker.Checker.pushScope?4(scopeClass=FunctionScope)
-eric5.Utilities.pyflakes.checker.Checker.report?4(messageClass, *args, **kwargs)
-eric5.Utilities.pyflakes.checker.Checker.runDeferred?4(deferred)
-eric5.Utilities.pyflakes.checker.Checker.runFunction?4()
-eric5.Utilities.pyflakes.checker.Checker.scope?4()
-eric5.Utilities.pyflakes.checker.Checker.traceTree?7
-eric5.Utilities.pyflakes.checker.Checker.withDoctest?7
-eric5.Utilities.pyflakes.checker.Checker?1(tree, filename='(none)', builtins=None)
-eric5.Utilities.pyflakes.checker.FunctionScope.alwaysUsed?7
-eric5.Utilities.pyflakes.checker.FunctionScope.usesLocals?7
-eric5.Utilities.pyflakes.checker.Scope.importStarred?7
-eric5.Utilities.pyflakes.checker._MAGIC_GLOBALS?8
-eric5.Utilities.pyflakes.checker.getNodeName?4(node)
-eric5.Utilities.pyflakes.checker.getNodeType?4(node_class)
-eric5.Utilities.pyflakes.checker.iter_child_nodes?4(node)
-eric5.Utilities.pyflakes.checker.names?4(self)
-eric5.Utilities.pyflakes.checker.unusedAssignments?4(self)
-eric5.Utilities.pyflakes.messages.DoctestSyntaxError.message?7
-eric5.Utilities.pyflakes.messages.DoctestSyntaxError.message_id?7
-eric5.Utilities.pyflakes.messages.DoctestSyntaxError?1(filename, loc, position=None)
-eric5.Utilities.pyflakes.messages.DuplicateArgument.message?7
-eric5.Utilities.pyflakes.messages.DuplicateArgument.message_id?7
-eric5.Utilities.pyflakes.messages.DuplicateArgument?1(filename, loc, name)
-eric5.Utilities.pyflakes.messages.ImportShadowedByLoopVar.message?7
-eric5.Utilities.pyflakes.messages.ImportShadowedByLoopVar.message_id?7
-eric5.Utilities.pyflakes.messages.ImportShadowedByLoopVar?1(filename, loc, name, orig_loc)
-eric5.Utilities.pyflakes.messages.ImportStarUsed.message?7
-eric5.Utilities.pyflakes.messages.ImportStarUsed.message_id?7
-eric5.Utilities.pyflakes.messages.ImportStarUsed?1(filename, loc, modname)
-eric5.Utilities.pyflakes.messages.LateFutureImport.message?7
-eric5.Utilities.pyflakes.messages.LateFutureImport.message_id?7
-eric5.Utilities.pyflakes.messages.LateFutureImport?1(filename, loc, names)
-eric5.Utilities.pyflakes.messages.Message.getMessageData?4()
-eric5.Utilities.pyflakes.messages.Message.message?7
-eric5.Utilities.pyflakes.messages.Message.message_args?7
-eric5.Utilities.pyflakes.messages.Message.message_id?7
-eric5.Utilities.pyflakes.messages.Message?1(filename, loc)
-eric5.Utilities.pyflakes.messages.Redefined.message?7
-eric5.Utilities.pyflakes.messages.Redefined.message_id?7
-eric5.Utilities.pyflakes.messages.Redefined?1(filename, loc, name, orig_loc)
-eric5.Utilities.pyflakes.messages.RedefinedInListComp.message?7
-eric5.Utilities.pyflakes.messages.RedefinedInListComp.message_id?7
-eric5.Utilities.pyflakes.messages.RedefinedInListComp?1(filename, loc, name, orig_loc)
-eric5.Utilities.pyflakes.messages.RedefinedWhileUnused.message?7
-eric5.Utilities.pyflakes.messages.RedefinedWhileUnused.message_id?7
-eric5.Utilities.pyflakes.messages.RedefinedWhileUnused?1(filename, loc, name, orig_loc)
-eric5.Utilities.pyflakes.messages.UndefinedExport.message?7
-eric5.Utilities.pyflakes.messages.UndefinedExport.message_id?7
-eric5.Utilities.pyflakes.messages.UndefinedExport?1(filename, loc, name)
-eric5.Utilities.pyflakes.messages.UndefinedLocal.message?7
-eric5.Utilities.pyflakes.messages.UndefinedLocal.message_id?7
-eric5.Utilities.pyflakes.messages.UndefinedLocal?1(filename, loc, name, orig_loc)
-eric5.Utilities.pyflakes.messages.UndefinedName.message?7
-eric5.Utilities.pyflakes.messages.UndefinedName.message_id?7
-eric5.Utilities.pyflakes.messages.UndefinedName?1(filename, loc, name)
-eric5.Utilities.pyflakes.messages.UnusedImport.message?7
-eric5.Utilities.pyflakes.messages.UnusedImport.message_id?7
-eric5.Utilities.pyflakes.messages.UnusedImport?1(filename, loc, name)
-eric5.Utilities.pyflakes.messages.UnusedVariable.message?7
-eric5.Utilities.pyflakes.messages.UnusedVariable.message_id?7
-eric5.Utilities.pyflakes.messages.UnusedVariable?1(filename, loc, names)
-eric5.Utilities.pyflakes.translations._messages?8
-eric5.Utilities.pyflakes.translations.getTranslatedFlakesMessage?4(message_id, message_args)
+eric5.Utilities.quote?4(url)
 eric5.Utilities.readEncodedFile?4(filename)
 eric5.Utilities.readEncodedFileWithEncoding?4(filename, encoding)
 eric5.Utilities.readEncodedFileWithHash?4(filename)
 eric5.Utilities.readStringFromStream?4(stream)
 eric5.Utilities.relpath?4(path, start=os.path.curdir)
+eric5.Utilities.samefilepath?4(f1, f2)
 eric5.Utilities.samepath?4(f1, f2)
 eric5.Utilities.splitPath?4(name)
 eric5.Utilities.supportedCodecs?7
@@ -8676,284 +8615,6 @@ eric5.Utilities.win32_GetUserName?4()
 eric5.Utilities.win32_Kill?4(pid)
 eric5.Utilities.win32_getRealName?4()
 eric5.Utilities.writeEncodedFile?4(filename, text, orig_coding)
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.docType?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.error_args?4(line_number, offset, code, check, *args)
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.filename?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.hang_closing?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.ignore?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.max_line_length?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.repeat?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport.select?7
-eric5.UtilitiesPython2.CodeStyleChecker.CodeStyleReport?1(options)
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker.Codes?7
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker.run?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker.unpackArgs?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleChecker?1(source, filename, select, ignore, expected, repeat, maxLineLength=79, docType="pep257")
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.contextType?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.end?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.indent?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.source?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.ssource?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext.start?4()
-eric5.UtilitiesPython2.DocStyleCheckerPy2.DocStyleContext?1(source, startLine, contextType)
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.CamelcaseRegexp?7
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.Codes?7
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.LowercaseRegex?7
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.MixedcaseRegexp?7
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.UppercaseRegexp?7
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.run?4()
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker.unpackArgs?4()
-eric5.UtilitiesPython2.NamingStyleCheckerPy2.NamingStyleChecker?1(tree, filename, options)
-eric5.UtilitiesPython2.Py2SyntaxChecker.compile?4(file, codestring)
-eric5.UtilitiesPython2.Py2SyntaxChecker.flakesCheck?4(fileName, codestring, ignoreStarImportWarnings)
-eric5.UtilitiesPython2.Tabnanny.NannyNag.get_line?4()
-eric5.UtilitiesPython2.Tabnanny.NannyNag.get_lineno?4()
-eric5.UtilitiesPython2.Tabnanny.NannyNag.get_msg?4()
-eric5.UtilitiesPython2.Tabnanny.NannyNag?1(lineno, msg, line)
-eric5.UtilitiesPython2.Tabnanny.Whitespace.equal?4(other)
-eric5.UtilitiesPython2.Tabnanny.Whitespace.indent_level?4(tabsize)
-eric5.UtilitiesPython2.Tabnanny.Whitespace.less?4(other)
-eric5.UtilitiesPython2.Tabnanny.Whitespace.longest_run_of_spaces?4()
-eric5.UtilitiesPython2.Tabnanny.Whitespace.not_equal_witness?4(other)
-eric5.UtilitiesPython2.Tabnanny.Whitespace.not_less_witness?4(other)
-eric5.UtilitiesPython2.Tabnanny.Whitespace?1(ws)
-eric5.UtilitiesPython2.Tabnanny.check?4(filename, codestring)
-eric5.UtilitiesPython2.Tabnanny.format_witnesses?4(w)
-eric5.UtilitiesPython2.Tabnanny.process_tokens?4(tokens)
-eric5.UtilitiesPython2.Tools.coding_regexps?7
-eric5.UtilitiesPython2.Tools.decode?4(text)
-eric5.UtilitiesPython2.Tools.extractLineFlags?4(line, startComment=")
-eric5.UtilitiesPython2.Tools.get_coding?4(text)
-eric5.UtilitiesPython2.Tools.normalizeCode?4(codestring)
-eric5.UtilitiesPython2.Tools.readEncodedFile?4(filename)
-eric5.UtilitiesPython2.pep8.ARITHMETIC_OP?7
-eric5.UtilitiesPython2.pep8.BENCHMARK_KEYS?7
-eric5.UtilitiesPython2.pep8.BaseReport.error?4(line_number, offset, text, check)
-eric5.UtilitiesPython2.pep8.BaseReport.error_args?4(line_number, offset, code, check, *args)
-eric5.UtilitiesPython2.pep8.BaseReport.get_count?4(prefix='')
-eric5.UtilitiesPython2.pep8.BaseReport.get_file_results?4()
-eric5.UtilitiesPython2.pep8.BaseReport.get_statistics?4(prefix='')
-eric5.UtilitiesPython2.pep8.BaseReport.increment_logical_line?4()
-eric5.UtilitiesPython2.pep8.BaseReport.init_file?4(filename, lines, expected, line_offset)
-eric5.UtilitiesPython2.pep8.BaseReport.print_benchmark?4()
-eric5.UtilitiesPython2.pep8.BaseReport.print_filename?7
-eric5.UtilitiesPython2.pep8.BaseReport.print_statistics?4(prefix='')
-eric5.UtilitiesPython2.pep8.BaseReport.start?4()
-eric5.UtilitiesPython2.pep8.BaseReport.stop?4()
-eric5.UtilitiesPython2.pep8.BaseReport?1(options)
-eric5.UtilitiesPython2.pep8.COMMENT_WITH_NL?7
-eric5.UtilitiesPython2.pep8.COMPARE_SINGLETON_REGEX?7
-eric5.UtilitiesPython2.pep8.COMPARE_TYPE_REGEX?7
-eric5.UtilitiesPython2.pep8.Checker.build_tokens_line?4()
-eric5.UtilitiesPython2.pep8.Checker.check_all?4(expected=None, line_offset=0)
-eric5.UtilitiesPython2.pep8.Checker.check_ast?4()
-eric5.UtilitiesPython2.pep8.Checker.check_logical?4()
-eric5.UtilitiesPython2.pep8.Checker.check_physical?4(line)
-eric5.UtilitiesPython2.pep8.Checker.generate_tokens?4()
-eric5.UtilitiesPython2.pep8.Checker.readline?4()
-eric5.UtilitiesPython2.pep8.Checker.readline_check_physical?4()
-eric5.UtilitiesPython2.pep8.Checker.report_invalid_syntax?4()
-eric5.UtilitiesPython2.pep8.Checker.run_check?4(check, argument_names)
-eric5.UtilitiesPython2.pep8.Checker?1(filename=None, lines=None, options=None, report=None, **kwargs)
-eric5.UtilitiesPython2.pep8.DEFAULT_EXCLUDE?7
-eric5.UtilitiesPython2.pep8.DEFAULT_IGNORE?7
-eric5.UtilitiesPython2.pep8.DOCSTRING_REGEX?7
-eric5.UtilitiesPython2.pep8.DiffReport.error?4(line_number, offset, text, check)
-eric5.UtilitiesPython2.pep8.DiffReport?1(options)
-eric5.UtilitiesPython2.pep8.ERRORCODE_REGEX?7
-eric5.UtilitiesPython2.pep8.EXTRANEOUS_WHITESPACE_REGEX?7
-eric5.UtilitiesPython2.pep8.FileReport.print_filename?7
-eric5.UtilitiesPython2.pep8.HUNK_REGEX?7
-eric5.UtilitiesPython2.pep8.INDENT_REGEX?7
-eric5.UtilitiesPython2.pep8.KEYWORDS?7
-eric5.UtilitiesPython2.pep8.KEYWORD_REGEX?7
-eric5.UtilitiesPython2.pep8.LAMBDA_REGEX?7
-eric5.UtilitiesPython2.pep8.MAX_LINE_LENGTH?7
-eric5.UtilitiesPython2.pep8.OPERATOR_REGEX?7
-eric5.UtilitiesPython2.pep8.PROJECT_CONFIG?7
-eric5.UtilitiesPython2.pep8.RAISE_COMMA_REGEX?7
-eric5.UtilitiesPython2.pep8.REPORT_FORMAT?7
-eric5.UtilitiesPython2.pep8.RERAISE_COMMA_REGEX?7
-eric5.UtilitiesPython2.pep8.SINGLETONS?7
-eric5.UtilitiesPython2.pep8.SKIP_TOKENS?7
-eric5.UtilitiesPython2.pep8.StandardReport.error?4(line_number, offset, text, check)
-eric5.UtilitiesPython2.pep8.StandardReport.error_args?4(line_number, offset, code, check, *args)
-eric5.UtilitiesPython2.pep8.StandardReport.get_file_results?4()
-eric5.UtilitiesPython2.pep8.StandardReport.init_file?4(filename, lines, expected, line_offset)
-eric5.UtilitiesPython2.pep8.StandardReport?1(options)
-eric5.UtilitiesPython2.pep8.StyleGuide.check_files?4(paths=None)
-eric5.UtilitiesPython2.pep8.StyleGuide.excluded?4(filename, parent=None)
-eric5.UtilitiesPython2.pep8.StyleGuide.get_checks?4(argument_name)
-eric5.UtilitiesPython2.pep8.StyleGuide.ignore_code?4(code)
-eric5.UtilitiesPython2.pep8.StyleGuide.init_report?4(reporter=None)
-eric5.UtilitiesPython2.pep8.StyleGuide.input_dir?4(dirname)
-eric5.UtilitiesPython2.pep8.StyleGuide.input_file?4(filename, lines=None, expected=None, line_offset=0)
-eric5.UtilitiesPython2.pep8.StyleGuide?1(*args, **kwargs)
-eric5.UtilitiesPython2.pep8.TESTSUITE_PATH?7
-eric5.UtilitiesPython2.pep8.UNARY_OPERATORS?7
-eric5.UtilitiesPython2.pep8.WHITESPACE?7
-eric5.UtilitiesPython2.pep8.WHITESPACE_AFTER_COMMA_REGEX?7
-eric5.UtilitiesPython2.pep8.WS_NEEDED_OPERATORS?7
-eric5.UtilitiesPython2.pep8.WS_OPTIONAL_OPERATORS?7
-eric5.UtilitiesPython2.pep8._add_check?5(check, kind, codes, args)
-eric5.UtilitiesPython2.pep8._checks?8
-eric5.UtilitiesPython2.pep8._main?5()
-eric5.UtilitiesPython2.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level)
-eric5.UtilitiesPython2.pep8.comparison_to_singleton?4(logical_line, noqa)
-eric5.UtilitiesPython2.pep8.comparison_type?4(logical_line)
-eric5.UtilitiesPython2.pep8.compound_statements?4(logical_line)
-eric5.UtilitiesPython2.pep8.continued_indentation?4(logical_line, tokens, indent_level, hang_closing, noqa, verbose)
-eric5.UtilitiesPython2.pep8.expand_indent?4(line)
-eric5.UtilitiesPython2.pep8.explicit_line_join?4(logical_line, tokens)
-eric5.UtilitiesPython2.pep8.extraneous_whitespace?4(logical_line)
-eric5.UtilitiesPython2.pep8.filename_match?4(filename, patterns, default=True)
-eric5.UtilitiesPython2.pep8.get_parser?4(prog='pep8', version=__version__)
-eric5.UtilitiesPython2.pep8.imports_on_separate_lines?4(logical_line)
-eric5.UtilitiesPython2.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
-eric5.UtilitiesPython2.pep8.init_checks_registry?4()
-eric5.UtilitiesPython2.pep8.maximum_line_length?4(physical_line, max_line_length)
-eric5.UtilitiesPython2.pep8.missing_newline?4(physical_line)
-eric5.UtilitiesPython2.pep8.missing_whitespace?4(logical_line)
-eric5.UtilitiesPython2.pep8.missing_whitespace_around_operator?4(logical_line, tokens)
-eric5.UtilitiesPython2.pep8.mute_string?4(text)
-eric5.UtilitiesPython2.pep8.noqa?7
-eric5.UtilitiesPython2.pep8.parse_udiff?4(diff, patterns=None, parent='.')
-eric5.UtilitiesPython2.pep8.process_options?4(arglist=None, parse_argv=False, config_file=None, parser=None)
-eric5.UtilitiesPython2.pep8.python_3000_backticks?4(logical_line)
-eric5.UtilitiesPython2.pep8.python_3000_has_key?4(logical_line)
-eric5.UtilitiesPython2.pep8.python_3000_not_equal?4(logical_line)
-eric5.UtilitiesPython2.pep8.python_3000_raise_comma?4(logical_line)
-eric5.UtilitiesPython2.pep8.read_config?4(options, args, arglist, parser)
-eric5.UtilitiesPython2.pep8.readlines?4(filename)
-eric5.UtilitiesPython2.pep8.register_check?4(check, codes=None)
-eric5.UtilitiesPython2.pep8.stdin_get_value?4()
-eric5.UtilitiesPython2.pep8.tabs_obsolete?4(physical_line)
-eric5.UtilitiesPython2.pep8.tabs_or_spaces?4(physical_line, indent_char)
-eric5.UtilitiesPython2.pep8.trailing_blank_lines?4(physical_line, lines, line_number)
-eric5.UtilitiesPython2.pep8.trailing_whitespace?4(physical_line)
-eric5.UtilitiesPython2.pep8.whitespace_around_comma?4(logical_line)
-eric5.UtilitiesPython2.pep8.whitespace_around_keywords?4(logical_line)
-eric5.UtilitiesPython2.pep8.whitespace_around_named_parameter_equals?4(logical_line, tokens)
-eric5.UtilitiesPython2.pep8.whitespace_around_operator?4(logical_line)
-eric5.UtilitiesPython2.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
-eric5.UtilitiesPython2.pep8.whitespace_before_parameters?4(logical_line, tokens)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.AND?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.ASSIGN?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.AUGASSIGN?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.BOOLOP?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.CLASSDEF?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.COMPREHENSION?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.CONTINUE?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.DICTCOMP?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.EXCEPTHANDLER?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.FOR?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.FUNCTIONDEF?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.GENERATOREXP?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.GLOBAL?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.IMPORT?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.IMPORTFROM?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.LAMBDA?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.LISTCOMP?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.LOAD?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.NAME?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.NONLOCAL?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.NUM?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.RETURN?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.SETCOMP?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.SLICE?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.TRY?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.TRYEXCEPT?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker._customBuiltIns?8
-eric5.UtilitiesPython2.pyflakes.checker.Checker._getDoctestExamples?8
-eric5.UtilitiesPython2.pyflakes.checker.Checker.addArgs?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.addBinding?4(node, value, reportRedef=True)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.builtIns?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.checkDeadScopes?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.checkUnusedAssignments?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.collectLoopVars?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.deferAssignment?4(callable)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.deferFunction?4(callable)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.descendantOf?4(node, ancestors, stop=None)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.differentForks?4(lnode, rnode)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.getCommonAncestor?4(lnode, rnode, stop=None)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.getDocstring?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.getNodeHandler?4(node_class)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.handleChildren?4(tree)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.handleDoctests?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.handleNode?4(node, parent)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.handleNodeDelete?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.handleNodeLoad?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.handleNodeStore?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.hasParent?4(node, kind)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.ignore?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.isDocstring?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.nodeDepth?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.offset?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.onFork?4(parent, lnode, rnode, items)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.popScope?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.pushClassScope?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.pushFunctionScope?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.pushScope?4(scopeClass=FunctionScope)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.report?4(messageClass, *args, **kwargs)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.runDeferred?4(deferred)
-eric5.UtilitiesPython2.pyflakes.checker.Checker.runFunction?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.scope?4()
-eric5.UtilitiesPython2.pyflakes.checker.Checker.traceTree?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker.withDoctest?7
-eric5.UtilitiesPython2.pyflakes.checker.Checker?1(tree, filename='(none)', builtins=None)
-eric5.UtilitiesPython2.pyflakes.checker.FunctionScope.alwaysUsed?7
-eric5.UtilitiesPython2.pyflakes.checker.FunctionScope.usesLocals?7
-eric5.UtilitiesPython2.pyflakes.checker.Scope.importStarred?7
-eric5.UtilitiesPython2.pyflakes.checker._MAGIC_GLOBALS?8
-eric5.UtilitiesPython2.pyflakes.checker.getNodeName?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.getNodeType?4(node_class)
-eric5.UtilitiesPython2.pyflakes.checker.iter_child_nodes?4(node)
-eric5.UtilitiesPython2.pyflakes.checker.names?4(self)
-eric5.UtilitiesPython2.pyflakes.checker.unusedAssignments?4(self)
-eric5.UtilitiesPython2.pyflakes.messages.DoctestSyntaxError.message?7
-eric5.UtilitiesPython2.pyflakes.messages.DoctestSyntaxError.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.DoctestSyntaxError?1(filename, loc, position=None)
-eric5.UtilitiesPython2.pyflakes.messages.DuplicateArgument.message?7
-eric5.UtilitiesPython2.pyflakes.messages.DuplicateArgument.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.DuplicateArgument?1(filename, loc, name)
-eric5.UtilitiesPython2.pyflakes.messages.ImportShadowedByLoopVar.message?7
-eric5.UtilitiesPython2.pyflakes.messages.ImportShadowedByLoopVar.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.ImportShadowedByLoopVar?1(filename, loc, name, orig_loc)
-eric5.UtilitiesPython2.pyflakes.messages.ImportStarUsed.message?7
-eric5.UtilitiesPython2.pyflakes.messages.ImportStarUsed.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.ImportStarUsed?1(filename, loc, modname)
-eric5.UtilitiesPython2.pyflakes.messages.LateFutureImport.message?7
-eric5.UtilitiesPython2.pyflakes.messages.LateFutureImport.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.LateFutureImport?1(filename, loc, names)
-eric5.UtilitiesPython2.pyflakes.messages.Message.getMessageData?4()
-eric5.UtilitiesPython2.pyflakes.messages.Message.message?7
-eric5.UtilitiesPython2.pyflakes.messages.Message.message_args?7
-eric5.UtilitiesPython2.pyflakes.messages.Message.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.Message?1(filename, loc)
-eric5.UtilitiesPython2.pyflakes.messages.Redefined.message?7
-eric5.UtilitiesPython2.pyflakes.messages.Redefined.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.Redefined?1(filename, loc, name, orig_loc)
-eric5.UtilitiesPython2.pyflakes.messages.RedefinedInListComp.message?7
-eric5.UtilitiesPython2.pyflakes.messages.RedefinedInListComp.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.RedefinedInListComp?1(filename, loc, name, orig_loc)
-eric5.UtilitiesPython2.pyflakes.messages.RedefinedWhileUnused.message?7
-eric5.UtilitiesPython2.pyflakes.messages.RedefinedWhileUnused.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.RedefinedWhileUnused?1(filename, loc, name, orig_loc)
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedExport.message?7
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedExport.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedExport?1(filename, loc, name)
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedLocal.message?7
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedLocal.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedLocal?1(filename, loc, name, orig_loc)
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedName.message?7
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedName.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.UndefinedName?1(filename, loc, name)
-eric5.UtilitiesPython2.pyflakes.messages.UnusedImport.message?7
-eric5.UtilitiesPython2.pyflakes.messages.UnusedImport.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.UnusedImport?1(filename, loc, name)
-eric5.UtilitiesPython2.pyflakes.messages.UnusedVariable.message?7
-eric5.UtilitiesPython2.pyflakes.messages.UnusedVariable.message_id?7
-eric5.UtilitiesPython2.pyflakes.messages.UnusedVariable?1(filename, loc, names)
 eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog.getOptions?4()
 eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog?1(vcs, parent=None)
 eric5.VCS.ProjectBrowserHelper.VcsProjectBrowserHelper._VCSAdd?5()

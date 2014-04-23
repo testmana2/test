@@ -8,6 +8,8 @@ Module implementing a LED to indicate the status of the VCS status monitor
 thread.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QColor, QInputDialog, QMenu
 
@@ -28,7 +30,8 @@ class StatusMonitorLed(E5ClickableLed):
         @param project reference to the project object (Project.Project)
         @param parent reference to the parent object (QWidget)
         """
-        super().__init__(parent, shape=E5LedRectangular, rectRatio=1.0)
+        super(StatusMonitorLed, self).__init__(
+            parent, shape=E5LedRectangular, rectRatio=1.0)
         
         self.__vcsClean = True
         self.project = project

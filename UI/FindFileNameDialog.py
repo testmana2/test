@@ -7,6 +7,8 @@
 Module implementing a dialog to search for files.
 """
 
+from __future__ import unicode_literals
+
 import os
 import sys
 
@@ -45,7 +47,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         @param project reference to the project object
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(FindFileNameDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.searchDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
@@ -272,4 +274,4 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         self.fileNameEdit.selectAll()
         self.fileNameEdit.setFocus()
         
-        super().show()
+        super(FindFileNameDialog, self).show()

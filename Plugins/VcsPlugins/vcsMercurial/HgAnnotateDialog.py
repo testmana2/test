@@ -7,6 +7,12 @@
 Module implementing a dialog to show the output of the hg annotate command.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 import re
 
@@ -32,7 +38,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgAnnotateDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -311,4 +317,4 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgAnnotateDialog, self).keyPressEvent(evt)

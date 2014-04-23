@@ -7,6 +7,8 @@
 Module implementing the Mercurial command dialog.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgCommandDialog import Ui_HgCommandDialog
@@ -30,7 +32,7 @@ class HgCommandDialog(QDialog, Ui_HgCommandDialog):
         @param ppath pathname of the project directory (string)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(HgCommandDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)

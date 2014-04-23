@@ -7,6 +7,8 @@
 Module implementing a checker for password strength.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 

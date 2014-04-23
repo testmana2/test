@@ -10,6 +10,8 @@
 #   - Sebastian Werner <info@sebastian-werner.net> (Refactoring Python) (2010)
 #
 
+from __future__ import unicode_literals
+
 import copy
 
 class Node(list):

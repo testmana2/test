@@ -7,6 +7,8 @@
 Module implementing the AdBlock subscription class.
 """
 
+from __future__ import unicode_literals
+
 import os
 import re
 import hashlib
@@ -43,7 +45,7 @@ class AdBlockSubscription(QObject):
         @param parent reference to the parent object (QObject)
         @param default flag indicating a default subscription (boolean)
         """
-        super().__init__(parent)
+        super(AdBlockSubscription, self).__init__(parent)
         
         self.__custom = custom
         self.__url = url.toEncoded()

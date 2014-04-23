@@ -7,14 +7,30 @@
 Package implementing various functions/classes needed everywhere within eric5.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+    import urllib
+
+    def quote(url):
+        """
+        Replacement for the urllib.quote function because of unicode problems.
+        
+        @param url text to quote (string)
+        @return quoted url (string)
+        """
+        return urllib.quote(url.encode('utf-8'))
+except NameError:
+    basestring = str
+    from urllib.parse import quote    # __IGNORE_WARNING__
+
 import os
 import sys
+import codecs
 import re
 import fnmatch
 import glob
 import getpass
-import json
-import tempfile
 
 
 def __showwarning(message, category, filename, lineno, file=None, line=""):
@@ -45,18 +61,18 @@ from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
 from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 # import these methods into the Utilities namespace
-from Globals import isWindowsPlatform, isLinuxPlatform  # __IGNORE_WARNING__
-from Globals import isMacPlatform                       # __IGNORE_WARNING__
-from Globals import getConfigDir, setConfigDir          # __IGNORE_WARNING__
-from Globals import getPythonModulesDirectory           # __IGNORE_WARNING__
-from Globals import getPyQt4ModulesDirectory            # __IGNORE_WARNING__
-from Globals import getQtBinariesPath                   # __IGNORE_WARNING__
+from Globals import (  # __IGNORE_WARNING__
+    isWindowsPlatform, isLinuxPlatform, isMacPlatform, getConfigDir,
+    setConfigDir, getPythonModulesDirectory, getPyQt4ModulesDirectory,
+    getQtBinariesPath)
 
 from E5Gui.E5Application import e5App
 
 from UI.Info import Program, Version
 
 import Preferences
+from Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck import (  # __IGNORE_WARNING__
+    normalizeCode)
 
 from eric5config import getConfig
 
@@ -371,7 +387,7 @@ def decodeString(text):
             buf += bytes(qb)
             index += 4
         else:
-            buf += bytes(text[index], encoding="utf-8")
+            buf += codecs.encode(text[index], "utf-8")
             index += 1
     buf = buf.replace(b"\x00", b"")
     return decodeBytes(buf)
@@ -429,7 +445,7 @@ def readStringFromStream(stream):
     data = stream.readString()
     if data is None:
         data = b""
-    return data.decode()
+    return data.decode('utf-8')
 
 
 _escape = re.compile("[&<>\"'\u0080-\uffff]")
@@ -580,13 +596,14 @@ def extractFlags(text):
     @return dictionary of string, boolean, complex, float and int
     """
     flags = {}
-    if isinstance(text, str):
-        lines = text.splitlines()
+    if isinstance(text, basestring):
+        lines = text.rstrip().splitlines()
     else:
         lines = text
     for line in reversed(lines):
-        index = line.find("eflag:")
-        if index == -1:
+        try:
+            index = line.index("eflag:")
+        except ValueError:
             # no flag found, don't look any further
             break
         
@@ -880,7 +897,26 @@ def samepath(f1, f2):
         return True
     
     return False
+
+
+def samefilepath(f1, f2):
+    """
+    Function to compare two paths. Strips the filename.
     
+    @param f1 first filepath for the compare (string)
+    @param f2 second filepath for the compare (string)
+    @return flag indicating whether the two paths represent the
+        same path on disk.
+    """
+    if f1 is None or f2 is None:
+        return False
+    
+    if (normcaseabspath(os.path.dirname(os.path.realpath(f1))) ==
+            normcaseabspath(os.path.dirname(os.path.realpath(f2)))):
+        return True
+    
+    return False
+
 try:
     EXTSEP = os.extsep
 except AttributeError:
@@ -1287,7 +1323,7 @@ def getPythonVersion():
     @return An integer representing major and minor version number (integer)
     """
     return sys.hexversion >> 16
-    
+
 
 def determinePythonVersion(filename, source, editor=None):
     """
@@ -1353,191 +1389,6 @@ def determinePythonVersion(filename, source, editor=None):
             editor.filetype = "Python{0}".format(pyVer)
     
     return pyVer
-
-
-def compile(file, codestring=""):
-    """
-    Function to compile one Python source file to Python bytecode.
-    
-    @param file source filename (string)
-    @param codestring string containing the code to compile (string)
-    @return A tuple indicating status (True = an error was found), the
-        file name, the line number, the index number, the code string
-        and the error message (boolean, string, string, string, string,
-        string). The values are only valid, if the status is True.
-    """
-    import builtins
-    if not codestring:
-        try:
-            codestring = readEncodedFile(file)[0]
-        except (UnicodeDecodeError, IOError):
-            return (False, None, None, None, None, None)
-
-    codestring = codestring.replace("\r\n", "\n")
-    codestring = codestring.replace("\r", "\n")
-
-    if codestring and codestring[-1] != '\n':
-        codestring = codestring + '\n'
-    
-    try:
-        if file.endswith('.ptl'):
-            try:
-                import quixote.ptl_compile
-            except ImportError:
-                return (False, None, None, None, None, None)
-            template = quixote.ptl_compile.Template(codestring, file)
-            template.compile()
-        else:
-            builtins.compile(codestring, file, 'exec')
-    except SyntaxError as detail:
-        import traceback
-        import re
-        index = "0"
-        code = ""
-        error = ""
-        lines = traceback.format_exception_only(SyntaxError, detail)
-        match = re.match(
-            '\s*File "(.+)", line (\d+)',
-            lines[0].replace('<string>', '{0}'.format(file)))
-        if match is not None:
-            fn, line = match.group(1, 2)
-            if lines[1].startswith('SyntaxError:'):
-                error = re.match('SyntaxError: (.+)', lines[1]).group(1)
-            else:
-                code = re.match('(.+)', lines[1]).group(1)
-                for seLine in lines[2:]:
-                    if seLine.startswith('SyntaxError:'):
-                        error = re.match('SyntaxError: (.+)', seLine).group(1)
-                    elif seLine.rstrip().endswith('^'):
-                        index = len(seLine.rstrip()) - 4
-        else:
-            fn = detail.filename
-            line = detail.lineno and detail.lineno or 1
-            error = detail.msg
-        return (True, fn, line, index, code, error)
-    except ValueError as detail:
-        index = "0"
-        code = ""
-        try:
-            fn = detail.filename
-            line = detail.lineno
-            error = detail.msg
-        except AttributeError:
-            fn = file
-            line = "1"
-            error = str(detail)
-        return (True, fn, line, index, code, error)
-    except Exception as detail:
-        try:
-            fn = detail.filename
-            line = detail.lineno
-            index = "0"
-            code = ""
-            error = detail.msg
-            return (True, fn, line, index, code, error)
-        except:         # this catchall is intentional
-            pass
-    
-    return (False, None, None, None, None, None)
-
-
-def py2compile(fileName, checkFlakes=False, txt=""):
-    """
-    Function to compile one Python 2 source file to Python 2 bytecode.
-    
-    @param fileName source filename (string)
-    @keyparam checkFlakes flag indicating to do a pyflakes check (boolean)
-    @keyparam txt text to be checked (string)
-    @return A tuple indicating status (True = an error was found), the
-        file name, the line number, the index number, the code string,
-        the error message and a list of tuples of pyflakes warnings indicating
-        file name, line number and message (boolean, string, string, string,
-        string, string, list of (string, string, string)). The syntax error
-        values are only valid, if the status is True. The pyflakes list will
-        be empty, if a syntax error was detected by the syntax checker.
-    """
-    interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isinpath(interpreter):
-        return (False, "", "", "", "", "", [(
-            fileName, "1",
-            QCoreApplication.translate("Utilities",
-                                       "Python2 interpreter not configured.")
-        )])
-    
-    # prepare a temporary file if a text to be checked was given
-    if txt:
-        try:
-            encodedText = encode(txt, "")[0]
-        except CodingError as err:
-            return (True, fileName, "1", "0", "",
-                    QCoreApplication.translate(
-                        "Utilities",
-                        "Codingerror: {0}").format(str(err)),
-                    [])
-        
-        tempFile = tempfile.NamedTemporaryFile(mode="wb", delete=False)
-        tempFile.write(encodedText)
-        tempFile.close()
-        checkFileName = tempFile.name
-    else:
-        tempFile = None
-        checkFileName = fileName
-    
-    syntaxChecker = os.path.join(getConfig('ericDir'),
-                                 "UtilitiesPython2", "Py2SyntaxChecker.py")
-    args = [syntaxChecker]
-    if checkFlakes:
-        if Preferences.getFlakes("IgnoreStarImportWarnings"):
-            args.append("-fi")
-        else:
-            args.append("-fs")
-    args.append(checkFileName)
-    proc = QProcess()
-    proc.setProcessChannelMode(QProcess.MergedChannels)
-    proc.start(interpreter, args)
-    finished = proc.waitForFinished(30000)
-    if tempFile:
-        os.unlink(tempFile.name)
-    if finished:
-        output = \
-            str(proc.readAllStandardOutput(),
-                Preferences.getSystem("IOEncoding"),
-                'replace')
-        
-        if output:
-            try:
-                infos = json.loads(output)
-                syntaxerror = infos[0][0] == "ERROR"
-                if syntaxerror:
-                    line = infos[0][2]
-                    index = infos[0][3]
-                    code = infos[0][4]
-                    error = infos[0][5]
-                    return (True, fileName, line, index, code, error, [])
-                else:
-                    warnings = []
-                    infos.pop(0)    # delete the overall status info
-                    for info in infos:
-                        if info[0] == "FLAKES_ERROR":
-                            return (True, fileName, info[2], "", info[3], [])
-                        else:
-                            warnings.append(info[1:])
-                    
-                    return (False, None, None, None, None, None, warnings)
-            except ValueError:
-                return (True, fileName, "1", "0", "",
-                        QCoreApplication.translate(
-                            "Utilities",
-                            "eric5 error: Invalid data received from Python2"
-                            " syntax checker."),
-                        [])
-        else:
-            return (False, "", "", "", "", "", [])
-    
-    return (True, fileName, "1", "0", "",
-            QCoreApplication.translate(
-                "Utilities", "Python2 interpreter did not finish within 30s."),
-            [])
 
 
 ###############################################################################
@@ -1664,14 +1515,18 @@ def generatePySideToolPath(toolname):
     """
     if isWindowsPlatform():
         try:
-            # step 1: try Python3 variant of PySide
+            # step 1: try internal Python variant of PySide
             import PySide       # __IGNORE_EXCEPTION__
             del PySide
             prefix = sys.prefix
         except ImportError:
-            # step 2: check for a Python2 variant
-            prefix = os.path.dirname(
-                Preferences.getDebugger("PythonInterpreter"))
+            # step 2: check for a external Python variant
+            if sys.version_info[0] == 2:
+                prefix = os.path.dirname(
+                    Preferences.getDebugger("Python3Interpreter"))
+            else:
+                prefix = os.path.dirname(
+                    Preferences.getDebugger("PythonInterpreter"))
         if toolname == "pyside-uic":
             return os.path.join(prefix, "Scripts", toolname + '.exe')
         else:
@@ -1689,21 +1544,24 @@ def checkPyside():
         and PySide for Python3 (boolean, boolean)
     """
     try:
-        # step 1: try Python3 variant of PySide
+        # step 1: try internal Python variant of PySide
         import PySide       # __IGNORE_EXCEPTION__
         del PySide
-        py3 = True
+        int_py = True
     except ImportError:
-        py3 = False
+        int_py = False
     
-    # step 2: check for a Python2 variant
-    interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isinpath(interpreter):
-        py2 = False
+    # step 2: check for a external Python variant
+    if sys.version_info[0] == 2:
+        interpreter = Preferences.getDebugger("Python3Interpreter")
     else:
-        py2 = False
+        interpreter = Preferences.getDebugger("PythonInterpreter")
+    if interpreter == "" or not isinpath(interpreter):
+        ext_py = False
+    else:
+        ext_py = False
         checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "PySideImporter.py")
+                               "Utilities", "PySideImporter.py")
         args = [checker]
         proc = QProcess()
         proc.setProcessChannelMode(QProcess.MergedChannels)
@@ -1711,9 +1569,12 @@ def checkPyside():
         finished = proc.waitForFinished(30000)
         if finished:
             if proc.exitCode() == 0:
-                py2 = True
+                ext_py = True
     
-    return py2, py3
+    if sys.version_info[0] == 2:
+        return int_py, ext_py
+    else:
+        return ext_py, int_py
 
 ###############################################################################
 # Other utility functions below
@@ -1877,46 +1738,3 @@ def win32_getRealName():
     nameBuffer = ctypes.create_unicode_buffer(size.contents.value)
     GetUserNameEx(NameDisplay, nameBuffer, size)
     return nameBuffer.value
-
-###############################################################################
-# Javascript related functions below
-###############################################################################
-
-
-def jsCheckSyntax(file, codestring=""):
-    """
-    Function to check a Javascript source file for syntax errors.
-    
-    @param file source filename (string)
-    @param codestring string containing the code to check (string)
-    @return A tuple indicating status (True = an error was found), the
-        file name, the line number and the error message (boolean, string,
-        string, string). The values are only valid, if the status is True.
-    """
-    import jasy.js.parse.Parser as jsParser
-    import jasy.js.tokenize.Tokenizer as jsTokenizer
-    
-    if not codestring:
-        try:
-            codestring = readEncodedFile(file)[0]
-        except (UnicodeDecodeError, IOError):
-            return (False, None, None, None)
-    
-    # normalize line endings
-    codestring = codestring.replace("\r\n", "\n")
-    codestring = codestring.replace("\r", "\n")
-    
-    # ensure source ends with an eol
-    if codestring and codestring[-1] != '\n':
-        codestring = codestring + '\n'
-    
-    try:
-        jsParser.parse(codestring, file)
-    except (jsParser.SyntaxError, jsTokenizer.ParseError) as exc:
-        details = exc.args[0]
-        error, details = details.splitlines()
-        fn, line = details.strip().rsplit(":", 1)
-        error = error.split(":", 1)[1].strip()
-        return (True, fn, line, error)
-    
-    return (False, None, None, None)

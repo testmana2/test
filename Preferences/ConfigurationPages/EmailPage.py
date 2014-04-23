@@ -7,6 +7,8 @@
 Module implementing the Email configuration page.
 """
 
+from __future__ import unicode_literals
+
 import smtplib
 import socket
 
@@ -29,7 +31,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EmailPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EmailPage")
         

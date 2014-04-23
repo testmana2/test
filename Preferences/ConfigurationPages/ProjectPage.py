@@ -7,6 +7,8 @@
 Module implementing the Project configuration page.
 """
 
+from __future__ import unicode_literals
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_ProjectPage import Ui_ProjectPage
 
@@ -21,7 +23,7 @@ class ProjectPage(ConfigurationPageBase, Ui_ProjectPage):
         """
         Constructor
         """
-        super().__init__()
+        super(ProjectPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("ProjectPage")
         

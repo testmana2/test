@@ -4,6 +4,8 @@
 Module implementing a dialog to select multiple shelve names.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -22,7 +24,7 @@ class HgShelvesSelectionDialog(QDialog, Ui_HgShelvesSelectionDialog):
         @param shelveNames list of shelve names (list of string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgShelvesSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.message.setText(message)

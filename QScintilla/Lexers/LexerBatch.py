@@ -7,6 +7,8 @@
 Module implementing a Batch file lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerBatch
 
 from .Lexer import Lexer

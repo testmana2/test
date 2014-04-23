@@ -7,6 +7,8 @@
 Module implementing the About plugin.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 from PyQt4.QtGui import QAction
 
@@ -27,6 +29,7 @@ packageName = "__core__"
 shortDescription = "Show the About dialogs."
 longDescription = """This plugin shows the About dialogs."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -42,7 +45,7 @@ class AboutPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(AboutPlugin, self).__init__(ui)
         self.__ui = ui
 
     def activate(self):

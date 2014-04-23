@@ -9,6 +9,8 @@
 Uninstallation script for the eric5 IDE and all eric5 related tools.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import shutil

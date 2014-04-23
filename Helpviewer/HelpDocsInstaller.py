@@ -8,6 +8,8 @@ Module implementing a thread class populating and updating the QtHelp
 documentation database.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, QThread, Qt, QMutex, QDateTime, QDir, \
     QLibraryInfo, QFileInfo
 from PyQt4.QtHelp import QHelpEngineCore
@@ -33,7 +35,7 @@ class HelpDocsInstaller(QThread):
         
         @param collection full pathname of the collection file (string)
         """
-        super().__init__()
+        super(HelpDocsInstaller, self).__init__()
         
         self.__abort = False
         self.__collection = collection
