@@ -204,8 +204,8 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.__currentIndex += 1
             self.__selectPage()
         elif button == self.__finishButton:
-            self.__installPlugins()
             self.__finishButton.setEnabled(False)
+            self.__installPlugins()
             self.__closeButton.show()
             self.__cancelButton.hide()
     
