@@ -449,6 +449,9 @@
     <Source>ThirdParty/CharDet/chardet/langhebrewmodel.py</Source>
     <Source>ThirdParty/CharDet/chardet/mbcharsetprober.py</Source>
     <Source>ThirdParty/CharDet/chardet/eucjpprober.py</Source>
+    <Source>ThirdParty/CharDet/chardet/chardetect.py</Source>
+    <Source>ThirdParty/CharDet/chardet/compat.py</Source>
+    <Source>ThirdParty/CharDet/chardet/cp949prober.py</Source>
     <Source>Preferences/ConfigurationPages/NetworkPage.py</Source>
     <Source>QScintilla/Lexers/LexerContainer.py</Source>
     <Source>QScintilla/Lexers/LexerPygments.py</Source>
@@ -652,7 +655,6 @@
     <Source>Helpviewer/AdBlock/AdBlockNetwork.py</Source>
     <Source>Helpviewer/AdBlock/AdBlockPage.py</Source>
     <Source>compileUiFiles.py</Source>
-    <Source>ThirdParty/CharDet/chardet/test.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
     <Source>eric5config.py</Source>
     <Source>eric5.py</Source>
@@ -1515,7 +1517,7 @@
     <Other>APIs/Python/zope-3.3.1.api</Other>
     <Other>LICENSE.GPL3</Other>
     <Other>ThirdParty/CharDet/docs</Other>
-    <Other>ThirdParty/CharDet/COPYING</Other>
+    <Other>ThirdParty/CharDet/LICENSE</Other>
     <Other>Dictionaries</Other>
     <Other>APIs/Python/zope-2.11.2.api</Other>
     <Other>APIs/Python/zope-2.10.7.api</Other>
@@ -2038,7 +2040,7 @@
               <string>ShowIgnored</string>
             </key>
             <value>
-              <bool>True</bool>
+              <bool>False</bool>
             </value>
           </dict>
         </value>
