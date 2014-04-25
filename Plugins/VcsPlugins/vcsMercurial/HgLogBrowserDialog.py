@@ -95,6 +95,28 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.initialCommandMode = "log"
         self.__hgClient = vcs.getClient()
         
+        if self.vcs.version >= (1, 8):
+            self.__detailsTemplate = self.tr(
+                "<table>"
+                "<tr><td><b>Revision</b></td><td>{0}</td></tr>"
+                "<tr><td><b>Date</b></td><td>{1}</td></tr>"
+                "<tr><td><b>Author</b></td><td>{2}</td></tr>"
+                "<tr><td><b>Branch</b></td><td>{3}</td></tr>"
+                "<tr><td><b>Tags</b></td><td>{4}</td></tr>"
+                "<tr><td><b>Bookmarks</b></td><td>{5}</td></tr>"
+                "</table>"
+            )
+        else:
+            self.__detailsTemplate = self.tr(
+                "<table>"
+                "<tr><td><b>Revision</b></td><td>{0}</td></tr>"
+                "<tr><td><b>Date</b></td><td>{1}</td></tr>"
+                "<tr><td><b>Author</b></td><td>{2}</td></tr>"
+                "<tr><td><b>Branch</b></td><td>{3}</td></tr>"
+                "<tr><td><b>Tags</b></td><td>{4}</td></tr>"
+                "</table>"
+            )
+        
         self.__bundle = ""
         self.__filename = ""
         self.__isFile = False
@@ -132,8 +154,11 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.logTree.setIconSize(
             QSize(100 * self.__rowHeight, self.__rowHeight))
         if self.vcs.version >= (1, 8):
+            self.BookmarksColumn = self.logTree.columnCount()
             self.logTree.headerItem().setText(
-                self.logTree.columnCount(), self.tr("Bookmarks"))
+                self.BookmarksColumn, self.tr("Bookmarks"))
+        else:
+            self.BookmarksColumn = -1
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
         
@@ -1199,10 +1224,29 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         @param itm reference to the item the update should be based on
             (QTreeWidgetItem)
         """
+        self.detailsEdit.clear()
         self.messageEdit.clear()
         self.filesTree.clear()
         
         if itm is not None:
+            if self.vcs.version >= (1, 8):
+                self.detailsEdit.setHtml(self.__detailsTemplate.format(
+                    itm.text(self.RevisionColumn),
+                    itm.text(self.DateColumn),
+                    itm.text(self.AuthorColumn),
+                    itm.text(self.BranchColumn),
+                    itm.text(self.TagsColumn),
+                    itm.text(self.BookmarksColumn)
+                ))
+            else:
+                self.detailsEdit.setHtml(self.__detailsTemplate.format(
+                    itm.text(self.RevisionColumn),
+                    itm.text(self.DateColumn),
+                    itm.text(self.AuthorColumn),
+                    itm.text(self.BranchColumn),
+                    itm.text(self.TagsColumn),
+                ))
+            
             for line in itm.data(0, self.__messageRole):
                 self.messageEdit.append(line.strip())
             

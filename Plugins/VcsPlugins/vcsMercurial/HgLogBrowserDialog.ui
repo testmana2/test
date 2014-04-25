@@ -13,8 +13,94 @@
   <property name="windowTitle">
    <string>Mercurial Log</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="5" column="0" colspan="2">
+    <widget class="QGroupBox" name="errorGroup">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="title">
+      <string>Errors</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QTextEdit" name="errors">
+        <property name="whatsThis">
+         <string>&lt;b&gt;Mercurial log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg log command.&lt;/p&gt;</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+        <property name="acceptRichText">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QGroupBox" name="inputGroup">
+     <property name="title">
+      <string>Input</string>
+     </property>
+     <layout class="QGridLayout">
+      <item row="1" column="1">
+       <spacer>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>327</width>
+          <height>29</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="sendButton">
+        <property name="toolTip">
+         <string>Press to send the input to the hg process</string>
+        </property>
+        <property name="text">
+         <string>&amp;Send</string>
+        </property>
+        <property name="shortcut">
+         <string>Alt+S</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLineEdit" name="input">
+        <property name="toolTip">
+         <string>Enter data to be sent to the hg process</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="passwordCheckBox">
+        <property name="toolTip">
+         <string>Select to switch the input field to password mode</string>
+        </property>
+        <property name="text">
+         <string>&amp;Password Mode</string>
+        </property>
+        <property name="shortcut">
+         <string>Alt+P</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QLabel" name="label">
@@ -124,7 +210,7 @@
      </item>
     </layout>
    </item>
-   <item>
+   <item row="1" column="0" colspan="2">
     <widget class="QTreeWidget" name="logTree">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -189,11 +275,11 @@
      </column>
     </widget>
    </item>
-   <item>
+   <item row="2" column="1">
     <widget class="QTextEdit" name="messageEdit">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
+       <horstretch>2</horstretch>
        <verstretch>2</verstretch>
       </sizepolicy>
      </property>
@@ -202,7 +288,7 @@
      </property>
     </widget>
    </item>
-   <item>
+   <item row="3" column="0" colspan="2">
     <widget class="QTreeWidget" name="filesTree">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -242,7 +328,7 @@
      </column>
     </widget>
    </item>
-   <item>
+   <item row="4" column="0" colspan="2">
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
       <widget class="QPushButton" name="nextButton">
@@ -374,99 +460,26 @@
      </item>
     </layout>
    </item>
-   <item>
-    <widget class="QGroupBox" name="errorGroup">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>1</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="title">
-      <string>Errors</string>
-     </property>
-     <layout class="QVBoxLayout">
-      <item>
-       <widget class="QTextEdit" name="errors">
-        <property name="whatsThis">
-         <string>&lt;b&gt;Mercurial log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the hg log command.&lt;/p&gt;</string>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-        <property name="acceptRichText">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QGroupBox" name="inputGroup">
-     <property name="title">
-      <string>Input</string>
-     </property>
-     <layout class="QGridLayout">
-      <item row="1" column="1">
-       <spacer>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>327</width>
-          <height>29</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="1" column="2">
-       <widget class="QPushButton" name="sendButton">
-        <property name="toolTip">
-         <string>Press to send the input to the hg process</string>
-        </property>
-        <property name="text">
-         <string>&amp;Send</string>
-        </property>
-        <property name="shortcut">
-         <string>Alt+S</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="3">
-       <widget class="QLineEdit" name="input">
-        <property name="toolTip">
-         <string>Enter data to be sent to the hg process</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QCheckBox" name="passwordCheckBox">
-        <property name="toolTip">
-         <string>Select to switch the input field to password mode</string>
-        </property>
-        <property name="text">
-         <string>&amp;Password Mode</string>
-        </property>
-        <property name="shortcut">
-         <string>Alt+P</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
+   <item row="7" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QTextEdit" name="detailsEdit">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>1</horstretch>
+       <verstretch>2</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -486,6 +499,7 @@
   <tabstop>fieldCombo</tabstop>
   <tabstop>rxEdit</tabstop>
   <tabstop>logTree</tabstop>
+  <tabstop>detailsEdit</tabstop>
   <tabstop>messageEdit</tabstop>
   <tabstop>filesTree</tabstop>
   <tabstop>nextButton</tabstop>
@@ -495,6 +509,7 @@
   <tabstop>diffP2Button</tabstop>
   <tabstop>diffRevisionsButton</tabstop>
   <tabstop>sbsCheckBox</tabstop>
+  <tabstop>actionsButton</tabstop>
   <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>

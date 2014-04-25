@@ -5,6 +5,8 @@ Version 5.5.0-xxx:
 - General
   -- changed the eric mascot to be a Python (i.e. the snake). New icons
      and pixmaps provided by Thimo Kraemer.
+  -- changed the code to be executed with Python 2 as well (thanks to
+     Tobias Rzepka)
 - Checkers
   -- updated pyflakes to version 0.7.3
   -- added syntax checker for JavaScript files
