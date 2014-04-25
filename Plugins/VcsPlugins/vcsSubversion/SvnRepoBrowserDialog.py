@@ -7,6 +7,12 @@
 Module implementing the subversion repository browser dialog.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, \
@@ -34,7 +40,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         @param mode mode of the dialog (string, "browse" or "select")
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnRepoBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.repoTree.headerItem().setText(self.repoTree.columnCount(), "")
@@ -336,7 +342,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         if self.focusWidget() == self.urlCombo:
             return
         
-        super().accept()
+        super(SvnRepoBrowserDialog, self).accept()
     
     def getSelectedUrl(self):
         """
@@ -475,4 +481,4 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(SvnRepoBrowserDialog, self).keyPressEvent(evt)

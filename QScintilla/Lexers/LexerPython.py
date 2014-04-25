@@ -7,6 +7,8 @@
 Module implementing a Python lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 from PyQt4.Qsci import QsciLexerPython,  QsciScintilla

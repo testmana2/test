@@ -7,7 +7,10 @@
 Module implementing a dialog to show the output of the svn blame command.
 """
 
+from __future__ import unicode_literals
+
 import os
+import sys
 
 import pysvn
 
@@ -31,7 +34,7 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnBlameDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -70,9 +73,14 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
             annotations = self.client.annotate(fname)
             locker.unlock()
             for annotation in annotations:
+                author = annotation["author"]
+                line = annotation["line"]
+                if sys.version_info[0] == 2:
+                    author = author.decode('utf-8')
+                    line = line.decode('utf-8')
                 self.__generateItem(
-                    annotation["revision"].number, annotation["author"],
-                    annotation["number"] + 1, annotation["line"])
+                    annotation["revision"].number, author,
+                    annotation["number"] + 1, line)
         except pysvn.ClientError as e:
             locker.unlock()
             self.__showError(e.args[0] + '\n')

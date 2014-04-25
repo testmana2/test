@@ -7,6 +7,8 @@
 Module implementing a starter for the system tray.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 
@@ -33,7 +35,7 @@ class TrayStarter(QSystemTrayIcon):
         """
         Constructor
         """
-        super().__init__(
+        super(TrayStarter, self).__init__(
             UI.PixmapCache.getIcon(
                 Preferences.getTrayStarter("TrayStarterIcon")))
         

@@ -4,6 +4,8 @@
 Module implementing a dialog to enter the data for the repo conversion.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -32,7 +34,7 @@ class LfConvertDataDialog(QDialog, Ui_LfConvertDataDialog):
         @param mode dialog mode (string, one of 'largefiles' or 'normal')
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(LfConvertDataDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.newProjectButton.setIcon(UI.PixmapCache.getIcon("open.png"))

@@ -7,6 +7,8 @@
 Module implementing the Editor Syntax Checker configuration page.
 """
 
+from __future__ import unicode_literals
+
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSyntaxPage import Ui_EditorSyntaxPage
 
@@ -23,7 +25,7 @@ class EditorSyntaxPage(ConfigurationPageBase, Ui_EditorSyntaxPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__()
+        super(EditorSyntaxPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorSyntaxPage")
         

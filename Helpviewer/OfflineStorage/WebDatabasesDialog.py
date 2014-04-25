@@ -7,6 +7,8 @@
 Module implementing a dialog to show all web databases.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QDialog, QFontMetrics
 
@@ -27,7 +29,7 @@ class WebDatabasesDialog(QDialog, Ui_WebDatabasesDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(WebDatabasesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.removeButton.clicked.connect(self.databasesTree.removeSelected)

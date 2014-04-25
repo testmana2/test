@@ -13,6 +13,8 @@
     :license: BSD, see LICENSE for details.
 """
 
+from __future__ import unicode_literals
+
 LEXERS = {
     'ABAPLexer': ('pygments.lexers.other', 'ABAP', ('abap',), ('*.abap',), ('text/x-abap',)),
     'ActionScript3Lexer': ('pygments.lexers.web', 'ActionScript 3', ('as3', 'actionscript3'), ('*.as',), ('application/x-actionscript', 'text/x-actionscript', 'text/actionscript')),

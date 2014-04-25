@@ -7,6 +7,8 @@
 Module implementing the synchronization data wizard page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QWizardPage
 
 from .Ui_SyncDataPage import Ui_SyncDataPage
@@ -24,7 +26,7 @@ class SyncDataPage(QWizardPage, Ui_SyncDataPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SyncDataPage, self).__init__(parent)
         self.setupUi(self)
         
         self.bookmarksCheckBox.setChecked(Preferences.getHelp("SyncBookmarks"))

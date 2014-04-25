@@ -7,6 +7,12 @@
 Module implementing a dialog to browse the log history.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 import re
 
@@ -56,7 +62,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         @param mode mode of the dialog (string; one of log, incoming, outgoing)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgLogBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__position = QPoint()
@@ -225,7 +231,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.move(self.__position)
         self.__resetUI()
         
-        super().show()
+        super(HgLogBrowserDialog, self).show()
     
     def __resetUI(self):
         """
@@ -1466,7 +1472,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgLogBrowserDialog, self).keyPressEvent(evt)
     
     @pyqtSlot()
     def __phaseActTriggered(self):

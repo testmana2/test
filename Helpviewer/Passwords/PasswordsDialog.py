@@ -7,6 +7,8 @@
 Module implementing a dialog to show all saved logins.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
 
@@ -25,7 +27,7 @@ class PasswordsDialog(QDialog, Ui_PasswordsDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PasswordsDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__showPasswordsText = self.tr("Show Passwords")

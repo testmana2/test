@@ -5,6 +5,8 @@ Module implementing a dialog to enter data needed for the initial creation
 of a repository configuration file (hgrc).
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, QUrl
 from PyQt4.QtGui import QDialog, QLineEdit
 
@@ -30,7 +32,7 @@ class HgRepoConfigDataDialog(QDialog, Ui_HgRepoConfigDataDialog):
             section (dict)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgRepoConfigDataDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.defaultShowPasswordButton.setIcon(

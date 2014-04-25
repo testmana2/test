@@ -7,130 +7,183 @@
 Module implementing the code style checker.
 """
 
-import os
+import sys
 
-from PyQt4.QtCore import QProcess, QCoreApplication
+import pep8
+from NamingStyleChecker import NamingStyleChecker
 
-from . import pep8
-from .NamingStyleChecker import NamingStyleChecker
-from .DocStyleChecker import DocStyleChecker
+# register the name checker
+pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
 
-import Preferences
-import Utilities
-
-from eric5config import getConfig
+from DocStyleChecker import DocStyleChecker
 
 
-class CodeStyleCheckerPy2(object):
+def initService():
     """
-    Class implementing the code style checker interface for Python 2.
+    Initialize the service and return the entry point.
+    
+    @return the entry point for the background client (function)
     """
-    def __init__(self, filename, lines, repeat=False,
-                 select="", ignore="", max_line_length=79,
-                 hang_closing=False, docType="pep257"):
+    return codeStyleCheck
+
+
+class CodeStyleCheckerReport(pep8.BaseReport):
+    """
+    Class implementing a special report to be used with our dialog.
+    """
+    def __init__(self, options):
         """
         Constructor
         
-        @param filename name of the file to check (string)
-        @param lines source of the file (list of strings) (ignored)
-        @keyparam repeat flag indicating to repeat message categories (boolean)
-        @keyparam select list of message IDs to check for
-            (comma separated string)
-        @keyparam ignore list of message IDs to ignore
-            (comma separated string)
-        @keyparam max_line_length maximum allowed line length (integer)
-        @keyparam hang_closing flag indicating to allow hanging closing
-            brackets (boolean)
-        @keyparam docType type of the documentation strings
-            (string, one of 'eric' or 'pep257')
-        @exception AssertionError raised if the docType argument is not
-            "eric" or "pep257"
+        @param options options for the report (optparse.Values)
         """
-        assert docType in ("eric", "pep257")
+        super(CodeStyleCheckerReport, self).__init__(options)
         
+        self.__repeat = options.repeat
         self.errors = []
-        self.counters = {}
+    
+    def error_args(self, line_number, offset, code, check, *args):
+        """
+        Public method to collect the error messages.
         
-        interpreter = Preferences.getDebugger("PythonInterpreter")
-        if interpreter == "" or not Utilities.isExecutable(interpreter):
+        @param line_number line number of the issue (integer)
+        @param offset position within line of the issue (integer)
+        @param code message code (string)
+        @param check reference to the checker function (function)
+        @param args arguments for the message (list)
+        @return error code (string)
+        """
+        code = super(CodeStyleCheckerReport, self).error_args(
+            line_number, offset, code, check, *args)
+        if code and (self.counters[code] == 1 or self.__repeat):
             self.errors.append(
-                (filename, 1, 1, QCoreApplication.translate(
-                    "CodeStyleCheckerPy2",
-                    "Python2 interpreter not configured.")))
-            return
-        
-        checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "CodeStyleChecker.py")
-        
-        args = [checker]
-        if repeat:
-            args.append("-r")
-        if select:
-            args.append("-s")
-            args.append(select)
-        if ignore:
-            args.append("-i")
-            args.append(ignore)
-        args.append("-m")
-        args.append(str(max_line_length))
-        if hang_closing:
-            args.append("-h")
-        args.append("-d")
-        args.append(docType)
-        args.append("-f")
-        args.append(filename)
-        
-        proc = QProcess()
-        proc.setProcessChannelMode(QProcess.MergedChannels)
-        proc.start(interpreter, args)
-        finished = proc.waitForFinished(15000)
-        if finished:
-            output = \
-                str(proc.readAllStandardOutput(),
-                    Preferences.getSystem("IOEncoding"),
-                    'replace').splitlines()
-            if output[0] == "ERROR":
-                self.errors.append((filename, 1, 1, output[2]))
-                return
-            
-            if output[0] == "NO_PEP8":
-                return
-            
-            index = 0
-            while index < len(output):
-                if output[index] == "PEP8_STATISTICS":
-                    index += 1
-                    break
-                
-                if output[index] == "EXCEPTION":
-                    exceptionText = os.linesep.join(output[index + 2:])
-                    raise RuntimeError(exceptionText)
-                
-                fname = output[index + 1]
-                lineno = int(output[index + 2])
-                position = int(output[index + 3])
-                code = output[index + 4]
-                arglen = int(output[index + 5])
-                args = []
-                argindex = 0
-                while argindex < arglen:
-                    args.append(output[index + 6 + argindex])
-                    argindex += 1
-                index += 6 + arglen
-                
-                if code in NamingStyleChecker.Codes:
-                    text = NamingStyleChecker.getMessage(code, *args)
-                elif code in DocStyleChecker.Codes:
-                    text = DocStyleChecker.getMessage(code, *args)
-                else:
-                    text = pep8.getMessage(code, *args)
-                self.errors.append((fname, lineno, position, text))
-            while index < len(output):
-                code, countStr = output[index].split(None, 1)
-                self.counters[code] = int(countStr)
-                index += 1
+                (self.filename, line_number, offset, (code, args))
+            )
+        return code
+
+
+def extractLineFlags(line, startComment="#", endComment=""):
+    """
+    Function to extract flags starting and ending with '__' from a line
+    comment.
+    
+    @param line line to extract flags from (string)
+    @keyparam startComment string identifying the start of the comment (string)
+    @keyparam endComment string identifying the end of a comment (string)
+    @return list containing the extracted flags (list of strings)
+    """
+    flags = []
+    
+    pos = line.rfind(startComment)
+    if pos >= 0:
+        comment = line[pos + len(startComment):].strip()
+        if endComment:
+            comment = comment.replace("endComment", "")
+        flags = [f.strip() for f in comment.split()
+                 if (f.startswith("__") and f.endswith("__"))]
+    return flags
+
+
+def codeStyleCheck(filename, source, args):
+    """
+    Do the code style check and/ or fix found errors.
+    
+    @param filename source filename (string)
+    @param source string containing the code to check (string)
+    @param args arguments used by the codeStyleCheck function (list of
+        excludeMessages (str), includeMessages (str), repeatMessages
+        (bool), fixCodes (str), noFixCodes (str), fixIssues (bool),
+        maxLineLength (int), hangClosing (bool), docType (str), errors
+        (list of str), eol (str), encoding (str))
+    @return tuple of stats (dict) and results (tuple for each found violation
+        of style (tuple of lineno (int), position (int), text (str), ignored
+            (bool), fixed (bool), autofixing (bool), fixedMsg (str)))
+    """
+    excludeMessages, includeMessages, \
+        repeatMessages, fixCodes, noFixCodes, fixIssues, maxLineLength, \
+        hangClosing, docType, errors, eol, encoding = args
+    
+    stats = {}
+    # avoid 'Encoding declaration in unicode string' exception on Python2
+    if sys.version_info[0] == 2:
+        if encoding == 'utf-8-bom':
+            enc = 'utf-8'
         else:
-            self.errors.append(
-                (filename, 1, 1, QCoreApplication.translate(
-                    "CodeStyleCheckerPy2",
-                    "Python2 interpreter did not finish within 15s.")))
+            enc = encoding
+        source = [line.encode(enc) for line in source]
+    
+    if fixIssues:
+        from CodeStyleFixer import CodeStyleFixer
+        fixer = CodeStyleFixer(
+            filename, source, fixCodes, noFixCodes,
+            maxLineLength, True, eol)  # always fix in place
+    else:
+        fixer = None
+    
+    if not errors:
+        if includeMessages:
+            select = [s.strip() for s in
+                      includeMessages.split(',') if s.strip()]
+        else:
+            select = []
+        if excludeMessages:
+            ignore = [i.strip() for i in
+                      excludeMessages.split(',') if i.strip()]
+        else:
+            ignore = []
+        
+        # check coding style
+        styleGuide = pep8.StyleGuide(
+            reporter=CodeStyleCheckerReport,
+            repeat=repeatMessages,
+            select=select,
+            ignore=ignore,
+            max_line_length=maxLineLength,
+            hang_closing=hangClosing,
+        )
+        report = styleGuide.check_files([filename])
+        stats.update(report.counters)
+
+        # check documentation style
+        docStyleChecker = DocStyleChecker(
+            source, filename, select, ignore, [], repeatMessages,
+            maxLineLength=maxLineLength, docType=docType)
+        docStyleChecker.run()
+        stats.update(docStyleChecker.counters)
+        
+        errors = report.errors + docStyleChecker.errors
+    
+    deferredFixes = {}
+    results = []
+    for fname, lineno, position, text in errors:
+        if lineno > len(source):
+            lineno = len(source)
+        if "__IGNORE_WARNING__" not in \
+                extractLineFlags(source[lineno - 1].strip()):
+            if fixer:
+                res, msg, id_ = fixer.fixIssue(lineno, position, text)
+                if res == -1:
+                    itm = [lineno, position, text]
+                    deferredFixes[id_] = itm
+                else:
+                    itm = [lineno, position, text, False, res == 1, True, msg]
+            else:
+                itm = [lineno, position, text, False, False, False, '']
+            results.append(itm)
+        else:
+            results.append([lineno, position, text, True, False, False, ''])
+    
+    if fixer:
+        deferredResults = fixer.finalize()
+        for id_ in deferredResults:
+            fixed, msg = deferredResults[id_]
+            itm = deferredFixes[id_]
+            itm.extend([fixed == 1, fixed == 1, msg])
+            results.append(itm)
+
+        errMsg = fixer.saveFile(encoding)
+        if errMsg:
+            for result in results:
+                result[-1] = errMsg
+
+    return stats, results

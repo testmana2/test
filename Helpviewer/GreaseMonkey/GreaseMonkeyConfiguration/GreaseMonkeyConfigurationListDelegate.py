@@ -8,6 +8,8 @@ Module implementing a delegate for the special list widget for GreaseMonkey
 scripts.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QSize, QRect
 from PyQt4.QtGui import QStyle, QStyledItemDelegate, QApplication, \
     QFontMetrics, QPalette, QFont, QStyleOptionViewItemV4
@@ -33,7 +35,7 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(GreaseMonkeyConfigurationListDelegate, self).__init__(parent)
         
         self.__removePixmap = \
             UI.PixmapCache.getIcon("greaseMonkeyTrash.png").pixmap(

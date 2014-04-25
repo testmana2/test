@@ -7,6 +7,8 @@
 Module implementing the Help Documentation configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, QUrl
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -28,7 +30,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         """
         Constructor
         """
-        super().__init__()
+        super(HelpDocumentationPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("HelpDocumentationPage")
         

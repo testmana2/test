@@ -7,6 +7,8 @@
 Module implementing a VHDL lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerVHDL
 
 from .Lexer import Lexer

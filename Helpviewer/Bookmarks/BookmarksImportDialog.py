@@ -7,6 +7,8 @@
 Module implementing a dialog for importing bookmarks from other sources.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QSize
@@ -35,7 +37,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(BookmarksImportDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.chooseButton.setIcon(UI.PixmapCache.getIcon("open.png"))

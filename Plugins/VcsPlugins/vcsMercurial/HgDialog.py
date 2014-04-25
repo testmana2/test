@@ -7,6 +7,12 @@
 Module implementing a dialog starting a process and showing its output.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess, QTimer, pyqtSlot, Qt, QCoreApplication
@@ -37,7 +43,7 @@ class HgDialog(QDialog, Ui_HgDialog):
             if possible (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -299,7 +305,7 @@ class HgDialog(QDialog, Ui_HgDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgDialog, self).keyPressEvent(evt)
     
     def hasAddOrDelete(self):
         """

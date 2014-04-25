@@ -7,6 +7,8 @@
 Module implementing a specialized tab bar for the web browser.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QPoint, QTimer, QEvent
 from PyQt4.QtGui import QFrame, QLabel
 

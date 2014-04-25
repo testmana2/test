@@ -22,14 +22,13 @@ AddLanguageDialog QDialog Ui_AddLanguageDialog
 AddProjectDialog QDialog Ui_AddProjectDialog
 ApplicationDiagramBuilder UMLDiagramBuilder
 ApplicationPage ConfigurationPageBase Ui_ApplicationPage
-Argument Binding
 ArgumentsError RuntimeError
 ArrayElementVarItem VariableItem
-Assignment Binding
 AssociationItem E5ArrowItem
 Attribute ClbrBaseClasses.Attribute VisibilityMixin
 AuthenticationDialog QDialog Ui_AuthenticationDialog
 AutoSaver QObject
+BackgroundService QTcpServer
 BinaryModel QAbstractTableModel
 BookmarkActionSelectionDialog QDialog Ui_BookmarkActionSelectionDialog
 BookmarkInfoDialog QDialog Ui_BookmarkInfoDialog
@@ -64,10 +63,8 @@ ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
 Class ClbrBaseClasses.Class VisibilityMixin
-ClassDefinition Definition
 ClassItem UMLItem
 ClassModel UMLModel
-ClassScope Scope
 ClbrBase _ClbrBase
 ClickToFlash QWidget Ui_ClickToFlash
 ClickToFlashPlugin WebPluginInterface
@@ -78,8 +75,6 @@ CodeStyleCheckerDialog QDialog Ui_CodeStyleCheckerDialog
 CodeStyleCheckerPlugin QObject
 CodeStyleCheckerReport pep8.BaseReport
 CodeStyleCodeSelectionDialog QDialog Ui_CodeStyleCodeSelectionDialog
-CodeStyleFixer QObject
-CodeStyleReport pep8.BaseReport
 CodeStyleStatisticsDialog QDialog Ui_CodeStyleStatisticsDialog
 Coding ClbrBase
 CodingError Exception
@@ -128,18 +123,15 @@ DebuggerPropertiesWriter XMLStreamWriterBase
 DebuggerPython3Page ConfigurationPageBase Ui_DebuggerPython3Page
 DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
-Definition Binding
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
 DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
-DoctestSyntaxError Message
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
 DownloadManager QDialog Ui_DownloadManager
 DownloadModel QAbstractListModel
-DuplicateArgument Message
 E5Action QAction
 E5Application QApplication
 E5ArrowItem QAbstractGraphicsShapeItem
@@ -233,7 +225,6 @@ EricdocPlugin QObject
 ErrorLogDialog QDialog Ui_ErrorLogDialog
 ExceptionLogger QTreeWidget
 ExceptionsFilterDialog QDialog Ui_ExceptionsFilterDialog
-ExportBinding Binding
 ExporterBase QObject
 ExporterHTML ExporterBase
 ExporterODT ExporterBase
@@ -246,6 +237,7 @@ FeedsDialog QDialog Ui_FeedsDialog
 FeedsManager QDialog Ui_FeedsManager
 Fetch HgExtension
 FetchProjectHelper HgExtensionProjectHelper
+File file
 FileAccessHandler SchemeAccessHandler
 FileDialogWizard QObject
 FileDialogWizardDialog QDialog Ui_FileDialogWizardDialog
@@ -264,9 +256,6 @@ FtpDirLineParserError Exception
 FtpReply QNetworkReply
 FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin
-FunctionDefinition Definition
-FunctionScope Scope
-GeneratorScope Scope
 GotoDialog QDialog Ui_GotoDialog
 Gpg HgExtension
 GpgProjectHelper HgExtensionProjectHelper
@@ -383,9 +372,6 @@ IconEditorWindow E5MainWindow
 IconSizeDialog QDialog Ui_IconSizeDialog
 IconsPage ConfigurationPageBase Ui_IconsPage
 IconsPreviewDialog QDialog Ui_IconsPreviewDialog
-ImportShadowedByLoopVar Message
-ImportStarUsed Message
-Importation Binding
 ImportsDiagramBuilder UMLDiagramBuilder
 InputDialogWizard QObject
 InputDialogWizardDialog QDialog Ui_InputDialogWizardDialog
@@ -410,7 +396,6 @@ JavaScriptExternalObject QObject
 Largefiles HgExtension
 LargefilesProjectBrowserHelper HgExtensionProjectBrowserHelper
 LargefilesProjectHelper HgExtensionProjectHelper
-LateFutureImport Message
 LexerAssociationDialog QDialog Ui_LexerAssociationDialog
 LexerBash Lexer QsciLexerBash
 LexerBatch Lexer QsciLexerBatch
@@ -460,7 +445,6 @@ MiniScintilla QsciScintillaCompat
 Module ClbrBaseClasses.Module VisibilityMixin
 ModuleItem UMLItem
 ModuleModel UMLModel
-ModuleScope Scope
 MultiProject QObject
 MultiProjectBrowser QTreeWidget
 MultiProjectPage ConfigurationPageBase Ui_MultiProjectPage
@@ -519,6 +503,7 @@ PluginManagerPage ConfigurationPageBase Ui_PluginManagerPage
 PluginModuleFormatError PluginError
 PluginModulesError PluginError
 PluginPathError PluginError
+PluginPy2IncompatibleError PluginError
 PluginRepositoryDialog QDialog
 PluginRepositoryReader XMLStreamReaderBase
 PluginRepositoryWidget QWidget Ui_PluginRepositoryDialog
@@ -593,15 +578,11 @@ RbModule Class
 Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
 RecursionError OverflowError ValueError
-Redefined Message
-RedefinedInListComp Message
-RedefinedWhileUnused Message
 Redirector QObject
 RemoveBookmarksCommand QUndoCommand
 RevisionsValidator QValidator
 SafariImporter BookmarksImporter
 SchemeAccessHandler QObject
-Scope dict
 SearchReplaceSlidingWidget QWidget
 SearchReplaceWidget QWidget
 SearchWidget QWidget Ui_SearchWidget
@@ -690,6 +671,7 @@ SyncFtpSettingsPage QWizardPage Ui_SyncFtpSettingsPage
 SyncHandler QObject
 SyncHostTypePage QWizardPage Ui_SyncHostTypePage
 SyncManager QObject
+SyntaxCheckService QObject
 SyntaxCheckerDialog QDialog Ui_SyntaxCheckerDialog
 SyntaxCheckerPlugin QObject
 TRPreviewer E5MainWindow
@@ -734,13 +716,8 @@ UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
 Uid int
-UndefinedExport Message
-UndefinedLocal Message
-UndefinedName Message
 UnittestDialog QWidget Ui_UnittestDialog
 UnittestWindow E5MainWindow
-UnusedImport Message
-UnusedVariable Message
 UrlBar E5LineEdit
 UserAgentManager QObject
 UserAgentMenu QMenu

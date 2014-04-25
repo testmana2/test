@@ -77,8 +77,6 @@ try:
 except ImportError:
     from ConfigParser import RawConfigParser            # __IGNORE_WARNING__
 
-from PyQt4.QtCore import QCoreApplication, QT_TRANSLATE_NOOP
-
 DEFAULT_EXCLUDE = '.svn,CVS,.bzr,.hg,.git,__pycache__'
 DEFAULT_IGNORE = 'E123,E226,E24'
 if sys.platform == 'win32':
@@ -126,164 +124,6 @@ HUNK_REGEX = re.compile(r'^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@.*$')
 # a comment which is on a line by itself.
 COMMENT_WITH_NL = tokenize.generate_tokens(['#\n'].pop).send(None)[1] == '#\n'
 
-
-##############################################################################
-# Helper functions for translated and formatted messages
-##############################################################################
-
-
-pep8_messages = {
-    "E101": QT_TRANSLATE_NOOP("pep8",
-        "indentation contains mixed spaces and tabs"),
-    "E111": QT_TRANSLATE_NOOP("pep8",
-        "indentation is not a multiple of four"),
-    "E112": QT_TRANSLATE_NOOP("pep8",
-        "expected an indented block"),
-    "E113": QT_TRANSLATE_NOOP("pep8",
-        "unexpected indentation"),
-    "E121": QT_TRANSLATE_NOOP("pep8",
-        "continuation line indentation is not a multiple of four"),
-    "E122": QT_TRANSLATE_NOOP("pep8",
-        "continuation line missing indentation or outdented"),
-    "E123": QT_TRANSLATE_NOOP("pep8",
-        "closing bracket does not match indentation of opening"
-        " bracket's line"),
-    "E124": QT_TRANSLATE_NOOP("pep8",
-        "closing bracket does not match visual indentation"),
-    "E125": QT_TRANSLATE_NOOP("pep8",
-        "continuation line does not distinguish itself from next"
-        " logical line"),
-    "E126": QT_TRANSLATE_NOOP("pep8",
-        "continuation line over-indented for hanging indent"),
-    "E127": QT_TRANSLATE_NOOP("pep8",
-        "continuation line over-indented for visual indent"),
-    "E128": QT_TRANSLATE_NOOP("pep8",
-        "continuation line under-indented for visual indent"),
-    "E133": QT_TRANSLATE_NOOP("pep8",
-        "closing bracket is missing indentation"),
-    "W191": QT_TRANSLATE_NOOP("pep8",
-        "indentation contains tabs"),
-    "E201": QT_TRANSLATE_NOOP("pep8",
-        "whitespace after '{0}'"),
-    "E202": QT_TRANSLATE_NOOP("pep8",
-        "whitespace before '{0}'"),
-    "E203": QT_TRANSLATE_NOOP("pep8",
-        "whitespace before '{0}'"),
-    "E211": QT_TRANSLATE_NOOP("pep8",
-        "whitespace before '{0}'"),
-    "E221": QT_TRANSLATE_NOOP("pep8",
-        "multiple spaces before operator"),
-    "E222": QT_TRANSLATE_NOOP("pep8",
-        "multiple spaces after operator"),
-    "E223": QT_TRANSLATE_NOOP("pep8",
-        "tab before operator"),
-    "E224": QT_TRANSLATE_NOOP("pep8",
-        "tab after operator"),
-    "E225": QT_TRANSLATE_NOOP("pep8",
-        "missing whitespace around operator"),
-    "E226": QT_TRANSLATE_NOOP("pep8",
-        "missing whitespace around arithmetic operator"),
-    "E227": QT_TRANSLATE_NOOP("pep8",
-        "missing whitespace around bitwise or shift operator"),
-    "E228": QT_TRANSLATE_NOOP("pep8",
-        "missing whitespace around modulo operator"),
-    "E231": QT_TRANSLATE_NOOP("pep8",
-        "missing whitespace after '{0}'"),
-    "E241": QT_TRANSLATE_NOOP("pep8",
-        "multiple spaces after '{0}'"),
-    "E242": QT_TRANSLATE_NOOP("pep8",
-        "tab after '{0}'"),
-    "E251": QT_TRANSLATE_NOOP("pep8",
-        "unexpected spaces around keyword / parameter equals"),
-    "E261": QT_TRANSLATE_NOOP("pep8",
-        "at least two spaces before inline comment"),
-    "E262": QT_TRANSLATE_NOOP("pep8",
-        "inline comment should start with '# '"),
-    "E271": QT_TRANSLATE_NOOP("pep8",
-        "multiple spaces after keyword"),
-    "E272": QT_TRANSLATE_NOOP("pep8",
-        "multiple spaces before keyword"),
-    "E273": QT_TRANSLATE_NOOP("pep8",
-        "tab after keyword"),
-    "E274": QT_TRANSLATE_NOOP("pep8",
-        "tab before keyword"),
-    "W291": QT_TRANSLATE_NOOP("pep8",
-        "trailing whitespace"),
-    "W292": QT_TRANSLATE_NOOP("pep8",
-        "no newline at end of file"),
-    "W293": QT_TRANSLATE_NOOP("pep8",
-        "blank line contains whitespace"),
-    "E301": QT_TRANSLATE_NOOP("pep8",
-        "expected 1 blank line, found 0"),
-    "E302": QT_TRANSLATE_NOOP("pep8",
-        "expected 2 blank lines, found {0}"),
-    "E303": QT_TRANSLATE_NOOP("pep8",
-        "too many blank lines ({0})"),
-    "E304": QT_TRANSLATE_NOOP("pep8",
-        "blank lines found after function decorator"),
-    "W391": QT_TRANSLATE_NOOP("pep8",
-        "blank line at end of file"),
-    "E401": QT_TRANSLATE_NOOP("pep8",
-        "multiple imports on one line"),
-    "E501": QT_TRANSLATE_NOOP("pep8",
-        "line too long ({0} > {1} characters)"),
-    "E502": QT_TRANSLATE_NOOP("pep8",
-        "the backslash is redundant between brackets"),
-    "W601": QT_TRANSLATE_NOOP("pep8",
-        ".has_key() is deprecated, use 'in'"),
-    "W602": QT_TRANSLATE_NOOP("pep8",
-        "deprecated form of raising exception"),
-    "W603": QT_TRANSLATE_NOOP("pep8",
-        "'<>' is deprecated, use '!='"),
-    "W604": QT_TRANSLATE_NOOP("pep8",
-        "backticks are deprecated, use 'repr()'"),
-    "E701": QT_TRANSLATE_NOOP("pep8",
-        "multiple statements on one line (colon)"),
-    "E702": QT_TRANSLATE_NOOP("pep8",
-        "multiple statements on one line (semicolon)"),
-    "E703": QT_TRANSLATE_NOOP("pep8",
-        "statement ends with a semicolon"),
-    "E711": QT_TRANSLATE_NOOP("pep8",
-        "comparison to {0} should be {1}"),
-    "E712": QT_TRANSLATE_NOOP("pep8",
-        "comparison to {0} should be {1}"),
-    "E721": QT_TRANSLATE_NOOP("pep8",
-        "do not compare types, use 'isinstance()'"),
-    "E901": QT_TRANSLATE_NOOP("pep8",
-        "{0}: {1}"),
-}
-
-pep8_messages_sample_args = {
-    "E201": ["([{"],
-    "E202": ["}])"],
-    "E203": [",;:"],
-    "E211": ["(["],
-    "E231": [",;:"],
-    "E241": [",;:"],
-    "E242": [",;:"],
-    "E302": [1],
-    "E303": [3],
-    "E501": [85, 79],
-    "E711": ["None", "'if cond is None:'"],
-    "E712": ["True", "'if cond is True:' or 'if cond:'"],
-    "E901": ["SyntaxError", "Invalid Syntax"],
-}
-
-
-def getMessage(code, *args):
-    """
-    Function to get a translated and formatted message for a given code.
-    
-    @param code message code (string)
-    @param args arguments for a formatted message (list)
-    @return translated and formatted message (string)
-    """
-    if code in pep8_messages:
-        return code + " " + QCoreApplication.translate("pep8",
-            pep8_messages[code]).format(*args)
-    else:
-        return code + " " + QCoreApplication.translate("pep8",
-            "no message for this code defined")
 
 ##############################################################################
 # Plugins (check functions) for physical lines
@@ -779,6 +619,7 @@ def whitespace_around_operator(logical_line):
             yield match.start(2), "E224"
         elif len(after) > 1:
             yield match.start(2), "E222"
+
 
 def missing_whitespace_around_operator(logical_line, tokens):
     r"""
@@ -1435,9 +1276,10 @@ class Checker(object):
         for name, check, argument_names in self._physical_checks:
             result = self.run_check(check, argument_names)
             if result is not None:
-                offset, code, *args = result
-                self.report_error_args(self.line_number, offset, code, check,
-                    *args)
+                offset, code = result[:2]
+                args = result[2:]
+                self.report_error_args(
+                    self.line_number, offset, code, check, *args)
 
     def build_tokens_line(self):
         """
@@ -1495,7 +1337,8 @@ class Checker(object):
             if self.verbose >= 4:
                 print('   ' + name)
             for result in self.run_check(check, argument_names):
-                offset, code, *args = result
+                offset, code = result[:2]
+                args = result[2:]
                 if isinstance(offset, tuple):
                     orig_number, orig_offset = offset
                 else:
@@ -1503,8 +1346,8 @@ class Checker(object):
                         if offset >= token_offset:
                             orig_number = token[2][0]
                             orig_offset = (token[2][1] + offset - token_offset)
-                self.report_error_args(orig_number, orig_offset, code, check,
-                    *args)
+                self.report_error_args(
+                    orig_number, orig_offset, code, check, *args)
         self.previous_logical = self.logical_line
 
     def check_ast(self):
@@ -1515,9 +1358,10 @@ class Checker(object):
         for name, cls, _ in self._ast_checks:
             # extended API for eric5 integration
             checker = cls(tree, self.filename, self.options)
-            for lineno, offset, code, check, *args in checker.run():
+            for args in checker.run():
+                lineno = args[0]
                 if not noqa(self.lines[lineno - 1]):
-                    self.report_error_args(lineno, offset, code, check, *args)
+                    self.report_error_args(lineno, *args[1:])
 
     def generate_tokens(self):
         if self._io_error:
@@ -1624,7 +1468,7 @@ class BaseReport(object):
             self.counters[code] += 1
         else:
             self.counters[code] = 1
-            self.messages[code] = text[5:]
+            self.messages[code] = []
         # Don't care about expected errors or warnings
         if code in self.expected:
             return
@@ -1638,12 +1482,11 @@ class BaseReport(object):
         """Report an error, according to options."""
         if self._ignore_code(code):
             return
-        text = getMessage(code, *args)
         if code in self.counters:
             self.counters[code] += 1
         else:
             self.counters[code] = 1
-            self.messages[code] = text[5:]
+            self.messages[code] = args
         # Don't care about expected errors or warnings
         if code in self.expected:
             return
@@ -1725,9 +1568,8 @@ class StandardReport(BaseReport):
         code = super(StandardReport, self).error_args(line_number, offset,
                                                       code, check, *args)
         if code and (self.counters[code] == 1 or self._repeat):
-            text = getMessage(code, *args)
             self._deferred_print.append(
-                (line_number, offset, code, text[5:], check.__doc__))
+                (line_number, offset, code, args, check.__doc__))
         return code
 
     def get_file_results(self):

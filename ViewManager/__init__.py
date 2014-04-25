@@ -15,6 +15,8 @@ the requested view manager type is not available, tabview will be used by
 default.
 """
 
+from __future__ import unicode_literals
+
 import Preferences
 
 ######################################################################

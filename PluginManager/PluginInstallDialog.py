@@ -7,13 +7,18 @@
 Module implementing the Plugin installation dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 import sys
 import shutil
 import zipfile
 import compileall
-import urllib.parse
 import glob
+try:  # Py3
+    import urllib.parse as parse
+except (ImportError):
+    import urlparse as parse    # __IGNORE_WARNING__
 
 from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
 from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
@@ -43,7 +48,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             installation (list of strings)
         @param parent parent of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInstallWidget, self).__init__(parent)
         self.setupUi(self)
         
         if pluginManager is None:
@@ -255,7 +260,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
             self.destinationCombo.currentIndex())
         
         # check if archive is a local url
-        url = urllib.parse.urlparse(archive)
+        url = parse.urlparse(archive)
         if url[0].lower() == 'file':
             archive = url[2]
 
@@ -453,7 +458,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                     "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
         except:
-            print("Unspecific exception installing plugin.", file=sys.stderr)
+            sys.stderr.write("Unspecific exception installing plugin.\n")
             self.__rollback()
             return False, \
                 self.tr("Unspecific exception installing plugin."), \
@@ -567,7 +572,7 @@ class PluginInstallDialog(QDialog):
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInstallDialog, self).__init__(parent)
         self.setSizeGripEnabled(True)
         
         self.__layout = QVBoxLayout(self)
@@ -604,7 +609,7 @@ class PluginInstallWindow(E5MainWindow):
             installation (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PluginInstallWindow, self).__init__(parent)
         self.cw = PluginInstallWidget(None, pluginFileNames, self)
         size = self.cw.size()
         self.setCentralWidget(self.cw)

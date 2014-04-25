@@ -7,6 +7,8 @@
 Module implementing the cookie model.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
 from PyQt4.QtGui import QFont, QFontMetrics
 
@@ -22,7 +24,7 @@ class CookieModel(QAbstractTableModel):
         @param cookieJar reference to the cookie jar (CookieJar)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(CookieModel, self).__init__(parent)
         
         self.__headers = [
             self.tr("Website"),

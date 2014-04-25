@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for a shelve operation.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QDateTime
 from PyQt4.QtGui import QDialog
 
@@ -23,7 +25,7 @@ class HgShelveDataDialog(QDialog, Ui_HgShelveDataDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgShelveDataDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.__initialDateTime = QDateTime.currentDateTime()

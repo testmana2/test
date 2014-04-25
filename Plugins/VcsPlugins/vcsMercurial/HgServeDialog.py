@@ -7,6 +7,12 @@
 Module implementing a dialog for the Mercurial server.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtCore import QProcess, Qt, QSize
@@ -34,7 +40,7 @@ class HgServeDialog(E5MainWindow):
         @param path path of the repository to serve (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgServeDialog, self).__init__(parent)
         
         self.vcs = vcs
         self.__repoPath = path

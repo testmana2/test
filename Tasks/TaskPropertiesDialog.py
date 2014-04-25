@@ -7,6 +7,8 @@
 Module implementing the task properties dialog.
 """
 
+from __future__ import unicode_literals
+
 import time
 
 from PyQt4.QtGui import QDialog
@@ -28,7 +30,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         @param parent the parent widget (QWidget)
         @param projectOpen flag indicating status of the project (boolean)
         """
-        super().__init__(parent)
+        super(TaskPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.filenameCompleter = E5FileCompleter(self.filenameEdit)

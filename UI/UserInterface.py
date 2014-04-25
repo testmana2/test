@@ -7,6 +7,12 @@
 Module implementing the main user interface.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 import sys
 import logging
@@ -66,7 +72,7 @@ class Redirector(QObject):
         
         @param stderr flag indicating stderr is being redirected
         """
-        super().__init__()
+        super(Redirector, self).__init__()
         self.stderr = stderr
         self.buffer = ''
         
@@ -154,7 +160,7 @@ class UserInterface(E5MainWindow):
         @param restartArguments list of command line parameters to be used for
             a restart (list of strings)
         """
-        super().__init__()
+        super(UserInterface, self).__init__()
         
         self.__restartArgs = restartArguments[:]
         
@@ -195,6 +201,10 @@ class UserInterface(E5MainWindow):
         # Generate the debug server object
         from Debugger.DebugServer import DebugServer
         debugServer = DebugServer()
+        
+        # Create the background service object
+        from Utilities.BackgroundService import BackgroundService
+        self.backgroundService = BackgroundService()
         
         # Generate an empty project object and multi project object
         from Project.Project import Project
@@ -446,6 +456,7 @@ class UserInterface(E5MainWindow):
         e5App().registerObject("UserInterface", self)
         e5App().registerObject("DebugUI", self.debuggerUI)
         e5App().registerObject("DebugServer", debugServer)
+        e5App().registerObject("BackgroundService", self.backgroundService)
         e5App().registerObject("ViewManager", self.viewmanager)
         e5App().registerObject("Project", self.project)
         e5App().registerObject("ProjectBrowser", self.projectBrowser)
@@ -5755,6 +5766,8 @@ class UserInterface(E5MainWindow):
         if not self.debuggerUI.shutdownServer():
             return False
         self.debuggerUI.shutdown()
+        
+        self.backgroundService.shutdown()
         
         self.cooperation.shutdown()
         

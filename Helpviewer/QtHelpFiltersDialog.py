@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the QtHelp filters.
 """
 
+from __future__ import unicode_literals
+
 import sqlite3
 
 from PyQt4.QtCore import pyqtSlot, Qt
@@ -30,7 +32,7 @@ class QtHelpFiltersDialog(QDialog, Ui_QtHelpFiltersDialog):
         @param engine reference to the help engine (QHelpEngine)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(QtHelpFiltersDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.removeButton.setEnabled(False)

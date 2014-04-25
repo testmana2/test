@@ -13,6 +13,8 @@ This is module is based on pyclbr found in the Python 2.2.2 distribution.
 """
 
 
+from __future__ import unicode_literals
+
 import sys
 import imp
 import re

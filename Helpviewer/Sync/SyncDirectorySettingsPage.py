@@ -7,6 +7,8 @@
 Module implementing the synchronization shared directory settings wizard page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QWizardPage
 
@@ -29,7 +31,7 @@ class SyncDirectorySettingsPage(QWizardPage, Ui_SyncDirectorySettingsPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SyncDirectorySettingsPage, self).__init__(parent)
         self.setupUi(self)
         
         self.directoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))

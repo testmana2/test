@@ -7,6 +7,8 @@
 Module implementing a model for password management.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QModelIndex, QAbstractTableModel
 
 
@@ -21,7 +23,7 @@ class PasswordModel(QAbstractTableModel):
         @param manager reference to the password manager (PasswordManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(PasswordModel, self).__init__(parent)
         
         self.__manager = manager
         manager.changed.connect(self.__passwordsChanged)

@@ -7,6 +7,8 @@
 Module implementing a dialog to manage the ClickToFlash whitelist.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel, \
     QInputDialog, QLineEdit
@@ -27,7 +29,7 @@ class ClickToFlashWhitelistDialog(QDialog, Ui_ClickToFlashWhitelistDialog):
         @param whitelist list of whitelisted hosts (list of string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ClickToFlashWhitelistDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("flashBlock48.png"))

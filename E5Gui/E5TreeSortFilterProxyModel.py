@@ -7,6 +7,8 @@
 Module implementing a modified QSortFilterProxyModel.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QModelIndex
 from PyQt4.QtGui import QSortFilterProxyModel
 
@@ -24,7 +26,7 @@ class E5TreeSortFilterProxyModel(QSortFilterProxyModel):
         
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(E5TreeSortFilterProxyModel, self).__init__(parent)
         
         self.setFilterCaseSensitivity(Qt.CaseInsensitive)
     

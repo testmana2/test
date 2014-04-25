@@ -7,6 +7,8 @@
 Module implementing the Interface configuration page.
 """
 
+from __future__ import unicode_literals
+
 import glob
 import os
 
@@ -34,7 +36,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         """
         Constructor
         """
-        super().__init__()
+        super(InterfacePage, self).__init__()
         self.setupUi(self)
         self.setObjectName("InterfacePage")
         

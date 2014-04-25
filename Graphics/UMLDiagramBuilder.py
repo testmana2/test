@@ -7,6 +7,8 @@
 Module implementing the UML diagram builder base class.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 
 
@@ -22,7 +24,7 @@ class UMLDiagramBuilder(QObject):
         @param view reference to the view object (UMLGraphicsView)
         @param project reference to the project object (Project)
         """
-        super().__init__(dialog)
+        super(UMLDiagramBuilder, self).__init__(dialog)
         
         self.umlView = view
         self.scene = self.umlView.scene()

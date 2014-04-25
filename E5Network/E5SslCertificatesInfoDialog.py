@@ -7,6 +7,8 @@
 Module implementing a dialog to show SSL certificate infos.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_E5SslCertificatesInfoDialog import Ui_E5SslCertificatesInfoDialog
@@ -23,7 +25,7 @@ class E5SslCertificatesInfoDialog(QDialog, Ui_E5SslCertificatesInfoDialog):
         @param certificateChain SSL certificate chain (list of QSslCertificate)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5SslCertificatesInfoDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.sslWidget.showCertificateChain(certificateChain)

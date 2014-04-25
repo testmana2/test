@@ -18,6 +18,8 @@ for being called from within the eric5 IDE.
 @exception ValueError The tokenize module is too old.
 """
 
+from __future__ import unicode_literals
+
 # Released to the public domain, by Tim Peters, 15 April 1998.
 
 # XXX Note: this is now a standard library module.
@@ -42,14 +44,24 @@ for being called from within the eric5 IDE.
 __version__ = "6_eric"
 
 import tokenize
-import io
-
-import Utilities
+try:
+    import StringIO as io
+except (ImportError):
+    import io    # __IGNORE_WARNING__
 
 if not hasattr(tokenize, 'NL'):
     raise ValueError("tokenize.NL doesn't exist -- tokenize module too old")
 
 __all__ = ["check", "NannyNag", "process_tokens"]
+
+
+def initService():
+    """
+    Initialize the service and return the entry point.
+    
+    @return the entry point for the background client (function)
+    """
+    return check
 
 
 class NannyNag(Exception):
@@ -109,36 +121,29 @@ def check(file, text=""):
     global indents, check_equal
     indents = [Whitespace("")]
     check_equal = 0
-    
     if not text:
-        try:
-            text = Utilities.readEncodedFile(file)[0]
-        except (UnicodeError, IOError) as msg:
-            return (True, file, "1", "Error: {0}".format(str(msg)))
-            
-        # convert eols
-        text = Utilities.convertLineEnds(text, "\n")
+        return (True, "1", "Error: source code missing.")
     
     source = io.StringIO(text)
     try:
         process_tokens(tokenize.generate_tokens(source.readline))
     
     except tokenize.TokenError as msg:
-        return (True, file, "1", "Token Error: {0}".format(str(msg)))
+        return (True, "1", "Token Error: {0}".format(str(msg)))
     
     except IndentationError as err:
-        return (True, file, err.lineno,
+        return (True, str(err.lineno),
                 "Indentation Error: {0}".format(str(err.msg)))
     
     except NannyNag as nag:
         badline = nag.get_lineno()
         line = nag.get_line()
-        return (True, file, str(badline), line)
+        return (True, str(badline), line)
     
     except Exception as err:
-        return (True, file, "1", "Unspecific Error: {0}".format(str(err)))
+        return (True, "1", "Unspecific Error: {0}".format(str(err)))
     
-    return (False, None, None, None)
+    return (False, None, None)
 
 
 class Whitespace(object):

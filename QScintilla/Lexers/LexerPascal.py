@@ -7,6 +7,8 @@
 Module implementing a Pascal lexer with some additional methods.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciLexerPascal
 
 from .Lexer import Lexer

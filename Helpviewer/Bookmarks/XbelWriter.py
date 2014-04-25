@@ -7,6 +7,8 @@
 Module implementing a class to write XBEL bookmark files.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile, Qt
 
 from .BookmarkNode import BookmarkNode
@@ -20,7 +22,7 @@ class XbelWriter(QXmlStreamWriter):
         """
         Constructor
         """
-        super().__init__()
+        super(XbelWriter, self).__init__()
         
         self.setAutoFormatting(True)
     

@@ -8,6 +8,12 @@ Module implementing a dialog to compare two files and show the result side by
 side.
 """
 
+from __future__ import unicode_literals
+try:
+    basestring    # __IGNORE_WARNING__
+except NameError:
+    basestring = str
+
 import re
 from difflib import _mdiff, IS_CHARACTER_JUNK
 
@@ -93,7 +99,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
             (list of two tuples of two strings)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CompareDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.file1Button.setIcon(UI.PixmapCache.getIcon("open.png"))
@@ -175,7 +181,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         if filename:
             self.file1Edit.setText(filename)
-        super().show()
+        super(CompareDialog, self).show()
         
     def __appendText(self, pane, linenumber, line, format, interLine=False):
         """
@@ -275,9 +281,9 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.diffButton.setEnabled(False)
         self.diffButton.hide()
         
-        if isinstance(lines1, str):
+        if isinstance(lines1, basestring):
             lines1 = lines1.splitlines(True)
-        if isinstance(lines2, str):
+        if isinstance(lines2, basestring):
             lines2 = lines2.splitlines(True)
         
         self.__compare(lines1, lines2)
@@ -488,7 +494,7 @@ class CompareWindow(E5MainWindow):
             (list of two tuples of two strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CompareWindow, self).__init__(parent)
         
         self.setStyle(Preferences.getUI("Style"),
                       Preferences.getUI("StyleSheet"))

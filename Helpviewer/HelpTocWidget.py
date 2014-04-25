@@ -7,6 +7,8 @@
 Module implementing a window for showing the QtHelp TOC.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, QEvent, QUrl
 from PyQt4.QtGui import QWidget, QVBoxLayout, QMenu
 
@@ -29,7 +31,7 @@ class HelpTocWidget(QWidget):
         @param mainWindow reference to the main window object (QMainWindow)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HelpTocWidget, self).__init__(parent)
         
         self.__engine = engine
         self.__mw = mainWindow

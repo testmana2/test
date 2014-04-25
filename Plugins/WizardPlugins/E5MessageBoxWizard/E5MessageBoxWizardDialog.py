@@ -4,6 +4,8 @@
 Module implementing the eric5 message box wizard dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -27,7 +29,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(E5MessageBoxWizardDialog, self).__init__(parent)
         self.setupUi(self)
         
         # keep the following three lists in sync

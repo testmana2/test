@@ -7,6 +7,8 @@
 Module implementing the Ericapi plugin.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QObject
@@ -33,6 +35,7 @@ longDescription = """This plugin implements the Ericapi dialogs.""" \
     """ Ericapi is used to generate a QScintilla API file for Python and""" \
     """ Ruby projects."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -74,7 +77,7 @@ class EricapiPlugin(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(EricapiPlugin, self).__init__(ui)
         self.__ui = ui
         self.__initialize()
         

@@ -7,6 +7,8 @@
 Module implementing a dialog for the configuration of eric5.
 """
 
+from __future__ import unicode_literals
+
 import os
 import types
 
@@ -44,7 +46,7 @@ class ConfigurationPageItem(QTreeWidgetItem):
         @param pageName name of the configuration page (string)
         @param iconFile file name of the icon to be shown (string)
         """
-        super().__init__(parent, [text])
+        super(ConfigurationPageItem, self).__init__(parent, [text])
         self.setIcon(0, UI.PixmapCache.getIcon(iconFile))
         
         self.__pageName = pageName
@@ -94,7 +96,7 @@ class ConfigurationWidget(QWidget):
             ConfigurationWidget.TrayStarterMode
         )
         
-        super().__init__(parent)
+        super(ConfigurationWidget, self).__init__(parent)
         self.fromEric = fromEric
         self.displayMode = displayMode
         
@@ -766,7 +768,7 @@ class ConfigurationDialog(QDialog):
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
         """
-        super().__init__(parent)
+        super(ConfigurationDialog, self).__init__(parent)
         if name:
             self.setObjectName(name)
         self.setModal(modal)
@@ -828,7 +830,7 @@ class ConfigurationDialog(QDialog):
         """
         Public method to accept the dialog.
         """
-        super().accept()
+        super(ConfigurationDialog, self).accept()
 
 
 class ConfigurationWindow(E5MainWindow):
@@ -841,7 +843,7 @@ class ConfigurationWindow(E5MainWindow):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ConfigurationWindow, self).__init__(parent)
         
         self.cw = ConfigurationWidget(self, fromEric=False)
         size = self.cw.size()

@@ -7,6 +7,8 @@
 Module implementing the synchronization host type wizard page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QWizardPage
 
 from . import SyncGlobals
@@ -26,7 +28,7 @@ class SyncHostTypePage(QWizardPage, Ui_SyncHostTypePage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SyncHostTypePage, self).__init__(parent)
         self.setupUi(self)
         
         if Preferences.getHelp("SyncType") == SyncGlobals.SyncTypeFtp:

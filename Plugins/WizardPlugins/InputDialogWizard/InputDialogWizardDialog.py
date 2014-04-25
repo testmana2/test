@@ -7,6 +7,8 @@
 Module implementing the input dialog wizard dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -29,7 +31,7 @@ class InputDialogWizardDialog(QDialog, Ui_InputDialogWizardDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(InputDialogWizardDialog, self).__init__(parent)
         self.setupUi(self)
         
         # set the validators for the double line edots

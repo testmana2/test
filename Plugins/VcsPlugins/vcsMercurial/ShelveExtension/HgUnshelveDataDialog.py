@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the data for an unshelve operation.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_HgUnshelveDataDialog import Ui_HgUnshelveDataDialog
@@ -24,7 +26,7 @@ class HgUnshelveDataDialog(QDialog, Ui_HgUnshelveDataDialog):
         @param shelveName name of the shelve to restore (string)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgUnshelveDataDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.nameComboBox.addItem("")

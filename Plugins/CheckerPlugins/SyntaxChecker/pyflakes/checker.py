@@ -4,18 +4,19 @@
 #
 # Original (c) 2005-2010 Divmod, Inc.
 #
-# This module is based on pyflakes for Python2 and Python3, but was modified to
-# be integrated into eric5
+# This module is based on pyflakes but was modified to work with eric5
+"""
+Main module.
 
+Implement the central Checker class.
+Also, it models the Bindings and Scopes.
+"""
 import doctest
 import os
 import sys
 try:
     builtin_vars = dir(__import__('builtins'))
     PY2 = False
-    ## added for eric5
-    basestring = str
-    ## end added for eric5
 except ImportError:
     builtin_vars = dir(__import__('__builtin__'))
     PY2 = True
@@ -53,6 +54,7 @@ else:
 
 from . import messages
 
+
 if PY2:
     def getNodeType(node_class):
         # workaround str.upper() which is locale-dependent
@@ -67,9 +69,13 @@ class Binding(object):
     Represents the binding of a value to a name.
 
     The checker uses this to keep track of which names have been bound and
-    which names have not. See Assignment for a special type of binding that
+    which names have not. See L{Assignment} for a special type of binding that
     is checked with stricter rules.
+
+    @ivar used: pair of (L{Scope}, line-number) indicating the scope and
+                line number that this binding was last used
     """
+
     def __init__(self, name, source):
         self.name = name
         self.source = source
@@ -79,16 +85,19 @@ class Binding(object):
         return self.name
 
     def __repr__(self):
-        return '<%s object %r from line %r at 0x%x>' % (
-            self.__class__.__name__,
-            self.name,
-            self.source.lineno,
-            id(self))
+        return '<%s object %r from line %r at 0x%x>' % (self.__class__.__name__,
+                                                        self.name,
+                                                        self.source.lineno,
+                                                        id(self))
 
 
 class Importation(Binding):
     """
     A binding created by an import statement.
+
+    @ivar fullName: The complete name given to the import statement,
+        possibly including multiple dotted components.
+    @type fullName: C{str}
     """
     def __init__(self, name, source):
         self.fullName = name
@@ -100,14 +109,12 @@ class Argument(Binding):
     """
     Represents binding a name as an argument.
     """
-    pass
 
 
 class Definition(Binding):
     """
     A binding that defines a function or a class.
     """
-    pass
 
 
 class Assignment(Binding):
@@ -118,36 +125,29 @@ class Assignment(Binding):
     the checker does not consider assignments in tuple/list unpacking to be
     Assignments, rather it treats them as simple Bindings.
     """
-    pass
 
 
 class FunctionDefinition(Definition):
-    """
-    Represents a function definition.
-    """
     pass
 
 
 class ClassDefinition(Definition):
-    """
-    Represents a class definition.
-    """
     pass
 
 
 class ExportBinding(Binding):
     """
-    A binding created by an __all__ assignment.  If the names in the list
+    A binding created by an C{__all__} assignment.  If the names in the list
     can be determined statically, they will be treated as names for export and
     additional checking applied to them.
 
-    The only __all__ assignment that can be recognized is one which takes
+    The only C{__all__} assignment that can be recognized is one which takes
     the value of a literal list containing literal strings.  For example::
 
         __all__ = ["foo", "bar"]
 
     Names which are imported and not otherwise used but appear in the value of
-    __all__ will not have an unused import warning reported for them.
+    C{__all__} will not have an unused import warning reported for them.
     """
     def names(self):
         """
@@ -162,9 +162,6 @@ class ExportBinding(Binding):
 
 
 class Scope(dict):
-    """
-    Class defining the scope base class.
-    """
     importStarred = False       # set to True when import * is found
 
     def __repr__(self):
@@ -173,15 +170,14 @@ class Scope(dict):
 
 
 class ClassScope(Scope):
-    """
-    Class representing a name scope for a class.
-    """
     pass
 
 
 class FunctionScope(Scope):
     """
-    Class representing a name scope for a function.
+    I represent a name scope for a function.
+
+    @ivar globals: Names declared 'global' in this function.
     """
     usesLocals = False
     alwaysUsed = set(['__tracebackhide__',
@@ -204,17 +200,12 @@ class FunctionScope(Scope):
 
 
 class GeneratorScope(Scope):
-    """
-    Class representing a name scope for a generator function.
-    """
     pass
 
 
 class ModuleScope(Scope):
-    """
-    Class representing a name scope for a module.
-    """
     pass
+
 
 # Globally defined names which are not attributes of the builtins module, or
 # are only present on some platforms.
@@ -222,9 +213,6 @@ _MAGIC_GLOBALS = ['__file__', '__builtins__', 'WindowsError']
 
 
 def getNodeName(node):
-    """
-    Module function for getting the name of a node.
-    """
     # Returns node.id, or node.name, or None
     if hasattr(node, 'id'):     # One of the many nodes with an id
         return node.id
@@ -234,8 +222,17 @@ def getNodeName(node):
 
 class Checker(object):
     """
-    Class to check the cleanliness and sanity of Python code.
+    I check the cleanliness and sanity of Python code.
+
+    @ivar _deferredFunctions: Tracking list used by L{deferFunction}.  Elements
+        of the list are two-tuples.  The first element is the callable passed
+        to L{deferFunction}.  The second element is a copy of the scope stack
+        at the time L{deferFunction} was called.
+
+    @ivar _deferredAssignments: Similar to C{_deferredFunctions}, but for
+        callables which are deferred assignment checks.
     """
+
     nodeDepth = 0
     offset = None
     traceTree = False
@@ -248,13 +245,6 @@ class Checker(object):
     del _customBuiltIns
 
     def __init__(self, tree, filename='(none)', builtins=None):
-        """
-        Constructor
-        
-        @param tree parsed module tree or module source code
-        @param filename name of the module file (string)
-        @param builtins set of names to be treated as builtins (set of string)
-        """
         self._nodeHandlers = {}
         self._deferredFunctions = []
         self._deferredAssignments = []
@@ -266,12 +256,6 @@ class Checker(object):
         self.scopeStack = [ModuleScope()]
         self.exceptHandlers = [()]
         self.futuresAllowed = True
-        
-        ## added for eric5
-        if isinstance(tree, basestring):
-            tree = compile(tree, filename, "exec", ast.PyCF_ONLY_AST)
-        ## end added for eric5
-        
         self.root = tree
         self.handleChildren(tree)
         self.runDeferred(self._deferredFunctions)
@@ -287,28 +271,26 @@ class Checker(object):
         self.checkDeadScopes()
 
     def deferFunction(self, callable):
-        '''
+        """
         Schedule a function handler to be called just before completion.
 
         This is used for handling function bodies, which must be deferred
         because code later in the file might modify the global scope. When
         `callable` is called, the scope at the time this is called will be
         restored, however it will contain any new bindings added to it.
-        '''
-        self._deferredFunctions.append((callable, self.scopeStack[:],
-                                        self.offset))
+        """
+        self._deferredFunctions.append((callable, self.scopeStack[:], self.offset))
 
     def deferAssignment(self, callable):
         """
         Schedule an assignment handler to be called just after deferred
         function handlers.
         """
-        self._deferredAssignments.append((callable, self.scopeStack[:],
-                                          self.offset))
+        self._deferredAssignments.append((callable, self.scopeStack[:], self.offset))
 
     def runDeferred(self, deferred):
         """
-        Run the callables in deferred using their associated scope stack.
+        Run the callables in C{deferred} using their associated scope stack.
         """
         for handler, scope, offset in deferred:
             self.scopeStack = scope

@@ -8,12 +8,12 @@ Module implementing a dialog showing statistical data for the last code
 style checker run.
 """
 
-from PyQt4.QtCore import Qt, QCoreApplication
+from __future__ import unicode_literals
+
+from PyQt4.QtCore import Qt
 from PyQt4.QtGui import QDialog, QTreeWidgetItem
 
-from . import pep8
-from .NamingStyleChecker import NamingStyleChecker
-from .DocStyleChecker import DocStyleChecker
+from .translations import _messages, _messages_sample_args
 
 from .Ui_CodeStyleStatisticsDialog import Ui_CodeStyleStatisticsDialog
 
@@ -32,7 +32,7 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         @param statistics dictionary with the statistical data
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CodeStyleStatisticsDialog, self).__init__(parent)
         self.setupUi(self)
         
         stats = statistics.copy()
@@ -48,21 +48,13 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         totalIssues = 0
         
         for code in sorted(stats.keys()):
-            if code in pep8.pep8_messages_sample_args:
-                message = QCoreApplication.translate(
-                    "pep8", pep8.pep8_messages[code]).format(
-                    *pep8.pep8_messages_sample_args[code])
-            elif code in pep8.pep8_messages:
-                message = QCoreApplication.translate(
-                    "pep8", pep8.pep8_messages[code])
-            elif code in NamingStyleChecker.Messages:
-                message = QCoreApplication.translate(
-                    "NamingStyleChecker", NamingStyleChecker.Messages[code])
-            elif code in DocStyleChecker.Messages:
-                message = QCoreApplication.translate(
-                    "DocStyleChecker", DocStyleChecker.Messages[code])
-            else:
+            message = _messages.get(code)
+            if message is None:
                 continue
+            
+            if code in _messages_sample_args:
+                message = message.format(*_messages_sample_args[code])
+            
             self.__createItem(stats[code], code, message)
             totalIssues += stats[code]
         

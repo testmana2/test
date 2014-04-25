@@ -7,6 +7,8 @@
 Module implementing a previewer widget for HTML, Markdown and ReST files.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QTimer
@@ -28,7 +30,7 @@ class Previewer(QStackedWidget):
         @param splitter reference to the embedding splitter (QSplitter)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Previewer, self).__init__(parent)
         
         self.__vm = viewmanager
         self.__splitter = splitter
@@ -57,7 +59,7 @@ class Previewer(QStackedWidget):
         """
         Public method to show the preview widget.
         """
-        super().show()
+        super(Previewer, self).show()
         if self.__firstShow:
             self.__splitter.restoreState(
                 Preferences.getUI("PreviewSplitterState"))
@@ -68,7 +70,7 @@ class Previewer(QStackedWidget):
         """
         Public method to hide the preview widget.
         """
-        super().hide()
+        super(Previewer, self).hide()
         self.__typingTimer.stop()
     
     def shutdown(self):

@@ -11,10 +11,22 @@ This is the main Python script that performs the necessary initialization
 of the IDE and starts the Qt event loop.
 """
 
+from __future__ import unicode_literals
+
+try:  # Only for Py2
+    import StringIO as io   # __IGNORE_EXCEPTION__
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    sip.setapi('QTextStream', 2)
+    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+except ImportError:
+    import io       # __IGNORE_WARNING__
+    basestring = str
+
 import sys
 import os
 import traceback
-import io
 import time
 import logging
 
@@ -89,6 +101,7 @@ def excepthook(excType, excValue, tracebackobj):
     @param excValue exception value
     @param tracebackobj traceback object
     """
+    import xml.sax.saxutils
     from UI.Info import BugAddress
     import Utilities
     import Globals
@@ -111,10 +124,13 @@ def excepthook(excType, excValue, tracebackobj):
     if distroInfo:
         versionInfo += "{0}\n{1}".format(separator, distroInfo)
     
-    tbinfofile = io.StringIO()
-    traceback.print_tb(tracebackobj, None, tbinfofile)
-    tbinfofile.seek(0)
-    tbinfo = tbinfofile.read()
+    if isinstance(excType, basestring):
+        tbinfo = tracebackobj
+    else:
+        tbinfofile = io.StringIO()
+        traceback.print_tb(tracebackobj, None, tbinfofile)
+        tbinfofile.seek(0)
+        tbinfo = tbinfofile.read()
     errmsg = '{0}: \n{1}'.format(str(excType), str(excValue))
     sections = [separator, timeString, separator, errmsg, separator, tbinfo]
     msg = '\n'.join(sections)
@@ -125,7 +141,11 @@ def excepthook(excType, excValue, tracebackobj):
         f.close()
     except IOError:
         pass
-    qWarning(str(notice) + str(msg) + str(versionInfo))
+    
+    warning = str(notice) + str(msg) + str(versionInfo)
+    # Escape &<> otherwise it's not visible in the error dialog
+    warning = xml.sax.saxutils.escape(warning)
+    qWarning(warning)
 
 
 def uiStartUp():

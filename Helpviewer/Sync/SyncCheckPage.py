@@ -7,6 +7,8 @@
 Module implementing the synchronization status wizard page.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QByteArray, QTimer
@@ -32,7 +34,7 @@ class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SyncCheckPage, self).__init__(parent)
         self.setupUi(self)
     
     def initializePage(self):

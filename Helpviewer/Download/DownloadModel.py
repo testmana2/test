@@ -7,6 +7,8 @@
 Module implementing the download model.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import Qt, QAbstractListModel, QModelIndex, QMimeData, QUrl
 
 
@@ -21,7 +23,7 @@ class DownloadModel(QAbstractListModel):
         @param manager reference to the download manager (DownloadManager)
         @param parent reference to the parent object (QObject)
         """
-        super().__init__(parent)
+        super(DownloadModel, self).__init__(parent)
         
         self.__manager = manager
     

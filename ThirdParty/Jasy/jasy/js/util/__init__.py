@@ -8,6 +8,8 @@
 # Copyright (c) 2013 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+from __future__ import unicode_literals
+
 pseudoTypes = set(["any", "var", "undefined", "null", "true", "false", "this",
                    "arguments"])
 builtinTypes = set(["Object", "String", "Number", "Boolean", "Array", "Function",

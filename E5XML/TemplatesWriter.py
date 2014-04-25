@@ -7,6 +7,8 @@
 Module implementing the writer class for writing an XML templates file.
 """
 
+from __future__ import unicode_literals
+
 import time
 
 from .XMLStreamWriterBase import XMLStreamWriterBase

@@ -7,6 +7,8 @@
 Package implementing cryptography related functionality.
 """
 
+from __future__ import unicode_literals
+
 import random
 import base64
 

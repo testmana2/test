@@ -8,10 +8,16 @@ Module implementing a dialog to show the output of the tabnanny command
 process.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 import fnmatch
 
-from PyQt4.QtCore import pyqtSlot, Qt, QProcess
+from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem, \
     QApplication, QHeaderView
 
@@ -22,20 +28,19 @@ from .Ui_TabnannyDialog import Ui_TabnannyDialog
 import Utilities
 import Preferences
 
-from eric5config import getConfig
-
 
 class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
     Class implementing a dialog to show the results of the tabnanny check run.
     """
-    def __init__(self, parent=None):
+    def __init__(self, indentCheckService, parent=None):
         """
         Constructor
         
+        @param indentCheckService reference to the service (IndentCheckService)
         @param parent The parent widget (QWidget).
         """
-        super().__init__(parent)
+        super(TabnannyDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -43,6 +48,10 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         self.resultList.headerItem().setText(self.resultList.columnCount(), "")
         self.resultList.header().setSortIndicator(0, Qt.AscendingOrder)
+        
+        self.indentCheckService = indentCheckService
+        self.indentCheckService.indentChecked.connect(self.__processResult)
+        self.filename = None
         
         self.noResults = True
         self.cancelled = False
@@ -116,84 +125,91 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         QApplication.processEvents()
         
         if isinstance(fn, list):
-            files = fn
+            self.files = fn
         elif os.path.isdir(fn):
-            files = []
-            for ext in Preferences.getPython("Python3Extensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
-            for ext in Preferences.getPython("PythonExtensions"):
-                files.extend(
-                    Utilities.direntries(fn, 1, '*{0}'.format(ext), 0))
+            self.files = []
+            extensions = set(Preferences.getPython("PythonExtensions") +
+                             Preferences.getPython("Python3Extensions"))
+            for ext in extensions:
+                self.files.extend(
+                    Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
-            files = [fn]
-        py3files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("Python3Extensions")))]
-        py2files = [f for f in files
-                    if f.endswith(
-                        tuple(Preferences.getPython("PythonExtensions")))]
+            self.files = [fn]
         
-        if len(py3files) + len(py2files) > 0:
-            self.checkProgress.setMaximum(len(py3files) + len(py2files))
-            self.checkProgressLabel.setVisible(
-                len(py3files) + len(py2files) > 1)
-            self.checkProgress.setVisible(
-                len(py3files) + len(py2files) > 1)
+        if len(self.files) > 0:
+            self.checkProgress.setMaximum(len(self.files))
+            self.checkProgress.setVisible(len(self.files) > 1)
+            self.checkProgressLabel.setVisible(len(self.files) > 1)
             QApplication.processEvents()
-            
-            # now go through all the files
-            progress = 0
-            for file in py3files + py2files:
-                self.checkProgress.setValue(progress)
-                self.checkProgressLabel.setPath(file)
-                QApplication.processEvents()
-                self.__resort()
-                
-                if self.cancelled:
-                    return
-                
-                try:
-                    source = Utilities.readEncodedFile(file)[0]
-                    # convert eols
-                    source = Utilities.convertLineEnds(source, "\n")
-                except (UnicodeError, IOError) as msg:
-                    self.noResults = False
-                    self.__createResultItem(
-                        file, "1",
-                        "Error: {0}".format(str(msg)).rstrip()[1:-1])
-                    progress += 1
-                    continue
-                
-                flags = Utilities.extractFlags(source)
-                ext = os.path.splitext(file)[1]
-                if ("FileType" in flags and
-                    flags["FileType"] in ["Python", "Python2"]) or \
-                   file in py2files or \
-                   (ext in [".py", ".pyw"] and
-                    Preferences.getProject("DeterminePyFromProject") and
-                    self.__project.isOpen() and
-                    self.__project.isProjectFile(file) and
-                    self.__project.getProjectLanguage() in ["Python",
-                                                            "Python2"]):
-                    nok, fname, line, error = self.__py2check(file)
-                else:
-                    from . import Tabnanny
-                    nok, fname, line, error = Tabnanny.check(file, source)
-                if nok:
-                    self.noResults = False
-                    self.__createResultItem(fname, line, error.rstrip())
-                progress += 1
-                
-            self.checkProgress.setValue(progress)
+        
+        # now go through all the files
+        self.progress = 0
+        self.check()
+
+    def check(self, codestring=''):
+        """
+        Start a style check for one file.
+        
+        The results are reported to the __processResult slot.
+        @keyparam codestring optional sourcestring (str)
+        """
+        if not self.files:
             self.checkProgressLabel.setPath("")
-            QApplication.processEvents()
-            self.__resort()
-        else:
             self.checkProgress.setMaximum(1)
             self.checkProgress.setValue(1)
-        self.__finish()
+            self.__finish()
+            return
         
+        self.filename = self.files.pop(0)
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.filename)
+        QApplication.processEvents()
+        self.__resort()
+        
+        if self.cancelled:
+            return
+        
+        try:
+            self.source = Utilities.readEncodedFile(self.filename)[0]
+            self.source = Utilities.normalizeCode(self.source)
+        except (UnicodeError, IOError) as msg:
+            self.noResults = False
+            self.__createResultItem(
+                self.filename, 1,
+                "Error: {0}".format(str(msg)).rstrip())
+            self.progress += 1
+            # Continue with next file
+            self.check()
+            return
+
+        self.indentCheckService.indentCheck(
+            None, self.filename, self.source)
+
+    def __processResult(self, fn, nok, line, error):
+        """
+        Privat slot called after perfoming a style check on one file.
+        
+        @param fn filename of the just checked file (str)
+        @param nok flag if a problem was found (bool)
+        @param line line number (str)
+        @param error text of the problem (str)
+        """
+        # Check if it's the requested file, otherwise ignore signal
+        if fn != self.filename:
+            return
+        
+        if nok:
+            self.noResults = False
+            self.__createResultItem(fn, line, error.rstrip())
+        self.progress += 1
+        
+        self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath("")
+        QApplication.processEvents()
+        self.__resort()
+        
+        self.check()
+
     def __finish(self):
         """
         Private slot called when the action or the user pressed the button.
@@ -262,46 +278,3 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         lineno = int(itm.text(1))
         
         e5App().getObject("ViewManager").openSourceFile(fn, lineno)
-    
-    ###########################################################################
-    ## Python 2 interface below
-    ###########################################################################
-    
-    def __py2check(self, filename):
-        """
-        Private method to perform the indentation check for Python 2 files.
-        
-        @param filename name of the file to be checked (string)
-        @return A tuple indicating status (True = an error was found), the
-            filename, the linenumber and the error message
-            (boolean, string, string, string). The values are only
-            valid, if the status is True.
-        """
-        interpreter = Preferences.getDebugger("PythonInterpreter")
-        if interpreter == "" or not Utilities.isExecutable(interpreter):
-            return (True, filename, "1",
-                    self.tr("Python2 interpreter not configured."))
-        
-        checker = os.path.join(getConfig('ericDir'),
-                               "UtilitiesPython2", "TabnannyChecker.py")
-        
-        proc = QProcess()
-        proc.setProcessChannelMode(QProcess.MergedChannels)
-        proc.start(interpreter, [checker, filename])
-        finished = proc.waitForFinished(15000)
-        if finished:
-            output = str(proc.readAllStandardOutput(),
-                         Preferences.getSystem("IOEncoding"),
-                         'replace').splitlines()
-            
-            nok = output[0] == "ERROR"
-            if nok:
-                fn = output[1]
-                line = output[2]
-                error = output[3]
-                return (True, fn, line, error)
-            else:
-                return (False, None, None, None)
-        
-        return (True, filename, "1",
-                self.tr("Python2 interpreter did not finish within 15s."))

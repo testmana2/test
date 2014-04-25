@@ -8,7 +8,10 @@ Module implementing a dialog to show the output of the svn diff command
 process.
 """
 
+from __future__ import unicode_literals
+
 import os
+import sys
 
 import pysvn
 
@@ -37,7 +40,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SvnDiffDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
@@ -213,10 +216,13 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             recurse=recurse)
                         diff_list = []
                         for diff_sum in diff_summary:
+                            path = diff_sum['path']
+                            if sys.version_info[0] == 2:
+                                path = path.decode('utf-8')
                             diff_list.append("{0} {1}".format(
                                 self.__getDiffSummaryKind(
                                     diff_sum['summarize_kind']),
-                                diff_sum['path']))
+                                path))
                         diffText = os.linesep.join(diff_list)
                     else:
                         diffText = self.client.diff(
@@ -224,6 +230,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                             url1, revision1=rev1,
                             url_or_path2=url2, revision2=rev2,
                             recurse=recurse)
+                        if sys.version_info[0] == 2:
+                            diffText = diffText.decode('utf-8')
                 else:
                     if pegRev is not None:
                         diffText = self.client.diff_peg(
@@ -235,6 +243,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                         diffText = self.client.diff(
                             tmpdir, name,
                             revision1=rev1, revision2=rev2, recurse=recurse)
+                    if sys.version_info[0] == 2:
+                        diffText = diffText.decode('utf-8')
                 counter = 0
                 for line in diffText.splitlines():
                     if line.startswith("--- ") or \

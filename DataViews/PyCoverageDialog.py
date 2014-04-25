@@ -7,6 +7,8 @@
 Module implementing a Python code coverage dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt
@@ -34,7 +36,7 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(PyCoverageDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)

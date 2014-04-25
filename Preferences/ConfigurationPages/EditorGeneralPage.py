@@ -7,6 +7,8 @@
 Module implementing the Editor General configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.Qsci import QsciScintillaBase
 
 from .ConfigurationPageBase import ConfigurationPageBase
@@ -23,7 +25,7 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         """
         Constructor
         """
-        super().__init__()
+        super(EditorGeneralPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("EditorGeneralPage")
         

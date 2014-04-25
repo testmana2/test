@@ -7,6 +7,8 @@
 Module implementing the shelve extension project browser helper.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QMenu
 
 from E5Gui import E5MessageBox
@@ -26,7 +28,8 @@ class ShelveProjectBrowserHelper(HgExtensionProjectBrowserHelper):
         @param browserObject reference to the project browser object
         @param projectObject reference to the project object
         """
-        super().__init__(vcsObject, browserObject, projectObject)
+        super(ShelveProjectBrowserHelper, self).__init__(
+            vcsObject, browserObject, projectObject)
     
     def initMenus(self):
         """

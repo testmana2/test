@@ -7,6 +7,8 @@
 Module implementing a class to write login data files.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QXmlStreamWriter, QIODevice, QFile
 
 
@@ -18,7 +20,7 @@ class PasswordWriter(QXmlStreamWriter):
         """
         Constructor
         """
-        super().__init__()
+        super(PasswordWriter, self).__init__()
         
         self.setAutoFormatting(True)
     

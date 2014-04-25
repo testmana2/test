@@ -7,6 +7,8 @@
 Module implementing the Call Stack viewer widget.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, Qt, QFileInfo
 from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QMenu
 
@@ -36,7 +38,7 @@ class CallStackViewer(QTreeWidget):
         @param debugServer reference to the debug server object (DebugServer)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(CallStackViewer, self).__init__(parent)
         
         self.setHeaderHidden(True)
         self.setAlternatingRowColors(True)

@@ -7,6 +7,8 @@
 Module implementing the QFileDialog wizard plugin.
 """
 
+from __future__ import unicode_literals
+
 import re
 
 from PyQt4.QtCore import QObject
@@ -27,6 +29,7 @@ packageName = "__core__"
 shortDescription = "Show the QFileDialog wizard."
 longDescription = """This plugin shows the QFileDialog wizard."""
 pyqtApi = 2
+python2Compatible = True
 # End-Of-Header
 
 error = ""
@@ -42,7 +45,7 @@ class FileDialogWizard(QObject):
         
         @param ui reference to the user interface object (UI.UserInterface)
         """
-        super().__init__(ui)
+        super(FileDialogWizard, self).__init__(ui)
         self.__ui = ui
         
         self.__pyqtRe = re.compile(r"(?:import|from)\s+PyQt([45])")

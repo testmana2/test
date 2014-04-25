@@ -7,6 +7,8 @@
 Module implementing the Debugger Ruby configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -28,7 +30,7 @@ class DebuggerRubyPage(ConfigurationPageBase, Ui_DebuggerRubyPage):
         """
         Constructor
         """
-        super().__init__()
+        super(DebuggerRubyPage, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerRubyPage")
         

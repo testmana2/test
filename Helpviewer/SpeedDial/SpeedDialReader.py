@@ -8,6 +8,8 @@
 Module implementing a class to read speed dial data files.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QXmlStreamReader, QIODevice, QFile, QCoreApplication
 
 
@@ -19,7 +21,7 @@ class SpeedDialReader(QXmlStreamReader):
         """
         Constructor
         """
-        super().__init__()
+        super(SpeedDialReader, self).__init__()
     
     def read(self, fileNameOrDevice):
         """

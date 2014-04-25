@@ -4,6 +4,12 @@
 Module implementing Mercurial shelve browser dialog.
 """
 
+from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QPoint, QProcess, QTimer
@@ -31,7 +37,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
         @param vcs reference to the vcs object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgShelveBrowserDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
@@ -98,7 +104,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
             self.move(self.__position)
         self.__resetUI()
         
-        super().show()
+        super(HgShelveBrowserDialog, self).show()
     
     def __resetUI(self):
         """
@@ -446,7 +452,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
             self.intercept = False
             evt.accept()
             return
-        super().keyPressEvent(evt)
+        super(HgShelveBrowserDialog, self).keyPressEvent(evt)
     
     def __unshelve(self):
         """

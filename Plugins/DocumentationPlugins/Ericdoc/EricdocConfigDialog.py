@@ -7,6 +7,8 @@
 Module implementing a dialog to enter the parameters for eric5_doc.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import copy
@@ -38,7 +40,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         @param parms parameters to set in the dialog
         @param parent parent widget of this dialog
         """
-        super().__init__(parent)
+        super(EricdocConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.outputDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
@@ -567,4 +569,4 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             self.qtHelpGenerateCollectionCheckBox.isChecked()
         
         # call the accept slot of the base class
-        super().accept()
+        super(EricdocConfigDialog, self).accept()

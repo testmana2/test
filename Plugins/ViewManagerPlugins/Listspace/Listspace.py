@@ -7,6 +7,8 @@
 Module implementing the listspace viewmanager class.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSignal, QFileInfo, QEvent, Qt
@@ -31,7 +33,7 @@ class StackedWidget(QStackedWidget):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(StackedWidget, self).__init__(parent)
         
         self.editors = []
         
@@ -43,7 +45,7 @@ class StackedWidget(QStackedWidget):
             (QScintilla.EditorAssembly.EditorAssembly)
         """
         editor = assembly.getEditor()
-        super().addWidget(assembly)
+        super(StackedWidget, self).addWidget(assembly)
         if not editor in self.editors:
             self.editors.append(editor)
         
@@ -56,7 +58,7 @@ class StackedWidget(QStackedWidget):
         if isinstance(widget, QScintilla.Editor.Editor):
             self.editors.remove(widget)
             widget = widget.parent()
-        super().removeWidget(widget)
+        super(StackedWidget, self).removeWidget(widget)
         
     def currentWidget(self):
         """
@@ -64,7 +66,7 @@ class StackedWidget(QStackedWidget):
         
         @return reference to the current editor (Editor)
         """
-        widget = super().currentWidget()
+        widget = super(StackedWidget, self).currentWidget()
         if widget is not None:
             widget = widget.getEditor()
         return widget
@@ -79,7 +81,7 @@ class StackedWidget(QStackedWidget):
             self.editors.remove(widget)
             self.editors.insert(0, widget)
             widget = widget.parent()
-        super().setCurrentWidget(widget)
+        super(StackedWidget, self).setCurrentWidget(widget)
         
     def setCurrentIndex(self, index):
         """

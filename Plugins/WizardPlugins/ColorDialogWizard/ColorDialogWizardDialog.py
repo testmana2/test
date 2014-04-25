@@ -7,6 +7,8 @@
 Module implementing the color dialog wizard dialog.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot
@@ -30,7 +32,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
         
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ColorDialogWizardDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.bTest = self.buttonBox.addButton(

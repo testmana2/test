@@ -7,6 +7,8 @@
 Module implementing some common utility functions for the subversion package.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 import Utilities

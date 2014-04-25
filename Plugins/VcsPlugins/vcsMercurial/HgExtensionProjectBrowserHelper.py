@@ -8,6 +8,8 @@ Module implementing the project browser helper base for Mercurial extension
 interfaces.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QObject
 
 
@@ -27,7 +29,7 @@ class HgExtensionProjectBrowserHelper(QObject):
         @param browserObject reference to the project browser object
         @param projectObject reference to the project object
         """
-        super().__init__()
+        super(HgExtensionProjectBrowserHelper, self).__init__()
         
         self.vcs = vcsObject
         self.browser = browserObject

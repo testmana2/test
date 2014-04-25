@@ -3,6 +3,8 @@
 # Copyright (c) 2013 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+from __future__ import unicode_literals
+
 import logging
 
 def error(text, *argv):

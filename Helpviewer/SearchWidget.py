@@ -7,6 +7,8 @@
 Module implementing the search bar for the web browser.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QWidget, QPalette, QBrush, QColor
 from PyQt4.QtWebKit import QWebPage
@@ -27,7 +29,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         @param mainWindow reference to the main window (QMainWindow)
         @param parent parent widget of this dialog (QWidget)
         """
-        super().__init__(parent)
+        super(SearchWidget, self).__init__(parent)
         self.setupUi(self)
         
         self.__mainWindow = mainWindow

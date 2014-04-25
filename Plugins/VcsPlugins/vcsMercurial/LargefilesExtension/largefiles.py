@@ -7,6 +7,8 @@
 Module implementing the largefiles extension interface.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import QTimer
@@ -28,7 +30,7 @@ class Largefiles(HgExtension):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(Largefiles, self).__init__(vcs)
     
     def hgLfconvert(self, direction, projectFile):
         """

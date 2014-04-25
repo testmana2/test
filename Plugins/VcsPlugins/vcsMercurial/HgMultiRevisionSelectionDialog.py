@@ -7,6 +7,8 @@
 Module implementing a dialog to select revisions.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -34,7 +36,7 @@ class HgMultiRevisionSelectionDialog(
         @param limitDefault default value for the limit (integer)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgMultiRevisionSelectionDialog, self).__init__(parent)
         self.setupUi(self)
        
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

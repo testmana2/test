@@ -7,6 +7,8 @@
 Module implementing the Debugger Python3 configuration page.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -28,7 +30,7 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Constructor
         """
-        super().__init__()
+        super(DebuggerPython3Page, self).__init__()
         self.setupUi(self)
         self.setObjectName("DebuggerPython3Page")
         
@@ -39,8 +41,6 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
         
         # set initial values
-        self.customPyCheckBox.setChecked(
-            Preferences.getDebugger("CustomPython3Interpreter"))
         self.interpreterEdit.setText(
             Preferences.getDebugger("Python3Interpreter"))
         dct = Preferences.getDebugger("DebugClientType3")
@@ -63,9 +63,6 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         """
         Public slot to save the Debugger Python configuration.
         """
-        Preferences.setDebugger(
-            "CustomPython3Interpreter",
-            self.customPyCheckBox.isChecked())
         Preferences.setDebugger(
             "Python3Interpreter",
             self.interpreterEdit.text())

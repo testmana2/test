@@ -7,6 +7,8 @@
 Module implementing the transplant extension interface.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtGui import QDialog
@@ -25,7 +27,7 @@ class Transplant(HgExtension):
         
         @param vcs reference to the Mercurial vcs object
         """
-        super().__init__(vcs)
+        super(Transplant, self).__init__(vcs)
     
     def hgTransplant(self, path):
         """

@@ -7,6 +7,8 @@
 Module implementing the printer functionality.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import QTime, QDate, Qt
 from PyQt4.QtGui import QColor, QPrinter, QApplication
 from PyQt4.Qsci import QsciPrinter
@@ -24,7 +26,7 @@ class Printer(QsciPrinter):
         
         @param mode mode of the printer (QPrinter.PrinterMode)
         """
-        super().__init__(mode)
+        super(Printer, self).__init__(mode)
         
         self.setMagnification(Preferences.getPrinter("Magnification"))
         if Preferences.getPrinter("ColorMode"):

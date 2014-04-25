@@ -32,9 +32,6 @@ Module implementing a dialog to show the results of the code style check.
 <tr>
 <td><a href="#CodeStyleCheckerDialog">CodeStyleCheckerDialog</a></td>
 <td>Class implementing a dialog to show the results of the code style check.</td>
-</tr><tr>
-<td><a href="#CodeStyleCheckerReport">CodeStyleCheckerReport</a></td>
-<td>Class implementing a special report to be used with our dialog.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -72,6 +69,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td><a href="#CodeStyleCheckerDialog.__finish">__finish</a></td>
 <td>Private slot called when the code style check finished or the user pressed the cancel button.</td>
 </tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__getEol">__getEol</a></td>
+<td>Private method to get the applicable eol string.</td>
+</tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__getSelectedFixableItems">__getSelectedFixableItems</a></td>
 <td>Private method to extract all selected items for fixable issues.</td>
 </tr><tr>
@@ -80,6 +80,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__modifyFixedResultItem">__modifyFixedResultItem</a></td>
 <td>Private method to modify a result list entry to show its positive fixed state.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__processResult">__processResult</a></td>
+<td>Privat slot called after perfoming a style check on one file.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__resetStatistics">__resetStatistics</a></td>
 <td>Private slot to reset the statistics data.</td>
@@ -95,6 +98,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__updateStatistics">__updateStatistics</a></td>
 <td>Private method to update the collected statistics.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerDialog.check">check</a></td>
+<td>Start a style check for one file.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -151,11 +157,15 @@ QDialog, Ui_CodeStyleCheckerDialog
 </table>
 <a NAME="CodeStyleCheckerDialog.__init__" ID="CodeStyleCheckerDialog.__init__"></a>
 <h4>CodeStyleCheckerDialog (Constructor)</h4>
-<b>CodeStyleCheckerDialog</b>(<i>parent=None</i>)
+<b>CodeStyleCheckerDialog</b>(<i>styleCheckService, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>styleCheckService</i></dt>
+<dd>
+reference to the service
+            (CodeStyleCheckService)
+</dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
 </dd>
@@ -210,7 +220,22 @@ reference to the created item (QTreeWidgetItem)
 <p>
         Private slot called when the code style check finished or the user
         pressed the cancel button.
-</p><a NAME="CodeStyleCheckerDialog.__getSelectedFixableItems" ID="CodeStyleCheckerDialog.__getSelectedFixableItems"></a>
+</p><a NAME="CodeStyleCheckerDialog.__getEol" ID="CodeStyleCheckerDialog.__getEol"></a>
+<h4>CodeStyleCheckerDialog.__getEol</h4>
+<b>__getEol</b>(<i>fn</i>)
+<p>
+        Private method to get the applicable eol string.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename where to determine the line ending (str)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+eol string (string)
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__getSelectedFixableItems" ID="CodeStyleCheckerDialog.__getSelectedFixableItems"></a>
 <h4>CodeStyleCheckerDialog.__getSelectedFixableItems</h4>
 <b>__getSelectedFixableItems</b>(<i></i>)
 <p>
@@ -251,6 +276,27 @@ text to be appended (string)
 </dd><dt><i>fixed</i></dt>
 <dd>
 flag indicating a fixed issue (boolean)
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__processResult" ID="CodeStyleCheckerDialog.__processResult"></a>
+<h4>CodeStyleCheckerDialog.__processResult</h4>
+<b>__processResult</b>(<i>fn, codeStyleCheckerStats, fixes, results</i>)
+<p>
+        Privat slot called after perfoming a style check on one file.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the just checked file (str)
+</dd><dt><i>codeStyleCheckerStats</i></dt>
+<dd>
+stats of style and name check (dict)
+</dd><dt><i>fixes</i></dt>
+<dd>
+number of applied fixes (int)
+</dd><dt><i>results</i></dt>
+<dd>
+tuple for each found violation of style (tuple of
+            lineno (int), position (int), text (str), ignored (bool),
+            fixed (bool), autofixing (bool))
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__resetStatistics" ID="CodeStyleCheckerDialog.__resetStatistics"></a>
 <h4>CodeStyleCheckerDialog.__resetStatistics</h4>
@@ -303,6 +349,21 @@ reference to the code style fixer (CodeStyleFixer)
 <dd>
 number of ignored errors (integer)
 </dd>
+</dl><a NAME="CodeStyleCheckerDialog.check" ID="CodeStyleCheckerDialog.check"></a>
+<h4>CodeStyleCheckerDialog.check</h4>
+<b>check</b>(<i>codestring='', onlyFixes={}</i>)
+<p>
+        Start a style check for one file.
+</p><p>
+        The results are reported to the __processResult slot.
+</p><dl>
+<dt><i>codestring=</i></dt>
+<dd>
+optional sourcestring (str)
+</dd><dt><i>onlyFixes=</i></dt>
+<dd>
+dict which violations should be fixed (dict)
+</dd>
 </dl><a NAME="CodeStyleCheckerDialog.on_buttonBox_clicked" ID="CodeStyleCheckerDialog.on_buttonBox_clicked"></a>
 <h4>CodeStyleCheckerDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
@@ -324,6 +385,9 @@ button that was clicked (QAbstractButton)
 <b>on_fixButton_clicked</b>(<i></i>)
 <p>
         Private slot to fix selected issues.
+</p><p>
+        Build a dictionary of issues to fix. Update the initialized __options.
+            Then call check with the dict as keyparam to fix selected issues.
 </p><a NAME="CodeStyleCheckerDialog.on_fixIssuesSelectButton_clicked" ID="CodeStyleCheckerDialog.on_fixIssuesSelectButton_clicked"></a>
 <h4>CodeStyleCheckerDialog.on_fixIssuesSelectButton_clicked</h4>
 <b>on_fixIssuesSelectButton_clicked</b>(<i></i>)
@@ -422,75 +486,6 @@ flag indicating to save the given
 <dd>
 state of the repeat check box if it is not None
             (None or boolean)
-</dd>
-</dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="CodeStyleCheckerReport" ID="CodeStyleCheckerReport"></a>
-<h2>CodeStyleCheckerReport</h2>
-<p>
-    Class implementing a special report to be used with our dialog.
-</p>
-<h3>Derived from</h3>
-pep8.BaseReport
-<h3>Class Attributes</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Class Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<h3>Methods</h3>
-<table>
-<tr>
-<td><a href="#CodeStyleCheckerReport.__init__">CodeStyleCheckerReport</a></td>
-<td>Constructor</td>
-</tr><tr>
-<td><a href="#CodeStyleCheckerReport.error_args">error_args</a></td>
-<td>Public method to collect the error messages.</td>
-</tr>
-</table>
-<h3>Static Methods</h3>
-<table>
-<tr><td>None</td></tr>
-</table>
-<a NAME="CodeStyleCheckerReport.__init__" ID="CodeStyleCheckerReport.__init__"></a>
-<h4>CodeStyleCheckerReport (Constructor)</h4>
-<b>CodeStyleCheckerReport</b>(<i>options</i>)
-<p>
-        Constructor
-</p><dl>
-<dt><i>options</i></dt>
-<dd>
-options for the report (optparse.Values)
-</dd>
-</dl><a NAME="CodeStyleCheckerReport.error_args" ID="CodeStyleCheckerReport.error_args"></a>
-<h4>CodeStyleCheckerReport.error_args</h4>
-<b>error_args</b>(<i>line_number, offset, code, check, *args</i>)
-<p>
-        Public method to collect the error messages.
-</p><dl>
-<dt><i>line_number</i></dt>
-<dd>
-line number of the issue (integer)
-</dd><dt><i>offset</i></dt>
-<dd>
-position within line of the issue (integer)
-</dd><dt><i>code</i></dt>
-<dd>
-message code (string)
-</dd><dt><i>check</i></dt>
-<dd>
-reference to the checker function (function)
-</dd><dt><i>args</i></dt>
-<dd>
-arguments for the message (list)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-error code (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

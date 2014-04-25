@@ -7,6 +7,8 @@
 Module implementing a dialog to enter data to fold patches.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem
 
@@ -26,7 +28,7 @@ class HgQueuesFoldDialog(QDialog, Ui_HgQueuesFoldDialog):
         @param patchesList list of patches to select from (list of strings)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgQueuesFoldDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.addButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))

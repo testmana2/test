@@ -7,6 +7,8 @@
 Module implementing a dialog to show and edit bookmark properties.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtGui import QDialog
 
 from .Ui_BookmarkPropertiesDialog import Ui_BookmarkPropertiesDialog
@@ -23,7 +25,7 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
         @param node reference to the bookmark (BookmarkNode)
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(BookmarkPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
         from .BookmarkNode import BookmarkNode
@@ -45,7 +47,7 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
         if (self.__node.type() == BookmarkNode.Bookmark and
             not self.addressEdit.text()) or \
            not self.nameEdit.text():
-            super().accept()
+            super(BookmarkPropertiesDialog, self).accept()
             return
         
         import Helpviewer.HelpWindow
@@ -62,4 +64,4 @@ class BookmarkPropertiesDialog(QDialog, Ui_BookmarkPropertiesDialog):
             self.__node.desc = description
             bookmarksManager.setNodeChanged(self.__node)
         
-        super().accept()
+        super(BookmarkPropertiesDialog, self).accept()

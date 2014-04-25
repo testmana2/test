@@ -8,6 +8,8 @@ Module implementing the QtHelp generator for the builtin documentation
 generator.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import os
 import shutil

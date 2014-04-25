@@ -7,6 +7,8 @@
 Module implementing a graphical Python shell.
 """
 
+from __future__ import unicode_literals
+
 import sys
 import re
 
@@ -40,7 +42,7 @@ class ShellAssembly(QWidget):
         @param horizontal flag indicating a horizontal layout (boolean)
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(ShellAssembly, self).__init__(parent)
         
         self.__shell = Shell(dbs, vm, self)
         
@@ -98,7 +100,7 @@ class Shell(QsciScintillaCompat):
         @param vm reference to the viewmanager object
         @param parent parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(Shell, self).__init__(parent)
         self.setUtf8(True)
         
         self.vm = vm
@@ -621,7 +623,7 @@ class Shell(QsciScintillaCompat):
         @param platform platform of the remote interpreter (string)
         @param dbgclient debug client variant used (string)
         """
-        super().clear()
+        super(Shell, self).clear()
         if self.passive and not self.dbs.isConnected():
             self.__write(self.tr('Passive Debug Mode'))
             self.__write(self.tr('\nNot connected'))
@@ -814,7 +816,7 @@ class Shell(QsciScintillaCompat):
         if event.button() == Qt.MidButton:
             self.__middleMouseButton()
         else:
-            super().mousePressEvent(event)
+            super(Shell, self).mousePressEvent(event)
         
     def wheelEvent(self, evt):
         """
@@ -830,7 +832,7 @@ class Shell(QsciScintillaCompat):
             evt.accept()
             return
         
-        super().wheelEvent(evt)
+        super(Shell, self).wheelEvent(evt)
     
     def event(self, evt):
         """
@@ -843,7 +845,7 @@ class Shell(QsciScintillaCompat):
             self.gestureEvent(evt)
             return True
         
-        return super().event(evt)
+        return super(Shell, self).event(evt)
     
     def gestureEvent(self, evt):
         """
@@ -905,7 +907,7 @@ class Shell(QsciScintillaCompat):
                 self.prline, self.prcol = self.getCursorPosition()
             if self.echoInput:
                 ac = self.isListActive()
-                super().keyPressEvent(ev)
+                super(Shell, self).keyPressEvent(ev)
                 self.incrementalSearchActive = True
                 if ac and \
                    self.racEnabled:
@@ -1511,7 +1513,7 @@ class Shell(QsciScintillaCompat):
         if self.inDragDrop:
             event.acceptProposedAction()
         else:
-            super().dragEnterEvent(event)
+            super(Shell, self).dragEnterEvent(event)
         
     def dragMoveEvent(self, event):
         """
@@ -1522,7 +1524,7 @@ class Shell(QsciScintillaCompat):
         if self.inDragDrop:
             event.accept()
         else:
-            super().dragMoveEvent(event)
+            super(Shell, self).dragMoveEvent(event)
         
     def dragLeaveEvent(self, event):
         """
@@ -1534,7 +1536,7 @@ class Shell(QsciScintillaCompat):
             self.inDragDrop = False
             event.accept()
         else:
-            super().dragLeaveEvent(event)
+            super(Shell, self).dragLeaveEvent(event)
         
     def dropEvent(self, event):
         """
@@ -1562,7 +1564,7 @@ class Shell(QsciScintillaCompat):
                 self.executeLines(s)
             del s
         else:
-            super().dropEvent(event)
+            super(Shell, self).dropEvent(event)
         
         self.inDragDrop = False
         
@@ -1600,7 +1602,7 @@ class Shell(QsciScintillaCompat):
         self.setCaretWidth(self.caretWidth)
         self.setCursorFlashTime(QApplication.cursorFlashTime())
         
-        super().focusInEvent(event)
+        super(Shell, self).focusInEvent(event)
         
     def focusOutEvent(self, event):
         """
@@ -1616,7 +1618,7 @@ class Shell(QsciScintillaCompat):
         self.__searchNextShortcut.setEnabled(False)
         self.__searchPrevShortcut.setEnabled(False)
         self.setCaretWidth(0)
-        super().focusOutEvent(event)
+        super(Shell, self).focusOutEvent(event)
         
     def insert(self, txt):
         """

@@ -9,6 +9,8 @@ Parse a JavaScript file and retrieve variables and functions.
 It uses the JavaScript parser contained in the jasy web framework.
 """
 
+from __future__ import unicode_literals
+
 import jasy.js.parse.Parser as jsParser
 import jasy.js.tokenize.Tokenizer as jsTokenizer
 

@@ -7,6 +7,8 @@
 Module implementing a dialog to enter a series of revisions.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -23,7 +25,7 @@ class LfRevisionsInputDialog(QDialog, Ui_LfRevisionsInputDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(LfRevisionsInputDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)

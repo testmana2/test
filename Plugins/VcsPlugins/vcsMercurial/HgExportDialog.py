@@ -7,6 +7,8 @@
 Module implementing a dialog to enter data for the Mercurial export command.
 """
 
+from __future__ import unicode_literals
+
 import os
 
 from PyQt4.QtCore import pyqtSlot, QDir
@@ -31,7 +33,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(HgExportDialog, self).__init__(parent)
         self.setupUi(self)
         
         self.directoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))

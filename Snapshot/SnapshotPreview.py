@@ -7,6 +7,8 @@
 Module implementing the snapshot preview label.
 """
 
+from __future__ import unicode_literals
+
 from PyQt4.QtCore import pyqtSignal, QPoint, Qt
 from PyQt4.QtGui import QLabel, QApplication
 
@@ -25,7 +27,7 @@ class SnapshotPreview(QLabel):
         
         @param parent reference to the parent widget (QWidget)
         """
-        super().__init__(parent)
+        super(SnapshotPreview, self).__init__(parent)
         
         self.setAlignment(Qt.AlignHCenter | Qt.AlignCenter)
         self.setCursor(Qt.OpenHandCursor)
