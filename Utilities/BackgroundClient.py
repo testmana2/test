@@ -50,7 +50,7 @@ class BackgroundClient(object):
         @param module name to import (str)
         @return text result of the import action (str)
         """
-        sys.path.append(path)
+        sys.path.insert(1, path)
         try:
             importedModule = __import__(module, globals(), locals(), [], 0)
             self.services[fn] = importedModule.initService()
