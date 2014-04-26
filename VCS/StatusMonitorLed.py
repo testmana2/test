@@ -130,7 +130,7 @@ class StatusMonitorLed(E5ClickableLed):
         """
         Private slot to change the status check interval.
         """
-        interval,  ok = QInputDialog.getInt(
+        interval, ok = QInputDialog.getInt(
             None,
             self.tr("VCS Status Monitor"),
             self.tr("Enter monitor interval [s]"),

@@ -425,7 +425,7 @@ class PreviewProcessingThread(QThread):
             extensions.append(_StrikeThroughExtension())
 
         try:
-            return markdown.markdown(text,  extensions + ['mathjax'])
+            return markdown.markdown(text, extensions + ['mathjax'])
         except (ImportError, ValueError):
             # markdown raises ValueError or ImportError, depends on version
             # It is not clear, how to distinguish missing mathjax from other

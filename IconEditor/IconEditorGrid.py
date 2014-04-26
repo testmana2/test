@@ -422,7 +422,7 @@ class IconEditorGrid(QWidget):
             j = 0
             while j <= self.__image.height():
                 painter.drawLine(
-                    0,  self.__zoom * j,
+                    0, self.__zoom * j,
                     self.__zoom * self.__image.width(), self.__zoom * j)
                 j += 1
         

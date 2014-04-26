@@ -1992,7 +1992,7 @@
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>E24, W293, N802, N803, N807, N808, N821</string>
+              <string>W293, N802, N803, N807, N808, N821</string>
             </value>
             <key>
               <string>FixCodes</string>

@@ -137,7 +137,7 @@ class Prefs(object):
                 QByteArray(),
                 # visibility of the toolboxes/sidebars (1)
                 # left, bottom, right
-                [True,  True, True],
+                [True, True, True],
                 # saved states of the splitters and sidebars of the
                 # sidebars layout (2)
                 # left splitter, vertical splitter, left sidebar,
@@ -150,7 +150,7 @@ class Prefs(object):
                 QByteArray(),
                 # visibility of the toolboxes/sidebars (1)
                 # left, bottom, right
-                [False,  True, True],
+                [False, True, True],
                 # saved states of the splitters and sidebars of the
                 # sidebars layout (2)
                 # left splitter, vertical splitter, left sidebar,

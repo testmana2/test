@@ -81,7 +81,7 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         
         self.actionsTree.header().hide()
         self.__separatorText = self.tr("--Separator--")
-        itm = QTreeWidgetItem(self.actionsTree,  [self.__separatorText])
+        itm = QTreeWidgetItem(self.actionsTree, [self.__separatorText])
         self.actionsTree.setCurrentItem(itm)
         
         for category in sorted(self.__manager.categories()):

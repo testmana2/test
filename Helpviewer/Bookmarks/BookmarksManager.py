@@ -226,7 +226,7 @@ class BookmarksManager(QObject):
         if not self.__loaded:
             return
         
-        self.setTimestamp(node,  BookmarkNode.TsAdded,
+        self.setTimestamp(node, BookmarkNode.TsAdded,
                           QDateTime.currentDateTime())
         
         command = InsertBookmarksCommand(self, parent, node, row)

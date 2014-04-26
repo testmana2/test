@@ -871,7 +871,7 @@ class DocStyleChecker(object):
         if "return" not in docstringContext.ssource().lower():
             tokens = list(
                 tokenize.generate_tokens(StringIO(context.ssource()).readline))
-            return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+            return_ = [tokens[i + 1][0] for i, token in enumerate(tokens)
                        if token[1] == "return"]
             if (set(return_) -
                     set([tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE]) !=
@@ -1035,7 +1035,7 @@ class DocStyleChecker(object):
         
         tokens = list(
             tokenize.generate_tokens(StringIO(context.ssource()).readline))
-        return_ = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+        return_ = [tokens[i + 1][0] for i, token in enumerate(tokens)
                    if token[1] in ("return", "yield")]
         if "@return" not in docstringContext.ssource():
             if (set(return_) -
@@ -1111,7 +1111,7 @@ class DocStyleChecker(object):
         
         tokens = list(
             tokenize.generate_tokens(StringIO(context.ssource()).readline))
-        exception = [tokens[i + 1][0] for i,  token in enumerate(tokens)
+        exception = [tokens[i + 1][0] for i, token in enumerate(tokens)
                      if token[1] == "raise"]
         if "@exception" not in docstringContext.ssource() and \
                 "@throws" not in docstringContext.ssource() and \

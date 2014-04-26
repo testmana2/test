@@ -1827,7 +1827,7 @@ class HelpBrowser(QWebView):
         """
         self.mw.statusBar().showMessage(text)
     
-    def __linkHovered(self, link,  title, textContent):
+    def __linkHovered(self, link, title, textContent):
         """
         Private slot to handle the linkHovered signal.
         

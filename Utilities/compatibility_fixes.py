@@ -32,7 +32,7 @@ def open(file, mode='r', buffering=-1, encoding=None,
         parameter (boolean)
     @return Returns the new file object
     """
-    return File(file, mode, buffering,  encoding, errors, newline, closefd)
+    return File(file, mode, buffering, encoding, errors, newline, closefd)
 
 
 class File(file):   # __IGNORE_WARNING__
@@ -76,7 +76,7 @@ class File(file):   # __IGNORE_WARNING__
 
         file.__init__(self, filein,  mode,  buffering)    # __IGNORE_WARNING__
 
-    def read(self,  n=-1):
+    def read(self, n=-1):
         """
         Read n bytes or all if n=-1 from file.
         
@@ -87,9 +87,9 @@ class File(file):   # __IGNORE_WARNING__
         if self.__encoding is None:
             return txt
         else:
-            return codecs.decode(txt,  self.__encoding)
+            return codecs.decode(txt, self.__encoding)
 
-    def readline(self,  limit=-1):
+    def readline(self, limit=-1):
         """
         Read one line from file.
         
@@ -100,9 +100,9 @@ class File(file):   # __IGNORE_WARNING__
         if self.__encoding is None:
             return txt
         else:
-            return codecs.decode(txt,  self.__encoding)
+            return codecs.decode(txt, self.__encoding)
 
-    def readlines(self,  hint=-1):
+    def readlines(self, hint=-1):
         """
         Read all lines from file.
         
@@ -112,10 +112,10 @@ class File(file):   # __IGNORE_WARNING__
         if self.__encoding is None:
             return super(File, self).readlines(hint)
         else:
-            return [codecs.decode(txt,  self.__encoding)
+            return [codecs.decode(txt, self.__encoding)
                     for txt in super(File, self).readlines(hint)]
 
-    def write(self,  txt):
+    def write(self, txt):
         """
         Write given data to file. Encode if needed.
         
@@ -139,7 +139,7 @@ class File(file):   # __IGNORE_WARNING__
         if self.__encoding is None:
             return txt
         else:
-            return codecs.decode(txt,  self.__encoding)
+            return codecs.decode(txt, self.__encoding)
 
 # Inject into the __builtin__ dictionary
 __builtin__.open = open

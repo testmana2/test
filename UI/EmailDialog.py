@@ -299,7 +299,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
                     server.login(Preferences.getUser("MailServerUser"),
                                  password)
                 except (smtplib.SMTPException, socket.error) as e:
-                    if isinstance(e,  smtplib.SMTPResponseException):
+                    if isinstance(e, smtplib.SMTPResponseException):
                         errorStr = e.smtp_error.decode()
                     elif isinstance(e, socket.error):
                         errorStr = e[1]
@@ -325,7 +325,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
             QApplication.restoreOverrideCursor()
         except (smtplib.SMTPException, socket.error) as e:
             QApplication.restoreOverrideCursor()
-            if isinstance(e,  smtplib.SMTPResponseException):
+            if isinstance(e, smtplib.SMTPResponseException):
                 errorStr = e.smtp_error.decode()
             elif isinstance(e, socket.error):
                 errorStr = e[1]

@@ -50,18 +50,18 @@ class Subversion(VersionControl):
         """
         VersionControl.__init__(self, parent, name)
         self.defaultOptions = {
-            'global':   [''],
-            'commit':   [''],
+            'global': [''],
+            'commit': [''],
             'checkout': [''],
-            'update':   [''],
-            'add':      [''],
-            'remove':   [''],
-            'diff':     [''],
-            'log':      [''],
-            'history':  [''],
-            'status':   [''],
-            'tag':      [''],
-            'export':   ['']
+            'update': [''],
+            'add': [''],
+            'remove': [''],
+            'diff': [''],
+            'log': [''],
+            'history': [''],
+            'status': [''],
+            'tag': [''],
+            'export': ['']
         }
         self.interestingDataKeys = [
             "standardLayout",

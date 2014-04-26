@@ -313,7 +313,7 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                 if thisindent > conditionalsstack[-1]:
                     if not deltaindentcalculated:
                         deltastack.append(thisindent - conditionalsstack[-1])
-                        deltaindent = reduce(lambda x, y:  x + y, deltastack)
+                        deltaindent = reduce(lambda x, y: x + y, deltastack)
                         deltaindentcalculated = 1
                     thisindent -= deltaindent
                 else:

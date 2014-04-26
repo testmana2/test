@@ -285,7 +285,7 @@ class SpellChecker(QObject):
         @param startPos position to start at (integer)
         @param endPos position to end at (integer)
         """
-        if not self.initCheck(startPos,  endPos):
+        if not self.initCheck(startPos, endPos):
             return
         
         while True:

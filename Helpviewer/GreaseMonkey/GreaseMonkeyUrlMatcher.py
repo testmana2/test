@@ -109,6 +109,6 @@ class GreaseMonkeyUrlMatcher(object):
             pattern = re.sub(r"\.tld", r"\.[a-z.]{2,6}")
             
             self.__useRegExp = True
-            self.__regExp = QRegExp(pattern,  Qt.CaseInsensitive)
+            self.__regExp = QRegExp(pattern, Qt.CaseInsensitive)
         else:
             self.__matchString = pattern

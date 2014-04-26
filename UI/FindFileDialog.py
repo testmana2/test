@@ -153,7 +153,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
             self.__lastFileItem.setData(0, self.md5Role, md5)
         
         itm = QTreeWidgetItem(self.__lastFileItem)
-        itm.setTextAlignment(0,  Qt.AlignRight)
+        itm.setTextAlignment(0, Qt.AlignRight)
         itm.setData(0, Qt.DisplayRole, line)
         itm.setData(1, Qt.DisplayRole, text)
         itm.setData(0, self.lineRole, line)

@@ -10,7 +10,7 @@ Module implementing the Call Trace viewer widget.
 from __future__ import unicode_literals
 
 from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QRegExp, QFileInfo
-from PyQt4.QtGui import QWidget,  QTreeWidgetItem
+from PyQt4.QtGui import QWidget, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox

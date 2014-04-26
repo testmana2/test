@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import smtplib
 import socket
 
-from PyQt4.QtCore import pyqtSlot,  Qt
+from PyQt4.QtCore import pyqtSlot, Qt
 from PyQt4.QtGui import QApplication, QCursor
 
 from E5Gui import E5MessageBox
@@ -139,7 +139,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
                     self.tr("""The login test succeeded."""))
             except (smtplib.SMTPException, socket.error) as e:
                 QApplication.restoreOverrideCursor()
-                if isinstance(e,  smtplib.SMTPResponseException):
+                if isinstance(e, smtplib.SMTPResponseException):
                     errorStr = e.smtp_error.decode()
                 elif isinstance(e, socket.timeout):
                     errorStr = str(e)
@@ -159,7 +159,7 @@ class EmailPage(ConfigurationPageBase, Ui_EmailPage):
             server.quit()
         except (smtplib.SMTPException, socket.error) as e:
             QApplication.restoreOverrideCursor()
-            if isinstance(e,  smtplib.SMTPResponseException):
+            if isinstance(e, smtplib.SMTPResponseException):
                 errorStr = e.smtp_error.decode()
             elif isinstance(e, socket.timeout):
                 errorStr = str(e)

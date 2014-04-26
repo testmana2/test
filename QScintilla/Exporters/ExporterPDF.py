@@ -36,7 +36,7 @@ PDFfontNames = [
 ]
 PDFfontAscenders = [629, 718, 699]
 PDFfontDescenders = [157, 207, 217]
-PDFfontWidths = [600,   0,   0]
+PDFfontWidths = [600, 0, 0]
 
 PDFpageSizes = {
     # name   : (height, width)

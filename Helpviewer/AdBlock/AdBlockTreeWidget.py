@@ -148,7 +148,7 @@ class AdBlockTreeWidget(E5TreeWidget):
            item == self.__topItem:
             return
         
-        offset = item.data(0,  Qt.UserRole)
+        offset = item.data(0, Qt.UserRole)
         self.__subscription.removeRule(offset)
         self.deleteItem(item)
     

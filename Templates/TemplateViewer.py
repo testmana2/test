@@ -741,7 +741,7 @@ class TemplateViewer(QTreeWidget):
                 for aline in txt.splitlines():
                     count = aline.find("i_n_s_e_r_t_i_o_n")
                     if count >= 0:
-                        txt = txt.replace("i_n_s_e_r_t_i_o_n",  "")
+                        txt = txt.replace("i_n_s_e_r_t_i_o_n", "")
                         if lines == 1:
                             count += index
                         else:
@@ -758,7 +758,7 @@ class TemplateViewer(QTreeWidget):
                 for aline in txt.splitlines():
                     posa = aline.find("s_e_l_e_c_t_s_t_a_r_t")
                     if posa >= 0:
-                        txt = txt.replace("s_e_l_e_c_t_s_t_a_r_t",  "")
+                        txt = txt.replace("s_e_l_e_c_t_s_t_a_r_t", "")
                         break
                     else:
                         linea += 1
@@ -766,7 +766,7 @@ class TemplateViewer(QTreeWidget):
                 for aline in txt.splitlines():
                     posb = aline.find("s_e_l_e_c_t_e_n_d")
                     if posb >= 0:
-                        txt = txt.replace("s_e_l_e_c_t_e_n_d",  "")
+                        txt = txt.replace("s_e_l_e_c_t_e_n_d", "")
                         break
                     else:
                         lineb += 1

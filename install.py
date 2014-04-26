@@ -16,7 +16,7 @@ try:
     import sip
     sip.setapi('QString', 2)
     sip.setapi('QVariant', 2)
-    sip.setapi('QTextStream',  2)
+    sip.setapi('QTextStream', 2)
 except (ImportError):
     import io    # __IGNORE_WARNING__
 

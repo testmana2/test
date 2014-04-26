@@ -62,7 +62,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
 
-    def setKeys(self, key, alternateKey,  noCheck, objectType):
+    def setKeys(self, key, alternateKey, noCheck, objectType):
         """
         Public method to set the key to be configured.
         

@@ -564,7 +564,7 @@ class Module(object):
                             deltastack.append(
                                 thisindent - conditionalsstack[-1])
                             deltaindent = reduce(
-                                lambda x, y:  x + y, deltastack)
+                                lambda x, y: x + y, deltastack)
                             deltaindentcalculated = 1
                         thisindent -= deltaindent
                     else:
@@ -664,7 +664,7 @@ class Module(object):
                 while classstack and \
                         classstack[-1][1] >= thisindent:
                     if classstack[-1][0] is not None and \
-                       isinstance(classstack[-1][0], (Class,  Function)):
+                       isinstance(classstack[-1][0], (Class, Function)):
                         # record the end line of this class or function
                         classstack[-1][0].setEndLine(lineno - 1)
                     del classstack[-1]
