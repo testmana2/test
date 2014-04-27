@@ -872,7 +872,7 @@ def doDependancyChecks():
         print('Sorry, you must have Python 3.1.0 or higher.')
         exit(5)
     if sys.version_info > (3, 9, 9):
-        print('Sorry, eric5 requires Python 3 for running.')
+        print('Sorry, eric5 requires Python 3 or Python 2 for running.')
         exit(5)
     print("Python Version: {0:d}.{1:d}.{2:d}".format(*sys.version_info[:3]))
     
@@ -1122,7 +1122,7 @@ def main(argv):
         if sys.platform.startswith("win"):
             optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:")
         elif sys.platform == "darwin":
-            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:m:p:")
+            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:m:n:p:")
         else:
             optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:")
     except getopt.GetoptError:
