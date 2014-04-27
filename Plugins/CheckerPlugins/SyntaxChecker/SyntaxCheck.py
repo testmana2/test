@@ -165,7 +165,7 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
     results = []
     lines = codestring.splitlines()
     try:
-        warnings = Checker(module, filename)
+        warnings = Checker(module, filename, withDoctest=True)
         warnings.messages.sort(key=lambda a: a.lineno)
         for warning in warnings.messages:
             if ignoreStarImportWarnings and \

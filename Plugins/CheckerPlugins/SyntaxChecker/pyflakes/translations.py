@@ -54,6 +54,9 @@ _messages = {
     'F13': QCoreApplication.translate(
         'pyFlakes',
         'Syntax error detected in doctest.'),
+    'F14': QCoreApplication.translate(
+        'pyFlakes',
+        "'return' with argument inside generator"),
 }
 
 

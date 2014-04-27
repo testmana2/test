@@ -8,7 +8,7 @@
 # be integrated into eric5
 
 """
-Module implementing the messages for pyflakes.
+Module providing the class Message and its subclasses.
 """
 
 
@@ -19,7 +19,7 @@ class Message(object):
     message_id = 'F00'
     message = ''
     message_args = ()
-    
+
     def __init__(self, filename, loc):
         """
         Constructor
@@ -30,7 +30,7 @@ class Message(object):
         self.filename = filename
         self.lineno = loc.lineno
         self.col = getattr(loc, 'col_offset', 0)
-    
+
     def __str__(self):
         """
         Special method return a string representation of the instance object.
@@ -57,7 +57,7 @@ class UnusedImport(Message):
     """
     message_id = 'F01'
     message = '%r imported but unused'
-    
+
     def __init__(self, filename, loc, name):
         """
         Constructor
@@ -76,7 +76,7 @@ class RedefinedWhileUnused(Message):
     """
     message_id = 'F02'
     message = 'redefinition of unused %r from line %r'
-    
+
     def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
@@ -116,7 +116,7 @@ class ImportShadowedByLoopVar(Message):
     """
     message_id = 'F03'
     message = 'import %r from line %r shadowed by loop variable'
-    
+
     def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
@@ -136,7 +136,7 @@ class ImportStarUsed(Message):
     """
     message_id = 'F04'
     message = "'from %s import *' used; unable to detect undefined names"
-    
+
     def __init__(self, filename, loc, modname):
         """
         Constructor
@@ -155,7 +155,7 @@ class UndefinedName(Message):
     """
     message_id = 'F05'
     message = 'undefined name %r'
-    
+
     def __init__(self, filename, loc, name):
         """
         Constructor
@@ -195,7 +195,7 @@ class UndefinedExport(Message):
     """
     message_id = 'F06'
     message = 'undefined name %r in __all__'
-    
+
     def __init__(self, filename, loc, name):
         """
         Constructor
@@ -213,9 +213,9 @@ class UndefinedLocal(Message):
     Class defining the "Undefined Local Variable" message.
     """
     message_id = 'F07'
-    message = "local variable %r (defined in enclosing scope on line %r)" \
-              " referenced before assignment"
-    
+    message = ('local variable %r (defined in enclosing scope on line %r) '
+               'referenced before assignment')
+
     def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
@@ -235,7 +235,7 @@ class DuplicateArgument(Message):
     """
     message_id = 'F08'
     message = 'duplicate argument %r in function definition'
-    
+
     def __init__(self, filename, loc, name):
         """
         Constructor
@@ -254,7 +254,7 @@ class Redefined(Message):
     """
     message_id = 'F09'
     message = 'redefinition of %r from line %r'
-    
+
     def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
@@ -274,7 +274,7 @@ class LateFutureImport(Message):
     """
     message_id = 'F10'
     message = 'future import(s) %r after other statements'
-    
+
     def __init__(self, filename, loc, names):
         """
         Constructor
@@ -296,7 +296,7 @@ class UnusedVariable(Message):
     """
     message_id = 'F11'
     message = 'local variable %r is assigned to but never used'
-    
+
     def __init__(self, filename, loc, names):
         """
         Constructor
@@ -307,3 +307,13 @@ class UnusedVariable(Message):
         """
         Message.__init__(self, filename, loc)
         self.message_args = (names,)
+
+
+class ReturnWithArgsInsideGenerator(Message):
+    """
+    Class defining the "Return values in generator" message.
+    
+    Indicates a return statement with arguments inside a generator.
+    """
+    message_id = 'F14'
+    message = '\'return\' with argument inside generator'

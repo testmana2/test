@@ -9,7 +9,7 @@ Package containg pyflakes adapted for Qt.
 
 """ License
 Copyright 2005-2011 Divmod, Inc.
-Copyright 2013 Florent Xicluna
+Copyright 2013-2014 Florent Xicluna
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -32,6 +32,32 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 """ Changes
+0.8.1 (2014-03-30):
+  - Detect the declared encoding in Python 3.
+  - Do not report redefinition of import in a local scope, if the
+    global name is used elsewhere in the module.
+  - Catch undefined variable in loop generator when it is also used as
+    loop variable.
+  - Report undefined name for `(a, b) = (1, 2)` but not for the general
+    unpacking `(a, b) = func()`.
+  - Correctly detect when an imported module is used in default arguments
+    of a method, when the method and the module use the same name.
+  - Distribute a universal wheel file.
+
+0.8.0 (2014-03-22):
+  - Adapt for the AST in Python 3.4.
+  - Fix caret position on SyntaxError.
+  - Fix crash on Python 2.x with some doctest SyntaxError.
+  - Add tox.ini.
+  - The `PYFLAKES_NODOCTEST` environment variable has been replaced with the
+    `PYFLAKES_DOCTEST` environment variable (with the opposite meaning).
+    Doctest checking is now disabled by default; set the environment variable
+    to enable it.
+  - Correctly parse incremental `__all__ += [...]`.
+  - Catch return with arguments inside a generator (Python <= 3.2).
+  - Do not complain about `_` in doctests.
+  - Drop deprecated methods `pushFunctionScope` and `pushClassScope`.
+
 0.7.3 (2013-07-02):
   - Do not report undefined name for generator expression and dict or
     set comprehension at class level.
@@ -91,6 +117,36 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   - Support for new syntax in 2.7 (including set literals, set comprehensions,
     and dictionary comprehensions).
   - Make sure class names don't get bound until after class definition.
+
+0.4.0 (2009-11-25):
+  - Fix reporting for certain SyntaxErrors which lack line number
+    information.
+  - Check for syntax errors more rigorously.
+  - Support checking names used with the class decorator syntax in versions
+    of Python which have it.
+  - Detect local variables which are bound but never used.
+  - Handle permission errors when trying to read source files.
+  - Handle problems with the encoding of source files.
+  - Support importing dotted names so as not to incorrectly report them as
+    redefined unused names.
+  - Support all forms of the with statement.
+  - Consider static `__all__` definitions and avoid reporting unused names
+    if the names are listed there.
+  - Fix incorrect checking of class names with respect to the names of their
+    bases in the class statement.
+  - Support the `__path__` global in `__init__.py`.
+
+0.3.0 (2009-01-30):
+  - Display more informative SyntaxError messages.
+  - Don't hang flymake with unmatched triple quotes (only report a single
+    line of source for a multiline syntax error).
+  - Recognize __builtins__ as a defined name.
+  - Improve pyflakes support for python versions 2.3-2.5
+  - Support for if-else expressions and with statements.
+  - Warn instead of error on non-existant file paths.
+  - Check for __future__ imports after other statements.
+  - Add reporting for some types of import shadowing.
+  - Improve reporting of unbound locals
 """
 
-__version__ = '0.7.3'
+__version__ = '0.8.1'
