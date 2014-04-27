@@ -1102,7 +1102,7 @@ def main(argv):
         if sys.platform.startswith("win"):
             optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:")
         elif sys.platform == "darwin":
-            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:m:p:")
+            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:m:n:p:")
         else:
             optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:")
     except getopt.GetoptError:
