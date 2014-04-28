@@ -78,7 +78,8 @@ class CodeStyleFixer(object):
         self.__indentWord = self.__getIndentWord()
         
         if inPlace:
-            # TODO: Do a backup before any changes
+            # TODO: Do a backup before any changes depending on
+            # 'CreateBackupFile' editor config setting.
             pass
         else:
             self.__origName = self.__filename

@@ -35,8 +35,6 @@ COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
 COLORS = [str(QColor(x).name()) for x in COLORNAMES]
 
 
-# TODO: add an info field next to the message pane giving copyable
-# info about branch, author, rev:changeset, date, tags, bookmarks
 class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.

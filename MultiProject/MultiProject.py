@@ -90,7 +90,6 @@ class MultiProject(QObject):
         self.description = ""   # description of the multi project
         self.name = ""
         self.opened = False
-        # TODO: Introduce a UUID to make the project file name editable via the GUI
         self.projects = []      # list of project info; each info entry is
                                 # a dictionary
                                 # 'name'        : name of the project
