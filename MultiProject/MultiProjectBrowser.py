@@ -267,14 +267,15 @@ class MultiProjectBrowser(QTreeWidget):
                         self, project=project,
                         categories=self.multiProject.getCategories())
                     if dlg.exec_() == QDialog.Accepted:
-                        name, filename, isMaster, description, category = \
-                            dlg.getData()
+                        (name, filename, isMaster, description, category,
+                         uid) = dlg.getData()
                         project = {
                             'name': name,
                             'file': filename,
                             'master': isMaster,
                             'description': description,
                             'category': category,
+                            'uid': uid,
                         }
                         self.multiProject.changeProjectProperties(project)
     

@@ -123,7 +123,7 @@ QObject
 <td>Private method to open a multi project from the list of rencently opened multi projects.</td>
 </tr><tr>
 <td><a href="#MultiProject.__readMultiProject">__readMultiProject</a></td>
-<td>Private method to read in a multi project (.e4m) file.</td>
+<td>Private method to read in a multi project (.e4m, .e5m) file.</td>
 </tr><tr>
 <td><a href="#MultiProject.__saveRecent">__saveRecent</a></td>
 <td>Private method to save the list of recently opened filenames.</td>
@@ -165,7 +165,7 @@ QObject
 <td>Public method to get the list of defined categories.</td>
 </tr><tr>
 <td><a href="#MultiProject.getDependantProjectFiles">getDependantProjectFiles</a></td>
-<td>Public method to get the filenames of the dependant projects.</td>
+<td>Public method to get the filenames of the dependent projects.</td>
 </tr><tr>
 <td><a href="#MultiProject.getMasterProjectFile">getMasterProjectFile</a></td>
 <td>Public method to get the filename of the master project.</td>
@@ -309,7 +309,7 @@ reference to the action that triggered (QAction)
 <h4>MultiProject.__readMultiProject</h4>
 <b>__readMultiProject</b>(<i>fn</i>)
 <p>
-        Private method to read in a multi project (.e4m) file.
+        Private method to read in a multi project (.e4m, .e5m) file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -439,11 +439,11 @@ list of categories (list of string)
 <h4>MultiProject.getDependantProjectFiles</h4>
 <b>getDependantProjectFiles</b>(<i></i>)
 <p>
-        Public method to get the filenames of the dependant projects.
+        Public method to get the filenames of the dependent projects.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-names of the dependant project files (list of strings)
+names of the dependent project files (list of strings)
 </dd>
 </dl><a NAME="MultiProject.getMasterProjectFile" ID="MultiProject.getMasterProjectFile"></a>
 <h4>MultiProject.getMasterProjectFile</h4>

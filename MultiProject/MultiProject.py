@@ -99,6 +99,7 @@ class MultiProject(QObject):
                                 #                 project
                                 # 'description' : description of the project
                                 # 'category'    : name of the group
+                                # 'uid'         : unique identifier
         self.categories = []
     
     def __loadRecent(self):
@@ -213,7 +214,7 @@ class MultiProject(QObject):
     
     def __readMultiProject(self, fn):
         """
-        Private method to read in a multi project (.e4m) file.
+        Private method to read in a multi project (.e4m, .e5m) file.
         
         @param fn filename of the multi project file to be read (string)
         @return flag indicating success
@@ -307,7 +308,8 @@ class MultiProject(QObject):
         dlg = AddProjectDialog(self.ui, startdir=startdir,
                                categories=self.categories)
         if dlg.exec_() == QDialog.Accepted:
-            name, filename, isMaster, description, category = dlg.getData()
+            name, filename, isMaster, description, category, uid = \
+                dlg.getData()
             
             # step 1: check, if project was already added
             for project in self.projects:
@@ -330,6 +332,7 @@ class MultiProject(QObject):
                 'master': isMaster,
                 'description': description,
                 'category': category,
+                'uid': uid,
             }
             self.projects.append(project)
             if category not in self.categories:
@@ -347,7 +350,7 @@ class MultiProject(QObject):
         if pro['master']:
             for project in self.projects:
                 if project['master']:
-                    if project['file'] != pro['file']:
+                    if project['uid'] != pro['uid']:
                         project['master'] = False
                         self.projectDataChanged.emit(project)
                         self.setDirty(True)
@@ -355,8 +358,9 @@ class MultiProject(QObject):
         
         # step 2: change the entry
         for project in self.projects:
-            if project['file'] == pro['file']:
-                # project file name is not changeable via interface
+            if project['uid'] == pro['uid']:
+                # project UID is not changeable via interface
+                project['file'] = pro['file']
                 project['name'] = pro['name']
                 project['master'] = pro['master']
                 project['description'] = pro['description']
@@ -914,9 +918,9 @@ class MultiProject(QObject):
     
     def getDependantProjectFiles(self):
         """
-        Public method to get the filenames of the dependant projects.
+        Public method to get the filenames of the dependent projects.
         
-        @return names of the dependant project files (list of strings)
+        @return names of the dependent project files (list of strings)
         """
         files = []
         for project in self.projects:

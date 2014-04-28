@@ -65,6 +65,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
         for project in self.multiProject.getProjects():
             self.writeStartElement("Project")
             self.writeAttribute("isMaster", str(project['master']))
+            self.writeAttribute("uid", project["uid"])
             self.writeTextElement("ProjectName", project['name'])
             self.writeTextElement(
                 "ProjectFile",

@@ -19,7 +19,7 @@ class MultiProjectReader(XMLStreamReaderBase):
     """
     Class for reading an XML multi project file.
     """
-    supportedVersions = ["4.2", "5.0"]
+    supportedVersions = ["4.2", "5.0", "5.1"]
     
     def __init__(self, device, multiProject):
         """
@@ -79,6 +79,13 @@ class MultiProjectReader(XMLStreamReaderBase):
         project = {}
         
         project["master"] = self.toBool(self.attribute("isMaster", "False"))
+        uid = self.attribute("uid", "")
+        if uid:
+            project["uid"] = uid
+        else:
+            # upgrade from pre 5.1 format
+            from PyQt4.QtCore import QUuid
+            project["uid"] = QUuid.createUuid().toString()
         
         while not self.atEnd():
             self.readNext()

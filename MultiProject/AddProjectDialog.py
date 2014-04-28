@@ -47,15 +47,13 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             self.categoryComboBox.addItems(sorted(categories))
         
         self.startdir = startdir
+        self.uid = ""
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.__okButton.setEnabled(False)
         
         if project is not None:
             self.setWindowTitle(self.tr("Project Properties"))
-            
-            self.filenameEdit.setReadOnly(True)
-            self.fileButton.setEnabled(False)
             
             self.nameEdit.setText(project['name'])
             self.filenameEdit.setText(project['file'])
@@ -65,6 +63,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             if index == -1:
                 index = 0
             self.categoryComboBox.setCurrentIndex(index)
+            self.uid = project["uid"]
     
     @pyqtSlot()
     def on_fileButton_clicked(self):
@@ -72,8 +71,9 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         Private slot to display a file selection dialog.
         """
         startdir = self.filenameEdit.text()
-        if not startdir and self.startdir is not None:
-            startdir = self.startdir
+        if startdir or self.startdir is not None:
+            if not startdir:
+                startdir = self.startdir
             projectFile = E5FileDialog.getOpenFileName(
                 self,
                 self.tr("Add Project"),
@@ -93,11 +93,17 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             telling whether the project shall be the main project, a short
             description for the project and the project category
         """
+        if not self.uid:
+            # new project entry
+            from PyQt4.QtCore import QUuid
+            self.uid = QUuid.createUuid().toString()
+        
         return (self.nameEdit.text(),
                 self.filenameEdit.text(),
                 self.masterCheckBox.isChecked(),
                 self.descriptionEdit.toPlainText(),
-                self.categoryComboBox.currentText())
+                self.categoryComboBox.currentText(),
+                self.uid)
     
     @pyqtSlot(str)
     def on_nameEdit_textChanged(self, txt):
