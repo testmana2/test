@@ -3514,6 +3514,9 @@ class ViewManager(QObject):
         self.prevSplitAct.setEnabled(False)
         self.previewAct.setEnabled(True)
         
+        self.splitOrientationAct.setChecked(
+            Preferences.getUI("SplitOrientationVertical"))
+        
     def initViewMenu(self):
         """
         Public method to create the View menu.
@@ -5687,6 +5690,7 @@ class ViewManager(QObject):
                 UI.PixmapCache.getIcon("remsplitVertical.png"))
             self.newDocumentSplitViewAct.setIcon(
                 UI.PixmapCache.getIcon("splitVertical.png"))
+        Preferences.setUI("SplitOrientationVertical", checked)
     
     def __previewEditor(self, checked):
         """
