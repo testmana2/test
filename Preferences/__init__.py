@@ -163,6 +163,7 @@ class Prefs(object):
         "PreviewSplitterState": QByteArray(),
         "ShowSplash": True,
         "SingleCloseButton": False,
+        "SplitOrientationVertical": False,
         
         "PerformVersionCheck": 4,
         # 0 = off
@@ -1438,7 +1439,7 @@ def getUI(key, prefClass=Prefs):
                "SingleApplicationMode", "TabViewManagerFilenameOnly",
                "ShowFilePreview", "ShowFilePreviewJS", "ShowFilePreviewSSI",
                "CaptionShowsFilename", "ShowSplash",
-               "SingleCloseButton",
+               "SingleCloseButton", "SplitOrientationVertical",
                "UseProxy", "UseSystemProxy", "UseHttpProxyForAll",
                "TopLeftByLeft", "BottomLeftByLeft",
                "TopRightByRight", "BottomRightByRight",
