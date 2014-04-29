@@ -235,7 +235,7 @@ object
 </table>
 <a NAME="CodeStyleFixer.__init__" ID="CodeStyleFixer.__init__"></a>
 <h4>CodeStyleFixer (Constructor)</h4>
-<b>CodeStyleFixer</b>(<i>filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace, eol</i>)
+<b>CodeStyleFixer</b>(<i>filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace, eol, backup=False</i>)
 <p>
         Constructor
 </p><dl>
@@ -263,6 +263,10 @@ flag indicating to modify the file in place (boolean)
 </dd><dt><i>eol</i></dt>
 <dd>
 end of line character(s) (string)
+</dd><dt><i>backup</i></dt>
+<dd>
+flag indicating to create a backup before fixing
+            anything (boolean)
 </dd>
 </dl><a NAME="CodeStyleFixer.__codeMatch" ID="CodeStyleFixer.__codeMatch"></a>
 <h4>CodeStyleFixer.__codeMatch</h4>

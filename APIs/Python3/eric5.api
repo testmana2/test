@@ -3808,7 +3808,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.fina
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.fixIssue?4(line, pos, message)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.mutualStartswith?4(b)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer.saveFile?4(encoding)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer?1(filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace, eol)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.CodeStyleFixer?1(filename, sourceLines, fixCodes, noFixCodes, maxLineLength, inPlace, eol, backup=False)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.FixableCodeStyleIssues?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper.SKIP_TOKENS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.IndentationWrapper.pep8Expected?4()

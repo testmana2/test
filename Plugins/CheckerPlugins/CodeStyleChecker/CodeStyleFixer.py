@@ -48,7 +48,7 @@ class CodeStyleFixer(object):
     Class implementing a fixer for certain code style issues.
     """
     def __init__(self, filename, sourceLines, fixCodes, noFixCodes,
-                 maxLineLength, inPlace, eol):
+                 maxLineLength, inPlace, eol, backup=False):
         """
         Constructor
         
@@ -62,6 +62,8 @@ class CodeStyleFixer(object):
         @param maxLineLength maximum allowed line length (integer)
         @param inPlace flag indicating to modify the file in place (boolean)
         @param eol end of line character(s) (string)
+        @param backup flag indicating to create a backup before fixing
+            anything (boolean)
         """
         super(CodeStyleFixer, self).__init__()
         
@@ -78,14 +80,13 @@ class CodeStyleFixer(object):
         self.__indentWord = self.__getIndentWord()
         
         if inPlace:
-            # TODO: Do a backup before any changes depending on
-            # 'CreateBackupFile' editor config setting.
-            pass
+            self.__createBackup = backup
         else:
             self.__origName = self.__filename
             self.__filename = os.path.join(
                 os.path.dirname(self.__filename),
                 "fixed_" + os.path.basename(self.__filename))
+            self.__createBackup = False
         self.__eol = eol
 
         self.__fixes = {
@@ -187,6 +188,23 @@ class CodeStyleFixer(object):
         if not self.__modified:
             # no need to write
             return
+        
+        if self.__createBackup:
+            # create a backup file before writing any changes
+            if os.path.islink(self.__filename):
+                bfn = '{0}~'.format(os.path.realpath(self.__filename))
+            else:
+                bfn = '{0}~'.format(self.__filename)
+            try:
+                os.remove(bfn)
+            except EnvironmentError:
+                # if there was an error, ignore it
+                pass
+            try:
+                os.rename(self.__filename, bfn)
+            except EnvironmentError:
+                # if there was an error, ignore it
+                pass
         
         txt = "".join(self.__source)
         try:

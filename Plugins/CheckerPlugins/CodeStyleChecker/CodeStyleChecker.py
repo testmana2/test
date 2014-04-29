@@ -94,14 +94,14 @@ def codeStyleCheck(filename, source, args):
         excludeMessages (str), includeMessages (str), repeatMessages
         (bool), fixCodes (str), noFixCodes (str), fixIssues (bool),
         maxLineLength (int), hangClosing (bool), docType (str), errors
-        (list of str), eol (str), encoding (str))
+        (list of str), eol (str), encoding (str), backup (bool))
     @return tuple of stats (dict) and results (tuple for each found violation
         of style (tuple of lineno (int), position (int), text (str), ignored
             (bool), fixed (bool), autofixing (bool), fixedMsg (str)))
     """
     excludeMessages, includeMessages, \
         repeatMessages, fixCodes, noFixCodes, fixIssues, maxLineLength, \
-        hangClosing, docType, errors, eol, encoding = args
+        hangClosing, docType, errors, eol, encoding, backup = args
     
     stats = {}
     # avoid 'Encoding declaration in unicode string' exception on Python2
@@ -116,7 +116,7 @@ def codeStyleCheck(filename, source, args):
         from CodeStyleFixer import CodeStyleFixer
         fixer = CodeStyleFixer(
             filename, source, fixCodes, noFixCodes,
-            maxLineLength, True, eol)  # always fix in place
+            maxLineLength, True, eol, backup)  # always fix in place
     else:
         fixer = None
     

@@ -420,7 +420,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.__itms.append(itm)
         
         eol = self.__getEol(self.filename)
-        args = self.__options + [errors, eol, encoding]
+        args = self.__options + [
+            errors, eol, encoding, Preferences.getEditor("CreateBackupFile")
+        ]
         self.styleCheckService.styleCheck(
             None, self.filename, self.source, args)
 
