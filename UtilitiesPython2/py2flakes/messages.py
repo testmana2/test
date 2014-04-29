@@ -19,16 +19,17 @@ class Message(object):
     message = ''
     message_args = ()
     
-    def __init__(self, filename, lineno):
+    def __init__(self, filename, loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         """
         self.filename = filename
-        self.lineno = lineno
-    
+        self.lineno = loc.lineno
+        self.col = getattr(loc, 'col_offset', 0)
+
     def __str__(self):
         """
         Special method return a string representation of the instance object.
@@ -54,15 +55,15 @@ class UnusedImport(Message):
     """
     message = '%r imported but unused'
     
-    def __init__(self, filename, lineno, name):
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name name of the unused import (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
 
 
@@ -72,17 +73,28 @@ class RedefinedWhileUnused(Message):
     """
     message = 'redefinition of unused %r from line %r'
     
-    def __init__(self, filename, lineno, name, orig_lineno):
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name name of the redefined object (string)
-        @param orig_lineno line number of the original definition (integer)
+        @param orig_loc location of the original definition (integer)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
+
+
+class RedefinedInListComp(Message):
+    """
+    Class defining the "Redefined by list comprehension" message.
+    """
+    message = 'list comprehension redefines %r from line %r'
+
+    def __init__(self, filename, loc, name, orig_loc):
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class ImportShadowedByLoopVar(Message):
@@ -91,17 +103,17 @@ class ImportShadowedByLoopVar(Message):
     """
     message = 'import %r from line %r shadowed by loop variable'
     
-    def __init__(self, filename, lineno, name, orig_lineno):
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name name of the shadowed import (string)
-        @param orig_lineno line number of the import (integer)
+        @param orig_loc location of the import (integer)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class ImportStarUsed(Message):
@@ -110,15 +122,15 @@ class ImportStarUsed(Message):
     """
     message = "'from %s import *' used; unable to detect undefined names"
     
-    def __init__(self, filename, lineno, modname):
+    def __init__(self, filename, loc, modname):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param modname name of the module imported using star import (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (modname,)
 
 
@@ -128,16 +140,29 @@ class UndefinedName(Message):
     """
     message = 'undefined name %r'
     
-    def __init__(self, filename, lineno, name):
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name undefined name (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
+
+
+class DoctestSyntaxError(Message):
+    """
+    Class defining the "Doctest syntax error" message.
+    """
+    message = 'syntax error in doctest'
+
+    def __init__(self, filename, loc, position=None):
+        Message.__init__(self, filename, loc)
+        if position:
+            (self.lineno, self.col) = position
+        self.message_args = ()
 
 
 class UndefinedExport(Message):
@@ -146,15 +171,15 @@ class UndefinedExport(Message):
     """
     message = 'undefined name %r in __all__'
     
-    def __init__(self, filename, lineno, name):
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name undefined exported name (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
 
 
@@ -165,17 +190,17 @@ class UndefinedLocal(Message):
     message = "local variable %r (defined in enclosing scope on line %r)" \
               " referenced before assignment"
     
-    def __init__(self, filename, lineno, name, orig_lineno):
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name name of the prematurely referenced variable (string)
-        @param orig_lineno line number of the variable definition (integer)
+        @param orig_loc location of the variable definition (integer)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class DuplicateArgument(Message):
@@ -184,15 +209,15 @@ class DuplicateArgument(Message):
     """
     message = 'duplicate argument %r in function definition'
     
-    def __init__(self, filename, lineno, name):
+    def __init__(self, filename, loc, name):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name name of the duplicate argument (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (name,)
 
 
@@ -202,17 +227,17 @@ class RedefinedFunction(Message):
     """
     message = 'redefinition of function %r from line %r'
     
-    def __init__(self, filename, lineno, name, orig_lineno):
+    def __init__(self, filename, loc, name, orig_loc):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param name name of the redefined function (string)
-        @param orig_lineno line number of the original definition (integer)
+        @param orig_loc location of the original definition (integer)
         """
-        Message.__init__(self, filename, lineno)
-        self.message_args = (name, orig_lineno)
+        Message.__init__(self, filename, loc)
+        self.message_args = (name, orig_loc.lineno)
 
 
 class LateFutureImport(Message):
@@ -221,15 +246,15 @@ class LateFutureImport(Message):
     """
     message = 'future import(s) %r after other statements'
     
-    def __init__(self, filename, lineno, names):
+    def __init__(self, filename, loc, names):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param names names of the imported futures (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (names,)
 
 
@@ -242,16 +267,23 @@ class UnusedVariable(Message):
     """
     message = 'local variable %r is assigned to but never used'
     
-    def __init__(self, filename, lineno, names):
+    def __init__(self, filename, loc, names):
         """
         Constructor
         
         @param filename name of the file (string)
-        @param lineno line number (integer)
+        @param loc location (integer)
         @param names name of the unused variable (string)
         """
-        Message.__init__(self, filename, lineno)
+        Message.__init__(self, filename, loc)
         self.message_args = (names,)
+
+
+class ReturnWithArgsInsideGenerator(Message):
+    """
+    Indicates a return statement with arguments inside a generator.
+    """
+    message = '\'return\' with argument inside generator'
     
 #
 # eflag: FileType = Python2

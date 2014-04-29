@@ -1,5 +1,10 @@
 Change Log
 ----------
+Version 5.4.4:
+- bug fixes
+- Checkers
+  -- updated pyflakes to version 0.8.1 (Python 3.4.0 compatible)
+
 Version 5.4.3:
 - bug fixes
 - General

@@ -7,7 +7,7 @@
 Package containg pyflakes for Python2.
 """
 
-__version__ = '0.5.0'
+__version__ = '0.8.1'
     
 #
 # eflag: FileType = Python2
