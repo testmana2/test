@@ -953,10 +953,6 @@
               <section title="eric5.Utilities.crypto.py3AES" ref="eric5.Utilities.crypto.py3AES.html" />
               <section title="eric5.Utilities.crypto.py3PBKDF2" ref="eric5.Utilities.crypto.py3PBKDF2.html" />
             </section>
-            <section title="eric5.Utilities.py3flakes" ref="index-eric5.Utilities.py3flakes.html">
-              <section title="eric5.Utilities.py3flakes.checker" ref="eric5.Utilities.py3flakes.checker.html" />
-              <section title="eric5.Utilities.py3flakes.messages" ref="eric5.Utilities.py3flakes.messages.html" />
-            </section>
             <section title="eric5.Utilities.AutoSaver" ref="eric5.Utilities.AutoSaver.html" />
             <section title="eric5.Utilities.FtpUtilities" ref="eric5.Utilities.FtpUtilities.html" />
             <section title="eric5.Utilities.ModuleParser" ref="eric5.Utilities.ModuleParser.html" />
@@ -966,10 +962,6 @@
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
           </section>
           <section title="eric5.UtilitiesPython2" ref="index-eric5.UtilitiesPython2.html">
-            <section title="eric5.UtilitiesPython2.py2flakes" ref="index-eric5.UtilitiesPython2.py2flakes.html">
-              <section title="eric5.UtilitiesPython2.py2flakes.checker" ref="eric5.UtilitiesPython2.py2flakes.checker.html" />
-              <section title="eric5.UtilitiesPython2.py2flakes.messages" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
-            </section>
             <section title="eric5.UtilitiesPython2.CodeStyleChecker" ref="eric5.UtilitiesPython2.CodeStyleChecker.html" />
             <section title="eric5.UtilitiesPython2.DocStyleCheckerPy2" ref="eric5.UtilitiesPython2.DocStyleCheckerPy2.html" />
             <section title="eric5.UtilitiesPython2.NamingStyleCheckerPy2" ref="eric5.UtilitiesPython2.NamingStyleCheckerPy2.html" />
@@ -1338,8 +1330,6 @@
       <keyword name="ApplicationPage (Constructor)" id="ApplicationPage (Constructor)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.__init__" />
       <keyword name="ApplicationPage (Module)" id="ApplicationPage (Module)" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html" />
       <keyword name="ApplicationPage.save" id="ApplicationPage.save" ref="eric5.Preferences.ConfigurationPages.ApplicationPage.html#ApplicationPage.save" />
-      <keyword name="Argument" id="Argument" ref="eric5.Utilities.py3flakes.checker.html#Argument" />
-      <keyword name="Argument" id="Argument" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Argument" />
       <keyword name="ArgumentsError" id="ArgumentsError" ref="eric5.E5Gui.E5Action.html#ArgumentsError" />
       <keyword name="ArgumentsError (Constructor)" id="ArgumentsError (Constructor)" ref="eric5.E5Gui.E5Action.html#ArgumentsError.__init__" />
       <keyword name="ArgumentsError.__repr__" id="ArgumentsError.__repr__" ref="eric5.E5Gui.E5Action.html#ArgumentsError.__repr__" />
@@ -1347,8 +1337,6 @@
       <keyword name="ArrayElementVarItem" id="ArrayElementVarItem" ref="eric5.Debugger.VariablesViewer.html#ArrayElementVarItem" />
       <keyword name="ArrayElementVarItem (Constructor)" id="ArrayElementVarItem (Constructor)" ref="eric5.Debugger.VariablesViewer.html#ArrayElementVarItem.__init__" />
       <keyword name="ArrayElementVarItem.key" id="ArrayElementVarItem.key" ref="eric5.Debugger.VariablesViewer.html#ArrayElementVarItem.key" />
-      <keyword name="Assignment" id="Assignment" ref="eric5.Utilities.py3flakes.checker.html#Assignment" />
-      <keyword name="Assignment" id="Assignment" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Assignment" />
       <keyword name="AssociationItem" id="AssociationItem" ref="eric5.Graphics.AssociationItem.html#AssociationItem" />
       <keyword name="AssociationItem (Constructor)" id="AssociationItem (Constructor)" ref="eric5.Graphics.AssociationItem.html#AssociationItem.__init__" />
       <keyword name="AssociationItem (Module)" id="AssociationItem (Module)" ref="eric5.Graphics.AssociationItem.html" />
@@ -1503,14 +1491,6 @@
       <keyword name="BinaryModel.setBitsAndValue" id="BinaryModel.setBitsAndValue" ref="eric5.UI.NumbersWidget.html#BinaryModel.setBitsAndValue" />
       <keyword name="BinaryModel.setData" id="BinaryModel.setData" ref="eric5.UI.NumbersWidget.html#BinaryModel.setData" />
       <keyword name="BinaryModel.setValue" id="BinaryModel.setValue" ref="eric5.UI.NumbersWidget.html#BinaryModel.setValue" />
-      <keyword name="Binding" id="Binding" ref="eric5.Utilities.py3flakes.checker.html#Binding" />
-      <keyword name="Binding" id="Binding" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Binding" />
-      <keyword name="Binding (Constructor)" id="Binding (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Binding.__init__" />
-      <keyword name="Binding (Constructor)" id="Binding (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Binding.__init__" />
-      <keyword name="Binding.__repr__" id="Binding.__repr__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__repr__" />
-      <keyword name="Binding.__repr__" id="Binding.__repr__" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Binding.__repr__" />
-      <keyword name="Binding.__str__" id="Binding.__str__" ref="eric5.Utilities.py3flakes.checker.html#Binding.__str__" />
-      <keyword name="Binding.__str__" id="Binding.__str__" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Binding.__str__" />
       <keyword name="BookmarkActionSelectionDialog" id="BookmarkActionSelectionDialog" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog" />
       <keyword name="BookmarkActionSelectionDialog (Constructor)" id="BookmarkActionSelectionDialog (Constructor)" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html#BookmarkActionSelectionDialog.__init__" />
       <keyword name="BookmarkActionSelectionDialog (Module)" id="BookmarkActionSelectionDialog (Module)" ref="eric5.Helpviewer.UrlBar.BookmarkActionSelectionDialog.html" />
@@ -1975,97 +1955,29 @@
       <keyword name="ChatWidget.preferencesChanged" id="ChatWidget.preferencesChanged" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.preferencesChanged" />
       <keyword name="ChatWidget.shutdown" id="ChatWidget.shutdown" ref="eric5.Cooperation.ChatWidget.html#ChatWidget.shutdown" />
       <keyword name="Checker" id="Checker" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker" />
-      <keyword name="Checker" id="Checker" ref="eric5.Utilities.py3flakes.checker.html#Checker" />
       <keyword name="Checker" id="Checker" ref="eric5.UtilitiesPython2.pep8.html#Checker" />
-      <keyword name="Checker" id="Checker" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker" />
       <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.__init__" />
-      <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Checker.__init__" />
       <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.UtilitiesPython2.pep8.html#Checker.__init__" />
-      <keyword name="Checker (Constructor)" id="Checker (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.__init__" />
-      <keyword name="Checker.ASSIGN" id="Checker.ASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.ASSIGN" />
-      <keyword name="Checker.ASSIGN" id="Checker.ASSIGN" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.ASSIGN" />
-      <keyword name="Checker.AUGASSIGN" id="Checker.AUGASSIGN" ref="eric5.Utilities.py3flakes.checker.html#Checker.AUGASSIGN" />
-      <keyword name="Checker.AUGASSIGN" id="Checker.AUGASSIGN" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.AUGASSIGN" />
-      <keyword name="Checker.CLASSDEF" id="Checker.CLASSDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.CLASSDEF" />
-      <keyword name="Checker.CLASSDEF" id="Checker.CLASSDEF" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.CLASSDEF" />
-      <keyword name="Checker.DICTCOMP" id="Checker.DICTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.DICTCOMP" />
-      <keyword name="Checker.DICTCOMP" id="Checker.DICTCOMP" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.DICTCOMP" />
-      <keyword name="Checker.EXCEPTHANDLER" id="Checker.EXCEPTHANDLER" ref="eric5.Utilities.py3flakes.checker.html#Checker.EXCEPTHANDLER" />
-      <keyword name="Checker.FOR" id="Checker.FOR" ref="eric5.Utilities.py3flakes.checker.html#Checker.FOR" />
-      <keyword name="Checker.FOR" id="Checker.FOR" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.FOR" />
-      <keyword name="Checker.FUNCTIONDEF" id="Checker.FUNCTIONDEF" ref="eric5.Utilities.py3flakes.checker.html#Checker.FUNCTIONDEF" />
-      <keyword name="Checker.FUNCTIONDEF" id="Checker.FUNCTIONDEF" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.FUNCTIONDEF" />
-      <keyword name="Checker.GLOBAL" id="Checker.GLOBAL" ref="eric5.Utilities.py3flakes.checker.html#Checker.GLOBAL" />
-      <keyword name="Checker.GLOBAL" id="Checker.GLOBAL" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.GLOBAL" />
-      <keyword name="Checker.IMPORT" id="Checker.IMPORT" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORT" />
-      <keyword name="Checker.IMPORT" id="Checker.IMPORT" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.IMPORT" />
-      <keyword name="Checker.IMPORTFROM" id="Checker.IMPORTFROM" ref="eric5.Utilities.py3flakes.checker.html#Checker.IMPORTFROM" />
-      <keyword name="Checker.IMPORTFROM" id="Checker.IMPORTFROM" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.IMPORTFROM" />
-      <keyword name="Checker.LAMBDA" id="Checker.LAMBDA" ref="eric5.Utilities.py3flakes.checker.html#Checker.LAMBDA" />
-      <keyword name="Checker.LAMBDA" id="Checker.LAMBDA" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.LAMBDA" />
-      <keyword name="Checker.LISTCOMP" id="Checker.LISTCOMP" ref="eric5.Utilities.py3flakes.checker.html#Checker.LISTCOMP" />
-      <keyword name="Checker.LISTCOMP" id="Checker.LISTCOMP" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.LISTCOMP" />
-      <keyword name="Checker.NAME" id="Checker.NAME" ref="eric5.Utilities.py3flakes.checker.html#Checker.NAME" />
-      <keyword name="Checker.NAME" id="Checker.NAME" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.NAME" />
-      <keyword name="Checker.STARRED" id="Checker.STARRED" ref="eric5.Utilities.py3flakes.checker.html#Checker.STARRED" />
-      <keyword name="Checker._runDeferred" id="Checker._runDeferred" ref="eric5.Utilities.py3flakes.checker.html#Checker._runDeferred" />
-      <keyword name="Checker._runDeferred" id="Checker._runDeferred" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker._runDeferred" />
-      <keyword name="Checker.addArgs" id="Checker.addArgs" ref="eric5.Utilities.py3flakes.checker.html#Checker.addArgs" />
-      <keyword name="Checker.addArgs" id="Checker.addArgs" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.addArgs" />
-      <keyword name="Checker.addBinding" id="Checker.addBinding" ref="eric5.Utilities.py3flakes.checker.html#Checker.addBinding" />
-      <keyword name="Checker.addBinding" id="Checker.addBinding" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.addBinding" />
       <keyword name="Checker.build_tokens_line" id="Checker.build_tokens_line" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.build_tokens_line" />
       <keyword name="Checker.build_tokens_line" id="Checker.build_tokens_line" ref="eric5.UtilitiesPython2.pep8.html#Checker.build_tokens_line" />
-      <keyword name="Checker.checkUnusedAssignments" id="Checker.checkUnusedAssignments" ref="eric5.Utilities.py3flakes.checker.html#Checker.checkUnusedAssignments" />
-      <keyword name="Checker.checkUnusedAssignments" id="Checker.checkUnusedAssignments" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.checkUnusedAssignments" />
       <keyword name="Checker.check_all" id="Checker.check_all" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.check_all" />
       <keyword name="Checker.check_all" id="Checker.check_all" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_all" />
       <keyword name="Checker.check_ast" id="Checker.check_ast" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.check_ast" />
       <keyword name="Checker.check_ast" id="Checker.check_ast" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_ast" />
-      <keyword name="Checker.check_dead_scopes" id="Checker.check_dead_scopes" ref="eric5.Utilities.py3flakes.checker.html#Checker.check_dead_scopes" />
-      <keyword name="Checker.check_dead_scopes" id="Checker.check_dead_scopes" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.check_dead_scopes" />
       <keyword name="Checker.check_logical" id="Checker.check_logical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.check_logical" />
       <keyword name="Checker.check_logical" id="Checker.check_logical" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_logical" />
       <keyword name="Checker.check_physical" id="Checker.check_physical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.check_physical" />
       <keyword name="Checker.check_physical" id="Checker.check_physical" ref="eric5.UtilitiesPython2.pep8.html#Checker.check_physical" />
-      <keyword name="Checker.collectLoopVars" id="Checker.collectLoopVars" ref="eric5.Utilities.py3flakes.checker.html#Checker.collectLoopVars" />
-      <keyword name="Checker.collectLoopVars" id="Checker.collectLoopVars" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.collectLoopVars" />
-      <keyword name="Checker.deferAssignment" id="Checker.deferAssignment" ref="eric5.Utilities.py3flakes.checker.html#Checker.deferAssignment" />
-      <keyword name="Checker.deferAssignment" id="Checker.deferAssignment" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.deferAssignment" />
-      <keyword name="Checker.deferFunction" id="Checker.deferFunction" ref="eric5.Utilities.py3flakes.checker.html#Checker.deferFunction" />
-      <keyword name="Checker.deferFunction" id="Checker.deferFunction" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.deferFunction" />
       <keyword name="Checker.generate_tokens" id="Checker.generate_tokens" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.generate_tokens" />
       <keyword name="Checker.generate_tokens" id="Checker.generate_tokens" ref="eric5.UtilitiesPython2.pep8.html#Checker.generate_tokens" />
-      <keyword name="Checker.handleAssignName" id="Checker.handleAssignName" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleAssignName" />
-      <keyword name="Checker.handleBody" id="Checker.handleBody" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleBody" />
-      <keyword name="Checker.handleChildren" id="Checker.handleChildren" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleChildren" />
-      <keyword name="Checker.handleChildren" id="Checker.handleChildren" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.handleChildren" />
-      <keyword name="Checker.handleNode" id="Checker.handleNode" ref="eric5.Utilities.py3flakes.checker.html#Checker.handleNode" />
-      <keyword name="Checker.handleNode" id="Checker.handleNode" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.handleNode" />
-      <keyword name="Checker.ignore" id="Checker.ignore" ref="eric5.Utilities.py3flakes.checker.html#Checker.ignore" />
-      <keyword name="Checker.ignore" id="Checker.ignore" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.ignore" />
-      <keyword name="Checker.isDocstring" id="Checker.isDocstring" ref="eric5.Utilities.py3flakes.checker.html#Checker.isDocstring" />
-      <keyword name="Checker.isDocstring" id="Checker.isDocstring" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.isDocstring" />
-      <keyword name="Checker.popScope" id="Checker.popScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.popScope" />
-      <keyword name="Checker.popScope" id="Checker.popScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.popScope" />
-      <keyword name="Checker.pushClassScope" id="Checker.pushClassScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushClassScope" />
-      <keyword name="Checker.pushClassScope" id="Checker.pushClassScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.pushClassScope" />
-      <keyword name="Checker.pushFunctionScope" id="Checker.pushFunctionScope" ref="eric5.Utilities.py3flakes.checker.html#Checker.pushFunctionScope" />
-      <keyword name="Checker.pushFunctionScope" id="Checker.pushFunctionScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.pushFunctionScope" />
       <keyword name="Checker.readline" id="Checker.readline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.readline" />
       <keyword name="Checker.readline" id="Checker.readline" ref="eric5.UtilitiesPython2.pep8.html#Checker.readline" />
       <keyword name="Checker.readline_check_physical" id="Checker.readline_check_physical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.readline_check_physical" />
       <keyword name="Checker.readline_check_physical" id="Checker.readline_check_physical" ref="eric5.UtilitiesPython2.pep8.html#Checker.readline_check_physical" />
-      <keyword name="Checker.report" id="Checker.report" ref="eric5.Utilities.py3flakes.checker.html#Checker.report" />
-      <keyword name="Checker.report" id="Checker.report" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.report" />
       <keyword name="Checker.report_invalid_syntax" id="Checker.report_invalid_syntax" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.report_invalid_syntax" />
       <keyword name="Checker.report_invalid_syntax" id="Checker.report_invalid_syntax" ref="eric5.UtilitiesPython2.pep8.html#Checker.report_invalid_syntax" />
-      <keyword name="Checker.runFunction" id="Checker.runFunction" ref="eric5.Utilities.py3flakes.checker.html#Checker.runFunction" />
-      <keyword name="Checker.runFunction" id="Checker.runFunction" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.runFunction" />
       <keyword name="Checker.run_check" id="Checker.run_check" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.run_check" />
       <keyword name="Checker.run_check" id="Checker.run_check" ref="eric5.UtilitiesPython2.pep8.html#Checker.run_check" />
-      <keyword name="Checker.scope" id="Checker.scope" ref="eric5.Utilities.py3flakes.checker.html#Checker.scope" />
-      <keyword name="Checker.scope" id="Checker.scope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Checker.scope" />
       <keyword name="CheckerPlugins (Package)" id="CheckerPlugins (Package)" ref="index-eric5.Plugins.CheckerPlugins.html" />
       <keyword name="ChromeImporter" id="ChromeImporter" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter" />
       <keyword name="ChromeImporter (Constructor)" id="ChromeImporter (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImporters.ChromeImporter.html#ChromeImporter.__init__" />
@@ -2108,8 +2020,6 @@
       <keyword name="ClassModel.addMethod" id="ClassModel.addMethod" ref="eric5.Graphics.ClassItem.html#ClassModel.addMethod" />
       <keyword name="ClassModel.getAttributes" id="ClassModel.getAttributes" ref="eric5.Graphics.ClassItem.html#ClassModel.getAttributes" />
       <keyword name="ClassModel.getMethods" id="ClassModel.getMethods" ref="eric5.Graphics.ClassItem.html#ClassModel.getMethods" />
-      <keyword name="ClassScope" id="ClassScope" ref="eric5.Utilities.py3flakes.checker.html#ClassScope" />
-      <keyword name="ClassScope" id="ClassScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#ClassScope" />
       <keyword name="ClbrBase" id="ClbrBase" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrBase" />
       <keyword name="ClbrBase (Constructor)" id="ClbrBase (Constructor)" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrBase.__init__" />
       <keyword name="ClbrBase._addattribute" id="ClbrBase._addattribute" ref="eric5.Utilities.ClassBrowsers.ClbrBaseClasses.html#ClbrBase._addattribute" />
@@ -3616,10 +3526,6 @@
       <keyword name="DownloadModel.removeRows" id="DownloadModel.removeRows" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.removeRows" />
       <keyword name="DownloadModel.rowCount" id="DownloadModel.rowCount" ref="eric5.Helpviewer.Download.DownloadModel.html#DownloadModel.rowCount" />
       <keyword name="DownloadUtilities (Module)" id="DownloadUtilities (Module)" ref="eric5.Helpviewer.Download.DownloadUtilities.html" />
-      <keyword name="DuplicateArgument" id="DuplicateArgument" ref="eric5.Utilities.py3flakes.messages.html#DuplicateArgument" />
-      <keyword name="DuplicateArgument" id="DuplicateArgument" ref="eric5.UtilitiesPython2.py2flakes.messages.html#DuplicateArgument" />
-      <keyword name="DuplicateArgument (Constructor)" id="DuplicateArgument (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#DuplicateArgument.__init__" />
-      <keyword name="DuplicateArgument (Constructor)" id="DuplicateArgument (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#DuplicateArgument.__init__" />
       <keyword name="E5Action" id="E5Action" ref="eric5.E5Gui.E5Action.html#E5Action" />
       <keyword name="E5Action (Constructor)" id="E5Action (Constructor)" ref="eric5.E5Gui.E5Action.html#E5Action.__init__" />
       <keyword name="E5Action (Module)" id="E5Action (Module)" ref="eric5.E5Gui.E5Action.html" />
@@ -4821,10 +4727,6 @@
       <keyword name="ExceptionsFilterDialog.on_deleteButton_clicked" id="ExceptionsFilterDialog.on_deleteButton_clicked" ref="eric5.Debugger.ExceptionsFilterDialog.html#ExceptionsFilterDialog.on_deleteButton_clicked" />
       <keyword name="ExceptionsFilterDialog.on_exceptionEdit_textChanged" id="ExceptionsFilterDialog.on_exceptionEdit_textChanged" ref="eric5.Debugger.ExceptionsFilterDialog.html#ExceptionsFilterDialog.on_exceptionEdit_textChanged" />
       <keyword name="ExceptionsFilterDialog.on_exceptionList_itemSelectionChanged" id="ExceptionsFilterDialog.on_exceptionList_itemSelectionChanged" ref="eric5.Debugger.ExceptionsFilterDialog.html#ExceptionsFilterDialog.on_exceptionList_itemSelectionChanged" />
-      <keyword name="ExportBinding" id="ExportBinding" ref="eric5.Utilities.py3flakes.checker.html#ExportBinding" />
-      <keyword name="ExportBinding" id="ExportBinding" ref="eric5.UtilitiesPython2.py2flakes.checker.html#ExportBinding" />
-      <keyword name="ExportBinding.names" id="ExportBinding.names" ref="eric5.Utilities.py3flakes.checker.html#ExportBinding.names" />
-      <keyword name="ExportBinding.names" id="ExportBinding.names" ref="eric5.UtilitiesPython2.py2flakes.checker.html#ExportBinding.names" />
       <keyword name="ExporterBase" id="ExporterBase" ref="eric5.QScintilla.Exporters.ExporterBase.html#ExporterBase" />
       <keyword name="ExporterBase (Constructor)" id="ExporterBase (Constructor)" ref="eric5.QScintilla.Exporters.ExporterBase.html#ExporterBase.__init__" />
       <keyword name="ExporterBase (Module)" id="ExporterBase (Module)" ref="eric5.QScintilla.Exporters.ExporterBase.html" />
@@ -5104,12 +5006,6 @@
       <keyword name="Function (Constructor)" id="Function (Constructor)" ref="eric5.Utilities.ModuleParser.html#Function.__init__" />
       <keyword name="Function.addDescription" id="Function.addDescription" ref="eric5.Utilities.ModuleParser.html#Function.addDescription" />
       <keyword name="Function.setEndLine" id="Function.setEndLine" ref="eric5.Utilities.ModuleParser.html#Function.setEndLine" />
-      <keyword name="FunctionDefinition" id="FunctionDefinition" ref="eric5.Utilities.py3flakes.checker.html#FunctionDefinition" />
-      <keyword name="FunctionDefinition" id="FunctionDefinition" ref="eric5.UtilitiesPython2.py2flakes.checker.html#FunctionDefinition" />
-      <keyword name="FunctionScope" id="FunctionScope" ref="eric5.Utilities.py3flakes.checker.html#FunctionScope" />
-      <keyword name="FunctionScope" id="FunctionScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#FunctionScope" />
-      <keyword name="FunctionScope (Constructor)" id="FunctionScope (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#FunctionScope.__init__" />
-      <keyword name="FunctionScope (Constructor)" id="FunctionScope (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#FunctionScope.__init__" />
       <keyword name="Globals (Package)" id="Globals (Package)" ref="index-eric5.Globals.html" />
       <keyword name="GotoDialog" id="GotoDialog" ref="eric5.QScintilla.GotoDialog.html#GotoDialog" />
       <keyword name="GotoDialog (Constructor)" id="GotoDialog (Constructor)" ref="eric5.QScintilla.GotoDialog.html#GotoDialog.__init__" />
@@ -6823,18 +6719,6 @@
       <keyword name="IconsPreviewDialog" id="IconsPreviewDialog" ref="eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html#IconsPreviewDialog" />
       <keyword name="IconsPreviewDialog (Constructor)" id="IconsPreviewDialog (Constructor)" ref="eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html#IconsPreviewDialog.__init__" />
       <keyword name="IconsPreviewDialog (Module)" id="IconsPreviewDialog (Module)" ref="eric5.Preferences.ConfigurationPages.IconsPreviewDialog.html" />
-      <keyword name="ImportShadowedByLoopVar" id="ImportShadowedByLoopVar" ref="eric5.Utilities.py3flakes.messages.html#ImportShadowedByLoopVar" />
-      <keyword name="ImportShadowedByLoopVar" id="ImportShadowedByLoopVar" ref="eric5.UtilitiesPython2.py2flakes.messages.html#ImportShadowedByLoopVar" />
-      <keyword name="ImportShadowedByLoopVar (Constructor)" id="ImportShadowedByLoopVar (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#ImportShadowedByLoopVar.__init__" />
-      <keyword name="ImportShadowedByLoopVar (Constructor)" id="ImportShadowedByLoopVar (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#ImportShadowedByLoopVar.__init__" />
-      <keyword name="ImportStarUsed" id="ImportStarUsed" ref="eric5.Utilities.py3flakes.messages.html#ImportStarUsed" />
-      <keyword name="ImportStarUsed" id="ImportStarUsed" ref="eric5.UtilitiesPython2.py2flakes.messages.html#ImportStarUsed" />
-      <keyword name="ImportStarUsed (Constructor)" id="ImportStarUsed (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#ImportStarUsed.__init__" />
-      <keyword name="ImportStarUsed (Constructor)" id="ImportStarUsed (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#ImportStarUsed.__init__" />
-      <keyword name="Importation" id="Importation" ref="eric5.Utilities.py3flakes.checker.html#Importation" />
-      <keyword name="Importation" id="Importation" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Importation" />
-      <keyword name="Importation (Constructor)" id="Importation (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Importation.__init__" />
-      <keyword name="Importation (Constructor)" id="Importation (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Importation.__init__" />
       <keyword name="ImportsDiagramBuilder" id="ImportsDiagramBuilder" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder" />
       <keyword name="ImportsDiagramBuilder (Constructor)" id="ImportsDiagramBuilder (Constructor)" ref="eric5.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__init__" />
       <keyword name="ImportsDiagramBuilder (Module)" id="ImportsDiagramBuilder (Module)" ref="eric5.Graphics.ImportsDiagramBuilder.html" />
@@ -7217,10 +7101,6 @@
       <keyword name="JavaScriptExternalObject (Constructor)" id="JavaScriptExternalObject (Constructor)" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.__init__" />
       <keyword name="JavaScriptExternalObject.AddSearchProvider" id="JavaScriptExternalObject.AddSearchProvider" ref="eric5.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.AddSearchProvider" />
       <keyword name="JavaScriptResources (Module)" id="JavaScriptResources (Module)" ref="eric5.Helpviewer.JavaScriptResources.html" />
-      <keyword name="LateFutureImport" id="LateFutureImport" ref="eric5.Utilities.py3flakes.messages.html#LateFutureImport" />
-      <keyword name="LateFutureImport" id="LateFutureImport" ref="eric5.UtilitiesPython2.py2flakes.messages.html#LateFutureImport" />
-      <keyword name="LateFutureImport (Constructor)" id="LateFutureImport (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#LateFutureImport.__init__" />
-      <keyword name="LateFutureImport (Constructor)" id="LateFutureImport (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#LateFutureImport.__init__" />
       <keyword name="Lexer" id="Lexer" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer" />
       <keyword name="Lexer (Constructor)" id="Lexer (Constructor)" ref="eric5.QScintilla.Lexers.Lexer.html#Lexer.__init__" />
       <keyword name="Lexer (Module)" id="Lexer (Module)" ref="eric5.QScintilla.Lexers.Lexer.html" />
@@ -7595,14 +7475,6 @@
       <keyword name="MercurialUserDataDialog (Constructor)" id="MercurialUserDataDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog.__init__" />
       <keyword name="MercurialUserDataDialog (Module)" id="MercurialUserDataDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html" />
       <keyword name="MercurialUserDataDialog.getData" id="MercurialUserDataDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialUserDataDialog.html#MercurialUserDataDialog.getData" />
-      <keyword name="Message" id="Message" ref="eric5.Utilities.py3flakes.messages.html#Message" />
-      <keyword name="Message" id="Message" ref="eric5.UtilitiesPython2.py2flakes.messages.html#Message" />
-      <keyword name="Message (Constructor)" id="Message (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#Message.__init__" />
-      <keyword name="Message (Constructor)" id="Message (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#Message.__init__" />
-      <keyword name="Message.__str__" id="Message.__str__" ref="eric5.Utilities.py3flakes.messages.html#Message.__str__" />
-      <keyword name="Message.__str__" id="Message.__str__" ref="eric5.UtilitiesPython2.py2flakes.messages.html#Message.__str__" />
-      <keyword name="Message.getMessageData" id="Message.getMessageData" ref="eric5.Utilities.py3flakes.messages.html#Message.getMessageData" />
-      <keyword name="Message.getMessageData" id="Message.getMessageData" ref="eric5.UtilitiesPython2.py2flakes.messages.html#Message.getMessageData" />
       <keyword name="MessageBoxWizard" id="MessageBoxWizard" ref="eric5.Plugins.PluginWizardQMessageBox.html#MessageBoxWizard" />
       <keyword name="MessageBoxWizard (Constructor)" id="MessageBoxWizard (Constructor)" ref="eric5.Plugins.PluginWizardQMessageBox.html#MessageBoxWizard.__init__" />
       <keyword name="MessageBoxWizard (Package)" id="MessageBoxWizard (Package)" ref="index-eric5.Plugins.WizardPlugins.MessageBoxWizard.html" />
@@ -7767,8 +7639,6 @@
       <keyword name="ModuleModel.addClass" id="ModuleModel.addClass" ref="eric5.Graphics.ModuleItem.html#ModuleModel.addClass" />
       <keyword name="ModuleModel.getClasses" id="ModuleModel.getClasses" ref="eric5.Graphics.ModuleItem.html#ModuleModel.getClasses" />
       <keyword name="ModuleParser (Module)" id="ModuleParser (Module)" ref="eric5.Utilities.ModuleParser.html" />
-      <keyword name="ModuleScope" id="ModuleScope" ref="eric5.Utilities.py3flakes.checker.html#ModuleScope" />
-      <keyword name="ModuleScope" id="ModuleScope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#ModuleScope" />
       <keyword name="MultiProject" id="MultiProject" ref="eric5.MultiProject.MultiProject.html#MultiProject" />
       <keyword name="MultiProject (Constructor)" id="MultiProject (Constructor)" ref="eric5.MultiProject.MultiProject.html#MultiProject.__init__" />
       <keyword name="MultiProject (Module)" id="MultiProject (Module)" ref="eric5.MultiProject.MultiProject.html" />
@@ -9616,14 +9486,6 @@
       <keyword name="RebaseProjectHelper.initMenu" id="RebaseProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.initMenu" />
       <keyword name="RebaseProjectHelper.menuTitle" id="RebaseProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.RebaseExtension.ProjectHelper.html#RebaseProjectHelper.menuTitle" />
       <keyword name="RecursionError" id="RecursionError" ref="eric5.Graphics.GraphicsUtilities.html#RecursionError" />
-      <keyword name="RedefinedFunction" id="RedefinedFunction" ref="eric5.Utilities.py3flakes.messages.html#RedefinedFunction" />
-      <keyword name="RedefinedFunction" id="RedefinedFunction" ref="eric5.UtilitiesPython2.py2flakes.messages.html#RedefinedFunction" />
-      <keyword name="RedefinedFunction (Constructor)" id="RedefinedFunction (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#RedefinedFunction.__init__" />
-      <keyword name="RedefinedFunction (Constructor)" id="RedefinedFunction (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#RedefinedFunction.__init__" />
-      <keyword name="RedefinedWhileUnused" id="RedefinedWhileUnused" ref="eric5.Utilities.py3flakes.messages.html#RedefinedWhileUnused" />
-      <keyword name="RedefinedWhileUnused" id="RedefinedWhileUnused" ref="eric5.UtilitiesPython2.py2flakes.messages.html#RedefinedWhileUnused" />
-      <keyword name="RedefinedWhileUnused (Constructor)" id="RedefinedWhileUnused (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#RedefinedWhileUnused.__init__" />
-      <keyword name="RedefinedWhileUnused (Constructor)" id="RedefinedWhileUnused (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#RedefinedWhileUnused.__init__" />
       <keyword name="Redirector" id="Redirector" ref="eric5.UI.UserInterface.html#Redirector" />
       <keyword name="Redirector (Constructor)" id="Redirector (Constructor)" ref="eric5.UI.UserInterface.html#Redirector.__init__" />
       <keyword name="Redirector.__bufferedWrite" id="Redirector.__bufferedWrite" ref="eric5.UI.UserInterface.html#Redirector.__bufferedWrite" />
@@ -9657,12 +9519,6 @@
       <keyword name="SchemeAccessHandler (Constructor)" id="SchemeAccessHandler (Constructor)" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html#SchemeAccessHandler.__init__" />
       <keyword name="SchemeAccessHandler (Module)" id="SchemeAccessHandler (Module)" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html" />
       <keyword name="SchemeAccessHandler.createRequest" id="SchemeAccessHandler.createRequest" ref="eric5.Helpviewer.Network.SchemeAccessHandler.html#SchemeAccessHandler.createRequest" />
-      <keyword name="Scope" id="Scope" ref="eric5.Utilities.py3flakes.checker.html#Scope" />
-      <keyword name="Scope" id="Scope" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Scope" />
-      <keyword name="Scope (Constructor)" id="Scope (Constructor)" ref="eric5.Utilities.py3flakes.checker.html#Scope.__init__" />
-      <keyword name="Scope (Constructor)" id="Scope (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Scope.__init__" />
-      <keyword name="Scope.__repr__" id="Scope.__repr__" ref="eric5.Utilities.py3flakes.checker.html#Scope.__repr__" />
-      <keyword name="Scope.__repr__" id="Scope.__repr__" ref="eric5.UtilitiesPython2.py2flakes.checker.html#Scope.__repr__" />
       <keyword name="SearchReplaceSlidingWidget" id="SearchReplaceSlidingWidget" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget" />
       <keyword name="SearchReplaceSlidingWidget (Constructor)" id="SearchReplaceSlidingWidget (Constructor)" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__init__" />
       <keyword name="SearchReplaceSlidingWidget.__enableScrollerButtons" id="SearchReplaceSlidingWidget.__enableScrollerButtons" ref="eric5.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__enableScrollerButtons" />
@@ -11749,20 +11605,6 @@
       <keyword name="UMLSceneSizeDialog.getData" id="UMLSceneSizeDialog.getData" ref="eric5.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog.getData" />
       <keyword name="Uid" id="Uid" ref="eric5.Utilities.binplistlib.html#Uid" />
       <keyword name="Uid.__repr__" id="Uid.__repr__" ref="eric5.Utilities.binplistlib.html#Uid.__repr__" />
-      <keyword name="UnBinding" id="UnBinding" ref="eric5.Utilities.py3flakes.checker.html#UnBinding" />
-      <keyword name="UnBinding" id="UnBinding" ref="eric5.UtilitiesPython2.py2flakes.checker.html#UnBinding" />
-      <keyword name="UndefinedExport" id="UndefinedExport" ref="eric5.Utilities.py3flakes.messages.html#UndefinedExport" />
-      <keyword name="UndefinedExport" id="UndefinedExport" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UndefinedExport" />
-      <keyword name="UndefinedExport (Constructor)" id="UndefinedExport (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UndefinedExport.__init__" />
-      <keyword name="UndefinedExport (Constructor)" id="UndefinedExport (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UndefinedExport.__init__" />
-      <keyword name="UndefinedLocal" id="UndefinedLocal" ref="eric5.Utilities.py3flakes.messages.html#UndefinedLocal" />
-      <keyword name="UndefinedLocal" id="UndefinedLocal" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UndefinedLocal" />
-      <keyword name="UndefinedLocal (Constructor)" id="UndefinedLocal (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UndefinedLocal.__init__" />
-      <keyword name="UndefinedLocal (Constructor)" id="UndefinedLocal (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UndefinedLocal.__init__" />
-      <keyword name="UndefinedName" id="UndefinedName" ref="eric5.Utilities.py3flakes.messages.html#UndefinedName" />
-      <keyword name="UndefinedName" id="UndefinedName" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UndefinedName" />
-      <keyword name="UndefinedName (Constructor)" id="UndefinedName (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UndefinedName.__init__" />
-      <keyword name="UndefinedName (Constructor)" id="UndefinedName (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UndefinedName.__init__" />
       <keyword name="UnittestDialog" id="UnittestDialog" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog" />
       <keyword name="UnittestDialog (Constructor)" id="UnittestDialog (Constructor)" ref="eric5.PyUnit.UnittestDialog.html#UnittestDialog.__init__" />
       <keyword name="UnittestDialog (Module)" id="UnittestDialog (Module)" ref="eric5.PyUnit.UnittestDialog.html" />
@@ -11792,14 +11634,6 @@
       <keyword name="UnittestWindow" id="UnittestWindow" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow" />
       <keyword name="UnittestWindow (Constructor)" id="UnittestWindow (Constructor)" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow.__init__" />
       <keyword name="UnittestWindow.eventFilter" id="UnittestWindow.eventFilter" ref="eric5.PyUnit.UnittestDialog.html#UnittestWindow.eventFilter" />
-      <keyword name="UnusedImport" id="UnusedImport" ref="eric5.Utilities.py3flakes.messages.html#UnusedImport" />
-      <keyword name="UnusedImport" id="UnusedImport" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UnusedImport" />
-      <keyword name="UnusedImport (Constructor)" id="UnusedImport (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UnusedImport.__init__" />
-      <keyword name="UnusedImport (Constructor)" id="UnusedImport (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UnusedImport.__init__" />
-      <keyword name="UnusedVariable" id="UnusedVariable" ref="eric5.Utilities.py3flakes.messages.html#UnusedVariable" />
-      <keyword name="UnusedVariable" id="UnusedVariable" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UnusedVariable" />
-      <keyword name="UnusedVariable (Constructor)" id="UnusedVariable (Constructor)" ref="eric5.Utilities.py3flakes.messages.html#UnusedVariable.__init__" />
-      <keyword name="UnusedVariable (Constructor)" id="UnusedVariable (Constructor)" ref="eric5.UtilitiesPython2.py2flakes.messages.html#UnusedVariable.__init__" />
       <keyword name="UrlBar" id="UrlBar" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar" />
       <keyword name="UrlBar (Constructor)" id="UrlBar (Constructor)" ref="eric5.Helpviewer.UrlBar.UrlBar.html#UrlBar.__init__" />
       <keyword name="UrlBar (Module)" id="UrlBar (Module)" ref="eric5.Helpviewer.UrlBar.UrlBar.html" />
@@ -12801,8 +12635,6 @@
       <keyword name="check" id="check" ref="eric5.UtilitiesPython2.Tabnanny.html#check" />
       <keyword name="checkBlacklistedVersions" id="checkBlacklistedVersions" ref="eric5.Globals.__init__.html#checkBlacklistedVersions" />
       <keyword name="checkPyside" id="checkPyside" ref="eric5.Utilities.__init__.html#checkPyside" />
-      <keyword name="checker (Module)" id="checker (Module)" ref="eric5.Utilities.py3flakes.checker.html" />
-      <keyword name="checker (Module)" id="checker (Module)" ref="eric5.UtilitiesPython2.py2flakes.checker.html" />
       <keyword name="cleanUp" id="cleanUp" ref="eric5.install.html#cleanUp" />
       <keyword name="close" id="close" ref="eric5.DebugClients.Ruby.AsyncFile.html#close" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
@@ -13176,7 +13008,6 @@
       <keyword name="is_stream_binary_plist" id="is_stream_binary_plist" ref="eric5.Utilities.binplistlib.html#is_stream_binary_plist" />
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="isinpath" id="isinpath" ref="eric5.Utilities.__init__.html#isinpath" />
-      <keyword name="iter_child_nodes" id="iter_child_nodes" ref="eric5.UtilitiesPython2.py2flakes.checker.html#iter_child_nodes" />
       <keyword name="joinext" id="joinext" ref="eric5.Utilities.__init__.html#joinext" />
       <keyword name="jsclbr (Module)" id="jsclbr (Module)" ref="eric5.Utilities.ClassBrowsers.jsclbr.html" />
       <keyword name="linesep" id="linesep" ref="eric5.Utilities.__init__.html#linesep" />
@@ -13216,8 +13047,6 @@
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.UtilitiesPython2.pep8.html#maximum_line_length" />
       <keyword name="messageHandler" id="messageHandler" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandler" />
       <keyword name="messageHandlerInstalled" id="messageHandlerInstalled" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandlerInstalled" />
-      <keyword name="messages (Module)" id="messages (Module)" ref="eric5.Utilities.py3flakes.messages.html" />
-      <keyword name="messages (Module)" id="messages (Module)" ref="eric5.UtilitiesPython2.py2flakes.messages.html" />
       <keyword name="missing_newline" id="missing_newline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_newline" />
       <keyword name="missing_newline" id="missing_newline" ref="eric5.UtilitiesPython2.pep8.html#missing_newline" />
       <keyword name="missing_whitespace" id="missing_whitespace" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_whitespace" />
@@ -13266,10 +13095,8 @@
       <keyword name="pwRecode" id="pwRecode" ref="eric5.Utilities.crypto.__init__.html#pwRecode" />
       <keyword name="pwReencrypt" id="pwReencrypt" ref="eric5.Utilities.crypto.__init__.html#pwReencrypt" />
       <keyword name="py2compile" id="py2compile" ref="eric5.Utilities.__init__.html#py2compile" />
-      <keyword name="py2flakes (Package)" id="py2flakes (Package)" ref="index-eric5.UtilitiesPython2.py2flakes.html" />
       <keyword name="py3AES (Module)" id="py3AES (Module)" ref="eric5.Utilities.crypto.py3AES.html" />
       <keyword name="py3PBKDF2 (Module)" id="py3PBKDF2 (Module)" ref="eric5.Utilities.crypto.py3PBKDF2.html" />
-      <keyword name="py3flakes (Package)" id="py3flakes (Package)" ref="index-eric5.Utilities.py3flakes.html" />
       <keyword name="pyName" id="pyName" ref="eric5.Utilities.uic.html#pyName" />
       <keyword name="pyName" id="pyName" ref="eric5.compileUiFiles.html#pyName" />
       <keyword name="pyName" id="pyName" ref="eric5.install.html#pyName" />

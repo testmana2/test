@@ -64,6 +64,7 @@ ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
 Class ClbrBaseClasses.Class VisibilityMixin
+ClassDefinition Definition
 ClassItem UMLItem
 ClassModel UMLModel
 ClassScope Scope
@@ -127,11 +128,13 @@ DebuggerPropertiesWriter XMLStreamWriterBase
 DebuggerPython3Page ConfigurationPageBase Ui_DebuggerPython3Page
 DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
+Definition Binding
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
 DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
+DoctestSyntaxError Message
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
 DownloadManager QDialog Ui_DownloadManager
@@ -258,8 +261,9 @@ FtpDirLineParserError Exception
 FtpReply QNetworkReply
 FtpSyncHandler SyncHandler
 Function ClbrBaseClasses.Function VisibilityMixin
-FunctionDefinition Binding
+FunctionDefinition Definition
 FunctionScope Scope
+GeneratorScope Scope
 GotoDialog QDialog Ui_GotoDialog
 Gpg HgExtension
 GpgProjectHelper HgExtensionProjectHelper
@@ -370,7 +374,7 @@ IconsPage ConfigurationPageBase Ui_IconsPage
 IconsPreviewDialog QDialog Ui_IconsPreviewDialog
 ImportShadowedByLoopVar Message
 ImportStarUsed Message
-Importation Binding
+Importation Definition
 ImportsDiagramBuilder UMLDiagramBuilder
 InputDialogWizard QObject
 InputDialogWizardDialog QDialog Ui_InputDialogWizardDialog
@@ -572,9 +576,11 @@ Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
 RecursionError OverflowError ValueError
 RedefinedFunction Message
+RedefinedInListComp Message
 RedefinedWhileUnused Message
 Redirector QObject
 RemoveBookmarksCommand QUndoCommand
+ReturnWithArgsInsideGenerator Message
 RevisionsValidator QValidator
 SafariImporter BookmarksImporter
 SchemeAccessHandler QObject
@@ -708,7 +714,6 @@ UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
 Uid int
-UnBinding Binding
 UndefinedExport Message
 UndefinedLocal Message
 UndefinedName Message
@@ -762,4 +767,5 @@ XbelReader QXmlStreamReader
 XbelWriter QXmlStreamWriter
 XmlEntityResolver QXmlStreamEntityResolver
 ZoomDialog QDialog Ui_ZoomDialog
+_FieldsOrder dict
 _StrikeThroughExtension markdown.Extension

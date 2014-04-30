@@ -8380,92 +8380,117 @@ eric5.Utilities.parseOptionString?4(s)
 eric5.Utilities.parseString?4(s, rx)
 eric5.Utilities.prepareQtMacBundle?4(toolname, version, args)
 eric5.Utilities.py2compile?4(file, checkFlakes=False)
+eric5.Utilities.py3flakes.checker.Binding.redefines?4(other)
 eric5.Utilities.py3flakes.checker.Binding?1(name, source)
-eric5.Utilities.py3flakes.checker.Checker.ASSIGN?4(node)
-eric5.Utilities.py3flakes.checker.Checker.ATTRIBUTES?7
+eric5.Utilities.py3flakes.checker.Checker.AND?7
 eric5.Utilities.py3flakes.checker.Checker.AUGASSIGN?4(node)
 eric5.Utilities.py3flakes.checker.Checker.BOOLOP?7
-eric5.Utilities.py3flakes.checker.Checker.CALL?7
 eric5.Utilities.py3flakes.checker.Checker.CLASSDEF?4(node)
-eric5.Utilities.py3flakes.checker.Checker.COMPREHENSION?7
-eric5.Utilities.py3flakes.checker.Checker.DICTCOMP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.CONTINUE?7
+eric5.Utilities.py3flakes.checker.Checker.DELETE?7
+eric5.Utilities.py3flakes.checker.Checker.DICTCOMP?7
 eric5.Utilities.py3flakes.checker.Checker.EXCEPTHANDLER?4(node)
-eric5.Utilities.py3flakes.checker.Checker.FOR?4(node)
 eric5.Utilities.py3flakes.checker.Checker.FUNCTIONDEF?4(node)
+eric5.Utilities.py3flakes.checker.Checker.GENERATOREXP?4(node)
 eric5.Utilities.py3flakes.checker.Checker.GLOBAL?4(node)
 eric5.Utilities.py3flakes.checker.Checker.IMPORT?4(node)
 eric5.Utilities.py3flakes.checker.Checker.IMPORTFROM?4(node)
-eric5.Utilities.py3flakes.checker.Checker.INVERT?7
-eric5.Utilities.py3flakes.checker.Checker.ISNOT?7
 eric5.Utilities.py3flakes.checker.Checker.LAMBDA?4(node)
-eric5.Utilities.py3flakes.checker.Checker.LISTCOMP?4(node)
+eric5.Utilities.py3flakes.checker.Checker.LISTCOMP?7
 eric5.Utilities.py3flakes.checker.Checker.LOAD?7
-eric5.Utilities.py3flakes.checker.Checker.MOD?7
 eric5.Utilities.py3flakes.checker.Checker.NAME?4(node)
 eric5.Utilities.py3flakes.checker.Checker.NONLOCAL?7
-eric5.Utilities.py3flakes.checker.Checker.PASS?7
-eric5.Utilities.py3flakes.checker.Checker.RETURN?7
-eric5.Utilities.py3flakes.checker.Checker.SETCOMP?7
+eric5.Utilities.py3flakes.checker.Checker.NUM?7
+eric5.Utilities.py3flakes.checker.Checker.RETURN?4(node)
 eric5.Utilities.py3flakes.checker.Checker.SLICE?7
-eric5.Utilities.py3flakes.checker.Checker.STARRED?4(node)
-eric5.Utilities.py3flakes.checker.Checker.TRY?7
-eric5.Utilities.py3flakes.checker.Checker._runDeferred?5(deferred)
+eric5.Utilities.py3flakes.checker.Checker.TRY?4(node)
+eric5.Utilities.py3flakes.checker.Checker.TRYEXCEPT?7
+eric5.Utilities.py3flakes.checker.Checker.YIELD?4(node)
+eric5.Utilities.py3flakes.checker.Checker.YIELDFROM?7
+eric5.Utilities.py3flakes.checker.Checker._customBuiltIns?8
+eric5.Utilities.py3flakes.checker.Checker._getDoctestExamples?8
 eric5.Utilities.py3flakes.checker.Checker.addArgs?4()
-eric5.Utilities.py3flakes.checker.Checker.addBinding?4(lineno, value, reportRedef=True)
+eric5.Utilities.py3flakes.checker.Checker.addBinding?4(node, value)
+eric5.Utilities.py3flakes.checker.Checker.builtIns?7
+eric5.Utilities.py3flakes.checker.Checker.checkDeadScopes?4()
+eric5.Utilities.py3flakes.checker.Checker.checkReturnWithArgumentInsideGenerator?4()
 eric5.Utilities.py3flakes.checker.Checker.checkUnusedAssignments?4()
-eric5.Utilities.py3flakes.checker.Checker.check_dead_scopes?4()
-eric5.Utilities.py3flakes.checker.Checker.collectLoopVars?4()
 eric5.Utilities.py3flakes.checker.Checker.deferAssignment?4(callable)
 eric5.Utilities.py3flakes.checker.Checker.deferFunction?4(callable)
-eric5.Utilities.py3flakes.checker.Checker.handleAssignName?4(node)
-eric5.Utilities.py3flakes.checker.Checker.handleBody?4(tree)
-eric5.Utilities.py3flakes.checker.Checker.handleChildren?4(tree)
+eric5.Utilities.py3flakes.checker.Checker.descendantOf?4(node, ancestors, stop)
+eric5.Utilities.py3flakes.checker.Checker.differentForks?4(lnode, rnode)
+eric5.Utilities.py3flakes.checker.Checker.getCommonAncestor?4(lnode, rnode, stop)
+eric5.Utilities.py3flakes.checker.Checker.getDocstring?4(node)
+eric5.Utilities.py3flakes.checker.Checker.getNodeHandler?4(node_class)
+eric5.Utilities.py3flakes.checker.Checker.getParent?4(node)
+eric5.Utilities.py3flakes.checker.Checker.handleChildren?4(tree, omit=None)
+eric5.Utilities.py3flakes.checker.Checker.handleDoctests?4(node)
 eric5.Utilities.py3flakes.checker.Checker.handleNode?4(node, parent)
+eric5.Utilities.py3flakes.checker.Checker.handleNodeDelete?4(node)
+eric5.Utilities.py3flakes.checker.Checker.handleNodeLoad?4(node)
+eric5.Utilities.py3flakes.checker.Checker.handleNodeStore?4(node)
 eric5.Utilities.py3flakes.checker.Checker.ignore?4(node)
 eric5.Utilities.py3flakes.checker.Checker.isDocstring?4(node)
+eric5.Utilities.py3flakes.checker.Checker.isLiteralTupleUnpacking?4(node)
 eric5.Utilities.py3flakes.checker.Checker.nodeDepth?7
+eric5.Utilities.py3flakes.checker.Checker.offset?7
 eric5.Utilities.py3flakes.checker.Checker.popScope?4()
-eric5.Utilities.py3flakes.checker.Checker.pushClassScope?4()
-eric5.Utilities.py3flakes.checker.Checker.pushFunctionScope?4()
+eric5.Utilities.py3flakes.checker.Checker.pushScope?4(scopeClass=FunctionScope)
 eric5.Utilities.py3flakes.checker.Checker.report?4(messageClass, *args, **kwargs)
+eric5.Utilities.py3flakes.checker.Checker.runDeferred?4(deferred)
 eric5.Utilities.py3flakes.checker.Checker.runFunction?4()
 eric5.Utilities.py3flakes.checker.Checker.scope?4()
-eric5.Utilities.py3flakes.checker.Checker.scope?7
 eric5.Utilities.py3flakes.checker.Checker.traceTree?7
-eric5.Utilities.py3flakes.checker.Checker?1(module, filename='(none)')
-eric5.Utilities.py3flakes.checker.ExportBinding.names?4()
-eric5.Utilities.py3flakes.checker.FunctionDefinition.is_property?7
+eric5.Utilities.py3flakes.checker.Checker?1(tree, filename='(none)', builtins=None, withDoctest='PYFLAKES_NODOCTEST' not in os.environ)
+eric5.Utilities.py3flakes.checker.ExportBinding?1(name, source, scope)
+eric5.Utilities.py3flakes.checker.FunctionScope.alwaysUsed?7
+eric5.Utilities.py3flakes.checker.FunctionScope.unusedAssignments?4()
+eric5.Utilities.py3flakes.checker.FunctionScope.usesLocals?7
 eric5.Utilities.py3flakes.checker.FunctionScope?1()
+eric5.Utilities.py3flakes.checker.Importation.redefines?4(other)
 eric5.Utilities.py3flakes.checker.Importation?1(name, source)
+eric5.Utilities.py3flakes.checker.PY2?7
+eric5.Utilities.py3flakes.checker.PY32?7
+eric5.Utilities.py3flakes.checker.PY33?7
 eric5.Utilities.py3flakes.checker.Scope.importStarred?7
-eric5.Utilities.py3flakes.checker.Scope?1()
 eric5.Utilities.py3flakes.checker._MAGIC_GLOBALS?8
+eric5.Utilities.py3flakes.checker._get_fields?5(self, node_class)
+eric5.Utilities.py3flakes.checker.builtin_vars?7
+eric5.Utilities.py3flakes.checker.getAlternatives?4(n)
+eric5.Utilities.py3flakes.checker.getNodeName?4(node)
+eric5.Utilities.py3flakes.checker.getNodeType?4(node_class)
+eric5.Utilities.py3flakes.checker.iter_child_nodes?4(node, omit=None, _fields_order=_FieldsOrder())
+eric5.Utilities.py3flakes.messages.DoctestSyntaxError.message?7
+eric5.Utilities.py3flakes.messages.DoctestSyntaxError?1(filename, loc, position=None)
 eric5.Utilities.py3flakes.messages.DuplicateArgument.message?7
-eric5.Utilities.py3flakes.messages.DuplicateArgument?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.DuplicateArgument?1(filename, loc, name)
 eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar.message?7
-eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.ImportShadowedByLoopVar?1(filename, loc, name, orig_loc)
 eric5.Utilities.py3flakes.messages.ImportStarUsed.message?7
-eric5.Utilities.py3flakes.messages.ImportStarUsed?1(filename, lineno, modname)
+eric5.Utilities.py3flakes.messages.ImportStarUsed?1(filename, loc, modname)
 eric5.Utilities.py3flakes.messages.LateFutureImport.message?7
-eric5.Utilities.py3flakes.messages.LateFutureImport?1(filename, lineno, names)
+eric5.Utilities.py3flakes.messages.LateFutureImport?1(filename, loc, names)
 eric5.Utilities.py3flakes.messages.Message.getMessageData?4()
 eric5.Utilities.py3flakes.messages.Message.message?7
 eric5.Utilities.py3flakes.messages.Message.message_args?7
-eric5.Utilities.py3flakes.messages.Message?1(filename, lineno)
+eric5.Utilities.py3flakes.messages.Message?1(filename, loc)
 eric5.Utilities.py3flakes.messages.RedefinedFunction.message?7
-eric5.Utilities.py3flakes.messages.RedefinedFunction?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.RedefinedFunction?1(filename, loc, name, orig_loc)
+eric5.Utilities.py3flakes.messages.RedefinedInListComp.message?7
+eric5.Utilities.py3flakes.messages.RedefinedInListComp?1(filename, loc, name, orig_loc)
 eric5.Utilities.py3flakes.messages.RedefinedWhileUnused.message?7
-eric5.Utilities.py3flakes.messages.RedefinedWhileUnused?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.RedefinedWhileUnused?1(filename, loc, name, orig_loc)
+eric5.Utilities.py3flakes.messages.ReturnWithArgsInsideGenerator.message?7
 eric5.Utilities.py3flakes.messages.UndefinedExport.message?7
-eric5.Utilities.py3flakes.messages.UndefinedExport?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UndefinedExport?1(filename, loc, name)
 eric5.Utilities.py3flakes.messages.UndefinedLocal.message?7
-eric5.Utilities.py3flakes.messages.UndefinedLocal?1(filename, lineno, name, orig_lineno)
+eric5.Utilities.py3flakes.messages.UndefinedLocal?1(filename, loc, name, orig_loc)
 eric5.Utilities.py3flakes.messages.UndefinedName.message?7
-eric5.Utilities.py3flakes.messages.UndefinedName?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UndefinedName?1(filename, loc, name)
 eric5.Utilities.py3flakes.messages.UnusedImport.message?7
-eric5.Utilities.py3flakes.messages.UnusedImport?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UnusedImport?1(filename, loc, name)
 eric5.Utilities.py3flakes.messages.UnusedVariable.message?7
-eric5.Utilities.py3flakes.messages.UnusedVariable?1(filename, lineno, name)
+eric5.Utilities.py3flakes.messages.UnusedVariable?1(filename, loc, names)
 eric5.Utilities.readEncodedFile?4(filename)
 eric5.Utilities.readEncodedFileWithHash?4(filename)
 eric5.Utilities.readStringFromStream?4(stream)
@@ -8646,86 +8671,117 @@ eric5.UtilitiesPython2.pep8.whitespace_around_named_parameter_equals?4(logical_l
 eric5.UtilitiesPython2.pep8.whitespace_around_operator?4(logical_line)
 eric5.UtilitiesPython2.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
 eric5.UtilitiesPython2.pep8.whitespace_before_parameters?4(logical_line, tokens)
+eric5.UtilitiesPython2.py2flakes.checker.Binding.redefines?4(other)
 eric5.UtilitiesPython2.py2flakes.checker.Binding?1(name, source)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.AND?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.ASSIGN?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.AUGASSIGN?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.BITOR?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.BOOLOP?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.CALL?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.CLASSDEF?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.COMPREHENSION?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.CONTINUE?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.DICTCOMP?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.EQ?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.FOR?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.DELETE?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.DICTCOMP?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.EXCEPTHANDLER?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.FUNCTIONDEF?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.GENERATOREXP?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.GENERATOREXP?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.GLOBAL?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.IMPORT?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.IMPORTFROM?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.LAMBDA?4(node)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.LISTCOMP?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.LISTCOMP?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.LOAD?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.NAME?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.NONLOCAL?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.NUM?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker.RETURN?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.RETURN?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.SLICE?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker._runDeferred?5(deferred)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.TRY?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.TRYEXCEPT?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.YIELD?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.YIELDFROM?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker._customBuiltIns?8
+eric5.UtilitiesPython2.py2flakes.checker.Checker._getDoctestExamples?8
 eric5.UtilitiesPython2.py2flakes.checker.Checker.addArgs?4()
-eric5.UtilitiesPython2.py2flakes.checker.Checker.addBinding?4(lineno, value, reportRedef=True)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.addBinding?4(node, value)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.builtIns?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.checkDeadScopes?4()
+eric5.UtilitiesPython2.py2flakes.checker.Checker.checkReturnWithArgumentInsideGenerator?4()
 eric5.UtilitiesPython2.py2flakes.checker.Checker.checkUnusedAssignments?4()
-eric5.UtilitiesPython2.py2flakes.checker.Checker.check_dead_scopes?4()
-eric5.UtilitiesPython2.py2flakes.checker.Checker.collectLoopVars?4()
 eric5.UtilitiesPython2.py2flakes.checker.Checker.deferAssignment?4(callable)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.deferFunction?4(callable)
-eric5.UtilitiesPython2.py2flakes.checker.Checker.handleChildren?4(tree)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.descendantOf?4(node, ancestors, stop)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.differentForks?4(lnode, rnode)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.getCommonAncestor?4(lnode, rnode, stop)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.getDocstring?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.getNodeHandler?4(node_class)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.getParent?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.handleChildren?4(tree, omit=None)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.handleDoctests?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.handleNode?4(node, parent)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.handleNodeDelete?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.handleNodeLoad?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.handleNodeStore?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.ignore?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.isDocstring?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.isLiteralTupleUnpacking?4(node)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.nodeDepth?7
+eric5.UtilitiesPython2.py2flakes.checker.Checker.offset?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.popScope?4()
-eric5.UtilitiesPython2.py2flakes.checker.Checker.pushClassScope?4()
-eric5.UtilitiesPython2.py2flakes.checker.Checker.pushFunctionScope?4()
+eric5.UtilitiesPython2.py2flakes.checker.Checker.pushScope?4(scopeClass=FunctionScope)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.report?4(messageClass, *args, **kwargs)
+eric5.UtilitiesPython2.py2flakes.checker.Checker.runDeferred?4(deferred)
 eric5.UtilitiesPython2.py2flakes.checker.Checker.runFunction?4()
 eric5.UtilitiesPython2.py2flakes.checker.Checker.scope?4()
-eric5.UtilitiesPython2.py2flakes.checker.Checker.scope?7
 eric5.UtilitiesPython2.py2flakes.checker.Checker.traceTree?7
-eric5.UtilitiesPython2.py2flakes.checker.Checker?1(module, filename='(none)')
-eric5.UtilitiesPython2.py2flakes.checker.ExportBinding.names?4()
+eric5.UtilitiesPython2.py2flakes.checker.Checker?1(tree, filename='(none)', builtins=None, withDoctest='PYFLAKES_NODOCTEST' not in os.environ)
+eric5.UtilitiesPython2.py2flakes.checker.ExportBinding?1(name, source, scope)
+eric5.UtilitiesPython2.py2flakes.checker.FunctionScope.alwaysUsed?7
+eric5.UtilitiesPython2.py2flakes.checker.FunctionScope.unusedAssignments?4()
+eric5.UtilitiesPython2.py2flakes.checker.FunctionScope.usesLocals?7
 eric5.UtilitiesPython2.py2flakes.checker.FunctionScope?1()
+eric5.UtilitiesPython2.py2flakes.checker.Importation.redefines?4(other)
 eric5.UtilitiesPython2.py2flakes.checker.Importation?1(name, source)
+eric5.UtilitiesPython2.py2flakes.checker.PY2?7
+eric5.UtilitiesPython2.py2flakes.checker.PY32?7
+eric5.UtilitiesPython2.py2flakes.checker.PY33?7
 eric5.UtilitiesPython2.py2flakes.checker.Scope.importStarred?7
-eric5.UtilitiesPython2.py2flakes.checker.Scope?1()
 eric5.UtilitiesPython2.py2flakes.checker._MAGIC_GLOBALS?8
-eric5.UtilitiesPython2.py2flakes.checker.iter_child_nodes?4(node, astcls=_ast.AST)
+eric5.UtilitiesPython2.py2flakes.checker._get_fields?5(self, node_class)
+eric5.UtilitiesPython2.py2flakes.checker.builtin_vars?7
+eric5.UtilitiesPython2.py2flakes.checker.getAlternatives?4(n)
+eric5.UtilitiesPython2.py2flakes.checker.getNodeName?4(node)
+eric5.UtilitiesPython2.py2flakes.checker.getNodeType?4(node_class)
+eric5.UtilitiesPython2.py2flakes.checker.iter_child_nodes?4(node, omit=None, _fields_order=_FieldsOrder())
+eric5.UtilitiesPython2.py2flakes.messages.DoctestSyntaxError.message?7
+eric5.UtilitiesPython2.py2flakes.messages.DoctestSyntaxError?1(filename, loc, position=None)
 eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument.message?7
-eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument?1(filename, lineno, name)
+eric5.UtilitiesPython2.py2flakes.messages.DuplicateArgument?1(filename, loc, name)
 eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar.message?7
-eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar?1(filename, lineno, name, orig_lineno)
+eric5.UtilitiesPython2.py2flakes.messages.ImportShadowedByLoopVar?1(filename, loc, name, orig_loc)
 eric5.UtilitiesPython2.py2flakes.messages.ImportStarUsed.message?7
-eric5.UtilitiesPython2.py2flakes.messages.ImportStarUsed?1(filename, lineno, modname)
+eric5.UtilitiesPython2.py2flakes.messages.ImportStarUsed?1(filename, loc, modname)
 eric5.UtilitiesPython2.py2flakes.messages.LateFutureImport.message?7
-eric5.UtilitiesPython2.py2flakes.messages.LateFutureImport?1(filename, lineno, names)
+eric5.UtilitiesPython2.py2flakes.messages.LateFutureImport?1(filename, loc, names)
 eric5.UtilitiesPython2.py2flakes.messages.Message.getMessageData?4()
 eric5.UtilitiesPython2.py2flakes.messages.Message.message?7
 eric5.UtilitiesPython2.py2flakes.messages.Message.message_args?7
-eric5.UtilitiesPython2.py2flakes.messages.Message?1(filename, lineno)
+eric5.UtilitiesPython2.py2flakes.messages.Message?1(filename, loc)
 eric5.UtilitiesPython2.py2flakes.messages.RedefinedFunction.message?7
-eric5.UtilitiesPython2.py2flakes.messages.RedefinedFunction?1(filename, lineno, name, orig_lineno)
+eric5.UtilitiesPython2.py2flakes.messages.RedefinedFunction?1(filename, loc, name, orig_loc)
+eric5.UtilitiesPython2.py2flakes.messages.RedefinedInListComp.message?7
+eric5.UtilitiesPython2.py2flakes.messages.RedefinedInListComp?1(filename, loc, name, orig_loc)
 eric5.UtilitiesPython2.py2flakes.messages.RedefinedWhileUnused.message?7
-eric5.UtilitiesPython2.py2flakes.messages.RedefinedWhileUnused?1(filename, lineno, name, orig_lineno)
+eric5.UtilitiesPython2.py2flakes.messages.RedefinedWhileUnused?1(filename, loc, name, orig_loc)
+eric5.UtilitiesPython2.py2flakes.messages.ReturnWithArgsInsideGenerator.message?7
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedExport.message?7
-eric5.UtilitiesPython2.py2flakes.messages.UndefinedExport?1(filename, lineno, name)
+eric5.UtilitiesPython2.py2flakes.messages.UndefinedExport?1(filename, loc, name)
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedLocal.message?7
-eric5.UtilitiesPython2.py2flakes.messages.UndefinedLocal?1(filename, lineno, name, orig_lineno)
+eric5.UtilitiesPython2.py2flakes.messages.UndefinedLocal?1(filename, loc, name, orig_loc)
 eric5.UtilitiesPython2.py2flakes.messages.UndefinedName.message?7
-eric5.UtilitiesPython2.py2flakes.messages.UndefinedName?1(filename, lineno, name)
+eric5.UtilitiesPython2.py2flakes.messages.UndefinedName?1(filename, loc, name)
 eric5.UtilitiesPython2.py2flakes.messages.UnusedImport.message?7
-eric5.UtilitiesPython2.py2flakes.messages.UnusedImport?1(filename, lineno, name)
+eric5.UtilitiesPython2.py2flakes.messages.UnusedImport?1(filename, loc, name)
 eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable.message?7
-eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable?1(filename, lineno, names)
+eric5.UtilitiesPython2.py2flakes.messages.UnusedVariable?1(filename, loc, names)
 eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog.getOptions?4()
 eric5.VCS.CommandOptionsDialog.VcsCommandOptionsDialog?1(vcs, parent=None)
 eric5.VCS.ProjectBrowserHelper.VcsProjectBrowserHelper._VCSAdd?5()
@@ -9079,6 +9135,7 @@ eric5.install.exit?4(rcode=0)
 eric5.install.initGlobals?4()
 eric5.install.installEric?4()
 eric5.install.macAppBundleName?7
+eric5.install.macAppBundlePath?7
 eric5.install.macPythonExe?7
 eric5.install.main?4(argv)
 eric5.install.modDir?7

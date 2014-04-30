@@ -1850,6 +1850,8 @@
                 <string>_hg</string>
                 <string>.directory</string>
                 <string>.issues</string>
+                <string>py3flakes</string>
+                <string>py2flakes</string>
               </list>
             </value>
             <key>
