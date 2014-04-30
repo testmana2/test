@@ -310,4 +310,6 @@ class ReturnWithArgsInsideGenerator(Message):
     """
     Indicates a return statement with arguments inside a generator.
     """
-    message = '\'return\' with argument inside generator'
+    message = QCoreApplication.translate(
+        'py3Flakes',
+        '\'return\' with argument inside generator')
