@@ -64,7 +64,7 @@ class HgStatusMonitorThread(VcsStatusMonitorThread):
                 # versions below that have a bug causing a second
                 # instance to not recognize changes to the status
                 from .HgClient import HgClient
-                client = HgClient(self.projectDir, "utf-8")
+                client = HgClient(self.projectDir, "utf-8", self.vcs)
                 ok, err = client.startServer()
                 if ok:
                     self.__client = client

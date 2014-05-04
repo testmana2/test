@@ -33,12 +33,13 @@ class HgClient(QObject):
     
     Channels = (b"I", b"L", b"o", b"e", b"r", b"d")
     
-    def __init__(self, repoPath, encoding, parent=None):
+    def __init__(self, repoPath, encoding, vcs, parent=None):
         """
         Constructor
         
         @param repoPath root directory of the repository (string)
         @param encoding encoding to be used by the command server (string)
+        @param vcs reference to the VCS object (Hg)
         @param parent reference to the parent object (QObject)
         """
         super(HgClient, self).__init__(parent)
@@ -46,13 +47,13 @@ class HgClient(QObject):
         self.__server = None
         self.__started = False
         self.__version = None
-        self.__encoding = parent.getEncoding()
+        self.__encoding = vcs.getEncoding()
         self.__cancel = False
         self.__commandRunning = False
         self.__repoPath = repoPath
         
         # generate command line and environment
-        self.__serverArgs = parent.initCommand("serve")  # parent is hg
+        self.__serverArgs = vcs.initCommand("serve")
         self.__serverArgs.append("--cmdserver")
         self.__serverArgs.append("pipe")
         self.__serverArgs.append("--config")

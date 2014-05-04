@@ -4549,7 +4549,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.runcommand?4(args, promp
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.startServer?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.stopServer?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient.wasCanceled?4()
-eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient?1(repoPath, encoding, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.HgClient?1(repoPath, encoding, vcs, parent=None)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.HgClientPromptDialog.getInput?4()
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.HgClientPromptDialog.on_inputEdit_textChanged?4(txt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.HgClientPromptDialog?1(size, message, parent=None)
@@ -4625,6 +4625,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.COLORNAMES?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.COLORS?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.AuthorColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.BranchColumn?7
+eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.ClosedIndicator?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.DateColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.IconColumn?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.LargefilesCacheL?7

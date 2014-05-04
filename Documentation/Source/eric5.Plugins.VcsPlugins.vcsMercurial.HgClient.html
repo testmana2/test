@@ -112,7 +112,7 @@ QObject
 </table>
 <a NAME="HgClient.__init__" ID="HgClient.__init__"></a>
 <h4>HgClient (Constructor)</h4>
-<b>HgClient</b>(<i>repoPath, encoding, parent=None</i>)
+<b>HgClient</b>(<i>repoPath, encoding, vcs, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -122,6 +122,9 @@ root directory of the repository (string)
 </dd><dt><i>encoding</i></dt>
 <dd>
 encoding to be used by the command server (string)
+</dd><dt><i>vcs</i></dt>
+<dd>
+reference to the VCS object (Hg)
 </dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent object (QObject)
