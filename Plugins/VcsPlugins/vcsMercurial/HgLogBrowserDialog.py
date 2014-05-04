@@ -52,6 +52,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     LargefilesCacheW = ".hglf\\"
     PathSeparatorRe = re.compile(r"/|\\")
     
+    ClosedIndicator = " \u2612"
+    
     def __init__(self, vcs, mode="log", parent=None):
         """
         Constructor
@@ -102,6 +104,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 "<tr><td><b>Branch</b></td><td>{3}</td></tr>"
                 "<tr><td><b>Tags</b></td><td>{4}</td></tr>"
                 "<tr><td><b>Bookmarks</b></td><td>{5}</td></tr>"
+                "<tr><td><b>Parents</b></td><td>{6}</td></tr>"
                 "</table>"
             )
         else:
@@ -112,6 +115,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 "<tr><td><b>Author</b></td><td>{2}</td></tr>"
                 "<tr><td><b>Branch</b></td><td>{3}</td></tr>"
                 "<tr><td><b>Tags</b></td><td>{4}</td></tr>"
+                "<tr><td><b>Parents</b></td><td>{5}</td></tr>"
                 "</table>"
             )
         
@@ -637,7 +641,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         rev, node = revision.split(":")
         if rev in self.__closedBranchesRevs:
-            closedStr = " \u2612"
+            closedStr = self.ClosedIndicator
         else:
             closedStr = ""
         msgtxt = msg[0]
@@ -1232,17 +1236,25 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                     itm.text(self.RevisionColumn),
                     itm.text(self.DateColumn),
                     itm.text(self.AuthorColumn),
-                    itm.text(self.BranchColumn),
+                    itm.text(self.BranchColumn).replace(
+                        self.ClosedIndicator, ""),
                     itm.text(self.TagsColumn),
-                    itm.text(self.BookmarksColumn)
+                    itm.text(self.BookmarksColumn),
+                    ", ".join(
+                        [str(x) for x in itm.data(0, self.__parentsRole)]
+                    ),
                 ))
             else:
                 self.detailsEdit.setHtml(self.__detailsTemplate.format(
                     itm.text(self.RevisionColumn),
                     itm.text(self.DateColumn),
                     itm.text(self.AuthorColumn),
-                    itm.text(self.BranchColumn),
+                    itm.text(self.BranchColumn).replace(
+                        self.ClosedIndicator, ""),
                     itm.text(self.TagsColumn),
+                    ", ".join(
+                        [str(x) for x in itm.data(0, self.__parentsRole)]
+                    ),
                 ))
             
             for line in itm.data(0, self.__messageRole):
