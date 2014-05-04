@@ -73,7 +73,7 @@ def getSupportedLanguages():
     Module function to get a dictionary of supported lexer languages.
     
     @return dictionary of supported lexer languages. The keys are the
-        internal language names. The items are lists of two entries.
+        internal language names. The items are lists of three entries.
         The first is the display string for the language, the second
         is a dummy file name, which can be used to derive the lexer, and
         the third is the name of an icon file.
