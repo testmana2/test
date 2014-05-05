@@ -296,6 +296,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="gettextGroup">
+     <property name="title">
+      <string>Gettext Lexer Properties</string>
+     </property>
+     <layout class="QVBoxLayout" name="_5">
+      <item>
+       <widget class="QCheckBox" name="foldPoCommentCheckBox">
+        <property name="toolTip">
+         <string>Select whether folding of comments shall be possible</string>
+        </property>
+        <property name="text">
+         <string>Fold comments</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="groupBox_10">
      <property name="title">
       <string>HTML Lexer Properties</string>
@@ -961,6 +980,7 @@
   <tabstop>foldDAtElseCheckBox</tabstop>
   <tabstop>dIndentOpeningBraceCheckBox</tabstop>
   <tabstop>dIndentClosingBraceCheckBox</tabstop>
+  <tabstop>foldPoCommentCheckBox</tabstop>
   <tabstop>foldHtmlPreprocessorCheckBox</tabstop>
   <tabstop>foldHtmlScriptCommentsCheckBox</tabstop>
   <tabstop>foldHtmlScriptHereDocsCheckBox</tabstop>

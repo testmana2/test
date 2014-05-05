@@ -102,6 +102,13 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         self.dIndentClosingBraceCheckBox.setChecked(
             Preferences.getEditor("DIndentClosingBrace"))
         
+        # Gettext
+        if "Gettext" in self.languages:
+            self.foldPoCommentCheckBox.setChecked(
+                Preferences.getEditor("PoFoldComment"))
+        else:
+            self.gettextGroup.setEnabled(False)
+        
         # HTML
         self.foldHtmlPreprocessorCheckBox.setChecked(
             Preferences.getEditor("HtmlFoldPreprocessor"))
@@ -356,6 +363,12 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         Preferences.setEditor(
             "DIndentClosingBrace",
             self.dIndentClosingBraceCheckBox.isChecked())
+        
+        # Gettext
+        if "Gettext" in self.languages:
+            Preferences.setEditor(
+                "PoFoldComment",
+                self.foldPoCommentCheckBox.isChecked())
         
         # HTML
         Preferences.setEditor(

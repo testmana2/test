@@ -9217,7 +9217,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2839"/>
+        <location filename="../QScintilla/Editor.py" line="2843"/>
         <source>Open File</source>
         <translation>Dosya Aç</translation>
     </message>
@@ -9307,7 +9307,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Tüm seçimi iptal et</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6910"/>
+        <location filename="../QScintilla/Editor.py" line="6914"/>
         <source>Check spelling...</source>
         <translation>Yazım Kontrolü...</translation>
     </message>
@@ -9557,7 +9557,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Bekleme noktasını düzenle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4851"/>
+        <location filename="../QScintilla/Editor.py" line="4855"/>
         <source>Enable breakpoint</source>
         <translation>Beklemenoktasını etkinleştir</translation>
     </message>
@@ -9672,57 +9672,57 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>Kullanmak için Pygment lexer seç.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1712"/>
+        <location filename="../QScintilla/Editor.py" line="1716"/>
         <source>Modification of Read Only file</source>
         <translation>Yalnızca okunabilir dosyada değişiklik</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1712"/>
+        <location filename="../QScintilla/Editor.py" line="1716"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Yalnızca okunabilir bir dosyayı değiştirmeşe çalışıyorsunuz. Lütfen önce farklı bir isimde kaydediniz.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2404"/>
+        <location filename="../QScintilla/Editor.py" line="2408"/>
         <source>Printing...</source>
         <translation>Yazılıyor...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2421"/>
+        <location filename="../QScintilla/Editor.py" line="2425"/>
         <source>Printing completed</source>
         <translation>Yazdırma tamalandı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2423"/>
+        <location filename="../QScintilla/Editor.py" line="2427"/>
         <source>Error while printing</source>
         <translation>Yazdırılırken hata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2426"/>
+        <location filename="../QScintilla/Editor.py" line="2430"/>
         <source>Printing aborted</source>
         <translation>Yazdırma iptal edildi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2784"/>
+        <location filename="../QScintilla/Editor.py" line="2788"/>
         <source>File Modified</source>
         <translation>Dosya Değiştirildi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2784"/>
+        <location filename="../QScintilla/Editor.py" line="2788"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt;dosyasında kaydedilmemiş değişiklikler var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2839"/>
+        <location filename="../QScintilla/Editor.py" line="2843"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; açılamıyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3009"/>
+        <location filename="../QScintilla/Editor.py" line="3013"/>
         <source>Save File</source>
         <translation>Dosyayı Kaydet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2942"/>
+        <location filename="../QScintilla/Editor.py" line="2946"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dosya &lt;b&gt;{0}&lt;/b&gt; kaydedilemiyor.&lt;/p&gt;&lt;p&gt;Sebep: {1}&lt;/p&gt;</translation>
     </message>
@@ -9732,62 +9732,62 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası zaten var.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4324"/>
+        <location filename="../QScintilla/Editor.py" line="4328"/>
         <source>Autocompletion</source>
         <translation>Otomatik tamamlama</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4324"/>
+        <location filename="../QScintilla/Editor.py" line="4328"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Otomatiktamamlama uygun değil çünkü bu otomatiktamamlama kaynağı değil.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4854"/>
+        <location filename="../QScintilla/Editor.py" line="4858"/>
         <source>Disable breakpoint</source>
         <translation>Durmanoktasını iptal et</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5198"/>
+        <location filename="../QScintilla/Editor.py" line="5202"/>
         <source>Code Coverage</source>
         <translation>Kod Koruyucu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5198"/>
+        <location filename="../QScintilla/Editor.py" line="5202"/>
         <source>Please select a coverage file</source>
         <translation>Lütfen bir koruyucu dosya seçiniz</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5262"/>
+        <location filename="../QScintilla/Editor.py" line="5266"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Kodların Dipnotunu Göster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5255"/>
+        <location filename="../QScintilla/Editor.py" line="5259"/>
         <source>All lines have been covered.</source>
         <translation>Tüm satırlar korumaya alındı.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5262"/>
+        <location filename="../QScintilla/Editor.py" line="5266"/>
         <source>There is no coverage file available.</source>
         <translation>Hazırda koruma dosyası yok.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5377"/>
+        <location filename="../QScintilla/Editor.py" line="5381"/>
         <source>Profile Data</source>
         <translation>Veri Kesiti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5377"/>
+        <location filename="../QScintilla/Editor.py" line="5381"/>
         <source>Please select a profile file</source>
         <translation>Lütfen kesit dosyasını seçiniz</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5537"/>
+        <location filename="../QScintilla/Editor.py" line="5541"/>
         <source>Syntax Error</source>
         <translation>Sözdizimi Hatası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5537"/>
+        <location filename="../QScintilla/Editor.py" line="5541"/>
         <source>No syntax error message available.</source>
         <translation>Uygun söz dizimi hata mesajı yok.</translation>
     </message>
@@ -9802,47 +9802,47 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">Hazırda Pyparçaları &quot;uyarı mesajı&quot; yok.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5852"/>
+        <location filename="../QScintilla/Editor.py" line="5856"/>
         <source>Macro Name</source>
         <translation>Makro Adı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5852"/>
+        <location filename="../QScintilla/Editor.py" line="5856"/>
         <source>Select a macro name:</source>
         <translation>Bir makro ismi seç:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5880"/>
+        <location filename="../QScintilla/Editor.py" line="5884"/>
         <source>Load macro file</source>
         <translation>Makro dosyasını yükle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5923"/>
+        <location filename="../QScintilla/Editor.py" line="5927"/>
         <source>Macro files (*.macro)</source>
         <translation>Makro dosyaları (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5903"/>
+        <location filename="../QScintilla/Editor.py" line="5907"/>
         <source>Error loading macro</source>
         <translation>Makronun yüklenmesinde hata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5894"/>
+        <location filename="../QScintilla/Editor.py" line="5898"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; okunamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5903"/>
+        <location filename="../QScintilla/Editor.py" line="5907"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; bozuk.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5923"/>
+        <location filename="../QScintilla/Editor.py" line="5927"/>
         <source>Save macro file</source>
         <translation>Makro Dosyasını Kaydet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5940"/>
+        <location filename="../QScintilla/Editor.py" line="5944"/>
         <source>Save macro</source>
         <translation>Makro Kaydet</translation>
     </message>
@@ -9852,37 +9852,37 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten açık.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5956"/>
+        <location filename="../QScintilla/Editor.py" line="5960"/>
         <source>Error saving macro</source>
         <translation>Makronun kaydedilmesinde hata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5956"/>
+        <location filename="../QScintilla/Editor.py" line="5960"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; yazılamıyor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5969"/>
+        <location filename="../QScintilla/Editor.py" line="5973"/>
         <source>Start Macro Recording</source>
         <translation>Makro Kaydı Başladı</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5969"/>
+        <location filename="../QScintilla/Editor.py" line="5973"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Makro kaydı şuan aktif. Yeniden başlasın mı?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5995"/>
+        <location filename="../QScintilla/Editor.py" line="5999"/>
         <source>Macro Recording</source>
         <translation>Makro Kaydediliyor</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5995"/>
+        <location filename="../QScintilla/Editor.py" line="5999"/>
         <source>Enter name of the macro:</source>
         <translation>Makronun ismini gir:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6119"/>
+        <location filename="../QScintilla/Editor.py" line="6123"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Eric5 ile açıldıktan sonra &lt;b&gt;{0}&lt;/b&gt; dosyasında değişiklik olmuş. Yeniden açılsın mı?&lt;/p&gt;</translation>
     </message>
@@ -9892,157 +9892,157 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="obsolete">&lt;br&gt;&lt;b&gt;Uyarı:&lt;/b&gt; Yapılan değişiklikleri yeniden açarken kaybedebilirsiniz.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6129"/>
+        <location filename="../QScintilla/Editor.py" line="6133"/>
         <source>File changed</source>
         <translation>Dosya değiştirilmiş</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6287"/>
+        <location filename="../QScintilla/Editor.py" line="6291"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6427"/>
+        <location filename="../QScintilla/Editor.py" line="6431"/>
         <source>Drop Error</source>
         <translation>Düşme hatası</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6427"/>
+        <location filename="../QScintilla/Editor.py" line="6431"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; bir dosya değil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6448"/>
+        <location filename="../QScintilla/Editor.py" line="6452"/>
         <source>Resources</source>
         <translation>Kaynaklar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6450"/>
+        <location filename="../QScintilla/Editor.py" line="6454"/>
         <source>Add file...</source>
         <translation>Dosya ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6452"/>
+        <location filename="../QScintilla/Editor.py" line="6456"/>
         <source>Add files...</source>
         <translation>Dosyaları ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6454"/>
+        <location filename="../QScintilla/Editor.py" line="6458"/>
         <source>Add aliased file...</source>
         <translation>Kısaltmalar dosyasına ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6457"/>
+        <location filename="../QScintilla/Editor.py" line="6461"/>
         <source>Add localized resource...</source>
         <translation>Yaral kaynak ekle...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6461"/>
+        <location filename="../QScintilla/Editor.py" line="6465"/>
         <source>Add resource frame</source>
         <translation>Çerçeve kaynağı ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6480"/>
+        <location filename="../QScintilla/Editor.py" line="6484"/>
         <source>Add file resource</source>
         <translation>Dosya kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6496"/>
+        <location filename="../QScintilla/Editor.py" line="6500"/>
         <source>Add file resources</source>
         <translation>Dosya kaynaklarını ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6524"/>
+        <location filename="../QScintilla/Editor.py" line="6528"/>
         <source>Add aliased file resource</source>
         <translation>Kısaltmalar dosyası kaynağını ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6524"/>
+        <location filename="../QScintilla/Editor.py" line="6528"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>&lt;b&gt;{0} dosyası için takma ad&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6588"/>
+        <location filename="../QScintilla/Editor.py" line="6592"/>
         <source>Package Diagram</source>
         <translation>Paket Şeması</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6588"/>
+        <location filename="../QScintilla/Editor.py" line="6592"/>
         <source>Include class attributes?</source>
         <translation>Sınıf nitelikleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6608"/>
+        <location filename="../QScintilla/Editor.py" line="6612"/>
         <source>Imports Diagram</source>
         <translation>Şemayı İçe Aktar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6608"/>
+        <location filename="../QScintilla/Editor.py" line="6612"/>
         <source>Include imports from external modules?</source>
         <translation>Harici modüllerdan içe aktarım dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6622"/>
+        <location filename="../QScintilla/Editor.py" line="6626"/>
         <source>Application Diagram</source>
         <translation>Uygulama Şeması</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6622"/>
+        <location filename="../QScintilla/Editor.py" line="6626"/>
         <source>Include module names?</source>
         <translation>Modül isimleri dahil edilsin mi?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6913"/>
+        <location filename="../QScintilla/Editor.py" line="6917"/>
         <source>Add to dictionary</source>
         <translation>Sözlüğe ekle</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6915"/>
+        <location filename="../QScintilla/Editor.py" line="6919"/>
         <source>Ignore All</source>
         <translation>Hepsini Yoksay</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3009"/>
+        <location filename="../QScintilla/Editor.py" line="3013"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; dosyası halen mevcut. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5791"/>
+        <location filename="../QScintilla/Editor.py" line="5795"/>
         <source>Warning: {0}</source>
         <translation>Dikkat: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5798"/>
+        <location filename="../QScintilla/Editor.py" line="5802"/>
         <source>Error: {0}</source>
         <translation>Hata: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5940"/>
+        <location filename="../QScintilla/Editor.py" line="5944"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Makro dosyası &lt;b&gt;{0}&lt;/b&gt; zaten var. Üzerine yazılsın mı?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6125"/>
+        <location filename="../QScintilla/Editor.py" line="6129"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4425"/>
+        <location filename="../QScintilla/Editor.py" line="4429"/>
         <source>Activating Auto-Completion Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4425"/>
+        <location filename="../QScintilla/Editor.py" line="4429"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4615"/>
+        <location filename="../QScintilla/Editor.py" line="4619"/>
         <source>Activating Calltip Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4615"/>
+        <location filename="../QScintilla/Editor.py" line="4619"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10067,27 +10067,27 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7327"/>
+        <location filename="../QScintilla/Editor.py" line="7331"/>
         <source>Sort Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7327"/>
+        <location filename="../QScintilla/Editor.py" line="7331"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5727"/>
+        <location filename="../QScintilla/Editor.py" line="5731"/>
         <source>Warning</source>
         <translation type="unfinished">Dikkat</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5727"/>
+        <location filename="../QScintilla/Editor.py" line="5731"/>
         <source>No warning messages available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5788"/>
+        <location filename="../QScintilla/Editor.py" line="5792"/>
         <source>Style: {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11490,12 +11490,12 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="917"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="936"/>
         <source>Select whether folding of comments shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="920"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="939"/>
         <source>Fold comments</source>
         <translation>Katlanmış yorumlama</translation>
     </message>
@@ -11505,22 +11505,22 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="888"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="907"/>
         <source>Select whether folding at else statement should be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="891"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="910"/>
         <source>Fold at else</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="405"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="424"/>
         <source>Select whether folding of preprocessor directives shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="408"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="427"/>
         <source>Fold preprocessor directives</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11580,242 +11580,242 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation>D Lexer Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="301"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="320"/>
         <source>HTML Lexer Properties</source>
         <translation>HTML Lexer Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="317"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="336"/>
         <source>Select to enable folding of script comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="320"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="339"/>
         <source>Fold script comments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="327"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="346"/>
         <source>Select to enable folding of script heredocs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="330"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="349"/>
         <source>Fold script heredocs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="337"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="356"/>
         <source>Select whether HTML tags should be case sensitive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="340"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="359"/>
         <source>Case sensitive tags</source>
         <translation>Duyarlılık etiketleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="367"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="386"/>
         <source>XML Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="373"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="392"/>
         <source>Select to enable styling of scripts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="376"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="395"/>
         <source>Style scripts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="408"/>
         <source>Pascal Lexer Properties</source>
         <translation>Paskal Dil Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="415"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="434"/>
         <source>Select to enable smart highlighting of keywords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="418"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="437"/>
         <source>Smart Highlighting</source>
         <translation>Akıllı vurgulama</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="428"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="447"/>
         <source>Perl Lexer Properties</source>
         <translation>Perl Dil Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="444"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="463"/>
         <source>Select to enable folding of Perl packages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="447"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="466"/>
         <source>Fold packages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="454"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="473"/>
         <source>Select to enable folding of Perl POD blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="457"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="476"/>
         <source>Fold POD blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="477"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="496"/>
         <source>PostScript Lexer Properties</source>
         <translation>PostScript Dil Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="493"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="512"/>
         <source>Select to mark tokens</source>
         <translation>Belirteçleri seçiniz</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="496"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="515"/>
         <source>Mark Tokens</source>
         <translation>Belirteçler</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="505"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="524"/>
         <source>PostScript Level:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="512"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="531"/>
         <source>Select the PostScript level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="549"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="568"/>
         <source>Povray Lexer Properties</source>
         <translation>Povray Dil Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="555"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="574"/>
         <source>Select whether folding of directives shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="558"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="577"/>
         <source>Fold directives</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="597"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="616"/>
         <source>Python Lexer Properties</source>
         <translation>Python Dil Özillikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="633"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="652"/>
         <source>Select whether bad indentation shall be highlighted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="655"/>
         <source>Highlight bad indentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="613"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="632"/>
         <source>Select whether folding of strings shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="616"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="635"/>
         <source>Fold strings</source>
         <translation>Katlanmış metin</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="653"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="672"/>
         <source>Select whether text should be autoindented after a &apos;:&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="656"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="675"/>
         <source>Auto indentation after &apos;:&apos;</source>
         <translation>&apos;:&apos; den sonra Otomatik Girintileme</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="673"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="692"/>
         <source>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="676"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="695"/>
         <source>Allow v2 unicode string literals</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="683"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="702"/>
         <source>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="686"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="705"/>
         <source>Allow v3 binary and octal literals</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="693"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="712"/>
         <source>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="696"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="715"/>
         <source>Allow v3 bytes string literals</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="725"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
         <source>SQL Lexer Properties</source>
         <translation>SQL Dili Özellikleri</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="761"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="780"/>
         <source>Select to enable Backslash Escapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="764"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="783"/>
         <source>Backslash Escapes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="862"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="881"/>
         <source>VHDL Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="868"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="887"/>
         <source>Select whether folding of blocks at a parenthesis shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="871"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="890"/>
         <source>Fold at parenthesis</source>
         <translation>Parentezleri katla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="878"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="897"/>
         <source>Select whether folding of begin blocks shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="881"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="900"/>
         <source>Fold at begin</source>
         <translation>Başlangıçta katlı</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="911"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="930"/>
         <source>YAML Lexer Properties</source>
         <translation>YAML Lexer Özellikleri</translation>
     </message>
@@ -11830,132 +11830,132 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="347"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="366"/>
         <source>Select to enable support for Django templates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="350"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="369"/>
         <source>Enable Django templates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="376"/>
         <source>Select to enable support for Mako templates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="360"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="379"/>
         <source>Enable Mako templates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="578"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="597"/>
         <source>Properties Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="584"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="603"/>
         <source>Select to allow initial spaces in a line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="587"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="606"/>
         <source>Allow initial spaces</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="623"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="642"/>
         <source>Select whether folding of triple quoted strings shall be possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="626"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="645"/>
         <source>Fold triple quoted strings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="663"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="682"/>
         <source>Select to allow strings to span newline characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="666"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="685"/>
         <source>Strings may span newline characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="706"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="725"/>
         <source>Ruby Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="770"/>
         <source>Select whether only BEGIN blocks can be folded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="773"/>
         <source>Only BEGIN blocks can be folded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="771"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="790"/>
         <source>Select if words may contain dots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="774"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="793"/>
         <source>Words may contain dots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="781"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="800"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="784"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="803"/>
         <source>Allow &apos;#&apos; as comment character</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="791"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="810"/>
         <source>Select to enable quoted identifiers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="794"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="813"/>
         <source>Enable quoted identifiers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="804"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="823"/>
         <source>TCL Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="823"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="842"/>
         <source>TeX Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="839"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="858"/>
         <source>Select to treat comments as TeX source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="842"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="861"/>
         <source>Treat comments as TeX source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="849"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="868"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="852"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="871"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11965,7 +11965,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="646"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="665"/>
         <source>Highlight sub-identifiers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11975,7 +11975,7 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="643"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="662"/>
         <source>Select to highlight sub-identifiers defined in keyword set 2</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12017,6 +12017,11 @@ BUnlud çeşitli işlem maddelerinin temsili görünümleridir.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="242"/>
         <source>Sassy CSS support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="301"/>
+        <source>Gettext Lexer Properties</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -21215,42 +21220,42 @@ You have %n tab(s) open.</source>
 <context>
     <name>HgClient</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="90"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished">Süreç {0} başlatılamadı. Bunun arama yolunda olduğundan emin olun.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="137"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="138"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="139"/>
         <source>Received data on unexpected channel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="143"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="144"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="148"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="149"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="156"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="157"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="161"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="162"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="345"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="346"/>
         <source>For message see output dialog.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22240,12 +22245,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1423"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1427"/>
         <source>Revision</source>
         <translation>Gözden Geçirme</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1420"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1424"/>
         <source>Author</source>
         <translation>Yazar</translation>
     </message>
@@ -22506,12 +22511,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1582"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1586"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1619"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1623"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished">Projenin yeniden okunması gerekiyor. Şimdi yapılsın mı?</translation>
     </message>
@@ -22546,7 +22551,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1619"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1623"/>
         <source>Switch</source>
         <translation type="unfinished">Değiştirmek</translation>
     </message>
@@ -31743,197 +31748,197 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>YAML</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="161"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="166"/>
         <source>Pygments</source>
         <translation>Pygments</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="337"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="345"/>
         <source>Python Files (*.py *.py2 *.py3)</source>
         <translation>Python Dosyaları (*.py *.py2 *.py3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="340"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="348"/>
         <source>Python GUI Files (*.pyw *.pyw2 *.pyw3)</source>
         <translation>Python GUI Dosyaları (*.pyw *.pyw2 *.pyw3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="505"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="520"/>
         <source>Pyrex Files (*.pyx)</source>
         <translation>Pyrex Dosyaları (*.pyx)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="508"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="523"/>
         <source>Quixote Template Files (*.ptl)</source>
         <translation>Quixote Template Dosyaları (*.ptl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="511"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="526"/>
         <source>Ruby Files (*.rb)</source>
         <translation>Ruby Dosyaları (*.rb)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="514"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="529"/>
         <source>IDL Files (*.idl)</source>
         <translation>IDL Dosyaları (*.idl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="355"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="363"/>
         <source>C Files (*.h *.c)</source>
         <translation>C Dosyalır (*.h *.c)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="358"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="366"/>
         <source>C++ Files (*.h *.hpp *.hh *.cxx *.cpp *.cc)</source>
         <translation>C++ Dosyaları (*.h *.hpp *.hh *.cxx *.cpp *.cc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="526"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="541"/>
         <source>C# Files (*.cs)</source>
         <translation>C# Dosyaları (*.cs)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="364"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="372"/>
         <source>HTML Files (*.html *.htm *.asp *.shtml)</source>
         <translation>HTML Dosyaları (*.html *.htm *.asp *.shtml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="538"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="553"/>
         <source>CSS Files (*.css)</source>
         <translation>CSS Dosyaları (*.css)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="541"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="556"/>
         <source>QSS Files (*.qss)</source>
         <translation>QSS Dosyaları (*.qss)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="373"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="381"/>
         <source>PHP Files (*.php *.php3 *.php4 *.php5 *.phtml)</source>
         <translation>PHP Dosyaları (*.php *.php3 *.php4 *.php5 *.phtml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="376"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="384"/>
         <source>XML Files (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</source>
         <translation>XML Dosyaları (*.xml *.xsl *.xslt *.dtd *.svg *.xul *.xsd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="553"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="568"/>
         <source>Qt Resource Files (*.qrc)</source>
         <translation>Qt Kaynak Dosyaları (*.qrc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="382"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="390"/>
         <source>D Files (*.d *.di)</source>
         <translation>D Dosyaları (*.d *.di)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="562"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="577"/>
         <source>Java Files (*.java)</source>
         <translation>Java Dosyaları (*.java)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="565"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="580"/>
         <source>JavaScript Files (*.js)</source>
         <translation>JavaScript Dosyaları (*.js)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="568"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="583"/>
         <source>SQL Files (*.sql)</source>
         <translation>SQL Dosyaları (*.sql)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="571"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="586"/>
         <source>Docbook Files (*.docbook)</source>
         <translation>Docbook Dosyaları (*.docbook)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="397"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="405"/>
         <source>Perl Files (*.pl *.pm *.ph)</source>
         <translation>Perl Dosyaları (*.pl *.pm *.ph)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="580"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="595"/>
         <source>Lua Files (*.lua)</source>
         <translation>Lua Dosyaları (*.lua)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="403"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="411"/>
         <source>Tex Files (*.tex *.sty *.aux *.toc *.idx)</source>
         <translation>Tex Dosyaları (*.tex *.sty *.aux *.toc *.idx)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="583"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="598"/>
         <source>Shell Files (*.sh)</source>
         <translation>Kabuk Dosyaları (*.sh)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="409"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="417"/>
         <source>Batch Files (*.bat *.cmd)</source>
         <translation>Batch Dosyaları (*.bat *.cmd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="412"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="420"/>
         <source>Diff Files (*.diff *.patch)</source>
         <translation>Diff Dosyaları (*.diff *.patch)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="415"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="423"/>
         <source>Makefiles (*.mak)</source>
         <translation>Make Dosyaları (*.mak)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="418"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="426"/>
         <source>Properties Files (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</source>
         <translation>Ayarlar Dosyaları (*.properties *.ini *.inf *.reg *.cfg *.cnf *.rc)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="607"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="622"/>
         <source>Povray Files (*.pov)</source>
         <translation>Povray Dosyaları (*.pov)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="425"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="433"/>
         <source>CMake Files (CMakeLists.txt *.cmake *.ctest)</source>
         <translation>CMake Dosyaları (CMakeLists.txt *.cmake *.ctest)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="428"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="436"/>
         <source>VHDL Files (*.vhd *.vhdl)</source>
         <translation>VHDL Dosyaları (*.vhd *.vhdl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="431"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="439"/>
         <source>TCL/Tk Files (*.tcl *.tk)</source>
         <translation>TCL/Tk Dosyaları (*.tcl *.tk)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="434"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="442"/>
         <source>Fortran Files (*.f90 *.f95 *.f2k)</source>
         <translation>Fortran Dosyaları (*.f90 *.f95 *.f2k)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="437"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="445"/>
         <source>Fortran77 Files (*.f *.for)</source>
         <translation>Fortran77 Dosyaları (*.f *.for)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="440"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="448"/>
         <source>Pascal Files (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</source>
         <translation>Pascal Dosyaları (*.dpr *.dpk *.pas *.dfm *.inc *.pp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="634"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="649"/>
         <source>PostScript Files (*.ps)</source>
         <translation>PostScript Dosyaları (*.ps)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="446"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="454"/>
         <source>YAML Files (*.yaml *.yml)</source>
         <translation>YAML Dosyaları (*.yaml *.yml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="662"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="684"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
@@ -31943,7 +31948,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Python Dosyaları (*.py2)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="496"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="511"/>
         <source>Python3 Files (*.py)</source>
         <translation>Python Dosyaları (*.py3)</translation>
     </message>
@@ -31953,152 +31958,152 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="obsolete">Python GUI Dosyaları (*.pyw2)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="502"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="517"/>
         <source>Python3 GUI Files (*.pyw)</source>
         <translation>Python GUI Dosyaları (*.pyw3)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="517"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="532"/>
         <source>C Files (*.c)</source>
         <translation>C Dosyaları (*.c)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="520"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="535"/>
         <source>C++ Files (*.cpp)</source>
         <translation>C++ Dosyaları (*.cpp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="523"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="538"/>
         <source>C++/C Header Files (*.h)</source>
         <translation>C++/C Yardımcı Dosyaları (*.h)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="529"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="544"/>
         <source>HTML Files (*.html)</source>
         <translation>HTML Dosyaları (*.html)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="532"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="547"/>
         <source>PHP Files (*.php)</source>
         <translation>PHP Dosyaları (*.php)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="535"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="550"/>
         <source>ASP Files (*.asp)</source>
         <translation>ASP Dosyaları (*.asp)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="544"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="559"/>
         <source>XML Files (*.xml)</source>
         <translation>XML Dosyaları (*.xml)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="547"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="562"/>
         <source>XSL Files (*.xsl)</source>
         <translation>XSL Dosyaları (*.xsl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="550"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="565"/>
         <source>DTD Files (*.dtd)</source>
         <translation>DTD Dosyaları (*.dtd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="556"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="571"/>
         <source>D Files (*.d)</source>
         <translation>D Dosyaları (*.d)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="559"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="574"/>
         <source>D Interface Files (*.di)</source>
         <translation>D Interface Dosyaları (*.di)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="574"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="589"/>
         <source>Perl Files (*.pl)</source>
         <translation>Perl Dosyaları (*.pl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="577"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="592"/>
         <source>Perl Module Files (*.pm)</source>
         <translation>Perl Module Dosyaları (*.pm)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="586"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="601"/>
         <source>Batch Files (*.bat)</source>
         <translation>Batch Dosyaları (*.bat)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="589"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="604"/>
         <source>TeX Files (*.tex)</source>
         <translation>TeX Dosyaları (*.tex)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="592"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="607"/>
         <source>TeX Template Files (*.sty)</source>
         <translation>TeXŞablon Dosyası (*.sty)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="595"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="610"/>
         <source>Diff Files (*.diff)</source>
         <translation>Diff  Dosyaları (*.diff)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="598"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="613"/>
         <source>Make Files (*.mak)</source>
         <translation>Make Dosyaları (*.mak)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="601"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="616"/>
         <source>Properties Files (*.ini)</source>
         <translation>Özellikler Dosyaları (*.ini)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="604"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="619"/>
         <source>Configuration Files (*.cfg)</source>
         <translation>Ayar Dosyaları (*.cfg)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="610"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="625"/>
         <source>CMake Files (CMakeLists.txt)</source>
         <translation>CMake Dosyaları (CMakeLists.txt)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="613"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="628"/>
         <source>CMake Macro Files (*.cmake)</source>
         <translation>CMake Makro Dosyaları (*.cmake)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="616"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="631"/>
         <source>VHDL Files (*.vhd)</source>
         <translation>VHDL Dosyaları (*.vhd)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="619"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="634"/>
         <source>TCL Files (*.tcl)</source>
         <translation>TCL Dosyaları (*.tcl)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="622"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="637"/>
         <source>Tk Files (*.tk)</source>
         <translation>Tk Dosyaları (*.tk)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="625"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="640"/>
         <source>Fortran Files (*.f95)</source>
         <translation>Fortran Dosyaları (*.f95)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="628"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="643"/>
         <source>Fortran77 Files (*.f)</source>
         <translation>Fortran77 Dosyaları (*.f)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="631"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="646"/>
         <source>Pascal Files (*.pas)</source>
         <translation>Pascal Dosyaları (*.pas)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="637"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="652"/>
         <source>YAML Files (*.yml)</source>
         <translation>YAML Dosyaları (*.yml)</translation>
     </message>
@@ -32113,12 +32118,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="493"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="508"/>
         <source>Python2 Files (*.py2)</source>
         <translation>Python2 Dosyaları (*.py2)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="499"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="514"/>
         <source>Python2 GUI Files (*.pyw2)</source>
         <translation>Python2 GUI Dosyaları (*.pyw2)</translation>
     </message>
@@ -32133,28 +32138,38 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="452"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="460"/>
         <source>Matlab Files (*.m *.m.matlab)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="643"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="658"/>
         <source>Matlab Files (*.m)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="643"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="658"/>
         <source>Octave Files (*.m.octave)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Lexers/__init__.py" line="452"/>
+        <location filename="../QScintilla/Lexers/__init__.py" line="460"/>
         <source>Octave Files (*.m *.m.octave)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="129"/>
         <source>QSS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Lexers/__init__.py" line="157"/>
+        <source>Gettext</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Lexers/__init__.py" line="668"/>
+        <source>Gettext Files (*.po)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -36653,27 +36668,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1153"/>
+        <location filename="../Preferences/__init__.py" line="1156"/>
         <source>Export Preferences</source>
         <translation>Seçenekleri Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1181"/>
+        <location filename="../Preferences/__init__.py" line="1184"/>
         <source>Import Preferences</source>
         <translation>Seçenekleri İçe Aktar</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1181"/>
+        <location filename="../Preferences/__init__.py" line="1184"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1283"/>
+        <location filename="../Preferences/__init__.py" line="1286"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1283"/>
+        <location filename="../Preferences/__init__.py" line="1286"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>

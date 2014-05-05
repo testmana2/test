@@ -361,6 +361,9 @@ class Prefs(object):
         "DIndentOpeningBrace": False,
         "DIndentClosingBrace": False,
         
+        # Gettext specifics
+        "PoFoldComment": False,
+        
         # HTML specifics
         "HtmlFoldPreprocessor": False,
         "HtmlFoldScriptComments": False,

@@ -866,6 +866,7 @@
               <section title="eric5.QScintilla.Lexers.LexerMakefile" ref="eric5.QScintilla.Lexers.LexerMakefile.html" />
               <section title="eric5.QScintilla.Lexers.LexerMatlab" ref="eric5.QScintilla.Lexers.LexerMatlab.html" />
               <section title="eric5.QScintilla.Lexers.LexerOctave" ref="eric5.QScintilla.Lexers.LexerOctave.html" />
+              <section title="eric5.QScintilla.Lexers.LexerPO" ref="eric5.QScintilla.Lexers.LexerPO.html" />
               <section title="eric5.QScintilla.Lexers.LexerPOV" ref="eric5.QScintilla.Lexers.LexerPOV.html" />
               <section title="eric5.QScintilla.Lexers.LexerPascal" ref="eric5.QScintilla.Lexers.LexerPascal.html" />
               <section title="eric5.QScintilla.Lexers.LexerPerl" ref="eric5.QScintilla.Lexers.LexerPerl.html" />
@@ -7388,6 +7389,13 @@
       <keyword name="LexerOctave.defaultKeywords" id="LexerOctave.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.defaultKeywords" />
       <keyword name="LexerOctave.isCommentStyle" id="LexerOctave.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.isCommentStyle" />
       <keyword name="LexerOctave.isStringStyle" id="LexerOctave.isStringStyle" ref="eric5.QScintilla.Lexers.LexerOctave.html#LexerOctave.isStringStyle" />
+      <keyword name="LexerPO" id="LexerPO" ref="eric5.QScintilla.Lexers.LexerPO.html#LexerPO" />
+      <keyword name="LexerPO (Constructor)" id="LexerPO (Constructor)" ref="eric5.QScintilla.Lexers.LexerPO.html#LexerPO.__init__" />
+      <keyword name="LexerPO (Module)" id="LexerPO (Module)" ref="eric5.QScintilla.Lexers.LexerPO.html" />
+      <keyword name="LexerPO.defaultKeywords" id="LexerPO.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerPO.html#LexerPO.defaultKeywords" />
+      <keyword name="LexerPO.initProperties" id="LexerPO.initProperties" ref="eric5.QScintilla.Lexers.LexerPO.html#LexerPO.initProperties" />
+      <keyword name="LexerPO.isCommentStyle" id="LexerPO.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerPO.html#LexerPO.isCommentStyle" />
+      <keyword name="LexerPO.isStringStyle" id="LexerPO.isStringStyle" ref="eric5.QScintilla.Lexers.LexerPO.html#LexerPO.isStringStyle" />
       <keyword name="LexerPOV" id="LexerPOV" ref="eric5.QScintilla.Lexers.LexerPOV.html#LexerPOV" />
       <keyword name="LexerPOV (Constructor)" id="LexerPOV (Constructor)" ref="eric5.QScintilla.Lexers.LexerPOV.html#LexerPOV.__init__" />
       <keyword name="LexerPOV (Module)" id="LexerPOV (Module)" ref="eric5.QScintilla.Lexers.LexerPOV.html" />
@@ -14124,6 +14132,7 @@
       <file>eric5.QScintilla.Lexers.LexerMakefile.html</file>
       <file>eric5.QScintilla.Lexers.LexerMatlab.html</file>
       <file>eric5.QScintilla.Lexers.LexerOctave.html</file>
+      <file>eric5.QScintilla.Lexers.LexerPO.html</file>
       <file>eric5.QScintilla.Lexers.LexerPOV.html</file>
       <file>eric5.QScintilla.Lexers.LexerPascal.html</file>
       <file>eric5.QScintilla.Lexers.LexerPerl.html</file>

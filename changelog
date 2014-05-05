@@ -22,6 +22,8 @@ Version 5.5.0-xxx:
   -- added a lexer for Qt style sheet files (when upgrading from older
      eric versions a change of the lexer association for *.qss files needs
      to be done via the configuration dialog)
+  -- added support for the QScintilla Gettext lexer (QsciLexerPO) as of
+     QScintilla 2.8.2
 - Multi Project
   -- added support for the categorisation of projects and changed the
      multi project file format

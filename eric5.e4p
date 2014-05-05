@@ -1140,6 +1140,7 @@
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/messages.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/jsCheckSyntax.py</Source>
+    <Source>QScintilla/Lexers/LexerPO.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

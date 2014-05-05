@@ -416,6 +416,7 @@ LexerLua Lexer QsciLexerLua
 LexerMakefile Lexer QsciLexerMakefile
 LexerMatlab Lexer QsciLexerMatlab
 LexerOctave Lexer QsciLexerOctave
+LexerPO Lexer QsciLexerPO
 LexerPOV Lexer QsciLexerPOV
 LexerPascal Lexer QsciLexerPascal
 LexerPerl Lexer QsciLexerPerl

@@ -152,6 +152,11 @@ def getSupportedLanguages():
                        'dummy.m.octave', "lexerOctave.png"],
         })
     
+    if QSCINTILLA_VERSION() >= 0x020802:
+        supportedLanguages["Gettext"] = \
+            [QApplication.translate('Lexers', "Gettext"), 'dummy.po',
+             "lexerGettext.png"]
+    
     for name in LexerRegistry:
         if not name.startswith("Pygments|"):
             supportedLanguages[name] = \
@@ -291,6 +296,9 @@ def getLexer(language, parent=None, pyname=""):
             elif language == "QSS":
                 from .LexerQSS import LexerQSS
                 return LexerQSS(parent)
+            elif language == "Gettext":
+                from .LexerPO import LexerPO
+                return LexerPO(parent)
             
             elif language in LexerRegistry:
                 return LexerRegistry[language][2](parent)
@@ -456,6 +464,13 @@ def getOpenFileFiltersList(includeAll=False, asString=False,
                 'Lexers',
                 'Octave Files (*.m *.m.octave)'),
         ])
+    
+    if QSCINTILLA_VERSION() >= 0x020802:
+        openFileFiltersList.append(
+            QApplication.translate(
+                'Lexers',
+                'Gettext Files (*.po)'),        
+        )
     
     for name in LexerRegistry:
         openFileFiltersList.extend(LexerRegistry[name][3])
@@ -648,6 +663,13 @@ def getSaveFileFiltersList(includeAll=False, asString=False,
                 'Octave Files (*.m.octave)'),
         ])
     
+    if QSCINTILLA_VERSION() >= 0x020802:
+        saveFileFiltersList.append(
+            QApplication.translate(
+                'Lexers',
+                'Gettext Files (*.po)'),        
+        )
+    
     for name in LexerRegistry:
         saveFileFiltersList.extend(LexerRegistry[name][4])
     
@@ -801,6 +823,9 @@ def getDefaultLexerAssociations():
             '*.m.matlab': "Matlab",
             '*.m.octave': "Octave",
         })
+    
+    if QSCINTILLA_VERSION() >= 0x020802:
+        assocs['*.po'] = "Gettext"
     
     for name in LexerRegistry:
         for pattern in LexerRegistry[name][5]:

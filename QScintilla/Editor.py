@@ -1530,9 +1530,13 @@ class Editor(QsciScintillaCompat):
         if pyname:
             self.apiLanguage = "Pygments|{0}".format(pyname)
         else:
+            # Change API language for lexer where QScintilla reports
+            # an abbreviated name.
             self.apiLanguage = self.lexer_.language()
             if self.apiLanguage == "POV":
                 self.apiLanguage = "Povray"
+            elif self.apiLanguage == "PO":
+                self.apiLanguage = "Gettext"
         self.setLexer(self.lexer_)
         self.__setMarginsDisplay()
         if self.lexer_.lexer() == "container" or self.lexer_.lexer() is None:
