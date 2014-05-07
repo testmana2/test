@@ -62,13 +62,48 @@ class TabnannyPlugin(QObject):
         
         path = os.path.join(
             os.path.dirname(__file__), 'CheckerPlugins', 'Tabnanny')
-        for lang in ['Python2', 'Python3']:
-            self.backgroundService.serviceConnect(
-                'indent', lang, path, 'Tabnanny',
-                lambda *args: self.indentChecked.emit(*args),
-                lambda fx, fn, ver, msg: self.indentChecked.emit(
-                    fn, True, "1", msg))
+        self.backgroundService.serviceConnect(
+            'indent', 'Python2', path, 'Tabnanny',
+            lambda *args: self.indentChecked.emit(*args),
+            onErrorCallback=self.serviceErrorPy2)
+        self.backgroundService.serviceConnect(
+            'indent', 'Python3', path, 'Tabnanny',
+            lambda *args: self.indentChecked.emit(*args),
+            onErrorCallback=self.serviceErrorPy3)
+    
+    def __serviceError(self, fn, msg):
+        """
+        Private slot handling service errors.
         
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        self.indentChecked.emit(fn, True, "1", msg)
+    
+    def serviceErrorPy2(self, fx, lang, fn, msg):
+        """
+        Public method handling service errors for Python 2.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        if fx == 'indent' and lang == 'Python2':
+            self.__serviceError(fn, msg)
+    
+    def serviceErrorPy3(self, fx, lang, fn, msg):
+        """
+        Public method handling service errors for Python 2.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        if fx == 'indent' and lang == 'Python3':
+            self.__serviceError(fn, msg)
+    
     def __initialize(self):
         """
         Private slot to (re)initialize the plugin.

@@ -135,7 +135,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         itm = QTreeWidgetItem(
             self.__lastFileItem,
             ["{0:6}".format(line), code, message])
-        if code.startswith("W"):
+        if code.startswith(("W", "-")):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("N"):
             itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
@@ -370,6 +370,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Start a style check for one file.
         
         The results are reported to the __processResult slot.
+        
         @keyparam codestring optional sourcestring (str)
         @keyparam onlyFixes dict which violations should be fixed (dict)
         """

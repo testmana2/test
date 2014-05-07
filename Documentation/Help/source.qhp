@@ -2183,9 +2183,12 @@
       <keyword name="CodeStyleCheckerPlugin.__projectBrowserShowMenu" id="CodeStyleCheckerPlugin.__projectBrowserShowMenu" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__projectBrowserShowMenu" />
       <keyword name="CodeStyleCheckerPlugin.__projectCodeStyleCheck" id="CodeStyleCheckerPlugin.__projectCodeStyleCheck" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__projectCodeStyleCheck" />
       <keyword name="CodeStyleCheckerPlugin.__projectShowMenu" id="CodeStyleCheckerPlugin.__projectShowMenu" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__projectShowMenu" />
+      <keyword name="CodeStyleCheckerPlugin.__serviceError" id="CodeStyleCheckerPlugin.__serviceError" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__serviceError" />
       <keyword name="CodeStyleCheckerPlugin.__translateStyleCheck" id="CodeStyleCheckerPlugin.__translateStyleCheck" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__translateStyleCheck" />
       <keyword name="CodeStyleCheckerPlugin.activate" id="CodeStyleCheckerPlugin.activate" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.activate" />
       <keyword name="CodeStyleCheckerPlugin.deactivate" id="CodeStyleCheckerPlugin.deactivate" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.deactivate" />
+      <keyword name="CodeStyleCheckerPlugin.serviceErrorPy2" id="CodeStyleCheckerPlugin.serviceErrorPy2" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.serviceErrorPy2" />
+      <keyword name="CodeStyleCheckerPlugin.serviceErrorPy3" id="CodeStyleCheckerPlugin.serviceErrorPy3" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.serviceErrorPy3" />
       <keyword name="CodeStyleCheckerPlugin.styleCheck" id="CodeStyleCheckerPlugin.styleCheck" ref="eric5.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.styleCheck" />
       <keyword name="CodeStyleCheckerReport" id="CodeStyleCheckerReport" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#CodeStyleCheckerReport" />
       <keyword name="CodeStyleCheckerReport (Constructor)" id="CodeStyleCheckerReport (Constructor)" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#CodeStyleCheckerReport.__init__" />
@@ -11252,9 +11255,13 @@
       <keyword name="SyntaxCheckerPlugin.__projectBrowserSyntaxCheck" id="SyntaxCheckerPlugin.__projectBrowserSyntaxCheck" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__projectBrowserSyntaxCheck" />
       <keyword name="SyntaxCheckerPlugin.__projectShowMenu" id="SyntaxCheckerPlugin.__projectShowMenu" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__projectShowMenu" />
       <keyword name="SyntaxCheckerPlugin.__projectSyntaxCheck" id="SyntaxCheckerPlugin.__projectSyntaxCheck" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__projectSyntaxCheck" />
+      <keyword name="SyntaxCheckerPlugin.__serviceError" id="SyntaxCheckerPlugin.__serviceError" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__serviceError" />
       <keyword name="SyntaxCheckerPlugin.__translateSyntaxCheck" id="SyntaxCheckerPlugin.__translateSyntaxCheck" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__translateSyntaxCheck" />
       <keyword name="SyntaxCheckerPlugin.activate" id="SyntaxCheckerPlugin.activate" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.activate" />
       <keyword name="SyntaxCheckerPlugin.deactivate" id="SyntaxCheckerPlugin.deactivate" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.deactivate" />
+      <keyword name="SyntaxCheckerPlugin.serviceErrorJavaScript" id="SyntaxCheckerPlugin.serviceErrorJavaScript" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorJavaScript" />
+      <keyword name="SyntaxCheckerPlugin.serviceErrorPy2" id="SyntaxCheckerPlugin.serviceErrorPy2" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorPy2" />
+      <keyword name="SyntaxCheckerPlugin.serviceErrorPy3" id="SyntaxCheckerPlugin.serviceErrorPy3" ref="eric5.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorPy3" />
       <keyword name="TRPreviewer" id="TRPreviewer" ref="eric5.Tools.TRPreviewer.html#TRPreviewer" />
       <keyword name="TRPreviewer (Constructor)" id="TRPreviewer (Constructor)" ref="eric5.Tools.TRPreviewer.html#TRPreviewer.__init__" />
       <keyword name="TRPreviewer (Module)" id="TRPreviewer (Module)" ref="eric5.Tools.TRPreviewer.html" />
@@ -11349,9 +11356,12 @@
       <keyword name="TabnannyPlugin.__projectBrowserTabnanny" id="TabnannyPlugin.__projectBrowserTabnanny" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.__projectBrowserTabnanny" />
       <keyword name="TabnannyPlugin.__projectShowMenu" id="TabnannyPlugin.__projectShowMenu" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.__projectShowMenu" />
       <keyword name="TabnannyPlugin.__projectTabnanny" id="TabnannyPlugin.__projectTabnanny" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.__projectTabnanny" />
+      <keyword name="TabnannyPlugin.__serviceError" id="TabnannyPlugin.__serviceError" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.__serviceError" />
       <keyword name="TabnannyPlugin.activate" id="TabnannyPlugin.activate" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.activate" />
       <keyword name="TabnannyPlugin.deactivate" id="TabnannyPlugin.deactivate" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.deactivate" />
       <keyword name="TabnannyPlugin.indentCheck" id="TabnannyPlugin.indentCheck" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.indentCheck" />
+      <keyword name="TabnannyPlugin.serviceErrorPy2" id="TabnannyPlugin.serviceErrorPy2" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.serviceErrorPy2" />
+      <keyword name="TabnannyPlugin.serviceErrorPy3" id="TabnannyPlugin.serviceErrorPy3" ref="eric5.Plugins.PluginTabnanny.html#TabnannyPlugin.serviceErrorPy3" />
       <keyword name="Tabview" id="Tabview" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview" />
       <keyword name="Tabview (Constructor)" id="Tabview (Constructor)" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html#Tabview.__init__" />
       <keyword name="Tabview (Module)" id="Tabview (Module)" ref="eric5.Plugins.ViewManagerPlugins.Tabview.Tabview.html" />

@@ -4055,6 +4055,8 @@ eric5.Plugins.PluginAbout.shortDescription?7
 eric5.Plugins.PluginAbout.version?7
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.activate?4()
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.deactivate?4()
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
+eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.serviceErrorPy3?4(fx, lang, fn, msg)
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleCheck?4(lang, filename, source, args)
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleChecked?7
 eric5.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin?1(ui)
@@ -4104,6 +4106,9 @@ eric5.Plugins.PluginEricdoc.shortDescription?7
 eric5.Plugins.PluginEricdoc.version?7
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.activate?4()
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.deactivate?4()
+eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.serviceErrorJavaScript?4(fx, lang, fn, msg)
+eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
+eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.serviceErrorPy3?4(fx, lang, fn, msg)
 eric5.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin?1(ui)
 eric5.Plugins.PluginSyntaxChecker.author?7
 eric5.Plugins.PluginSyntaxChecker.autoactivate?7
@@ -4121,6 +4126,8 @@ eric5.Plugins.PluginTabnanny.TabnannyPlugin.activate?4()
 eric5.Plugins.PluginTabnanny.TabnannyPlugin.deactivate?4()
 eric5.Plugins.PluginTabnanny.TabnannyPlugin.indentCheck?4(lang, filename, source)
 eric5.Plugins.PluginTabnanny.TabnannyPlugin.indentChecked?7
+eric5.Plugins.PluginTabnanny.TabnannyPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
+eric5.Plugins.PluginTabnanny.TabnannyPlugin.serviceErrorPy3?4(fx, lang, fn, msg)
 eric5.Plugins.PluginTabnanny.TabnannyPlugin?1(ui)
 eric5.Plugins.PluginTabnanny.author?7
 eric5.Plugins.PluginTabnanny.autoactivate?7

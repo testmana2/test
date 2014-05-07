@@ -94,6 +94,9 @@ QObject
 <td><a href="#TabnannyPlugin.__projectTabnanny">__projectTabnanny</a></td>
 <td>Public slot used to check the project files for bad indentations.</td>
 </tr><tr>
+<td><a href="#TabnannyPlugin.__serviceError">__serviceError</a></td>
+<td>Private slot handling service errors.</td>
+</tr><tr>
 <td><a href="#TabnannyPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
 </tr><tr>
@@ -102,6 +105,12 @@ QObject
 </tr><tr>
 <td><a href="#TabnannyPlugin.indentCheck">indentCheck</a></td>
 <td>Method to prepare a style check on one Python source file in another task.</td>
+</tr><tr>
+<td><a href="#TabnannyPlugin.serviceErrorPy2">serviceErrorPy2</a></td>
+<td>Public method handling service errors for Python 2.</td>
+</tr><tr>
+<td><a href="#TabnannyPlugin.serviceErrorPy3">serviceErrorPy3</a></td>
+<td>Public method handling service errors for Python 2.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -204,7 +213,20 @@ reference to the menu (QMenu)
 <b>__projectTabnanny</b>(<i></i>)
 <p>
         Public slot used to check the project files for bad indentations.
-</p><a NAME="TabnannyPlugin.activate" ID="TabnannyPlugin.activate"></a>
+</p><a NAME="TabnannyPlugin.__serviceError" ID="TabnannyPlugin.__serviceError"></a>
+<h4>TabnannyPlugin.__serviceError</h4>
+<b>__serviceError</b>(<i>fn, msg</i>)
+<p>
+        Private slot handling service errors.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
+</dd>
+</dl><a NAME="TabnannyPlugin.activate" ID="TabnannyPlugin.activate"></a>
 <h4>TabnannyPlugin.activate</h4>
 <b>activate</b>(<i></i>)
 <p>
@@ -236,6 +258,44 @@ source filename (string)
 </dd><dt><i>source</i></dt>
 <dd>
 string containing the code to check (string)
+</dd>
+</dl><a NAME="TabnannyPlugin.serviceErrorPy2" ID="TabnannyPlugin.serviceErrorPy2"></a>
+<h4>TabnannyPlugin.serviceErrorPy2</h4>
+<b>serviceErrorPy2</b>(<i>fx, lang, fn, msg</i>)
+<p>
+        Public method handling service errors for Python 2.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd><dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
+</dd>
+</dl><a NAME="TabnannyPlugin.serviceErrorPy3" ID="TabnannyPlugin.serviceErrorPy3"></a>
+<h4>TabnannyPlugin.serviceErrorPy3</h4>
+<b>serviceErrorPy3</b>(<i>fx, lang, fn, msg</i>)
+<p>
+        Public method handling service errors for Python 2.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd><dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
