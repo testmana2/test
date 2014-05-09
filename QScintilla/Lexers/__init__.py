@@ -469,7 +469,7 @@ def getOpenFileFiltersList(includeAll=False, asString=False,
         openFileFiltersList.append(
             QApplication.translate(
                 'Lexers',
-                'Gettext Files (*.po)'),        
+                'Gettext Files (*.po)'),
         )
     
     for name in LexerRegistry:
@@ -667,7 +667,7 @@ def getSaveFileFiltersList(includeAll=False, asString=False,
         saveFileFiltersList.append(
             QApplication.translate(
                 'Lexers',
-                'Gettext Files (*.po)'),        
+                'Gettext Files (*.po)'),
         )
     
     for name in LexerRegistry:
