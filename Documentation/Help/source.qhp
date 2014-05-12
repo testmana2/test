@@ -488,14 +488,6 @@
             </section>
             <section title="eric5.Plugins.VcsPlugins" ref="index-eric5.Plugins.VcsPlugins.html">
               <section title="eric5.Plugins.VcsPlugins.vcsMercurial" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.html">
-                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html">
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html" />
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html" />
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html" />
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html" />
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html" />
-                  <section title="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html" />
-                </section>
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html">
                   <section title="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
                 </section>
@@ -561,6 +553,10 @@
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html" />
+                <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html" />
                 <section title="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html" />
@@ -1560,21 +1556,7 @@
       <keyword name="BookmarkedFilesDialog.on_fileEdit_textChanged" id="BookmarkedFilesDialog.on_fileEdit_textChanged" ref="eric5.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_fileEdit_textChanged" />
       <keyword name="BookmarkedFilesDialog.on_filesList_currentRowChanged" id="BookmarkedFilesDialog.on_filesList_currentRowChanged" ref="eric5.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_filesList_currentRowChanged" />
       <keyword name="BookmarkedFilesDialog.on_upButton_clicked" id="BookmarkedFilesDialog.on_upButton_clicked" ref="eric5.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_upButton_clicked" />
-      <keyword name="Bookmarks" id="Bookmarks" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks" />
-      <keyword name="Bookmarks (Constructor)" id="Bookmarks (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.__init__" />
       <keyword name="Bookmarks (Package)" id="Bookmarks (Package)" ref="index-eric5.Helpviewer.Bookmarks.html" />
-      <keyword name="Bookmarks.__getInOutBookmarks" id="Bookmarks.__getInOutBookmarks" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.__getInOutBookmarks" />
-      <keyword name="Bookmarks.hgBookmarkDefine" id="Bookmarks.hgBookmarkDefine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkDefine" />
-      <keyword name="Bookmarks.hgBookmarkDelete" id="Bookmarks.hgBookmarkDelete" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkDelete" />
-      <keyword name="Bookmarks.hgBookmarkIncoming" id="Bookmarks.hgBookmarkIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkIncoming" />
-      <keyword name="Bookmarks.hgBookmarkMove" id="Bookmarks.hgBookmarkMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkMove" />
-      <keyword name="Bookmarks.hgBookmarkOutgoing" id="Bookmarks.hgBookmarkOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkOutgoing" />
-      <keyword name="Bookmarks.hgBookmarkPull" id="Bookmarks.hgBookmarkPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkPull" />
-      <keyword name="Bookmarks.hgBookmarkPush" id="Bookmarks.hgBookmarkPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkPush" />
-      <keyword name="Bookmarks.hgBookmarkRename" id="Bookmarks.hgBookmarkRename" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgBookmarkRename" />
-      <keyword name="Bookmarks.hgGetBookmarksList" id="Bookmarks.hgGetBookmarksList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgGetBookmarksList" />
-      <keyword name="Bookmarks.hgListBookmarks" id="Bookmarks.hgListBookmarks" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.hgListBookmarks" />
-      <keyword name="Bookmarks.shutdown" id="Bookmarks.shutdown" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html#Bookmarks.shutdown" />
       <keyword name="BookmarksDialog" id="BookmarksDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog" />
       <keyword name="BookmarksDialog (Constructor)" id="BookmarksDialog (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__init__" />
       <keyword name="BookmarksDialog (Module)" id="BookmarksDialog (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html" />
@@ -1592,7 +1574,6 @@
       <keyword name="BookmarksDialog.__shutdown" id="BookmarksDialog.__shutdown" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.__shutdown" />
       <keyword name="BookmarksDialog.closeEvent" id="BookmarksDialog.closeEvent" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.closeEvent" />
       <keyword name="BookmarksDialog.reject" id="BookmarksDialog.reject" ref="eric5.Helpviewer.Bookmarks.BookmarksDialog.html#BookmarksDialog.reject" />
-      <keyword name="BookmarksExtension (Package)" id="BookmarksExtension (Package)" ref="index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html" />
       <keyword name="BookmarksImportDialog" id="BookmarksImportDialog" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog" />
       <keyword name="BookmarksImportDialog (Constructor)" id="BookmarksImportDialog (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.__init__" />
       <keyword name="BookmarksImportDialog (Module)" id="BookmarksImportDialog (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksImportDialog.html" />
@@ -1682,21 +1663,6 @@
       <keyword name="BookmarksModel.rowCount" id="BookmarksModel.rowCount" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html#BookmarksModel.rowCount" />
       <keyword name="BookmarksModel.setData" id="BookmarksModel.setData" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html#BookmarksModel.setData" />
       <keyword name="BookmarksModel.supportedDropActions" id="BookmarksModel.supportedDropActions" ref="eric5.Helpviewer.Bookmarks.BookmarksModel.html#BookmarksModel.supportedDropActions" />
-      <keyword name="BookmarksProjectHelper" id="BookmarksProjectHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper" />
-      <keyword name="BookmarksProjectHelper (Constructor)" id="BookmarksProjectHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__init__" />
-      <keyword name="BookmarksProjectHelper.__aboutToShowMenu" id="BookmarksProjectHelper.__aboutToShowMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__aboutToShowMenu" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkDefine" id="BookmarksProjectHelper.__hgBookmarkDefine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkDefine" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkDelete" id="BookmarksProjectHelper.__hgBookmarkDelete" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkDelete" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkIncoming" id="BookmarksProjectHelper.__hgBookmarkIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkIncoming" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkMove" id="BookmarksProjectHelper.__hgBookmarkMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkMove" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkOutgoing" id="BookmarksProjectHelper.__hgBookmarkOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkOutgoing" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkPull" id="BookmarksProjectHelper.__hgBookmarkPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkPull" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkPush" id="BookmarksProjectHelper.__hgBookmarkPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkPush" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarkRename" id="BookmarksProjectHelper.__hgBookmarkRename" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarkRename" />
-      <keyword name="BookmarksProjectHelper.__hgBookmarksList" id="BookmarksProjectHelper.__hgBookmarksList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.__hgBookmarksList" />
-      <keyword name="BookmarksProjectHelper.initActions" id="BookmarksProjectHelper.initActions" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.initActions" />
-      <keyword name="BookmarksProjectHelper.initMenu" id="BookmarksProjectHelper.initMenu" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.initMenu" />
-      <keyword name="BookmarksProjectHelper.menuTitle" id="BookmarksProjectHelper.menuTitle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html#BookmarksProjectHelper.menuTitle" />
       <keyword name="BookmarksToolBar" id="BookmarksToolBar" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar" />
       <keyword name="BookmarksToolBar (Constructor)" id="BookmarksToolBar (Constructor)" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html#BookmarksToolBar.__init__" />
       <keyword name="BookmarksToolBar (Module)" id="BookmarksToolBar (Module)" ref="eric5.Helpviewer.Bookmarks.BookmarksToolBar.html" />
@@ -5611,6 +5577,7 @@
       <keyword name="Hg (Constructor)" id="Hg (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__init__" />
       <keyword name="Hg.__checkDefaults" id="Hg.__checkDefaults" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__checkDefaults" />
       <keyword name="Hg.__getExtensionsInfo" id="Hg.__getExtensionsInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__getExtensionsInfo" />
+      <keyword name="Hg.__getInOutBookmarks" id="Hg.__getInOutBookmarks" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__getInOutBookmarks" />
       <keyword name="Hg.__hgGetFileForRevision" id="Hg.__hgGetFileForRevision" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__hgGetFileForRevision" />
       <keyword name="Hg.__hgURL" id="Hg.__hgURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__hgURL" />
       <keyword name="Hg.__iniFileChanged" id="Hg.__iniFileChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__iniFileChanged" />
@@ -5631,6 +5598,14 @@
       <keyword name="Hg.hgArchive" id="Hg.hgArchive" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgArchive" />
       <keyword name="Hg.hgBackout" id="Hg.hgBackout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBackout" />
       <keyword name="Hg.hgBisect" id="Hg.hgBisect" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBisect" />
+      <keyword name="Hg.hgBookmarkDefine" id="Hg.hgBookmarkDefine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkDefine" />
+      <keyword name="Hg.hgBookmarkDelete" id="Hg.hgBookmarkDelete" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkDelete" />
+      <keyword name="Hg.hgBookmarkIncoming" id="Hg.hgBookmarkIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkIncoming" />
+      <keyword name="Hg.hgBookmarkMove" id="Hg.hgBookmarkMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkMove" />
+      <keyword name="Hg.hgBookmarkOutgoing" id="Hg.hgBookmarkOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkOutgoing" />
+      <keyword name="Hg.hgBookmarkPull" id="Hg.hgBookmarkPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkPull" />
+      <keyword name="Hg.hgBookmarkPush" id="Hg.hgBookmarkPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkPush" />
+      <keyword name="Hg.hgBookmarkRename" id="Hg.hgBookmarkRename" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBookmarkRename" />
       <keyword name="Hg.hgBranch" id="Hg.hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBranch" />
       <keyword name="Hg.hgBundle" id="Hg.hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgBundle" />
       <keyword name="Hg.hgCancelMerge" id="Hg.hgCancelMerge" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgCancelMerge" />
@@ -5641,6 +5616,7 @@
       <keyword name="Hg.hgExport" id="Hg.hgExport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgExport" />
       <keyword name="Hg.hgExtendedDiff" id="Hg.hgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgExtendedDiff" />
       <keyword name="Hg.hgForget" id="Hg.hgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgForget" />
+      <keyword name="Hg.hgGetBookmarksList" id="Hg.hgGetBookmarksList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetBookmarksList" />
       <keyword name="Hg.hgGetBranchesList" id="Hg.hgGetBranchesList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetBranchesList" />
       <keyword name="Hg.hgGetTagsList" id="Hg.hgGetTagsList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGetTagsList" />
       <keyword name="Hg.hgGraft" id="Hg.hgGraft" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgGraft" />
@@ -5649,6 +5625,7 @@
       <keyword name="Hg.hgImport" id="Hg.hgImport" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgImport" />
       <keyword name="Hg.hgIncoming" id="Hg.hgIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgIncoming" />
       <keyword name="Hg.hgInfo" id="Hg.hgInfo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgInfo" />
+      <keyword name="Hg.hgListBookmarks" id="Hg.hgListBookmarks" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgListBookmarks" />
       <keyword name="Hg.hgListTagBranch" id="Hg.hgListTagBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgListTagBranch" />
       <keyword name="Hg.hgNormalizeURL" id="Hg.hgNormalizeURL" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgNormalizeURL" />
       <keyword name="Hg.hgOutgoing" id="Hg.hgOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.hgOutgoing" />
@@ -5751,67 +5728,67 @@
       <keyword name="HgBackoutDialog.on_noneButton_toggled" id="HgBackoutDialog.on_noneButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.on_noneButton_toggled" />
       <keyword name="HgBackoutDialog.on_tagButton_toggled" id="HgBackoutDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.on_tagButton_toggled" />
       <keyword name="HgBackoutDialog.on_tagCombo_editTextChanged" id="HgBackoutDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.on_tagCombo_editTextChanged" />
-      <keyword name="HgBookmarkDialog" id="HgBookmarkDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog" />
-      <keyword name="HgBookmarkDialog (Constructor)" id="HgBookmarkDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.__init__" />
-      <keyword name="HgBookmarkDialog (Module)" id="HgBookmarkDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html" />
-      <keyword name="HgBookmarkDialog.__updateBookmarksCombo" id="HgBookmarkDialog.__updateBookmarksCombo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.__updateBookmarksCombo" />
-      <keyword name="HgBookmarkDialog.__updateOK" id="HgBookmarkDialog.__updateOK" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.__updateOK" />
-      <keyword name="HgBookmarkDialog.getData" id="HgBookmarkDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.getData" />
-      <keyword name="HgBookmarkDialog.on_bookmarkButton_toggled" id="HgBookmarkDialog.on_bookmarkButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_bookmarkButton_toggled" />
-      <keyword name="HgBookmarkDialog.on_bookmarkCombo_editTextChanged" id="HgBookmarkDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_bookmarkCombo_editTextChanged" />
-      <keyword name="HgBookmarkDialog.on_branchButton_toggled" id="HgBookmarkDialog.on_branchButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_branchButton_toggled" />
-      <keyword name="HgBookmarkDialog.on_branchCombo_editTextChanged" id="HgBookmarkDialog.on_branchCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_branchCombo_editTextChanged" />
-      <keyword name="HgBookmarkDialog.on_idButton_toggled" id="HgBookmarkDialog.on_idButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_idButton_toggled" />
-      <keyword name="HgBookmarkDialog.on_idEdit_textChanged" id="HgBookmarkDialog.on_idEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_idEdit_textChanged" />
-      <keyword name="HgBookmarkDialog.on_nameCombo_activated" id="HgBookmarkDialog.on_nameCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_nameCombo_activated" />
-      <keyword name="HgBookmarkDialog.on_nameEdit_textChanged" id="HgBookmarkDialog.on_nameEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_nameEdit_textChanged" />
-      <keyword name="HgBookmarkDialog.on_tagButton_toggled" id="HgBookmarkDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_tagButton_toggled" />
-      <keyword name="HgBookmarkDialog.on_tagCombo_editTextChanged" id="HgBookmarkDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html#HgBookmarkDialog.on_tagCombo_editTextChanged" />
-      <keyword name="HgBookmarkRenameDialog" id="HgBookmarkRenameDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog" />
-      <keyword name="HgBookmarkRenameDialog (Constructor)" id="HgBookmarkRenameDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.__init__" />
-      <keyword name="HgBookmarkRenameDialog (Module)" id="HgBookmarkRenameDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html" />
-      <keyword name="HgBookmarkRenameDialog.__updateUI" id="HgBookmarkRenameDialog.__updateUI" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.__updateUI" />
-      <keyword name="HgBookmarkRenameDialog.getData" id="HgBookmarkRenameDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.getData" />
-      <keyword name="HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" id="HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" />
-      <keyword name="HgBookmarkRenameDialog.on_nameEdit_textChanged" id="HgBookmarkRenameDialog.on_nameEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.on_nameEdit_textChanged" />
-      <keyword name="HgBookmarksInOutDialog" id="HgBookmarksInOutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog" />
-      <keyword name="HgBookmarksInOutDialog (Constructor)" id="HgBookmarksInOutDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__init__" />
-      <keyword name="HgBookmarksInOutDialog (Module)" id="HgBookmarksInOutDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html" />
-      <keyword name="HgBookmarksInOutDialog.__finish" id="HgBookmarksInOutDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__finish" />
-      <keyword name="HgBookmarksInOutDialog.__generateItem" id="HgBookmarksInOutDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__generateItem" />
-      <keyword name="HgBookmarksInOutDialog.__procFinished" id="HgBookmarksInOutDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__procFinished" />
-      <keyword name="HgBookmarksInOutDialog.__processOutputLine" id="HgBookmarksInOutDialog.__processOutputLine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__processOutputLine" />
-      <keyword name="HgBookmarksInOutDialog.__readStderr" id="HgBookmarksInOutDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__readStderr" />
-      <keyword name="HgBookmarksInOutDialog.__readStdout" id="HgBookmarksInOutDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__readStdout" />
-      <keyword name="HgBookmarksInOutDialog.__resizeColumns" id="HgBookmarksInOutDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__resizeColumns" />
-      <keyword name="HgBookmarksInOutDialog.__resort" id="HgBookmarksInOutDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__resort" />
-      <keyword name="HgBookmarksInOutDialog.__showError" id="HgBookmarksInOutDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__showError" />
-      <keyword name="HgBookmarksInOutDialog.closeEvent" id="HgBookmarksInOutDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.closeEvent" />
-      <keyword name="HgBookmarksInOutDialog.keyPressEvent" id="HgBookmarksInOutDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.keyPressEvent" />
-      <keyword name="HgBookmarksInOutDialog.on_buttonBox_clicked" id="HgBookmarksInOutDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_buttonBox_clicked" />
-      <keyword name="HgBookmarksInOutDialog.on_input_returnPressed" id="HgBookmarksInOutDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_input_returnPressed" />
-      <keyword name="HgBookmarksInOutDialog.on_passwordCheckBox_toggled" id="HgBookmarksInOutDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_passwordCheckBox_toggled" />
-      <keyword name="HgBookmarksInOutDialog.on_sendButton_clicked" id="HgBookmarksInOutDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_sendButton_clicked" />
-      <keyword name="HgBookmarksInOutDialog.start" id="HgBookmarksInOutDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.start" />
-      <keyword name="HgBookmarksListDialog" id="HgBookmarksListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog" />
-      <keyword name="HgBookmarksListDialog (Constructor)" id="HgBookmarksListDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__init__" />
-      <keyword name="HgBookmarksListDialog (Module)" id="HgBookmarksListDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html" />
-      <keyword name="HgBookmarksListDialog.__finish" id="HgBookmarksListDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__finish" />
-      <keyword name="HgBookmarksListDialog.__generateItem" id="HgBookmarksListDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__generateItem" />
-      <keyword name="HgBookmarksListDialog.__procFinished" id="HgBookmarksListDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__procFinished" />
-      <keyword name="HgBookmarksListDialog.__processOutputLine" id="HgBookmarksListDialog.__processOutputLine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__processOutputLine" />
-      <keyword name="HgBookmarksListDialog.__readStderr" id="HgBookmarksListDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__readStderr" />
-      <keyword name="HgBookmarksListDialog.__readStdout" id="HgBookmarksListDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__readStdout" />
-      <keyword name="HgBookmarksListDialog.__resizeColumns" id="HgBookmarksListDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__resizeColumns" />
-      <keyword name="HgBookmarksListDialog.__resort" id="HgBookmarksListDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__resort" />
-      <keyword name="HgBookmarksListDialog.__showError" id="HgBookmarksListDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.__showError" />
-      <keyword name="HgBookmarksListDialog.closeEvent" id="HgBookmarksListDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.closeEvent" />
-      <keyword name="HgBookmarksListDialog.keyPressEvent" id="HgBookmarksListDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.keyPressEvent" />
-      <keyword name="HgBookmarksListDialog.on_buttonBox_clicked" id="HgBookmarksListDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.on_buttonBox_clicked" />
-      <keyword name="HgBookmarksListDialog.on_input_returnPressed" id="HgBookmarksListDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.on_input_returnPressed" />
-      <keyword name="HgBookmarksListDialog.on_passwordCheckBox_toggled" id="HgBookmarksListDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.on_passwordCheckBox_toggled" />
-      <keyword name="HgBookmarksListDialog.on_sendButton_clicked" id="HgBookmarksListDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.on_sendButton_clicked" />
-      <keyword name="HgBookmarksListDialog.start" id="HgBookmarksListDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html#HgBookmarksListDialog.start" />
+      <keyword name="HgBookmarkDialog" id="HgBookmarkDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog" />
+      <keyword name="HgBookmarkDialog (Constructor)" id="HgBookmarkDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.__init__" />
+      <keyword name="HgBookmarkDialog (Module)" id="HgBookmarkDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html" />
+      <keyword name="HgBookmarkDialog.__updateBookmarksCombo" id="HgBookmarkDialog.__updateBookmarksCombo" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.__updateBookmarksCombo" />
+      <keyword name="HgBookmarkDialog.__updateOK" id="HgBookmarkDialog.__updateOK" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.__updateOK" />
+      <keyword name="HgBookmarkDialog.getData" id="HgBookmarkDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.getData" />
+      <keyword name="HgBookmarkDialog.on_bookmarkButton_toggled" id="HgBookmarkDialog.on_bookmarkButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_bookmarkButton_toggled" />
+      <keyword name="HgBookmarkDialog.on_bookmarkCombo_editTextChanged" id="HgBookmarkDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_bookmarkCombo_editTextChanged" />
+      <keyword name="HgBookmarkDialog.on_branchButton_toggled" id="HgBookmarkDialog.on_branchButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_branchButton_toggled" />
+      <keyword name="HgBookmarkDialog.on_branchCombo_editTextChanged" id="HgBookmarkDialog.on_branchCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_branchCombo_editTextChanged" />
+      <keyword name="HgBookmarkDialog.on_idButton_toggled" id="HgBookmarkDialog.on_idButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_idButton_toggled" />
+      <keyword name="HgBookmarkDialog.on_idEdit_textChanged" id="HgBookmarkDialog.on_idEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_idEdit_textChanged" />
+      <keyword name="HgBookmarkDialog.on_nameCombo_activated" id="HgBookmarkDialog.on_nameCombo_activated" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_nameCombo_activated" />
+      <keyword name="HgBookmarkDialog.on_nameEdit_textChanged" id="HgBookmarkDialog.on_nameEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_nameEdit_textChanged" />
+      <keyword name="HgBookmarkDialog.on_tagButton_toggled" id="HgBookmarkDialog.on_tagButton_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_tagButton_toggled" />
+      <keyword name="HgBookmarkDialog.on_tagCombo_editTextChanged" id="HgBookmarkDialog.on_tagCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html#HgBookmarkDialog.on_tagCombo_editTextChanged" />
+      <keyword name="HgBookmarkRenameDialog" id="HgBookmarkRenameDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog" />
+      <keyword name="HgBookmarkRenameDialog (Constructor)" id="HgBookmarkRenameDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.__init__" />
+      <keyword name="HgBookmarkRenameDialog (Module)" id="HgBookmarkRenameDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html" />
+      <keyword name="HgBookmarkRenameDialog.__updateUI" id="HgBookmarkRenameDialog.__updateUI" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.__updateUI" />
+      <keyword name="HgBookmarkRenameDialog.getData" id="HgBookmarkRenameDialog.getData" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.getData" />
+      <keyword name="HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" id="HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.on_bookmarkCombo_editTextChanged" />
+      <keyword name="HgBookmarkRenameDialog.on_nameEdit_textChanged" id="HgBookmarkRenameDialog.on_nameEdit_textChanged" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html#HgBookmarkRenameDialog.on_nameEdit_textChanged" />
+      <keyword name="HgBookmarksInOutDialog" id="HgBookmarksInOutDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog" />
+      <keyword name="HgBookmarksInOutDialog (Constructor)" id="HgBookmarksInOutDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__init__" />
+      <keyword name="HgBookmarksInOutDialog (Module)" id="HgBookmarksInOutDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html" />
+      <keyword name="HgBookmarksInOutDialog.__finish" id="HgBookmarksInOutDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__finish" />
+      <keyword name="HgBookmarksInOutDialog.__generateItem" id="HgBookmarksInOutDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__generateItem" />
+      <keyword name="HgBookmarksInOutDialog.__procFinished" id="HgBookmarksInOutDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__procFinished" />
+      <keyword name="HgBookmarksInOutDialog.__processOutputLine" id="HgBookmarksInOutDialog.__processOutputLine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__processOutputLine" />
+      <keyword name="HgBookmarksInOutDialog.__readStderr" id="HgBookmarksInOutDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__readStderr" />
+      <keyword name="HgBookmarksInOutDialog.__readStdout" id="HgBookmarksInOutDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__readStdout" />
+      <keyword name="HgBookmarksInOutDialog.__resizeColumns" id="HgBookmarksInOutDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__resizeColumns" />
+      <keyword name="HgBookmarksInOutDialog.__resort" id="HgBookmarksInOutDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__resort" />
+      <keyword name="HgBookmarksInOutDialog.__showError" id="HgBookmarksInOutDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.__showError" />
+      <keyword name="HgBookmarksInOutDialog.closeEvent" id="HgBookmarksInOutDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.closeEvent" />
+      <keyword name="HgBookmarksInOutDialog.keyPressEvent" id="HgBookmarksInOutDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.keyPressEvent" />
+      <keyword name="HgBookmarksInOutDialog.on_buttonBox_clicked" id="HgBookmarksInOutDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_buttonBox_clicked" />
+      <keyword name="HgBookmarksInOutDialog.on_input_returnPressed" id="HgBookmarksInOutDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_input_returnPressed" />
+      <keyword name="HgBookmarksInOutDialog.on_passwordCheckBox_toggled" id="HgBookmarksInOutDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgBookmarksInOutDialog.on_sendButton_clicked" id="HgBookmarksInOutDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.on_sendButton_clicked" />
+      <keyword name="HgBookmarksInOutDialog.start" id="HgBookmarksInOutDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html#HgBookmarksInOutDialog.start" />
+      <keyword name="HgBookmarksListDialog" id="HgBookmarksListDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog" />
+      <keyword name="HgBookmarksListDialog (Constructor)" id="HgBookmarksListDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__init__" />
+      <keyword name="HgBookmarksListDialog (Module)" id="HgBookmarksListDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html" />
+      <keyword name="HgBookmarksListDialog.__finish" id="HgBookmarksListDialog.__finish" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__finish" />
+      <keyword name="HgBookmarksListDialog.__generateItem" id="HgBookmarksListDialog.__generateItem" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__generateItem" />
+      <keyword name="HgBookmarksListDialog.__procFinished" id="HgBookmarksListDialog.__procFinished" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__procFinished" />
+      <keyword name="HgBookmarksListDialog.__processOutputLine" id="HgBookmarksListDialog.__processOutputLine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__processOutputLine" />
+      <keyword name="HgBookmarksListDialog.__readStderr" id="HgBookmarksListDialog.__readStderr" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__readStderr" />
+      <keyword name="HgBookmarksListDialog.__readStdout" id="HgBookmarksListDialog.__readStdout" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__readStdout" />
+      <keyword name="HgBookmarksListDialog.__resizeColumns" id="HgBookmarksListDialog.__resizeColumns" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__resizeColumns" />
+      <keyword name="HgBookmarksListDialog.__resort" id="HgBookmarksListDialog.__resort" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__resort" />
+      <keyword name="HgBookmarksListDialog.__showError" id="HgBookmarksListDialog.__showError" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.__showError" />
+      <keyword name="HgBookmarksListDialog.closeEvent" id="HgBookmarksListDialog.closeEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.closeEvent" />
+      <keyword name="HgBookmarksListDialog.keyPressEvent" id="HgBookmarksListDialog.keyPressEvent" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.keyPressEvent" />
+      <keyword name="HgBookmarksListDialog.on_buttonBox_clicked" id="HgBookmarksListDialog.on_buttonBox_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_buttonBox_clicked" />
+      <keyword name="HgBookmarksListDialog.on_input_returnPressed" id="HgBookmarksListDialog.on_input_returnPressed" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_input_returnPressed" />
+      <keyword name="HgBookmarksListDialog.on_passwordCheckBox_toggled" id="HgBookmarksListDialog.on_passwordCheckBox_toggled" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgBookmarksListDialog.on_sendButton_clicked" id="HgBookmarksListDialog.on_sendButton_clicked" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_sendButton_clicked" />
+      <keyword name="HgBookmarksListDialog.start" id="HgBookmarksListDialog.start" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.start" />
       <keyword name="HgBranchInputDialog" id="HgBranchInputDialog" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog" />
       <keyword name="HgBranchInputDialog (Constructor)" id="HgBranchInputDialog (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog.__init__" />
       <keyword name="HgBranchInputDialog (Module)" id="HgBranchInputDialog (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html" />
@@ -6155,6 +6132,15 @@
       <keyword name="HgProjectHelper.__hgBisectGood" id="HgProjectHelper.__hgBisectGood" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectGood" />
       <keyword name="HgProjectHelper.__hgBisectReset" id="HgProjectHelper.__hgBisectReset" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectReset" />
       <keyword name="HgProjectHelper.__hgBisectSkip" id="HgProjectHelper.__hgBisectSkip" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBisectSkip" />
+      <keyword name="HgProjectHelper.__hgBookmarkDefine" id="HgProjectHelper.__hgBookmarkDefine" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkDefine" />
+      <keyword name="HgProjectHelper.__hgBookmarkDelete" id="HgProjectHelper.__hgBookmarkDelete" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkDelete" />
+      <keyword name="HgProjectHelper.__hgBookmarkIncoming" id="HgProjectHelper.__hgBookmarkIncoming" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkIncoming" />
+      <keyword name="HgProjectHelper.__hgBookmarkMove" id="HgProjectHelper.__hgBookmarkMove" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkMove" />
+      <keyword name="HgProjectHelper.__hgBookmarkOutgoing" id="HgProjectHelper.__hgBookmarkOutgoing" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkOutgoing" />
+      <keyword name="HgProjectHelper.__hgBookmarkPull" id="HgProjectHelper.__hgBookmarkPull" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkPull" />
+      <keyword name="HgProjectHelper.__hgBookmarkPush" id="HgProjectHelper.__hgBookmarkPush" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkPush" />
+      <keyword name="HgProjectHelper.__hgBookmarkRename" id="HgProjectHelper.__hgBookmarkRename" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarkRename" />
+      <keyword name="HgProjectHelper.__hgBookmarksList" id="HgProjectHelper.__hgBookmarksList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBookmarksList" />
       <keyword name="HgProjectHelper.__hgBranch" id="HgProjectHelper.__hgBranch" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranch" />
       <keyword name="HgProjectHelper.__hgBranchList" id="HgProjectHelper.__hgBranchList" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBranchList" />
       <keyword name="HgProjectHelper.__hgBundle" id="HgProjectHelper.__hgBundle" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.__hgBundle" />
@@ -8931,7 +8917,6 @@
       <keyword name="ProjectFormsBrowser._openItem" id="ProjectFormsBrowser._openItem" ref="eric5.Project.ProjectFormsBrowser.html#ProjectFormsBrowser._openItem" />
       <keyword name="ProjectFormsBrowser.compileChangedForms" id="ProjectFormsBrowser.compileChangedForms" ref="eric5.Project.ProjectFormsBrowser.html#ProjectFormsBrowser.compileChangedForms" />
       <keyword name="ProjectFormsBrowser.handlePreferencesChanged" id="ProjectFormsBrowser.handlePreferencesChanged" ref="eric5.Project.ProjectFormsBrowser.html#ProjectFormsBrowser.handlePreferencesChanged" />
-      <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.ProjectHelper.html" />
       <keyword name="ProjectHelper (Module)" id="ProjectHelper (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.ProjectHelper.html" />
@@ -12828,7 +12813,6 @@
       <keyword name="append_PKCS7_padding" id="append_PKCS7_padding" ref="eric5.Utilities.crypto.py3AES.html#append_PKCS7_padding" />
       <keyword name="binplistlib (Module)" id="binplistlib (Module)" ref="eric5.Utilities.binplistlib.html" />
       <keyword name="blank_lines" id="blank_lines" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#blank_lines" />
-      <keyword name="bookmarks (Module)" id="bookmarks (Module)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html" />
       <keyword name="changeRememberedMaster" id="changeRememberedMaster" ref="eric5.Utilities.crypto.__init__.html#changeRememberedMaster" />
       <keyword name="check" id="check" ref="eric5.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#check" />
       <keyword name="checkBlacklistedVersions" id="checkBlacklistedVersions" ref="eric5.Globals.__init__.html#checkBlacklistedVersions" />
@@ -13848,12 +13832,6 @@
       <file>eric5.Plugins.PluginWizardQMessageBox.html</file>
       <file>eric5.Plugins.PluginWizardQRegExp.html</file>
       <file>eric5.Plugins.PluginWizardQRegularExpression.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkDialog.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarkRenameDialog.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksInOutDialog.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.HgBookmarksListDialog.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.ProjectHelper.html</file>
-      <file>eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.bookmarks.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.Config.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.HgFetchDialog.html</file>
@@ -13867,6 +13845,10 @@
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarkRenameDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksInOutDialog.html</file>
+      <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgBundleDialog.html</file>
       <file>eric5.Plugins.VcsPlugins.vcsMercurial.HgClient.html</file>
@@ -14333,7 +14315,6 @@
       <file>index-eric5.Plugins.DocumentationPlugins.Ericdoc.html</file>
       <file>index-eric5.Plugins.DocumentationPlugins.html</file>
       <file>index-eric5.Plugins.VcsPlugins.html</file>
-      <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.BookmarksExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.FetchExtension.html</file>
       <file>index-eric5.Plugins.VcsPlugins.vcsMercurial.GpgExtension.html</file>

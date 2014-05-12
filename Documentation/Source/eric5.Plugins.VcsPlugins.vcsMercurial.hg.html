@@ -80,6 +80,9 @@ VersionControl
 <td><a href="#Hg.__getExtensionsInfo">__getExtensionsInfo</a></td>
 <td>Private method to get the active extensions from Mercurial.</td>
 </tr><tr>
+<td><a href="#Hg.__getInOutBookmarks">__getInOutBookmarks</a></td>
+<td>Public method to get the list of incoming or outgoing bookmarks.</td>
+</tr><tr>
 <td><a href="#Hg.__hgGetFileForRevision">__hgGetFileForRevision</a></td>
 <td>Private method to get a file for a specific revision from the repository.</td>
 </tr><tr>
@@ -140,6 +143,30 @@ VersionControl
 <td><a href="#Hg.hgBisect">hgBisect</a></td>
 <td>Public method to perform bisect commands.</td>
 </tr><tr>
+<td><a href="#Hg.hgBookmarkDefine">hgBookmarkDefine</a></td>
+<td>Public method to define a bookmark.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkDelete">hgBookmarkDelete</a></td>
+<td>Public method to delete a bookmark.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkIncoming">hgBookmarkIncoming</a></td>
+<td>Public method to show a list of incoming bookmarks.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkMove">hgBookmarkMove</a></td>
+<td>Public method to move a bookmark.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkOutgoing">hgBookmarkOutgoing</a></td>
+<td>Public method to show a list of outgoing bookmarks.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkPull">hgBookmarkPull</a></td>
+<td>Public method to pull a bookmark from a remote repository.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkPush">hgBookmarkPush</a></td>
+<td>Public method to push a bookmark to a remote repository.</td>
+</tr><tr>
+<td><a href="#Hg.hgBookmarkRename">hgBookmarkRename</a></td>
+<td>Public method to rename a bookmark.</td>
+</tr><tr>
 <td><a href="#Hg.hgBranch">hgBranch</a></td>
 <td>Public method used to create a branch in the Mercurial repository.</td>
 </tr><tr>
@@ -170,6 +197,9 @@ VersionControl
 <td><a href="#Hg.hgForget">hgForget</a></td>
 <td>Public method used to remove a file from the Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.hgGetBookmarksList">hgGetBookmarksList</a></td>
+<td>Public method to get the list of bookmarks.</td>
+</tr><tr>
 <td><a href="#Hg.hgGetBranchesList">hgGetBranchesList</a></td>
 <td>Public method to get the list of branches.</td>
 </tr><tr>
@@ -193,6 +223,9 @@ VersionControl
 </tr><tr>
 <td><a href="#Hg.hgInfo">hgInfo</a></td>
 <td>Public method to show information about the heads of the repository.</td>
+</tr><tr>
+<td><a href="#Hg.hgListBookmarks">hgListBookmarks</a></td>
+<td>Public method used to list the available bookmarks.</td>
 </tr><tr>
 <td><a href="#Hg.hgListTagBranch">hgListTagBranch</a></td>
 <td>Public method used to list the available tags or branches.</td>
@@ -391,7 +424,25 @@ name of this object (string)
 <b>__getExtensionsInfo</b>(<i></i>)
 <p>
         Private method to get the active extensions from Mercurial.
-</p><a NAME="Hg.__hgGetFileForRevision" ID="Hg.__hgGetFileForRevision"></a>
+</p><a NAME="Hg.__getInOutBookmarks" ID="Hg.__getInOutBookmarks"></a>
+<h4>Hg.__getInOutBookmarks</h4>
+<b>__getInOutBookmarks</b>(<i>repodir, incoming</i>)
+<p>
+        Public method to get the list of incoming or outgoing bookmarks.
+</p><dl>
+<dt><i>repodir</i></dt>
+<dd>
+directory name of the repository (string)
+</dd><dt><i>incoming</i></dt>
+<dd>
+flag indicating to get incoming bookmarks (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of bookmarks (list of string)
+</dd>
+</dl><a NAME="Hg.__hgGetFileForRevision" ID="Hg.__hgGetFileForRevision"></a>
 <h4>Hg.__hgGetFileForRevision</h4>
 <b>__hgGetFileForRevision</b>(<i>name, rev=""</i>)
 <p>
@@ -612,6 +663,86 @@ name of the subcommand (string, one of 'good', 'bad',
 <dd>
 raised to indicate an invalid bisect subcommand
 </dd>
+</dl><a NAME="Hg.hgBookmarkDefine" ID="Hg.hgBookmarkDefine"></a>
+<h4>Hg.hgBookmarkDefine</h4>
+<b>hgBookmarkDefine</b>(<i>name</i>)
+<p>
+        Public method to define a bookmark.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkDelete" ID="Hg.hgBookmarkDelete"></a>
+<h4>Hg.hgBookmarkDelete</h4>
+<b>hgBookmarkDelete</b>(<i>name</i>)
+<p>
+        Public method to delete a bookmark.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkIncoming" ID="Hg.hgBookmarkIncoming"></a>
+<h4>Hg.hgBookmarkIncoming</h4>
+<b>hgBookmarkIncoming</b>(<i>name</i>)
+<p>
+        Public method to show a list of incoming bookmarks.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkMove" ID="Hg.hgBookmarkMove"></a>
+<h4>Hg.hgBookmarkMove</h4>
+<b>hgBookmarkMove</b>(<i>name</i>)
+<p>
+        Public method to move a bookmark.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkOutgoing" ID="Hg.hgBookmarkOutgoing"></a>
+<h4>Hg.hgBookmarkOutgoing</h4>
+<b>hgBookmarkOutgoing</b>(<i>name</i>)
+<p>
+        Public method to show a list of outgoing bookmarks.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkPull" ID="Hg.hgBookmarkPull"></a>
+<h4>Hg.hgBookmarkPull</h4>
+<b>hgBookmarkPull</b>(<i>name</i>)
+<p>
+        Public method to pull a bookmark from a remote repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkPush" ID="Hg.hgBookmarkPush"></a>
+<h4>Hg.hgBookmarkPush</h4>
+<b>hgBookmarkPush</b>(<i>name</i>)
+<p>
+        Public method to push a bookmark to a remote repository.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
+</dl><a NAME="Hg.hgBookmarkRename" ID="Hg.hgBookmarkRename"></a>
+<h4>Hg.hgBookmarkRename</h4>
+<b>hgBookmarkRename</b>(<i>name</i>)
+<p>
+        Public method to rename a bookmark.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name (string)
+</dd>
 </dl><a NAME="Hg.hgBranch" ID="Hg.hgBranch"></a>
 <h4>Hg.hgBranch</h4>
 <b>hgBranch</b>(<i>name</i>)
@@ -748,6 +879,21 @@ file/directory name to be diffed (string)
 file/directory name to be removed (string or list of
             strings))
 </dd>
+</dl><a NAME="Hg.hgGetBookmarksList" ID="Hg.hgGetBookmarksList"></a>
+<h4>Hg.hgGetBookmarksList</h4>
+<b>hgGetBookmarksList</b>(<i>repodir</i>)
+<p>
+        Public method to get the list of bookmarks.
+</p><dl>
+<dt><i>repodir</i></dt>
+<dd>
+directory name of the repository (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of bookmarks (list of string)
+</dd>
 </dl><a NAME="Hg.hgGetBranchesList" ID="Hg.hgGetBranchesList"></a>
 <h4>Hg.hgGetBranchesList</h4>
 <b>hgGetBranchesList</b>(<i>repodir</i>)
@@ -867,6 +1013,16 @@ local path to get the repository infos (string)
 <dd>
 mode of the operation (string, one of heads, parents,
             tip)
+</dd>
+</dl><a NAME="Hg.hgListBookmarks" ID="Hg.hgListBookmarks"></a>
+<h4>Hg.hgListBookmarks</h4>
+<b>hgListBookmarks</b>(<i>path</i>)
+<p>
+        Public method used to list the available bookmarks.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name of the project (string)
 </dd>
 </dl><a NAME="Hg.hgListTagBranch" ID="Hg.hgListTagBranch"></a>
 <h4>Hg.hgListTagBranch</h4>

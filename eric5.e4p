@@ -830,13 +830,6 @@
     <Source>Helpviewer/Download/DownloadAskActionDialog.py</Source>
     <Source>QScintilla/Lexers/LexerMatlab.py</Source>
     <Source>QScintilla/Lexers/LexerOctave.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/__init__.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkRenameDialog.py</Source>
-    <Source>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/__init__.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/queues.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py</Source>
@@ -1141,6 +1134,10 @@
     <Source>Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/jsCheckSyntax.py</Source>
     <Source>QScintilla/Lexers/LexerPO.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1369,10 +1366,6 @@
     <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpVirusTotalPage.ui</Form>
     <Form>Helpviewer/Download/DownloadAskActionDialog.ui</Form>
-    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksListDialog.ui</Form>
-    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkDialog.ui</Form>
-    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarkRenameDialog.ui</Form>
-    <Form>Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/HgBookmarksInOutDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui</Form>
@@ -1469,6 +1462,10 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui</Form>
     <Form>UI/Previewers/PreviewerHTML.ui</Form>
     <Form>UI/Previewers/PreviewerQSS.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>
@@ -1543,8 +1540,6 @@
     <Other>eric5.desktop</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
-    <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowser.style</Other>
-    <Other>Plugins/VcsPlugins/vcsMercurial/styles/logDialog.style</Other>
     <Other>.hgignore</Other>
     <Other>patches</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/startServer.png</Other>

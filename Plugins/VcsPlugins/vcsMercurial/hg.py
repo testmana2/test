@@ -18,7 +18,7 @@ import shutil
 import re
 
 from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
-from PyQt4.QtGui import QApplication, QDialog
+from PyQt4.QtGui import QApplication, QDialog, QInputDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -80,6 +80,7 @@ class Hg(VersionControl):
         self.tagsList = []
         self.branchesList = []
         self.allTagsBranchesList = []
+        self.bookmarksList = []
         self.showedTags = False
         self.showedBranches = False
         
@@ -108,6 +109,8 @@ class Hg(VersionControl):
         self.repoEditor = None
         self.userEditor = None
         self.serveDlg = None
+        self.bookmarksListDlg = None
+        self.bookmarksInOutDlg = None
         
         self.bundleFile = None
         self.__lastChangeGroupPath = None
@@ -136,7 +139,6 @@ class Hg(VersionControl):
         self.__defaultPushConfigured = False
         
         # instantiate the extensions
-        from .BookmarksExtension.bookmarks import Bookmarks
         from .QueuesExtension.queues import Queues
         from .FetchExtension.fetch import Fetch
         from .PurgeExtension.purge import Purge
@@ -146,7 +148,6 @@ class Hg(VersionControl):
         from .ShelveExtension.shelve import Shelve
         from .LargefilesExtension.largefiles import Largefiles
         self.__extensions = {
-            "bookmarks": Bookmarks(self),
             "mq": Queues(self),
             "fetch": Fetch(self),
             "purge": Purge(self),
@@ -199,6 +200,11 @@ class Hg(VersionControl):
             self.annotate.close()
         if self.serveDlg is not None:
             self.serveDlg.close()
+        
+        if self.bookmarksListDlg is not None:
+            self.bookmarksListDlg.close()
+        if self.bookmarksInOutDlg is not None:
+            self.bookmarksInOutDlg.close()
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
@@ -821,19 +827,12 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        if self.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
-        
         from .HgMultiRevisionSelectionDialog import \
             HgMultiRevisionSelectionDialog
         dlg = HgMultiRevisionSelectionDialog(
             self.hgGetTagsList(repodir),
             self.hgGetBranchesList(repodir),
-            bookmarksList,
+            self.hgGetBookmarksList(repodir),
             emptyRevsOk=True,
             showLimit=True,
             limitDefault=self.getPlugin().getPreferences("LogLimit"))
@@ -1033,16 +1032,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        if self.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgMergeDialog import HgMergeDialog
         dlg = HgMergeDialog(self.hgGetTagsList(repodir),
                             self.hgGetBranchesList(repodir),
-                            bookmarksList)
+                            self.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             rev, force = dlg.getParameters()
         else:
@@ -1082,16 +1075,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return False
         
-        if self.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
         dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                         self.hgGetBranchesList(repodir),
-                                        bookmarksList,
+                                        self.hgGetBookmarksList(repodir),
                                         self.tr("Current branch tip"))
         if dlg.exec_() == QDialog.Accepted:
             rev = dlg.getRevision()
@@ -1710,16 +1697,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        if self.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
         dlg = HgRevisionsSelectionDialog(self.hgGetTagsList(repodir),
                                          self.hgGetBranchesList(repodir),
-                                         bookmarksList)
+                                         self.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             revisions = dlg.getRevisions()
             from .HgDiffDialog import HgDiffDialog
@@ -1800,17 +1781,10 @@ class Hg(VersionControl):
                 if os.path.splitdrive(repodir)[1] == os.sep:
                     return
             
-            if self.isExtensionActive("bookmarks"):
-                bookmarksList = \
-                    self.getExtensionObject("bookmarks")\
-                        .hgGetBookmarksList(repodir)
-            else:
-                bookmarksList = None
-            
             from .HgRevisionsSelectionDialog import HgRevisionsSelectionDialog
             dlg = HgRevisionsSelectionDialog(self.hgGetTagsList(repodir),
                                              self.hgGetBranchesList(repodir),
-                                             bookmarksList)
+                                             self.hgGetBookmarksList(repodir))
             if dlg.exec_() == QDialog.Accepted:
                 rev1, rev2 = dlg.getRevisions()
         elif revisions:
@@ -2490,16 +2464,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        if self.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgBundleDialog import HgBundleDialog
         dlg = HgBundleDialog(self.hgGetTagsList(repodir),
                              self.hgGetBranchesList(repodir),
-                             bookmarksList)
+                             self.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             revs, baseRevs, compression, all = dlg.getParameters()
             
@@ -2659,16 +2627,10 @@ class Hg(VersionControl):
         
         rev = ""
         if subcommand in ("good", "bad", "skip"):
-            if self.isExtensionActive("bookmarks"):
-                bookmarksList = \
-                    self.getExtensionObject("bookmarks")\
-                        .hgGetBookmarksList(repodir)
-            else:
-                bookmarksList = None
             from .HgRevisionSelectionDialog import HgRevisionSelectionDialog
             dlg = HgRevisionSelectionDialog(self.hgGetTagsList(repodir),
                                             self.hgGetBranchesList(repodir),
-                                            bookmarksList)
+                                            self.hgGetBookmarksList(repodir))
             if dlg.exec_() == QDialog.Accepted:
                 rev = dlg.getRevision()
             else:
@@ -2738,16 +2700,10 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        if self.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgBackoutDialog import HgBackoutDialog
         dlg = HgBackoutDialog(self.hgGetTagsList(repodir),
                               self.hgGetBranchesList(repodir),
-                              bookmarksList)
+                              self.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             rev, merge, date, user, message = dlg.getParameters()
             if not rev:
@@ -3357,10 +3313,6 @@ class Hg(VersionControl):
                     line.split("=", 1)[0].strip().split(".")[-1].strip()
                 self.__activeExtensions.append(extensionName)
         
-        if self.version >= (1, 8):
-            if "bookmarks" not in self.__activeExtensions:
-                self.__activeExtensions.append("bookmarks")
-        
         if activeExtensions != sorted(self.__activeExtensions):
             self.activeExtensionsChanged.emit()
     
@@ -3441,9 +3393,7 @@ class Hg(VersionControl):
         self.__projectHelper.setObjects(self, project)
         self.__monitorRepoIniFile(project.getProjectPath())
         
-        if not Utilities.isMacPlatform() and \
-            self.version >= (1, 9) and \
-                repodir:
+        if repodir:
             from .HgClient import HgClient
             client = HgClient(repodir, "utf-8", self)
             ok, err = client.startServer()
@@ -3475,3 +3425,309 @@ class Hg(VersionControl):
         """
         from .HgStatusMonitorThread import HgStatusMonitorThread
         return HgStatusMonitorThread(interval, project, self)
+
+    ###########################################################################
+    ##  Bookmarks methods
+    ###########################################################################
+
+    def hgListBookmarks(self, path):
+        """
+        Public method used to list the available bookmarks.
+        
+        @param path directory name of the project (string)
+        """
+        self.bookmarksList = []
+        
+        from .HgBookmarksListDialog import HgBookmarksListDialog
+        self.bookmarksListDlg = HgBookmarksListDialog(self)
+        self.bookmarksListDlg.show()
+        self.bookmarksListDlg.start(path, self.bookmarksList)
+    
+    def hgGetBookmarksList(self, repodir):
+        """
+        Public method to get the list of bookmarks.
+        
+        @param repodir directory name of the repository (string)
+        @return list of bookmarks (list of string)
+        """
+        args = self.initCommand("bookmarks")
+        
+        client = self.getClient()
+        output = ""
+        if client:
+            output = client.runcommand(args)[0]
+        else:
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
+        
+        self.bookmarksList = []
+        for line in output.splitlines():
+            li = line.strip().split()
+            if li[-1][0] in "1234567890":
+                # last element is a rev:changeset
+                del li[-1]
+                if li[0] == "*":
+                    del li[0]
+                name = " ".join(li)
+                self.bookmarksList.append(name)
+        
+        return self.bookmarksList[:]
+    
+    def hgBookmarkDefine(self, name):
+        """
+        Public method to define a bookmark.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        from .HgBookmarkDialog import HgBookmarkDialog
+        dlg = HgBookmarkDialog(HgBookmarkDialog.DEFINE_MODE,
+                               self.hgGetTagsList(repodir),
+                               self.hgGetBranchesList(repodir),
+                               self.hgGetBookmarksList(repodir))
+        if dlg.exec_() == QDialog.Accepted:
+            rev, bookmark = dlg.getData()
+            
+            args = self.initCommand("bookmarks")
+            if rev:
+                args.append("--rev")
+                args.append(rev)
+            args.append(bookmark)
+            
+            dia = HgDialog(self.tr('Mercurial Bookmark'), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgBookmarkDelete(self, name):
+        """
+        Public method to delete a bookmark.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        bookmark, ok = QInputDialog.getItem(
+            None,
+            self.tr("Delete Bookmark"),
+            self.tr("Select the bookmark to be deleted:"),
+            [""] + sorted(self.hgGetBookmarksList(repodir)),
+            0, True)
+        if ok and bookmark:
+            args = self.initCommand("bookmarks")
+            args.append("--delete")
+            args.append(bookmark)
+            
+            dia = HgDialog(self.tr('Delete Mercurial Bookmark'), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgBookmarkRename(self, name):
+        """
+        Public method to rename a bookmark.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        from .HgBookmarkRenameDialog import HgBookmarkRenameDialog
+        dlg = HgBookmarkRenameDialog(self.hgGetBookmarksList(repodir))
+        if dlg.exec_() == QDialog.Accepted:
+            newName, oldName = dlg.getData()
+            
+            args = self.initCommand("bookmarks")
+            args.append("--rename")
+            args.append(oldName)
+            args.append(newName)
+            
+            dia = HgDialog(self.tr('Rename Mercurial Bookmark'), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgBookmarkMove(self, name):
+        """
+        Public method to move a bookmark.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        from .HgBookmarkDialog import HgBookmarkDialog
+        dlg = HgBookmarkDialog(HgBookmarkDialog.MOVE_MODE,
+                               self.hgGetTagsList(repodir),
+                               self.hgGetBranchesList(repodir),
+                               self.hgGetBookmarksList(repodir))
+        if dlg.exec_() == QDialog.Accepted:
+            rev, bookmark = dlg.getData()
+            
+            args = self.initCommand("bookmarks")
+            args.append("--force")
+            if rev:
+                args.append("--rev")
+                args.append(rev)
+            args.append(bookmark)
+            
+            dia = HgDialog(self.tr('Move Mercurial Bookmark'), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgBookmarkIncoming(self, name):
+        """
+        Public method to show a list of incoming bookmarks.
+        
+        @param name file/directory name (string)
+        """
+        from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
+        self.bookmarksInOutDlg = HgBookmarksInOutDialog(
+            self, HgBookmarksInOutDialog.INCOMING)
+        self.bookmarksInOutDlg.show()
+        self.bookmarksInOutDlg.start(name)
+    
+    def hgBookmarkOutgoing(self, name):
+        """
+        Public method to show a list of outgoing bookmarks.
+        
+        @param name file/directory name (string)
+        """
+        from .HgBookmarksInOutDialog import HgBookmarksInOutDialog
+        self.bookmarksInOutDlg = HgBookmarksInOutDialog(
+            self, HgBookmarksInOutDialog.OUTGOING)
+        self.bookmarksInOutDlg.show()
+        self.bookmarksInOutDlg.start(name)
+    
+    def __getInOutBookmarks(self, repodir, incoming):
+        """
+        Public method to get the list of incoming or outgoing bookmarks.
+        
+        @param repodir directory name of the repository (string)
+        @param incoming flag indicating to get incoming bookmarks (boolean)
+        @return list of bookmarks (list of string)
+        """
+        bookmarksList = []
+        
+        if incoming:
+            args = self.initCommand("incoming")
+        else:
+            args = self.initCommand("outgoing")
+        args.append('--bookmarks')
+        
+        client = self.getClient()
+        output = ""
+        if client:
+            output = client.runcommand(args)[0]
+        else:
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
+        
+        for line in output.splitlines():
+            if line.startswith(" "):
+                li = line.strip().split()
+                del li[-1]
+                name = " ".join(li)
+                bookmarksList.append(name)
+        
+        return bookmarksList
+    
+    def hgBookmarkPull(self, name):
+        """
+        Public method to pull a bookmark from a remote repository.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        bookmarks = self.__getInOutBookmarks(repodir, True)
+        
+        bookmark, ok = QInputDialog.getItem(
+            None,
+            self.tr("Pull Bookmark"),
+            self.tr("Select the bookmark to be pulled:"),
+            [""] + sorted(bookmarks),
+            0, True)
+        if ok and bookmark:
+            args = self.initCommand("pull")
+            args.append('--bookmark')
+            args.append(bookmark)
+            
+            dia = HgDialog(self.tr(
+                'Pulling bookmark from a remote Mercurial repository'),
+                self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+    
+    def hgBookmarkPush(self, name):
+        """
+        Public method to push a bookmark to a remote repository.
+        
+        @param name file/directory name (string)
+        """
+        # find the root of the repo
+        repodir = self.splitPath(name)[0]
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        bookmarks = self.__getInOutBookmarks(repodir, False)
+        
+        bookmark, ok = QInputDialog.getItem(
+            None,
+            self.tr("Push Bookmark"),
+            self.tr("Select the bookmark to be push:"),
+            [""] + sorted(bookmarks),
+            0, True)
+        if ok and bookmark:
+            args = self.initCommand("push")
+            args.append('--bookmark')
+            args.append(bookmark)
+            
+            dia = HgDialog(self.tr(
+                'Pushing bookmark to a remote Mercurial repository'),
+                self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()

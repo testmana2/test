@@ -66,16 +66,10 @@ class Gpg(HgExtension):
                 return
         
         if rev is None:
-            if self.vcs.isExtensionActive("bookmarks"):
-                bookmarksList = \
-                    self.vcs.getExtensionObject("bookmarks")\
-                        .hgGetBookmarksList(repodir)
-            else:
-                bookmarksList = None
             dlg = HgRevisionSelectionDialog(
                 self.vcs.hgGetTagsList(repodir),
                 self.vcs.hgGetBranchesList(repodir),
-                bookmarksList)
+                self.vcs.hgGetBookmarksList(repodir))
             if dlg.exec_() == QDialog.Accepted:
                 rev = dlg.getRevision()
         
@@ -103,16 +97,10 @@ class Gpg(HgExtension):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        if self.vcs.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.vcs.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgGpgSignDialog import HgGpgSignDialog
         dlg = HgGpgSignDialog(self.vcs.hgGetTagsList(repodir),
                               self.vcs.hgGetBranchesList(repodir),
-                              bookmarksList)
+                              self.vcs.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             revision, noCommit, message, keyId, local, force = dlg.getData()
             

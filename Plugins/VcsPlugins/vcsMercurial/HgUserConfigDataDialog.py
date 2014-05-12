@@ -25,8 +25,6 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
         super(HgUserConfigDataDialog, self).__init__(parent)
         self.setupUi(self)
         
-        if version >= (1, 8):
-            self.bookmarksCheckBox.setEnabled(False)
         if version >= (2, 3):
             self.transplantCheckBox.setEnabled(False)
         
@@ -45,8 +43,6 @@ class HgUserConfigDataDialog(QDialog, Ui_HgUserConfigDataDialog):
         extensions = []
         extensionsData = {}
         
-        if self.bookmarksCheckBox.isChecked():
-            extensions.append("bookmarks")
         if self.fetchCheckBox.isChecked():
             extensions.append("fetch")
         if self.gpgCheckBox.isChecked():

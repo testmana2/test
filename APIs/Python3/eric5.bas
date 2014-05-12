@@ -34,7 +34,6 @@ BookmarkActionSelectionDialog QDialog Ui_BookmarkActionSelectionDialog
 BookmarkInfoDialog QDialog Ui_BookmarkInfoDialog
 BookmarkPropertiesDialog QDialog Ui_BookmarkPropertiesDialog
 BookmarkedFilesDialog QDialog Ui_BookmarkedFilesDialog
-Bookmarks HgExtension
 BookmarksDialog QDialog Ui_BookmarksDialog
 BookmarksImportDialog QDialog Ui_BookmarksImportDialog
 BookmarksImporter QObject
@@ -42,7 +41,6 @@ BookmarksManager QObject
 BookmarksMenu E5ModelMenu
 BookmarksMenuBarMenu BookmarksMenu
 BookmarksModel QAbstractItemModel
-BookmarksProjectHelper HgExtensionProjectHelper
 BookmarksToolBar E5ModelToolBar
 BreakPointModel QAbstractItemModel
 BreakPointViewer QTreeView

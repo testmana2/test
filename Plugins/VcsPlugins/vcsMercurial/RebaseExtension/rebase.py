@@ -44,16 +44,10 @@ class Rebase(HgExtension):
                 return False
         
         res = False
-        if self.vcs.isExtensionActive("bookmarks"):
-            bookmarksList = \
-                self.vcs.getExtensionObject("bookmarks")\
-                    .hgGetBookmarksList(repodir)
-        else:
-            bookmarksList = None
         from .HgRebaseDialog import HgRebaseDialog
         dlg = HgRebaseDialog(self.vcs.hgGetTagsList(repodir),
                              self.vcs.hgGetBranchesList(repodir),
-                             bookmarksList)
+                             self.vcs.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             (indicator, sourceRev, destRev, collapse, keep, keepBranches,
              detach) = dlg.getData()

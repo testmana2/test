@@ -144,12 +144,9 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if self.vcs.version >= (2, 1):
             args.append(os.path.join(os.path.dirname(__file__),
                                      "styles", "logDialogBookmarkPhase.style"))
-        elif self.vcs.version >= (1, 8):
-            args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logDialogBookmark.style"))
         else:
             args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logDialog.style"))
+                                     "styles", "logDialogBookmark.style"))
         if self.mode == "incoming":
             if self.bundle:
                 args.append(self.bundle)
