@@ -208,13 +208,18 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         @param name name of the bookmark (string)
         """
         itm = QTreeWidgetItem(self.bookmarksList)
-        itm.setData(0, Qt.DisplayRole, int(revision))
-        itm.setData(1, Qt.DisplayRole, changeset)
-        itm.setData(2, Qt.DisplayRole, status)
-        itm.setData(3, Qt.DisplayRole, name)
-        itm.setTextAlignment(0, Qt.AlignRight)
-        itm.setTextAlignment(1, Qt.AlignRight)
-        itm.setTextAlignment(2, Qt.AlignHCenter)
+        if revision[0].isdecimal():
+            # valid bookmark entry
+            itm.setData(0, Qt.DisplayRole, int(revision))
+            itm.setData(1, Qt.DisplayRole, changeset)
+            itm.setData(2, Qt.DisplayRole, status)
+            itm.setData(3, Qt.DisplayRole, name)
+            itm.setTextAlignment(0, Qt.AlignRight)
+            itm.setTextAlignment(1, Qt.AlignRight)
+            itm.setTextAlignment(2, Qt.AlignHCenter)
+        else:
+            # error message
+            itm.setData(0, Qt.DisplayRole, revision)
     
     def __readStdout(self):
         """
