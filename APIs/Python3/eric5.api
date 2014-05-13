@@ -8592,6 +8592,8 @@ eric5.Utilities.isExecutable?4(exe)
 eric5.Utilities.isinpath?4(file)
 eric5.Utilities.joinext?4(prefix, ext)
 eric5.Utilities.linesep?4()
+eric5.Utilities.mimetypes.TextMimeTypes?7
+eric5.Utilities.mimetypes.isTextFile?4(filename)
 eric5.Utilities.normabsjoinpath?4(a, *p)
 eric5.Utilities.normabspath?4(path)
 eric5.Utilities.normcaseabspath?4(path)
