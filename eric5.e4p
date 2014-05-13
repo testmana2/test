@@ -1138,6 +1138,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py</Source>
+    <Source>Utilities/mimetypes.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

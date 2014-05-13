@@ -10,7 +10,6 @@ Module implementing a browser with class browsing capabilities.
 from __future__ import unicode_literals
 
 import os
-import mimetypes
 
 from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl, Qt, qVersion
 from PyQt4.QtGui import QTreeView, QDesktopServices, QItemSelectionModel, \
@@ -27,6 +26,7 @@ from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 import UI.PixmapCache
 import Preferences
 import Utilities
+import Utilities.mimetypes
 
 
 class Browser(QTreeView):
@@ -423,8 +423,7 @@ class Browser(QTreeView):
                     elif itm.isPixmapFile():
                         self.pixmapFile.emit(itm.fileName())
                     else:
-                        type_ = mimetypes.guess_type(itm.fileName())[0]
-                        if type_ is None or type_.split("/")[0] == "text":
+                        if Utilities.mimetypes.isTextFile(itm.fileName()):
                             self.sourceFile[str].emit(itm.fileName())
                         else:
                             QDesktopServices.openUrl(QUrl(itm.fileName()))

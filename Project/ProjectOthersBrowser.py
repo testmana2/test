@@ -10,8 +10,6 @@ don't fit the other categories.
 
 from __future__ import unicode_literals
 
-import mimetypes
-
 from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl
 from PyQt4.QtGui import QDesktopServices, QDialog, QMenu
 
@@ -19,6 +17,8 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserOthersType
 from .ProjectBaseBrowser import ProjectBaseBrowser
+
+import Utilities.mimetypes
 
 
 class ProjectOthersBrowser(ProjectBaseBrowser):
@@ -236,8 +236,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
                 elif itm.isSvgFile():
                     self.svgFile.emit(itm.fileName())
                 else:
-                    type_ = mimetypes.guess_type(itm.fileName())[0]
-                    if type_ is None or type_.split("/")[0] == "text":
+                    if Utilities.mimetypes.isTextFile(itm.fileName()):
                         self.sourceFile.emit(itm.fileName())
                     else:
                         QDesktopServices.openUrl(QUrl(itm.fileName()))
