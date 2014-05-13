@@ -959,6 +959,7 @@
             <section title="eric5.Utilities.PasswordChecker" ref="eric5.Utilities.PasswordChecker.html" />
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
             <section title="eric5.Utilities.binplistlib" ref="eric5.Utilities.binplistlib.html" />
+            <section title="eric5.Utilities.mimetypes" ref="eric5.Utilities.mimetypes.html" />
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
           </section>
           <section title="eric5.UtilitiesPython2" ref="index-eric5.UtilitiesPython2.html">
@@ -13004,6 +13005,7 @@
       <keyword name="isExecutable" id="isExecutable" ref="eric5.Utilities.__init__.html#isExecutable" />
       <keyword name="isLinuxPlatform" id="isLinuxPlatform" ref="eric5.Globals.__init__.html#isLinuxPlatform" />
       <keyword name="isMacPlatform" id="isMacPlatform" ref="eric5.Globals.__init__.html#isMacPlatform" />
+      <keyword name="isTextFile" id="isTextFile" ref="eric5.Utilities.mimetypes.html#isTextFile" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
       <keyword name="is_stream_binary_plist" id="is_stream_binary_plist" ref="eric5.Utilities.binplistlib.html#is_stream_binary_plist" />
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
@@ -13047,6 +13049,7 @@
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.UtilitiesPython2.pep8.html#maximum_line_length" />
       <keyword name="messageHandler" id="messageHandler" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandler" />
       <keyword name="messageHandlerInstalled" id="messageHandlerInstalled" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandlerInstalled" />
+      <keyword name="mimetypes (Module)" id="mimetypes (Module)" ref="eric5.Utilities.mimetypes.html" />
       <keyword name="missing_newline" id="missing_newline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_newline" />
       <keyword name="missing_newline" id="missing_newline" ref="eric5.UtilitiesPython2.pep8.html#missing_newline" />
       <keyword name="missing_whitespace" id="missing_whitespace" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_whitespace" />
@@ -14042,8 +14045,7 @@
       <file>eric5.Utilities.crypto.__init__.html</file>
       <file>eric5.Utilities.crypto.py3AES.html</file>
       <file>eric5.Utilities.crypto.py3PBKDF2.html</file>
-      <file>eric5.Utilities.py3flakes.checker.html</file>
-      <file>eric5.Utilities.py3flakes.messages.html</file>
+      <file>eric5.Utilities.mimetypes.html</file>
       <file>eric5.Utilities.uic.html</file>
       <file>eric5.UtilitiesPython2.CodeStyleChecker.html</file>
       <file>eric5.UtilitiesPython2.DocStyleCheckerPy2.html</file>
@@ -14054,8 +14056,6 @@
       <file>eric5.UtilitiesPython2.TabnannyChecker.html</file>
       <file>eric5.UtilitiesPython2.Tools.html</file>
       <file>eric5.UtilitiesPython2.pep8.html</file>
-      <file>eric5.UtilitiesPython2.py2flakes.checker.html</file>
-      <file>eric5.UtilitiesPython2.py2flakes.messages.html</file>
       <file>eric5.VCS.CommandOptionsDialog.html</file>
       <file>eric5.VCS.ProjectBrowserHelper.html</file>
       <file>eric5.VCS.ProjectHelper.html</file>
@@ -14192,9 +14192,7 @@
       <file>index-eric5.Utilities.ClassBrowsers.html</file>
       <file>index-eric5.Utilities.crypto.html</file>
       <file>index-eric5.Utilities.html</file>
-      <file>index-eric5.Utilities.py3flakes.html</file>
       <file>index-eric5.UtilitiesPython2.html</file>
-      <file>index-eric5.UtilitiesPython2.py2flakes.html</file>
       <file>index-eric5.VCS.html</file>
       <file>index-eric5.ViewManager.html</file>
       <file>index-eric5.html</file>
