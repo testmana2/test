@@ -2384,7 +2384,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>在该文件夹中查找和替换(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="489"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>New toplevel directory</source>
         <translation>新建顶层文件夹</translation>
     </message>
@@ -24711,7 +24711,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1566"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1578"/>
         <source>Apply changegroups</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24916,12 +24916,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1403"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1415"/>
         <source>Pull</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1677"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1689"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24951,7 +24951,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1240"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1256"/>
         <source>Extensions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25031,7 +25031,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1622"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1634"/>
         <source>Import Patch</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25056,7 +25056,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1642"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1654"/>
         <source>Revert Changes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25101,7 +25101,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1662"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1674"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25131,12 +25131,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1252"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1268"/>
         <source>Graft</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1677"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1689"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25201,7 +25201,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1260"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1276"/>
         <source>Sub-Repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25456,9 +25456,19 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1223"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1239"/>
         <source>Bookmarks</source>
         <translation type="unfinished">书签</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1223"/>
+        <source>Tags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1230"/>
+        <source>Branches</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -40790,12 +40800,12 @@ Select Update.</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="295"/>
         <source>Delete files/directories</source>
         <translation>删除文件或文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="295"/>
         <source>Do you really want to delete these entries from the project?</source>
         <translation>确定要从项目中删除这些条目吗？</translation>
     </message>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -2090,8 +2089,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="150"/>
@@ -2332,8 +2331,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="92"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="103"/>
@@ -2493,7 +2492,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Добавить как каталог верхнего уровня</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="489"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>New toplevel directory</source>
         <translation>Новый каталог верхнего уровня</translation>
     </message>
@@ -16464,8 +16463,8 @@ Reason: {0}</source>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1090"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Открыть ссылку в новой закладке	Shift+Левая кнопка мыши</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="834"/>
@@ -24205,7 +24204,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Создать файл коллекции изменений</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1566"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1578"/>
         <source>Apply changegroups</source>
         <translation>Применить группу изменений</translation>
     </message>
@@ -24440,12 +24439,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Запустить сервер для репозитория проекта&lt;/b&gt;&lt;p&gt;Запустить сервер для репозитория проекта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1403"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1415"/>
         <source>Pull</source>
         <translation>Загрузить</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1677"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1689"/>
         <source>The project should be reread. Do this now?</source>
         <translation>Необходимо перезагрузить проект. Сделать это?</translation>
     </message>
@@ -24475,7 +24474,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1240"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1256"/>
         <source>Extensions</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24555,7 +24554,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1622"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1634"/>
         <source>Import Patch</source>
         <translation type="unfinished">Импортировать патч</translation>
     </message>
@@ -24580,7 +24579,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1642"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1654"/>
         <source>Revert Changes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24625,7 +24624,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1662"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1674"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24655,12 +24654,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1252"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1268"/>
         <source>Graft</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1677"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1689"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24725,7 +24724,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1260"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1276"/>
         <source>Sub-Repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24980,9 +24979,19 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Протолкнуть закладки&lt;/b&gt;&lt;p&gt;Протолкнуть закладку из локального репозитория в удалённый репозиторий.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1223"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1239"/>
         <source>Bookmarks</source>
         <translation>Закладки</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1223"/>
+        <source>Tags</source>
+        <translation type="unfinished">Метки</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1230"/>
+        <source>Branches</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -39749,12 +39758,12 @@ Select Update.</source>
         <translation>Переименовать файл</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="295"/>
         <source>Delete files/directories</source>
         <translation>Удаление файлов/каталогов</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="295"/>
         <source>Do you really want to delete these entries from the project?</source>
         <translation>Вы правда хотите удалить эти элементы из проекта?</translation>
     </message>
