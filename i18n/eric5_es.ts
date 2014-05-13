@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="es">
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1400,12 +1400,12 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="110"/>
         <source>{0} not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} no configurado.</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="264"/>
         <source>Error in Erics background service stopped service.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un error en un servicio en segundo plano de Eric ha parado el servicio.</translation>
     </message>
 </context>
 <context>
@@ -3668,12 +3668,12 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="503"/>
         <source>Could not save the file! Skipping it. Reason: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>¡No se ha podido guardar el archivo! Va a ser omitido. Razón: {0}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="553"/>
         <source> no message defined for code &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>sin mensaje definido para el código &apos;{0}&apos;</translation>
     </message>
 </context>
 <context>
@@ -6273,7 +6273,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebuggerInterfacePython3.py" line="159"/>
         <source>&lt;p&gt;No Python3 interpreter configured.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;No se ha encontrado un intérprete de Python2 configurado.&lt;/p&gt; {3 ?}</translation>
+        <translation>&lt;p&gt;No se ha encontrado un intérprete de Python configurado.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -11497,7 +11497,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="301"/>
         <source>Gettext Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propiedades del Analizador Léxico de Gettext</translation>
     </message>
 </context>
 <context>
@@ -21760,7 +21760,7 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="98"/>
         <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branch&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branch&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{5}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{6}&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
 </context>
 <context>
@@ -31229,12 +31229,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="157"/>
         <source>Gettext</source>
-        <translation type="unfinished"></translation>
+        <translation>Gettext</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="668"/>
         <source>Gettext Files (*.po)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos Gettext (*.po)</translation>
     </message>
 </context>
 <context>
@@ -34450,7 +34450,7 @@ Razón: {1}</translation>
     <message>
         <location filename="../PluginManager/PluginExceptions.py" line="160"/>
         <source>The plugin module {0} is not compatible with Python2.</source>
-        <translation type="unfinished"></translation>
+        <translation>El módulo de plugin {0} no es compatible con Python2.</translation>
     </message>
 </context>
 <context>
@@ -34764,12 +34764,12 @@ Destination:
     <message>
         <location filename="../PluginManager/PluginManager.py" line="348"/>
         <source>Module is missing the Python2 compatibility flag. Please update.</source>
-        <translation type="unfinished"></translation>
+        <translation>El módulo no tiene el flag de compatibilidad con Python2. Por favor, actualize.</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginManager.py" line="353"/>
         <source>Module is not Python2 compatible.</source>
-        <translation type="unfinished"></translation>
+        <translation>El módulo no es compatible con Python2.</translation>
     </message>
 </context>
 <context>
@@ -35247,12 +35247,12 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Preferences/__init__.py" line="1286"/>
         <source>Select Python{0} Interpreter</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar intérprete de Python{0}</translation>
     </message>
     <message>
         <location filename="../Preferences/__init__.py" line="1286"/>
         <source>Select the Python{0} interpreter to be used:</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el intérprete de Python{0} a utilizar:</translation>
     </message>
 </context>
 <context>
@@ -63199,7 +63199,7 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="57"/>
         <source>&apos;return&apos; with argument inside generator</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;return&apos; con argumento dentro de generator</translation>
     </message>
 </context>
 <context>
