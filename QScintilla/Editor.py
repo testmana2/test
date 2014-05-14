@@ -730,8 +730,8 @@ class Editor(QsciScintillaCompat):
             self.menuActs["Show"] = self.menu.addMenu(self.menuShow)
             self.menu.addSeparator()
             self.menuActs["Diagrams"] = self.menu.addMenu(self.graphicsMenu)
-        self.menu.addSeparator()
-        self.menuActs["Tools"] = self.menu.addMenu(self.toolsMenu)
+            self.menu.addSeparator()
+            self.menuActs["Tools"] = self.menu.addMenu(self.toolsMenu)
         self.menu.addSeparator()
         self.menu.addAction(
             UI.PixmapCache.getIcon("documentNewView.png"),
