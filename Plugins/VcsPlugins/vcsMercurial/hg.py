@@ -2054,7 +2054,8 @@ class Hg(VersionControl):
             
             dlg = VcsRepositoryInfoDialog(None, "\n".join(info))
             dlg.exec_()
-
+    
+    # TODO: Add support for hg resolve -l displaying a dialog like log
     def hgResolve(self, name):
         """
         Public method used to resolve conflicts of a file/directory.
