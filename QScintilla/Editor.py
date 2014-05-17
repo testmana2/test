@@ -5070,7 +5070,7 @@ class Editor(QsciScintillaCompat):
 
     def checkSyntax(self):
         """
-        Private method to perform an automatic syntax check of the file.
+        Public method to perform an automatic syntax check of the file.
         """
         if self.filetype not in self.syntaxCheckService.getLanguages():
             return
@@ -5084,7 +5084,7 @@ class Editor(QsciScintillaCompat):
 
     def __processResult(self, fn, problems):
         """
-        Slot to report the resulting messages.
+        Private slot to report the resulting messages.
         
         @param fn filename of the checked file (str)
         @param problems dictionary with the keys 'error' and 'warnings' which

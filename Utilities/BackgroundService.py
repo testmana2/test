@@ -168,13 +168,16 @@ class BackgroundService(QTcpServer):
                     "<p>The background client for <b>{0}</b> has stopped"
                     " due to an exception. It's used by various plug-ins like"
                     " the different checkers.</p>"
-                    "<p>Select<br>"
-                    "<b>'Yes'</b> to restart the client, but abort the last"
-                    " job<br>"
-                    "<b>'Retry'</b> to restart the client and the last job<br>"
-                    "<b>'No'</b> to leave the client off.</p>"
+                    "<p>Select"
+                    "<ul>"
+                    "<li><b>'Yes'</b> to restart the client, but abort the"
+                    " last job</li>"
+                    "<li><b>'Retry'</b> to restart the client and the last"
+                    " job</li>"
+                    "<li><b>'No'</b> to leave the client off.</li>"
+                    "</ul></p>"
                     "<p>Note: The client can be restarted by opening and"
-                    " accepting the preferences dialog or reloading/ changing"
+                    " accepting the preferences dialog or reloading/changing"
                     " the project.</p>").format(lang),
                 E5MessageBox.Yes | E5MessageBox.No | E5MessageBox.Retry,
                 E5MessageBox.Yes)

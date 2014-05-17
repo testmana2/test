@@ -423,7 +423,7 @@ QsciScintillaCompat
 <td>Private slot to process a remote RequestSync command.</td>
 </tr><tr>
 <td><a href="#Editor.__processResult">__processResult</a></td>
-<td>Slot to report the resulting messages.</td>
+<td>Private slot to report the resulting messages.</td>
 </tr><tr>
 <td><a href="#Editor.__processStartEditCommand">__processStartEditCommand</a></td>
 <td>Private slot to process a remote StartEdit command.</td>
@@ -648,7 +648,7 @@ QsciScintillaCompat
 <td>Public slot to perform an interactive spell check of the document.</td>
 </tr><tr>
 <td><a href="#Editor.checkSyntax">checkSyntax</a></td>
-<td>Private method to perform an automatic syntax check of the file.</td>
+<td>Public method to perform an automatic syntax check of the file.</td>
 </tr><tr>
 <td><a href="#Editor.clearBookmarks">clearBookmarks</a></td>
 <td>Public slot to handle the 'Clear all bookmarks' context menu action.</td>
@@ -2071,7 +2071,7 @@ string containing the command parameters (string)
 <h4>Editor.__processResult</h4>
 <b>__processResult</b>(<i>fn, problems</i>)
 <p>
-        Slot to report the resulting messages.
+        Private slot to report the resulting messages.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -2619,7 +2619,7 @@ flag indicating successful reset of the dirty flag (boolean)
 <h4>Editor.checkSyntax</h4>
 <b>checkSyntax</b>(<i></i>)
 <p>
-        Private method to perform an automatic syntax check of the file.
+        Public method to perform an automatic syntax check of the file.
 </p><a NAME="Editor.clearBookmarks" ID="Editor.clearBookmarks"></a>
 <h4>Editor.clearBookmarks</h4>
 <b>clearBookmarks</b>(<i></i>)
