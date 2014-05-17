@@ -1235,11 +1235,12 @@ class DocStyleChecker(object):
                 if firstWord != 'constructor':
                     self.__error(docstringContext.start() + lineNumber, 0,
                                  "D232", 'constructor')
-            elif functionName.startswith('__'):
+            elif functionName.startswith(('__', 'on_')):
                 if firstWord != 'private':
                     self.__error(docstringContext.start() + lineNumber, 0,
                                  "D232", 'private')
-            elif functionName.startswith('_'):
+            elif functionName.startswith('_') or \
+                    functionName.endswith('Event'):
                 if firstWord != 'protected':
                     self.__error(docstringContext.start() + lineNumber, 0,
                              "D232", 'protected')
