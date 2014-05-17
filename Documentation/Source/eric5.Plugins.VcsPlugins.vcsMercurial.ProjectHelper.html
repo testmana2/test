@@ -186,14 +186,17 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgPushNewBranch">__hgPushNewBranch</a></td>
 <td>Private slot to push a new named branch.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgReMerge">__hgReMerge</a></td>
+<td>Private slot used to list all files with conflicts.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgRecover">__hgRecover</a></td>
 <td>Private slot used to recover from an interrupted transaction.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgRemoveSubrepositories">__hgRemoveSubrepositories</a></td>
 <td>Private slot used to remove sub-repositories.</td>
 </tr><tr>
-<td><a href="#HgProjectHelper.__hgResolve">__hgResolve</a></td>
-<td>Private slot used to resolve conflicts of the local project.</td>
+<td><a href="#HgProjectHelper.__hgResolved">__hgResolved</a></td>
+<td>Private slot used to mark conflicts of the local project as being resolved.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgRevert">__hgRevert</a></td>
 <td>Private slot used to revert changes made to the local project.</td>
@@ -210,6 +213,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.__hgShowConfig">__hgShowConfig</a></td>
 <td>Private slot used to show the combined configuration.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.__hgShowConflicts">__hgShowConflicts</a></td>
+<td>Private slot used to list all files with conflicts.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.__hgShowPaths">__hgShowPaths</a></td>
 <td>Private slot used to show the aliases for remote repositories.</td>
 </tr><tr>
@@ -224,6 +230,9 @@ VcsProjectHelper
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgUnbundle">__hgUnbundle</a></td>
 <td>Private slot used to apply changegroup files.</td>
+</tr><tr>
+<td><a href="#HgProjectHelper.__hgUnresolved">__hgUnresolved</a></td>
+<td>Private slot used to mark conflicts of the local project as being unresolved.</td>
 </tr><tr>
 <td><a href="#HgProjectHelper.__hgVerify">__hgVerify</a></td>
 <td>Private slot used to verify the integrity of the repository.</td>
@@ -490,6 +499,11 @@ name of this object (string)
 <b>__hgPushNewBranch</b>(<i></i>)
 <p>
         Private slot to push a new named branch.
+</p><a NAME="HgProjectHelper.__hgReMerge" ID="HgProjectHelper.__hgReMerge"></a>
+<h4>HgProjectHelper.__hgReMerge</h4>
+<b>__hgReMerge</b>(<i></i>)
+<p>
+        Private slot used to list all files with conflicts.
 </p><a NAME="HgProjectHelper.__hgRecover" ID="HgProjectHelper.__hgRecover"></a>
 <h4>HgProjectHelper.__hgRecover</h4>
 <b>__hgRecover</b>(<i></i>)
@@ -500,11 +514,12 @@ name of this object (string)
 <b>__hgRemoveSubrepositories</b>(<i></i>)
 <p>
         Private slot used to remove sub-repositories.
-</p><a NAME="HgProjectHelper.__hgResolve" ID="HgProjectHelper.__hgResolve"></a>
-<h4>HgProjectHelper.__hgResolve</h4>
-<b>__hgResolve</b>(<i></i>)
+</p><a NAME="HgProjectHelper.__hgResolved" ID="HgProjectHelper.__hgResolved"></a>
+<h4>HgProjectHelper.__hgResolved</h4>
+<b>__hgResolved</b>(<i></i>)
 <p>
-        Private slot used to resolve conflicts of the local project.
+        Private slot used to mark conflicts of the local project as being
+        resolved.
 </p><a NAME="HgProjectHelper.__hgRevert" ID="HgProjectHelper.__hgRevert"></a>
 <h4>HgProjectHelper.__hgRevert</h4>
 <b>__hgRevert</b>(<i></i>)
@@ -530,6 +545,11 @@ name of this object (string)
 <b>__hgShowConfig</b>(<i></i>)
 <p>
         Private slot used to show the combined configuration.
+</p><a NAME="HgProjectHelper.__hgShowConflicts" ID="HgProjectHelper.__hgShowConflicts"></a>
+<h4>HgProjectHelper.__hgShowConflicts</h4>
+<b>__hgShowConflicts</b>(<i></i>)
+<p>
+        Private slot used to list all files with conflicts.
 </p><a NAME="HgProjectHelper.__hgShowPaths" ID="HgProjectHelper.__hgShowPaths"></a>
 <h4>HgProjectHelper.__hgShowPaths</h4>
 <b>__hgShowPaths</b>(<i></i>)
@@ -555,6 +575,12 @@ name of this object (string)
 <b>__hgUnbundle</b>(<i></i>)
 <p>
         Private slot used to apply changegroup files.
+</p><a NAME="HgProjectHelper.__hgUnresolved" ID="HgProjectHelper.__hgUnresolved"></a>
+<h4>HgProjectHelper.__hgUnresolved</h4>
+<b>__hgUnresolved</b>(<i></i>)
+<p>
+        Private slot used to mark conflicts of the local project as being
+        unresolved.
 </p><a NAME="HgProjectHelper.__hgVerify" ID="HgProjectHelper.__hgVerify"></a>
 <h4>HgProjectHelper.__hgVerify</h4>
 <b>__hgVerify</b>(<i></i>)

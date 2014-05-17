@@ -428,6 +428,37 @@ class HgProjectHelper(VcsProjectHelper):
         self.hgCancelMergeAct.triggered.connect(self.__hgCancelMerge)
         self.actions.append(self.hgCancelMergeAct)
         
+        self.hgReMergeAct = E5Action(
+            self.tr('Re-Merge'),
+            UI.PixmapCache.getIcon("vcsMerge.png"),
+            self.tr('Re-Merge'),
+            0, 0, self, 'mercurial_remerge')
+        self.hgReMergeAct.setStatusTip(self.tr(
+            'Re-Merge all conflicting, unresolved files of the project'
+        ))
+        self.hgReMergeAct.setWhatsThis(self.tr(
+            """<b>Re-Merge</b>"""
+            """<p>This re-merges all conflicting, unresolved files of the"""
+            """ project discarding any previous merge attempt.</p>"""
+        ))
+        self.hgReMergeAct.triggered.connect(self.__hgReMerge)
+        self.actions.append(self.hgReMergeAct)
+        
+        self.hgShowConflictsAct = E5Action(
+            self.tr('Show conflicts'),
+            self.tr('Show conflicts...'),
+            0, 0, self, 'mercurial_show_conflicts')
+        self.hgShowConflictsAct.setStatusTip(self.tr(
+            'Show a dialog listing all files with conflicts'
+        ))
+        self.hgShowConflictsAct.setWhatsThis(self.tr(
+            """<b>Show conflicts</b>"""
+            """<p>This shows a dialog listing all files which had or still"""
+            """ have conflicts.</p>"""
+        ))
+        self.hgShowConflictsAct.triggered.connect(self.__hgShowConflicts)
+        self.actions.append(self.hgShowConflictsAct)
+        
         self.vcsResolveAct = E5Action(
             self.tr('Conflicts resolved'),
             self.tr('Con&flicts resolved'),
@@ -440,8 +471,23 @@ class HgProjectHelper(VcsProjectHelper):
             """<p>This marks all conflicts of the local project as"""
             """ resolved.</p>"""
         ))
-        self.vcsResolveAct.triggered.connect(self.__hgResolve)
+        self.vcsResolveAct.triggered.connect(self.__hgResolved)
         self.actions.append(self.vcsResolveAct)
+        
+        self.hgUnresolveAct = E5Action(
+            self.tr('Conflicts unresolved'),
+            self.tr('Conflicts unresolved'),
+            0, 0, self, 'mercurial_unresolve')
+        self.hgUnresolveAct.setStatusTip(self.tr(
+            'Mark all conflicts of the local project as unresolved'
+        ))
+        self.hgUnresolveAct.setWhatsThis(self.tr(
+            """<b>Conflicts unresolved</b>"""
+            """<p>This marks all conflicts of the local project as"""
+            """ unresolved.</p>"""
+        ))
+        self.hgUnresolveAct.triggered.connect(self.__hgUnresolved)
+        self.actions.append(self.hgUnresolveAct)
         
         self.vcsTagAct = E5Action(
             self.tr('Tag in repository'),
@@ -1278,6 +1324,16 @@ class HgProjectHelper(VcsProjectHelper):
         subrepoMenu.addAction(self.hgAddSubrepoAct)
         subrepoMenu.addAction(self.hgRemoveSubreposAct)
         
+        changesMenu = QMenu(self.tr("Manage Changes"), menu)
+        changesMenu.setTearOffEnabled(True)
+        changesMenu.addAction(self.vcsRevertAct)
+        changesMenu.addAction(self.vcsMergeAct)
+        changesMenu.addAction(self.hgShowConflictsAct)
+        changesMenu.addAction(self.vcsResolveAct)
+        changesMenu.addAction(self.hgUnresolveAct)
+        changesMenu.addAction(self.hgReMergeAct)
+        changesMenu.addAction(self.hgCancelMergeAct)
+        
         act = menu.addAction(
             UI.PixmapCache.getIcon(
                 os.path.join("VcsPlugins", "vcsMercurial", "icons",
@@ -1323,10 +1379,7 @@ class HgProjectHelper(VcsProjectHelper):
         if self.vcs.version >= (2, 1):
             menu.addAction(self.hgPhaseAct)
             menu.addSeparator()
-        menu.addAction(self.vcsRevertAct)
-        menu.addAction(self.vcsMergeAct)
-        menu.addAction(self.vcsResolveAct)
-        menu.addAction(self.hgCancelMergeAct)
+        menu.addMenu(changesMenu)
         menu.addSeparator()
         menu.addAction(self.vcsSwitchAct)
         menu.addSeparator()
@@ -1451,17 +1504,37 @@ class HgProjectHelper(VcsProjectHelper):
         """
         self.vcs.hgInfo(self.project.ppath, mode="tip")
     
-    def __hgResolve(self):
+    def __hgResolved(self):
         """
-        Private slot used to resolve conflicts of the local project.
+        Private slot used to mark conflicts of the local project as being
+        resolved.
         """
-        self.vcs.hgResolve(self.project.ppath)
+        self.vcs.hgResolved(self.project.ppath)
+    
+    def __hgUnresolved(self):
+        """
+        Private slot used to mark conflicts of the local project as being
+        unresolved.
+        """
+        self.vcs.hgResolved(self.project.ppath, unresolve=True)
     
     def __hgCancelMerge(self):
         """
         Private slot used to cancel an uncommitted merge.
         """
         self.vcs.hgCancelMerge(self.project.ppath)
+    
+    def __hgShowConflicts(self):
+        """
+        Private slot used to list all files with conflicts.
+        """
+        self.vcs.hgConflicts(self.project.ppath)
+    
+    def __hgReMerge(self):
+        """
+        Private slot used to list all files with conflicts.
+        """
+        self.vcs.hgReMerge(self.project.ppath)
     
     def __hgTagList(self):
         """

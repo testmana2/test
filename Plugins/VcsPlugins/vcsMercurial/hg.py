@@ -111,6 +111,7 @@ class Hg(VersionControl):
         self.serveDlg = None
         self.bookmarksListDlg = None
         self.bookmarksInOutDlg = None
+        self.conflictsDlg = None
         
         self.bundleFile = None
         self.__lastChangeGroupPath = None
@@ -205,6 +206,9 @@ class Hg(VersionControl):
             self.bookmarksListDlg.close()
         if self.bookmarksInOutDlg is not None:
             self.bookmarksInOutDlg.close()
+        
+        if self.conflictsDlg is not None:
+            self.conflictsDlg.close()
         
         if self.bundleFile and os.path.exists(self.bundleFile):
             os.remove(self.bundleFile)
@@ -1056,6 +1060,57 @@ class Hg(VersionControl):
         if res:
             dia.exec_()
         self.checkVCSStatus()
+    
+    def hgReMerge(self, name):
+        """
+        Public method used to merge a URL/revision into the local project.
+        
+        @param name file/directory name to be merged (string)
+        """
+        args = self.initCommand("resolve")
+        if self.getPlugin().getPreferences("InternalMerge"):
+            args.append("--tool")
+            args.append("internal:merge")
+        if isinstance(name, list):
+            dname, fnames = self.splitPathList(name)
+            self.addArguments(args, name)
+            names = name[:]
+        else:
+            dname, fname = self.splitPath(name)
+            args.append(name)
+            names = [name]
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
+        project = e5App().getObject("Project")
+        names = [project.getRelativePath(nam) for nam in names]
+        if names[0]:
+            from UI.DeleteFilesConfirmationDialog import \
+                DeleteFilesConfirmationDialog
+            dlg = DeleteFilesConfirmationDialog(
+                self.parent(),
+                self.tr("Re-Merge"),
+                self.tr(
+                    "Do you really want to re-merge these files"
+                    " or directories?"),
+                names)
+            yes = dlg.exec_() == QDialog.Accepted
+        else:
+            yes = E5MessageBox.yesNo(
+                None,
+                self.tr("Re-Merge"),
+                self.tr("""Do you really want to re-merge the project?"""))
+        if yes:
+            dia = HgDialog(self.tr('Re-Merging').format(name), self)
+            res = dia.startProcess(args, repodir)
+            if res:
+                dia.exec_()
+            self.checkVCSStatus()
     
     def vcsSwitch(self, name):
         """
@@ -2055,15 +2110,31 @@ class Hg(VersionControl):
             dlg = VcsRepositoryInfoDialog(None, "\n".join(info))
             dlg.exec_()
     
-    # TODO: Add support for hg resolve -l displaying a dialog like log
-    def hgResolve(self, name):
+    def hgConflicts(self, name):
+        """
+        Public method used to show a list of files containing.
+        
+        @param name file/directory name to be resolved (string)
+        """
+        if self.conflictsDlg is None:
+            from .HgConflictsListDialog import HgConflictsListDialog
+            self.conflictsDlg = HgConflictsListDialog(self)
+        self.conflictsDlg.show()
+        self.conflictsDlg.start(name)
+    
+    def hgResolved(self, name, unresolve=False):
         """
         Public method used to resolve conflicts of a file/directory.
         
         @param name file/directory name to be resolved (string)
+        @param unresolve flag indicating to mark the file/directory as
+            unresolved (boolean)
         """
         args = self.initCommand("resolve")
-        args.append("--mark")
+        if unresolve:
+            args.append("--unmark")
+        else:
+            args.append("--mark")
         
         if isinstance(name, list):
             dname, fnames = self.splitPathList(name)
@@ -2079,7 +2150,11 @@ class Hg(VersionControl):
             if os.path.splitdrive(repodir)[1] == os.sep:
                 return
         
-        dia = HgDialog(self.tr('Resolving files/directories'), self)
+        if unresolve:
+            title = self.tr("Marking as 'unresolved'")
+        else:
+            title = self.tr("Marking as 'resolved'")
+        dia = HgDialog(title, self)
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()

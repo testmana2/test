@@ -176,6 +176,9 @@ VersionControl
 <td><a href="#Hg.hgCancelMerge">hgCancelMerge</a></td>
 <td>Public method to cancel an uncommitted merge.</td>
 </tr><tr>
+<td><a href="#Hg.hgConflicts">hgConflicts</a></td>
+<td>Public method used to show a list of files containing.</td>
+</tr><tr>
 <td><a href="#Hg.hgCopy">hgCopy</a></td>
 <td>Public method used to copy a file/directory.</td>
 </tr><tr>
@@ -248,13 +251,16 @@ VersionControl
 <td><a href="#Hg.hgPush">hgPush</a></td>
 <td>Public method used to push changes to a remote Mercurial repository.</td>
 </tr><tr>
+<td><a href="#Hg.hgReMerge">hgReMerge</a></td>
+<td>Public method used to merge a URL/revision into the local project.</td>
+</tr><tr>
 <td><a href="#Hg.hgRecover">hgRecover</a></td>
 <td>Public method to recover an interrupted transaction.</td>
 </tr><tr>
 <td><a href="#Hg.hgRemoveSubrepositories">hgRemoveSubrepositories</a></td>
 <td>Public method to remove sub-repositories.</td>
 </tr><tr>
-<td><a href="#Hg.hgResolve">hgResolve</a></td>
+<td><a href="#Hg.hgResolved">hgResolved</a></td>
 <td>Public method used to resolve conflicts of a file/directory.</td>
 </tr><tr>
 <td><a href="#Hg.hgRevert">hgRevert</a></td>
@@ -779,6 +785,16 @@ file/directory name (string)
 flag indicating, that the cancellation contained an add
             or delete (boolean)
 </dd>
+</dl><a NAME="Hg.hgConflicts" ID="Hg.hgConflicts"></a>
+<h4>Hg.hgConflicts</h4>
+<b>hgConflicts</b>(<i>name</i>)
+<p>
+        Public method used to show a list of files containing.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to be resolved (string)
+</dd>
 </dl><a NAME="Hg.hgCopy" ID="Hg.hgCopy"></a>
 <h4>Hg.hgCopy</h4>
 <b>hgCopy</b>(<i>name, project</i>)
@@ -1131,6 +1147,16 @@ flag indicating a forced push (boolean)
 <dd>
 flag indicating to push a new branch (boolean)
 </dd>
+</dl><a NAME="Hg.hgReMerge" ID="Hg.hgReMerge"></a>
+<h4>Hg.hgReMerge</h4>
+<b>hgReMerge</b>(<i>name</i>)
+<p>
+        Public method used to merge a URL/revision into the local project.
+</p><dl>
+<dt><i>name</i></dt>
+<dd>
+file/directory name to be merged (string)
+</dd>
 </dl><a NAME="Hg.hgRecover" ID="Hg.hgRecover"></a>
 <h4>Hg.hgRecover</h4>
 <b>hgRecover</b>(<i>name</i>)
@@ -1146,15 +1172,19 @@ file/directory name (string)
 <b>hgRemoveSubrepositories</b>(<i></i>)
 <p>
         Public method to remove sub-repositories.
-</p><a NAME="Hg.hgResolve" ID="Hg.hgResolve"></a>
-<h4>Hg.hgResolve</h4>
-<b>hgResolve</b>(<i>name</i>)
+</p><a NAME="Hg.hgResolved" ID="Hg.hgResolved"></a>
+<h4>Hg.hgResolved</h4>
+<b>hgResolved</b>(<i>name, unresolve=False</i>)
 <p>
         Public method used to resolve conflicts of a file/directory.
 </p><dl>
 <dt><i>name</i></dt>
 <dd>
 file/directory name to be resolved (string)
+</dd><dt><i>unresolve</i></dt>
+<dd>
+flag indicating to mark the file/directory as
+            unresolved (boolean)
 </dd>
 </dl><a NAME="Hg.hgRevert" ID="Hg.hgRevert"></a>
 <h4>Hg.hgRevert</h4>

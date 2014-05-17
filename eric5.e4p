@@ -1139,6 +1139,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py</Source>
     <Source>Utilities/mimetypes.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1467,6 +1468,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui</Form>
+    <Form>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric5_cs.ts</Translation>

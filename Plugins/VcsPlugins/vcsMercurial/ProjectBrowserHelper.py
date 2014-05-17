@@ -351,7 +351,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflicts resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolved)
+        self.vcsMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Conflicts unresolved'), self.__HgUnresolved)
+        self.vcsMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Re-Merge'), self.__HgReMerge)
         self.vcsMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -432,7 +438,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsMultiMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflicts resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolved)
+        self.vcsMultiMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Conflicts unresolved'), self.__HgUnresolved)
+        self.vcsMultiMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Re-Merge'), self.__HgReMerge)
         self.vcsMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -556,7 +568,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsDirMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflicts resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolved)
+        self.vcsDirMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Conflicts unresolved'), self.__HgUnresolved)
+        self.vcsDirMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Re-Merge'), self.__HgReMerge)
         self.vcsDirMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -634,7 +652,13 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
             self.tr('Revert changes'), self.__HgRevert)
         self.vcsDirMultiMenuActions.append(act)
         act = menu.addAction(
-            self.tr('Conflicts resolved'), self.__HgResolve)
+            self.tr('Conflicts resolved'), self.__HgResolved)
+        self.vcsDirMultiMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Conflicts unresolved'), self.__HgUnresolved)
+        self.vcsDirMultiMenuActions.append(act)
+        act = menu.addAction(
+            self.tr('Re-Merge'), self.__HgReMerge)
         self.vcsDirMultiMenuActions.append(act)
         menu.addSeparator()
         menu.addAction(self.tr('Select all local file entries'),
@@ -741,9 +765,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         fn = itm.fileName()
         self.vcs.hgAnnotate(fn)
     
-    def __HgResolve(self):
+    def __HgResolved(self):
         """
-        Private slot called by the context menu to resolve conflicts of a file.
+        Private slot called by the context menu to mark conflicts of a file
+        as being resolved.
         """
         names = []
         for itm in self.browser.getSelectedItems():
@@ -751,8 +776,33 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
                 names.append(itm.fileName())
             except AttributeError:
                 names.append(itm.dirName())
-        self.vcs.hgResolve(names)
-        
+        self.vcs.hgResolved(names)
+    
+    def __HgUnresolved(self):
+        """
+        Private slot called by the context menu to mark conflicts of a file
+        as being unresolved.
+        """
+        names = []
+        for itm in self.browser.getSelectedItems():
+            try:
+                names.append(itm.fileName())
+            except AttributeError:
+                names.append(itm.dirName())
+        self.vcs.hgResolved(names, unresolve=True)
+    
+    def __HgReMerge(self):
+        """
+        Private slot called by the context menu to re-merge a file.
+        """
+        names = []
+        for itm in self.browser.getSelectedItems():
+            try:
+                names.append(itm.fileName())
+            except AttributeError:
+                names.append(itm.dirName())
+        self.vcs.hgReMerge(names)
+    
     def __HgForget(self):
         """
         Private slot called by the context menu to remove the selected file

@@ -75,8 +75,11 @@ VcsProjectBrowserHelper
 <td><a href="#HgProjectBrowserHelper.__HgMove">__HgMove</a></td>
 <td>Private slot called by the context menu to move the selected file.</td>
 </tr><tr>
-<td><a href="#HgProjectBrowserHelper.__HgResolve">__HgResolve</a></td>
-<td>Private slot called by the context menu to resolve conflicts of a file.</td>
+<td><a href="#HgProjectBrowserHelper.__HgReMerge">__HgReMerge</a></td>
+<td>Private slot called by the context menu to re-merge a file.</td>
+</tr><tr>
+<td><a href="#HgProjectBrowserHelper.__HgResolved">__HgResolved</a></td>
+<td>Private slot called by the context menu to mark conflicts of a file as being resolved.</td>
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper.__HgRevert">__HgRevert</a></td>
 <td>Protected slot called by the context menu to revert changes made.</td>
@@ -86,6 +89,9 @@ VcsProjectBrowserHelper
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper.__HgSbsExtendedDiff">__HgSbsExtendedDiff</a></td>
 <td>Private slot called by the context menu to show the difference of a file to the repository side-by-side.</td>
+</tr><tr>
+<td><a href="#HgProjectBrowserHelper.__HgUnresolved">__HgUnresolved</a></td>
+<td>Private slot called by the context menu to mark conflicts of a file as being unresolved.</td>
 </tr><tr>
 <td><a href="#HgProjectBrowserHelper.__addExtensionsMenu">__addExtensionsMenu</a></td>
 <td>Private method to add an extension menu entry.</td>
@@ -181,11 +187,17 @@ name of this object (string)
 <b>__HgMove</b>(<i></i>)
 <p>
         Private slot called by the context menu to move the selected file.
-</p><a NAME="HgProjectBrowserHelper.__HgResolve" ID="HgProjectBrowserHelper.__HgResolve"></a>
-<h4>HgProjectBrowserHelper.__HgResolve</h4>
-<b>__HgResolve</b>(<i></i>)
+</p><a NAME="HgProjectBrowserHelper.__HgReMerge" ID="HgProjectBrowserHelper.__HgReMerge"></a>
+<h4>HgProjectBrowserHelper.__HgReMerge</h4>
+<b>__HgReMerge</b>(<i></i>)
 <p>
-        Private slot called by the context menu to resolve conflicts of a file.
+        Private slot called by the context menu to re-merge a file.
+</p><a NAME="HgProjectBrowserHelper.__HgResolved" ID="HgProjectBrowserHelper.__HgResolved"></a>
+<h4>HgProjectBrowserHelper.__HgResolved</h4>
+<b>__HgResolved</b>(<i></i>)
+<p>
+        Private slot called by the context menu to mark conflicts of a file
+        as being resolved.
 </p><a NAME="HgProjectBrowserHelper.__HgRevert" ID="HgProjectBrowserHelper.__HgRevert"></a>
 <h4>HgProjectBrowserHelper.__HgRevert</h4>
 <b>__HgRevert</b>(<i></i>)
@@ -205,6 +217,12 @@ name of this object (string)
         file to the repository side-by-side.
 </p><p>
         It allows the selection of revisions to compare.
+</p><a NAME="HgProjectBrowserHelper.__HgUnresolved" ID="HgProjectBrowserHelper.__HgUnresolved"></a>
+<h4>HgProjectBrowserHelper.__HgUnresolved</h4>
+<b>__HgUnresolved</b>(<i></i>)
+<p>
+        Private slot called by the context menu to mark conflicts of a file
+        as being unresolved.
 </p><a NAME="HgProjectBrowserHelper.__addExtensionsMenu" ID="HgProjectBrowserHelper.__addExtensionsMenu"></a>
 <h4>HgProjectBrowserHelper.__addExtensionsMenu</h4>
 <b>__addExtensionsMenu</b>(<i>menu, key</i>)

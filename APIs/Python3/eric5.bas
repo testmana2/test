@@ -299,6 +299,7 @@ HgClient QObject
 HgClientPromptDialog QDialog Ui_HgClientPromptDialog
 HgCommandDialog QDialog Ui_HgCommandDialog
 HgCommitDialog QWidget Ui_HgCommitDialog
+HgConflictsListDialog QWidget Ui_HgConflictsListDialog
 HgCopyDialog QDialog Ui_HgCopyDialog
 HgDialog QDialog Ui_HgDialog
 HgDiffDialog QWidget Ui_HgDiffDialog
