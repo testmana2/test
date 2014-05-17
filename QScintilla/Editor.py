@@ -620,12 +620,12 @@ class Editor(QsciScintillaCompat):
             self.menuShow = self.__initContextMenuShow()
             self.graphicsMenu = self.__initContextMenuGraphics()
             self.autocompletionMenu = self.__initContextMenuAutocompletion()
-            self.toolsMenu = self.__initContextMenuTools()
             self.__menus["Checks"] = self.checksMenu
             self.__menus["Show"] = self.menuShow
             self.__menus["Graphics"] = self.graphicsMenu
             self.__menus["Autocompletion"] = self.autocompletionMenu
-            self.__menus["Tools"] = self.toolsMenu
+        self.toolsMenu = self.__initContextMenuTools()
+        self.__menus["Tools"] = self.toolsMenu
         self.exportersMenu = self.__initContextMenuExporters()
         self.__menus["Exporters"] = self.exportersMenu
         self.eolMenu = self.__initContextMenuEol()
@@ -730,8 +730,8 @@ class Editor(QsciScintillaCompat):
             self.menuActs["Show"] = self.menu.addMenu(self.menuShow)
             self.menu.addSeparator()
             self.menuActs["Diagrams"] = self.menu.addMenu(self.graphicsMenu)
-            self.menu.addSeparator()
-            self.menuActs["Tools"] = self.menu.addMenu(self.toolsMenu)
+        self.menu.addSeparator()
+        self.menuActs["Tools"] = self.menu.addMenu(self.toolsMenu)
         self.menu.addSeparator()
         self.menu.addAction(
             UI.PixmapCache.getIcon("documentNewView.png"),
@@ -4737,8 +4737,7 @@ class Editor(QsciScintillaCompat):
             self.menuActs["NewSplit"].setIcon(
                 UI.PixmapCache.getIcon("splitVertical.png"))
         
-        if not self.isResourcesFile:
-            self.menuActs["Tools"].setEnabled(not self.toolsMenu.isEmpty())
+        self.menuActs["Tools"].setEnabled(not self.toolsMenu.isEmpty())
         
         self.showMenu.emit("Main", self.menu, self)
         
