@@ -1228,22 +1228,31 @@ class DocStyleChecker(object):
         if summary:
             # check, if the first word is 'Constructor', 'Public',
             # 'Protected' or 'Private'
-            functionName = context.source()[0].lstrip().split()[1]\
-                .split("(")[0]
+            functionName, arguments = context.source()[0].lstrip()\
+                .split()[1].split("(", 1)
             firstWord = summary.strip().split(None, 1)[0].lower()
             if functionName == '__init__':
                 if firstWord != 'constructor':
                     self.__error(docstringContext.start() + lineNumber, 0,
                                  "D232", 'constructor')
+            elif functionName.startswith('__') and \
+                    functionName.endswith('__'):
+                if firstWord != 'special':
+                    self.__error(docstringContext.start() + lineNumber, 0,
+                                 "D232", 'special')
             elif functionName.startswith(('__', 'on_')):
                 if firstWord != 'private':
                     self.__error(docstringContext.start() + lineNumber, 0,
                                  "D232", 'private')
             elif functionName.startswith('_') or \
-                functionName.endswith('Event'):
+                    functionName.endswith('Event'):
                 if firstWord != 'protected':
                     self.__error(docstringContext.start() + lineNumber, 0,
-                             "D232", 'protected')
+                                 "D232", 'protected')
+            elif arguments.startswith(('cls,', 'cls)')):
+                if firstWord != 'class':
+                    self.__error(docstringContext.start() + lineNumber, 0,
+                                 "D232", 'class')
             else:
                 if firstWord != 'public':
                     self.__error(docstringContext.start() + lineNumber, 0,
