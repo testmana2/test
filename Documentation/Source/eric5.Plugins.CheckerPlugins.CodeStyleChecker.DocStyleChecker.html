@@ -105,6 +105,9 @@ object
 <td><a href="#DocStyleChecker.__checkEricReturn">__checkEricReturn</a></td>
 <td>Private method to check, that docstrings contain an &#64;return line if they return anything and don't otherwise.</td>
 </tr><tr>
+<td><a href="#DocStyleChecker.__checkEricSummary">__checkEricSummary</a></td>
+<td>Private method to check, that method docstring summaries start with specific words.</td>
+</tr><tr>
 <td><a href="#DocStyleChecker.__checkFunctionDocstring">__checkFunctionDocstring</a></td>
 <td>Private method to check, that all public functions and methods have a docstring.</td>
 </tr><tr>
@@ -416,6 +419,20 @@ context of the docstring (DocStyleContext)
 <p>
         Private method to check, that docstrings contain an &#64;return line
         if they return anything and don't otherwise.
+</p><dl>
+<dt><i>docstringContext</i></dt>
+<dd>
+docstring context (DocStyleContext)
+</dd><dt><i>context</i></dt>
+<dd>
+context of the docstring (DocStyleContext)
+</dd>
+</dl><a NAME="DocStyleChecker.__checkEricSummary" ID="DocStyleChecker.__checkEricSummary"></a>
+<h4>DocStyleChecker.__checkEricSummary</h4>
+<b>__checkEricSummary</b>(<i>docstringContext, context</i>)
+<p>
+        Private method to check, that method docstring summaries start with
+        specific words.
 </p><dl>
 <dt><i>docstringContext</i></dt>
 <dd>

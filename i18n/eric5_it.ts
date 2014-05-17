@@ -3667,147 +3667,147 @@ aprirà una finestra per le modifiche posizionando il cursore alla rispettiva ri
         <translation type="obsolete">&lt;p&gt;Non posso salvare il file&lt;b&gt;{0}&lt;/b&gt;. Lo salto.&lt;/p&gt;&lt;p&gt;Motivo:{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="356"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="358"/>
         <source>Triple single quotes converted to triple double quotes.</source>
         <translation>Triple virgolette singole convertite in triple virgolette doppie.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="359"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="361"/>
         <source>Introductory quotes corrected to be {0}&quot;&quot;&quot;</source>
         <translation>Virgolette introduttive corrette in {0}&quot;&quot;&quot;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="362"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="364"/>
         <source>Single line docstring put on one line.</source>
         <translation>Singole righe documentazione raggruppate su una sola.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="365"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="367"/>
         <source>Period added to summary line.</source>
         <translation>Aggiunto punto alla riga sommario.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="392"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="394"/>
         <source>Blank line before function/method docstring removed.</source>
         <translation>Riga vuota prima della stringa di documentazione funzione/metodo rimossa.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="371"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="373"/>
         <source>Blank line inserted before class docstring.</source>
         <translation>Riga vuota inserita prima della stringa di documentazione della classe.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="374"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="376"/>
         <source>Blank line inserted after class docstring.</source>
         <translation>Linea vuota inserita dopo la stringa di documentazione della classe.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="377"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="379"/>
         <source>Blank line inserted after docstring summary.</source>
         <translation>Linea vuota inserita dopo la stringa di documentazione del sommario.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="380"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="382"/>
         <source>Blank line inserted after last paragraph of docstring.</source>
         <translation>Linea vuota inserita dopo l&apos;ultimo paragrafo della stringa di documentazione.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="383"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="385"/>
         <source>Leading quotes put on separate line.</source>
         <translation>Le virgolette di testa messe su una riga separata.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="386"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="388"/>
         <source>Trailing quotes put on separate line.</source>
         <translation>Le virgolette di coda messe su una riga separata.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="389"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="391"/>
         <source>Blank line before class docstring removed.</source>
         <translation>Rimossa riga vuota prima della stringa di documentazione.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="395"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="397"/>
         <source>Blank line after class docstring removed.</source>
         <translation>Rimossa riga vuota dopo della stringa di documentazione.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="398"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="400"/>
         <source>Blank line after function/method docstring removed.</source>
         <translation>Riga vuota dopo la stringa di documentazione funzione/metodo rimossa.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="401"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="403"/>
         <source>Blank line after last paragraph removed.</source>
         <translation>Rimossa riga vuota dopo l&apos;ultimo paragrafo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="404"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="406"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Convertita Tabulazione in 4 spazi.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="407"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="409"/>
         <source>Indentation adjusted to be a multiple of four.</source>
         <translation>Identazione portata ad un multiplo di quattro.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="410"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="412"/>
         <source>Indentation of continuation line corrected.</source>
         <translation>Identazione di continuazione riga corretta.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="413"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="415"/>
         <source>Indentation of closing bracket corrected.</source>
         <translation>Identazione di parentesi chiusa corretta.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="416"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="418"/>
         <source>Missing indentation of continuation line corrected.</source>
         <translation>Corretta la mancanza di indentazione della continuazione riga.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="419"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="421"/>
         <source>Closing bracket aligned to opening bracket.</source>
         <translation>Parentesi chiusa allineata con quella d&apos;apertura.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="422"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="424"/>
         <source>Indentation level changed.</source>
         <translation>Livello di indentazione modificato.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="425"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="427"/>
         <source>Indentation level of hanging indentation changed.</source>
         <translation>Modificato il livello di indentazione dell&apos;indentazione pendente.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="428"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="430"/>
         <source>Visual indentation corrected.</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="443"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="445"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Spazio non pertinente eliminato.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="440"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="442"/>
         <source>Missing whitespace added.</source>
         <translation>Spazi mancanti aggiunti.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="446"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="448"/>
         <source>Whitespace around comment sign corrected.</source>
         <translation>Corretto spazio vicino al segno di commento.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="449"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="451"/>
         <source>One blank line inserted.</source>
         <translation>Inserita una riga vuota.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="453"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="455"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>%n riga vuota inserita.</numerusform>
@@ -3815,7 +3815,7 @@ aprirà una finestra per le modifiche posizionando il cursore alla rispettiva ri
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="456"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="458"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>%n riga superflua eliminata</numerusform>
@@ -3823,77 +3823,77 @@ aprirà una finestra per le modifiche posizionando il cursore alla rispettiva ri
         </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="460"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="462"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Righe vuote superflue eliminate.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="463"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="465"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Righe vuote superflue eliminate dopo a dichiarazione della funzione.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="466"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="468"/>
         <source>Imports were put on separate lines.</source>
         <translation>Import messi su righe separate.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="469"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="471"/>
         <source>Long lines have been shortened.</source>
         <translation>Accorciate righe lughe.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="472"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="474"/>
         <source>Redundant backslash in brackets removed.</source>
         <translation>Rimossi barre rovesciate ridondanti.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="478"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="480"/>
         <source>Compound statement corrected.</source>
         <translation>Corretta istruzione composta.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="481"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="483"/>
         <source>Comparison to None/True/False corrected.</source>
         <translation>Corretta comparazione con None/True/False.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="484"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="486"/>
         <source>&apos;{0}&apos; argument added.</source>
         <translation>&apos;{0}&apos; argumento aggiunto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="487"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="489"/>
         <source>&apos;{0}&apos; argument removed.</source>
         <translation>&apos;{0}&apos; argumento rimosso.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="490"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="492"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Eliminati gli spazi alla fine della linea.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="493"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="495"/>
         <source>newline added to end of file.</source>
         <translation>Aggiunta una nuova riga alla fine del file.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="496"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="498"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Rghe vuote superflue eliminate dalla fine del file.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="499"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="501"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>&apos;&lt;&gt;&apos; sostituito da &apos;!=&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="503"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="505"/>
         <source>Could not save the file! Skipping it. Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="553"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="556"/>
         <source> no message defined for code &apos;{0}&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7368,7 +7368,7 @@ Not connected
         <translation>docstring della classe non è seguita da una riga vuota</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="292"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="294"/>
         <source>docstring summary is not followed by a blank line</source>
         <translation>docstring sommario non è seguito da una riga vuota</translation>
     </message>
@@ -7398,67 +7398,67 @@ Not connected
         <translation>Virgolette finali della docstring non sono su riga separata</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="262"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="264"/>
         <source>docstring does not contain a @return line but function/method returns something</source>
         <translation>docstring non contiene una riga @return ma la funzione/metodo ritorna dei valori</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="266"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="268"/>
         <source>docstring contains a @return line but function/method doesn&apos;t return anything</source>
         <translation>docstring contiene una riga @return ma la funzione/metodo non ritorna dei valori</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="270"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="272"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
         <translation>docstring non contiene sufficienti righe @param/@keyparam</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="273"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="275"/>
         <source>docstring contains too many @param/@keyparam lines</source>
         <translation>docstring contiene troppe righe @param/@keyparam</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="276"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="278"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
         <translation>Argomenti con una sola parola-chiave devono essere documentati con righe @keyparam</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="279"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="281"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
         <translation>La sequenza di righe @param/@keyparam non si raccorda con le definizioni funzione/metodo</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="282"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="284"/>
         <source>class docstring is preceded by a blank line</source>
         <translation>docstring della classe è preceduta da una riga vuota</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="284"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="286"/>
         <source>class docstring is followed by a blank line</source>
         <translation>docstring della classe è seguita da una riga vuota</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="286"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="288"/>
         <source>function/method docstring is preceded by a blank line</source>
         <translation>docstring funzione/metodo è preceduto da una riga vuota</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="289"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="291"/>
         <source>function/method docstring is followed by a blank line</source>
         <translation>docstring funzione/metodo è seguito da una riga vuota</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="295"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="297"/>
         <source>last paragraph of docstring is followed by a blank line</source>
         <translation>L&apos;ultimo paragrafo della docstring è seguito da una riga vuota</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="298"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="300"/>
         <source>docstring does not contain a @exception line but function/method raises an exception</source>
         <translation>docstring non contiene una riga @exception ma la funzione/metodo causa un&apos;eccezione</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="302"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="304"/>
         <source>docstring contains a @exception line but function/method doesn&apos;t raise an exception</source>
         <translation>docstring contiene una riga @return ma la funzione/metodo non causa un&apos;eccezione</translation>
     </message>
@@ -7468,7 +7468,7 @@ Not connected
         <translation type="obsolete">nessun messaggio definito per questo codice </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="307"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="309"/>
         <source>{0}: {1}</source>
         <translation>{0}: {1}</translation>
     </message>
@@ -7476,6 +7476,11 @@ Not connected
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="219"/>
         <source>docstring does not contain a summary</source>
         <translation>docstring non contiene un sommario</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="262"/>
+        <source>docstring summary does not start with &apos;{0}&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -34401,72 +34406,72 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 <context>
     <name>NamingStyleChecker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="311"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="313"/>
         <source>class names should use CapWords convention</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="314"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="316"/>
         <source>function name should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="317"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="319"/>
         <source>argument name should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="320"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="322"/>
         <source>first argument of a class method should be named &apos;cls&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="323"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="325"/>
         <source>first argument of a method should be named &apos;self&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="326"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="328"/>
         <source>first argument of a static method should not be named &apos;self&apos; or &apos;cls</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="330"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="332"/>
         <source>module names should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="333"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="335"/>
         <source>package names should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="336"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="338"/>
         <source>constant imported as non constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="339"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="341"/>
         <source>lowercase imported as non lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="342"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="344"/>
         <source>camelcase imported as lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="345"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="347"/>
         <source>camelcase imported as constant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="348"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="350"/>
         <source>variable in function should be lowercase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="351"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="353"/>
         <source>names &apos;l&apos;, &apos;O&apos; and &apos;I&apos; should be avoided</source>
         <translation type="unfinished"></translation>
     </message>

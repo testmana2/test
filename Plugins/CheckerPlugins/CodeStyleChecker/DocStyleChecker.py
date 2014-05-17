@@ -111,7 +111,7 @@ class DocStyleChecker(object):
         
         "D203", "D205",
         "D221", "D222",
-        "D231", "D234", "D235", "D236", "D237", "D238", "D239",
+        "D231", "D232", "D234", "D235", "D236", "D237", "D238", "D239",
         "D242", "D243", "D244", "D245", "D246", "D247",
         "D250", "D251",
         
@@ -208,6 +208,7 @@ class DocStyleChecker(object):
                      ("D242", "D243")),
                 ],
                 "methodDocstring": [
+                    (self.__checkEricSummary, ("D232")),
                 ],
                 "defDocstring": [
                     (self.__checkFunctionDocstring, ("D102", "D203")),
@@ -1211,3 +1212,38 @@ class DocStyleChecker(object):
         
         if not docstrings[-2].strip():
             self.__error(docstringContext.end(), 0, "D247")
+    
+    def __checkEricSummary(self, docstringContext, context):
+        """
+        Private method to check, that method docstring summaries start with
+        specific words.
+        
+        @param docstringContext docstring context (DocStyleContext)
+        @param context context of the docstring (DocStyleContext)
+        """
+        if docstringContext is None:
+            return
+        
+        summary, lineNumber = self.__getSummaryLine(docstringContext)
+        if summary:
+            # check, if the first word is 'Constructor', 'Public',
+            # 'Protected' or 'Private'
+            functionName = context.source()[0].lstrip().split()[1]\
+                .split("(")[0]
+            firstWord = summary.strip().split(None, 1)[0].lower()
+            if functionName == '__init__':
+                if firstWord != 'constructor':
+                    self.__error(docstringContext.start() + lineNumber, 0,
+                                 "D232", 'constructor')
+            elif functionName.startswith('__'):
+                if firstWord != 'private':
+                    self.__error(docstringContext.start() + lineNumber, 0,
+                                 "D232", 'private')
+            elif functionName.startswith('_'):
+                if firstWord != 'protected':
+                    self.__error(docstringContext.start() + lineNumber, 0,
+                             "D232", 'protected')
+            else:
+                if firstWord != 'public':
+                    self.__error(docstringContext.start() + lineNumber, 0,
+                                 "D232", 'public')

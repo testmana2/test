@@ -259,6 +259,8 @@ _messages = {
         "trailing quotes of docstring not on separate line"),
     "D231": QCoreApplication.translate(
         "DocStyleChecker", "docstring summary does not end with a period"),
+    "D232": QCoreApplication.translate(
+        "DocStyleChecker", "docstring summary does not start with '{0}'"),
     "D234": QCoreApplication.translate(
         "DocStyleChecker",
         "docstring does not contain a @return line but function/method"
@@ -519,6 +521,7 @@ _messages_sample_args = {
     "E711": ["None", "'if cond is None:'"],
     "E712": ["True", "'if cond is True:' or 'if cond:'"],
     "E901": ["SyntaxError", "Invalid Syntax"],
+    "D232": ["public"],
     "D901": ["SyntaxError", "Invalid Syntax"],
 }
 
