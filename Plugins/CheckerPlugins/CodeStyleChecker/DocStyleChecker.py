@@ -1241,7 +1241,7 @@ class DocStyleChecker(object):
                                  "D232", 'private')
             elif functionName.startswith('_') or \
                 functionName.endswith('Event') or \
-                    functionName == 'event':
+                    functionName in ['event', 'eventFilter']:
                 if firstWord != 'protected':
                     self.__error(docstringContext.start() + lineNumber, 0,
                              "D232", 'protected')
