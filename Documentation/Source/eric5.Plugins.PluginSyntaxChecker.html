@@ -88,13 +88,13 @@ QObject
 <td>Private slot called, when the the project menu or a submenu is about to be shown.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerPlugin.__projectSyntaxCheck">__projectSyntaxCheck</a></td>
-<td>Public slot used to check the project files for syntax errors.</td>
+<td>Private slot used to check the project files for syntax errors.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerPlugin.__serviceError">__serviceError</a></td>
 <td>Private slot handling service errors.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerPlugin.__translateSyntaxCheck">__translateSyntaxCheck</a></td>
-<td>Slot to translate the resulting messages.</td>
+<td>Private slot to translate the resulting messages.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
@@ -222,7 +222,7 @@ reference to the menu (QMenu)
 <h4>SyntaxCheckerPlugin.__projectSyntaxCheck</h4>
 <b>__projectSyntaxCheck</b>(<i></i>)
 <p>
-        Public slot used to check the project files for syntax errors.
+        Private slot used to check the project files for syntax errors.
 </p><a NAME="SyntaxCheckerPlugin.__serviceError" ID="SyntaxCheckerPlugin.__serviceError"></a>
 <h4>SyntaxCheckerPlugin.__serviceError</h4>
 <b>__serviceError</b>(<i>fn, msg</i>)
@@ -240,7 +240,7 @@ message text (string)
 <h4>SyntaxCheckerPlugin.__translateSyntaxCheck</h4>
 <b>__translateSyntaxCheck</b>(<i>fn, problems</i>)
 <p>
-        Slot to translate the resulting messages.
+        Private slot to translate the resulting messages.
 </p><p>
         If checkFlakes is True, warnings contains a list of strings containing
         the warnings (marker, file name, line number, message)

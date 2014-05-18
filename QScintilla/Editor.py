@@ -2033,7 +2033,7 @@ class Editor(QsciScintillaCompat):
         
     def newBreakpointWithProperties(self, line, properties):
         """
-        Private method to set a new breakpoint and its properties.
+        Public method to set a new breakpoint and its properties.
         
         @param line line number of the breakpoint (integer)
         @param properties properties for the breakpoint (tuple)
@@ -3156,7 +3156,7 @@ class Editor(QsciScintillaCompat):
         
     def handleMonospacedEnable(self):
         """
-        Private slot to handle the Use Monospaced Font context menu entry.
+        Public slot to handle the Use Monospaced Font context menu entry.
         """
         if self.menuActs["MonospacedFont"].isChecked():
             if not self.lexer_:
@@ -4351,7 +4351,7 @@ class Editor(QsciScintillaCompat):
     
     def __charAdded(self, charNumber):
         """
-        Public slot called to handle the user entering a character.
+        Private slot called to handle the user entering a character.
         
         @param charNumber value of the character entered (integer)
         """
@@ -4642,7 +4642,7 @@ class Editor(QsciScintillaCompat):
         
     def contextMenuEvent(self, evt):
         """
-        Private method implementing the context menu event.
+        Protected method implementing the context menu event.
         
         @param evt the context menu event (QContextMenuEvent)
         """
@@ -5656,7 +5656,7 @@ class Editor(QsciScintillaCompat):
     
     def __clearTypedWarning(self, warningKind):
         """
-        Public method to clear warnings of a specific kind.
+        Private method to clear warnings of a specific kind.
         
         @param warningKind kind of warning to clear (Editor.WarningCode,
             Editor.WarningStyle)
@@ -6060,7 +6060,7 @@ class Editor(QsciScintillaCompat):
         
     def keyPressEvent(self, ev):
         """
-        Re-implemented to handle the user input a key at a time.
+        Protected method to handle the user input a key at a time.
         
         @param ev key event (QKeyEvent)
         """
@@ -6130,7 +6130,7 @@ class Editor(QsciScintillaCompat):
         
     def focusOutEvent(self, event):
         """
-        Public method called when the editor loses focus.
+        Protected method called when the editor loses focus.
         
         @param event the event object (QFocusEvent)
         """
@@ -6198,7 +6198,7 @@ class Editor(QsciScintillaCompat):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)
@@ -6830,7 +6830,7 @@ class Editor(QsciScintillaCompat):
     @pyqtSlot(int)
     def __spellCharAdded(self, charNumber):
         """
-        Public slot called to handle the user entering a character.
+        Private slot called to handle the user entering a character.
         
         @param charNumber value of the character entered (integer)
         """
@@ -7234,7 +7234,7 @@ class Editor(QsciScintillaCompat):
     
     def __searchCurrentWord(self, forward=True):
         """
-        Public slot to search the next occurrence of the current word.
+        Private slot to search the next occurrence of the current word.
         
         @param forward flag indicating the search direction (boolean)
         """

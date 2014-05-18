@@ -87,7 +87,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenu(self, menu, standardItems):
         """
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the file status.
@@ -118,7 +118,8 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuMulti(self, menu, standardItems):
         """
-        Slot called before the context menu (multiple selections) is shown.
+        Public slot called before the context menu (multiple selections) is
+        shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.
@@ -159,7 +160,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuDir(self, menu, standardItems):
         """
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
@@ -188,7 +189,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuDirMulti(self, menu, standardItems):
         """
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
@@ -681,7 +682,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def __HgRevert(self):
         """
-        Protected slot called by the context menu to revert changes made.
+        Private slot called by the context menu to revert changes made.
         """
         names = []
         for itm in self.browser.getSelectedItems():

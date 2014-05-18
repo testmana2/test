@@ -39,7 +39,7 @@ class CooperationServer(QTcpServer):
     
     def incomingConnection(self, socketDescriptor):
         """
-        Protected method handling an incoming connection.
+        Public method handling an incoming connection.
         
         @param socketDescriptor native socket descriptor (integer)
         """

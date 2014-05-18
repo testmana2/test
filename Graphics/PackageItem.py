@@ -33,7 +33,7 @@ class PackageModel(UMLModel):
     
     def addModule(self, modulename):
         """
-        Method to add a module to the package model.
+        Public method to add a module to the package model.
         
         @param modulename module name to be added (string)
         """
@@ -41,7 +41,7 @@ class PackageModel(UMLModel):
     
     def getModules(self):
         """
-        Method to retrieve the modules of the package.
+        Public method to retrieve the modules of the package.
         
         @return list of module names (list of strings)
         """
@@ -111,7 +111,7 @@ class PackageItem(UMLItem):
         
     def __calculateSize(self):
         """
-        Method to calculate the size of the package widget.
+        Private method to calculate the size of the package widget.
         """
         if self.model is None:
             return
@@ -135,7 +135,7 @@ class PackageItem(UMLItem):
        
     def setModel(self, model):
         """
-        Method to set the package model.
+        Public method to set the package model.
         
         @param model package model containing the package data (PackageModel)
         """

@@ -472,7 +472,7 @@ class Module(object):
     
     def addDescription(self, description):
         """
-        Protected method to store the modules docstring.
+        Public method to store the modules docstring.
         
         @param description the docstring to be stored (string)
         """

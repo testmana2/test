@@ -83,7 +83,7 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
     
     def __showCertificate(self, certificate):
         """
-        Public method to show the  SSL certificate information.
+        Private method to show the  SSL certificate information.
         
         @param certificate reference to the SSL certificate (QSslCertificate)
         """

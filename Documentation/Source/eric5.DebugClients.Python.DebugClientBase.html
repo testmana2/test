@@ -112,7 +112,7 @@ object
 <td>Private slot to handle the request for a commandline completion list.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.__dumpThreadList">__dumpThreadList</a></td>
-<td>Public method to send the list of threads.</td>
+<td>Private method to send the list of threads.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.__dumpVariable">__dumpVariable</a></td>
 <td>Private method to return the variables of a frame to the debug server.</td>
@@ -154,7 +154,7 @@ object
 <td>Public method to setup a thread for DebugClient to debug.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.close">close</a></td>
-<td>Private method implementing a close method as a replacement for os.close().</td>
+<td>Public method implementing a close method as a replacement for os.close().</td>
 </tr><tr>
 <td><a href="#DebugClientBase.connectDebugger">connectDebugger</a></td>
 <td>Public method to establish a session with the debugger.</td>
@@ -241,7 +241,7 @@ the text to be completed (string)
 <h4>DebugClientBase.__dumpThreadList</h4>
 <b>__dumpThreadList</b>(<i></i>)
 <p>
-        Public method to send the list of threads.
+        Private method to send the list of threads.
 </p><a NAME="DebugClientBase.__dumpVariable" ID="DebugClientBase.__dumpVariable"></a>
 <h4>DebugClientBase.__dumpVariable</h4>
 <b>__dumpVariable</b>(<i>var, frmnr, scope, filter</i>)
@@ -476,7 +476,7 @@ non-zero, if we are attaching to the already
 <h4>DebugClientBase.close</h4>
 <b>close</b>(<i>fd</i>)
 <p>
-        Private method implementing a close method as a replacement for
+        Public method implementing a close method as a replacement for
         os.close().
 </p><p>
         It prevents the debugger connections from being closed.

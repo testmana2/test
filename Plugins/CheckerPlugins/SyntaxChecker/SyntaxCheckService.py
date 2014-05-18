@@ -31,7 +31,7 @@ class SyntaxCheckService(QObject):
     
     def __init__(self):
         """
-        Contructor of SyntaxCheckService.
+        Constructor
         """
         super(SyntaxCheckService, self).__init__()
         self.backgroundService = e5App().getObject("BackgroundService")
@@ -58,7 +58,7 @@ class SyntaxCheckService(QObject):
     def addLanguage(
             self, lang, env, path, module, getArgs, getExt, callback, onError):
         """
-        Register the new language to the supported languages.
+        Public method to register a new language to the supported languages.
         
         @param lang new language to check syntax (str)
         @param env the environment in which the checker is implemented (str)
@@ -79,7 +79,7 @@ class SyntaxCheckService(QObject):
 
     def getLanguages(self):
         """
-        Return the supported language names.
+        Public method to return the supported language names.
         
         @return list of languanges supported (list of str)
         """
@@ -87,7 +87,7 @@ class SyntaxCheckService(QObject):
 
     def removeLanguage(self, lang):
         """
-        Remove the language from syntax check.
+        Public method to remove the language from syntax check.
         
         @param lang language to remove (str)
         """
@@ -97,7 +97,8 @@ class SyntaxCheckService(QObject):
 
     def getExtensions(self):
         """
-        Return all supported file extensions for the syntax checker dialog.
+        Public method to return all supported file extensions for the
+        syntax checker dialog.
         
         @return set of all supported file extensions (set of str)
         """
@@ -109,8 +110,8 @@ class SyntaxCheckService(QObject):
 
     def syntaxCheck(self, lang, filename, source):
         """
-        Method to prepare to compile one Python source file to Python bytecode
-        and to perform a pyflakes check in another task.
+        Public method to prepare to compile one Python source file to Python
+        bytecode and to perform a pyflakes check.
         
         @param lang language of the file or None to determine by internal
             algorithm (str or None)

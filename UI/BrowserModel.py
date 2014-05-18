@@ -480,7 +480,7 @@ class BrowserModel(QAbstractItemModel):
     
     def addItem(self, itm, parent=QModelIndex()):
         """
-        Puplic slot to add an item.
+        Public slot to add an item.
         
         @param itm item to add (BrowserItem)
         @param parent index of parent item (QModelIndex)
@@ -765,7 +765,7 @@ class BrowserItem(object):
     """
     def __init__(self, parent, data):
         """
-        Constructor.
+        Constructor
         
         @param parent reference to the parent item
         @param data single data of the item

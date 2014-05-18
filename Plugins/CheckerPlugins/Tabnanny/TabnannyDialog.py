@@ -148,7 +148,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
 
     def check(self, codestring=''):
         """
-        Start a style check for one file.
+        Public method to start a style check for one file.
         
         The results are reported to the __processResult slot.
         @keyparam codestring optional sourcestring (str)
@@ -187,7 +187,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
 
     def __processResult(self, fn, nok, line, error):
         """
-        Privat slot called after perfoming a style check on one file.
+        Private slot called after perfoming a style check on one file.
         
         @param fn filename of the just checked file (str)
         @param nok flag if a problem was found (bool)

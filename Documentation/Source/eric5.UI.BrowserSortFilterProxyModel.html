@@ -61,7 +61,7 @@ QSortFilterProxyModel
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#BrowserSortFilterProxyModel.filterAcceptsRow">filterAcceptsRow</a></td>
-<td>Protected method to filter rows.</td>
+<td>Public method to filter rows.</td>
 </tr><tr>
 <td><a href="#BrowserSortFilterProxyModel.hasChildren">hasChildren</a></td>
 <td>Public method to check for the presence of child items.</td>
@@ -70,7 +70,7 @@ QSortFilterProxyModel
 <td>Public method to get a reference to an item.</td>
 </tr><tr>
 <td><a href="#BrowserSortFilterProxyModel.lessThan">lessThan</a></td>
-<td>Protected method used to sort the displayed items.</td>
+<td>Public method used to sort the displayed items.</td>
 </tr><tr>
 <td><a href="#BrowserSortFilterProxyModel.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot called to handle a change of the preferences settings.</td>
@@ -97,7 +97,7 @@ reference to the parent object (QObject)
 <h4>BrowserSortFilterProxyModel.filterAcceptsRow</h4>
 <b>filterAcceptsRow</b>(<i>source_row, source_parent</i>)
 <p>
-        Protected method to filter rows.
+        Public method to filter rows.
 </p><p>
         It implements a filter to suppress the display of non public
         classes, methods and attributes.
@@ -152,7 +152,7 @@ requested item reference (BrowserItem)
 <h4>BrowserSortFilterProxyModel.lessThan</h4>
 <b>lessThan</b>(<i>left, right</i>)
 <p>
-        Protected method used to sort the displayed items.
+        Public method used to sort the displayed items.
 </p><p>
         It implements a special sorting function that takes into account,
         if folders should be shown first, and that __init__ is always the first

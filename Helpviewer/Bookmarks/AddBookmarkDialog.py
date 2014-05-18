@@ -38,7 +38,7 @@ class AddBookmarkProxyModel(QSortFilterProxyModel):
     
     def filterAcceptsRow(self, sourceRow, sourceParent):
         """
-        Protected method to determine, if the row is acceptable.
+        Public method to determine, if the row is acceptable.
         
         @param sourceRow row number in the source model (integer)
         @param sourceParent index of the source item (QModelIndex)
@@ -49,7 +49,7 @@ class AddBookmarkProxyModel(QSortFilterProxyModel):
     
     def filterAcceptsColumn(self, sourceColumn, sourceParent):
         """
-        Protected method to determine, if the column is acceptable.
+        Public method to determine, if the column is acceptable.
         
         @param sourceColumn column number in the source model (integer)
         @param sourceParent index of the source item (QModelIndex)

@@ -40,7 +40,8 @@ class E5MapWidget(QWidget):
     
     def __setSliderColor(self):
         """
-        Set the slider color depending upon the background color.
+        Private method to set the slider color depending upon the background
+        color.
         """
         if self.__backgroundColor.toHsv().value() < 128:
             # dark background, use white slider

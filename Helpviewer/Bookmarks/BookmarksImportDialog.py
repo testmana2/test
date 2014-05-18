@@ -156,7 +156,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
     @pyqtSlot()
     def on_cancelButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot documentation goes here.
         """
         self.reject()
     

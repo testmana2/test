@@ -55,7 +55,7 @@ class E5ZoomWidget(QWidget, Ui_E5ZoomWidget):
     @pyqtSlot(int)
     def on_slider_sliderMoved(self, value):
         """
-        Public slot to handle changes of the zoom value.
+        Private slot to handle changes of the zoom value.
         
         @param value value of the slider (integer)
         """

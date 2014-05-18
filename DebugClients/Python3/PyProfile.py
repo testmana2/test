@@ -132,7 +132,7 @@ class PyProfile(profile.Profile):
 
     def trace_dispatch_call(self, frame, t):
         """
-        Private method used to trace functions calls.
+        Public method used to trace functions calls.
         
         This is a variant of the one found in the standard Python
         profile.py calling fix_frame_filename above.

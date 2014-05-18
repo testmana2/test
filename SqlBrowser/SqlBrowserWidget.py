@@ -252,7 +252,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     
     def __insertRow(self):
         """
-        Privat slot to insert a row into the database table.
+        Private slot to insert a row into the database table.
         """
         model = self.table.model()
         if not isinstance(model, QSqlTableModel):
@@ -270,7 +270,7 @@ class SqlBrowserWidget(QWidget, Ui_SqlBrowserWidget):
     
     def __deleteRow(self):
         """
-        Privat slot to delete a row from the database table.
+        Private slot to delete a row from the database table.
         """
         model = self.table.model()
         if not isinstance(model, QSqlTableModel):

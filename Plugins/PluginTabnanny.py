@@ -121,8 +121,7 @@ class TabnannyPlugin(QObject):
 
     def indentCheck(self, lang, filename, source):
         """
-        Method to prepare a style check on one Python source file in another
-        task.
+        Public method to prepare a style check on one Python source file.
 
         @param lang language of the file or None to determine by internal
             algorithm (str or None)
@@ -256,7 +255,7 @@ class TabnannyPlugin(QObject):
     
     def __projectTabnanny(self):
         """
-        Public slot used to check the project files for bad indentations.
+        Private slot used to check the project files for bad indentations.
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()

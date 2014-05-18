@@ -54,7 +54,7 @@ class VcsStatusMonitorThread(QThread):
     
     def run(self):
         """
-        Protected method implementing the tasks action.
+        Public method implementing the tasks action.
         """
         while not self.__stopIt:
             # perform the checking task

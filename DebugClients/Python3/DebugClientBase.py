@@ -276,7 +276,7 @@ class DebugClientBase(object):
 
     def __dumpThreadList(self):
         """
-        Public method to send the list of threads.
+        Private method to send the list of threads.
         """
         threadList = []
         if self.threads and self.currentThread:
@@ -2171,7 +2171,7 @@ class DebugClientBase(object):
         
     def close(self, fd):
         """
-        Private method implementing a close method as a replacement for
+        Public method implementing a close method as a replacement for
         os.close().
         
         It prevents the debugger connections from being closed.

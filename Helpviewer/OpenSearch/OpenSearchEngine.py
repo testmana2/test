@@ -382,7 +382,7 @@ class OpenSearchEngine(QObject):
     
     def __eq__(self, other):
         """
-        Public method implementing the == operator.
+        Special method implementing the == operator.
         
         @param other reference to an open search engine (OpenSearchEngine)
         @return flag indicating equality (boolean)
@@ -400,7 +400,7 @@ class OpenSearchEngine(QObject):
     
     def __lt__(self, other):
         """
-        Public method implementing the < operator.
+        Special method implementing the < operator.
         
         @param other reference to an open search engine (OpenSearchEngine)
         @return flag indicating less than (boolean)

@@ -127,8 +127,7 @@ class CodeStyleCheckerPlugin(QObject):
 
     def styleCheck(self, lang, filename, source, args):
         """
-        Method to prepare a style check on one Python source file in another
-        task.
+        Public method to prepare a style check on one Python source file.
 
         @param lang language of the file or None to determine by internal
             algorithm (str or None)
@@ -150,7 +149,7 @@ class CodeStyleCheckerPlugin(QObject):
     
     def __translateStyleCheck(self, fn, codeStyleCheckerStats, results):
         """
-        Privat slot called after perfoming a style check on one file.
+        Private slot called after perfoming a style check on one file.
         
         @param fn filename of the just checked file (str)
         @param codeStyleCheckerStats stats of style and name check (dict)
@@ -296,7 +295,7 @@ class CodeStyleCheckerPlugin(QObject):
     
     def __projectCodeStyleCheck(self):
         """
-        Public slot used to check the project files for code style.
+        Private slot used to check the project files for code style.
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()

@@ -78,7 +78,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
     
     def closeEvent(self, e):
         """
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
         
         @param e close event (QCloseEvent)
         """
@@ -378,7 +378,7 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
     @pyqtSlot(QPoint)
     def on_shelveList_customContextMenuRequested(self, pos):
         """
-        Protected slot to show the context menu of the shelve list.
+        Private slot to show the context menu of the shelve list.
         
         @param pos position of the mouse pointer (QPoint)
         """

@@ -80,7 +80,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
     
     def reject(self):
         """
-        Protected method called when the dialog is rejected.
+        Public method called when the dialog is rejected.
         """
         self.__shutdown()
         super(BookmarksDialog, self).reject()

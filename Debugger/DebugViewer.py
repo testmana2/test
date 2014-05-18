@@ -320,7 +320,7 @@ class DebugViewer(QWidget):
         
     def handleRawInput(self):
         """
-        Pulic slot to handle the switch to the shell in raw input mode.
+        Public slot to handle the switch to the shell in raw input mode.
         """
         if self.embeddedShell:
             self.saveCurrentPage()

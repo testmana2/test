@@ -317,7 +317,7 @@ class CooperationClient(QObject):
     
     def __findConnections(self, nick):
         """
-        Public method to get a list of connection given a nick name.
+        Private method to get a list of connection given a nick name.
         
         @param nick nick name in the format of self.nickName() (string)
         @return list of references to the connection objects (list of

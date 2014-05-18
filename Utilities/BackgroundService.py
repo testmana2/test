@@ -253,7 +253,7 @@ class BackgroundService(QTcpServer):
 
     def enqueueRequest(self, fx, lang, fn, data):
         """
-        Implement a queued processing of incomming events.
+        Public method implementing a queued processing of incomming events.
         
         Dublicate service requests updates an older request to avoid overrun or
         starving of the services.
@@ -280,7 +280,8 @@ class BackgroundService(QTcpServer):
             self, fx, lang, modulepath, module, callback,
             onErrorCallback=None):
         """
-        Announce a new service to the background service/ client.
+        Public method to announce a new service to the background
+        service/client.
         
         @param fx function name of the service (str)
         @param lang language of the new service (str)
@@ -297,7 +298,7 @@ class BackgroundService(QTcpServer):
     
     def serviceDisconnect(self, fx, lang):
         """
-        Remove the service from the service list.
+        Public method to remove the service from the service list.
         
         @param fx function name of the service (function)
         @param lang language of the service (str)
@@ -308,7 +309,7 @@ class BackgroundService(QTcpServer):
 
     def on_newConnection(self):
         """
-        Slot for new incomming connections from the clients.
+        Private slot for new incomming connections from the clients.
         """
         connection = self.nextPendingConnection()
         if not connection.waitForReadyRead(1000):
@@ -343,7 +344,7 @@ class BackgroundService(QTcpServer):
 
     def on_disconnectSocket(self, lang):
         """
-        Slot is called when connection to a client is lost.
+        Private slot called when connection to a client is lost.
         
         @param lang client language which connection is lost (str)
         """
@@ -371,7 +372,8 @@ class BackgroundService(QTcpServer):
 
     def shutdown(self):
         """
-        Cleanup the connections and processes when eric is shuting down.
+        Public method to cleanup the connections and processes when eric is
+        shuting down.
         """
         for connection in self.connections.values():
             # Prevent calling of on_disconnectSocket

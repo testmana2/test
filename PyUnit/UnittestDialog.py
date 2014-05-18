@@ -249,7 +249,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
     @pyqtSlot()
     def on_startButton_clicked(self, failedOnly=False):
         """
-        Public slot to start the test.
+        Private slot to start the test.
         
         @keyparam failedOnly flag indicating to run only failed tests (boolean)
         """
@@ -687,7 +687,7 @@ class QtTestResult(unittest.TestResult):
         
     def addFailure(self, test, err):
         """
-        Method called if a test failed.
+        Public method called if a test failed.
         
         @param test reference to the test object
         @param err error traceback
@@ -698,7 +698,7 @@ class QtTestResult(unittest.TestResult):
         
     def addError(self, test, err):
         """
-        Method called if a test errored.
+        Public method called if a test errored.
         
         @param test reference to the test object
         @param err error traceback
@@ -709,7 +709,7 @@ class QtTestResult(unittest.TestResult):
         
     def addSkip(self, test, reason):
         """
-        Method called if a test was skipped.
+        Public method called if a test was skipped.
         
         @param test reference to the test object
         @param reason reason for skipping the test (string)
@@ -719,7 +719,7 @@ class QtTestResult(unittest.TestResult):
         
     def addExpectedFailure(self, test, err):
         """
-        Method called if a test failed expected.
+        Public method called if a test failed expected.
         
         @param test reference to the test object
         @param err error traceback
@@ -730,7 +730,7 @@ class QtTestResult(unittest.TestResult):
         
     def addUnexpectedSuccess(self, test):
         """
-        Method called if a test succeeded expectedly.
+        Public method called if a test succeeded expectedly.
         
         @param test reference to the test object
         """
@@ -739,7 +739,7 @@ class QtTestResult(unittest.TestResult):
         
     def startTest(self, test):
         """
-        Method called at the start of a test.
+        Public method called at the start of a test.
         
         @param test Reference to the test object
         """
@@ -748,7 +748,7 @@ class QtTestResult(unittest.TestResult):
 
     def stopTest(self, test):
         """
-        Method called at the end of a test.
+        Public method called at the end of a test.
         
         @param test Reference to the test object
         """

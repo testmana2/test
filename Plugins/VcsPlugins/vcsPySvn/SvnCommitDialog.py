@@ -47,7 +47,7 @@ class SvnCommitDialog(QWidget, Ui_SvnCommitDialog):
         
     def showEvent(self, evt):
         """
-        Public method called when the dialog is about to be shown.
+        Protected method called when the dialog is about to be shown.
         
         @param evt the event (QShowEvent)
         """

@@ -43,7 +43,7 @@ class BackgroundClient(object):
 
     def __initClientService(self, fn, path, module):
         """
-        Import the given module and register it as service.
+        Private method to import the given module and register it as service.
         
         @param fn service name to register (str)
         @param path contains the path to the module (str)
@@ -91,7 +91,7 @@ class BackgroundClient(object):
     
     def run(self):
         """
-        Implement the main loop of the client.
+        Public method implementing the main loop of the client.
         """
         try:
             while True:

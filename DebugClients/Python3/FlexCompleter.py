@@ -60,7 +60,7 @@ class Completer(object):
     """
     def __init__(self, namespace=None):
         """
-        Create a new completer for the command line.
+        Constructor
 
         Completer([namespace]) -> completer instance.
 
@@ -91,7 +91,7 @@ class Completer(object):
 
     def complete(self, text, state):
         """
-        Return the next possible completion for 'text'.
+        Public method to return the next possible completion for 'text'.
 
         This is called successively with state == 0, 1, 2, ... until it
         returns None.  The completion should begin with 'text'.
@@ -127,7 +127,7 @@ class Completer(object):
 
     def global_matches(self, text):
         """
-        Compute matches when text is a simple name.
+        Public method to compute matches when text is a simple name.
 
         @param text The text to be completed. (string)
         @return A list of all keywords, built-in functions and names currently
@@ -147,7 +147,7 @@ class Completer(object):
 
     def attr_matches(self, text):
         """
-        Compute matches when text contains a dot.
+        Public method to compute matches when text contains a dot.
 
         Assuming the text is of the form NAME.NAME....[NAME], and is
         evaluatable in self.namespace, it will be evaluated and its attributes

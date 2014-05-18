@@ -823,7 +823,7 @@ and so on.</td></tr>
 
     def show(self, text=''):
         """
-        Overridden slot from QWidget.
+        Public slot to show the widget.
         
         @param text text to be shown in the findtext edit (string)
         """
@@ -956,7 +956,7 @@ class SearchReplaceSlidingWidget(QWidget):
 
     def show(self, text=''):
         """
-        Overridden slot from QWidget.
+        Public slot to show the widget.
         
         @param text text to be shown in the findtext edit (string)
         """

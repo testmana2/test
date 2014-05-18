@@ -166,7 +166,7 @@ class DebugUI(QObject):
         
     def initActions(self):
         """
-        Method defining the user interface actions.
+        Public method defining the user interface actions.
         """
         self.actions = []
         
@@ -1294,7 +1294,7 @@ class DebugUI(QObject):
         
     def __clientWatchConditionError(self, cond):
         """
-        Public method to handle a expression error of a watch expression.
+        Private method to handle a expression error of a watch expression.
         
         Note: This can only happen for normal watch expressions
         

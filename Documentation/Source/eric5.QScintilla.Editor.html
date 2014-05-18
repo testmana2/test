@@ -201,7 +201,7 @@ QsciScintillaCompat
 <td>Private slot to set changed breakpoints.</td>
 </tr><tr>
 <td><a href="#Editor.__charAdded">__charAdded</a></td>
-<td>Public slot called to handle the user entering a character.</td>
+<td>Private slot called to handle the user entering a character.</td>
 </tr><tr>
 <td><a href="#Editor.__checkEncoding">__checkEncoding</a></td>
 <td>Private method to check the selected encoding of the encodings submenu.</td>
@@ -222,7 +222,7 @@ QsciScintillaCompat
 <td>Private slot to clear all breakpoints.</td>
 </tr><tr>
 <td><a href="#Editor.__clearTypedWarning">__clearTypedWarning</a></td>
-<td>Public method to clear warnings of a specific kind.</td>
+<td>Private method to clear warnings of a specific kind.</td>
 </tr><tr>
 <td><a href="#Editor.__codeCoverageHideAnnotations">__codeCoverageHideAnnotations</a></td>
 <td>Private method to handle the hide code coverage annotations context menu action.</td>
@@ -474,7 +474,7 @@ QsciScintillaCompat
 <td>Private slot to record the last edit position.</td>
 </tr><tr>
 <td><a href="#Editor.__searchCurrentWord">__searchCurrentWord</a></td>
-<td>Public slot to search the next occurrence of the current word.</td>
+<td>Private slot to search the next occurrence of the current word.</td>
 </tr><tr>
 <td><a href="#Editor.__selectAll">__selectAll</a></td>
 <td>Private slot handling the select all context menu action.</td>
@@ -579,7 +579,7 @@ QsciScintillaCompat
 <td>Private slot to handle the 'Show warning' context menu action.</td>
 </tr><tr>
 <td><a href="#Editor.__spellCharAdded">__spellCharAdded</a></td>
-<td>Public slot called to handle the user entering a character.</td>
+<td>Private slot called to handle the user entering a character.</td>
 </tr><tr>
 <td><a href="#Editor.__styleNeeded">__styleNeeded</a></td>
 <td>Private slot to handle the need for more styling.</td>
@@ -693,7 +693,7 @@ QsciScintillaCompat
 <td>Public slot to comment the current selection.</td>
 </tr><tr>
 <td><a href="#Editor.contextMenuEvent">contextMenuEvent</a></td>
-<td>Private method implementing the context menu event.</td>
+<td>Protected method implementing the context menu event.</td>
 </tr><tr>
 <td><a href="#Editor.curLineHasBreakpoint">curLineHasBreakpoint</a></td>
 <td>Public method to check for the presence of a breakpoint at the current line.</td>
@@ -723,7 +723,7 @@ QsciScintillaCompat
 <td>Public slot to ensure, that the specified line is visible at the top of the editor.</td>
 </tr><tr>
 <td><a href="#Editor.event">event</a></td>
-<td>Protected method handling events.</td>
+<td>Public method handling events.</td>
 </tr><tr>
 <td><a href="#Editor.exportFile">exportFile</a></td>
 <td>Public method to export the file.</td>
@@ -738,7 +738,7 @@ QsciScintillaCompat
 <td>Protected method called when the editor receives focus.</td>
 </tr><tr>
 <td><a href="#Editor.focusOutEvent">focusOutEvent</a></td>
-<td>Public method called when the editor loses focus.</td>
+<td>Protected method called when the editor loses focus.</td>
 </tr><tr>
 <td><a href="#Editor.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
@@ -840,7 +840,7 @@ QsciScintillaCompat
 <td>Public slot to handle the 'Goto syntax error' context menu action.</td>
 </tr><tr>
 <td><a href="#Editor.handleMonospacedEnable">handleMonospacedEnable</a></td>
-<td>Private slot to handle the Use Monospaced Font context menu entry.</td>
+<td>Public slot to handle the Use Monospaced Font context menu entry.</td>
 </tr><tr>
 <td><a href="#Editor.handleRenamed">handleRenamed</a></td>
 <td>Public slot to handle the editorRenamed signal.</td>
@@ -903,7 +903,7 @@ QsciScintillaCompat
 <td>Public slot to join the current line with the next one.</td>
 </tr><tr>
 <td><a href="#Editor.keyPressEvent">keyPressEvent</a></td>
-<td>Re-implemented to handle the user input a key at a time.</td>
+<td>Protected method to handle the user input a key at a time.</td>
 </tr><tr>
 <td><a href="#Editor.macroDelete">macroDelete</a></td>
 <td>Public method to delete a macro.</td>
@@ -942,7 +942,7 @@ QsciScintillaCompat
 <td>Protected method to handle the mouse press event.</td>
 </tr><tr>
 <td><a href="#Editor.newBreakpointWithProperties">newBreakpointWithProperties</a></td>
-<td>Private method to set a new breakpoint and its properties.</td>
+<td>Public method to set a new breakpoint and its properties.</td>
 </tr><tr>
 <td><a href="#Editor.nextBookmark">nextBookmark</a></td>
 <td>Public slot to handle the 'Next bookmark' context menu action.</td>
@@ -1369,7 +1369,7 @@ end index of the breakpoints being changed
 <h4>Editor.__charAdded</h4>
 <b>__charAdded</b>(<i>charNumber</i>)
 <p>
-        Public slot called to handle the user entering a character.
+        Private slot called to handle the user entering a character.
 </p><dl>
 <dt><i>charNumber</i></dt>
 <dd>
@@ -1414,7 +1414,7 @@ name of the file (string)
 <h4>Editor.__clearTypedWarning</h4>
 <b>__clearTypedWarning</b>(<i>warningKind</i>)
 <p>
-        Public method to clear warnings of a specific kind.
+        Private method to clear warnings of a specific kind.
 </p><dl>
 <dt><i>warningKind</i></dt>
 <dd>
@@ -2189,7 +2189,7 @@ flag indicating to propagate the change (boolean)
 <h4>Editor.__searchCurrentWord</h4>
 <b>__searchCurrentWord</b>(<i>forward=True</i>)
 <p>
-        Public slot to search the next occurrence of the current word.
+        Private slot to search the next occurrence of the current word.
 </p><dl>
 <dt><i>forward</i></dt>
 <dd>
@@ -2416,7 +2416,7 @@ line number to show the warning for (integer)
 <h4>Editor.__spellCharAdded</h4>
 <b>__spellCharAdded</b>(<i>charNumber</i>)
 <p>
-        Public slot called to handle the user entering a character.
+        Private slot called to handle the user entering a character.
 </p><dl>
 <dt><i>charNumber</i></dt>
 <dd>
@@ -2723,7 +2723,7 @@ flag indicating to not show any dialog (boolean)
 <h4>Editor.contextMenuEvent</h4>
 <b>contextMenuEvent</b>(<i>evt</i>)
 <p>
-        Private method implementing the context menu event.
+        Protected method implementing the context menu event.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -2825,7 +2825,7 @@ line number to make visible
 <h4>Editor.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method handling events.
+        Public method handling events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -2880,7 +2880,7 @@ the event object (QFocusEvent)
 <h4>Editor.focusOutEvent</h4>
 <b>focusOutEvent</b>(<i>event</i>)
 <p>
-        Public method called when the editor loses focus.
+        Protected method called when the editor loses focus.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -3293,7 +3293,7 @@ flag indicating the move direction (boolean)
 <h4>Editor.handleMonospacedEnable</h4>
 <b>handleMonospacedEnable</b>(<i></i>)
 <p>
-        Private slot to handle the Use Monospaced Font context menu entry.
+        Public slot to handle the Use Monospaced Font context menu entry.
 </p><a NAME="Editor.handleRenamed" ID="Editor.handleRenamed"></a>
 <h4>Editor.handleRenamed</h4>
 <b>handleRenamed</b>(<i>fn</i>)
@@ -3496,7 +3496,7 @@ flag indicating pos is in a spell check region (boolean)
 <h4>Editor.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>ev</i>)
 <p>
-        Re-implemented to handle the user input a key at a time.
+        Protected method to handle the user input a key at a time.
 </p><dl>
 <dt><i>ev</i></dt>
 <dd>
@@ -3576,7 +3576,7 @@ the mouse press event (QMouseEvent)
 <h4>Editor.newBreakpointWithProperties</h4>
 <b>newBreakpointWithProperties</b>(<i>line, properties</i>)
 <p>
-        Private method to set a new breakpoint and its properties.
+        Public method to set a new breakpoint and its properties.
 </p><dl>
 <dt><i>line</i></dt>
 <dd>

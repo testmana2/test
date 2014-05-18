@@ -3874,7 +3874,7 @@ class UserInterface(E5MainWindow):
         
     def __activateIRC(self):
         """
-        Public slot to handle the activation of the IRC window.
+        Private slot to handle the activation of the IRC window.
         """
         if self.layout == "Toolboxes":
             self.rToolboxDock.show()
@@ -5719,7 +5719,7 @@ class UserInterface(E5MainWindow):
 
     def closeEvent(self, event):
         """
-        Private event handler for the close event.
+        Protected event handler for the close event.
         
         This event handler saves the preferences.
         

@@ -76,10 +76,10 @@ DebugClientBase.DebugClientBase, AsyncIO
 <td>Public method to acquire the lock for this client.</td>
 </tr><tr>
 <td><a href="#DebugClientThreads.setCurrentThread">setCurrentThread</a></td>
-<td>Private method to set the current thread.</td>
+<td>Public method to set the current thread.</td>
 </tr><tr>
 <td><a href="#DebugClientThreads.set_quit">set_quit</a></td>
-<td>Private method to do a 'set quit' on all threads.</td>
+<td>Public method to do a 'set quit' on all threads.</td>
 </tr><tr>
 <td><a href="#DebugClientThreads.threadTerminated">threadTerminated</a></td>
 <td>Public method called when a DebugThread has exited.</td>
@@ -156,7 +156,7 @@ flag indicating successful locking
 <h4>DebugClientThreads.setCurrentThread</h4>
 <b>setCurrentThread</b>(<i>id</i>)
 <p>
-        Private method to set the current thread.
+        Public method to set the current thread.
 </p><dl>
 <dt><i>id</i></dt>
 <dd>
@@ -166,7 +166,7 @@ the id the current thread should be set to.
 <h4>DebugClientThreads.set_quit</h4>
 <b>set_quit</b>(<i></i>)
 <p>
-        Private method to do a 'set quit' on all threads.
+        Public method to do a 'set quit' on all threads.
 </p><a NAME="DebugClientThreads.threadTerminated" ID="DebugClientThreads.threadTerminated"></a>
 <h4>DebugClientThreads.threadTerminated</h4>
 <b>threadTerminated</b>(<i>dbgThread</i>)

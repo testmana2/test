@@ -115,7 +115,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         
     def keyPressEvent(self, ev):
         """
-        Re-implemented to handle the user pressing the escape key.
+        Protected method to handle the user pressing the escape key.
         
         @param ev key event (QKeyEvent)
         """

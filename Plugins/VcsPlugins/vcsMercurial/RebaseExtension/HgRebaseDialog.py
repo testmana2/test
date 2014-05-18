@@ -265,7 +265,7 @@ class HgRebaseDialog(QDialog, Ui_HgRebaseDialog):
     
     def getData(self):
         """
-        Private method to retrieve the data for the rebase session.
+        Public method to retrieve the data for the rebase session.
         
         @return tuple with a source indicator of "S" or "B", the source
             revision, the destination revision, a flag indicating to collapse,

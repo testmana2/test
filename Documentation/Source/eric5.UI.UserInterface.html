@@ -198,7 +198,7 @@ E5MainWindow
 <td>Private slot to handle the activation of the debug viewer.</td>
 </tr><tr>
 <td><a href="#UserInterface.__activateIRC">__activateIRC</a></td>
-<td>Public slot to handle the activation of the IRC window.</td>
+<td>Private slot to handle the activation of the IRC window.</td>
 </tr><tr>
 <td><a href="#UserInterface.__activateLogViewer">__activateLogViewer</a></td>
 <td>Private slot to handle the activation of the Log Viewer.</td>
@@ -663,7 +663,7 @@ E5MainWindow
 <td>Public method to check, if a projects workspace has been configured.</td>
 </tr><tr>
 <td><a href="#UserInterface.closeEvent">closeEvent</a></td>
-<td>Private event handler for the close event.</td>
+<td>Protected event handler for the close event.</td>
 </tr><tr>
 <td><a href="#UserInterface.dragEnterEvent">dragEnterEvent</a></td>
 <td>Protected method to handle the drag enter event.</td>
@@ -850,7 +850,7 @@ filename of the form to be previewed (string)
 <h4>UserInterface.__activateIRC</h4>
 <b>__activateIRC</b>(<i></i>)
 <p>
-        Public slot to handle the activation of the IRC window.
+        Private slot to handle the activation of the IRC window.
 </p><a NAME="UserInterface.__activateLogViewer" ID="UserInterface.__activateLogViewer"></a>
 <h4>UserInterface.__activateLogViewer</h4>
 <b>__activateLogViewer</b>(<i></i>)
@@ -1944,7 +1944,7 @@ output to be appended (string)
 <h4>UserInterface.closeEvent</h4>
 <b>closeEvent</b>(<i>event</i>)
 <p>
-        Private event handler for the close event.
+        Protected event handler for the close event.
 </p><p>
         This event handler saves the preferences.
 </p><dl>

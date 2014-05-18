@@ -42,7 +42,9 @@ class File(file):   # __IGNORE_WARNING__
     def __init__(self, filein, mode='r', buffering=-1,
                  encoding=None, errors=None, newline=None, closefd=True):
         """
-        Constructor, checks for unimplemented parameters.
+        Constructor
+        
+        It checks for unimplemented parameters.
         
         @param filein filename or file descriptor (string)
         @keyparam mode access mode (string)
@@ -78,7 +80,7 @@ class File(file):   # __IGNORE_WARNING__
 
     def read(self, n=-1):
         """
-        Read n bytes or all if n=-1 from file.
+        Public method to read n bytes or all if n=-1 from file.
         
         @keyparam n bytecount or all if n=-1 (int)
         @return decoded bytes read
@@ -91,7 +93,7 @@ class File(file):   # __IGNORE_WARNING__
 
     def readline(self, limit=-1):
         """
-        Read one line from file.
+        Public method to read one line from file.
         
         @keyparam limit maximum bytes to read or all if limit=-1 (int)
         @return decoded line read
@@ -104,7 +106,7 @@ class File(file):   # __IGNORE_WARNING__
 
     def readlines(self, hint=-1):
         """
-        Read all lines from file.
+        Public method to read all lines from file.
         
         @keyparam hint maximum bytes to read or all if hint=-1 (int)
         @return decoded lines read
@@ -117,7 +119,7 @@ class File(file):   # __IGNORE_WARNING__
 
     def write(self, txt):
         """
-        Write given data to file. Encode if needed.
+        Public method to write given data to file and encode if needed.
         
         @param txt data to write. (str, bytes)
         """
@@ -131,7 +133,7 @@ class File(file):   # __IGNORE_WARNING__
 
     def next(self):
         """
-        Method if used in a iterator.
+        Public method used in an iterator.
         
         @return decoded data read
         """

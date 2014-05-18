@@ -157,7 +157,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
     
     def filterAcceptsRow(self, sourceRow, sourceParent):
         """
-        Protected method to determine, if the row is acceptable.
+        Public method to determine, if the row is acceptable.
         
         @param sourceRow row number in the source model (integer)
         @param sourceParent index of the source item (QModelIndex)
@@ -180,7 +180,7 @@ class HistoryCompletionModel(QSortFilterProxyModel):
     
     def lessThan(self, left, right):
         """
-        Protected method used to sort the displayed items.
+        Public method used to sort the displayed items.
         
         It implements a special sorting function based on the history entry's
         frequency giving a bonus to hits that match on a word boundary so that

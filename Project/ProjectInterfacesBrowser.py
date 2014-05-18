@@ -521,7 +521,7 @@ class ProjectInterfacesBrowser(ProjectBaseBrowser):
         
     def __compileIDL(self, fn, noDialog=False, progress=None):
         """
-        Privat method to compile a .idl file to python.
+        Private method to compile a .idl file to python.
 
         @param fn filename of the .idl file to be compiled (string)
         @param noDialog flag indicating silent operations (boolean)

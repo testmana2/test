@@ -143,7 +143,7 @@ class SvgDiagram(E5MainWindow):
         
     def getDiagramName(self):
         """
-        Method to retrieve a name for the diagram.
+        Public method to retrieve a name for the diagram.
         
         @return name for the diagram
         """
@@ -167,7 +167,7 @@ class SvgDiagram(E5MainWindow):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)
@@ -224,7 +224,7 @@ class SvgDiagram(E5MainWindow):
     
     def __doZoom(self, value):
         """
-        Public method to set the zoom value in percent.
+        Private method to set the zoom value in percent.
         
         @param value zoom value in percent (integer)
         """
@@ -262,7 +262,7 @@ class SvgDiagram(E5MainWindow):
         
     def __zoom(self):
         """
-        Public method to get the current zoom factor in percent.
+        Private method to get the current zoom factor in percent.
         
         @return current zoom factor in percent (integer)
         """

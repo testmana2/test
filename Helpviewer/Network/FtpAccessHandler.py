@@ -31,7 +31,7 @@ class FtpAccessHandler(SchemeAccessHandler):
     
     def createRequest(self, op, request, outgoingData=None):
         """
-        Protected method to create a request.
+        Public method to create a request.
         
         @param op the operation to be performed
             (QNetworkAccessManager.Operation)

@@ -982,7 +982,7 @@ class IconEditorWindow(E5MainWindow):
     
     def closeEvent(self, evt):
         """
-        Private event handler for the close event.
+        Protected event handler for the close event.
         
         @param evt the close event (QCloseEvent)
                 <br />This event is simply accepted after the history has been
@@ -1023,7 +1023,7 @@ class IconEditorWindow(E5MainWindow):
     
     def __newWindow(self):
         """
-        Public slot called to open a new icon editor window.
+        Private slot called to open a new icon editor window.
         """
         ie = IconEditorWindow(parent=self.parent(), fromEric=self.fromEric,
                               project=self.__project)
@@ -1337,7 +1337,7 @@ class IconEditorWindow(E5MainWindow):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)

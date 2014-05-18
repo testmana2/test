@@ -80,7 +80,7 @@ class MiniScintilla(QsciScintillaCompat):
     
     def focusOutEvent(self, event):
         """
-        Public method called when the editor loses focus.
+        Protected method called when the editor loses focus.
         
         @param event the event object (QFocusEvent)
         """
@@ -191,7 +191,7 @@ class MiniEditor(E5MainWindow):
 
     def closeEvent(self, event):
         """
-        Public method to handle the close event.
+        Protected method to handle the close event.
         
         @param event close event (QCloseEvent)
         """
@@ -2272,14 +2272,14 @@ class MiniEditor(E5MainWindow):
     
     def __undo(self):
         """
-        Public method to undo the last recorded change.
+        Private method to undo the last recorded change.
         """
         self.__textEdit.undo()
         self.__checkActions()
     
     def __redo(self):
         """
-        Public method to redo the last recorded change.
+        Private method to redo the last recorded change.
         """
         self.__textEdit.redo()
         self.__checkActions()

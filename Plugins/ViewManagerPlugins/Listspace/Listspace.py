@@ -39,7 +39,7 @@ class StackedWidget(QStackedWidget):
         
     def addWidget(self, assembly):
         """
-        Overwritten method to add a new widget.
+        Public method to add a new widget.
         
         @param assembly editor assembly object to be added
             (QScintilla.EditorAssembly.EditorAssembly)
@@ -51,7 +51,7 @@ class StackedWidget(QStackedWidget):
         
     def removeWidget(self, widget):
         """
-        Overwritten method to remove a widget.
+        Public method to remove a widget.
         
         @param widget widget to be removed (QWidget)
         """
@@ -73,7 +73,7 @@ class StackedWidget(QStackedWidget):
         
     def setCurrentWidget(self, widget):
         """
-        Overwritten method to set the current widget.
+        Public method to set the current widget.
         
         @param widget widget to be made current (QWidget)
         """
@@ -85,7 +85,7 @@ class StackedWidget(QStackedWidget):
         
     def setCurrentIndex(self, index):
         """
-        Overwritten method to set the current widget by its index.
+        Public method to set the current widget by its index.
         
         @param index index of widget to be made current (integer)
         """
@@ -496,7 +496,7 @@ class Listspace(QSplitter, ViewManager):
         
     def setEditorName(self, editor, newName):
         """
-        Change the displayed name of the editor.
+        Public method to change the displayed name of the editor.
         
         @param editor editor window to be changed
         @param newName new name to be shown (string)
@@ -770,7 +770,7 @@ class Listspace(QSplitter, ViewManager):
         
     def eventFilter(self, watched, event):
         """
-        Method called to filter the event queue.
+        Public method called to filter the event queue.
         
         @param watched the QObject being watched
         @param event the event that occurred

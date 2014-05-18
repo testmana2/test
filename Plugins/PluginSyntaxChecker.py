@@ -161,7 +161,7 @@ class SyntaxCheckerPlugin(QObject):
 
     def __translateSyntaxCheck(self, fn, problems):
         """
-        Slot to translate the resulting messages.
+        Private slot to translate the resulting messages.
         
         If checkFlakes is True, warnings contains a list of strings containing
         the warnings (marker, file name, line number, message)
@@ -300,7 +300,7 @@ class SyntaxCheckerPlugin(QObject):
     
     def __projectSyntaxCheck(self):
         """
-        Public slot used to check the project files for syntax errors.
+        Private slot used to check the project files for syntax errors.
         """
         project = e5App().getObject("Project")
         project.saveAllScripts()

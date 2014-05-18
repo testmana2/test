@@ -100,7 +100,7 @@ QWidget, Ui_HgShelveBrowserDialog
 <td>Private slot to restore the selected shelve of changes.</td>
 </tr><tr>
 <td><a href="#HgShelveBrowserDialog.closeEvent">closeEvent</a></td>
-<td>Private slot implementing a close event handler.</td>
+<td>Protected slot implementing a close event handler.</td>
 </tr><tr>
 <td><a href="#HgShelveBrowserDialog.keyPressEvent">keyPressEvent</a></td>
 <td>Protected slot to handle a key press event.</td>
@@ -124,7 +124,7 @@ QWidget, Ui_HgShelveBrowserDialog
 <td>Private slot called, when the current item of the shelve list changes.</td>
 </tr><tr>
 <td><a href="#HgShelveBrowserDialog.on_shelveList_customContextMenuRequested">on_shelveList_customContextMenuRequested</a></td>
-<td>Protected slot to show the context menu of the shelve list.</td>
+<td>Private slot to show the context menu of the shelve list.</td>
 </tr><tr>
 <td><a href="#HgShelveBrowserDialog.show">show</a></td>
 <td>Public slot to show the dialog.</td>
@@ -259,7 +259,7 @@ error to be shown (string)
 <h4>HgShelveBrowserDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
 </p><dl>
 <dt><i>e</i></dt>
 <dd>
@@ -327,7 +327,7 @@ reference to the old current item (QTreeWidgetItem)
 <h4>HgShelveBrowserDialog.on_shelveList_customContextMenuRequested</h4>
 <b>on_shelveList_customContextMenuRequested</b>(<i>pos</i>)
 <p>
-        Protected slot to show the context menu of the shelve list.
+        Private slot to show the context menu of the shelve list.
 </p><dl>
 <dt><i>pos</i></dt>
 <dd>

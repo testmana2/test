@@ -124,7 +124,7 @@ class Previewer(QStackedWidget):
     
     def __previewStateChanged(self, on):
         """
-        Public slot to toggle the display of the preview.
+        Private slot to toggle the display of the preview.
         
         @param on flag indicating to show a preview (boolean)
         """

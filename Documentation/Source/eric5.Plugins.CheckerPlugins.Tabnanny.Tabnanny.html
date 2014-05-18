@@ -96,13 +96,13 @@ Exception
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#NannyNag.get_line">get_line</a></td>
-<td>Method to retrieve the offending line.</td>
+<td>Public method to retrieve the offending line.</td>
 </tr><tr>
 <td><a href="#NannyNag.get_lineno">get_lineno</a></td>
-<td>Method to retrieve the line number.</td>
+<td>Public method to retrieve the line number.</td>
 </tr><tr>
 <td><a href="#NannyNag.get_msg">get_msg</a></td>
-<td>Method to retrieve the message.</td>
+<td>Public method to retrieve the message.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -129,7 +129,7 @@ The offending source line.
 <h4>NannyNag.get_line</h4>
 <b>get_line</b>(<i></i>)
 <p>
-        Method to retrieve the offending line.
+        Public method to retrieve the offending line.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -139,7 +139,7 @@ The line of code (string)
 <h4>NannyNag.get_lineno</h4>
 <b>get_lineno</b>(<i></i>)
 <p>
-        Method to retrieve the line number.
+        Public method to retrieve the line number.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -149,7 +149,7 @@ The line number (integer)
 <h4>NannyNag.get_msg</h4>
 <b>get_msg</b>(<i></i>)
 <p>
-        Method to retrieve the message.
+        Public method to retrieve the message.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -180,22 +180,22 @@ object
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#Whitespace.equal">equal</a></td>
-<td>Method to compare the indentation levels of two Whitespace objects for equality.</td>
+<td>Public method to compare the indentation levels of two Whitespace objects for equality.</td>
 </tr><tr>
 <td><a href="#Whitespace.indent_level">indent_level</a></td>
-<td>Method to determine the indentation level.</td>
+<td>Public method to determine the indentation level.</td>
 </tr><tr>
 <td><a href="#Whitespace.less">less</a></td>
-<td>Method to compare the indentation level against another Whitespace objects to be smaller.</td>
+<td>Public method to compare the indentation level against another Whitespace objects to be smaller.</td>
 </tr><tr>
 <td><a href="#Whitespace.longest_run_of_spaces">longest_run_of_spaces</a></td>
-<td>Method to calculate the length of longest contiguous run of spaces.</td>
+<td>Public method to calculate the length of longest contiguous run of spaces.</td>
 </tr><tr>
 <td><a href="#Whitespace.not_equal_witness">not_equal_witness</a></td>
-<td>Method to calculate a tuple of witnessing tab size.</td>
+<td>Public method to calculate a tuple of witnessing tab size.</td>
 </tr><tr>
 <td><a href="#Whitespace.not_less_witness">not_less_witness</a></td>
-<td>Method to calculate a tuple of witnessing tab size.</td>
+<td>Public method to calculate a tuple of witnessing tab size.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -216,8 +216,8 @@ The string to be checked.
 <h4>Whitespace.equal</h4>
 <b>equal</b>(<i>other</i>)
 <p>
-        Method to compare the indentation levels of two Whitespace objects for
-        equality.
+        Public method to compare the indentation levels of two Whitespace
+        objects for equality.
 </p><dl>
 <dt><i>other</i></dt>
 <dd>
@@ -232,7 +232,7 @@ True, if we compare equal against the other Whitespace object.
 <h4>Whitespace.indent_level</h4>
 <b>indent_level</b>(<i>tabsize</i>)
 <p>
-        Method to determine the indentation level.
+        Public method to determine the indentation level.
 </p><dl>
 <dt><i>tabsize</i></dt>
 <dd>
@@ -247,8 +247,8 @@ indentation level (integer)
 <h4>Whitespace.less</h4>
 <b>less</b>(<i>other</i>)
 <p>
-        Method to compare the indentation level against another Whitespace
-        objects to be smaller.
+        Public method to compare the indentation level against another
+        Whitespace objects to be smaller.
 </p><dl>
 <dt><i>other</i></dt>
 <dd>
@@ -263,7 +263,8 @@ True, if we compare less against the other Whitespace object.
 <h4>Whitespace.longest_run_of_spaces</h4>
 <b>longest_run_of_spaces</b>(<i></i>)
 <p>
-        Method to calculate the length of longest contiguous run of spaces.
+        Public method to calculate the length of longest contiguous run of
+        spaces.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -274,7 +275,7 @@ The length of longest contiguous run of spaces (whether or not
 <h4>Whitespace.not_equal_witness</h4>
 <b>not_equal_witness</b>(<i>other</i>)
 <p>
-        Method to calculate a tuple of witnessing tab size.
+        Public method to calculate a tuple of witnessing tab size.
 </p><p>
         Intended to be used after not self.equal(other) is known, in which
         case it will return at least one witnessing tab size.
@@ -293,7 +294,7 @@ A list of tuples (ts, i1, i2) such that
 <h4>Whitespace.not_less_witness</h4>
 <b>not_less_witness</b>(<i>other</i>)
 <p>
-        Method to calculate a tuple of witnessing tab size.
+        Public method to calculate a tuple of witnessing tab size.
 </p><p>
         Intended to be used after not self.less(other is known, in which
         case it will return at least one witnessing tab size.

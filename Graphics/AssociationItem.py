@@ -379,7 +379,7 @@ class AssociationItem(E5ArrowItem):
         
     def __findIntersection(self, p1, p2, p3, p4):
         """
-        Method to calculate the intersection point of two lines.
+        Private method to calculate the intersection point of two lines.
         
         The first line is determined by the points p1 and p2, the second
         line by p3 and p4. If the intersection point is not contained in

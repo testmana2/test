@@ -2454,7 +2454,7 @@ class Project(QObject):
         
     def __showFiletypeAssociations(self):
         """
-        Public slot to display the filetype association dialog.
+        Private slot to display the filetype association dialog.
         """
         from .FiletypeAssociationDialog import FiletypeAssociationDialog
         dlg = FiletypeAssociationDialog(self)
@@ -2464,7 +2464,7 @@ class Project(QObject):
         
     def __showLexerAssociations(self):
         """
-        Public slot to display the lexer association dialog.
+        Private slot to display the lexer association dialog.
         """
         from .LexerAssociationDialog import LexerAssociationDialog
         dlg = LexerAssociationDialog(self)
@@ -4437,7 +4437,7 @@ class Project(QObject):
     
     def handleApplicationDiagram(self):
         """
-        Private method to handle the application diagram context menu action.
+        Public method to handle the application diagram context menu action.
         """
         res = E5MessageBox.yesNo(
             self.ui,

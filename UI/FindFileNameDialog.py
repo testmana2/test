@@ -262,7 +262,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         
     def show(self):
         """
-        Overwritten method to enable/disable the project checkbox.
+        Public method to enable/disable the project checkbox.
         """
         if self.project and self.project.isOpen():
             self.projectCheckBox.setEnabled(True)

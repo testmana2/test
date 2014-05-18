@@ -39,7 +39,7 @@ class ProfileTreeWidgetItem(QTreeWidgetItem):
         
     def __lt__(self, other):
         """
-        Public method to check, if the item is less than the other one.
+        Special method to check, if the item is less than the other one.
         
         @param other reference to item to compare against
             (ProfileTreeWidgetItem)

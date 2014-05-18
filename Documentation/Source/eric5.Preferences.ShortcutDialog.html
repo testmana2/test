@@ -77,10 +77,10 @@ QDialog, Ui_ShortcutDialog
 <td>Private slot to handle the change of the shortcuts type.</td>
 </tr><tr>
 <td><a href="#ShortcutDialog.eventFilter">eventFilter</a></td>
-<td>Method called to filter the event queue.</td>
+<td>Public method called to filter the event queue.</td>
 </tr><tr>
 <td><a href="#ShortcutDialog.keyPressEvent">keyPressEvent</a></td>
-<td>Private method to handle a key press event.</td>
+<td>Protected method to handle a key press event.</td>
 </tr><tr>
 <td><a href="#ShortcutDialog.on_buttonBox_accepted">on_buttonBox_accepted</a></td>
 <td>Private slot to handle the OK button press.</td>
@@ -133,7 +133,7 @@ text to be set (string)
 <h4>ShortcutDialog.eventFilter</h4>
 <b>eventFilter</b>(<i>watched, event</i>)
 <p>
-        Method called to filter the event queue.
+        Public method called to filter the event queue.
 </p><dl>
 <dt><i>watched</i></dt>
 <dd>
@@ -151,7 +151,7 @@ always False
 <h4>ShortcutDialog.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>evt</i>)
 <p>
-        Private method to handle a key press event.
+        Protected method to handle a key press event.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>

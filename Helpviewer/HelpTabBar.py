@@ -137,7 +137,7 @@ class HelpTabBar(E5WheelTabBar):
     
     def event(self, evt):
         """
-        Protected method to handle event.
+        Public method to handle event.
         
         This event handler just handles the tooltip event and passes the
         handling of all others to the superclass.
@@ -155,7 +155,7 @@ class HelpTabBar(E5WheelTabBar):
     
     def tabRemoved(self, index):
         """
-        Protected slot to handle the removal of a tab.
+        Public slot to handle the removal of a tab.
         
         @param index index of the removed tab (integer)
         """

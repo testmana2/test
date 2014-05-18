@@ -310,7 +310,7 @@ class FtpDirLineParser(QObject):
     
     def parseLine(self, line):
         """
-        Private method to parse a directory listing line.
+        Public method to parse a directory listing line.
         
         This implementation support Unix and Windows style directory
         listings. It tries Unix style first and if that fails switches

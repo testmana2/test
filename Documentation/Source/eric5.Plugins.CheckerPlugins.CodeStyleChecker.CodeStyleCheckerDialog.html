@@ -82,7 +82,7 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td>Private method to modify a result list entry to show its positive fixed state.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__processResult">__processResult</a></td>
-<td>Privat slot called after perfoming a style check on one file.</td>
+<td>Private slot called after perfoming a style check on one file.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__resetStatistics">__resetStatistics</a></td>
 <td>Private slot to reset the statistics data.</td>
@@ -100,7 +100,7 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td>Private method to update the collected statistics.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.check">check</a></td>
-<td>Start a style check for one file.</td>
+<td>Public method to start a style check for one file.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -281,7 +281,7 @@ flag indicating a fixed issue (boolean)
 <h4>CodeStyleCheckerDialog.__processResult</h4>
 <b>__processResult</b>(<i>fn, codeStyleCheckerStats, fixes, results</i>)
 <p>
-        Privat slot called after perfoming a style check on one file.
+        Private slot called after perfoming a style check on one file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -353,7 +353,7 @@ number of ignored errors (integer)
 <h4>CodeStyleCheckerDialog.check</h4>
 <b>check</b>(<i>codestring='', onlyFixes={}</i>)
 <p>
-        Start a style check for one file.
+        Public method to start a style check for one file.
 </p><p>
         The results are reported to the __processResult slot.
 </p><dl>

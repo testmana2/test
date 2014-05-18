@@ -62,22 +62,22 @@ file
 <table>
 <tr>
 <td><a href="#File.__init__">File</a></td>
-<td>Constructor, checks for unimplemented parameters.</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#File.next">next</a></td>
-<td>Method if used in a iterator.</td>
+<td>Public method used in an iterator.</td>
 </tr><tr>
 <td><a href="#File.read">read</a></td>
-<td>Read n bytes or all if n=-1 from file.</td>
+<td>Public method to read n bytes or all if n=-1 from file.</td>
 </tr><tr>
 <td><a href="#File.readline">readline</a></td>
-<td>Read one line from file.</td>
+<td>Public method to read one line from file.</td>
 </tr><tr>
 <td><a href="#File.readlines">readlines</a></td>
-<td>Read all lines from file.</td>
+<td>Public method to read all lines from file.</td>
 </tr><tr>
 <td><a href="#File.write">write</a></td>
-<td>Write given data to file.</td>
+<td>Public method to write given data to file and encode if needed.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -88,7 +88,9 @@ file
 <h4>File (Constructor)</h4>
 <b>File</b>(<i>filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True</i>)
 <p>
-        Constructor, checks for unimplemented parameters.
+        Constructor
+</p><p>
+        It checks for unimplemented parameters.
 </p><dl>
 <dt><i>filein</i></dt>
 <dd>
@@ -123,7 +125,7 @@ for not implemented method parameters
 <h4>File.next</h4>
 <b>next</b>(<i></i>)
 <p>
-        Method if used in a iterator.
+        Public method used in an iterator.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -133,7 +135,7 @@ decoded data read
 <h4>File.read</h4>
 <b>read</b>(<i>n=-1</i>)
 <p>
-        Read n bytes or all if n=-1 from file.
+        Public method to read n bytes or all if n=-1 from file.
 </p><dl>
 <dt><i>n=</i></dt>
 <dd>
@@ -148,7 +150,7 @@ decoded bytes read
 <h4>File.readline</h4>
 <b>readline</b>(<i>limit=-1</i>)
 <p>
-        Read one line from file.
+        Public method to read one line from file.
 </p><dl>
 <dt><i>limit=</i></dt>
 <dd>
@@ -163,7 +165,7 @@ decoded line read
 <h4>File.readlines</h4>
 <b>readlines</b>(<i>hint=-1</i>)
 <p>
-        Read all lines from file.
+        Public method to read all lines from file.
 </p><dl>
 <dt><i>hint=</i></dt>
 <dd>
@@ -178,7 +180,7 @@ decoded lines read
 <h4>File.write</h4>
 <b>write</b>(<i>txt</i>)
 <p>
-        Write given data to file. Encode if needed.
+        Public method to write given data to file and encode if needed.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>

@@ -214,7 +214,7 @@ class UserAgentManager(QObject):
     
     def userAgentForUrl(self, url):
         """
-        Publci method to determine the user agent for the given URL.
+        Public method to determine the user agent for the given URL.
         
         @param url URL to determine user agent for (QUrl)
         @return user agent string (string)

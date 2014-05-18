@@ -89,7 +89,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
     
     def __getQueuesList(self):
         """
-        Public method to get a list of all queues and the name of the active
+        Private method to get a list of all queues and the name of the active
         queue.
         
         @return tuple with a list of all queues and the name of the active

@@ -528,7 +528,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     
     def accept(self):
         """
-        Protected slot called by the Ok button.
+        Public slot called by the Ok button.
         
         It saves the values in the parameters dictionary.
         """

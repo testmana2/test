@@ -68,7 +68,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         
     def closeEvent(self, e):
         """
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
         
         @param e close event (QCloseEvent)
         """

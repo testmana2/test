@@ -725,7 +725,7 @@ class Shell(QsciScintillaCompat):
         
     def paste(self):
         """
-        Reimplemented slot to handle the paste action.
+        Public slot to handle the paste action.
         """
         lines = QApplication.clipboard().text()
         self.executeLines(lines)
@@ -836,7 +836,7 @@ class Shell(QsciScintillaCompat):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)
@@ -893,7 +893,7 @@ class Shell(QsciScintillaCompat):
         
     def keyPressEvent(self, ev):
         """
-        Re-implemented to handle the user input a key at a time.
+        Protected method to handle the user input a key at a time.
         
         @param ev key event (QKeyEvent)
         """
@@ -1371,7 +1371,7 @@ class Shell(QsciScintillaCompat):
         
     def focusNextPrevChild(self, next):
         """
-        Reimplemented to stop Tab moving to the next window.
+        Public method to stop Tab moving to the next window.
         
         While the user is entering a multi-line command, the movement to
         the next window by the Tab key being pressed is suppressed.
@@ -1386,7 +1386,7 @@ class Shell(QsciScintillaCompat):
         
     def contextMenuEvent(self, ev):
         """
-        Reimplemented to show our own context menu.
+        Protected method to show our own context menu.
         
         @param ev context menu event (QContextMenuEvent)
         """
@@ -1570,7 +1570,7 @@ class Shell(QsciScintillaCompat):
         
     def focusInEvent(self, event):
         """
-        Public method called when the shell receives focus.
+        Protected method called when the shell receives focus.
         
         @param event the event object (QFocusEvent)
         """
@@ -1606,7 +1606,7 @@ class Shell(QsciScintillaCompat):
         
     def focusOutEvent(self, event):
         """
-        Public method called when the shell loses focus.
+        Protected method called when the shell loses focus.
         
         @param event the event object (QFocusEvent)
         """

@@ -30,7 +30,7 @@ class PreferencesLexerError(Exception):
         
     def __repr__(self):
         """
-        Private method returning a representation of the exception.
+        Special method returning a representation of the exception.
         
         @return string representing the error message
         """
@@ -38,7 +38,7 @@ class PreferencesLexerError(Exception):
         
     def __str__(self):
         """
-        Private method returning a string representation of the exception.
+        Special method returning a string representation of the exception.
         
         @return string representing the error message
         """

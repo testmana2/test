@@ -121,8 +121,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
     @classmethod
     def httpString(cls, languages):
         """
-        Class method to convert a list of acceptable languages into a byte
-        array.
+        Class method to convert a list of acceptable languages into a
+        byte array.
        
         The byte array can be sent along with the Accept-Language http header
         (see RFC 2616).
@@ -161,7 +161,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
     @classmethod
     def expand(cls, language):
         """
-        Class method to expand a language enum to a readable languages list.
+        Class method to expand a language enum to a readable languages
+        list.
         
         @param language language number (QLocale.Language)
         @return list of expanded language names (list of strings)

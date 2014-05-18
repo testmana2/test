@@ -316,7 +316,7 @@ class SymbolsModel(QAbstractTableModel):
     
     def getTableIndex(self):
         """
-        Private method to get the current table index.
+        Public method to get the current table index.
         
         @return current table index (integer)
         """

@@ -87,10 +87,10 @@ QThread
 <td>Private method to process the given text for SSI statements.</td>
 </tr><tr>
 <td><a href="#PreviewProcessingThread.process">process</a></td>
-<td>Convert the given text to HTML.</td>
+<td>Public method to convert the given text to HTML.</td>
 </tr><tr>
 <td><a href="#PreviewProcessingThread.run">run</a></td>
-<td>Thread function to convert the stored data.</td>
+<td>Public thread method to convert the stored data.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -194,7 +194,7 @@ processed HTML (string)
 <h4>PreviewProcessingThread.process</h4>
 <b>process</b>(<i>filePath, language, text, ssiEnabled, rootPath</i>)
 <p>
-        Convert the given text to HTML.
+        Public method to convert the given text to HTML.
 </p><dl>
 <dt><i>filePath</i></dt>
 <dd>
@@ -217,7 +217,7 @@ root path to be used for SSI processing (str)
 <h4>PreviewProcessingThread.run</h4>
 <b>run</b>(<i></i>)
 <p>
-        Thread function to convert the stored data.
+        Public thread method to convert the stored data.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -267,7 +267,7 @@ QWidget, Ui_PreviewerHTML
 <td>Private slot to enable/disable SSI.</td>
 </tr><tr>
 <td><a href="#PreviewerHTML.processEditor">processEditor</a></td>
-<td>Private slot to process an editor's text.</td>
+<td>Public slot to process an editor's text.</td>
 </tr><tr>
 <td><a href="#PreviewerHTML.shutdown">shutdown</a></td>
 <td>Public method to perform shutdown actions.</td>
@@ -365,7 +365,7 @@ state of the checkbox (boolean)
 <h4>PreviewerHTML.processEditor</h4>
 <b>processEditor</b>(<i>editor=None</i>)
 <p>
-        Private slot to process an editor's text.
+        Public slot to process an editor's text.
 </p><dl>
 <dt><i>editor</i></dt>
 <dd>

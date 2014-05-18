@@ -64,7 +64,7 @@ E5MainWindow
 <td>Private method to adjust a scrollbar by a certain factor.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__doZoom">__doZoom</a></td>
-<td>Public method to set the zoom value in percent.</td>
+<td>Private method to set the zoom value in percent.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__initActions">__initActions</a></td>
 <td>Private method to initialize the view actions.</td>
@@ -94,7 +94,7 @@ E5MainWindow
 <td>Private method to show a file.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__zoom">__zoom</a></td>
-<td>Public method to get the current zoom factor in percent.</td>
+<td>Private method to get the current zoom factor in percent.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.__zoomIn">__zoomIn</a></td>
 <td>Private method to zoom into the pixmap.</td>
@@ -106,16 +106,16 @@ E5MainWindow
 <td>Private method to reset the zoom value.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.event">event</a></td>
-<td>Protected method handling events.</td>
+<td>Public method handling events.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.getDiagramName">getDiagramName</a></td>
-<td>Method to retrieve a name for the diagram.</td>
+<td>Public method to retrieve a name for the diagram.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.getStatus">getStatus</a></td>
-<td>Method to retrieve the status of the canvas.</td>
+<td>Public method to retrieve the status of the canvas.</td>
 </tr><tr>
 <td><a href="#PixmapDiagram.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
@@ -158,7 +158,7 @@ factor to adjust by (float)
 <h4>PixmapDiagram.__doZoom</h4>
 <b>__doZoom</b>(<i>value</i>)
 <p>
-        Public method to set the zoom value in percent.
+        Private method to set the zoom value in percent.
 </p><dl>
 <dt><i>value</i></dt>
 <dd>
@@ -243,7 +243,7 @@ flag indicating success (boolean)
 <h4>PixmapDiagram.__zoom</h4>
 <b>__zoom</b>(<i></i>)
 <p>
-        Public method to get the current zoom factor in percent.
+        Private method to get the current zoom factor in percent.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -268,7 +268,7 @@ current zoom factor in percent (integer)
 <h4>PixmapDiagram.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method handling events.
+        Public method handling events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -293,7 +293,7 @@ reference to the gesture event (QGestureEvent
 <h4>PixmapDiagram.getDiagramName</h4>
 <b>getDiagramName</b>(<i></i>)
 <p>
-        Method to retrieve a name for the diagram.
+        Public method to retrieve a name for the diagram.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -303,7 +303,7 @@ name for the diagram
 <h4>PixmapDiagram.getStatus</h4>
 <b>getStatus</b>(<i></i>)
 <p>
-        Method to retrieve the status of the canvas.
+        Public method to retrieve the status of the canvas.
 </p><dl>
 <dt>Returns:</dt>
 <dd>

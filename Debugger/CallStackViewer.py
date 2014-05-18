@@ -102,7 +102,7 @@ class CallStackViewer(QTreeWidget):
     
     def __showCallStack(self, stack):
         """
-        Public slot to show the call stack of the program being debugged.
+        Private slot to show the call stack of the program being debugged.
         
         @param stack list of tuples with call stack data (file name,
             line number, function name, formatted argument/values list)

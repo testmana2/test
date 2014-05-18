@@ -190,7 +190,7 @@ class DebugBase(bdb.Bdb):
     
     def trace_dispatch(self, frame, event, arg):
         """
-        Reimplemented from bdb.py to do some special things.
+        Public method reimplemented from bdb.py to do some special things.
         
         This specialty is to check the connection to the debug server
         for new events (i.e. new breakpoints) while we are going through
@@ -229,7 +229,7 @@ class DebugBase(bdb.Bdb):
 
     def dispatch_line(self, frame):
         """
-        Reimplemented from bdb.py to do some special things.
+        Public method reimplemented from bdb.py to do some special things.
         
         This speciality is to check the connection to the debug server
         for new events (i.e. new breakpoints) while we are going through
@@ -247,7 +247,7 @@ class DebugBase(bdb.Bdb):
 
     def dispatch_return(self, frame, arg):
         """
-        Reimplemented from bdb.py to handle passive mode cleanly.
+        Public method reimplemented from bdb.py to handle passive mode cleanly.
         
         @param frame The current stack frame.
         @param arg The arguments
@@ -262,7 +262,7 @@ class DebugBase(bdb.Bdb):
 
     def dispatch_exception(self, frame, arg):
         """
-        Reimplemented from bdb.py to always call user_exception.
+        Public method reimplemented from bdb.py to always call user_exception.
         
         @param frame The current stack frame.
         @param arg The arguments
@@ -277,7 +277,7 @@ class DebugBase(bdb.Bdb):
 
     def set_trace(self, frame=None):
         """
-        Overridden method of bdb.py to do some special setup.
+        Public method reimplemented from bdb.py to do some special setup.
         
         @param frame frame to start debugging from
         """
@@ -286,7 +286,8 @@ class DebugBase(bdb.Bdb):
     
     def set_continue(self, special):
         """
-        Reimplemented from bdb.py to always get informed of exceptions.
+        Public method reimplemented from bdb.py to always get informed of
+        exceptions.
         
         @param special flag indicating a special continue operation
         """
@@ -458,7 +459,8 @@ class DebugBase(bdb.Bdb):
     
     def break_here(self, frame):
         """
-        Reimplemented from bdb.py to fix the filename from the frame.
+        Public method reimplemented from bdb.py to fix the filename from the
+        frame.
         
         See fix_frame_filename for more info.
         
@@ -498,7 +500,7 @@ class DebugBase(bdb.Bdb):
 
     def break_anywhere(self, frame):
         """
-        Reimplemented from bdb.py to do some special things.
+        Public method reimplemented from bdb.py to do some special things.
         
         These speciality is to fix the filename from the frame
         (see fix_frame_filename for more info).
@@ -512,8 +514,8 @@ class DebugBase(bdb.Bdb):
 
     def get_break(self, filename, lineno):
         """
-        Reimplemented from bdb.py to get the first breakpoint of a particular
-        line.
+        Public method reimplemented from bdb.py to get the first breakpoint of
+        a particular line.
         
         Because eric5 supports only one breakpoint per line, this overwritten
         method will return this one and only breakpoint.
@@ -575,7 +577,8 @@ class DebugBase(bdb.Bdb):
     
     def user_line(self, frame):
         """
-        Reimplemented to handle the program about to execute a particular line.
+        Public method reimplemented to handle the program about to execute a
+        particular line.
         
         @param frame the frame object
         """
@@ -636,7 +639,7 @@ class DebugBase(bdb.Bdb):
 
     def user_exception(self, frame, excinfo, unhandled=False):
         """
-        Reimplemented to report an exception to the debug server.
+        Public method reimplemented to report an exception to the debug server.
         
         @param frame the frame object
         @param excinfo information about the exception
@@ -758,7 +761,8 @@ class DebugBase(bdb.Bdb):
 
     def user_return(self, frame, retval):
         """
-        Reimplemented to report program termination to the debug server.
+        Public method reimplemented to report program termination to the debug
+        server.
         
         @param frame the frame object
         @param retval the return value of the program
@@ -774,7 +778,7 @@ class DebugBase(bdb.Bdb):
 
     def stop_here(self, frame):
         """
-        Reimplemented to filter out debugger files.
+        Public method reimplemented to filter out debugger files.
         
         Tracing is turned off for files that are part of the
         debugger that are called from the application being debugged.
@@ -835,7 +839,7 @@ class DebugBase(bdb.Bdb):
     
     def getEvent(self):
         """
-        Public method to return the last debugger event.
+        Protected method to return the last debugger event.
         
         @return last debugger event (string)
         """

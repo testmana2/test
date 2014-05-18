@@ -79,7 +79,7 @@ class LexerPython(Lexer, QsciLexerPython):
         
     def getIndentationDifference(self, line, editor):
         """
-        Private method to determine the difference for the new indentation.
+        Public method to determine the difference for the new indentation.
         
         @param line line to perform the calculation for (integer)
         @param editor QScintilla editor

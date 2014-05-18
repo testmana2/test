@@ -29,7 +29,7 @@ class Page(object):
     
     def __eq__(self, other):
         """
-        Public method implementing the equality operator.
+        Special method implementing the equality operator.
         
         @param other reference to the other page object (Page)
         @return flag indicating equality (boolean)

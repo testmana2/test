@@ -46,7 +46,7 @@ class UMLSceneSizeDialog(QDialog, Ui_UMLSceneSizeDialog):
         
     def getData(self):
         """
-        Method to retrieve the entered data.
+        Public method to retrieve the entered data.
         
         @return tuple giving the selected width and height
             (integer, integer)

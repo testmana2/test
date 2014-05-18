@@ -45,7 +45,7 @@ class Purge(HgExtension):
     
     def __getEntries(self, repodir, all):
         """
-        Public method to get a list of files/directories being purged.
+        Private method to get a list of files/directories being purged.
         
         @param repodir directory name of the repository (string)
         @param all flag indicating to delete all files including ignored ones

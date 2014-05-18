@@ -183,7 +183,7 @@ class FtpReply(QNetworkReply):
     
     def readData(self, maxlen):
         """
-        Protected method to retrieve data from the reply object.
+        Public method to retrieve data from the reply object.
         
         @param maxlen maximum number of bytes to read (integer)
         @return string containing the data (bytes)

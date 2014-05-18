@@ -33,7 +33,7 @@ class E5LineEditSideWidget(QWidget):
     
     def event(self, evt):
         """
-        Protected method to handle events.
+        Public method to handle events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, whether the event was recognized (boolean)
@@ -124,7 +124,7 @@ class E5LineEdit(QLineEdit):
     
     def event(self, evt):
         """
-        Protected method to handle events.
+        Public method to handle events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, whether the event was recognized (boolean)

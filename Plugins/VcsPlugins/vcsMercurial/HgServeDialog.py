@@ -175,7 +175,7 @@ class HgServeDialog(E5MainWindow):
     
     def closeEvent(self, e):
         """
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
         
         @param e close event (QCloseEvent)
         """
@@ -214,7 +214,7 @@ class HgServeDialog(E5MainWindow):
     
     def __appendText(self, txt, error=False):
         """
-        Public method to append text to the end.
+        Private method to append text to the end.
         
         @param txt text to insert (string)
         @param error flag indicating to insert error text (boolean)

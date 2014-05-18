@@ -319,7 +319,7 @@ class CookieJar(QNetworkCookieJar):
     
     def keepPolicy(self):
         """
-        Private method to get the keep policy.
+        Public method to get the keep policy.
         
         @return keep policy
         """

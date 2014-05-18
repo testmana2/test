@@ -76,10 +76,10 @@ QLineEdit
 <td>Public method to perform an editor command.</td>
 </tr><tr>
 <td><a href="#QuickSearchLineEdit.focusInEvent">focusInEvent</a></td>
-<td>Re-implemented to record the current editor widget.</td>
+<td>Protected method to record the current editor widget.</td>
 </tr><tr>
 <td><a href="#QuickSearchLineEdit.keyPressEvent">keyPressEvent</a></td>
-<td>Re-implemented to handle the press of the ESC key.</td>
+<td>Protected method to handle the press of the ESC key.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -100,7 +100,7 @@ the scintilla command to be performed
 <h4>QuickSearchLineEdit.focusInEvent</h4>
 <b>focusInEvent</b>(<i>evt</i>)
 <p>
-        Re-implemented to record the current editor widget.
+        Protected method to record the current editor widget.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -110,7 +110,7 @@ focus event (QFocusEvent)
 <h4>QuickSearchLineEdit.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>evt</i>)
 <p>
-        Re-implemented to handle the press of the ESC key.
+        Protected method to handle the press of the ESC key.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -613,7 +613,7 @@ QObject
 <td>Private method to handle the toggle current fold action.</td>
 </tr><tr>
 <td><a href="#ViewManager.__unhighlight">__unhighlight</a></td>
-<td>Privat slot to switch of all highlights.</td>
+<td>Private slot to switch of all highlights.</td>
 </tr><tr>
 <td><a href="#ViewManager.__zoom">__zoom</a></td>
 <td>Private method to handle the zoom action.</td>
@@ -700,7 +700,7 @@ QObject
 <td>Public method to clone an editor displaying the given document.</td>
 </tr><tr>
 <td><a href="#ViewManager.closeAllWindows">closeAllWindows</a></td>
-<td>Private method to close all editor windows via file menu.</td>
+<td>Public method to close all editor windows via file menu.</td>
 </tr><tr>
 <td><a href="#ViewManager.closeCurrentWindow">closeCurrentWindow</a></td>
 <td>Public method to close the current window.</td>
@@ -808,10 +808,10 @@ QObject
 <td>Public method to create the View toolbar.</td>
 </tr><tr>
 <td><a href="#ViewManager.insertNumber">insertNumber</a></td>
-<td>Private slot to insert a number text into the active window.</td>
+<td>Public slot to insert a number text into the active window.</td>
 </tr><tr>
 <td><a href="#ViewManager.insertSymbol">insertSymbol</a></td>
-<td>Private slot to insert a symbol text into the active window.</td>
+<td>Public slot to insert a symbol text into the active window.</td>
 </tr><tr>
 <td><a href="#ViewManager.isConnected">isConnected</a></td>
 <td>Public method to check the connection status of the IDE.</td>
@@ -1813,7 +1813,7 @@ editor that sent the signal
 <h4>ViewManager.__unhighlight</h4>
 <b>__unhighlight</b>(<i></i>)
 <p>
-        Privat slot to switch of all highlights.
+        Private slot to switch of all highlights.
 </p><a NAME="ViewManager.__zoom" ID="ViewManager.__zoom"></a>
 <h4>ViewManager.__zoom</h4>
 <b>__zoom</b>(<i></i>)
@@ -2158,7 +2158,7 @@ reference to the new editor object (Editor.Editor) and the new
 <h4>ViewManager.closeAllWindows</h4>
 <b>closeAllWindows</b>(<i></i>)
 <p>
-        Private method to close all editor windows via file menu.
+        Public method to close all editor windows via file menu.
 </p><a NAME="ViewManager.closeCurrentWindow" ID="ViewManager.closeCurrentWindow"></a>
 <h4>ViewManager.closeCurrentWindow</h4>
 <b>closeCurrentWindow</b>(<i></i>)
@@ -2594,7 +2594,7 @@ the generated toolbar
 <h4>ViewManager.insertNumber</h4>
 <b>insertNumber</b>(<i>txt</i>)
 <p>
-        Private slot to insert a number text into the active window.
+        Public slot to insert a number text into the active window.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>
@@ -2604,7 +2604,7 @@ text to be inserted (string)
 <h4>ViewManager.insertSymbol</h4>
 <b>insertSymbol</b>(<i>txt</i>)
 <p>
-        Private slot to insert a symbol text into the active window.
+        Public slot to insert a symbol text into the active window.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>

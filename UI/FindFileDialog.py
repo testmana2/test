@@ -167,7 +167,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
     def show(self, txt=""):
         """
-        Overwritten method to enable/disable the project button.
+        Public method to enable/disable the project button.
         
         @param txt text to be shown in the searchtext combo (string)
         """

@@ -175,7 +175,7 @@ E5MainWindow
 <td>Private function to read a single keyboard shortcut from the settings.</td>
 </tr><tr>
 <td><a href="#MiniEditor.__redo">__redo</a></td>
-<td>Public method to redo the last recorded change.</td>
+<td>Private method to redo the last recorded change.</td>
 </tr><tr>
 <td><a href="#MiniEditor.__replace">__replace</a></td>
 <td>Private method to handle the replace action.</td>
@@ -235,7 +235,7 @@ E5MainWindow
 <td>Private slot to handle the need for more styling.</td>
 </tr><tr>
 <td><a href="#MiniEditor.__undo">__undo</a></td>
-<td>Public method to undo the last recorded change.</td>
+<td>Private method to undo the last recorded change.</td>
 </tr><tr>
 <td><a href="#MiniEditor.__whatsThis">__whatsThis</a></td>
 <td>Private slot called in to enter Whats This mode.</td>
@@ -250,7 +250,7 @@ E5MainWindow
 <td>Public method to clear all search indicators.</td>
 </tr><tr>
 <td><a href="#MiniEditor.closeEvent">closeEvent</a></td>
-<td>Public method to handle the close event.</td>
+<td>Protected method to handle the close event.</td>
 </tr><tr>
 <td><a href="#MiniEditor.getFileName">getFileName</a></td>
 <td>Public method to return the name of the file being displayed.</td>
@@ -582,7 +582,7 @@ category the action belongs to (string)
 <h4>MiniEditor.__redo</h4>
 <b>__redo</b>(<i></i>)
 <p>
-        Public method to redo the last recorded change.
+        Private method to redo the last recorded change.
 </p><a NAME="MiniEditor.__replace" ID="MiniEditor.__replace"></a>
 <h4>MiniEditor.__replace</h4>
 <b>__replace</b>(<i></i>)
@@ -741,7 +741,7 @@ end position, that needs styling (integer)
 <h4>MiniEditor.__undo</h4>
 <b>__undo</b>(<i></i>)
 <p>
-        Public method to undo the last recorded change.
+        Private method to undo the last recorded change.
 </p><a NAME="MiniEditor.__whatsThis" ID="MiniEditor.__whatsThis"></a>
 <h4>MiniEditor.__whatsThis</h4>
 <b>__whatsThis</b>(<i></i>)
@@ -771,7 +771,7 @@ reference to the text edit component (QsciScintillaCompat)
 <h4>MiniEditor.closeEvent</h4>
 <b>closeEvent</b>(<i>event</i>)
 <p>
-        Public method to handle the close event.
+        Protected method to handle the close event.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -896,7 +896,7 @@ QsciScintillaCompat
 <td>Protected method called when the editor receives focus.</td>
 </tr><tr>
 <td><a href="#MiniScintilla.focusOutEvent">focusOutEvent</a></td>
-<td>Public method called when the editor loses focus.</td>
+<td>Protected method called when the editor loses focus.</td>
 </tr><tr>
 <td><a href="#MiniScintilla.getFileName">getFileName</a></td>
 <td>Public method to return the name of the file being displayed.</td>
@@ -935,7 +935,7 @@ the event object (QFocusEvent)
 <h4>MiniScintilla.focusOutEvent</h4>
 <b>focusOutEvent</b>(<i>event</i>)
 <p>
-        Public method called when the editor loses focus.
+        Protected method called when the editor loses focus.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>

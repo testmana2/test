@@ -64,7 +64,7 @@ E5MainWindow
 <td>Private method to adjust a scrollbar by a certain factor.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.__doZoom">__doZoom</a></td>
-<td>Public method to set the zoom value in percent.</td>
+<td>Private method to set the zoom value in percent.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.__initActions">__initActions</a></td>
 <td>Private method to initialize the view actions.</td>
@@ -91,7 +91,7 @@ E5MainWindow
 <td>Private slot to show the context menu of the listview.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.__zoom">__zoom</a></td>
-<td>Public method to get the current zoom factor in percent.</td>
+<td>Private method to get the current zoom factor in percent.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.__zoomIn">__zoomIn</a></td>
 <td>Private method to zoom into the SVG.</td>
@@ -103,13 +103,13 @@ E5MainWindow
 <td>Private method to reset the zoom value.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.event">event</a></td>
-<td>Protected method handling events.</td>
+<td>Public method handling events.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.getDiagramName">getDiagramName</a></td>
-<td>Method to retrieve a name for the diagram.</td>
+<td>Public method to retrieve a name for the diagram.</td>
 </tr><tr>
 <td><a href="#SvgDiagram.wheelEvent">wheelEvent</a></td>
 <td>Protected method to handle wheel events.</td>
@@ -152,7 +152,7 @@ factor to adjust by (float)
 <h4>SvgDiagram.__doZoom</h4>
 <b>__doZoom</b>(<i>value</i>)
 <p>
-        Public method to set the zoom value in percent.
+        Private method to set the zoom value in percent.
 </p><dl>
 <dt><i>value</i></dt>
 <dd>
@@ -222,7 +222,7 @@ the position of the mouse pointer (QPoint)
 <h4>SvgDiagram.__zoom</h4>
 <b>__zoom</b>(<i></i>)
 <p>
-        Public method to get the current zoom factor in percent.
+        Private method to get the current zoom factor in percent.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -247,7 +247,7 @@ current zoom factor in percent (integer)
 <h4>SvgDiagram.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method handling events.
+        Public method handling events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -272,7 +272,7 @@ reference to the gesture event (QGestureEvent
 <h4>SvgDiagram.getDiagramName</h4>
 <b>getDiagramName</b>(<i></i>)
 <p>
-        Method to retrieve a name for the diagram.
+        Public method to retrieve a name for the diagram.
 </p><dl>
 <dt>Returns:</dt>
 <dd>

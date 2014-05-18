@@ -367,7 +367,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
     def check(self, codestring='', onlyFixes={}):
         """
-        Start a style check for one file.
+        Public method to start a style check for one file.
         
         The results are reported to the __processResult slot.
         
@@ -429,7 +429,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
 
     def __processResult(self, fn, codeStyleCheckerStats, fixes, results):
         """
-        Privat slot called after perfoming a style check on one file.
+        Private slot called after perfoming a style check on one file.
         
         @param fn filename of the just checked file (str)
         @param codeStyleCheckerStats stats of style and name check (dict)

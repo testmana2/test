@@ -46,7 +46,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenu(self, menu, standardItems):
         """
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the file status.
@@ -81,7 +81,8 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuMulti(self, menu, standardItems):
         """
-        Slot called before the context menu (multiple selections) is shown.
+        Public slot called before the context menu (multiple selections) is
+        shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.
@@ -122,7 +123,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuDir(self, menu, standardItems):
         """
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
@@ -148,7 +149,7 @@ class SvnProjectBrowserHelper(VcsProjectBrowserHelper):
     
     def showContextMenuDirMulti(self, menu, standardItems):
         """
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
         
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.

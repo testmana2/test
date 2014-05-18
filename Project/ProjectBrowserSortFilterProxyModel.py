@@ -33,7 +33,7 @@ class ProjectBrowserSortFilterProxyModel(BrowserSortFilterProxyModel):
         
     def filterAcceptsRow(self, source_row, source_parent):
         """
-        Protected method to filter rows.
+        Public method to filter rows.
         
         It implements a filter to suppress the display of non public
         classes, methods and attributes.

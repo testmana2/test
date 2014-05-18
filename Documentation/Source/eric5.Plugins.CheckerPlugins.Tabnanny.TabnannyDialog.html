@@ -68,13 +68,13 @@ QDialog, Ui_TabnannyDialog
 <td>Private slot called when the action or the user pressed the button.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.__processResult">__processResult</a></td>
-<td>Privat slot called after perfoming a style check on one file.</td>
+<td>Private slot called after perfoming a style check on one file.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.check">check</a></td>
-<td>Start a style check for one file.</td>
+<td>Public method to start a style check for one file.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -134,7 +134,7 @@ faulty line of code (string)
 <h4>TabnannyDialog.__processResult</h4>
 <b>__processResult</b>(<i>fn, nok, line, error</i>)
 <p>
-        Privat slot called after perfoming a style check on one file.
+        Private slot called after perfoming a style check on one file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -158,7 +158,7 @@ text of the problem (str)
 <h4>TabnannyDialog.check</h4>
 <b>check</b>(<i>codestring=''</i>)
 <p>
-        Start a style check for one file.
+        Public method to start a style check for one file.
 </p><p>
         The results are reported to the __processResult slot.
 </p><dl>

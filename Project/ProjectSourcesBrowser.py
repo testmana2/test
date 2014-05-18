@@ -114,7 +114,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
     def __createPythonPopupMenus(self):
         """
-        Privat method to generate the popup menus for a Python project.
+        Private method to generate the popup menus for a Python project.
         """
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)
@@ -298,7 +298,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
     def __createRubyPopupMenus(self):
         """
-        Privat method to generate the popup menus for a Ruby project.
+        Private method to generate the popup menus for a Ruby project.
         """
         self.graphicsMenu = QMenu(self.tr('Diagrams'))
         self.classDiagramAction = self.graphicsMenu.addAction(
@@ -438,7 +438,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         
     def __createJavaScriptPopupMenus(self):
         """
-        Privat method to generate the popup menus for a Python project.
+        Private method to generate the popup menus for a Python project.
         """
         self.checksMenu = QMenu(self.tr('Check'))
         self.checksMenu.aboutToShow.connect(self.__showContextMenuCheck)

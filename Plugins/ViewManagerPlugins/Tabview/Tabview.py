@@ -343,7 +343,7 @@ class TabWidget(E5TabWidget):
         
     def addTab(self, assembly, title):
         """
-        Overwritten method to add a new tab.
+        Public method to add a new tab.
         
         @param assembly editor assembly object to be added
             (QScintilla.EditorAssembly.EditorAssembly)
@@ -369,7 +369,7 @@ class TabWidget(E5TabWidget):
         
     def insertWidget(self, index, assembly, title):
         """
-        Overwritten method to insert a new tab.
+        Public method to insert a new tab.
         
         @param index index position for the new tab (integer)
         @param assembly editor assembly object to be added
@@ -526,7 +526,7 @@ class TabWidget(E5TabWidget):
         
     def currentWidget(self):
         """
-        Overridden method to return a reference to the current page.
+        Public method to return a reference to the current page.
         
         @return reference to the current page (Editor)
         """
@@ -889,7 +889,7 @@ class Tabview(QSplitter, ViewManager):
         
     def insertView(self, win, tabWidget, index, fn=None, noName=""):
         """
-        Protected method to add a view (i.e. window).
+        Public method to add a view (i.e. window).
         
         @param win editor assembly to be inserted
         @param tabWidget reference to the tab widget to insert the editor into

@@ -2199,7 +2199,7 @@ class HelpWindow(E5MainWindow):
         
     def closeEvent(self, e):
         """
-        Private event handler for the close event.
+        Protected event handler for the close event.
         
         @param e the close event (QCloseEvent)
                 <br />This event is simply accepted after the history has been
@@ -3691,7 +3691,7 @@ class HelpWindow(E5MainWindow):
     @classmethod
     def showNotification(cls, icon, heading, text):
         """
-        Clsss method to show a desktop notification.
+        Class method to show a desktop notification.
         
         @param icon icon to be shown in the notification (QPixmap)
         @param heading heading of the notification (string)
@@ -3717,7 +3717,7 @@ class HelpWindow(E5MainWindow):
     @classmethod
     def notificationsEnabled(cls):
         """
-        Clsss method to check, if notifications are enabled.
+        Class method to check, if notifications are enabled.
         
         @return flag indicating, if notifications are enabled (boolean)
         """

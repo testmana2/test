@@ -187,7 +187,7 @@ class HelpWebPage(QWebPage):
     
     def acceptNavigationRequest(self, frame, request, type_):
         """
-        Protected method to determine, if a request may be accepted.
+        Public method to determine, if a request may be accepted.
         
         @param frame reference to the frame sending the request (QWebFrame)
         @param request reference to the request object (QNetworkRequest)
@@ -445,7 +445,7 @@ class HelpWebPage(QWebPage):
     
     def userAgentForUrl(self, url):
         """
-        Protected method to determine the user agent for the given URL.
+        Public method to determine the user agent for the given URL.
         
         @param url URL to determine user agent for (QUrl)
         @return user agent string (string)
@@ -586,7 +586,8 @@ class HelpWebPage(QWebPage):
     @classmethod
     def webPluginFactory(cls):
         """
-        Class method to get a reference to the web plug-in factory instance.
+        Class method to get a reference to the web plug-in factory
+        instance.
         
         @return reference to the web plug-in factory instance (WebPluginFactory
         """
@@ -598,7 +599,7 @@ class HelpWebPage(QWebPage):
     
     def event(self, evt):
         """
-        Protected method implementing the event handler.
+        Public method implementing the event handler.
         
         @param evt reference to the event (QEvent)
         @return flag indicating that the event was handled (boolean)
@@ -1770,7 +1771,7 @@ class HelpBrowser(QWebView):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)
@@ -2221,7 +2222,7 @@ class HelpBrowser(QWebView):
     
     def createWindow(self, windowType):
         """
-        Protected method called, when a new window should be created.
+        Public method called, when a new window should be created.
         
         @param windowType type of the requested window (QWebPage.WebWindowType)
         @return reference to the created browser window (HelpBrowser)

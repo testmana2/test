@@ -70,13 +70,13 @@ QDialog, Ui_SyntaxCheckerDialog
 <td>Private slot called when the syntax check finished or the user pressed the button.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__processResult">__processResult</a></td>
-<td>Slot to display the reported messages.</td>
+<td>Private slot to display the reported messages.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.check">check</a></td>
-<td>Start a check for one file.</td>
+<td>Public method to start a check for one file.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -157,7 +157,7 @@ flag indicating a warning message (boolean)
 <h4>SyntaxCheckerDialog.__processResult</h4>
 <b>__processResult</b>(<i>fn, problems</i>)
 <p>
-        Slot to display the reported messages.
+        Private slot to display the reported messages.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -178,7 +178,7 @@ dictionary with the keys 'error' and 'warnings' which
 <h4>SyntaxCheckerDialog.check</h4>
 <b>check</b>(<i>codestring=''</i>)
 <p>
-        Start a check for one file.
+        Public method to start a check for one file.
 </p><p>
         The results are reported to the __processResult slot.
 </p><dl>

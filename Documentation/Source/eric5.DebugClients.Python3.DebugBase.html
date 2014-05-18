@@ -91,22 +91,22 @@ bdb.Bdb
 <td>Private method to filter out debugger files.</td>
 </tr><tr>
 <td><a href="#DebugBase.break_anywhere">break_anywhere</a></td>
-<td>Reimplemented from bdb.py to do some special things.</td>
+<td>Public method reimplemented from bdb.py to do some special things.</td>
 </tr><tr>
 <td><a href="#DebugBase.break_here">break_here</a></td>
-<td>Reimplemented from bdb.py to fix the filename from the frame.</td>
+<td>Public method reimplemented from bdb.py to fix the filename from the frame.</td>
 </tr><tr>
 <td><a href="#DebugBase.clear_watch">clear_watch</a></td>
 <td>Public method to clear a watch expression.</td>
 </tr><tr>
 <td><a href="#DebugBase.dispatch_exception">dispatch_exception</a></td>
-<td>Reimplemented from bdb.py to always call user_exception.</td>
+<td>Public method reimplemented from bdb.py to always call user_exception.</td>
 </tr><tr>
 <td><a href="#DebugBase.dispatch_line">dispatch_line</a></td>
-<td>Reimplemented from bdb.py to do some special things.</td>
+<td>Public method reimplemented from bdb.py to do some special things.</td>
 </tr><tr>
 <td><a href="#DebugBase.dispatch_return">dispatch_return</a></td>
-<td>Reimplemented from bdb.py to handle passive mode cleanly.</td>
+<td>Public method reimplemented from bdb.py to handle passive mode cleanly.</td>
 </tr><tr>
 <td><a href="#DebugBase.fix_frame_filename">fix_frame_filename</a></td>
 <td>Public method used to fixup the filename for a given frame.</td>
@@ -118,13 +118,13 @@ bdb.Bdb
 <td>Public method to return the locals dictionary of the current frame.</td>
 </tr><tr>
 <td><a href="#DebugBase.getEvent">getEvent</a></td>
-<td>Public method to return the last debugger event.</td>
+<td>Protected method to return the last debugger event.</td>
 </tr><tr>
 <td><a href="#DebugBase.getStack">getStack</a></td>
 <td>Public method to get the stack.</td>
 </tr><tr>
 <td><a href="#DebugBase.get_break">get_break</a></td>
-<td>Reimplemented from bdb.py to get the first breakpoint of a particular line.</td>
+<td>Public method reimplemented from bdb.py to get the first breakpoint of a particular line.</td>
 </tr><tr>
 <td><a href="#DebugBase.get_watch">get_watch</a></td>
 <td>Public method to get a watch expression.</td>
@@ -142,13 +142,13 @@ bdb.Bdb
 <td>Public method to determine the current recursion depth.</td>
 </tr><tr>
 <td><a href="#DebugBase.set_continue">set_continue</a></td>
-<td>Reimplemented from bdb.py to always get informed of exceptions.</td>
+<td>Public method reimplemented from bdb.py to always get informed of exceptions.</td>
 </tr><tr>
 <td><a href="#DebugBase.set_quit">set_quit</a></td>
 <td>Public method to quit.</td>
 </tr><tr>
 <td><a href="#DebugBase.set_trace">set_trace</a></td>
-<td>Overridden method of bdb.py to do some special setup.</td>
+<td>Public method reimplemented from bdb.py to do some special setup.</td>
 </tr><tr>
 <td><a href="#DebugBase.set_watch">set_watch</a></td>
 <td>Public method to set a watch expression.</td>
@@ -160,19 +160,19 @@ bdb.Bdb
 <td>Public method to perform a step out of the current call.</td>
 </tr><tr>
 <td><a href="#DebugBase.stop_here">stop_here</a></td>
-<td>Reimplemented to filter out debugger files.</td>
+<td>Public method reimplemented to filter out debugger files.</td>
 </tr><tr>
 <td><a href="#DebugBase.trace_dispatch">trace_dispatch</a></td>
-<td>Reimplemented from bdb.py to do some special things.</td>
+<td>Public method reimplemented from bdb.py to do some special things.</td>
 </tr><tr>
 <td><a href="#DebugBase.user_exception">user_exception</a></td>
-<td>Reimplemented to report an exception to the debug server.</td>
+<td>Public method reimplemented to report an exception to the debug server.</td>
 </tr><tr>
 <td><a href="#DebugBase.user_line">user_line</a></td>
-<td>Reimplemented to handle the program about to execute a particular line.</td>
+<td>Public method reimplemented to handle the program about to execute a particular line.</td>
 </tr><tr>
 <td><a href="#DebugBase.user_return">user_return</a></td>
-<td>Reimplemented to report program termination to the debug server.</td>
+<td>Public method reimplemented to report program termination to the debug server.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -297,7 +297,7 @@ flag indicating whether the debugger should skip this frame
 <h4>DebugBase.break_anywhere</h4>
 <b>break_anywhere</b>(<i>frame</i>)
 <p>
-        Reimplemented from bdb.py to do some special things.
+        Public method reimplemented from bdb.py to do some special things.
 </p><p>
         These speciality is to fix the filename from the frame
         (see fix_frame_filename for more info).
@@ -315,7 +315,8 @@ flag indicating the break status (boolean)
 <h4>DebugBase.break_here</h4>
 <b>break_here</b>(<i>frame</i>)
 <p>
-        Reimplemented from bdb.py to fix the filename from the frame.
+        Public method reimplemented from bdb.py to fix the filename from the
+        frame.
 </p><p>
         See fix_frame_filename for more info.
 </p><dl>
@@ -342,7 +343,7 @@ expression of the watch expression to be cleared (string)
 <h4>DebugBase.dispatch_exception</h4>
 <b>dispatch_exception</b>(<i>frame, arg</i>)
 <p>
-        Reimplemented from bdb.py to always call user_exception.
+        Public method reimplemented from bdb.py to always call user_exception.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
@@ -365,7 +366,7 @@ raised to indicate the end of the debug session
 <h4>DebugBase.dispatch_line</h4>
 <b>dispatch_line</b>(<i>frame</i>)
 <p>
-        Reimplemented from bdb.py to do some special things.
+        Public method reimplemented from bdb.py to do some special things.
 </p><p>
         This speciality is to check the connection to the debug server
         for new events (i.e. new breakpoints) while we are going through
@@ -389,7 +390,7 @@ raised to indicate the end of the debug session
 <h4>DebugBase.dispatch_return</h4>
 <b>dispatch_return</b>(<i>frame, arg</i>)
 <p>
-        Reimplemented from bdb.py to handle passive mode cleanly.
+        Public method reimplemented from bdb.py to handle passive mode cleanly.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
@@ -458,7 +459,7 @@ locals dictionary of the current frame
 <h4>DebugBase.getEvent</h4>
 <b>getEvent</b>(<i></i>)
 <p>
-        Public method to return the last debugger event.
+        Protected method to return the last debugger event.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -479,8 +480,8 @@ list of lists with file name (string), line number (integer)
 <h4>DebugBase.get_break</h4>
 <b>get_break</b>(<i>filename, lineno</i>)
 <p>
-        Reimplemented from bdb.py to get the first breakpoint of a particular
-        line.
+        Public method reimplemented from bdb.py to get the first breakpoint of
+        a particular line.
 </p><p>
         Because eric5 supports only one breakpoint per line, this overwritten
         method will return this one and only breakpoint.
@@ -570,7 +571,8 @@ The current stack frame.
 <h4>DebugBase.set_continue</h4>
 <b>set_continue</b>(<i>special</i>)
 <p>
-        Reimplemented from bdb.py to always get informed of exceptions.
+        Public method reimplemented from bdb.py to always get informed of
+        exceptions.
 </p><dl>
 <dt><i>special</i></dt>
 <dd>
@@ -587,7 +589,7 @@ flag indicating a special continue operation
 <h4>DebugBase.set_trace</h4>
 <b>set_trace</b>(<i>frame=None</i>)
 <p>
-        Overridden method of bdb.py to do some special setup.
+        Public method reimplemented from bdb.py to do some special setup.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
@@ -626,7 +628,7 @@ If it is True, then the step is a step into,
 <h4>DebugBase.stop_here</h4>
 <b>stop_here</b>(<i>frame</i>)
 <p>
-        Reimplemented to filter out debugger files.
+        Public method reimplemented to filter out debugger files.
 </p><p>
         Tracing is turned off for files that are part of the
         debugger that are called from the application being debugged.
@@ -644,7 +646,7 @@ flag indicating whether the debugger should stop here
 <h4>DebugBase.trace_dispatch</h4>
 <b>trace_dispatch</b>(<i>frame, event, arg</i>)
 <p>
-        Reimplemented from bdb.py to do some special things.
+        Public method reimplemented from bdb.py to do some special things.
 </p><p>
         This specialty is to check the connection to the debug server
         for new events (i.e. new breakpoints) while we are going through
@@ -669,7 +671,7 @@ local trace function
 <h4>DebugBase.user_exception</h4>
 <b>user_exception</b>(<i>frame, excinfo, unhandled=False</i>)
 <p>
-        Reimplemented to report an exception to the debug server.
+        Public method reimplemented to report an exception to the debug server.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
@@ -685,7 +687,8 @@ flag indicating an uncaught exception
 <h4>DebugBase.user_line</h4>
 <b>user_line</b>(<i>frame</i>)
 <p>
-        Reimplemented to handle the program about to execute a particular line.
+        Public method reimplemented to handle the program about to execute a
+        particular line.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
@@ -695,7 +698,8 @@ the frame object
 <h4>DebugBase.user_return</h4>
 <b>user_return</b>(<i>frame, retval</i>)
 <p>
-        Reimplemented to report program termination to the debug server.
+        Public method reimplemented to report program termination to the debug
+        server.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>

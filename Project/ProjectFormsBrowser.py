@@ -734,7 +734,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
     def __compileUI(self, fn, noDialog=False, progress=None):
         """
-        Privat method to compile a .ui file to a .py/.rb file.
+        Private method to compile a .ui file to a .py/.rb file.
         
         @param fn filename of the .ui file to be compiled
         @param noDialog flag indicating silent operations

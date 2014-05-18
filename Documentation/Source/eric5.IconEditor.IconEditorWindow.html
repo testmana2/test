@@ -124,7 +124,7 @@ E5MainWindow
 <td>Private slot to create a new icon.</td>
 </tr><tr>
 <td><a href="#IconEditorWindow.__newWindow">__newWindow</a></td>
-<td>Public slot called to open a new icon editor window.</td>
+<td>Private slot called to open a new icon editor window.</td>
 </tr><tr>
 <td><a href="#IconEditorWindow.__openIcon">__openIcon</a></td>
 <td>Private slot to open an icon file.</td>
@@ -166,10 +166,10 @@ E5MainWindow
 <td>Private slot called to handle the zoom reset action.</td>
 </tr><tr>
 <td><a href="#IconEditorWindow.closeEvent">closeEvent</a></td>
-<td>Private event handler for the close event.</td>
+<td>Protected event handler for the close event.</td>
 </tr><tr>
 <td><a href="#IconEditorWindow.event">event</a></td>
-<td>Protected method handling events.</td>
+<td>Public method handling events.</td>
 </tr><tr>
 <td><a href="#IconEditorWindow.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
@@ -323,7 +323,7 @@ modification status
 <h4>IconEditorWindow.__newWindow</h4>
 <b>__newWindow</b>(<i></i>)
 <p>
-        Public slot called to open a new icon editor window.
+        Private slot called to open a new icon editor window.
 </p><a NAME="IconEditorWindow.__openIcon" ID="IconEditorWindow.__openIcon"></a>
 <h4>IconEditorWindow.__openIcon</h4>
 <b>__openIcon</b>(<i></i>)
@@ -444,7 +444,7 @@ height of the icon (integer)
 <h4>IconEditorWindow.closeEvent</h4>
 <b>closeEvent</b>(<i>evt</i>)
 <p>
-        Private event handler for the close event.
+        Protected event handler for the close event.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -456,7 +456,7 @@ the close event (QCloseEvent)
 <h4>IconEditorWindow.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method handling events.
+        Public method handling events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>

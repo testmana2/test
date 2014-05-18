@@ -3704,7 +3704,7 @@ class Hg(VersionControl):
     
     def __getInOutBookmarks(self, repodir, incoming):
         """
-        Public method to get the list of incoming or outgoing bookmarks.
+        Private method to get the list of incoming or outgoing bookmarks.
         
         @param repodir directory name of the repository (string)
         @param incoming flag indicating to get incoming bookmarks (boolean)

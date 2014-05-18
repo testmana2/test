@@ -74,13 +74,13 @@ QTcpServer
 <td>Private method to start the background client as external process.</td>
 </tr><tr>
 <td><a href="#BackgroundService.enqueueRequest">enqueueRequest</a></td>
-<td>Implement a queued processing of incomming events.</td>
+<td>Public method implementing a queued processing of incomming events.</td>
 </tr><tr>
 <td><a href="#BackgroundService.on_disconnectSocket">on_disconnectSocket</a></td>
-<td>Slot is called when connection to a client is lost.</td>
+<td>Private slot called when connection to a client is lost.</td>
 </tr><tr>
 <td><a href="#BackgroundService.on_newConnection">on_newConnection</a></td>
-<td>Slot for new incomming connections from the clients.</td>
+<td>Private slot for new incomming connections from the clients.</td>
 </tr><tr>
 <td><a href="#BackgroundService.preferencesOrProjectChanged">preferencesOrProjectChanged</a></td>
 <td>Public slot to restart the built in languages.</td>
@@ -89,13 +89,13 @@ QTcpServer
 <td>Public method to restart a given lanuage.</td>
 </tr><tr>
 <td><a href="#BackgroundService.serviceConnect">serviceConnect</a></td>
-<td>Announce a new service to the background service/ client.</td>
+<td>Public method to announce a new service to the background service/client.</td>
 </tr><tr>
 <td><a href="#BackgroundService.serviceDisconnect">serviceDisconnect</a></td>
-<td>Remove the service from the service list.</td>
+<td>Public method to remove the service from the service list.</td>
 </tr><tr>
 <td><a href="#BackgroundService.shutdown">shutdown</a></td>
-<td>Cleanup the connections and processes when eric is shuting down.</td>
+<td>Public method to cleanup the connections and processes when eric is shuting down.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -164,7 +164,7 @@ the process object (QProcess or None)
 <h4>BackgroundService.enqueueRequest</h4>
 <b>enqueueRequest</b>(<i>fx, lang, fn, data</i>)
 <p>
-        Implement a queued processing of incomming events.
+        Public method implementing a queued processing of incomming events.
 </p><p>
         Dublicate service requests updates an older request to avoid overrun or
         starving of the services.
@@ -186,7 +186,7 @@ function argument(s) (any basic datatype(s))
 <h4>BackgroundService.on_disconnectSocket</h4>
 <b>on_disconnectSocket</b>(<i>lang</i>)
 <p>
-        Slot is called when connection to a client is lost.
+        Private slot called when connection to a client is lost.
 </p><dl>
 <dt><i>lang</i></dt>
 <dd>
@@ -196,7 +196,7 @@ client language which connection is lost (str)
 <h4>BackgroundService.on_newConnection</h4>
 <b>on_newConnection</b>(<i></i>)
 <p>
-        Slot for new incomming connections from the clients.
+        Private slot for new incomming connections from the clients.
 </p><a NAME="BackgroundService.preferencesOrProjectChanged" ID="BackgroundService.preferencesOrProjectChanged"></a>
 <h4>BackgroundService.preferencesOrProjectChanged</h4>
 <b>preferencesOrProjectChanged</b>(<i></i>)
@@ -219,7 +219,8 @@ flag to kill a running task (bool)
 <h4>BackgroundService.serviceConnect</h4>
 <b>serviceConnect</b>(<i>fx, lang, modulepath, module, callback, onErrorCallback=None</i>)
 <p>
-        Announce a new service to the background service/ client.
+        Public method to announce a new service to the background
+        service/client.
 </p><dl>
 <dt><i>fx</i></dt>
 <dd>
@@ -244,7 +245,7 @@ function if client isn't available (function)
 <h4>BackgroundService.serviceDisconnect</h4>
 <b>serviceDisconnect</b>(<i>fx, lang</i>)
 <p>
-        Remove the service from the service list.
+        Public method to remove the service from the service list.
 </p><dl>
 <dt><i>fx</i></dt>
 <dd>
@@ -257,7 +258,8 @@ language of the service (str)
 <h4>BackgroundService.shutdown</h4>
 <b>shutdown</b>(<i></i>)
 <p>
-        Cleanup the connections and processes when eric is shuting down.
+        Public method to cleanup the connections and processes when eric is
+        shuting down.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />

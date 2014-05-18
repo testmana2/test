@@ -50,7 +50,7 @@ conflicts.
 QWidget, Ui_HgConflictsListDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>StatusRole</td></tr>
+<tr><td>FilenameRole</td></tr><tr><td>StatusRole</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -93,7 +93,7 @@ QWidget, Ui_HgConflictsListDialog
 <td>Private slot to show some error.</td>
 </tr><tr>
 <td><a href="#HgConflictsListDialog.closeEvent">closeEvent</a></td>
-<td>Private slot implementing a close event handler.</td>
+<td>Protected slot implementing a close event handler.</td>
 </tr><tr>
 <td><a href="#HgConflictsListDialog.keyPressEvent">keyPressEvent</a></td>
 <td>Protected slot to handle a key press event.</td>
@@ -242,7 +242,7 @@ error to be shown (string)
 <h4>HgConflictsListDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
 </p><dl>
 <dt><i>e</i></dt>
 <dd>
@@ -273,7 +273,15 @@ button that was clicked (QAbstractButton)
 <b>on_conflictsList_itemDoubleClicked</b>(<i>item, column</i>)
 <p>
         Private slot to open the double clicked entry.
-</p><a NAME="HgConflictsListDialog.on_conflictsList_itemSelectionChanged" ID="HgConflictsListDialog.on_conflictsList_itemSelectionChanged"></a>
+</p><dl>
+<dt><i>item</i></dt>
+<dd>
+reference to the double clicked item (QTreeWidgetItem)
+</dd><dt><i>column</i></dt>
+<dd>
+column that was double clicked (integer)
+</dd>
+</dl><a NAME="HgConflictsListDialog.on_conflictsList_itemSelectionChanged" ID="HgConflictsListDialog.on_conflictsList_itemSelectionChanged"></a>
 <h4>HgConflictsListDialog.on_conflictsList_itemSelectionChanged</h4>
 <b>on_conflictsList_itemSelectionChanged</b>(<i></i>)
 <p>

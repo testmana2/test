@@ -171,7 +171,7 @@ class PersonalInformationManager(QObject):
     
     def viewKeyPressEvent(self, view, evt):
         """
-        Public method to handle key press events we are interested in.
+        Protected method to handle key press events we are interested in.
         
         @param view reference to the view (HelpBrowser)
         @param evt reference to the key event (QKeyEvent)

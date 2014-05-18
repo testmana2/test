@@ -98,7 +98,7 @@ QsciScintilla
 <td>Public method to clear all occurrences of an indicator.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.clearAlternateKeys">clearAlternateKeys</a></td>
-<td>Protected method to clear the alternate key commands.</td>
+<td>Public method to clear the alternate key commands.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.clearIndicator">clearIndicator</a></td>
 <td>Public method to clear an indicator for the given range.</td>
@@ -107,7 +107,7 @@ QsciScintilla
 <td>Public method to clear an indicator for the given range.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.clearKeys">clearKeys</a></td>
-<td>Protected method to clear the key commands.</td>
+<td>Public method to clear the key commands.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.clearStyles">clearStyles</a></td>
 <td>Public method to set the styles according the selected Qt style.</td>
@@ -146,7 +146,7 @@ QsciScintilla
 <td>Public method to perform a simple editor command.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.event">event</a></td>
-<td>Protected method to handle events.</td>
+<td>Public method to handle events.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.extendSelectionLeft">extendSelectionLeft</a></td>
 <td>Public method to extend the selection one character to the left.</td>
@@ -176,7 +176,7 @@ QsciScintilla
 <td>Public method to flash the find indicator for the given range.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.focusOutEvent">focusOutEvent</a></td>
-<td>Public method called when the editor loses focus.</td>
+<td>Protected method called when the editor loses focus.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.foldExpandedAt">foldExpandedAt</a></td>
 <td>Public method to determine, if a fold is expanded.</td>
@@ -248,7 +248,7 @@ QsciScintilla
 <td>Protected method to cope with a glitch in some Qscintilla versions handling input events.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.inputMethodQuery">inputMethodQuery</a></td>
-<td>Protected method to cope with a glitch in some Qscintilla versions handling input events.</td>
+<td>Public method to cope with a glitch in some Qscintilla versions handling input events.</td>
 </tr><tr>
 <td><a href="#QsciScintillaCompat.isModified">isModified</a></td>
 <td>Public method to return the modification status.</td>
@@ -506,7 +506,7 @@ number of the indicator (integer,
 <h4>QsciScintillaCompat.clearAlternateKeys</h4>
 <b>clearAlternateKeys</b>(<i></i>)
 <p>
-        Protected method to clear the alternate key commands.
+        Public method to clear the alternate key commands.
 </p><a NAME="QsciScintillaCompat.clearIndicator" ID="QsciScintillaCompat.clearIndicator"></a>
 <h4>QsciScintillaCompat.clearIndicator</h4>
 <b>clearIndicator</b>(<i>indicator, sline, sindex, eline, eindex</i>)
@@ -551,7 +551,7 @@ length of the indicator (integer)
 <h4>QsciScintillaCompat.clearKeys</h4>
 <b>clearKeys</b>(<i></i>)
 <p>
-        Protected method to clear the key commands.
+        Public method to clear the key commands.
 </p><a NAME="QsciScintillaCompat.clearStyles" ID="QsciScintillaCompat.clearStyles"></a>
 <h4>QsciScintillaCompat.clearStyles</h4>
 <b>clearStyles</b>(<i></i>)
@@ -646,7 +646,7 @@ the scintilla command to be performed (integer)
 <h4>QsciScintillaCompat.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method to handle events.
+        Public method to handle events.
 </p><p>
         Note: We are not interested in the standard QsciScintilla event
         handling because we do it our self.
@@ -767,7 +767,7 @@ index of the indicator end (integer)
 <h4>QsciScintillaCompat.focusOutEvent</h4>
 <b>focusOutEvent</b>(<i>event</i>)
 <p>
-        Public method called when the editor loses focus.
+        Protected method called when the editor loses focus.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -1077,7 +1077,7 @@ reference to the input method event object
 <h4>QsciScintillaCompat.inputMethodQuery</h4>
 <b>inputMethodQuery</b>(<i>query</i>)
 <p>
-            Protected method to cope with a glitch in some Qscintilla versions
+            Public method to cope with a glitch in some Qscintilla versions
             handling input events.
 </p><p>
             Note: This simply disables the Qscintilla behavior.

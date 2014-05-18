@@ -612,7 +612,7 @@ class UMLGraphicsView(E5GraphicsView):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)

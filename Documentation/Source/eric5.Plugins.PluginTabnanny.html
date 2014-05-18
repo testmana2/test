@@ -92,7 +92,7 @@ QObject
 <td>Private slot called, when the the project menu or a submenu is about to be shown.</td>
 </tr><tr>
 <td><a href="#TabnannyPlugin.__projectTabnanny">__projectTabnanny</a></td>
-<td>Public slot used to check the project files for bad indentations.</td>
+<td>Private slot used to check the project files for bad indentations.</td>
 </tr><tr>
 <td><a href="#TabnannyPlugin.__serviceError">__serviceError</a></td>
 <td>Private slot handling service errors.</td>
@@ -104,7 +104,7 @@ QObject
 <td>Public method to deactivate this plugin.</td>
 </tr><tr>
 <td><a href="#TabnannyPlugin.indentCheck">indentCheck</a></td>
-<td>Method to prepare a style check on one Python source file in another task.</td>
+<td>Public method to prepare a style check on one Python source file.</td>
 </tr><tr>
 <td><a href="#TabnannyPlugin.serviceErrorPy2">serviceErrorPy2</a></td>
 <td>Public method handling service errors for Python 2.</td>
@@ -212,7 +212,7 @@ reference to the menu (QMenu)
 <h4>TabnannyPlugin.__projectTabnanny</h4>
 <b>__projectTabnanny</b>(<i></i>)
 <p>
-        Public slot used to check the project files for bad indentations.
+        Private slot used to check the project files for bad indentations.
 </p><a NAME="TabnannyPlugin.__serviceError" ID="TabnannyPlugin.__serviceError"></a>
 <h4>TabnannyPlugin.__serviceError</h4>
 <b>__serviceError</b>(<i>fn, msg</i>)
@@ -245,8 +245,7 @@ tuple of None and activation status (boolean)
 <h4>TabnannyPlugin.indentCheck</h4>
 <b>indentCheck</b>(<i>lang, filename, source</i>)
 <p>
-        Method to prepare a style check on one Python source file in another
-        task.
+        Public method to prepare a style check on one Python source file.
 </p><dl>
 <dt><i>lang</i></dt>
 <dd>

@@ -591,7 +591,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
     
     def __showContextMenu(self, coord):
         """
-        Protected slot to show the context menu of the status list.
+        Private slot to show the context menu of the status list.
         
         @param coord the position of the mouse pointer (QPoint)
         """

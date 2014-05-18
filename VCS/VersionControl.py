@@ -643,7 +643,7 @@ class VersionControl(QObject):
 
     def addArguments(self, args, argslist):
         """
-        Protected method to add an argument list to the already present
+        Public method to add an argument list to the already present
         arguments.
         
         @param args current arguments list (list of strings)

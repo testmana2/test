@@ -59,7 +59,7 @@ QObject
 <td>Protected classmethod to get a new dictionary.</td>
 </tr><tr>
 <td><a href="#SpellChecker.getAvailableLanguages">getAvailableLanguages</a></td>
-<td>Public classmethod to get all available languages.</td>
+<td>Class method to get all available languages.</td>
 </tr><tr>
 <td><a href="#SpellChecker.getDefaultPath">getDefaultPath</a></td>
 <td>Class method to get the default path names of the user dictionaries.</td>
@@ -68,10 +68,10 @@ QObject
 <td>Class method to get the path name of a user dictionary file.</td>
 </tr><tr>
 <td><a href="#SpellChecker.isAvailable">isAvailable</a></td>
-<td>Public classmethod to check, if spellchecking is available.</td>
+<td>Class method to check, if spellchecking is available.</td>
 </tr><tr>
 <td><a href="#SpellChecker.setDefaultLanguage">setDefaultLanguage</a></td>
-<td>Public classmethod to set the default language.</td>
+<td>Class method to set the default language.</td>
 </tr>
 </table>
 <h3>Methods</h3>
@@ -90,16 +90,16 @@ QObject
 <td>Private method to check the document incrementally.</td>
 </tr><tr>
 <td><a href="#SpellChecker.__iter__">__iter__</a></td>
-<td>Private method to create an iterator.</td>
+<td>Special method to create an iterator.</td>
 </tr><tr>
 <td><a href="#SpellChecker.__next__">__next__</a></td>
-<td>Public method to advance to the next error.</td>
+<td>Special method to advance to the next error.</td>
 </tr><tr>
 <td><a href="#SpellChecker.add">add</a></td>
 <td>Public method to add a word to the personal word list.</td>
 </tr><tr>
 <td><a href="#SpellChecker.checkCurrentPage">checkCurrentPage</a></td>
-<td>Private method to check the currently visible page.</td>
+<td>Public method to check the currently visible page.</td>
 </tr><tr>
 <td><a href="#SpellChecker.checkDocument">checkDocument</a></td>
 <td>Public method to check the complete document.</td>
@@ -111,7 +111,7 @@ QObject
 <td>Public method to check some lines of text.</td>
 </tr><tr>
 <td><a href="#SpellChecker.checkSelection">checkSelection</a></td>
-<td>Private method to check the current selection.</td>
+<td>Public method to check the current selection.</td>
 </tr><tr>
 <td><a href="#SpellChecker.checkWord">checkWord</a></td>
 <td>Public method to check the word at position pos.</td>
@@ -186,7 +186,7 @@ reference to the dictionary (enchant.Dict)
 <h4>SpellChecker.getAvailableLanguages (class method)</h4>
 <b>getAvailableLanguages</b>(<i></i>)
 <p>
-        Public classmethod to get all available languages.
+        Class method to get all available languages.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -230,7 +230,7 @@ file name of the user dictionary or the user exception
 <h4>SpellChecker.isAvailable (class method)</h4>
 <b>isAvailable</b>(<i></i>)
 <p>
-        Public classmethod to check, if spellchecking is available.
+        Class method to check, if spellchecking is available.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -240,7 +240,7 @@ flag indicating availability (boolean)
 <h4>SpellChecker.setDefaultLanguage (class method)</h4>
 <b>setDefaultLanguage</b>(<i>language</i>)
 <p>
-        Public classmethod to set the default language.
+        Class method to set the default language.
 </p><dl>
 <dt><i>language</i></dt>
 <dd>
@@ -311,7 +311,7 @@ tuple of three values (the extracted word (string),
 <h4>SpellChecker.__iter__</h4>
 <b>__iter__</b>(<i></i>)
 <p>
-        Private method to create an iterator.
+        Special method to create an iterator.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -321,7 +321,7 @@ self
 <h4>SpellChecker.__next__</h4>
 <b>__next__</b>(<i></i>)
 <p>
-        Public method to advance to the next error.
+        Special method to advance to the next error.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -346,7 +346,7 @@ word to add (string)
 <h4>SpellChecker.checkCurrentPage</h4>
 <b>checkCurrentPage</b>(<i></i>)
 <p>
-        Private method to check the currently visible page.
+        Public method to check the currently visible page.
 </p><a NAME="SpellChecker.checkDocument" ID="SpellChecker.checkDocument"></a>
 <h4>SpellChecker.checkDocument</h4>
 <b>checkDocument</b>(<i></i>)
@@ -374,7 +374,7 @@ line number of last line to check (integer)
 <h4>SpellChecker.checkSelection</h4>
 <b>checkSelection</b>(<i></i>)
 <p>
-        Private method to check the current selection.
+        Public method to check the current selection.
 </p><a NAME="SpellChecker.checkWord" ID="SpellChecker.checkWord"></a>
 <h4>SpellChecker.checkWord</h4>
 <b>checkWord</b>(<i>pos, atEnd=False</i>)

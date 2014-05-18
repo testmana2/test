@@ -29,7 +29,7 @@ class VisibilityMixin(ClbrBaseClasses.ClbrVisibilityMixinBase):
     """
     def __init__(self):
         """
-        Method to initialize the visibility.
+        Constructor
         """
         if self.name.startswith('__'):
             self.setPrivate()

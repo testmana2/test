@@ -73,7 +73,7 @@ class DebugThread(DebugBase):
     
     def traceThread(self):
         """
-        Private method to setup tracing for this thread.
+        Public method to setup tracing for this thread.
         """
         self.set_trace()
         if not self._mainThread:
@@ -81,7 +81,7 @@ class DebugThread(DebugBase):
     
     def bootstrap(self):
         """
-        Private method to bootstrap the thread.
+        Public method to bootstrap the thread.
         
         It wraps the call to the user function to enable tracing
         before hand.
@@ -101,7 +101,7 @@ class DebugThread(DebugBase):
     
     def trace_dispatch(self, frame, event, arg):
         """
-        Private method wrapping the trace_dispatch of bdb.py.
+        Public method wrapping the trace_dispatch of bdb.py.
         
         It wraps the call to dispatch tracing into
         bdb to make sure we have locked the client to prevent multiple

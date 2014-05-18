@@ -33,7 +33,7 @@ class DCTestResult(TestResult):
         
     def addFailure(self, test, err):
         """
-        Method called if a test failed.
+        Public method called if a test failed.
         
         @param test Reference to the test object
         @param err The error traceback
@@ -46,7 +46,7 @@ class DCTestResult(TestResult):
         
     def addError(self, test, err):
         """
-        Method called if a test errored.
+        Public method called if a test errored.
         
         @param test Reference to the test object
         @param err The error traceback
@@ -59,7 +59,7 @@ class DCTestResult(TestResult):
         
     def addSkip(self, test, reason):
         """
-        Method called if a test was skipped.
+        Public method called if a test was skipped.
         
         @param test reference to the test object
         @param reason reason for skipping the test (string)
@@ -71,7 +71,7 @@ class DCTestResult(TestResult):
         
     def addExpectedFailure(self, test, err):
         """
-        Method called if a test failed expected.
+        Public method called if a test failed expected.
         
         @param test reference to the test object
         @param err error traceback
@@ -84,7 +84,7 @@ class DCTestResult(TestResult):
         
     def addUnexpectedSuccess(self, test):
         """
-        Method called if a test succeeded expectedly.
+        Public method called if a test succeeded expectedly.
         
         @param test reference to the test object
         """
@@ -95,7 +95,7 @@ class DCTestResult(TestResult):
         
     def startTest(self, test):
         """
-        Method called at the start of a test.
+        Public method called at the start of a test.
         
         @param test Reference to the test object
         """
@@ -106,7 +106,7 @@ class DCTestResult(TestResult):
 
     def stopTest(self, test):
         """
-        Method called at the end of a test.
+        Public method called at the end of a test.
         
         @param test Reference to the test object
         """

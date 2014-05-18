@@ -118,7 +118,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         
     def eventFilter(self, watched, event):
         """
-        Method called to filter the event queue.
+        Public method called to filter the event queue.
         
         @param watched the QObject being watched
         @param event the event that occurred
@@ -132,7 +132,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
         
     def keyPressEvent(self, evt):
         """
-        Private method to handle a key press event.
+        Protected method to handle a key press event.
         
         @param evt the key event (QKeyEvent)
         """

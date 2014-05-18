@@ -115,7 +115,7 @@ class Uid(int):
     """
     def __repr__(self):
         """
-        Public method to return an object representation.
+        Special method to return an object representation.
         
         @return object representation (string)
         """
@@ -278,7 +278,7 @@ class PlistReader(object):
     
     def reset(self):
         """
-        Private method to reset the instance object.
+        Public method to reset the instance object.
         """
         self.trailer = None
         self.contents = b''
@@ -287,7 +287,7 @@ class PlistReader(object):
     
     def readRoot(self):
         """
-        Private method to read the root object.
+        Public method to read the root object.
         
         @return unpickled object
         @exception InvalidPlistException raised to indicate an invalid
@@ -327,7 +327,7 @@ class PlistReader(object):
     
     def setCurrentOffsetToObjectNumber(self, objectNumber):
         """
-        Private method to set the current offset.
+        Public method to set the current offset.
         
         @param objectNumber number of the object (integer)
         """
@@ -335,7 +335,7 @@ class PlistReader(object):
     
     def readObject(self):
         """
-        Private method to read the object data.
+        Public method to read the object data.
         
         @return unpickled object
         @exception InvalidPlistException raised to indicate an invalid
@@ -414,7 +414,7 @@ class PlistReader(object):
     
     def readInteger(self, bytes):
         """
-        Private method to read an Integer object.
+        Public method to read an Integer object.
         
         @param bytes length of the object (integer)
         @return integer object
@@ -428,7 +428,7 @@ class PlistReader(object):
     
     def readReal(self, length):
         """
-        Private method to read a Real object.
+        Public method to read a Real object.
         
         @param length length of the object (integer)
         @return float object
@@ -449,7 +449,7 @@ class PlistReader(object):
     
     def readRefs(self, count):
         """
-        Private method to read References.
+        Public method to read References.
         
         @param count amount of the references (integer)
         @return list of references (list of integers)
@@ -468,7 +468,7 @@ class PlistReader(object):
     
     def readArray(self, count):
         """
-        Private method to read an Array object.
+        Public method to read an Array object.
         
         @param count number of array elements (integer)
         @return list of unpickled objects
@@ -485,7 +485,7 @@ class PlistReader(object):
     
     def readDict(self, count):
         """
-        Private method to read a Dictionary object.
+        Public method to read a Dictionary object.
         
         @param count number of dictionary elements (integer)
         @return dictionary of unpickled objects
@@ -505,7 +505,7 @@ class PlistReader(object):
     
     def readAsciiString(self, length):
         """
-        Private method to read an ASCII encoded string.
+        Public method to read an ASCII encoded string.
         
         @param length length of the string (integer)
         @return ASCII encoded string
@@ -519,7 +519,7 @@ class PlistReader(object):
     
     def readUnicode(self, length):
         """
-        Private method to read an Unicode encoded string.
+        Public method to read an Unicode encoded string.
         
         @param length length of the string (integer)
         @return unicode encoded string
@@ -533,7 +533,7 @@ class PlistReader(object):
     
     def readDate(self):
         """
-        Private method to read a date.
+        Public method to read a date.
         
         @return date object (datetime.datetime)
         """
@@ -548,7 +548,7 @@ class PlistReader(object):
     
     def readData(self, length):
         """
-        Private method to read some bytes.
+        Public method to read some bytes.
         
         @param length number of bytes to read (integer)
         @return Data object
@@ -559,7 +559,7 @@ class PlistReader(object):
     
     def readUid(self, length):
         """
-        Private method to read a UID.
+        Public method to read a UID.
         
         @param length length of the UID (integer)
         @return Uid object
@@ -568,7 +568,7 @@ class PlistReader(object):
     
     def getSizedInteger(self, data, bytes):
         """
-        Private method to read an integer of a specific size.
+        Public method to read an integer of a specific size.
         
         @param data data to extract the integer from (bytes)
         @param bytes length of the integer (integer)
@@ -606,7 +606,7 @@ class HashableWrapper(object):
 
     def __repr__(self):
         """
-        Public method to generate a representation of the object.
+        Special method to generate a representation of the object.
         
         @return object representation (string)
         """
@@ -627,7 +627,7 @@ class BoolWrapper(object):
 
     def __repr__(self):
         """
-        Public method to generate a representation of the object.
+        Special method to generate a representation of the object.
         
         @return object representation (string)
         """
@@ -661,7 +661,7 @@ class PlistWriter(object):
 
     def reset(self):
         """
-        Private method to reset the instance object.
+        Public method to reset the instance object.
         """
         self.byteCounts = PlistByteCounts(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
         self.trailer = PlistTrailer(0, 0, 0, 0, 0)
@@ -675,7 +675,7 @@ class PlistWriter(object):
         
     def positionOfObjectReference(self, obj):
         """
-        Private method to get the position of an object.
+        Public method to get the position of an object.
         
         If the given object has been written already, return its
         position in the offset table. Otherwise, return None.
@@ -737,7 +737,7 @@ class PlistWriter(object):
     
     def wrapRoot(self, root):
         """
-        Private method to generate object wrappers.
+        Public method to generate object wrappers.
         
         @param root object to be wrapped
         @return wrapped object
@@ -856,7 +856,7 @@ class PlistWriter(object):
 
     def writeObjectReference(self, obj, output):
         """
-        Private method to write an object reference.
+        Public method to write an object reference.
         
         Tries to write an object reference, adding it to the references
         table. Does not write the actual object bytes or set the reference
@@ -881,7 +881,7 @@ class PlistWriter(object):
 
     def writeObject(self, obj, output, setReferencePosition=False):
         """
-        Private method to serialize the given object to the output.
+        Public method to serialize the given object to the output.
         
         @param obj object to be serialized
         @param output output to be serialized to (bytes)
@@ -973,7 +973,7 @@ class PlistWriter(object):
     
     def writeOffsetTable(self, output):
         """
-        Private method to write all of the object reference offsets.
+        Public method to write all of the object reference offsets.
         
         @param output current output (bytes)
         @return new output (bytes)
@@ -995,7 +995,7 @@ class PlistWriter(object):
     
     def binaryReal(self, obj):
         """
-        Private method to pack a real object.
+        Public method to pack a real object.
         
         @param obj real to be packed
         @return serialized object (bytes)
@@ -1006,7 +1006,7 @@ class PlistWriter(object):
     
     def binaryInt(self, obj, bytes=None):
         """
-        Private method to pack an integer object.
+        Public method to pack an integer object.
         
         @param obj integer to be packed
         @param bytes length the integer should be packed into (integer)
@@ -1033,7 +1033,7 @@ class PlistWriter(object):
     
     def intSize(self, obj):
         """
-        Private method to determine the number of bytes necessary to store the
+        Public method to determine the number of bytes necessary to store the
         given integer.
         
         @param obj integer object
@@ -1062,7 +1062,7 @@ class PlistWriter(object):
     
     def realSize(self, obj):
         """
-        Private method to determine the number of bytes necessary to store the
+        Public method to determine the number of bytes necessary to store the
         given real.
         
         @param obj real object

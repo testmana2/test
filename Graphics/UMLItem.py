@@ -29,7 +29,7 @@ class UMLModel(object):
     
     def getName(self):
         """
-        Method to retrieve the model name.
+        Public method to retrieve the model name.
         
         @return model name (string)
         """
@@ -78,7 +78,7 @@ class UMLItem(QGraphicsRectItem):
     
     def getName(self):
         """
-        Method to retrieve the item name.
+        Public method to retrieve the item name.
         
         @return item name (string)
         """
@@ -100,7 +100,7 @@ class UMLItem(QGraphicsRectItem):
     
     def addAssociation(self, assoc):
         """
-        Method to add an association to this widget.
+        Public method to add an association to this widget.
         
         @param assoc association to be added (AssociationWidget)
         """
@@ -109,7 +109,7 @@ class UMLItem(QGraphicsRectItem):
     
     def removeAssociation(self, assoc):
         """
-        Method to remove an association to this widget.
+        Public method to remove an association to this widget.
         
         @param assoc association to be removed (AssociationWidget)
         """
@@ -118,7 +118,7 @@ class UMLItem(QGraphicsRectItem):
     
     def removeAssociations(self):
         """
-        Method to remove all associations of this widget.
+        Public method to remove all associations of this widget.
         """
         for assoc in self.associations[:]:
             assoc.unassociate()
@@ -127,7 +127,7 @@ class UMLItem(QGraphicsRectItem):
     
     def adjustAssociations(self):
         """
-        Method to adjust the associations to widget movements.
+        Public method to adjust the associations to widget movements.
         """
         if self.shouldAdjustAssociations:
             for assoc in self.associations:
@@ -136,7 +136,7 @@ class UMLItem(QGraphicsRectItem):
     
     def moveBy(self, dx, dy):
         """
-        Overriden method to move the widget relative.
+        Public overriden method to move the widget relative.
         
         @param dx relative movement in x-direction (float)
         @param dy relative movement in y-direction (float)
@@ -146,7 +146,7 @@ class UMLItem(QGraphicsRectItem):
     
     def setPos(self, x, y):
         """
-        Overriden method to set the items position.
+        Public overriden method to set the items position.
         
         @param x absolute x-position (float)
         @param y absolute y-position (float)
@@ -156,7 +156,7 @@ class UMLItem(QGraphicsRectItem):
     
     def itemChange(self, change, value):
         """
-        Protected method called when an items state changes.
+        Public method called when an items state changes.
         
         @param change the item's change (QGraphicsItem.GraphicsItemChange)
         @param value the value of the change

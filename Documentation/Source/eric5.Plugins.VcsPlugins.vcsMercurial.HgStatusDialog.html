@@ -138,7 +138,7 @@ QWidget, Ui_HgStatusDialog
 <td>Private slot to prepare the Add button menu before it is shown.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__showContextMenu">__showContextMenu</a></td>
-<td>Protected slot to show the context menu of the status list.</td>
+<td>Private slot to show the context menu of the status list.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__showError">__showError</a></td>
 <td>Private slot to show some error.</td>
@@ -150,7 +150,7 @@ QWidget, Ui_HgStatusDialog
 <td>Private method to update the Commit button status.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.closeEvent">closeEvent</a></td>
-<td>Private slot implementing a close event handler.</td>
+<td>Protected slot implementing a close event handler.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.keyPressEvent">keyPressEvent</a></td>
 <td>Protected slot to handle a key press event.</td>
@@ -412,7 +412,7 @@ output line to be processed (string)
 <h4>HgStatusDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
 <p>
-        Protected slot to show the context menu of the status list.
+        Private slot to show the context menu of the status list.
 </p><dl>
 <dt><i>coord</i></dt>
 <dd>
@@ -442,7 +442,7 @@ error to be shown (string)
 <h4>HgStatusDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
 </p><dl>
 <dt><i>e</i></dt>
 <dd>

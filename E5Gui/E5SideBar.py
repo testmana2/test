@@ -232,7 +232,7 @@ class E5SideBar(QWidget):
     
     def eventFilter(self, obj, evt):
         """
-        Protected method to handle some events for the tabbar.
+        Public method to handle some events for the tabbar.
         
         @param obj reference to the object (QObject)
         @param evt reference to the event object (QEvent)

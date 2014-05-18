@@ -44,7 +44,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     
     def __checkButtons(self):
         """
-        Public slot to set the enabled state of the buttons.
+        Private slot to set the enabled state of the buttons.
         """
         enable = True
         selectedItems = self.networksList.selectedItems()
@@ -119,7 +119,7 @@ class IrcNetworkListDialog(QDialog, Ui_IrcNetworkListDialog):
     @pyqtSlot()
     def on_networksList_itemSelectionChanged(self):
         """
-        Privat slot to handle changes of the selection of networks.
+        Private slot to handle changes of the selection of networks.
         """
         self.__checkButtons()
     

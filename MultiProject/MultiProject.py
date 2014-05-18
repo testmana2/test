@@ -890,7 +890,7 @@ class MultiProject(QObject):
     
     def __openMasterProject(self, reopen=True):
         """
-        Public slot to open the master project.
+        Private slot to open the master project.
         
         @param reopen flag indicating, that the master project should be
             reopened, if it has been opened already (boolean)

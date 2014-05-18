@@ -147,7 +147,7 @@ QWidget, Ui_SvnStatusDialog
 <td>Private slot to handle the Side-by-Side Diff context menu entry.</td>
 </tr><tr>
 <td><a href="#SvnStatusDialog.__showContextMenu">__showContextMenu</a></td>
-<td>Protected slot to show the context menu of the status list.</td>
+<td>Private slot to show the context menu of the status list.</td>
 </tr><tr>
 <td><a href="#SvnStatusDialog.__stealLock">__stealLock</a></td>
 <td>Private slot to handle the Break Lock context menu entry.</td>
@@ -162,7 +162,7 @@ QWidget, Ui_SvnStatusDialog
 <td>Private method to update the Commit button status.</td>
 </tr><tr>
 <td><a href="#SvnStatusDialog.closeEvent">closeEvent</a></td>
-<td>Private slot implementing a close event handler.</td>
+<td>Protected slot implementing a close event handler.</td>
 </tr><tr>
 <td><a href="#SvnStatusDialog.keyPressEvent">keyPressEvent</a></td>
 <td>Protected slot to handle a key press event.</td>
@@ -472,7 +472,7 @@ exit status of the process (QProcess.ExitStatus)
 <h4>SvnStatusDialog.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
 <p>
-        Protected slot to show the context menu of the status list.
+        Private slot to show the context menu of the status list.
 </p><dl>
 <dt><i>coord</i></dt>
 <dd>
@@ -502,7 +502,7 @@ the position of the mouse pointer (QPoint)
 <h4>SvnStatusDialog.closeEvent</h4>
 <b>closeEvent</b>(<i>e</i>)
 <p>
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
 </p><dl>
 <dt><i>e</i></dt>
 <dd>

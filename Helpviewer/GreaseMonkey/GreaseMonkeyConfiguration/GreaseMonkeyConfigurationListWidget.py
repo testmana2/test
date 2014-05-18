@@ -57,7 +57,7 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
     
     def mousePressEvent(self, evt):
         """
-        Private method handling presses of mouse buttons.
+        Protected method handling presses of mouse buttons.
         
         @param evt mouse press event (QMouseEvent)
         """
@@ -69,7 +69,7 @@ class GreaseMonkeyConfigurationListWidget(QListWidget):
     
     def mouseDoubleClickEvent(self, evt):
         """
-        Private method handling mouse double click events.
+        Protected method handling mouse double click events.
         
         @param evt mouse press event (QMouseEvent)
         """

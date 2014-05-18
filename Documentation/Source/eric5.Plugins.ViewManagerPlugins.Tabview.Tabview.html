@@ -251,10 +251,10 @@ E5TabWidget
 <td>Private slot to show the navigation button menu.</td>
 </tr><tr>
 <td><a href="#TabWidget.addTab">addTab</a></td>
-<td>Overwritten method to add a new tab.</td>
+<td>Public method to add a new tab.</td>
 </tr><tr>
 <td><a href="#TabWidget.currentWidget">currentWidget</a></td>
-<td>Overridden method to return a reference to the current page.</td>
+<td>Public method to return a reference to the current page.</td>
 </tr><tr>
 <td><a href="#TabWidget.hasEditor">hasEditor</a></td>
 <td>Public method to check for an editor.</td>
@@ -266,7 +266,7 @@ E5TabWidget
 <td>Public method to get the tab index of the given editor.</td>
 </tr><tr>
 <td><a href="#TabWidget.insertWidget">insertWidget</a></td>
-<td>Overwritten method to insert a new tab.</td>
+<td>Public method to insert a new tab.</td>
 </tr><tr>
 <td><a href="#TabWidget.mouseDoubleClickEvent">mouseDoubleClickEvent</a></td>
 <td>Protected method handling double click events.</td>
@@ -485,7 +485,7 @@ index of the tab the menu is requested for (integer)
 <h4>TabWidget.addTab</h4>
 <b>addTab</b>(<i>assembly, title</i>)
 <p>
-        Overwritten method to add a new tab.
+        Public method to add a new tab.
 </p><dl>
 <dt><i>assembly</i></dt>
 <dd>
@@ -499,7 +499,7 @@ title for the new tab (string)
 <h4>TabWidget.currentWidget</h4>
 <b>currentWidget</b>(<i></i>)
 <p>
-        Overridden method to return a reference to the current page.
+        Public method to return a reference to the current page.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -550,7 +550,7 @@ tab index of the editor (integer)
 <h4>TabWidget.insertWidget</h4>
 <b>insertWidget</b>(<i>index, assembly, title</i>)
 <p>
-        Overwritten method to insert a new tab.
+        Public method to insert a new tab.
 </p><dl>
 <dt><i>index</i></dt>
 <dd>
@@ -749,7 +749,7 @@ QSplitter, ViewManager
 <td>Public method to get a reference to a tab widget knowing its ID.</td>
 </tr><tr>
 <td><a href="#Tabview.insertView">insertView</a></td>
-<td>Protected method to add a view (i.e.</td>
+<td>Public method to add a view (i.e.</td>
 </tr><tr>
 <td><a href="#Tabview.nextSplit">nextSplit</a></td>
 <td>Public slot used to move to the next split.</td>
@@ -970,7 +970,7 @@ reference to the tab widget (TabWidget)
 <h4>Tabview.insertView</h4>
 <b>insertView</b>(<i>win, tabWidget, index, fn=None, noName=""</i>)
 <p>
-        Protected method to add a view (i.e. window).
+        Public method to add a view (i.e. window).
 </p><dl>
 <dt><i>win</i></dt>
 <dd>

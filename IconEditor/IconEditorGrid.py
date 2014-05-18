@@ -622,7 +622,7 @@ class IconEditorGrid(QWidget):
     
     def __drawTool(self, pos, mark):
         """
-        Public method to perform a draw operation depending of the current
+        Private method to perform a draw operation depending of the current
         tool.
         
         @param pos widget coordinate to perform the draw operation at (QPoint)

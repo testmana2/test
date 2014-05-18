@@ -13,8 +13,9 @@ from __future__ import unicode_literals
 import os
 
 from PyQt4.QtCore import pyqtSlot, Qt, QPoint, QProcess, QTimer
-from PyQt4.QtGui import (QWidget, QAbstractButton, QDialogButtonBox,
-    QHeaderView, QTreeWidgetItem, QLineEdit, QApplication)
+from PyQt4.QtGui import (
+    QWidget, QAbstractButton, QDialogButtonBox, QHeaderView, QTreeWidgetItem,
+    QLineEdit, QApplication)
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
@@ -71,7 +72,7 @@ class HgConflictsListDialog(QWidget, Ui_HgConflictsListDialog):
     
     def closeEvent(self, e):
         """
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
         
         @param e close event (QCloseEvent)
         """
@@ -364,6 +365,9 @@ class HgConflictsListDialog(QWidget, Ui_HgConflictsListDialog):
     def on_conflictsList_itemDoubleClicked(self, item, column):
         """
         Private slot to open the double clicked entry.
+        
+        @param item reference to the double clicked item (QTreeWidgetItem)
+        @param column column that was double clicked (integer)
         """
         self.on_editButton_clicked()
     

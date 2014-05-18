@@ -165,7 +165,7 @@ class PixmapDiagram(E5MainWindow):
         
     def getDiagramName(self):
         """
-        Method to retrieve a name for the diagram.
+        Public method to retrieve a name for the diagram.
         
         @return name for the diagram
         """
@@ -173,7 +173,7 @@ class PixmapDiagram(E5MainWindow):
         
     def getStatus(self):
         """
-        Method to retrieve the status of the canvas.
+        Public method to retrieve the status of the canvas.
         
         @return flag indicating a successful pixmap loading (boolean)
         """
@@ -197,7 +197,7 @@ class PixmapDiagram(E5MainWindow):
     
     def event(self, evt):
         """
-        Protected method handling events.
+        Public method handling events.
         
         @param evt reference to the event (QEvent)
         @return flag indicating, if the event was handled (boolean)
@@ -253,7 +253,7 @@ class PixmapDiagram(E5MainWindow):
     
     def __doZoom(self, value):
         """
-        Public method to set the zoom value in percent.
+        Private method to set the zoom value in percent.
         
         @param value zoom value in percent (integer)
         """
@@ -294,7 +294,7 @@ class PixmapDiagram(E5MainWindow):
         
     def __zoom(self):
         """
-        Public method to get the current zoom factor in percent.
+        Private method to get the current zoom factor in percent.
         
         @return current zoom factor in percent (integer)
         """

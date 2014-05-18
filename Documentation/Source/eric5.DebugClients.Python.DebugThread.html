@@ -66,7 +66,7 @@ DebugBase
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#DebugThread.bootstrap">bootstrap</a></td>
-<td>Private method to bootstrap the thread.</td>
+<td>Public method to bootstrap the thread.</td>
 </tr><tr>
 <td><a href="#DebugThread.get_ident">get_ident</a></td>
 <td>Public method to return the id of this thread.</td>
@@ -78,10 +78,10 @@ DebugBase
 <td>Public method to set the id for this thread.</td>
 </tr><tr>
 <td><a href="#DebugThread.traceThread">traceThread</a></td>
-<td>Private method to setup tracing for this thread.</td>
+<td>Public method to setup tracing for this thread.</td>
 </tr><tr>
 <td><a href="#DebugThread.trace_dispatch">trace_dispatch</a></td>
-<td>Private method wrapping the trace_dispatch of bdb.py.</td>
+<td>Public method wrapping the trace_dispatch of bdb.py.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -114,7 +114,7 @@ arguments to be passed to the thread
 <h4>DebugThread.bootstrap</h4>
 <b>bootstrap</b>(<i></i>)
 <p>
-        Private method to bootstrap the thread.
+        Public method to bootstrap the thread.
 </p><p>
         It wraps the call to the user function to enable tracing
         before hand.
@@ -152,12 +152,12 @@ id for this thread (int)
 <h4>DebugThread.traceThread</h4>
 <b>traceThread</b>(<i></i>)
 <p>
-        Private method to setup tracing for this thread.
+        Public method to setup tracing for this thread.
 </p><a NAME="DebugThread.trace_dispatch" ID="DebugThread.trace_dispatch"></a>
 <h4>DebugThread.trace_dispatch</h4>
 <b>trace_dispatch</b>(<i>frame, event, arg</i>)
 <p>
-        Private method wrapping the trace_dispatch of bdb.py.
+        Public method wrapping the trace_dispatch of bdb.py.
 </p><p>
         It wraps the call to dispatch tracing into
         bdb to make sure we have locked the client to prevent multiple

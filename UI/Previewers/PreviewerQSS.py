@@ -68,7 +68,7 @@ class PreviewerQSS(QWidget, Ui_PreviewerQSS):
     
     def processEditor(self, editor=None):
         """
-        Private slot to process an editor's text.
+        Public slot to process an editor's text.
         
         @param editor editor to be processed (Editor)
         """

@@ -58,7 +58,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
     def closeEvent(self, e):
         """
-        Private slot implementing a close event handler.
+        Protected slot implementing a close event handler.
         
         @param e close event (QCloseEvent)
         """

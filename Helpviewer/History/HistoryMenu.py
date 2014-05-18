@@ -225,7 +225,7 @@ class HistoryMostVisitedMenuModel(QSortFilterProxyModel):
     
     def lessThan(self, left, right):
         """
-        Protected method used to sort the displayed items.
+        Public method used to sort the displayed items.
         
         @param left index of left item (QModelIndex)
         @param right index of right item (QModelIndex)

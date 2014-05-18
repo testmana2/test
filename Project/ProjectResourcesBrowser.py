@@ -619,7 +619,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
     def __compileQRC(self, fn, noDialog=False, progress=None):
         """
-        Privat method to compile a .qrc file to a .py file.
+        Private method to compile a .qrc file to a .py file.
         
         @param fn filename of the .ui file to be compiled
         @param noDialog flag indicating silent operations

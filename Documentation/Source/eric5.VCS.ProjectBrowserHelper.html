@@ -103,16 +103,16 @@ QObject
 <td>Public method to add the VCS entries to the various project browser menus.</td>
 </tr><tr>
 <td><a href="#VcsProjectBrowserHelper.showContextMenu">showContextMenu</a></td>
-<td>Slot called before the context menu is shown.</td>
+<td>Public slot called before the context menu is shown.</td>
 </tr><tr>
 <td><a href="#VcsProjectBrowserHelper.showContextMenuDir">showContextMenuDir</a></td>
-<td>Slot called before the context menu is shown.</td>
+<td>Public slot called before the context menu is shown.</td>
 </tr><tr>
 <td><a href="#VcsProjectBrowserHelper.showContextMenuDirMulti">showContextMenuDirMulti</a></td>
-<td>Slot called before the context menu is shown.</td>
+<td>Public slot called before the context menu is shown.</td>
 </tr><tr>
 <td><a href="#VcsProjectBrowserHelper.showContextMenuMulti">showContextMenuMulti</a></td>
-<td>Slot called before the context menu (multiple selections) is shown.</td>
+<td>Public slot called before the context menu (multiple selections) is shown.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -256,7 +256,7 @@ reference to the multiple selection directory
 <h4>VcsProjectBrowserHelper.showContextMenu</h4>
 <b>showContextMenu</b>(<i>menu, standardItems</i>)
 <p>
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
 </p><p>
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the file status.
@@ -279,7 +279,7 @@ to indicate that this method must be
 <h4>VcsProjectBrowserHelper.showContextMenuDir</h4>
 <b>showContextMenuDir</b>(<i>menu, standardItems</i>)
 <p>
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
 </p><p>
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
@@ -302,7 +302,7 @@ to indicate that this method must be
 <h4>VcsProjectBrowserHelper.showContextMenuDirMulti</h4>
 <b>showContextMenuDirMulti</b>(<i>menu, standardItems</i>)
 <p>
-        Slot called before the context menu is shown.
+        Public slot called before the context menu is shown.
 </p><p>
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the directory status.
@@ -325,7 +325,8 @@ to indicate that this method must be
 <h4>VcsProjectBrowserHelper.showContextMenuMulti</h4>
 <b>showContextMenuMulti</b>(<i>menu, standardItems</i>)
 <p>
-        Slot called before the context menu (multiple selections) is shown.
+        Public slot called before the context menu (multiple selections) is
+        shown.
 </p><p>
         It enables/disables the VCS menu entries depending on the overall
         VCS status and the files status.

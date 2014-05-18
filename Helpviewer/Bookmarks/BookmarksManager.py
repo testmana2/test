@@ -79,7 +79,7 @@ class BookmarksManager(QObject):
     @classmethod
     def getFileName(cls):
         """
-        Public method to get the file name of the bookmark file.
+        Class method to get the file name of the bookmark file.
         
         @return name of the bookmark file (string)
         """

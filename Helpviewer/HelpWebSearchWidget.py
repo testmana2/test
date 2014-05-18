@@ -339,7 +339,7 @@ class HelpWebSearchWidget(E5ClearableLineEdit):
     
     def __loadSearches(self):
         """
-        Public method to load the recently performed web searches.
+        Private method to load the recently performed web searches.
         """
         searches = Preferences.Prefs.settings.value('Help/WebSearches')
         if searches is not None:

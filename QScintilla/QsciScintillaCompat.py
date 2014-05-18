@@ -1191,14 +1191,14 @@ class QsciScintillaCompat(QsciScintilla):
     
     def clearKeys(self):
         """
-        Protected method to clear the key commands.
+        Public method to clear the key commands.
         """
         # call into the QsciCommandSet
         self.standardCommands().clearKeys()
         
     def clearAlternateKeys(self):
         """
-        Protected method to clear the alternate key commands.
+        Public method to clear the alternate key commands.
         """
         # call into the QsciCommandSet
         self.standardCommands().clearAlternateKeys()
@@ -1209,7 +1209,7 @@ class QsciScintillaCompat(QsciScintilla):
     
     def focusOutEvent(self, event):
         """
-        Public method called when the editor loses focus.
+        Protected method called when the editor loses focus.
         
         @param event event object (QFocusEvent)
         """
@@ -1233,7 +1233,7 @@ class QsciScintillaCompat(QsciScintilla):
     
     def event(self, evt):
         """
-        Protected method to handle events.
+        Public method to handle events.
         
         Note: We are not interested in the standard QsciScintilla event
         handling because we do it our self.
@@ -1259,7 +1259,7 @@ class QsciScintillaCompat(QsciScintilla):
         
         def inputMethodQuery(self, query):
             """
-            Protected method to cope with a glitch in some Qscintilla versions
+            Public method to cope with a glitch in some Qscintilla versions
             handling input events.
             
             Note: This simply disables the Qscintilla behavior.

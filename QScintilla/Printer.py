@@ -53,7 +53,7 @@ class Printer(QsciPrinter):
         
     def formatPage(self, painter, drawing, area, pagenr):
         """
-        Private method to generate a header line.
+        Public method to generate a header line.
         
         @param painter the paint canvas (QPainter)
         @param drawing flag indicating that something should be drawn

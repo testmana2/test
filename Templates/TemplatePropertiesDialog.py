@@ -93,7 +93,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
 
     def keyPressEvent(self, ev):
         """
-        Re-implemented to handle the user pressing the escape key.
+        Protected method to handle the user pressing the escape key.
         
         @param ev key event (QKeyEvent)
         """
@@ -108,7 +108,7 @@ class TemplatePropertiesDialog(QDialog, Ui_TemplatePropertiesDialog):
     @pyqtSlot()
     def on_helpButton_clicked(self):
         """
-        Public slot to show some help.
+        Private slot to show some help.
         """
         E5MessageBox.information(
             self,

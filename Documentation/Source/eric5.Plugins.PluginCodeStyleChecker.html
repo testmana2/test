@@ -89,7 +89,7 @@ QObject
 <td>Private slot called, when the the project browser menu or a submenu is about to be shown.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.__projectCodeStyleCheck">__projectCodeStyleCheck</a></td>
-<td>Public slot used to check the project files for code style.</td>
+<td>Private slot used to check the project files for code style.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.__projectShowMenu">__projectShowMenu</a></td>
 <td>Private slot called, when the the project menu or a submenu is about to be shown.</td>
@@ -98,7 +98,7 @@ QObject
 <td>Private slot handling service errors.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.__translateStyleCheck">__translateStyleCheck</a></td>
-<td>Privat slot called after perfoming a style check on one file.</td>
+<td>Private slot called after perfoming a style check on one file.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
@@ -113,7 +113,7 @@ QObject
 <td>Public method handling service errors for Python 2.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.styleCheck">styleCheck</a></td>
-<td>Method to prepare a style check on one Python source file in another task.</td>
+<td>Public method to prepare a style check on one Python source file.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -202,7 +202,7 @@ reference to the menu (QMenu)
 <h4>CodeStyleCheckerPlugin.__projectCodeStyleCheck</h4>
 <b>__projectCodeStyleCheck</b>(<i></i>)
 <p>
-        Public slot used to check the project files for code style.
+        Private slot used to check the project files for code style.
 </p><a NAME="CodeStyleCheckerPlugin.__projectShowMenu" ID="CodeStyleCheckerPlugin.__projectShowMenu"></a>
 <h4>CodeStyleCheckerPlugin.__projectShowMenu</h4>
 <b>__projectShowMenu</b>(<i>menuName, menu</i>)
@@ -234,7 +234,7 @@ message text (string)
 <h4>CodeStyleCheckerPlugin.__translateStyleCheck</h4>
 <b>__translateStyleCheck</b>(<i>fn, codeStyleCheckerStats, results</i>)
 <p>
-        Privat slot called after perfoming a style check on one file.
+        Private slot called after perfoming a style check on one file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
@@ -305,8 +305,7 @@ message text (string)
 <h4>CodeStyleCheckerPlugin.styleCheck</h4>
 <b>styleCheck</b>(<i>lang, filename, source, args</i>)
 <p>
-        Method to prepare a style check on one Python source file in another
-        task.
+        Public method to prepare a style check on one Python source file.
 </p><dl>
 <dt><i>lang</i></dt>
 <dd>

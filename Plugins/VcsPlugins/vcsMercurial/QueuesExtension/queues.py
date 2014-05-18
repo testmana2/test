@@ -80,7 +80,7 @@ class Queues(HgExtension):
     
     def __getPatchesList(self, repodir, listType, withSummary=False):
         """
-        Public method to get a list of patches of a given type.
+        Private method to get a list of patches of a given type.
         
         @param repodir directory name of the repository (string)
         @param listType type of patches list to get
@@ -132,7 +132,7 @@ class Queues(HgExtension):
     
     def __getCurrentPatch(self, repodir):
         """
-        Public method to get the name of the current patch.
+        Private method to get the name of the current patch.
         
         @param repodir directory name of the repository (string)
         @return name of the current patch (string)
@@ -160,7 +160,7 @@ class Queues(HgExtension):
     
     def __getCommitMessage(self, repodir):
         """
-        Public method to get the commit message of the current patch.
+        Private method to get the commit message of the current patch.
         
         @param repodir directory name of the repository (string)
         @return name of the current patch (string)

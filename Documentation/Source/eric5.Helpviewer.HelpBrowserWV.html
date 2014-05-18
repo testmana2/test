@@ -256,7 +256,7 @@ QWebView
 <td>Public slot to copy the selected text.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.createWindow">createWindow</a></td>
-<td>Protected method called, when a new window should be created.</td>
+<td>Public method called, when a new window should be created.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.documentTitle">documentTitle</a></td>
 <td>Public method to return the title of the loaded page.</td>
@@ -271,7 +271,7 @@ QWebView
 <td>Protected method called by a drop event.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.event">event</a></td>
-<td>Protected method handling events.</td>
+<td>Public method handling events.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.findNextPrev">findNextPrev</a></td>
 <td>Public slot to find the next occurrence of a text.</td>
@@ -788,7 +788,7 @@ reference to the context menu event object
 <h4>HelpBrowser.createWindow</h4>
 <b>createWindow</b>(<i>windowType</i>)
 <p>
-        Protected method called, when a new window should be created.
+        Public method called, when a new window should be created.
 </p><dl>
 <dt><i>windowType</i></dt>
 <dd>
@@ -843,7 +843,7 @@ reference to the drop event (QDropEvent)
 <h4>HelpBrowser.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method handling events.
+        Public method handling events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -1155,13 +1155,13 @@ QWebPage
 <td>Private slot to handle a finished reply.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.acceptNavigationRequest">acceptNavigationRequest</a></td>
-<td>Protected method to determine, if a request may be accepted.</td>
+<td>Public method to determine, if a request may be accepted.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.addAdBlockRule">addAdBlockRule</a></td>
 <td>Public slot to add an AdBlock rule to the page.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.event">event</a></td>
-<td>Protected method implementing the event handler.</td>
+<td>Public method implementing the event handler.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.extension">extension</a></td>
 <td>Public method to implement a specific extension.</td>
@@ -1203,7 +1203,7 @@ QWebPage
 <td>Public method to get the global user agent setting.</td>
 </tr><tr>
 <td><a href="#HelpWebPage.userAgentForUrl">userAgentForUrl</a></td>
-<td>Protected method to determine the user agent for the given URL.</td>
+<td>Public method to determine the user agent for the given URL.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -1214,7 +1214,8 @@ QWebPage
 <h4>HelpWebPage.webPluginFactory (class method)</h4>
 <b>webPluginFactory</b>(<i></i>)
 <p>
-        Class method to get a reference to the web plug-in factory instance.
+        Class method to get a reference to the web plug-in factory
+        instance.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -1251,7 +1252,7 @@ reference to the finished reply (QNetworkReply)
 <h4>HelpWebPage.acceptNavigationRequest</h4>
 <b>acceptNavigationRequest</b>(<i>frame, request, type_</i>)
 <p>
-        Protected method to determine, if a request may be accepted.
+        Public method to determine, if a request may be accepted.
 </p><dl>
 <dt><i>frame</i></dt>
 <dd>
@@ -1285,7 +1286,7 @@ URL that matched the rule (QUrl)
 <h4>HelpWebPage.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method implementing the event handler.
+        Public method implementing the event handler.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -1454,7 +1455,7 @@ user agent string (string)
 <h4>HelpWebPage.userAgentForUrl</h4>
 <b>userAgentForUrl</b>(<i>url</i>)
 <p>
-        Protected method to determine the user agent for the given URL.
+        Public method to determine the user agent for the given URL.
 </p><dl>
 <dt><i>url</i></dt>
 <dd>

@@ -65,7 +65,7 @@ class QuickSearchLineEdit(QLineEdit):
     
     def keyPressEvent(self, evt):
         """
-        Re-implemented to handle the press of the ESC key.
+        Protected method to handle the press of the ESC key.
         
         @param evt key event (QKeyPressEvent)
         """
@@ -76,7 +76,7 @@ class QuickSearchLineEdit(QLineEdit):
     
     def focusInEvent(self, evt):
         """
-        Re-implemented to record the current editor widget.
+        Protected method to record the current editor widget.
         
         @param evt focus event (QFocusEvent)
         """
@@ -4278,7 +4278,7 @@ class ViewManager(QObject):
         
     def closeAllWindows(self):
         """
-        Private method to close all editor windows via file menu.
+        Public method to close all editor windows via file menu.
         """
         savedEditors = self.editors[:]
         for editor in savedEditors:
@@ -4572,7 +4572,7 @@ class ViewManager(QObject):
         
     def __unhighlight(self):
         """
-        Privat slot to switch of all highlights.
+        Private slot to switch of all highlights.
         """
         self.unhighlight()
         
@@ -6696,7 +6696,7 @@ class ViewManager(QObject):
     
     def insertSymbol(self, txt):
         """
-        Private slot to insert a symbol text into the active window.
+        Public slot to insert a symbol text into the active window.
         
         @param txt text to be inserted (string)
         """
@@ -6715,7 +6715,7 @@ class ViewManager(QObject):
     
     def insertNumber(self, txt):
         """
-        Private slot to insert a number text into the active window.
+        Public slot to insert a number text into the active window.
         
         @param txt text to be inserted (string)
         """

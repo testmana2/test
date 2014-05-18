@@ -61,7 +61,7 @@ class HelpDocsInstaller(QThread):
     
     def run(self):
         """
-        Protected method executed by the thread.
+        Public method executed by the thread.
         """
         engine = QHelpEngineCore(self.__collection)
         engine.setupData()

@@ -174,7 +174,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
     
     def check(self, codestring=''):
         """
-        Start a check for one file.
+        Public method to start a check for one file.
         
         The results are reported to the __processResult slot.
         @keyparam codestring optional sourcestring (str)
@@ -211,7 +211,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
 
     def __processResult(self, fn, problems):
         """
-        Slot to display the reported messages.
+        Private slot to display the reported messages.
         
         @param fn filename of the checked file (str)
         @param problems dictionary with the keys 'error' and 'warnings' which

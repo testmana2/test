@@ -275,7 +275,7 @@ QsciScintillaCompat
 <td>Public method to shutdown the shell.</td>
 </tr><tr>
 <td><a href="#Shell.contextMenuEvent">contextMenuEvent</a></td>
-<td>Reimplemented to show our own context menu.</td>
+<td>Protected method to show our own context menu.</td>
 </tr><tr>
 <td><a href="#Shell.dragEnterEvent">dragEnterEvent</a></td>
 <td>Protected method to handle the drag enter event.</td>
@@ -293,19 +293,19 @@ QsciScintillaCompat
 <td>Public method to perform an editor command.</td>
 </tr><tr>
 <td><a href="#Shell.event">event</a></td>
-<td>Protected method handling events.</td>
+<td>Public method handling events.</td>
 </tr><tr>
 <td><a href="#Shell.executeLines">executeLines</a></td>
 <td>Public method to execute a set of lines as multiple commands.</td>
 </tr><tr>
 <td><a href="#Shell.focusInEvent">focusInEvent</a></td>
-<td>Public method called when the shell receives focus.</td>
+<td>Protected method called when the shell receives focus.</td>
 </tr><tr>
 <td><a href="#Shell.focusNextPrevChild">focusNextPrevChild</a></td>
-<td>Reimplemented to stop Tab moving to the next window.</td>
+<td>Public method to stop Tab moving to the next window.</td>
 </tr><tr>
 <td><a href="#Shell.focusOutEvent">focusOutEvent</a></td>
-<td>Public method called when the shell loses focus.</td>
+<td>Protected method called when the shell loses focus.</td>
 </tr><tr>
 <td><a href="#Shell.gestureEvent">gestureEvent</a></td>
 <td>Protected method handling gesture events.</td>
@@ -323,7 +323,7 @@ QsciScintillaCompat
 <td>Public slot to insert text at the current cursor position.</td>
 </tr><tr>
 <td><a href="#Shell.keyPressEvent">keyPressEvent</a></td>
-<td>Re-implemented to handle the user input a key at a time.</td>
+<td>Protected method to handle the user input a key at a time.</td>
 </tr><tr>
 <td><a href="#Shell.loadHistory">loadHistory</a></td>
 <td>Public method to load the history for the given client type.</td>
@@ -332,7 +332,7 @@ QsciScintillaCompat
 <td>Protected method to handle the mouse press event.</td>
 </tr><tr>
 <td><a href="#Shell.paste">paste</a></td>
-<td>Reimplemented slot to handle the paste action.</td>
+<td>Public slot to handle the paste action.</td>
 </tr><tr>
 <td><a href="#Shell.reloadHistory">reloadHistory</a></td>
 <td>Public method to reload the history of the currently selected client type.</td>
@@ -921,7 +921,7 @@ text to be displayed (string)
 <h4>Shell.contextMenuEvent</h4>
 <b>contextMenuEvent</b>(<i>ev</i>)
 <p>
-        Reimplemented to show our own context menu.
+        Protected method to show our own context menu.
 </p><dl>
 <dt><i>ev</i></dt>
 <dd>
@@ -981,7 +981,7 @@ the scintilla command to be performed
 <h4>Shell.event</h4>
 <b>event</b>(<i>evt</i>)
 <p>
-        Protected method handling events.
+        Public method handling events.
 </p><dl>
 <dt><i>evt</i></dt>
 <dd>
@@ -1007,7 +1007,7 @@ multiple lines of text to be executed as single
 <h4>Shell.focusInEvent</h4>
 <b>focusInEvent</b>(<i>event</i>)
 <p>
-        Public method called when the shell receives focus.
+        Protected method called when the shell receives focus.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -1017,7 +1017,7 @@ the event object (QFocusEvent)
 <h4>Shell.focusNextPrevChild</h4>
 <b>focusNextPrevChild</b>(<i>next</i>)
 <p>
-        Reimplemented to stop Tab moving to the next window.
+        Public method to stop Tab moving to the next window.
 </p><p>
         While the user is entering a multi-line command, the movement to
         the next window by the Tab key being pressed is suppressed.
@@ -1035,7 +1035,7 @@ flag indicating the movement
 <h4>Shell.focusOutEvent</h4>
 <b>focusOutEvent</b>(<i>event</i>)
 <p>
-        Public method called when the shell loses focus.
+        Protected method called when the shell loses focus.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -1098,7 +1098,7 @@ text to be inserted (string)
 <h4>Shell.keyPressEvent</h4>
 <b>keyPressEvent</b>(<i>ev</i>)
 <p>
-        Re-implemented to handle the user input a key at a time.
+        Protected method to handle the user input a key at a time.
 </p><dl>
 <dt><i>ev</i></dt>
 <dd>
@@ -1128,7 +1128,7 @@ the mouse press event (QMouseEvent)
 <h4>Shell.paste</h4>
 <b>paste</b>(<i></i>)
 <p>
-        Reimplemented slot to handle the paste action.
+        Public slot to handle the paste action.
 </p><a NAME="Shell.reloadHistory" ID="Shell.reloadHistory"></a>
 <h4>Shell.reloadHistory</h4>
 <b>reloadHistory</b>(<i></i>)

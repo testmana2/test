@@ -41,7 +41,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         
     def lessThan(self, left, right):
         """
-        Protected method used to sort the displayed items.
+        Public method used to sort the displayed items.
         
         It implements a special sorting function that takes into account,
         if folders should be shown first, and that __init__ is always the first
@@ -87,7 +87,7 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
 
     def filterAcceptsRow(self, source_row, source_parent):
         """
-        Protected method to filter rows.
+        Public method to filter rows.
         
         It implements a filter to suppress the display of non public
         classes, methods and attributes.

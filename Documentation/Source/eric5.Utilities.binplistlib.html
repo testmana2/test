@@ -142,7 +142,7 @@ object
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#BoolWrapper.__repr__">__repr__</a></td>
-<td>Public method to generate a representation of the object.</td>
+<td>Special method to generate a representation of the object.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -163,7 +163,7 @@ object value (boolean)
 <h4>BoolWrapper.__repr__</h4>
 <b>__repr__</b>(<i></i>)
 <p>
-        Public method to generate a representation of the object.
+        Special method to generate a representation of the object.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -221,7 +221,7 @@ object
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#HashableWrapper.__repr__">__repr__</a></td>
-<td>Public method to generate a representation of the object.</td>
+<td>Special method to generate a representation of the object.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -242,7 +242,7 @@ object value
 <h4>HashableWrapper.__repr__</h4>
 <b>__repr__</b>(<i></i>)
 <p>
-        Public method to generate a representation of the object.
+        Special method to generate a representation of the object.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -325,7 +325,7 @@ object
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#PlistReader.getSizedInteger">getSizedInteger</a></td>
-<td>Private method to read an integer of a specific size.</td>
+<td>Public method to read an integer of a specific size.</td>
 </tr><tr>
 <td><a href="#PlistReader.parse">parse</a></td>
 <td>Public method to parse the plist data.</td>
@@ -334,46 +334,46 @@ object
 <td></td>
 </tr><tr>
 <td><a href="#PlistReader.readArray">readArray</a></td>
-<td>Private method to read an Array object.</td>
+<td>Public method to read an Array object.</td>
 </tr><tr>
 <td><a href="#PlistReader.readAsciiString">readAsciiString</a></td>
-<td>Private method to read an ASCII encoded string.</td>
+<td>Public method to read an ASCII encoded string.</td>
 </tr><tr>
 <td><a href="#PlistReader.readData">readData</a></td>
-<td>Private method to read some bytes.</td>
+<td>Public method to read some bytes.</td>
 </tr><tr>
 <td><a href="#PlistReader.readDate">readDate</a></td>
-<td>Private method to read a date.</td>
+<td>Public method to read a date.</td>
 </tr><tr>
 <td><a href="#PlistReader.readDict">readDict</a></td>
-<td>Private method to read a Dictionary object.</td>
+<td>Public method to read a Dictionary object.</td>
 </tr><tr>
 <td><a href="#PlistReader.readInteger">readInteger</a></td>
-<td>Private method to read an Integer object.</td>
+<td>Public method to read an Integer object.</td>
 </tr><tr>
 <td><a href="#PlistReader.readObject">readObject</a></td>
-<td>Private method to read the object data.</td>
+<td>Public method to read the object data.</td>
 </tr><tr>
 <td><a href="#PlistReader.readReal">readReal</a></td>
-<td>Private method to read a Real object.</td>
+<td>Public method to read a Real object.</td>
 </tr><tr>
 <td><a href="#PlistReader.readRefs">readRefs</a></td>
-<td>Private method to read References.</td>
+<td>Public method to read References.</td>
 </tr><tr>
 <td><a href="#PlistReader.readRoot">readRoot</a></td>
-<td>Private method to read the root object.</td>
+<td>Public method to read the root object.</td>
 </tr><tr>
 <td><a href="#PlistReader.readUid">readUid</a></td>
-<td>Private method to read a UID.</td>
+<td>Public method to read a UID.</td>
 </tr><tr>
 <td><a href="#PlistReader.readUnicode">readUnicode</a></td>
-<td>Private method to read an Unicode encoded string.</td>
+<td>Public method to read an Unicode encoded string.</td>
 </tr><tr>
 <td><a href="#PlistReader.reset">reset</a></td>
-<td>Private method to reset the instance object.</td>
+<td>Public method to reset the instance object.</td>
 </tr><tr>
 <td><a href="#PlistReader.setCurrentOffsetToObjectNumber">setCurrentOffsetToObjectNumber</a></td>
-<td>Private method to set the current offset.</td>
+<td>Public method to set the current offset.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -394,7 +394,7 @@ open file containing the plist data (file object)
 <h4>PlistReader.getSizedInteger</h4>
 <b>getSizedInteger</b>(<i>data, bytes</i>)
 <p>
-        Private method to read an integer of a specific size.
+        Public method to read an integer of a specific size.
 </p><dl>
 <dt><i>data</i></dt>
 <dd>
@@ -431,7 +431,7 @@ unpickled object
 <h4>PlistReader.readArray</h4>
 <b>readArray</b>(<i>count</i>)
 <p>
-        Private method to read an Array object.
+        Public method to read an Array object.
 </p><dl>
 <dt><i>count</i></dt>
 <dd>
@@ -446,7 +446,7 @@ list of unpickled objects
 <h4>PlistReader.readAsciiString</h4>
 <b>readAsciiString</b>(<i>length</i>)
 <p>
-        Private method to read an ASCII encoded string.
+        Public method to read an ASCII encoded string.
 </p><dl>
 <dt><i>length</i></dt>
 <dd>
@@ -461,7 +461,7 @@ ASCII encoded string
 <h4>PlistReader.readData</h4>
 <b>readData</b>(<i>length</i>)
 <p>
-        Private method to read some bytes.
+        Public method to read some bytes.
 </p><dl>
 <dt><i>length</i></dt>
 <dd>
@@ -476,7 +476,7 @@ Data object
 <h4>PlistReader.readDate</h4>
 <b>readDate</b>(<i></i>)
 <p>
-        Private method to read a date.
+        Public method to read a date.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -486,7 +486,7 @@ date object (datetime.datetime)
 <h4>PlistReader.readDict</h4>
 <b>readDict</b>(<i>count</i>)
 <p>
-        Private method to read a Dictionary object.
+        Public method to read a Dictionary object.
 </p><dl>
 <dt><i>count</i></dt>
 <dd>
@@ -501,7 +501,7 @@ dictionary of unpickled objects
 <h4>PlistReader.readInteger</h4>
 <b>readInteger</b>(<i>bytes</i>)
 <p>
-        Private method to read an Integer object.
+        Public method to read an Integer object.
 </p><dl>
 <dt><i>bytes</i></dt>
 <dd>
@@ -516,7 +516,7 @@ integer object
 <h4>PlistReader.readObject</h4>
 <b>readObject</b>(<i></i>)
 <p>
-        Private method to read the object data.
+        Public method to read the object data.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -532,7 +532,7 @@ raised to indicate an invalid
 <h4>PlistReader.readReal</h4>
 <b>readReal</b>(<i>length</i>)
 <p>
-        Private method to read a Real object.
+        Public method to read a Real object.
 </p><dl>
 <dt><i>length</i></dt>
 <dd>
@@ -553,7 +553,7 @@ raised to indicate an invalid
 <h4>PlistReader.readRefs</h4>
 <b>readRefs</b>(<i>count</i>)
 <p>
-        Private method to read References.
+        Public method to read References.
 </p><dl>
 <dt><i>count</i></dt>
 <dd>
@@ -568,7 +568,7 @@ list of references (list of integers)
 <h4>PlistReader.readRoot</h4>
 <b>readRoot</b>(<i></i>)
 <p>
-        Private method to read the root object.
+        Public method to read the root object.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
@@ -584,7 +584,7 @@ raised to indicate an invalid
 <h4>PlistReader.readUid</h4>
 <b>readUid</b>(<i>length</i>)
 <p>
-        Private method to read a UID.
+        Public method to read a UID.
 </p><dl>
 <dt><i>length</i></dt>
 <dd>
@@ -599,7 +599,7 @@ Uid object
 <h4>PlistReader.readUnicode</h4>
 <b>readUnicode</b>(<i>length</i>)
 <p>
-        Private method to read an Unicode encoded string.
+        Public method to read an Unicode encoded string.
 </p><dl>
 <dt><i>length</i></dt>
 <dd>
@@ -614,12 +614,12 @@ unicode encoded string
 <h4>PlistReader.reset</h4>
 <b>reset</b>(<i></i>)
 <p>
-        Private method to reset the instance object.
+        Public method to reset the instance object.
 </p><a NAME="PlistReader.setCurrentOffsetToObjectNumber" ID="PlistReader.setCurrentOffsetToObjectNumber"></a>
 <h4>PlistReader.setCurrentOffsetToObjectNumber</h4>
 <b>setCurrentOffsetToObjectNumber</b>(<i>objectNumber</i>)
 <p>
-        Private method to set the current offset.
+        Public method to set the current offset.
 </p><dl>
 <dt><i>objectNumber</i></dt>
 <dd>
@@ -650,10 +650,10 @@ object
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#PlistWriter.binaryInt">binaryInt</a></td>
-<td>Private method to pack an integer object.</td>
+<td>Public method to pack an integer object.</td>
 </tr><tr>
 <td><a href="#PlistWriter.binaryReal">binaryReal</a></td>
-<td>Private method to pack a real object.</td>
+<td>Public method to pack a real object.</td>
 </tr><tr>
 <td><a href="#PlistWriter.check_key">check_key</a></td>
 <td></td>
@@ -665,10 +665,10 @@ object
 <td>Public method to increment the byte count.</td>
 </tr><tr>
 <td><a href="#PlistWriter.intSize">intSize</a></td>
-<td>Private method to determine the number of bytes necessary to store the given integer.</td>
+<td>Public method to determine the number of bytes necessary to store the given integer.</td>
 </tr><tr>
 <td><a href="#PlistWriter.positionOfObjectReference">positionOfObjectReference</a></td>
-<td>Private method to get the position of an object.</td>
+<td>Public method to get the position of an object.</td>
 </tr><tr>
 <td><a href="#PlistWriter.proc_size">proc_size</a></td>
 <td></td>
@@ -677,22 +677,22 @@ object
 <td></td>
 </tr><tr>
 <td><a href="#PlistWriter.realSize">realSize</a></td>
-<td>Private method to determine the number of bytes necessary to store the given real.</td>
+<td>Public method to determine the number of bytes necessary to store the given real.</td>
 </tr><tr>
 <td><a href="#PlistWriter.reset">reset</a></td>
-<td>Private method to reset the instance object.</td>
+<td>Public method to reset the instance object.</td>
 </tr><tr>
 <td><a href="#PlistWriter.wrapRoot">wrapRoot</a></td>
-<td>Private method to generate object wrappers.</td>
+<td>Public method to generate object wrappers.</td>
 </tr><tr>
 <td><a href="#PlistWriter.writeObject">writeObject</a></td>
-<td>Private method to serialize the given object to the output.</td>
+<td>Public method to serialize the given object to the output.</td>
 </tr><tr>
 <td><a href="#PlistWriter.writeObjectReference">writeObjectReference</a></td>
-<td>Private method to write an object reference.</td>
+<td>Public method to write an object reference.</td>
 </tr><tr>
 <td><a href="#PlistWriter.writeOffsetTable">writeOffsetTable</a></td>
-<td>Private method to write all of the object reference offsets.</td>
+<td>Public method to write all of the object reference offsets.</td>
 </tr><tr>
 <td><a href="#PlistWriter.writeRoot">writeRoot</a></td>
 <td>Public method to write an object to a plist file.</td>
@@ -716,7 +716,7 @@ file to write the plist data to (file object)
 <h4>PlistWriter.binaryInt</h4>
 <b>binaryInt</b>(<i>obj, bytes=None</i>)
 <p>
-        Private method to pack an integer object.
+        Public method to pack an integer object.
 </p><dl>
 <dt><i>obj</i></dt>
 <dd>
@@ -740,7 +740,7 @@ raised to indicate an invalid
 <h4>PlistWriter.binaryReal</h4>
 <b>binaryReal</b>(<i>obj</i>)
 <p>
-        Private method to pack a real object.
+        Public method to pack a real object.
 </p><dl>
 <dt><i>obj</i></dt>
 <dd>
@@ -793,7 +793,7 @@ byte count increment (integer)
 <h4>PlistWriter.intSize</h4>
 <b>intSize</b>(<i>obj</i>)
 <p>
-        Private method to determine the number of bytes necessary to store the
+        Public method to determine the number of bytes necessary to store the
         given integer.
 </p><dl>
 <dt><i>obj</i></dt>
@@ -815,7 +815,7 @@ raised to indicate an invalid
 <h4>PlistWriter.positionOfObjectReference</h4>
 <b>positionOfObjectReference</b>(<i>obj</i>)
 <p>
-        Private method to get the position of an object.
+        Public method to get the position of an object.
 </p><p>
         If the given object has been written already, return its
         position in the offset table. Otherwise, return None.
@@ -839,7 +839,7 @@ position of the object (integer)
 <h4>PlistWriter.realSize</h4>
 <b>realSize</b>(<i>obj</i>)
 <p>
-        Private method to determine the number of bytes necessary to store the
+        Public method to determine the number of bytes necessary to store the
         given real.
 </p><dl>
 <dt><i>obj</i></dt>
@@ -855,12 +855,12 @@ number of bytes required (integer)
 <h4>PlistWriter.reset</h4>
 <b>reset</b>(<i></i>)
 <p>
-        Private method to reset the instance object.
+        Public method to reset the instance object.
 </p><a NAME="PlistWriter.wrapRoot" ID="PlistWriter.wrapRoot"></a>
 <h4>PlistWriter.wrapRoot</h4>
 <b>wrapRoot</b>(<i>root</i>)
 <p>
-        Private method to generate object wrappers.
+        Public method to generate object wrappers.
 </p><dl>
 <dt><i>root</i></dt>
 <dd>
@@ -875,7 +875,7 @@ wrapped object
 <h4>PlistWriter.writeObject</h4>
 <b>writeObject</b>(<i>obj, output, setReferencePosition=False</i>)
 <p>
-        Private method to serialize the given object to the output.
+        Public method to serialize the given object to the output.
 </p><dl>
 <dt><i>obj</i></dt>
 <dd>
@@ -897,7 +897,7 @@ new output
 <h4>PlistWriter.writeObjectReference</h4>
 <b>writeObjectReference</b>(<i>obj, output</i>)
 <p>
-        Private method to write an object reference.
+        Public method to write an object reference.
 </p><p>
         Tries to write an object reference, adding it to the references
         table. Does not write the actual object bytes or set the reference
@@ -921,7 +921,7 @@ flag indicating a new reference and the new output
 <h4>PlistWriter.writeOffsetTable</h4>
 <b>writeOffsetTable</b>(<i>output</i>)
 <p>
-        Private method to write all of the object reference offsets.
+        Public method to write all of the object reference offsets.
 </p><dl>
 <dt><i>output</i></dt>
 <dd>
@@ -992,7 +992,7 @@ int
 <table>
 <tr>
 <td><a href="#Uid.__repr__">__repr__</a></td>
-<td>Public method to return an object representation.</td>
+<td>Special method to return an object representation.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -1003,7 +1003,7 @@ int
 <h4>Uid.__repr__</h4>
 <b>__repr__</b>(<i></i>)
 <p>
-        Public method to return an object representation.
+        Special method to return an object representation.
 </p><dl>
 <dt>Returns:</dt>
 <dd>

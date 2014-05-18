@@ -61,7 +61,7 @@ class E5TextSpinBox(QSpinBox):
     
     def textFromValue(self, value):
         """
-        Protected method to convert a value to text.
+        Public method to convert a value to text.
         
         @param value value to be converted (integer)
         @return text for the given value (string)
@@ -73,7 +73,7 @@ class E5TextSpinBox(QSpinBox):
     
     def valueFromText(self, txt):
         """
-        Protected method to convert a text to a value.
+        Public method to convert a text to a value.
         
         @param txt text to be converted (string)
         @return value for the given text (integer)

@@ -83,7 +83,7 @@ class NannyNag(Exception):
         
     def get_lineno(self):
         """
-        Method to retrieve the line number.
+        Public method to retrieve the line number.
         
         @return The line number (integer)
         """
@@ -91,7 +91,7 @@ class NannyNag(Exception):
         
     def get_msg(self):
         """
-        Method to retrieve the message.
+        Public method to retrieve the message.
         
         @return The error message (string)
         """
@@ -99,7 +99,7 @@ class NannyNag(Exception):
         
     def get_line(self):
         """
-        Method to retrieve the offending line.
+        Public method to retrieve the offending line.
         
         @return The line of code (string)
         """
@@ -204,7 +204,8 @@ class Whitespace(object):
     # preceding a tab)
     def longest_run_of_spaces(self):
         """
-        Method to calculate the length of longest contiguous run of spaces.
+        Public method to calculate the length of longest contiguous run of
+        spaces.
         
         @return The length of longest contiguous run of spaces (whether or not
             preceding a tab)
@@ -214,7 +215,7 @@ class Whitespace(object):
 
     def indent_level(self, tabsize):
         """
-        Method to determine the indentation level.
+        Public method to determine the indentation level.
         
         @param tabsize The length of a tab stop. (integer)
         @return indentation level (integer)
@@ -243,8 +244,8 @@ class Whitespace(object):
     # for all t >= 1
     def equal(self, other):
         """
-        Method to compare the indentation levels of two Whitespace objects for
-        equality.
+        Public method to compare the indentation levels of two Whitespace
+        objects for equality.
         
         @param other Whitespace object to compare against.
         @return True, if we compare equal against the other Whitespace object.
@@ -257,7 +258,7 @@ class Whitespace(object):
     # case it will return at least one witnessing tab size.
     def not_equal_witness(self, other):
         """
-        Method to calculate a tuple of witnessing tab size.
+        Public method to calculate a tuple of witnessing tab size.
         
         Intended to be used after not self.equal(other) is known, in which
         case it will return at least one witnessing tab size.
@@ -291,8 +292,8 @@ class Whitespace(object):
     # Note that M is of the form (T*)(S*) iff len(M.norm[0]) <= 1.
     def less(self, other):
         """
-        Method to compare the indentation level against another Whitespace
-        objects to be smaller.
+        Public method to compare the indentation level against another
+        Whitespace objects to be smaller.
         
         @param other Whitespace object to compare against.
         @return True, if we compare less against the other Whitespace object.
@@ -315,7 +316,7 @@ class Whitespace(object):
     # case it will return at least one witnessing tab size.
     def not_less_witness(self, other):
         """
-        Method to calculate a tuple of witnessing tab size.
+        Public method to calculate a tuple of witnessing tab size.
         
         Intended to be used after not self.less(other is known, in which
         case it will return at least one witnessing tab size.

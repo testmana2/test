@@ -37,7 +37,7 @@ class ClassModel(UMLModel):
     
     def addMethod(self, method):
         """
-        Method to add a method to the class model.
+        Public method to add a method to the class model.
         
         @param method method name to be added (string)
         """
@@ -45,7 +45,7 @@ class ClassModel(UMLModel):
     
     def addAttribute(self, attribute):
         """
-        Method to add an attribute to the class model.
+        Public method to add an attribute to the class model.
         
         @param attribute attribute name to be added (string)
         """
@@ -53,7 +53,7 @@ class ClassModel(UMLModel):
     
     def getMethods(self):
         """
-        Method to retrieve the methods of the class.
+        Public method to retrieve the methods of the class.
         
         @return list of class methods (list of strings)
         """
@@ -61,7 +61,7 @@ class ClassModel(UMLModel):
     
     def getAttributes(self):
         """
-        Method to retrieve the attributes of the class.
+        Public method to retrieve the attributes of the class.
         
         @return list of class attributes (list of strings)
         """
@@ -161,7 +161,7 @@ class ClassItem(UMLItem):
         
     def setModel(self, model):
         """
-        Method to set the class model.
+        Public method to set the class model.
         
         @param model class model containing the class data (ClassModel)
         """
@@ -213,7 +213,7 @@ class ClassItem(UMLItem):
         
     def isExternal(self):
         """
-        Method returning the external state.
+        Public method returning the external state.
         
         @return external state (boolean)
         """

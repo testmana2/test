@@ -147,7 +147,7 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
     
     def setCurrentThread(self, id):
         """
-        Private method to set the current thread.
+        Public method to set the current thread.
 
         @param id the id the current thread should be set to.
         """
@@ -177,7 +177,7 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
 
     def set_quit(self):
         """
-        Private method to do a 'set quit' on all threads.
+        Public method to do a 'set quit' on all threads.
         """
         try:
             locked = self.lockClient(False)

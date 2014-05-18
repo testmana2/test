@@ -246,7 +246,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
     
     def __initPushPopActions(self):
         """
-        Public method to generate the push and pop action objects.
+        Private method to generate the push and pop action objects.
         """
         self.hgQueuePushAct = E5Action(
             self.tr('Push Next Patch'),
@@ -358,7 +358,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
     
     def __initPushPopForceActions(self):
         """
-        Public method to generate the push and pop (force) action objects.
+        Private method to generate the push and pop (force) action objects.
         """
         self.hgQueuePushForceAct = E5Action(
             self.tr('Push Next Patch'),
@@ -478,7 +478,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
     
     def __initGuardsActions(self):
         """
-        Public method to generate the guards action objects.
+        Private method to generate the guards action objects.
         """
         self.hgQueueDefineGuardsAct = E5Action(
             self.tr('Define Guards'),
@@ -588,7 +588,7 @@ class QueuesProjectHelper(HgExtensionProjectHelper):
     
     def __initQueuesMgmtActions(self):
         """
-        Public method to generate the queues management action objects.
+        Private method to generate the queues management action objects.
         """
         self.hgQueueCreateQueueAct = E5Action(
             self.tr('Create Queue'),

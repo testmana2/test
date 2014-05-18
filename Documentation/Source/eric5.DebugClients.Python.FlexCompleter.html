@@ -141,16 +141,16 @@ object
 <table>
 <tr>
 <td><a href="#Completer.__init__">Completer</a></td>
-<td>Create a new completer for the command line.</td>
+<td>Constructor</td>
 </tr><tr>
 <td><a href="#Completer.attr_matches">attr_matches</a></td>
-<td>Compute matches when text contains a dot.</td>
+<td>Public method to compute matches when text contains a dot.</td>
 </tr><tr>
 <td><a href="#Completer.complete">complete</a></td>
-<td>Return the next possible completion for 'text'.</td>
+<td>Public method to return the next possible completion for 'text'.</td>
 </tr><tr>
 <td><a href="#Completer.global_matches">global_matches</a></td>
-<td>Compute matches when text is a simple name.</td>
+<td>Public method to compute matches when text is a simple name.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -161,7 +161,7 @@ object
 <h4>Completer (Constructor)</h4>
 <b>Completer</b>(<i>namespace=None</i>)
 <p>
-        Create a new completer for the command line.
+        Constructor
 </p><p>
         Completer([namespace]) -> completer instance.
 </p><p>
@@ -187,7 +187,7 @@ raised to indicate a wrong namespace structure
 <h4>Completer.attr_matches</h4>
 <b>attr_matches</b>(<i>text</i>)
 <p>
-        Compute matches when text contains a dot.
+        Public method to compute matches when text contains a dot.
 </p><p>
         Assuming the text is of the form NAME.NAME....[NAME], and is
         evaluatable in self.namespace, it will be evaluated and its attributes
@@ -210,7 +210,7 @@ A list of all matches.
 <h4>Completer.complete</h4>
 <b>complete</b>(<i>text, state</i>)
 <p>
-        Return the next possible completion for 'text'.
+        Public method to return the next possible completion for 'text'.
 </p><p>
         This is called successively with state == 0, 1, 2, ... until it
         returns None.  The completion should begin with 'text'.
@@ -231,7 +231,7 @@ The possible completions as a list of strings.
 <h4>Completer.global_matches</h4>
 <b>global_matches</b>(<i>text</i>)
 <p>
-        Compute matches when text is a simple name.
+        Public method to compute matches when text is a simple name.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>

@@ -97,7 +97,7 @@ class PreviewerHTML(QWidget, Ui_PreviewerHTML):
     
     def processEditor(self, editor=None):
         """
-        Private slot to process an editor's text.
+        Public slot to process an editor's text.
         
         @param editor editor to be processed (Editor)
         """
@@ -241,7 +241,7 @@ class PreviewProcessingThread(QThread):
     
     def process(self, filePath, language, text, ssiEnabled, rootPath):
         """
-        Convert the given text to HTML.
+        Public method to convert the given text to HTML.
         
         @param filePath file path of the text (string)
         @param language language of the text (string)
@@ -262,7 +262,7 @@ class PreviewProcessingThread(QThread):
     
     def run(self):
         """
-        Thread function to convert the stored data.
+        Public thread method to convert the stored data.
         """
         while True:
             # exits with break

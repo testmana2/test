@@ -103,7 +103,7 @@ E5MainWindow
 <td>Private slot called in to enter Whats This mode.</td>
 </tr><tr>
 <td><a href="#TRPreviewer.closeEvent">closeEvent</a></td>
-<td>Private event handler for the close event.</td>
+<td>Protected event handler for the close event.</td>
 </tr><tr>
 <td><a href="#TRPreviewer.reloadTranslations">reloadTranslations</a></td>
 <td>Public slot to reload all translations.</td>
@@ -189,7 +189,7 @@ name of this window (string)
 <h4>TRPreviewer.closeEvent</h4>
 <b>closeEvent</b>(<i>event</i>)
 <p>
-        Private event handler for the close event.
+        Protected event handler for the close event.
 </p><dl>
 <dt><i>event</i></dt>
 <dd>
@@ -521,7 +521,7 @@ QMdiArea
 <td>Public slot to close the active window.</td>
 </tr><tr>
 <td><a href="#WidgetArea.eventFilter">eventFilter</a></td>
-<td>Protected method called to filter an event.</td>
+<td>Public method called to filter an event.</td>
 </tr><tr>
 <td><a href="#WidgetArea.hasWidgets">hasWidgets</a></td>
 <td>Public method to check for loaded widgets.</td>
@@ -589,7 +589,7 @@ window to be toggled
 <h4>WidgetArea.eventFilter</h4>
 <b>eventFilter</b>(<i>obj, ev</i>)
 <p>
-        Protected method called to filter an event.
+        Public method called to filter an event.
 </p><dl>
 <dt><i>obj</i></dt>
 <dd>

@@ -64,7 +64,7 @@ class SpellChecker(QObject):
     @classmethod
     def getAvailableLanguages(cls):
         """
-        Public classmethod to get all available languages.
+        Class method to get all available languages.
         
         @return list of available languages (list of strings)
         """
@@ -77,7 +77,7 @@ class SpellChecker(QObject):
     @classmethod
     def isAvailable(cls):
         """
-        Public classmethod to check, if spellchecking is available.
+        Class method to check, if spellchecking is available.
         
         @return flag indicating availability (boolean)
         """
@@ -159,7 +159,7 @@ class SpellChecker(QObject):
     @classmethod
     def setDefaultLanguage(cls, language):
         """
-        Public classmethod to set the default language.
+        Class method to set the default language.
         
         @param language the language to be used as the default (string).
             The string should be in language locale format (e.g. en_US, de).
@@ -396,7 +396,7 @@ class SpellChecker(QObject):
     
     def checkSelection(self):
         """
-        Private method to check the current selection.
+        Public method to check the current selection.
         """
         selStartLine, selStartIndex, selEndLine, selEndIndex = \
             self.editor.getSelection()
@@ -407,7 +407,7 @@ class SpellChecker(QObject):
     
     def checkCurrentPage(self):
         """
-        Private method to check the currently visible page.
+        Public method to check the currently visible page.
         """
         startLine = self.editor.firstVisibleLine()
         endLine = startLine + self.editor.linesOnScreen()
@@ -503,7 +503,7 @@ class SpellChecker(QObject):
     
     def __iter__(self):
         """
-        Private method to create an iterator.
+        Special method to create an iterator.
         
         @return self
         """
@@ -511,7 +511,7 @@ class SpellChecker(QObject):
     
     def __next__(self):
         """
-        Public method to advance to the next error.
+        Special method to advance to the next error.
         
         @return self
         @exception StopIteration raised to indicate the end of the iteration

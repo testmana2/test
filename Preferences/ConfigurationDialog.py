@@ -867,7 +867,7 @@ class ConfigurationWindow(E5MainWindow):
         
     def accept(self):
         """
-        Protected slot called by the Ok button.
+        Public slot called by the Ok button.
         """
         self.cw.setPreferences()
         Preferences.saveResetLayout()

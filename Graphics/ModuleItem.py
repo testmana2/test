@@ -31,7 +31,7 @@ class ModuleModel(UMLModel):
     
     def addClass(self, classname):
         """
-        Method to add a class to the module model.
+        Public method to add a class to the module model.
         
         @param classname class name to be added (string)
         """
@@ -39,7 +39,7 @@ class ModuleModel(UMLModel):
     
     def getClasses(self):
         """
-        Method to retrieve the classes of the module.
+        Public method to retrieve the classes of the module.
         
         @return list of class names (list of strings)
         """
@@ -116,7 +116,7 @@ class ModuleItem(UMLItem):
     
     def setModel(self, model):
         """
-        Method to set the module model.
+        Public method to set the module model.
         
         @param model module model containing the module data (ModuleModel)
         """
