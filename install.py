@@ -354,13 +354,13 @@ def cleanupSource(dirName):
     for formName, sourceName in [(f.replace('Ui_',"").replace(".py",".ui"), f)
                                  for f in dirListing
                                  if fnmatch.fnmatch(f, "Ui_*.py")]:
-        if not os.path.exist(os.path.join(dirName, formName)):
+        if not os.path.exists(os.path.join(dirName, formName)):
             os.remove(os.path.join(dirName, sourceName))
-            if os.path.exist(os.path.join(dirName, sourceName + "c")):
+            if os.path.exists(os.path.join(dirName, sourceName + "c")):
                 os.remove(os.path.join(dirName, sourceName + "c"))
     
     # step 2: delete the __pycache__ directory
-    if os.path.exist(os.path.join(dirName, "__pycache__")):
+    if os.path.exists(os.path.join(dirName, "__pycache__")):
         shutil.rmtree(os.path.join(dirName, "__pycache__"))
     
     # step 3: descent into subdirectories and delete them if empty
