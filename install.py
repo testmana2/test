@@ -1223,6 +1223,7 @@ def main(argv):
     if installFromSource:
         print("Cleaning up source ...")
         cleanupSource(sourceDir)
+        print()
     
     # cleanup old installation
     print("Cleaning up old installation ...")
