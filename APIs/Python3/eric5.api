@@ -4558,6 +4558,7 @@ eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.on_recentCom
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.rejected?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog.showEvent?4(evt)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgCommitDialog.HgCommitDialog?1(vcs, msg, mq, parent=None)
+eric5.Plugins.VcsPlugins.vcsMercurial.HgConflictsListDialog.HgConflictsListDialog.FilenameRole?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgConflictsListDialog.HgConflictsListDialog.StatusRole?7
 eric5.Plugins.VcsPlugins.vcsMercurial.HgConflictsListDialog.HgConflictsListDialog.closeEvent?4(e)
 eric5.Plugins.VcsPlugins.vcsMercurial.HgConflictsListDialog.HgConflictsListDialog.keyPressEvent?4(evt)
@@ -7620,6 +7621,7 @@ eric5.QScintilla.SpellChecker.SpellChecker.getUserDictionaryPath?4(isException=F
 eric5.QScintilla.SpellChecker.SpellChecker.ignoreAlways?4(word=None)
 eric5.QScintilla.SpellChecker.SpellChecker.initCheck?4(startPos, endPos)
 eric5.QScintilla.SpellChecker.SpellChecker.isAvailable?4()
+eric5.QScintilla.SpellChecker.SpellChecker.next?4()
 eric5.QScintilla.SpellChecker.SpellChecker.remove?4(word)
 eric5.QScintilla.SpellChecker.SpellChecker.replace?4(replacement)
 eric5.QScintilla.SpellChecker.SpellChecker.replaceAlways?4(replacement)

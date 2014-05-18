@@ -12,6 +12,7 @@ The spell checker is based on pyenchant.
 from __future__ import unicode_literals
 
 import os
+import sys
 
 from PyQt4.QtCore import QTimer, QObject
 
@@ -537,3 +538,13 @@ class SpellChecker(QObject):
                     return self
         
         raise StopIteration
+    
+    if sys.version_info.major == 2:
+        def next(self):
+            """
+            Public method to advance to the next error.
+            
+            @return self
+            @exception StopIteration raised to indicate the end of the iteration
+            """
+            return self.__next__()

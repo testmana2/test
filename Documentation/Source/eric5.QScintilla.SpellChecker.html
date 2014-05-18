@@ -137,6 +137,9 @@ QObject
 <td><a href="#SpellChecker.initCheck">initCheck</a></td>
 <td>Public method to initialize a spell check.</td>
 </tr><tr>
+<td><a href="#SpellChecker.next">next</a></td>
+<td>Public method to advance to the next error.</td>
+</tr><tr>
 <td><a href="#SpellChecker.remove">remove</a></td>
 <td>Public method to add a word to the personal exclude list.</td>
 </tr><tr>
@@ -477,6 +480,21 @@ position to end at (integer)
 <dt>Returns:</dt>
 <dd>
 flag indicating successful initialization (boolean)
+</dd>
+</dl><a NAME="SpellChecker.next" ID="SpellChecker.next"></a>
+<h4>SpellChecker.next</h4>
+<b>next</b>(<i></i>)
+<p>
+            Public method to advance to the next error.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+self
+</dd>
+</dl><dl>
+<dt>Raises <b>StopIteration</b>:</dt>
+<dd>
+raised to indicate the end of the iteration
 </dd>
 </dl><a NAME="SpellChecker.remove" ID="SpellChecker.remove"></a>
 <h4>SpellChecker.remove</h4>

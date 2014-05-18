@@ -10164,6 +10164,7 @@
       <keyword name="SpellChecker.ignoreAlways" id="SpellChecker.ignoreAlways" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.ignoreAlways" />
       <keyword name="SpellChecker.initCheck" id="SpellChecker.initCheck" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.initCheck" />
       <keyword name="SpellChecker.isAvailable" id="SpellChecker.isAvailable" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.isAvailable" />
+      <keyword name="SpellChecker.next" id="SpellChecker.next" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.next" />
       <keyword name="SpellChecker.remove" id="SpellChecker.remove" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.remove" />
       <keyword name="SpellChecker.replace" id="SpellChecker.replace" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.replace" />
       <keyword name="SpellChecker.replaceAlways" id="SpellChecker.replaceAlways" ref="eric5.QScintilla.SpellChecker.html#SpellChecker.replaceAlways" />
