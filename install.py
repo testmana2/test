@@ -253,6 +253,7 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
 
     # Mac OS X
     elif sys.platform == "darwin":
+        # TODO: change this to respect the Python version install is executed with
         pyexec = "{0}/bin/pythonw3".format(sys.exec_prefix)
         if not os.path.exists(pyexec):
             pyexec = "{0}/bin/python3".format(sys.exec_prefix)
@@ -338,6 +339,37 @@ Package containing the global plugins.
         )
         f.close()
         os.chmod(fname, 0o644)
+
+
+def cleanupSource(dirName):
+    """
+    Cleanup the sources directory to get rid of leftover files
+    and directories.
+    
+    @param dirName name of the directory to prune (string)
+    """
+    # step 1: delete all Ui_*.py files without a corresponding
+    #         *.ui file
+    dirListing = os.listdir(dirName)
+    for formName, sourceName in [(f.replace('Ui_',"").replace(".py",".ui"), f)
+                                 for f in dirListing
+                                 if fnmatch.fnmatch(f, "Ui_*.py")]:
+        if not os.path.exist(os.path.join(dirName, formName)):
+            os.remove(os.path.join(dirName, sourceName))
+            if os.path.exist(os.path.join(dirName, sourceName + "c")):
+                os.remove(os.path.join(dirName, sourceName + "c"))
+    
+    # step 2: delete the __pycache__ directory
+    if os.path.exist(os.path.join(dirName, "__pycache__")):
+        shutil.rmtree(os.path.join(dirName, "__pycache__"))
+    
+    # step 3: descent into subdirectories and delete them if empty
+    for name in os.listdir(dirName):
+        name = os.path.join(dirName, name)
+        if os.path.isdir(name):
+            cleanupSource(name)
+        if len(os.listdir(name)) == 0:
+            os.rmdir(name)
 
 
 def cleanUp():
@@ -1186,6 +1218,11 @@ def main(argv):
         os.remove(configName)
     except EnvironmentError:
         pass
+    
+    # cleanup source if installing from source
+    if installFromSource:
+        print("Cleaning up source ...")
+        cleanupSource(sourceDir)
     
     # cleanup old installation
     print("Cleaning up old installation ...")
