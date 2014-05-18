@@ -368,8 +368,8 @@ def cleanupSource(dirName):
         name = os.path.join(dirName, name)
         if os.path.isdir(name):
             cleanupSource(name)
-        if len(os.listdir(name)) == 0:
-            os.rmdir(name)
+            if len(os.listdir(name)) == 0:
+                os.rmdir(name)
 
 
 def cleanUp():
