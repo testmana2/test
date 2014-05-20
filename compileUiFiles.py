@@ -9,6 +9,7 @@ Script for eric5 to compile all .ui files to Python source.
 """
 
 from __future__ import unicode_literals
+from __future__ import print_function
 
 import sys
 import os

@@ -26,6 +26,13 @@ from eric5config import getConfig
 progName = None
 pyModDir = None
 progLanguages = ["Python", "Ruby", "QSS"]
+includePythonVariant = False
+
+# Define file name markers for Python variants
+PythonMarkers = {
+    2: "_py2",
+    3: "_py3",
+}
 
 
 def exit(rcode=0):
@@ -53,6 +60,7 @@ def usage(rcode=2):
     print("    {0} [-h]".format(progName))
     print("where:")
     print("    -h             display this help message")
+    print("    -y             remove executables with Python variant in name")
 
     exit(rcode)
 
@@ -109,6 +117,8 @@ def uninstallEric():
         "eric5-plugininstall", "eric5-pluginuninstall",
         "eric5-pluginrepository", "eric5-sqlbrowser",
         "eric5-webbrowser", "eric5-iconeditor",
+    ]
+    rem_wnames2 = [
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
         "eric5_doc", "eric5_qregularexpression",
@@ -121,62 +131,73 @@ def uninstallEric():
         "eric5_webbrowser", "eric5_iconeditor",
         "eric5_snap",
     ]
-    for rem_wname in rem_wnames:
-        rwname = wrapperName(getConfig('bindir'), rem_wname)
-        if os.path.exists(rwname):
-            os.remove(rwname)
+    if includePythonVariant:
+        marker = PythonMarkers[sys.version_info.major]
+        rem_wnames.extend([n + marker for n in rem_wnames2])
+    else:
+        rem_wnames.extend(rem_wnames2)
     
-    # Cleanup our config file(s)
-    for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
-        e5cfile = os.path.join(pyModDir, name)
-        if os.path.exists(e5cfile):
-            os.remove(e5cfile)
-        e5cfile = os.path.join(pyModDir, "__pycache__", name)
-        path, ext = os.path.splitext(e5cfile)
-        for f in glob.glob("{0}.*{1}".format(path, ext)):
-            os.remove(f)
-    
-    # Cleanup the install directories
-    for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                 'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
-                 'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
-                 'ericDir']:
-        dirpath = getConfig(name)
-        if os.path.exists(dirpath):
-            shutil.rmtree(dirpath, True)
-    
-    # Cleanup translations
-    for name in glob.glob(
-            os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
-        if os.path.exists(name):
-            os.remove(name)
-    
-    # Cleanup API files
-    apidir = getConfig('apidir')
-    for progLanguage in progLanguages:
-        for name in getConfig('apis'):
-            apiname = os.path.join(apidir, progLanguage.lower(), name)
-            if os.path.exists(apiname):
+    try:
+        for rem_wname in rem_wnames:
+            rwname = wrapperName(getConfig('bindir'), rem_wname)
+            if os.path.exists(rwname):
+                os.remove(rwname)
+        
+        # Cleanup our config file(s)
+        for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
+            e5cfile = os.path.join(pyModDir, name)
+            if os.path.exists(e5cfile):
+                os.remove(e5cfile)
+            e5cfile = os.path.join(pyModDir, "__pycache__", name)
+            path, ext = os.path.splitext(e5cfile)
+            for f in glob.glob("{0}.*{1}".format(path, ext)):
+                os.remove(f)
+        
+        # Cleanup the install directories
+        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
+                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
+                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
+                     'ericDir']:
+            dirpath = getConfig(name)
+            if os.path.exists(dirpath):
+                shutil.rmtree(dirpath, True)
+        
+        # Cleanup translations
+        for name in glob.glob(
+                os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+            if os.path.exists(name):
+                os.remove(name)
+        
+        # Cleanup API files
+        apidir = getConfig('apidir')
+        for progLanguage in progLanguages:
+            for name in getConfig('apis'):
+                apiname = os.path.join(apidir, progLanguage.lower(), name)
+                if os.path.exists(apiname):
+                    os.remove(apiname)
+            for apiname in glob.glob(
+                    os.path.join(apidir, progLanguage.lower(), "*.bas")):
                 os.remove(apiname)
-        for apiname in glob.glob(
-                os.path.join(apidir, progLanguage.lower(), "*.bas")):
-            os.remove(apiname)
-    
-    if sys.platform == "darwin":
-        # delete the Mac app bundle
-        if os.path.exists("/Developer/Applications/Eric5"):
-            shutil.rmtree("/Developer/Applications/Eric5")
-        try:
-            macAppBundlePath = getConfig("macAppBundlePath")
-            macAppBundleName = getConfig("macAppBundleName")
-        except AttributeError:
-            macAppBundlePath = "/Applications"
-            macAppBundleName = "eric5.app"
-        if os.path.exists("/Applications/" + macAppBundleName):
-            shutil.rmtree("/Applications/" + macAppBundleName)
-        bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
-        if os.path.exists(bundlePath):
-            shutil.rmtree(bundlePath)
+        
+        if sys.platform == "darwin":
+            # delete the Mac app bundle
+            if os.path.exists("/Developer/Applications/Eric5"):
+                shutil.rmtree("/Developer/Applications/Eric5")
+            try:
+                macAppBundlePath = getConfig("macAppBundlePath")
+                macAppBundleName = getConfig("macAppBundleName")
+            except AttributeError:
+                macAppBundlePath = "/Applications"
+                macAppBundleName = "eric5.app"
+            if os.path.exists("/Applications/" + macAppBundleName):
+                shutil.rmtree("/Applications/" + macAppBundleName)
+            bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
+            if os.path.exists(bundlePath):
+                shutil.rmtree(bundlePath)
+    except (IOError, OSError) as msg:
+        sys.stderr.write(
+            'Error: {0}\nTry uninstall with admin rights.\n'.format(msg))
+        exit(7)
 
 
 def main(argv):
@@ -187,6 +208,8 @@ def main(argv):
     """
     import getopt
 
+    global includePythonVariant
+    
     initGlobals()
 
     # Parse the command line.
@@ -194,7 +217,7 @@ def main(argv):
     progName = os.path.basename(argv[0])
 
     try:
-        optlist, args = getopt.getopt(argv[1:], "h")
+        optlist, args = getopt.getopt(argv[1:], "hy")
     except getopt.GetoptError:
         usage()
 
@@ -203,6 +226,8 @@ def main(argv):
     for opt, arg in optlist:
         if opt == "-h":
             usage(0)
+        if opt == "-y":
+            includePythonVariant = True
     
     try:
         uninstallEric()

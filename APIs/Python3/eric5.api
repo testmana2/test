@@ -8911,6 +8911,8 @@ eric5.ViewManager.ViewManager.ViewManager.unhighlight?4(current=False)
 eric5.ViewManager.ViewManager.ViewManager.zoomValueChanged?4(value)
 eric5.ViewManager.ViewManager.ViewManager?1()
 eric5.ViewManager.factory?4(parent, ui, dbs, pluginManager)
+eric5.cleanupSource.cleanupSource?4(dirName)
+eric5.cleanupSource.main?4(argv)
 eric5.compileUiFiles.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric5.compileUiFiles.compileUiFiles?4()
 eric5.compileUiFiles.compile_ui?4(ui_dir, ui_file)
@@ -8979,9 +8981,11 @@ eric5.install-i18n.progName?7
 eric5.install-i18n.usage?4(rcode=2)
 eric5.install.BlackLists?7
 eric5.install.PlatformsBlackLists?7
+eric5.install.PythonMarkers?7
 eric5.install.apisDir?7
 eric5.install.cfg?7
 eric5.install.cleanUp?4()
+eric5.install.cleanupSource?4(dirName)
 eric5.install.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric5.install.compileUiFiles?4()
 eric5.install.compile_ui?4(ui_dir, ui_file)
@@ -9001,6 +9005,7 @@ eric5.install.doCleanup?7
 eric5.install.doCompile?7
 eric5.install.doDependancyChecks?4()
 eric5.install.exit?4(rcode=0)
+eric5.install.includePythonVariant?7
 eric5.install.initGlobals?4()
 eric5.install.installEric?4()
 eric5.install.macAppBundleName?7
@@ -9022,7 +9027,9 @@ eric5.patch_modpython.main?4(argv)
 eric5.patch_modpython.modDir?7
 eric5.patch_modpython.progName?7
 eric5.patch_modpython.usage?4(rcode=2)
+eric5.uninstall.PythonMarkers?7
 eric5.uninstall.exit?4(rcode=0)
+eric5.uninstall.includePythonVariant?7
 eric5.uninstall.initGlobals?4()
 eric5.uninstall.main?4(argv)
 eric5.uninstall.progLanguages?7

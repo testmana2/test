@@ -1140,6 +1140,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py</Source>
     <Source>Utilities/mimetypes.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py</Source>
+    <Source>cleanupSource.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

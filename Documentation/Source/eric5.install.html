@@ -25,7 +25,7 @@ Installation script for the eric5 IDE and all eric5 related tools.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>BlackLists</td></tr><tr><td>PlatformsBlackLists</td></tr><tr><td>apisDir</td></tr><tr><td>cfg</td></tr><tr><td>configLength</td></tr><tr><td>configName</td></tr><tr><td>currDir</td></tr><tr><td>defaultMacAppBundleName</td></tr><tr><td>distDir</td></tr><tr><td>doCleanup</td></tr><tr><td>doCompile</td></tr><tr><td>macAppBundleName</td></tr><tr><td>macAppBundlePath</td></tr><tr><td>macPythonExe</td></tr><tr><td>modDir</td></tr><tr><td>platBinDir</td></tr><tr><td>progLanguages</td></tr><tr><td>progName</td></tr><tr><td>pyModDir</td></tr><tr><td>sourceDir</td></tr>
+<tr><td>BlackLists</td></tr><tr><td>PlatformsBlackLists</td></tr><tr><td>PythonMarkers</td></tr><tr><td>apisDir</td></tr><tr><td>cfg</td></tr><tr><td>configLength</td></tr><tr><td>configName</td></tr><tr><td>currDir</td></tr><tr><td>defaultMacAppBundleName</td></tr><tr><td>distDir</td></tr><tr><td>doCleanup</td></tr><tr><td>doCompile</td></tr><tr><td>includePythonVariant</td></tr><tr><td>macAppBundleName</td></tr><tr><td>macAppBundlePath</td></tr><tr><td>macPythonExe</td></tr><tr><td>modDir</td></tr><tr><td>platBinDir</td></tr><tr><td>progLanguages</td></tr><tr><td>progName</td></tr><tr><td>pyModDir</td></tr><tr><td>sourceDir</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -36,6 +36,9 @@ Installation script for the eric5 IDE and all eric5 related tools.
 <tr>
 <td><a href="#cleanUp">cleanUp</a></td>
 <td>Uninstall the old eric files.</td>
+</tr><tr>
+<td><a href="#cleanupSource">cleanupSource</a></td>
+<td>Cleanup the sources directory to get rid of leftover files and directories.</td>
 </tr><tr>
 <td><a href="#compileUiDir">compileUiDir</a></td>
 <td>Creates Python modules from Qt Designer .ui files in a directory or directory tree.</td>
@@ -102,6 +105,20 @@ Installation script for the eric5 IDE and all eric5 related tools.
 <p>
     Uninstall the old eric files.
 </p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="cleanupSource" ID="cleanupSource"></a>
+<h2>cleanupSource</h2>
+<b>cleanupSource</b>(<i>dirName</i>)
+<p>
+    Cleanup the sources directory to get rid of leftover files
+    and directories.
+</p><dl>
+<dt><i>dirName</i></dt>
+<dd>
+name of the directory to prune (string)
+</dd>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="compileUiDir" ID="compileUiDir"></a>

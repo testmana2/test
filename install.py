@@ -41,6 +41,7 @@ distDir = None
 apisDir = None
 doCleanup = True
 doCompile = True
+includePythonVariant = False
 cfg = {}
 progLanguages = ["Python", "Ruby", "QSS"]
 sourceDir = "eric"
@@ -77,6 +78,12 @@ PlatformsBlackLists = {
     },
 }
 
+# Define file name markers for Python variants
+PythonMarkers = {
+    2: "_py2",
+    3: "_py3",
+}
+
 
 def exit(rcode=0):
     """
@@ -110,13 +117,13 @@ def usage(rcode=2):
     print()
     print("Usage:")
     if sys.platform == "darwin":
-        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
+        print("    {0} [-chxyz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
               " [-m name] [-p python]".format(progName))
     elif sys.platform.startswith("win"):
-        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file]"
+        print("    {0} [-chxyz] [-a dir] [-b dir] [-d dir] [-f file]"
               .format(progName))
     else:
-        print("    {0} [-chxz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
+        print("    {0} [-chxyz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
               .format(progName))
     print("where:")
     print("    -h        display this help message")
@@ -142,9 +149,10 @@ def usage(rcode=2):
         print("              (default: {0}".format(macAppBundlePath))
         print("    -p python name of the python executable")
         print("              (default: {0})".format(macPythonExe))
+    print("    -c        don't cleanup old installation first")
     print("    -x        don't perform dependency checks (use on your own"
           " risk)")
-    print("    -c        don't cleanup old installation first")
+    print("    -y        add the Python variant to the executable names")
     print("    -z        don't compile the installed python files")
     print()
     print("The file given to the -f option must be valid Python code"
@@ -351,9 +359,9 @@ def cleanupSource(dirName):
     # step 1: delete all Ui_*.py files without a corresponding
     #         *.ui file
     dirListing = os.listdir(dirName)
-    for formName, sourceName in [(f.replace('Ui_',"").replace(".py",".ui"), f)
-                                 for f in dirListing
-                                 if fnmatch.fnmatch(f, "Ui_*.py")]:
+    for formName, sourceName in [
+        (f.replace('Ui_', "").replace(".py", ".ui"), f)
+            for f in dirListing if fnmatch.fnmatch(f, "Ui_*.py")]:
         if not os.path.exists(os.path.join(dirName, formName)):
             os.remove(os.path.join(dirName, sourceName))
             if os.path.exists(os.path.join(dirName, sourceName + "c")):
@@ -376,7 +384,7 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
-    global macAppBundleName, macAppBundlePath, platBinDir
+    global macAppBundleName, macAppBundlePath, platBinDir, includePythonVariant
     
     try:
         from eric5config import getConfig
@@ -407,6 +415,8 @@ def cleanUp():
         "eric5-plugininstall", "eric5-pluginuninstall",
         "eric5-pluginrepository", "eric5-sqlbrowser",
         "eric5-webbrowser", "eric5-iconeditor",
+    ]
+    rem_wnames2 = [
         "eric5_api", "eric5_compare",
         "eric5_configure", "eric5_diff",
         "eric5_doc", "eric5_qregularexpression",
@@ -419,6 +429,11 @@ def cleanUp():
         "eric5_webbrowser", "eric5_iconeditor",
         "eric5_snap",
     ]
+    if includePythonVariant:
+        marker = PythonMarkers[sys.version_info.major]
+        rem_wnames.extend([n + marker for n in rem_wnames2])
+    else:
+        rem_wnames.extend(rem_wnames2)
     
     try:
         for rem_wname in rem_wnames:
@@ -480,7 +495,6 @@ def cleanUp():
             bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
             if os.path.exists(bundlePath):
                 shutil.rmtree(bundlePath)
-        
     except (IOError, OSError) as msg:
         sys.stderr.write(
             'Error: {0}\nTry install with admin rights.\n'.format(msg))
@@ -508,30 +522,58 @@ def installEric():
     @return result code (integer)
     """
     global distDir, doCleanup, cfg, progLanguages, sourceDir, configName
+    global includePythonVariant
     
     # Create the platform specific wrappers.
     wnames = []
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_api", False))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_compare"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_configure"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_diff"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_doc", False))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_editor"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_iconeditor"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_plugininstall"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginrepository"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_pluginuninstall"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregexp"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_qregularexpression"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_re"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_snap"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_sqlbrowser"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_tray"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_trpreviewer"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_uipreviewer"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_unittest"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5_webbrowser"))
-    wnames.append(createPyWrapper(cfg['ericDir'], "eric5"))
+    if includePythonVariant:
+        marker = PythonMarkers[sys.version_info.major]
+    else:
+        marker = ""
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_api" + marker,
+                                  False))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_compare" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_configure" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_diff" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_doc" + marker,
+                                  False))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_editor" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_iconeditor" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_plugininstall" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_pluginrepository" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_pluginuninstall" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_qregexp" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_qregularexpression" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_re" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_snap" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_sqlbrowser" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_tray" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_trpreviewer" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_uipreviewer" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_unittest" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5_webbrowser" + marker))
+    wnames.append(createPyWrapper(cfg['ericDir'],
+                                  "eric5" + marker))
     
     # set install prefix, if not None
     if distDir:
@@ -1135,7 +1177,7 @@ def main(argv):
 
     # Parse the command line.
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
-    global sourceDir, configName
+    global sourceDir, configName, includePythonVariant
     global macAppBundlePath, macAppBundleName, macPythonExe
     
     if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
@@ -1152,11 +1194,11 @@ def main(argv):
 
     try:
         if sys.platform.startswith("win"):
-            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:")
+            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:")
         elif sys.platform == "darwin":
-            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:m:n:p:")
+            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:i:m:n:p:")
         else:
-            optlist, args = getopt.getopt(argv[1:], "chxza:b:d:f:i:")
+            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:i:")
     except getopt.GetoptError:
         usage()
 
@@ -1181,6 +1223,8 @@ def main(argv):
             doCleanup = False
         elif opt == "-z":
             doCompile = False
+        elif opt == "-y":
+            includePythonVariant = True
         elif opt == "-f":
             try:
                 exec(compile(open(arg).read(), arg, 'exec'), globals())

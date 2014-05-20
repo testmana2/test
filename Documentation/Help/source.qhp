@@ -1010,6 +1010,7 @@
             <section title="eric5.ViewManager.ViewManager" ref="eric5.ViewManager.ViewManager.html" />
             <section title="eric5.ViewManager.__init__" ref="eric5.ViewManager.__init__.html" />
           </section>
+          <section title="eric5.cleanupSource" ref="eric5.cleanupSource.html" />
           <section title="eric5.compileUiFiles" ref="eric5.compileUiFiles.html" />
           <section title="eric5.eric5" ref="eric5.eric5.html" />
           <section title="eric5.eric5_api" ref="eric5.eric5_api.html" />
@@ -12859,6 +12860,9 @@
       <keyword name="checkBlacklistedVersions" id="checkBlacklistedVersions" ref="eric5.Globals.__init__.html#checkBlacklistedVersions" />
       <keyword name="checkPyside" id="checkPyside" ref="eric5.Utilities.__init__.html#checkPyside" />
       <keyword name="cleanUp" id="cleanUp" ref="eric5.install.html#cleanUp" />
+      <keyword name="cleanupSource" id="cleanupSource" ref="eric5.cleanupSource.html#cleanupSource" />
+      <keyword name="cleanupSource" id="cleanupSource" ref="eric5.install.html#cleanupSource" />
+      <keyword name="cleanupSource (Module)" id="cleanupSource (Module)" ref="eric5.cleanupSource.html" />
       <keyword name="close" id="close" ref="eric5.DebugClients.Ruby.AsyncFile.html#close" />
       <keyword name="codeStyleCheck" id="codeStyleCheck" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#codeStyleCheck" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
@@ -13234,6 +13238,7 @@
       <keyword name="loadTranslators" id="loadTranslators" ref="eric5.Toolbox.Startup.html#loadTranslators" />
       <keyword name="main" id="main" ref="eric5.DataViews.CodeMetrics.html#main" />
       <keyword name="main" id="main" ref="eric5.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardServer.html#main" />
+      <keyword name="main" id="main" ref="eric5.cleanupSource.html#main" />
       <keyword name="main" id="main" ref="eric5.compileUiFiles.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5.html#main" />
       <keyword name="main" id="main" ref="eric5.eric5_api.html#main" />
@@ -14280,6 +14285,7 @@
       <file>eric5.ViewManager.BookmarkedFilesDialog.html</file>
       <file>eric5.ViewManager.ViewManager.html</file>
       <file>eric5.ViewManager.__init__.html</file>
+      <file>eric5.cleanupSource.html</file>
       <file>eric5.compileUiFiles.html</file>
       <file>eric5.eric5.html</file>
       <file>eric5.eric5_api.html</file>
