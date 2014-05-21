@@ -152,6 +152,14 @@ class ProjectBrowserSimpleDirectoryItem(BrowserItem, ProjectBrowserItemMixin):
         """
         return self._dirName
     
+    def name(self):
+        """
+        Public method to return the name of the item.
+        
+        @return name of the item (string)
+        """
+        return self._dirName
+    
     def lessThan(self, other, column, order):
         """
         Public method to check, if the item is less than the other one.

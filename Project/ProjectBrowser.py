@@ -376,6 +376,15 @@ class ProjectBrowser(E5TabWidget):
         else:
             return None
     
+    def getProjectBrowserNames(self):
+        """
+        Public method to get the names of the various project browsers.
+        
+        @return list of project browser names (list of string)
+        """
+        return ["sources", "forms", "resources",
+                "translations", "interfaces", "others"]
+    
     def handlePreferencesChanged(self):
         """
         Public slot used to handle the preferencesChanged signal.

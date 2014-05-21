@@ -35,6 +35,7 @@ class SessionWriter(XMLStreamWriterBase):
         
         self.name = projectName
         self.project = e5App().getObject("Project")
+        self.projectBrowser = e5App().getObject("ProjectBrowser")
         self.multiProject = e5App().getObject("MultiProject")
         self.vm = e5App().getObject("ViewManager")
         self.dbg = e5App().getObject("DebugUI")
@@ -223,6 +224,20 @@ class SessionWriter(XMLStreamWriterBase):
                     self.writeAttribute("value", str(bookmark))
                     self.writeEndElement()
         self.writeEndElement()
+        
+        # step 5: save state of the various project browsers
+        if not isGlobal:
+            self.writeStartElement("ProjectBrowserStates")
+            for browserName in self.projectBrowser.getProjectBrowserNames():
+                self.writeStartElement("ProjectBrowserState")
+                self.writeAttribute("name", browserName)
+                # get the names of expanded files and directories
+                names = self.projectBrowser\
+                    .getProjectBrowser(browserName).getExpandedItemNames()
+                for name in names:
+                    self.writeTextElement("ExpandedItemName", name)
+                self.writeEndElement()
+            self.writeEndElement()
         
         # add the main end tag
         self.writeEndElement()

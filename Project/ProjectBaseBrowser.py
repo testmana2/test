@@ -566,6 +566,31 @@ class ProjectBaseBrowser(Browser):
             filter=[ProjectBrowserSimpleDirectoryItem,
                     ProjectBrowserDirectoryItem])
         
+    def getExpandedItemNames(self):
+        """
+        Public method to get the file/directory names of all expanded items.
+        
+        @return list of expanded items names (list of string)
+        """
+        # step 1: find the top most index
+        childIndex = self.currentIndex()
+        if not childIndex.isValid():
+            return []
+        
+        while childIndex.isValid():
+            topIndex = childIndex
+            childIndex = self.indexAbove(childIndex)
+        
+        # step 2: get names of expanded items
+        expandedNames = []
+        childIndex = topIndex
+        while childIndex.isValid():
+            if self.isExpanded(childIndex):
+                expandedNames.append(
+                    self.model().item(childIndex).name())
+            childIndex = self.indexBelow(childIndex)
+        return expandedNames
+        
     def _prepareRepopulateItem(self, name):
         """
         Protected slot to handle the prepareRepopulateItem signal.

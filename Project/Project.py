@@ -852,9 +852,11 @@ class Project(QObject):
             enable = False
         else:
             fn, ext = os.path.splitext(os.path.basename(self.pfile))
-            fn = os.path.join(self.getProjectManagementDir(),
-                              '{0}.e4s'.format(fn))
-            enable = os.path.exists(fn)
+            fn_new = os.path.join(self.getProjectManagementDir(),
+                                  '{0}.e5s'.format(fn))
+            fn_old = os.path.join(self.getProjectManagementDir(),
+                                  '{0}.e4s'.format(fn))
+            enable = os.path.exists(fn_new) or os.path.exists(fn_old)
         self.sessActGrp.findChild(
             QAction, "project_load_session").setEnabled(enable)
         self.sessActGrp.findChild(
@@ -863,7 +865,7 @@ class Project(QObject):
     @pyqtSlot()
     def __readSession(self, quiet=False, indicator=""):
         """
-        Private method to read in the project session file (.e4s).
+        Private method to read in the project session file (.e5s or .e4s).
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -877,9 +879,12 @@ class Project(QObject):
                     self.tr("Please save the project first."))
             return
             
-        fn, ext = os.path.splitext(os.path.basename(self.pfile))
+        fn1, ext = os.path.splitext(os.path.basename(self.pfile))
         fn = os.path.join(self.getProjectManagementDir(),
-                          '{0}{1}.e4s'.format(fn, indicator))
+                          '{0}{1}.e5s'.format(fn1, indicator))
+        if not os.path.exists(fn):
+            fn = os.path.join(self.getProjectManagementDir(),
+                              '{0}{1}.e4s'.format(fn1, indicator))
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
@@ -899,7 +904,7 @@ class Project(QObject):
     @pyqtSlot()
     def __writeSession(self, quiet=False, indicator=""):
         """
-        Private method to write the session data to an XML file (.e4s).
+        Private method to write the session data to an XML file (.e5s).
         
         @param quiet flag indicating quiet operations.
                 If this flag is true, no errors are reported.
@@ -915,7 +920,7 @@ class Project(QObject):
         
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         fn = os.path.join(self.getProjectManagementDir(),
-                          '{0}{1}.e4s'.format(fn, indicator))
+                          '{0}{1}.e5s'.format(fn, indicator))
         
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
@@ -945,7 +950,10 @@ class Project(QObject):
             
         fname, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        for fn in [os.path.join(
+        for fn in [
+            os.path.join(
+                self.getProjectManagementDir(), "{0}.e5s".format(fname)),
+            os.path.join(
                 self.getProjectManagementDir(), "{0}.e4s".format(fname))]:
             if os.path.exists(fn):
                 try:

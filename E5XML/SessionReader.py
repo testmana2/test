@@ -19,7 +19,7 @@ class SessionReader(XMLStreamReaderBase):
     """
     Class for reading an XML session file.
     """
-    supportedVersions = ["4.3", "4.4"]
+    supportedVersions = ["4.3", "4.4", "5.0"]
     
     def __init__(self, device, isGlobal):
         """
@@ -34,6 +34,7 @@ class SessionReader(XMLStreamReaderBase):
         self.isGlobal = isGlobal
         
         self.project = e5App().getObject("Project")
+        self.projectBrowser = e5App().getObject("ProjectBrowser")
         self.multiProject = e5App().getObject("MultiProject")
         self.vm = e5App().getObject("ViewManager")
         self.dbg = e5App().getObject("DebugUI")
@@ -89,6 +90,8 @@ class SessionReader(XMLStreamReaderBase):
                     self.__readDebugInfo()
                 elif self.name() == "Bookmarks":
                     self.__readBookmarks()
+                elif self.name() == "ProjectBrowserStates":
+                    self.__readProjectBrowserStates()
                 else:
                     self.raiseUnexpectedStartTag(self.name())
         
@@ -333,5 +336,47 @@ class SessionReader(XMLStreamReaderBase):
                     filename = self.readElementText()
                 elif self.name() == "Linenumber":
                     lineno = int(self.attribute("value", "0"))
+                else:
+                    self.raiseUnexpectedStartTag(self.name())
+    
+    def __readProjectBrowserStates(self):
+        """
+        Private method to read the project browser state infos.
+        """
+        while not self.atEnd():
+            self.readNext()
+            if self.isEndElement() and self.name() == "ProjectBrowserStates":
+                break
+            
+            if self.isStartElement():
+                if self.name() == "ProjectBrowserState":
+                    browserName = self.attribute("name", "")
+                    if not browserName:
+                        self.raiseBadValue("ProjectBrowserState.name")
+                    self.__readProjectBrowserState(browserName)
+                else:
+                    self.raiseUnexpectedStartTag(self.name())
+        
+    def __readProjectBrowserState(self, browserName):
+        """
+        Private method to read the project browser state info.
+        
+        @param browserName name of the project browser (string)
+        """
+        expandedNames = []
+        
+        while not self.atEnd():
+            self.readNext()
+            if self.isEndElement() and self.name() == "ProjectBrowserState":
+                # TODO: implement the expand logic
+                print(browserName)
+                print(expandedNames)
+                break
+            
+            if self.isStartElement():
+                if self.name() == "ExpandedItemName":
+                    itemName = self.readElementText()
+                    if itemName:
+                        expandedNames.append(itemName)
                 else:
                     self.raiseUnexpectedStartTag(self.name())

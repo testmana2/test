@@ -5478,9 +5478,9 @@ class UserInterface(E5MainWindow):
         
     def __writeSession(self):
         """
-        Private slot to write the session data to an XML file (.e4s).
+        Private slot to write the session data to an XML file (.e5s).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
+        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e5s")
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
             from E5XML.SessionWriter import SessionWriter
@@ -5496,17 +5496,20 @@ class UserInterface(E5MainWindow):
         
     def __readSession(self):
         """
-        Private slot to read in the session file (.e4s).
+        Private slot to read in the session file (.e5s or .e4s).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
+        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e5s")
         if not os.path.exists(fn):
-            E5MessageBox.critical(
-                self,
-                self.tr("Read session"),
-                self.tr(
-                    "<p>The session file <b>{0}</b> could not be read.</p>")
-                .format(fn))
-            return
+            fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
+            if not os.path.exists(fn):
+                E5MessageBox.critical(
+                    self,
+                    self.tr("Read session"),
+                    self.tr(
+                        "<p>The session file <b>{0}</b> could not"
+                        " be read.</p>")
+                    .format(fn))
+                return
         
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
