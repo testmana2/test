@@ -915,6 +915,8 @@ class Subversion(VersionControl):
             accepted = (dlg.exec_() == QDialog.Accepted)
             if accepted:
                 target, force = dlg.getData()
+            if not target:
+                return False
         
         if not rx_prot.exactMatch(target):
             isDir = os.path.isdir(name)
