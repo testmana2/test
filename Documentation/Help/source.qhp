@@ -1791,6 +1791,7 @@
       <keyword name="BrowserClassItem.isPublic" id="BrowserClassItem.isPublic" ref="eric5.UI.BrowserModel.html#BrowserClassItem.isPublic" />
       <keyword name="BrowserClassItem.lessThan" id="BrowserClassItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserClassItem.lessThan" />
       <keyword name="BrowserClassItem.lineno" id="BrowserClassItem.lineno" ref="eric5.UI.BrowserModel.html#BrowserClassItem.lineno" />
+      <keyword name="BrowserClassItem.name" id="BrowserClassItem.name" ref="eric5.UI.BrowserModel.html#BrowserClassItem.name" />
       <keyword name="BrowserCodingItem" id="BrowserCodingItem" ref="eric5.UI.BrowserModel.html#BrowserCodingItem" />
       <keyword name="BrowserCodingItem (Constructor)" id="BrowserCodingItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserCodingItem.__init__" />
       <keyword name="BrowserCodingItem.lessThan" id="BrowserCodingItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserCodingItem.lessThan" />
@@ -1849,6 +1850,7 @@
       <keyword name="BrowserMethodItem.isPublic" id="BrowserMethodItem.isPublic" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.isPublic" />
       <keyword name="BrowserMethodItem.lessThan" id="BrowserMethodItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.lessThan" />
       <keyword name="BrowserMethodItem.lineno" id="BrowserMethodItem.lineno" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.lineno" />
+      <keyword name="BrowserMethodItem.name" id="BrowserMethodItem.name" ref="eric5.UI.BrowserModel.html#BrowserMethodItem.name" />
       <keyword name="BrowserModel" id="BrowserModel" ref="eric5.UI.BrowserModel.html#BrowserModel" />
       <keyword name="BrowserModel (Constructor)" id="BrowserModel (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserModel.__init__" />
       <keyword name="BrowserModel (Module)" id="BrowserModel (Module)" ref="eric5.UI.BrowserModel.html" />
@@ -1891,6 +1893,7 @@
       <keyword name="BrowserSortFilterProxyModel.sort" id="BrowserSortFilterProxyModel.sort" ref="eric5.UI.BrowserSortFilterProxyModel.html#BrowserSortFilterProxyModel.sort" />
       <keyword name="BrowserSysPathItem" id="BrowserSysPathItem" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem" />
       <keyword name="BrowserSysPathItem (Constructor)" id="BrowserSysPathItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem.__init__" />
+      <keyword name="BrowserSysPathItem.name" id="BrowserSysPathItem.name" ref="eric5.UI.BrowserModel.html#BrowserSysPathItem.name" />
       <keyword name="CallStackViewer" id="CallStackViewer" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer" />
       <keyword name="CallStackViewer (Constructor)" id="CallStackViewer (Constructor)" ref="eric5.Debugger.CallStackViewer.html#CallStackViewer.__init__" />
       <keyword name="CallStackViewer (Module)" id="CallStackViewer (Module)" ref="eric5.Debugger.CallStackViewer.html" />

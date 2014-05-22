@@ -1020,6 +1020,14 @@ class BrowserSysPathItem(BrowserItem):
         self.icon = UI.PixmapCache.getIcon("filePython.png")
         self._populated = False
         self._lazyPopulation = True
+    
+    def name(self):
+        """
+        Public method to return the name of the item.
+        
+        @return name of the item (string)
+        """
+        return "sys.path"
 
 
 class BrowserFileItem(BrowserItem):
@@ -1358,6 +1366,14 @@ class BrowserClassItem(BrowserItem):
             self._populated = False
             self._lazyPopulation = True
     
+    def name(self):
+        """
+        Public method to return the name of the item.
+        
+        @return name of the item (string)
+        """
+        return '{0}@@{1}'.format(self._filename, self.lineno())
+    
     def fileName(self):
         """
         Public method returning the filename.
@@ -1463,6 +1479,14 @@ class BrowserMethodItem(BrowserItem):
            (self._functionObject.methods or self._functionObject.classes):
             self._populated = False
             self._lazyPopulation = True
+    
+    def name(self):
+        """
+        Public method to return the name of the item.
+        
+        @return name of the item (string)
+        """
+        return '{0}@@{1}'.format(self._filename, self.lineno())
     
     def fileName(self):
         """

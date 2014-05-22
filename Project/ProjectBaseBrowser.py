@@ -597,9 +597,13 @@ class ProjectBaseBrowser(Browser):
         for name in names:
             childIndex = model.index(0, 0)
             while childIndex.isValid():
-                if model.item(childIndex).name() == name:
-                    self.setExpanded(childIndex, True)
-                    break
+                try:
+                    if model.item(childIndex).name() == name:
+                        self.setExpanded(childIndex, True)
+                        break
+                except AttributeError:
+                    # ignore items not supporting this method
+                    pass
                 childIndex = self.indexBelow(childIndex)
         
     def _prepareRepopulateItem(self, name):
