@@ -572,24 +572,35 @@ class ProjectBaseBrowser(Browser):
         
         @return list of expanded items names (list of string)
         """
-        # step 1: find the top most index
-        childIndex = self.currentIndex()
-        if not childIndex.isValid():
-            return []
-        
-        while childIndex.isValid():
-            topIndex = childIndex
-            childIndex = self.indexAbove(childIndex)
-        
-        # step 2: get names of expanded items
         expandedNames = []
-        childIndex = topIndex
+        
+        childIndex = self.model().index(0, 0)
         while childIndex.isValid():
             if self.isExpanded(childIndex):
-                expandedNames.append(
-                    self.model().item(childIndex).name())
+                try:
+                    expandedNames.append(
+                        self.model().item(childIndex).name())
+                except AttributeError:
+                    # only items defining the name() method are returned
+                    pass
             childIndex = self.indexBelow(childIndex)
+        
         return expandedNames
+        
+    def expandItemsByName(self, names):
+        """
+        Public method to expand items given their names.
+        
+        @param names list of item names to be expanded (list of string)
+        """
+        model = self.model()
+        for name in names:
+            childIndex = model.index(0, 0)
+            while childIndex.isValid():
+                if model.item(childIndex).name() == name:
+                    self.setExpanded(childIndex, True)
+                    break
+                childIndex = self.indexBelow(childIndex)
         
     def _prepareRepopulateItem(self, name):
         """

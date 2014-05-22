@@ -368,9 +368,10 @@ class SessionReader(XMLStreamReaderBase):
         while not self.atEnd():
             self.readNext()
             if self.isEndElement() and self.name() == "ProjectBrowserState":
-                # TODO: implement the expand logic
-                print(browserName)
-                print(expandedNames)
+                projectBrowser = \
+                    self.projectBrowser.getProjectBrowser(browserName)
+                if projectBrowser is not None:
+                    projectBrowser.expandItemsByName(expandedNames)
                 break
             
             if self.isStartElement():

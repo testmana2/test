@@ -1318,7 +1318,7 @@ class BrowserClassItem(BrowserItem):
         BrowserItem.__init__(self, parent, name)
         
         self.type_ = BrowserItemClass
-        self.name = name
+        self._name = name
         self._classObject = cl
         self._filename = filename
         
@@ -1438,7 +1438,7 @@ class BrowserMethodItem(BrowserItem):
         
         import Utilities.ClassBrowsers.ClbrBaseClasses
         self.type_ = BrowserItemMethod
-        self.name = name
+        self._name = name
         self._functionObject = fn
         self._filename = filename
         if self._functionObject.modifier == \
@@ -1506,9 +1506,9 @@ class BrowserMethodItem(BrowserItem):
         @return true, if this item is less than other (boolean)
         """
         if issubclass(other.__class__, BrowserMethodItem):
-            if self.name.startswith('__init__'):
+            if self._name.startswith('__init__'):
                 return order == Qt.AscendingOrder
-            if other.name.startswith('__init__'):
+            if other._name.startswith('__init__'):
                 return order == Qt.DescendingOrder
         elif issubclass(other.__class__, BrowserClassAttributesItem):
             return order == Qt.DescendingOrder
