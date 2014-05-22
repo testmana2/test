@@ -252,7 +252,7 @@ QObject
 <td>Private method to read in a project (.e4p) file.</td>
 </tr><tr>
 <td><a href="#Project.__readSession">__readSession</a></td>
-<td>Private method to read in the project session file (.e4s).</td>
+<td>Private method to read in the project session file (.e5s or .e4s).</td>
 </tr><tr>
 <td><a href="#Project.__readTasks">__readTasks</a></td>
 <td>Private method to read in the project tasks file (.e4t).</td>
@@ -336,7 +336,7 @@ QObject
 <td>Private method to save the project infos to a project file.</td>
 </tr><tr>
 <td><a href="#Project.__writeSession">__writeSession</a></td>
-<td>Private method to write the session data to an XML file (.e4s).</td>
+<td>Private method to write the session data to an XML file (.e5s).</td>
 </tr><tr>
 <td><a href="#Project.__writeUserProperties">__writeUserProperties</a></td>
 <td>Private method to write the project data to an XML file.</td>
@@ -953,7 +953,7 @@ flag indicating success
 <h4>Project.__readSession</h4>
 <b>__readSession</b>(<i>quiet=False, indicator=""</i>)
 <p>
-        Private method to read in the project session file (.e4s).
+        Private method to read in the project session file (.e5s or .e4s).
 </p><dl>
 <dt><i>quiet</i></dt>
 <dd>
@@ -1134,7 +1134,7 @@ flag indicating success
 <h4>Project.__writeSession</h4>
 <b>__writeSession</b>(<i>quiet=False, indicator=""</i>)
 <p>
-        Private method to write the session data to an XML file (.e4s).
+        Private method to write the session data to an XML file (.e5s).
 </p><dl>
 <dt><i>quiet</i></dt>
 <dd>

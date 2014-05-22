@@ -8839,6 +8839,8 @@
       <keyword name="ProjectBaseBrowser.addHookMethod" id="ProjectBaseBrowser.addHookMethod" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.addHookMethod" />
       <keyword name="ProjectBaseBrowser.addHookMethodAndMenuEntry" id="ProjectBaseBrowser.addHookMethodAndMenuEntry" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.addHookMethodAndMenuEntry" />
       <keyword name="ProjectBaseBrowser.currentItem" id="ProjectBaseBrowser.currentItem" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.currentItem" />
+      <keyword name="ProjectBaseBrowser.expandItemsByName" id="ProjectBaseBrowser.expandItemsByName" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.expandItemsByName" />
+      <keyword name="ProjectBaseBrowser.getExpandedItemNames" id="ProjectBaseBrowser.getExpandedItemNames" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.getExpandedItemNames" />
       <keyword name="ProjectBaseBrowser.removeHookMethod" id="ProjectBaseBrowser.removeHookMethod" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.removeHookMethod" />
       <keyword name="ProjectBaseBrowser.selectFile" id="ProjectBaseBrowser.selectFile" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectFile" />
       <keyword name="ProjectBaseBrowser.selectFileLine" id="ProjectBaseBrowser.selectFileLine" ref="eric5.Project.ProjectBaseBrowser.html#ProjectBaseBrowser.selectFileLine" />
@@ -8859,6 +8861,7 @@
       <keyword name="ProjectBrowser.__vcsStateChanged" id="ProjectBrowser.__vcsStateChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.__vcsStateChanged" />
       <keyword name="ProjectBrowser.__vcsStatusIndicatorClicked" id="ProjectBrowser.__vcsStatusIndicatorClicked" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.__vcsStatusIndicatorClicked" />
       <keyword name="ProjectBrowser.getProjectBrowser" id="ProjectBrowser.getProjectBrowser" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowser" />
+      <keyword name="ProjectBrowser.getProjectBrowserNames" id="ProjectBrowser.getProjectBrowserNames" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowserNames" />
       <keyword name="ProjectBrowser.getProjectBrowsers" id="ProjectBrowser.getProjectBrowsers" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.getProjectBrowsers" />
       <keyword name="ProjectBrowser.handleEditorChanged" id="ProjectBrowser.handleEditorChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.handleEditorChanged" />
       <keyword name="ProjectBrowser.handleEditorLineChanged" id="ProjectBrowser.handleEditorLineChanged" ref="eric5.Project.ProjectBrowser.html#ProjectBrowser.handleEditorLineChanged" />
@@ -8921,6 +8924,7 @@
       <keyword name="ProjectBrowserSimpleDirectoryItem (Constructor)" id="ProjectBrowserSimpleDirectoryItem (Constructor)" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem.__init__" />
       <keyword name="ProjectBrowserSimpleDirectoryItem.dirName" id="ProjectBrowserSimpleDirectoryItem.dirName" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem.dirName" />
       <keyword name="ProjectBrowserSimpleDirectoryItem.lessThan" id="ProjectBrowserSimpleDirectoryItem.lessThan" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem.lessThan" />
+      <keyword name="ProjectBrowserSimpleDirectoryItem.name" id="ProjectBrowserSimpleDirectoryItem.name" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem.name" />
       <keyword name="ProjectBrowserSimpleDirectoryItem.setName" id="ProjectBrowserSimpleDirectoryItem.setName" ref="eric5.Project.ProjectBrowserModel.html#ProjectBrowserSimpleDirectoryItem.setName" />
       <keyword name="ProjectBrowserSortFilterProxyModel" id="ProjectBrowserSortFilterProxyModel" ref="eric5.Project.ProjectBrowserSortFilterProxyModel.html#ProjectBrowserSortFilterProxyModel" />
       <keyword name="ProjectBrowserSortFilterProxyModel (Constructor)" id="ProjectBrowserSortFilterProxyModel (Constructor)" ref="eric5.Project.ProjectBrowserSortFilterProxyModel.html#ProjectBrowserSortFilterProxyModel.__init__" />
@@ -9789,6 +9793,8 @@
       <keyword name="SessionReader.__readBreakpoints" id="SessionReader.__readBreakpoints" ref="eric5.E5XML.SessionReader.html#SessionReader.__readBreakpoints" />
       <keyword name="SessionReader.__readDebugInfo" id="SessionReader.__readDebugInfo" ref="eric5.E5XML.SessionReader.html#SessionReader.__readDebugInfo" />
       <keyword name="SessionReader.__readFilenames" id="SessionReader.__readFilenames" ref="eric5.E5XML.SessionReader.html#SessionReader.__readFilenames" />
+      <keyword name="SessionReader.__readProjectBrowserState" id="SessionReader.__readProjectBrowserState" ref="eric5.E5XML.SessionReader.html#SessionReader.__readProjectBrowserState" />
+      <keyword name="SessionReader.__readProjectBrowserStates" id="SessionReader.__readProjectBrowserStates" ref="eric5.E5XML.SessionReader.html#SessionReader.__readProjectBrowserStates" />
       <keyword name="SessionReader.__readWatchexpression" id="SessionReader.__readWatchexpression" ref="eric5.E5XML.SessionReader.html#SessionReader.__readWatchexpression" />
       <keyword name="SessionReader.__readWatchexpressions" id="SessionReader.__readWatchexpressions" ref="eric5.E5XML.SessionReader.html#SessionReader.__readWatchexpressions" />
       <keyword name="SessionReader.readXML" id="SessionReader.readXML" ref="eric5.E5XML.SessionReader.html#SessionReader.readXML" />
