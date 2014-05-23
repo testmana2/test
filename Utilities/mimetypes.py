@@ -108,6 +108,7 @@ TextMimeTypes = [
     "application/xml+smarty",
     "application/xsl+xml",
     "application/xslt+xml",
+    "application/x-desktop",
     
     "image/svg+xml",
 ]
