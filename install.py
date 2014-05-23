@@ -343,6 +343,7 @@ def cleanUp():
     if sys.platform.startswith("linux"):
         for name in ["/usr/share/pixmaps/eric.png",
                      "/usr/share/applications/eric5.desktop",
+                     "/usr/share/appdata/eric5.appdata.xml",
                      "/usr/share/pixmaps/ericWeb.png",
                      "/usr/share/applications/eric5_webbrowser.desktop"]:
             if os.path.exists(name):
@@ -646,6 +647,11 @@ def installEric():
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
             shutilCopy(os.path.join(sourceDir, "eric5_webbrowser.desktop"),
                        dst)
+            dst = os.path.normpath(
+                os.path.join(distDir, "usr/share/appdata"))
+            if not os.path.exists(dst):
+                os.makedirs(dst)
+            shutilCopy(os.path.join(sourceDir, "eric5.appdata.xml"), dst)
         else:
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "eric.png"),
@@ -653,6 +659,10 @@ def installEric():
             shutilCopy(os.path.join(
                 sourceDir, "eric5.desktop"),
                 "/usr/share/applications")
+            if os.path.exists("/usr/share/appdata"):
+                shutilCopy(os.path.join(
+                    sourceDir, "eric5.appdata.xml"),
+                    "/usr/share/appdata")
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "ericWeb48.png"),
                 "/usr/share/pixmaps/ericWeb.png")
