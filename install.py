@@ -633,13 +633,19 @@ def installEric():
             dst = os.path.normpath(os.path.join(distDir, "usr/share/pixmaps"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutilCopy(os.path.join(sourceDir, "icons", "default", "eric.png"),
-                       os.path.join(dst, "eric.png"))
+            shutilCopy(
+                os.path.join(sourceDir, "icons", "default", "eric.png"),
+                os.path.join(dst, "eric.png"))
+            shutilCopy(
+                os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
+                os.path.join(dst, "ericWeb.png"))
             dst = os.path.normpath(
                 os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
             shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
+            shutilCopy(os.path.join(sourceDir, "eric5_webbrowser.desktop"),
+                       dst)
         else:
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "eric.png"),
