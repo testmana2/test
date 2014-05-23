@@ -1613,6 +1613,7 @@
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikipedia.xml</Other>
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wiktionary.xml</Other>
     <Other>APIs/QSS/qss.api</Other>
+    <Other>eric5.appdata.xml</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
