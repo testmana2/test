@@ -1580,6 +1580,14 @@ class BrowserClassAttributesItem(BrowserItem):
             self.icon = UI.PixmapCache.getIcon("attributes.png")
         self.__isClass = isClass
     
+    def name(self):
+        """
+        Public method to return the name of the item.
+        
+        @return name of the item (string)
+        """
+        return '{0}@@{1}'.format(self.parentItem.name(), self.data(0))
+    
     def attributes(self):
         """
         Public method returning the attribute list.

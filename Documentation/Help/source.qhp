@@ -1783,6 +1783,7 @@
       <keyword name="BrowserClassAttributesItem.attributes" id="BrowserClassAttributesItem.attributes" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.attributes" />
       <keyword name="BrowserClassAttributesItem.isClassAttributes" id="BrowserClassAttributesItem.isClassAttributes" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.isClassAttributes" />
       <keyword name="BrowserClassAttributesItem.lessThan" id="BrowserClassAttributesItem.lessThan" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.lessThan" />
+      <keyword name="BrowserClassAttributesItem.name" id="BrowserClassAttributesItem.name" ref="eric5.UI.BrowserModel.html#BrowserClassAttributesItem.name" />
       <keyword name="BrowserClassItem" id="BrowserClassItem" ref="eric5.UI.BrowserModel.html#BrowserClassItem" />
       <keyword name="BrowserClassItem (Constructor)" id="BrowserClassItem (Constructor)" ref="eric5.UI.BrowserModel.html#BrowserClassItem.__init__" />
       <keyword name="BrowserClassItem.boundaries" id="BrowserClassItem.boundaries" ref="eric5.UI.BrowserModel.html#BrowserClassItem.boundaries" />

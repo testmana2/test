@@ -7933,6 +7933,7 @@ eric5.UI.BrowserModel.BrowserClassAttributeItem?1(parent, attribute, isClass=Fal
 eric5.UI.BrowserModel.BrowserClassAttributesItem.attributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.isClassAttributes?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem.lessThan?4(other, column, order)
+eric5.UI.BrowserModel.BrowserClassAttributesItem.name?4()
 eric5.UI.BrowserModel.BrowserClassAttributesItem?1(parent, attributes, text, isClass=False)
 eric5.UI.BrowserModel.BrowserClassItem.boundaries?4()
 eric5.UI.BrowserModel.BrowserClassItem.classObject?4()
