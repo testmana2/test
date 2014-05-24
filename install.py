@@ -232,20 +232,21 @@ def wrapperName(dname, wfile):
     return wname
 
 
-def createPyWrapper(pydir, wfile, isGuiScript=True):
+def createPyWrapper(pydir, wfile, marker, isGuiScript=True):
     """
     Create an executable wrapper for a Python script.
 
     @param pydir the name of the directory where the Python script will
-        eventually be installed
-    @param wfile the basename of the wrapper
+        eventually be installed (string)
+    @param wfile the basename of the wrapper (string)
+    @param marker marker for the Python variant (string)
     @param isGuiScript flag indicating a wrapper script for a GUI
         application (boolean)
-    @return the platform specific name of the wrapper
+    @return the platform specific name of the wrapper (string)
     """
     # all kinds of Windows systems
     if sys.platform.startswith("win"):
-        wname = wfile + ".bat"
+        wname = wfile + marker + ".bat"
         if isGuiScript:
             wrapper = \
                 '''@echo off\n''' \
@@ -261,11 +262,11 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
 
     # Mac OS X
     elif sys.platform == "darwin":
-        # TODO: change this to respect the Python version install is executed with
-        pyexec = "{0}/bin/pythonw3".format(sys.exec_prefix)
+        major = sys.version_info.major
+        pyexec = "{0}/bin/pythonw{1}".format(sys.exec_prefix, major)
         if not os.path.exists(pyexec):
-            pyexec = "{0}/bin/python3".format(sys.exec_prefix)
-        wname = wfile
+            pyexec = "{0}/bin/python{1}".format(sys.exec_prefix, major)
+        wname = wfile + marker
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
                    '''exec "{0}" "{1}/{2}.py" "$@"\n'''
@@ -273,7 +274,7 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
 
     # *nix systems
     else:
-        wname = wfile
+        wname = wfile + marker
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
                    '''exec "{0}" "{1}/{2}.py" "$@"\n'''
@@ -367,9 +368,11 @@ def cleanupSource(dirName):
             if os.path.exists(os.path.join(dirName, sourceName + "c")):
                 os.remove(os.path.join(dirName, sourceName + "c"))
     
-    # step 2: delete the __pycache__ directory
+    # step 2: delete the __pycache__ directory and all *.pyc files
     if os.path.exists(os.path.join(dirName, "__pycache__")):
         shutil.rmtree(os.path.join(dirName, "__pycache__"))
+    for name in [f for f in dirListing if fnmatch.fnmatch(f, "*.pyc")]:
+        os.remove(os.path.join(dirName, name))
     
     # step 3: descent into subdirectories and delete them if empty
     for name in os.listdir(dirName):
@@ -532,49 +535,49 @@ def installEric():
     else:
         marker = ""
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_api" + marker,
+                                  "eric5_api", marker,
                                   False))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_compare" + marker))
+                                  "eric5_compare", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_configure" + marker))
+                                  "eric5_configure", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_diff" + marker))
+                                  "eric5_diff", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_doc" + marker,
+                                  "eric5_doc", marker,
                                   False))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_editor" + marker))
+                                  "eric5_editor", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_iconeditor" + marker))
+                                  "eric5_iconeditor", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_plugininstall" + marker))
+                                  "eric5_plugininstall", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_pluginrepository" + marker))
+                                  "eric5_pluginrepository", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_pluginuninstall" + marker))
+                                  "eric5_pluginuninstall", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_qregexp" + marker))
+                                  "eric5_qregexp", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_qregularexpression" + marker))
+                                  "eric5_qregularexpression", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_re" + marker))
+                                  "eric5_re", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_snap" + marker))
+                                  "eric5_snap", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_sqlbrowser" + marker))
+                                  "eric5_sqlbrowser", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_tray" + marker))
+                                  "eric5_tray", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_trpreviewer" + marker))
+                                  "eric5_trpreviewer", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_uipreviewer" + marker))
+                                  "eric5_uipreviewer", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_unittest" + marker))
+                                  "eric5_unittest", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5_webbrowser" + marker))
+                                  "eric5_webbrowser", marker))
     wnames.append(createPyWrapper(cfg['ericDir'],
-                                  "eric5" + marker))
+                                  "eric5", marker))
     
     # set install prefix, if not None
     if distDir:
@@ -791,7 +794,7 @@ def createMacAppBundle(pydir):
         starter = os.path.join(dirs["exe"], "eric")
         os.symlink(macPythonExe, starter)
     else:
-        starter = "python3"
+        starter = "python{0}".format(sys.version_info.major)
     
     wname = os.path.join(dirs["exe"], "eric5")
     path = os.getenv("PATH", "")
