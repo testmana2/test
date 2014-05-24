@@ -566,7 +566,7 @@ class TaskViewer(QTreeWidget):
                 lines = text.splitlines()
             except (UnicodeError, IOError):
                 count += 1
-                self.progress.setValue(count)
+                progress.setValue(count)
                 continue
             
             # now search tasks and record them
