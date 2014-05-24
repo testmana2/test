@@ -35,9 +35,11 @@ def cleanupSource(dirName):
             if os.path.exists(os.path.join(dirName, sourceName + "c")):
                 os.remove(os.path.join(dirName, sourceName + "c"))
     
-    # step 2: delete the __pycache__ directory
+    # step 2: delete the __pycache__ directory and all *.pyc files
     if os.path.exists(os.path.join(dirName, "__pycache__")):
         shutil.rmtree(os.path.join(dirName, "__pycache__"))
+    for name in [f for f in dirListing if fnmatch.fnmatch(f, "*.pyc")]:
+        os.remove(os.path.join(dirName, name))
     
     # step 3: descent into subdirectories and delete them if empty
     for name in os.listdir(dirName):
