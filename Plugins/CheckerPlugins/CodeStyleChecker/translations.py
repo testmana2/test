@@ -41,8 +41,7 @@ _messages = {
         "closing bracket does not match visual indentation"),
     "E125": QCoreApplication.translate(
         "pep8",
-        "continuation line does not distinguish itself from next"
-        " logical line"),
+        "continuation line with same indent as next logical line"),
     "E126": QCoreApplication.translate(
         "pep8",
         "continuation line over-indented for hanging indent"),
@@ -52,6 +51,12 @@ _messages = {
     "E128": QCoreApplication.translate(
         "pep8",
         "continuation line under-indented for visual indent"),
+    "E129": QCoreApplication.translate(
+        "pep8",
+        "visually indented line with same indent as next logical line"),
+    "E131": QCoreApplication.translate(
+        "pep8",
+        "continuation line unaligned for hanging indent"),
     "E133": QCoreApplication.translate(
         "pep8",
         "closing bracket is missing indentation"),
@@ -112,6 +117,9 @@ _messages = {
     "E262": QCoreApplication.translate(
         "pep8",
         "inline comment should start with '# '"),
+    "E265": QCoreApplication.translate(
+        "pep8",
+        "block comment should start with '# '"),
     "E271": QCoreApplication.translate(
         "pep8",
         "multiple spaces after keyword"),
@@ -184,12 +192,21 @@ _messages = {
     "E712": QCoreApplication.translate(
         "pep8",
         "comparison to {0} should be {1}"),
+    "E713": QCoreApplication.translate(
+        "pep8",
+        "test for membership should be 'not in'"),
+    "E714": QCoreApplication.translate(
+        "pep8",
+        "test for object identity should be 'is not'"),
     "E721": QCoreApplication.translate(
         "pep8",
         "do not compare types, use 'isinstance()'"),
     "E901": QCoreApplication.translate(
         "pep8",
         "{0}: {1}"),
+    "E902": QCoreApplication.translate(
+        "pep8",
+        "{0}"),
 
     # DocStyleChecker messages
     "D101": QCoreApplication.translate(
@@ -521,8 +538,10 @@ _messages_sample_args = {
     "E711": ["None", "'if cond is None:'"],
     "E712": ["True", "'if cond is True:' or 'if cond:'"],
     "E901": ["SyntaxError", "Invalid Syntax"],
+    "E902": ["IOError"],
     "D232": ["public"],
     "D901": ["SyntaxError", "Invalid Syntax"],
+    "FWRITE_ERROR": ["IOError"],
 }
 
 
@@ -538,12 +557,13 @@ def getTranslatedMessage(message):
         message, args = message
     else:
         args = []
+
     if message in _messages:
         if isinstance(args, int):
             # Retranslate with correct plural form
             return _messages[message](args)
         else:
-            if message.startswith('F'):
+            if message.startswith(('FD', 'FE', 'FN', 'FW')):
                 prefix = ''
             else:
                 prefix = message + ' '

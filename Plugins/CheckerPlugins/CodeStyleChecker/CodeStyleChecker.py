@@ -112,6 +112,10 @@ def codeStyleCheck(filename, source, args):
             enc = encoding
         source = [line.encode(enc) for line in source]
     
+    # Don't check an empty file
+    if source == []:
+        return stats, []
+
     if fixIssues:
         from CodeStyleFixer import CodeStyleFixer
         fixer = CodeStyleFixer(

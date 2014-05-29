@@ -623,7 +623,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             vm.openSourceFile(fn, lineno=lineno, pos=position + 1)
             editor = vm.getOpenEditor(fn)
             
-            if code == "E901":
+            if code in ["E901", "E902"]:
                 editor.toggleSyntaxError(lineno, 0, True, message, True)
             else:
                 editor.toggleWarning(
