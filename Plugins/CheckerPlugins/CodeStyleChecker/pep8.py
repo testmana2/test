@@ -1690,13 +1690,14 @@ class StyleGuide(object):
             options.reporter = BaseReport if options.quiet else StandardReport
 
         options.select = tuple(options.select or ())
-        if not (options.select or options.ignore or
-                options.testsuite or options.doctest) and DEFAULT_IGNORE:
-            # The default choice: ignore controversial checks
-            options.ignore = tuple(DEFAULT_IGNORE.split(','))
-        else:
-            # Ignore all checks which are not explicitly selected
-            options.ignore = ('',) if options.select else tuple(options.ignore)
+#        if not (options.select or options.ignore or
+#                options.testsuite or options.doctest) and DEFAULT_IGNORE:
+#            # The default choice: ignore controversial checks
+#            options.ignore = tuple(DEFAULT_IGNORE.split(','))
+#        else:
+        # Ignore all checks which are not explicitly selected or all if no
+        # check is ignored or explicitly selected
+        options.ignore = ('',) if options.select else tuple(options.ignore)
         options.benchmark_keys = BENCHMARK_KEYS[:]
         options.ignore_code = self.ignore_code
         options.physical_checks = self.get_checks('physical_line')
