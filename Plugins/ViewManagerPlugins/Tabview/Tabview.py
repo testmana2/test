@@ -358,7 +358,7 @@ class TabWidget(E5TabWidget):
             self.setTabsClosable(True)
         self.navigationButton.setEnabled(True)
         
-        if not editor in self.editors:
+        if editor not in self.editors:
             self.editors.append(editor)
             editor.captionChanged.connect(self.__captionChange)
             editor.cursorLineChanged.connect(self.__cursorLineChanged)
@@ -388,7 +388,7 @@ class TabWidget(E5TabWidget):
             self.setTabsClosable(True)
         self.navigationButton.setEnabled(True)
         
-        if not editor in self.editors:
+        if editor not in self.editors:
             self.editors.append(editor)
             editor.captionChanged.connect(self.__captionChange)
             editor.cursorLineChanged.connect(self.__cursorLineChanged)

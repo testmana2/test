@@ -630,8 +630,9 @@ class Shell(QsciScintillaCompat):
         else:
             version = version.replace("#", self.tr("No."))
             if platform != "" and dbgclient != "":
-                self.__write(self.tr('{0} on {1}, {2}')
-                    .format(version, platform, dbgclient))
+                self.__write(
+                    self.tr('{0} on {1}, {2}')
+                        .format(version, platform, dbgclient))
             else:
                 self.__write(version)
         self.__write('\n')
@@ -1259,9 +1260,9 @@ class Shell(QsciScintillaCompat):
                         self.dbs.startClient(False)  # same as reset
                     else:
                         language = cmdList[1]
-                        if not language in self.clientLanguages:
+                        if language not in self.clientLanguages:
                             language = cmdList[1].capitalize()
-                            if not language in self.clientLanguages:
+                            if language not in self.clientLanguages:
                                 language = ""
                         if language:
                             self.dbs.startClient(False, language)

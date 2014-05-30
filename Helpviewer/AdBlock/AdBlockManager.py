@@ -246,8 +246,8 @@ class AdBlockManager(QObject):
         Preferences.setHelp("AdBlockEnabled", self.__enabled)
         if self.__subscriptionsLoaded:
             subscriptions = []
-            requiresSubscriptions = []  # intermediate store for
-                                       # subscription requiring others
+            requiresSubscriptions = []
+            # intermediate store for subscription requiring others
             for subscription in self.__subscriptions:
                 if subscription is None:
                     continue

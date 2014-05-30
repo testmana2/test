@@ -485,11 +485,13 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.startFailedButton.setDefault(False)
             self.startButton.setDefault(True)
         if self.runCount == 1:
-            self.sbLabel.setText(self.tr("Ran {0} test in {1:.3f}s")
-                .format(self.runCount, self.timeTaken))
+            self.sbLabel.setText(
+                self.tr("Ran {0} test in {1:.3f}s")
+                    .format(self.runCount, self.timeTaken))
         else:
-            self.sbLabel.setText(self.tr("Ran {0} tests in {1:.3f}s")
-                .format(self.runCount, self.timeTaken))
+            self.sbLabel.setText(
+                self.tr("Ran {0} tests in {1:.3f}s")
+                    .format(self.runCount, self.timeTaken))
         self.progressLed.off()
         
         self.unittestStopped.emit()

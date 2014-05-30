@@ -1138,9 +1138,9 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py</Source>
-    <Source>Utilities/mimetypes.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py</Source>
     <Source>cleanupSource.py</Source>
+    <Source>Utilities/MimeTypes.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1993,7 +1993,7 @@
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>W293, N802, N803, N807, N808, N821</string>
+              <string>N802, N803, N807, N808, N821, W293, E265</string>
             </value>
             <key>
               <string>FixCodes</string>

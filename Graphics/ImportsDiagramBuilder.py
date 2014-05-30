@@ -152,7 +152,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                     impLst.append(n)
                 elif self.showExternalImports:
                     impLst.append(n)
-                    if not n in externalMods:
+                    if n not in externalMods:
                         externalMods.append(n)
             for i in list(modules[module].from_imports.keys()):
                 if i.startswith('.'):
@@ -175,7 +175,7 @@ class ImportsDiagramBuilder(UMLDiagramBuilder):
                     impLst.append(n)
                 elif self.showExternalImports:
                     impLst.append(n)
-                    if not n in externalMods:
+                    if n not in externalMods:
                         externalMods.append(n)
             classNames = []
             for cls in list(modules[module].classes.keys()):

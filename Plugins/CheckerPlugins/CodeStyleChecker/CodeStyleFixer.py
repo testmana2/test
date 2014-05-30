@@ -165,11 +165,12 @@ class CodeStyleFixer(object):
             "W603": self.__fixW603,
         }
         self.__modified = False
-        self.__stackLogical = []    # these need to be fixed before the file
-                                    # is saved but after all other inline
-                                    # fixes. These work with logical lines.
-        self.__stack = []           # these need to be fixed before the file
-                                    # is saved but after all inline fixes
+        self.__stackLogical = []
+        # These need to be fixed before the file is saved but after all
+        # other inline fixes. These work with logical lines.
+        self.__stack = []
+        # These need to be fixed before the file is saved but after all
+        # inline fixes.
         
         self.__multiLineNumbers = None
         self.__docLineNumbers = None
@@ -1900,8 +1901,7 @@ class Reindenter(object):
                                 if have == self.__getlspace(lines[jline]):
                                     want = jlevel * 4
                                 break
-                    if want < 0:           # Maybe it's a hanging
-                                           # comment like this one,
+                    if want < 0:  # Maybe it's a hanging comment like this one,
                         # in which case we should shift it like its base
                         # line got shifted.
                         for j in range(i - 1, -1, -1):

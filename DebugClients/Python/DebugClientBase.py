@@ -2075,7 +2075,7 @@ class DebugClientBase(object):
             except:
                 remoteAddress = None
             sys.argv = ['']
-            if not '' in sys.path:
+            if '' not in sys.path:
                 sys.path.insert(0, '')
             if port >= 0:
                 if not self.noencoding:

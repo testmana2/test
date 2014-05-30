@@ -23,7 +23,7 @@ a { color: #BA6D36; }
 
 <h3>Global Attributes</h3>
 <table>
-<tr><td>ARITHMETIC_OP</td></tr><tr><td>BENCHMARK_KEYS</td></tr><tr><td>COMMENT_WITH_NL</td></tr><tr><td>COMPARE_SINGLETON_REGEX</td></tr><tr><td>COMPARE_TYPE_REGEX</td></tr><tr><td>DEFAULT_EXCLUDE</td></tr><tr><td>DEFAULT_IGNORE</td></tr><tr><td>DOCSTRING_REGEX</td></tr><tr><td>ERRORCODE_REGEX</td></tr><tr><td>EXTRANEOUS_WHITESPACE_REGEX</td></tr><tr><td>HUNK_REGEX</td></tr><tr><td>INDENT_REGEX</td></tr><tr><td>KEYWORDS</td></tr><tr><td>KEYWORD_REGEX</td></tr><tr><td>LAMBDA_REGEX</td></tr><tr><td>MAX_LINE_LENGTH</td></tr><tr><td>OPERATOR_REGEX</td></tr><tr><td>PROJECT_CONFIG</td></tr><tr><td>RAISE_COMMA_REGEX</td></tr><tr><td>REPORT_FORMAT</td></tr><tr><td>RERAISE_COMMA_REGEX</td></tr><tr><td>SINGLETONS</td></tr><tr><td>SKIP_TOKENS</td></tr><tr><td>TESTSUITE_PATH</td></tr><tr><td>UNARY_OPERATORS</td></tr><tr><td>WHITESPACE</td></tr><tr><td>WHITESPACE_AFTER_COMMA_REGEX</td></tr><tr><td>WS_NEEDED_OPERATORS</td></tr><tr><td>WS_OPTIONAL_OPERATORS</td></tr><tr><td>__version__</td></tr><tr><td>_checks</td></tr><tr><td>noqa</td></tr>
+<tr><td>ARITHMETIC_OP</td></tr><tr><td>BENCHMARK_KEYS</td></tr><tr><td>COMMENT_WITH_NL</td></tr><tr><td>COMPARE_NEGATIVE_REGEX</td></tr><tr><td>COMPARE_SINGLETON_REGEX</td></tr><tr><td>COMPARE_TYPE_REGEX</td></tr><tr><td>DEFAULT_EXCLUDE</td></tr><tr><td>DEFAULT_IGNORE</td></tr><tr><td>DOCSTRING_REGEX</td></tr><tr><td>ERRORCODE_REGEX</td></tr><tr><td>EXTRANEOUS_WHITESPACE_REGEX</td></tr><tr><td>HUNK_REGEX</td></tr><tr><td>INDENT_REGEX</td></tr><tr><td>KEYWORDS</td></tr><tr><td>KEYWORD_REGEX</td></tr><tr><td>LAMBDA_REGEX</td></tr><tr><td>MAX_LINE_LENGTH</td></tr><tr><td>NEWLINE</td></tr><tr><td>OPERATOR_REGEX</td></tr><tr><td>PROJECT_CONFIG</td></tr><tr><td>RAISE_COMMA_REGEX</td></tr><tr><td>REPORT_FORMAT</td></tr><tr><td>RERAISE_COMMA_REGEX</td></tr><tr><td>SINGLETONS</td></tr><tr><td>SKIP_COMMENTS</td></tr><tr><td>SKIP_TOKENS</td></tr><tr><td>TESTSUITE_PATH</td></tr><tr><td>UNARY_OPERATORS</td></tr><tr><td>WHITESPACE</td></tr><tr><td>WHITESPACE_AFTER_COMMA_REGEX</td></tr><tr><td>WS_NEEDED_OPERATORS</td></tr><tr><td>WS_OPTIONAL_OPERATORS</td></tr><tr><td>__version__</td></tr><tr><td>_checks</td></tr><tr><td>noqa</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -53,23 +53,32 @@ a { color: #BA6D36; }
 <td><a href="#_add_check">_add_check</a></td>
 <td></td>
 </tr><tr>
+<td><a href="#_is_eol_token">_is_eol_token</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#_is_eol_token_1">_is_eol_token</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#_main">_main</a></td>
 <td>Parse options and run checks on Python source.</td>
 </tr><tr>
 <td><a href="#blank_lines">blank_lines</a></td>
 <td>Separate top-level function and class definitions with two blank lines.</td>
 </tr><tr>
+<td><a href="#comparison_negative">comparison_negative</a></td>
+<td>Negative comparison should be done using "not in" and "is not".</td>
+</tr><tr>
 <td><a href="#comparison_to_singleton">comparison_to_singleton</a></td>
-<td>Comparisons to singletons like None should always be done with "is" or "is not", never the equality operators.</td>
+<td>Comparison to singletons should use "is" or "is not".</td>
 </tr><tr>
 <td><a href="#comparison_type">comparison_type</a></td>
-<td>Object type comparisons should always use isinstance() instead of comparing types directly.</td>
+<td>Object type comparisons should always use isinstance().</td>
 </tr><tr>
 <td><a href="#compound_statements">compound_statements</a></td>
-<td>Compound statements (multiple statements on the same line) are generally discouraged.</td>
+<td>Compound statements (on the same line) are generally discouraged.</td>
 </tr><tr>
 <td><a href="#continued_indentation">continued_indentation</a></td>
-<td>Continuation lines should align wrapped elements either vertically using Python's implicit line joining inside parentheses, brackets and braces, or using a hanging indent.</td>
+<td>Continuation lines indentation.</td>
 </tr><tr>
 <td><a href="#expand_indent">expand_indent</a></td>
 <td>Return the amount of indentation.</td>
@@ -78,7 +87,7 @@ a { color: #BA6D36; }
 <td>Avoid explicit line join between brackets.</td>
 </tr><tr>
 <td><a href="#extraneous_whitespace">extraneous_whitespace</a></td>
-<td>Avoid extraneous whitespace in the following situations:</td>
+<td>Avoid extraneous whitespace.</td>
 </tr><tr>
 <td><a href="#filename_match">filename_match</a></td>
 <td>Check if patterns contains a pattern that matches filename.</td>
@@ -93,22 +102,22 @@ a { color: #BA6D36; }
 <td>Use 4 spaces per indentation level.</td>
 </tr><tr>
 <td><a href="#init_checks_registry">init_checks_registry</a></td>
-<td>Register all globally visible functions where the first argument name is 'physical_line' or 'logical_line'.</td>
+<td>Register all globally visible functions.</td>
 </tr><tr>
 <td><a href="#maximum_line_length">maximum_line_length</a></td>
 <td>Limit all lines to a maximum of 79 characters.</td>
 </tr><tr>
-<td><a href="#missing_newline">missing_newline</a></td>
-<td>JCR: The last line should have a newline.</td>
-</tr><tr>
 <td><a href="#missing_whitespace">missing_whitespace</a></td>
-<td>JCR: Each comma, semicolon or colon should be followed by whitespace.</td>
+<td>Each comma, semicolon or colon should be followed by whitespace.</td>
 </tr><tr>
 <td><a href="#missing_whitespace_around_operator">missing_whitespace_around_operator</a></td>
-<td>- Always surround these binary operators with a single space on either side: assignment (=), augmented assignment (+=, -= etc.), comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not), Booleans (and, or, not).</td>
+<td>Surround operators with a single space on either side.</td>
 </tr><tr>
 <td><a href="#mute_string">mute_string</a></td>
 <td>Replace contents with 'xxx' to prevent syntax matching.</td>
+</tr><tr>
+<td><a href="#normalize_paths">normalize_paths</a></td>
+<td>Parse a comma-separated list of paths.</td>
 </tr><tr>
 <td><a href="#parse_udiff">parse_udiff</a></td>
 <td>Return a dictionary of matching lines.</td>
@@ -117,25 +126,25 @@ a { color: #BA6D36; }
 <td>Process options passed either via arglist or via command line args.</td>
 </tr><tr>
 <td><a href="#python_3000_backticks">python_3000_backticks</a></td>
-<td>Backticks are removed in Python 3.</td>
+<td>Backticks are removed in Python 3: use repr() instead.</td>
 </tr><tr>
 <td><a href="#python_3000_has_key">python_3000_has_key</a></td>
-<td>The {}.has_key() method is removed in the Python 3.</td>
+<td>The {}.has_key() method is removed in Python 3: use the 'in' operator.</td>
 </tr><tr>
 <td><a href="#python_3000_not_equal">python_3000_not_equal</a></td>
-<td>!= can also be written <>, but this is an obsolete usage kept for backwards compatibility only.</td>
+<td>New code should always use != instead of <>.</td>
 </tr><tr>
 <td><a href="#python_3000_raise_comma">python_3000_raise_comma</a></td>
-<td>When raising an exception, use "raise ValueError('message')" instead of the older form "raise ValueError, 'message'".</td>
+<td>When raising an exception, use "raise ValueError('message')".</td>
 </tr><tr>
 <td><a href="#read_config">read_config</a></td>
 <td>Read both user configuration and local configuration.</td>
 </tr><tr>
 <td><a href="#readlines">readlines</a></td>
-<td></td>
+<td>Read the source code.</td>
 </tr><tr>
 <td><a href="#readlines_1">readlines</a></td>
-<td></td>
+<td>Read the source code.</td>
 </tr><tr>
 <td><a href="#register_check">register_check</a></td>
 <td>Register a new check object.</td>
@@ -150,28 +159,28 @@ a { color: #BA6D36; }
 <td>Never mix tabs and spaces.</td>
 </tr><tr>
 <td><a href="#trailing_blank_lines">trailing_blank_lines</a></td>
-<td>JCR: Trailing blank lines are superfluous.</td>
+<td>Trailing blank lines are superfluous.</td>
 </tr><tr>
 <td><a href="#trailing_whitespace">trailing_whitespace</a></td>
-<td>JCR: Trailing whitespace is superfluous.</td>
+<td>Trailing whitespace is superfluous.</td>
 </tr><tr>
 <td><a href="#whitespace_around_comma">whitespace_around_comma</a></td>
-<td>Avoid extraneous whitespace in the following situations:</td>
+<td>Avoid extraneous whitespace after a comma or a colon.</td>
 </tr><tr>
 <td><a href="#whitespace_around_keywords">whitespace_around_keywords</a></td>
 <td>Avoid extraneous whitespace around keywords.</td>
 </tr><tr>
 <td><a href="#whitespace_around_named_parameter_equals">whitespace_around_named_parameter_equals</a></td>
-<td>Don't use spaces around the '=' sign when used to indicate a keyword argument or a default parameter value.</td>
+<td>Don't use spaces around the '=' sign in function arguments.</td>
 </tr><tr>
 <td><a href="#whitespace_around_operator">whitespace_around_operator</a></td>
-<td>Avoid extraneous whitespace in the following situations:</td>
+<td>Avoid extraneous whitespace around an operator.</td>
 </tr><tr>
-<td><a href="#whitespace_before_inline_comment">whitespace_before_inline_comment</a></td>
+<td><a href="#whitespace_before_comment">whitespace_before_comment</a></td>
 <td>Separate inline comments by at least two spaces.</td>
 </tr><tr>
 <td><a href="#whitespace_before_parameters">whitespace_before_parameters</a></td>
-<td>Avoid extraneous whitespace in the following situations:</td>
+<td>Avoid extraneous whitespace.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -244,7 +253,7 @@ object
 Report an error, according to options.
 </p><a NAME="BaseReport.error_args" ID="BaseReport.error_args"></a>
 <h4>BaseReport.error_args</h4>
-<b>error_args</b>(<i>line_number, offset, code, check, *args</i>)
+<b>error_args</b>(<i>line_number, offset, text, check, *args</i>)
 <p>
 Report an error, according to options.
 </p><a NAME="BaseReport.get_count" ID="BaseReport.get_count"></a>
@@ -261,7 +270,7 @@ Return the count of errors and warnings for this file.
 <h4>BaseReport.get_statistics</h4>
 <b>get_statistics</b>(<i>prefix=''</i>)
 <p>
-        Get statistics for message codes that start with the prefix.
+Get statistics for message codes that start with the prefix.
 </p><p>
         prefix='' matches all errors and warnings
         prefix='E' matches all errors
@@ -303,7 +312,7 @@ Stop the timer.
 <a NAME="Checker" ID="Checker"></a>
 <h2>Checker</h2>
 <p>
-    Load a Python source file, tokenize it, check coding style.
+Load a Python source file, tokenize it, check coding style.
 </p>
 <h3>Derived from</h3>
 object
@@ -328,7 +337,7 @@ object
 <td>Run all checks on the input file.</td>
 </tr><tr>
 <td><a href="#Checker.check_ast">check_ast</a></td>
-<td></td>
+<td>Build the file's AST and run all AST checks.</td>
 </tr><tr>
 <td><a href="#Checker.check_logical">check_logical</a></td>
 <td>Build a line from tokens and run all logical checks on it.</td>
@@ -337,16 +346,16 @@ object
 <td>Run all physical checks on a raw input line.</td>
 </tr><tr>
 <td><a href="#Checker.generate_tokens">generate_tokens</a></td>
-<td></td>
+<td>Tokenize the file, run physical line checks and yield tokens.</td>
+</tr><tr>
+<td><a href="#Checker.maybe_check_physical">maybe_check_physical</a></td>
+<td>If appropriate (based on token), check current physical line(s).</td>
 </tr><tr>
 <td><a href="#Checker.readline">readline</a></td>
 <td>Get the next line from the input buffer.</td>
 </tr><tr>
-<td><a href="#Checker.readline_check_physical">readline_check_physical</a></td>
-<td>Check and return the next physical line.</td>
-</tr><tr>
 <td><a href="#Checker.report_invalid_syntax">report_invalid_syntax</a></td>
-<td></td>
+<td>Check if the syntax is valid.</td>
 </tr><tr>
 <td><a href="#Checker.run_check">run_check</a></td>
 <td>Run a check plugin.</td>
@@ -363,47 +372,52 @@ object
 <h4>Checker.build_tokens_line</h4>
 <b>build_tokens_line</b>(<i></i>)
 <p>
-        Build a logical line from tokens.
+Build a logical line from tokens.
 </p><a NAME="Checker.check_all" ID="Checker.check_all"></a>
 <h4>Checker.check_all</h4>
 <b>check_all</b>(<i>expected=None, line_offset=0</i>)
 <p>
-        Run all checks on the input file.
+Run all checks on the input file.
 </p><a NAME="Checker.check_ast" ID="Checker.check_ast"></a>
 <h4>Checker.check_ast</h4>
 <b>check_ast</b>(<i></i>)
-<a NAME="Checker.check_logical" ID="Checker.check_logical"></a>
+<p>
+Build the file's AST and run all AST checks.
+</p><a NAME="Checker.check_logical" ID="Checker.check_logical"></a>
 <h4>Checker.check_logical</h4>
 <b>check_logical</b>(<i></i>)
 <p>
-        Build a line from tokens and run all logical checks on it.
+Build a line from tokens and run all logical checks on it.
 </p><a NAME="Checker.check_physical" ID="Checker.check_physical"></a>
 <h4>Checker.check_physical</h4>
 <b>check_physical</b>(<i>line</i>)
 <p>
-        Run all physical checks on a raw input line.
+Run all physical checks on a raw input line.
 </p><a NAME="Checker.generate_tokens" ID="Checker.generate_tokens"></a>
 <h4>Checker.generate_tokens</h4>
 <b>generate_tokens</b>(<i></i>)
-<a NAME="Checker.readline" ID="Checker.readline"></a>
+<p>
+Tokenize the file, run physical line checks and yield tokens.
+</p><a NAME="Checker.maybe_check_physical" ID="Checker.maybe_check_physical"></a>
+<h4>Checker.maybe_check_physical</h4>
+<b>maybe_check_physical</b>(<i>token</i>)
+<p>
+If appropriate (based on token), check current physical line(s).
+</p><a NAME="Checker.readline" ID="Checker.readline"></a>
 <h4>Checker.readline</h4>
 <b>readline</b>(<i></i>)
 <p>
-        Get the next line from the input buffer.
-</p><a NAME="Checker.readline_check_physical" ID="Checker.readline_check_physical"></a>
-<h4>Checker.readline_check_physical</h4>
-<b>readline_check_physical</b>(<i></i>)
-<p>
-        Check and return the next physical line. This method can be
-        used to feed tokenize.generate_tokens.
+Get the next line from the input buffer.
 </p><a NAME="Checker.report_invalid_syntax" ID="Checker.report_invalid_syntax"></a>
 <h4>Checker.report_invalid_syntax</h4>
 <b>report_invalid_syntax</b>(<i></i>)
-<a NAME="Checker.run_check" ID="Checker.run_check"></a>
+<p>
+Check if the syntax is valid.
+</p><a NAME="Checker.run_check" ID="Checker.run_check"></a>
 <h4>Checker.run_check</h4>
 <b>run_check</b>(<i>check, argument_names</i>)
 <p>
-        Run a check plugin.
+Run a check plugin.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -560,10 +574,10 @@ object
 <td>Run all checks on the paths.</td>
 </tr><tr>
 <td><a href="#StyleGuide.excluded">excluded</a></td>
-<td>Check if options.exclude contains a pattern that matches filename.</td>
+<td>Check if the file should be excluded.</td>
 </tr><tr>
 <td><a href="#StyleGuide.get_checks">get_checks</a></td>
-<td>Find all globally visible functions where the first argument name starts with argument_name and which contain selected tests.</td>
+<td>Get all the checks for this category.</td>
 </tr><tr>
 <td><a href="#StyleGuide.ignore_code">ignore_code</a></td>
 <td>Check if the error code should be ignored.</td>
@@ -594,18 +608,22 @@ Run all checks on the paths.
 <h4>StyleGuide.excluded</h4>
 <b>excluded</b>(<i>filename, parent=None</i>)
 <p>
-        Check if options.exclude contains a pattern that matches filename.
+Check if the file should be excluded.
+</p><p>
+        Check if 'options.exclude' contains a pattern that matches filename.
 </p><a NAME="StyleGuide.get_checks" ID="StyleGuide.get_checks"></a>
 <h4>StyleGuide.get_checks</h4>
 <b>get_checks</b>(<i>argument_name</i>)
 <p>
+Get all the checks for this category.
+</p><p>
         Find all globally visible functions where the first argument name
         starts with argument_name and which contain selected tests.
 </p><a NAME="StyleGuide.ignore_code" ID="StyleGuide.ignore_code"></a>
 <h4>StyleGuide.ignore_code</h4>
 <b>ignore_code</b>(<i>code</i>)
 <p>
-        Check if the error code should be ignored.
+Check if the error code should be ignored.
 </p><p>
         If 'options.select' contains a prefix of the error code,
         return False.  Else, if 'options.ignore' contains a prefix of
@@ -634,6 +652,18 @@ Run all checks on a Python source file.
 
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="_is_eol_token" ID="_is_eol_token"></a>
+<h2>_is_eol_token</h2>
+<b>_is_eol_token</b>(<i>token</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="_is_eol_token_1" ID="_is_eol_token_1"></a>
+<h2>_is_eol_token</h2>
+<b>_is_eol_token</b>(<i>token</i>)
+
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="_main" ID="_main"></a>
 <h2>_main</h2>
 <b>_main</b>(<i></i>)
@@ -644,9 +674,9 @@ Parse options and run checks on Python source.
 <hr /><hr />
 <a NAME="blank_lines" ID="blank_lines"></a>
 <h2>blank_lines</h2>
-<b>blank_lines</b>(<i>logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level</i>)
+<b>blank_lines</b>(<i>logical_line, blank_lines, indent_level, line_number, blank_before, previous_logical, previous_indent_level</i>)
 <p>
-    Separate top-level function and class definitions with two blank lines.
+Separate top-level function and class definitions with two blank lines.
 </p><p>
     Method definitions inside a class are separated by a single blank line.
 </p><p>
@@ -667,10 +697,29 @@ Parse options and run checks on Python source.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="comparison_negative" ID="comparison_negative"></a>
+<h2>comparison_negative</h2>
+<b>comparison_negative</b>(<i>logical_line</i>)
+<p>
+Negative comparison should be done using "not in" and "is not".
+</p><p>
+    Okay: if x not in y:\n    pass
+    Okay: assert (X in Y or X is Z)
+    Okay: if not (X in Y):\n    pass
+    Okay: zz = x is not y
+    E713: Z = not X in Y
+    E713: if not X.B in Y:\n    pass
+    E714: if not X is Y:\n    pass
+    E714: Z = not X.B is Y
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="comparison_to_singleton" ID="comparison_to_singleton"></a>
 <h2>comparison_to_singleton</h2>
 <b>comparison_to_singleton</b>(<i>logical_line, noqa</i>)
 <p>
+Comparison to singletons should use "is" or "is not".
+</p><p>
     Comparisons to singletons like None should always be done
     with "is" or "is not", never the equality operators.
 </p><p>
@@ -689,8 +738,9 @@ Parse options and run checks on Python source.
 <h2>comparison_type</h2>
 <b>comparison_type</b>(<i>logical_line</i>)
 <p>
-    Object type comparisons should always use isinstance() instead of
-    comparing types directly.
+Object type comparisons should always use isinstance().
+</p><p>
+    Do not compare types directly.
 </p><p>
     Okay: if isinstance(obj, int):
     E721: if type(obj) is type(1):
@@ -708,12 +758,11 @@ Parse options and run checks on Python source.
 <h2>compound_statements</h2>
 <b>compound_statements</b>(<i>logical_line</i>)
 <p>
-    Compound statements (multiple statements on the same line) are
-    generally discouraged.
+Compound statements (on the same line) are generally discouraged.
 </p><p>
     While sometimes it's okay to put an if/for/while with a small body
-    on the same line, never do this for multi-clause statements. Also
-    avoid folding such long lines!
+    on the same line, never do this for multi-clause statements.
+    Also avoid folding such long lines!
 </p><p>
     Okay: if foo == 'blah':\n    do_blah_thing()
     Okay: do_one()
@@ -736,16 +785,16 @@ Parse options and run checks on Python source.
 <hr /><hr />
 <a NAME="continued_indentation" ID="continued_indentation"></a>
 <h2>continued_indentation</h2>
-<b>continued_indentation</b>(<i>logical_line, tokens, indent_level, hang_closing, noqa, verbose</i>)
+<b>continued_indentation</b>(<i>logical_line, tokens, indent_level, hang_closing, indent_char, noqa, verbose</i>)
 <p>
-    Continuation lines should align wrapped elements either vertically using
-    Python's implicit line joining inside parentheses, brackets and braces, or
-    using a hanging indent.
+Continuation lines indentation.
 </p><p>
-    When using a hanging indent the following considerations should be applied:
+    Continuation lines should align wrapped elements either vertically
+    using Python's implicit line joining inside parentheses, brackets
+    and braces, or using a hanging indent.
 </p><p>
+    When using a hanging indent these considerations should be applied:
     - there should be no arguments on the first line, and
-</p><p>
     - further indentation should be used to clearly distinguish itself as a
       continuation line.
 </p><p>
@@ -757,10 +806,12 @@ Parse options and run checks on Python source.
     E122: a = (\n42)
     E123: a = (\n    42\n    )
     E124: a = (24,\n     42\n)
-    E125: if (a or\n    b):\n    pass
+    E125: if (\n    b):\n    pass
     E126: a = (\n        42)
     E127: a = (24,\n      42)
     E128: a = (24,\n    42)
+    E129: if (a or\n    b):\n    pass
+    E131: a = (\n    42\n 24)
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -768,14 +819,13 @@ Parse options and run checks on Python source.
 <h2>expand_indent</h2>
 <b>expand_indent</b>(<i>line</i>)
 <p>
-    Return the amount of indentation.
+Return the amount of indentation.
+</p><p>
     Tabs are expanded to the next multiple of 8.
 </p><p>
     >>> expand_indent('    ')
     4
     >>> expand_indent('\t')
-    8
-    >>> expand_indent('    \t')
     8
     >>> expand_indent('       \t')
     8
@@ -788,7 +838,7 @@ Parse options and run checks on Python source.
 <h2>explicit_line_join</h2>
 <b>explicit_line_join</b>(<i>logical_line, tokens</i>)
 <p>
-    Avoid explicit line join between brackets.
+Avoid explicit line join between brackets.
 </p><p>
     The preferred way of wrapping long lines is by using Python's implied line
     continuation inside parentheses, brackets and braces.  Long lines can be
@@ -808,10 +858,10 @@ Parse options and run checks on Python source.
 <h2>extraneous_whitespace</h2>
 <b>extraneous_whitespace</b>(<i>logical_line</i>)
 <p>
-    Avoid extraneous whitespace in the following situations:
+Avoid extraneous whitespace.
 </p><p>
+    Avoid extraneous whitespace in these situations:
     - Immediately inside parentheses, brackets or braces.
-</p><p>
     - Immediately before a comma, semicolon, or colon.
 </p><p>
     Okay: spam(ham[1], {eggs: 2})
@@ -832,7 +882,8 @@ Parse options and run checks on Python source.
 <h2>filename_match</h2>
 <b>filename_match</b>(<i>filename, patterns, default=True</i>)
 <p>
-    Check if patterns contains a pattern that matches filename.
+Check if patterns contains a pattern that matches filename.
+</p><p>
     If patterns is unspecified, this always returns True.
 </p>
 <div align="right"><a href="#top">Up</a></div>
@@ -847,7 +898,7 @@ Parse options and run checks on Python source.
 <h2>imports_on_separate_lines</h2>
 <b>imports_on_separate_lines</b>(<i>logical_line</i>)
 <p>
-    Imports should usually be on separate lines.
+Imports should usually be on separate lines.
 </p><p>
     Okay: import os\nimport sys
     E401: import sys, os
@@ -864,7 +915,7 @@ Parse options and run checks on Python source.
 <h2>indentation</h2>
 <b>indentation</b>(<i>logical_line, previous_logical, indent_char, indent_level, previous_indent_level</i>)
 <p>
-    Use 4 spaces per indentation level.
+Use 4 spaces per indentation level.
 </p><p>
     For really old code that you don't want to mess up, you can continue to
     use 8-space tabs.
@@ -885,16 +936,17 @@ Parse options and run checks on Python source.
 <h2>init_checks_registry</h2>
 <b>init_checks_registry</b>(<i></i>)
 <p>
-    Register all globally visible functions where the first argument name
-    is 'physical_line' or 'logical_line'.
+Register all globally visible functions.
+</p><p>
+    The first argument name is either 'physical_line' or 'logical_line'.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="maximum_line_length" ID="maximum_line_length"></a>
 <h2>maximum_line_length</h2>
-<b>maximum_line_length</b>(<i>physical_line, max_line_length</i>)
+<b>maximum_line_length</b>(<i>physical_line, max_line_length, multiline</i>)
 <p>
-    Limit all lines to a maximum of 79 characters.
+Limit all lines to a maximum of 79 characters.
 </p><p>
     There are still many devices around that are limited to 80 character
     lines; plus, limiting windows to 80 characters makes it possible to have
@@ -907,21 +959,11 @@ Parse options and run checks on Python source.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="missing_newline" ID="missing_newline"></a>
-<h2>missing_newline</h2>
-<b>missing_newline</b>(<i>physical_line</i>)
-<p>
-    JCR: The last line should have a newline.
-</p><p>
-    Reports warning W292.
-</p>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
 <a NAME="missing_whitespace" ID="missing_whitespace"></a>
 <h2>missing_whitespace</h2>
 <b>missing_whitespace</b>(<i>logical_line</i>)
 <p>
-    JCR: Each comma, semicolon or colon should be followed by whitespace.
+Each comma, semicolon or colon should be followed by whitespace.
 </p><p>
     Okay: [a, b]
     Okay: (3,)
@@ -939,12 +981,15 @@ Parse options and run checks on Python source.
 <h2>missing_whitespace_around_operator</h2>
 <b>missing_whitespace_around_operator</b>(<i>logical_line, tokens</i>)
 <p>
+Surround operators with a single space on either side.
+</p><p>
     - Always surround these binary operators with a single space on
       either side: assignment (=), augmented assignment (+=, -= etc.),
-      comparisons (==, <, >, !=, <>, <=, >=, in, not in, is, is not),
+      comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
       Booleans (and, or, not).
 </p><p>
-    - Use spaces around arithmetic operators.
+    - If operators with different priorities are used, consider adding
+      whitespace around the operators with the lowest priorities.
 </p><p>
     Okay: i = i + 1
     Okay: submitted += 1
@@ -969,7 +1014,7 @@ Parse options and run checks on Python source.
 <h2>mute_string</h2>
 <b>mute_string</b>(<i>text</i>)
 <p>
-    Replace contents with 'xxx' to prevent syntax matching.
+Replace contents with 'xxx' to prevent syntax matching.
 </p><p>
     >>> mute_string('"abc"')
     '"xxx"'
@@ -977,6 +1022,16 @@ Parse options and run checks on Python source.
     "'''xxx'''"
     >>> mute_string("r'abc'")
     "r'xxx'"
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="normalize_paths" ID="normalize_paths"></a>
+<h2>normalize_paths</h2>
+<b>normalize_paths</b>(<i>value, parent=os.curdir</i>)
+<p>
+Parse a comma-separated list of paths.
+</p><p>
+    Return a list of absolute paths.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -1000,8 +1055,7 @@ Process options passed either via arglist or via command line args.
 <h2>python_3000_backticks</h2>
 <b>python_3000_backticks</b>(<i>logical_line</i>)
 <p>
-    Backticks are removed in Python 3.
-    Use repr() instead.
+Backticks are removed in Python 3: use repr() instead.
 </p><p>
     Okay: val = repr(1 + 2)
     W604: val = `1 + 2`
@@ -1010,10 +1064,9 @@ Process options passed either via arglist or via command line args.
 <hr /><hr />
 <a NAME="python_3000_has_key" ID="python_3000_has_key"></a>
 <h2>python_3000_has_key</h2>
-<b>python_3000_has_key</b>(<i>logical_line</i>)
+<b>python_3000_has_key</b>(<i>logical_line, noqa</i>)
 <p>
-    The {}.has_key() method is removed in the Python 3.
-    Use the 'in' operation instead.
+The {}.has_key() method is removed in Python 3: use the 'in' operator.
 </p><p>
     Okay: if "alph" in d:\n    print d["alph"]
     W601: assert d.has_key('alph')
@@ -1024,8 +1077,8 @@ Process options passed either via arglist or via command line args.
 <h2>python_3000_not_equal</h2>
 <b>python_3000_not_equal</b>(<i>logical_line</i>)
 <p>
-    != can also be written <>, but this is an obsolete usage kept for
-    backwards compatibility only. New code should always use !=.
+New code should always use != instead of <>.
+</p><p>
     The older syntax is removed in Python 3.
 </p><p>
     Okay: if a != 'no':
@@ -1037,13 +1090,9 @@ Process options passed either via arglist or via command line args.
 <h2>python_3000_raise_comma</h2>
 <b>python_3000_raise_comma</b>(<i>logical_line</i>)
 <p>
-    When raising an exception, use "raise ValueError('message')"
-    instead of the older form "raise ValueError, 'message'".
+When raising an exception, use "raise ValueError('message')".
 </p><p>
-    The paren-using form is preferred because when the exception arguments
-    are long or include string formatting, you don't need to use line
-    continuation characters thanks to the containing parentheses.  The older
-    form is removed in Python 3.
+    The older form is removed in Python 3.
 </p><p>
     Okay: raise DummyError("Message")
     W602: raise DummyError, "Message"
@@ -1061,20 +1110,24 @@ Read both user configuration and local configuration.
 <a NAME="readlines" ID="readlines"></a>
 <h2>readlines</h2>
 <b>readlines</b>(<i>filename</i>)
-
+<p>
+Read the source code.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="readlines_1" ID="readlines_1"></a>
 <h2>readlines</h2>
 <b>readlines</b>(<i>filename</i>)
-
+<p>
+Read the source code.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="register_check" ID="register_check"></a>
 <h2>register_check</h2>
 <b>register_check</b>(<i>check, codes=None</i>)
 <p>
-    Register a new check object.
+Register a new check object.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -1088,8 +1141,7 @@ Read both user configuration and local configuration.
 <h2>tabs_obsolete</h2>
 <b>tabs_obsolete</b>(<i>physical_line</i>)
 <p>
-    For new projects, spaces-only are strongly recommended over tabs.  Most
-    editors have features that make this easy to do.
+For new projects, spaces-only are strongly recommended over tabs.
 </p><p>
     Okay: if True:\n    return
     W191: if True:\n\treturn
@@ -1100,7 +1152,7 @@ Read both user configuration and local configuration.
 <h2>tabs_or_spaces</h2>
 <b>tabs_or_spaces</b>(<i>physical_line, indent_char</i>)
 <p>
-    Never mix tabs and spaces.
+Never mix tabs and spaces.
 </p><p>
     The most popular way of indenting Python is with spaces only.  The
     second-most popular way is with tabs only.  Code indented with a mixture
@@ -1116,12 +1168,14 @@ Read both user configuration and local configuration.
 <hr /><hr />
 <a NAME="trailing_blank_lines" ID="trailing_blank_lines"></a>
 <h2>trailing_blank_lines</h2>
-<b>trailing_blank_lines</b>(<i>physical_line, lines, line_number</i>)
+<b>trailing_blank_lines</b>(<i>physical_line, lines, line_number, total_lines</i>)
 <p>
-    JCR: Trailing blank lines are superfluous.
+Trailing blank lines are superfluous.
 </p><p>
     Okay: spam(1)
     W391: spam(1)\n
+</p><p>
+    However the last line should end with a new line (warning W292).
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -1129,15 +1183,7 @@ Read both user configuration and local configuration.
 <h2>trailing_whitespace</h2>
 <b>trailing_whitespace</b>(<i>physical_line</i>)
 <p>
-    JCR: Trailing whitespace is superfluous.
-    FBM: Except when it occurs as part of a blank line (i.e. the line is
-         nothing but whitespace). According to Python docs[1] a line with only
-         whitespace is considered a blank line, and is to be ignored. However,
-         matching a blank line to its indentation level avoids mistakenly
-         terminating a multi-line statement (e.g. class declaration) when
-         pasting code into the standard Python interpreter.
-</p><p>
-         [1] http://docs.python.org/reference/lexical_analysis.html#blank-lines
+Trailing whitespace is superfluous.
 </p><p>
     The warning returned varies on whether the line itself is blank, for easier
     filtering for those who want to indent their blank lines.
@@ -1152,12 +1198,8 @@ Read both user configuration and local configuration.
 <h2>whitespace_around_comma</h2>
 <b>whitespace_around_comma</b>(<i>logical_line</i>)
 <p>
-    Avoid extraneous whitespace in the following situations:
+Avoid extraneous whitespace after a comma or a colon.
 </p><p>
-    - More than one space around an assignment (or other) operator to
-      align it with another.
-</p><p>
-    JCR: This should also be applied around comma etc.
     Note: these checks are disabled by default
 </p><p>
     Okay: a = (1, 2)
@@ -1170,7 +1212,7 @@ Read both user configuration and local configuration.
 <h2>whitespace_around_keywords</h2>
 <b>whitespace_around_keywords</b>(<i>logical_line</i>)
 <p>
-    Avoid extraneous whitespace around keywords.
+Avoid extraneous whitespace around keywords.
 </p><p>
     Okay: True and False
     E271: True and  False
@@ -1184,6 +1226,8 @@ Read both user configuration and local configuration.
 <h2>whitespace_around_named_parameter_equals</h2>
 <b>whitespace_around_named_parameter_equals</b>(<i>logical_line, tokens</i>)
 <p>
+Don't use spaces around the '=' sign in function arguments.
+</p><p>
     Don't use spaces around the '=' sign when used to indicate a
     keyword argument or a default parameter value.
 </p><p>
@@ -1203,10 +1247,7 @@ Read both user configuration and local configuration.
 <h2>whitespace_around_operator</h2>
 <b>whitespace_around_operator</b>(<i>logical_line</i>)
 <p>
-    Avoid extraneous whitespace in the following situations:
-</p><p>
-    - More than one space around an assignment (or other) operator to
-      align it with another.
+Avoid extraneous whitespace around an operator.
 </p><p>
     Okay: a = 12 + 3
     E221: a = 4  + 5
@@ -1216,21 +1257,26 @@ Read both user configuration and local configuration.
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
-<a NAME="whitespace_before_inline_comment" ID="whitespace_before_inline_comment"></a>
-<h2>whitespace_before_inline_comment</h2>
-<b>whitespace_before_inline_comment</b>(<i>logical_line, tokens</i>)
+<a NAME="whitespace_before_comment" ID="whitespace_before_comment"></a>
+<h2>whitespace_before_comment</h2>
+<b>whitespace_before_comment</b>(<i>logical_line, tokens</i>)
 <p>
-    Separate inline comments by at least two spaces.
+Separate inline comments by at least two spaces.
 </p><p>
     An inline comment is a comment on the same line as a statement.  Inline
     comments should be separated by at least two spaces from the statement.
     They should start with a # and a single space.
 </p><p>
+    Each line of a block comment starts with a # and a single space
+    (unless it is indented text inside the comment).
+</p><p>
     Okay: x = x + 1  # Increment x
     Okay: x = x + 1    # Increment x
+    Okay: # Block comment
     E261: x = x + 1 # Increment x
     E262: x = x + 1  #Increment x
     E262: x = x + 1  #  Increment x
+    E265: #Block comment
 </p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -1238,13 +1284,12 @@ Read both user configuration and local configuration.
 <h2>whitespace_before_parameters</h2>
 <b>whitespace_before_parameters</b>(<i>logical_line, tokens</i>)
 <p>
+Avoid extraneous whitespace.
+</p><p>
     Avoid extraneous whitespace in the following situations:
-</p><p>
-    - Immediately before the open parenthesis that starts the argument
-      list of a function call.
-</p><p>
-    - Immediately before the open parenthesis that starts an indexing or
-      slicing.
+    - before the open parenthesis that starts the argument list of a
+      function call.
+    - before the open parenthesis that starts an indexing or slicing.
 </p><p>
     Okay: spam(1)
     E211: spam (1)

@@ -419,8 +419,8 @@ def readmodule_ex(module, path=[]):
             while acstack and \
                     acstack[-1][1] >= thisindent:
                 del acstack[-1]
-            acstack.append(["public", thisindent])  # default access control
-                                                    # is 'public'
+            acstack.append(["public", thisindent])
+            # default access control is 'public'
 
         elif m.start("Module") >= 0:
             # we found a module definition
@@ -460,8 +460,8 @@ def readmodule_ex(module, path=[]):
             while acstack and \
                     acstack[-1][1] >= thisindent:
                 del acstack[-1]
-            acstack.append(["public", thisindent])  # default access control
-                                                    # is 'public'
+            acstack.append(["public", thisindent])
+            # default access control is 'public'
 
         elif m.start("AccessControl") >= 0:
             aclist = m.group("AccessControlList")

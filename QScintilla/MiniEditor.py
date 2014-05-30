@@ -2799,7 +2799,7 @@ class MiniEditor(E5MainWindow):
             line0 = self.__textEdit.text(0)
             if line0.startswith("#!") and \
                ("python2" in line0 or
-                    ("python" in line0 and not "python3" in line0)):
+                    ("python" in line0 and "python3" not in line0)):
                 return True
             
             if self.__curFile is not None:

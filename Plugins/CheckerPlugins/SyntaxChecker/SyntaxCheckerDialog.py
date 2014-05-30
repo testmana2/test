@@ -394,7 +394,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             errorFiles.append(
                 Utilities.normabspath(itm.data(0, self.filenameRole)))
         for file in openFiles:
-            if not file in errorFiles:
+            if file not in errorFiles:
                 editor = vm.getOpenEditor(file)
                 editor.clearSyntaxError()
                 editor.clearFlakesWarnings()

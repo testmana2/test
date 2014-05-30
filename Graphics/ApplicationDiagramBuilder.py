@@ -181,7 +181,7 @@ class ApplicationDiagramBuilder(UMLDiagramBuilder):
                             impLst.append(n)
             for imp in impLst:
                 impPackage = '.'.join(imp.split('.')[:-1])
-                if not impPackage in packages[package][1] and \
+                if impPackage not in packages[package][1] and \
                    not impPackage == package:
                     packages[package][1].append(impPackage)
                     

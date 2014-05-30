@@ -363,9 +363,9 @@ class TemplateEntry(QTreeWidgetItem):
         self.variables = []
         self.formatedVariables = []
         for var in variables:
-            if not var in self.variables:
+            if var not in self.variables:
                 self.variables.append(var)
-            if var.find(':') >= 0 and not var in self.formatedVariables:
+            if var.find(':') >= 0 and var not in self.formatedVariables:
                 self.formatedVariables.append(var)
 
 

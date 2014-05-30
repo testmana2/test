@@ -106,8 +106,8 @@ class Subversion(VersionControl):
         self.__commitData = {}
         self.__commitDialog = None
         
-        self.__wcng = True      # assume new generation working copy
-                                # metadata format
+        self.__wcng = True
+        # assume new generation working copy metadata format
     
     def getPlugin(self):
         """
@@ -693,8 +693,8 @@ class Subversion(VersionControl):
                         repodir = os.path.dirname(repodir)
                         if os.path.splitdrive(repodir)[1] == os.sep:
                             return  # oops, project is not version controlled
-                    while os.path.normcase(d) != \
-                            os.path.normcase(repodir) and \
+                    while (os.path.normcase(d) !=
+                            os.path.normcase(repodir)) and \
                         (d not in tree2 + tree) and \
                         (os.path.normcase(d) not in self.statusCache or
                          self.statusCache[os.path.normcase(d)] ==
@@ -773,8 +773,8 @@ class Subversion(VersionControl):
                         repodir = os.path.dirname(repodir)
                         if os.path.splitdrive(repodir)[1] == os.sep:
                             return  # oops, project is not version controlled
-                    while os.path.normcase(d) != \
-                            os.path.normcase(repodir) and \
+                    while (os.path.normcase(d) !=
+                            os.path.normcase(repodir)) and \
                         (d not in tree) and \
                         (os.path.normcase(d) not in self.statusCache or
                          self.statusCache[os.path.normcase(d)] ==
@@ -798,8 +798,8 @@ class Subversion(VersionControl):
                     repodir = os.path.dirname(repodir)
                     if os.path.splitdrive(repodir)[1] == os.sep:
                         return  # oops, project is not version controlled
-                while os.path.normcase(dname) != \
-                        os.path.normcase(repodir) and \
+                while (os.path.normcase(dname) !=
+                        os.path.normcase(repodir)) and \
                     (os.path.normcase(dname) not in self.statusCache or
                      self.statusCache[os.path.normcase(dname)] ==
                         self.canBeAdded):

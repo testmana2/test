@@ -168,18 +168,18 @@ class Editor(QsciScintillaCompat):
         self.lastCurrMarker = None   # remember the last current line
         
         self.breaks = {}
-            # key:   marker handle,
-            # value: (lineno, condition, temporary,
-            #         enabled, ignorecount)
+        # key:   marker handle,
+        # value: (lineno, condition, temporary,
+        #         enabled, ignorecount)
         self.bookmarks = []
-            # bookmarks are just a list of handles to the
-            # bookmark markers
+        # bookmarks are just a list of handles to the
+        # bookmark markers
         self.syntaxerrors = {}
-            # key:   marker handle
-            # value: list of (error message, error index)
+        # key:   marker handle
+        # value: list of (error message, error index)
         self.warnings = {}
-            # key:   marker handle
-            # value: list of (warning message, warning type)
+        # key:   marker handle
+        # value: list of (warning message, warning type)
         self.notcoveredMarkers = []  # just a list of marker handles
         self.showingNotcoveredMarkers = False
         
@@ -192,21 +192,21 @@ class Editor(QsciScintillaCompat):
         self.lastModified = 0
         self.line = -1
         self.inReopenPrompt = False
-            # true if the prompt to reload a changed source is present
+        # true if the prompt to reload a changed source is present
         self.inFileRenamed = False
-            # true if we are propagating a rename action
+        # true if we are propagating a rename action
         self.inLanguageChanged = False
-            # true if we are propagating a language change
+        # true if we are propagating a language change
         self.inEolChanged = False
-            # true if we are propagating an eol change
+        # true if we are propagating an eol change
         self.inEncodingChanged = False
-            # true if we are propagating an encoding change
+        # true if we are propagating an encoding change
         self.inDragDrop = False
-            # true if we are in drop mode
+        # true if we are in drop mode
         self.inLinesChanged = False
-            # true if we are propagating a lines changed event
+        # true if we are propagating a lines changed event
         self.__hasTaskMarkers = False
-            # no task markers present
+        # no task markers present
             
         self.macros = {}    # list of defined macros
         self.curMacro = None
@@ -2790,13 +2790,13 @@ class Editor(QsciScintillaCompat):
         undo_ = True
         while self.isModified():
             if undo_:
-            # try undo first
+                # try undo first
                 if self.isUndoAvailable():
                     self.undo()
                 else:
                     undo_ = False
             else:
-            # try redo next
+                # try redo next
                 if self.isRedoAvailable():
                     self.redo()
                 else:
@@ -5174,9 +5174,9 @@ class Editor(QsciScintillaCompat):
             
             f = "{0}.coverage".format(basename)
             tf = "{0}.coverage".format(tbasename)
-            if os.path.isfile(f) and not f in files:
+            if os.path.isfile(f) and f not in files:
                 files.append(f)
-            if os.path.isfile(tf) and not tf in files:
+            if os.path.isfile(tf) and tf not in files:
                 files.append(tf)
         
         if files:
@@ -5353,9 +5353,9 @@ class Editor(QsciScintillaCompat):
             
             f = "{0}.profile".format(basename)
             tf = "{0}.profile".format(tbasename)
-            if os.path.isfile(f) and not f in files:
+            if os.path.isfile(f) and f not in files:
                 files.append(f)
-            if os.path.isfile(tf) and not tf in files:
+            if os.path.isfile(tf) and tf not in files:
                 files.append(tf)
         
         if files:

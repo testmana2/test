@@ -179,7 +179,7 @@ class Completer(object):
             for word in list:
                 if word[:n] == text and \
                    word != "__builtins__" and \
-                   not word in matches:
+                   word not in matches:
                     matches.append(word)
         return matches
 
@@ -223,7 +223,7 @@ class Completer(object):
             try:
                 if word[:n] == attr and word != "__builtins__":
                     match = "%s.%s" % (expr, word)
-                    if not match in matches:
+                    if match not in matches:
                         matches.append(match)
             except:
                 # some badly behaved objects pollute dir() with non-strings,

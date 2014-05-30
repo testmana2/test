@@ -38,8 +38,8 @@ class UserAgentManager(QObject):
         """
         super(UserAgentManager, self).__init__(parent)
         
-        self.__agents = {}      # dictionary with agent strings indexed
-                                # by host name
+        self.__agents = {}
+        # dictionary with agent strings indexed by host name
         self.__loaded = False
         self.__saveTimer = AutoSaver(self, self.save)
         

@@ -950,8 +950,8 @@ def joinext(prefix, ext):
     @return the complete filename (string)
     """
     if ext[0] != ".":
-        ext = ".{0}".format(ext)  # require leading separator to match
-                                  # os.path.splitext
+        ext = ".{0}".format(ext)
+        # require leading separator to match os.path.splitext
     return prefix + EXTSEP + ext[1:]
 
 

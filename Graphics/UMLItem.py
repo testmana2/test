@@ -104,7 +104,7 @@ class UMLItem(QGraphicsRectItem):
         
         @param assoc association to be added (AssociationWidget)
         """
-        if assoc and not assoc in self.associations:
+        if assoc and assoc not in self.associations:
             self.associations.append(assoc)
     
     def removeAssociation(self, assoc):

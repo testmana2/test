@@ -221,8 +221,8 @@ class EricdocPlugin(QObject):
                 outdir = Utilities.toNativeSeparators(
                     parms['qtHelpOutputDirectory'])
                 if outdir == '':
-                    outdir = 'help'      # that is eric5_docs default QtHelp
-                                         # output dir
+                    outdir = 'help'
+                    # that is eric5_docs default QtHelp output dir
                     
                 # add it to the project data, if it isn't in already
                 outdir = project.getRelativePath(outdir)

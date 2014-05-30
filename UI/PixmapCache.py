@@ -56,7 +56,7 @@ class PixmapCache(object):
 
         @param path path to add (string)
         """
-        if not path in self.searchPath:
+        if path not in self.searchPath:
             self.searchPath.append(path)
 
 pixCache = PixmapCache()

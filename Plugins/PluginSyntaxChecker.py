@@ -295,7 +295,7 @@ class SyntaxCheckerPlugin(QObject):
                 ))
                 self.__projectBrowserAct.triggered.connect(
                     self.__projectBrowserSyntaxCheck)
-            if not self.__projectBrowserAct in menu.actions():
+            if self.__projectBrowserAct not in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     
     def __projectSyntaxCheck(self):
@@ -373,7 +373,7 @@ class SyntaxCheckerPlugin(QObject):
         @param editor reference to the editor
         """
         if menuName == "Checks":
-            if not self.__editorAct in menu.actions():
+            if self.__editorAct not in menu.actions():
                 menu.addAction(self.__editorAct)
             self.__editorAct.setEnabled(
                 editor.getLanguage() in self.syntaxCheckService.getLanguages())

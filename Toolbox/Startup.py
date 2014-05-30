@@ -129,7 +129,7 @@ def initializeResourceSearchPath():
         if iconPath:
             UI.PixmapCache.addSearchPath(iconPath)
     for defaultIconPath in defaultIconPaths:
-        if not defaultIconPath in iconPaths:
+        if defaultIconPath not in iconPaths:
             UI.PixmapCache.addSearchPath(defaultIconPath)
 
 

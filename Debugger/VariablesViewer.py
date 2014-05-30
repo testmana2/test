@@ -291,8 +291,9 @@ class VariablesViewer(QTreeWidget):
         
         self.indicators = {'list': '[]', 'tuple': '()', 'dict': '{}',
                            # Python types
-                           'Array': '[]', 'Hash': '{}'}
+                           'Array': '[]', 'Hash': '{}'
                            # Ruby types
+                           }
         
         self.rx_class = QRegExp('<.*(instance|object) at 0x.*>')
         self.rx_class2 = QRegExp('class .*')

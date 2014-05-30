@@ -201,8 +201,8 @@ class PasswordManager(QObject):
                 return
             
             data = []
-            section = 0     # 0 = login data, 1 = forms data,
-                            # 2 = never store info
+            section = 0
+            # 0 = login data, 1 = forms data, 2 = never store info
             for line in lines.splitlines():
                 if line == self.FORMS:
                     section = 1

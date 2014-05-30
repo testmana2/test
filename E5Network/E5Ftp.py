@@ -51,10 +51,9 @@ class E5FtpProxyType(object):
     Site = 3                        # proxy login first, than use SITE command
     Open = 4                        # proxy login first, than use OPEN command
     UserAtProxyuserAtServer = 5     # one login for both
-    ProxyuserAtServer = 6           # proxy login with remote host given, than
-                                    # normal remote login
-    AuthResp = 7                    # authenticate to proxy with AUTH and
-                                    # RESP commands
+    ProxyuserAtServer = 6
+    # proxy login with remote host given, than normal remote login
+    AuthResp = 7  # authenticate to proxy with AUTH and RESP commands
     Bluecoat = 8                    # bluecoat proxy
 
 

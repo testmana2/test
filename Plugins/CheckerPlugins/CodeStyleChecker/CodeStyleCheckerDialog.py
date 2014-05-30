@@ -671,7 +671,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             errorFiles.append(
                 Utilities.normabspath(itm.data(0, self.filenameRole)))
         for file in openFiles:
-            if not file in errorFiles:
+            if file not in errorFiles:
                 editor = vm.getOpenEditor(file)
                 editor.clearStyleWarnings()
     
@@ -838,9 +838,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             if itm.childCount() > 0:
                 for index in range(itm.childCount()):
                     citm = itm.child(index)
-                    if self.__itemFixable(citm) and not citm in fixableItems:
+                    if self.__itemFixable(citm) and citm not in fixableItems:
                         fixableItems.append(citm)
-            elif self.__itemFixable(itm) and not itm in fixableItems:
+            elif self.__itemFixable(itm) and itm not in fixableItems:
                 fixableItems.append(itm)
         
         return fixableItems

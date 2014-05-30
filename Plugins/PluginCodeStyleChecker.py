@@ -290,7 +290,7 @@ class CodeStyleCheckerPlugin(QObject):
                 ))
                 self.__projectBrowserAct.triggered.connect(
                     self.__projectBrowserCodeStyleCheck)
-            if not self.__projectBrowserAct in menu.actions():
+            if self.__projectBrowserAct not in menu.actions():
                 menu.addAction(self.__projectBrowserAct)
     
     def __projectCodeStyleCheck(self):
@@ -378,7 +378,7 @@ class CodeStyleCheckerPlugin(QObject):
         @param editor reference to the editor
         """
         if menuName == "Checks":
-            if not self.__editorAct in menu.actions():
+            if self.__editorAct not in menu.actions():
                 menu.addAction(self.__editorAct)
             self.__editorAct.setEnabled(editor.isPyFile())
     

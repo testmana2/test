@@ -279,7 +279,7 @@ def main():
                         continue
                     
                     for apiEntry in api:
-                        if not apiEntry in apis:
+                        if apiEntry not in apis:
                             apis.append(apiEntry)
                     for basesEntry in bases:
                         if bases[basesEntry]:

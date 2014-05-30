@@ -1450,7 +1450,7 @@ class DebugClientBase(object):
                             exec('mcdict = dict{0!s}.__class__.__dict__'
                                  .format(access), globals(), loc)
                             ndict.update(loc["mcdict"])
-                            if mdict and not "sipThis" in mdict.keys():
+                            if mdict and "sipThis" not in mdict.keys():
                                 del rvar[0:2]
                                 access = ""
                         except:
@@ -2134,7 +2134,7 @@ class DebugClientBase(object):
             except:
                 remoteAddress = None
             sys.argv = ['']
-            if not '' in sys.path:
+            if '' not in sys.path:
                 sys.path.insert(0, '')
             if port >= 0:
                 if not self.noencoding:

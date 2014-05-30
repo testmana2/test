@@ -78,7 +78,7 @@ class AssociationItem(E5ArrowItem):
             self.calculateEndingPoints = \
                 self.__calculateEndingPoints_topToBottom
         else:
-##            self.calculateEndingPoints = self.__calculateEndingPoints_center
+            ## self.calculateEndingPoints = self.__calculateEndingPoints_center
             self.calculateEndingPoints = self.__calculateEndingPoints_rectangle
         
         self.itemA = itemA

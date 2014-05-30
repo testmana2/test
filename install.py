@@ -327,7 +327,7 @@ def copyTree(src, dst, filters, excludeDirs=[], excludePatterns=[]):
                     os.chmod(dstname, 0o644)
                     break
             else:
-                if os.path.isdir(srcname) and not srcname in excludeDirs:
+                if os.path.isdir(srcname) and srcname not in excludeDirs:
                     copyTree(srcname, dstname, filters,
                              excludePatterns=excludePatterns)
 

@@ -60,15 +60,15 @@ class E5ToolBarDialog(QDialog, Ui_E5ToolBarDialog):
         
         self.__manager = toolBarManager
         self.__toolbarItems = {}
-            # maps toolbar item IDs to toolbar items
+        # maps toolbar item IDs to toolbar items
         self.__currentToolBarItem = None
         self.__removedToolBarIDs = []
-            # remember custom toolbars to be deleted
+        # remember custom toolbars to be deleted
         
         self.__widgetActionToToolBarItemID = {}
-            # maps widget action IDs to toolbar item IDs
+        # maps widget action IDs to toolbar item IDs
         self.__toolBarItemToWidgetActionID = {}
-            # maps toolbar item IDs to widget action IDs
+        # maps toolbar item IDs to widget action IDs
         
         self.upButton.setIcon(UI.PixmapCache.getIcon("1uparrow.png"))
         self.downButton.setIcon(UI.PixmapCache.getIcon("1downarrow.png"))

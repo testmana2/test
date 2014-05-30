@@ -36,29 +36,29 @@ class E5ToolBarManager(QObject):
         self.__ui = ui
         
         self.__toolBars = {}
-            # maps toolbar IDs to actions
+        # maps toolbar IDs to actions
         self.__toolBarsWithSeparators = {}
-            # maps toolbar IDs to actions incl. separators
+        # maps toolbar IDs to actions incl. separators
         self.__defaultToolBars = {}
-            # maps default toolbar IDs to actions
+        # maps default toolbar IDs to actions
         self.__customToolBars = []
-            # list of custom toolbars
+        # list of custom toolbars
         self.__allToolBars = {}
-            # maps toolbar IDs to toolbars
+        # maps toolbar IDs to toolbars
         
         self.__categoryToActions = {}
-            # maps categories to actions
+        # maps categories to actions
         self.__actionToCategory = {}
-            # maps action IDs to categories
+        # maps action IDs to categories
         self.__allActions = {}
-            # maps action IDs to actions
+        # maps action IDs to actions
         self.__actionToToolBars = {}
-            # maps action IDs to toolbars
+        # maps action IDs to toolbars
         
         self.__widgetActions = {}
-            # maps widget action IDs to toolbars
+        # maps widget action IDs to toolbars
         self.__allWidgetActions = {}
-            # maps widget action IDs to widget actions
+        # maps widget action IDs to widget actions
     
     ######################################################
     ## Private methods

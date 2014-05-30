@@ -23,9 +23,10 @@ class LoginForm(object):
         self.url = QUrl()
         self.name = ""
         self.hasAPassword = False
-        self.elements = []      # list of tuples of element name and value
-                                # (string, string)
-        self.elementTypes = {}  # dict of element name as key and type as value
+        self.elements = []
+        # list of tuples of element name and value (string, string)
+        self.elementTypes = {}
+        # dict of element name as key and type as value
     
     def isValid(self):
         """

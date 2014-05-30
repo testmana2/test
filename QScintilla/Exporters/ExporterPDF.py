@@ -575,16 +575,16 @@ class ExporterPDF(ExporterBase):
                                         utf8Len = 3
                                     elif (utf8Ch[0] & 0xC0) == 0xC0:
                                         utf8Len = 2
-                                    column -= 1  # will be incremented
-                                                 # again later
+                                    column -= 1
+                                    # will be incremented again later
                                 elif len(utf8Ch) == utf8Len:
                                     ch = utf8Ch.decode('utf8')
                                     self.pr.add(ch, style)
                                     utf8Ch = b""
                                     utf8Len = 0
                                 else:
-                                    column -= 1  # will be incremented
-                                                 # again later
+                                    column -= 1
+                                    # will be incremented again later
                             else:
                                 self.pr.add(ch.decode(), style)
                             column += 1

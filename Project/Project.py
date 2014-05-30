@@ -391,8 +391,8 @@ class Project(QObject):
         self.translationsRoot = ""  # the translations prefix
         self.name = ""
         self.opened = False
-        self.subdirs = [""]  # record the project dir as a relative path
-                             # (i.e. empty path)
+        self.subdirs = [""]
+        # record the project dir as a relative path (i.e. empty path)
         self.otherssubdirs = []
         self.vcs = None
         self.vcsRequested = False
@@ -1559,8 +1559,8 @@ class Project(QObject):
                             .format(targetfile),
                             icon=E5MessageBox.Warning)
                         if not res:
-                            continue  # don't overwrite, carry on
-                                      # with next file
+                            continue
+                            # don't overwrite, carry on with next file
                             
                     shutil.copy(file, target)
                 except EnvironmentError:
@@ -4613,7 +4613,7 @@ class Project(QObject):
                     """<p>Reason: {0}</p>""").format(str(why)))
             return
         
-        if not "PKGLIST" in self.pdata["OTHERS"]:
+        if "PKGLIST" not in self.pdata["OTHERS"]:
             self.appendFile("PKGLIST")
         
     @pyqtSlot()
@@ -4698,7 +4698,7 @@ class Project(QObject):
         archiveFile.writestr("VERSION", version.encode("utf-8"))
         archiveFile.close()
         
-        if not archive in self.pdata["OTHERS"]:
+        if archive not in self.pdata["OTHERS"]:
             self.appendFile(archive)
         
         if self.ui.notificationsEnabled():
@@ -4736,7 +4736,7 @@ class Project(QObject):
         if not path.endswith("/") and not path.endswith("\\"):
             path = "{0}/".format(path)
         
-        if not path in zipFile.namelist():
+        if path not in zipFile.namelist():
             self.__createZipDirEntries(os.path.split(path[:-1])[0], zipFile)
             zipFile.writestr(path, b"")
     

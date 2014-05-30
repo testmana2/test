@@ -70,7 +70,7 @@ def sort(nodes, routes, noRecursion=False):
             for parent in currentParents:
                 if parent in stage and parent != current:
                     # might wind up removing current
-                    if not current in parents.get(parent, []):
+                    if current not in parents.get(parent, []):
                         # is not mutually dependant
                         removes.append(current)
         
@@ -105,9 +105,9 @@ def _buildChildrenLists(routes):
     for sourceID, destinationID in routes:
         currentChildren = childrenTable.get(sourceID, [])
         currentParents = parentTable.get(destinationID, [])
-        if not destinationID in currentChildren:
+        if destinationID not in currentChildren:
             currentChildren.append(destinationID)
-        if not sourceID in currentParents:
+        if sourceID not in currentParents:
             currentParents.append(sourceID)
         childrenTable[sourceID] = currentChildren
         parentTable[destinationID] = currentParents

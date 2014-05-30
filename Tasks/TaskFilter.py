@@ -26,12 +26,17 @@ class TaskFilter(object):
         
         self.summaryFilter = None
         self.filenameFilter = None
-        self.typeFilter = Task.TypeNone     # task type
-        self.scopeFilter = None             # global (False) or project (True)
-        self.statusFilter = None            # uncompleted (False) or
-                                            # completed (True)
-        self.prioritiesFilter = None        # list of priorities
-                                            # [0 (high), 1 (normal), 2 (low)]
+        self.typeFilter = Task.TypeNone
+        # task type
+        
+        self.scopeFilter = None
+        # global (False) or project (True)
+        
+        self.statusFilter = None
+        # uncompleted (False) or completed (True)
+        
+        self.prioritiesFilter = None
+        # list of priorities [0 (high), 1 (normal), 2 (low)]
     
     def setActive(self, enabled):
         """
@@ -143,7 +148,7 @@ class TaskFilter(object):
             return False
         
         if self.prioritiesFilter is not None and \
-           not task.priority in self.prioritiesFilter:
+           task.priority not in self.prioritiesFilter:
             return False
         
         return True

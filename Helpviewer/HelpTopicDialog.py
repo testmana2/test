@@ -32,7 +32,7 @@ class HelpTopicDialog(QDialog, Ui_HelpTopicDialog):
         self.setupUi(self)
         
         self.label.setText(self.tr("Choose a &topic for <b>{0}</b>:")
-            .format(keyword))
+                           .format(keyword))
         
         self.__links = links
         for topic in sorted(self.__links):

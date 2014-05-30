@@ -283,7 +283,7 @@ class PluginManager(QObject):
         
         if self.__develPluginFile:
             path = Utilities.splitPath(self.__develPluginFile)[0]
-            if not path in sys.path:
+            if path not in sys.path:
                 sys.path.insert(2, path)
             UI.PixmapCache.addSearchPath(path)
     

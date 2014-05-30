@@ -52,8 +52,9 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         self.__wasShown = False
         self.__loaded = False
         self.__feeds = []
-        self.__replies = {}  # dict key is the id of the request object
-                             # dict value is a tuple of request and tree item
+        self.__replies = {}
+        # dict key is the id of the request object
+        # dict value is a tuple of request and tree item
         
         self.feedsTree.setContextMenuPolicy(Qt.CustomContextMenu)
         self.feedsTree.customContextMenuRequested.connect(

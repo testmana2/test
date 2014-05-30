@@ -986,13 +986,13 @@
             <section title="eric5.Utilities.BackgroundClient" ref="eric5.Utilities.BackgroundClient.html" />
             <section title="eric5.Utilities.BackgroundService" ref="eric5.Utilities.BackgroundService.html" />
             <section title="eric5.Utilities.FtpUtilities" ref="eric5.Utilities.FtpUtilities.html" />
+            <section title="eric5.Utilities.MimeTypes" ref="eric5.Utilities.MimeTypes.html" />
             <section title="eric5.Utilities.ModuleParser" ref="eric5.Utilities.ModuleParser.html" />
             <section title="eric5.Utilities.PasswordChecker" ref="eric5.Utilities.PasswordChecker.html" />
             <section title="eric5.Utilities.PySideImporter" ref="eric5.Utilities.PySideImporter.html" />
             <section title="eric5.Utilities.__init__" ref="eric5.Utilities.__init__.html" />
             <section title="eric5.Utilities.binplistlib" ref="eric5.Utilities.binplistlib.html" />
             <section title="eric5.Utilities.compatibility_fixes" ref="eric5.Utilities.compatibility_fixes.html" />
-            <section title="eric5.Utilities.mimetypes" ref="eric5.Utilities.mimetypes.html" />
             <section title="eric5.Utilities.uic" ref="eric5.Utilities.uic.html" />
           </section>
           <section title="eric5.VCS" ref="index-eric5.VCS.html">
@@ -1972,8 +1972,8 @@
       <keyword name="Checker.check_logical" id="Checker.check_logical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.check_logical" />
       <keyword name="Checker.check_physical" id="Checker.check_physical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.check_physical" />
       <keyword name="Checker.generate_tokens" id="Checker.generate_tokens" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.generate_tokens" />
+      <keyword name="Checker.maybe_check_physical" id="Checker.maybe_check_physical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.maybe_check_physical" />
       <keyword name="Checker.readline" id="Checker.readline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.readline" />
-      <keyword name="Checker.readline_check_physical" id="Checker.readline_check_physical" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.readline_check_physical" />
       <keyword name="Checker.report_invalid_syntax" id="Checker.report_invalid_syntax" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.report_invalid_syntax" />
       <keyword name="Checker.run_check" id="Checker.run_check" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#Checker.run_check" />
       <keyword name="CheckerPlugins (Package)" id="CheckerPlugins (Package)" ref="index-eric5.Plugins.CheckerPlugins.html" />
@@ -7677,6 +7677,7 @@
       <keyword name="MessageBoxWizardDialog.on_buttonBox_clicked" id="MessageBoxWizardDialog.on_buttonBox_clicked" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.on_buttonBox_clicked" />
       <keyword name="MessageBoxWizardDialog.on_rAboutQt_toggled" id="MessageBoxWizardDialog.on_rAboutQt_toggled" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.on_rAboutQt_toggled" />
       <keyword name="MessageBoxWizardDialog.on_rAbout_toggled" id="MessageBoxWizardDialog.on_rAbout_toggled" ref="eric5.Plugins.WizardPlugins.MessageBoxWizard.MessageBoxWizardDialog.html#MessageBoxWizardDialog.on_rAbout_toggled" />
+      <keyword name="MimeTypes (Module)" id="MimeTypes (Module)" ref="eric5.Utilities.MimeTypes.html" />
       <keyword name="MiniEditor" id="MiniEditor" ref="eric5.QScintilla.MiniEditor.html#MiniEditor" />
       <keyword name="MiniEditor (Constructor)" id="MiniEditor (Constructor)" ref="eric5.QScintilla.MiniEditor.html#MiniEditor.__init__" />
       <keyword name="MiniEditor (Module)" id="MiniEditor (Module)" ref="eric5.QScintilla.MiniEditor.html" />
@@ -12855,6 +12856,8 @@
       <keyword name="_encode_base64" id="_encode_base64" ref="eric5.UI.EmailDialog.html#_encode_base64" />
       <keyword name="_indent" id="_indent" ref="eric5.Utilities.ClassBrowsers.pyclbr.html#_indent" />
       <keyword name="_indent" id="_indent" ref="eric5.Utilities.ModuleParser.html#_indent" />
+      <keyword name="_is_eol_token" id="_is_eol_token" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_is_eol_token" />
+      <keyword name="_is_eol_token_1" id="_is_eol_token_1" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_is_eol_token_1" />
       <keyword name="_main" id="_main" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_main" />
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric5.Utilities.__init__.html#_percentReplacementFunc" />
       <keyword name="addActions" id="addActions" ref="eric5.E5Gui.E5Action.html#addActions" />
@@ -12876,6 +12879,7 @@
       <keyword name="close" id="close" ref="eric5.DebugClients.Ruby.AsyncFile.html#close" />
       <keyword name="codeStyleCheck" id="codeStyleCheck" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#codeStyleCheck" />
       <keyword name="compactPath" id="compactPath" ref="eric5.Utilities.__init__.html#compactPath" />
+      <keyword name="comparison_negative" id="comparison_negative" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_negative" />
       <keyword name="comparison_to_singleton" id="comparison_to_singleton" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_to_singleton" />
       <keyword name="comparison_type" id="comparison_type" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_type" />
       <keyword name="compatibility_fixes (Module)" id="compatibility_fixes (Module)" ref="eric5.Utilities.compatibility_fixes.html" />
@@ -13233,7 +13237,7 @@
       <keyword name="isExecutable" id="isExecutable" ref="eric5.Utilities.__init__.html#isExecutable" />
       <keyword name="isLinuxPlatform" id="isLinuxPlatform" ref="eric5.Globals.__init__.html#isLinuxPlatform" />
       <keyword name="isMacPlatform" id="isMacPlatform" ref="eric5.Globals.__init__.html#isMacPlatform" />
-      <keyword name="isTextFile" id="isTextFile" ref="eric5.Utilities.mimetypes.html#isTextFile" />
+      <keyword name="isTextFile" id="isTextFile" ref="eric5.Utilities.MimeTypes.html#isTextFile" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric5.Globals.__init__.html#isWindowsPlatform" />
       <keyword name="is_stream_binary_plist" id="is_stream_binary_plist" ref="eric5.Utilities.binplistlib.html#is_stream_binary_plist" />
       <keyword name="isatty" id="isatty" ref="eric5.DebugClients.Ruby.AsyncFile.html#isatty" />
@@ -13280,8 +13284,6 @@
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#maximum_line_length" />
       <keyword name="messageHandler" id="messageHandler" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandler" />
       <keyword name="messageHandlerInstalled" id="messageHandlerInstalled" ref="eric5.E5Gui.E5ErrorMessage.html#messageHandlerInstalled" />
-      <keyword name="mimetypes (Module)" id="mimetypes (Module)" ref="eric5.Utilities.mimetypes.html" />
-      <keyword name="missing_newline" id="missing_newline" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_newline" />
       <keyword name="missing_whitespace" id="missing_whitespace" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_whitespace" />
       <keyword name="missing_whitespace_around_operator" id="missing_whitespace_around_operator" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_whitespace_around_operator" />
       <keyword name="mute_string" id="mute_string" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#mute_string" />
@@ -13289,6 +13291,7 @@
       <keyword name="normabspath" id="normabspath" ref="eric5.Utilities.__init__.html#normabspath" />
       <keyword name="normalizeCode" id="normalizeCode" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#normalizeCode" />
       <keyword name="normalizeCode" id="normalizeCode" ref="eric5.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#normalizeCode" />
+      <keyword name="normalize_paths" id="normalize_paths" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#normalize_paths" />
       <keyword name="normcaseabspath" id="normcaseabspath" ref="eric5.Utilities.__init__.html#normcaseabspath" />
       <keyword name="normcasepath" id="normcasepath" ref="eric5.Utilities.__init__.html#normcasepath" />
       <keyword name="normjoinpath" id="normjoinpath" ref="eric5.Utilities.__init__.html#normjoinpath" />
@@ -13486,7 +13489,7 @@
       <keyword name="whitespace_around_keywords" id="whitespace_around_keywords" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#whitespace_around_keywords" />
       <keyword name="whitespace_around_named_parameter_equals" id="whitespace_around_named_parameter_equals" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#whitespace_around_named_parameter_equals" />
       <keyword name="whitespace_around_operator" id="whitespace_around_operator" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#whitespace_around_operator" />
-      <keyword name="whitespace_before_inline_comment" id="whitespace_before_inline_comment" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#whitespace_before_inline_comment" />
+      <keyword name="whitespace_before_comment" id="whitespace_before_comment" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#whitespace_before_comment" />
       <keyword name="whitespace_before_parameters" id="whitespace_before_parameters" ref="eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#whitespace_before_parameters" />
       <keyword name="wildcardMatch" id="wildcardMatch" ref="eric5.Helpviewer.GreaseMonkey.GreaseMonkeyUrlMatcher.html#wildcardMatch" />
       <keyword name="win32_GetUserName" id="win32_GetUserName" ref="eric5.Utilities.__init__.html#win32_GetUserName" />
@@ -14273,6 +14276,7 @@
       <file>eric5.Utilities.ClassBrowsers.pyclbr.html</file>
       <file>eric5.Utilities.ClassBrowsers.rbclbr.html</file>
       <file>eric5.Utilities.FtpUtilities.html</file>
+      <file>eric5.Utilities.MimeTypes.html</file>
       <file>eric5.Utilities.ModuleParser.html</file>
       <file>eric5.Utilities.PasswordChecker.html</file>
       <file>eric5.Utilities.PySideImporter.html</file>

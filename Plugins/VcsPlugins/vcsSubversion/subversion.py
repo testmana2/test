@@ -111,8 +111,8 @@ class Subversion(VersionControl):
         self.__commitData = {}
         self.__commitDialog = None
         
-        self.__wcng = True      # assume new generation working copy
-                                # metadata format
+        self.__wcng = True
+        # assume new generation working copy metadata format
         
     def getPlugin(self):
         """
@@ -2238,10 +2238,9 @@ class Subversion(VersionControl):
         @return list of defined change list names (list of strings)
         """
         changelists = []
-        rx_changelist = \
-            QRegExp('--- \\S+ .([\\w\\s]+).:\\s*')
-            # three dashes, Changelist (translated), quote,
-            # changelist name, quote, :
+        rx_changelist = QRegExp('--- \\S+ .([\\w\\s]+).:\\s*')
+        # three dashes, Changelist (translated), quote,
+        # changelist name, quote, :
         
         args = []
         args.append("status")

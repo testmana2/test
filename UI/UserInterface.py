@@ -1165,11 +1165,13 @@ class UserInterface(E5MainWindow):
                 self.setWindowTitle(
                     self.tr("{0} - Passive Mode").format(Program))
             elif self.capProject and not self.capEditor:
-                self.setWindowTitle(self.tr("{0} - {1} - Passive Mode")
-                    .format(self.capProject, Program))
+                self.setWindowTitle(
+                    self.tr("{0} - {1} - Passive Mode")
+                        .format(self.capProject, Program))
             elif not self.capProject and self.capEditor:
-                self.setWindowTitle(self.tr("{0} - {1} - Passive Mode")
-                    .format(self.capEditor, Program))
+                self.setWindowTitle(
+                    self.tr("{0} - {1} - Passive Mode")
+                        .format(self.capEditor, Program))
             else:
                 self.setWindowTitle(
                     self.tr("{0} - {1} - {2} - Passive Mode")

@@ -260,9 +260,8 @@ class SnapshotFreehandGrabber(QWidget):
                 self.__selection.append(p)
             else:
                 # moving the whole selection
-                p = evt.pos() - self.__pBefore      # Offset
-                self.__pBefore = evt.pos()          # save position for
-                                                    # next iteration
+                p = evt.pos() - self.__pBefore  # Offset
+                self.__pBefore = evt.pos()  # save position for next iteration
                 self.__selection.translate(p)
             
             self.update()

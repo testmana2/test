@@ -113,7 +113,7 @@ class PluginUninstallWidget(QWidget, Ui_PluginUninstallDialog):
                     """ Aborting...</p>""").format(pluginName))
             return False
         
-        if not pluginDirectory in sys.path:
+        if pluginDirectory not in sys.path:
             sys.path.insert(2, pluginDirectory)
         module = imp.load_source(pluginName, pluginFile)
         if not hasattr(module, "packageName"):

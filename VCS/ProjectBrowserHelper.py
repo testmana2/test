@@ -301,8 +301,8 @@ class VcsProjectBrowserHelper(QObject):
             status = self.vcs.vcsRemove(names)
             if status:
                 if isRemoveDirs:
-                    self.browser._removeDir()  # remove directories from
-                                               # Project
+                    self.browser._removeDir()
+                    # remove directories from Project
                 else:
                     self.browser._removeFile()  # remove file(s) from project
         

@@ -154,10 +154,10 @@ def uninstallEric():
                 os.remove(f)
         
         # Cleanup the install directories
-        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
-                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
-                     'ericDir']:
+        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir',
+                     'ericCSSDir', 'ericIconDir', 'ericPixDir',
+                     'ericTemplatesDir', 'ericCodeTemplatesDir',
+                     'ericOthersDir', 'ericStylesDir', 'ericDir']:
             dirpath = getConfig(name)
             if os.path.exists(dirpath):
                 shutil.rmtree(dirpath, True)

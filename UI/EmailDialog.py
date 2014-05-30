@@ -55,8 +55,8 @@ def _encode_base64(msg):
     msg.set_payload(encdata)
     msg['Content-Transfer-Encoding'] = 'base64'
 
-encoders.encode_base64 = _encode_base64     # WORK AROUND: implement our
-                                            # corrected encoder
+encoders.encode_base64 = _encode_base64
+# WORK AROUND: implement our corrected encoder
 
 
 class EmailDialog(QDialog, Ui_EmailDialog):

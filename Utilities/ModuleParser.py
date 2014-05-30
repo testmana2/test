@@ -465,7 +465,7 @@ class Module(object):
         @param name name of the global to add (string)
         @param attr Attribute object to be added
         """
-        if not name in self.globals:
+        if name not in self.globals:
             self.globals[name] = attr
         else:
             self.globals[name].addAssignment(attr.lineno)
@@ -760,7 +760,7 @@ class Module(object):
                          "".join(m.group("ImportList").splitlines())
                          .replace("\\", "").split(',')]
                 for name in names:
-                    if not name in self.imports:
+                    if name not in self.imports:
                         self.imports.append(name)
             
             elif m.start("ImportFrom") >= 0:
@@ -1273,7 +1273,7 @@ class Class(VisibilityBase):
         @param name name of the attribute to add (string)
         @param attr Attribute object to be added
         """
-        if not name in self.attributes:
+        if name not in self.attributes:
             self.attributes[name] = attr
         else:
             self.attributes[name].addAssignment(attr.lineno)
@@ -1297,7 +1297,7 @@ class Class(VisibilityBase):
         @param name name of the global to add (string)
         @param attr Attribute object to be added
         """
-        if not name in self.globals:
+        if name not in self.globals:
             self.globals[name] = attr
         else:
             self.globals[name].addAssignment(attr.lineno)

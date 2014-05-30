@@ -43,15 +43,15 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         # set initial values
         self.standardFont = Preferences.getHelp("StandardFont")
         self.standardFontSample.setFont(self.standardFont)
-        self.standardFontSample.setText("{0} {1}"
-            .format(self.standardFont.family(),
-                    self.standardFont.pointSize()))
+        self.standardFontSample.setText(
+            "{0} {1}".format(self.standardFont.family(),
+                             self.standardFont.pointSize()))
         
         self.fixedFont = Preferences.getHelp("FixedFont")
         self.fixedFontSample.setFont(self.fixedFont)
-        self.fixedFontSample.setText("{0} {1}"
-            .format(self.fixedFont.family(),
-                    self.fixedFont.pointSize()))
+        self.fixedFontSample.setText(
+            "{0} {1}".format(self.fixedFont.family(),
+                             self.fixedFont.pointSize()))
         
         self.initColour("SaveUrlColor", self.secureURLsColourButton,
                         Preferences.getHelp)

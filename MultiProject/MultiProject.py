@@ -90,15 +90,15 @@ class MultiProject(QObject):
         self.description = ""   # description of the multi project
         self.name = ""
         self.opened = False
-        self.projects = []      # list of project info; each info entry is
-                                # a dictionary
-                                # 'name'        : name of the project
-                                # 'file'        : project file name
-                                # 'master'      : flag indicating the master
-                                #                 project
-                                # 'description' : description of the project
-                                # 'category'    : name of the group
-                                # 'uid'         : unique identifier
+        self.projects = []
+        # list of project info; each info entry is a dictionary
+        # 'name'        : name of the project
+        # 'file'        : project file name
+        # 'master'      : flag indicating the master
+        #                 project
+        # 'description' : description of the project
+        # 'category'    : name of the group
+        # 'uid'         : unique identifier
         self.categories = []
     
     def __loadRecent(self):

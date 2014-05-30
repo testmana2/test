@@ -545,6 +545,5 @@ class SpellChecker(QObject):
             Public method to advance to the next error.
             
             @return self
-            @exception StopIteration raised to indicate the end of the iteration
             """
             return self.__next__()

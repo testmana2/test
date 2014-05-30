@@ -1187,8 +1187,8 @@ class HelpBrowser(QWebView):
             if element.tagName().lower() in ["input", "textarea"]:
                 if menu.isEmpty():
                     pageMenu = self.page().createStandardContextMenu()
-                    directionFound = False  # used to detect double
-                                            # direction entry
+                    directionFound = False
+                    # used to detect double direction entry
                     for act in pageMenu.actions():
                         if act.isSeparator():
                             menu.addSeparator()

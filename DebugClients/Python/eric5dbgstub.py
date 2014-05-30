@@ -19,7 +19,7 @@ __scriptname = None
 modDir = distutils.sysconfig.get_python_lib(True)
 ericpath = os.getenv('ERICDIR', getConfig('ericDir'))
 
-if not ericpath in sys.path:
+if ericpath not in sys.path:
     sys.path.insert(-1, ericpath)
     
 

@@ -48,7 +48,7 @@ class ProjectBrowserSortFilterProxyModel(BrowserSortFilterProxyModel):
             return False
         sitem = self.sourceModel().item(sindex)
         try:
-            if not self.__filterType in sitem.getProjectTypes():
+            if self.__filterType not in sitem.getProjectTypes():
                 return False
             if self.hideGeneratedForms and \
                self.__filterType == ProjectBrowserSourceType and \

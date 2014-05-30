@@ -46,7 +46,7 @@ class StackedWidget(QStackedWidget):
         """
         editor = assembly.getEditor()
         super(StackedWidget, self).addWidget(assembly)
-        if not editor in self.editors:
+        if editor not in self.editors:
             self.editors.append(editor)
         
     def removeWidget(self, widget):

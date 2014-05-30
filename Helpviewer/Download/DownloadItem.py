@@ -435,8 +435,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         self.__md5Hash.addData(buffer)
         bytesWritten = self.__output.write(buffer)
         if bytesWritten == -1:
-            self.infoLabel.setText(self.tr("Error saving: {0}")
-                .format(self.__output.errorString()))
+            self.infoLabel.setText(
+                self.tr("Error saving: {0}")
+                    .format(self.__output.errorString()))
             self.on_stopButton_clicked()
         else:
             self.__startedSaving = True
@@ -447,8 +448,9 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         """
         Private slot to handle a network error.
         """
-        self.infoLabel.setText(self.tr("Network Error: {0}")
-            .format(self.__reply.errorString()))
+        self.infoLabel.setText(
+            self.tr("Network Error: {0}")
+                .format(self.__reply.errorString()))
         self.tryAgainButton.setEnabled(True)
         self.tryAgainButton.setVisible(True)
         self.downloadFinished.emit()

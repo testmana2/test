@@ -627,8 +627,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                     self.unittestAction.setEnabled(False)
                                     self.checksMenu.menuAction().setEnabled(
                                         False)
-                                elif fn.endswith('.rb'):  # entry for mixed
-                                                          # mode programs
+                                elif fn.endswith('.rb'):
+                                    # entry for mixed mode programs
                                     for act in self.sourceMenuActions.values():
                                         act.setEnabled(False)
                                     self.classDiagramAction.setEnabled(True)
@@ -636,8 +636,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                     self.unittestAction.setEnabled(False)
                                     self.checksMenu.menuAction().setEnabled(
                                         False)
-                                elif fn.endswith('.js'):  # entry for mixed
-                                                          # mode programs
+                                elif fn.endswith('.js'):
+                                    # entry for mixed mode programs
                                     for act in self.sourceMenuActions.values():
                                         act.setEnabled(False)
                                     self.unittestAction.setEnabled(False)
@@ -645,8 +645,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                         False)
                                     self.graphicsMenu.menuAction().setEnabled(
                                         False)
-                                else:  # assume the source file is a
-                                       # Python file
+                                else:
+                                    # assume the source file is a Python file
                                     for act in self.sourceMenuActions.values():
                                         act.setEnabled(True)
                                     self.classDiagramAction.setEnabled(True)
@@ -956,9 +956,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             
             f = "{0}.coverage".format(basename)
             tf = "{0}.coverage".format(tbasename)
-            if os.path.isfile(f) and not f in files:
+            if os.path.isfile(f) and f not in files:
                 files.append(f)
-            if os.path.isfile(tf) and not tf in files:
+            if os.path.isfile(tf) and tf not in files:
                 files.append(tf)
         
         if files:
@@ -1010,9 +1010,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             
             f = "{0}.profile".format(basename)
             tf = "{0}.profile".format(tbasename)
-            if os.path.isfile(f) and not f in files:
+            if os.path.isfile(f) and f not in files:
                 files.append(f)
-            if os.path.isfile(tf) and not tf in files:
+            if os.path.isfile(tf) and tf not in files:
                 files.append(tf)
                 
         if files:
