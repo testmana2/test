@@ -37957,7 +37957,7 @@ Bitte „Aktualisieren“ drücken.</translation>
     <message>
         <location filename="../Project/ProjectSourcesBrowser.py" line="818"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Das Packageverzeichnis &lt;b&gt;{0}&lt;/b&gt; konnte nicht angelegt werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Das Packageverzeichnis &lt;b&gt;{0}&lt;/b&gt; konnte nicht angelegt werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
