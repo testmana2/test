@@ -26,7 +26,7 @@ from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 import UI.PixmapCache
 import Preferences
 import Utilities
-import Utilities.mimetypes
+import Utilities.MimeTypes
 
 
 class Browser(QTreeView):
@@ -423,7 +423,7 @@ class Browser(QTreeView):
                     elif itm.isPixmapFile():
                         self.pixmapFile.emit(itm.fileName())
                     else:
-                        if Utilities.mimetypes.isTextFile(itm.fileName()):
+                        if Utilities.MimeTypes.isTextFile(itm.fileName()):
                             self.sourceFile[str].emit(itm.fileName())
                         else:
                             QDesktopServices.openUrl(QUrl(itm.fileName()))

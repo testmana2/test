@@ -408,7 +408,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 self.__createResultItem(
                     self.filename, 1, 1,
                     self.tr("Error: {0}").format(str(msg))
-                        .rstrip()[1:-1], False, False, False)
+                        .rstrip(), False, False, False)
                 self.progress += 1
                 # Continue with next file
                 self.check()
@@ -623,7 +623,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             vm.openSourceFile(fn, lineno=lineno, pos=position + 1)
             editor = vm.getOpenEditor(fn)
             
-            if code == "E901":
+            if code in ["E901", "E902"]:
                 editor.toggleSyntaxError(lineno, 0, True, message, True)
             else:
                 editor.toggleWarning(

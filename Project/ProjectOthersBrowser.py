@@ -18,7 +18,7 @@ from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserOthersType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
-import Utilities.mimetypes
+import Utilities.MimeTypes
 
 
 class ProjectOthersBrowser(ProjectBaseBrowser):
@@ -236,7 +236,7 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
                 elif itm.isSvgFile():
                     self.svgFile.emit(itm.fileName())
                 else:
-                    if Utilities.mimetypes.isTextFile(itm.fileName()):
+                    if Utilities.MimeTypes.isTextFile(itm.fileName()):
                         self.sourceFile.emit(itm.fileName())
                     else:
                         QDesktopServices.openUrl(QUrl(itm.fileName()))
