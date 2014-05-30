@@ -179,6 +179,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         The results are reported to the __processResult slot.
         @keyparam codestring optional sourcestring (str)
         """
+        if not self.files:
+            self.__finish()
+            return
+        
         self.filename = self.files.pop(0)
         self.checkProgress.setValue(self.progress)
         self.checkProgressLabel.setPath(self.filename)
@@ -201,7 +205,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 self.__createResultItem(
                     self.filename, 1, 0,
                     self.tr("Error: {0}").format(str(msg))
-                    .rstrip()[1:-1], "")
+                    .rstrip(), "")
                 self.progress += 1
                 # Continue with next file
                 self.check()
