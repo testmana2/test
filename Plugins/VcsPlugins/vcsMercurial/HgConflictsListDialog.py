@@ -22,7 +22,7 @@ from E5Gui.E5Application import e5App
 
 from .Ui_HgConflictsListDialog import Ui_HgConflictsListDialog
 
-import Utilities.mimetypes
+import Utilities.MimeTypes
 
 
 class HgConflictsListDialog(QWidget, Ui_HgConflictsListDialog):
@@ -390,7 +390,7 @@ class HgConflictsListDialog(QWidget, Ui_HgConflictsListDialog):
         self.reMergeButton.setEnabled(unresolved > 0)
         self.editButton.setEnabled(
             selectedCount == 1 and
-            Utilities.mimetypes.isTextFile(
+            Utilities.MimeTypes.isTextFile(
                 self.conflictsList.selectedItems()[0].data(
                     0, self.FilenameRole)))
     
@@ -442,5 +442,5 @@ class HgConflictsListDialog(QWidget, Ui_HgConflictsListDialog):
         """
         itm = self.conflictsList.selectedItems()[0]
         filename = itm.data(0, self.FilenameRole)
-        if Utilities.mimetypes.isTextFile(filename):
+        if Utilities.MimeTypes.isTextFile(filename):
             e5App().getObject("ViewManager").getEditor(filename)
