@@ -137,7 +137,7 @@ class DocStyleChecker(object):
         assert docType in ("eric", "pep257")
         
         self.__select = tuple(select)
-        self.__ignore = tuple(ignore)
+        self.__ignore = ('',) if select else tuple(ignore)
         self.__expected = expected[:]
         self.__repeat = repeat
         self.__maxLineLength = maxLineLength
