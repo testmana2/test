@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1409,32 +1410,32 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="164"/>
         <source>Restart background client?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Reiniciar cliente en background?</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="362"/>
         <source>Background client disconnected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cliente en background desconectado.</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="362"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
-        <translation type="unfinished"></translation>
+        <translation>El cliente en background para &lt;b&gt;{0}&lt;/b&gt; ha desconectado por razón desconocida.&lt;br&gt;¿Reiniciarlo?</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="356"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
-        <translation type="unfinished"></translation>
+        <translation>El cliente en background de Eric ha desconectado debido a una razón desconocida.</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="189"/>
         <source>An error in Erics background client stopped the service.</source>
-        <translation type="unfinished"></translation>
+        <translation>Un error en el cliente en background de Eric ha detenido el servicio.</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="164"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El cliente en background para &lt;b&gt;{0}&lt;/b&gt; se ha detenido debido a una excepción. Éste es utilizado por varios plug-ins como los distintos comprobadores.&lt;/p&gt;&lt;p&gt;Seleccionar&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Si&apos;&lt;/b&gt; para reiniciar el cliente, abortando el último trabajo&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Reintentar&apos;&lt;/b&gt; para reiniciar el cliente y el último trabajo&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; para dejar el cliente sin iniciar.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Nota: El cliente se puede reiniciar abriendo y aceptando el diálogo de preferencias o recargando/cambiando el proyecto.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1910,8 +1911,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="150"/>
@@ -1984,8 +1985,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="92"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="103"/>
@@ -6895,7 +6896,7 @@ Not connected
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="279"/>
         <source>docstring summary does not start with &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>docstring de resumen no empieza con &apos;{0}&apos;</translation>
     </message>
 </context>
 <context>
@@ -15486,7 +15487,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1085"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -19278,32 +19279,32 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1104"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-Merge</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1095"/>
         <source>Do you really want to re-merge these files or directories?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Desea realmente hacer un re-merge de estos archivos o directorios?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1104"/>
         <source>Do you really want to re-merge the project?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Desea realmente hacer un re-merge del proyecto?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1109"/>
         <source>Re-Merging</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicando Re-Merge</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2154"/>
         <source>Marking as &apos;unresolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcando como &apos;unresolved&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2156"/>
         <source>Marking as &apos;resolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcando como &apos;resolved&apos;</translation>
     </message>
 </context>
 <context>
@@ -20374,132 +20375,132 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="14"/>
         <source>Mercurial Conflicts</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflictos de Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="23"/>
         <source>&lt;b&gt;Conflicts List&lt;/b&gt;\n&lt;p&gt;This shows a list of files  which had or still have conflicts.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista de Conflictos&lt;/b&gt;\n&lt;p&gt;Muestra un listado de archivos que han tenido o tienen todavía conflictos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="42"/>
         <source>Status</source>
-        <translation type="unfinished">Estado</translation>
+        <translation>Estado</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="47"/>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="70"/>
         <source>Press to mark the selected entries as &apos;resolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para marcar las entradas seleccionadas como &apos;resolved&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="247"/>
         <source>Resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolved</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="80"/>
         <source>Press to mark the selected entries as &apos;unresolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para marcar las entradas seleccionadas como &apos;unresolved&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="245"/>
         <source>Unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Unresolved</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="103"/>
         <source>Press to re-merge the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para aplicar re-merge a las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="106"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-Merge</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="113"/>
         <source>Press to edit the selected entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para editar la entrada seleccionada</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="116"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="144"/>
         <source>Errors</source>
-        <translation type="unfinished">Errores</translation>
+        <translation>Errores</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="163"/>
         <source>Input</source>
-        <translation type="unfinished">Input</translation>
+        <translation>Input</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="185"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para enviar el input al proceso de hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="188"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Enviar</translation>
+        <translation>&amp;Enviar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="191"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+E</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="198"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzcir los datos a enviar al proceso de hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="205"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Seleccionar para cambiar el campo de input a modo contraseña</translation>
+        <translation>Seleccionar para cambiar el campo de input a modo contraseña</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="208"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">&amp;Modo de contraseña</translation>
+        <translation>&amp;Modo de contraseña</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="211"/>
         <source>Alt+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+M</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="55"/>
         <source>&amp;Refresh</source>
-        <translation type="unfinished">Actualiza&amp;r</translation>
+        <translation>Actualiza&amp;r</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="57"/>
         <source>Press to refresh the list of conflicts</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para actualizar la lista de conflictos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="158"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Error de Generación de Proceso</translation>
+        <translation>Error de Configuración de Página</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="158"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished">El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
+        <translation>El proceso {0} no se ha podido ejecutar. Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="249"/>
         <source>Unknown Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Estado Desconocido</translation>
     </message>
 </context>
 <context>
@@ -22385,12 +22386,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="658"/>
         <source>Conflicts unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflictos sin resolver</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="661"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-Merge</translation>
     </message>
 </context>
 <context>
@@ -23713,57 +23714,57 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="431"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Re-Merge</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="436"/>
         <source>Re-Merge all conflicting, unresolved files of the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplicar Re-Merge a todos los archivos con conflictos sin resolver en el proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="447"/>
         <source>Show conflicts</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar conflictos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="447"/>
         <source>Show conflicts...</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar conflictos...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="451"/>
         <source>Show a dialog listing all files with conflicts</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar un diálogo listando todos los archivos con conflictos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="454"/>
         <source>&lt;b&gt;Show conflicts&lt;/b&gt;&lt;p&gt;This shows a dialog listing all files which had or still have conflicts.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista de Conflictos&lt;/b&gt;\n&lt;p&gt;Muestra un listado de archivos que han tenido o tienen todavía conflictos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="477"/>
         <source>Conflicts unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Conflictos sin resolver</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="481"/>
         <source>Mark all conflicts of the local project as unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar todos los conflictos del proyecto local como sin resolver</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="484"/>
         <source>&lt;b&gt;Conflicts unresolved&lt;/b&gt;&lt;p&gt;This marks all conflicts of the local project as unresolved.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Conflictos sin resolver&lt;/b&gt;&lt;p&gt;Marca todos los conflictos del proyecto local como sin resolver.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1327"/>
         <source>Manage Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar Cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="439"/>
         <source>&lt;b&gt;Re-Merge&lt;/b&gt;&lt;p&gt;This re-merges all conflicting, unresolved files of the project discarding any previous merge attempt.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Re-Merge&lt;/b&gt;&lt;p&gt;Aplica un re-merge a todos los archivos con conflictos sin resolver del proyecto, descartando cualquier intento anterior de merge.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -63069,37 +63070,37 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="42"/>
         <source>continuation line with same indent as next logical line</source>
-        <translation type="unfinished"></translation>
+        <translation>indentación de línea de continuación como la siguiente línea lógica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="54"/>
         <source>visually indented line with same indent as next logical line</source>
-        <translation type="unfinished"></translation>
+        <translation>línea visualmente indentada con la misma indentación que la siguiente línea lógica</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="57"/>
         <source>continuation line unaligned for hanging indent</source>
-        <translation type="unfinished"></translation>
+        <translation>línea de continuación sin alinear debido a indentación pendiente</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="120"/>
         <source>block comment should start with &apos;# &apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>comentarios de bloque debería comenzar con &apos;# &apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="195"/>
         <source>test for membership should be &apos;not in&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>comprobación de &apos;miembro de&apos; debería ser &apos;not in&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="198"/>
         <source>test for object identity should be &apos;is not&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>comprobación para identidad del objeto debería ser &apos;is not&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="207"/>
         <source>{0}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0}</translation>
     </message>
 </context>
 <context>
