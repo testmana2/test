@@ -994,10 +994,21 @@ def doDependancyChecks():
     
     # check version of sip
     try:
-        import sipconfig
-        sipVersion = sipconfig.Configuration().sip_version_str
+        import sip
+        sipVersion = sip.SIP_VERSION_STR
         # always assume, that snapshots are new enough
         if "snapshot" not in sipVersion:
+            while sipVersion.count('.') < 2:
+                sipVersion += '.0'
+            (maj, min, pat) = sipVersion.split('.')
+            maj = int(maj)
+            min = int(min)
+            pat = int(pat)
+            if maj < 4 or (maj == 4 and min < 14) or \
+                    (maj == 4 and min == 14 and pat < 2):
+                print('Sorry, you must have sip 4.14.2 or higher or'
+                      ' a recent snapshot release.')
+                exit(3)
             # check for blacklisted versions
             for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
@@ -1006,7 +1017,7 @@ def doDependancyChecks():
                         .format(vers))
                     print('Please install another version.')
                     exit(3)
-    except ImportError:
+    except (ImportError, AttributeError):
         pass
     
     # check version of PyQt

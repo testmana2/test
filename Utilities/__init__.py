@@ -1589,9 +1589,9 @@ def generateVersionInfo(linesep='\n'):
     @return string with version infos (string)
     """
     try:
-        import sipconfig
-        sip_version_str = sipconfig.Configuration().sip_version_str
-    except ImportError:
+        import sip
+        sip_version_str = sip.SIP_VERSION_STR
+    except (ImportError, AttributeError):
         sip_version_str = "sip version not available"
     
     info = "Version Numbers:{0}  Python {1}{2}".format(

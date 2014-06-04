@@ -24,6 +24,13 @@ except ImportError:
     import io       # __IGNORE_WARNING__
     basestring = str
 
+import sip
+try:
+    sip.setdestroyonexit(False)
+except AttributeError:
+    pass
+
+
 import sys
 import os
 import traceback

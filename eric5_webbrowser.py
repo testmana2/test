@@ -21,6 +21,11 @@ try:  # Only for Py2
 except (ImportError):
     pass
 
+try:
+    sip.setdestroyonexit(False)
+except AttributeError:
+    pass
+
 import sys
 import os
 
