@@ -103,6 +103,9 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
         # unicode string' exception on Python2
         codestring = normalizeCode(codestring)
         
+        # TODO: check for lines starting with VCS conflict markers
+        #       (7 * c for c in "<>=|") and report as 'error' like syntax check
+        
         if filename.endswith('.ptl'):
             try:
                 import quixote.ptl_compile
