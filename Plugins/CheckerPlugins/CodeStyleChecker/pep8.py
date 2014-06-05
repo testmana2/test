@@ -1141,9 +1141,9 @@ def parse_udiff(diff, patterns=None, parent='.'):
             if path[:2] == 'b/':
                 path = path[2:]
             rv[path] = set()
-    return dict([(os.path.join(parent, path), rows)
-                 for (path, rows) in rv.items()
-                 if rows and filename_match(path, patterns)])
+    return dict([(os.path.join(parent, path_), rows)
+                 for (path_, rows) in rv.items()
+                 if rows and filename_match(path_, patterns)])
 
 
 def normalize_paths(value, parent=os.curdir):
