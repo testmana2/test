@@ -728,8 +728,31 @@ class Shell(QsciScintillaCompat):
         """
         Public slot to handle the paste action.
         """
-        lines = QApplication.clipboard().text()
-        self.executeLines(lines)
+        if self.__isCursorOnLastLine():
+            line, col = self.getCursorPosition()
+            lastLine = self.text(line)
+            
+            # Remove if text is selected
+            if self.hasSelectedText():
+                lineFrom, indexFrom, lineTo, indexTo = self.getSelection()
+                if self.text(lineFrom).startswith(sys.ps1):
+                    if indexFrom < len(sys.ps1):
+                        indexFrom = len(sys.ps1)
+                elif self.text(lineFrom).startswith(sys.ps2):
+                    if indexFrom < len(sys.ps2):
+                        indexFrom = len(sys.ps2)
+                lastLine = lastLine[:indexFrom] + lastLine[indexTo:]
+                col = indexFrom
+
+            self.setCursorPosition(line, 0)
+            self.deleteLineRight()
+            
+            lines = QApplication.clipboard().text()
+            lines = lastLine[:col] + lines + lastLine[col:]
+            self.executeLines(lines)
+            line, _ = self.getCursorPosition()
+            pos = len(self.text(line)) - (len(lastLine) - col)
+            self.setCursorPosition(line, pos)
         
     def __middleMouseButton(self):
         """
@@ -755,8 +778,15 @@ class Shell(QsciScintillaCompat):
             else:
                 fullline = False
             
+            self.incrementalSearchActive = True
             self.__insertTextAtEnd(line)
             if fullline:
+                self.incrementalSearchActive = False
+                if cmd.startswith(sys.ps1):
+                    cmd = cmd[len(sys.ps1):]
+                elif cmd.startswith(sys.ps2):
+                    cmd = cmd[len(sys.ps2):]
+                
                 self.__executeCommand(cmd)
                 if self.interruptCommandExecution:
                     self.__executeCommand("")
@@ -795,7 +825,7 @@ class Shell(QsciScintillaCompat):
         line, col = self.__getEndPos()
         self.setCursorPosition(line, col)
         self.insert(s)
-        self.prline, self.prcol = self.getCursorPosition()
+        self.prline, _ = self.getCursorPosition()
         
     def __insertTextNoEcho(self, s):
         """
