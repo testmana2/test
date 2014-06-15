@@ -338,6 +338,10 @@ class HelpWebPage(QWebPage):
                info.errorString == "eric5:No Error":
                 return False
             
+            if info.domain == QWebPage.WebKit and info.error == 203:
+                # "Loading is handled by the media engine"
+                return False
+            
             title = self.tr("Error loading page: {0}").format(urlString)
             htmlFile = QFile(":/html/notFoundPage.html")
             htmlFile.open(QFile.ReadOnly)
