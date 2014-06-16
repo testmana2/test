@@ -103,8 +103,14 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
         # unicode string' exception on Python2
         codestring = normalizeCode(codestring)
         
-        # TODO: check for lines starting with VCS conflict markers
-        #       (7 * c for c in "<>=|") and report as 'error' like syntax check
+        # Check for VCS conflict markers
+        lineindex = 1
+        for line in codestring.splitlines():
+            if any(line.startswith(c * 7) for c in "<>=|"):
+                return [{'error':
+                    (file_enc, lineindex, 0, "", "VCS conflict marker found")
+                }]
+            lineindex += 1
         
         if filename.endswith('.ptl'):
             try:
