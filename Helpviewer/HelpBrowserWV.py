@@ -294,10 +294,6 @@ class HelpWebPage(QWebPage):
         
         if extension == QWebPage.ErrorPageExtension:
             info = sip.cast(option, QWebPage.ErrorPageExtensionOption)
-            if info.error == 102:
-                # this is something of a hack; hopefully it will work in
-                # the future
-                return False
             
             errorPage = sip.cast(output, QWebPage.ErrorPageExtensionReturn)
             urlString = bytes(info.url.toEncoded()).decode()
