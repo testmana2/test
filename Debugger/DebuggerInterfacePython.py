@@ -65,7 +65,7 @@ class DebuggerInterfacePython(QObject):
         super(DebuggerInterfacePython, self).__init__()
         
         self.__isNetworked = True
-        self.__autoContinue = not passive
+        self.__autoContinue = False
         
         self.debugServer = debugServer
         self.passive = passive

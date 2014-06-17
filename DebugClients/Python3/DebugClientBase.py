@@ -559,14 +559,15 @@ class DebugClientBase(object):
                 self.debugMod.__dict__['__file__'] = sys.argv[0]
                 sys.modules['__main__'] = self.debugMod
                 res = 0
-                try:
-                    exec(open(sys.argv[0], encoding=self.__coding).read(),
-                         self.debugMod.__dict__)
-                except SystemExit as exc:
-                    res = exc.code
-                    atexit._run_exitfuncs()
-                self.writestream.flush()
-                self.progTerminated(res)
+                code = self.__compileFileSource(self.running)
+                if code:
+                    try:
+                        exec(code, self.debugMod.__dict__)
+                    except SystemExit as exc:
+                        res = exc.code
+                        atexit._run_exitfuncs()
+                    self.writestream.flush()
+                    self.progTerminated(res)
                 return
 
             if cmd == DebugProtocol.RequestProfile:
