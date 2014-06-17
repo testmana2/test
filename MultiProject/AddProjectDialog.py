@@ -9,6 +9,8 @@ Module implementing the add project dialog.
 
 from __future__ import unicode_literals
 
+import os
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -98,8 +100,12 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             from PyQt4.QtCore import QUuid
             self.uid = QUuid.createUuid().toString()
         
+        filename = Utilities.toNativeSeparators(self.filenameEdit.text())
+        if not os.path.isabs(filename):
+            filename = Utilities.toNativeSeparators(
+                os.path.join(self.startdir, filename))
         return (self.nameEdit.text(),
-                self.filenameEdit.text(),
+                filename,
                 self.masterCheckBox.isChecked(),
                 self.descriptionEdit.toPlainText(),
                 self.categoryComboBox.currentText(),
