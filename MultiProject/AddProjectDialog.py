@@ -7,6 +7,8 @@
 Module implementing the add project dialog.
 """
 
+import os
+
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
@@ -78,7 +80,12 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             whether the project shall be the main project and a short
             description for the project
         """
-        return (self.nameEdit.text(), self.filenameEdit.text(),
+        filename = Utilities.toNativeSeparators(self.filenameEdit.text())
+        if not os.path.isabs(filename):
+            filename = Utilities.toNativeSeparators(
+                os.path.join(self.startdir, filename))
+        
+        return (self.nameEdit.text(), filename,
                 self.masterCheckBox.isChecked(),
                 self.descriptionEdit.toPlainText())
     
