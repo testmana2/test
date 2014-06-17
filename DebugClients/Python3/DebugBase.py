@@ -804,7 +804,7 @@ class DebugBase(bdb.Bdb):
 
         # Eliminate things like <string> and <stdin>.
         if fn[0] == '<':
-            return 1
+            return True
 
         #XXX - think of a better way to do this.  It's only a convience for
         #debugging the debugger - when the debugger code is in the current
