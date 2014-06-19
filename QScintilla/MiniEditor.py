@@ -333,7 +333,7 @@ class MiniEditor(E5MainWindow):
                 "Shortcuts/{0}/{1}/AltAccel".format(
                     category, act.objectName()))
             if accel is not None:
-                act.setAlternateShortcut(QKeySequence(accel))
+                act.setAlternateShortcut(QKeySequence(accel), removeEmpty=True)
     
     def __createActions(self):
         """
