@@ -32,7 +32,7 @@ def __readShortcut(act, category, prefClass):
         accel = prefClass.settings.value(
             "Shortcuts/{0}/{1}/AltAccel".format(category, act.objectName()))
         if accel is not None:
-            act.setAlternateShortcut(QKeySequence(accel))
+            act.setAlternateShortcut(QKeySequence(accel), removeEmpty=True)
 
 
 def readShortcuts(prefClass=Prefs, helpViewer=None, pluginName=None):
@@ -253,7 +253,8 @@ def __setAction(actions, sdict):
             try:
                 accel, altAccel = sdict[act.objectName()]
                 act.setShortcut(QKeySequence(accel))
-                act.setAlternateShortcut(QKeySequence(altAccel))
+                act.setAlternateShortcut(QKeySequence(altAccel),
+                                         removeEmpty=True)
             except KeyError:
                 pass
 
