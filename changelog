@@ -35,6 +35,9 @@ Version 5.5.0-xxx:
      'python2Compatible'
 - Project
   -- added support for JavaScript projects
+  -- added code to move deleted files/directories to the recycle bin falling
+     back to removing them (os.remove), if send2trash cannot be imported due
+     to missing dependencies
 - Version Control System Interfaces
   -- All
      --- made the status LED (right lower corner) clickable (depending on

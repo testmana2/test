@@ -1141,6 +1141,13 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py</Source>
     <Source>cleanupSource.py</Source>
     <Source>Utilities/MimeTypes.py</Source>
+    <Source>ThirdParty/Send2Trash/__init__.py</Source>
+    <Source>ThirdParty/Send2Trash/send2trash/plat_win.py</Source>
+    <Source>ThirdParty/Send2Trash/send2trash/__init__.py</Source>
+    <Source>ThirdParty/Send2Trash/send2trash/plat_osx.py</Source>
+    <Source>ThirdParty/Send2Trash/send2trash/plat_other.py</Source>
+    <Source>ThirdParty/Send2Trash/send2trash/compat.py</Source>
+    <Source>ThirdParty/Send2Trash/send2trash/plat_gio.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1614,6 +1621,7 @@
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wiktionary.xml</Other>
     <Other>APIs/QSS/qss.api</Other>
     <Other>eric5.appdata.xml</Other>
+    <Other>ThirdParty/Send2Trash/LICENSE</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

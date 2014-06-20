@@ -1308,14 +1308,19 @@ class Project(QObject):
         
         @param langFile the translation file to be removed (string)
         """
+        try:
+            from ThirdParty.Send2Trash.send2trash import send2trash as s2t
+        except ImportError:
+            s2t = os.remove
+        
         langFile = self.getRelativePath(langFile)
         qmFile = self.__binaryTranslationFile(langFile)
         
         try:
             fn = os.path.join(self.ppath, langFile)
             if os.path.exists(fn):
-                os.remove(fn)
-        except IOError:
+                s2t(fn)
+        except EnvironmentError:
             E5MessageBox.critical(
                 self.ui,
                 self.tr("Delete translation"),
@@ -1335,8 +1340,8 @@ class Project(QObject):
                                      os.path.basename(qmFile)))
                 fn = os.path.join(self.ppath, qmFile)
                 if os.path.exists(fn):
-                    os.remove(fn)
-            except IOError:
+                    s2t(fn)
+            except EnvironmentError:
                 E5MessageBox.critical(
                     self.ui,
                     self.tr("Delete translation"),
@@ -1939,22 +1944,27 @@ class Project(QObject):
         @return flag indicating success (boolean)
         """
         try:
-            os.remove(os.path.join(self.ppath, fn))
+            from ThirdParty.Send2Trash.send2trash import send2trash as s2t
+        except ImportError:
+            s2t = os.remove
+        
+        try:
+            s2t(os.path.join(self.ppath, fn))
             path, ext = os.path.splitext(fn)
             if ext == '.ui':
                 fn2 = os.path.join(self.ppath, '{0}.h'.format(fn))
                 if os.path.isfile(fn2):
-                    os.remove(fn2)
+                    s2t(fn2)
             head, tail = os.path.split(path)
             for ext in ['.pyc', '.pyo']:
                 fn2 = os.path.join(self.ppath, path + ext)
                 if os.path.isfile(fn2):
-                    os.remove(fn2)
+                    s2t(fn2)
                 pat = os.path.join(
                     self.ppath, head,
                     "__pycache__", "{0}.*{1}".format(tail, ext))
                 for f in glob.glob(pat):
-                    os.remove(f)
+                    s2t(f)
         except EnvironmentError:
             E5MessageBox.critical(
                 self.ui,
@@ -1979,7 +1989,11 @@ class Project(QObject):
         if not os.path.isabs(dn):
             dn = os.path.join(self.ppath, dn)
         try:
-            shutil.rmtree(dn, True)
+            try:
+                from ThirdParty.Send2Trash.send2trash import send2trash
+                send2trash(dn)
+            except ImportError:
+                shutil.rmtree(dn, True)
         except EnvironmentError:
             E5MessageBox.critical(
                 self.ui,
