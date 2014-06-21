@@ -321,12 +321,20 @@ class NamingStyleChecker(object):
             (integer, integer, string)
         """
         if node.args.kwarg is not None:
-            if not self.LowercaseRegex.match(node.args.kwarg):
+            if sys.version_info >= (3, 4):
+                kwarg = node.args.kwarg.arg
+            else:
+                kwarg = node.args.kwarg
+            if not self.LowercaseRegex.match(kwarg):
                 yield self.__error(node, "N803")
                 return
         
         if node.args.vararg is not None:
-            if not self.LowercaseRegex.match(node.args.vararg):
+            if sys.version_info >= (3, 4):
+                vararg = node.args.vararg.arg
+            else:
+                vararg = node.args.vararg
+            if not self.LowercaseRegex.match(vararg):
                 yield self.__error(node, "N803")
                 return
         
