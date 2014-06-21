@@ -25,6 +25,8 @@ Version 5.5.0-xxx:
      to be done via the configuration dialog)
   -- added support for the QScintilla Gettext lexer (QsciLexerPO) as of
      QScintilla 2.8.2
+  -- added support for the QScintilla CoffeeScript lexer
+     (QsciLexerCoffeeScript) as of QScintilla 2.8.3
 - Multi Project
   -- added support for the categorisation of projects and changed the
      multi project file format

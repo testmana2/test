@@ -349,6 +349,11 @@ class Prefs(object):
         "CppHighlightTripleQuotedStrings": False,
         "CppHighlightHashQuotedStrings": False,
         
+        # CoffeeScript specifics
+        "CoffeScriptFoldComment": False,
+        "CoffeeScriptDollarsAllowed": True,
+        "CoffeeScriptStylePreprocessor": False,
+        
         # CSS specifics
         "CssFoldComment": True,
         "CssHssSupport": False,

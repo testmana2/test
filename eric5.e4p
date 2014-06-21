@@ -1148,6 +1148,7 @@
     <Source>ThirdParty/Send2Trash/send2trash/plat_other.py</Source>
     <Source>ThirdParty/Send2Trash/send2trash/compat.py</Source>
     <Source>ThirdParty/Send2Trash/send2trash/plat_gio.py</Source>
+    <Source>QScintilla/Lexers/LexerCoffeeScript.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

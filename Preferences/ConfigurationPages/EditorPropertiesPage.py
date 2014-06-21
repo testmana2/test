@@ -42,10 +42,6 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
         self.foldBashCommentCheckBox.setChecked(
             Preferences.getEditor("BashFoldComment"))
         
-        # CMake
-        self.cmakeFoldAtElseCheckBox.setChecked(
-            Preferences.getEditor("CMakeFoldAtElse"))
-        
         # C++
         self.foldCppCommentCheckBox.setChecked(
             Preferences.getEditor("CppFoldComment"))
@@ -76,6 +72,21 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
                 Preferences.getEditor("CppHighlightHashQuotedStrings"))
         else:
             self.cppHighlightHashQuotedCheckBox.setEnabled(False)
+        
+        # CMake
+        self.cmakeFoldAtElseCheckBox.setChecked(
+            Preferences.getEditor("CMakeFoldAtElse"))
+        
+        # CoffeeScript
+        if "CoffeeScript" in self.languages:
+            self.foldCoffeeScriptCommentCheckBox.setChecked(
+                Preferences.getEditor("CoffeScriptFoldComment"))
+            self.coffeeScriptDollarAllowedCheckBox.setChecked(
+                Preferences.getEditor("CoffeeScriptDollarsAllowed"))
+            self.coffeeScriptStylePreprocessorCheckBox.setChecked(
+                Preferences.getEditor("CoffeeScriptStylePreprocessor"))
+        else:
+            self.coffeeScriptGroup.setEnabled(False)
         
         # CSS
         self.foldCssCommentCheckBox.setChecked(
@@ -334,6 +345,23 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.setEditor(
                 "CppHighlightHashQuotedStrings",
                 self.cppHighlightHashQuotedCheckBox.isChecked())
+        
+        # CMake
+        Preferences.setEditor(
+            "CMakeFoldAtElse",
+            self.cmakeFoldAtElseCheckBox.isChecked())
+        
+        # CoffeeScript
+        if "CoffeeScript" in self.languages:
+            Preferences.setEditor(
+                "CoffeScriptFoldComment",
+                self.foldCoffeeScriptCommentCheckBox.isChecked())
+            Preferences.setEditor(
+                "CoffeeScriptDollarsAllowed",
+                self.coffeeScriptDollarAllowedCheckBox.isChecked())
+            Preferences.setEditor(
+                "CoffeeScriptStylePreprocessor",
+                self.coffeeScriptStylePreprocessorCheckBox.isChecked())
         
         # CSS
         Preferences.setEditor(

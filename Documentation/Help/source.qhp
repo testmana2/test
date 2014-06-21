@@ -850,6 +850,7 @@
               <section title="eric5.QScintilla.Lexers.LexerCPP" ref="eric5.QScintilla.Lexers.LexerCPP.html" />
               <section title="eric5.QScintilla.Lexers.LexerCSS" ref="eric5.QScintilla.Lexers.LexerCSS.html" />
               <section title="eric5.QScintilla.Lexers.LexerCSharp" ref="eric5.QScintilla.Lexers.LexerCSharp.html" />
+              <section title="eric5.QScintilla.Lexers.LexerCoffeeScript" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html" />
               <section title="eric5.QScintilla.Lexers.LexerContainer" ref="eric5.QScintilla.Lexers.LexerContainer.html" />
               <section title="eric5.QScintilla.Lexers.LexerD" ref="eric5.QScintilla.Lexers.LexerD.html" />
               <section title="eric5.QScintilla.Lexers.LexerDiff" ref="eric5.QScintilla.Lexers.LexerDiff.html" />
@@ -7330,6 +7331,7 @@
       <keyword name="LexerCSharp.initProperties" id="LexerCSharp.initProperties" ref="eric5.QScintilla.Lexers.LexerCSharp.html#LexerCSharp.initProperties" />
       <keyword name="LexerCSharp.isCommentStyle" id="LexerCSharp.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerCSharp.html#LexerCSharp.isCommentStyle" />
       <keyword name="LexerCSharp.isStringStyle" id="LexerCSharp.isStringStyle" ref="eric5.QScintilla.Lexers.LexerCSharp.html#LexerCSharp.isStringStyle" />
+      <keyword name="LexerCoffeeScript (Module)" id="LexerCoffeeScript (Module)" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html" />
       <keyword name="LexerContainer" id="LexerContainer" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer" />
       <keyword name="LexerContainer (Constructor)" id="LexerContainer (Constructor)" ref="eric5.QScintilla.Lexers.LexerContainer.html#LexerContainer.__init__" />
       <keyword name="LexerContainer (Module)" id="LexerContainer (Module)" ref="eric5.QScintilla.Lexers.LexerContainer.html" />
@@ -7390,12 +7392,18 @@
       <keyword name="LexerJava.initProperties" id="LexerJava.initProperties" ref="eric5.QScintilla.Lexers.LexerJava.html#LexerJava.initProperties" />
       <keyword name="LexerJava.isCommentStyle" id="LexerJava.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerJava.html#LexerJava.isCommentStyle" />
       <keyword name="LexerJava.isStringStyle" id="LexerJava.isStringStyle" ref="eric5.QScintilla.Lexers.LexerJava.html#LexerJava.isStringStyle" />
+      <keyword name="LexerJavaScript" id="LexerJavaScript" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html#LexerJavaScript" />
       <keyword name="LexerJavaScript" id="LexerJavaScript" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript" />
+      <keyword name="LexerJavaScript (Constructor)" id="LexerJavaScript (Constructor)" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html#LexerJavaScript.__init__" />
       <keyword name="LexerJavaScript (Constructor)" id="LexerJavaScript (Constructor)" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript.__init__" />
       <keyword name="LexerJavaScript (Module)" id="LexerJavaScript (Module)" ref="eric5.QScintilla.Lexers.LexerJavaScript.html" />
+      <keyword name="LexerJavaScript.defaultKeywords" id="LexerJavaScript.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html#LexerJavaScript.defaultKeywords" />
       <keyword name="LexerJavaScript.defaultKeywords" id="LexerJavaScript.defaultKeywords" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript.defaultKeywords" />
+      <keyword name="LexerJavaScript.initProperties" id="LexerJavaScript.initProperties" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html#LexerJavaScript.initProperties" />
       <keyword name="LexerJavaScript.initProperties" id="LexerJavaScript.initProperties" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript.initProperties" />
+      <keyword name="LexerJavaScript.isCommentStyle" id="LexerJavaScript.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html#LexerJavaScript.isCommentStyle" />
       <keyword name="LexerJavaScript.isCommentStyle" id="LexerJavaScript.isCommentStyle" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript.isCommentStyle" />
+      <keyword name="LexerJavaScript.isStringStyle" id="LexerJavaScript.isStringStyle" ref="eric5.QScintilla.Lexers.LexerCoffeeScript.html#LexerJavaScript.isStringStyle" />
       <keyword name="LexerJavaScript.isStringStyle" id="LexerJavaScript.isStringStyle" ref="eric5.QScintilla.Lexers.LexerJavaScript.html#LexerJavaScript.isStringStyle" />
       <keyword name="LexerLua" id="LexerLua" ref="eric5.QScintilla.Lexers.LexerLua.html#LexerLua" />
       <keyword name="LexerLua (Constructor)" id="LexerLua (Constructor)" ref="eric5.QScintilla.Lexers.LexerLua.html#LexerLua.__init__" />
@@ -14173,6 +14181,7 @@
       <file>eric5.QScintilla.Lexers.LexerCPP.html</file>
       <file>eric5.QScintilla.Lexers.LexerCSS.html</file>
       <file>eric5.QScintilla.Lexers.LexerCSharp.html</file>
+      <file>eric5.QScintilla.Lexers.LexerCoffeeScript.html</file>
       <file>eric5.QScintilla.Lexers.LexerContainer.html</file>
       <file>eric5.QScintilla.Lexers.LexerD.html</file>
       <file>eric5.QScintilla.Lexers.LexerDiff.html</file>
@@ -14286,7 +14295,6 @@
       <file>eric5.Utilities.crypto.__init__.html</file>
       <file>eric5.Utilities.crypto.py3AES.html</file>
       <file>eric5.Utilities.crypto.py3PBKDF2.html</file>
-      <file>eric5.Utilities.mimetypes.html</file>
       <file>eric5.Utilities.uic.html</file>
       <file>eric5.VCS.CommandOptionsDialog.html</file>
       <file>eric5.VCS.ProjectBrowserHelper.html</file>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>558</width>
-    <height>2042</height>
+    <height>2611</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -191,6 +191,45 @@
         </property>
         <property name="text">
          <string>Fold at else</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="coffeeScriptGroup">
+     <property name="title">
+      <string>CoffeeScript</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_11">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="foldCoffeeScriptCommentCheckBox">
+        <property name="toolTip">
+         <string>Select whether folding of comments shall be possible</string>
+        </property>
+        <property name="text">
+         <string>Fold comments</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="coffeeScriptDollarAllowedCheckBox">
+        <property name="toolTip">
+         <string>Select to allow '$' characters in identifier names</string>
+        </property>
+        <property name="text">
+         <string>Allow '$' in identifier names</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QCheckBox" name="coffeeScriptStylePreprocessorCheckBox">
+        <property name="toolTip">
+         <string>Select to style preprocessor lines</string>
+        </property>
+        <property name="text">
+         <string>Style preprocessor lines</string>
         </property>
        </widget>
       </item>
@@ -972,6 +1011,9 @@
   <tabstop>cppHighlightTripleQuotedCheckBox</tabstop>
   <tabstop>cppHighlightHashQuotedCheckBox</tabstop>
   <tabstop>cmakeFoldAtElseCheckBox</tabstop>
+  <tabstop>foldCoffeeScriptCommentCheckBox</tabstop>
+  <tabstop>coffeeScriptDollarAllowedCheckBox</tabstop>
+  <tabstop>coffeeScriptStylePreprocessorCheckBox</tabstop>
   <tabstop>foldCssCommentCheckBox</tabstop>
   <tabstop>cssHssCheckBox</tabstop>
   <tabstop>cssLessCheckBox</tabstop>

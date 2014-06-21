@@ -3842,7 +3842,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChec
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.ARITHMETIC_OP?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BENCHMARK_KEYS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.error?4(line_number, offset, text, check)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.error_args?4(line_number, offset, code, check, *args)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.error_args?4(line_number, offset, text, check, *args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.get_count?4(prefix='')
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.get_file_results?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.get_statistics?4(prefix='')
@@ -3855,6 +3855,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.start?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.stop?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport?1(options)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMMENT_WITH_NL?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMPARE_NEGATIVE_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMPARE_SINGLETON_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.COMPARE_TYPE_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.build_tokens_line?4()
@@ -3863,8 +3864,8 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_ast?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_logical?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.check_physical?4(line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.generate_tokens?4()
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.maybe_check_physical?4(token)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.readline?4()
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.readline_check_physical?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.report_invalid_syntax?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker.run_check?4(check, argument_names)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.Checker?1(filename=None, lines=None, options=None, report=None, **kwargs)
@@ -3882,12 +3883,14 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.KEYWORDS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.KEYWORD_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.LAMBDA_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.MAX_LINE_LENGTH?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.NEWLINE?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.OPERATOR_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.PROJECT_CONFIG?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.RAISE_COMMA_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.REPORT_FORMAT?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.RERAISE_COMMA_REGEX?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.SINGLETONS?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.SKIP_COMMENTS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.SKIP_TOKENS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport.error?4(line_number, offset, text, check)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.StandardReport.error_args?4(line_number, offset, code, check, *args)
@@ -3910,12 +3913,14 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.WS_NEEDED_OPERATORS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.WS_OPTIONAL_OPERATORS?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._add_check?5(check, kind, codes, args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._checks?8
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._is_eol_token?5(token)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8._main?5()
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, previous_logical, previous_indent_level)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.blank_lines?4(logical_line, blank_lines, indent_level, line_number, blank_before, previous_logical, previous_indent_level)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.comparison_negative?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.comparison_to_singleton?4(logical_line, noqa)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.comparison_type?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.compound_statements?4(logical_line)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.continued_indentation?4(logical_line, tokens, indent_level, hang_closing, noqa, verbose)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.continued_indentation?4(logical_line, tokens, indent_level, hang_closing, indent_char, noqa, verbose)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.expand_indent?4(line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.explicit_line_join?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.extraneous_whitespace?4(logical_line)
@@ -3924,16 +3929,16 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.get_parser?4(prog='pep8', ver
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.imports_on_separate_lines?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.indentation?4(logical_line, previous_logical, indent_char, indent_level, previous_indent_level)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.init_checks_registry?4()
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.maximum_line_length?4(physical_line, max_line_length)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_newline?4(physical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.maximum_line_length?4(physical_line, max_line_length, multiline)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_whitespace?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.missing_whitespace_around_operator?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.mute_string?4(text)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.noqa?7
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.normalize_paths?4(value, parent=os.curdir)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.parse_udiff?4(diff, patterns=None, parent='.')
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.process_options?4(arglist=None, parse_argv=False, config_file=None, parser=None)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_backticks?4(logical_line)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_has_key?4(logical_line)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_has_key?4(logical_line, noqa)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_not_equal?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.python_3000_raise_comma?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.read_config?4(options, args, arglist, parser)
@@ -3942,13 +3947,13 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.register_check?4(check, codes
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.stdin_get_value?4()
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.tabs_obsolete?4(physical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.tabs_or_spaces?4(physical_line, indent_char)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.trailing_blank_lines?4(physical_line, lines, line_number)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.trailing_blank_lines?4(physical_line, lines, line_number, total_lines)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.trailing_whitespace?4(physical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_comma?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_keywords?4(logical_line)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_named_parameter_equals?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_around_operator?4(logical_line)
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_inline_comment?4(logical_line, tokens)
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_comment?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_parameters?4(logical_line, tokens)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages?8
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages_sample_args?8
@@ -7198,6 +7203,11 @@ eric5.QScintilla.Lexers.LexerCSharp.LexerCSharp.initProperties?4()
 eric5.QScintilla.Lexers.LexerCSharp.LexerCSharp.isCommentStyle?4(style)
 eric5.QScintilla.Lexers.LexerCSharp.LexerCSharp.isStringStyle?4(style)
 eric5.QScintilla.Lexers.LexerCSharp.LexerCSharp?1(parent=None)
+eric5.QScintilla.Lexers.LexerCoffeeScript.LexerJavaScript.defaultKeywords?4(kwSet)
+eric5.QScintilla.Lexers.LexerCoffeeScript.LexerJavaScript.initProperties?4()
+eric5.QScintilla.Lexers.LexerCoffeeScript.LexerJavaScript.isCommentStyle?4(style)
+eric5.QScintilla.Lexers.LexerCoffeeScript.LexerJavaScript.isStringStyle?4(style)
+eric5.QScintilla.Lexers.LexerCoffeeScript.LexerJavaScript?1(parent=None)
 eric5.QScintilla.Lexers.LexerContainer.LexerContainer.description?4(style)
 eric5.QScintilla.Lexers.LexerContainer.LexerContainer.keywords?4(kwSet)
 eric5.QScintilla.Lexers.LexerContainer.LexerContainer.language?4()
@@ -8407,6 +8417,8 @@ eric5.Utilities.FtpUtilities.FtpDirLineParser.UnixMode?7
 eric5.Utilities.FtpUtilities.FtpDirLineParser.WindowsMode?7
 eric5.Utilities.FtpUtilities.FtpDirLineParser.parseLine?4(line)
 eric5.Utilities.FtpUtilities.FtpDirLineParser?1(parent=None)
+eric5.Utilities.MimeTypes.TextMimeTypes?7
+eric5.Utilities.MimeTypes.isTextFile?4(filename)
 eric5.Utilities.ModuleParser.Attribute.addAssignment?4(lineno)
 eric5.Utilities.ModuleParser.Attribute?1(module, name, file, lineno, isSignal=False)
 eric5.Utilities.ModuleParser.Class.addAttribute?4(name, attr)
@@ -8624,8 +8636,6 @@ eric5.Utilities.isExecutable?4(exe)
 eric5.Utilities.isinpath?4(file)
 eric5.Utilities.joinext?4(prefix, ext)
 eric5.Utilities.linesep?4()
-eric5.Utilities.mimetypes.TextMimeTypes?7
-eric5.Utilities.mimetypes.isTextFile?4(filename)
 eric5.Utilities.normabsjoinpath?4(a, *p)
 eric5.Utilities.normabspath?4(path)
 eric5.Utilities.normcaseabspath?4(path)

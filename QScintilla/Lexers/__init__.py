@@ -157,6 +157,11 @@ def getSupportedLanguages():
             [QApplication.translate('Lexers', "Gettext"), 'dummy.po',
              "lexerGettext.png"]
     
+    if QSCINTILLA_VERSION() >= 0x020803:
+        supportedLanguages["CoffeeScript"] = \
+            [QApplication.translate('Lexers', "CoffeeScript"), 'dummy.coffee',
+             "lexerCoffeeScript.png"]
+    
     for name in LexerRegistry:
         if not name.startswith("Pygments|"):
             supportedLanguages[name] = \
@@ -299,6 +304,9 @@ def getLexer(language, parent=None, pyname=""):
             elif language == "Gettext":
                 from .LexerPO import LexerPO
                 return LexerPO(parent)
+            elif language == "CoffeeScript":
+                from .LexerCoffeeScript import LexerCoffeeScript
+                return LexerCoffeeScript(parent)
             
             elif language in LexerRegistry:
                 return LexerRegistry[language][2](parent)
@@ -470,6 +478,13 @@ def getOpenFileFiltersList(includeAll=False, asString=False,
             QApplication.translate(
                 'Lexers',
                 'Gettext Files (*.po)'),
+        )
+    
+    if QSCINTILLA_VERSION() >= 0x020803:
+        openFileFiltersList.append(
+            QApplication.translate(
+                'Lexers',
+                'CoffeeScript Files (*.coffee)'),
         )
     
     for name in LexerRegistry:
@@ -670,6 +685,13 @@ def getSaveFileFiltersList(includeAll=False, asString=False,
                 'Gettext Files (*.po)'),
         )
     
+    if QSCINTILLA_VERSION() >= 0x020803:
+        saveFileFiltersList.append(
+            QApplication.translate(
+                'Lexers',
+                'CoffeeScript Files (*.coffee)'),
+        )
+    
     for name in LexerRegistry:
         saveFileFiltersList.extend(LexerRegistry[name][4])
     
@@ -824,8 +846,8 @@ def getDefaultLexerAssociations():
             '*.m.octave': "Octave",
         })
     
-    if QSCINTILLA_VERSION() >= 0x020802:
-        assocs['*.po'] = "Gettext"
+    if QSCINTILLA_VERSION() >= 0x020803:
+        assocs['*.coffee'] = "CoffeeScript"
     
     for name in LexerRegistry:
         for pattern in LexerRegistry[name][5]:
