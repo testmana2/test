@@ -377,6 +377,7 @@ class UserInterface(E5MainWindow):
         debugServer.clientProcessStderr.connect(self.appendToStderr)
         debugServer.clientInterpreterChanged.connect(
             self.browser.handleInterpreterChanged)
+        debugServer.appendStdout.connect(self.appendToStdout)
         
         self.stdout.appendStdout.connect(self.appendToStdout)
         self.stderr.appendStderr.connect(self.appendToStderr)

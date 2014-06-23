@@ -112,6 +112,8 @@ class DebugServer(QTcpServer):
     @signal callTraceInfo emitted after the client reported the call trace
         data (isCall, fromFile, fromLine, fromFunction, toFile, toLine,
         toFunction)
+    @signal appendStdout(msg) emitted when a passive debug connection is
+        established or lost
     """
     clientClearBreak = pyqtSignal(str, int)
     clientClearWatch = pyqtSignal(str)
@@ -148,6 +150,7 @@ class DebugServer(QTcpServer):
     utFinished = pyqtSignal()
     passiveDebugStarted = pyqtSignal(str, bool)
     callTraceInfo = pyqtSignal(bool, str, str, str, str, str, str)
+    appendStdout = pyqtSignal(str)
     
     def __init__(self):
         """
@@ -1451,7 +1454,7 @@ class DebugServer(QTcpServer):
         @param fn filename of the debugged script (string)
         @param exc flag to enable exception reporting of the IDE (boolean)
         """
-        print(self.tr("Passive debug connection received"))
+        self.appendStdout.emit(self.tr("Passive debug connection received\n"))
         self.passiveClientExited = False
         self.debugging = True
         self.running = True
@@ -1465,7 +1468,7 @@ class DebugServer(QTcpServer):
         """
         self.passiveClientExited = True
         self.shutdownServer()
-        print(self.tr("Passive debug connection closed"))
+        self.appendStdout.emit(self.tr("Passive debug connection closed\n"))
         
     def __restoreBreakpoints(self):
         """
