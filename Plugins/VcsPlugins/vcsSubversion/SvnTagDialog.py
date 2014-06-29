@@ -9,7 +9,7 @@ Module implementing a dialog to enter the data for a tagging operation.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_SvnTagDialog import Ui_SvnTagDialog
 

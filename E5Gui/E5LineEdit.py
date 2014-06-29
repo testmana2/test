@@ -9,10 +9,11 @@ Module implementing specialized line edits.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QEvent, qVersion
-from PyQt4.QtGui import QLineEdit, QStyle, QPainter, QPalette, \
-    QStyleOptionFrameV2, QWidget, QHBoxLayout, QBoxLayout, QLayout, \
-    QApplication, QSpacerItem, QSizePolicy
+from PyQt5.QtCore import pyqtSignal, Qt, QEvent, qVersion
+from PyQt5.QtGui import QPainter, QPalette
+from PyQt5.QtWidgets import QLineEdit, QStyle, QWidget, QHBoxLayout, \
+    QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy, \
+    QStyleOptionFrame
 
 import UI.PixmapCache
 
@@ -152,7 +153,7 @@ class E5LineEdit(QLineEdit):
             if not self.text() and \
                self.__inactiveText and \
                not self.hasFocus():
-                panel = QStyleOptionFrameV2()
+                panel = QStyleOptionFrame()
                 self.initStyleOption(panel)
                 textRect = self.style().subElementRect(
                     QStyle.SE_LineEditContents, panel, self)

@@ -12,9 +12,10 @@ from __future__ import unicode_literals
 # This code is a port of the C++ code found in SciTE 1.74
 # Original code: Copyright 1998-2006 by Neil Hodgson <neilh@scintilla.org>
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QCursor, QFontInfo, QApplication
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QCursor, QFontInfo
+from PyQt5.QtWidgets import QApplication
+from PyQt5.Qsci import QsciScintilla
 
 from E5Gui import E5MessageBox
 

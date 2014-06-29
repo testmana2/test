@@ -9,8 +9,8 @@ Module implementing a dialog to edit feed data.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QUrl
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot, QUrl
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_FeedEditDialog import Ui_FeedEditDialog
 

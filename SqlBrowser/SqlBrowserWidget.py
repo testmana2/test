@@ -9,9 +9,10 @@ Module implementing the SQL Browser widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, QVariant, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget, QStandardItemModel, QDialog, QAbstractItemView
-from PyQt4.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, \
+from PyQt5.QtCore import pyqtSignal, QVariant, Qt, pyqtSlot
+from PyQt5.QtGui import QStandardItemModel
+from PyQt5.QtWidgets import QWidget, QDialog, QAbstractItemView
+from PyQt5.QtSql import QSqlDatabase, QSqlError, QSqlTableModel, \
     QSqlQueryModel, QSqlQuery
 
 from E5Gui import E5MessageBox

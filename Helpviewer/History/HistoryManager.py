@@ -11,10 +11,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, QFileInfo, QDateTime, QDate, \
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, QFileInfo, QDateTime, QDate, \
     QTime, QUrl, QTimer, QFile, QIODevice, QByteArray, QDataStream, \
     QTemporaryFile
-from PyQt4.QtWebKit import QWebHistoryInterface, QWebSettings
+from PyQt5.QtWebKit import QWebHistoryInterface, QWebSettings
 
 from E5Gui import E5MessageBox
 

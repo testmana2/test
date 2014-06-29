@@ -9,9 +9,9 @@ Module implementing a menu populated from a QAbstractItemModel.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint
-from PyQt4.QtGui import QMenu, QFontMetrics, QAction, QApplication, QDrag, \
-    QPixmap
+from PyQt5.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint
+from PyQt5.QtGui import QFontMetrics, QDrag, QPixmap
+from PyQt5.QtWidgets import QMenu, QAction, QApplication
 
 import UI.PixmapCache
 

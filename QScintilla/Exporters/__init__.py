@@ -9,7 +9,7 @@ Package implementing exporters for various file formats.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QCoreApplication
 
 
 def getSupportedFormats():
@@ -21,11 +21,11 @@ def getSupportedFormats():
         for the exporters (string)
     """
     supportedFormats = {
-        "HTML": QApplication.translate('Exporters', "HTML"),
-        "RTF": QApplication.translate('Exporters', "RTF"),
-        "PDF": QApplication.translate('Exporters', "PDF"),
-        "TeX": QApplication.translate('Exporters', "TeX"),
-        "ODT": QApplication.translate('Exporters', "ODT"),
+        "HTML": QCoreApplication.translate('Exporters', "HTML"),
+        "RTF": QCoreApplication.translate('Exporters', "RTF"),
+        "PDF": QCoreApplication.translate('Exporters', "PDF"),
+        "TeX": QCoreApplication.translate('Exporters', "TeX"),
+        "ODT": QCoreApplication.translate('Exporters', "ODT"),
     }
     
     return supportedFormats

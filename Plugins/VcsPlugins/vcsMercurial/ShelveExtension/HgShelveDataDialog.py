@@ -9,8 +9,8 @@ Module implementing a dialog to enter the data for a shelve operation.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QDateTime
-from PyQt4.QtGui import QDialog
+from PyQt5.QtCore import QDateTime
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_HgShelveDataDialog import Ui_HgShelveDataDialog
 

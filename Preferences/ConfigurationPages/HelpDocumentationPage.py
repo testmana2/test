@@ -9,7 +9,7 @@ Module implementing the Help Documentation configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QUrl
+from PyQt5.QtCore import pyqtSlot, QUrl
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog
@@ -71,7 +71,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.qt5DocDirEdit.setText(
             Preferences.getHelp("Qt5DocDir"))
         self.pyqt4DocDirEdit.setText(
-            Preferences.getHelp("PyQt4DocDir"))
+            Preferences.getHelp("PyQt5DocDir"))
         self.pyqt5DocDirEdit.setText(
             Preferences.getHelp("PyQt5DocDir"))
         self.pysideDocDirEdit.setText(
@@ -94,7 +94,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             "Qt5DocDir",
             self.qt5DocDirEdit.text())
         Preferences.setHelp(
-            "PyQt4DocDir",
+            "PyQt5DocDir",
             self.pyqt4DocDirEdit.text())
         Preferences.setHelp(
             "PyQt5DocDir",
@@ -168,11 +168,11 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
     @pyqtSlot()
     def on_pyqt4DocDirButton_clicked(self):
         """
-        Private slot to select the PyQt4 documentation directory.
+        Private slot to select the PyQt5 documentation directory.
         """
         entry = E5FileDialog.getOpenFileName(
             self,
-            self.tr("Select PyQt4 documentation entry"),
+            self.tr("Select PyQt5 documentation entry"),
             QUrl(self.pyqt4DocDirEdit.text()).path(),
             self.tr("HTML Files (*.html *.htm);;All Files (*)"))
         

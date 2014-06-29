@@ -9,9 +9,9 @@ Module implementing a widget to show SSL information.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import qVersion, Qt, QUrl, QPoint
-from PyQt4.QtGui import QMenu, QGridLayout, QLabel, QSizePolicy
-from PyQt4.QtNetwork import QSsl, QSslConfiguration, QSslCertificate
+from PyQt5.QtCore import qVersion, Qt, QUrl, QPoint
+from PyQt5.QtWidgets import QMenu, QGridLayout, QLabel, QSizePolicy
+from PyQt5.QtNetwork import QSsl, QSslConfiguration, QSslCertificate
 
 import UI.PixmapCache
 import Utilities

@@ -11,15 +11,15 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray, qVersion
-from PyQt4.QtGui import QDialog
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
+from PyQt5.QtCore import pyqtSignal, QByteArray, qVersion
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
     QNetworkReply
 
 from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory, \
     proxyAuthenticationRequired
 try:
-    from PyQt4.QtNetwork import QSslSocket
+    from PyQt5.QtNetwork import QSslSocket
     from E5Network.E5SslErrorHandler import E5SslErrorHandler
     SSL_AVAILABLE = True
 except ImportError:
@@ -261,7 +261,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         Private method to set the disk cache.
         """
         if Preferences.getHelp("DiskCacheEnabled"):
-            from PyQt4.QtWebKit import qWebKitVersion
+            from PyQt5.QtWebKit import qWebKitVersion
             from .NetworkDiskCache import NetworkDiskCache
             diskCache = NetworkDiskCache(self)
             location = os.path.join(

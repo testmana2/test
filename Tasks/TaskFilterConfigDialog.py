@@ -9,7 +9,7 @@ Module implementing the task filter configuration dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Task import Task
 

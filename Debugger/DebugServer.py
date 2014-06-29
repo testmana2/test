@@ -15,8 +15,8 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QModelIndex
-from PyQt4.QtNetwork import QTcpServer, QHostAddress, QHostInfo, \
+from PyQt5.QtCore import pyqtSignal, QModelIndex
+from PyQt5.QtNetwork import QTcpServer, QHostAddress, QHostInfo, \
     QNetworkInterface
 
 from E5Gui.E5Application import e5App

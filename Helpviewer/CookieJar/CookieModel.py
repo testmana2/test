@@ -9,8 +9,8 @@ Module implementing the cookie model.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
-from PyQt4.QtGui import QFont, QFontMetrics
+from PyQt5.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
+from PyQt5.QtGui import QFont, QFontMetrics
 
 
 class CookieModel(QAbstractTableModel):
@@ -148,4 +148,5 @@ class CookieModel(QAbstractTableModel):
         """
         Private slot handling changes of the cookies list in the cookie jar.
         """
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()

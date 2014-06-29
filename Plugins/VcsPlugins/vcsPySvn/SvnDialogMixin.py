@@ -10,7 +10,8 @@ the pysvn client.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QApplication, QDialog, QWidget, QCursor
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QApplication, QDialog, QWidget
 
 
 class SvnDialogMixin(object):

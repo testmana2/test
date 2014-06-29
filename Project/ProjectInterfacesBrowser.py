@@ -17,8 +17,8 @@ except NameError:
 import os
 import glob
 
-from PyQt4.QtCore import QThread, pyqtSignal, QProcess
-from PyQt4.QtGui import QDialog, QApplication, QMenu
+from PyQt5.QtCore import QThread, pyqtSignal, QProcess
+from PyQt5.QtWidgets import QDialog, QApplication, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

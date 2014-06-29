@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QDir, QFileInfo, pyqtSignal, QObject
-from PyQt4.Qsci import QsciAPIs
+from PyQt5.QtCore import QDir, QFileInfo, pyqtSignal, QObject
+from PyQt5.Qsci import QsciAPIs
 
 from . import Lexers
 import Preferences
@@ -182,7 +182,7 @@ class APIs(QObject):
         if self.__apis is not None:
             if Globals.isWindowsPlatform():
                 qsciPath = os.path.join(
-                    Globals.getPyQt4ModulesDirectory(), "qsci")
+                    Globals.getPyQt5ModulesDirectory(), "qsci")
                 if os.path.exists(qsciPath):
                     # it's the installer
                     if self.__lexer.lexerName() is not None:

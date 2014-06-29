@@ -11,8 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QObject, QCoreApplication
 
 from E5Gui.E5Application import e5App
 
@@ -60,7 +59,7 @@ def exeDisplayData():
     
     data = {
         "programEntry": False,
-        "header": QApplication.translate(
+        "header": QCoreApplication.translate(
             "VcsPySvnPlugin", "Version Control - Subversion (pysvn)"),
         "text": text,
         "version": version,
@@ -91,7 +90,8 @@ def displayString():
     """
     try:
         import pysvn        # __IGNORE_WARNING__
-        return QApplication.translate('VcsPySvnPlugin', 'Subversion (pysvn)')
+        return QCoreApplication.translate('VcsPySvnPlugin',
+                                          'Subversion (pysvn)')
     except ImportError:
         return ""
 
@@ -123,7 +123,7 @@ def getConfigData():
     """
     return {
         "zzz_subversionPage":
-        [QApplication.translate("VcsPySvnPlugin", "Subversion"),
+        [QCoreApplication.translate("VcsPySvnPlugin", "Subversion"),
          os.path.join("VcsPlugins", "vcsPySvn", "icons",
                       "preferences-subversion.png"),
          createConfigurationPage, "vcsPage", None],

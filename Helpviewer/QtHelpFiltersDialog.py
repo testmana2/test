@@ -11,10 +11,10 @@ from __future__ import unicode_literals
 
 import sqlite3
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QTreeWidgetItem, QListWidgetItem, \
-    QInputDialog, QLineEdit, QItemSelectionModel
-from PyQt4.QtHelp import QHelpEngineCore
+from PyQt5.QtCore import pyqtSlot, Qt, QItemSelectionModel
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem, QListWidgetItem, \
+    QInputDialog, QLineEdit
+from PyQt5.QtHelp import QHelpEngineCore
 
 from E5Gui import E5MessageBox
 

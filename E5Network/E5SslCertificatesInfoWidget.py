@@ -13,9 +13,9 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import pyqtSlot, QCryptographicHash, QDateTime, qVersion
-from PyQt4.QtGui import QWidget
-from PyQt4.QtNetwork import QSslCertificate
+from PyQt5.QtCore import pyqtSlot, QCryptographicHash, QDateTime, qVersion
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtNetwork import QSslCertificate
 
 from .Ui_E5SslCertificatesInfoWidget import Ui_E5SslCertificatesInfoWidget
 

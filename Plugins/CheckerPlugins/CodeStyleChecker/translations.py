@@ -9,7 +9,7 @@ Module implementing message translations for the code style plugin messages.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QCoreApplication
+from PyQt5.QtCore import QCoreApplication
 
 __all__ = ["getTranslatedMessage"]
 

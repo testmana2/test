@@ -17,7 +17,7 @@ import sys
 import pickle
 import base64
 
-from PyQt4.QtCore import QXmlStreamWriter
+from PyQt5.QtCore import QXmlStreamWriter
 
 
 class XMLStreamWriterBase(QXmlStreamWriter):

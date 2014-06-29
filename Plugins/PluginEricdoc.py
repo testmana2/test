@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QDialog, QApplication
+from PyQt5.QtCore import QObject, QCoreApplication
+from PyQt5.QtWidgets import QDialog
 
 from E5Gui.E5Application import e5App
 
@@ -56,7 +56,7 @@ def exeDisplayDataList():
         exe = os.path.join(getConfig("bindir"), exe + '.bat')
     dataList.append({
         "programEntry": True,
-        "header": QApplication.translate(
+        "header": QCoreApplication.translate(
             "EricdocPlugin", "Eric5 Documentation Generator"),
         "exe": exe,
         "versionCommand": '--version',
@@ -72,7 +72,7 @@ def exeDisplayDataList():
         exe += '.exe'
     dataList.append({
         "programEntry": True,
-        "header": QApplication.translate(
+        "header": QCoreApplication.translate(
             "EricdocPlugin", "Qt Help Tools"),
         "exe": exe,
         "versionCommand": '-v',
@@ -88,7 +88,7 @@ def exeDisplayDataList():
         exe += '.exe'
     dataList.append({
         "programEntry": True,
-        "header": QApplication.translate(
+        "header": QCoreApplication.translate(
             "EricdocPlugin", "Qt Help Tools"),
         "exe": exe,
         "versionCommand": '-v',

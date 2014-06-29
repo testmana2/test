@@ -6,11 +6,12 @@ Module implementing the download manager class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt, QModelIndex, QFileInfo
-from PyQt4.QtGui import QDialog, QStyle, QFileIconProvider, QMenu, QCursor, \
+from PyQt5.QtCore import pyqtSlot, Qt, QModelIndex, QFileInfo
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QDialog, QStyle, QFileIconProvider, QMenu, \
     QApplication
-from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings
+from PyQt5.QtNetwork import QNetworkRequest
+from PyQt5.QtWebKit import QWebSettings
 
 from E5Gui import E5MessageBox
 

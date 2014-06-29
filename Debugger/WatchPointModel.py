@@ -9,7 +9,7 @@ Module implementing the Watch expression model.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
+from PyQt5.QtCore import pyqtSignal, Qt, QAbstractItemModel, QModelIndex
 
 
 class WatchPointModel(QAbstractItemModel):

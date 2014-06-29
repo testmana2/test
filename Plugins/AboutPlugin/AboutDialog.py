@@ -9,7 +9,8 @@ Module implementing an 'About Eric' dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QApplication, QDialog
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_AboutDialog import Ui_AboutDialog
 
@@ -21,7 +22,7 @@ import UI.Info
 
 titleText = "<b>{0} - {1}</b>".format(UI.Info.Program, UI.Info.Version)
 
-aboutText = QApplication.translate(
+aboutText = QCoreApplication.translate(
     "AboutDialog",
     """<p>{0} is an Integrated Development Environment for the Python"""
     """ programming language. It is written using the PyQt Python bindings"""

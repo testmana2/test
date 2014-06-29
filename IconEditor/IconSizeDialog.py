@@ -6,7 +6,7 @@ Module implementing a dialog to enter the icon size.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_IconSizeDialog import Ui_IconSizeDialog
 

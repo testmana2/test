@@ -9,7 +9,7 @@ Module implementing the QScintilla Autocompletion configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.Qsci import QsciScintilla
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAutocompletionQScintillaPage import \

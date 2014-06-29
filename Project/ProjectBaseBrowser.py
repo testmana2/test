@@ -11,9 +11,11 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QModelIndex, pyqtSignal, Qt
-from PyQt4.QtGui import QTreeView, QCursor, QItemSelection, \
-    QItemSelectionModel, QApplication, QMenu, QAbstractItemView, QDialog
+from PyQt5.QtCore import QModelIndex, pyqtSignal, Qt, QCoreApplication, \
+    QItemSelectionModel, QItemSelection
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QTreeView, QApplication, QMenu, QDialog, \
+    QAbstractItemView
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -103,19 +105,19 @@ class ProjectBaseBrowser(Browser):
         # create the popup menu for source files
         self.sourceMenu = QMenu(self)
         self.sourceMenu.addAction(
-            QApplication.translate('ProjectBaseBrowser', 'Open'),
+            QCoreApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
         
         # create the popup menu for general use
         self.menu = QMenu(self)
         self.menu.addAction(
-            QApplication.translate('ProjectBaseBrowser', 'Open'),
+            QCoreApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         self.multiMenu.addAction(
-            QApplication.translate('ProjectBaseBrowser', 'Open'),
+            QCoreApplication.translate('ProjectBaseBrowser', 'Open'),
             self._openItem)
         
         # create the background menu
@@ -488,7 +490,7 @@ class ProjectBaseBrowser(Browser):
         
         if local:
             compareString = \
-                QApplication.translate('ProjectBaseBrowser', "local")
+                QCoreApplication.translate('ProjectBaseBrowser', "local")
         else:
             compareString = self.project.vcs.vcsName()
         
@@ -530,8 +532,9 @@ class ProjectBaseBrowser(Browser):
         if selectedEntries == 0:
             E5MessageBox.information(
                 self,
-                QApplication.translate('ProjectBaseBrowser', "Select entries"),
-                QApplication.translate(
+                QCoreApplication.translate(
+                    'ProjectBaseBrowser', "Select entries"),
+                QCoreApplication.translate(
                     'ProjectBaseBrowser',
                     """There were no matching entries found."""))
         

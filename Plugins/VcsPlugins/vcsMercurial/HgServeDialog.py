@@ -15,9 +15,10 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import QProcess, Qt, QSize
-from PyQt4.QtGui import QAction, QToolBar, QPlainTextEdit, \
-    QTextCursor, QBrush, QSpinBox, QComboBox
+from PyQt5.QtCore import QProcess, Qt, QSize
+from PyQt5.QtGui import QTextCursor, QBrush
+from PyQt5.QtWidgets import QAction, QToolBar, QPlainTextEdit, QSpinBox, \
+    QComboBox
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

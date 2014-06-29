@@ -9,7 +9,7 @@ Module implementing a model for user agent management.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QModelIndex, QAbstractTableModel
+from PyQt5.QtCore import Qt, QModelIndex, QAbstractTableModel
 
 
 class UserAgentModel(QAbstractTableModel):
@@ -37,7 +37,8 @@ class UserAgentModel(QAbstractTableModel):
         """
         Private slot handling a change of the registered user agent strings.
         """
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
     
     def removeRows(self, row, count, parent=QModelIndex()):
         """

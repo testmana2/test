@@ -9,8 +9,9 @@ Module implementing the bookmarks menu.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QUrl
-from PyQt4.QtGui import QMenu, QCursor
+from PyQt5.QtCore import pyqtSignal, Qt, QUrl
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QMenu
 
 from E5Gui.E5ModelMenu import E5ModelMenu
 

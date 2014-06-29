@@ -9,7 +9,7 @@ Module implementing a writer for open search engine descriptions.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QXmlStreamWriter, QIODevice
+from PyQt5.QtCore import QXmlStreamWriter, QIODevice
 
 
 class OpenSearchWriter(QXmlStreamWriter):

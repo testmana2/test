@@ -56,14 +56,14 @@ warnings.showwarning = __showwarning
 
 from codecs import BOM_UTF8, BOM_UTF16, BOM_UTF32
 
-from PyQt4.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
+from PyQt5.QtCore import QRegExp, QDir, QProcess, Qt, QByteArray, \
     qVersion, PYQT_VERSION_STR, QCoreApplication, QCryptographicHash
-from PyQt4.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
+from PyQt5.Qsci import QSCINTILLA_VERSION_STR, QsciScintilla
 
 # import these methods into the Utilities namespace
 from Globals import (  # __IGNORE_WARNING__
     isWindowsPlatform, isLinuxPlatform, isMacPlatform, getConfigDir,
-    setConfigDir, getPythonModulesDirectory, getPyQt4ModulesDirectory,
+    setConfigDir, getPythonModulesDirectory, getPyQt5ModulesDirectory,
     getQtBinariesPath)
 
 from E5Gui.E5Application import e5App
@@ -1596,12 +1596,12 @@ def generateVersionInfo(linesep='\n'):
     
     info = "Version Numbers:{0}  Python {1}{2}".format(
         linesep, sys.version.split()[0], linesep)
-    info += "  Qt {0}{1}  PyQt4 {2}{3}".format(
+    info += "  Qt {0}{1}  PyQt5 {2}{3}".format(
         qVersion(), linesep, PYQT_VERSION_STR, linesep)
     info += "  sip {0}{1}  QScintilla {2}{3}".format(
         sip_version_str, linesep, QSCINTILLA_VERSION_STR, linesep)
     try:
-        from PyQt4.QtWebKit import qWebKitVersion
+        from PyQt5.QtWebKit import qWebKitVersion
         info += "  WebKit {0}{1}".format(qWebKitVersion(), linesep)
     except ImportError:
         pass

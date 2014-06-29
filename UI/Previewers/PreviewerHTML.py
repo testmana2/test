@@ -13,9 +13,9 @@ import os
 import threading
 import re
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QUrl, QSize, QThread
-from PyQt4.QtGui import QWidget
-from PyQt4.QtWebKit import QWebPage
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QUrl, QSize, QThread
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from E5Gui.E5Application import e5App
 

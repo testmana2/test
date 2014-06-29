@@ -9,8 +9,8 @@ Module implementing the Exception Logger widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt
-from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QMenu
+from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QMenu
 
 from E5Gui.E5Application import e5App
 

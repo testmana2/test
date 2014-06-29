@@ -21,11 +21,12 @@ import fnmatch
 import copy
 import zipfile
 
-from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, pyqtSignal, \
+from PyQt5.QtCore import pyqtSlot, QFile, QFileInfo, pyqtSignal, \
     QCryptographicHash, QIODevice, QByteArray, QObject, Qt
-from PyQt4.QtGui import QCursor, QLineEdit, QToolBar, QDialog, QInputDialog, \
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QLineEdit, QToolBar, QDialog, QInputDialog, \
     QApplication, QMenu, QAction
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.Qsci import QsciScintilla
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox

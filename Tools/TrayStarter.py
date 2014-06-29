@@ -12,9 +12,9 @@ from __future__ import unicode_literals
 import sys
 import os
 
-from PyQt4.QtCore import QProcess, QSettings, QFileInfo
-from PyQt4.QtGui import QSystemTrayIcon, QMenu, qApp, QCursor, QDialog, \
-    QApplication
+from PyQt5.QtCore import QProcess, QSettings, QFileInfo
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QSystemTrayIcon, QMenu, qApp, QDialog, QApplication
 
 from E5Gui import E5MessageBox
 

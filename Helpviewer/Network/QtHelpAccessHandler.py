@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import mimetypes
 import os
 
-from PyQt4.QtCore import QByteArray
+from PyQt5.QtCore import QByteArray
 
 from .SchemeAccessHandler import SchemeAccessHandler
 

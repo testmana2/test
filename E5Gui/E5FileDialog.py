@@ -10,7 +10,7 @@ to cope with distributor's usage of KDE wrapper dialogs for Qt file dialogs.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QFileDialog
+from PyQt5.QtWidgets import QFileDialog
 
 import Globals
 
@@ -60,7 +60,7 @@ def getOpenFileName(parent=None, caption="", directory="",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     return QFileDialog.getOpenFileName(parent, caption, directory,
-                                       filter, options)
+                                       filter, "", options)[0]
 
 
 def getOpenFileNameAndFilter(parent=None, caption="", directory="",
@@ -81,9 +81,8 @@ def getOpenFileNameAndFilter(parent=None, caption="", directory="",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
-    return QFileDialog.getOpenFileNameAndFilter(parent, caption, directory,
-                                                newfilter, initialFilter,
-                                                options)
+    return QFileDialog.getOpenFileName(parent, caption, directory, newfilter,
+                                       initialFilter, options)
 
 
 def getOpenFileNames(parent=None, caption="", directory="",
@@ -101,7 +100,7 @@ def getOpenFileNames(parent=None, caption="", directory="",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     return QFileDialog.getOpenFileNames(parent, caption, directory,
-                                        filter, options)
+                                        filter, "", options)[0]
 
 
 def getOpenFileNamesAndFilter(parent=None, caption="", directory="",
@@ -123,9 +122,8 @@ def getOpenFileNamesAndFilter(parent=None, caption="", directory="",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
-    return QFileDialog.getOpenFileNamesAndFilter(parent, caption, directory,
-                                                 newfilter, initialFilter,
-                                                 options)
+    return QFileDialog.getOpenFileNames(parent, caption, directory, newfilter,
+                                        initialFilter, options)
 
 
 def getSaveFileName(parent=None, caption="", directory="",
@@ -143,7 +141,7 @@ def getSaveFileName(parent=None, caption="", directory="",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     return QFileDialog.getSaveFileName(parent, caption, directory,
-                                       filter, options)
+                                       filter, "", options)[0]
 
 
 def getSaveFileNameAndFilter(parent=None, caption="", directory="",
@@ -164,9 +162,8 @@ def getSaveFileNameAndFilter(parent=None, caption="", directory="",
     if Globals.isLinuxPlatform():
         options |= QFileDialog.DontUseNativeDialog
     newfilter = __reorderFilter(filter, initialFilter)
-    return QFileDialog.getSaveFileNameAndFilter(parent, caption, directory,
-                                                newfilter, initialFilter,
-                                                options)
+    return QFileDialog.getSaveFileName(parent, caption, directory, newfilter,
+                                       initialFilter, options)
 
 
 def getExistingDirectory(parent=None, caption="",

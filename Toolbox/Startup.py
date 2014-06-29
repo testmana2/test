@@ -12,9 +12,9 @@ from __future__ import unicode_literals
 import os
 import sys
 
-from PyQt4.QtCore import QTranslator, QLocale, QLibraryInfo, QDir, \
+from PyQt5.QtCore import QTranslator, QLocale, QLibraryInfo, QDir, \
     QTextCodec, qVersion
-from PyQt4.QtGui import QApplication
+from PyQt5.QtWidgets import QApplication
 
 from E5Gui.E5Application import E5Application
 
@@ -138,7 +138,7 @@ def setLibraryPaths():
     Module function to set the Qt library paths correctly for windows systems.
     """
     if Globals.isWindowsPlatform():
-        libPath = os.path.join(Globals.getPyQt4ModulesDirectory(), "plugins")
+        libPath = os.path.join(Globals.getPyQt5ModulesDirectory(), "plugins")
         if os.path.exists(libPath):
             libPath = QDir.fromNativeSeparators(libPath)
             libraryPaths = QApplication.libraryPaths()

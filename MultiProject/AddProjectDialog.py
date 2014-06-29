@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog
@@ -97,7 +97,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         """
         if not self.uid:
             # new project entry
-            from PyQt4.QtCore import QUuid
+            from PyQt5.QtCore import QUuid
             self.uid = QUuid.createUuid().toString()
         
         filename = Utilities.toNativeSeparators(self.filenameEdit.text())

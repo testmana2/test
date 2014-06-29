@@ -9,8 +9,7 @@ Module implementing the history filter model.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QDateTime, QModelIndex
-from PyQt4.QtGui import QAbstractProxyModel
+from PyQt5.QtCore import Qt, QDateTime, QModelIndex, QAbstractProxyModel
 
 from .HistoryModel import HistoryModel
 
@@ -166,8 +165,9 @@ class HistoryFilterModel(QAbstractProxyModel):
         """
         Private slot to handle a reset of the source model.
         """
+        self.beginResetModel()
         self.__loaded = False
-        self.reset()
+        self.endResetModel()
     
     def rowCount(self, parent=QModelIndex()):
         """
@@ -346,7 +346,8 @@ class HistoryFilterModel(QAbstractProxyModel):
         self.sourceModel().rowsRemoved.connect(self.__sourceRowsRemoved)
         self.__loaded = False
         if oldCount - count != self.rowCount():
-            self.reset()
+            self.beginResetModel()
+            self.endResetModel()
         return True
     
     def __frequencyScore(self, sourceIndex):

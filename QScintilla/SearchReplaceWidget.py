@@ -9,8 +9,8 @@ Module implementing the search and replace widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget, QHBoxLayout, QToolButton, QScrollArea, \
+from PyQt5.QtCore import pyqtSignal, Qt, pyqtSlot
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton, QScrollArea, \
     QSizePolicy, QFrame
 
 from .Editor import Editor

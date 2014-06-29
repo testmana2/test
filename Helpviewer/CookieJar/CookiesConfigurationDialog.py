@@ -9,8 +9,8 @@ Module implementing the cookies configuration dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog
 
 from .CookieJar import CookieJar
 

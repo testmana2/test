@@ -10,8 +10,8 @@ fields.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QObject
-from PyQt4.QtGui import QDialog, QMenu
+from PyQt5.QtCore import Qt, QObject
+from PyQt5.QtWidgets import QDialog, QMenu
 
 import Preferences
 import UI.PixmapCache

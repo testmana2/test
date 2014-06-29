@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import pysvn
 
-from PyQt4.QtCore import QMutexLocker, Qt, pyqtSlot
-from PyQt4.QtGui import QCursor, QHeaderView, QDialog, QApplication, \
+from PyQt5.QtCore import QMutexLocker, Qt, pyqtSlot
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QHeaderView, QDialog, QApplication, \
     QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox

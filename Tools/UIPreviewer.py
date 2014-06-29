@@ -9,13 +9,14 @@ Module implementing the UI Previewer main window.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import qVersion, QDir, QFileInfo, QEvent, QSize, Qt
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
-    QCursor, QPrinter, QKeySequence, QPrintDialog, QWhatsThis, QPixmap, \
-    QImageWriter, QPainter, QDialog, QScrollArea, qApp, QApplication, \
-    QStyleFactory, QFrame, QMainWindow, QComboBox, QVBoxLayout, QAction, \
-    QLabel
-from PyQt4 import uic
+from PyQt5.QtCore import qVersion, QDir, QFileInfo, QEvent, QSize, Qt
+from PyQt5.QtGui import QCursor, QKeySequence, QPixmap, QImageWriter, QPainter
+from PyQt5.QtWidgets import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QWhatsThis, QDialog, QScrollArea, qApp, QApplication, QStyleFactory, \
+    QFrame, QMainWindow, QComboBox, QVBoxLayout, QAction, QLabel
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
+from PyQt5 import uic
+
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
@@ -549,7 +550,7 @@ class UIPreviewer(E5MainWindow):
         """
         Private slot to handle the Print Preview menu action.
         """
-        from PyQt4.QtGui import QPrintPreviewDialog
+        from PyQt5.QtPrintSupport import QPrintPreviewDialog
         
         if self.mainWidget is None:
             E5MessageBox.critical(

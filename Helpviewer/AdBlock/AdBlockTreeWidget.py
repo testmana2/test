@@ -9,9 +9,10 @@ Module implementing a tree widget for the AdBlock configuration dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QAbstractItemView, QFont, QTreeWidgetItem, \
-    QInputDialog, QLineEdit, QMenu, QApplication, QColor
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFont, QColor
+from PyQt5.QtWidgets import QAbstractItemView, QTreeWidgetItem, QInputDialog, \
+    QLineEdit, QMenu, QApplication
 
 from E5Gui.E5TreeWidget import E5TreeWidget
 

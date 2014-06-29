@@ -9,8 +9,8 @@ Module implementing a graphics item for an association between two items.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QPointF, QRectF, QLineF
-from PyQt4.QtGui import QGraphicsItem
+from PyQt5.QtCore import QPointF, QRectF, QLineF
+from PyQt5.QtWidgets import QGraphicsItem
 
 from E5Graphics.E5ArrowItem import E5ArrowItem, NormalArrow, WideArrow
 

@@ -9,7 +9,7 @@ Module implementing the VCS status monitor thread base class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QThread, QMutex, QWaitCondition, pyqtSignal
+from PyQt5.QtCore import QThread, QMutex, QWaitCondition, pyqtSignal
 
 
 class VcsStatusMonitorThread(QThread):

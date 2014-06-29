@@ -9,7 +9,7 @@ Module implementing a class to write Netscape HTML bookmark files.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject, QIODevice, QFile
+from PyQt5.QtCore import QObject, QIODevice, QFile
 
 from .BookmarkNode import BookmarkNode
 

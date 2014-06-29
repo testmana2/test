@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import pickle
 import base64
 
-from PyQt4.QtCore import QXmlStreamReader, QCoreApplication
+from PyQt5.QtCore import QXmlStreamReader, QCoreApplication
 
 from E5Gui import E5MessageBox
 

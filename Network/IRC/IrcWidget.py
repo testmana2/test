@@ -16,11 +16,11 @@ except NameError:
 import re
 import logging
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QTimer
-from PyQt4.QtGui import QWidget, QToolButton, QLabel, QTabWidget
-from PyQt4.QtNetwork import QTcpSocket, QAbstractSocket
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QTimer
+from PyQt5.QtWidgets import QWidget, QToolButton, QLabel, QTabWidget
+from PyQt5.QtNetwork import QTcpSocket, QAbstractSocket
 try:
-    from PyQt4.QtNetwork import QSslSocket, QSslConfiguration
+    from PyQt5.QtNetwork import QSslSocket, QSslConfiguration
     from E5Network.E5SslErrorHandler import E5SslErrorHandler
     SSL_AVAILABLE = True
 except ImportError:

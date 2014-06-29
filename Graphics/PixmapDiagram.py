@@ -9,10 +9,11 @@ Module implementing a dialog showing a pixmap.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QSize, QEvent
-from PyQt4.QtGui import QLabel, QPalette, QSizePolicy, QScrollArea, QAction, \
-    QMenu, QToolBar, QImage, QPixmap, QPrinter, QPrintDialog, QPainter, \
-    QFont, QColor
+from PyQt5.QtCore import Qt, QSize, QEvent
+from PyQt5.QtGui import QPalette, QImage, QPixmap, QPainter, QFont, QColor
+from PyQt5.QtWidgets import QLabel, QSizePolicy, QScrollArea, QAction, QMenu, \
+    QToolBar
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
 
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
@@ -186,7 +187,7 @@ class PixmapDiagram(E5MainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()
@@ -325,7 +326,7 @@ class PixmapDiagram(E5MainWindow):
         """
         Private slot called to show a print preview of the diagram.
         """
-        from PyQt4.QtGui import QPrintPreviewDialog
+        from PyQt5.QtPrintSupport import QPrintPreviewDialog
         
         printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)

@@ -9,7 +9,7 @@ Module implementing the largefiles extension project browser helper.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QMenu
+from PyQt5.QtWidgets import QMenu
 
 from ..HgExtensionProjectBrowserHelper import HgExtensionProjectBrowserHelper
 

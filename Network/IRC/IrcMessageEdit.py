@@ -9,7 +9,7 @@ Module implementing a specialized line edit for entering IRC messages.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
+from PyQt5.QtCore import Qt
 
 from E5Gui.E5LineEdit import E5LineEdit, E5ClearableLineEdit
 
@@ -75,9 +75,9 @@ class IrcMessageEdit(E5ClearableLineEdit):
         
         @param evt reference to the wheel event (QWheelEvent)
         """
-        if evt.delta() > 0:
+        if evt.angleDelta().y() > 0:
             self.__getHistory(True)
-        elif evt.delta() < 0:
+        elif evt.angleDelta().y() < 0:
             self.__getHistory(False)
         
         super(IrcMessageEdit, self).wheelEvent(evt)

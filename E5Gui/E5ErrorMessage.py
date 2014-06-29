@@ -9,10 +9,10 @@ Module implementing a specialized error message dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import qInstallMsgHandler, QCoreApplication, QtDebugMsg, \
-    QtWarningMsg, QtCriticalMsg, QtFatalMsg, QThread, QMetaObject, Qt, Q_ARG, \
-    QSettings
-from PyQt4.QtGui import QErrorMessage, qApp, QDialog
+from PyQt5.QtCore import qInstallMessageHandler, QCoreApplication, \
+    QtDebugMsg, QtWarningMsg, QtCriticalMsg, QtFatalMsg, QThread, \
+    QMetaObject, Qt, Q_ARG, QSettings
+from PyQt5.QtWidgets import QErrorMessage, qApp, QDialog
 
 import Globals
 import Utilities
@@ -87,7 +87,7 @@ class E5ErrorMessage(QErrorMessage):
             self.settings.setValue("MessageFilters", filters)
 
 
-def messageHandler(msgType, message):
+def messageHandler(msgType, context, message):
     """
     Module function handling messages.
     
@@ -113,8 +113,10 @@ def messageHandler(msgType, message):
             message = message.replace("\r\n", "<br/>")\
                              .replace("\n", "<br/>")\
                              .replace("\r", "<br/>")
-            msg = "<p><b>{0}</b></p><p>{1}</p>".format(
-                messageType, Utilities.html_uencode(message))
+            msg = "<p><b>{0}</b></p><p>{1}</p><p>File: {2}</p>" \
+                "<p>Line: {3}</p><p>Function: {4}</p>".format(
+                messageType, Utilities.html_uencode(message),
+                context.file, context.line, context.function)
             if QThread.currentThread() == qApp.thread():
                 __msgHandlerDialog.showMessage(msg)
             else:
@@ -144,7 +146,8 @@ def messageHandler(msgType, message):
             "E5ErrorMessage", "Fatal Error")
     if isinstance(message, bytes):
         message = message.decode()
-    print("{0}: {1}".format(messageType, message))
+    print("{0}: {1} in {2} at line {3} ({4})".format(
+        messageType, message, context.file, context.line, context.function))
 
 
 def qtHandler():
@@ -159,7 +162,7 @@ def qtHandler():
     if __msgHandlerDialog is None:
         # Install an E5ErrorMessage dialog as the global message handler.
         __msgHandlerDialog = E5ErrorMessage()
-        __origMsgHandler = qInstallMsgHandler(messageHandler)
+        __origMsgHandler = qInstallMessageHandler(messageHandler)
     
     return __msgHandlerDialog
 

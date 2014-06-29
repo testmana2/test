@@ -15,11 +15,11 @@ import os
 import zipfile
 import glob
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, \
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QFile, QIODevice, QUrl, \
     QProcess, QPoint
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
+from PyQt5.QtWidgets import QWidget, QDialogButtonBox, QAbstractButton, \
     QTreeWidgetItem, QDialog, QVBoxLayout, QMenu
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
+from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
     QNetworkReply
 
 from .Ui_PluginRepositoryDialog import Ui_PluginRepositoryDialog

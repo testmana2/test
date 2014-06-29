@@ -12,9 +12,10 @@ from __future__ import unicode_literals
 import os
 import fnmatch
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QTreeWidgetItem, QAbstractButton, \
-    QDialogButtonBox, QApplication, QHeaderView, QIcon
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem, QAbstractButton, \
+    QDialogButtonBox, QApplication, QHeaderView
 
 from E5Gui.E5Application import e5App
 

@@ -9,9 +9,8 @@ Module implementing a dialog to manage the list of messages to be ignored.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel, \
-    QInputDialog, QLineEdit
+from PyQt5.QtCore import pyqtSlot, Qt, QSortFilterProxyModel, QStringListModel
+from PyQt5.QtWidgets import QDialog, QInputDialog, QLineEdit
 
 from .Ui_E5ErrorMessageFilterDialog import Ui_E5ErrorMessageFilterDialog
 

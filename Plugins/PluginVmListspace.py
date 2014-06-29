@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QT_TRANSLATE_NOOP, QObject
-from PyQt4.QtGui import QPixmap
+from PyQt5.QtCore import QT_TRANSLATE_NOOP, QObject
+from PyQt5.QtGui import QPixmap
 
 # Start-Of-Header
 name = "Listspace Plugin"

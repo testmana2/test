@@ -9,8 +9,8 @@ Module implementing the AdBlock icon for the main window status bar.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QAction, QMenu
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QAction, QMenu
 
 from E5Gui.E5ClickableLabel import E5ClickableLabel
 

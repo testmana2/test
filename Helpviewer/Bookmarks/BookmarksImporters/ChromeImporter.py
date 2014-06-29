@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 import json
 
-from PyQt4.QtCore import QCoreApplication, QDate, Qt
+from PyQt5.QtCore import QCoreApplication, QDate, Qt
 
 from .BookmarksImporter import BookmarksImporter
 

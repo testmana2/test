@@ -9,7 +9,7 @@ Module implementing a dialog to show and edit bookmark properties.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_BookmarkPropertiesDialog import Ui_BookmarkPropertiesDialog
 

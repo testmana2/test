@@ -11,10 +11,11 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, \
+from PyQt5.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, \
     QFile, QEvent
-from PyQt4.QtGui import QScrollArea, QPalette, QImage, QImageReader, \
-    QImageWriter, QKeySequence, QLabel, QDockWidget, QWhatsThis
+from PyQt5.QtGui import QPalette, QImage, QImageReader, QImageWriter, \
+    QKeySequence
+from PyQt5.QtWidgets import QScrollArea, QLabel, QDockWidget, QWhatsThis
 
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5FileDialog, E5MessageBox
@@ -1326,7 +1327,7 @@ class IconEditorWindow(E5MainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()

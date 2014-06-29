@@ -9,8 +9,8 @@ Module implementing the Flash blocker plug-in.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
-from PyQt4.QtWebKit import QWebPluginFactory
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtWebKit import QWebPluginFactory
 
 from ..WebPluginInterface import WebPluginInterface
 

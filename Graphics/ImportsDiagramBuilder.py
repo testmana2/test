@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import glob
 import os
 
-from PyQt4.QtGui import QApplication, QGraphicsTextItem
+from PyQt5.QtWidgets import QApplication, QGraphicsTextItem
 
 from E5Gui.E5ProgressDialog import E5ProgressDialog
 

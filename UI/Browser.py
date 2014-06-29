@@ -11,9 +11,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl, Qt, qVersion
-from PyQt4.QtGui import QTreeView, QDesktopServices, QItemSelectionModel, \
-    QApplication, QMenu, QAbstractItemView
+from PyQt5.QtCore import QModelIndex, pyqtSignal, QUrl, Qt, qVersion, \
+    QCoreApplication, QItemSelectionModel
+from PyQt5.QtGui import QDesktopServices
+from PyQt5.QtWidgets import QTreeView, QApplication, QMenu, QAbstractItemView
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog
@@ -69,7 +70,8 @@ class Browser(QTreeView):
         """
         super(Browser, self).__init__(parent)
         
-        self.setWindowTitle(QApplication.translate('Browser', 'File-Browser'))
+        self.setWindowTitle(QCoreApplication.translate('Browser',
+                                                       'File-Browser'))
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
         
         self.__embeddedBrowser = Preferences.getUI("LayoutFileBrowserEmbedded")
@@ -89,7 +91,7 @@ class Browser(QTreeView):
         self.expanded.connect(self._resizeColumns)
         self.collapsed.connect(self._resizeColumns)
         
-        self.setWhatsThis(QApplication.translate(
+        self.setWhatsThis(QCoreApplication.translate(
             'Browser',
             """<b>The Browser Window</b>"""
             """<p>This allows you to easily navigate the hierarchy of"""
@@ -190,70 +192,70 @@ class Browser(QTreeView):
         # create the popup menu for source files
         self.sourceMenu = QMenu(self)
         self.sourceMenu.addAction(
-            QApplication.translate('Browser', 'Open'), self._openItem)
+            QCoreApplication.translate('Browser', 'Open'), self._openItem)
         self.unittestAct = self.sourceMenu.addAction(
-            QApplication.translate('Browser', 'Run unittest...'),
+            QCoreApplication.translate('Browser', 'Run unittest...'),
             self.handleUnittest)
         self.sourceMenu.addAction(
-            QApplication.translate('Browser', 'Copy Path to Clipboard'),
+            QCoreApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
         
         # create the popup menu for general use
         self.menu = QMenu(self)
         self.menu.addAction(
-            QApplication.translate('Browser', 'Open'), self._openItem)
+            QCoreApplication.translate('Browser', 'Open'), self._openItem)
         self.editPixmapAct = self.menu.addAction(
-            QApplication.translate('Browser', 'Open in Icon Editor'),
+            QCoreApplication.translate('Browser', 'Open in Icon Editor'),
             self._editPixmap)
         self.menu.addAction(
-            QApplication.translate('Browser', 'Copy Path to Clipboard'),
+            QCoreApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
         if self.__embeddedBrowser in [1, 2]:
             self.menu.addSeparator()
             self.menu.addAction(
-                QApplication.translate('Browser', 'Configure...'),
+                QCoreApplication.translate('Browser', 'Configure...'),
                 self.__configure)
 
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         self.multiMenu.addAction(
-            QApplication.translate('Browser', 'Open'), self._openItem)
+            QCoreApplication.translate('Browser', 'Open'), self._openItem)
         if self.__embeddedBrowser in [1, 2]:
             self.multiMenu.addSeparator()
             self.multiMenu.addAction(
-                QApplication.translate('Browser', 'Configure...'),
+                QCoreApplication.translate('Browser', 'Configure...'),
                 self.__configure)
         
         # create the directory menu
         self.dirMenu = QMenu(self)
         self.dirMenu.addAction(
-            QApplication.translate('Browser', 'New toplevel directory...'),
+            QCoreApplication.translate('Browser', 'New toplevel directory...'),
             self.__newToplevelDir)
         self.addAsTopLevelAct = self.dirMenu.addAction(
-            QApplication.translate('Browser', 'Add as toplevel directory'),
+            QCoreApplication.translate('Browser', 'Add as toplevel directory'),
             self.__addAsToplevelDir)
         self.removeFromToplevelAct = self.dirMenu.addAction(
-            QApplication.translate('Browser', 'Remove from toplevel'),
+            QCoreApplication.translate('Browser', 'Remove from toplevel'),
             self.__removeToplevel)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            QApplication.translate('Browser', 'Refresh directory'),
+            QCoreApplication.translate('Browser', 'Refresh directory'),
             self.__refreshDirectory)
         self.dirMenu.addSeparator()
         self.dirMenu.addAction(
-            QApplication.translate('Browser', 'Find in this directory'),
+            QCoreApplication.translate('Browser', 'Find in this directory'),
             self.__findInDirectory)
         self.dirMenu.addAction(
-            QApplication.translate(
+            QCoreApplication.translate(
                 'Browser', 'Find&&Replace in this directory'),
             self.__replaceInDirectory)
         self.dirMenu.addAction(
-            QApplication.translate('Browser', 'Copy Path to Clipboard'),
+            QCoreApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
         if self.__embeddedBrowser in [1, 2]:
             self.dirMenu.addSeparator()
             self.dirMenu.addAction(
-                QApplication.translate('Browser', 'Configure...'),
+                QCoreApplication.translate('Browser', 'Configure...'),
                 self.__configure)
         
         # create the attribute menu
@@ -263,25 +265,25 @@ class Browser(QTreeView):
         
         self.attributeMenu = QMenu(self)
         self.attributeMenu.addAction(
-            QApplication.translate('Browser', 'New toplevel directory...'),
+            QCoreApplication.translate('Browser', 'New toplevel directory...'),
             self.__newToplevelDir)
         self.attributeMenu.addSeparator()
         self.attributeMenu.addMenu(self.gotoMenu)
         if self.__embeddedBrowser in [1, 2]:
             self.attributeMenu.addSeparator()
             self.attributeMenu.addAction(
-                QApplication.translate('Browser', 'Configure...'),
+                QCoreApplication.translate('Browser', 'Configure...'),
                 self.__configure)
         
         # create the background menu
         self.backMenu = QMenu(self)
         self.backMenu.addAction(
-            QApplication.translate('Browser', 'New toplevel directory...'),
+            QCoreApplication.translate('Browser', 'New toplevel directory...'),
             self.__newToplevelDir)
         if self.__embeddedBrowser in [1, 2]:
             self.backMenu.addSeparator()
             self.backMenu.addAction(
-                QApplication.translate('Browser', 'Configure...'),
+                QCoreApplication.translate('Browser', 'Configure...'),
                 self.__configure)
 
     def mouseDoubleClickEvent(self, mouseEvent):
@@ -486,7 +488,7 @@ class Browser(QTreeView):
         """
         dname = E5FileDialog.getExistingDirectory(
             None,
-            QApplication.translate('Browser', "New toplevel directory"),
+            QCoreApplication.translate('Browser', "New toplevel directory"),
             "",
             E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
         if dname:

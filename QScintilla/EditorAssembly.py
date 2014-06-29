@@ -10,8 +10,8 @@ combos and the editor widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QTimer
-from PyQt4.QtGui import QWidget, QGridLayout, QComboBox
+from PyQt5.QtCore import QTimer
+from PyQt5.QtWidgets import QWidget, QGridLayout, QComboBox
 
 import UI.PixmapCache
 

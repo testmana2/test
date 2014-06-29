@@ -13,7 +13,7 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import QProcess
+from PyQt5.QtCore import QProcess
 
 from VCS.StatusMonitorThread import VcsStatusMonitorThread
 

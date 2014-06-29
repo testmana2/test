@@ -9,9 +9,9 @@ Module implementing a dialog for the configuration of cookie exceptions.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QSortFilterProxyModel, QCompleter, QFont, \
-    QFontMetrics
+from PyQt5.QtCore import pyqtSlot, QSortFilterProxyModel
+from PyQt5.QtGui import QFont, QFontMetrics
+from PyQt5.QtWidgets import QDialog, QCompleter
 
 from .CookieExceptionsModel import CookieExceptionsModel
 from .CookieModel import CookieModel

@@ -9,8 +9,8 @@ Module implementing various kinds of completers.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QDir, Qt
-from PyQt4.QtGui import QCompleter, QFileSystemModel, QStringListModel
+from PyQt5.QtCore import QDir, Qt, QStringListModel
+from PyQt5.QtWidgets import QCompleter, QFileSystemModel
 
 from Globals import isWindowsPlatform
 

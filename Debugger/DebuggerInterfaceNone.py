@@ -9,7 +9,7 @@ Module implementing a dummy debugger interface for the debug server.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject
+from PyQt5.QtCore import QObject
 
 
 ClientDefaultCapabilities = 0

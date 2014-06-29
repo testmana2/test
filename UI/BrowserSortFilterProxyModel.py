@@ -9,8 +9,7 @@ Module implementing the browser sort filter proxy model.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QModelIndex
-from PyQt4.QtGui import QSortFilterProxyModel
+from PyQt5.QtCore import QModelIndex, QSortFilterProxyModel
 
 import Preferences
 

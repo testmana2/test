@@ -9,8 +9,8 @@ Module implementing the multi project browser.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QDialog, QMenu
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QDialog, QMenu
 
 from E5Gui.E5Application import e5App
 

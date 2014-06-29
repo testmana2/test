@@ -9,9 +9,9 @@ Module implementing a dialog to configure the offline storage.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog
-from PyQt4.QtWebKit import QWebSettings
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtWebKit import QWebSettings
 
 from .Ui_OfflineStorageConfigDialog import Ui_OfflineStorageConfigDialog
 

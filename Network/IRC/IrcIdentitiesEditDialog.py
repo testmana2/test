@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import copy
 
-from PyQt4.QtCore import pyqtSlot, Qt, QEvent
-from PyQt4.QtGui import QDialog, QInputDialog, QLineEdit, QItemSelectionModel
+from PyQt5.QtCore import pyqtSlot, Qt, QEvent, QItemSelectionModel
+from PyQt5.QtWidgets import QDialog, QInputDialog, QLineEdit
 
 from E5Gui import E5MessageBox
 

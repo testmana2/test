@@ -11,10 +11,11 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QUrl
-from PyQt4.QtGui import QWidget, QHBoxLayout, QMenu, QToolButton, QPrinter, \
-    QPrintDialog, QDialog, QIcon
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QUrl
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QMenu, QToolButton, QDialog
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
+from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest
 
 from E5Gui.E5TabWidget import E5TabWidget
 from E5Gui import E5MessageBox
@@ -545,7 +546,7 @@ class HelpTabWidget(E5TabWidget):
                     self.tr("eric5 Web Browser"),
                     self.tr(
                         """<p>Printing is not available due to a bug in"""
-                        """ PyQt4. Please upgrade.</p>"""))
+                        """ PyQt5. Please upgrade.</p>"""))
                 return
     
     @pyqtSlot()
@@ -591,7 +592,7 @@ class HelpTabWidget(E5TabWidget):
                     self.tr("eric5 Web Browser"),
                     self.tr(
                         """<p>Printing is not available due to a bug in"""
-                        """ PyQt4. Please upgrade.</p>"""))
+                        """ PyQt5. Please upgrade.</p>"""))
                 return
     
     @pyqtSlot()
@@ -601,7 +602,7 @@ class HelpTabWidget(E5TabWidget):
         
         @param browser reference to the browser to be printed (HelpBrowserWV)
         """
-        from PyQt4.QtGui import QPrintPreviewDialog
+        from PyQt5.QtPrintSupport import QPrintPreviewDialog
         
         if browser is None:
             browser = self.currentBrowser()
@@ -644,7 +645,7 @@ class HelpTabWidget(E5TabWidget):
                 self,
                 self.tr("eric5 Web Browser"),
                 self.tr(
-                    """<p>Printing is not available due to a bug in PyQt4."""
+                    """<p>Printing is not available due to a bug in PyQt5."""
                     """Please upgrade.</p>"""))
             return
     

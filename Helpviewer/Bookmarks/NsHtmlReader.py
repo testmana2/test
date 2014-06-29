@@ -13,7 +13,7 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import QObject, QIODevice, QFile, QRegExp, Qt, QDateTime
+from PyQt5.QtCore import QObject, QIODevice, QFile, QRegExp, Qt, QDateTime
 
 from .BookmarkNode import BookmarkNode
 

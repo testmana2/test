@@ -9,8 +9,8 @@ Class implementing a specialized application class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QCoreApplication
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QApplication
 
 
 class E5Application(QApplication):

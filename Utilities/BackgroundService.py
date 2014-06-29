@@ -17,9 +17,9 @@ import struct
 import sys
 from zlib import adler32
 
-from PyQt4.QtCore import QProcess, pyqtSignal, QTimer
-from PyQt4.QtGui import QApplication
-from PyQt4.QtNetwork import QTcpServer, QHostAddress
+from PyQt5.QtCore import QProcess, pyqtSignal, QTimer
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtNetwork import QTcpServer, QHostAddress
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App

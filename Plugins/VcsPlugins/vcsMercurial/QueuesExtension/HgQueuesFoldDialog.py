@@ -9,8 +9,8 @@ Module implementing a dialog to enter data to fold patches.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QTreeWidgetItem
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QTreeWidgetItem
 
 from .Ui_HgQueuesFoldDialog import Ui_HgQueuesFoldDialog
 

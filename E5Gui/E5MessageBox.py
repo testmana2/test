@@ -9,8 +9,8 @@ Module implementing QMessageBox replacements and more convenience function.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QMessageBox, QApplication
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QMessageBox, QApplication
 
 ###############################################################################
 ##  Mappings to standard QMessageBox                                         ##

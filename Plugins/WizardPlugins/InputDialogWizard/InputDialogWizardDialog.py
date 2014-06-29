@@ -11,9 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QLineEdit, QDoubleValidator, QDialog, QInputDialog, \
-    QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QDoubleValidator
+from PyQt5.QtWidgets import QLineEdit, QDialog, QInputDialog, QDialogButtonBox
 
 from .Ui_InputDialogWizardDialog import Ui_InputDialogWizardDialog
 

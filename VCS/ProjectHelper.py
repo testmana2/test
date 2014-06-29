@@ -13,8 +13,8 @@ import os
 import shutil
 import copy
 
-from PyQt4.QtCore import pyqtSlot, QDir, QFileInfo, QObject
-from PyQt4.QtGui import QDialog, QInputDialog
+from PyQt5.QtCore import pyqtSlot, QDir, QFileInfo, QObject
+from PyQt5.QtWidgets import QDialog, QInputDialog
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox

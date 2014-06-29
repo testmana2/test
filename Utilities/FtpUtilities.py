@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject, QDate, QDateTime, QTime
+from PyQt5.QtCore import QObject, QDate, QDateTime, QTime
 
 from E5Network.E5UrlInfo import E5UrlInfo
 

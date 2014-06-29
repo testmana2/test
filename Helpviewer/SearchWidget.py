@@ -9,9 +9,10 @@ Module implementing the search bar for the web browser.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QWidget, QPalette, QBrush, QColor
-from PyQt4.QtWebKit import QWebPage
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtGui import QPalette, QBrush, QColor
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from .Ui_SearchWidget import Ui_SearchWidget
 

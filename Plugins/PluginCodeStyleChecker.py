@@ -11,8 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject, pyqtSignal
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QObject, pyqtSignal, QCoreApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action
@@ -169,7 +168,7 @@ class CodeStyleCheckerPlugin(QObject):
                 fixes += 1
                 trFixedMsg = getTranslatedMessage(fixedMsg)
                 
-                msg += "\n" + QApplication.translate(
+                msg += "\n" + QCoreApplication.translate(
                     'CodeStyleCheckerDialog', "Fix: {0}").format(trFixedMsg)
             
             result[2] = msg

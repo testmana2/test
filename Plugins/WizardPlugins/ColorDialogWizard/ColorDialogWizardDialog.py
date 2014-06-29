@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QColor, QColorDialog, QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QColorDialog, QDialog, QDialogButtonBox
 
 from E5Gui import E5MessageBox
 
@@ -65,7 +66,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                 else:
                     coStr = "QColor({0})".format(coStr)
                 try:
-                    exec('from PyQt4.QtCore import Qt;'
+                    exec('from PyQt5.QtCore import Qt;'
                          ' QColorDialog.getColor({0}, None, "{1}")'.format(
                              coStr, self.eTitle.text()))
                 except:

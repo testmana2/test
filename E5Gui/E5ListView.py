@@ -9,8 +9,8 @@ Module implementing specialized list views.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QListView, QItemSelectionModel
+from PyQt5.QtCore import Qt, QItemSelectionModel
+from PyQt5.QtWidgets import QListView
 
 
 class E5ListView(QListView):

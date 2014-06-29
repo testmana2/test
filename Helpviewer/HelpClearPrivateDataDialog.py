@@ -9,7 +9,7 @@ Module implementing a dialog to select which private data to clear.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_HelpClearPrivateDataDialog import Ui_HelpClearPrivateDataDialog
 

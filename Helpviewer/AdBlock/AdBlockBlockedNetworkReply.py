@@ -9,8 +9,8 @@ Module implementing a QNetworkReply subclass reporting a blocked request.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QTimer
-from PyQt4.QtNetwork import QNetworkReply, QNetworkAccessManager
+from PyQt5.QtCore import QTimer
+from PyQt5.QtNetwork import QNetworkReply, QNetworkAccessManager
 
 
 class AdBlockBlockedNetworkReply(QNetworkReply):

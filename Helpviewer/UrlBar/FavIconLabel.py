@@ -13,8 +13,9 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import Qt, QPoint, QUrl, QMimeData
-from PyQt4.QtGui import QLabel, QApplication, QDrag, QPixmap
+from PyQt5.QtCore import Qt, QPoint, QUrl, QMimeData
+from PyQt5.QtGui import QDrag, QPixmap
+from PyQt5.QtWidgets import QLabel, QApplication
 
 
 class FavIconLabel(QLabel):

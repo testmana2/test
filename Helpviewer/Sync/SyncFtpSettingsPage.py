@@ -9,7 +9,7 @@ Module implementing the synchronization FTP host settings wizard page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QWizardPage
+from PyQt5.QtWidgets import QWizardPage
 
 from .Ui_SyncFtpSettingsPage import Ui_SyncFtpSettingsPage
 

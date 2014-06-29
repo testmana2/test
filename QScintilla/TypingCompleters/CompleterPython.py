@@ -15,8 +15,8 @@ except NameError:
 
 import re
 
-from PyQt4.QtCore import QRegExp
-from PyQt4.Qsci import QsciLexerPython
+from PyQt5.QtCore import QRegExp
+from PyQt5.Qsci import QsciLexerPython
 
 from .CompleterBase import CompleterBase
 

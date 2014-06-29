@@ -9,9 +9,9 @@ Module implementing the Help web browser configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QLocale
-from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings
+from PyQt5.QtCore import pyqtSlot, QLocale
+from PyQt5.QtNetwork import QNetworkRequest
+from PyQt5.QtWebKit import QWebSettings
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpWebBrowserPage import Ui_HelpWebBrowserPage

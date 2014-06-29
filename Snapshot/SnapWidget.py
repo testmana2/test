@@ -10,15 +10,16 @@ Module implementing the snapshot widget.
 from __future__ import unicode_literals
 
 #
-# SnapWidget and its associated modules are PyQt4 ports of Ksnapshot.
+# SnapWidget and its associated modules are PyQt5 ports of Ksnapshot.
 #
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, \
+from PyQt5.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, \
     QMimeData, Qt, QEvent, QRegExp, qVersion
-from PyQt4.QtGui import QWidget, QImageWriter, QApplication, QPixmap, \
-    QCursor, QDrag, QShortcut, QKeySequence, QDesktopServices
+from PyQt5.QtGui import QImageWriter, QPixmap, QCursor, QDrag, QKeySequence, \
+    QDesktopServices
+from PyQt5.QtWidgets import QWidget, QApplication, QShortcut
 
 from E5Gui import E5FileDialog, E5MessageBox
 

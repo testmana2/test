@@ -15,9 +15,9 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, QObject, QCryptographicHash, \
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, QObject, QCryptographicHash, \
     QByteArray, QUrl, qWarning
-from PyQt4.QtWebKit import QWebPage
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from E5Gui import E5MessageBox
 
@@ -192,7 +192,7 @@ class SpeedDial(QObject):
                 'url:"http://eric-ide.python-projects.org/"|'\
                 'title:"Eric Web Site";'\
                 'url:"http://www.riverbankcomputing.com/"|'\
-                'title:"PyQt4 Web Site";'\
+                'title:"PyQt5 Web Site";'\
                 'url:"http://qt.digia.com/"|title:"Qt Web Site";'\
                 'url:"http://blog.qt.digia.com/"|title:"Qt Blog";'\
                 'url:"http://www.python.org"|title:"Python Language Website";'\

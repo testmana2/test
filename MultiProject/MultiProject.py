@@ -11,9 +11,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QFileInfo, QFile, \
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QFileInfo, QFile, \
     QIODevice, QObject
-from PyQt4.QtGui import QMenu, QApplication, QDialog, QCursor, QToolBar
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QMenu, QApplication, QDialog, QToolBar
 
 from Globals import recentNameMultiProject
 

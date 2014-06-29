@@ -9,10 +9,11 @@ Module implementing a palette widget for the icon editor.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt
-from PyQt4.QtGui import QWidget, QColor, QPainter, QBoxLayout, QLabel, \
-    QFrame, QPushButton, QSpinBox, QGroupBox, QVBoxLayout, QRadioButton, \
-    QSpacerItem, QSizePolicy, QPixmap, QColorDialog
+from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtGui import QColor, QPainter, QPixmap
+from PyQt5.QtWidgets import QWidget, QBoxLayout, QLabel, QFrame, QPushButton, \
+    QSpinBox, QGroupBox, QVBoxLayout, QRadioButton, QSpacerItem, QSizePolicy, \
+    QColorDialog
 
 
 class IconEditorPalette(QWidget):

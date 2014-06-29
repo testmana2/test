@@ -12,8 +12,9 @@ from __future__ import unicode_literals
 import os.path
 import logging
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QApplication, QPixmap, QSplashScreen, QColor
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPixmap, QColor
+from PyQt5.QtWidgets import QApplication, QSplashScreen
 
 from eric5config import getConfig
 

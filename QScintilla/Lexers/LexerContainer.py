@@ -9,7 +9,7 @@ Module implementing a base class for custom lexers.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexer
+from PyQt5.Qsci import QsciLexer
 
 from .Lexer import Lexer
 

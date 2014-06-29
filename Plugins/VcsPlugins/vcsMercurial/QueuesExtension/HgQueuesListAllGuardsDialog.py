@@ -15,8 +15,8 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import QProcess, QCoreApplication
-from PyQt4.QtGui import QDialog, QTreeWidgetItem
+from PyQt5.QtCore import QProcess, QCoreApplication
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem
 
 from .Ui_HgQueuesListAllGuardsDialog import Ui_HgQueuesListAllGuardsDialog
 

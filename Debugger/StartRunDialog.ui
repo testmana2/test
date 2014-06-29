@@ -51,9 +51,6 @@
      <property name="sizeAdjustPolicy">
       <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
      </property>
-     <property name="autoCompletion">
-      <bool>true</bool>
-     </property>
      <property name="duplicatesEnabled">
       <bool>false</bool>
      </property>
@@ -92,9 +89,6 @@
      </property>
      <property name="sizeAdjustPolicy">
       <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
-     </property>
-     <property name="autoCompletion">
-      <bool>true</bool>
      </property>
      <property name="duplicatesEnabled">
       <bool>false</bool>
@@ -135,9 +129,6 @@
      </property>
      <property name="sizeAdjustPolicy">
       <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
-     </property>
-     <property name="autoCompletion">
-      <bool>true</bool>
      </property>
      <property name="duplicatesEnabled">
       <bool>false</bool>

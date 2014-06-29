@@ -9,10 +9,12 @@ Module implementing a web search widget for the web browser.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer, Qt
-from PyQt4.QtGui import QMenu, QStandardItem, QStandardItemModel, \
-    QCompleter, QFont, QIcon, QPixmap
-from PyQt4.QtWebKit import QWebSettings, QWebPage
+from PyQt5.QtCore import pyqtSignal, QUrl, QModelIndex, QTimer, Qt
+from PyQt5.QtGui import QStandardItem, QStandardItemModel, QFont, QIcon, \
+    QPixmap
+from PyQt5.QtWidgets import QMenu, QCompleter
+from PyQt5.QtWebKit import QWebSettings
+from PyQt5.QtWebKitWidgets import QWebPage
 
 import UI.PixmapCache
 

@@ -9,7 +9,7 @@ Module implementing the Editor General configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciScintillaBase
+from PyQt5.Qsci import QsciScintillaBase
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorGeneralPage import Ui_EditorGeneralPage

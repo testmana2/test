@@ -9,7 +9,7 @@ Module implementing the Editor Calltips configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.Qsci import QsciScintilla
 
 from QScintilla.QsciScintillaCompat import QSCINTILLA_VERSION
 

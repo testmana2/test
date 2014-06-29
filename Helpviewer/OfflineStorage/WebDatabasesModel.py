@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import sys
 
-from PyQt4.QtCore import QAbstractItemModel, QModelIndex, Qt
-from PyQt4.QtWebKit import QWebSecurityOrigin, QWebDatabase
+from PyQt5.QtCore import QAbstractItemModel, QModelIndex, Qt
+from PyQt5.QtWebKit import QWebSecurityOrigin, QWebDatabase
 
 
 class WebDatabasesModel(QAbstractItemModel):

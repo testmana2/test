@@ -15,10 +15,11 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot, \
+from PyQt5.QtCore import QTimer, QDate, QProcess, QRegExp, Qt, pyqtSlot, \
     QPoint
-from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QWidget, \
-    QApplication, QDialogButtonBox, QTreeWidgetItem
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QHeaderView, QLineEdit, QWidget, QApplication, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 

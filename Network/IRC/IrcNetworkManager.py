@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import copy
 
-from PyQt4.QtCore import pyqtSignal, QObject, QCoreApplication
+from PyQt5.QtCore import pyqtSignal, QObject, QCoreApplication
 
 import Utilities
 from Utilities.AutoSaver import AutoSaver

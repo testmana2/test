@@ -9,7 +9,7 @@ Module implementing the shelve extension project browser helper.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QMenu
+from PyQt5.QtWidgets import QMenu
 
 from E5Gui import E5MessageBox
 

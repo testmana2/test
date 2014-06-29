@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.Qsci import QsciLexerPython, QsciScintilla
+from PyQt5.Qsci import QsciLexerPython, QsciScintilla
 
 from .Lexer import Lexer
 import Preferences

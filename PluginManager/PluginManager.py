@@ -14,10 +14,10 @@ import sys
 import imp
 import zipfile
 
-from PyQt4.QtCore import pyqtSignal, QObject, QDate, QFile, QFileInfo, QUrl, \
+from PyQt5.QtCore import pyqtSignal, QObject, QDate, QFile, QFileInfo, QUrl, \
     QIODevice
-from PyQt4.QtGui import QPixmap
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
     QNetworkReply
 
 from E5Gui import E5MessageBox

@@ -126,7 +126,7 @@ r"""
     )
 
 |   (?P<Method>
-        (^ [ \t]* @ (?: PyQt4 \. )? (?: QtCore \. )?
+        (^ [ \t]* @ (?: PyQt[45] \. )? (?: QtCore \. )?
             (?: pyqtSignature | pyqtSlot )
             [ \t]* \(
                 (?P<MethodPyQtSignature> [^)]* )

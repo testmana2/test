@@ -52,9 +52,6 @@ In order to switch to the trunk version leave it empty.&lt;/p></string>
      <property name="editable" >
       <bool>true</bool>
      </property>
-     <property name="autoCompletion" >
-      <bool>true</bool>
-     </property>
      <property name="duplicatesEnabled" >
       <bool>false</bool>
      </property>

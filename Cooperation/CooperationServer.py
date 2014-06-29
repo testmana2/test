@@ -9,8 +9,8 @@ Module implementing the cooperation server.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal
-from PyQt4.QtNetwork import QTcpServer
+from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtNetwork import QTcpServer
 
 from .Connection import Connection
 

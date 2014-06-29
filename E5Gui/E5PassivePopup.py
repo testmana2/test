@@ -10,8 +10,8 @@ interrupting the user.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QTimer, QPoint, QRect
-from PyQt4.QtGui import QFrame, QVBoxLayout, QApplication
+from PyQt5.QtCore import pyqtSignal, Qt, QTimer, QPoint, QRect
+from PyQt5.QtWidgets import QFrame, QVBoxLayout, QApplication
 
 
 class E5PassivePopup(QFrame):

@@ -12,9 +12,6 @@ This is the main Python script to configure the eric5 IDE from the outside.
 
 from __future__ import unicode_literals
 try:  # Only for Py2
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass

@@ -9,9 +9,9 @@ Module implementing a tool bar populated from a QAbstractItemModel.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint, QEvent
-from PyQt4.QtGui import QApplication, QDrag, QPixmap, QToolBar, QIcon, \
-    QToolButton
+from PyQt5.QtCore import pyqtSignal, qVersion, Qt, QModelIndex, QPoint, QEvent
+from PyQt5.QtGui import QDrag, QPixmap, QIcon
+from PyQt5.QtWidgets import QApplication, QToolBar, QToolButton
 
 
 class E5ModelToolBar(QToolBar):

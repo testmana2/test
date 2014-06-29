@@ -9,9 +9,9 @@ Module implementing functions to generate page previews.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QSize, Qt
-from PyQt4.QtGui import QPixmap, QPainter
-from PyQt4.QtWebKit import QWebFrame
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QPixmap, QPainter
+from PyQt5.QtWebKitWidgets import QWebFrame
 
 
 def renderTabPreview(page, w, h):

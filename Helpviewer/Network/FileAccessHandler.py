@@ -9,8 +9,8 @@ Module implementing a scheme access handler for file.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QFileInfo
-from PyQt4.QtNetwork import QNetworkAccessManager
+from PyQt5.QtCore import QFileInfo
+from PyQt5.QtNetwork import QNetworkAccessManager
 
 from .SchemeAccessHandler import SchemeAccessHandler
 

@@ -9,7 +9,7 @@ Module implementing the exceptions raised by the plugin system.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QCoreApplication
 
 
 class PluginError(Exception):
@@ -20,8 +20,8 @@ class PluginError(Exception):
         """
         Constructor
         """
-        self._errorMessage = \
-            QApplication.translate("PluginError", "Unspecific plugin error.")
+        self._errorMessage = QCoreApplication.translate(
+            "PluginError", "Unspecific plugin error.")
         
     def __repr__(self):
         """
@@ -54,7 +54,7 @@ class PluginPathError(PluginError):
         if msg:
             self._errorMessage = msg
         else:
-            self._errorMessage = QApplication.translate(
+            self._errorMessage = QCoreApplication.translate(
                 "PluginError",
                 "Plugin paths not found or not creatable.")
 
@@ -67,8 +67,8 @@ class PluginModulesError(PluginError):
         """
         Constructor
         """
-        self._errorMessage = \
-            QApplication.translate("PluginError", "No plugin modules found.")
+        self._errorMessage = QCoreApplication.translate(
+            "PluginError", "No plugin modules found.")
 
 
 class PluginLoadError(PluginError):
@@ -83,7 +83,7 @@ class PluginLoadError(PluginError):
         @param name name of the plugin module (string)
         """
         self._errorMessage = \
-            QApplication.translate(
+            QCoreApplication.translate(
                 "PluginError",
                 "Error loading plugin module: {0}")\
             .format(name)
@@ -101,7 +101,7 @@ class PluginActivationError(PluginError):
         @param name name of the plugin module (string)
         """
         self._errorMessage = \
-            QApplication.translate(
+            QCoreApplication.translate(
                 "PluginError",
                 "Error activating plugin module: {0}")\
             .format(name)
@@ -119,7 +119,7 @@ class PluginModuleFormatError(PluginError):
         @param missing description of the missing element (string)
         """
         self._errorMessage = \
-            QApplication.translate(
+            QCoreApplication.translate(
                 "PluginError",
                 "The plugin module {0} is missing {1}.")\
             .format(name, missing)
@@ -139,7 +139,7 @@ class PluginClassFormatError(PluginError):
         @param missing description of the missing element (string)
         """
         self._errorMessage = \
-            QApplication.translate(
+            QCoreApplication.translate(
                 "PluginError",
                 "The plugin class {0} of module {1} is missing {2}.")\
             .format(class_, name, missing)
@@ -157,7 +157,7 @@ class PluginPy2IncompatibleError(PluginError):
         @param name name of the plugin module (string)
         """
         self._errorMessage = \
-            QApplication.translate(
+            QCoreApplication.translate(
                 "PluginError",
                 "The plugin module {0} is not compatible with Python2.")\
             .format(name)

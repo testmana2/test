@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 import sqlite3
 
-from PyQt4.QtCore import QCoreApplication, QDate, Qt, QUrl
+from PyQt5.QtCore import QCoreApplication, QDate, Qt, QUrl
 
 from .BookmarksImporter import BookmarksImporter
 

@@ -15,8 +15,8 @@ import sys
 
 import pysvn
 
-from PyQt4.QtCore import QMutexLocker
-from PyQt4.QtGui import QDialog, QApplication
+from PyQt5.QtCore import QMutexLocker
+from PyQt5.QtWidgets import QDialog, QApplication
 
 from .SvnUtilities import formatTime
 from .SvnDialogMixin import SvnDialogMixin

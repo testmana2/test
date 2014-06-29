@@ -14,9 +14,9 @@ import re
 import hashlib
 import base64
 
-from PyQt4.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, \
+from PyQt5.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, \
     QUrl, QCryptographicHash, QFile, QIODevice, QTextStream, QDate, QTime
-from PyQt4.QtNetwork import QNetworkReply
+from PyQt5.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
 

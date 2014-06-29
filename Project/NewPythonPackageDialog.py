@@ -9,8 +9,8 @@ Module implementing a dialog to add a new Python package.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog, QDialogButtonBox
-from PyQt4.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot
 
 from .Ui_NewPythonPackageDialog import Ui_NewPythonPackageDialog
 

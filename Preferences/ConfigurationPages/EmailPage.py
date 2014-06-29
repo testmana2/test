@@ -12,8 +12,9 @@ from __future__ import unicode_literals
 import smtplib
 import socket
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QApplication, QCursor
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QApplication
 
 from E5Gui import E5MessageBox
 

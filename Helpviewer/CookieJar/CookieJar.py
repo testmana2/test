@@ -11,10 +11,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray, QDataStream, QIODevice, \
+from PyQt5.QtCore import pyqtSignal, QByteArray, QDataStream, QIODevice, \
     QSettings, QDateTime
-from PyQt4.QtNetwork import QNetworkCookieJar, QNetworkCookie
-from PyQt4.QtWebKit import QWebSettings
+from PyQt5.QtNetwork import QNetworkCookieJar, QNetworkCookie
+from PyQt5.QtWebKit import QWebSettings
 
 from Utilities.AutoSaver import AutoSaver
 import Utilities

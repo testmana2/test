@@ -9,7 +9,7 @@ Module implementing the synchronization manager class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSignal
 
 import Preferences
 

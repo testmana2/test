@@ -14,8 +14,9 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import QTimer, QProcess, QProcessEnvironment, QRegExp, Qt
-from PyQt4.QtGui import QWidget, QHeaderView, QDialogButtonBox, QTreeWidgetItem
+from PyQt5.QtCore import QTimer, QProcess, QProcessEnvironment, QRegExp, Qt
+from PyQt5.QtWidgets import QWidget, QHeaderView, QDialogButtonBox, \
+    QTreeWidgetItem
 
 from E5Gui import E5MessageBox
 

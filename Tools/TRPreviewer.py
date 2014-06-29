@@ -11,12 +11,14 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QDir, QTimer, QFileInfo, pyqtSignal, QEvent, QSize, \
-    QTranslator, QObject, Qt
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
-    QKeySequence, QWhatsThis, QMdiArea, qApp, QApplication, QComboBox, \
-    QVBoxLayout, QAction, QLabel
-from PyQt4 import uic
+from PyQt5.QtCore import QDir, QTimer, QFileInfo, pyqtSignal, QEvent, QSize, \
+    QTranslator, QObject, Qt, QCoreApplication
+from PyQt5.QtGui import QKeySequence
+from PyQt5.QtWidgets import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+    QWhatsThis, QMdiArea, qApp, QApplication, QComboBox, QVBoxLayout, \
+    QAction, QLabel
+from PyQt5 import uic
+
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
@@ -27,7 +29,8 @@ import UI.Config
 import Preferences
 
 
-noTranslationName = QApplication.translate("TRPreviewer", "<No translation>")
+noTranslationName = QCoreApplication.translate(
+    "TRPreviewer", "<No translation>")
 
 
 class TRPreviewer(E5MainWindow):

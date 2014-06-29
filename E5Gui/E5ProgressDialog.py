@@ -9,8 +9,8 @@ Module implementing a progress dialog allowing a customized progress bar label.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QProgressBar, QProgressDialog
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QProgressBar, QProgressDialog
 
 
 class E5ProgressDialog(QProgressDialog):

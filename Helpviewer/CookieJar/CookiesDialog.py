@@ -9,8 +9,10 @@ Module implementing a dialog to show all cookies.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt, QDateTime, QByteArray
-from PyQt4.QtGui import QDialog, QFont, QFontMetrics, QSortFilterProxyModel
+from PyQt5.QtCore import pyqtSlot, Qt, QDateTime, QByteArray, \
+    QSortFilterProxyModel
+from PyQt5.QtGui import QFont, QFontMetrics
+from PyQt5.QtWidgets import QDialog
 
 from .CookieModel import CookieModel
 

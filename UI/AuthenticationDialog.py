@@ -9,7 +9,7 @@ Module implementing the authentication dialog for the help browser.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog, QStyle
+from PyQt5.QtWidgets import QDialog, QStyle
 
 from .Ui_AuthenticationDialog import Ui_AuthenticationDialog
 

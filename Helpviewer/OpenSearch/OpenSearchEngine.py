@@ -12,10 +12,10 @@ from __future__ import unicode_literals
 import re
 import json
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, \
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, \
     QBuffer, QIODevice, QObject
-from PyQt4.QtGui import QImage
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
+from PyQt5.QtGui import QImage
+from PyQt5.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 from UI.Info import Program
 

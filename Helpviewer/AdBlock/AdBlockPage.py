@@ -9,7 +9,7 @@ Module implementing a class to apply AdBlock rules to a web page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject, QUrl
+from PyQt5.QtCore import QObject, QUrl
 
 
 class AdBlockPage(QObject):

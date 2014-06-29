@@ -17,12 +17,13 @@ import os
 import re
 import difflib
 
-from PyQt4.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
+from PyQt5.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
     pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
-from PyQt4.QtGui import QCursor, QPrinter, QPrintDialog, QLineEdit, \
-    QActionGroup, QDialog, QAbstractPrintDialog, QInputDialog, QApplication, \
-    QMenu, QPalette, QFont, QPixmap, QPainter
-from PyQt4.Qsci import QsciScintilla, QsciMacro, QsciStyledText
+from PyQt5.QtGui import QCursor, QPalette, QFont, QPixmap, QPainter
+from PyQt5.QtWidgets import QLineEdit, QActionGroup, QDialog, QInputDialog, \
+    QApplication, QMenu
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog, QAbstractPrintDialog
+from PyQt5.Qsci import QsciScintilla, QsciMacro, QsciStyledText
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
@@ -2421,7 +2422,7 @@ class Editor(QsciScintillaCompat):
         """
         Public slot to show a print preview of the text.
         """
-        from PyQt4.QtGui import QPrintPreviewDialog
+        from PyQt5.QtPrintSupport import QPrintPreviewDialog
         from .Printer import Printer
         
         printer = Printer(mode=QPrinter.HighResolution)
@@ -6179,7 +6180,7 @@ class Editor(QsciScintillaCompat):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()
@@ -6187,7 +6188,7 @@ class Editor(QsciScintillaCompat):
             return
         
         if evt.modifiers() & Qt.ShiftModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.gotoMethodClass(False)
             else:
                 self.gotoMethodClass(True)

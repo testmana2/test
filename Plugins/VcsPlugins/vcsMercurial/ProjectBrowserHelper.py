@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtGui import QMenu, QDialog
+from PyQt5.QtWidgets import QMenu, QDialog
 
 from Project.ProjectBrowserModel import ProjectBrowserFileItem
 

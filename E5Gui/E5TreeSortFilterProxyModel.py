@@ -9,8 +9,7 @@ Module implementing a modified QSortFilterProxyModel.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QModelIndex
-from PyQt4.QtGui import QSortFilterProxyModel
+from PyQt5.QtCore import Qt, QModelIndex, QSortFilterProxyModel
 
 
 class E5TreeSortFilterProxyModel(QSortFilterProxyModel):

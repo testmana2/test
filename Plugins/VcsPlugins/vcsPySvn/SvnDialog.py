@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import pysvn
 
-from PyQt4.QtGui import QDialog, QApplication, QDialogButtonBox
+from PyQt5.QtWidgets import QDialog, QApplication, QDialogButtonBox
 
 from .SvnConst import svnNotifyActionMap
 

@@ -9,8 +9,8 @@ Module implementing the About plugin.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QAction
+from PyQt5.QtCore import QObject
+from PyQt5.QtWidgets import QAction
 
 import UI.Info
 import UI.PixmapCache

@@ -9,7 +9,7 @@ Module implementing a model for password management.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QModelIndex, QAbstractTableModel
+from PyQt5.QtCore import Qt, QModelIndex, QAbstractTableModel
 
 
 class PasswordModel(QAbstractTableModel):
@@ -43,7 +43,8 @@ class PasswordModel(QAbstractTableModel):
         @param on flag indicating if passwords shall be shown (boolean)
         """
         self.__showPasswords = on
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
     
     def showPasswords(self):
         """
@@ -57,7 +58,8 @@ class PasswordModel(QAbstractTableModel):
         """
         Private slot handling a change of the registered passwords.
         """
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
     
     def removeRows(self, row, count, parent=QModelIndex()):
         """

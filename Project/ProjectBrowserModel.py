@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 import os
 import re
 
-from PyQt4.QtCore import QDir, QModelIndex, pyqtSignal, QFileSystemWatcher, Qt
-from PyQt4.QtGui import QColor
+from PyQt5.QtCore import QDir, QModelIndex, pyqtSignal, QFileSystemWatcher, Qt
+from PyQt5.QtGui import QColor
 
 from UI.BrowserModel import BrowserModel, BrowserItem, BrowserDirectoryItem, \
     BrowserFileItem
@@ -345,7 +345,7 @@ class ProjectBrowserModel(BrowserModel):
                                   QDir.Hidden |
                                   QDir.NoDotAndDotDot)
         else:
-            filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(QDir.AllEntries | QDir.NoDot | QDir.NoDotDot)
         entryInfoList = qdir.entryInfoList(filter)
         
         if len(entryInfoList) > 0:
@@ -398,7 +398,8 @@ class ProjectBrowserModel(BrowserModel):
             self.watcher.removePaths(watchedDirs)
         
         self.rootItem.removeChildren()
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
         
         # reset the module parser cache
         Utilities.ModuleParser.resetParsedModules()
@@ -458,7 +459,8 @@ class ProjectBrowserModel(BrowserModel):
                 else:
                     itm.addVcsStatus("")
         self.inRefresh = False
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
 
     def findParentItemByName(self, type_, name, dontSplit=False):
         """
@@ -671,7 +673,7 @@ class ProjectBrowserModel(BrowserModel):
                                   QDir.Hidden |
                                   QDir.NoDotAndDotDot)
         else:
-            filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(QDir.AllEntries | QDir.NoDot | QDir.NoDotDot)
         
         for itm in self.watchedItems[path]:
             oldCnt = itm.childCount()

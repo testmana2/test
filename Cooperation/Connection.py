@@ -13,8 +13,8 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import pyqtSignal, QTimer, QTime, QByteArray
-from PyQt4.QtNetwork import QTcpSocket, QHostInfo
+from PyQt5.QtCore import pyqtSignal, QTimer, QTime, QByteArray
+from PyQt5.QtNetwork import QTcpSocket, QHostInfo
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App

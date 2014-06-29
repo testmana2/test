@@ -84,7 +84,7 @@ class MultiProjectReader(XMLStreamReaderBase):
             project["uid"] = uid
         else:
             # upgrade from pre 5.1 format
-            from PyQt4.QtCore import QUuid
+            from PyQt5.QtCore import QUuid
             project["uid"] = QUuid.createUuid().toString()
         
         while not self.atEnd():

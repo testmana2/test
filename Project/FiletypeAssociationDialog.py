@@ -9,8 +9,8 @@ Module implementing a dialog to enter filetype associations for the project.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, pyqtSlot
-from PyQt4.QtGui import QHeaderView, QDialog, QTreeWidgetItem
+from PyQt5.QtCore import Qt, pyqtSlot
+from PyQt5.QtWidgets import QHeaderView, QDialog, QTreeWidgetItem
 
 from .Ui_FiletypeAssociationDialog import Ui_FiletypeAssociationDialog
 

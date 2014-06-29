@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import time
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from E5Gui.E5Completers import E5FileCompleter
 

@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

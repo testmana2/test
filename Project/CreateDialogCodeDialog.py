@@ -11,11 +11,12 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, \
-    QMetaMethod, qVersion
-from PyQt4.QtGui import QWidget, QSortFilterProxyModel, QStandardItemModel, \
-    QDialog, QBrush, QStandardItem, QDialogButtonBox, QAction
-from PyQt4 import uic
+from PyQt5.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, \
+    QMetaMethod, qVersion, QSortFilterProxyModel
+from PyQt5.QtGui import QStandardItemModel, QBrush, QStandardItem
+from PyQt5.QtWidgets import QWidget, QDialog, QDialogButtonBox, QAction
+from PyQt5 import uic
+
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

@@ -9,8 +9,9 @@ Module implementing a menu to select the user agent string.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QXmlStreamReader, QFile, QIODevice
-from PyQt4.QtGui import QMenu, QAction, QActionGroup, QInputDialog, QLineEdit
+from PyQt5.QtCore import QXmlStreamReader, QFile, QIODevice
+from PyQt5.QtWidgets import QMenu, QAction, QActionGroup, QInputDialog, \
+    QLineEdit
 
 from E5Gui import E5MessageBox
 

@@ -9,8 +9,8 @@ Module implementing specialized table views.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QTableView, QItemSelectionModel
+from PyQt5.QtCore import Qt, QItemSelectionModel
+from PyQt5.QtWidgets import QTableView
 
 
 class E5TableView(QTableView):

@@ -12,7 +12,8 @@ shortcuts.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QAction, QActionGroup, QIcon, QKeySequence, qApp
+from PyQt5.QtGui import QIcon, QKeySequence
+from PyQt5.QtWidgets import QAction, QActionGroup, qApp
 
 
 class ArgumentsError(RuntimeError):

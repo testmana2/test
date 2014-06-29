@@ -13,8 +13,8 @@ import sys
 import os
 import copy
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 from E5Gui import E5FileDialog

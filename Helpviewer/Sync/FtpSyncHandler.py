@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import ftplib
 import io
 
-from PyQt4.QtCore import pyqtSignal, QTimer, QFileInfo, QCoreApplication, \
+from PyQt5.QtCore import pyqtSignal, QTimer, QFileInfo, QCoreApplication, \
     QByteArray
 
 from E5Network.E5Ftp import E5Ftp, E5FtpProxyType, E5FtpProxyError

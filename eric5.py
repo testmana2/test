@@ -15,17 +15,13 @@ from __future__ import unicode_literals
 
 try:  # Only for Py2
     import StringIO as io   # __IGNORE_EXCEPTION__
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
-    sip.setapi('QTextStream', 2)
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__
 except ImportError:
     import io       # __IGNORE_WARNING__
     basestring = str
 
-import sip
 try:
+    import sip
     sip.setdestroyonexit(False)
 except AttributeError:
     pass
@@ -37,8 +33,7 @@ import traceback
 import time
 import logging
 
-from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import qWarning, QLibraryInfo, QTimer, QCoreApplication
 
 # some global variables needed to start the application
 args = None
@@ -246,9 +241,9 @@ def main():
     else:
         splash = SplashScreen()
 
-    # modify the executable search path for the PyQt4 installer
+    # modify the executable search path for the PyQt5 installer
     if Globals.isWindowsPlatform():
-        pyqtDataDir = Globals.getPyQt4ModulesDirectory()
+        pyqtDataDir = Globals.getPyQt5ModulesDirectory()
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
             path = os.path.join(pyqtDataDir, "bin") + \
                 os.pathsep + os.environ["PATH"]
@@ -283,13 +278,13 @@ def main():
     # Load translation files and install them
     loc = Startup.loadTranslators(qt4TransDir, app, ("qscintilla",))
     
-    splash.showMessage(QApplication.translate("eric5", "Starting..."))
+    splash.showMessage(QCoreApplication.translate("eric5", "Starting..."))
     # We can only import these after creating the E5Application because they
     # make Qt calls that need the E5Application to exist.
     from UI.UserInterface import UserInterface
 
     splash.showMessage(
-        QApplication.translate("eric5", "Generating Main Window..."))
+        QCoreApplication.translate("eric5", "Generating Main Window..."))
     try:
         mainWindow = UserInterface(app, loc, splash, pluginFile, noopen,
                                    restartArgs)

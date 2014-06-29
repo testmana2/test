@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QFileDialog, QButtonGroup
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QFileDialog, \
+    QButtonGroup
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 
@@ -56,7 +57,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             self.__toggleInitialFilterAndResult)
         self.__toggleInitialFilterAndResult(1)
         
-        self.pyqtComboBox.addItems(["PyQt4", "PyQt5"])
+        self.pyqtComboBox.addItems(["PyQt5", "PyQt5"])
         if self.__pyqtVariant == 5:
             self.pyqtComboBox.setCurrentIndex(1)
         else:
@@ -93,9 +94,9 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         @param txt text of the selected combo box entry (string)
         """
-        self.rfOpenFile.setEnabled(txt == "PyQt4")
-        self.rfOpenFiles.setEnabled(txt == "PyQt4")
-        self.rfSaveFile.setEnabled(txt == "PyQt4")
+        self.rfOpenFile.setEnabled(txt == "PyQt5")
+        self.rfOpenFiles.setEnabled(txt == "PyQt5")
+        self.rfSaveFile.setEnabled(txt == "PyQt5")
         
         if txt == "PyQt5":
             if self.rfOpenFile.isChecked():

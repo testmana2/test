@@ -13,10 +13,10 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import Qt, QRegExp, qVersion
-from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QApplication, \
-    QAbstractItemView, QMenu
-from PyQt4.QtGui import QTextDocument   # __IGNORE_WARNING__
+from PyQt5.QtCore import Qt, QRegExp, qVersion, QCoreApplication
+from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QAbstractItemView, \
+    QMenu
+from PyQt5.QtGui import QTextDocument   # __IGNORE_WARNING__
 
 from E5Gui.E5Application import e5App
 
@@ -43,8 +43,8 @@ class VariableItem(QTreeWidgetItem):
         """
         self.__value = dvalue
         if len(dvalue) > 2048:     # 1024 * 2
-            dvalue = QApplication.translate("VariableItem",
-                                            "<double click to show value>")
+            dvalue = QCoreApplication.translate(
+                "VariableItem", "<double click to show value>")
             self.__tooltip = dvalue
         else:
             if Qt.mightBeRichText(dvalue):

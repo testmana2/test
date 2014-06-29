@@ -15,8 +15,8 @@ import imp
 import shutil
 import glob
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal
-from PyQt4.QtGui import QWidget, QDialog, QDialogButtonBox, QVBoxLayout
+from PyQt5.QtCore import pyqtSlot, pyqtSignal
+from PyQt5.QtWidgets import QWidget, QDialog, QDialogButtonBox, QVBoxLayout
 
 from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow

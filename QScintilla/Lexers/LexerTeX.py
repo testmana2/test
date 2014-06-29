@@ -9,7 +9,7 @@ Module implementing a Tex lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerTeX
+from PyQt5.Qsci import QsciLexerTeX
 
 from .Lexer import Lexer
 import Preferences

@@ -9,9 +9,9 @@ Module implementing the Editor File Handling configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QListWidgetItem, QInputDialog, QLineEdit
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QListWidgetItem, QInputDialog, QLineEdit
+from PyQt5.Qsci import QsciScintilla
 
 from E5Gui import E5MessageBox
 

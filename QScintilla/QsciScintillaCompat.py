@@ -9,9 +9,10 @@ Module implementing a compatability interface class to QsciScintilla.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt
-from PyQt4.QtGui import QPalette, QColor, QApplication
-from PyQt4.Qsci import QsciScintillaBase, QsciScintilla, \
+from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtGui import QPalette, QColor
+from PyQt5.QtWidgets import QApplication
+from PyQt5.Qsci import QsciScintillaBase, QsciScintilla, \
     QSCINTILLA_VERSION as QSCIQSCINTILLA_VERSION
 
 ###############################################################################

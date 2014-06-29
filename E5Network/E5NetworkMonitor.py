@@ -9,9 +9,11 @@ Module implementing a network monitor dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
-from PyQt4.QtGui import QDialog, QStandardItemModel, QSortFilterProxyModel
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkAccessManager
+from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl, \
+    QSortFilterProxyModel
+from PyQt5.QtGui import QStandardItemModel
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
 from .Ui_E5NetworkMonitor import Ui_E5NetworkMonitor
 

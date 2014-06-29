@@ -9,7 +9,7 @@ Module implementing a dialog to select a list of guards.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, \
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QListWidgetItem, \
     QAbstractItemView
 
 from .Ui_HgQueuesGuardsSelectionDialog import Ui_HgQueuesGuardsSelectionDialog

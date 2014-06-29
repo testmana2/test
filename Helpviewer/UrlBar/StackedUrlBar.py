@@ -9,7 +9,7 @@ Module implementing a widget to stack url bars.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QStackedWidget, QSizePolicy
+from PyQt5.QtWidgets import QStackedWidget, QSizePolicy
 
 
 class StackedUrlBar(QStackedWidget):

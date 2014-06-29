@@ -17,14 +17,15 @@ import os
 import sys
 import logging
 
-from PyQt4.QtCore import pyqtSlot, QTimer, QFile, QFileInfo, pyqtSignal, \
+from PyQt5.QtCore import pyqtSlot, QTimer, QFile, QFileInfo, pyqtSignal, \
     PYQT_VERSION_STR, QDate, QIODevice, qVersion, QProcess, QSize, QUrl, \
     QObject, Qt
-from PyQt4.QtGui import QSizePolicy, QWidget, QKeySequence, QDesktopServices, \
-    QWhatsThis, QToolBar, QDialog, QSplitter, QApplication, QMenu, \
-    QVBoxLayout, QDockWidget, QAction, QLabel
-from PyQt4.Qsci import QSCINTILLA_VERSION_STR
-from PyQt4.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
+from PyQt5.QtGui import QKeySequence, QDesktopServices
+from PyQt5.QtWidgets import QSizePolicy, QWidget, QWhatsThis, QToolBar, \
+    QDialog, QSplitter, QApplication, QMenu, QVBoxLayout, QDockWidget, \
+    QAction, QLabel
+from PyQt5.Qsci import QSCINTILLA_VERSION_STR
+from PyQt5.QtNetwork import QNetworkProxyFactory, QNetworkAccessManager, \
     QNetworkRequest, QNetworkReply
 
 from .Info import Version, BugAddress, Program, FeatureAddress
@@ -2247,17 +2248,17 @@ class UserInterface(E5MainWindow):
         self.actions.append(self.qt5DocAct)
       
         self.pyqt4DocAct = E5Action(
-            self.tr('PyQt4 Documentation'),
+            self.tr('PyQt5 Documentation'),
             self.tr('PyQt&4 Documentation'),
             0, 0, self, 'pyqt4_documentation')
-        self.pyqt4DocAct.setStatusTip(self.tr('Open PyQt4 Documentation'))
+        self.pyqt4DocAct.setStatusTip(self.tr('Open PyQt5 Documentation'))
         self.pyqt4DocAct.setWhatsThis(self.tr(
-            """<b>PyQt4 Documentation</b>"""
-            """<p>Display the PyQt4 Documentation. Dependent upon your"""
+            """<b>PyQt5 Documentation</b>"""
+            """<p>Display the PyQt5 Documentation. Dependent upon your"""
             """ settings, this will either show the help in Eric's internal"""
             """ help viewer, or execute a web browser or Qt Assistant. </p>"""
         ))
-        self.pyqt4DocAct.triggered.connect(self.__showPyQt4Doc)
+        self.pyqt4DocAct.triggered.connect(self.__showPyQt5Doc)
         self.actions.append(self.pyqt4DocAct)
         
         try:
@@ -2944,7 +2945,7 @@ class UserInterface(E5MainWindow):
         versionText += """<tr><td><b>QScintilla</b></td><td>{0}</td></tr>"""\
             .format(QSCINTILLA_VERSION_STR)
         try:
-            from PyQt4.QtWebKit import qWebKitVersion
+            from PyQt5.QtWebKit import qWebKitVersion
             versionText += """<tr><td><b>WebKit</b></td><td>{0}</td></tr>"""\
                 .format(qWebKitVersion())
         except ImportError:

@@ -9,8 +9,8 @@ Module implementing the cookie exceptions model.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
-from PyQt4.QtGui import QFont, QFontMetrics
+from PyQt5.QtCore import Qt, QAbstractTableModel, QSize, QModelIndex
+from PyQt5.QtGui import QFont, QFontMetrics
 
 
 class CookieExceptionsModel(QAbstractTableModel):
@@ -227,4 +227,5 @@ class CookieExceptionsModel(QAbstractTableModel):
         if otherRule in removeList2:
             removeList2.remove(otherRule)
         
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()

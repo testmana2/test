@@ -9,8 +9,8 @@ Module implementing a clickable label.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QPoint
-from PyQt4.QtGui import QLabel
+from PyQt5.QtCore import pyqtSignal, Qt, QPoint
+from PyQt5.QtWidgets import QLabel
 
 
 class E5ClickableLabel(QLabel):

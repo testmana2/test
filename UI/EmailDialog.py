@@ -14,9 +14,10 @@ import mimetypes
 import smtplib
 import socket
 
-from PyQt4.QtCore import Qt, pyqtSlot, qVersion
-from PyQt4.QtGui import QCursor, QHeaderView, QLineEdit, QDialog, \
-    QInputDialog, QApplication, QDialogButtonBox, QTreeWidgetItem
+from PyQt5.QtCore import Qt, pyqtSlot, qVersion
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QHeaderView, QLineEdit, QDialog, QInputDialog, \
+    QApplication, QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 

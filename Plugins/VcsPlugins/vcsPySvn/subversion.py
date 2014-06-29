@@ -14,8 +14,9 @@ import sys
 import shutil
 import time
 
-from PyQt4.QtCore import Qt, QMutexLocker, pyqtSignal, QRegExp, QDateTime
-from PyQt4.QtGui import QLineEdit, QDialog, QInputDialog, QApplication
+from PyQt5.QtCore import Qt, QMutexLocker, pyqtSignal, QRegExp, QDateTime, \
+    QCoreApplication
+from PyQt5.QtWidgets import QLineEdit, QDialog, QInputDialog, QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -1727,12 +1728,12 @@ class Subversion(VersionControl):
                 ".".join([str(v) for v in pysvn.svn_api_version[:3]]),
                 pysvn.svn_api_version[3])
         else:
-            apiVersion = QApplication.translate('subversion', "unknown")
+            apiVersion = QCoreApplication.translate('subversion', "unknown")
         
         hmsz = time.strftime("%H:%M:%S %Z", time.localtime(entry.commit_time))
         if sys.version_info[0] == 2:
             hmsz = hmsz.decode(sys.getfilesystemencoding())
-        return QApplication.translate(
+        return QCoreApplication.translate(
             'subversion',
             """<h3>Repository information</h3>"""
             """<table>"""

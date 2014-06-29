@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from ..HgExtension import HgExtension
 from ..HgDialog import HgDialog

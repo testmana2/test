@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 import os
 import fnmatch
 
-from PyQt4.QtCore import pyqtSlot, Qt, QLocale, qVersion
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
+from PyQt5.QtCore import pyqtSlot, Qt, QLocale, qVersion
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
     QTreeWidgetItem, QApplication
 
 from .Ui_CodeMetricsDialog import Ui_CodeMetricsDialog

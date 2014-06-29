@@ -10,9 +10,9 @@ scripts.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QSize, QRect
-from PyQt4.QtGui import QStyle, QStyledItemDelegate, QApplication, \
-    QFontMetrics, QPalette, QFont, QStyleOptionViewItemV4
+from PyQt5.QtCore import Qt, QSize, QRect
+from PyQt5.QtGui import QFontMetrics, QPalette, QFont, QStyleOptionViewItemV4
+from PyQt5.QtWidgets import QStyle, QStyledItemDelegate, QApplication
 
 import UI.PixmapCache
 import Globals

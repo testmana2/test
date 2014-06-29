@@ -9,8 +9,9 @@ Module implementing a Notification widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QTimer, QPoint
-from PyQt4.QtGui import QWidget, QPixmap
+from PyQt5.QtCore import Qt, QTimer, QPoint
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QWidget
 
 from .Ui_NotificationWidget import Ui_NotificationWidget
 

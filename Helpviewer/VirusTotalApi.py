@@ -16,8 +16,8 @@ except NameError:
 
 import json
 
-from PyQt4.QtCore import QObject, QUrl, QByteArray, pyqtSignal
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply, \
+from PyQt5.QtCore import QObject, QUrl, QByteArray, pyqtSignal
+from PyQt5.QtNetwork import QNetworkRequest, QNetworkReply, \
     QNetworkAccessManager
 
 import Preferences

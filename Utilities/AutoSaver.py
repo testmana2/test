@@ -9,7 +9,7 @@ Module implementing an auto saver class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject, QBasicTimer, QTime
+from PyQt5.QtCore import QObject, QBasicTimer, QTime
 
 
 class AutoSaver(QObject):

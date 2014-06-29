@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, Qt
-from PyQt4.QtGui import QKeySequence, QMenu, QToolBar, QApplication, QDialog, \
+from PyQt5.QtCore import pyqtSignal, QObject, Qt
+from PyQt5.QtGui import QKeySequence
+from PyQt5.QtWidgets import QMenu, QToolBar, QApplication, QDialog, \
     QInputDialog
 
 from UI.Info import Program

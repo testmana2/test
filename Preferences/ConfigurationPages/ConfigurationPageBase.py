@@ -9,9 +9,9 @@ Module implementing the base class for all configuration pages.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QWidget, QIcon, QPixmap, QColor, QColorDialog, \
-    QFontDialog
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QIcon, QPixmap, QColor
+from PyQt5.QtWidgets import QWidget, QColorDialog, QFontDialog
 
 
 class ConfigurationPageBase(QWidget):

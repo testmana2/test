@@ -9,8 +9,8 @@ Module implementing the Notifications configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QPoint
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import pyqtSlot, QPoint
+from PyQt5.QtWidgets import QApplication
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NotificationsPage import Ui_NotificationsPage

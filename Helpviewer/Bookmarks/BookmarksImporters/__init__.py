@@ -9,7 +9,7 @@ Package implementing bookmarks importers for various sources.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QCoreApplication
+from PyQt5.QtCore import QCoreApplication
 
 import UI.PixmapCache
 import Globals

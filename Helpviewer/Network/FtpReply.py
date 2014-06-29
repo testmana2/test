@@ -18,11 +18,12 @@ import socket
 import errno
 import mimetypes
 
-from PyQt4.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, \
+from PyQt5.QtCore import QByteArray, QIODevice, Qt, QUrl, QTimer, QBuffer, \
     QCoreApplication
-from PyQt4.QtGui import QPixmap, QDialog
-from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest, QAuthenticator
-from PyQt4.QtWebKit import QWebSettings
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtNetwork import QNetworkReply, QNetworkRequest, QAuthenticator
+from PyQt5.QtWebKit import QWebSettings
 
 from E5Network.E5Ftp import E5Ftp, E5FtpProxyError, E5FtpProxyType
 

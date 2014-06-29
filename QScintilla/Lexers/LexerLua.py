@@ -9,7 +9,7 @@ Module implementing a Lua lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerLua
+from PyQt5.Qsci import QsciLexerLua
 
 from .Lexer import Lexer
 import Preferences

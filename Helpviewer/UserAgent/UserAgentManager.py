@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QXmlStreamReader
+from PyQt5.QtCore import pyqtSignal, QObject, QXmlStreamReader
 
 from E5Gui import E5MessageBox
 

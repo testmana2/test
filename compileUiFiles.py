@@ -20,9 +20,9 @@ def compileUiFiles():
     Compile the .ui files to Python sources.
     """                                                 # __IGNORE_WARNING__
     try:
-        from PyQt4.uic import compileUiDir
+        from PyQt5.uic import compileUiDir
     except ImportError:
-        from PyQt4.uic import compileUi
+        from PyQt5.uic import compileUi
         
         def compileUiDir(dir, recurse=False,            # __IGNORE_WARNING__
                          map=None, **compileUi_args):
@@ -31,7 +31,7 @@ def compileUiFiles():
             directory tree.
             
             Note: This function is a modified version of the one found in
-            PyQt4.
+            PyQt5.
 
             @param dir Name of the directory to scan for files whose name ends
                 with '.ui'. By default the generated Python module is created

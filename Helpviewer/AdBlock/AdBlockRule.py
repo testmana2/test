@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import Qt, QRegExp, QUrl, qVersion
-from PyQt4.QtNetwork import QNetworkRequest
+from PyQt5.QtCore import Qt, QRegExp, QUrl, qVersion
+from PyQt5.QtNetwork import QNetworkRequest
 
 
 # Qt version < 4.8 has an issue; it will wrongly

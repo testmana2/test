@@ -9,9 +9,9 @@ Module implementing a sidebar class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, \
+from PyQt5.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, \
     QIODevice, QTimer
-from PyQt4.QtGui import QTabBar, QWidget, QStackedWidget, QBoxLayout, \
+from PyQt5.QtWidgets import QTabBar, QWidget, QStackedWidget, QBoxLayout, \
     QToolButton, QSizePolicy
 
 from E5Gui.E5Application import e5App

@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import QRegExp
-from PyQt4.Qsci import QsciLexerRuby
+from PyQt5.QtCore import QRegExp
+from PyQt5.Qsci import QsciLexerRuby
 
 from .CompleterBase import CompleterBase
 

@@ -9,8 +9,9 @@ Module implementing a dialog to show some bookmark info.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QFont
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_BookmarkInfoDialog import Ui_BookmarkInfoDialog
 

@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QByteArray, QFileInfo, QCoreApplication
+from PyQt5.QtCore import pyqtSignal, QByteArray, QFileInfo, QCoreApplication
 
 from .SyncHandler import SyncHandler
 

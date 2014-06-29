@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QDialog
+from PyQt5.QtCore import QObject
+from PyQt5.QtWidgets import QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Action import E5Action

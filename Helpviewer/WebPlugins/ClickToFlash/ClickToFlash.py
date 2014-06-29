@@ -10,11 +10,12 @@ Module implementing the Flash blocker.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QUrl, Qt, QByteArray, QTimer
-from PyQt4.QtGui import QWidget, QMenu, QCursor, QDialog, QLabel, QFormLayout
-from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import QWebHitTestResult, QWebElement, QWebView, \
-    QWebElementCollection
+from PyQt5.QtCore import pyqtSlot, QUrl, Qt, QByteArray, QTimer
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QWidget, QMenu, QDialog, QLabel, QFormLayout
+from PyQt5.QtNetwork import QNetworkRequest
+from PyQt5.QtWebKit import QWebElement, QWebElementCollection
+from PyQt5.QtWebKitWidgets import QWebHitTestResult, QWebView
 
 from .Ui_ClickToFlash import Ui_ClickToFlash
 

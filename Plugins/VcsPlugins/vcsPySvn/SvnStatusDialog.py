@@ -15,8 +15,9 @@ import sys
 
 import pysvn
 
-from PyQt4.QtCore import QMutexLocker, Qt, pyqtSlot
-from PyQt4.QtGui import QWidget, QCursor, QHeaderView, QApplication, QMenu, \
+from PyQt5.QtCore import QMutexLocker, Qt, pyqtSlot
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QWidget, QHeaderView, QApplication, QMenu, \
     QDialogButtonBox, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App

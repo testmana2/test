@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import Qt, QSize
-from PyQt4.QtGui import QPixmap, QIcon, QPainter
+from PyQt5.QtCore import Qt, QSize
+from PyQt5.QtGui import QPixmap, QIcon, QPainter
 
 
 class PixmapCache(object):

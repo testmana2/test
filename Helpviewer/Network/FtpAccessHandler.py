@@ -9,7 +9,7 @@ Module implementing a scheme access handler for FTP.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtNetwork import QNetworkAccessManager
+from PyQt5.QtNetwork import QNetworkAccessManager
 
 from .SchemeAccessHandler import SchemeAccessHandler
 

@@ -9,7 +9,7 @@ Module implementing a dialog to enter the sort options for a line sort.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_SortOptionsDialog import Ui_SortOptionsDialog
 

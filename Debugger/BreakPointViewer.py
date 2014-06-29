@@ -9,9 +9,10 @@ Module implementing the Breakpoint viewer widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, qVersion
-from PyQt4.QtGui import QTreeView, QAbstractItemView, QSortFilterProxyModel, \
-    QHeaderView, QItemSelectionModel, QMenu, QDialog
+from PyQt5.QtCore import pyqtSignal, Qt, qVersion, QItemSelectionModel, \
+    QSortFilterProxyModel
+from PyQt5.QtWidgets import QTreeView, QAbstractItemView, QHeaderView, QMenu, \
+    QDialog
 
 from E5Gui.E5Application import e5App
 

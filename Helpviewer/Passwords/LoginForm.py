@@ -9,7 +9,7 @@ Module implementing a data structure for login forms.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QUrl
+from PyQt5.QtCore import QUrl
 
 
 class LoginForm(object):

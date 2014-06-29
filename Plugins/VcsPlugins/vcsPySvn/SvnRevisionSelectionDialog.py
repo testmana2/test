@@ -9,8 +9,8 @@ Module implementing a dialog to enter the revisions for the svn diff command.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QDate, QDateTime, Qt
-from PyQt4.QtGui import QDialog
+from PyQt5.QtCore import QDate, QDateTime, Qt
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_SvnRevisionSelectionDialog import Ui_SvnRevisionSelectionDialog
 

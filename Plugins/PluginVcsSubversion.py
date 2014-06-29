@@ -11,8 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QObject, QCoreApplication
 
 from E5Gui.E5Application import e5App
 
@@ -56,7 +55,7 @@ def exeDisplayData():
     
     data = {
         "programEntry": True,
-        "header": QApplication.translate(
+        "header": QCoreApplication.translate(
             "VcsSubversionPlugin", "Version Control - Subversion (svn)"),
         "exe": exe,
         "versionCommand": '--version',
@@ -97,7 +96,7 @@ def displayString():
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     if Utilities.isinpath(exe):
-        return QApplication.translate(
+        return QCoreApplication.translate(
             'VcsSubversionPlugin', 'Subversion (svn)')
     else:
         return ""
@@ -130,7 +129,7 @@ def getConfigData():
     """
     return {
         "zzz_subversionPage":
-        [QApplication.translate("VcsSubversionPlugin", "Subversion"),
+        [QCoreApplication.translate("VcsSubversionPlugin", "Subversion"),
          os.path.join("VcsPlugins", "vcsSubversion", "icons",
                       "preferences-subversion.png"),
          createConfigurationPage, "vcsPage", None],

@@ -13,8 +13,8 @@ import os
 
 from pygments.lexers import get_all_lexers
 
-from PyQt4.QtCore import Qt, pyqtSlot, qVersion
-from PyQt4.QtGui import QHeaderView, QTreeWidgetItem
+from PyQt5.QtCore import Qt, pyqtSlot, qVersion
+from PyQt5.QtWidgets import QHeaderView, QTreeWidgetItem
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightersPage import Ui_EditorHighlightersPage

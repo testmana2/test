@@ -17,9 +17,9 @@ except NameError:
 import re
 from difflib import _mdiff, IS_CHARACTER_JUNK
 
-from PyQt4.QtCore import QTimer, QEvent, pyqtSlot
-from PyQt4.QtGui import QWidget, QColor, QFontMetrics, QBrush, QApplication, \
-    QTextCursor, QDialogButtonBox
+from PyQt5.QtCore import QTimer, QEvent, pyqtSlot
+from PyQt5.QtGui import QColor, QFontMetrics, QBrush, QTextCursor
+from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog

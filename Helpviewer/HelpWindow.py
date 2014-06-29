@@ -15,17 +15,18 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, \
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QByteArray, QSize, QTimer, \
     QUrl, QThread, QTextCodec
-from PyQt4.QtGui import QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
-    QDesktopServices, QKeySequence, QComboBox, QFont, QFontMetrics, QLabel, \
-    QSplitter, QMenu, QToolButton, QLineEdit, QApplication, QWhatsThis, \
-    QDialog, QHBoxLayout, QProgressBar, QAction, QIcon
-from PyQt4.QtNetwork import QNetworkAccessManager, QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin, \
-    QWebPage
+from PyQt5.QtGui import QDesktopServices, QKeySequence, QFont, QFontMetrics, \
+    QIcon
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
+    QComboBox, QLabel, QSplitter, QMenu, QToolButton, QLineEdit, \
+    QApplication, QWhatsThis, QDialog, QHBoxLayout, QProgressBar, QAction
+from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest
+from PyQt5.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin
+from PyQt5.QtWebKitWidgets import QWebPage
 try:
-    from PyQt4.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
+    from PyQt5.QtHelp import QHelpEngine, QHelpEngineCore, QHelpSearchQuery
     QTHELP_AVAILABLE = True
 except ImportError:
     QTHELP_AVAILABLE = False

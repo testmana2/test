@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QStringListModel, QSortFilterProxyModel
+from PyQt5.QtCore import pyqtSlot, Qt, QSortFilterProxyModel, QStringListModel
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_SpellingDictionaryEditDialog import Ui_SpellingDictionaryEditDialog
 

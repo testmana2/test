@@ -14,9 +14,9 @@ import sys
 
 import pysvn
 
-from PyQt4.QtCore import QMutexLocker, QByteArray, QUrl, Qt
-from PyQt4.QtGui import QWidget, QCursor, QApplication, QTextCursor, \
-    QDialogButtonBox
+from PyQt5.QtCore import QMutexLocker, QByteArray, QUrl, Qt
+from PyQt5.QtGui import QCursor, QTextCursor
+from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
 from .SvnUtilities import formatTime
 

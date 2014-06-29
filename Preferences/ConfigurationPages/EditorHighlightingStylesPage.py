@@ -9,9 +9,9 @@ Module implementing the Editor Highlighting Styles configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt, QFileInfo, QFile, QIODevice
-from PyQt4.QtGui import QPalette, QColorDialog, QFontDialog, \
-    QInputDialog, QFont, QMenu
+from PyQt5.QtCore import pyqtSlot, Qt, QFileInfo, QFile, QIODevice
+from PyQt5.QtGui import QPalette, QFont
+from PyQt5.QtWidgets import QColorDialog, QFontDialog, QInputDialog, QMenu
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorHighlightingStylesPage import Ui_EditorHighlightingStylesPage

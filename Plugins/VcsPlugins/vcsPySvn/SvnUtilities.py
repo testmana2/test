@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QDateTime, Qt
+from PyQt5.QtCore import QDateTime, Qt
 
 import Utilities
 

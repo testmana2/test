@@ -9,7 +9,8 @@ Module implementing an UML like class item.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QFont, QGraphicsSimpleTextItem, QStyle
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QGraphicsSimpleTextItem, QStyle
 
 from .UMLItem import UMLModel, UMLItem
 

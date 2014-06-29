@@ -9,8 +9,8 @@ Module implementing a special QextScintilla lexer to handle the preferences.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QColor, QFont, QApplication
-from PyQt4.Qsci import QsciLexer
+from PyQt5.QtGui import QColor, QFont, QCoreApplication
+from PyQt5.Qsci import QsciLexer
 
 import Preferences
 import Globals
@@ -24,7 +24,7 @@ class PreferencesLexerError(Exception):
         """
         Constructor
         """
-        self._errorMessage = QApplication.translate(
+        self._errorMessage = QCoreApplication.translate(
             "PreferencesLexerError",
             "Unspecific PreferencesLexer error.")
         
@@ -56,7 +56,7 @@ class PreferencesLexerLanguageError(PreferencesLexerError):
         @param language lexer language (string)
         """
         PreferencesLexerError.__init__(self)
-        self._errorMessage = QApplication.translate(
+        self._errorMessage = QCoreApplication.translate(
             "PreferencesLexerError",
             'Unsupported Lexer Language: {0}').format(language)
 

@@ -16,8 +16,8 @@ from __future__ import unicode_literals
 import os
 import fnmatch
 
-from PyQt4.QtCore import pyqtSignal, Qt
-from PyQt4.QtGui import QHeaderView, QLineEdit, QTreeWidget, QDialog, \
+from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtWidgets import QHeaderView, QLineEdit, QTreeWidget, QDialog, \
     QInputDialog, QApplication, QMenu, QAbstractItemView, QTreeWidgetItem
 
 from E5Gui.E5Application import e5App

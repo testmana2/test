@@ -9,8 +9,8 @@ Module implementing a window for showing the QtHelp TOC.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QEvent, QUrl
-from PyQt4.QtGui import QWidget, QVBoxLayout, QMenu
+from PyQt5.QtCore import pyqtSignal, Qt, QEvent, QUrl
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QMenu
 
 
 class HelpTocWidget(QWidget):

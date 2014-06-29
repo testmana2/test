@@ -14,14 +14,12 @@ of the integrated helpviewer.
 
 from __future__ import unicode_literals
 try:  # Only for Py2
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass
 
 try:
+    import sip
     sip.setdestroyonexit(False)
 except AttributeError:
     pass

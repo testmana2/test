@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import QTime, QCoreApplication
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QTime, QCoreApplication
+from PyQt5.QtWidgets import QApplication
 
 import Utilities
 import Preferences

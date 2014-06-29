@@ -9,8 +9,8 @@ Module implementing the Editor APIs configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QDir, pyqtSlot, QFileInfo
-from PyQt4.QtGui import QInputDialog
+from PyQt5.QtCore import QDir, pyqtSlot, QFileInfo
+from PyQt5.QtWidgets import QInputDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter

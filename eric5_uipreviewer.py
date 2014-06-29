@@ -14,9 +14,6 @@ of the integrated ui previewer.
 
 from __future__ import unicode_literals
 try:  # Only for Py2
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass

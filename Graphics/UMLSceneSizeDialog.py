@@ -9,7 +9,7 @@ Module implementing a dialog to set the scene sizes.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_UMLSceneSizeDialog import Ui_UMLSceneSizeDialog
 

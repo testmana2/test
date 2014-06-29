@@ -11,9 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, \
+from PyQt5.QtCore import pyqtSignal, QObject, QTimer, QFile, QDir, QSettings, \
     QUrl, QByteArray
-from PyQt4.QtNetwork import QNetworkAccessManager
+from PyQt5.QtNetwork import QNetworkAccessManager
 
 import Utilities
 import Preferences

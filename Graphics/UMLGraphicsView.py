@@ -9,10 +9,10 @@ Module implementing a subclass of E5GraphicsView for our diagrams.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, \
+from PyQt5.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, \
     QRectF
-from PyQt4.QtGui import QGraphicsView, QAction, QToolBar, QDialog, QPrinter, \
-    QPrintDialog
+from PyQt5.QtWidgets import QGraphicsView, QAction, QToolBar, QDialog
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
 
 from E5Graphics.E5GraphicsView import E5GraphicsView
 
@@ -431,7 +431,7 @@ class UMLGraphicsView(E5GraphicsView):
         """
         Public slot called to show a print preview of the diagram.
         """
-        from PyQt4.QtGui import QPrintPreviewDialog
+        from PyQt5.QtPrintSupport import QPrintPreviewDialog
         
         printer = QPrinter(mode=QPrinter.ScreenResolution)
         printer.setFullPage(True)
@@ -601,7 +601,7 @@ class UMLGraphicsView(E5GraphicsView):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()

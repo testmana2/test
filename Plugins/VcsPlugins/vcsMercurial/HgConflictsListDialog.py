@@ -12,10 +12,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, Qt, QPoint, QProcess, QTimer
-from PyQt4.QtGui import (
-    QWidget, QAbstractButton, QDialogButtonBox, QHeaderView, QTreeWidgetItem,
-    QLineEdit, QApplication)
+from PyQt5.QtCore import pyqtSlot, Qt, QPoint, QProcess, QTimer
+from PyQt5.QtGui import QWidget
+from PyQt5.QtWidgets import QAbstractButton, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QLineEdit, QApplication
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App

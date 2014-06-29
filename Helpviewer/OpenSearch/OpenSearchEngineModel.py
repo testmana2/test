@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import Qt, QUrl, QAbstractTableModel, QModelIndex
-from PyQt4.QtGui import QPixmap, QIcon
+from PyQt5.QtCore import Qt, QUrl, QAbstractTableModel, QModelIndex
+from PyQt5.QtGui import QPixmap, QIcon
 
 
 class OpenSearchEngineModel(QAbstractTableModel):
@@ -197,4 +197,5 @@ class OpenSearchEngineModel(QAbstractTableModel):
         """
         Private slot handling a change of the registered engines.
         """
-        super(OpenSearchEngineModel, self).reset()
+        self.beginResetModel()
+        self.endResetModel()

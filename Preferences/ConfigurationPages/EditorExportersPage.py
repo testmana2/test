@@ -9,8 +9,8 @@ Module implementing the Editor Exporters configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QFontDialog
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QFontDialog
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorExportersPage import Ui_EditorExportersPage

@@ -11,7 +11,7 @@ check.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject, pyqtSignal
+from PyQt5.QtCore import QObject, pyqtSignal
 
 from E5Gui.E5Application import e5App
 from Utilities import determinePythonVersion

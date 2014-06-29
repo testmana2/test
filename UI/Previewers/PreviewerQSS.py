@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import qVersion
-from PyQt4.QtGui import QWidget, QMenu, QLabel, QHeaderView, QListWidgetItem
+from PyQt5.QtCore import qVersion
+from PyQt5.QtWidgets import QWidget, QMenu, QLabel, QHeaderView, \
+    QListWidgetItem
 
 from .Ui_PreviewerQSS import Ui_PreviewerQSS
 
@@ -53,7 +54,7 @@ class PreviewerQSS(QWidget, Ui_PreviewerQSS):
         else:
             self.tree.header().setResizeMode(
                 QHeaderView.ResizeToContents)
-            self.table.horizontalHeader().setResizeMode(
+            self.table.horizontalHeader().setSectionResizeMode(
                 QHeaderView.ResizeToContents)
         self.tree.topLevelItem(0).setExpanded(True)
         

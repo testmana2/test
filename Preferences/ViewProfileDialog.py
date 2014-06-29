@@ -9,7 +9,7 @@ Module implementing a dialog to configure the various view profiles.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_ViewProfileToolboxesDialog import Ui_ViewProfileToolboxesDialog
 from .Ui_ViewProfileSidebarsDialog import Ui_ViewProfileSidebarsDialog

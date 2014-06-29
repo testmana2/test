@@ -9,8 +9,8 @@ Module implementing a dialog to enter the archive data.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QFileInfo
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot, QFileInfo
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
 from E5Gui import E5FileDialog

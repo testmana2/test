@@ -9,8 +9,8 @@ Module implementing the network block class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject, QUrl
-from PyQt4.QtNetwork import QNetworkRequest
+from PyQt5.QtCore import QObject, QUrl
+from PyQt5.QtNetwork import QNetworkRequest
 
 from .AdBlockBlockedNetworkReply import AdBlockBlockedNetworkReply
 

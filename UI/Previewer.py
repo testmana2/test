@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QTimer
-from PyQt4.QtGui import QStackedWidget
+from PyQt5.QtCore import QTimer
+from PyQt5.QtWidgets import QStackedWidget
 
 import Preferences
 

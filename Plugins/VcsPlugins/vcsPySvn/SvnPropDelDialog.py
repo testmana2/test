@@ -9,7 +9,7 @@ Module implementing a dialog to enter the data for a new property.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_SvnPropDelDialog import Ui_SvnPropDelDialog
 

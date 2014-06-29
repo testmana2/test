@@ -9,8 +9,8 @@ Module implementing the synchronization shared directory settings wizard page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QWizardPage
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QWizardPage
 
 from E5Gui import E5FileDialog
 

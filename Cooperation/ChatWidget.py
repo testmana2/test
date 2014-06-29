@@ -9,8 +9,9 @@ Module implementing the chat dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
-from PyQt4.QtGui import QWidget, QColor, QListWidgetItem, QMenu, QApplication
+from PyQt5.QtCore import Qt, pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QWidget, QListWidgetItem, QMenu, QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog

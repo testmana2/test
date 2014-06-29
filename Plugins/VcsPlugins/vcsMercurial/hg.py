@@ -17,8 +17,9 @@ import os
 import shutil
 import re
 
-from PyQt4.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher
-from PyQt4.QtGui import QApplication, QDialog, QInputDialog
+from PyQt5.QtCore import QProcess, pyqtSignal, QFileInfo, QFileSystemWatcher, \
+    QCoreApplication
+from PyQt5.QtWidgets import QApplication, QDialog, QInputDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
@@ -1419,27 +1420,27 @@ class Hg(VersionControl):
                     line.split("@@@")
                 cdate, ctime = date.split()[:2]
                 info = []
-                info.append(QApplication.translate(
+                info.append(QCoreApplication.translate(
                     "mercurial",
                     """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
                     """<tr><td><b>Changeset</b></td><td>{1}</td></tr>""")
                     .format(index, changeset))
                 if tags:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(tags.split())))
                 if bookmarks:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(bookmarks.split())))
                 if branches:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(branches.split())))
-                info.append(QApplication.translate(
+                info.append(QCoreApplication.translate(
                     "mercurial",
                     """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""
@@ -1473,7 +1474,7 @@ class Hg(VersionControl):
         else:
             url = ""
         
-        return QApplication.translate(
+        return QCoreApplication.translate(
             'mercurial',
             """<h3>Repository information</h3>\n"""
             """<p><table>\n"""
@@ -2062,44 +2063,44 @@ class Hg(VersionControl):
                 cdate, ctime = date.split()[:2]
                 info.append("""<p><table>""")
                 if mode == "heads":
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Head #{0}</b></td><td></td></tr>\n"""
                         .format(index, changeset)))
                 elif mode == "parents":
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
                         .format(index, changeset)))
                 elif mode == "tip":
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Tip</b></td><td></td></tr>\n"""))
-                info.append(QApplication.translate(
+                info.append(QCoreApplication.translate(
                     "mercurial",
                     """<tr><td><b>Changeset</b></td><td>{0}</td></tr>""")
                     .format(changeset))
                 if tags:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Tags</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(tags.split())))
                 if bookmarks:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(bookmarks.split())))
                 if branches:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Branches</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(branches.split())))
                 if parents:
-                    info.append(QApplication.translate(
+                    info.append(QCoreApplication.translate(
                         "mercurial",
                         """<tr><td><b>Parents</b></td><td>{0}</td></tr>""")
                         .format('<br/>'.join(parents.split())))
-                info.append(QApplication.translate(
+                info.append(QCoreApplication.translate(
                     "mercurial",
                     """<tr><td><b>Last author</b></td><td>{0}</td></tr>\n"""
                     """<tr><td><b>Committed date</b></td><td>{1}</td></tr>\n"""

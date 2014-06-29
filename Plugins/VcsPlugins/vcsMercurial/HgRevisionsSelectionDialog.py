@@ -9,8 +9,8 @@ Module implementing a dialog to enter the revisions for the hg diff command.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_HgRevisionsSelectionDialog import Ui_HgRevisionsSelectionDialog
 

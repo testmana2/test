@@ -16,7 +16,7 @@ try:  # Py3
 except ImportError:
     from itertools import izip_longest as zip_longest    # __IGNORE_WARNING__
 
-from PyQt4.QtGui import QApplication, QGraphicsTextItem
+from PyQt5.QtWidgets import QApplication, QGraphicsTextItem
 
 from E5Gui.E5ProgressDialog import E5ProgressDialog
 
@@ -202,7 +202,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         initlist = glob.glob(os.path.join(self.package, '__init__.*'))
         if len(initlist) == 0:
-            ct = QGraphicsTextItem(None, self.scene)
+            ct = QGraphicsTextItem(None)
+            self.scene.addItem(ct)
             ct.setHtml(
                 self.tr("The directory <b>'{0}'</b> is not a package.")
                     .format(self.package))
@@ -210,7 +211,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
         
         modules = self.__buildModulesDict()
         if not modules:
-            ct = QGraphicsTextItem(None, self.scene)
+            ct = QGraphicsTextItem(None)
+            self.scene.addItem(ct)
             ct.setHtml(
                 self.tr(
                     "The package <b>'{0}'</b> does not contain any modules.")
@@ -226,7 +228,8 @@ class PackageDiagramBuilder(UMLDiagramBuilder):
                 classesFound = True
                 self.__addLocalClass(cls, module.classes[cls], 0, 0)
         if not classesFound:
-            ct = QGraphicsTextItem(None, self.scene)
+            ct = QGraphicsTextItem(None)
+            self.scene.addItem(ct)
             ct.setHtml(
                 self.tr(
                     "The package <b>'{0}'</b> does not contain any classes.")

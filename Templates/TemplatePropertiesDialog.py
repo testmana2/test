@@ -9,8 +9,9 @@ Module implementing the templates properties dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QRegExp, Qt, pyqtSlot
-from PyQt4.QtGui import QDialog, QRegExpValidator
+from PyQt5.QtCore import QRegExp, Qt, pyqtSlot
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_TemplatePropertiesDialog import Ui_TemplatePropertiesDialog
 

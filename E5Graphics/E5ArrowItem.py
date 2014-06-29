@@ -11,9 +11,9 @@ from __future__ import unicode_literals
 
 import math
 
-from PyQt4.QtCore import QPointF, QRectF, QSizeF, QLineF, Qt
-from PyQt4.QtGui import QAbstractGraphicsShapeItem, QGraphicsItem, QStyle, \
-    QPen, QPolygonF
+from PyQt5.QtCore import QPointF, QRectF, QSizeF, QLineF, Qt
+from PyQt5.QtGui import QPen, QPolygonF
+from PyQt5.QtWidgets import QAbstractGraphicsShapeItem, QGraphicsItem, QStyle
 
 NormalArrow = 1
 WideArrow = 2

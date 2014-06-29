@@ -10,7 +10,7 @@ Module defining the different Python types and their display strings.
 from __future__ import unicode_literals
 
 try:
-    from PyQt4.QtCore import QT_TRANSLATE_NOOP
+    from PyQt5.QtCore import QT_TRANSLATE_NOOP
     
     # Variables type definition
     ConfigVarTypeDispStrings = [

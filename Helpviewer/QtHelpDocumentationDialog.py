@@ -9,9 +9,9 @@ Module implementing a dialog to manage the QtHelp documentation database.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QItemSelectionModel
-from PyQt4.QtHelp import QHelpEngineCore
+from PyQt5.QtCore import pyqtSlot, Qt, QItemSelectionModel
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtHelp import QHelpEngineCore
 
 from E5Gui import E5MessageBox, E5FileDialog
 

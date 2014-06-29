@@ -14,9 +14,6 @@ This script can be used via the commandline as well.
 
 from __future__ import unicode_literals
 try:  # Only for Py2
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass
@@ -269,7 +266,7 @@ def main():
         usage()
     
     if qtHelpCreation:
-        from PyQt4.QtCore import QCoreApplication
+        from PyQt5.QtCore import QCoreApplication
         app = QCoreApplication(sys.argv)    # __IGNORE_WARNING__
 
     input = output = 0

@@ -11,10 +11,11 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, \
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, QDateTime, QPoint, QFileInfo, \
     QTimer, QUrl
-from PyQt4.QtGui import QWidget, QListWidgetItem, QIcon, QPainter, QMenu, \
-    QApplication, QInputDialog, QLineEdit, QTextCursor, QDesktopServices
+from PyQt5.QtGui import QIcon, QPainter, QTextCursor, QDesktopServices
+from PyQt5.QtWidgets import QWidget, QListWidgetItem, QMenu, QApplication, \
+    QInputDialog, QLineEdit
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App

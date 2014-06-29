@@ -9,8 +9,8 @@ Module implementing a network reply delegate allowing to check redirects.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, QObject
-from PyQt4.QtNetwork import QNetworkRequest
+from PyQt5.QtCore import pyqtSignal, QObject
+from PyQt5.QtNetwork import QNetworkRequest
 
 
 class FollowRedirectReply(QObject):

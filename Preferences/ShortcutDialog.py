@@ -9,8 +9,9 @@ Module implementing a dialog for the configuration of a keyboard shortcut.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, QEvent, Qt
-from PyQt4.QtGui import QKeySequence, QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSignal, QEvent, Qt
+from PyQt5.QtGui import QKeySequence
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_ShortcutDialog import Ui_ShortcutDialog
 

@@ -11,8 +11,7 @@ from __future__ import unicode_literals
 
 import bisect
 
-from PyQt4.QtCore import Qt, QModelIndex, QDate
-from PyQt4.QtGui import QAbstractProxyModel
+from PyQt5.QtCore import Qt, QModelIndex, QDate, QAbstractProxyModel
 
 from .HistoryModel import HistoryModel
 
@@ -239,14 +238,16 @@ class HistoryTreeModel(QAbstractProxyModel):
             self.sourceModel().rowsInserted.connect(self.__sourceRowsInserted)
             self.sourceModel().rowsRemoved.connect(self.__sourceRowsRemoved)
         
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
     
     def __sourceReset(self):
         """
         Private slot to handle a reset of the source model.
         """
+        self.beginResetModel()
         self.__sourceRowCache = []
-        self.reset()
+        self.endResetModel()
     
     def __sourceRowsInserted(self, parent, start, end):
         """
@@ -258,8 +259,9 @@ class HistoryTreeModel(QAbstractProxyModel):
         """
         if not parent.isValid():
             if start != 0 or start != end:
+                self.beginResetModel()
                 self.__sourceRowCache = []
-                self.reset()
+                self.endResetModel()
                 return
             
             self.__sourceRowCache = []
@@ -339,8 +341,9 @@ class HistoryTreeModel(QAbstractProxyModel):
         @param end end row (integer)
         """
         if not self.__removingDown:
+            self.beginResetModel()
             self.__sourceRowCache = []
-            self.reset()
+            self.endResetModel()
             return
         
         if not parent.isValid():

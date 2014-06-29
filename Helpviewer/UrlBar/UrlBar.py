@@ -13,14 +13,15 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime, qVersion
-from PyQt4.QtGui import QColor, QPalette, QLinearGradient, QIcon, QDialog, \
-    QApplication
+from PyQt5.QtCore import pyqtSlot, Qt, QPointF, QUrl, QDateTime, qVersion
+from PyQt5.QtGui import QColor, QPalette, QLinearGradient, QIcon
+from PyQt5.QtWidgets import QDialog, QApplication
 try:
-    from PyQt4.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
+    from PyQt5.QtNetwork import QSslCertificate     # __IGNORE_EXCEPTION__
 except ImportError:
     QSslCertificate = None      # __IGNORE_WARNING__
-from PyQt4.QtWebKit import QWebSettings, QWebPage
+from PyQt5.QtWebKit import QWebSettings
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from E5Gui.E5LineEdit import E5LineEdit
 from E5Gui.E5LineEditButton import E5LineEditButton

@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QByteArray, QTimer
-from PyQt4.QtGui import QWizardPage, QMovie
+from PyQt5.QtCore import QByteArray, QTimer
+from PyQt5.QtGui import QMovie
+from PyQt5.QtWidgets import QWizardPage
 
 from . import SyncGlobals
 

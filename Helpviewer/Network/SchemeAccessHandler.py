@@ -9,7 +9,7 @@ Module implementing the base class for specific scheme access handlers.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject
+from PyQt5.QtCore import QObject
 
 
 class SchemeAccessHandler(QObject):

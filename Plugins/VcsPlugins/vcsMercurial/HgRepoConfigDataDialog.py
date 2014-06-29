@@ -7,8 +7,8 @@ of a repository configuration file (hgrc).
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QUrl
-from PyQt4.QtGui import QDialog, QLineEdit
+from PyQt5.QtCore import pyqtSlot, QUrl
+from PyQt5.QtWidgets import QDialog, QLineEdit
 
 from .Ui_HgRepoConfigDataDialog import Ui_HgRepoConfigDataDialog
 

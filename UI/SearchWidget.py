@@ -9,8 +9,8 @@ Module implementing the search box for the shell, terminal and log viewer.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt
-from PyQt4.QtGui import QWidget, QSpacerItem, QSizePolicy
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt
+from PyQt5.QtWidgets import QWidget, QSpacerItem, QSizePolicy
 
 from .Ui_SearchWidget import Ui_SearchWidget
 

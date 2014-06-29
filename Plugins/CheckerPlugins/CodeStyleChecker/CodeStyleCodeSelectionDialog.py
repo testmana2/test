@@ -9,7 +9,7 @@ Module implementing a dialog to select code style message codes.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog, QTreeWidgetItem
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem
 
 from .Ui_CodeStyleCodeSelectionDialog import Ui_CodeStyleCodeSelectionDialog
 

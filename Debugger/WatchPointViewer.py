@@ -9,9 +9,10 @@ Module implementing the watch expression viewer widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QModelIndex, qVersion
-from PyQt4.QtGui import QTreeView, QAbstractItemView, QMenu, \
-    QSortFilterProxyModel, QHeaderView, QItemSelectionModel, QDialog
+from PyQt5.QtCore import Qt, QModelIndex, qVersion, QItemSelectionModel, \
+    QSortFilterProxyModel
+from PyQt5.QtWidgets import QTreeView, QAbstractItemView, QMenu, QHeaderView, \
+    QDialog
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

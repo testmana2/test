@@ -9,9 +9,10 @@ Module implementing the Editor Styles configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QColor, QPalette, QColorDialog
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QColor, QPalette
+from PyQt5.QtWidgets import QColorDialog
+from PyQt5.Qsci import QsciScintilla
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorStylesPage import Ui_EditorStylesPage
@@ -31,8 +32,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.setupUi(self)
         self.setObjectName("EditorStylesPage")
         
-        from QScintilla.QsciScintillaCompat import (
-            QsciScintillaCompat, QSCINTILLA_VERSION)
+        from QScintilla.QsciScintillaCompat import QsciScintillaCompat, \
+            QSCINTILLA_VERSION
         self.foldStyles = [
             QsciScintilla.PlainFoldStyle,
             QsciScintilla.CircledFoldStyle,

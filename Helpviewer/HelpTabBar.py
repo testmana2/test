@@ -9,8 +9,8 @@ Module implementing a specialized tab bar for the web browser.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QPoint, QTimer, QEvent
-from PyQt4.QtGui import QFrame, QLabel
+from PyQt5.QtCore import Qt, QPoint, QTimer, QEvent
+from PyQt5.QtWidgets import QFrame, QLabel
 
 from E5Gui.E5TabWidget import E5WheelTabBar
 from E5Gui.E5PassivePopup import E5PassivePopup

@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QListWidgetItem, QItemSelectionModel, QDialog
+from PyQt5.QtCore import pyqtSlot, QItemSelectionModel
+from PyQt5.QtWidgets import QListWidgetItem, QDialog
 
 from .Ui_ShellHistoryDialog import Ui_ShellHistoryDialog
 

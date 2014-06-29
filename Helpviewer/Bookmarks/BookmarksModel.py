@@ -9,7 +9,7 @@ Module implementing the bookmark model class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, \
+from PyQt5.QtCore import Qt, QAbstractItemModel, QModelIndex, QUrl, \
     QByteArray, QDataStream, QIODevice, QBuffer, QMimeData
 
 import UI.PixmapCache

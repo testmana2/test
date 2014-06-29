@@ -9,8 +9,8 @@ Module implementing the Cooperation configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QRegExp
-from PyQt4.QtGui import QRegExpValidator, QValidator
+from PyQt5.QtCore import pyqtSlot, QRegExp
+from PyQt5.QtGui import QRegExpValidator, QValidator
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_CooperationPage import Ui_CooperationPage

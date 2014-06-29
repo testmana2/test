@@ -11,9 +11,9 @@ It was inspired by KLed.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QSize, QPoint
-from PyQt4.QtGui import QWidget, QColor, QRadialGradient, QPalette, QPainter, \
-    QBrush
+from PyQt5.QtCore import pyqtSignal, Qt, QSize, QPoint
+from PyQt5.QtGui import QColor, QRadialGradient, QPalette, QPainter, QBrush
+from PyQt5.QtWidgets import QWidget
 
 E5LedRectangular = 0
 E5LedCircular = 1
@@ -40,7 +40,7 @@ class E5Led(QWidget):
         
         self.__led_on = True
         self.__dark_factor = 300
-        self.__offcolor = color.dark(self.__dark_factor)
+        self.__offcolor = color.darker(self.__dark_factor)
         self.__led_color = color
         self.__framedLed = True
         self.__shape = shape
@@ -83,13 +83,13 @@ class E5Led(QWidget):
         wh = width / 2
         color = self.__led_on and self.__led_color or self.__offcolor
         gradient = QRadialGradient(wh, wh, wh, 0.8 * wh, 0.8 * wh)
-        gradient.setColorAt(0.0, color.light(200))
+        gradient.setColorAt(0.0, color.lighter(200))
         gradient.setColorAt(0.6, color)
         if self.__framedLed:
-            gradient.setColorAt(0.9, color.dark())
+            gradient.setColorAt(0.9, color.darker())
             gradient.setColorAt(1.0, self.palette().color(QPalette.Dark))
         else:
-            gradient.setColorAt(1.0, color.dark())
+            gradient.setColorAt(1.0, color.darker())
         
         # now do the drawing
         paint = QPainter(self)
@@ -114,13 +114,13 @@ class E5Led(QWidget):
         painter.setRenderHint(QPainter.Antialiasing, True)
         color = self.__led_on and self.__led_color or self.__offcolor
 
-        painter.setPen(color.light(200))
+        painter.setPen(color.lighter(200))
         painter.drawLine(left, 0, left, height - 1)
         painter.drawLine(left + 1, 0, right - 1, 0)
         if self.__framedLed:
             painter.setPen(self.palette().color(QPalette.Dark))
         else:
-            painter.setPen(color.dark())
+            painter.setPen(color.darker())
         painter.drawLine(left + 1, height - 1, right - 1, height - 1)
         painter.drawLine(right - 1, 1, right - 1, height - 1)
         painter.fillRect(left + 1, 1, right - 2, height - 2, QBrush(color))
@@ -196,7 +196,7 @@ class E5Led(QWidget):
         """
         if self.__led_color != color:
             self.__led_color = color
-            self.__offcolor = color.dark(self.__dark_factor)
+            self.__offcolor = color.darker(self.__dark_factor)
             self.update()
         
     def setDarkFactor(self, darkfactor):
@@ -207,7 +207,7 @@ class E5Led(QWidget):
         """
         if self.__dark_factor != darkfactor:
             self.__dark_factor = darkfactor
-            self.__offcolor = self.__led_color.dark(darkfactor)
+            self.__offcolor = self.__led_color.darker(darkfactor)
             self.update()
         
     def darkFactor(self):

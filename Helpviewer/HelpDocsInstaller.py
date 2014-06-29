@@ -10,9 +10,9 @@ documentation database.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, QThread, Qt, QMutex, QDateTime, QDir, \
+from PyQt5.QtCore import pyqtSignal, QThread, Qt, QMutex, QDateTime, QDir, \
     QLibraryInfo, QFileInfo
-from PyQt4.QtHelp import QHelpEngineCore
+from PyQt5.QtHelp import QHelpEngineCore
 
 from eric5config import getConfig
 

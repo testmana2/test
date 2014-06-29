@@ -6,8 +6,8 @@ Module implementing the Interface configuration page (variant for web browser).
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QStyleFactory
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QStyleFactory
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog

@@ -11,11 +11,12 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
+from PyQt5.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
     QCoreApplication, QXmlStreamReader
-from PyQt4.QtGui import QApplication
-from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings, QWebPage
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtNetwork import QNetworkRequest
+from PyQt5.QtWebKit import QWebSettings
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from E5Gui import E5MessageBox
 from E5Gui.E5ProgressDialog import E5ProgressDialog

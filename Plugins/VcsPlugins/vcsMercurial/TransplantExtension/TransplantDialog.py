@@ -9,8 +9,9 @@ Module implementing a dialog to enter the data for a transplant session.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QValidator
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QValidator
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_TransplantDialog import Ui_TransplantDialog
 

@@ -11,7 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject, QTextCodec, QProcess, QTimer
+from PyQt5.QtCore import QObject, QTextCodec, QProcess, QProcessEnvironment, \
+    QTimer
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -123,10 +124,10 @@ class DebuggerInterfaceRuby(QObject):
         """
         proc = QProcess()
         if environment is not None:
-            env = []
+            env = QProcessEnvironment()
             for key, value in list(environment.items()):
-                env.append("{0}={1}".format(key, value))
-            proc.setEnvironment(env)
+                env.insert(key, value)
+            proc.setProcessEnvironment(env)
         args = []
         for arg in arguments:
             args.append(arg)

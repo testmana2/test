@@ -10,8 +10,9 @@ don't fit the other categories.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QModelIndex, pyqtSignal, QUrl
-from PyQt4.QtGui import QDesktopServices, QDialog, QMenu
+from PyQt5.QtCore import QModelIndex, pyqtSignal, QUrl
+from PyQt5.QtGui import QDesktopServices
+from PyQt5.QtWidgets import QDialog, QMenu
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \

@@ -9,8 +9,8 @@ Module implementing a dialog to configure the preferred languages.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, QByteArray, QLocale
-from PyQt4.QtGui import QDialog, QStringListModel
+from PyQt5.QtCore import pyqtSlot, QByteArray, QLocale, QStringListModel
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_HelpLanguagesDialog import Ui_HelpLanguagesDialog
 

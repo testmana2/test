@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 import random
 import base64
 
-from PyQt4.QtCore import QCoreApplication
-from PyQt4.QtGui import QLineEdit, QInputDialog
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QLineEdit, QInputDialog
 
 from E5Gui import E5MessageBox
 
@@ -317,7 +317,7 @@ def dataDecrypt(edata, password, keyLength=32):
     
 if __name__ == "__main__":
     import sys
-    from PyQt4.QtGui import QApplication
+    from PyQt5.QtWidgets import QApplication
     
     app = QApplication([])
     

@@ -14,9 +14,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QCursor, QApplication
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QApplication
+from PyQt5.Qsci import QsciScintilla
 
 from E5Gui import E5MessageBox
 

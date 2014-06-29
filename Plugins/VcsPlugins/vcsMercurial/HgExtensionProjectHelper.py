@@ -9,7 +9,7 @@ Module implementing the project helper base for Mercurial extension interfaces.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject
+from PyQt5.QtCore import QObject
 
 
 class HgExtensionProjectHelper(QObject):

@@ -9,7 +9,7 @@ Module implementing the multi project properties dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_PropertiesDialog import Ui_PropertiesDialog
 

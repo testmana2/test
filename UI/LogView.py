@@ -9,9 +9,10 @@ Module implementing the log viewer widget and the log widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, pyqtSignal
-from PyQt4.QtGui import QTextEdit, QBrush, QApplication, QMenu, QTextCursor, \
-    QWidget, QHBoxLayout, QTextDocument
+from PyQt5.QtCore import Qt, pyqtSignal
+from PyQt5.QtGui import QBrush, QTextCursor, QTextDocument
+from PyQt5.QtWidgets import QTextEdit, QApplication, QMenu, QWidget, \
+    QHBoxLayout
 
 from E5Gui.E5Application import e5App
 

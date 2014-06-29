@@ -9,7 +9,7 @@ Module implementing a dialog to show the data of a response or reply header.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_E5NetworkHeaderDetailsDialog import Ui_E5NetworkHeaderDetailsDialog
 

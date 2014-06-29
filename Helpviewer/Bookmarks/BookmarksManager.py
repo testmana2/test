@@ -11,9 +11,10 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, \
-    QIODevice, QXmlStreamReader, QDate, QDateTime, QFileInfo, QUrl
-from PyQt4.QtGui import QUndoStack, QUndoCommand, QApplication, QDialog
+from PyQt5.QtCore import pyqtSignal, Qt, QT_TRANSLATE_NOOP, QObject, QFile, \
+    QIODevice, QXmlStreamReader, QDate, QDateTime, QFileInfo, QUrl, \
+    QCoreApplication
+from PyQt5.QtWidgets import QUndoStack, QUndoCommand, QDialog
 
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -531,7 +532,7 @@ class RemoveBookmarksCommand(QUndoCommand):
         @param row row number of bookmark (integer)
         """
         super(RemoveBookmarksCommand, self).__init__(
-            QApplication.translate("BookmarksManager", "Remove Bookmark"))
+            QCoreApplication.translate("BookmarksManager", "Remove Bookmark"))
         
         self._row = row
         self._bookmarksManager = bookmarksManager
@@ -572,7 +573,7 @@ class InsertBookmarksCommand(RemoveBookmarksCommand):
         @param row row number of bookmark (integer)
         """
         RemoveBookmarksCommand.__init__(self, bookmarksManager, parent, row)
-        self.setText(QApplication.translate(
+        self.setText(QCoreApplication.translate(
             "BookmarksManager", "Insert Bookmark"))
         self._node = node
     
@@ -613,11 +614,11 @@ class ChangeBookmarkCommand(QUndoCommand):
         
         if self._title:
             self._oldValue = self._node.title
-            self.setText(QApplication.translate(
+            self.setText(QCoreApplication.translate(
                 "BookmarksManager", "Name Change"))
         else:
             self._oldValue = self._node.url
-            self.setText(QApplication.translate(
+            self.setText(QCoreApplication.translate(
                 "BookmarksManager", "Address Change"))
     
     def undo(self):

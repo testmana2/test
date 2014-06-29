@@ -11,8 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QObject, QCoreApplication
 
 from E5Gui.E5Application import e5App
 
@@ -56,7 +55,7 @@ def exeDisplayData():
     
     data = {
         "programEntry": True,
-        "header": QApplication.translate(
+        "header": QCoreApplication.translate(
             "VcsMercurialPlugin", "Version Control - Mercurial"),
         "exe": exe,
         "versionCommand": 'version',
@@ -97,7 +96,7 @@ def displayString():
     if Utilities.isWindowsPlatform():
         exe += '.exe'
     if Utilities.isinpath(exe):
-        return QApplication.translate('VcsMercurialPlugin', 'Mercurial')
+        return QCoreApplication.translate('VcsMercurialPlugin', 'Mercurial')
     else:
         return ""
 
@@ -129,7 +128,7 @@ def getConfigData():
     """
     return {
         "zzz_mercurialPage":
-        [QApplication.translate("VcsMercurialPlugin", "Mercurial"),
+        [QCoreApplication.translate("VcsMercurialPlugin", "Mercurial"),
             os.path.join("VcsPlugins", "vcsMercurial", "icons",
                          "preferences-mercurial.png"),
             createConfigurationPage, "vcsPage", None],

@@ -9,8 +9,8 @@ Module implementing specialized tree views.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QTreeView
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QTreeView
 
 
 class E5TreeView(QTreeView):

@@ -9,8 +9,8 @@ Module implementing the Subversion command dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog

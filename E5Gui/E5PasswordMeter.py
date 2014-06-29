@@ -9,7 +9,7 @@ Module implementing a custom widget indicating the strength of a password.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QProgressBar
+from PyQt5.QtWidgets import QProgressBar
 
 from Utilities.PasswordChecker import PasswordChecker
 
@@ -94,7 +94,7 @@ class E5PasswordMeter(QProgressBar):
 
 if __name__ == "__main__":
     import sys
-    from PyQt4.QtGui import QApplication
+    from PyQt5.QtWidgets import QApplication
     
     app = QApplication(sys.argv)
     meter = E5PasswordMeter()

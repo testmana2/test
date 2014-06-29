@@ -9,7 +9,7 @@ Module implementing a horizontal and a vertical toolbox class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QToolBox, QTabWidget
+from PyQt5.QtWidgets import QToolBox, QTabWidget
 
 from .E5TabWidget import E5TabWidget
 

@@ -9,7 +9,7 @@ Module implementing the web plug-in factory.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtWebKit import QWebPluginFactory
+from PyQt5.QtWebKit import QWebPluginFactory
 
 
 class WebPluginFactory(QWebPluginFactory):

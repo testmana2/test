@@ -108,8 +108,9 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
         for line in codestring.splitlines():
             if any(line.startswith(c * 7) for c in "<>=|"):
                 return [{'error':
-                    (file_enc, lineindex, 0, "", "VCS conflict marker found")
-                }]
+                         (file_enc, lineindex, 0, "",
+                          "VCS conflict marker found")
+                         }]
             lineindex += 1
         
         if filename.endswith('.ptl'):

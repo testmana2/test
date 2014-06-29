@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, QDir, QFile
-from PyQt4.QtGui import QDialog
+from PyQt5.QtCore import pyqtSlot, QDir, QFile
+from PyQt5.QtWidgets import QDialog
 
 from E5Gui import E5MessageBox
 

@@ -24,8 +24,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal
-from PyQt4.QtGui import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, \
+from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLineEdit, \
     QSizePolicy, QPushButton, QComboBox, QLabel, QTreeWidget, \
     QTreeWidgetItem, QHeaderView
 

@@ -9,7 +9,7 @@ Module implementing the synchronization data wizard page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QWizardPage
+from PyQt5.QtWidgets import QWizardPage
 
 from .Ui_SyncDataPage import Ui_SyncDataPage
 

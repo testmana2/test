@@ -13,10 +13,10 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import Qt, QByteArray, QTimer, QDir, QIODevice, QUrl, QBuffer
-from PyQt4.QtGui import QPixmap
-from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings
+from PyQt5.QtCore import Qt, QByteArray, QTimer, QDir, QIODevice, QUrl, QBuffer
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtNetwork import QNetworkReply, QNetworkRequest
+from PyQt5.QtWebKit import QWebSettings
 
 import UI.PixmapCache
 

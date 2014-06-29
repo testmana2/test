@@ -9,8 +9,9 @@ Module implementing a configuration dialog for the bookmarked files menu.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QFileInfo, Qt, pyqtSlot
-from PyQt4.QtGui import QListWidgetItem, QColor, QDialog
+from PyQt5.QtCore import QFileInfo, Qt, pyqtSlot
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QListWidgetItem, QDialog
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog
@@ -43,7 +44,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         for bookmark in self.bookmarks:
             itm = QListWidgetItem(bookmark, self.filesList)
             if not QFileInfo(bookmark).exists():
-                itm.setBackgroundColor(QColor(Qt.red))
+                itm.setBackground(QColor(Qt.red))
             
         if len(self.bookmarks):
             self.filesList.setCurrentRow(0)
@@ -91,7 +92,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
             bookmark = Utilities.toNativeSeparators(bookmark)
             itm = QListWidgetItem(bookmark, self.filesList)
             if not QFileInfo(bookmark).exists():
-                itm.setBackgroundColor(QColor(Qt.red))
+                itm.setBackground(QColor(Qt.red))
             self.fileEdit.clear()
             self.bookmarks.append(bookmark)
         row = self.filesList.currentRow()
@@ -109,9 +110,9 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         itm = self.filesList.item(row)
         itm.setText(bookmark)
         if not QFileInfo(bookmark).exists():
-            itm.setBackgroundColor(QColor(Qt.red))
+            itm.setBackground(QColor(Qt.red))
         else:
-            itm.setBackgroundColor(QColor())
+            itm.setBackground(QColor())
         
     @pyqtSlot()
     def on_deleteButton_clicked(self):

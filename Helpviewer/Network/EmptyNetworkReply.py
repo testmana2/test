@@ -10,8 +10,8 @@ Module implementing a network reply class for an empty reply
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QTimer
-from PyQt4.QtNetwork import QNetworkReply, QNetworkAccessManager
+from PyQt5.QtCore import QTimer
+from PyQt5.QtNetwork import QNetworkReply, QNetworkAccessManager
 
 
 class EmptyNetworkReply(QNetworkReply):

@@ -9,8 +9,9 @@ Module implementing a window for showing the QtHelp index.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QUrl, QEvent
-from PyQt4.QtGui import QWidget, QVBoxLayout, QLabel, QLineEdit, QMenu, QDialog
+from PyQt5.QtCore import pyqtSignal, Qt, QUrl, QEvent
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QLineEdit, QMenu, \
+    QDialog
 
 
 class HelpIndexWidget(QWidget):

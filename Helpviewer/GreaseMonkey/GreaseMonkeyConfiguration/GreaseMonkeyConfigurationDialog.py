@@ -9,8 +9,9 @@ Module implementing the GreaseMonkey scripts configuration dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt, QUrl
-from PyQt4.QtGui import QDialog, QListWidgetItem, QDesktopServices
+from PyQt5.QtCore import pyqtSlot, Qt, QUrl
+from PyQt5.QtGui import QDesktopServices
+from PyQt5.QtWidgets import QDialog, QListWidgetItem
 
 from E5Gui import E5MessageBox
 

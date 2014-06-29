@@ -24,12 +24,13 @@ import shutil
 import json
 import sys
 
-from PyQt4.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, \
+from PyQt5.QtCore import QDir, QPoint, QLocale, QSettings, QFileInfo, \
     QCoreApplication, QByteArray, QSize, QUrl, Qt, QLibraryInfo
-from PyQt4.QtGui import QColor, QFont, QInputDialog, QPalette, QApplication
-from PyQt4.QtNetwork import QNetworkRequest
-from PyQt4.QtWebKit import QWebSettings
-from PyQt4.Qsci import QsciScintilla
+from PyQt5.QtGui import QColor, QFont, QPalette
+from PyQt5.QtWidgets import QInputDialog, QApplication
+from PyQt5.QtNetwork import QNetworkRequest
+from PyQt5.QtWebKit import QWebSettings
+from PyQt5.Qsci import QsciScintilla
 
 from E5Gui import E5FileDialog
 
@@ -37,7 +38,7 @@ from E5Network.E5Ftp import E5FtpProxyType
 
 from Globals import settingsNameOrganization, settingsNameGlobal, \
     settingsNameRecent, isWindowsPlatform, findPythonInterpreters, \
-    getPyQt4ModulesDirectory
+    getPyQt5ModulesDirectory
 
 from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
@@ -312,9 +313,9 @@ class Prefs(object):
         "SpellCheckingPersonalExcludeList": "",
         
         "DefaultEncoding": "utf-8",
-        "DefaultOpenFilter": QApplication.translate(
+        "DefaultOpenFilter": QCoreApplication.translate(
             'Lexers', 'Python Files (*.py *.py2 *.py3)'),
-        "DefaultSaveFilter": QApplication.translate(
+        "DefaultSaveFilter": QCoreApplication.translate(
             'Lexers', "Python3 Files (*.py)"),
         "AdditionalOpenFilters": [],
         "AdditionalSaveFilters": [],
@@ -679,7 +680,7 @@ class Prefs(object):
         "QtDocDir": "",
         "Qt4DocDir": "",
         "Qt5DocDir": "",
-        "PyQt4DocDir": "",
+        "PyQt5DocDir": "",
         "PyQt5DocDir": "",
         "PySideDocDir": "",
         "SingleHelpWindow": True,
@@ -2368,7 +2369,7 @@ def getQt4TranslationsDir(prefClass=Prefs):
     if s == "":
         s = QLibraryInfo.location(QLibraryInfo.TranslationsPath)
     if s == "" and isWindowsPlatform():
-        transPath = os.path.join(getPyQt4ModulesDirectory(), "translations")
+        transPath = os.path.join(getPyQt5ModulesDirectory(), "translations")
         if os.path.exists(transPath):
             s = transPath
     return s

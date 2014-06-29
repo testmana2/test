@@ -9,11 +9,11 @@ Module implementing a dialog to show and edit all certificates.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, \
+from PyQt5.QtCore import pyqtSlot, Qt, QByteArray, QFile, QFileInfo, \
     QIODevice, qVersion
-from PyQt4.QtGui import QDialog, QTreeWidgetItem
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem
 try:
-    from PyQt4.QtNetwork import QSslCertificate, QSslSocket, \
+    from PyQt5.QtNetwork import QSslCertificate, QSslSocket, \
         QSslConfiguration, QSsl
 except ImportError:
     pass

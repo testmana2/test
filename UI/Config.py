@@ -7,6 +7,6 @@
 Module defining common data to be used by all windows..
 """
 
-from PyQt4.QtCore import QSize
+from PyQt5.QtCore import QSize
 
 ToolBarIconSize = QSize(20, 18)

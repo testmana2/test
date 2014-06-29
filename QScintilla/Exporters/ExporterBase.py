@@ -9,8 +9,7 @@ Module implementing the exporter base class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QFileInfo, QObject
-from PyQt4.QtGui import QApplication
+from PyQt5.QtCore import QFileInfo, QObject, QCoreApplication
 
 from E5Gui import E5MessageBox, E5FileDialog
 
@@ -41,7 +40,7 @@ class ExporterBase(QObject):
         """
         filter_ = filter
         filter_ += ";;"
-        filter_ += QApplication.translate('Exporter', "All Files (*)")
+        filter_ += QCoreApplication.translate('Exporter', "All Files (*)")
         fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             self.editor,
             self.tr("Export source"),

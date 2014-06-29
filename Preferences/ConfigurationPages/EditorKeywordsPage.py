@@ -9,7 +9,7 @@ Module implementing the editor highlighter keywords configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorKeywordsPage import Ui_EditorKeywordsPage

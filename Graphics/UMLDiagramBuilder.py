@@ -9,7 +9,7 @@ Module implementing the UML diagram builder base class.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QObject
+from PyQt5.QtCore import QObject
 
 
 class UMLDiagramBuilder(QObject):

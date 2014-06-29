@@ -9,9 +9,9 @@ Module implementing a widget to show numbers in different formats.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel, \
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QAbstractTableModel, \
     qVersion
-from PyQt4.QtGui import QWidget, QHeaderView
+from PyQt5.QtWidgets import QWidget, QHeaderView
 
 from E5Gui.E5Application import e5App
 
@@ -98,8 +98,9 @@ class BinaryModel(QAbstractTableModel):
         
         @param bits number of bits to show (integer)
         """
+        self.beginResetModel()
         self.__bits = bits
-        self.reset()
+        self.endResetModel()
     
     def setValue(self, value):
         """
@@ -107,8 +108,9 @@ class BinaryModel(QAbstractTableModel):
         
         @param value value to show (integer)
         """
+        self.beginResetModel()
         self.__value = value
-        self.reset()
+        self.endResetModel()
     
     def setBitsAndValue(self, bits, value):
         """
@@ -119,7 +121,8 @@ class BinaryModel(QAbstractTableModel):
         """
         self.__bits = bits
         self.__value = value
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
     
     def getValue(self):
         """
@@ -202,7 +205,7 @@ class NumbersWidget(QWidget, Ui_NumbersWidget):
             self.binTable.horizontalHeader().setSectionResizeMode(
                 QHeaderView.ResizeToContents)
         else:
-            self.binTable.horizontalHeader().setResizeMode(
+            self.binTable.horizontalHeader().setSectionResizeMode(
                 QHeaderView.ResizeToContents)
         self.__model.setBitsAndValue(self.__bytes * 8, self.__input)
         self.__model.dataChanged.connect(self.__binModelDataChanged)

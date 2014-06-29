@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import Qt, pyqtSlot, qVersion
-from PyQt4.QtGui import QHeaderView, QTreeWidgetItem, QDialog
+from PyQt5.QtCore import Qt, pyqtSlot, qVersion
+from PyQt5.QtWidgets import QHeaderView, QTreeWidgetItem, QDialog
 
 from .Ui_LexerAssociationDialog import Ui_LexerAssociationDialog
 

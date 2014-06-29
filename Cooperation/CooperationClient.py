@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import collections
 
-from PyQt4.QtCore import QObject, pyqtSignal, QProcess, QRegExp
-from PyQt4.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket, \
+from PyQt5.QtCore import QObject, pyqtSignal, QProcess, QRegExp
+from PyQt5.QtNetwork import QHostInfo, QHostAddress, QAbstractSocket, \
     QNetworkInterface
 
 from .CooperationServer import CooperationServer

@@ -9,8 +9,8 @@ Module implementing a SSL error handler.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import qVersion, QObject, QByteArray
-from PyQt4.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket, \
+from PyQt5.QtCore import qVersion, QObject, QByteArray
+from PyQt5.QtNetwork import QSslCertificate, QSslConfiguration, QSslSocket, \
     QSslError, QSsl
 
 from E5Gui import E5MessageBox

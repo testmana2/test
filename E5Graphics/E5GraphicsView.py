@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import sys
 
-from PyQt4.QtCore import pyqtSignal, QRectF, QSize, QSizeF, Qt
-from PyQt4.QtGui import QGraphicsView, QBrush, QPainter, QPixmap, QFont, QColor
+from PyQt5.QtCore import pyqtSignal, QRectF, QSize, QSizeF, Qt
+from PyQt5.QtGui import QBrush, QPainter, QPixmap, QFont, QColor
+from PyQt5.QtWidgets import QGraphicsView
 
 import Preferences
 
@@ -260,7 +261,7 @@ class E5GraphicsView(QGraphicsView):
             paintDevice = QPixmap(int(rect.width()), int(rect.height()))
             paintDevice.fill(self.backgroundBrush().color())
         else:
-            from PyQt4.QtSvg import QSvgGenerator
+            from PyQt5.QtSvg import QSvgGenerator
             paintDevice = QSvgGenerator()
             paintDevice.setResolution(100)  # 100 dpi
             paintDevice.setSize(QSize(int(rect.width()), int(rect.height())))

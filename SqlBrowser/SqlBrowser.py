@@ -9,9 +9,10 @@ Module implementing the SQL Browser main window.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QTimer, QUrl
-from PyQt4.QtGui import QKeySequence, qApp
-from PyQt4.QtSql import QSqlError, QSqlDatabase
+from PyQt5.QtCore import QTimer, QUrl
+from PyQt5.QtGui import QKeySequence
+from PyQt5.QtWidgets import qApp
+from PyQt5.QtSql import QSqlError, QSqlDatabase
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox

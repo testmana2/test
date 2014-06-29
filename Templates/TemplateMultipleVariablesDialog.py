@@ -9,8 +9,8 @@ Module implementing a dialog for entering multiple template variables.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QSize, Qt
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtWidgets import QSizePolicy, QSpacerItem, QWidget, QHBoxLayout, \
     QLineEdit, QPushButton, QTextEdit, QDialog, QScrollArea, QFrame, \
     QGridLayout, QVBoxLayout, QLabel
 

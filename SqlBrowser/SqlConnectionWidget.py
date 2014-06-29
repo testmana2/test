@@ -9,10 +9,10 @@ Module implementing a widget showing the SQL connections.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, qVersion
-from PyQt4.QtGui import QWidget, QHeaderView, QTreeWidget, QVBoxLayout, \
+from PyQt5.QtCore import pyqtSignal, Qt, qVersion
+from PyQt5.QtWidgets import QWidget, QHeaderView, QTreeWidget, QVBoxLayout, \
     QTreeWidgetItem, QAction
-from PyQt4.QtSql import QSqlDatabase
+from PyQt5.QtSql import QSqlDatabase
 
 
 class SqlConnectionWidget(QWidget):

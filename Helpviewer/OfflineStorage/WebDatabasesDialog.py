@@ -9,8 +9,9 @@ Module implementing a dialog to show all web databases.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QDialog, QFontMetrics
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QFontMetrics
+from PyQt5.QtWidgets import QDialog
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 

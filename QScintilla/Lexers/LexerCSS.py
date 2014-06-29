@@ -9,7 +9,7 @@ Module implementing a CSS lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerCSS
+from PyQt5.Qsci import QsciLexerCSS
 
 from .Lexer import Lexer
 import Preferences

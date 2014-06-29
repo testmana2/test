@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import os.path
 
-from PyQt4.QtGui import QListWidgetItem, QDialog, QIcon
-from PyQt4.QtCore import QDir
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QListWidgetItem, QDialog
+from PyQt5.QtCore import QDir
 
 from .Ui_IconsPreviewDialog import Ui_IconsPreviewDialog
 

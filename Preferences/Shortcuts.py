@@ -9,8 +9,8 @@ Module implementing functions dealing with keyboard shortcuts.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QFile, QIODevice
-from PyQt4.QtGui import QKeySequence, QApplication
+from PyQt5.QtCore import QFile, QIODevice, QCoreApplication
+from PyQt5.QtGui import QKeySequence
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -202,8 +202,9 @@ def exportShortcuts(fn):
     else:
         E5MessageBox.critical(
             None,
-            QApplication.translate("Shortcuts", "Export Keyboard Shortcuts"),
-            QApplication.translate(
+            QCoreApplication.translate(
+                "Shortcuts", "Export Keyboard Shortcuts"),
+            QCoreApplication.translate(
                 "Shortcuts",
                 "<p>The keyboard shortcuts could not be written to file"
                 " <b>{0}</b>.</p>")
@@ -234,8 +235,9 @@ def importShortcuts(fn):
     else:
         E5MessageBox.critical(
             None,
-            QApplication.translate("Shortcuts", "Import Keyboard Shortcuts"),
-            QApplication.translate(
+            QCoreApplication.translate(
+                "Shortcuts", "Import Keyboard Shortcuts"),
+            QCoreApplication.translate(
                 "Shortcuts",
                 "<p>The keyboard shortcuts could not be read from file"
                 " <b>{0}</b>.</p>")

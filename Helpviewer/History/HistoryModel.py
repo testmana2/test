@@ -9,7 +9,7 @@ Module implementing the history model.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
+from PyQt5.QtCore import Qt, QAbstractTableModel, QModelIndex, QUrl
 
 import Helpviewer.HelpWindow
 
@@ -51,7 +51,8 @@ class HistoryModel(QAbstractTableModel):
         """
         Public slot to reset the model.
         """
-        self.reset()
+        self.beginResetModel()
+        self.endResetModel()
     
     def entryAdded(self):
         """

@@ -9,7 +9,7 @@ Module implementing a Octave lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerOctave
+from PyQt5.Qsci import QsciLexerOctave
 
 from .Lexer import Lexer
 

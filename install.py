@@ -13,10 +13,6 @@ from __future__ import unicode_literals
 from __future__ import print_function
 try:
     import cStringIO as io
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
-    sip.setapi('QTextStream', 2)
 except (ImportError):
     import io    # __IGNORE_WARNING__
 
@@ -55,25 +51,25 @@ macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
 # Define blacklisted versions of the prerequisites
 BlackLists = {
     "sip": ["4.11", "4.12.3"],
-    "PyQt4": ["4.7.5"],
+    "PyQt5": ["4.7.5"],
     "QScintilla2": [],
 }
 PlatformsBlackLists = {
     "windows": {
         "sip": [],
-        "PyQt4": ["4.9.2", "4.9.3"],
+        "PyQt5": ["4.9.2", "4.9.3"],
         "QScintilla2": [],
     },
     
     "linux": {
         "sip": [],
-        "PyQt4": [],
+        "PyQt5": [],
         "QScintilla2": [],
     },
     
     "mac": {
         "sip": [],
-        "PyQt4": ["4.9.2", "4.9.3"],
+        "PyQt5": ["4.9.2", "4.9.3"],
         "QScintilla2": [],
     },
 }
@@ -186,13 +182,13 @@ def initGlobals():
     modDir = distutils.sysconfig.get_python_lib(True)
     pyModDir = modDir
     
-    pyqtDataDir = os.path.join(modDir, "PyQt4")
+    pyqtDataDir = os.path.join(modDir, "PyQt5")
     if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
         # it's the installer
         qtDataDir = pyqtDataDir
     else:
         try:
-            from PyQt4.QtCore import QLibraryInfo
+            from PyQt5.QtCore import QLibraryInfo
             qtDataDir = QLibraryInfo.location(QLibraryInfo.DataPath)
         except ImportError:
             qtDataDir = None
@@ -944,25 +940,26 @@ def doDependancyChecks():
         exit(5)
     
     try:
-        from PyQt4.QtCore import qVersion
+        from PyQt5.QtCore import qVersion
     except ImportError as msg:
-        print('Sorry, please install PyQt4.')
+        print('Sorry, please install PyQt5.')
         print('Error: {0}'.format(msg))
         exit(1)
-    print("Found PyQt4")
+    print("Found PyQt5")
     
     try:
-        from PyQt4 import Qsci      # __IGNORE_WARNING__
+        from PyQt5 import Qsci      # __IGNORE_WARNING__
+
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")
-        print("its PyQt4 wrapper.")
+        print("its PyQt5 wrapper.")
         print('Error: {0}'.format(msg))
         exit(1)
     print("Found QScintilla2")
     
     for impModule in [
-        "PyQt4.QtGui", "PyQt4.QtNetwork", "PyQt4.QtSql",
-        "PyQt4.QtSvg", "PyQt4.QtWebKit",
+        "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt5.QtSql",
+        "PyQt5.QtSvg", "PyQt5.QtWebKit",
     ]:
         name = impModule.split(".")[1]
         modulesOK = True
@@ -1021,7 +1018,7 @@ def doDependancyChecks():
         pass
     
     # check version of PyQt
-    from PyQt4.QtCore import PYQT_VERSION_STR
+    from PyQt5.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
     # always assume, that snapshots are new enough
     if "snapshot" not in pyqtVersion:
@@ -1036,16 +1033,16 @@ def doDependancyChecks():
                   ' a recent snapshot release.')
             exit(4)
         # check for blacklisted versions
-        for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
+        for vers in BlackLists["PyQt5"] + PlatformBlackLists["PyQt5"]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt4 version {0} is not compatible with eric5.'
+                print('Sorry, PyQt5 version {0} is not compatible with eric5.'
                       .format(vers))
                 print('Please install another version.')
                 exit(4)
     print("PyQt Version: ", pyqtVersion)
     
     # check version of QScintilla
-    from PyQt4.Qsci import QSCINTILLA_VERSION_STR
+    from PyQt5.Qsci import QSCINTILLA_VERSION_STR
     scintillaVersion = QSCINTILLA_VERSION_STR
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
@@ -1079,9 +1076,9 @@ def compileUiFiles():
     """                                                 # __IGNORE_WARNING__
     global sourceDir
     try:
-        from PyQt4.uic import compileUiDir
+        from PyQt5.uic import compileUiDir
     except ImportError:
-        from PyQt4.uic import compileUi
+        from PyQt5.uic import compileUi
         
         def compileUiDir(dir, recurse=False,            # __IGNORE_WARNING__
                          map=None, **compileUi_args):
@@ -1090,7 +1087,7 @@ def compileUiFiles():
             directory tree.
             
             Note: This function is a modified version of the one found in
-            PyQt4.
+            PyQt5.
 
             @param dir Name of the directory to scan for files whose name ends
                 with '.ui'. By default the generated Python module is created

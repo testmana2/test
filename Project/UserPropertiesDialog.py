@@ -9,7 +9,7 @@ Module implementing the user specific project properties dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from E5Gui.E5Application import e5App
 

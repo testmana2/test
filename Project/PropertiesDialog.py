@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QDir, pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox
+from PyQt5.QtCore import QDir, pyqtSlot
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter

@@ -12,9 +12,9 @@ from __future__ import unicode_literals
 import os
 import time
 
-from PyQt4.QtCore import QFileInfo, QEvent, pyqtSlot
-from PyQt4.QtGui import QWidget, QColor, QBrush, QApplication, QTextCursor, \
-    QDialogButtonBox
+from PyQt5.QtCore import QFileInfo, QEvent, pyqtSlot
+from PyQt5.QtGui import QColor, QBrush, QTextCursor
+from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog

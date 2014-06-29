@@ -14,18 +14,21 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
     QUrl, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, \
     QPoint, QByteArray, qVersion
-from PyQt4.QtGui import qApp, QDesktopServices, QStyle, QMenu, QApplication, \
-    QInputDialog, QLineEdit, QClipboard, QMouseEvent, QLabel, QToolTip, \
-    QColor, QPalette, QFrame, QPrinter, QPrintDialog, QDialog
-from PyQt4.QtWebKit import QWebView, QWebPage, QWebSettings
+from PyQt5.QtGui import QDesktopServices, QClipboard, QMouseEvent, QColor, \
+    QPalette
+from PyQt5.QtWidgets import qApp, QStyle, QMenu, QApplication, QInputDialog, \
+    QLineEdit, QLabel, QToolTip, QFrame, QDialog
+from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
+from PyQt5.QtWebKit import QWebSettings
+from PyQt5.QtWebKitWidgets import QWebView, QWebPage
 try:
-    from PyQt4.QtWebKit import QWebElement
+    from PyQt5.QtWebKit import QWebElement
 except ImportError:
     pass
-from PyQt4.QtNetwork import QNetworkReply, QNetworkRequest
+from PyQt5.QtNetwork import QNetworkReply, QNetworkRequest
 import sip
 
 from E5Gui import E5MessageBox, E5FileDialog
@@ -34,7 +37,7 @@ import Preferences
 import UI.PixmapCache
 
 try:
-    from PyQt4.QtNetwork import QSslCertificate
+    from PyQt5.QtNetwork import QSslCertificate
     SSL_AVAILABLE = True
 except ImportError:
     SSL_AVAILABLE = False
@@ -1703,7 +1706,7 @@ class HelpBrowser(QWebView):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()
@@ -1711,7 +1714,7 @@ class HelpBrowser(QWebView):
             return
         
         if evt.modifiers() & Qt.ShiftModifier:
-            if evt.delta() < 0:
+            if evt.angleDelta().y() < 0:
                 self.backward()
             else:
                 self.forward()
@@ -2330,13 +2333,13 @@ class HelpBrowser(QWebView):
                     self.tr("eric5 Web Browser"),
                     self.tr(
                         """<p>Printing is not available due to a bug in"""
-                        """ PyQt4. Please upgrade.</p>"""))
+                        """ PyQt5. Please upgrade.</p>"""))
     
     def __printPreviewClickedFrame(self):
         """
         Private slot to show a print preview of the clicked frame.
         """
-        from PyQt4.QtGui import QPrintPreviewDialog
+        from PyQt5.QtPrintSupport import QPrintPreviewDialog
         
         printer = QPrinter(mode=QPrinter.HighResolution)
         if Preferences.getPrinter("ColorMode"):
@@ -2375,7 +2378,7 @@ class HelpBrowser(QWebView):
                 self,
                 self.tr("eric5 Web Browser"),
                 self.tr(
-                    """<p>Printing is not available due to a bug in PyQt4."""
+                    """<p>Printing is not available due to a bug in PyQt5."""
                     """Please upgrade.</p>"""))
             return
     
@@ -2408,7 +2411,7 @@ class HelpBrowser(QWebView):
                     self.tr("eric5 Web Browser"),
                     self.tr(
                         """<p>Printing is not available due to a bug in"""
-                        """ PyQt4. Please upgrade.</p>"""))
+                        """ PyQt5. Please upgrade.</p>"""))
                 return
     
     def __zoomInClickedFrame(self):

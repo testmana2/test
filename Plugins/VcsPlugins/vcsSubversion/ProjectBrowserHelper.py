@@ -10,7 +10,7 @@ Module implementing the VCS project browser helper for subversion.
 from __future__ import unicode_literals
 
 import os
-from PyQt4.QtGui import QMenu
+from PyQt5.QtWidgets import QMenu
 
 from E5Gui.E5Application import e5App
 

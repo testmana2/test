@@ -9,7 +9,7 @@ Module implementing the single application server and client.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtNetwork import QLocalServer, QLocalSocket
+from PyQt5.QtNetwork import QLocalServer, QLocalSocket
 
 
 class SingleApplicationServer(QLocalServer):

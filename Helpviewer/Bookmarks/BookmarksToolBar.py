@@ -9,9 +9,10 @@ Module implementing a tool bar showing bookmarks.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QUrl
-from PyQt4.QtGui import QMenu, QApplication, QCursor
-from PyQt4.QtWebKit import QWebPage
+from PyQt5.QtCore import pyqtSignal, Qt, QUrl, QCoreApplication
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QMenu
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from E5Gui.E5ModelToolBar import E5ModelToolBar
 
@@ -39,7 +40,7 @@ class BookmarksToolBar(E5ModelToolBar):
         @param parent reference to the parent widget (QWidget)
         """
         E5ModelToolBar.__init__(
-            self, QApplication.translate("BookmarksToolBar", "Bookmarks"),
+            self, QCoreApplication.translate("BookmarksToolBar", "Bookmarks"),
             parent)
         
         self.__mw = mainWindow

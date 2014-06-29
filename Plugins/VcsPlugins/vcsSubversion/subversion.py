@@ -17,8 +17,8 @@ import os
 import re
 import shutil
 
-from PyQt4.QtCore import pyqtSignal, QProcess, QRegExp
-from PyQt4.QtGui import QLineEdit, QDialog, QInputDialog, QApplication
+from PyQt5.QtCore import pyqtSignal, QProcess, QRegExp, QCoreApplication
+from PyQt5.QtWidgets import QLineEdit, QDialog, QInputDialog, QApplication
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -1595,7 +1595,7 @@ class Subversion(VersionControl):
                         info['committed-time'] = "{0}{1}".format(
                             time.split('.')[0], time[-1])
         
-        return QApplication.translate(
+        return QCoreApplication.translate(
             'subversion',
             """<h3>Repository information</h3>"""
             """<table>"""

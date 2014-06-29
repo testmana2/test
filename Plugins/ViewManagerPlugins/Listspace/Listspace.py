@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QFileInfo, QEvent, Qt
-from PyQt4.QtGui import QStackedWidget, QSplitter, QListWidget, \
+from PyQt5.QtCore import pyqtSignal, QFileInfo, QEvent, Qt
+from PyQt5.QtWidgets import QStackedWidget, QSplitter, QListWidget, \
     QListWidgetItem, QSizePolicy, QMenu, QApplication
 
 from ViewManager.ViewManager import ViewManager

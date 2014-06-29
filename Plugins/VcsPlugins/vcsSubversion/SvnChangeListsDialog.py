@@ -15,8 +15,9 @@ except NameError:
 
 import os
 
-from PyQt4.QtCore import pyqtSlot, Qt, QProcess, QRegExp, QTimer
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, QLineEdit
+from PyQt5.QtCore import pyqtSlot, Qt, QProcess, QRegExp, QTimer
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QListWidgetItem, \
+    QLineEdit
 
 from E5Gui import E5MessageBox
 

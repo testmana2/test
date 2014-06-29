@@ -9,8 +9,9 @@ Module implementing a base class for showing a document map.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QSize, QRect, QCoreApplication
-from PyQt4.QtGui import QWidget, QAbstractScrollArea, QColor, QBrush, QPainter
+from PyQt5.QtCore import Qt, QSize, QRect, QCoreApplication
+from PyQt5.QtGui import QColor, QBrush, QPainter
+from PyQt5.QtWidgets import QWidget, QAbstractScrollArea
 
 
 class E5MapWidget(QWidget):

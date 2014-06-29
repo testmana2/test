@@ -10,8 +10,9 @@ Module implementing the Plugin Info Dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt
-from PyQt4.QtGui import QDialog, QTreeWidgetItem, QHeaderView, QMenu, QBrush
+from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtGui import QBrush
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem, QHeaderView, QMenu
 
 from .Ui_PluginInfoDialog import Ui_PluginInfoDialog
 

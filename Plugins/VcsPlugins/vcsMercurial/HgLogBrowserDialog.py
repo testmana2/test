@@ -16,11 +16,11 @@ except NameError:
 import os
 import re
 
-from PyQt4.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
+from PyQt5.QtCore import pyqtSlot, Qt, QDate, QProcess, QTimer, QRegExp, \
     QSize, QPoint
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QHeaderView, \
-    QTreeWidgetItem, QApplication, QCursor, QLineEdit, QColor, \
-    QPixmap, QPainter, QPen, QBrush, QIcon, QMenu
+from PyQt5.QtGui import QCursor, QColor, QPixmap, QPainter, QPen, QBrush, QIcon
+from PyQt5.QtWidgets import QWidget, QDialogButtonBox, QHeaderView, \
+    QTreeWidgetItem, QApplication, QLineEdit, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox

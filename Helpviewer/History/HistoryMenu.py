@@ -11,8 +11,9 @@ from __future__ import unicode_literals
 
 import sys
 
-from PyQt4.QtCore import pyqtSignal, Qt, QMimeData, QUrl, QModelIndex
-from PyQt4.QtGui import QAbstractProxyModel, QSortFilterProxyModel, QMenu
+from PyQt5.QtCore import pyqtSignal, Qt, QMimeData, QUrl, QModelIndex, \
+    QSortFilterProxyModel, QAbstractProxyModel
+from PyQt5.QtWidgets import QMenu
 
 from E5Gui.E5ModelMenu import E5ModelMenu
 from E5Gui import E5MessageBox

@@ -17,8 +17,8 @@ import os
 import sys
 import shutil
 
-from PyQt4.QtCore import QThread, QFileInfo, pyqtSignal, QProcess
-from PyQt4.QtGui import QDialog, QInputDialog, QApplication, QMenu
+from PyQt5.QtCore import QThread, QFileInfo, pyqtSignal, QProcess
+from PyQt5.QtWidgets import QDialog, QInputDialog, QApplication, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog

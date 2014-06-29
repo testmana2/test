@@ -14,7 +14,7 @@ from pygments.lexers import guess_lexer_for_filename, guess_lexer, \
     find_lexer_class
 from pygments.util import ClassNotFound
 
-from PyQt4.QtGui import QColor, QFont
+from PyQt5.QtGui import QColor, QFont
 
 from QScintilla.Lexers.LexerContainer import LexerContainer
 

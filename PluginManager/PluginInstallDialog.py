@@ -20,8 +20,8 @@ try:  # Py3
 except (ImportError):
     import urlparse as parse    # __IGNORE_WARNING__
 
-from PyQt4.QtCore import pyqtSlot, Qt, QDir, QFileInfo
-from PyQt4.QtGui import QWidget, QDialogButtonBox, QAbstractButton, \
+from PyQt5.QtCore import pyqtSlot, Qt, QDir, QFileInfo
+from PyQt5.QtWidgets import QWidget, QDialogButtonBox, QAbstractButton, \
     QApplication, QDialog, QVBoxLayout
 
 from E5Gui import E5FileDialog

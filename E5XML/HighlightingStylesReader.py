@@ -10,7 +10,7 @@ Module implementing a class for reading a highlighting styles XML file.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QColor, QFont
+from PyQt5.QtGui import QColor, QFont
 
 from .Config import highlightingStylesFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase

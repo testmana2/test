@@ -9,7 +9,7 @@ Module implementing a wizard dialog to enter the synchronization data.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QWizard
+from PyQt5.QtWidgets import QWizard
 
 import UI.PixmapCache
 import Globals

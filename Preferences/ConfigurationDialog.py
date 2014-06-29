@@ -12,11 +12,11 @@ from __future__ import unicode_literals
 import os
 import types
 
-from PyQt4.QtCore import QMetaObject, pyqtSignal, Qt, QRect, pyqtSlot
-from PyQt4.QtGui import QSizePolicy, QSpacerItem, QWidget, QPixmap, \
-    QTreeWidget, QStackedWidget, QDialog, QSplitter, QScrollArea, \
-    QApplication, QDialogButtonBox, QFrame, QVBoxLayout, QTreeWidgetItem, \
-    QLabel
+from PyQt5.QtCore import QMetaObject, pyqtSignal, Qt, QRect, pyqtSlot
+from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QSizePolicy, QSpacerItem, QWidget, QTreeWidget, \
+    QStackedWidget, QDialog, QSplitter, QScrollArea, QApplication, \
+    QDialogButtonBox, QFrame, QVBoxLayout, QTreeWidgetItem, QLabel
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5LineEdit import E5ClearableLineEdit

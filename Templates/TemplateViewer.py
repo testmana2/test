@@ -13,8 +13,8 @@ import datetime
 import os
 import re
 
-from PyQt4.QtCore import QFile, QFileInfo, QIODevice, Qt
-from PyQt4.QtGui import QTreeWidget, QDialog, QApplication, QMenu, \
+from PyQt5.QtCore import QFile, QFileInfo, QIODevice, Qt, QCoreApplication
+from PyQt5.QtWidgets import QTreeWidget, QDialog, QApplication, QMenu, \
     QTreeWidgetItem
 
 from E5Gui.E5Application import e5App
@@ -95,8 +95,9 @@ class TemplateGroup(QTreeWidgetItem):
             if not quiet:
                 E5MessageBox.critical(
                     None,
-                    QApplication.translate("TemplateGroup", "Add Template"),
-                    QApplication.translate(
+                    QCoreApplication.translate("TemplateGroup",
+                                               "Add Template"),
+                    QCoreApplication.translate(
                         "TemplateGroup",
                         """<p>The group <b>{0}</b> already contains a"""
                         """ template named <b>{1}</b>.</p>""")

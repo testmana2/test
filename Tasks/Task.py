@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 import os
 import time
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QTreeWidgetItem
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QTreeWidgetItem
 
 import UI.PixmapCache
 import Preferences
@@ -113,16 +113,16 @@ class Task(QTreeWidgetItem):
         boldFont.setBold(True)
         for col in range(5):
             if self.taskType == Task.TypeFixme:
-                self.setBackgroundColor(
+                self.setBackground(
                     col, Preferences.getTasks("TasksFixmeColor"))
             elif self.taskType == Task.TypeWarning:
-                self.setBackgroundColor(
+                self.setBackground(
                     col, Preferences.getTasks("TasksWarningColor"))
             elif self.taskType == Task.TypeTodo:
-                self.setBackgroundColor(
+                self.setBackground(
                     col, Preferences.getTasks("TasksTodoColor"))
             else:
-                self.setBackgroundColor(
+                self.setBackground(
                     col, Preferences.getTasks("TasksNoteColor"))
             if self._isProjectTask:
                 self.setFont(col, boldFont)

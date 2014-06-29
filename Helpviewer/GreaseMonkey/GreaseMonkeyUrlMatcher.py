@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import re
 
-from PyQt4.QtCore import Qt, QRegExp
+from PyQt5.QtCore import Qt, QRegExp
 
 
 def wildcardMatch(string, pattern):

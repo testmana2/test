@@ -9,8 +9,8 @@ Module implementing a dialog showing UML like diagrams.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, Qt, QFileInfo
-from PyQt4.QtGui import QAction, QToolBar, QGraphicsScene
+from PyQt5.QtCore import pyqtSlot, Qt, QFileInfo
+from PyQt5.QtWidgets import QAction, QToolBar, QGraphicsScene
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow

@@ -9,8 +9,9 @@ Module implementing a dialog to manage history.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QUrl
-from PyQt4.QtGui import QDialog, QFontMetrics, QMenu, QCursor, QApplication
+from PyQt5.QtCore import pyqtSignal, Qt, QUrl
+from PyQt5.QtGui import QFontMetrics, QCursor
+from PyQt5.QtWidgets import QDialog, QMenu, QApplication
 
 from E5Gui.E5TreeSortFilterProxyModel import E5TreeSortFilterProxyModel
 

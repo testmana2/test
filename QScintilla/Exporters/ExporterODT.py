@@ -9,9 +9,9 @@ Module implementing an exporter for ODT.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QApplication, QCursor, QTextDocument, \
-    QTextDocumentWriter
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QCursor, QTextDocument, QTextDocumentWriter
+from PyQt5.QtWidgets import QApplication
 
 from E5Gui import E5MessageBox
 

@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import QObject
+from PyQt5.QtCore import QObject
 
 from E5Gui.E5Action import E5Action
 from E5Gui.E5Application import e5App

@@ -14,9 +14,10 @@ import sys
 
 import pysvn
 
-from PyQt4.QtCore import pyqtSlot, Qt, QMutexLocker
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QListWidgetItem, \
-    QApplication, QCursor
+from PyQt5.QtCore import pyqtSlot, Qt, QMutexLocker
+from PyQt5.QtGui import QCursor
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QListWidgetItem, \
+    QApplication
 
 from .SvnDialogMixin import SvnDialogMixin
 

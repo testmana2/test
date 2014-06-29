@@ -9,7 +9,7 @@ Module implementing a Makefile lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerMakefile
+from PyQt5.Qsci import QsciLexerMakefile
 
 from .Lexer import Lexer
 

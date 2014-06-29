@@ -15,9 +15,9 @@ except NameError:
 import struct
 import io
 
-from PyQt4.QtCore import QProcess, QObject, QByteArray, QCoreApplication, \
+from PyQt5.QtCore import QProcess, QObject, QByteArray, QCoreApplication, \
     QThread
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .HgUtilities import prepareProcess
 

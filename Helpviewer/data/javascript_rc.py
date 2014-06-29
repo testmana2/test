@@ -2,14 +2,12 @@
 
 # Resource object code
 #
-# Created: Fri Feb 24 21:13:08 2012
-#      by: The Resource Compiler for PyQt (Qt v4.8.0)
+# Created: So. Juni 29 18:58:05 2014
+#      by: The Resource Compiler for PyQt (Qt v5.3.1)
 #
 # WARNING! All changes made in this file will be lost!
 
-from __future__ import unicode_literals
-
-from PyQt4 import QtCore
+from PyQt5 import QtCore
 
 qt_resource_data = b"\
 \x00\x00\x24\x34\

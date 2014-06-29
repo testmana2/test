@@ -9,9 +9,10 @@ Module implementing a grabber widget for a rectangular snapshot region.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
-from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \
-    QPainter, QPalette, QToolTip, QPaintEngine, QPen, QBrush
+from PyQt5.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
+from PyQt5.QtGui import QPixmap, QColor, QRegion, QPainter, QPalette, \
+    QPaintEngine, QPen, QBrush
+from PyQt5.QtWidgets import QWidget, QApplication, QToolTip
 
 
 def drawRect(painter, rect, outline, fill=QColor()):

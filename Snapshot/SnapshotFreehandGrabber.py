@@ -9,9 +9,10 @@ Module implementing a grabber widget for a freehand snapshot region.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
-from PyQt4.QtGui import QWidget, QPixmap, QColor, QRegion, QApplication, \
-    QPainter, QPalette, QToolTip, QPolygon, QPen, QBrush, QPaintEngine
+from PyQt5.QtCore import pyqtSignal, Qt, QRect, QPoint, QTimer, qVersion
+from PyQt5.QtGui import QPixmap, QColor, QRegion, QPainter, QPalette, \
+    QPolygon, QPen, QBrush, QPaintEngine
+from PyQt5.QtWidgets import QWidget, QApplication, QToolTip
 
 
 def drawPolygon(painter, polygon, outline, fill=QColor()):

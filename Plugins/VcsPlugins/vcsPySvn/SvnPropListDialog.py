@@ -15,9 +15,9 @@ import sys
 
 import pysvn
 
-from PyQt4.QtCore import QMutexLocker, Qt
-from PyQt4.QtGui import QWidget, QHeaderView, QApplication, QDialogButtonBox, \
-    QTreeWidgetItem
+from PyQt5.QtCore import QMutexLocker, Qt
+from PyQt5.QtWidgets import QWidget, QHeaderView, QApplication, \
+    QDialogButtonBox, QTreeWidgetItem
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnPropListDialog import Ui_SvnPropListDialog

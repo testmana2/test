@@ -9,7 +9,7 @@ Module implementing the VCS command options dialog.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtGui import QDialog
+from PyQt5.QtWidgets import QDialog
 
 from .Ui_CommandOptionsDialog import Ui_VcsCommandOptionsDialog
 

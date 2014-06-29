@@ -9,9 +9,8 @@ Module implementing a special completer for the history.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt, QRegExp, QTimer
-from PyQt4.QtGui import QTableView, QAbstractItemView, QSortFilterProxyModel, \
-    QCompleter
+from PyQt5.QtCore import Qt, QRegExp, QTimer, QSortFilterProxyModel
+from PyQt5.QtWidgets import QTableView, QAbstractItemView, QCompleter
 
 from .HistoryModel import HistoryModel
 from .HistoryFilterModel import HistoryFilterModel

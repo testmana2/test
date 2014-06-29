@@ -11,9 +11,9 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal, QObject, QSettings, QRegExp, QUrl
-from PyQt4.QtGui import QDialog
-from PyQt4.QtNetwork import QNetworkReply
+from PyQt5.QtCore import pyqtSignal, QObject, QSettings, QRegExp, QUrl
+from PyQt5.QtWidgets import QDialog
+from PyQt5.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
 

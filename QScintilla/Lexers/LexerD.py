@@ -9,7 +9,7 @@ Module implementing a D lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerD, QsciScintilla
+from PyQt5.Qsci import QsciLexerD, QsciScintilla
 
 from .Lexer import Lexer
 import Preferences

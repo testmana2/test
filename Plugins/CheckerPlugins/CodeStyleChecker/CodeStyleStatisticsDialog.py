@@ -10,8 +10,8 @@ style checker run.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QDialog, QTreeWidgetItem
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem
 
 from .translations import _messages, _messages_sample_args
 

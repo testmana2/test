@@ -16,7 +16,7 @@ import os
 import shutil
 import glob
 
-from PyQt4.QtCore import QDir
+from PyQt5.QtCore import QDir
 
 try:
     from eric5config import getConfig
@@ -43,7 +43,7 @@ def getConfigDir():
     try:
         return QDir.toNativeSeparators(hp)
     except AttributeError:
-        return QDir.convertSeparators(hp)
+        return QDir.toNativeSeparators(hp)
     
 # Define the globals.
 progName = None

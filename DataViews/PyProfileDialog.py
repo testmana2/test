@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 import os
 import pickle
 
-from PyQt4.QtCore import Qt
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
+from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
     QTreeWidgetItem, QApplication
 
 from E5Gui import E5MessageBox

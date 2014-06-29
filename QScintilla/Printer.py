@@ -9,9 +9,10 @@ Module implementing the printer functionality.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QTime, QDate, Qt
-from PyQt4.QtGui import QColor, QPrinter, QApplication
-from PyQt4.Qsci import QsciPrinter
+from PyQt5.QtCore import QTime, QDate, Qt, QCoreApplication
+from PyQt5.QtGui import QColor
+from PyQt5.QtPrintSupport import QPrinter
+from PyQt5.Qsci import QsciPrinter
 
 import Preferences
 
@@ -62,7 +63,7 @@ class Printer(QsciPrinter):
         """
         fn = self.docName()
         
-        header = QApplication.translate(
+        header = QCoreApplication.translate(
             'Printer', '{0} - Printed on {1}, {2} - Page {3}')\
             .format(fn, self.date, self.time, pagenr)
         

@@ -13,8 +13,8 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import pyqtSlot, QProcess, QCoreApplication
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QAbstractItemView, \
+from PyQt5.QtCore import pyqtSlot, QProcess, QCoreApplication
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QAbstractItemView, \
     QListWidgetItem, QAbstractButton
 
 from .Ui_HgQueuesQueueManagementDialog import Ui_HgQueuesQueueManagementDialog

@@ -9,8 +9,8 @@ Module implementing the snapshot preview label.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, QPoint, Qt
-from PyQt4.QtGui import QLabel, QApplication
+from PyQt5.QtCore import pyqtSignal, QPoint, Qt
+from PyQt5.QtWidgets import QLabel, QApplication
 
 
 class SnapshotPreview(QLabel):

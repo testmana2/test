@@ -9,7 +9,7 @@ Module implementing a class to read login data files.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QXmlStreamReader, QIODevice, QFile, \
+from PyQt5.QtCore import QXmlStreamReader, QIODevice, QFile, \
     QCoreApplication, QUrl
 
 

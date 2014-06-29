@@ -9,8 +9,8 @@ Module implementing the Call Stack viewer widget.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, Qt, QFileInfo
-from PyQt4.QtGui import QTreeWidget, QTreeWidgetItem, QMenu
+from PyQt5.QtCore import pyqtSignal, Qt, QFileInfo
+from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QMenu
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox

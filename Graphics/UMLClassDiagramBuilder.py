@@ -13,7 +13,7 @@ try:  # Py3
 except ImportError:
     from itertools import izip_longest as zip_longest    # __IGNORE_WARNING__
 
-from PyQt4.QtGui import QGraphicsTextItem
+from PyQt5.QtWidgets import QGraphicsTextItem
 
 import Utilities
 import Preferences

@@ -9,7 +9,7 @@ Module implementing the Subversion configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot
 
 from Preferences.ConfigurationPages.ConfigurationPageBase import \
     ConfigurationPageBase

@@ -11,9 +11,9 @@ from __future__ import unicode_literals
 
 import socket
 
-from PyQt4.QtCore import QRegExp, pyqtSlot
-from PyQt4.QtGui import QLineEdit, QInputDialog
-from PyQt4.QtNetwork import QNetworkInterface, QAbstractSocket, QHostAddress
+from PyQt5.QtCore import QRegExp, pyqtSlot
+from PyQt5.QtWidgets import QLineEdit, QInputDialog
+from PyQt5.QtNetwork import QNetworkInterface, QAbstractSocket, QHostAddress
 
 from E5Gui.E5Application import e5App
 from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter

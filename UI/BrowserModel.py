@@ -18,9 +18,10 @@ import sys
 import fnmatch
 import json
 
-from PyQt4.QtCore import QDir, QModelIndex, QAbstractItemModel, \
-    QFileSystemWatcher, Qt, QProcess
-from PyQt4.QtGui import QImageReader, QApplication, QFont
+from PyQt5.QtCore import QDir, QModelIndex, QAbstractItemModel, \
+    QFileSystemWatcher, Qt, QProcess, QCoreApplication
+from PyQt5.QtGui import QImageReader, QFont
+from PyQt5.QtWidgets import QApplication
 
 import UI.PixmapCache
 import Preferences
@@ -60,7 +61,7 @@ class BrowserModel(QAbstractItemModel):
         self.__sysPathItem = None
         
         if not nopopulate:
-            rootData = QApplication.translate("BrowserModel", "Name")
+            rootData = QCoreApplication.translate("BrowserModel", "Name")
             self.rootItem = BrowserItem(None, rootData)
             
             self.__populateModel()
@@ -236,8 +237,9 @@ class BrowserModel(QAbstractItemModel):
         """
         Public method to clear the model.
         """
+        self.beginResetModel()
         self.rootItem.removeChildren()
-        self.reset()
+        self.endResetModel()
     
     def item(self, index):
         """
@@ -299,7 +301,7 @@ class BrowserModel(QAbstractItemModel):
             filter = QDir.Filters(
                 QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
         else:
-            filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(QDir.AllEntries | QDir.NoDot | QDir.NoDotDot)
         
         for itm in self.watchedItems[path]:
             oldCnt = itm.childCount()
@@ -530,7 +532,7 @@ class BrowserModel(QAbstractItemModel):
             filter = QDir.Filters(
                 QDir.AllEntries | QDir.Hidden | QDir.NoDotAndDotDot)
         else:
-            filter = QDir.Filters(QDir.AllEntries | QDir.NoDotAndDotDot)
+            filter = QDir.Filters(QDir.AllEntries | QDir.NoDot | QDir.NoDotDot)
         entryInfoList = qdir.entryInfoList(filter)
         if len(entryInfoList) > 0:
             if repopulate:
@@ -628,14 +630,14 @@ class BrowserModel(QAbstractItemModel):
             if "@@Coding@@" in keys:
                 node = BrowserCodingItem(
                     parentItem,
-                    QApplication.translate("BrowserModel", "Coding: {0}")
+                    QCoreApplication.translate("BrowserModel", "Coding: {0}")
                     .format(dict["@@Coding@@"].coding))
                 self._addItem(node, parentItem)
             if "@@Globals@@" in keys:
                 node = BrowserClassAttributesItem(
                     parentItem,
                     dict["@@Globals@@"].globals,
-                    QApplication.translate("BrowserModel", "Globals"))
+                    QCoreApplication.translate("BrowserModel", "Globals"))
                 self._addItem(node, parentItem)
             if repopulate:
                 self.endInsertRows()
@@ -679,7 +681,7 @@ class BrowserModel(QAbstractItemModel):
         if len(cl.attributes):
             node = BrowserClassAttributesItem(
                 parentItem, cl.attributes,
-                QApplication.translate("BrowserModel", "Attributes"))
+                QCoreApplication.translate("BrowserModel", "Attributes"))
             if repopulate:
                 self.addItem(
                     node, self.createIndex(parentItem.row(), 0, parentItem))
@@ -689,7 +691,7 @@ class BrowserModel(QAbstractItemModel):
         if len(cl.globals):
             node = BrowserClassAttributesItem(
                 parentItem, cl.globals,
-                QApplication.translate("BrowserModel", "Class Attributes"),
+                QCoreApplication.translate("BrowserModel", "Class Attributes"),
                 True)
             if repopulate:
                 self.addItem(

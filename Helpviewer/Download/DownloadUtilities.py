@@ -9,7 +9,7 @@ Module implementing some utility functions for the Download package.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QCoreApplication
+from PyQt5.QtCore import QCoreApplication
 
 
 def timeString(timeRemaining):
@@ -25,12 +25,12 @@ def timeString(timeRemaining):
         remaining = QCoreApplication.translate(
             "DownloadUtilities",
             "%n:{0:02} minutes remaining""", "",
-            QCoreApplication.UnicodeUTF8, minutes).format(seconds)
+            QCoreApplication, minutes).format(seconds)
     else:
         seconds = int(timeRemaining)
         remaining = QCoreApplication.translate(
             "DownloadUtilities",
-            "%n seconds remaining", "", QCoreApplication.UnicodeUTF8, seconds)
+            "%n seconds remaining", "", QCoreApplication, seconds)
     
     return remaining
 

@@ -14,9 +14,10 @@ import re
 import sys
 import json
 
-from PyQt4.QtCore import QFileInfo, pyqtSlot, QProcess, QByteArray
-from PyQt4.QtGui import QWidget, QDialog, QInputDialog, QApplication, \
-    QClipboard, QTextCursor, QDialogButtonBox, QVBoxLayout, QTableWidgetItem
+from PyQt5.QtCore import QFileInfo, pyqtSlot, QProcess, QByteArray
+from PyQt5.QtGui import QClipboard, QTextCursor
+from PyQt5.QtWidgets import QWidget, QDialog, QInputDialog, QApplication, \
+    QDialogButtonBox, QVBoxLayout, QTableWidgetItem
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow

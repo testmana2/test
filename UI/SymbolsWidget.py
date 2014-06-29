@@ -17,10 +17,10 @@ except (ImportError):
     chr = unichr    # __IGNORE_WARNING__
     import htmlentitydefs as html_entities    # __IGNORE_WARNING__
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, \
-    QModelIndex, Qt, qVersion
-from PyQt4.QtGui import QWidget, QHeaderView, QAbstractItemView, QColor, \
-    QItemSelectionModel
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, \
+    QModelIndex, Qt, qVersion, QItemSelectionModel
+from PyQt5.QtGui import QColor
+from PyQt5.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 
 from .Ui_SymbolsWidget import Ui_SymbolsWidget
 
@@ -328,8 +328,9 @@ class SymbolsModel(QAbstractTableModel):
         
         @param index index of the character table (integer)
         """
+        self.beginResetModel()
         self.__currentTableIndex = index
-        self.reset()
+        self.endResetModel()
     
     def headerData(self, section, orientation, role=Qt.DisplayRole):
         """
@@ -494,7 +495,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
             self.symbolsTable.horizontalHeader().setSectionResizeMode(
                 QHeaderView.Fixed)
         else:
-            self.symbolsTable.horizontalHeader().setResizeMode(
+            self.symbolsTable.horizontalHeader().setSectionResizeMode(
                 QHeaderView.Fixed)
         fm = self.fontMetrics()
         em = fm.width("M")

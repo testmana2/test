@@ -9,10 +9,11 @@ Module implementing a dialog for entering character classes.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QRegExp
-from PyQt4.QtGui import QWidget, QDialog, QVBoxLayout, QHBoxLayout, \
-    QScrollArea, QPushButton, QSpacerItem, QSizePolicy, QComboBox, \
-    QRegExpValidator, QLineEdit, QLabel
+from PyQt5.QtCore import QRegExp
+from PyQt5.QtGui import QRegExpValidator
+from PyQt5.QtWidgets import QWidget, QDialog, QVBoxLayout, QHBoxLayout, \
+    QScrollArea, QPushButton, QSpacerItem, QSizePolicy, QComboBox, QLineEdit, \
+    QLabel
 
 from .Ui_QRegularExpressionWizardCharactersDialog import \
     Ui_QRegularExpressionWizardCharactersDialog

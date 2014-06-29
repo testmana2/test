@@ -14,7 +14,7 @@ from __future__ import unicode_literals
 import os
 import sys
 
-from PyQt4.QtCore import QTimer, QObject
+from PyQt5.QtCore import QTimer, QObject
 
 import Preferences
 import Utilities

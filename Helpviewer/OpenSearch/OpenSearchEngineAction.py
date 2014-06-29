@@ -9,8 +9,9 @@ Module implementing a QAction subclass for open search.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QUrl
-from PyQt4.QtGui import QPixmap, QIcon, QAction
+from PyQt5.QtCore import QUrl
+from PyQt5.QtGui import QPixmap, QIcon
+from PyQt5.QtWidgets import QAction
 
 
 class OpenSearchEngineAction(QAction):

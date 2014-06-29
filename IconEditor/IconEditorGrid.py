@@ -9,10 +9,11 @@ Module implementing the icon editor grid.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QPoint, QRect, QSize
-from PyQt4.QtGui import QUndoCommand, QImage, QWidget, QColor, QPixmap, \
-    QSizePolicy, QUndoStack, qRgba, QPainter, QApplication, QCursor, \
-    QBrush, QDialog, qGray, qAlpha
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QPoint, QRect, QSize
+from PyQt5.QtGui import QImage, QColor, QPixmap, qRgba, QPainter, QCursor, \
+    QBrush, qGray, qAlpha
+from PyQt5.QtWidgets import QUndoCommand, QWidget, QSizePolicy, QUndoStack, \
+    QApplication, QDialog
 
 from E5Gui import E5MessageBox
 

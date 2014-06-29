@@ -13,10 +13,11 @@ try:
 except NameError:
     pass
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, \
+from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, \
     QUrl, QIODevice, QCryptographicHash
-from PyQt4.QtGui import QWidget, QPalette, QStyle, QDesktopServices, QDialog
-from PyQt4.QtNetwork import QNetworkRequest, QNetworkReply
+from PyQt5.QtGui import QPalette, QDesktopServices
+from PyQt5.QtWidgets import QWidget, QStyle, QDialog
+from PyQt5.QtNetwork import QNetworkRequest, QNetworkReply
 
 from E5Gui import E5FileDialog
 

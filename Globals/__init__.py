@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import sys
 import os
 
-from PyQt4.QtCore import QDir, QLibraryInfo
+from PyQt5.QtCore import QDir, QLibraryInfo
 
 # names of the various settings objects
 settingsNameOrganization = "Eric5"
@@ -89,20 +89,20 @@ def checkBlacklistedVersions():
         pass
     
     # check version of PyQt
-    from PyQt4.QtCore import PYQT_VERSION_STR
+    from PyQt5.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
     # always assume, that snapshots are good
     if "snapshot" not in pyqtVersion:
         # check for blacklisted versions
-        for vers in BlackLists["PyQt4"] + PlatformBlackLists["PyQt4"]:
+        for vers in BlackLists["PyQt5"] + PlatformBlackLists["PyQt5"]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt4 version {0} is not compatible with eric5.'
+                print('Sorry, PyQt5 version {0} is not compatible with eric5.'
                       .format(vers))
                 print('Please install another version.')
                 return False
     
     # check version of QScintilla
-    from PyQt4.Qsci import QSCINTILLA_VERSION_STR
+    from PyQt5.Qsci import QSCINTILLA_VERSION_STR
     scintillaVersion = QSCINTILLA_VERSION_STR
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
@@ -160,14 +160,14 @@ def getPythonModulesDirectory():
     return distutils.sysconfig.get_python_lib(True)
 
 
-def getPyQt4ModulesDirectory():
+def getPyQt5ModulesDirectory():
     """
-    Function to determine the path to PyQt4's modules directory.
+    Function to determine the path to PyQt5's modules directory.
     
-    @return path to the PyQt4 modules directory (string)
+    @return path to the PyQt5 modules directory (string)
     """
     import distutils.sysconfig
-    return os.path.join(distutils.sysconfig.get_python_lib(True), "PyQt4")
+    return os.path.join(distutils.sysconfig.get_python_lib(True), "PyQt5")
     
 
 def getQtBinariesPath():
@@ -178,8 +178,8 @@ def getQtBinariesPath():
     """
     path = ""
     if isWindowsPlatform():
-        # check for PyQt4 installer first (designer is test object)
-        modDir = getPyQt4ModulesDirectory()
+        # check for PyQt5 installer first (designer is test object)
+        modDir = getPyQt5ModulesDirectory()
         if os.path.exists(os.path.join(modDir, "bin", "designer.exe")):
             path = os.path.join(modDir, "bin")
         elif os.path.exists(os.path.join(modDir, "designer.exe")):

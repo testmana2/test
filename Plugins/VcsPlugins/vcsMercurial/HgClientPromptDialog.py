@@ -9,8 +9,9 @@ Module implementing a prompt dialog for the Mercurial command server.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot
-from PyQt4.QtGui import QDialog, QDialogButtonBox, QTextCursor
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtGui import QTextCursor
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from .Ui_HgClientPromptDialog import Ui_HgClientPromptDialog
 

@@ -9,8 +9,8 @@ Module implementing a zoom widget for the status bar.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import pyqtSlot, pyqtSignal
-from PyQt4.QtGui import QWidget
+from PyQt5.QtCore import pyqtSlot, pyqtSignal
+from PyQt5.QtWidgets import QWidget
 
 from .Ui_E5ZoomWidget import Ui_E5ZoomWidget
 

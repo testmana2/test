@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt4.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal
 
 from Toolbox.SingleApplication import SingleApplicationClient, \
     SingleApplicationServer

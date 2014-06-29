@@ -9,8 +9,8 @@ Module implementing a dialog to add RSS feeds.
 
 from __future__ import unicode_literals
 
-from PyQt4.QtCore import QUrl
-from PyQt4.QtGui import QDialog, QPushButton, QLabel
+from PyQt5.QtCore import QUrl
+from PyQt5.QtWidgets import QDialog, QPushButton, QLabel
 
 from E5Gui import E5MessageBox
 
