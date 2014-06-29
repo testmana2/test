@@ -45,7 +45,11 @@ Module implementing the debug server.
     Class implementing the debug server embedded within the IDE.
 </p><h3>Signals</h3>
 <dl>
-<dt>callTraceInfo</dt>
+<dt>appendStdout(msg)</dt>
+<dd>
+emitted when a passive debug connection is
+        established or lost
+</dd><dt>callTraceInfo</dt>
 <dd>
 emitted after the client reported the call trace
         data (isCall, fromFile, fromLine, fromFunction, toFile, toLine,

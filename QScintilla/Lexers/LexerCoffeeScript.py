@@ -9,13 +9,13 @@ Module implementing a CoffeeScript lexer with some additional methods.
 
 from __future__ import unicode_literals
 
-from PyQt4.Qsci import QsciLexerCoffeScript
+from PyQt4.Qsci import QsciLexerCoffeeScript
 
 from .Lexer import Lexer
 import Preferences
 
 
-class LexerJavaScript(Lexer, QsciLexerCoffeScript):
+class LexerCoffeeScript(Lexer, QsciLexerCoffeeScript):
     """
     Subclass to implement some additional lexer dependant methods.
     """
@@ -25,7 +25,7 @@ class LexerJavaScript(Lexer, QsciLexerCoffeScript):
         
         @param parent parent widget of this lexer
         """
-        QsciLexerCoffeScript.__init__(self, parent)
+        QsciLexerCoffeeScript.__init__(self, parent)
         Lexer.__init__(self)
         
         self.commentString = "#"
@@ -54,12 +54,12 @@ class LexerJavaScript(Lexer, QsciLexerCoffeScript):
         @param style style to check (integer)
         @return flag indicating a comment style (boolean)
         """
-        return style in [QsciLexerCoffeScript.Comment,
-                         QsciLexerCoffeScript.CommentDoc,
-                         QsciLexerCoffeScript.CommentLine,
-                         QsciLexerCoffeScript.CommentLineDoc,
-                         QsciLexerCoffeScript.CommentBlock,
-                         QsciLexerCoffeScript.BlockRegexComment]
+        return style in [QsciLexerCoffeeScript.Comment,
+                         QsciLexerCoffeeScript.CommentDoc,
+                         QsciLexerCoffeeScript.CommentLine,
+                         QsciLexerCoffeeScript.CommentLineDoc,
+                         QsciLexerCoffeeScript.CommentBlock,
+                         QsciLexerCoffeeScript.BlockRegexComment]
     
     def isStringStyle(self, style):
         """
@@ -68,10 +68,10 @@ class LexerJavaScript(Lexer, QsciLexerCoffeScript):
         @param style style to check (integer)
         @return flag indicating a string style (boolean)
         """
-        return style in [QsciLexerCoffeScript.DoubleQuotedString,
-                         QsciLexerCoffeScript.SingleQuotedString,
-                         QsciLexerCoffeScript.UnclosedString,
-                         QsciLexerCoffeScript.VerbatimString]
+        return style in [QsciLexerCoffeeScript.DoubleQuotedString,
+                         QsciLexerCoffeeScript.SingleQuotedString,
+                         QsciLexerCoffeeScript.UnclosedString,
+                         QsciLexerCoffeeScript.VerbatimString]
     
     def defaultKeywords(self, kwSet):
         """
@@ -80,4 +80,12 @@ class LexerJavaScript(Lexer, QsciLexerCoffeScript):
         @param kwSet number of the keyword set (integer)
         @return string giving the keywords (string) or None
         """
-        return QsciLexerCoffeScript.keywords(self, kwSet)
+        return QsciLexerCoffeeScript.keywords(self, kwSet)
+    
+    def maximumKeywordSet(self):
+        """
+        Public method to get the maximum keyword set.
+        
+        @return maximum keyword set (integer)
+        """
+        return 4

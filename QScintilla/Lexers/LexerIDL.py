@@ -86,3 +86,11 @@ class LexerIDL(Lexer, QsciLexerIDL):
         @return string giving the keywords (string) or None
         """
         return QsciLexerIDL.keywords(self, kwSet)
+    
+    def maximumKeywordSet(self):
+        """
+        Public method to get the maximum keyword set.
+        
+        @return maximum keyword set (integer)
+        """
+        return 4

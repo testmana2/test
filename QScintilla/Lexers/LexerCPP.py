@@ -115,3 +115,11 @@ class LexerCPP(Lexer, QsciLexerCPP):
         @return string giving the keywords (string) or None
         """
         return QsciLexerCPP.keywords(self, kwSet)
+    
+    def maximumKeywordSet(self):
+        """
+        Public method to get the maximum keyword set.
+        
+        @return maximum keyword set (integer)
+        """
+        return 4

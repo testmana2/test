@@ -77,3 +77,11 @@ class LexerSQL(Lexer, QsciLexerSQL):
         @return string giving the keywords (string) or None
         """
         return QsciLexerSQL.keywords(self, kwSet)
+    
+    def maximumKeywordSet(self):
+        """
+        Public method to get the maximum keyword set.
+        
+        @return maximum keyword set (integer)
+        """
+        return 8

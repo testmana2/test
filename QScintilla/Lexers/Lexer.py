@@ -226,6 +226,16 @@ class Lexer(object):
         else:
             return self.defaultKeywords(kwSet)
     
+    def maximumKeywordSet(self):
+        """
+        Public method to get the maximum keyword set.
+        
+        Note: A return value of 0 indicates to determine this dynamically.
+        
+        @return maximum keyword set (integer)
+        """
+        return 0
+    
     def lexerName(self):
         """
         Public method to return the lexer name.

@@ -402,6 +402,7 @@ LexerCMake Lexer QsciLexerCMake
 LexerCPP Lexer QsciLexerCPP
 LexerCSS Lexer QsciLexerCSS
 LexerCSharp Lexer QsciLexerCSharp
+LexerCoffeeScript Lexer QsciLexerCoffeeScript
 LexerContainer Lexer QsciLexer
 LexerD Lexer QsciLexerD
 LexerDiff Lexer QsciLexerDiff

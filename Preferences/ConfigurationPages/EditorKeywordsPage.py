@@ -36,6 +36,10 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         self.__keywords = {
             "": ["", "", "", "", "", "", "", "", "", ""]
         }
+        self.__maxKeywordSets = {
+            "": 0
+        }
+        
         languages = sorted(
             [''] + list(QScintilla.Lexers.getSupportedLanguages().keys()))
         for lang in languages:
@@ -52,6 +56,7 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
                             kw = ""
                         keywords.append(kw)
                 self.__keywords[lang] = keywords
+                self.__maxKeywordSets[lang] = lex.maximumKeywordSet()
             self.languageCombo.addItem(lang)
         
         self.currentLanguage = ''
@@ -81,13 +86,15 @@ class EditorKeywordsPage(ConfigurationPageBase, Ui_EditorKeywordsPage):
         
         if self.setSpinBox.value() == 1:
             self.on_setSpinBox_valueChanged(1)
-        first, last = 10, 0
-        for kwSet in range(1, 10):
-            if self.__keywords[language][kwSet] != "":
-                first = min(first, kwSet)
-                last = max(last, kwSet)
-        if language in ["Python2", "Python3"] and last < 2:
-            last = 2    # support for keyword set 2 as of QScintilla 2.6.0
+        if self.__maxKeywordSets[language]:
+            first = 1
+            last = self.__maxKeywordSets[language]
+        else:
+            first, last = 10, 0
+            for kwSet in range(1, 10):
+                if self.__keywords[language][kwSet] != "":
+                    first = min(first, kwSet)
+                    last = max(last, kwSet)
         self.setSpinBox.setEnabled(language != "" and first < 10)
         self.keywordsEdit.setEnabled(language != "" and first < 10)
         if first < 10:

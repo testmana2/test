@@ -92,3 +92,11 @@ class LexerD(Lexer, QsciLexerD):
         @return string giving the keywords (string) or None
         """
         return QsciLexerD.keywords(self, kwSet)
+    
+    def maximumKeywordSet(self):
+        """
+        Public method to get the maximum keyword set.
+        
+        @return maximum keyword set (integer)
+        """
+        return 7
