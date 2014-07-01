@@ -434,7 +434,7 @@ class PasswordManager(QObject):
         @return stripped URL (QUrl)
         """
         cleanUrl = QUrl(url)
-        cleanUrl.setQueryItems([])
+        cleanUrl.setQuery("")
         cleanUrl.setFragment("")
         cleanUrl.setUserInfo("")
         return cleanUrl

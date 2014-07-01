@@ -125,7 +125,9 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         self.expireHistory.setCurrentIndex(idx)
         
         for language in range(2, QLocale.LastLanguage + 1):
-            if len(QLocale.countriesForLanguage(language)) > 0:
+            countries = [l.country() for l in QLocale.matchingLocales(
+                language, QLocale.AnyScript, QLocale.AnyCountry)]
+            if len(countries) > 0:
                 self.languageCombo.addItem(
                     QLocale.languageToString(language), language)
         self.languageCombo.model().sort(0)

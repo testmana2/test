@@ -9,7 +9,8 @@ Module implementing a special QextScintilla lexer to handle the preferences.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtGui import QColor, QFont, QCoreApplication
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtGui import QColor, QFont
 from PyQt5.Qsci import QsciLexer
 
 import Preferences

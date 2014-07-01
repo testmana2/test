@@ -15,7 +15,8 @@ import hashlib
 import base64
 
 from PyQt5.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, \
-    QUrl, QCryptographicHash, QFile, QIODevice, QTextStream, QDate, QTime
+    QUrl, QUrlQuery, QCryptographicHash, QFile, QIODevice, QTextStream, \
+    QDate, QTime
 from PyQt5.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
@@ -157,7 +158,9 @@ class AdBlockSubscription(QObject):
         if self.__lastUpdate.isValid():
             queryItems.append(("lastUpdate",
                                self.__lastUpdate.toString(Qt.ISODate)))
-        url.setQueryItems(queryItems)
+        query = QUrlQuery()
+        query.setQueryItems(queryItems)
+        url.setQuery(query)
         return url
     
     def isEnabled(self):

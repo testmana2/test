@@ -61,7 +61,7 @@ class E5ModelToolBar(QToolBar):
                 self._build)
             self.__model.rowsRemoved[QModelIndex, int, int].disconnect(
                 self._build)
-            self.__model.dataChanged[QModelIndex, QModelIndex].disconnect(
+            self.__model.dataChanged.disconnect(
                 self._build)
         
         self.__model = model
@@ -72,7 +72,7 @@ class E5ModelToolBar(QToolBar):
                 self._build)
             self.__model.rowsRemoved[QModelIndex, int, int].connect(
                 self._build)
-            self.__model.dataChanged[QModelIndex, QModelIndex].connect(
+            self.__model.dataChanged.connect(
                 self._build)
     
     def model(self):

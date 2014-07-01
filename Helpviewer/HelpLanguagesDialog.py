@@ -168,7 +168,8 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
         @return list of expanded language names (list of strings)
         """
         allLanguages = []
-        countries = QLocale.countriesForLanguage(language)
+        countries = [l.country() for l in QLocale.matchingLocales(
+            language, QLocale.AnyScript, QLocale.AnyCountry)]
         languageString = "{0} [{1}]"\
             .format(QLocale.languageToString(language),
                     QLocale(language).name().split('_')[0])
