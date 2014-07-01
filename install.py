@@ -51,13 +51,13 @@ macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
 # Define blacklisted versions of the prerequisites
 BlackLists = {
     "sip": ["4.11", "4.12.3"],
-    "PyQt5": ["4.7.5"],
+    "PyQt5": [],
     "QScintilla2": [],
 }
 PlatformsBlackLists = {
     "windows": {
         "sip": [],
-        "PyQt5": ["4.9.2", "4.9.3"],
+        "PyQt5": [],
         "QScintilla2": [],
     },
     
@@ -69,7 +69,7 @@ PlatformsBlackLists = {
     
     "mac": {
         "sip": [],
-        "PyQt5": ["4.9.2", "4.9.3"],
+        "PyQt5": [],
         "QScintilla2": [],
     },
 }
@@ -958,8 +958,10 @@ def doDependancyChecks():
     print("Found QScintilla2")
     
     for impModule in [
-        "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt5.QtSql",
-        "PyQt5.QtSvg", "PyQt5.QtWebKit",
+        "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt4.QtPrintSupport",
+        "PyQt5.QtSql", "PyQt5.QtSvg", "PyQt5.QtWebKit",
+        "PyQt5.QtWebKitWidgets", "PyQt5.QtWidgets",
+        
     ]:
         name = impModule.split(".")[1]
         modulesOK = True
@@ -984,8 +986,8 @@ def doDependancyChecks():
     # check version of Qt
     qtMajor = int(qVersion().split('.')[0])
     qtMinor = int(qVersion().split('.')[1])
-    if qtMajor < 4 or (qtMajor == 4 and qtMinor < 6):
-        print('Sorry, you must have Qt version 4.6.0 or higher.')
+    if qtMajor < 5 or (qtMajor == 3 and qtMinor < 6):
+        print('Sorry, you must have Qt version 5.3.0 or higher.')
         exit(2)
     print("Qt Version: {0}".format(qVersion()))
     
@@ -1028,8 +1030,8 @@ def doDependancyChecks():
         maj = int(maj)
         min = int(min)
         pat = int(pat)
-        if maj < 4 or (maj == 4 and min < 8):
-            print('Sorry, you must have PyQt 4.8.0 or higher or'
+        if maj < 5 or (maj == 5 and min < 3):
+            print('Sorry, you must have PyQt 5.3.0 or higher or'
                   ' a recent snapshot release.')
             exit(4)
         # check for blacklisted versions
@@ -1052,8 +1054,8 @@ def doDependancyChecks():
         maj = int(maj)
         min = int(min)
         pat = int(pat)
-        if maj < 2 or (maj == 2 and min < 6):
-            print('Sorry, you must have QScintilla 2.6.0 or higher or'
+        if maj < 2 or (maj == 2 and min < 8):
+            print('Sorry, you must have QScintilla 2.8.0 or higher or'
                   ' a recent snapshot release.')
             exit(5)
         # check for blacklisted versions
