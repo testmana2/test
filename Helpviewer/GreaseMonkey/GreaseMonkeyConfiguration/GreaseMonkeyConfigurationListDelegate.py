@@ -11,8 +11,9 @@ scripts.
 from __future__ import unicode_literals
 
 from PyQt5.QtCore import Qt, QSize, QRect
-from PyQt5.QtGui import QFontMetrics, QPalette, QFont, QStyleOptionViewItemV4
-from PyQt5.QtWidgets import QStyle, QStyledItemDelegate, QApplication
+from PyQt5.QtGui import QFontMetrics, QPalette, QFont
+from PyQt5.QtWidgets import QStyle, QStyledItemDelegate, QApplication, \
+    QStyleOptionViewItem
 
 import UI.PixmapCache
 import Globals
@@ -59,7 +60,7 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         @param option style option used for painting (QStyleOptionViewItem)
         @param index model index of the item (QModelIndex)
         """
-        opt = QStyleOptionViewItemV4(option)
+        opt = QStyleOptionViewItem(option)
         self.initStyleOption(opt, index)
         
         widget = opt.widget
@@ -89,7 +90,7 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         # Draw checkbox
         checkBoxYPos = center - \
             GreaseMonkeyConfigurationListDelegate.CheckBoxSize // 2
-        opt2 = QStyleOptionViewItemV4(opt)
+        opt2 = QStyleOptionViewItem(opt)
         if opt2.checkState == Qt.Checked:
             opt2.state |= QStyle.State_On
         else:
@@ -163,7 +164,7 @@ class GreaseMonkeyConfigurationListDelegate(QStyledItemDelegate):
         @return size hint (QSize)
         """
         if not self.__rowHeight:
-            opt = QStyleOptionViewItemV4(option)
+            opt = QStyleOptionViewItem(option)
             self.initStyleOption(opt, index)
             
             widget = opt.widget
