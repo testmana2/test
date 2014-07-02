@@ -2247,19 +2247,24 @@ class UserInterface(E5MainWindow):
         self.qt5DocAct.triggered.connect(self.__showQt5Doc)
         self.actions.append(self.qt5DocAct)
       
-        self.pyqt4DocAct = E5Action(
-            self.tr('PyQt5 Documentation'),
-            self.tr('PyQt&4 Documentation'),
-            0, 0, self, 'pyqt4_documentation')
-        self.pyqt4DocAct.setStatusTip(self.tr('Open PyQt5 Documentation'))
-        self.pyqt4DocAct.setWhatsThis(self.tr(
-            """<b>PyQt5 Documentation</b>"""
-            """<p>Display the PyQt5 Documentation. Dependent upon your"""
-            """ settings, this will either show the help in Eric's internal"""
-            """ help viewer, or execute a web browser or Qt Assistant. </p>"""
-        ))
-        self.pyqt4DocAct.triggered.connect(self.__showPyQt5Doc)
-        self.actions.append(self.pyqt4DocAct)
+        try:
+            import PyQt4        # __IGNORE_WARNING__
+            self.pyqt4DocAct = E5Action(
+                self.tr('PyQt4 Documentation'),
+                self.tr('PyQt&4 Documentation'),
+                0, 0, self, 'pyqt4_documentation')
+            self.pyqt4DocAct.setStatusTip(self.tr('Open PyQt4 Documentation'))
+            self.pyqt4DocAct.setWhatsThis(self.tr(
+                """<b>PyQt4 Documentation</b>"""
+                """<p>Display the PyQt4 Documentation. Dependent upon your"""
+                """ settings, this will either show the help in Eric's"""
+                """ internal help viewer, or execute a web browser or"""
+                """ Qt Assistant. </p>"""
+            ))
+            self.pyqt4DocAct.triggered.connect(self.__showPyQt5Doc)
+            self.actions.append(self.pyqt4DocAct)
+        except ImportError:
+            self.pyqt4DocAct = None
         
         try:
             import PyQt5        # __IGNORE_WARNING__
@@ -2516,7 +2521,8 @@ class UserInterface(E5MainWindow):
         self.__menus["help"].addAction(self.python2DocAct)
         self.__menus["help"].addAction(self.qt4DocAct)
         self.__menus["help"].addAction(self.qt5DocAct)
-        self.__menus["help"].addAction(self.pyqt4DocAct)
+        if self.pyqt4DocAct is not None:
+            self.__menus["help"].addAction(self.pyqt4DocAct)
         if self.pyqt5DocAct is not None:
             self.__menus["help"].addAction(self.pyqt5DocAct)
         if self.pysideDocAct is not None:
