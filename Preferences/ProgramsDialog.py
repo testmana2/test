@@ -133,19 +133,19 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
             self.tr("Qt Assistant"), exe, version=version)
         
         # 2. do the PyQt programs
-        # 2a. Translation Extractor PyQt5
+        # 2a. Translation Extractor PyQt4
         self.__createProgramEntry(
-            self.tr("Translation Extractor (Python, PyQt5)"),
+            self.tr("Translation Extractor (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pylupdate4.exe" or "pylupdate4",
             '-version', 'pylupdate', -1)
-        # 2b. Forms Compiler PyQt5
+        # 2b. Forms Compiler PyQt4
         self.__createProgramEntry(
-            self.tr("Forms Compiler (Python, PyQt5)"),
+            self.tr("Forms Compiler (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pyuic4.bat" or "pyuic4",
             '--version', 'Python User', 4)
-        # 2c. Resource Compiler PyQt5
+        # 2c. Resource Compiler PyQt4
         self.__createProgramEntry(
-            self.tr("Resource Compiler (Python, PyQt5)"),
+            self.tr("Resource Compiler (Python, PyQt4)"),
             Utilities.isWindowsPlatform() and "pyrcc4.exe" or "pyrcc4",
             '-version', 'Resource Compiler', -1)
         # 2d. Translation Extractor PyQt5

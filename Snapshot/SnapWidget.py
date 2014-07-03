@@ -16,9 +16,8 @@ from __future__ import unicode_literals
 import os
 
 from PyQt5.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, \
-    QMimeData, Qt, QEvent, QRegExp, qVersion
-from PyQt5.QtGui import QImageWriter, QPixmap, QCursor, QDrag, QKeySequence, \
-    QDesktopServices
+    QMimeData, Qt, QEvent, QRegExp, qVersion, QStandardPaths
+from PyQt5.QtGui import QImageWriter, QPixmap, QCursor, QDrag, QKeySequence
 from PyQt5.QtWidgets import QWidget, QApplication, QShortcut
 
 from E5Gui import E5FileDialog, E5MessageBox
@@ -63,7 +62,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
                                SnapWidget.ModeEllipse)
         self.modeCombo.addItem(self.tr("Freehand Selection"),
                                SnapWidget.ModeFreehand)
-        if QApplication.desktop().numScreens() > 1:
+        if QApplication.desktop().screenCount() > 1:
             self.modeCombo.addItem(self.tr("Current Screen"),
                                    SnapWidget.ModeScreen)
         self.__mode = int(Preferences.Prefs.settings.value("Snapshot/Mode", 0))
@@ -79,8 +78,8 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         self.__filename = Preferences.Prefs.settings.value(
             "Snapshot/Filename",
             os.path.join(
-                QDesktopServices.storageLocation(
-                    QDesktopServices.PicturesLocation),
+                QStandardPaths.writableLocation(
+                    QStandardPaths.PicturesLocation),
                 self.tr("snapshot") + "1.png"))
         
         self.__grabber = None

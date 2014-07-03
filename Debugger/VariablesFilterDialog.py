@@ -50,10 +50,10 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
                 
         for filterIndex in lDefaultFilter:
             itm = self.localsList.item(filterIndex)
-            self.localsList.setItemSelected(itm, True)
+            itm.setSelected(True)
         for filterIndex in gDefaultFilter:
             itm = self.globalsList.item(filterIndex)
-            self.globalsList.setItemSelected(itm, True)
+            itm.setSelected(True)
 
     def getSelection(self):
         """
@@ -83,10 +83,10 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         """
         for filterIndex in lList:
             itm = self.localsList.item(filterIndex)
-            self.localsList.setItemSelected(itm, True)
+            itm.setSelected(True)
         for filterIndex in gList:
             itm = self.globalsList.item(filterIndex)
-            self.globalsList.setItemSelected(itm, True)
+            itm.setSelected(True)
 
     def on_buttonBox_clicked(self, button):
         """

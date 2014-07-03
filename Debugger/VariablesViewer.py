@@ -451,7 +451,7 @@ class VariablesViewer(QTreeWidget):
                 citm = self.__findItem(self.curpathlist, 0)
                 if citm:
                     self.setCurrentItem(citm)
-                    self.setItemSelected(citm, True)
+                    citm.setSelected(True)
                     self.scrollToItem(citm, QAbstractItemView.PositionAtTop)
                     self.current = None
             
@@ -502,7 +502,7 @@ class VariablesViewer(QTreeWidget):
             citm = self.__findItem(self.curpathlist, 0)
             if citm:
                 self.setCurrentItem(citm)
-                self.setItemSelected(citm, True)
+                citm.setSelected(True)
                 if self.__scrollToItem:
                     self.scrollToItem(self.__scrollToItem,
                                       QAbstractItemView.PositionAtTop)
