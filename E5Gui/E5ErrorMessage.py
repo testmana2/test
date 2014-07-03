@@ -109,7 +109,7 @@ def messageHandler(msgType, message):
                 messageType = QCoreApplication.translate(
                     "E5ErrorMessage", "Fatal Error:")
             if isinstance(message, bytes):
-                message = message.decode()
+                message = Utilities.decodeBytes(message)
             message = message.replace("\r\n", "<br/>")\
                              .replace("\n", "<br/>")\
                              .replace("\r", "<br/>")
