@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric5 project file for project eric5 -->
+<!-- eric5 project file for project eric6 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -9,8 +9,8 @@
   <Hash>df7daa8781250f7664e6ecaeaf1361fa2efd39ee</Hash>
   <ProgLanguage mixed="1">Python3</ProgLanguage>
   <ProjectType>PyQt5</ProjectType>
-  <Description>eric5 is an integrated development environment for the Python and Ruby language. It uses the PyQt4 bindings and the QScintilla2 editor widget.</Description>
-  <Version>5.5.x</Version>
+  <Description>eric6 is an integrated development environment for the Python and Ruby language. It uses the PyQt5 bindings and the QScintilla2 editor widget.</Description>
+  <Version>6.0.x</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
@@ -657,8 +657,6 @@
     <Source>compileUiFiles.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
     <Source>eric5config.py</Source>
-    <Source>eric5.py</Source>
-    <Source>eric5.pyw</Source>
     <Source>DebugClients/Python/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/coverage/bytecode.py</Source>
@@ -1149,6 +1147,8 @@
     <Source>ThirdParty/Send2Trash/send2trash/compat.py</Source>
     <Source>ThirdParty/Send2Trash/send2trash/plat_gio.py</Source>
     <Source>QScintilla/Lexers/LexerCoffeeScript.py</Source>
+    <Source>eric6.py</Source>
+    <Source>eric6.pyw</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1544,12 +1544,9 @@
     <Other>DebugClients/Python/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/htmlfiles</Other>
-    <Other>eric5config.linux</Other>
-    <Other>eric5.e4p</Other>
     <Other>README-eric5-doc.txt</Other>
     <Other>APIs/Ruby/eric5.api</Other>
     <Other>APIs/Python3/eric5.api</Other>
-    <Other>eric5.desktop</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
     <Other>.hgignore</Other>
@@ -1581,7 +1578,6 @@
     <Other>Helpviewer/data/javascript/jquery-ui.js</Other>
     <Other>Helpviewer/data/javascript/jquery.js</Other>
     <Other>README-Raspberry.txt</Other>
-    <Other>eric5_webbrowser.desktop</Other>
     <Other>icons</Other>
     <Other>CSSs</Other>
     <Other>DTDs</Other>
@@ -1621,10 +1617,14 @@
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wikipedia.xml</Other>
     <Other>Helpviewer/OpenSearch/DefaultSearchEngines/Wiktionary.xml</Other>
     <Other>APIs/QSS/qss.api</Other>
-    <Other>eric5.appdata.xml</Other>
     <Other>ThirdParty/Send2Trash/LICENSE</Other>
+    <Other>eric6.e4p</Other>
+    <Other>eric6config.linux</Other>
+    <Other>eric6_webbrowser.desktop</Other>
+    <Other>eric6.appdata.xml</Other>
+    <Other>eric6.desktop</Other>
   </Others>
-  <MainScript>eric5.py</MainScript>
+  <MainScript>eric6.py</MainScript>
   <Vcs>
     <VcsType>Mercurial</VcsType>
     <VcsOptions>
