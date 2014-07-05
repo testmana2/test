@@ -635,6 +635,13 @@ class Prefs(object):
             TranslationsBrowserFlag |
             InterfacesBrowserFlag |
             OthersBrowserFlag),
+        "E6Plugin": (
+            SourcesBrowserFlag |
+            FormsBrowserFlag |
+            ResourcesBrowserFlag |
+            TranslationsBrowserFlag |
+            InterfacesBrowserFlag |
+            OthersBrowserFlag),
         "Console": (
             SourcesBrowserFlag |
             InterfacesBrowserFlag |

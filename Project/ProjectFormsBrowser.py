@@ -129,7 +129,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
             self.menu.addAction(
                 self.tr('Compile form'), self.__compileForm)
             self.menu.addAction(
@@ -184,7 +184,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.menuActions.append(act)
         self.menu.addSeparator()
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
             self.menu.addAction(self.tr('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -207,7 +207,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"] or \
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"] or \
                 self.hooks["compileAllForms"] is not None:
             self.backMenu.addAction(
                 self.tr('Compile all forms'), self.__compileAllForms)
@@ -234,7 +234,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
             act = self.multiMenu.addAction(
                 self.tr('Compile forms'), self.__compileSelectedForms)
             self.multiMenu.addSeparator()
@@ -276,7 +276,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
             self.dirMenu.addAction(
                 self.tr('Compile all forms'), self.__compileAllForms)
             self.dirMenu.addSeparator()
@@ -296,7 +296,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         self.dirMenuActions.append(act)
         self.dirMenu.addSeparator()
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
             self.dirMenu.addAction(self.tr('New form...'), self.__newForm)
         else:
             if self.hooks["newForm"] is not None:
@@ -321,7 +321,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
             self.dirMultiMenu.addAction(
                 self.tr('Compile all forms'), self.__compileAllForms)
             self.dirMultiMenu.addSeparator()
@@ -539,7 +539,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.hooks["newForm"](path)
         else:
             if self.project.getProjectType() in \
-                    ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+                    ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
                 self.__newUiForm(path)
         
     def __newUiForm(self, path):
@@ -753,7 +753,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                     uic = self.uicompiler + '.bat'
                 else:
                     uic = self.uicompiler
-            elif self.project.getProjectType() == "PyQt5":
+            elif self.project.getProjectType() in ["PyQt5", "E6Plugin"]:
                 self.uicompiler = 'pyuic5'
                 if Utilities.isWindowsPlatform():
                     uic = self.uicompiler + '.bat'
@@ -930,7 +930,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             self.hooks["compileChangedForms"](self.project.pdata["FORMS"])
         else:
             if self.project.getProjectType() not in \
-               ["Qt4", "PyQt5", "E4Plugin", "PySide"]:
+               ["Qt4", "PyQt5", "E4Plugin", "E6Plugin", "PySide"]:
                 # ignore the request for non Qt GUI projects
                 return
             

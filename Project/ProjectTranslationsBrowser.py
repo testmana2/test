@@ -113,7 +113,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             act = self.menu.addAction(
                 self.tr('Generate translation'), self.__generateSelected)
@@ -240,7 +240,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             act = self.backMenu.addAction(
                 self.tr('Generate all translations'),
@@ -301,7 +301,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             act = self.multiMenu.addAction(
                 self.tr('Generate translations'),
@@ -385,7 +385,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             act = self.dirMenu.addAction(
                 self.tr('Generate all translations'),
@@ -503,7 +503,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the menu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             tsFiles = 0
             qmFiles = 0
@@ -545,7 +545,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the multiMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             tsFiles = 0
             qmFiles = 0
@@ -585,7 +585,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the dirMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             if self.pylupdateProcRunning:
                 for act in self.tsprocDirMenuActions:
@@ -605,7 +605,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
         Private slot called by the backMenu aboutToShow signal.
         """
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             if self.pylupdateProcRunning:
                 for act in self.tsprocBackMenuActions:
@@ -1035,7 +1035,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.pylupdate = 'pylupdate4'
             if Utilities.isWindowsPlatform():
                 self.pylupdate = self.pylupdate + '.exe'
-        elif self.project.getProjectType() in ["PyQt5", "PyQt5C"]:
+        elif self.project.getProjectType() in ["PyQt5", "PyQt5C", "E6Plugin"]:
             self.pylupdate = 'pylupdate5'
             if Utilities.isWindowsPlatform():
                 self.pylupdate = self.pylupdate + '.exe'
@@ -1208,7 +1208,7 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             return
         
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
                  "PySide", "PySideC"]:
             lrelease = os.path.join(
                 Utilities.getQtBinariesPath(),

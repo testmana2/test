@@ -1565,7 +1565,8 @@ class DebugUI(QObject):
             self.viewmanager.unhighlight()
             
             if not doNotStart:
-                if runProject and self.project.getProjectType() == "E4Plugin":
+                if runProject and self.project.getProjectType() in [
+                        "E4Plugin", "E6Plugin"]:
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric6.py")
                 
@@ -1683,7 +1684,8 @@ class DebugUI(QObject):
             self.viewmanager.unhighlight()
             
             if not doNotStart:
-                if runProject and self.project.getProjectType() == "E4Plugin":
+                if runProject and self.project.getProjectType() in [
+                        "E4Plugin", "E6Plugin"]:
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric6.py")
                 
@@ -1804,7 +1806,8 @@ class DebugUI(QObject):
             self.viewmanager.unhighlight()
             
             if not doNotStart:
-                if runProject and self.project.getProjectType() == "E4Plugin":
+                if runProject and self.project.getProjectType() in [
+                        "E4Plugin", "E6Plugin"]:
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric6.py")
                 
@@ -1932,8 +1935,8 @@ class DebugUI(QObject):
             self.viewmanager.unhighlight()
             
             if not doNotStart:
-                if debugProject and \
-                        self.project.getProjectType() == "E4Plugin":
+                if debugProject and self.project.getProjectType() in [
+                        "E4Plugin", "E6Plugin"]:
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
                     fn = os.path.join(getConfig('ericDir'), "eric6.py")
                     tracePython = True  # override flag because it must be true
@@ -1995,7 +1998,8 @@ class DebugUI(QObject):
         self.viewmanager.unhighlight()
         
         if not doNotStart:
-            if forProject and self.project.getProjectType() == "E4Plugin":
+            if forProject and self.project.getProjectType() in [
+                    "E4Plugin", "E6Plugin"]:
                 argv = '--plugin="{0}" {1}'.format(fn, argv)
                 fn = os.path.join(getConfig('ericDir'), "eric6.py")
             
