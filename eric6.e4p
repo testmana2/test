@@ -13,7 +13,7 @@
   <Version>6.0.x</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
-  <TranslationPattern>i18n/eric5_%language%.ts</TranslationPattern>
+  <TranslationPattern>i18n/eric6_%language%.ts</TranslationPattern>
   <Eol index="1"/>
   <Sources>
     <Source>__init__.py</Source>
@@ -656,7 +656,6 @@
     <Source>Helpviewer/AdBlock/AdBlockPage.py</Source>
     <Source>compileUiFiles.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
-    <Source>eric5config.py</Source>
     <Source>DebugClients/Python/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/coverage/bytecode.py</Source>
@@ -789,40 +788,6 @@
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
-    <Source>eric5_compare.py</Source>
-    <Source>eric5_compare.pyw</Source>
-    <Source>eric5_configure.py</Source>
-    <Source>eric5_diff.py</Source>
-    <Source>eric5_editor.py</Source>
-    <Source>eric5_iconeditor.py</Source>
-    <Source>eric5_plugininstall.py</Source>
-    <Source>eric5_pluginrepository.py</Source>
-    <Source>eric5_pluginuninstall.py</Source>
-    <Source>eric5_qregexp.py</Source>
-    <Source>eric5_re.py</Source>
-    <Source>eric5_sqlbrowser.py</Source>
-    <Source>eric5_tray.py</Source>
-    <Source>eric5_trpreviewer.py</Source>
-    <Source>eric5_uipreviewer.py</Source>
-    <Source>eric5_unittest.py</Source>
-    <Source>eric5_webbrowser.py</Source>
-    <Source>eric5_configure.pyw</Source>
-    <Source>eric5_diff.pyw</Source>
-    <Source>eric5_editor.pyw</Source>
-    <Source>eric5_iconeditor.pyw</Source>
-    <Source>eric5_plugininstall.pyw</Source>
-    <Source>eric5_pluginrepository.pyw</Source>
-    <Source>eric5_pluginuninstall.pyw</Source>
-    <Source>eric5_qregexp.pyw</Source>
-    <Source>eric5_re.pyw</Source>
-    <Source>eric5_sqlbrowser.pyw</Source>
-    <Source>eric5_tray.pyw</Source>
-    <Source>eric5_trpreviewer.pyw</Source>
-    <Source>eric5_uipreviewer.pyw</Source>
-    <Source>eric5_unittest.pyw</Source>
-    <Source>eric5_webbrowser.pyw</Source>
-    <Source>eric5_api.py</Source>
-    <Source>eric5_doc.py</Source>
     <Source>Helpviewer/VirusTotalApi.py</Source>
     <Source>Preferences/ConfigurationPages/HelpVirusTotalPage.py</Source>
     <Source>Helpviewer/Download/DownloadAskActionDialog.py</Source>
@@ -952,8 +917,6 @@
     <Source>Snapshot/__init__.py</Source>
     <Source>Snapshot/SnapWidget.py</Source>
     <Source>Snapshot/SnapshotRegionGrabber.py</Source>
-    <Source>eric5_snap.py</Source>
-    <Source>eric5_snap.pyw</Source>
     <Source>Snapshot/SnapshotPreview.py</Source>
     <Source>Snapshot/SnapshotTimer.py</Source>
     <Source>Snapshot/SnapshotFreehandGrabber.py</Source>
@@ -1051,8 +1014,6 @@
     <Source>Plugins/WizardPlugins/QRegularExpressionWizard/__init__.py</Source>
     <Source>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardCharactersDialog.py</Source>
     <Source>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardRepeatDialog.py</Source>
-    <Source>eric5_qregularexpression.py</Source>
-    <Source>eric5_qregularexpression.pyw</Source>
     <Source>Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardServer.py</Source>
     <Source>Utilities/ClassBrowsers/jsclbr.py</Source>
     <Source>ThirdParty/Jasy/__init__.py</Source>
@@ -1149,6 +1110,45 @@
     <Source>QScintilla/Lexers/LexerCoffeeScript.py</Source>
     <Source>eric6.py</Source>
     <Source>eric6.pyw</Source>
+    <Source>eric6_api.py</Source>
+    <Source>eric6_compare.py</Source>
+    <Source>eric6_compare.pyw</Source>
+    <Source>eric6_configure.py</Source>
+    <Source>eric6_configure.pyw</Source>
+    <Source>eric6_diff.py</Source>
+    <Source>eric6_diff.pyw</Source>
+    <Source>eric6_doc.py</Source>
+    <Source>eric6_editor.py</Source>
+    <Source>eric6_editor.pyw</Source>
+    <Source>eric6_iconeditor.py</Source>
+    <Source>eric6_iconeditor.pyw</Source>
+    <Source>eric6_plugininstall.py</Source>
+    <Source>eric6_plugininstall.pyw</Source>
+    <Source>eric6_pluginrepository.py</Source>
+    <Source>eric6_pluginrepository.pyw</Source>
+    <Source>eric6_pluginuninstall.py</Source>
+    <Source>eric6_pluginuninstall.pyw</Source>
+    <Source>eric6_qregexp.py</Source>
+    <Source>eric6_qregexp.pyw</Source>
+    <Source>eric6_qregularexpression.py</Source>
+    <Source>eric6_qregularexpression.pyw</Source>
+    <Source>eric6_re.py</Source>
+    <Source>eric6_re.pyw</Source>
+    <Source>eric6_snap.py</Source>
+    <Source>eric6_snap.pyw</Source>
+    <Source>eric6_sqlbrowser.py</Source>
+    <Source>eric6_sqlbrowser.pyw</Source>
+    <Source>eric6_tray.py</Source>
+    <Source>eric6_tray.pyw</Source>
+    <Source>eric6_trpreviewer.py</Source>
+    <Source>eric6_trpreviewer.pyw</Source>
+    <Source>eric6_uipreviewer.py</Source>
+    <Source>eric6_uipreviewer.pyw</Source>
+    <Source>eric6_unittest.py</Source>
+    <Source>eric6_unittest.pyw</Source>
+    <Source>eric6_webbrowser.py</Source>
+    <Source>eric6_webbrowser.pyw</Source>
+    <Source>eric6config.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1480,24 +1480,24 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui</Form>
   </Forms>
   <Translations>
-    <Translation>i18n/eric5_cs.ts</Translation>
-    <Translation>i18n/eric5_de.ts</Translation>
-    <Translation>i18n/eric5_es.ts</Translation>
-    <Translation>i18n/eric5_fr.ts</Translation>
-    <Translation>i18n/eric5_it.ts</Translation>
-    <Translation>i18n/eric5_ru.ts</Translation>
-    <Translation>i18n/eric5_tr.ts</Translation>
-    <Translation>i18n/eric5_zh_CN.GB2312.ts</Translation>
-    <Translation>i18n/eric5_en.ts</Translation>
-    <Translation>i18n/eric5_cs.qm</Translation>
-    <Translation>i18n/eric5_de.qm</Translation>
-    <Translation>i18n/eric5_en.qm</Translation>
-    <Translation>i18n/eric5_es.qm</Translation>
-    <Translation>i18n/eric5_fr.qm</Translation>
-    <Translation>i18n/eric5_it.qm</Translation>
-    <Translation>i18n/eric5_ru.qm</Translation>
-    <Translation>i18n/eric5_tr.qm</Translation>
-    <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
+    <Translation>i18n/eric6_cs.qm</Translation>
+    <Translation>i18n/eric6_cs.ts</Translation>
+    <Translation>i18n/eric6_de.qm</Translation>
+    <Translation>i18n/eric6_de.ts</Translation>
+    <Translation>i18n/eric6_en.qm</Translation>
+    <Translation>i18n/eric6_en.ts</Translation>
+    <Translation>i18n/eric6_es.qm</Translation>
+    <Translation>i18n/eric6_es.ts</Translation>
+    <Translation>i18n/eric6_fr.qm</Translation>
+    <Translation>i18n/eric6_fr.ts</Translation>
+    <Translation>i18n/eric6_it.qm</Translation>
+    <Translation>i18n/eric6_it.ts</Translation>
+    <Translation>i18n/eric6_ru.qm</Translation>
+    <Translation>i18n/eric6_ru.ts</Translation>
+    <Translation>i18n/eric6_tr.qm</Translation>
+    <Translation>i18n/eric6_tr.ts</Translation>
+    <Translation>i18n/eric6_zh_CN.GB2312.qm</Translation>
+    <Translation>i18n/eric6_zh_CN.GB2312.ts</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
@@ -1545,8 +1545,6 @@
     <Other>DebugClients/Python3/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/htmlfiles</Other>
     <Other>README-eric5-doc.txt</Other>
-    <Other>APIs/Ruby/eric5.api</Other>
-    <Other>APIs/Python3/eric5.api</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
     <Other>.hgignore</Other>
@@ -1583,19 +1581,14 @@
     <Other>DTDs</Other>
     <Other>DesignerTemplates</Other>
     <Other>pixmaps</Other>
-    <Other>Documentation/eric5-plugin.odt</Other>
-    <Other>Documentation/eric5-plugin.pdf</Other>
     <Other>Documentation/mod_python.odt</Other>
     <Other>Documentation/mod_python.pdf</Other>
-    <Other>Documentation/Source</Other>
     <Other>Styles</Other>
     <Other>CodeTemplates</Other>
     <Other>Documentation/Help</Other>
-    <Other>APIs/Ruby/eric5.bas</Other>
     <Other>APIs/Ruby/Ruby-1.8.7.bas</Other>
     <Other>APIs/Ruby/Ruby-1.9.1.api</Other>
     <Other>APIs/Ruby/Ruby-1.9.1.bas</Other>
-    <Other>APIs/Python3/eric5.bas</Other>
     <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>APIs/Python3/QScintilla2.bas</Other>
     <Other>ThirdParty/Jasy/jasy/license.md</Other>
@@ -1623,6 +1616,12 @@
     <Other>eric6_webbrowser.desktop</Other>
     <Other>eric6.appdata.xml</Other>
     <Other>eric6.desktop</Other>
+    <Other>APIs/Python3/eric6.api</Other>
+    <Other>APIs/Python3/eric6.bas</Other>
+    <Other>APIs/Ruby/eric6.api</Other>
+    <Other>APIs/Ruby/eric6.bas</Other>
+    <Other>Documentation/eric6-plugin.odt</Other>
+    <Other>Documentation/eric6-plugin.pdf</Other>
   </Others>
   <MainScript>eric6.py</MainScript>
   <Vcs>
