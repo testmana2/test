@@ -1115,17 +1115,18 @@ class Hg(VersionControl):
         
         if output:
             for line in output.splitlines():
-                flag, path = line.split(" ", 1)
-                absname = os.path.join(repodir, os.path.normcase(path))
-                if flag not in "?I":
-                    if fname == '.':
-                        if absname.startswith(dname + os.path.sep):
-                            return self.canBeCommitted
-                        if absname == dname:
-                            return self.canBeCommitted
-                    else:
-                        if absname == name:
-                            return self.canBeCommitted
+                if line and line[0] in "MARC!?I":
+                    flag, path = line.split(" ", 1)
+                    absname = os.path.join(repodir, os.path.normcase(path))
+                    if flag not in "?I":
+                        if fname == '.':
+                            if absname.startswith(dname + os.path.sep):
+                                return self.canBeCommitted
+                            if absname == dname:
+                                return self.canBeCommitted
+                        else:
+                            if absname == name:
+                                return self.canBeCommitted
         
         return self.canBeAdded
     
@@ -1186,28 +1187,29 @@ class Hg(VersionControl):
             if output:
                 dirs = [x for x in names.keys() if os.path.isdir(x)]
                 for line in output.splitlines():
-                    flag, path = line.split(" ", 1)
-                    name = os.path.normcase(os.path.join(repodir, path))
-                    dirName = os.path.dirname(name)
-                    if name.startswith(dname):
+                    if line and line[0] in "MARC!?I":
+                        flag, path = line.split(" ", 1)
+                        name = os.path.normcase(os.path.join(repodir, path))
+                        dirName = os.path.dirname(name)
+                        if name.startswith(dname):
+                            if flag not in "?I":
+                                if name in names:
+                                    names[name] = self.canBeCommitted
+                                if dirName in names:
+                                    names[dirName] = self.canBeCommitted
+                                if dirs:
+                                    for d in dirs:
+                                        if name.startswith(d):
+                                            names[d] = self.canBeCommitted
+                                            dirs.remove(d)
+                                            break
                         if flag not in "?I":
-                            if name in names:
-                                names[name] = self.canBeCommitted
-                            if dirName in names:
-                                names[dirName] = self.canBeCommitted
-                            if dirs:
-                                for d in dirs:
-                                    if name.startswith(d):
-                                        names[d] = self.canBeCommitted
-                                        dirs.remove(d)
-                                        break
-                    if flag not in "?I":
-                        self.statusCache[name] = self.canBeCommitted
-                        self.statusCache[dirName] = self.canBeCommitted
-                    else:
-                        self.statusCache[name] = self.canBeAdded
-                        if dirName not in self.statusCache:
-                            self.statusCache[dirName] = self.canBeAdded
+                            self.statusCache[name] = self.canBeCommitted
+                            self.statusCache[dirName] = self.canBeCommitted
+                        else:
+                            self.statusCache[name] = self.canBeAdded
+                            if dirName not in self.statusCache:
+                                self.statusCache[dirName] = self.canBeAdded
         
         return names
     
