@@ -1,5 +1,7 @@
 glob:.eric5project
 glob:_eric5project
+glob:.eric6project
+glob:_eric6project
 glob:.ropeproject
 glob:_ropeproject
 glob:.directory
