@@ -3,10 +3,10 @@
 
 # Copyright (c) 2002-2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is the install script for eric5.
+# This is the install script for eric6.
 
 """
-Installation script for the eric5 IDE and all eric5 related tools.
+Installation script for the eric6 IDE and all eric6 related tools.
 """
 
 from __future__ import unicode_literals
@@ -41,9 +41,9 @@ includePythonVariant = False
 cfg = {}
 progLanguages = ["Python", "Ruby", "QSS"]
 sourceDir = "eric"
-configName = 'eric5config.py'
-defaultMacAppBundleName = "eric5.app"
-macAppBundleName = "eric5.app"
+configName = 'eric6config.py'
+defaultMacAppBundleName = "eric6.app"
+macAppBundleName = "eric6.app"
 macAppBundlePath = "/Applications"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
     sys.exec_prefix)
@@ -130,7 +130,7 @@ def usage(rcode=2):
         print("              (no default value)")
     print("    -b dir    where the binaries will be installed")
     print("              (default: {0})".format(platBinDir))
-    print("    -d dir    where eric5 python files will be installed")
+    print("    -d dir    where eric6 python files will be installed")
     print("              (default: {0})".format(modDir))
     print("    -f file   configuration file naming the various installation"
           " paths")
@@ -160,7 +160,7 @@ def usage(rcode=2):
     print("'ericTranslationsDir', 'ericTemplatesDir', 'ericCodeTemplatesDir',")
     print("'ericOthersDir','bindir', 'mdir' and 'apidir.")
     print("These define the directories for the installation of the various"
-          " parts of eric5.")
+          " parts of eric6.")
 
     exit(rcode)
 
@@ -334,7 +334,7 @@ def createGlobalPluginsDir():
     """
     global cfg, distDir
     
-    pdir = os.path.join(cfg['mdir'], "eric5plugins")
+    pdir = os.path.join(cfg['mdir'], "eric6plugins")
     fname = os.path.join(pdir, "__init__.py")
     if not os.path.exists(fname):
         if not os.path.exists(pdir):
@@ -392,9 +392,9 @@ def cleanUp():
     global macAppBundleName, macAppBundlePath, platBinDir, includePythonVariant
     
     try:
-        from eric5config import getConfig
+        from eric6config import getConfig
     except ImportError:
-        # eric5 wasn't installed previously
+        # eric6 wasn't installed previously
         return
     
     global pyModDir, progLanguages
@@ -402,38 +402,38 @@ def cleanUp():
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux"):
         for name in ["/usr/share/pixmaps/eric.png",
-                     "/usr/share/applications/eric5.desktop",
-                     "/usr/share/appdata/eric5.appdata.xml",
+                     "/usr/share/applications/eric6.desktop",
+                     "/usr/share/appdata/eric6.appdata.xml",
                      "/usr/share/pixmaps/ericWeb.png",
-                     "/usr/share/applications/eric5_webbrowser.desktop"]:
+                     "/usr/share/applications/eric6_webbrowser.desktop"]:
             if os.path.exists(name):
                 os.remove(name)
     
     # Remove the wrapper scripts
     rem_wnames = [
-        "eric5-api", "eric5-compare",
-        "eric5-configure", "eric5-diff",
-        "eric5-doc",
-        "eric5-qregexp", "eric5-re",
-        "eric5-trpreviewer", "eric5-uipreviewer",
-        "eric5-unittest", "eric5",
-        "eric5-tray", "eric5-editor",
-        "eric5-plugininstall", "eric5-pluginuninstall",
-        "eric5-pluginrepository", "eric5-sqlbrowser",
-        "eric5-webbrowser", "eric5-iconeditor",
+        "eric6-api", "eric6-compare",
+        "eric6-configure", "eric6-diff",
+        "eric6-doc",
+        "eric6-qregexp", "eric6-re",
+        "eric6-trpreviewer", "eric6-uipreviewer",
+        "eric6-unittest", "eric6",
+        "eric6-tray", "eric6-editor",
+        "eric6-plugininstall", "eric6-pluginuninstall",
+        "eric6-pluginrepository", "eric6-sqlbrowser",
+        "eric6-webbrowser", "eric6-iconeditor",
     ]
     rem_wnames2 = [
-        "eric5_api", "eric5_compare",
-        "eric5_configure", "eric5_diff",
-        "eric5_doc", "eric5_qregularexpression",
-        "eric5_qregexp", "eric5_re",
-        "eric5_trpreviewer", "eric5_uipreviewer",
-        "eric5_unittest", "eric5",
-        "eric5_tray", "eric5_editor",
-        "eric5_plugininstall", "eric5_pluginuninstall",
-        "eric5_pluginrepository", "eric5_sqlbrowser",
-        "eric5_webbrowser", "eric5_iconeditor",
-        "eric5_snap",
+        "eric6_api", "eric6_compare",
+        "eric6_configure", "eric6_diff",
+        "eric6_doc", "eric6_qregularexpression",
+        "eric6_qregexp", "eric6_re",
+        "eric6_trpreviewer", "eric6_uipreviewer",
+        "eric6_unittest", "eric6",
+        "eric6_tray", "eric6_editor",
+        "eric6_plugininstall", "eric6_pluginuninstall",
+        "eric6_pluginrepository", "eric6_sqlbrowser",
+        "eric6_webbrowser", "eric6_iconeditor",
+        "eric6_snap",
     ]
     if includePythonVariant:
         marker = PythonMarkers[sys.version_info.major]
@@ -449,7 +449,7 @@ def cleanUp():
                     os.remove(rwname)
         
         # Cleanup our config file(s)
-        for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
+        for name in ['eric6config.py', 'eric6config.pyc', 'eric6.pth']:
             e5cfile = os.path.join(pyModDir, name)
             if os.path.exists(e5cfile):
                 os.remove(e5cfile)
@@ -468,7 +468,7 @@ def cleanUp():
         
         # Cleanup translations
         for name in glob.glob(
-                os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+                os.path.join(getConfig('ericTranslationsDir'), 'eric6_*.qm')):
             if os.path.exists(name):
                 os.remove(name)
         
@@ -488,14 +488,14 @@ def cleanUp():
         
         if sys.platform == "darwin":
             # delete the Mac app bundle
-            if os.path.exists("/Developer/Applications/Eric5"):
-                shutil.rmtree("/Developer/Applications/Eric5")
+            if os.path.exists("/Developer/Applications/Eric6"):
+                shutil.rmtree("/Developer/Applications/Eric6")
             try:
                 macAppBundlePath = getConfig("macAppBundlePath")
                 macAppBundleName = getConfig("macAppBundleName")
             except AttributeError:
                 macAppBundlePath = "/Applications"
-                macAppBundleName = "eric5.app"
+                macAppBundleName = "eric6.app"
             if os.path.exists("/Applications/" + macAppBundleName):
                 shutil.rmtree("/Applications/" + macAppBundleName)
             bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
@@ -531,15 +531,15 @@ def installEric():
     
     # Create the platform specific wrappers.
     wnames = []
-    for name in ["eric5_api", "eric5_doc"]:
+    for name in ["eric6_api", "eric6_doc"]:
         wnames.append(createPyWrapper(cfg['ericDir'], name, False))
-    for name in ["eric5_compare", "eric5_configure", "eric5_diff",
-                 "eric5_editor", "eric5_iconeditor", "eric5_plugininstall",
-                 "eric5_pluginrepository", "eric5_pluginuninstall",
-                 "eric5_qregexp", "eric5_qregularexpression", "eric5_re",
-                 "eric5_snap", "eric5_sqlbrowser", "eric5_tray",
-                 "eric5_trpreviewer", "eric5_uipreviewer", "eric5_unittest",
-                 "eric5_webbrowser", "eric5"]:
+    for name in ["eric6_compare", "eric6_configure", "eric6_diff",
+                 "eric6_editor", "eric6_iconeditor", "eric6_plugininstall",
+                 "eric6_pluginrepository", "eric6_pluginuninstall",
+                 "eric6_qregexp", "eric6_qregularexpression", "eric6_re",
+                 "eric6_snap", "eric6_sqlbrowser", "eric6_tray",
+                 "eric6_trpreviewer", "eric6_uipreviewer", "eric6_unittest",
+                 "eric6_webbrowser", "eric6"]:
         wnames.append(createPyWrapper(cfg['ericDir'], name))
     
     # set install prefix, if not None
@@ -554,7 +554,7 @@ def installEric():
             if not os.path.isdir(cfg[key]):
                 os.makedirs(cfg[key])
         
-        # copy the eric5 config file
+        # copy the eric6 config file
         if distDir:
             shutilCopy(configName, cfg['mdir'])
             if os.path.exists(configName + 'c'):
@@ -564,12 +564,12 @@ def installEric():
             if os.path.exists(configName + 'c'):
                 shutilCopy(configName + 'c', modDir)
         
-        # copy the various parts of eric5
+        # copy the various parts of eric6
         copyTree(
             sourceDir, cfg['ericDir'],
             ['*.py', '*.pyc', '*.pyo', '*.pyw'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)],
-            excludePatterns=["eric5config.py*"])
+            excludePatterns=["eric6config.py*"])
         copyTree(
             sourceDir, cfg['ericDir'], ['*.rb'],
             ['{1}{0}Examples'.format(os.sep, sourceDir)])
@@ -699,30 +699,30 @@ def installEric():
                 os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutilCopy(os.path.join(sourceDir, "eric5.desktop"), dst)
-            shutilCopy(os.path.join(sourceDir, "eric5_webbrowser.desktop"),
+            shutilCopy(os.path.join(sourceDir, "eric6.desktop"), dst)
+            shutilCopy(os.path.join(sourceDir, "eric6_webbrowser.desktop"),
                        dst)
             dst = os.path.normpath(
                 os.path.join(distDir, "usr/share/appdata"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutilCopy(os.path.join(sourceDir, "eric5.appdata.xml"), dst)
+            shutilCopy(os.path.join(sourceDir, "eric6.appdata.xml"), dst)
         else:
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "eric.png"),
                 "/usr/share/pixmaps/eric.png")
             shutilCopy(os.path.join(
-                sourceDir, "eric5.desktop"),
+                sourceDir, "eric6.desktop"),
                 "/usr/share/applications")
             if os.path.exists("/usr/share/appdata"):
                 shutilCopy(os.path.join(
-                    sourceDir, "eric5.appdata.xml"),
+                    sourceDir, "eric6.appdata.xml"),
                     "/usr/share/appdata")
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "ericWeb48.png"),
                 "/usr/share/pixmaps/ericWeb.png")
             shutilCopy(os.path.join(
-                sourceDir, "eric5_webbrowser.desktop"),
+                sourceDir, "eric6_webbrowser.desktop"),
                 "/usr/share/applications")
     
     # Create a Mac application bundle
@@ -759,7 +759,7 @@ def createMacAppBundle(pydir):
     else:
         starter = "python{0}".format(sys.version_info.major)
     
-    wname = os.path.join(dirs["exe"], "eric5")
+    wname = os.path.join(dirs["exe"], "eric6")
     path = os.getenv("PATH", "")
     if path:
         pybin = os.path.join(sys.exec_prefix, "bin")
@@ -771,12 +771,12 @@ def createMacAppBundle(pydir):
                    '''\n'''
                    '''PATH={0}\n'''
                    '''exec "{1}" "{2}/{3}.py" "$@"\n'''
-                   .format(path, starter, pydir, "eric5"))
+                   .format(path, starter, pydir, "eric6"))
     else:
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
                    '''exec "{0}" "{1}/{2}.py" "$@"\n'''
-                   .format(starter, pydir, "eric5"))
+                   .format(starter, pydir, "eric6"))
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
     
@@ -791,7 +791,7 @@ def createMacAppBundle(pydir):
         '''<plist version="1.0">\n'''
         '''<dict>\n'''
         '''    <key>CFBundleExecutable</key>\n'''
-        '''    <string>eric5</string>\n'''
+        '''    <string>eric6</string>\n'''
         '''    <key>CFBundleIconFile</key>\n'''
         '''    <string>eric.icns</string>\n'''
         '''    <key>CFBundleInfoDictionaryVersion</key>\n'''
@@ -816,7 +816,7 @@ def createInstallConfig():
     """
     global modDir, platBinDir, cfg, apisDir
         
-    ericdir = os.path.join(modDir, "eric5")
+    ericdir = os.path.join(modDir, "eric6")
     cfg = {
         'ericDir': ericdir,
         'ericPixDir': os.path.join(ericdir, "pixmaps"),
@@ -857,11 +857,11 @@ def createConfig():
                     os.path.join(sourceDir, "APIs", "Python3", "*.api")):
                 apis.append(os.path.basename(apiName))
     
-    fn = 'eric5config.py'
+    fn = 'eric6config.py'
     config = (
         """# -*- coding: utf-8 -*-\n"""
         """#\n"""
-        """# This module contains the configuration of the individual eric5"""
+        """# This module contains the configuration of the individual eric6"""
         """ installation\n"""
         """#\n"""
         """\n"""
@@ -928,7 +928,7 @@ def doDependancyChecks():
         print('Sorry, you must have Python 3.1.0 or higher.')
         exit(5)
     if sys.version_info > (3, 9, 9):
-        print('Sorry, eric5 requires Python 3 or Python 2 for running.')
+        print('Sorry, eric6 requires Python 3 or Python 2 for running.')
         exit(5)
     print("Python Version: {0:d}.{1:d}.{2:d}".format(*sys.version_info[:3]))
     
@@ -1012,7 +1012,7 @@ def doDependancyChecks():
             for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
                     print(
-                        'Sorry, sip version {0} is not compatible with eric5.'
+                        'Sorry, sip version {0} is not compatible with eric6.'
                         .format(vers))
                     print('Please install another version.')
                     exit(3)
@@ -1037,7 +1037,7 @@ def doDependancyChecks():
         # check for blacklisted versions
         for vers in BlackLists["PyQt5"] + PlatformBlackLists["PyQt5"]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt5 version {0} is not compatible with eric5.'
+                print('Sorry, PyQt5 version {0} is not compatible with eric6.'
                       .format(vers))
                 print('Please install another version.')
                 exit(4)
@@ -1064,7 +1064,7 @@ def doDependancyChecks():
             if vers == scintillaVersion:
                 print(
                     'Sorry, QScintilla2 version {0} is not compatible with'
-                    ' eric5.'.format(vers))
+                    ' eric6.'.format(vers))
                 print('Please install another version.')
                 exit(5)
     print("QScintilla Version: ", QSCINTILLA_VERSION_STR)
@@ -1177,7 +1177,7 @@ def main(argv):
     global macAppBundlePath, macAppBundleName, macPythonExe
     
     if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
-        print('Sorry, eric5 requires at least Python 2.6 or '
+        print('Sorry, eric6 requires at least Python 2.6 or '
               'Python 3 for running.')
         exit(5)
     
@@ -1240,7 +1240,7 @@ def main(argv):
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:
         sourceDir = os.path.dirname(__file__) or "."
-        configName = os.path.join(sourceDir, "eric5config.py")
+        configName = os.path.join(sourceDir, "eric6config.py")
     
     if len(cfg) == 0:
         createInstallConfig()
@@ -1302,7 +1302,7 @@ def main(argv):
                 quiet=True)
             py_compile.compile(
                 configName,
-                dfile=os.path.join(distDir, modDir, "eric5config.py"))
+                dfile=os.path.join(distDir, modDir, "eric6config.py"))
         else:
             compileall.compile_dir(
                 sourceDir,
@@ -1310,9 +1310,9 @@ def main(argv):
                 rx=re.compile(r"DebugClients[\\/]Python[\\/]"),
                 quiet=True)
             py_compile.compile(configName,
-                               dfile=os.path.join(modDir, "eric5config.py"))
+                               dfile=os.path.join(modDir, "eric6config.py"))
         sys.stdout = sys.__stdout__
-    print("\nInstalling eric5 ...")
+    print("\nInstalling eric6 ...")
     res = installEric()
     
     # do some cleanup
@@ -1340,5 +1340,5 @@ if __name__ == "__main__":
     except:
         print("""An internal error occured.  Please report all the output"""
               """ of the program,\nincluding the following traceback, to"""
-              """ eric5-bugs@eric-ide.python-projects.org.\n""")
+              """ eric-bugs@eric-ide.python-projects.org.\n""")
         raise

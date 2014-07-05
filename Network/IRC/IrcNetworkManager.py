@@ -30,9 +30,9 @@ class IrcIdentity(object):
     DefaultAwayMessage = QCoreApplication.translate(
         "IrcIdentity", "Gone away for now.")
     DefaultQuitMessage = QCoreApplication.translate(
-        "IrcIdentity", "IRC for eric5 IDE")
+        "IrcIdentity", "IRC for eric6 IDE")
     DefaultPartMessage = QCoreApplication.translate(
-        "IrcIdentity", "IRC for eric5 IDE")
+        "IrcIdentity", "IRC for eric6 IDE")
     
     def __init__(self, name):
         """

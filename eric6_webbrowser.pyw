@@ -7,6 +7,6 @@
 Module implementing the Windows entry point.
 """
 
-from eric5_webbrowser import main
+from eric6_webbrowser import main
 
 main()

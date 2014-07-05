@@ -40,7 +40,7 @@ import Preferences
 
 import UI.PixmapCache
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
@@ -791,10 +791,10 @@ class PluginRepositoryWindow(E5MainWindow):
     
     def __startPluginInstall(self):
         """
-        Private slot to start the eric5 plugin installation dialog.
+        Private slot to start the eric6 plugin installation dialog.
         """
         proc = QProcess()
-        applPath = os.path.join(getConfig("ericDir"), "eric5_plugininstall.py")
+        applPath = os.path.join(getConfig("ericDir"), "eric6_plugininstall.py")
         
         args = []
         args.append(applPath)

@@ -41,7 +41,7 @@ class TemplatesWriter(XMLStreamWriterBase):
             templatesFileFormatVersion))
         
         # add some generation comments
-        self.writeComment(" eric5 templates file ")
+        self.writeComment(" eric6 templates file ")
         self.writeComment(
             " Saved: {0} ".format(time.strftime('%Y-%m-%d, %H:%M:%S')))
         

@@ -4,7 +4,7 @@
 #
 
 """
-Module containing the default configuration of the eric5 installation.
+Module containing the default configuration of the eric6 installation.
 """
 
 from __future__ import unicode_literals

@@ -7,6 +7,6 @@
 Module implementing the Windows entry point.
 """
 
-from eric5_qregexp import main
+from eric6_qregexp import main
 
 main()

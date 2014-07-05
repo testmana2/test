@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 QRegularExpression.
+Eric6 QRegularExpression.
 
 This is the main Python script that performs the necessary initialization
 of the QRegularExpression wizard module and starts the Qt event loop. This is
@@ -56,7 +56,7 @@ def main():
     ]
     appinfo = AppInfo.makeAppInfo(
         sys.argv,
-        "Eric5 QRegularExpression",
+        "Eric6 QRegularExpression",
         "",
         "Regexp editor for Qt's QRegularExpression class",
         options)

@@ -7,6 +7,6 @@
 Module implementing the Windows entry point.
 """
 
-from eric5_trpreviewer import main
+from eric6_trpreviewer import main
 
 main()

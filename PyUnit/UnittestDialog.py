@@ -51,7 +51,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         @param prog filename of the program to open
         @param dbs reference to the debug server object. It is an indication
-            whether we were called from within the eric5 IDE
+            whether we were called from within the eric6 IDE
         @param ui reference to the UI object
         @param fromEric flag indicating an instantiation from within the
             eric IDE (boolean)
@@ -123,7 +123,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
         self.__failedTests = []
         
-        # now connect the debug server signals if called from the eric5 IDE
+        # now connect the debug server signals if called from the eric6 IDE
         if self.dbs:
             self.dbs.utPrepared.connect(self.__UTPrepared)
             self.dbs.utFinished.connect(self.__setStoppedMode)
@@ -280,7 +280,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.testName = os.path.splitext(os.path.basename(prog))[0]
         
         if self.dbs and not self.localCheckBox.isChecked():
-            # we are cooperating with the eric5 IDE
+            # we are cooperating with the eric6 IDE
             project = e5App().getObject("Project")
             if project.isOpen() and project.isProjectSource(prog):
                 mainScript = project.getMainScript(True)
@@ -347,7 +347,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             # now set up the coverage stuff
             if self.coverageCheckBox.isChecked():
                 if self.dbs:
-                    # we are cooperating with the eric5 IDE
+                    # we are cooperating with the eric6 IDE
                     project = e5App().getObject("Project")
                     if project.isOpen() and project.isProjectSource(prog):
                         mainScript = project.getMainScript(True)
@@ -647,7 +647,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
     def __showSource(self):
         """
-        Private slot to show the source of a traceback in an eric5 editor.
+        Private slot to show the source of a traceback in an eric6 editor.
         """
         if not self.dbs:
             return

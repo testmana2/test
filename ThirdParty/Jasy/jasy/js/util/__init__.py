@@ -4,7 +4,7 @@
 #
 
 #
-# minimized for using just the parser within eric5
+# minimized for using just the parser within eric6
 # Copyright (c) 2013 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 

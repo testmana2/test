@@ -20,7 +20,7 @@ from E5Gui.E5Action import E5Action
 
 import Utilities
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 # Start-Of-Header
 name = "Ericapi Plugin"
@@ -48,17 +48,17 @@ def exeDisplayData():
     @return dictionary containing the data to query the presence of
         the executable
     """
-    exe = 'eric5_api'
+    exe = 'eric6_api'
     if Utilities.isWindowsPlatform():
         exe = os.path.join(getConfig("bindir"), exe + '.bat')
     
     data = {
         "programEntry": True,
         "header": QCoreApplication.translate(
-            "EricapiPlugin", "Eric5 API File Generator"),
+            "EricapiPlugin", "Eric6 API File Generator"),
         "exe": exe,
         "versionCommand": '--version',
-        "versionStartsWith": 'eric5_',
+        "versionStartsWith": 'eric6_',
         "versionPosition": -3,
         "version": "",
         "versionCleanup": None,
@@ -96,14 +96,14 @@ class EricapiPlugin(QObject):
         menu = e5App().getObject("Project").getMenu("Apidoc")
         if menu:
             self.__projectAct = E5Action(
-                self.tr('Generate API file (eric5_api)'),
-                self.tr('Generate &API file (eric5_api)'), 0, 0,
-                self, 'doc_eric5_api')
+                self.tr('Generate API file (eric6_api)'),
+                self.tr('Generate &API file (eric6_api)'), 0, 0,
+                self, 'doc_eric6_api')
             self.__projectAct.setStatusTip(self.tr(
-                'Generate an API file using eric5_api'))
+                'Generate an API file using eric6_api'))
             self.__projectAct.setWhatsThis(self.tr(
                 """<b>Generate API file</b>"""
-                """<p>Generate an API file using eric5_api.</p>"""
+                """<p>Generate an API file using eric6_api.</p>"""
             ))
             self.__projectAct.triggered.connect(self.__doEricapi)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
@@ -142,7 +142,7 @@ class EricapiPlugin(QObject):
     
     def __doEricapi(self):
         """
-        Private slot to perform the eric5_api api generation.
+        Private slot to perform the eric6_api api generation.
         """
         from DocumentationPlugins.Ericapi.EricapiConfigDialog import \
             EricapiConfigDialog

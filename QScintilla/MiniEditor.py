@@ -251,9 +251,9 @@ class MiniEditor(E5MainWindow):
         """
         E5MessageBox.about(
             self,
-            self.tr("About eric5 Mini Editor"),
+            self.tr("About eric6 Mini Editor"),
             self.tr(
-                "The eric5 Mini Editor is an editor component"
+                "The eric6 Mini Editor is an editor component"
                 " based on QScintilla. It may be used for simple"
                 " editing tasks, that don't need the power of"
                 " a full blown editor."))
@@ -262,7 +262,7 @@ class MiniEditor(E5MainWindow):
         """
         Private slot to handle the About Qt dialog.
         """
-        E5MessageBox.aboutQt(self, "eric5 Mini Editor")
+        E5MessageBox.aboutQt(self, "eric6 Mini Editor")
     
     def __whatsThis(self):
         """
@@ -351,7 +351,7 @@ class MiniEditor(E5MainWindow):
         self.__createSearchActions()
         
         # read the keyboard shortcuts and make them identical to the main
-        # eric5 shortcuts
+        # eric6 shortcuts
         for act in self.helpActions:
             self.__readShortcut(act, "General")
         for act in self.editActions:
@@ -2176,7 +2176,7 @@ class MiniEditor(E5MainWindow):
         if self.__textEdit.isModified():
             ret = E5MessageBox.okToClearData(
                 self,
-                self.tr("eric5 Mini Editor"),
+                self.tr("eric6 Mini Editor"),
                 self.tr("The document has unsaved changes."),
                 self.__save)
             return ret

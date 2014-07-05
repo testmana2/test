@@ -23,7 +23,7 @@ from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 import Utilities
 import UI.PixmapCache
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):

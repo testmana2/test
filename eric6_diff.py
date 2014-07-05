@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Diff.
+Eric6 Diff.
 
 This is the main Python script that performs the necessary initialization
 of the Diff module and starts the Qt event loop. This is a standalone
@@ -53,7 +53,7 @@ def main():
          "use the given directory as the one containing the config files"),
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 Diff",
+                                  "Eric6 Diff",
                                   "",
                                   "Simple graphical diff tool",
                                   options)

@@ -38,7 +38,7 @@ import UI.PixmapCache
 import Utilities
 import Preferences
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class PluginManager(QObject):
@@ -69,10 +69,10 @@ class PluginManager(QObject):
         Constructor
         
         The Plugin Manager deals with three different plugin directories.
-        The first is the one, that is part of eric5 (eric5/Plugins). The
-        second one is the global plugin directory called 'eric5plugins',
+        The first is the one, that is part of eric6 (eric6/Plugins). The
+        second one is the global plugin directory called 'eric6plugins',
         which is located inside the site-packages directory. The last one
-        is the user plugin directory located inside the .eric5 directory
+        is the user plugin directory located inside the .eric6 directory
         of the users home directory.
         
         @param parent reference to the parent object (QObject)
@@ -91,12 +91,12 @@ class PluginManager(QObject):
         self.__inactivePluginsKey = "PluginManager/InactivePlugins"
         
         self.pluginDirs = {
-            "eric5": os.path.join(getConfig('ericDir'), "Plugins"),
+            "eric6": os.path.join(getConfig('ericDir'), "Plugins"),
             "global": os.path.join(Utilities.getPythonModulesDirectory(),
-                                   "eric5plugins"),
-            "user": os.path.join(Utilities.getConfigDir(), "eric5plugins"),
+                                   "eric6plugins"),
+            "user": os.path.join(Utilities.getConfigDir(), "eric6plugins"),
         }
-        self.__priorityOrder = ["eric5", "global", "user"]
+        self.__priorityOrder = ["eric6", "global", "user"]
         
         self.__defaultDownloadDir = os.path.join(
             Utilities.getConfigDir(), "Downloads")
@@ -218,12 +218,12 @@ class PluginManager(QObject):
             del self.pluginDirs["user"]
             del self.pluginDirs["global"]
         
-        if not os.path.exists(self.pluginDirs["eric5"]):
+        if not os.path.exists(self.pluginDirs["eric6"]):
             return (
                 False,
                 self.tr(
                     "The internal plugin directory <b>{0}</b>"
-                    " does not exits.").format(self.pluginDirs["eric5"]))
+                    " does not exits.").format(self.pluginDirs["eric6"]))
         
         return (True, "")
     
@@ -238,7 +238,7 @@ class PluginManager(QObject):
             return False
         
         self.__foundCoreModules = self.getPluginModules(
-            self.pluginDirs["eric5"])
+            self.pluginDirs["eric6"])
         if "global" in self.pluginDirs:
             self.__foundGlobalModules = \
                 self.getPluginModules(self.pluginDirs["global"])
@@ -303,7 +303,7 @@ class PluginManager(QObject):
             if pluginName not in self.__foundGlobalModules and \
                pluginName not in self.__foundUserModules and \
                pluginName != develPluginName:
-                self.loadPlugin(pluginName, self.pluginDirs["eric5"])
+                self.loadPlugin(pluginName, self.pluginDirs["eric6"])
         
         for pluginName in self.__foundGlobalModules:
             # user plugins have priority
@@ -369,8 +369,8 @@ class PluginManager(QObject):
                     raise PluginLoadError(name)
                 else:
                     self.__onDemandInactiveModules[name] = module
-            module.eric5PluginModuleName = name
-            module.eric5PluginModuleFilename = fname
+            module.eric6PluginModuleName = name
+            module.eric6PluginModuleFilename = fname
             self.__modulesCount += 1
             if reload_:
                 imp.reload(module)
@@ -469,16 +469,16 @@ class PluginManager(QObject):
                 return
             
             if not self.__canActivatePlugin(module):
-                raise PluginActivationError(module.eric5PluginModuleName)
+                raise PluginActivationError(module.eric6PluginModuleName)
             version = getattr(module, "version")
             className = getattr(module, "className")
             pluginClass = getattr(module, className)
             pluginObject = None
             if name not in self.__onDemandInactivePlugins:
                 pluginObject = pluginClass(self.__ui)
-                pluginObject.eric5PluginModule = module
-                pluginObject.eric5PluginName = className
-                pluginObject.eric5PluginVersion = version
+                pluginObject.eric6PluginModule = module
+                pluginObject.eric6PluginName = className
+                pluginObject.eric6PluginVersion = version
                 self.__onDemandInactivePlugins[name] = pluginObject
         except PluginActivationError:
             return
@@ -521,7 +521,7 @@ class PluginManager(QObject):
                 return None
             
             if not self.__canActivatePlugin(module):
-                raise PluginActivationError(module.eric5PluginModuleName)
+                raise PluginActivationError(module.eric6PluginModuleName)
             version = getattr(module, "version")
             className = getattr(module, "className")
             pluginClass = getattr(module, className)
@@ -548,9 +548,9 @@ class PluginManager(QObject):
                 return None
             
             self.pluginActivated.emit(name, pluginObject)
-            pluginObject.eric5PluginModule = module
-            pluginObject.eric5PluginName = className
-            pluginObject.eric5PluginVersion = version
+            pluginObject.eric6PluginModule = module
+            pluginObject.eric6PluginName = className
+            pluginObject.eric6PluginVersion = version
             
             if onDemand:
                 self.__onDemandInactiveModules.pop(name)
@@ -587,26 +587,26 @@ class PluginManager(QObject):
         try:
             if not hasattr(module, "version"):
                 raise PluginModuleFormatError(
-                    module.eric5PluginModuleName, "version")
+                    module.eric6PluginModuleName, "version")
             if not hasattr(module, "className"):
                 raise PluginModuleFormatError(
-                    module.eric5PluginModuleName, "className")
+                    module.eric6PluginModuleName, "className")
             className = getattr(module, "className")
             if not hasattr(module, className):
                 raise PluginModuleFormatError(
-                    module.eric5PluginModuleName, className)
+                    module.eric6PluginModuleName, className)
             pluginClass = getattr(module, className)
             if not hasattr(pluginClass, "__init__"):
                 raise PluginClassFormatError(
-                    module.eric5PluginModuleName,
+                    module.eric6PluginModuleName,
                     className, "__init__")
             if not hasattr(pluginClass, "activate"):
                 raise PluginClassFormatError(
-                    module.eric5PluginModuleName,
+                    module.eric6PluginModuleName,
                     className, "activate")
             if not hasattr(pluginClass, "deactivate"):
                 raise PluginClassFormatError(
-                    module.eric5PluginModuleName,
+                    module.eric6PluginModuleName,
                     className, "deactivate")
             return True
         except PluginModuleFormatError as e:
@@ -777,7 +777,7 @@ class PluginManager(QObject):
         
         details["moduleName"] = name
         details["moduleFileName"] = getattr(
-            module, "eric5PluginModuleFilename", "")
+            module, "eric6PluginModuleFilename", "")
         details["pluginName"] = getattr(module, "name", "")
         details["version"] = getattr(module, "version", "")
         details["author"] = getattr(module, "author", "")

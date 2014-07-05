@@ -41,7 +41,7 @@ class QRegularExpressionWizardWidget(QWidget,
         Constructor
         
         @param parent parent widget (QWidget)
-        @param fromEric flag indicating a call from within eric5
+        @param fromEric flag indicating a call from within eric6
         """
         super(QRegularExpressionWizardWidget, self).__init__(parent)
         self.setupUi(self)
@@ -462,7 +462,7 @@ class QRegularExpressionWizardWidget(QWidget,
         """
         Private slot to copy the QRegularExpression string into the clipboard.
         
-        This slot is only available, if not called from within eric5.
+        This slot is only available, if not called from within eric6.
         """
         escaped = self.regexpTextEdit.toPlainText()
         if escaped:
@@ -781,7 +781,7 @@ class QRegularExpressionWizardDialog(QDialog):
         Constructor
         
         @param parent parent widget (QWidget)
-        @param fromEric flag indicating a call from within eric5
+        @param fromEric flag indicating a call from within eric6
         """
         super(QRegularExpressionWizardDialog, self).__init__(parent)
         self.setModal(fromEric)

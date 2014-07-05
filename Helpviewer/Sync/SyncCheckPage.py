@@ -22,7 +22,7 @@ from .Ui_SyncCheckPage import Ui_SyncCheckPage
 import Preferences
 import UI.PixmapCache
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class SyncCheckPage(QWizardPage, Ui_SyncCheckPage):

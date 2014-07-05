@@ -4,5 +4,5 @@
 #
 
 """
-Package containing the universal character encoding detector used by eric5.
+Package containing the universal character encoding detector used by eric6.
 """ 

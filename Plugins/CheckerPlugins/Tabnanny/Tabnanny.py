@@ -13,7 +13,7 @@ Warning: The API provided by this module is likely to change in future
 releases; such changes may not be backward compatible.
 
 This is a modified version to make the original tabnanny better suitable
-for being called from within the eric5 IDE.
+for being called from within the eric6 IDE.
 
 @exception ValueError The tokenize module is too old.
 """
@@ -28,7 +28,7 @@ from __future__ import unicode_literals
 
 #
 # This is a modified version to make the original tabnanny better suitable
-# for being called from within the eric5 IDE. The modifications are as
+# for being called from within the eric6 IDE. The modifications are as
 # follows:
 #
 # - there is no main function anymore

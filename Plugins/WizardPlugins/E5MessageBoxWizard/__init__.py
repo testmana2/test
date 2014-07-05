@@ -4,5 +4,5 @@
 #
 
 """
-Package implementing the eric5 message box wizard.
+Package implementing the eric6 message box wizard.
 """

@@ -2479,6 +2479,8 @@ class Hg(VersionControl):
         """
         status = False
         ignorePatterns = [
+            "glob:.eric6project",
+            "glob:_eric6project",
             "glob:.eric5project",
             "glob:_eric5project",
             "glob:.eric4project",

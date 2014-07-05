@@ -4,5 +4,5 @@
 #
 
 """
-Package implementing web plug-ins for the eric5 web browser.
+Package implementing web plug-ins for the eric6 web browser.
 """

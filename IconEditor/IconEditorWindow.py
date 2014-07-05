@@ -48,13 +48,13 @@ class IconEditorWindow(E5MainWindow):
         @param fileName name of a file to load on startup (string)
         @param parent parent widget of this window (QWidget)
         @keyparam fromEric flag indicating whether it was called from within
-            eric5 (boolean)
+            eric6 (boolean)
         @keyparam initShortcutsOnly flag indicating to just initialize the
             keyboard shortcuts (boolean)
         @keyparam project reference to the project object (Project)
         """
         super(IconEditorWindow, self).__init__(parent)
-        self.setObjectName("eric5_icon_editor")
+        self.setObjectName("eric6_icon_editor")
         
         self.fromEric = fromEric
         self.initShortcutsOnly = initShortcutsOnly
@@ -1121,14 +1121,14 @@ class IconEditorWindow(E5MainWindow):
         file = QFile(fileName)
         if not file.exists():
             E5MessageBox.warning(
-                self, self.tr("eric5 Icon Editor"),
+                self, self.tr("eric6 Icon Editor"),
                 self.tr("The file '{0}' does not exist.")
                 .format(fileName))
             return
         
         if not file.open(QFile.ReadOnly):
             E5MessageBox.warning(
-                self, self.tr("eric5 Icon Editor"),
+                self, self.tr("eric6 Icon Editor"),
                 self.tr("Cannot read file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
             return
@@ -1148,7 +1148,7 @@ class IconEditorWindow(E5MainWindow):
         file = QFile(fileName)
         if not file.open(QFile.WriteOnly):
             E5MessageBox.warning(
-                self, self.tr("eric5 Icon Editor"),
+                self, self.tr("eric6 Icon Editor"),
                 self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
         
@@ -1162,7 +1162,7 @@ class IconEditorWindow(E5MainWindow):
         
         if not res:
             E5MessageBox.warning(
-                self, self.tr("eric5 Icon Editor"),
+                self, self.tr("eric6 Icon Editor"),
                 self.tr("Cannot write file '{0}:\n{1}.")
                 .format(fileName, file.errorString()))
         
@@ -1215,7 +1215,7 @@ class IconEditorWindow(E5MainWindow):
         if self.__editor.isDirty():
             ret = E5MessageBox.okToClearData(
                 self,
-                self.tr("eric5 Icon Editor"),
+                self.tr("eric6 Icon Editor"),
                 self.tr("""The icon image has unsaved changes."""),
                 self.__saveIcon)
             if not ret:
@@ -1304,15 +1304,15 @@ class IconEditorWindow(E5MainWindow):
         Private slot to show a little About message.
         """
         E5MessageBox.about(
-            self, self.tr("About eric5 Icon Editor"),
-            self.tr("The eric5 Icon Editor is a simple editor component"
+            self, self.tr("About eric6 Icon Editor"),
+            self.tr("The eric6 Icon Editor is a simple editor component"
                     " to perform icon drawing tasks."))
     
     def __aboutQt(self):
         """
         Private slot to handle the About Qt dialog.
         """
-        E5MessageBox.aboutQt(self, "eric5 Icon Editor")
+        E5MessageBox.aboutQt(self, "eric6 Icon Editor")
     
     def __whatsThis(self):
         """

@@ -28,7 +28,7 @@ import UI.PixmapCache
 import Utilities
 import Preferences
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class HelpTabWidget(E5TabWidget):
@@ -249,7 +249,7 @@ class HelpTabWidget(E5TabWidget):
             return
         
         req = QNetworkRequest(self.widget(idx).url())
-        req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+        req.setRawHeader("X-Eric6-UserLoadAction", b"1")
         self.newBrowser(None, (req, QNetworkAccessManager.GetOperation, b""))
     
     def __tabContextMenuClose(self):
@@ -543,7 +543,7 @@ class HelpTabWidget(E5TabWidget):
             except AttributeError:
                 E5MessageBox.critical(
                     self,
-                    self.tr("eric5 Web Browser"),
+                    self.tr("eric6 Web Browser"),
                     self.tr(
                         """<p>Printing is not available due to a bug in"""
                         """ PyQt5. Please upgrade.</p>"""))
@@ -589,7 +589,7 @@ class HelpTabWidget(E5TabWidget):
             except AttributeError:
                 E5MessageBox.critical(
                     self,
-                    self.tr("eric5 Web Browser"),
+                    self.tr("eric6 Web Browser"),
                     self.tr(
                         """<p>Printing is not available due to a bug in"""
                         """ PyQt5. Please upgrade.</p>"""))
@@ -643,7 +643,7 @@ class HelpTabWidget(E5TabWidget):
         except AttributeError:
             E5MessageBox.critical(
                 self,
-                self.tr("eric5 Web Browser"),
+                self.tr("eric6 Web Browser"),
                 self.tr(
                     """<p>Printing is not available due to a bug in PyQt5."""
                     """Please upgrade.</p>"""))
@@ -857,7 +857,7 @@ class HelpTabWidget(E5TabWidget):
         edit = self.sender()
         url = self.__guessUrlFromPath(edit.text())
         request = QNetworkRequest(url)
-        request.setRawHeader("X-Eric5-UserLoadAction", b"1")
+        request.setRawHeader("X-Eric6-UserLoadAction", b"1")
         if e5App().keyboardModifiers() == Qt.AltModifier:
             self.newBrowser(
                 None, (request, QNetworkAccessManager.GetOperation, b""))

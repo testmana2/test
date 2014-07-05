@@ -5,9 +5,9 @@
 #
 
 """
-Eric5 Configure.
+Eric6 Configure.
 
-This is the main Python script to configure the eric5 IDE from the outside.
+This is the main Python script to configure the eric6 IDE from the outside.
 """
 
 from __future__ import unicode_literals
@@ -59,9 +59,9 @@ def main():
          "use the given directory as the one containing the config files"),
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 Configure",
+                                  "Eric6 Configure",
                                   "",
-                                  "Configuration editor for eric5",
+                                  "Configuration editor for eric6",
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,

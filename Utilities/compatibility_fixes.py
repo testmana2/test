@@ -4,9 +4,9 @@
 #
 
 """
-Module implementing the open behavior of Python3 for use with Eric5.
+Module implementing the open behavior of Python3 for use with Eric6.
 
-The Eric5 used features are emulated only. The not emulated features
+The Eric6 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 """
 

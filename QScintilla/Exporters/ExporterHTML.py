@@ -84,7 +84,7 @@ class HTMLGenerator(object):
         else:
             html += '''<title>{0}</title>\n'''.format(
                 os.path.basename(self.editor.getFileName()))
-        html += '''<meta name="Generator" content="eric5" />\n''' \
+        html += '''<meta name="Generator" content="eric6" />\n''' \
             '''<meta http-equiv="Content-Type" ''' \
             '''content="text/html; charset=utf-8" />\n'''
         if folding:

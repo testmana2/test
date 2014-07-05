@@ -4,6 +4,6 @@
 #
 
 #
-# This is an eric5 dummy package to provide some specially variants of modules
+# This is an eric6 dummy package to provide some specially variants of modules
 # found in the standard jasy package
 #

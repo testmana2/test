@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2009 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
+# Copyright (c) 2002 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
 """
@@ -11,7 +11,7 @@ import os
 import sys
 import distutils.sysconfig
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 debugger = None
 __scriptname = None
@@ -29,10 +29,11 @@ def initDebugger(kind="standard"):
     
     @param kind type of debugger ("standard" or "threads")
     @return flag indicating success (boolean)
-    @exception ValueError raised to indicate a wrong debugger kind
+    @exception ValueError raised to indicate an invalid debugger kind
+        was requested
     """
     global debugger
-    res = True
+    res = 1
     try:
         if kind == "standard":
             import DebugClient
@@ -44,7 +45,7 @@ def initDebugger(kind="standard"):
             raise ValueError
     except ImportError:
         debugger = None
-        res = False
+        res = 0
         
     return res
 
@@ -88,3 +89,6 @@ def startDebugger(enableTrace=True, exceptions=True,
     if debugger:
         debugger.startDebugger(enableTrace=enableTrace, exceptions=exceptions,
                                tracePython=tracePython, redirect=redirect)
+
+#
+# eflag: FileType = Python2

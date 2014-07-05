@@ -15,7 +15,7 @@ from PyQt5.QtCore import QObject
 
 from E5Gui.E5Action import E5Action
 from E5Gui.E5Application import e5App
-from eric5config import getConfig
+from eric6config import getConfig
 
 from Project.ProjectBrowserModel import ProjectBrowserFileItem
 

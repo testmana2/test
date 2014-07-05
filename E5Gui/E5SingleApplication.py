@@ -22,7 +22,7 @@ import Utilities
 # define some module global stuff
 ###########################################################################
 
-SAFile = "eric5"
+SAFile = "eric6"
 
 # define the protocol tokens
 SAOpenFile = '>OpenFile<'

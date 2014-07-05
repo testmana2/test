@@ -493,7 +493,7 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         if self.__modified:
             res = E5MessageBox.question(
                 self,
-                self.tr("eric5 Snapshot"),
+                self.tr("eric6 Snapshot"),
                 self.tr(
                     """The application contains an unsaved snapshot."""),
                 E5MessageBox.StandardButtons(
@@ -521,6 +521,6 @@ class SnapWidget(QWidget, Ui_SnapWidget):
         """
         self.setWindowTitle("{0}[*] - {1}".format(
             os.path.basename(self.__filename),
-            self.tr("eric5 Snapshot")))
+            self.tr("eric6 Snapshot")))
         self.setWindowModified(self.__modified)
         self.pathNameEdit.setText(os.path.dirname(self.__filename))

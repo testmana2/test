@@ -211,7 +211,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         msg = self.__encodedText(msgtext)
         msg['From'] = Preferences.getUser("Email")
         msg['To'] = self.__toAddress
-        subject = '[eric5] {0}'.format(self.subject.text())
+        subject = '[eric6] {0}'.format(self.subject.text())
         msg['Subject'] = self.__encodedHeader(subject)
         
         return msg.as_string()
@@ -236,7 +236,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         msg = MIMEMultipart()
         msg['From'] = Preferences.getUser("Email")
         msg['To'] = self.__toAddress
-        subject = '[eric5] {0}'.format(self.subject.text())
+        subject = '[eric6] {0}'.format(self.subject.text())
         msg['Subject'] = self.__encodedHeader(subject)
         msg.preamble = mpPreamble
         msg.epilogue = ''

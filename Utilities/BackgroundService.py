@@ -26,7 +26,7 @@ from E5Gui.E5Application import e5App
 import Preferences
 import Utilities
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class BackgroundService(QTcpServer):

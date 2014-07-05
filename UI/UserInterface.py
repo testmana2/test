@@ -54,7 +54,7 @@ try:
 except ImportError:
     SSL_AVAILABLE = False
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class Redirector(QObject):
@@ -143,7 +143,7 @@ class UserInterface(E5MainWindow):
     BottomSide = 2
     RightSide = 3
     
-    ErrorLogFileName = "eric5_error.log"
+    ErrorLogFileName = "eric6_error.log"
     
     def __init__(self, app, locale, splash, plugin, noOpenAtStartup,
                  restartArguments):
@@ -1222,10 +1222,10 @@ class UserInterface(E5MainWindow):
             QKeySequence(self.tr("Ctrl+Shift+N", "File|New Window")),
             0, self, 'new_window')
         self.newWindowAct.setStatusTip(self.tr(
-            'Open a new eric5 instance'))
+            'Open a new eric6 instance'))
         self.newWindowAct.setWhatsThis(self.tr(
             """<b>New Window</b>"""
-            """<p>This opens a new instance of the eric5 IDE.</p>"""
+            """<p>This opens a new instance of the eric6 IDE.</p>"""
         ))
         self.newWindowAct.triggered.connect(self.__newWindow)
         self.actions.append(self.newWindowAct)
@@ -1587,7 +1587,7 @@ class UserInterface(E5MainWindow):
             'Open the helpviewer window'))
         self.helpviewerAct.setWhatsThis(self.tr(
             """<b>Helpviewer</b>"""
-            """<p>Display the eric5 web browser. This window will show"""
+            """<p>Display the eric6 web browser. This window will show"""
             """ HTML help files and help from Qt help collections. It has"""
             """ the capability to navigate to links, set bookmarks, print"""
             """ the displayed help and some more features. You may use it to"""
@@ -1621,7 +1621,7 @@ class UserInterface(E5MainWindow):
         self.checkUpdateAct.setStatusTip(self.tr('Check for Updates'))
         self.checkUpdateAct.setWhatsThis(self.tr(
             """<b>Check for Updates...</b>"""
-            """<p>Checks the internet for updates of eric5.</p>"""
+            """<p>Checks the internet for updates of eric6.</p>"""
         ))
         self.checkUpdateAct.triggered.connect(self.performVersionCheck)
         self.actions.append(self.checkUpdateAct)
@@ -1634,7 +1634,7 @@ class UserInterface(E5MainWindow):
             self.tr('Show the versions available for download'))
         self.showVersionsAct.setWhatsThis(self.tr(
             """<b>Show downloadable versions...</b>"""
-            """<p>Shows the eric5 versions available for download """
+            """<p>Shows the eric6 versions available for download """
             """from the internet.</p>"""
         ))
         self.showVersionsAct.triggered.connect(
@@ -1888,15 +1888,15 @@ class UserInterface(E5MainWindow):
         self.actions.append(self.miniEditorAct)
 
         self.webBrowserAct = E5Action(
-            self.tr('eric5 Web Browser'),
+            self.tr('eric6 Web Browser'),
             UI.PixmapCache.getIcon("ericWeb.png"),
-            self.tr('eric5 &Web Browser...'),
+            self.tr('eric6 &Web Browser...'),
             0, 0, self, 'web_browser')
         self.webBrowserAct.setStatusTip(self.tr(
-            'Start the eric5 Web Browser'))
+            'Start the eric6 Web Browser'))
         self.webBrowserAct.setWhatsThis(self.tr(
-            """<b>eric5 Web Browser</b>"""
-            """<p>Browse the Internet with the eric5 Web Browser.</p>"""
+            """<b>eric6 Web Browser</b>"""
+            """<p>Browse the Internet with the eric6 Web Browser.</p>"""
         ))
         self.webBrowserAct.triggered.connect(self.__startWebBrowser)
         self.actions.append(self.webBrowserAct)
@@ -1907,10 +1907,10 @@ class UserInterface(E5MainWindow):
             self.tr('&Icon Editor...'),
             0, 0, self, 'icon_editor')
         self.iconEditorAct.setStatusTip(self.tr(
-            'Start the eric5 Icon Editor'))
+            'Start the eric6 Icon Editor'))
         self.iconEditorAct.setWhatsThis(self.tr(
             """<b>Icon Editor</b>"""
-            """<p>Starts the eric5 Icon Editor for editing simple icons.</p>"""
+            """<p>Starts the eric6 Icon Editor for editing simple icons.</p>"""
         ))
         self.iconEditorAct.triggered.connect(self.__editPixmap)
         self.actions.append(self.iconEditorAct)
@@ -1997,7 +1997,7 @@ class UserInterface(E5MainWindow):
         self.showExternalToolsAct.setWhatsThis(self.tr(
             """<b>Show external tools</b>"""
             """<p>Opens a dialog to show the path and versions of all"""
-            """ extenal tools used by eric5.</p>"""
+            """ extenal tools used by eric6.</p>"""
         ))
         self.showExternalToolsAct.triggered.connect(
             self.__showExternalTools)
@@ -2331,7 +2331,7 @@ class UserInterface(E5MainWindow):
         
     def __initEricDocAction(self):
         """
-        Private slot to initialize the action to show the eric5 documentation.
+        Private slot to initialize the action to show the eric6 documentation.
         """
         self.ericDocAct = E5Action(
             self.tr("Eric API Documentation"),
@@ -2343,7 +2343,7 @@ class UserInterface(E5MainWindow):
             """<b>Eric API Documentation</b>"""
             """<p>Display the Eric API documentation. The location for the"""
             """ documentation is the Documentation/Source subdirectory of"""
-            """ the eric5 installation directory.</p>"""
+            """ the eric6 installation directory.</p>"""
         ))
         self.ericDocAct.triggered.connect(self.__showEricDoc)
         self.actions.append(self.ericDocAct)
@@ -3019,7 +3019,7 @@ class UserInterface(E5MainWindow):
             address = FeatureAddress
         else:
             address = BugAddress
-        subject = "[eric5] "
+        subject = "[eric6] "
         if attachFile is not None:
             f = open(attachFile, "r", encoding="utf-8")
             body = f.read()
@@ -3271,21 +3271,21 @@ class UserInterface(E5MainWindow):
         if res and self.__shutdown():
             e5App().closeAllWindows()
             program = sys.executable
-            eric5 = os.path.join(getConfig("ericDir"), "eric5.py")
-            args = [eric5]
+            eric6 = os.path.join(getConfig("ericDir"), "eric6.py")
+            args = [eric6]
             args.append("--start-session")
             args.extend(self.__restartArgs)
             QProcess.startDetached(program, args)
         
     def __newWindow(self):
         """
-        Private slot to start a new instance of eric5.
+        Private slot to start a new instance of eric6.
         """
         if not Preferences.getUI("SingleApplicationMode"):
-            # start eric5 without any arguments
+            # start eric6 without any arguments
             program = sys.executable
-            eric5 = os.path.join(getConfig("ericDir"), "eric5.py")
-            args = [eric5]
+            eric6 = os.path.join(getConfig("ericDir"), "eric6.py")
+            args = [eric6]
             QProcess.startDetached(program, args)
         
     def __showToolsMenu(self):
@@ -4099,7 +4099,7 @@ class UserInterface(E5MainWindow):
             E5MessageBox.information(
                 self,
                 self.tr("Qt 3 support"),
-                self.tr("""Qt v.3 is not supported by eric5."""))
+                self.tr("""Qt v.3 is not supported by eric6."""))
             return
 
         args = []
@@ -4164,7 +4164,7 @@ class UserInterface(E5MainWindow):
             E5MessageBox.information(
                 self,
                 self.tr("Qt 3 support"),
-                self.tr("""Qt v.3 is not supported by eric5."""))
+                self.tr("""Qt v.3 is not supported by eric6."""))
             return
 
         args = []
@@ -4235,7 +4235,7 @@ class UserInterface(E5MainWindow):
             E5MessageBox.information(
                 self,
                 self.tr("Qt 3 support"),
-                self.tr("""Qt v.3 is not supported by eric5."""))
+                self.tr("""Qt v.3 is not supported by eric6."""))
             return
 
         args = []
@@ -4273,7 +4273,7 @@ class UserInterface(E5MainWindow):
     
     def __startWebBrowser(self):
         """
-        Private slot to start the eric5 web browser.
+        Private slot to start the eric6 web browser.
         """
         self.launchHelpViewer("")
         
@@ -4337,7 +4337,7 @@ class UserInterface(E5MainWindow):
         """
         proc = QProcess()
         
-        viewer = os.path.join(getConfig("ericDir"), "eric5_uipreviewer.py")
+        viewer = os.path.join(getConfig("ericDir"), "eric6_uipreviewer.py")
         
         args = []
         args.append(viewer)
@@ -4389,7 +4389,7 @@ class UserInterface(E5MainWindow):
         """
         proc = QProcess()
         
-        viewer = os.path.join(getConfig("ericDir"), "eric5_trpreviewer.py")
+        viewer = os.path.join(getConfig("ericDir"), "eric6_trpreviewer.py")
         
         args = []
         args.append(viewer)
@@ -4436,7 +4436,7 @@ class UserInterface(E5MainWindow):
         """
         proc = QProcess()
         
-        browser = os.path.join(getConfig("ericDir"), "eric5_sqlbrowser.py")
+        browser = os.path.join(getConfig("ericDir"), "eric6_sqlbrowser.py")
         
         args = []
         args.append(browser)
@@ -4494,7 +4494,7 @@ class UserInterface(E5MainWindow):
         """
         proc = QProcess()
         
-        snap = os.path.join(getConfig("ericDir"), "eric5_snap.py")
+        snap = os.path.join(getConfig("ericDir"), "eric6_snap.py")
         
         args = []
         args.append(snap)
@@ -5113,7 +5113,7 @@ class UserInterface(E5MainWindow):
     
     def __webBrowser(self, home=""):
         """
-        Private slot to start the eric5 web browser.
+        Private slot to start the eric6 web browser.
         
         @param home full pathname of a file to display (string)
         """
@@ -5247,7 +5247,7 @@ class UserInterface(E5MainWindow):
     def __showExternalTools(self):
         """
         Private slot to display a dialog show a list of external tools used
-        by eric5.
+        by eric6.
         """
         if self.programsDialog is None:
             from Preferences.ProgramsDialog import ProgramsDialog
@@ -5449,7 +5449,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to write the tasks data to an XML file (.e4t).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
+        fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e4t")
         f = QFile(fn)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
@@ -5469,7 +5469,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to read in the tasks file (.e4t).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric5tasks.e4t")
+        fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e4t")
         if not os.path.exists(fn):
             return
         f = QFile(fn)
@@ -5490,7 +5490,7 @@ class UserInterface(E5MainWindow):
         """
         Private slot to write the session data to an XML file (.e5s).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e5s")
+        fn = os.path.join(Utilities.getConfigDir(), "eric6session.e5s")
         f = QFile(fn)
         if f.open(QIODevice.WriteOnly):
             from E5XML.SessionWriter import SessionWriter
@@ -5508,9 +5508,9 @@ class UserInterface(E5MainWindow):
         """
         Private slot to read in the session file (.e5s or .e4s).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric5session.e5s")
+        fn = os.path.join(Utilities.getConfigDir(), "eric6session.e5s")
         if not os.path.exists(fn):
-            fn = os.path.join(Utilities.getConfigDir(), "eric5session.e4s")
+            fn = os.path.join(Utilities.getConfigDir(), "eric6session.e4s")
             if not os.path.exists(fn):
                 E5MessageBox.critical(
                     self,
@@ -5818,7 +5818,7 @@ class UserInterface(E5MainWindow):
 
     def showAvailableVersionsInfo(self):
         """
-        Public method to show the eric5 versions available for download.
+        Public method to show the eric6 versions available for download.
         """
         self.performVersionCheck(manual=True, showVersions=True)
         
@@ -5826,7 +5826,7 @@ class UserInterface(E5MainWindow):
     def performVersionCheck(self, manual=True, alternative=0,
                             showVersions=False):
         """
-        Public method to check the internet for an eric5 update.
+        Public method to check the internet for an eric6 update.
         
         @param manual flag indicating an invocation via the menu (boolean)
         @param alternative index of server to download from (integer)
@@ -5982,7 +5982,7 @@ class UserInterface(E5MainWindow):
                         self,
                         self.tr("Update available"),
                         self.tr(
-                            """The update to <b>{0}</b> of eric5 is"""
+                            """The update to <b>{0}</b> of eric6 is"""
                             """ available at <b>{1}</b>. Would you like to"""
                             """ get it?""")
                         .format(versions[2], versions[3]),
@@ -5993,7 +5993,7 @@ class UserInterface(E5MainWindow):
                         self,
                         self.tr("Update available"),
                         self.tr(
-                            """The update to <b>{0}</b> of eric5 is"""
+                            """The update to <b>{0}</b> of eric6 is"""
                             """ available at <b>{1}</b>. Would you like to"""
                             """ get it?""")
                         .format(versions[0], versions[1]),
@@ -6003,10 +6003,10 @@ class UserInterface(E5MainWindow):
                     if self.manualUpdatesCheck:
                         E5MessageBox.information(
                             self,
-                            self.tr("Eric5 is up to date"),
+                            self.tr("Eric6 is up to date"),
                             self.tr(
                                 """You are using the latest version of"""
-                                """ eric5"""))
+                                """ eric6"""))
             else:
                 # check release version
                 if versions[0] > Version:
@@ -6014,7 +6014,7 @@ class UserInterface(E5MainWindow):
                         self,
                         self.tr("Update available"),
                         self.tr(
-                            """The update to <b>{0}</b> of eric5 is"""
+                            """The update to <b>{0}</b> of eric6 is"""
                             """ available at <b>{1}</b>. Would you like"""
                             """ to get it?""")
                         .format(versions[0], versions[1]),
@@ -6024,10 +6024,10 @@ class UserInterface(E5MainWindow):
                     if self.manualUpdatesCheck:
                         E5MessageBox.information(
                             self,
-                            self.tr("Eric5 is up to date"),
+                            self.tr("Eric6 is up to date"),
                             self.tr(
                                 """You are using the latest version of"""
-                                """ eric5"""))
+                                """ eric6"""))
         except IndexError:
             E5MessageBox.warning(
                 self,
@@ -6087,7 +6087,7 @@ class UserInterface(E5MainWindow):
 
     def checkConfigurationStatus(self):
         """
-        Public method to check, if eric5 has been configured. If it is not,
+        Public method to check, if eric6 has been configured. If it is not,
         the configuration dialog is shown.
         """
         if not Preferences.isConfigured():
@@ -6096,7 +6096,7 @@ class UserInterface(E5MainWindow):
             E5MessageBox.information(
                 self,
                 self.tr("First time usage"),
-                self.tr("""eric5 has not been configured yet. """
+                self.tr("""eric6 has not been configured yet. """
                         """The configuration dialog will be started."""))
             self.showPreferences()
     
@@ -6121,7 +6121,7 @@ class UserInterface(E5MainWindow):
     
     def versionIsNewer(self, required, snapshot=None):
         """
-        Public method to check, if the eric5 version is good compared to
+        Public method to check, if the eric6 version is good compared to
         the required version.
         
         @param required required version (string)

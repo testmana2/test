@@ -7,6 +7,6 @@
 Module implementing the Windows entry point.
 """
 
-from eric5_sqlbrowser import main
+from eric6_sqlbrowser import main
 
 main()

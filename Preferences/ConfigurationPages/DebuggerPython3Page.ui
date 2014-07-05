@@ -142,7 +142,7 @@
    <item>
     <widget class="QCheckBox" name="pyRedirectCheckBox">
      <property name="toolTip">
-      <string>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</string>
+      <string>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</string>
      </property>
      <property name="text">
       <string>Redirect stdin/stdout/stderr</string>

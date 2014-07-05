@@ -20,7 +20,7 @@ from E5Gui.E5Action import E5Action
 
 import Utilities
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 # Start-Of-Header
 name = "Ericdoc Plugin"
@@ -50,17 +50,17 @@ def exeDisplayDataList():
     """
     dataList = []
     
-    # 1. eric5_doc
-    exe = 'eric5_doc'
+    # 1. eric6_doc
+    exe = 'eric6_doc'
     if Utilities.isWindowsPlatform():
         exe = os.path.join(getConfig("bindir"), exe + '.bat')
     dataList.append({
         "programEntry": True,
         "header": QCoreApplication.translate(
-            "EricdocPlugin", "Eric5 Documentation Generator"),
+            "EricdocPlugin", "Eric6 Documentation Generator"),
         "exe": exe,
         "versionCommand": '--version',
-        "versionStartsWith": 'eric5_',
+        "versionStartsWith": 'eric6_',
         "versionPosition": -3,
         "version": "",
         "versionCleanup": None,
@@ -131,14 +131,14 @@ class EricdocPlugin(QObject):
         if menu:
             self.__projectAct = \
                 E5Action(
-                    self.tr('Generate documentation (eric5_doc)'),
-                    self.tr('Generate &documentation (eric5_doc)'), 0, 0,
-                    self, 'doc_eric5_doc')
+                    self.tr('Generate documentation (eric6_doc)'),
+                    self.tr('Generate &documentation (eric6_doc)'), 0, 0,
+                    self, 'doc_eric6_doc')
             self.__projectAct.setStatusTip(
-                self.tr('Generate API documentation using eric5_doc'))
+                self.tr('Generate API documentation using eric6_doc'))
             self.__projectAct.setWhatsThis(self.tr(
                 """<b>Generate documentation</b>"""
-                """<p>Generate API documentation using eric5_doc.</p>"""
+                """<p>Generate API documentation using eric6_doc.</p>"""
             ))
             self.__projectAct.triggered.connect(self.__doEricdoc)
             e5App().getObject("Project").addE5Actions([self.__projectAct])
@@ -177,7 +177,7 @@ class EricdocPlugin(QObject):
     
     def __doEricdoc(self):
         """
-        Private slot to perform the eric5_doc api documentation generation.
+        Private slot to perform the eric6_doc api documentation generation.
         """
         from DocumentationPlugins.Ericdoc.EricdocConfigDialog import \
             EricdocConfigDialog
@@ -208,7 +208,7 @@ class EricdocPlugin(QObject):
             
             outdir = Utilities.toNativeSeparators(parms['outputDirectory'])
             if outdir == '':
-                outdir = 'doc'      # that is eric5_docs default output dir
+                outdir = 'doc'      # that is eric6_docs default output dir
                 
             # add it to the project data, if it isn't in already
             outdir = project.getRelativePath(outdir)
@@ -222,7 +222,7 @@ class EricdocPlugin(QObject):
                     parms['qtHelpOutputDirectory'])
                 if outdir == '':
                     outdir = 'help'
-                    # that is eric5_docs default QtHelp output dir
+                    # that is eric6_docs default QtHelp output dir
                     
                 # add it to the project data, if it isn't in already
                 outdir = project.getRelativePath(outdir)

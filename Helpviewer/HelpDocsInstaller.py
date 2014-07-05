@@ -14,7 +14,7 @@ from PyQt5.QtCore import pyqtSignal, QThread, Qt, QMutex, QDateTime, QDir, \
     QLibraryInfo, QFileInfo
 from PyQt5.QtHelp import QHelpEngineCore
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class HelpDocsInstaller(QThread):
@@ -85,7 +85,7 @@ class HelpDocsInstaller(QThread):
                     return
                 self.__mutex.unlock()
         
-        changes |= self.__installEric5Doc(engine)
+        changes |= self.__installEric6Doc(engine)
         engine = None
         del engine
         self.docsInstalled.emit(changes)
@@ -164,14 +164,14 @@ class HelpDocsInstaller(QThread):
         
         return False
     
-    def __installEric5Doc(self, engine):
+    def __installEric6Doc(self, engine):
         """
-        Private method to install/update the eric5 help documentation.
+        Private method to install/update the eric6 help documentation.
         
         @param engine reference to the help engine (QHelpEngineCore)
         @return flag indicating success (boolean)
         """
-        versionKey = "eric5_ide"
+        versionKey = "eric6_ide"
         info = engine.customValue(versionKey, "")
         lst = info.split('|')
         

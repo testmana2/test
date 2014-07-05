@@ -27,7 +27,7 @@ class EmptyNetworkReply(QNetworkReply):
         super(EmptyNetworkReply, self).__init__(parent)
         
         self.setOperation(QNetworkAccessManager.GetOperation)
-        self.setError(QNetworkReply.OperationCanceledError, "eric5:No Error")
+        self.setError(QNetworkReply.OperationCanceledError, "eric6:No Error")
         
         QTimer.singleShot(0, lambda: self.finished.emit())
     

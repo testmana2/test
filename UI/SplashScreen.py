@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a splashscreen for eric5.
+Module implementing a splashscreen for eric6.
 """
 
 from __future__ import unicode_literals
@@ -16,12 +16,12 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap, QColor
 from PyQt5.QtWidgets import QApplication, QSplashScreen
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class SplashScreen(QSplashScreen):
     """
-    Class implementing a splashscreen for eric5.
+    Class implementing a splashscreen for eric6.
     """
     def __init__(self):
         """
@@ -56,7 +56,7 @@ class SplashScreen(QSplashScreen):
 
 class NoneSplashScreen(object):
     """
-    Class implementing a "None" splashscreen for eric5.
+    Class implementing a "None" splashscreen for eric6.
     
     This class implements the same interface as the real splashscreen,
     but simply does nothing.

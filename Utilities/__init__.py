@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing various functions/classes needed everywhere within eric5.
+Package implementing various functions/classes needed everywhere within eric6.
 """
 
 from __future__ import unicode_literals
@@ -74,7 +74,7 @@ import Preferences
 from Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck import (  # __IGNORE_WARNING__
     normalizeCode)
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 configDir = None
 
@@ -1020,7 +1020,7 @@ def direntries(path, filesonly=False, pattern=None, followsymlinks=True,
                          '.svn', '_svn',
                          '.hg', '_hg',
                          '.ropeproject', '_ropeproject',
-                         '.eric5project', '_eric5project',
+                         '.eric6project', '_eric6project',
                          '.issues', '_issues']:
                 continue
             

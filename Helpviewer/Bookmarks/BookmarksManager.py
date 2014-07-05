@@ -369,7 +369,7 @@ class BookmarksManager(QObject):
         fileName, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
             None,
             self.tr("Export Bookmarks"),
-            "eric5_bookmarks.xbel",
+            "eric6_bookmarks.xbel",
             self.tr("XBEL bookmarks (*.xbel);;"
                     "XBEL bookmarks (*.xml);;"
                     "HTML Bookmarks (*.html)"))

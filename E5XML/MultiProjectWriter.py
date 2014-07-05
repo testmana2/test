@@ -45,7 +45,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
                       .format(multiProjectFileFormatVersion))
         
         # add some generation comments
-        self.writeComment(" eric5 multi project file for multi project {0} "
+        self.writeComment(" eric6 multi project file for multi project {0} "
                           .format(self.name))
         if Preferences.getMultiProject("XMLTimestamp"):
             self.writeComment(

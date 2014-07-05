@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Icon Editor.
+Eric6 Icon Editor.
 
 This is the main Python script that performs the necessary initialization
 of the icon editor and starts the Qt event loop. This is a standalone version
@@ -61,7 +61,7 @@ def main():
         ("", "name of file to edit")
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 Icon Editor",
+                                  "Eric6 Icon Editor",
                                   "",
                                   "Little tool to edit icon files.",
                                   options)

@@ -4,7 +4,7 @@
 #
 
 """
-Package implementing the viewmanager of the eric5 IDE.
+Package implementing the viewmanager of the eric6 IDE.
 
 The viewmanager is responsible for the layout of the editor windows. This is
 the central part of the IDE. In additon to this, the viewmanager provides all

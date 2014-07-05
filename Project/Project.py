@@ -3127,9 +3127,9 @@ class Project(QObject):
         @return path of the management directory (string)
         """
         if Utilities.isWindowsPlatform():
-            return os.path.join(self.ppath, "_eric5project")
+            return os.path.join(self.ppath, "_eric6project")
         else:
-            return os.path.join(self.ppath, ".eric5project")
+            return os.path.join(self.ppath, ".eric6project")
         
     def createProjectManagementDir(self):
         """
@@ -3706,11 +3706,11 @@ class Project(QObject):
             self.tr('Create &Package List'), 0, 0,
             self.pluginGrp, 'project_plugin_pkglist')
         self.pluginPkgListAct.setStatusTip(
-            self.tr('Create an initial PKGLIST file for an eric5 plugin.'))
+            self.tr('Create an initial PKGLIST file for an eric6 plugin.'))
         self.pluginPkgListAct.setWhatsThis(self.tr(
             """<b>Create Package List</b>"""
             """<p>This creates an initial list of files to include in an"""
-            """ eric5 plugin archive. The list is created from the project"""
+            """ eric6 plugin archive. The list is created from the project"""
             """ file.</p>"""
         ))
         self.pluginPkgListAct.triggered.connect(self.__pluginCreatePkgList)
@@ -3722,10 +3722,10 @@ class Project(QObject):
             self.tr('Create Plugin &Archive'), 0, 0,
             self.pluginGrp, 'project_plugin_archive')
         self.pluginArchiveAct.setStatusTip(
-            self.tr('Create an eric5 plugin archive file.'))
+            self.tr('Create an eric6 plugin archive file.'))
         self.pluginArchiveAct.setWhatsThis(self.tr(
             """<b>Create Plugin Archive</b>"""
-            """<p>This creates an eric5 plugin archive file using the list"""
+            """<p>This creates an eric6 plugin archive file using the list"""
             """ of files given in the PKGLIST file. The archive name is"""
             """ built from the main script name.</p>"""
         ))
@@ -3738,10 +3738,10 @@ class Project(QObject):
             self.tr('Create Plugin Archive (&Snapshot)'), 0, 0,
             self.pluginGrp, 'project_plugin_sarchive')
         self.pluginSArchiveAct.setStatusTip(self.tr(
-            'Create an eric5 plugin archive file (snapshot release).'))
+            'Create an eric6 plugin archive file (snapshot release).'))
         self.pluginSArchiveAct.setWhatsThis(self.tr(
             """<b>Create Plugin Archive (Snapshot)</b>"""
-            """<p>This creates an eric5 plugin archive file using the list"""
+            """<p>This creates an eric6 plugin archive file using the list"""
             """ of files given in the PKGLIST file. The archive name is"""
             """ built from the main script name. The version entry of the"""
             """ main script is modified to reflect a snapshot release.</p>"""
@@ -4634,7 +4634,7 @@ class Project(QObject):
     @pyqtSlot()
     def __pluginCreateArchive(self, snapshot=False):
         """
-        Private slot to create an eric5 plugin archive.
+        Private slot to create an eric6 plugin archive.
         
         @param snapshot flag indicating a snapshot archive (boolean)
         """
@@ -4680,7 +4680,7 @@ class Project(QObject):
                 self.ui,
                 self.tr("Create Plugin Archive"),
                 self.tr(
-                    """<p>The eric5 plugin archive file <b>{0}</b> could """
+                    """<p>The eric6 plugin archive file <b>{0}</b> could """
                     """not be created.</p>"""
                     """<p>Reason: {1}</p>""").format(archive, str(why)))
             return
@@ -4721,7 +4721,7 @@ class Project(QObject):
                 UI.PixmapCache.getPixmap("pluginArchive48.png"),
                 self.tr("Create Plugin Archive"),
                 self.tr(
-                    """<p>The eric5 plugin archive file <b>{0}</b> was """
+                    """<p>The eric6 plugin archive file <b>{0}</b> was """
                     """created successfully.</p>""")
                 .format(os.path.basename(archive)))
         else:
@@ -4729,12 +4729,12 @@ class Project(QObject):
                 self.ui,
                 self.tr("Create Plugin Archive"),
                 self.tr(
-                    """<p>The eric5 plugin archive file <b>{0}</b> was """
+                    """<p>The eric6 plugin archive file <b>{0}</b> was """
                     """created successfully.</p>""").format(archive))
     
     def __pluginCreateSnapshotArchive(self):
         """
-        Private slot to create an eric5 plugin archive snapshot release.
+        Private slot to create an eric6 plugin archive snapshot release.
         """
         self.__pluginCreateArchive(True)
     

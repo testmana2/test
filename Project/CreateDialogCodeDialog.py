@@ -24,7 +24,7 @@ from E5Gui import E5MessageBox
 from .Ui_CreateDialogCodeDialog import Ui_CreateDialogCodeDialog
 from .NewDialogClassDialog import NewDialogClassDialog
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 pyqtSignatureRole = Qt.UserRole + 1
 pythonSignatureRole = Qt.UserRole + 2

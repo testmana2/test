@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Documentation Generator.
+Eric6 Documentation Generator.
 
 This is the main Python script of the documentation generator. It is
 this script that gets called via the source documentation interface.
@@ -27,7 +27,7 @@ import Utilities.ModuleParser
 from DocumentationTools.ModuleDocumentor import ModuleDocument
 from DocumentationTools.IndexGenerator import IndexGenerator
 from DocumentationTools.QtHelpGenerator import QtHelpGenerator
-from DocumentationTools.Config import eric5docDefaultColors
+from DocumentationTools.Config import eric6docDefaultColors
 from UI.Info import Version
 import Utilities
 
@@ -42,14 +42,14 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print("eric5_doc")
+    print("eric6_doc")
     print()
     print("Copyright (c) 2003 - 2014 Detlev Offenbach"
           " <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
-    print("  eric5_doc [options] files...")
+    print("  eric6_doc [options] files...")
     print()
     print("where files can be either python modules, package")
     print("directories or ordinary directories.")
@@ -129,9 +129,9 @@ def version():
     Function to show the version information.
     """
     print(
-        """eric5_doc  {0}\n"""
+        """eric6_doc  {0}\n"""
         """\n"""
-        """Eric5 API documentation generator.\n"""
+        """Eric6 API documentation generator.\n"""
         """\n"""
         """Copyright (c) 2003-2014 Detlev Offenbach"""
         """ <detlev@die-offenbachs.de>\n"""
@@ -168,7 +168,7 @@ def main():
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
-                   ".eric5project", "_eric5project", "dist", "build", "doc",
+                   ".eric6project", "_eric6project", "dist", "build", "doc",
                    "docs"]
     excludePatterns = []
     outputDir = "doc"
@@ -178,7 +178,7 @@ def main():
     newline = None
     
     stylesheetFile = ""
-    colors = eric5docDefaultColors.copy()
+    colors = eric6docDefaultColors.copy()
     
     qtHelpCreation = False
     qtHelpOutputDir = "help"

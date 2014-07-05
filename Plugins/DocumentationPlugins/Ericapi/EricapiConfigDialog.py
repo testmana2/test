@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to enter the parameters for eric5_api.
+Module implementing a dialog to enter the parameters for eric6_api.
 """
 
 from __future__ import unicode_literals
@@ -24,12 +24,12 @@ import Utilities
 import UI.PixmapCache
 import DocumentationTools
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
     """
-    Class implementing a dialog to enter the parameters for eric5_api.
+    Class implementing a dialog to enter the parameters for eric6_api.
     """
     def __init__(self, project, parms=None, parent=None):
         """
@@ -130,7 +130,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         # 1. the program name
         args.append(sys.executable)
         args.append(
-            Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_api.py"))
+            Utilities.normabsjoinpath(getConfig('ericDir'), "eric6_api.py"))
         
         # 2. the commandline options
         if self.parameters['outputFile'] != self.defaults['outputFile']:

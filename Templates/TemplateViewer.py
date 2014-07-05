@@ -939,7 +939,7 @@ class TemplateViewer(QTreeWidget):
         """
         if filename is None:
             filename = os.path.join(
-                Utilities.getConfigDir(), "eric5templates.e4c")
+                Utilities.getConfigDir(), "eric6templates.e4c")
         f = QFile(filename)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
@@ -966,7 +966,7 @@ class TemplateViewer(QTreeWidget):
         """
         if filename is None:
             filename = os.path.join(
-                Utilities.getConfigDir(), "eric5templates.e4c")
+                Utilities.getConfigDir(), "eric6templates.e4c")
             if not os.path.exists(filename):
                 return
         

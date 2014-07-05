@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a base class for all of eric5s XML stream writers.
+Module implementing a base class for all of eric6s XML stream writers.
 """
 
 from __future__ import unicode_literals
@@ -19,7 +19,7 @@ from E5Gui import E5MessageBox
 
 class XMLStreamReaderBase(QXmlStreamReader):
     """
-    Class implementing a base class for all of eric5s XML stream readers.
+    Class implementing a base class for all of eric6s XML stream readers.
     """
     def __init__(self, device):
         """

@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a base class for all of eric5s XML stream writers.
+Module implementing a base class for all of eric6s XML stream writers.
 """
 
 from __future__ import unicode_literals
@@ -22,7 +22,7 @@ from PyQt5.QtCore import QXmlStreamWriter
 
 class XMLStreamWriterBase(QXmlStreamWriter):
     """
-    Class implementing a base class for all of eric5s XML stream writers.
+    Class implementing a base class for all of eric6s XML stream writers.
     """
     def __init__(self, device):
         """

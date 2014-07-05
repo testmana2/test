@@ -32,7 +32,7 @@ from E5Gui.E5Led import E5Led
 import Preferences
 from Globals import isMacPlatform
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class TabBar(E5WheelTabBar):

@@ -7,6 +7,6 @@
 Module implementing the Windows entry point.
 """
 
-from eric5_iconeditor import main
+from eric6_iconeditor import main
 
 main()

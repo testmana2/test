@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 API Generator.
+Eric6 API Generator.
 
 This is the main Python script of the API generator. It is
 this script that gets called via the API generation interface.
@@ -37,14 +37,14 @@ def usage():
     It prints a reference of all commandline parameters that may
     be used and ends the application.
     """
-    print("eric5_api")
+    print("eric6_api")
     print()
     print("Copyright (c) 2004 - 2014 Detlev Offenbach"
           " <detlev@die-offenbachs.de>.")
     print()
     print("Usage:")
     print()
-    print("  eric5_api [options] files...")
+    print("  eric6_api [options] files...")
     print()
     print("where files can be either python modules, package")
     print("directories or ordinary directories.")
@@ -94,9 +94,9 @@ def version():
     Function to show the version information.
     """
     print(
-        """eric5_api  {0}\n"""
+        """eric6_api  {0}\n"""
         """\n"""
-        """Eric5 API generator.\n"""
+        """Eric6 API generator.\n"""
         """\n"""
         """Copyright (c) 2004 - 2014 Detlev Offenbach"""
         """ <detlev@die-offenbachs.de>\n"""
@@ -126,7 +126,7 @@ def main():
         usage()
 
     excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
-                   ".eric5project", "_eric5project", "dist", "build", "doc",
+                   ".eric6project", "_eric6project", "dist", "build", "doc",
                    "docs"]
     excludePatterns = []
     outputFileName = ""

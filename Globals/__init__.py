@@ -15,9 +15,9 @@ import os
 from PyQt5.QtCore import QDir, QLibraryInfo
 
 # names of the various settings objects
-settingsNameOrganization = "Eric5"
-settingsNameGlobal = "eric5"
-settingsNameRecent = "eric5recent"
+settingsNameOrganization = "Eric6"
+settingsNameGlobal = "eric6"
+settingsNameRecent = "eric6recent"
 
 # key names of the various recent entries
 recentNameMultiProject = "MultiProjects"
@@ -81,7 +81,7 @@ def checkBlacklistedVersions():
             for vers in BlackLists["sip"] + PlatformBlackLists["sip"]:
                 if vers == sipVersion:
                     print(
-                        'Sorry, sip version {0} is not compatible with eric5.'
+                        'Sorry, sip version {0} is not compatible with eric6.'
                         .format(vers))
                     print('Please install another version.')
                     return False
@@ -96,7 +96,7 @@ def checkBlacklistedVersions():
         # check for blacklisted versions
         for vers in BlackLists["PyQt5"] + PlatformBlackLists["PyQt5"]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt5 version {0} is not compatible with eric5.'
+                print('Sorry, PyQt5 version {0} is not compatible with eric6.'
                       .format(vers))
                 print('Please install another version.')
                 return False
@@ -112,7 +112,7 @@ def checkBlacklistedVersions():
             if vers == scintillaVersion:
                 print(
                     'Sorry, QScintilla2 version {0} is not compatible'
-                    ' with eric5.'.format(vers))
+                    ' with eric6.'.format(vers))
                 print('Please install another version.')
                 return False
     
@@ -129,9 +129,9 @@ def getConfigDir():
         hp = configDir
     else:
         if isWindowsPlatform():
-            cdn = "_eric5"
+            cdn = "_eric6"
         else:
-            cdn = ".eric5"
+            cdn = ".eric6"
             
         hp = QDir.homePath()
         dn = QDir(hp)

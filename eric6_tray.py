@@ -5,11 +5,11 @@
 #
 
 """
-Eric5 Tray.
+Eric6 Tray.
 
 This is the main Python script that performs the necessary initialization
 of the system-tray application. This acts as a quickstarter by providing a
-context menu to start the eric5 IDE and the eric5 tools.
+context menu to start the eric6 IDE and the eric6 tools.
 """
 
 from __future__ import unicode_literals
@@ -53,9 +53,9 @@ def main():
          "use the given directory as the one containing the config files"),
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 Tray",
+                                  "Eric6 Tray",
                                   "",
-                                  "Traystarter for eric5",
+                                  "Traystarter for eric6",
                                   options)
     res = Startup.simpleAppStartup(sys.argv,
                                    appinfo,

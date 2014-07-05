@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Python IDE.
+Eric6 Python IDE.
 
 This is the main Python script that performs the necessary initialization
 of the IDE and starts the Qt event loop.
@@ -91,7 +91,7 @@ def handleSingleApplication(ddindex):
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print("eric5: {0}".format(client.errstr()))
+        print("eric6: {0}".format(client.errstr()))
         sys.exit(res)
 
 
@@ -109,7 +109,7 @@ def excepthook(excType, excValue, tracebackobj):
     import Globals
     
     separator = '-' * 80
-    logFile = os.path.join(Globals.getConfigDir(), "eric5_error.log")
+    logFile = os.path.join(Globals.getConfigDir(), "eric6_error.log")
     notice = \
         """An unhandled exception occurred. Please report the problem\n"""\
         """using the error reporting dialog or via email to <{0}>.\n"""\
@@ -204,7 +204,7 @@ def main():
          "(everything after that is considered arguments for this program)")
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5",
+                                  "Eric6",
                                   "[project | files... [--] [debug-options]]",
                                   "A Python IDE",
                                   options)
@@ -278,13 +278,13 @@ def main():
     # Load translation files and install them
     loc = Startup.loadTranslators(qt4TransDir, app, ("qscintilla",))
     
-    splash.showMessage(QCoreApplication.translate("eric5", "Starting..."))
+    splash.showMessage(QCoreApplication.translate("eric6", "Starting..."))
     # We can only import these after creating the E5Application because they
     # make Qt calls that need the E5Application to exist.
     from UI.UserInterface import UserInterface
 
     splash.showMessage(
-        QCoreApplication.translate("eric5", "Generating Main Window..."))
+        QCoreApplication.translate("eric6", "Generating Main Window..."))
     try:
         mainWindow = UserInterface(app, loc, splash, pluginFile, noopen,
                                    restartArgs)

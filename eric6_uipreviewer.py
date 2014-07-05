@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 UI Previewer.
+Eric6 UI Previewer.
 
 This is the main Python script that performs the necessary initialization
 of the ui previewer and starts the Qt event loop. This is a standalone version
@@ -60,7 +60,7 @@ def main():
          "use the given directory as the one containing the config files"),
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
-                                  "Eric5 UI Previewer",
+                                  "Eric6 UI Previewer",
                                   "file",
                                   "UI file previewer",
                                   options)

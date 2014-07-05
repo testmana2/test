@@ -24,7 +24,7 @@ import UI.PixmapCache
 import Utilities
 import Preferences
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class TrayStarter(QSystemTrayIcon):
@@ -56,7 +56,7 @@ class TrayStarter(QSystemTrayIcon):
         
         self.activated.connect(self.__activated)
         
-        self.__menu = QMenu(self.tr("Eric5 tray starter"))
+        self.__menu = QMenu(self.tr("Eric6 tray starter"))
         
         self.recentProjectsMenu = QMenu(
             self.tr('Recent Projects'), self.__menu)
@@ -75,7 +75,7 @@ class TrayStarter(QSystemTrayIcon):
         self.recentFilesMenu.triggered.connect(self.__openRecent)
         
         act = self.__menu.addAction(
-            self.tr("Eric5 tray starter"), self.__about)
+            self.tr("Eric6 tray starter"), self.__about)
         font = act.font()
         font.setBold(True)
         act.setFont(font)
@@ -98,7 +98,7 @@ class TrayStarter(QSystemTrayIcon):
             self.tr("Unittest"), self.__startUnittest)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("ericWeb.png"),
-            self.tr("eric5 Web Browser"), self.__startHelpViewer)
+            self.tr("eric6 Web Browser"), self.__startHelpViewer)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
@@ -138,10 +138,10 @@ class TrayStarter(QSystemTrayIcon):
             self.tr('Preferences'), self.__startPreferences)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("erict.png"),
-            self.tr("eric5 IDE"), self.__startEric)
+            self.tr("eric6 IDE"), self.__startEric)
         self.__menu.addAction(
             UI.PixmapCache.getIcon("editor.png"),
-            self.tr("eric5 Mini Editor"), self.__startMiniEditor)
+            self.tr("eric6 Mini Editor"), self.__startMiniEditor)
         self.__menu.addSeparator()
         
         self.__menu.addAction(
@@ -224,9 +224,9 @@ class TrayStarter(QSystemTrayIcon):
     
     def __startProc(self, applName, *applArgs):
         """
-        Private method to start an eric5 application.
+        Private method to start an eric6 application.
         
-        @param applName name of the eric5 application script (string)
+        @param applName name of the eric6 application script (string)
         @param *applArgs variable list of application arguments
         """
         proc = QProcess()
@@ -250,121 +250,121 @@ class TrayStarter(QSystemTrayIcon):
     
     def __startMiniEditor(self):
         """
-        Private slot to start the eric5 Mini Editor.
+        Private slot to start the eric6 Mini Editor.
         """
-        self.__startProc("eric5_editor.py", "--config={0}".format(
+        self.__startProc("eric6_editor.py", "--config={0}".format(
             Utilities.getConfigDir()))
     
     def __startEric(self):
         """
-        Private slot to start the eric5 IDE.
+        Private slot to start the eric6 IDE.
         """
-        self.__startProc("eric5.py", "--config={0}".format(
+        self.__startProc("eric6.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPreferences(self):
         """
-        Private slot to start the eric5 configuration dialog.
+        Private slot to start the eric6 configuration dialog.
         """
-        self.__startProc("eric5_configure.py", "--config={0}".format(
+        self.__startProc("eric6_configure.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPluginInstall(self):
         """
-        Private slot to start the eric5 plugin installation dialog.
+        Private slot to start the eric6 plugin installation dialog.
         """
-        self.__startProc("eric5_plugininstall.py", "--config={0}".format(
+        self.__startProc("eric6_plugininstall.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPluginUninstall(self):
         """
-        Private slot to start the eric5 plugin uninstallation dialog.
+        Private slot to start the eric6 plugin uninstallation dialog.
         """
-        self.__startProc("eric5_pluginuninstall.py", "--config={0}".format(
+        self.__startProc("eric6_pluginuninstall.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPluginRepository(self):
         """
-        Private slot to start the eric5 plugin repository dialog.
+        Private slot to start the eric6 plugin repository dialog.
         """
-        self.__startProc("eric5_pluginrepository.py", "--config={0}".format(
+        self.__startProc("eric6_pluginrepository.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startHelpViewer(self):
         """
-        Private slot to start the eric5 web browser.
+        Private slot to start the eric6 web browser.
         """
-        self.__startProc("eric5_webbrowser.py", "--config={0}".format(
+        self.__startProc("eric6_webbrowser.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startUIPreviewer(self):
         """
-        Private slot to start the eric5 UI previewer.
+        Private slot to start the eric6 UI previewer.
         """
-        self.__startProc("eric5_uipreviewer.py", "--config={0}".format(
+        self.__startProc("eric6_uipreviewer.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startTRPreviewer(self):
         """
-        Private slot to start the eric5 translations previewer.
+        Private slot to start the eric6 translations previewer.
         """
-        self.__startProc("eric5_trpreviewer.py", "--config={0}".format(
+        self.__startProc("eric6_trpreviewer.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startUnittest(self):
         """
-        Private slot to start the eric5 unittest dialog.
+        Private slot to start the eric6 unittest dialog.
         """
-        self.__startProc("eric5_unittest.py", "--config={0}".format(
+        self.__startProc("eric6_unittest.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startDiff(self):
         """
-        Private slot to start the eric5 diff dialog.
+        Private slot to start the eric6 diff dialog.
         """
-        self.__startProc("eric5_diff.py", "--config={0}".format(
+        self.__startProc("eric6_diff.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startCompare(self):
         """
-        Private slot to start the eric5 compare dialog.
+        Private slot to start the eric6 compare dialog.
         """
-        self.__startProc("eric5_compare.py", "--config={0}".format(
+        self.__startProc("eric6_compare.py", "--config={0}".format(
             Utilities.getConfigDir()))
     
     def __startSqlBrowser(self):
         """
-        Private slot to start the eric5 sql browser dialog.
+        Private slot to start the eric6 sql browser dialog.
         """
-        self.__startProc("eric5_sqlbrowser.py", "--config={0}".format(
+        self.__startProc("eric6_sqlbrowser.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startIconEditor(self):
         """
-        Private slot to start the eric5 icon editor dialog.
+        Private slot to start the eric6 icon editor dialog.
         """
-        self.__startProc("eric5_iconeditor.py", "--config={0}".format(
+        self.__startProc("eric6_iconeditor.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startSnapshot(self):
         """
-        Private slot to start the eric5 snapshot dialog.
+        Private slot to start the eric6 snapshot dialog.
         """
-        self.__startProc("eric5_snap.py", "--config={0}".format(
+        self.__startProc("eric6_snap.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startQRegExp(self):
         """
-        Private slot to start the eric5 QRegExp editor dialog.
+        Private slot to start the eric6 QRegExp editor dialog.
         """
-        self.__startProc("eric5_qregexp.py", "--config={0}".format(
+        self.__startProc("eric6_qregexp.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __startPyRe(self):
         """
-        Private slot to start the eric5 Python re editor dialog.
+        Private slot to start the eric6 Python re editor dialog.
         """
-        self.__startProc("eric5_re.py", "--config={0}".format(
+        self.__startProc("eric6_re.py", "--config={0}".format(
             Utilities.getConfigDir()))
 
     def __showRecentProjectsMenu(self):
@@ -442,7 +442,7 @@ class TrayStarter(QSystemTrayIcon):
         """
         filename = act.data()
         if filename:
-            self.__startProc("eric5.py", filename)
+            self.__startProc("eric6.py", filename)
     
     def __showPreferences(self):
         """

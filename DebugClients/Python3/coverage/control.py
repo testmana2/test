@@ -11,7 +11,7 @@ from .data import CoverageData
 from .debug import DebugControl
 from .files import FileLocator, TreeMatcher, FnmatchMatcher
 from .files import PathAliases, find_python_files, prep_patterns
-#from .html import HtmlReporter     # Comment for eric5
+#from .html import HtmlReporter     # Comment for eric6
 from .misc import CoverageException, bool_or_none, join_regex
 from .misc import file_be_gone
 from .results import Analysis, Numbers

@@ -2,10 +2,10 @@
 
 # Copyright (c) 2003-2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is a  script to patch mod_python for eric5.
+# This is a  script to patch mod_python for eric6.
 
 """
-Script to patch mod_python for usage with the eric5 IDE.
+Script to patch mod_python for usage with the eric6 IDE.
 """
 
 from __future__ import unicode_literals
@@ -38,7 +38,7 @@ def usage(rcode=2):
     print()
     print("This script patches the file apache.py of the Mod_python"
           " distribution")
-    print("so that it will work with the eric5 debugger instead of pdb.")
+    print("so that it will work with the eric6 debugger instead of pdb.")
     print("Please see mod_python.html for more details.")
     print()
 
@@ -99,11 +99,11 @@ def main(argv):
     s = open(sn, "w", encoding="utf-8")
     for line in lines:
         if not pdbFound and line.startswith("import pdb"):
-            s.write("import eric5.DebugClients.Python.eric5dbgstub as pdb\n")
+            s.write("import eric6.DebugClients.Python.eric6dbgstub as pdb\n")
             pdbFound = True
         else:
             s.write(line)
-            if line.startswith("import eric5"):
+            if line.startswith("import eric6"):
                 ericFound = True
     
     if not ericFound:
@@ -112,7 +112,7 @@ def main(argv):
         s.write('    """\n')
         s.write('    Initialize the debugger and set the script name to be'
                 ' reported \n')
-        s.write('    by the debugger. This is a patch for eric5.\n')
+        s.write('    by the debugger. This is a patch for eric6.\n')
         s.write('    """\n')
         s.write('    if not pdb.initDebugger("standard"):\n')
         s.write('        raise ImportError("Could not initialize debugger")\n')
@@ -121,7 +121,7 @@ def main(argv):
     s.close()
     
     if ericFound:
-        print("Mod_python is already patched for eric5.")
+        print("Mod_python is already patched for eric6.")
         os.remove(sn)
     else:
         try:

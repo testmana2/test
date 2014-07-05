@@ -28,7 +28,7 @@ import UI.Config
 from E5Gui.E5Action import E5Action, createActionGroup
 from E5Gui import E5MessageBox
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class DebugUI(QObject):
@@ -1567,7 +1567,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
-                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric6.py")
                 
                 self.debugViewer.initCallStackViewer(runProject)
                 
@@ -1685,7 +1685,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
-                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric6.py")
                 
                 self.debugViewer.initCallStackViewer(runProject)
                 
@@ -1806,7 +1806,7 @@ class DebugUI(QObject):
             if not doNotStart:
                 if runProject and self.project.getProjectType() == "E4Plugin":
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
-                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric6.py")
                 
                 self.debugViewer.initCallStackViewer(runProject)
                 
@@ -1935,7 +1935,7 @@ class DebugUI(QObject):
                 if debugProject and \
                         self.project.getProjectType() == "E4Plugin":
                     argv = '--plugin="{0}" {1}'.format(fn, argv)
-                    fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                    fn = os.path.join(getConfig('ericDir'), "eric6.py")
                     tracePython = True  # override flag because it must be true
                 
                 self.debugViewer.initCallStackViewer(debugProject)
@@ -1997,7 +1997,7 @@ class DebugUI(QObject):
         if not doNotStart:
             if forProject and self.project.getProjectType() == "E4Plugin":
                 argv = '--plugin="{0}" {1}'.format(fn, argv)
-                fn = os.path.join(getConfig('ericDir'), "eric5.py")
+                fn = os.path.join(getConfig('ericDir'), "eric6.py")
             
             self.debugViewer.initCallStackViewer(forProject)
             

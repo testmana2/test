@@ -98,14 +98,14 @@ class HelpWindow(E5MainWindow):
         @param parent parent widget of this window (QWidget)
         @param name name of this window (string)
         @param fromEric flag indicating whether it was called from within
-            eric5 (boolean)
+            eric6 (boolean)
         @keyparam initShortcutsOnly flag indicating to just initialize the
             keyboard shortcuts (boolean)
         @keyparam searchWord word to search for (string)
         """
         super(HelpWindow, self).__init__(parent)
         self.setObjectName(name)
-        self.setWindowTitle(self.tr("eric5 Web Browser"))
+        self.setWindowTitle(self.tr("eric6 Web Browser"))
         
         self.fromEric = fromEric
         self.__class__._fromEric = fromEric
@@ -139,7 +139,7 @@ class HelpWindow(E5MainWindow):
             if self.useQtHelp:
                 self.__helpEngine = \
                     QHelpEngine(os.path.join(Utilities.getConfigDir(),
-                                             "browser", "eric5help.qhc"), self)
+                                             "browser", "eric6help.qhc"), self)
                 self.__removeOldDocumentation()
                 self.__helpEngine.warning.connect(self.__warning)
             else:
@@ -680,10 +680,10 @@ class HelpWindow(E5MainWindow):
             self.tr('&Quit'),
             QKeySequence(self.tr("Ctrl+Q", "File|Quit")),
             0, self, 'help_file_quit')
-        self.exitAct.setStatusTip(self.tr('Quit the eric5 Web Browser'))
+        self.exitAct.setStatusTip(self.tr('Quit the eric6 Web Browser'))
         self.exitAct.setWhatsThis(self.tr(
             """<b>Quit</b>"""
-            """<p>Quit the eric5 Web Browser.</p>"""
+            """<p>Quit the eric6 Web Browser.</p>"""
         ))
         if not self.initShortcutsOnly:
             if self.fromEric:
@@ -2071,11 +2071,11 @@ class HelpWindow(E5MainWindow):
         """
         E5MessageBox.about(
             self,
-            self.tr("eric5 Web Browser"),
+            self.tr("eric6 Web Browser"),
             self.tr(
-                """<b>eric5 Web Browser - {0}</b>"""
-                """<p>The eric5 Web Browser is a combined help file and HTML"""
-                """ browser. It is part of the eric5 development"""
+                """<b>eric6 Web Browser - {0}</b>"""
+                """<p>The eric6 Web Browser is a combined help file and HTML"""
+                """ browser. It is part of the eric6 development"""
                 """ toolset.</p>"""
             ).format(Version))
         
@@ -2083,7 +2083,7 @@ class HelpWindow(E5MainWindow):
         """
         Private slot to show info about Qt.
         """
-        E5MessageBox.aboutQt(self, self.tr("eric5 Web Browser"))
+        E5MessageBox.aboutQt(self, self.tr("eric6 Web Browser"))
 
     def setBackwardAvailable(self, b):
         """
@@ -2583,7 +2583,7 @@ class HelpWindow(E5MainWindow):
             if cls._helpEngine is None:
                 cls._helpEngine = \
                     QHelpEngine(os.path.join(Utilities.getConfigDir(),
-                                             "browser", "eric5help.qhc"))
+                                             "browser", "eric6help.qhc"))
             return cls._helpEngine
         else:
             return None
@@ -2630,7 +2630,7 @@ class HelpWindow(E5MainWindow):
         if not self.__activating:
             self.__activating = True
             req = QNetworkRequest(url)
-            req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+            req.setRawHeader("X-Eric6-UserLoadAction", b"1")
             self.currentBrowser().setSource(
                 None, (req, QNetworkAccessManager.GetOperation, b""))
             self.__activating = False
@@ -2871,7 +2871,7 @@ class HelpWindow(E5MainWindow):
         """
         E5MessageBox.warning(
             self,
-            self.tr("eric5 Web Browser"),
+            self.tr("eric6 Web Browser"),
             message)
         
     def __docsInstalled(self, installed):
@@ -3204,7 +3204,7 @@ class HelpWindow(E5MainWindow):
         @param title title of the bookmark (string)
         """
         req = QNetworkRequest(url)
-        req.setRawHeader("X-Eric5-UserLoadAction", b"1")
+        req.setRawHeader("X-Eric6-UserLoadAction", b"1")
         self.newTab(None, (req, QNetworkAccessManager.GetOperation, b""))
         
     @classmethod

@@ -5,7 +5,7 @@
 # Original (c) 2005 Divmod, Inc.  See __init__.py file for details
 #
 # This module is based on pyflakes for Python2 and Python3, but was modified to
-# be integrated into eric5
+# be integrated into eric6
 
 """
 Module providing the class Message and its subclasses.

@@ -3,10 +3,10 @@
 
 # Copyright (c) 2002 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is the uninstall script for eric5.
+# This is the uninstall script for eric6.
 
 """
-Uninstallation script for the eric5 IDE and all eric5 related tools.
+Uninstallation script for the eric6 IDE and all eric6 related tools.
 """
 
 from __future__ import unicode_literals
@@ -17,10 +17,10 @@ import shutil
 import glob
 import distutils.sysconfig
 
-# get a local eric5config.py out of the way
-if os.path.exists("eric5config.py"):
-    os.rename("eric5config.py", "eric5config.py.orig")
-from eric5config import getConfig
+# get a local eric6config.py out of the way
+if os.path.exists("eric6config.py"):
+    os.rename("eric6config.py", "eric6config.py.orig")
+from eric6config import getConfig
 
 # Define the globals.
 progName = None
@@ -41,11 +41,11 @@ def exit(rcode=0):
     
     @param rcode result code to report back (integer)
     """
-    # restore the local eric5config.py
-    if os.path.exists("eric5config.py.orig"):
-        if os.path.exists("eric5config.py"):
-            os.remove("eric5config.py")
-        os.rename("eric5config.py.orig", "eric5config.py")
+    # restore the local eric6config.py
+    if os.path.exists("eric6config.py.orig"):
+        if os.path.exists("eric6config.py"):
+            os.remove("eric6config.py")
+        os.rename("eric6config.py.orig", "eric6config.py")
 
 
 def usage(rcode=2):
@@ -99,37 +99,37 @@ def uninstallEric():
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux"):
         for name in ["/usr/share/pixmaps/eric.png",
-                     "/usr/share/applications/eric5.desktop",
+                     "/usr/share/applications/eric6.desktop",
                      "/usr/share/pixmaps/ericWeb.png",
-                     "/usr/share/applications/eric5_webbrowser.desktop"]:
+                     "/usr/share/applications/eric6_webbrowser.desktop"]:
             if os.path.exists(name):
                 os.remove(name)
     
     # Remove the wrapper scripts
     rem_wnames = [
-        "eric5-api", "eric5-compare",
-        "eric5-configure", "eric5-diff",
-        "eric5-doc",
-        "eric5-qregexp", "eric5-re",
-        "eric5-trpreviewer", "eric5-uipreviewer",
-        "eric5-unittest", "eric5",
-        "eric5-tray", "eric5-editor",
-        "eric5-plugininstall", "eric5-pluginuninstall",
-        "eric5-pluginrepository", "eric5-sqlbrowser",
-        "eric5-webbrowser", "eric5-iconeditor",
+        "eric6-api", "eric6-compare",
+        "eric6-configure", "eric6-diff",
+        "eric6-doc",
+        "eric6-qregexp", "eric6-re",
+        "eric6-trpreviewer", "eric6-uipreviewer",
+        "eric6-unittest", "eric6",
+        "eric6-tray", "eric6-editor",
+        "eric6-plugininstall", "eric6-pluginuninstall",
+        "eric6-pluginrepository", "eric6-sqlbrowser",
+        "eric6-webbrowser", "eric6-iconeditor",
     ]
     rem_wnames2 = [
-        "eric5_api", "eric5_compare",
-        "eric5_configure", "eric5_diff",
-        "eric5_doc", "eric5_qregularexpression",
-        "eric5_qregexp", "eric5_re",
-        "eric5_trpreviewer", "eric5_uipreviewer",
-        "eric5_unittest", "eric5",
-        "eric5_tray", "eric5_editor",
-        "eric5_plugininstall", "eric5_pluginuninstall",
-        "eric5_pluginrepository", "eric5_sqlbrowser",
-        "eric5_webbrowser", "eric5_iconeditor",
-        "eric5_snap",
+        "eric6_api", "eric6_compare",
+        "eric6_configure", "eric6_diff",
+        "eric6_doc", "eric6_qregularexpression",
+        "eric6_qregexp", "eric6_re",
+        "eric6_trpreviewer", "eric6_uipreviewer",
+        "eric6_unittest", "eric6",
+        "eric6_tray", "eric6_editor",
+        "eric6_plugininstall", "eric6_pluginuninstall",
+        "eric6_pluginrepository", "eric6_sqlbrowser",
+        "eric6_webbrowser", "eric6_iconeditor",
+        "eric6_snap",
     ]
     if includePythonVariant:
         marker = PythonMarkers[sys.version_info.major]
@@ -144,7 +144,7 @@ def uninstallEric():
                 os.remove(rwname)
         
         # Cleanup our config file(s)
-        for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
+        for name in ['eric6config.py', 'eric6config.pyc', 'eric6.pth']:
             e5cfile = os.path.join(pyModDir, name)
             if os.path.exists(e5cfile):
                 os.remove(e5cfile)
@@ -164,7 +164,7 @@ def uninstallEric():
         
         # Cleanup translations
         for name in glob.glob(
-                os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+                os.path.join(getConfig('ericTranslationsDir'), 'eric6_*.qm')):
             if os.path.exists(name):
                 os.remove(name)
         
@@ -181,14 +181,14 @@ def uninstallEric():
         
         if sys.platform == "darwin":
             # delete the Mac app bundle
-            if os.path.exists("/Developer/Applications/Eric5"):
-                shutil.rmtree("/Developer/Applications/Eric5")
+            if os.path.exists("/Developer/Applications/Eric6"):
+                shutil.rmtree("/Developer/Applications/Eric6")
             try:
                 macAppBundlePath = getConfig("macAppBundlePath")
                 macAppBundleName = getConfig("macAppBundleName")
             except AttributeError:
                 macAppBundlePath = "/Applications"
-                macAppBundleName = "eric5.app"
+                macAppBundleName = "eric6.app"
             if os.path.exists("/Applications/" + macAppBundleName):
                 shutil.rmtree("/Applications/" + macAppBundleName)
             bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
@@ -250,5 +250,5 @@ if __name__ == "__main__":
         print("""An internal error occured.  Please report all the output of"""
               """ the program,\n"""
               """including the following traceback, to"""
-              """ eric5-bugs@eric-ide.python-projects.org.\n""")
+              """ eric-bugs@eric-ide.python-projects.org.\n""")
         raise

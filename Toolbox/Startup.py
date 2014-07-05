@@ -22,7 +22,7 @@ import Globals
 
 import UI.PixmapCache
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 def usage(appinfo, optlen=12):
@@ -168,7 +168,7 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
         # set the default encoding for tr()
         QTextCodec.setCodecForTr(QTextCodec.codecForName("utf-8"))
     
-    translations = ("qt", "eric5") + translationFiles
+    translations = ("qt", "eric6") + translationFiles
     loc = Preferences.getUILanguage()
     if loc is None:
         return
@@ -187,7 +187,7 @@ def loadTranslators(qtTransDir, app, translationFiles=()):
             if ok:
                 app.installTranslator(translator)
             else:
-                if tf.startswith("eric5"):
+                if tf.startswith("eric6"):
                     loca = None
         loc = loca
     else:
@@ -201,7 +201,7 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     Module function to start up an application that doesn't need a specialized
     start up.
     
-    This function is used by all of eric5's helper programs.
+    This function is used by all of eric6's helper programs.
     
     @param argv list of commandline parameters (list of strings)
     @param appinfo dictionary describing the application

@@ -8,7 +8,7 @@ Package implementing the preferences interface.
 
 The preferences interface consists of a class, which defines the default
 values for all configuration items and stores the actual values. These
-values are read and written to the eric5 preferences file by module
+values are read and written to the eric6 preferences file by module
 functions. The data is stored in a file in a subdirectory of the users home
 directory. The individual configuration data is accessed by accessor functions
 defined on the module level. The module is simply imported wherever it is
@@ -131,7 +131,6 @@ class Prefs(object):
         "ShowFilePreview": True,
         "ShowFilePreviewJS": True,
         "ShowFilePreviewSSI": True,
-        # ViewProfiles is obsolete (used till Eric5.3)
         "ViewProfiles2": {
             "edit": [
                 # saved state main window with toolbox windows (0)
@@ -1132,7 +1131,7 @@ def initPreferences():
     if not isWindowsPlatform():
         hp = QDir.homePath()
         dn = QDir(hp)
-        dn.mkdir(".eric5")
+        dn.mkdir(".eric6")
     QCoreApplication.setOrganizationName(settingsNameOrganization)
     QCoreApplication.setApplicationName(settingsNameGlobal)
     

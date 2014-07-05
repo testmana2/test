@@ -656,8 +656,6 @@
     <Source>Helpviewer/AdBlock/AdBlockPage.py</Source>
     <Source>compileUiFiles.py</Source>
     <Source>Helpviewer/OpenSearch/OpenSearchEditDialog.py</Source>
-    <Source>DebugClients/Python/eric5dbgstub.py</Source>
-    <Source>DebugClients/Python3/eric5dbgstub.py</Source>
     <Source>DebugClients/Python3/coverage/bytecode.py</Source>
     <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
     <Source>DebugClients/Python3/coverage/phystokens.py</Source>
@@ -1149,6 +1147,8 @@
     <Source>eric6_webbrowser.py</Source>
     <Source>eric6_webbrowser.pyw</Source>
     <Source>eric6config.py</Source>
+    <Source>DebugClients/Python/eric6dbgstub.py</Source>
+    <Source>DebugClients/Python3/eric6dbgstub.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

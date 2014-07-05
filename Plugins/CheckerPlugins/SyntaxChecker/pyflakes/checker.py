@@ -4,7 +4,7 @@
 #
 # Original (c) 2005-2010 Divmod, Inc.
 #
-# This module is based on pyflakes but was modified to work with eric5
+# This module is based on pyflakes but was modified to work with eric6
 """
 Main module.
 

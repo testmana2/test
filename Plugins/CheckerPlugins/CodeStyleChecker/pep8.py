@@ -50,11 +50,11 @@ from __future__ import with_statement
 
 #
 # This is a modified version to make the original pep8.py better suitable
-# for being called from within the eric5 IDE. The modifications are as
+# for being called from within the eric6 IDE. The modifications are as
 # follows:
 #
 # - made messages translatable via Qt
-# - added code for eric5 integration
+# - added code for eric6 integration
 #
 # Copyright (c) 2011 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
@@ -1261,7 +1261,7 @@ class Checker(object):
         self.report_error = self.report.error
         self.report_error_args = self.report.error_args
         
-        # added for eric5 integration
+        # added for eric6 integration
         self.options = options
 
     def report_invalid_syntax(self):
@@ -1377,7 +1377,7 @@ class Checker(object):
         except (SyntaxError, TypeError):
             return self.report_invalid_syntax()
         for name, cls, __ in self._ast_checks:
-            # extended API for eric5 integration
+            # extended API for eric6 integration
             checker = cls(tree, self.filename, self.options)
             for args in checker.run():
                 lineno = args[0]

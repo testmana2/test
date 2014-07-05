@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog to enter the parameters for eric5_doc.
+Module implementing a dialog to enter the parameters for eric6_doc.
 """
 
 from __future__ import unicode_literals
@@ -21,17 +21,17 @@ from E5Gui.E5Completers import E5DirCompleter
 from E5Gui import E5FileDialog
 
 from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
-from DocumentationTools.Config import eric5docDefaultColors, \
-    eric5docColorParameterNames
+from DocumentationTools.Config import eric6docDefaultColors, \
+    eric6docColorParameterNames
 import Utilities
 import UI.PixmapCache
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
     """
-    Class implementing a dialog to enter the parameters for eric5_doc.
+    Class implementing a dialog to enter the parameters for eric6_doc.
     """
     def __init__(self, project, parms=None, parent=None):
         """
@@ -77,7 +77,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         
         # get a copy of the defaults to store the user settings
         self.parameters = copy.deepcopy(self.defaults)
-        self.colors = eric5docDefaultColors.copy()
+        self.colors = eric6docDefaultColors.copy()
         
         # combine it with the values of parms
         if parms is not None:
@@ -175,7 +175,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         # 1. the program name
         args.append(sys.executable)
         args.append(
-            Utilities.normabsjoinpath(getConfig('ericDir'), "eric5_doc.py"))
+            Utilities.normabsjoinpath(getConfig('ericDir'), "eric6_doc.py"))
         
         # 2. the commandline options
         # 2a. general commandline options
@@ -233,10 +233,10 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
                 args.append(
                     os.path.join(self.ppath, self.parameters['cssFile']))
         for key, value in list(self.colors.items()):
-            if self.colors[key] != eric5docDefaultColors[key]:
+            if self.colors[key] != eric6docDefaultColors[key]:
                 parms[key] = self.colors[key]
                 args.append("--{0}={1}".format(
-                    eric5docColorParameterNames[key], self.colors[key]))
+                    eric6docColorParameterNames[key], self.colors[key]))
         
         # 2c. QtHelp commandline options
         parms['qtHelpEnabled'] = self.parameters['qtHelpEnabled']

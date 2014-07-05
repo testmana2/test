@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the editor component of the eric5 IDE.
+Module implementing the editor component of the eric6 IDE.
 """
 from __future__ import unicode_literals
 try:
@@ -42,7 +42,7 @@ TemplateCompletionListID = 2
 
 class Editor(QsciScintillaCompat):
     """
-    Class implementing the editor component of the eric5 IDE.
+    Class implementing the editor component of the eric6 IDE.
     
     @signal modificationStatusChanged(bool, QsciScintillaCompat) emitted when
         the modification status has changed
@@ -6105,7 +6105,7 @@ class Editor(QsciScintillaCompat):
             else:
                 msg = self.tr(
                     """<p>The file <b>{0}</b> has been changed while it"""
-                    """ was opened in eric5. Reread it?</p>""")\
+                    """ was opened in eric6. Reread it?</p>""")\
                     .format(self.fileName)
                 yesDefault = True
                 if self.isModified():

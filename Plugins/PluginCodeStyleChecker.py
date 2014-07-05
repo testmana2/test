@@ -34,7 +34,7 @@ longDescription = """This plugin implements the Python Code Style""" \
     """ files for compliance to the code style conventions given in PEP-8.""" \
     """ A PEP-257 checker is used to check Python source files for""" \
     """ compliance to docstring conventions given in PEP-257 and an""" \
-    """ eric5 variant is used to check against eric conventions."""
+    """ eric6 variant is used to check against eric conventions."""
 pyqtApi = 2
 python2Compatible = True
 # End-Of-Header

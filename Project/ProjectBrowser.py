@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing the project browser part of the eric5 UI.
+Module implementing the project browser part of the eric6 UI.
 """
 
 from __future__ import unicode_literals
@@ -28,7 +28,7 @@ from .ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
 
 class ProjectBrowser(E5TabWidget):
     """
-    Class implementing the project browser part of the eric5 UI.
+    Class implementing the project browser part of the eric6 UI.
     
     It generates a widget with up to seven tabs. The individual tabs contain
     the project sources browser, the project forms browser,

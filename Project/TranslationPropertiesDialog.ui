@@ -47,7 +47,7 @@
        </property>
        <property name="whatsThis">
         <string>&lt;b&gt;Translation Pattern&lt;/b&gt;
-&lt;p&gt;Enter the path pattern for the translation files using %language% at the place of the language code (e.g. /path_to_eric/i18n/eric5_%language%.ts). This will result in translation files like /path_to_eric/i18n/eric5_de.ts.&lt;/p&gt;</string>
+&lt;p&gt;Enter the path pattern for the translation files using %language% at the place of the language code (e.g. /path_to_eric/i18n/eric6_%language%.ts). This will result in translation files like /path_to_eric/i18n/eric6_de.ts.&lt;/p&gt;</string>
        </property>
       </widget>
      </item>
@@ -55,7 +55,7 @@
       <widget class="QLabel" name="textLabel1_3">
        <property name="text">
         <string>&amp;Translation Path Pattern:
-(Use '%language%' where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</string>
+(Use '%language%' where the language code should be inserted, e.g. i18n/eric6_%language%.ts)</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

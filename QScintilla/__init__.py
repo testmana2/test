@@ -4,9 +4,9 @@
 #
 
 """
-Package implementing the editor and shell components of the eric5 IDE.
+Package implementing the editor and shell components of the eric6 IDE.
 
-The editor component of the eric5 IDE is based on the Qt port
+The editor component of the eric6 IDE is based on the Qt port
 of the Scintilla editor widget. It supports syntax highlighting, code
 folding, has an interface to the integrated debugger and can be
 configured to the most possible degree.

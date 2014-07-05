@@ -26,7 +26,7 @@ from . import DebugClientCapabilities
 import Preferences
 import Utilities
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 ClientDefaultCapabilities = DebugClientCapabilities.HasAll

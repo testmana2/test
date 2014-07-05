@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog for the configuration of eric5.
+Module implementing a dialog for the configuration of eric6.
 """
 
 from __future__ import unicode_literals
@@ -29,7 +29,7 @@ import Preferences
 
 import UI.PixmapCache
 
-from eric5config import getConfig
+from eric6config import getConfig
 
 
 class ConfigurationPageItem(QTreeWidgetItem):
@@ -62,7 +62,7 @@ class ConfigurationPageItem(QTreeWidgetItem):
 
 class ConfigurationWidget(QWidget):
     """
-    Class implementing a dialog for the configuration of eric5.
+    Class implementing a dialog for the configuration of eric6.
     
     @signal preferencesChanged() emitted after settings have been changed
     @signal masterPasswordChanged(str, str) emitted after the master
@@ -85,7 +85,7 @@ class ConfigurationWidget(QWidget):
         
         @param parent The parent widget of this dialog. (QWidget)
         @keyparam fromEric flag indicating a dialog generation from within the
-            eric5 ide (boolean)
+            eric6 ide (boolean)
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
         @exception RuntimeError raised to indicate an invalid dialog mode
@@ -281,7 +281,7 @@ class ConfigurationWidget(QWidget):
                 [self.tr("VirusTotal Interface"), "virustotal.png",
                  "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage":
-                [self.tr("eric5 Web Browser"), "ericWeb.png",
+                [self.tr("eric6 Web Browser"), "ericWeb.png",
                  "HelpWebBrowserPage", "0helpPage", None],
                 
                 "0projectPage":
@@ -346,7 +346,7 @@ class ConfigurationWidget(QWidget):
                 [self.tr("VirusTotal Interface"), "virustotal.png",
                  "HelpVirusTotalPage", "0helpPage", None],
                 "helpWebBrowserPage":
-                [self.tr("eric5 Web Browser"), "ericWeb.png",
+                [self.tr("eric6 Web Browser"), "ericWeb.png",
                  "HelpWebBrowserPage", "0helpPage", None],
             }
         elif displayMode == ConfigurationWidget.TrayStarterMode:
@@ -764,7 +764,7 @@ class ConfigurationDialog(QDialog):
         @param name The name of this dialog. string
         @param modal Flag indicating a modal dialog. (boolean)
         @keyparam fromEric flag indicating a dialog generation from within the
-            eric5 ide (boolean)
+            eric6 ide (boolean)
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
         """

@@ -38,7 +38,7 @@ class E5ErrorMessage(QErrorMessage):
             QSettings.IniFormat,
             QSettings.UserScope,
             Globals.settingsNameOrganization,
-            "eric5messagefilters")
+            "eric6messagefilters")
         
         self.__defaultFilters = [
             "QFont::",

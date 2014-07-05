@@ -3,10 +3,10 @@
 
 # Copyright (c) 2004 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
-# This is the install script for eric5's translation files.
+# This is the install script for eric6's translation files.
 
 """
-Installation script for the eric5 IDE translation files.
+Installation script for the eric6 IDE translation files.
 """
 
 from __future__ import unicode_literals
@@ -19,9 +19,9 @@ import glob
 from PyQt5.QtCore import QDir
 
 try:
-    from eric5config import getConfig
+    from eric6config import getConfig
 except ImportError:
-    print("The eric5 IDE doesn't seem to be installed. Aborting.")
+    print("The eric6 IDE doesn't seem to be installed. Aborting.")
     sys.exit(1)
     
 
@@ -32,9 +32,9 @@ def getConfigDir():
     @return directory name of the config dir (string)
     """
     if sys.platform.startswith("win"):
-        cdn = "_eric5"
+        cdn = "_eric6"
     else:
-        cdn = ".eric5"
+        cdn = ".eric6"
         
     hp = QDir.homePath()
     dn = QDir(hp)
@@ -128,5 +128,5 @@ if __name__ == "__main__":
     except:
         print("""An internal error occured.  Please report all the output of"""
               """ the program,\nincluding the following traceback, to"""
-              """ eric5-bugs@eric-ide.python-projects.org.\n""")
+              """ eric-bugs@eric-ide.python-projects.org.\n""")
         raise

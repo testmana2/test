@@ -7,6 +7,6 @@
 Module implementing the Windows entry point.
 """
 
-from eric5_diff import main
+from eric6_diff import main
 
 main()

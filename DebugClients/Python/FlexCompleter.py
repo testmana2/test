@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-Word completion for the eric5 shell.
+Word completion for the eric6 shell.
 
-<h4>NOTE for eric5 variant</h4>
+<h4>NOTE for eric6 variant</h4>
 
     This version is a re-implementation of FlexCompleter
-    as found in the PyQwt package. It is modified to work with the eric5 debug
+    as found in the PyQwt package. It is modified to work with the eric6 debug
     clients.
 
 

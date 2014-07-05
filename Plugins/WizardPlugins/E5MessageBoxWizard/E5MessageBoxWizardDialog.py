@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Module implementing the eric5 message box wizard dialog.
+Module implementing the eric6 message box wizard dialog.
 """
 
 from __future__ import unicode_literals
@@ -18,7 +18,7 @@ from .Ui_E5MessageBoxWizardDialog import Ui_E5MessageBoxWizardDialog
 
 class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
     """
-    Class implementing the eric5 message box wizard dialog.
+    Class implementing the eric6 message box wizard dialog.
     
     It displays a dialog for entering the parameters
     for the E5MessageBox code generator.

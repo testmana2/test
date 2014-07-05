@@ -5,7 +5,7 @@
 #
 
 """
-Eric5 Snap.
+Eric6 Snap.
 
 This is the main Python script that performs the necessary initialization
 of the snapshot module and starts the Qt event loop.
@@ -53,7 +53,7 @@ def main():
     ]
     appinfo = AppInfo.makeAppInfo(
         sys.argv,
-        "Eric5 Snap",
+        "Eric6 Snap",
         "",
         "Simple utility to do snapshots of the screen.",
         options)

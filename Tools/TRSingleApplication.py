@@ -20,7 +20,7 @@ from Toolbox.SingleApplication import SingleApplicationClient, \
 # define some module global stuff
 ###########################################################################
 
-SAFile = "eric5_trpreviewer"
+SAFile = "eric6_trpreviewer"
 
 # define the protocol tokens
 SALoadForm = '>LoadForm<'

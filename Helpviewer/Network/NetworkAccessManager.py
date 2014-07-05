@@ -141,8 +141,8 @@ class NetworkAccessManager(QNetworkAccessManager):
             return reply
         
         req = QNetworkRequest(request)
-        if req.rawHeader("X-Eric5-UserLoadAction") == QByteArray("1"):
-            req.setRawHeader("X-Eric5-UserLoadAction", QByteArray())
+        if req.rawHeader("X-Eric6-UserLoadAction") == QByteArray("1"):
+            req.setRawHeader("X-Eric6-UserLoadAction", QByteArray())
             req.setAttribute(QNetworkRequest.User + 200, "")
         else:
             req.setAttribute(

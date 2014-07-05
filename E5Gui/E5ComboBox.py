@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing combobox classes using the eric5 line edits.
+Module implementing combobox classes using the eric6 line edits.
 """
 
 from __future__ import unicode_literals
@@ -14,7 +14,7 @@ from PyQt5.QtWidgets import QComboBox
 
 class E5ComboBox(QComboBox):
     """
-    Class implementing a combobox using the eric5 line edit.
+    Class implementing a combobox using the eric6 line edit.
     """
     def __init__(self, parent=None, inactiveText=""):
         """
@@ -52,7 +52,7 @@ class E5ComboBox(QComboBox):
 
 class E5ClearableComboBox(E5ComboBox):
     """
-    Class implementing a combobox using the eric5 line edit.
+    Class implementing a combobox using the eric6 line edit.
     """
     def __init__(self, parent=None, inactiveText=""):
         """

@@ -4,7 +4,7 @@
 #
 
 """
-Module implementing a dialog for the configuration of eric5's keyboard
+Module implementing a dialog for the configuration of eric6's keyboard
 shortcuts.
 """
 
@@ -25,7 +25,7 @@ from Preferences import Shortcuts
 
 class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
     """
-    Class implementing a dialog for the configuration of eric5's keyboard
+    Class implementing a dialog for the configuration of eric6's keyboard
     shortcuts.
     
     @signal updateShortcuts() emitted when the user pressed the dialogs OK
@@ -188,7 +188,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
                 self.pluginCategoryItems.append(categoryItem)
         
         self.helpViewerItem = self.__generateCategoryItem(
-            self.tr("eric5 Web Browser"))
+            self.tr("eric6 Web Browser"))
         for act in e5App().getObject("DummyHelpViewer").getActions():
             self.__generateShortcutItem(self.helpViewerItem, act, True)
         
