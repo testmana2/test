@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 First Lastname <your@email.com> -->
 <application>
- <id type="desktop">eric5.desktop</id>
+ <id type="desktop">eric6.desktop</id>
  <metadata_license>CC-BY-3.0</metadata_license>
  <project_license>GPL-3.0+</project_license>
  <name>eric5</name>
