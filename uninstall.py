@@ -107,18 +107,6 @@ def uninstallEric():
     
     # Remove the wrapper scripts
     rem_wnames = [
-        "eric6-api", "eric6-compare",
-        "eric6-configure", "eric6-diff",
-        "eric6-doc",
-        "eric6-qregexp", "eric6-re",
-        "eric6-trpreviewer", "eric6-uipreviewer",
-        "eric6-unittest", "eric6",
-        "eric6-tray", "eric6-editor",
-        "eric6-plugininstall", "eric6-pluginuninstall",
-        "eric6-pluginrepository", "eric6-sqlbrowser",
-        "eric6-webbrowser", "eric6-iconeditor",
-    ]
-    rem_wnames2 = [
         "eric6_api", "eric6_compare",
         "eric6_configure", "eric6_diff",
         "eric6_doc", "eric6_qregularexpression",
@@ -133,9 +121,7 @@ def uninstallEric():
     ]
     if includePythonVariant:
         marker = PythonMarkers[sys.version_info.major]
-        rem_wnames.extend([n + marker for n in rem_wnames2])
-    else:
-        rem_wnames.extend(rem_wnames2)
+        rem_wnames = [n + marker for n in rem_wnames]
     
     try:
         for rem_wname in rem_wnames:

@@ -411,18 +411,6 @@ def cleanUp():
     
     # Remove the wrapper scripts
     rem_wnames = [
-        "eric6-api", "eric6-compare",
-        "eric6-configure", "eric6-diff",
-        "eric6-doc",
-        "eric6-qregexp", "eric6-re",
-        "eric6-trpreviewer", "eric6-uipreviewer",
-        "eric6-unittest", "eric6",
-        "eric6-tray", "eric6-editor",
-        "eric6-plugininstall", "eric6-pluginuninstall",
-        "eric6-pluginrepository", "eric6-sqlbrowser",
-        "eric6-webbrowser", "eric6-iconeditor",
-    ]
-    rem_wnames2 = [
         "eric6_api", "eric6_compare",
         "eric6_configure", "eric6_diff",
         "eric6_doc", "eric6_qregularexpression",
@@ -437,9 +425,7 @@ def cleanUp():
     ]
     if includePythonVariant:
         marker = PythonMarkers[sys.version_info.major]
-        rem_wnames.extend([n + marker for n in rem_wnames2])
-    else:
-        rem_wnames.extend(rem_wnames2)
+        rem_wnames = [n + marker for n in rem_wnames]
     
     try:
         for rem_wname in rem_wnames:
@@ -920,8 +906,8 @@ def doDependancyChecks():
     print('Checking dependencies')
     
     # perform dependency checks
-    if sys.version_info < (2, 6, 0):
-        print('Sorry, you must have Python 2.6.0 or higher or '
+    if sys.version_info < (2, 7, 0):
+        print('Sorry, you must have Python 2.7.0 or higher or '
               'Python 3.1.0 or higher.')
         exit(5)
     elif sys.version_info < (3, 1, 0) and sys.version_info[0] == 3:
@@ -1176,8 +1162,8 @@ def main(argv):
     global sourceDir, configName, includePythonVariant
     global macAppBundlePath, macAppBundleName, macPythonExe
     
-    if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
-        print('Sorry, eric6 requires at least Python 2.6 or '
+    if sys.version_info < (2, 7, 0) or sys.version_info > (3, 9, 9):
+        print('Sorry, eric6 requires at least Python 2.7 or '
               'Python 3 for running.')
         exit(5)
     
