@@ -49,6 +49,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         self.havefound = False
         self.__findBackwards = False
         
+        self.findtextCombo.setCompleter(None)
         self.findtextCombo.lineEdit().returnPressed.connect(
             self.__findByReturnPressed)
         self.findtextCombo.lineEdit().textEdited.connect(

@@ -60,6 +60,7 @@ class SearchWidget(QWidget, Ui_SearchWidget):
         
         self.findHistory = []
         
+        self.findtextCombo.setCompleter(False)
         self.findtextCombo.lineEdit().returnPressed.connect(
             self.__findByReturnPressed)
         

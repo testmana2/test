@@ -85,6 +85,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         
         self.findProgressLabel.setMaximumWidth(550)
         
+        self.findtextCombo.setCompleter(None)
+        self.replacetextCombo.setCompleter(None)
+        
         self.searchHistory = Preferences.toList(
             Preferences.Prefs.settings.value(
                 "FindFileDialog/SearchHistory"))

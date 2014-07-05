@@ -135,9 +135,11 @@ and so on.</td></tr>
             self.ui.replaceAllButton.setIcon(
                 UI.PixmapCache.getIcon("editReplaceAll.png"))
         
+        self.ui.findtextCombo.setCompleter(None)
         self.ui.findtextCombo.lineEdit().returnPressed.connect(
             self.__findByReturnPressed)
         if replace:
+            self.ui.replacetextCombo.setCompleter(None)
             self.ui.replacetextCombo.lineEdit().returnPressed.connect(
                 self.on_replaceButton_clicked)
         
