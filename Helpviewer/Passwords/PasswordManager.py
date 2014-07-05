@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt5.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
+from PyQt5.QtCore import pyqtSignal, QObject, QByteArray, QUrl, QUrlQuery, \
     QCoreApplication, QXmlStreamReader
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtNetwork import QNetworkRequest
@@ -117,11 +117,14 @@ class PasswordManager(QObject):
         @param realm realm to get the credentials for (string)
         @return key string (string)
         """
+        authority = url.authority()
+        if authority.startswith("@"):
+            authority = authority[1:]
         if realm:
             key = "{0}://{1} ({2})".format(
-                url.scheme(), url.authority(), realm)
+                url.scheme(), authority, realm)
         else:
-            key = "{0}://{1}".format(url.scheme(), url.authority())
+            key = "{0}://{1}".format(url.scheme(), authority)
         return key
     
     def getFileName(self):
@@ -435,8 +438,14 @@ class PasswordManager(QObject):
         """
         cleanUrl = QUrl(url)
         cleanUrl.setQuery("")
-        cleanUrl.setFragment("")
         cleanUrl.setUserInfo("")
+        
+        authority = cleanUrl.authority()
+        if authority.startswith("@"):
+            authority = authority[1:]
+        cleanUrl = QUrl("{0}://{1}{2}".format(
+            cleanUrl.scheme(), authority, cleanUrl.path()))
+        cleanUrl.setFragment("")
         return cleanUrl
     
     def __findForm(self, webPage, data, boundary=None):
@@ -455,8 +464,9 @@ class PasswordManager(QObject):
             args = self.__extractMultipartQueryItems(data, boundary)
         else:
             argsUrl = QUrl.fromEncoded(
-                QByteArray("foo://bar.com/?" + data.replace(b"+", b"%20")))
-            encodedArgs = argsUrl.queryItems()
+                QByteArray("foo://bar.com/?" + QUrl.fromPercentEncoding(
+                    data.replace(b"+", b"%20"))))
+            encodedArgs = QUrlQuery(argsUrl).queryItems()
             args = set()
             for arg in encodedArgs:
                 key = arg[0]
