@@ -8150,47 +8150,47 @@ whole selection.&lt;/li&gt;
 <context>
     <name>E5ErrorMessage</name>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="100"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="101"/>
         <source>Debug Message:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="103"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="104"/>
         <source>Warning:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="106"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="107"/>
         <source>Critical:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="109"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="110"/>
         <source>Fatal Error:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="139"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="140"/>
         <source>Warning</source>
         <translation type="unfinished">警告</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="142"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="143"/>
         <source>Critical</source>
         <translation type="unfinished">危险</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="145"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="146"/>
         <source>Fatal Error</source>
         <translation type="unfinished">严重错误</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="136"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="137"/>
         <source>Debug Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5ErrorMessage.py" line="177"/>
+        <location filename="../E5Gui/E5ErrorMessage.py" line="178"/>
         <source>No message handler installed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16084,12 +16084,12 @@ whole selection.&lt;/li&gt;
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="661"/>
+        <location filename="../UI/FindFileDialog.py" line="664"/>
         <source>Replace in Files</source>
         <translation>在文件中替换</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="550"/>
+        <location filename="../UI/FindFileDialog.py" line="553"/>
         <source>Select directory</source>
         <translation>选择文件夹</translation>
     </message>
@@ -16114,37 +16114,37 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="688"/>
+        <location filename="../UI/FindFileDialog.py" line="691"/>
         <source>Open</source>
         <translation type="unfinished">打开</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="689"/>
+        <location filename="../UI/FindFileDialog.py" line="692"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="373"/>
+        <location filename="../UI/FindFileDialog.py" line="376"/>
         <source>Invalid search expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="373"/>
+        <location filename="../UI/FindFileDialog.py" line="376"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="620"/>
+        <location filename="../UI/FindFileDialog.py" line="623"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="661"/>
+        <location filename="../UI/FindFileDialog.py" line="664"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="635"/>
+        <location filename="../UI/FindFileDialog.py" line="638"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16154,20 +16154,20 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="494"/>
+        <location filename="../UI/FindFileDialog.py" line="497"/>
         <source>{0} / {1}</source>
         <comment>occurrences / files</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../UI/FindFileDialog.py" line="495"/>
+        <location filename="../UI/FindFileDialog.py" line="498"/>
         <source>%n occurrence(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../UI/FindFileDialog.py" line="495"/>
+        <location filename="../UI/FindFileDialog.py" line="498"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -20725,7 +20725,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1826"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1828"/>
         <source>The hg process did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20790,12 +20790,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1367"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1369"/>
         <source>Mercurial command</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1587"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1589"/>
         <source>Copying {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20805,127 +20805,127 @@ You have %n tab(s) open.</source>
         <translation type="obsolete">选择要显示的条目数。</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1980"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1982"/>
         <source>Pulling from a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2030"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2032"/>
         <source>Pushing to a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2238"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2240"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2391"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2393"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2416"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2418"/>
         <source>Showing the combined configuration settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2440"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2442"/>
         <source>Showing aliases for remote repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2464"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2466"/>
         <source>Recovering from interrupted transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2685"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2687"/>
         <source>Shall the working directory be updated?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2267"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2269"/>
         <source>Showing current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2617"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2619"/>
         <source>Create changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2697"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2699"/>
         <source>Apply changegroups</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2715"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2717"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2745"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2747"/>
         <source>Mercurial Bisect ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2638"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2640"/>
         <source>Preview changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2488"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2490"/>
         <source>Identifying project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2526"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2528"/>
         <source>Create .hgignore file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2526"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2528"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2777"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2779"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2574"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2576"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2677"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2679"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2831"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2833"/>
         <source>Backing out changeset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2811"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2813"/>
         <source>No revision given. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2591"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2593"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2858"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2860"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2851"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2853"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20935,72 +20935,72 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3507"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3509"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3347"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3349"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3507"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3509"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2926"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2928"/>
         <source>Import Patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2973"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2975"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3020"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3022"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3073"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3075"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3099"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3101"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3216"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3218"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3249"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3251"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3197"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3199"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3268"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3270"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3268"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3270"/>
         <source>Remove Sub-repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3237"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3239"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21030,22 +21030,22 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3134"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3136"/>
         <source>Create Unversioned Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1896"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
         <source>Mercurial Side-by-Side Difference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1896"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1829"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1831"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21055,7 +21055,7 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2245"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
         <source>Created new branch &lt;{0}&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21065,67 +21065,67 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2205"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2207"/>
         <source>Cancelling uncommitted merge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3615"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3617"/>
         <source>Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3633"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3635"/>
         <source>Delete Bookmark</source>
         <translation type="unfinished">删除书签</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3633"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3635"/>
         <source>Select the bookmark to be deleted:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3644"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3646"/>
         <source>Delete Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3672"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3674"/>
         <source>Rename Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3705"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3707"/>
         <source>Move Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3790"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3792"/>
         <source>Pull Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3790"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3792"/>
         <source>Select the bookmark to be pulled:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3801"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3803"/>
         <source>Pulling bookmark from a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3823"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3825"/>
         <source>Push Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3823"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3825"/>
         <source>Select the bookmark to be push:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3834"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3836"/>
         <source>Pushing bookmark to a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21150,12 +21150,12 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2176"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2178"/>
         <source>Marking as &apos;unresolved&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2180"/>
         <source>Marking as &apos;resolved&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36856,68 +36856,68 @@ Reason: {1}</source>
 <context>
     <name>PasswordManager</name>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="148"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="151"/>
         <source>Saving login data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="221"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="224"/>
         <source>Loading login data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="389"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="392"/>
         <source>&lt;b&gt;Would you like to save this password?&lt;/b&gt;&lt;br/&gt;To review passwords you have saved and remove them, use the password management dialog of the Settings menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="398"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="401"/>
         <source>Never for this site</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="401"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="404"/>
         <source>Not now</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="196"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="199"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="221"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="224"/>
         <source>&lt;p&gt;Login data could not be loaded from &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: Wrong input format&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="389"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="392"/>
         <source>Save password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="612"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="622"/>
         <source>Re-encoding saved passwords...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="148"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="151"/>
         <source>&lt;p&gt;Login data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="170"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="173"/>
         <source>Error when loading login data on line {0}, column {1}:
 {2}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="612"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="622"/>
         <source>%v/%m Passwords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="617"/>
+        <location filename="../Helpviewer/Passwords/PasswordManager.py" line="627"/>
         <source>Passwords</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40296,16 +40296,6 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="244"/>
-        <source>Qt GUI</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="245"/>
-        <source>Qt Console</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="246"/>
         <source>PyQt5 GUI</source>
         <translation type="unfinished"></translation>
@@ -40363,6 +40353,16 @@ Select Update.</source>
     <message>
         <location filename="../Project/Project.py" line="4745"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="244"/>
+        <source>PyQt4 GUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="245"/>
+        <source>PyQt4 Console</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -48680,27 +48680,27 @@ Reason: {0}</source>
         <translation type="obsolete">没有替换任何东西，因为“%1”未找到。</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="645"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="647"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="767"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="769"/>
         <source>Replaced {0} occurrences.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="772"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="774"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="144"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="146"/>
         <source>Find Next</source>
         <translation type="unfinished">查找下一个</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="152"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="154"/>
         <source>Find Prev</source>
         <translation type="unfinished">查找上一个</translation>
     </message>
@@ -48823,7 +48823,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SearchWidget.py" line="97"/>
+        <location filename="../Helpviewer/SearchWidget.py" line="98"/>
         <source>Expression was not found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48833,7 +48833,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/SearchWidget.py" line="182"/>
+        <location filename="../UI/SearchWidget.py" line="183"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60549,7 +60549,8 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric6_%language%.ts)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">翻译路径模式(&amp;T)：
+（在要插入语言代码的地方使用“%language%”，如：i18n/eric4_%language%.ts） {18n?} {5_?} {18n?} {6_?}</translation>
     </message>
 </context>
 <context>
@@ -61393,7 +61394,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     </message>
     <message>
         <location filename="../Graphics/UMLDialog.py" line="280"/>
-        <source>Eric6 Graphics File (*.e5g);;All Files (*)</source>
+        <source>Eric Graphics File (*.e5g);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -70029,46 +70030,46 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>mercurial</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1434"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1436"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2105"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2107"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2115"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2117"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1454"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1456"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2097"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2099"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2100"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2102"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2120"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2122"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2124"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2126"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -70076,12 +70077,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2110"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2112"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1492"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1494"/>
         <source>&lt;h3&gt;Repository information&lt;/h3&gt;
 &lt;p&gt;&lt;table&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Mercurial V.&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
