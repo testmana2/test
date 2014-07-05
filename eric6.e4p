@@ -1548,7 +1548,6 @@
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
     <Other>.hgignore</Other>
-    <Other>patches</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/startServer.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/stopServer.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/styles/logBrowserBookmark.style</Other>
@@ -1622,6 +1621,7 @@
     <Other>APIs/Ruby/eric6.bas</Other>
     <Other>Documentation/eric6-plugin.odt</Other>
     <Other>Documentation/eric6-plugin.pdf</Other>
+    <Other>Documentation/Source</Other>
   </Others>
   <MainScript>eric6.py</MainScript>
   <Vcs>
@@ -1785,6 +1785,8 @@
                 <string>.issues</string>
                 <string>data</string>
                 <string>pyflakes</string>
+                <string>.eric6project</string>
+                <string>_eric6project</string>
               </list>
             </value>
             <key>
@@ -1808,7 +1810,7 @@
               <string>outputFile</string>
             </key>
             <value>
-              <string>APIs/%L/eric5.api</string>
+              <string>APIs/%L/eric6.api</string>
             </value>
             <key>
               <string>useRecursion</string>
@@ -1903,6 +1905,8 @@
                 <string>.directory</string>
                 <string>.issues</string>
                 <string>pyflakes</string>
+                <string>.eric6project</string>
+                <string>_eric6project</string>
               </list>
             </value>
             <key>
@@ -1930,19 +1934,19 @@
               <string>qtHelpFilterAttributes</string>
             </key>
             <value>
-              <string>eric5:ide:5.5</string>
+              <string>eric6:ide:6.0</string>
             </value>
             <key>
               <string>qtHelpFilterName</string>
             </key>
             <value>
-              <string>eric5</string>
+              <string>eric6</string>
             </value>
             <key>
               <string>qtHelpNamespace</string>
             </key>
             <value>
-              <string>org.eric5.ide.55</string>
+              <string>org.eric6.ide.60</string>
             </value>
             <key>
               <string>qtHelpOutputDirectory</string>
@@ -1954,13 +1958,13 @@
               <string>qtHelpTitle</string>
             </key>
             <value>
-              <string>The eric5 IDE</string>
+              <string>The eric6 IDE</string>
             </value>
             <key>
               <string>qtHelpVirtualFolder</string>
             </key>
             <value>
-              <string>eric5</string>
+              <string>eric6</string>
             </value>
             <key>
               <string>sourceExtensions</string>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.ProjectHelper</h1>
+<p>
+Module implementing the transplant extension project helper.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#TransplantProjectHelper">TransplantProjectHelper</a></td>
+<td>Class implementing the transplant extension project helper.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="TransplantProjectHelper" ID="TransplantProjectHelper"></a>
+<h2>TransplantProjectHelper</h2>
+<p>
+    Class implementing the transplant extension project helper.
+</p>
+<h3>Derived from</h3>
+HgExtensionProjectHelper
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#TransplantProjectHelper.__init__">TransplantProjectHelper</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#TransplantProjectHelper.__hgTransplant">__hgTransplant</a></td>
+<td>Private slot used to transplant changesets from another branch.</td>
+</tr><tr>
+<td><a href="#TransplantProjectHelper.__hgTransplantContinue">__hgTransplantContinue</a></td>
+<td>Private slot used to continue the last transplant session after repair.</td>
+</tr><tr>
+<td><a href="#TransplantProjectHelper.initActions">initActions</a></td>
+<td>Public method to generate the action objects.</td>
+</tr><tr>
+<td><a href="#TransplantProjectHelper.initMenu">initMenu</a></td>
+<td>Public method to generate the extension menu.</td>
+</tr><tr>
+<td><a href="#TransplantProjectHelper.menuTitle">menuTitle</a></td>
+<td>Public method to get the menu title.</td>
+</tr><tr>
+<td><a href="#TransplantProjectHelper.setObjects">setObjects</a></td>
+<td>Public method to set references to the vcs and project objects.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="TransplantProjectHelper.__init__" ID="TransplantProjectHelper.__init__"></a>
+<h4>TransplantProjectHelper (Constructor)</h4>
+<b>TransplantProjectHelper</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="TransplantProjectHelper.__hgTransplant" ID="TransplantProjectHelper.__hgTransplant"></a>
+<h4>TransplantProjectHelper.__hgTransplant</h4>
+<b>__hgTransplant</b>(<i></i>)
+<p>
+        Private slot used to transplant changesets from another branch.
+</p><a NAME="TransplantProjectHelper.__hgTransplantContinue" ID="TransplantProjectHelper.__hgTransplantContinue"></a>
+<h4>TransplantProjectHelper.__hgTransplantContinue</h4>
+<b>__hgTransplantContinue</b>(<i></i>)
+<p>
+        Private slot used to continue the last transplant session after repair.
+</p><a NAME="TransplantProjectHelper.initActions" ID="TransplantProjectHelper.initActions"></a>
+<h4>TransplantProjectHelper.initActions</h4>
+<b>initActions</b>(<i></i>)
+<p>
+        Public method to generate the action objects.
+</p><a NAME="TransplantProjectHelper.initMenu" ID="TransplantProjectHelper.initMenu"></a>
+<h4>TransplantProjectHelper.initMenu</h4>
+<b>initMenu</b>(<i>mainMenu</i>)
+<p>
+        Public method to generate the extension menu.
+</p><dl>
+<dt><i>mainMenu</i></dt>
+<dd>
+reference to the main menu (QMenu)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+populated menu (QMenu)
+</dd>
+</dl><a NAME="TransplantProjectHelper.menuTitle" ID="TransplantProjectHelper.menuTitle"></a>
+<h4>TransplantProjectHelper.menuTitle</h4>
+<b>menuTitle</b>(<i></i>)
+<p>
+        Public method to get the menu title.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+title of the menu (string)
+</dd>
+</dl><a NAME="TransplantProjectHelper.setObjects" ID="TransplantProjectHelper.setObjects"></a>
+<h4>TransplantProjectHelper.setObjects</h4>
+<b>setObjects</b>(<i>vcsObject, projectObject</i>)
+<p>
+        Public method to set references to the vcs and project objects.
+</p><dl>
+<dt><i>vcsObject</i></dt>
+<dd>
+reference to the vcs object
+</dd><dt><i>projectObject</i></dt>
+<dd>
+reference to the project object
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

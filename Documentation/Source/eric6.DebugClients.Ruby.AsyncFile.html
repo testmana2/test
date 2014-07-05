@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Ruby.AsyncFile</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Ruby.AsyncFile</h1>
+<p>
+File implementing an asynchronous file like socket interface for the debugger.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#AsyncFile">AsyncFile</a></td>
+<td>Class wrapping a socket object with a file interface.</td>
+</tr>
+</table>
+<h3>Modules</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#<<"><<</a></td>
+<td>Synonym for write(s).</td>
+</tr><tr>
+<td><a href="#AsyncPendingWrite">AsyncPendingWrite</a></td>
+<td>Module function to check for data to be written.</td>
+</tr><tr>
+<td><a href="#close">close</a></td>
+<td>Public method to close the file.</td>
+</tr><tr>
+<td><a href="#fileno">fileno</a></td>
+<td>Public method returning the file number.</td>
+</tr><tr>
+<td><a href="#flush">flush</a></td>
+<td>Public method to write all pending bytes.</td>
+</tr><tr>
+<td><a href="#getSock">getSock</a></td>
+<td>Public method to get the socket object.</td>
+</tr><tr>
+<td><a href="#gets">gets</a></td>
+<td>Public method to read a line from this file.</td>
+</tr><tr>
+<td><a href="#isatty">isatty</a></td>
+<td>Public method to indicate whether a tty interface is supported.</td>
+</tr><tr>
+<td><a href="#pendingWrite">pendingWrite</a></td>
+<td>Public method that returns the number of bytes waiting to be written.</td>
+</tr><tr>
+<td><a href="#read">read</a></td>
+<td>Public method to read bytes from this file.</td>
+</tr><tr>
+<td><a href="#readline">readline</a></td>
+<td>Public method to read a line from this file.</td>
+</tr><tr>
+<td><a href="#readlines">readlines</a></td>
+<td>Public method to read all lines from this file.</td>
+</tr><tr>
+<td><a href="#seek">seek</a></td>
+<td>Public method to move the filepointer.</td>
+</tr><tr>
+<td><a href="#tell">tell</a></td>
+<td>Public method to get the filepointer position.</td>
+</tr><tr>
+<td><a href="#write">write</a></td>
+<td>Public method to write a string to the file.</td>
+</tr><tr>
+<td><a href="#writelines">writelines</a></td>
+<td>Public method to write a list of strings to the file.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="AsyncFile" ID="AsyncFile"></a>
+<h2>AsyncFile</h2>
+<p>
+Class wrapping a socket object with a file interface.
+</p>
+<h3>Derived from</h3>
+None
+<h3>Class Attributes</h3>
+<table>
+<tr><td>@@maxbuffersize</td></tr><tr><td>@@maxtries</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#AsyncFile.checkMode">checkMode</a></td>
+<td>Private method to check the mode.</td>
+</tr><tr>
+<td><a href="#AsyncFile.initialize">initialize</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#AsyncFile.nWrite">nWrite</a></td>
+<td>Private method to write a specific number of pending bytes.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="AsyncFile.checkMode" ID="AsyncFile.checkMode"></a>
+<h4>AsyncFile.checkMode</h4>
+<b>checkMode</b>(<i></i>)
+<p>
+Private method to check the mode.
+</p><p>
+This method checks, if an operation is permitted according to
+the mode of the file. If it is not, an IOError is raised.
+</p><dl>
+<dt><i>mode</i></dt>
+<dd>
+the mode to be checked (string)
+</dd>
+</dl><a NAME="AsyncFile.initialize" ID="AsyncFile.initialize"></a>
+<h4>AsyncFile.initialize</h4>
+<b>initialize</b>(<i>mode, name</i>)
+<p>
+Constructor
+</p><dl>
+<dt><i>sock</i></dt>
+<dd>
+the socket object being wrapped
+</dd><dt><i>mode</i></dt>
+<dd>
+mode of this file (string)
+</dd><dt><i>name</i></dt>
+<dd>
+name of this file (string)
+</dd>
+</dl><a NAME="AsyncFile.nWrite" ID="AsyncFile.nWrite"></a>
+<h4>AsyncFile.nWrite</h4>
+<b>nWrite</b>(<i></i>)
+<p>
+Private method to write a specific number of pending bytes.
+</p><dl>
+<dt><i>n</i></dt>
+<dd>
+the number of bytes to be written (int)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="<<" ID="<<"></a>
+<h2><<</h2>
+<b><<</b>(<i>s</i>)
+<p>
+Synonym for write(s).
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+bytes to be written (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="AsyncPendingWrite" ID="AsyncPendingWrite"></a>
+<h2>AsyncPendingWrite</h2>
+<b>AsyncPendingWrite</b>(<i>file</i>)
+<p>
+Module function to check for data to be written.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+The file object to be checked (file)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+Flag indicating if there is data wating (int)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="close" ID="close"></a>
+<h2>close</h2>
+<b>close</b>(<i></i>)
+<p>
+Public method to close the file.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="fileno" ID="fileno"></a>
+<h2>fileno</h2>
+<b>fileno</b>(<i></i>)
+<p>
+Public method returning the file number.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+file number (int)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="flush" ID="flush"></a>
+<h2>flush</h2>
+<b>flush</b>(<i></i>)
+<p>
+Public method to write all pending bytes.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getSock" ID="getSock"></a>
+<h2>getSock</h2>
+<b>getSock</b>(<i></i>)
+<p>
+Public method to get the socket object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the socket object
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="gets" ID="gets"></a>
+<h2>gets</h2>
+<b>gets</b>(<i></i>)
+<p>
+ Public method to read a line from this file.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="isatty" ID="isatty"></a>
+<h2>isatty</h2>
+<b>isatty</b>(<i></i>)
+<p>
+Public method to indicate whether a tty interface is supported.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+always false
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="pendingWrite" ID="pendingWrite"></a>
+<h2>pendingWrite</h2>
+<b>pendingWrite</b>(<i></i>)
+<p>
+Public method that returns the number of bytes waiting to be written.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the number of bytes to be written (int)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="read" ID="read"></a>
+<h2>read</h2>
+<b>read</b>(<i>size = -1</i>)
+<p>
+Public method to read bytes from this file.
+</p><dl>
+<dt><i>size</i></dt>
+<dd>
+maximum number of bytes to be read (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the bytes read (any)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readline" ID="readline"></a>
+<h2>readline</h2>
+<b>readline</b>(<i>size = -1</i>)
+<p>
+Public method to read a line from this file.
+</p><p>
+<b>Note</b>: This method will not block and may return
+only a part of a line if that is all that is available.
+</p><dl>
+<dt><i>size</i></dt>
+<dd>
+maximum number of bytes to be read (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+one line of text up to size bytes (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="readlines" ID="readlines"></a>
+<h2>readlines</h2>
+<b>readlines</b>(<i>sizehint = -1</i>)
+<p>
+Public method to read all lines from this file.
+</p><dl>
+<dt><i>sizehint</i></dt>
+<dd>
+hint of the numbers of bytes to be read (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines read (list of strings)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="seek" ID="seek"></a>
+<h2>seek</h2>
+<b>seek</b>(<i>offset, whence=IO::SEEK_SET</i>)
+<p>
+Public method to move the filepointer.
+</p><dl>
+<dt>Raises <b>IOError</b>:</dt>
+<dd>
+This method is not supported and always raises an
+       IOError.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="tell" ID="tell"></a>
+<h2>tell</h2>
+<b>tell</b>(<i></i>)
+<p>
+Public method to get the filepointer position.
+</p><dl>
+<dt>Raises <b>IOError</b>:</dt>
+<dd>
+This method is not supported and always raises an
+      IOError.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="write" ID="write"></a>
+<h2>write</h2>
+<b>write</b>(<i>s</i>)
+<p>
+Public method to write a string to the file.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+bytes to be written (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="writelines" ID="writelines"></a>
+<h2>writelines</h2>
+<b>writelines</b>(<i>list</i>)
+<p>
+Public method to write a list of strings to the file.
+</p><dl>
+<dt><i>list</i></dt>
+<dd>
+the list to be written (list of string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
