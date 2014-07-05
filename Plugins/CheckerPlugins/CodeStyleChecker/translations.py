@@ -471,10 +471,10 @@ _messages = {
     
     "FE302+": lambda n=1: QCoreApplication.translate(
         'CodeStyleFixer',
-        "%n blank line(s) inserted.", '', QCoreApplication.CodecForTr, n),
+        "%n blank line(s) inserted.", '', n),
     "FE302-": lambda n=1: QCoreApplication.translate(
         'CodeStyleFixer',
-        "%n superfluous lines removed", '', QCoreApplication.CodecForTr, n),
+        "%n superfluous lines removed", '', n),
     
     "FE303": QCoreApplication.translate(
         'CodeStyleFixer',

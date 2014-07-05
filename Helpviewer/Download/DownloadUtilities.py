@@ -25,12 +25,12 @@ def timeString(timeRemaining):
         remaining = QCoreApplication.translate(
             "DownloadUtilities",
             "%n:{0:02} minutes remaining""", "",
-            QCoreApplication, minutes).format(seconds)
+            minutes).format(seconds)
     else:
         seconds = int(timeRemaining)
         remaining = QCoreApplication.translate(
             "DownloadUtilities",
-            "%n seconds remaining", "", QCoreApplication, seconds)
+            "%n seconds remaining", "", seconds)
     
     return remaining
 
