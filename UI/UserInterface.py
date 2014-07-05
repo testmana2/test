@@ -562,7 +562,7 @@ class UserInterface(E5MainWindow):
         self.helpWindow = None
         
         # list of web addresses serving the versions file
-        self.__httpAlternatives = Preferences.getUI("VersionsUrls5")
+        self.__httpAlternatives = Preferences.getUI("VersionsUrls6")
         self.__inVersionCheck = False
         self.__versionCheckProgress = None
         
@@ -5206,7 +5206,7 @@ class UserInterface(E5MainWindow):
             else:
                 self.__setWindowCaption(editor="")
         
-        self.__httpAlternatives = Preferences.getUI("VersionsUrls5")
+        self.__httpAlternatives = Preferences.getUI("VersionsUrls6")
         self.performVersionCheck(False)
         
         self.__configureDockareaCornerUsage()
@@ -5964,7 +5964,7 @@ class UserInterface(E5MainWindow):
                 urls.append(versions[line])
                 line += 1
             
-            Preferences.setUI("VersionsUrls5", urls)
+            Preferences.setUI("VersionsUrls6", urls)
         
     def __versionCheckResult(self, versions):
         """

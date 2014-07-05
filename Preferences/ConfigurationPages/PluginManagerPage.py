@@ -63,7 +63,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.downloadedOnlyCheckBox.setChecked(
             Preferences.getPluginManager("CheckInstalledOnly"))
         
-        self.__repositoryUrl = Preferences.getUI("PluginRepositoryUrl5")
+        self.__repositoryUrl = Preferences.getUI("PluginRepositoryUrl6")
         self.repositoryUrlEdit.setText(self.__repositoryUrl)
     
     def save(self):
@@ -99,7 +99,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         
         if self.repositoryUrlEdit.text() != self.__repositoryUrl:
             Preferences.setUI(
-                "PluginRepositoryUrl5", self.repositoryUrlEdit.text())
+                "PluginRepositoryUrl6", self.repositoryUrlEdit.text())
     
     @pyqtSlot()
     def on_downloadDirButton_clicked(self):

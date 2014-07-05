@@ -189,12 +189,12 @@ class Prefs(object):
         "ProxyType/Ftp": E5FtpProxyType.NoProxy,
         "ProxyAccount/Ftp": "",
         
-        "PluginRepositoryUrl5":
-        "http://eric-ide.python-projects.org/plugins5/repository.xml",
-        "VersionsUrls5": [
-            "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/"
-            "versions",
-            "http://eric-ide.python-projects.org/snapshots5/versions",
+        "PluginRepositoryUrl6":
+        "http://eric-ide.python-projects.org/plugins6/repository.xml",
+        "VersionsUrls6": [
+            "http://die-offenbachs.homelinux.org:48888/eric/versions/"
+            "versions6",
+            "http://eric-ide.python-projects.org/versions/versions6",
         ],
         
         "OpenOnStartup": 0,        # 0 = nothing
@@ -1519,7 +1519,7 @@ def getUI(key, prefClass=Prefs):
             return state
         else:
             return prefClass.uiDefaults[key]
-    elif key in ["VersionsUrls5"]:
+    elif key in ["VersionsUrls6"]:
         urls = toList(
             prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
         if len(urls) == 0:

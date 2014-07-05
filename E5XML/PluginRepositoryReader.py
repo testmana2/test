@@ -50,7 +50,7 @@ class PluginRepositoryReader(XMLStreamReaderBase):
                         self.raiseUnsupportedFormatVersion(self.version)
                 elif self.name() == "RepositoryUrl":
                     url = self.readElementText()
-                    Preferences.setUI("PluginRepositoryUrl5", url)
+                    Preferences.setUI("PluginRepositoryUrl6", url)
                 elif self.name() == "Plugin":
                     self.__readPlugin()
                 else:

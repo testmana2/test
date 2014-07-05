@@ -91,7 +91,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
         self.__installButton.setEnabled(False)
         
         self.repositoryUrlEdit.setText(
-            Preferences.getUI("PluginRepositoryUrl5"))
+            Preferences.getUI("PluginRepositoryUrl6"))
         
         self.repositoryList.headerItem().setText(
             self.repositoryList.columnCount(), "")
@@ -361,7 +361,7 @@ class PluginRepositoryWidget(QWidget, Ui_PluginRepositoryDialog):
                 self.repositoryList.resizeColumnToContents(1)
                 self.repositoryList.resizeColumnToContents(2)
                 self.__resortRepositoryList()
-                url = Preferences.getUI("PluginRepositoryUrl5")
+                url = Preferences.getUI("PluginRepositoryUrl6")
                 if url != self.repositoryUrlEdit.text():
                     self.repositoryUrlEdit.setText(url)
                     E5MessageBox.warning(

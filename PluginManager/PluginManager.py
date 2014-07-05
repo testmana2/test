@@ -1094,7 +1094,7 @@ class PluginManager(QObject):
         self.__updateAvailable = False
         
         request = QNetworkRequest(
-            QUrl(Preferences.getUI("PluginRepositoryUrl5")))
+            QUrl(Preferences.getUI("PluginRepositoryUrl6")))
         request.setAttribute(QNetworkRequest.CacheLoadControlAttribute,
                              QNetworkRequest.AlwaysNetwork)
         reply = self.__networkManager.get(request)
@@ -1115,7 +1115,7 @@ class PluginManager(QObject):
                 self.tr(
                     """<p>Could not download the requested file"""
                     """ from {0}.</p><p>Error: {1}</p>"""
-                ).format(Preferences.getUI("PluginRepositoryUrl5"),
+                ).format(Preferences.getUI("PluginRepositoryUrl6"),
                          reply.errorString())
             )
             return
@@ -1132,13 +1132,13 @@ class PluginManager(QObject):
             f = QFile(self.pluginRepositoryFile)
             if f.open(QIODevice.ReadOnly):
                 # save current URL
-                url = Preferences.getUI("PluginRepositoryUrl5")
+                url = Preferences.getUI("PluginRepositoryUrl6")
                 
                 # read the repository file
                 from E5XML.PluginRepositoryReader import PluginRepositoryReader
                 reader = PluginRepositoryReader(f, self.checkPluginEntry)
                 reader.readXML()
-                if url != Preferences.getUI("PluginRepositoryUrl5"):
+                if url != Preferences.getUI("PluginRepositoryUrl6"):
                     # redo if it is a redirect
                     self.checkPluginUpdatesAvailable()
                     return
