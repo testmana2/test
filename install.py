@@ -943,14 +943,14 @@ def doDependancyChecks():
         exit(1)
     print("Found QScintilla2")
     
+    modulesOK = True
     for impModule in [
-        "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt4.QtPrintSupport",
+        "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt5.QtPrintSupport",
         "PyQt5.QtSql", "PyQt5.QtSvg", "PyQt5.QtWebKit",
         "PyQt5.QtWebKitWidgets", "PyQt5.QtWidgets",
         
     ]:
         name = impModule.split(".")[1]
-        modulesOK = True
         try:
             __import__(impModule)
             print("Found", name)
