@@ -5540,7 +5540,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1735"/>
+        <location filename="../Debugger/DebugUI.py" line="1737"/>
         <source>Run Script</source>
         <translation>Lancer le script</translation>
     </message>
@@ -5560,7 +5560,7 @@ Not connected
         <translation>&lt;b&gt;Lancer le script&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et lancer le script sans le débogueur. Si le script a des modifications, elles doivent d&apos;abord être enregistrées.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1750"/>
+        <location filename="../Debugger/DebugUI.py" line="1752"/>
         <source>Run Project</source>
         <translation>Lancer le projet</translation>
     </message>
@@ -5700,7 +5700,7 @@ Not connected
         <translation type="obsolete">&lt;b&gt;Lancement du projet avec Cyclops&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et lancer le projet avec Cyclops. Si des fichiers ont été modifiés, ils doivent d&apos;abord être sauvés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1856"/>
+        <location filename="../Debugger/DebugUI.py" line="1859"/>
         <source>Debug Script</source>
         <translation>Déboguer le script</translation>
     </message>
@@ -5720,7 +5720,7 @@ Not connected
         <translation>&lt;b&gt;Deboguer le script&lt;/b&gt;&lt;p&gt;Entrer les arguments de la ligne de commande et donner la ligne qui correspond à la première instruction Python. Si le fichier a été modifié, il doit d&apos;abord être sauvé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1871"/>
+        <location filename="../Debugger/DebugUI.py" line="1874"/>
         <source>Debug Project</source>
         <translation>Déboguer le projet</translation>
     </message>
@@ -5855,7 +5855,7 @@ Not connected
         <translation>&lt;b&gt;Arrêt&lt;/b&gt;&lt;p&gt;Arrête le débogage courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2162"/>
+        <location filename="../Debugger/DebugUI.py" line="2166"/>
         <source>Evaluate</source>
         <translation>Evaluer</translation>
     </message>
@@ -5870,7 +5870,7 @@ Not connected
         <translation>Evalue l&apos;expression dans le contexte en cours</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2191"/>
+        <location filename="../Debugger/DebugUI.py" line="2195"/>
         <source>Execute</source>
         <translation>Exécuter</translation>
     </message>
@@ -5995,17 +5995,17 @@ Not connected
         <translation>Coverage du Script</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1750"/>
+        <location filename="../Debugger/DebugUI.py" line="1752"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Il n&apos;y a pas de script principal défini dans le projet en cours. Abandon</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1630"/>
+        <location filename="../Debugger/DebugUI.py" line="1631"/>
         <source>Profile of Project</source>
         <translation>Profil du projet</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1617"/>
+        <location filename="../Debugger/DebugUI.py" line="1618"/>
         <source>Profile of Script</source>
         <translation>Profil du Script</translation>
     </message>
@@ -6025,17 +6025,17 @@ Not connected
         <translation type="obsolete">Erreur Cyclops</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1871"/>
+        <location filename="../Debugger/DebugUI.py" line="1874"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>Il n&apos;y a pas de script principal défini dans le projet en cours. Débogage impossible.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2162"/>
+        <location filename="../Debugger/DebugUI.py" line="2166"/>
         <source>Enter the statement to evaluate</source>
         <translation>Entrer une instruction à évaluer</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2191"/>
+        <location filename="../Debugger/DebugUI.py" line="2195"/>
         <source>Enter the statement to execute</source>
         <translation>Entrer une instruction à exécuter</translation>
     </message>
@@ -38669,27 +38669,27 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1161"/>
+        <location filename="../Preferences/__init__.py" line="1168"/>
         <source>Export Preferences</source>
         <translation>Export des préférences</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1189"/>
+        <location filename="../Preferences/__init__.py" line="1196"/>
         <source>Import Preferences</source>
         <translation>Import des préférences</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1189"/>
+        <location filename="../Preferences/__init__.py" line="1196"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1291"/>
+        <location filename="../Preferences/__init__.py" line="1298"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1291"/>
+        <location filename="../Preferences/__init__.py" line="1298"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39156,7 +39156,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>Project</name>
     <message>
-        <location filename="../Project/Project.py" line="684"/>
+        <location filename="../Project/Project.py" line="688"/>
         <source>Read project file</source>
         <translation>Lire un fichier projet</translation>
     </message>
@@ -39166,17 +39166,17 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Les fichiers projets compressés ne sont pas supportés. La librairie de compression est manquante.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="784"/>
+        <location filename="../Project/Project.py" line="788"/>
         <source>Save project file</source>
         <translation>Enregistrer le fichier projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="902"/>
+        <location filename="../Project/Project.py" line="906"/>
         <source>Read project session</source>
         <translation>Lire la session du projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1119"/>
+        <location filename="../Project/Project.py" line="1123"/>
         <source>Please save the project first.</source>
         <translation>Prière d&apos;enregistrer votre projet d&apos;abord.</translation>
     </message>
@@ -39186,307 +39186,307 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Les fichiers de session compressés ne sont pas supportés. La librairie de compression est manquante.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="938"/>
+        <location filename="../Project/Project.py" line="942"/>
         <source>Save project session</source>
         <translation>Enregistrer la session</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1231"/>
+        <location filename="../Project/Project.py" line="1235"/>
         <source>Add Language</source>
         <translation>Ajouter une langue</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1355"/>
+        <location filename="../Project/Project.py" line="1359"/>
         <source>Delete translation</source>
         <translation>Supprimer la traduction</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1506"/>
+        <location filename="../Project/Project.py" line="1510"/>
         <source>Add file</source>
         <translation>Ajouter un fichier</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1623"/>
+        <location filename="../Project/Project.py" line="1627"/>
         <source>The target directory must not be empty.</source>
         <translation>Le répertoire cible ne doit pas être vide.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1634"/>
+        <location filename="../Project/Project.py" line="1638"/>
         <source>Add directory</source>
         <translation>Ajouter un répertoire</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1634"/>
+        <location filename="../Project/Project.py" line="1638"/>
         <source>The source directory must not be empty.</source>
         <translation>Le répertoire source ne doit pas être vide.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1979"/>
+        <location filename="../Project/Project.py" line="1983"/>
         <source>Delete file</source>
         <translation>Suppression de fichier</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2091"/>
+        <location filename="../Project/Project.py" line="2095"/>
         <source>Create project directory</source>
         <translation>Création d&apos;un répertoire projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3343"/>
+        <location filename="../Project/Project.py" line="3348"/>
         <source>New project</source>
         <translation>Nouveau projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3357"/>
+        <location filename="../Project/Project.py" line="3362"/>
         <source>Open project</source>
         <translation>Ouvir un projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3394"/>
+        <location filename="../Project/Project.py" line="3399"/>
         <source>Save project as</source>
         <translation>Enregistrer le projet sous</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2744"/>
+        <location filename="../Project/Project.py" line="2749"/>
         <source>Save File</source>
         <translation>Enregistrer Fichier</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2780"/>
+        <location filename="../Project/Project.py" line="2785"/>
         <source>Close Project</source>
         <translation>Fermer le projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2780"/>
+        <location filename="../Project/Project.py" line="2785"/>
         <source>The current project has unsaved changes.</source>
         <translation>Le projet courant a des modifications non enregistrées.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3558"/>
+        <location filename="../Project/Project.py" line="3563"/>
         <source>&amp;Save</source>
         <translation>&amp;Enregistrer</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3343"/>
+        <location filename="../Project/Project.py" line="3348"/>
         <source>&amp;New...</source>
         <translation>&amp;Nouveau...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3348"/>
+        <location filename="../Project/Project.py" line="3353"/>
         <source>Generate a new project</source>
         <translation>Génerer un nouveau projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3349"/>
+        <location filename="../Project/Project.py" line="3354"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nouveau...&lt;/b&gt;&lt;p&gt;Ouvre une boite de dialogue pour entrer les paramètres d&apos;un nouveau projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3357"/>
+        <location filename="../Project/Project.py" line="3362"/>
         <source>&amp;Open...</source>
         <translation>&amp;Ouvrir...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3362"/>
+        <location filename="../Project/Project.py" line="3367"/>
         <source>Open an existing project</source>
         <translation>Ouvrir un projet existant</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3363"/>
+        <location filename="../Project/Project.py" line="3368"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ouvrir...&lt;/b&gt;&lt;p&gt;Ouvre un projet existant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3370"/>
+        <location filename="../Project/Project.py" line="3375"/>
         <source>Close project</source>
         <translation>Fermer le projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3370"/>
+        <location filename="../Project/Project.py" line="3375"/>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3374"/>
+        <location filename="../Project/Project.py" line="3379"/>
         <source>Close the current project</source>
         <translation>Fermer le projet en cours</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3375"/>
+        <location filename="../Project/Project.py" line="3380"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fermer&lt;/b&gt;&lt;p&gt;Ferme le projet en cours.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3382"/>
+        <location filename="../Project/Project.py" line="3387"/>
         <source>Save project</source>
         <translation>Enregistrer le projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3386"/>
+        <location filename="../Project/Project.py" line="3391"/>
         <source>Save the current project</source>
         <translation>Enregistre le projet courant</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3387"/>
+        <location filename="../Project/Project.py" line="3392"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Enregistrer&lt;/b&gt;&lt;p&gt;Enregistre le projet en cours.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3394"/>
+        <location filename="../Project/Project.py" line="3399"/>
         <source>Save &amp;as...</source>
         <translation>&amp;Enregistrer sous...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3398"/>
+        <location filename="../Project/Project.py" line="3403"/>
         <source>Save the current project to a new file</source>
         <translation>Enregistre le projet en cours dans un nouveau fichier</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3400"/>
+        <location filename="../Project/Project.py" line="3405"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Enregistrer sous&lt;/b&gt;&lt;p&gt;Enregistre le projet en cours dans un nouveau fichier.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3440"/>
+        <location filename="../Project/Project.py" line="3445"/>
         <source>Add translation to project</source>
         <translation>Ajouter une traduction au projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3440"/>
+        <location filename="../Project/Project.py" line="3445"/>
         <source>Add &amp;translation...</source>
         <translation>Ajouter une &amp;traduction...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3445"/>
+        <location filename="../Project/Project.py" line="3450"/>
         <source>Add a translation to the current project</source>
         <translation>Ajoute une traduction au projet en cours</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3447"/>
+        <location filename="../Project/Project.py" line="3452"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ajouter une traduction...&lt;/b&gt;&lt;p&gt;Ouvre une boite de dialogue pour ajouter une traduction au projet courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3455"/>
+        <location filename="../Project/Project.py" line="3460"/>
         <source>Search new files</source>
         <translation>Rechercher des nouveaux fichiers</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3455"/>
+        <location filename="../Project/Project.py" line="3460"/>
         <source>Searc&amp;h new files...</source>
         <translation>Re&amp;chercher des nouveaux fichiers...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3459"/>
+        <location filename="../Project/Project.py" line="3464"/>
         <source>Search new files in the project directory.</source>
         <translation>Recherche des nouveaux fichiers dans le répertoire du projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3469"/>
+        <location filename="../Project/Project.py" line="3474"/>
         <source>Project properties</source>
         <translation>Propriétés du projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3469"/>
+        <location filename="../Project/Project.py" line="3474"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propriétés...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3474"/>
+        <location filename="../Project/Project.py" line="3479"/>
         <source>Show the project properties</source>
         <translation>Affiche les propriétés du projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3475"/>
+        <location filename="../Project/Project.py" line="3480"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propriétés...&lt;/b&gt;&lt;p&gt;Affiche une boite de dialogue pour éditer les propriétés du projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3597"/>
+        <location filename="../Project/Project.py" line="3602"/>
         <source>Load session</source>
         <translation>Charger la session</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3601"/>
+        <location filename="../Project/Project.py" line="3606"/>
         <source>Load the projects session file.</source>
         <translation>Charge le fichier de session du projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3602"/>
+        <location filename="../Project/Project.py" line="3607"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Charger la session&lt;/b&gt;&lt;p&gt;Charge le fichier session du projet. Une session est constituée par les données suivantes.&lt;br&gt;- tous les fichiers open source&lt;br&gt;- tous les points d&apos;arrêts&lt;br&gt;- les arguments de ligne de commande&lt;br&gt;- le répertoire de travail&lt;br&gt;- le flag de rapport d&apos;exception&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3615"/>
+        <location filename="../Project/Project.py" line="3620"/>
         <source>Save session</source>
         <translation>Enregistrer la session</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3619"/>
+        <location filename="../Project/Project.py" line="3624"/>
         <source>Save the projects session file.</source>
         <translation>Enregistre le fichier de session du projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3620"/>
+        <location filename="../Project/Project.py" line="3625"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Enregistrer la session&lt;/b&gt;&lt;p&gt;Enregistrer le fichier session du projet. Une session est constituée par les données suivantes.&lt;br&gt;- tous les fichiers open source&lt;br&gt;- tous les points d&apos;arrêts&lt;br&gt;- les arguments de ligne de commande&lt;br&gt;- le répertoire de travail&lt;br&gt;- le flag de rapport d&apos;exception&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3647"/>
+        <location filename="../Project/Project.py" line="3652"/>
         <source>Code Metrics</source>
         <translation>Statistiques du code</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3647"/>
+        <location filename="../Project/Project.py" line="3652"/>
         <source>&amp;Code Metrics...</source>
         <translation>Statistiques du &amp;Code...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3651"/>
+        <location filename="../Project/Project.py" line="3656"/>
         <source>Show some code metrics for the project.</source>
         <translation>Affiche des statistiques sur le code du projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3653"/>
+        <location filename="../Project/Project.py" line="3658"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Statistiques du Code...&lt;/b&gt;&lt;p&gt;Affiche des statistiques sur le code de tous les fichiers Python du projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3661"/>
+        <location filename="../Project/Project.py" line="3666"/>
         <source>Python Code Coverage</source>
         <translation> Code Coverage Python</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3661"/>
+        <location filename="../Project/Project.py" line="3666"/>
         <source>Code Co&amp;verage...</source>
         <translation>Code Co&amp;verage...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3665"/>
+        <location filename="../Project/Project.py" line="3670"/>
         <source>Show code coverage information for the project.</source>
         <translation>Affiche les informations de code coverage pour le projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3667"/>
+        <location filename="../Project/Project.py" line="3672"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;Affiche les informations de code coverage pour le projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4428"/>
+        <location filename="../Project/Project.py" line="4433"/>
         <source>Profile Data</source>
         <translation>Profiling des données</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3675"/>
+        <location filename="../Project/Project.py" line="3680"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Profiling des données...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3679"/>
+        <location filename="../Project/Project.py" line="3684"/>
         <source>Show profiling data for the project.</source>
         <translation>Affiche le profiling des données du projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3681"/>
+        <location filename="../Project/Project.py" line="3686"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilling des données...&lt;/b&gt;&lt;p&gt;Affiche le profiling des données du projet.&lt;/p&gt;</translation>
     </message>
@@ -39531,147 +39531,147 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;b&gt;Supprimer Cyclops le rapport Cyclops&lt;/b&gt;&lt;p&gt;Supprime le rapport Cyclops du projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4482"/>
+        <location filename="../Project/Project.py" line="4487"/>
         <source>Application Diagram</source>
         <translation>Diagramme de l&apos;application</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3690"/>
+        <location filename="../Project/Project.py" line="3695"/>
         <source>&amp;Application Diagram...</source>
         <translation>&amp;Diagramme de l&apos;application...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3694"/>
+        <location filename="../Project/Project.py" line="3699"/>
         <source>Show a diagram of the project.</source>
         <translation>Affiche le diagramme de l&apos;application.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3696"/>
+        <location filename="../Project/Project.py" line="3701"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagramme de l&apos;application...&lt;/b&gt;&lt;p&gt;Affiche le diagramme du projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3788"/>
+        <location filename="../Project/Project.py" line="3793"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Ouvrir un projet &amp;récent</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3796"/>
+        <location filename="../Project/Project.py" line="3801"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagrammes</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3793"/>
+        <location filename="../Project/Project.py" line="3798"/>
         <source>Chec&amp;k</source>
         <translation>&amp;Vérification</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3789"/>
+        <location filename="../Project/Project.py" line="3794"/>
         <source>&amp;Version Control</source>
         <translation>&amp;Contrôle de version</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3795"/>
+        <location filename="../Project/Project.py" line="3800"/>
         <source>Sho&amp;w</source>
         <translation>&amp;Affichage</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3798"/>
+        <location filename="../Project/Project.py" line="3803"/>
         <source>Source &amp;Documentation</source>
         <translation>&amp;Documentation automatique</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4091"/>
+        <location filename="../Project/Project.py" line="4096"/>
         <source>Search New Files</source>
         <translation>Rechercher des nouveaux fichiers</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4091"/>
+        <location filename="../Project/Project.py" line="4096"/>
         <source>There were no new files found to be added.</source>
         <translation>Aucun fichier à ajouter n&apos;a été trouvé.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4237"/>
+        <location filename="../Project/Project.py" line="4242"/>
         <source>Version Control System</source>
         <translation>Système de conrôle des versions (VCS)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4355"/>
+        <location filename="../Project/Project.py" line="4360"/>
         <source>Coverage Data</source>
         <translation>Coverage de données</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4405"/>
+        <location filename="../Project/Project.py" line="4410"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Il n&apos;y a pas de script principal défini dans le projet en cours. Abandon</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1758"/>
+        <location filename="../Project/Project.py" line="1762"/>
         <source>Rename file</source>
         <translation>Renommer le fichier</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1782"/>
+        <location filename="../Project/Project.py" line="1786"/>
         <source>Rename File</source>
         <translation>Renommer le fichier</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2596"/>
+        <location filename="../Project/Project.py" line="2600"/>
         <source>New Project</source>
         <translation>Nouveau projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2158"/>
+        <location filename="../Project/Project.py" line="2162"/>
         <source>Add existing files to the project?</source>
         <translation>Ajouter des fichiers existant au projet ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2277"/>
+        <location filename="../Project/Project.py" line="2281"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Voulez-vous éditer les options de commande VCS ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2225"/>
+        <location filename="../Project/Project.py" line="2229"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Le fichier projet doit-il être ajouté au référentiel?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2249"/>
+        <location filename="../Project/Project.py" line="2253"/>
         <source>Select version control system for the project</source>
         <translation>Sélectionner un système de contrôle de version (VCS) pour le projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3425"/>
+        <location filename="../Project/Project.py" line="3430"/>
         <source>Add directory to project</source>
         <translation>Ajouter un répertoire au projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3425"/>
+        <location filename="../Project/Project.py" line="3430"/>
         <source>Add directory...</source>
         <translation>Ajouter un répertoire...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3430"/>
+        <location filename="../Project/Project.py" line="3435"/>
         <source>Add a directory to the current project</source>
         <translation>Ajouter un répertoire au projet courant</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3432"/>
+        <location filename="../Project/Project.py" line="3437"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ajouter un répertoire...&lt;/b&gt;&lt;p&gt;Ouvre une fenêtre pour ajouter un répertoire au projet courant.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4378"/>
+        <location filename="../Project/Project.py" line="4383"/>
         <source>Code Coverage</source>
         <translation>Code Coverage</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4378"/>
+        <location filename="../Project/Project.py" line="4383"/>
         <source>Please select a coverage file</source>
         <translation>Sélectionner un fichier coverage</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4428"/>
+        <location filename="../Project/Project.py" line="4433"/>
         <source>Please select a profile file</source>
         <translation>Sélectionner un fichier profile</translation>
     </message>
@@ -39761,7 +39761,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de créer le répertoire projet &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="967"/>
+        <location filename="../Project/Project.py" line="971"/>
         <source>Delete project session</source>
         <translation>Supprime la session de projet</translation>
     </message>
@@ -39771,17 +39771,17 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de supprimer le fichier session de projet &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3633"/>
+        <location filename="../Project/Project.py" line="3638"/>
         <source>Delete session</source>
         <translation>Supprimer la session</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3637"/>
+        <location filename="../Project/Project.py" line="3642"/>
         <source>Delete the projects session file.</source>
         <translation>Suppression du fichier session de projet.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3638"/>
+        <location filename="../Project/Project.py" line="3643"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suppression de session&lt;/b&gt;&lt;p&gt;Ceci supprime le fichier session de projet.&lt;/p&gt;</translation>
     </message>
@@ -39791,27 +39791,27 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>Fichiers Ruby (*.rb);;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3461"/>
+        <location filename="../Project/Project.py" line="3466"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Chercher des nouveaux fichiers...&lt;/b&gt;&lt;p&gt;Cette commande recherche des nouveaux fichiers (sources, *.ui, *.idl) dans le répertoire projet et dans les sous-répertoires enregistrés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="249"/>
+        <location filename="../Project/Project.py" line="250"/>
         <source>Console</source>
         <translation>Console</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="250"/>
+        <location filename="../Project/Project.py" line="251"/>
         <source>Other</source>
         <translation>Autre</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4482"/>
+        <location filename="../Project/Project.py" line="4487"/>
         <source>Include module names?</source>
         <translation>Inclure les noms de modules ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2008"/>
+        <location filename="../Project/Project.py" line="2012"/>
         <source>Delete directory</source>
         <translation>Suppression répertoire</translation>
     </message>
@@ -39821,7 +39821,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de supprimer le répertoire sélectionné &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="996"/>
+        <location filename="../Project/Project.py" line="1000"/>
         <source>Read tasks</source>
         <translation>Tâches lues</translation>
     </message>
@@ -39841,7 +39841,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Format non reconnu pour le fichier de tâches &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1016"/>
+        <location filename="../Project/Project.py" line="1020"/>
         <source>Save tasks</source>
         <translation>Tâches enregistrées</translation>
     </message>
@@ -39851,7 +39851,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible d&apos;enregistrer le fichier de tâches &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1073"/>
+        <location filename="../Project/Project.py" line="1077"/>
         <source>Read debugger properties</source>
         <translation>Lecture des propriétés du débogueur</translation>
     </message>
@@ -39866,7 +39866,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Le format du fichier de propriétés du débogueur &lt;b&gt;%1&lt;/b&gt; n&apos;est pas supporté.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1107"/>
+        <location filename="../Project/Project.py" line="1111"/>
         <source>Save debugger properties</source>
         <translation>Enregistrement des propriétés du débogueur</translation>
     </message>
@@ -39881,7 +39881,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible d&apos;écrire le fichier de propriétés du débogueur : &lt;b&gt;%1&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1133"/>
+        <location filename="../Project/Project.py" line="1137"/>
         <source>Delete debugger properties</source>
         <translation>Suppression des propriétés du débogueur</translation>
     </message>
@@ -39891,132 +39891,132 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de supprimer le fichier de propriétés du débogueur : &lt;b&gt;%1&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3533"/>
+        <location filename="../Project/Project.py" line="3538"/>
         <source>Debugger Properties</source>
         <translation>Propriétés du Débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3533"/>
+        <location filename="../Project/Project.py" line="3538"/>
         <source>Debugger &amp;Properties...</source>
         <translation>Débogueur &amp; Propriétés...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3537"/>
+        <location filename="../Project/Project.py" line="3542"/>
         <source>Show the debugger properties</source>
         <translation>Affichage des propriétés du débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3538"/>
+        <location filename="../Project/Project.py" line="3543"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propriétés du Débogueur...&lt;/b&gt;&lt;p&gt;Affiche une boite de dialogue permettant d&apos;éditer les proprités du débogueur, spécifiques au projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3546"/>
+        <location filename="../Project/Project.py" line="3551"/>
         <source>Load</source>
         <translation>Charger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3546"/>
+        <location filename="../Project/Project.py" line="3551"/>
         <source>&amp;Load</source>
         <translation>&amp;Charger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3550"/>
+        <location filename="../Project/Project.py" line="3555"/>
         <source>Load the debugger properties</source>
         <translation>Charger les propriétés du débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3558"/>
+        <location filename="../Project/Project.py" line="3563"/>
         <source>Save</source>
         <translation>Enregistrer</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3562"/>
+        <location filename="../Project/Project.py" line="3567"/>
         <source>Save the debugger properties</source>
         <translation>Enregistrer les propriétés du débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3570"/>
+        <location filename="../Project/Project.py" line="3575"/>
         <source>Delete</source>
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3570"/>
+        <location filename="../Project/Project.py" line="3575"/>
         <source>&amp;Delete</source>
         <translation>&amp;Supprimer</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3574"/>
+        <location filename="../Project/Project.py" line="3579"/>
         <source>Delete the debugger properties</source>
         <translation>Supprimer les propriétés du débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3583"/>
+        <location filename="../Project/Project.py" line="3588"/>
         <source>Reset</source>
         <translation>Réinitialiser</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3583"/>
+        <location filename="../Project/Project.py" line="3588"/>
         <source>&amp;Reset</source>
         <translation>&amp;Réinitialiser</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3587"/>
+        <location filename="../Project/Project.py" line="3592"/>
         <source>Reset the debugger properties</source>
         <translation>Réinitialise des propriétés du débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3800"/>
+        <location filename="../Project/Project.py" line="3805"/>
         <source>Debugger</source>
         <translation>Débogueur</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3797"/>
+        <location filename="../Project/Project.py" line="3802"/>
         <source>Session</source>
         <translation>Session</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3551"/>
+        <location filename="../Project/Project.py" line="3556"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Chargement des Propriétés du Débogueur&lt;/b&gt;&lt;p&gt;Charge la configuration du débogueur spécifique au projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3563"/>
+        <location filename="../Project/Project.py" line="3568"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Enregistrement des Propriétés du Débogueur&lt;/b&gt;&lt;p&gt;Enregistre la configuration du débogueur spécifique au projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3575"/>
+        <location filename="../Project/Project.py" line="3580"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suppression des Propriétés du Débogueur...&lt;/b&gt;&lt;p&gt;Supprime la configuration du débogueur spécifique au projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3588"/>
+        <location filename="../Project/Project.py" line="3593"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Réinitialiser les propriétés du débogueur&lt;/b&gt;&lt;p&gt;Réinitialise la configuration du débogueur spécifique au projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3497"/>
+        <location filename="../Project/Project.py" line="3502"/>
         <source>Filetype Associations</source>
         <translation>Association des types de fichiers</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3497"/>
+        <location filename="../Project/Project.py" line="3502"/>
         <source>Filetype Associations...</source>
         <translation>Association des types de fichiers...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3501"/>
+        <location filename="../Project/Project.py" line="3506"/>
         <source>Show the project filetype associations</source>
         <translation>Affiche les asociation Fichier/Type de fichier pour le projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3503"/>
+        <location filename="../Project/Project.py" line="3508"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3801"/>
+        <location filename="../Project/Project.py" line="3806"/>
         <source>Pac&amp;kagers</source>
         <translation>Création de pac&amp;kage</translation>
     </message>
@@ -40026,22 +40026,22 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Problème de sécurité</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3409"/>
+        <location filename="../Project/Project.py" line="3414"/>
         <source>Add files to project</source>
         <translation>Ajouter des fichiers au projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3409"/>
+        <location filename="../Project/Project.py" line="3414"/>
         <source>Add &amp;files...</source>
         <translation>Ajouter des &amp;fichiers...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3414"/>
+        <location filename="../Project/Project.py" line="3419"/>
         <source>Add files to the current project</source>
         <translation>Ajouter des fichiers au projet courant</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3416"/>
+        <location filename="../Project/Project.py" line="3421"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ajouter des fichiers...&lt;/b&gt;&lt;p&gt;Ouvre une boite de dialogue pour ajouter des fichiers au projet courant. La position pour l&apos;insertion est déterminée par l&apos;extension du fichier.&lt;/p&gt;</translation>
     </message>
@@ -40086,7 +40086,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Fichiers projets compressés (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2729"/>
+        <location filename="../Project/Project.py" line="2734"/>
         <source>Project Files (*.e4p)</source>
         <translation>Fichiers projets (*.e4p)</translation>
     </message>
@@ -40096,17 +40096,17 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Fichiers projets (*.e4p);;Fichiers projets compressés (*.e4pz)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3787"/>
+        <location filename="../Project/Project.py" line="3792"/>
         <source>&amp;Project</source>
         <translation>&amp;Projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3908"/>
+        <location filename="../Project/Project.py" line="3913"/>
         <source>Project</source>
         <translation>Projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3970"/>
+        <location filename="../Project/Project.py" line="3975"/>
         <source>&amp;Clear</source>
         <translation>&amp;Effacer</translation>
     </message>
@@ -40116,7 +40116,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Le fichier &lt;b&gt;%1&lt;/b&gt; existe déjà. Ecraser ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="820"/>
+        <location filename="../Project/Project.py" line="824"/>
         <source>Read user project properties</source>
         <translation>Lire les propriétés utilisateur du projet</translation>
     </message>
@@ -40126,7 +40126,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de lire le fichier de propriétés de projet &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="844"/>
+        <location filename="../Project/Project.py" line="848"/>
         <source>Save user project properties</source>
         <translation>Enregistrer les propriétés utilisateur du projet</translation>
     </message>
@@ -40136,27 +40136,27 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible d&apos;écrire le fichier de propriétés du projet &lt;b&gt;%1&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3482"/>
+        <location filename="../Project/Project.py" line="3487"/>
         <source>User project properties</source>
         <translation>Propriétés utilisateur du projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3482"/>
+        <location filename="../Project/Project.py" line="3487"/>
         <source>&amp;User Properties...</source>
         <translation>Propriétés &amp;Utilisateur...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3487"/>
+        <location filename="../Project/Project.py" line="3492"/>
         <source>Show the user specific project properties</source>
         <translation>Afficher le propriétés utilisateurs spécifiques au projet</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3489"/>
+        <location filename="../Project/Project.py" line="3494"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propriétés utilisateur...&lt;/b&gt;&lt;p&gt;Affiche une fenêtre permettant d&apos;éditer les propriétés du projet spécifiques à l&apos;utilisateur.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2943"/>
+        <location filename="../Project/Project.py" line="2948"/>
         <source>Syntax errors detected</source>
         <translation>Erreurs de syntaxe détectées</translation>
     </message>
@@ -40166,7 +40166,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">KDE 3</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Project/Project.py" line="2943"/>
+        <location filename="../Project/Project.py" line="2948"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Le projet contient %n fichier avec des erreurs de syntaxe.</numerusform>
@@ -40179,12 +40179,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Plugin Eric4</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4640"/>
+        <location filename="../Project/Project.py" line="4645"/>
         <source>Create Package List</source>
         <translation>Création de la liste de package</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3719"/>
+        <location filename="../Project/Project.py" line="3724"/>
         <source>Create &amp;Package List</source>
         <translation>Création de la liste de &amp;package</translation>
     </message>
@@ -40199,12 +40199,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;b&gt;Création de la liste de package&lt;/b&gt;&lt;p&gt;Cette commande créé la liste des fichiers à inclure dans l&apos;archive d&apos;un plugin eric4. Cette liste est créée à partir du fichier projet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4833"/>
+        <location filename="../Project/Project.py" line="4838"/>
         <source>Create Plugin Archive</source>
         <translation>Création de l&apos;archive du plugin</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3735"/>
+        <location filename="../Project/Project.py" line="3740"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Création de l&apos;&amp;archive du plugin</translation>
     </message>
@@ -40214,7 +40214,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Créé le fichier d&apos;archive pour un plugin eric4.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4600"/>
+        <location filename="../Project/Project.py" line="4605"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Le fichier &lt;b&gt;PKGLIST&lt;/b&gt; existe déjà.&lt;/p&gt;&lt;p&gt;Ecraser ?&lt;/p&gt;</translation>
     </message>
@@ -40224,12 +40224,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible de créer le fichier &lt;b&gt;PKGLIST&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Raison: %1&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4660"/>
+        <location filename="../Project/Project.py" line="4665"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Le fichier &lt;b&gt;PKGLIST&lt;/b&gt; n&apos;existe pas. Abandon...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4669"/>
+        <location filename="../Project/Project.py" line="4674"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Le projet n&apos;a pas de script principal défini. Abandon...</translation>
     </message>
@@ -40254,22 +40254,22 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;b&gt;Création de l&apos;archive du plugin&lt;/b&gt;&lt;p&gt;Ceci créé une archive contenant l&apos;ensemble des fichiers indiqués dans le fichier PKGLIST. Le nom de l&apos;archive est construit à partir du nom du script principal.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1537"/>
+        <location filename="../Project/Project.py" line="1541"/>
         <source>&lt;p&gt;The source directory doesn&apos;t contain any files belonging to the selected category.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Le répertoire source ne contient aucun fichier correspondant à la catégorie sélectionnée.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2596"/>
+        <location filename="../Project/Project.py" line="2600"/>
         <source>Select Version Control System</source>
         <translation>Sélectionner un système de contrôle de version</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2256"/>
+        <location filename="../Project/Project.py" line="2260"/>
         <source>None</source>
         <translation>Auncun</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="346"/>
+        <location filename="../Project/Project.py" line="347"/>
         <source>Registering Project Type</source>
         <translation>Enregistrement du type de projet</translation>
     </message>
@@ -40284,12 +40284,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Impossible d&apos;enregistrer le fichier &lt;b&gt;%1&lt;/b&gt; dans l&apos;archive. Plugin ignoré.&lt;/p&gt;&lt;p&gt;Raison: %2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3751"/>
+        <location filename="../Project/Project.py" line="3756"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Création d&apos;une archive plugin (Snapshot)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3751"/>
+        <location filename="../Project/Project.py" line="3756"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Création d&apos;une archive plugin (&amp;Snapshot)</translation>
     </message>
@@ -40314,17 +40314,17 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">KDE 4</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1231"/>
+        <location filename="../Project/Project.py" line="1235"/>
         <source>You have to specify a translation pattern first.</source>
         <translation>Vous devez d&apos;abord spécifier un pattern de traduction.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2355"/>
+        <location filename="../Project/Project.py" line="2359"/>
         <source>Translation Pattern</source>
         <translation>Pattern de traduction</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2355"/>
+        <location filename="../Project/Project.py" line="2359"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Entrer le pattern pour les fichiers de traduction (utiliser la balise &apos;%language%&apos; à la place de la langue à utiliser):</translation>
     </message>
@@ -40339,32 +40339,32 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;p&gt;Le VCS sélectionné (&lt;b&gt;%1&lt;/b&gt;) est introuvable.&lt;br&gt;Désactivation du système de contrôle de versions (VCS).&lt;/p&gt;&lt;p&gt;%2&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3515"/>
+        <location filename="../Project/Project.py" line="3520"/>
         <source>Lexer Associations</source>
         <translation>Association des types de fichiers</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3515"/>
+        <location filename="../Project/Project.py" line="3520"/>
         <source>Lexer Associations...</source>
         <translation>Association des types de fichiers...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3519"/>
+        <location filename="../Project/Project.py" line="3524"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Affiche les asociations Fichier/Type de fichier pour le projet (sans tenir compte des valeurs par défaut)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3521"/>
+        <location filename="../Project/Project.py" line="3526"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Associations des types de fichiers...&lt;/b&gt;&lt;p&gt;Permet d&apos;associer les types de fichiers aux analyseurs syntaxiques pour le projet en cours. Ces associations sont prioritaires sur les associations de fichiers configurées par défaut.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="262"/>
+        <location filename="../Project/Project.py" line="263"/>
         <source>PySide GUI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="263"/>
+        <location filename="../Project/Project.py" line="264"/>
         <source>PySide Console</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40374,102 +40374,97 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="248"/>
-        <source>Eric Plugin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="684"/>
+        <location filename="../Project/Project.py" line="688"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="784"/>
+        <location filename="../Project/Project.py" line="788"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="820"/>
+        <location filename="../Project/Project.py" line="824"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="844"/>
+        <location filename="../Project/Project.py" line="848"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="902"/>
+        <location filename="../Project/Project.py" line="906"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="938"/>
+        <location filename="../Project/Project.py" line="942"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="967"/>
+        <location filename="../Project/Project.py" line="971"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="996"/>
+        <location filename="../Project/Project.py" line="1000"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1016"/>
+        <location filename="../Project/Project.py" line="1020"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1073"/>
+        <location filename="../Project/Project.py" line="1077"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1107"/>
+        <location filename="../Project/Project.py" line="1111"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1133"/>
+        <location filename="../Project/Project.py" line="1137"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1355"/>
+        <location filename="../Project/Project.py" line="1359"/>
         <source>&lt;p&gt;The selected translation file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1568"/>
+        <location filename="../Project/Project.py" line="1572"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2744"/>
+        <location filename="../Project/Project.py" line="2749"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Le fichier &lt;b&gt;{0}&lt;/b&gt;existe déjà. Écraser ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1782"/>
+        <location filename="../Project/Project.py" line="1786"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1979"/>
+        <location filename="../Project/Project.py" line="1983"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2008"/>
+        <location filename="../Project/Project.py" line="2012"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2091"/>
+        <location filename="../Project/Project.py" line="2095"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40509,37 +40504,37 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">&lt;b&gt;Création d&apos;une archive de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Ceci permet de créer un plugin en utilisant la liste des fichiers indiqués dans le fichier PKGLIST. Le nom de l&apos;archive est créé à partir du nom du script principal. Le champ &apos;version&apos; du script principal est modifié pour indiquer une version snapshot.&lt;/p&gt; {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4237"/>
+        <location filename="../Project/Project.py" line="4242"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4640"/>
+        <location filename="../Project/Project.py" line="4645"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4683"/>
+        <location filename="../Project/Project.py" line="4688"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4722"/>
+        <location filename="../Project/Project.py" line="4727"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4791"/>
+        <location filename="../Project/Project.py" line="4796"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1494"/>
+        <location filename="../Project/Project.py" line="1498"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1550"/>
+        <location filename="../Project/Project.py" line="1554"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40549,47 +40544,47 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2145"/>
+        <location filename="../Project/Project.py" line="2149"/>
         <source>Create main script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2145"/>
+        <location filename="../Project/Project.py" line="2149"/>
         <source>&lt;p&gt;The mainscript &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3704"/>
+        <location filename="../Project/Project.py" line="3709"/>
         <source>Load Diagram</source>
         <translation type="unfinished">Charger le diagramme</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3704"/>
+        <location filename="../Project/Project.py" line="3709"/>
         <source>&amp;Load Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3708"/>
+        <location filename="../Project/Project.py" line="3713"/>
         <source>Load a diagram from file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3710"/>
+        <location filename="../Project/Project.py" line="3715"/>
         <source>&lt;b&gt;Load Diagram...&lt;/b&gt;&lt;p&gt;This loads a diagram from file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="323"/>
+        <location filename="../Project/Project.py" line="324"/>
         <source>&lt;p&gt;The Programming Language &lt;b&gt;{0}&lt;/b&gt; is not supported.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="346"/>
+        <location filename="../Project/Project.py" line="347"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="334"/>
+        <location filename="../Project/Project.py" line="335"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40604,52 +40599,52 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4226"/>
+        <location filename="../Project/Project.py" line="4231"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found. &lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4833"/>
+        <location filename="../Project/Project.py" line="4838"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt; &lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3724"/>
+        <location filename="../Project/Project.py" line="3729"/>
         <source>Create an initial PKGLIST file for an eric6 plugin.</source>
         <translation type="unfinished">Créé un fichier PKGLIST initial pour un plugin eric4. {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3726"/>
+        <location filename="../Project/Project.py" line="3731"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric6 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Création de la liste de package&lt;/b&gt;&lt;p&gt;Cette commande créé la liste des fichiers à inclure dans l&apos;archive d&apos;un plugin eric4. Cette liste est créée à partir du fichier projet.&lt;/p&gt; {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3740"/>
+        <location filename="../Project/Project.py" line="3745"/>
         <source>Create an eric6 plugin archive file.</source>
         <translation type="unfinished">Créé le fichier d&apos;archive pour un plugin eric4. {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3742"/>
+        <location filename="../Project/Project.py" line="3747"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Création de l&apos;archive du plugin&lt;/b&gt;&lt;p&gt;Ceci créé une archive contenant l&apos;ensemble des fichiers indiqués dans le fichier PKGLIST. Le nom de l&apos;archive est construit à partir du nom du script principal.&lt;/p&gt; {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3756"/>
+        <location filename="../Project/Project.py" line="3761"/>
         <source>Create an eric6 plugin archive file (snapshot release).</source>
         <translation type="unfinished">Créé une archive de plugin eric4 (snapshot release). {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3758"/>
+        <location filename="../Project/Project.py" line="3763"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Création d&apos;une archive de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Ceci permet de créer un plugin en utilisant la liste des fichiers indiqués dans le fichier PKGLIST. Le nom de l&apos;archive est créé à partir du nom du script principal. Le champ &apos;version&apos; du script principal est modifié pour indiquer une version snapshot.&lt;/p&gt; {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4696"/>
+        <location filename="../Project/Project.py" line="4701"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4745"/>
+        <location filename="../Project/Project.py" line="4750"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40662,6 +40657,16 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <location filename="../Project/Project.py" line="245"/>
         <source>PyQt4 Console</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="248"/>
+        <source>Eric4/5 Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="249"/>
+        <source>Eric6 Plugin</source>
+        <translation type="unfinished">Plugin Eric4 {6 ?}</translation>
     </message>
 </context>
 <context>
@@ -41671,7 +41676,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
 <context>
     <name>ProjectResourcesBrowser</name>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="843"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="844"/>
         <source>Resources</source>
         <translation>Ressources</translation>
     </message>
@@ -41786,7 +41791,7 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation>La compilation du fichier ressource a échoué.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="700"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="701"/>
         <source>Process Generation Error</source>
         <translation>Erreur du processus</translation>
     </message>
@@ -41796,22 +41801,22 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="obsolete">Impossible de démarrer %1.&lt;br&gt;Assurez-vous qu&apos;il est bien dans le chemin de recherche.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="766"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="767"/>
         <source>Compiling resources...</source>
         <translation>Compilation des ressources...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="766"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="767"/>
         <source>Abort</source>
         <translation>Abandonner</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="839"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="840"/>
         <source>Determining changed resources...</source>
         <translation>Détermination des fichiers ressource modifiés...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="874"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="875"/>
         <source>Compiling changed resources...</source>
         <translation>Compilation des fichiers ressource modifiés...</translation>
     </message>
@@ -41841,12 +41846,12 @@ Cliquer sur &quot;Mise à jour&quot; pour récupérer la liste des plugins.</tra
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="700"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="701"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="839"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="840"/>
         <source>%v/%m Resources</source>
         <translation type="unfinished"></translation>
     </message>
