@@ -92,6 +92,7 @@ def messageHandler(msgType, context, message):
     Module function handling messages.
     
     @param msgType type of the message (integer, QtMsgType)
+    @param context context information (QMessageLogContext)
     @param message message to be shown (bytes)
     """
     if __msgHandlerDialog:
@@ -115,8 +116,8 @@ def messageHandler(msgType, context, message):
                              .replace("\r", "<br/>")
             msg = "<p><b>{0}</b></p><p>{1}</p><p>File: {2}</p>" \
                 "<p>Line: {3}</p><p>Function: {4}</p>".format(
-                messageType, Utilities.html_uencode(message),
-                context.file, context.line, context.function)
+                    messageType, Utilities.html_uencode(message),
+                    context.file, context.line, context.function)
             if QThread.currentThread() == qApp.thread():
                 __msgHandlerDialog.showMessage(msg)
             else:
