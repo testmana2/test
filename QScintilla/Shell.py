@@ -1448,7 +1448,7 @@ class Shell(QsciScintillaCompat):
     def __startDebugClient(self, action):
         """
         Private slot to start a debug client according to the action
-        triggered[()].
+        triggered.
         
         @param action context menu action that was triggered (QAction)
         """

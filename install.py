@@ -948,7 +948,6 @@ def doDependancyChecks():
         "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt5.QtPrintSupport",
         "PyQt5.QtSql", "PyQt5.QtSvg", "PyQt5.QtWebKit",
         "PyQt5.QtWebKitWidgets", "PyQt5.QtWidgets",
-        
     ]:
         name = impModule.split(".")[1]
         try:
