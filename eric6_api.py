@@ -125,9 +125,12 @@ def main():
     except getopt.error:
         usage()
 
-    excludeDirs = ["CVS", ".svn", "_svn", ".ropeproject", "_ropeproject",
-                   ".eric6project", "_eric6project", "dist", "build", "doc",
-                   "docs"]
+    excludeDirs = ["CVS", ".svn", "_svn",
+                   ".ropeproject", "_ropeproject",
+                   ".eric5project", "_eric5project",
+                   ".eric6project", "_eric6project",
+                   "dist", "build", "doc", "docs"
+                   ]
     excludePatterns = []
     outputFileName = ""
     recursive = False

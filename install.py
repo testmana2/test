@@ -468,7 +468,8 @@ def cleanUp():
                         os.remove(apiname)
                 for apiname in glob.glob(
                         os.path.join(apidir, progLanguage.lower(), "*.bas")):
-                    os.remove(apiname)
+                    if os.path.basename(apiname) != "eric5.bas":
+                        os.remove(apiname)
         except AttributeError:
             pass
         
@@ -664,10 +665,13 @@ def installEric():
                     print("Could not install '{0}'.".format(apiName))
             for apiName in glob.glob(os.path.join(sourceDir, "APIs",
                                                   "Python3", "*.bas")):
-                try:
-                    shutilCopy(apiName, apidir)
-                except EnvironmentError:
-                    print("Could not install '{0}'.".format(apiName))
+                if os.path.exists(os.path.join(
+                    apidir, os.path.basename(
+                        apiName.replace(".bas", ".api")))):
+                    try:
+                        shutilCopy(apiName, apidir)
+                    except EnvironmentError:
+                        print("Could not install '{0}'.".format(apiName))
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):

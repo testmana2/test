@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric5 project file for project eric6 -->
+<!-- eric6 project file for project eric6 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1588,7 +1588,6 @@
     <Other>APIs/Ruby/Ruby-1.8.7.bas</Other>
     <Other>APIs/Ruby/Ruby-1.9.1.api</Other>
     <Other>APIs/Ruby/Ruby-1.9.1.bas</Other>
-    <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>APIs/Python3/QScintilla2.bas</Other>
     <Other>ThirdParty/Jasy/jasy/license.md</Other>
     <Other>Helpviewer/Bookmarks/DefaultBookmarks.xbel</Other>
@@ -1622,6 +1621,8 @@
     <Other>Documentation/eric6-plugin.odt</Other>
     <Other>Documentation/eric6-plugin.pdf</Other>
     <Other>Documentation/Source</Other>
+    <Other>APIs/Python3/PyQt5.bas</Other>
+    <Other>APIs/Python3/PyQt4.bas</Other>
   </Others>
   <MainScript>eric6.py</MainScript>
   <Vcs>

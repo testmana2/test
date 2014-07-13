@@ -1,12 +1,14 @@
 QsciAPIs QsciAbstractAPIs
 QsciAbstractAPIs QObject
 QsciLexer QObject
+QsciLexerAVS QsciLexer
 QsciLexerBash QsciLexer
 QsciLexerBatch QsciLexer
 QsciLexerCMake QsciLexer
 QsciLexerCPP QsciLexer
 QsciLexerCSS QsciLexer
 QsciLexerCSharp QsciLexerCPP
+QsciLexerCoffeeScript QsciLexer
 QsciLexerCustom QsciLexer
 QsciLexerD QsciLexer
 QsciLexerDiff QsciLexer
@@ -20,6 +22,7 @@ QsciLexerLua QsciLexer
 QsciLexerMakefile QsciLexer
 QsciLexerMatlab QsciLexer
 QsciLexerOctave QsciLexerMatlab
+QsciLexerPO QsciLexer
 QsciLexerPOV QsciLexer
 QsciLexerPascal QsciLexer
 QsciLexerPerl QsciLexer
