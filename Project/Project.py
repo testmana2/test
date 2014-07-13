@@ -182,15 +182,6 @@ class Project(QObject):
             "JavaScript",
         ]
         
-        self.sourceExtensions = {
-            "Python2": Preferences.getPython("PythonExtensions"),
-            "Python3": Preferences.getPython("Python3Extensions"),
-            "Ruby": ['.rb'],
-            "JavaScript": ['.js'],
-            "Mixed": (Preferences.getPython("Python3Extensions") +
-                      ['.rb', '.js']),
-        }
-        
         self.dbgFilters = {
             "Python2": self.tr(
                 "Python2 Files (*.py2);;"
@@ -223,6 +214,27 @@ class Project(QObject):
         self.profiledata = None
         self.applicationDiagram = None
         self.loadedDiagram = None
+        
+    def __sourceExtensions(self, language):
+        """
+        Private method to get the source extensions of a programming language.
+        
+        @param language programming language (string)
+        @return source extensions (list of string)
+        """
+        if language == "Python2":
+            return Preferences.getPython("PythonExtensions")
+        elif language == "Python3":
+            return Preferences.getPython("Python3Extensions")
+        elif language == "Ruby":
+            return ['.rb']
+        elif language == "JavaScript":
+            return ['.js']
+        elif language == "Mixed":
+            return (Preferences.getPython("Python3Extensions") +
+                    ['.rb', '.js'])
+        else:
+            return [""]
         
     def getProgrammingLanguages(self):
         """
@@ -501,13 +513,12 @@ class Project(QObject):
             sourceKey = "Mixed"
         else:
             sourceKey = self.pdata["PROGLANGUAGE"][0]
-        for ext in self.sourceExtensions[sourceKey]:
+        for ext in self.__sourceExtensions(sourceKey):
             self.pdata["FILETYPES"]["*{0}".format(ext)] = "SOURCES"
         self.pdata["FILETYPES"]["*.idl"] = "INTERFACES"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "PyQt5", "E4Plugin",
                                             "E6Plugin", "PySide"]:
             self.pdata["FILETYPES"]["*.ui"] = "FORMS"
-            self.pdata["FILETYPES"]["*.ui.h"] = "FORMS"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C",
                                             "E4Plugin", "E6Plugin",
                                             "PyQt5", "PyQt5C",
@@ -3071,7 +3082,7 @@ class Project(QObject):
                 lang = "Python3"
             elif lang == "Python":
                 lang = "Python2"
-            return self.sourceExtensions[lang][0]
+            return self.__sourceExtensions(lang)[0]
         else:
             return ""
         
