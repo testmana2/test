@@ -1623,6 +1623,7 @@
     <Other>APIs/QSS/qss.api</Other>
     <Other>eric5.appdata.xml</Other>
     <Other>ThirdParty/Send2Trash/LICENSE</Other>
+    <Other>APIs/Python3/PyQt5.bas</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
