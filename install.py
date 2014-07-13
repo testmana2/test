@@ -657,6 +657,7 @@ def installEric():
                 os.sep, name, sourceDir))
     
     # install the API file
+    from PyQt4.QtCore import qVersion
     for progLanguage in progLanguages:
         apidir = os.path.join(cfg['apidir'], progLanguage.lower())
         if not os.path.exists(apidir):
@@ -684,7 +685,17 @@ def installEric():
             for apiName in glob.glob(os.path.join(sourceDir, "APIs",
                                                   "Python3", "*.bas")):
                 try:
-                    shutilCopy(apiName, apidir)
+                    if os.path.basename(apiName).startswith("PyQt4"):
+                        # only install the PyQt4 file matching the Qt version
+                        if os.path.splitext(apiName)[0].endswith(
+                                qVersion().split(".")[0]):
+                            shutilCopy(apiName,
+                                       os.path.join(apidir, "PyQt4.bas"))
+                        continue
+                    if os.path.exists(os.path.join(
+                        apidir, os.path.basename(
+                            apiName.replace(".bas", ".api")))):
+                        shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
     

@@ -24,7 +24,7 @@ QAction QObject
 QActionEvent QEvent
 QActionGroup QObject
 QAnimationGroup QAbstractAnimation
-QApplication QGuiApplication
+QApplication QCoreApplication
 QAudioInput QObject
 QAudioOutput QObject
 QBitmap QPixmap
@@ -75,7 +75,6 @@ QDial QAbstractSlider
 QDialog QWidget
 QDialogButtonBox QWidget
 QDirModel QAbstractItemModel
-QDnsLookup QObject
 QDockWidget QWidget
 QDomAttr QDomNode
 QDomCDATASection QDomText
@@ -96,17 +95,15 @@ QDrag QObject
 QDragEnterEvent QDragMoveEvent
 QDragLeaveEvent QEvent
 QDragMoveEvent QDropEvent
-QDropEvent QEvent
+QDropEvent QEvent QMimeSource
 QDynamicPropertyChangeEvent QEvent
-QEnterEvent QEvent
 QErrorMessage QDialog
 QEventLoop QObject
 QEventTransition QAbstractTransition
-QExposeEvent QEvent
 QExtensionFactory QObject QAbstractExtensionFactory
 QExtensionManager QObject QAbstractExtensionManager
-QFile QFileDevice
-QFileDevice QIODevice
+QFSFileEngine QAbstractFileEngine
+QFile QIODevice
 QFileDialog QDialog
 QFileOpenEvent QEvent
 QFileSystemModel QAbstractItemModel
@@ -119,6 +116,7 @@ QFontDialog QDialog
 QFormBuilder QAbstractFormBuilder
 QFormLayout QLayout
 QFrame QWidget
+QFtp QObject
 QGLFramebufferObject QPaintDevice
 QGLPixelBuffer QPaintDevice
 QGLShader QObject
@@ -167,7 +165,6 @@ QGraphicsWebView QGraphicsWidget
 QGraphicsWidget QGraphicsObject QGraphicsLayoutItem
 QGridLayout QLayout
 QGroupBox QWidget
-QGuiApplication QCoreApplication
 QHBoxLayout QBoxLayout
 QHeaderView QAbstractItemView
 QHelpContentModel QAbstractItemModel
@@ -182,16 +179,20 @@ QHelpSearchQueryWidget QWidget
 QHelpSearchResultWidget QWidget
 QHideEvent QEvent
 QHistoryState QAbstractState
-QHoverEvent QInputEvent
+QHoverEvent QEvent
+QHttp QObject
 QHttpMultiPart QObject
+QHttpRequestHeader QHttpHeader
+QHttpResponseHeader QHttpHeader
 QIODevice QObject
 QIconDragEvent QEvent
+QIconEngineV2 QIconEngine
 QIdentityProxyModel QAbstractProxyModel
 QImage QPaintDevice
+QInputContext QObject
 QInputDialog QDialog
 QInputEvent QEvent
 QInputMethodEvent QEvent
-QInputMethodQueryEvent QEvent
 QIntValidator QValidator
 QItemDelegate QAbstractItemDelegate
 QItemSelectionModel QObject
@@ -226,7 +227,6 @@ QNetworkReply QIODevice
 QNetworkSession QObject
 QObjectCleanupHandler QObject
 QPageSetupDialog QDialog
-QPagedPaintDevice QPaintDevice
 QPaintEvent QEvent
 QPanGesture QGesture
 QParallelAnimationGroup QAnimationGroup
@@ -240,11 +240,12 @@ QPluginLoader QObject
 QPrintDialog QAbstractPrintDialog
 QPrintPreviewDialog QDialog
 QPrintPreviewWidget QWidget
-QPrinter QPagedPaintDevice
+QPrinter QPaintDevice
 QProcess QIODevice
 QProgressBar QWidget
 QProgressDialog QDialog
 QPropertyAnimation QVariantAnimation
+QProxyModel QAbstractItemModel
 QPushButton QAbstractButton
 QPyDeclarativePropertyValueSource QObject QDeclarativePropertyValueSource
 QPyDesignerContainerExtension QObject QDesignerContainerExtension
@@ -259,13 +260,10 @@ QRadioButton QAbstractButton
 QRegExpValidator QValidator
 QResizeEvent QEvent
 QRubberBand QWidget
-QScreen QObject
 QScriptEngine QObject
 QScriptEngineDebugger QObject
 QScrollArea QAbstractScrollArea
 QScrollBar QAbstractSlider
-QScrollEvent QEvent
-QScrollPrepareEvent QEvent
 QSequentialAnimationGroup QAnimationGroup
 QSessionManager QObject
 QSettings QObject
@@ -280,6 +278,7 @@ QSizeGrip QWidget
 QSlider QAbstractSlider
 QSocketNotifier QObject
 QSortFilterProxyModel QAbstractProxyModel
+QSound QObject
 QSpacerItem QLayoutItem
 QSpinBox QAbstractSpinBox
 QSplashScreen QWidget
@@ -307,36 +306,37 @@ QStyleOptionButton QStyleOption
 QStyleOptionComboBox QStyleOptionComplex
 QStyleOptionComplex QStyleOption
 QStyleOptionDockWidget QStyleOption
+QStyleOptionDockWidgetV2 QStyleOptionDockWidget
 QStyleOptionFocusRect QStyleOption
 QStyleOptionFrame QStyleOption
-QStyleOptionFrame QStyleOption
-QStyleOptionFrame QStyleOption
+QStyleOptionFrameV2 QStyleOptionFrame
+QStyleOptionFrameV3 QStyleOptionFrameV2
 QStyleOptionGraphicsItem QStyleOption
 QStyleOptionGroupBox QStyleOptionComplex
 QStyleOptionHeader QStyleOption
 QStyleOptionMenuItem QStyleOption
 QStyleOptionProgressBar QStyleOption
-QStyleOptionProgressBar QStyleOption
+QStyleOptionProgressBarV2 QStyleOptionProgressBar
 QStyleOptionRubberBand QStyleOption
 QStyleOptionSizeGrip QStyleOptionComplex
 QStyleOptionSlider QStyleOptionComplex
 QStyleOptionSpinBox QStyleOptionComplex
 QStyleOptionTab QStyleOption
-QStyleOptionTab QStyleOption
-QStyleOptionTab QStyleOption
 QStyleOptionTabBarBase QStyleOption
-QStyleOptionTabBarBase QStyleOption
+QStyleOptionTabBarBaseV2 QStyleOptionTabBarBase
+QStyleOptionTabV2 QStyleOptionTab
+QStyleOptionTabV3 QStyleOptionTabV2
 QStyleOptionTabWidgetFrame QStyleOption
-QStyleOptionTabWidgetFrame QStyleOption
+QStyleOptionTabWidgetFrameV2 QStyleOptionTabWidgetFrame
 QStyleOptionTitleBar QStyleOptionComplex
 QStyleOptionToolBar QStyleOption
 QStyleOptionToolBox QStyleOption
-QStyleOptionToolBox QStyleOption
+QStyleOptionToolBoxV2 QStyleOptionToolBox
 QStyleOptionToolButton QStyleOptionComplex
 QStyleOptionViewItem QStyleOption
-QStyleOptionViewItem QStyleOption
-QStyleOptionViewItem QStyleOption
-QStyleOptionViewItem QStyleOption
+QStyleOptionViewItemV2 QStyleOptionViewItem
+QStyleOptionViewItemV3 QStyleOptionViewItemV2
+QStyleOptionViewItemV4 QStyleOptionViewItemV3
 QStylePainter QPainter
 QStyledItemDelegate QAbstractItemDelegate
 QSvgGenerator QPaintDevice
@@ -404,6 +404,9 @@ QWidgetItem QLayoutItem
 QWindowStateChangeEvent QEvent
 QWizard QDialog
 QWizardPage QWidget
+QWorkspace QWidget
+QX11EmbedContainer QWidget
+QX11EmbedWidget QWidget
 QXmlDefaultHandler QXmlContentHandler QXmlErrorHandler QXmlDTDHandler QXmlEntityResolver QXmlLexicalHandler QXmlDeclHandler
 QXmlFormatter QXmlSerializer
 QXmlSerializer QAbstractXmlReceiver
