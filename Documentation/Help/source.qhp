@@ -8712,6 +8712,7 @@
       <keyword name="Project.__showProfileData" id="Project.__showProfileData" ref="eric6.Project.Project.html#Project.__showProfileData" />
       <keyword name="Project.__showProperties" id="Project.__showProperties" ref="eric6.Project.Project.html#Project.__showProperties" />
       <keyword name="Project.__showUserProperties" id="Project.__showUserProperties" ref="eric6.Project.Project.html#Project.__showUserProperties" />
+      <keyword name="Project.__sourceExtensions" id="Project.__sourceExtensions" ref="eric6.Project.Project.html#Project.__sourceExtensions" />
       <keyword name="Project.__statusMonitorStatus" id="Project.__statusMonitorStatus" ref="eric6.Project.Project.html#Project.__statusMonitorStatus" />
       <keyword name="Project.__syncRecent" id="Project.__syncRecent" ref="eric6.Project.Project.html#Project.__syncRecent" />
       <keyword name="Project.__vcsStatusChanged" id="Project.__vcsStatusChanged" ref="eric6.Project.Project.html#Project.__vcsStatusChanged" />
