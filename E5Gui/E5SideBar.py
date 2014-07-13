@@ -255,7 +255,7 @@ class E5SideBar(QWidget):
                     self.expand()
             elif evt.type() == QEvent.Wheel and \
                     not self.__stackedWidget.isHidden():
-                if evt.delta() > 0:
+                if evt.angleDelta().y() > 0:
                     self.prevTab()
                 else:
                     self.nextTab()

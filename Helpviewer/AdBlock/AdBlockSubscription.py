@@ -113,26 +113,21 @@ class AdBlockSubscription(QObject):
         if url.path() != "subscribe":
             return
         
-        self.__title = \
-            QUrl.fromPercentEncoding(url.encodedQueryItemValue("title"))
-        self.__enabled = QUrl.fromPercentEncoding(
-            url.encodedQueryItemValue("enabled")) != "false"
-        self.__location = QByteArray(QUrl.fromPercentEncoding(
-            url.encodedQueryItemValue("location")))
+        urlQuery = QUrlQuery(url)
+        self.__title = urlQuery.queryItemValue("title")
+        self.__enabled = urlQuery.queryItemValue("enabled") != "false"
+        self.__location = QByteArray(urlQuery.queryItemValue("location"))
         
         # Check for required subscription
-        self.__requiresLocation = QUrl.fromPercentEncoding(
-            url.encodedQueryItemValue("requiresLocation"))
-        self.__requiresTitle = QUrl.fromPercentEncoding(
-            url.encodedQueryItemValue("requiresTitle"))
+        self.__requiresLocation = urlQuery.queryItemValue("requiresLocation")
+        self.__requiresTitle = urlQuery.queryItemValue("requiresTitle")
         if self.__requiresLocation and self.__requiresTitle:
             import Helpviewer.HelpWindow
             Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
                 .loadRequiredSubscription(self.__requiresLocation,
                                           self.__requiresTitle)
         
-        lastUpdateByteArray = url.encodedQueryItemValue("lastUpdate")
-        lastUpdateString = QUrl.fromPercentEncoding(lastUpdateByteArray)
+        lastUpdateString = urlQuery.queryItemValue("lastUpdate")
         self.__lastUpdate = QDateTime.fromString(lastUpdateString, Qt.ISODate)
         
         self.__loadRules()

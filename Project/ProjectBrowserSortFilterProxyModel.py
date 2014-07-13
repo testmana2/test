@@ -71,4 +71,4 @@ class ProjectBrowserSortFilterProxyModel(BrowserSortFilterProxyModel):
         hideGeneratedForms = Preferences.getProject("HideGeneratedForms")
         if self.hideGeneratedForms != hideGeneratedForms:
             self.hideGeneratedForms = hideGeneratedForms
-            self.filterChanged()
+            self.invalidateFilter()

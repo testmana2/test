@@ -109,4 +109,4 @@ class BrowserSortFilterProxyModel(QSortFilterProxyModel):
         hideNonPublic = Preferences.getUI("BrowsersHideNonPublic")
         if self.hideNonPublic != hideNonPublic:
             self.hideNonPublic = hideNonPublic
-            self.filterChanged()
+            self.invalidateFilter()

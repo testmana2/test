@@ -12,8 +12,8 @@ from __future__ import unicode_literals
 import re
 import json
 
-from PyQt5.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, \
-    QBuffer, QIODevice, QObject
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QUrlQuery, \
+    QByteArray, QBuffer, QIODevice, QObject
 from PyQt5.QtGui import QImage
 from PyQt5.QtNetwork import QNetworkRequest, QNetworkAccessManager
 
@@ -153,9 +153,11 @@ class OpenSearchEngine(QObject):
             self.parseTemplate(searchTerm, self._searchUrlTemplate))
         
         if self.__searchMethod != "post":
+            urlQuery = QUrlQuery()
             for parameter in self._searchParameters:
-                ret.addQueryItem(parameter[0],
-                                 self.parseTemplate(searchTerm, parameter[1]))
+                urlQuery.addQueryItem(
+                    parameter[0], self.parseTemplate(searchTerm, parameter[1]))
+            ret.setQuery(urlQuery)
         
         return ret
     
@@ -198,9 +200,11 @@ class OpenSearchEngine(QObject):
             searchTerm, self._suggestionsUrlTemplate)))
         
         if self.__searchMethod != "post":
+            urlQuery = QUrlQuery()
             for parameter in self._suggestionsParameters:
-                ret.addQueryItem(parameter[0],
-                                 self.parseTemplate(searchTerm, parameter[1]))
+                urlQuery.addQueryItem(
+                    parameter[0], self.parseTemplate(searchTerm, parameter[1]))
+            ret.setQuery(urlQuery)
         
         return ret
     

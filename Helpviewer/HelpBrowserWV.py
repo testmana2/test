@@ -1531,6 +1531,7 @@ class HelpBrowser(QWebView):
         if searchUrl.scheme() != "http":
             return
         
+        searchUrlQuery = UrlQuery()
         searchEngines = {}
         inputFields = formElement.findAll("input")
         for inputField in inputFields.toList():
@@ -1543,12 +1544,12 @@ class HelpBrowser(QWebView):
             elif type_ == "text":
                 if inputField == element:
                     value = "{searchTerms}"
-                searchUrl.addQueryItem(name, value)
+                searchUrlQuery.addQueryItem(name, value)
             elif type_ == "checkbox" or type_ == "radio":
                 if inputField.evaluateJavaScript("this.checked"):
-                    searchUrl.addQueryItem(name, value)
+                    searchUrlQuery.addQueryItem(name, value)
             elif type_ == "hidden":
-                searchUrl.addQueryItem(name, value)
+                searchUrlQuery.addQueryItem(name, value)
         
         selectFields = formElement.findAll("select")
         for selectField in selectFields.toList():
@@ -1560,7 +1561,7 @@ class HelpBrowser(QWebView):
             
             options = selectField.findAll("option")
             value = options.at(selectedIndex).toPlainText()
-            searchUrl.addQueryItem(name, value)
+            searchUrlQuery.addQueryItem(name, value)
         
         ok = True
         if len(searchEngines) > 1:
@@ -1574,7 +1575,7 @@ class HelpBrowser(QWebView):
                 return
             
             if searchEngines[searchEngine] != "":
-                searchUrl.addQueryItem(
+                searchUrlQuery.addQueryItem(
                     searchEngines[searchEngine], searchEngine)
         
         engineName = ""
@@ -1590,6 +1591,8 @@ class HelpBrowser(QWebView):
             engineName)
         if not ok:
             return
+        
+        searchUrl.setQuery(searchUrlQuery)
         
         from .OpenSearch.OpenSearchEngine import OpenSearchEngine
         engine = OpenSearchEngine()

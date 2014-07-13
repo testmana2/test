@@ -15,7 +15,7 @@ except NameError:
 
 import os
 
-from PyQt5.QtCore import QTimer, QByteArray, QProcess, QRegExp, QUrl, pyqtSlot
+from PyQt5.QtCore import QTimer, QProcess, QRegExp, QUrl, pyqtSlot
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QLineEdit, QApplication, QDialogButtonBox
 
@@ -182,12 +182,10 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
                     url = QUrl()
                     url.setScheme("file")
                     url.setPath(self.filename)
-                    query = QByteArray()
-                    query.append(lv).append('_').append(ver)
-                    url.setEncodedQuery(query)
+                    query = lv + '_' + ver
+                    url.setQuery(query)
                     dstr += ' [<a href="{0}" name="{1}">{2}</a>]'.format(
-                        url.toString(),
-                        query,
+                        url.toString(), query,
                         self.tr('diff to {0}').format(lv),
                     )
                 except IndexError:
@@ -274,7 +272,7 @@ class SvnLogDialog(QWidget, Ui_SvnLogDialog):
         if Utilities.isWindowsPlatform():
             if filename.startswith("/"):
                 filename = filename[1:]
-        ver = bytes(url.encodedQuery()).decode()
+        ver = url.query()
         v1 = ver.split('_')[0]
         v2 = ver.split('_')[1]
         if v1 == "" or v2 == "":

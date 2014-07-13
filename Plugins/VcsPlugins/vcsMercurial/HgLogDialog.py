@@ -15,7 +15,7 @@ except NameError:
 
 import os
 
-from PyQt5.QtCore import pyqtSlot, QProcess, QTimer, QUrl, QByteArray
+from PyQt5.QtCore import pyqtSlot, QProcess, QTimer, QUrl
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QDialogButtonBox, QApplication, QLineEdit
 
@@ -332,12 +332,10 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 url = QUrl()
                 url.setScheme("file")
                 url.setPath(self.filename)
-                query = QByteArray()
-                query.append(parent.split(":")[0]).append('_').append(rev)
-                url.setEncodedQuery(query)
+                query = parent.split(":")[0] + '_' + rev
+                url.setQuery(query)
                 dstr += ' [<a href="{0}" name="{1}" id="{1}">{2}</a>]'.format(
-                    url.toString(),
-                    str(query, encoding="ascii"),
+                    url.toString(), query,
                     self.tr('diff to {0}').format(parent),
                 )
             dstr += '<br />\n'
@@ -481,7 +479,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
         if Utilities.isWindowsPlatform():
             if filename.startswith("/"):
                 filename = filename[1:]
-        ver = bytes(url.encodedQuery()).decode()
+        ver = url.query()
         v1, v2 = ver.split('_')
         if v1 == "" or v2 == "":
             return

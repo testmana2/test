@@ -19,7 +19,7 @@ import logging
 
 from PyQt5.QtCore import pyqtSlot, QTimer, QFile, QFileInfo, pyqtSignal, \
     PYQT_VERSION_STR, QDate, QIODevice, qVersion, QProcess, QSize, QUrl, \
-    QObject, Qt
+    QUrlQuery, QObject, Qt
 from PyQt5.QtGui import QKeySequence, QDesktopServices
 from PyQt5.QtWidgets import QSizePolicy, QWidget, QWhatsThis, QToolBar, \
     QDialog, QSplitter, QApplication, QMenu, QVBoxLayout, QDockWidget, \
@@ -3033,8 +3033,10 @@ class UserInterface(E5MainWindow):
                 Utilities.generateDistroInfo("\r\n"))
         
         url = QUrl("mailto:{0}".format(address))
-        url.addQueryItem("subject", subject)
-        url.addQueryItem("body", body)
+        urlQuery = QUrlQuery()
+        urlQuery.addQueryItem("subject", subject)
+        urlQuery.addQueryItem("body", body)
+        url.setQuery(urlQuery)
         QDesktopServices.openUrl(url)
         
     def checkForErrorLog(self):

@@ -66,11 +66,11 @@ class VariablesFilterDialog(QDialog, Ui_VariablesFilterDialog):
         gList = []
         for i in range(self.localsList.count()):
             itm = self.localsList.item(i)
-            if self.localsList.isItemSelected(itm):
+            if itm.isSelected():
                 lList.append(i)
         for i in range(self.globalsList.count()):
             itm = self.globalsList.item(i)
-            if self.globalsList.isItemSelected(itm):
+            if itm.isSelected():
                 gList.append(i)
         return (lList, gList)
         
