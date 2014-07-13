@@ -253,8 +253,7 @@ class E5SideBar(QWidget):
                     return True
                 elif self.isMinimized():
                     self.expand()
-            elif evt.type() == QEvent.Wheel and \
-                    not self.__stackedWidget.isHidden():
+            elif evt.type() == QEvent.Wheel:
                 if evt.delta() > 0:
                     self.prevTab()
                 else:
