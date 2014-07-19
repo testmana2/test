@@ -37,8 +37,22 @@ import traceback
 import time
 import logging
 
-from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer
-from PyQt4.QtGui import QApplication
+try:
+    from PyQt4.QtCore import qWarning, QLibraryInfo, QTimer
+    from PyQt4.QtGui import QApplication
+except ImportError:
+    try:    # Py2 
+        import tkMessageBox as messagebox
+    except ImportError:
+        try:    # Py3
+            from tkinter import messagebox
+        except ImportError:
+            sys.exit(100)
+    messagebox.showerror(
+        "eric5 Error",
+        "PyQt4 could not be imported. Please make sure"
+        " it is installed and accessible.")
+    sys.exit(100)
 
 # some global variables needed to start the application
 args = None
