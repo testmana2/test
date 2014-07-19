@@ -329,7 +329,7 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
-    global macAppBundleName, macAppBundlePath, platBinDir
+    global platBinDir
     
     try:
         from eric5config import getConfig
