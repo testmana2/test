@@ -33,7 +33,18 @@ import traceback
 import time
 import logging
 
-from PyQt5.QtCore import qWarning, QLibraryInfo, QTimer, QCoreApplication
+try:
+    from PyQt5.QtCore import qWarning, QLibraryInfo, QTimer, QCoreApplication
+except ImportError:
+    try:
+        from tkinter import messagebox
+        messagebox.showerror(
+            "eric6 Error",
+            "PyQt5 could not be imported. Please make sure"
+            " it is installed and accessible.")
+    except ImportError:
+        pass
+    sys.exit(100)
 
 # some global variables needed to start the application
 args = None
