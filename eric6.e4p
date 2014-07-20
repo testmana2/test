@@ -1623,6 +1623,8 @@
     <Other>Documentation/Source</Other>
     <Other>APIs/Python3/PyQt5.bas</Other>
     <Other>APIs/Python3/PyQt4.bas</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/templates/logBrowserBookmarkPhase.tmpl</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/templates/logDialogBookmarkPhase.tmpl</Other>
   </Others>
   <MainScript>eric6.py</MainScript>
   <Vcs>

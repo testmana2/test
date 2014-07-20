@@ -140,13 +140,21 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 args.append("--subrepos")
         if self.mode == "log":
             args.append('--copies')
-        args.append('--style')
-        if self.vcs.version >= (2, 1):
+        if self.vcs.version >= (3, 0):
+            args.append('--template')
             args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logDialogBookmarkPhase.style"))
+                                     "templates",
+                                     "logDialogBookmarkPhase.tmpl"))
         else:
-            args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles", "logDialogBookmark.style"))
+            args.append('--style')
+            if self.vcs.version >= (2, 1):
+                args.append(os.path.join(os.path.dirname(__file__),
+                                         "styles",
+                                         "logDialogBookmarkPhase.style"))
+            else:
+                args.append(os.path.join(os.path.dirname(__file__),
+                                         "styles",
+                                         "logDialogBookmark.style"))
         if self.mode == "incoming":
             if self.bundle:
                 args.append(self.bundle)
@@ -345,7 +353,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 html += self.tr("Phase: {0}<br />\n")\
                     .format(entry["phase"])
             
-            html += self.tr("Branches: {0}<br />\n")\
+            html += self.tr("Branch: {0}<br />\n")\
                 .format(entry["branches"])
             
             html += self.tr("Tags: {0}<br />\n").format(entry["tags"])
@@ -358,7 +366,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                 .format(entry["parents"])
             
             html += self.tr('<i>Author: {0}</i><br />\n')\
-                .format(entry["user"])
+                .format(Utilities.html_encode(entry["user"]))
             
             date, time = entry["date"].split()[:2]
             html += self.tr('<i>Date: {0}, {1}</i><br />\n')\
