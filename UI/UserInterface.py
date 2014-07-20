@@ -5979,7 +5979,7 @@ class UserInterface(E5MainWindow):
         try:
             if "-snapshot-" in Version:
                 # check snapshot version
-                if versions[2][0] == "5" and versions[2] > Version:
+                if versions[2][0] == "6" and versions[2] > Version:
                     res = E5MessageBox.yesNo(
                         self,
                         self.tr("Update available"),
