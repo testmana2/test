@@ -325,27 +325,27 @@
 <context>
     <name>AdBlockSubscription</name>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="288"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="283"/>
         <source>Load subscription rules</source>
         <translation>Carica regole di sottoscrizione</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="461"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="456"/>
         <source>Downloading subscription rules</source>
         <translation>Scarica regole di sottoscrizione</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="399"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="394"/>
         <source>Got empty subscription rules.</source>
         <translation>Ricevuto regole di sottoscrizione vuote.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="484"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="479"/>
         <source>Saving subscription rules</source>
         <translation>Salvataggio regole di sottoscrizione</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="278"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="273"/>
         <source>Unable to open adblock file &apos;{0}&apos; for reading.</source>
         <translation>Non è possibile aprire il file adblock &apos;{0}&apos; in lettura.</translation>
     </message>
@@ -355,22 +355,22 @@
         <translation type="obsolete">Il file adblock &apos;{0}&apos; non inizia con [Adblock.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="386"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="381"/>
         <source>&lt;p&gt;Subscription rules could not be downloaded.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Le regole di sottoscrizione non possono essere scaricate.&lt;/p&gt;&lt;p&gt;Errore {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="484"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="479"/>
         <source>Unable to open adblock file &apos;{0}&apos; for writing.</source>
         <translation>Non è possibile aprire il file adblock &apos;{0}&apos; in scrittura.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="288"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="283"/>
         <source>AdBlock file &apos;{0}&apos; does not start with [Adblock.</source>
         <translation>Il file adblock &apos;{0}&apos; non inizia con [Adblock.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="461"/>
+        <location filename="../Helpviewer/AdBlock/AdBlockSubscription.py" line="456"/>
         <source>&lt;p&gt;AdBlock subscription &lt;b&gt;{0}&lt;/b&gt; has a wrong checksum.&lt;br/&gt;Found: {1}&lt;br/&gt;Calculated: {2}&lt;br/&gt;Use it anyway?&lt;/p&gt;</source>
         <translation>&lt;p&gt;la Sottoscrizione AdBlock &lt;b&gt;{0}&lt;/b&gt; ha un codice di controllo errato.&lt;br/&gt;Trovato: {1}&lt;br/&gt;Calcolato: {2}&lt;br/&gt;Usarlo comunque?&lt;/p&gt;</translation>
     </message>
@@ -3806,15 +3806,21 @@ aprirà una finestra per le modifiche posizionando il cursore alla rispettiva ri
         <source>One blank line inserted.</source>
         <translation>Inserita una riga vuota.</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="472"/>
         <source>%n blank line(s) inserted.</source>
-        <translation type="unfinished">%n riga vuota inserita.</translation>
+        <translation type="unfinished">
+            <numerusform>%n riga vuota inserita.</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="475"/>
         <source>%n superfluous lines removed</source>
-        <translation type="unfinished">%n riga superflua eliminata</translation>
+        <translation type="unfinished">
+            <numerusform>%n riga superflua eliminata</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="479"/>
@@ -7811,10 +7817,13 @@ Vuoi uscire comunque ?</numerusform>
 </context>
 <context>
     <name>DownloadUtilities</name>
-    <message>
+    <message numerus="yes">
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="31"/>
         <source>%n seconds remaining</source>
-        <translation type="unfinished">%n secondi rimanenti</translation>
+        <translation type="unfinished">
+            <numerusform>%n secondi rimanenti</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="48"/>
@@ -7836,10 +7845,13 @@ Vuoi uscire comunque ?</numerusform>
         <source>GiB</source>
         <translation>GiB</translation>
     </message>
-    <message>
+    <message numerus="yes">
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="25"/>
         <source>%n:{0:02} minutes remaining</source>
-        <translation type="unfinished">%n: {0:02} minuti rimanenti</translation>
+        <translation type="unfinished">
+            <numerusform>%n: {0:02} minuti rimanenti</numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -16478,17 +16490,17 @@ Motivo: {0}</translation>
         <translation>Web Inspector...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1975"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1978"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Controlla l&apos;indirizzo per errori tipo &lt;b&gt;ww&lt;/b&gt;.example.org invece di &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1980"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1983"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Se l&apos;indirizzo è corretto, prova  a controllare la connessione di rete.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1984"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1987"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Se il tuo computer o la rete sono protetti da un firewall o un proxy, assicurati che il browser possa accedere alla rete.</translation>
     </message>
@@ -16563,47 +16575,47 @@ Motivo: {0}</translation>
         <translation>&lt;p&gt;Non posso lanciare un&apos;applicazione per l&apos;URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1954"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1957"/>
         <source>Error loading page: {0}</source>
         <translation>Errore nel caricamento della pagina: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1972"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1975"/>
         <source>When connecting to: {0}.</source>
         <translation>Nella connessione a: {0}.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2023"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2026"/>
         <source>Web Database Quota</source>
         <translation>Quota Web Database</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2023"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2026"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La quota per il database &lt;strong&gt;{0}&lt;/strong&gt; è stata superata durante l&apos;accesso al database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Deve essere cambiata?&lt;/P&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2034"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2037"/>
         <source>New Web Database Quota</source>
         <translation>Nuova quota Web Database</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2034"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2037"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Inserisci la nuova quota in MB (corrente = {0}, usata = {1}; incremento = 5MB):</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2058"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2061"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2061"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2064"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2064"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2067"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
@@ -16623,27 +16635,27 @@ Motivo: {0}</translation>
         <translation>il metodo {0} non è supportato.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1573"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1574"/>
         <source>Search engine</source>
         <translation>Motore di ricerca</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1573"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1574"/>
         <source>Choose the desired search engine</source>
         <translation>Scegli il motore di ricerca</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1592"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1593"/>
         <source>Engine name</source>
         <translation>Nome motore</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1592"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1593"/>
         <source>Enter a name for the engine</source>
         <translation>Inserisci un nome per il motore</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1990"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1993"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Se la tua politica di chaching è impostata su navigazione offline, saranno disponibili solo le pagine nella cache locale.</translation>
     </message>
@@ -16758,7 +16770,7 @@ Motivo: {0}</translation>
         <translation>User Agent</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1995"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1998"/>
         <source>Try Again</source>
         <translation>Ritenta</translation>
     </message>
@@ -16803,17 +16815,17 @@ Motivo: {0}</translation>
         <translation type="obsolete">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2419"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2422"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">Web Browser di eric5 {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2419"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2422"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt; {5.?}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2387"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2390"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt; {5.?}</translation>
     </message>
@@ -22608,12 +22620,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Seleziona il campo su cui filtrare</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1395"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1401"/>
         <source>Revision</source>
         <translation>Revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1392"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1398"/>
         <source>Author</source>
         <translation>Autore</translation>
     </message>
@@ -22758,12 +22770,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Modificato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="824"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="830"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="824"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="830"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
@@ -22869,12 +22881,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1554"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1560"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1591"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished">Il progetto deve essere riletto. Farlo ora ?</translation>
     </message>
@@ -22909,7 +22921,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1591"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
         <source>Switch</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22929,7 +22941,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="914"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="920"/>
         <source>{0} (large file)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23017,22 +23029,22 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="217"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="225"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="217"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="225"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="308"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="316"/>
         <source>No log available for &apos;{0}&apos;</source>
         <translation>Nessun log disponibile per &apos;{0}&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="342"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="349"/>
         <source>diff to {0}</source>
         <translation>diff su {0}</translation>
     </message>
@@ -23040,88 +23052,88 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="354"/>
         <source>Branches: {0}&lt;br /&gt;
 </source>
-        <translation>Branches: {0}&lt;br /&gt;
+        <translation type="obsolete">Branches: {0}&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="357"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="363"/>
         <source>Tags: {0}&lt;br /&gt;
 </source>
         <translation>Tags: {0}&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="363"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="369"/>
         <source>Parents: {0}&lt;br /&gt;
 </source>
         <translation>Parents: {0}&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="366"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="372"/>
         <source>&lt;i&gt;Author: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Autore: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="370"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="376"/>
         <source>&lt;i&gt;Date: {0}, {1}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;Data: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="386"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="392"/>
         <source>Added {0}&lt;br /&gt;
 </source>
         <translation>Aggiunti: {0}&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="392"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="398"/>
         <source>Modified {0}&lt;br /&gt;
 </source>
         <translation>Modificati {0}&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="398"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="404"/>
         <source>Deleted {0}&lt;br /&gt;
 </source>
         <translation>Cancellati {0}&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="272"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="280"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Il processo hg non è finito entro i 30s.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="275"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="283"/>
         <source>Could not start the hg executable.</source>
         <translation>Non posso avviare l&apos;eseguibile hg.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="278"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="286"/>
         <source>Mercurial Error</source>
         <translation>Mercurial Error</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="381"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="387"/>
         <source>Added {0} (copied from {1})&lt;br /&gt;
 </source>
         <translation>Aggiunti {0} (copiati da {1})&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="360"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="366"/>
         <source>Bookmarks: {0}&lt;br /&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="351"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="357"/>
         <source>Phase: {0}&lt;br /&gt;
 </source>
         <translation type="unfinished"></translation>
@@ -23134,6 +23146,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui" line="48"/>
         <source>Show differences side-by-side</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="360"/>
+        <source>Branch: {0}&lt;br /&gt;
+</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -38162,697 +38180,697 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>Project</name>
     <message>
-        <location filename="../Project/Project.py" line="688"/>
+        <location filename="../Project/Project.py" line="699"/>
         <source>Read project file</source>
         <translation>Leggi file progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="788"/>
+        <location filename="../Project/Project.py" line="799"/>
         <source>Save project file</source>
         <translation>Salva file progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="906"/>
+        <location filename="../Project/Project.py" line="917"/>
         <source>Read project session</source>
         <translation>Leggi sessione del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1123"/>
+        <location filename="../Project/Project.py" line="1134"/>
         <source>Please save the project first.</source>
         <translation>Prima salvare il progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="942"/>
+        <location filename="../Project/Project.py" line="953"/>
         <source>Save project session</source>
         <translation>Salva sessione di progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1235"/>
+        <location filename="../Project/Project.py" line="1246"/>
         <source>Add Language</source>
         <translation>Aggiungi Lingua</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1359"/>
+        <location filename="../Project/Project.py" line="1370"/>
         <source>Delete translation</source>
         <translation>Cancella traduzione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1510"/>
+        <location filename="../Project/Project.py" line="1521"/>
         <source>Add file</source>
         <translation>Aggiungi file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1627"/>
+        <location filename="../Project/Project.py" line="1638"/>
         <source>The target directory must not be empty.</source>
         <translation>La directory di destinazione non deve essere vuota.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1638"/>
+        <location filename="../Project/Project.py" line="1649"/>
         <source>Add directory</source>
         <translation>Aggiungi directory</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1638"/>
+        <location filename="../Project/Project.py" line="1649"/>
         <source>The source directory must not be empty.</source>
         <translation>La directory sorgente non deve essere vuota.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1983"/>
+        <location filename="../Project/Project.py" line="1994"/>
         <source>Delete file</source>
         <translation>Cancella file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2095"/>
+        <location filename="../Project/Project.py" line="2106"/>
         <source>Create project directory</source>
         <translation>Crea la directory del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3348"/>
+        <location filename="../Project/Project.py" line="3359"/>
         <source>New project</source>
         <translation>Nuovo progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3362"/>
+        <location filename="../Project/Project.py" line="3373"/>
         <source>Open project</source>
         <translation>Apri progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3399"/>
+        <location filename="../Project/Project.py" line="3410"/>
         <source>Save project as</source>
         <translation>Salva progetto come</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2749"/>
+        <location filename="../Project/Project.py" line="2760"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2785"/>
+        <location filename="../Project/Project.py" line="2796"/>
         <source>Close Project</source>
         <translation>Chiudi progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2785"/>
+        <location filename="../Project/Project.py" line="2796"/>
         <source>The current project has unsaved changes.</source>
         <translation>Il progetto attuale ha delle modifiche non salvate.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3563"/>
+        <location filename="../Project/Project.py" line="3574"/>
         <source>&amp;Save</source>
         <translation>&amp;Salva</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3348"/>
+        <location filename="../Project/Project.py" line="3359"/>
         <source>&amp;New...</source>
         <translation>&amp;Nuovo...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3353"/>
+        <location filename="../Project/Project.py" line="3364"/>
         <source>Generate a new project</source>
         <translation>Genera un nuovo progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3354"/>
+        <location filename="../Project/Project.py" line="3365"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuovo...&lt;/b&gt;&lt;p&gt;Apre un dialogo per l&apos;inserimento delle informazioni per un nuovo progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3362"/>
+        <location filename="../Project/Project.py" line="3373"/>
         <source>&amp;Open...</source>
         <translation>&amp;Apri...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3367"/>
+        <location filename="../Project/Project.py" line="3378"/>
         <source>Open an existing project</source>
         <translation>Apri un progetto esistente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3368"/>
+        <location filename="../Project/Project.py" line="3379"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Apri...&lt;/b&gt;&lt;p&gt;Apre un progetto esistente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3375"/>
+        <location filename="../Project/Project.py" line="3386"/>
         <source>Close project</source>
         <translation>Chiudi progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3375"/>
+        <location filename="../Project/Project.py" line="3386"/>
         <source>&amp;Close</source>
         <translation>&amp;Chiudi</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3379"/>
+        <location filename="../Project/Project.py" line="3390"/>
         <source>Close the current project</source>
         <translation>Chiudi il progetto corrente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3380"/>
+        <location filename="../Project/Project.py" line="3391"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Chiudi&lt;/b&gt;&lt;p&gt;Chiude l&apos;attuale progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3387"/>
+        <location filename="../Project/Project.py" line="3398"/>
         <source>Save project</source>
         <translation>Salva progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3391"/>
+        <location filename="../Project/Project.py" line="3402"/>
         <source>Save the current project</source>
         <translation>Salva il progetto corrente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3392"/>
+        <location filename="../Project/Project.py" line="3403"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salva&lt;/b&gt;&lt;p&gt;Salva l&apos;attuale progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3399"/>
+        <location filename="../Project/Project.py" line="3410"/>
         <source>Save &amp;as...</source>
         <translation>S&amp;alva come...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3403"/>
+        <location filename="../Project/Project.py" line="3414"/>
         <source>Save the current project to a new file</source>
         <translation>Salva il progetto attuale come un nuovo file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3405"/>
+        <location filename="../Project/Project.py" line="3416"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salva as &lt;/b&gt;&lt;p&gt;Salva l&apos;attuale progetto come nuovo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3445"/>
+        <location filename="../Project/Project.py" line="3456"/>
         <source>Add translation to project</source>
         <translation>Aggiungi le traduzioni al progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3445"/>
+        <location filename="../Project/Project.py" line="3456"/>
         <source>Add &amp;translation...</source>
         <translation>Aggiungi &amp;traduzione...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3450"/>
+        <location filename="../Project/Project.py" line="3461"/>
         <source>Add a translation to the current project</source>
         <translation>Aggiungi le traduzioni al progetto corrente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3452"/>
+        <location filename="../Project/Project.py" line="3463"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aggiungi traduzione...&lt;/b&gt;&lt;p&gt;Apre un dialogo per aggiungere una traduzione al progetto corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3460"/>
+        <location filename="../Project/Project.py" line="3471"/>
         <source>Search new files</source>
         <translation>Cerca nuovi file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3460"/>
+        <location filename="../Project/Project.py" line="3471"/>
         <source>Searc&amp;h new files...</source>
         <translation>Cerca &amp;nuovi file...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3464"/>
+        <location filename="../Project/Project.py" line="3475"/>
         <source>Search new files in the project directory.</source>
         <translation>Cerca nei file nella directory del progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3474"/>
+        <location filename="../Project/Project.py" line="3485"/>
         <source>Project properties</source>
         <translation>Proprietà del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3474"/>
+        <location filename="../Project/Project.py" line="3485"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Proprietà...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3479"/>
+        <location filename="../Project/Project.py" line="3490"/>
         <source>Show the project properties</source>
         <translation>Mostra le proprietà del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3480"/>
+        <location filename="../Project/Project.py" line="3491"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proprietà...&lt;/b&gt;&lt;p&gt;Mosta un dialogo per modificare le proprietà di un progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3602"/>
+        <location filename="../Project/Project.py" line="3613"/>
         <source>Load session</source>
         <translation>Carica sessione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3606"/>
+        <location filename="../Project/Project.py" line="3617"/>
         <source>Load the projects session file.</source>
         <translation>Carica il file di sessione del progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3607"/>
+        <location filename="../Project/Project.py" line="3618"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Carica sessione&lt;/b&gt;&lt;p&gt;Questo carica la sessione del progetto.La sessione è composta dai seguenti dati.&lt;br&gt;- tutti i file sorgente aperti&lt;br&gt;- tutti i breakpoint&lt;br&gt;- gli argomenti alla riga di comango&lt;br&gt;- la directory di lavoro&lt;br&gt;- il flag di segnalazione delle eccezioni&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3620"/>
+        <location filename="../Project/Project.py" line="3631"/>
         <source>Save session</source>
         <translation>Salva sessione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3624"/>
+        <location filename="../Project/Project.py" line="3635"/>
         <source>Save the projects session file.</source>
         <translation>Salva il file sessione del progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3625"/>
+        <location filename="../Project/Project.py" line="3636"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salva sessione&lt;/b&gt;&lt;p&gt;Questo carica la sessione del progetto.La sessione è composta dai seguenti dati.&lt;br&gt;- tutti i file sorgente aperti&lt;br&gt;- tutti i breakpoint&lt;br&gt;- gli argomenti alla riga di comango&lt;br&gt;- la directory di lavoro&lt;br&gt;- il flag di segnalazione delle eccezioni&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3652"/>
+        <location filename="../Project/Project.py" line="3663"/>
         <source>Code Metrics</source>
         <translation>Statistiche codice</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3652"/>
+        <location filename="../Project/Project.py" line="3663"/>
         <source>&amp;Code Metrics...</source>
         <translation>Statistiche &amp;codice...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3656"/>
+        <location filename="../Project/Project.py" line="3667"/>
         <source>Show some code metrics for the project.</source>
         <translation>Mostra alcune statistiche del codice per il progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3658"/>
+        <location filename="../Project/Project.py" line="3669"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Statistiche codice...&lt;/b&gt;&lt;p&gt;Mostra alcune statistiche di tutti i file Python nel progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3666"/>
+        <location filename="../Project/Project.py" line="3677"/>
         <source>Python Code Coverage</source>
         <translation>Analisi codice Python</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3666"/>
+        <location filename="../Project/Project.py" line="3677"/>
         <source>Code Co&amp;verage...</source>
         <translation>A&amp;nalisi codice...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3670"/>
+        <location filename="../Project/Project.py" line="3681"/>
         <source>Show code coverage information for the project.</source>
         <translation>Mostra le informazioni dell&apos;analisi del codice del progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3672"/>
+        <location filename="../Project/Project.py" line="3683"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Analisi codice...&lt;/b&gt;&lt;p&gt;Mostra le analisi  del codice di tutti i file Python nel progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4433"/>
+        <location filename="../Project/Project.py" line="4444"/>
         <source>Profile Data</source>
         <translation>Profilazione dati</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3680"/>
+        <location filename="../Project/Project.py" line="3691"/>
         <source>&amp;Profile Data...</source>
         <translation>&amp;Profilazione dati...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3684"/>
+        <location filename="../Project/Project.py" line="3695"/>
         <source>Show profiling data for the project.</source>
         <translation>Mostra la profilazione dei dati per il progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3686"/>
+        <location filename="../Project/Project.py" line="3697"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Profilazione dati...&lt;/b&gt;&lt;p&gt;Mostra la profilazione dei dati per il progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4487"/>
+        <location filename="../Project/Project.py" line="4498"/>
         <source>Application Diagram</source>
         <translation>Diagrammi dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3695"/>
+        <location filename="../Project/Project.py" line="3706"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagramma dell&apos; &amp;Applicazione...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3699"/>
+        <location filename="../Project/Project.py" line="3710"/>
         <source>Show a diagram of the project.</source>
         <translation>Mostra un diagramma del progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3701"/>
+        <location filename="../Project/Project.py" line="3712"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagrammi dell&apos;applicazione...&lt;/b&gt;&lt;p&gt;Mostra un diagramma del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3793"/>
+        <location filename="../Project/Project.py" line="3804"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Apri un progetto &amp;recente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3801"/>
+        <location filename="../Project/Project.py" line="3812"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagrammi</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3798"/>
+        <location filename="../Project/Project.py" line="3809"/>
         <source>Chec&amp;k</source>
         <translation>&amp;Controlla</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3794"/>
+        <location filename="../Project/Project.py" line="3805"/>
         <source>&amp;Version Control</source>
         <translation>Controllo di &amp;Versione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3800"/>
+        <location filename="../Project/Project.py" line="3811"/>
         <source>Sho&amp;w</source>
         <translation>&amp;Mostra</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3803"/>
+        <location filename="../Project/Project.py" line="3814"/>
         <source>Source &amp;Documentation</source>
         <translation>&amp;Documentazione sorgenti</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4096"/>
+        <location filename="../Project/Project.py" line="4107"/>
         <source>Search New Files</source>
         <translation>Cerca Nuovi File</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4096"/>
+        <location filename="../Project/Project.py" line="4107"/>
         <source>There were no new files found to be added.</source>
         <translation>Non sono stati trovati file da aggiungere.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4242"/>
+        <location filename="../Project/Project.py" line="4253"/>
         <source>Version Control System</source>
         <translation>Version Control System</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4360"/>
+        <location filename="../Project/Project.py" line="4371"/>
         <source>Coverage Data</source>
         <translation>Dati Analisi</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4410"/>
+        <location filename="../Project/Project.py" line="4421"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Non c&apos;è uno script principale definito per il progetto. Esco</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1762"/>
+        <location filename="../Project/Project.py" line="1773"/>
         <source>Rename file</source>
         <translation>Rinomina file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1786"/>
+        <location filename="../Project/Project.py" line="1797"/>
         <source>Rename File</source>
         <translation>Rinomina File</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2600"/>
+        <location filename="../Project/Project.py" line="2611"/>
         <source>New Project</source>
         <translation>Nuovo Progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2162"/>
+        <location filename="../Project/Project.py" line="2173"/>
         <source>Add existing files to the project?</source>
         <translation>Aggiungi file esistenti al progetto ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2281"/>
+        <location filename="../Project/Project.py" line="2292"/>
         <source>Would you like to edit the VCS command options?</source>
         <translation>Vuoi modificare le opzioni del comando VCS ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2229"/>
+        <location filename="../Project/Project.py" line="2240"/>
         <source>Shall the project file be added to the repository?</source>
         <translation>Il file progetto deve essere aggiunto al repository ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2253"/>
+        <location filename="../Project/Project.py" line="2264"/>
         <source>Select version control system for the project</source>
         <translation>Seleziona il version control system per il progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3430"/>
+        <location filename="../Project/Project.py" line="3441"/>
         <source>Add directory to project</source>
         <translation>Aggiungi directory al progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3430"/>
+        <location filename="../Project/Project.py" line="3441"/>
         <source>Add directory...</source>
         <translation>Aggiungi directory...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3435"/>
+        <location filename="../Project/Project.py" line="3446"/>
         <source>Add a directory to the current project</source>
         <translation>Aggiungi una directory al progetto corrente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3437"/>
+        <location filename="../Project/Project.py" line="3448"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aggiungi directory...&lt;/b&gt;&lt;p&gt;Apre un dialogo per aggiungere una directory al progetto corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4383"/>
+        <location filename="../Project/Project.py" line="4394"/>
         <source>Code Coverage</source>
         <translation>Analisi codice</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4383"/>
+        <location filename="../Project/Project.py" line="4394"/>
         <source>Please select a coverage file</source>
         <translation>Per favore seleziona un file per l&apos;analisi</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4433"/>
+        <location filename="../Project/Project.py" line="4444"/>
         <source>Please select a profile file</source>
         <translation>Per favore seleziona un file per la profilazione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="971"/>
+        <location filename="../Project/Project.py" line="982"/>
         <source>Delete project session</source>
         <translation>Cancella sessione di progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3638"/>
+        <location filename="../Project/Project.py" line="3649"/>
         <source>Delete session</source>
         <translation>Cancella sessione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3642"/>
+        <location filename="../Project/Project.py" line="3653"/>
         <source>Delete the projects session file.</source>
         <translation>Cancella il file di sessione del progetto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3643"/>
+        <location filename="../Project/Project.py" line="3654"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella sessione&lt;/b&gt;&lt;p&gt;Cancella la sessione del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="201"/>
+        <location filename="../Project/Project.py" line="192"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>File Ruby (*.rb);;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3466"/>
+        <location filename="../Project/Project.py" line="3477"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerca nuovi file...&lt;/b&gt;&lt;p&gt;Cerca per nuovi file (sorgenti, *.ui, *.idl) nella directory del progetto e in tutte le sottodirectory registrate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="250"/>
+        <location filename="../Project/Project.py" line="262"/>
         <source>Console</source>
         <translation>Console</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="251"/>
+        <location filename="../Project/Project.py" line="263"/>
         <source>Other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4487"/>
+        <location filename="../Project/Project.py" line="4498"/>
         <source>Include module names?</source>
         <translation>Includi i nomi dei moduli ?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2012"/>
+        <location filename="../Project/Project.py" line="2023"/>
         <source>Delete directory</source>
         <translation>Cancella directory</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1000"/>
+        <location filename="../Project/Project.py" line="1011"/>
         <source>Read tasks</source>
         <translation>Leggi tesk</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1020"/>
+        <location filename="../Project/Project.py" line="1031"/>
         <source>Save tasks</source>
         <translation>Salva task</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1077"/>
+        <location filename="../Project/Project.py" line="1088"/>
         <source>Read debugger properties</source>
         <translation>Leggi le proprietà del debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1111"/>
+        <location filename="../Project/Project.py" line="1122"/>
         <source>Save debugger properties</source>
         <translation>Salva le proprietà del debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1137"/>
+        <location filename="../Project/Project.py" line="1148"/>
         <source>Delete debugger properties</source>
         <translation>Cancella le proprietà del debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3538"/>
+        <location filename="../Project/Project.py" line="3549"/>
         <source>Debugger Properties</source>
         <translation>Proprietà Debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3538"/>
+        <location filename="../Project/Project.py" line="3549"/>
         <source>Debugger &amp;Properties...</source>
         <translation>&amp;Proprietà Debugger...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3542"/>
+        <location filename="../Project/Project.py" line="3553"/>
         <source>Show the debugger properties</source>
         <translation>Mostra le proprietàd el debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3543"/>
+        <location filename="../Project/Project.py" line="3554"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proprietà debugger...&lt;/b&gt;&lt;p&gt;Mostra un dialogo per modificare le impostazioni specifiche per il progetto del debugger.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3551"/>
+        <location filename="../Project/Project.py" line="3562"/>
         <source>Load</source>
         <translation>Carica</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3551"/>
+        <location filename="../Project/Project.py" line="3562"/>
         <source>&amp;Load</source>
         <translation>&amp;Carica</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3555"/>
+        <location filename="../Project/Project.py" line="3566"/>
         <source>Load the debugger properties</source>
         <translation>Carica le proprietàd el debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3563"/>
+        <location filename="../Project/Project.py" line="3574"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3567"/>
+        <location filename="../Project/Project.py" line="3578"/>
         <source>Save the debugger properties</source>
         <translation>Salva le proprietà del debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3575"/>
+        <location filename="../Project/Project.py" line="3586"/>
         <source>Delete</source>
         <translation>Cancella</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3575"/>
+        <location filename="../Project/Project.py" line="3586"/>
         <source>&amp;Delete</source>
         <translation>&amp;Cancella</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3579"/>
+        <location filename="../Project/Project.py" line="3590"/>
         <source>Delete the debugger properties</source>
         <translation>Cancella le proprietà del debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3588"/>
+        <location filename="../Project/Project.py" line="3599"/>
         <source>Reset</source>
         <translation>Resetta</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3588"/>
+        <location filename="../Project/Project.py" line="3599"/>
         <source>&amp;Reset</source>
         <translation>&amp;Resetta</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3592"/>
+        <location filename="../Project/Project.py" line="3603"/>
         <source>Reset the debugger properties</source>
         <translation>Resetta le proprietà del debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3805"/>
+        <location filename="../Project/Project.py" line="3816"/>
         <source>Debugger</source>
         <translation>Debugger</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3802"/>
+        <location filename="../Project/Project.py" line="3813"/>
         <source>Session</source>
         <translation>Sessione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3556"/>
+        <location filename="../Project/Project.py" line="3567"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Carica le proprietà del debugger&lt;/b&gt;&lt;p&gt;Carica le proprietà del debugger specifiche per il progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3568"/>
+        <location filename="../Project/Project.py" line="3579"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Salva le proprietà del debugger&lt;/b&gt;&lt;p&gt;Salva le proprietà del debugger specifiche per il progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3580"/>
+        <location filename="../Project/Project.py" line="3591"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella le proprietà del debugger&lt;/b&gt;&lt;p&gt;Cancella il file che contiene le proprietà del debugger specifiche per il progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3593"/>
+        <location filename="../Project/Project.py" line="3604"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Azzera le proprietà del debugger&lt;/b&gt;&lt;p&gt;Azzera le proprietà del debugger specifiche per il progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3502"/>
+        <location filename="../Project/Project.py" line="3513"/>
         <source>Filetype Associations</source>
         <translation>Associazione tipi file</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3502"/>
+        <location filename="../Project/Project.py" line="3513"/>
         <source>Filetype Associations...</source>
         <translation>Associazione tipi file...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3506"/>
+        <location filename="../Project/Project.py" line="3517"/>
         <source>Show the project filetype associations</source>
         <translation>Mostra le associazioni dei tipi di file del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3508"/>
+        <location filename="../Project/Project.py" line="3519"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Associazione tipi file...&lt;/b&gt;&lt;p&gt;Mostra un dialogo per modificare le associazioni dei tipi file del progetto. Queste associazioni determinano il tipo (codice sorgente, interfaccia o altro) con un pattern del nome file. Sono usati quando aggiungi un file al progetto e quanto esegui una ricerca per nuovi file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3806"/>
+        <location filename="../Project/Project.py" line="3817"/>
         <source>Pac&amp;kagers</source>
         <translation>Pac&amp;kagers</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3414"/>
+        <location filename="../Project/Project.py" line="3425"/>
         <source>Add files to project</source>
         <translation>Aggiungi file al progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3414"/>
+        <location filename="../Project/Project.py" line="3425"/>
         <source>Add &amp;files...</source>
         <translation>Aggiungi &amp;files...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3419"/>
+        <location filename="../Project/Project.py" line="3430"/>
         <source>Add files to the current project</source>
         <translation>Aggiungi file al progetto corrente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3421"/>
+        <location filename="../Project/Project.py" line="3432"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aggiungi files...&lt;/b&gt;&lt;p&gt;Apre un dialogo per aggiungere file al progetto corrente. Il posto dove aggiungerli è determinato dall&apos;estensione.&lt;/p&gt;</translation>
     </message>
@@ -38867,62 +38885,62 @@ Selezionare Aggiorna.</translation>
         <translation type="obsolete">Console Qt4</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2734"/>
+        <location filename="../Project/Project.py" line="2745"/>
         <source>Project Files (*.e4p)</source>
         <translation>File progetto (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3792"/>
+        <location filename="../Project/Project.py" line="3803"/>
         <source>&amp;Project</source>
         <translation>&amp;Progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3913"/>
+        <location filename="../Project/Project.py" line="3924"/>
         <source>Project</source>
         <translation>Progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3975"/>
+        <location filename="../Project/Project.py" line="3986"/>
         <source>&amp;Clear</source>
         <translation>Pulis&amp;ci</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="824"/>
+        <location filename="../Project/Project.py" line="835"/>
         <source>Read user project properties</source>
         <translation>Leggi le proprietà utente del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="848"/>
+        <location filename="../Project/Project.py" line="859"/>
         <source>Save user project properties</source>
         <translation>Salva le proprietà utente del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3487"/>
+        <location filename="../Project/Project.py" line="3498"/>
         <source>User project properties</source>
         <translation>Proprietà utente del progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3487"/>
+        <location filename="../Project/Project.py" line="3498"/>
         <source>&amp;User Properties...</source>
         <translation>Proprietà &amp;utente...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3492"/>
+        <location filename="../Project/Project.py" line="3503"/>
         <source>Show the user specific project properties</source>
         <translation>Mostra le proprietà del multiprogetto specifiche dell&apos;utente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3494"/>
+        <location filename="../Project/Project.py" line="3505"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Proprietà utente...&lt;/b&gt;&lt;p&gt;Mosta un dialogo per modificare le proprietà utente di un progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2948"/>
+        <location filename="../Project/Project.py" line="2959"/>
         <source>Syntax errors detected</source>
         <translation>Errore di sintassi rilevato</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Project/Project.py" line="2948"/>
+        <location filename="../Project/Project.py" line="2959"/>
         <source>The project contains %n file(s) with syntax errors.</source>
         <translation>
             <numerusform>Il progetto contiene %n file con errori di sintassi.</numerusform>
@@ -38930,117 +38948,117 @@ Selezionare Aggiorna.</translation>
         </translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4645"/>
+        <location filename="../Project/Project.py" line="4656"/>
         <source>Create Package List</source>
         <translation>Crea lista del package</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3724"/>
+        <location filename="../Project/Project.py" line="3735"/>
         <source>Create &amp;Package List</source>
         <translation>Crea lista del &amp;package</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4838"/>
+        <location filename="../Project/Project.py" line="4849"/>
         <source>Create Plugin Archive</source>
         <translation>Crea un archivio per il plugin</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3740"/>
+        <location filename="../Project/Project.py" line="3751"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Crea un &amp;archivio per il plugin</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4605"/>
+        <location filename="../Project/Project.py" line="4616"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;PKGLIST&lt;/b&gt; esiste già.&lt;/p&gt;&lt;p&gt;Sovrascriverlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4665"/>
+        <location filename="../Project/Project.py" line="4676"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;PKGLIST &lt;/b&gt; non esiste. Uscita...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4674"/>
+        <location filename="../Project/Project.py" line="4685"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>Non c&apos;è uno script principale definito per il progetto. Esco...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1541"/>
+        <location filename="../Project/Project.py" line="1552"/>
         <source>&lt;p&gt;The source directory doesn&apos;t contain any files belonging to the selected category.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory di partenza non contiene nessun file appartenente alla categoria selezionata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2600"/>
+        <location filename="../Project/Project.py" line="2611"/>
         <source>Select Version Control System</source>
         <translation>Selezione il Sistema di Controllo della Versione (VCS)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2260"/>
+        <location filename="../Project/Project.py" line="2271"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="347"/>
+        <location filename="../Project/Project.py" line="359"/>
         <source>Registering Project Type</source>
         <translation>Registrazione tipo progetto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3756"/>
+        <location filename="../Project/Project.py" line="3767"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Crea un archivio per il plugin (Snapshot)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3756"/>
+        <location filename="../Project/Project.py" line="3767"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Crea un archivio per il plugin (&amp;Snapshot)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1235"/>
+        <location filename="../Project/Project.py" line="1246"/>
         <source>You have to specify a translation pattern first.</source>
         <translation>Devi prima specificare un pattern di traduzione.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2359"/>
+        <location filename="../Project/Project.py" line="2370"/>
         <source>Translation Pattern</source>
         <translation>Pattern di traduzione</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2359"/>
+        <location filename="../Project/Project.py" line="2370"/>
         <source>Enter the path pattern for translation files (use &apos;%language%&apos; in place of the language code):</source>
         <translation>Inserisci il path per il file di traduzione (usa &apos;%language% al posto del codice lingua):</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3520"/>
+        <location filename="../Project/Project.py" line="3531"/>
         <source>Lexer Associations</source>
         <translation>Associazioni analizzatore lessicale</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3520"/>
+        <location filename="../Project/Project.py" line="3531"/>
         <source>Lexer Associations...</source>
         <translation>Associazioni analizzatore lessicale...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3524"/>
+        <location filename="../Project/Project.py" line="3535"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Mostra le associazioni degli analizzatori lessicali del progetto (sovrascrivendo i default)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3526"/>
+        <location filename="../Project/Project.py" line="3537"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Associazioni analizzatore lessicale...&lt;/b&gt;&lt;p&gt;Mostra un dialogo per modificare le associazioni degli analizzatori lessicali dei progetti. Queste associazioni sovrascrivono the impostazioni globali. Gli analizzatori lessicali sono utilizzati per l&apos;evidenziazione del testo nell&apos;editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="263"/>
+        <location filename="../Project/Project.py" line="275"/>
         <source>PySide GUI</source>
         <translation>GUI PySide</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="264"/>
+        <location filename="../Project/Project.py" line="276"/>
         <source>PySide Console</source>
         <translation>Console PySide</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="198"/>
+        <location filename="../Project/Project.py" line="189"/>
         <source>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</source>
         <translation>Python3 Files (*.py *.py3);;Python3 GUI Files (*.pyw *.pyw3);;</translation>
     </message>
@@ -39055,97 +39073,97 @@ Selezionare Aggiorna.</translation>
         <translation type="obsolete">&lt;p&gt;Il tipo progetto &lt;b&gt;{0*&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="688"/>
+        <location filename="../Project/Project.py" line="699"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file progetto &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="788"/>
+        <location filename="../Project/Project.py" line="799"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file progetto &lt;b{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="824"/>
+        <location filename="../Project/Project.py" line="835"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà specifiche dell&apos;utente del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="848"/>
+        <location filename="../Project/Project.py" line="859"/>
         <source>&lt;p&gt;The user specific project properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà specifiche dell&apos;utente del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="906"/>
+        <location filename="../Project/Project.py" line="917"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La sessione del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere letta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="942"/>
+        <location filename="../Project/Project.py" line="953"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La sessione del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere scritta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="971"/>
+        <location filename="../Project/Project.py" line="982"/>
         <source>&lt;p&gt;The project session file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La sessione del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere cancellato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1000"/>
+        <location filename="../Project/Project.py" line="1011"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1020"/>
+        <location filename="../Project/Project.py" line="1031"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1077"/>
+        <location filename="../Project/Project.py" line="1088"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà del debugger del progetto&lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1111"/>
+        <location filename="../Project/Project.py" line="1122"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà del debugger del progetto&lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1137"/>
+        <location filename="../Project/Project.py" line="1148"/>
         <source>&lt;p&gt;The project debugger properties file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file delle proprietà del debugger del progetto&lt;b&gt;{0}&lt;/b&gt; non può essere cancellato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1359"/>
+        <location filename="../Project/Project.py" line="1370"/>
         <source>&lt;p&gt;The selected translation file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file di traduzione selezionato &lt;b&gt;{0}&lt;/b&gt; non può essere cancellato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1572"/>
+        <location filename="../Project/Project.py" line="1583"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già.&lt;/p&gt;&lt;p&gt;Sovrascriverlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2749"/>
+        <location filename="../Project/Project.py" line="2760"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1786"/>
+        <location filename="../Project/Project.py" line="1797"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be renamed.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere rinominato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1983"/>
+        <location filename="../Project/Project.py" line="1994"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file selezionato &lt;b&gt;{0}&lt;/b&gt; non può essere cancellato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2012"/>
+        <location filename="../Project/Project.py" line="2023"/>
         <source>&lt;p&gt;The selected directory &lt;b&gt;{0}&lt;/b&gt; could not be deleted.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory selezionata &lt;b&gt;{0}&lt;/b&gt; non può essere cancellata.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2095"/>
+        <location filename="../Project/Project.py" line="2106"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory del progetto &lt;b&gt;{0}&lt;/b&gt; non può essere creata.&lt;/p&gt;</translation>
     </message>
@@ -39185,17 +39203,17 @@ Selezionare Aggiorna.</translation>
         <translation type="obsolete">&lt;p&gt;VCS selezionato &lt;b&gt;{0}&lt;/b&gt;non trovato.&lt;br&gt;Ripristino al valore precedente.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4242"/>
+        <location filename="../Project/Project.py" line="4253"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;VCS selezionato &lt;b&gt;{0}&lt;/b&gt;non trovato.&lt;br&gt;Disabilito il controllo di versione.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4645"/>
+        <location filename="../Project/Project.py" line="4656"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;PKGLIST&lt;/b&gt; non può essere creato.&lt;br /&gt;Motivo: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4688"/>
+        <location filename="../Project/Project.py" line="4699"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;PKGLIST&lt;/b&gt; non può essere letto.&lt;br /&gt;Motivo: {0}&lt;/p&gt;</translation>
     </message>
@@ -39205,7 +39223,7 @@ Selezionare Aggiorna.</translation>
         <translation type="obsolete">&lt;p&gt;Il file archivio del plugin di eric5&lt;b&gt;{0}&lt;/b&gt; non può essere creato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4727"/>
+        <location filename="../Project/Project.py" line="4738"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere aggiunto all&apos;archivio.Lo ignoro.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -39215,147 +39233,147 @@ Selezionare Aggiorna.</translation>
         <translation type="obsolete">&lt;p&gt;Il file archivio del plugin di eric5&lt;b&gt;{0} &lt;/b&gt; è stato creato con successo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4796"/>
+        <location filename="../Project/Project.py" line="4807"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file plugin &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1498"/>
+        <location filename="../Project/Project.py" line="1509"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file selezionato &lt;b&gt;{0}&lt;/b&gt; non può essere aggiunto a &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Motivo: {2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="1554"/>
+        <location filename="../Project/Project.py" line="1565"/>
         <source>&lt;p&gt;The target directory &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory di destinazione&lt;b&gt;{0}&lt;/b&gt; non può essere creata.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="195"/>
+        <location filename="../Project/Project.py" line="186"/>
         <source>Python2 Files (*.py2);;Python2 GUI Files (*.pyw2);;</source>
         <translation>Python Files (*.py2);;Python GUI Files (*.pyw2);;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2149"/>
+        <location filename="../Project/Project.py" line="2160"/>
         <source>Create main script</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="2149"/>
+        <location filename="../Project/Project.py" line="2160"/>
         <source>&lt;p&gt;The mainscript &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3709"/>
+        <location filename="../Project/Project.py" line="3720"/>
         <source>Load Diagram</source>
         <translation type="unfinished">Carico Diagramma</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3709"/>
+        <location filename="../Project/Project.py" line="3720"/>
         <source>&amp;Load Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3713"/>
+        <location filename="../Project/Project.py" line="3724"/>
         <source>Load a diagram from file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3715"/>
+        <location filename="../Project/Project.py" line="3726"/>
         <source>&lt;b&gt;Load Diagram...&lt;/b&gt;&lt;p&gt;This loads a diagram from file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="324"/>
+        <location filename="../Project/Project.py" line="336"/>
         <source>&lt;p&gt;The Programming Language &lt;b&gt;{0}&lt;/b&gt; is not supported.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="347"/>
+        <location filename="../Project/Project.py" line="359"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="335"/>
+        <location filename="../Project/Project.py" line="347"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="246"/>
+        <location filename="../Project/Project.py" line="258"/>
         <source>PyQt5 GUI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="247"/>
+        <location filename="../Project/Project.py" line="259"/>
         <source>PyQt5 Console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4231"/>
+        <location filename="../Project/Project.py" line="4242"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found. &lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4838"/>
+        <location filename="../Project/Project.py" line="4849"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt; &lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3729"/>
+        <location filename="../Project/Project.py" line="3740"/>
         <source>Create an initial PKGLIST file for an eric6 plugin.</source>
         <translation type="unfinished">Crea un PKGLIST iniziale per un plugin di eric5. {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3731"/>
+        <location filename="../Project/Project.py" line="3742"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric6 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Crea la lista del Package&lt;b&gt;&lt;p&gt;Crea una lista iniziale dei file da includere nell&apos;archivio di un plugin di eric5. La lista è creata partendo dal file progetto.&lt;/p&gt; {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3745"/>
+        <location filename="../Project/Project.py" line="3756"/>
         <source>Create an eric6 plugin archive file.</source>
         <translation type="unfinished">Crea un file archivio per il plugin di eric5. {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3747"/>
+        <location filename="../Project/Project.py" line="3758"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Crea Archivio Plugin&lt;/b&gt;&lt;p&gt;Crea un archivio per il plugin eric5 usando la lista dei file fornita nel file PKGLIST. Il nome dell&apos;archivio è costruito dal nome dello script.&lt;/p&gt; {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3761"/>
+        <location filename="../Project/Project.py" line="3772"/>
         <source>Create an eric6 plugin archive file (snapshot release).</source>
         <translation type="unfinished">Crea un file archivio per il plugin di eric5 (snapshot release). {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3763"/>
+        <location filename="../Project/Project.py" line="3774"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;Crea un archivio plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Crea un file archivio di un plugin eric5 usando la lista di file fornita nel file PKGLIST. Il nome dell&apos;archivio è determinato dal nome dello script principale. La versione dello script principale viene modificata per riflettere la release dello snapshot.&lt;/p&gt; {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4701"/>
+        <location filename="../Project/Project.py" line="4712"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file archivio del plugin di eric5&lt;b&gt;{0}&lt;/b&gt; non può essere creato.&lt;br /&gt;Motivo: {1}&lt;/p&gt; {6 ?} {0}?} {1}?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4750"/>
+        <location filename="../Project/Project.py" line="4761"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file archivio del plugin di eric5&lt;b&gt;{0} &lt;/b&gt; è stato creato con successo.&lt;/p&gt; {6 ?} {0}?}</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="244"/>
+        <location filename="../Project/Project.py" line="256"/>
         <source>PyQt4 GUI</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="245"/>
+        <location filename="../Project/Project.py" line="257"/>
         <source>PyQt4 Console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="248"/>
+        <location filename="../Project/Project.py" line="260"/>
         <source>Eric4/5 Plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="249"/>
+        <location filename="../Project/Project.py" line="261"/>
         <source>Eric6 Plugin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -51906,26 +51924,26 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="146"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="145"/>
         <source>diff to {0}</source>
         <translation>diff su {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="160"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="159"/>
         <source>&lt;i&gt;author: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;autore: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="164"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="163"/>
         <source>&lt;i&gt;date: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;data: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="187"/>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="186"/>
         <source> (copied from {0}, revision {1})</source>
         <translation>(copiato da {0}, revisione {1})</translation>
     </message>
@@ -60318,7 +60336,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Scorciatoie da tastiera&lt;/b&gt;&lt;p&gt;Imposta le scorciatoie da tastiera dell&apos;applicazione con i valori personalizzati.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5307"/>
+        <location filename="../UI/UserInterface.py" line="5309"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Esporta scorciatoie da tastiera</translation>
     </message>
@@ -60338,7 +60356,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Esporta scorciatoie da tastiera&lt;/b&gt;&lt;p&gt;Esporta le scorciatoie da tastiera dell&apos;applicazione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5331"/>
+        <location filename="../UI/UserInterface.py" line="5333"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Importa scorciatoie da tastiera</translation>
     </message>
@@ -60383,7 +60401,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4294"/>
+        <location filename="../UI/UserInterface.py" line="4296"/>
         <source>Help</source>
         <translation>Aiuto</translation>
     </message>
@@ -60398,12 +60416,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&amp;Toolbar</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4420"/>
+        <location filename="../UI/UserInterface.py" line="4422"/>
         <source>Problem</source>
         <translation>Problema</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4595"/>
+        <location filename="../UI/UserInterface.py" line="4597"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
@@ -60458,7 +60476,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Script Unittest&lt;/b&gt;&lt;p&gt;Esegui unittest con lo script corrente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4042"/>
+        <location filename="../UI/UserInterface.py" line="4044"/>
         <source>Unittest Project</source>
         <translation>Progetto Unittest</translation>
     </message>
@@ -60518,12 +60536,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&amp;Unittest</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4042"/>
+        <location filename="../UI/UserInterface.py" line="4044"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Non c&apos;è uno script principale definito per il progetto. Esco</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5730"/>
+        <location filename="../UI/UserInterface.py" line="5732"/>
         <source>Drop Error</source>
         <translation>Errore Drop</translation>
     </message>
@@ -60698,22 +60716,22 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">&lt;b&gt;Abilita/Disabilita la finestra del Task-Viewer&lt;/b&gt;&lt;p&gt;Se la finestra del Log-Viewer è nascosta verrà mostrata. Se è mostrata verrà chiusa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5465"/>
+        <location filename="../UI/UserInterface.py" line="5467"/>
         <source>Save tasks</source>
         <translation>Salva task</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5491"/>
+        <location filename="../UI/UserInterface.py" line="5493"/>
         <source>Read tasks</source>
         <translation>Leggi task</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4294"/>
+        <location filename="../UI/UserInterface.py" line="4296"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Attualmente nessun visualizzatore personalizzato è selezionato. Per favore usa il dialogo delle preferenze per specificarne uno.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5038"/>
+        <location filename="../UI/UserInterface.py" line="5040"/>
         <source>Documentation Missing</source>
         <translation>Documentazione mancante</translation>
     </message>
@@ -60878,7 +60896,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Apri documentazione API di Eric</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4328"/>
+        <location filename="../UI/UserInterface.py" line="4330"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare il visualizzatore di help.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -60984,27 +61002,27 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Profili</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3358"/>
+        <location filename="../UI/UserInterface.py" line="3360"/>
         <source>&amp;Builtin Tools</source>
         <translation>Tool &amp;Builtin</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5022"/>
+        <location filename="../UI/UserInterface.py" line="5024"/>
         <source>Documentation</source>
         <translation>Documentazione</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4864"/>
+        <location filename="../UI/UserInterface.py" line="4866"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;inizio della documentazione di PyQt4 non è stato configurato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6045"/>
+        <location filename="../UI/UserInterface.py" line="6047"/>
         <source>Error during updates check</source>
         <translation>Errore nel controllo per gli update</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6025"/>
+        <location filename="../UI/UserInterface.py" line="6027"/>
         <source>Update available</source>
         <translation>Aggiornamento disponibile</translation>
     </message>
@@ -61014,7 +61032,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;h3&gt;Numeri di versione&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6082"/>
+        <location filename="../UI/UserInterface.py" line="6084"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
@@ -61024,12 +61042,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">Caricamento Style Sheet</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3304"/>
+        <location filename="../UI/UserInterface.py" line="3306"/>
         <source>Configure Tool Groups ...</source>
         <translation>Configura Tools Groups...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3308"/>
+        <location filename="../UI/UserInterface.py" line="3310"/>
         <source>Configure current Tool Group ...</source>
         <translation>Configura Tools Groups correnti...</translation>
     </message>
@@ -61044,17 +61062,17 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Mostra toll &amp;esterni</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5875"/>
+        <location filename="../UI/UserInterface.py" line="5877"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancella</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6045"/>
+        <location filename="../UI/UserInterface.py" line="6047"/>
         <source>Could not perform updates check.</source>
         <translation>Non posso controllare per gli update.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6109"/>
+        <location filename="../UI/UserInterface.py" line="6111"/>
         <source>First time usage</source>
         <translation>Primo avvio</translation>
     </message>
@@ -61094,7 +61112,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Informazioni su &amp;Plugin...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3366"/>
+        <location filename="../UI/UserInterface.py" line="3368"/>
         <source>&amp;Plugin Tools</source>
         <translation>Informazioni sui &amp;Plugin Tools</translation>
     </message>
@@ -61124,12 +61142,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Wi&amp;zards</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3456"/>
+        <location filename="../UI/UserInterface.py" line="3458"/>
         <source>&amp;Show all</source>
         <translation>Mo&amp;stra tutti</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3458"/>
+        <location filename="../UI/UserInterface.py" line="3460"/>
         <source>&amp;Hide all</source>
         <translation>Nascondi &amp;tutti</translation>
     </message>
@@ -61159,7 +61177,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">Non posso scaricare il file delle versioni.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6068"/>
+        <location filename="../UI/UserInterface.py" line="6070"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Versioni disponibili&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -61279,17 +61297,17 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">Temp&amp;late-Viewer</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4540"/>
+        <location filename="../UI/UserInterface.py" line="4542"/>
         <source>External Tools</source>
         <translation>Tool esterni</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5509"/>
+        <location filename="../UI/UserInterface.py" line="5511"/>
         <source>Save session</source>
         <translation>Salva sessione</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5540"/>
+        <location filename="../UI/UserInterface.py" line="5542"/>
         <source>Read session</source>
         <translation>Leggi sessione</translation>
     </message>
@@ -61424,12 +61442,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Abilita/Disabilita la finestra della toolbox orizzontale&lt;/b&gt;&lt;p&gt;Se la finestra della toolbox orizzontale è nascosta verrà mostrata. Se è mostrata verrà chiusa.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3270"/>
+        <location filename="../UI/UserInterface.py" line="3272"/>
         <source>Restart application</source>
         <translation>Riavvia applicazione</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3270"/>
+        <location filename="../UI/UserInterface.py" line="3272"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>L&apos;applicazione necessita di un riavvio. Farlo ora ?</translation>
     </message>
@@ -61629,7 +61647,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Editor di &amp;icone...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4241"/>
+        <location filename="../UI/UserInterface.py" line="4243"/>
         <source>Qt 3 support</source>
         <translation>Supporto Qt3</translation>
     </message>
@@ -61654,7 +61672,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">&lt;b&gt;Documentazione PySide&lt;/b&gt;&lt;p&gt;Visualizza la documentazione di PySide. A seconda di come è configurato il tuo sistema, verrà mostrata nel visualizzatore interno di Eric o in un browser web o usando Qt Assistant. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5022"/>
+        <location filename="../UI/UserInterface.py" line="5024"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;inizio della documentazione di PySide non è stato configurato.&lt;/p&gt;</translation>
     </message>
@@ -61734,105 +61752,105 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">Le Qt v.3 non sono supportate da eric5.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4420"/>
+        <location filename="../UI/UserInterface.py" line="4422"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non esiste o ha lunghezza zero.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4148"/>
+        <location filename="../UI/UserInterface.py" line="4150"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare Qt-Designer.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4215"/>
+        <location filename="../UI/UserInterface.py" line="4217"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare Qt-Linguist.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4266"/>
+        <location filename="../UI/UserInterface.py" line="4268"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare Qt-Assistant.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4308"/>
+        <location filename="../UI/UserInterface.py" line="4310"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare il visualizzatore personalizzato.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4376"/>
+        <location filename="../UI/UserInterface.py" line="4378"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare UI Previewer.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4431"/>
+        <location filename="../UI/UserInterface.py" line="4433"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare l&apos;anteprima delle traduzioni.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4452"/>
+        <location filename="../UI/UserInterface.py" line="4454"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare SQL Browser.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4531"/>
+        <location filename="../UI/UserInterface.py" line="4533"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>Nessun elemento per il tool esterno &apos;{0}&apos; trovato nel gruppo &apos;{1}&apos;.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4540"/>
+        <location filename="../UI/UserInterface.py" line="4542"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Nessun gruppo &apos;{0}&apos; trovato.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4579"/>
+        <location filename="../UI/UserInterface.py" line="4581"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Avvio processo &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4595"/>
+        <location filename="../UI/UserInterface.py" line="4597"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare l&apos;elemento degli strumenti &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4671"/>
+        <location filename="../UI/UserInterface.py" line="4673"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Il processo &apos;{0}&apos; è terminato.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5038"/>
+        <location filename="../UI/UserInterface.py" line="5040"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;inizio della documentazione &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; non viene trovato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5465"/>
+        <location filename="../UI/UserInterface.py" line="5467"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5491"/>
+        <location filename="../UI/UserInterface.py" line="5493"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file task &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5509"/>
+        <location filename="../UI/UserInterface.py" line="5511"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file sessione &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5540"/>
+        <location filename="../UI/UserInterface.py" line="5542"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file sessione &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5730"/>
+        <location filename="../UI/UserInterface.py" line="5732"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; non è un file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5884"/>
+        <location filename="../UI/UserInterface.py" line="5886"/>
         <source>Trying host {0}</source>
         <translation>Tento su host {0}</translation>
     </message>
@@ -61952,7 +61970,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5331"/>
+        <location filename="../UI/UserInterface.py" line="5333"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>File scorciatoi tastiera (*.e4k)</translation>
     </message>
@@ -61997,27 +62015,27 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Documentazione Python 2&lt;/b&gt;&lt;p&gt;Mostra la documentazione Python 2. Se non è configurata una directory per la documentazione, viene assunto che la posizione della documentazione sia nella directory doc nella locazione dell&apos;eseguibile Python 2 su Windows e &lt;i&gt;/usr/share/doc/packages/python/html&lt;/i&gt; su Unix. Imposta PYTHONDOCDIR2 nel tuo ambiente per sovrascrivere questi valori.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5935"/>
+        <location filename="../UI/UserInterface.py" line="5937"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5928"/>
+        <location filename="../UI/UserInterface.py" line="5930"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5131"/>
+        <location filename="../UI/UserInterface.py" line="5133"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5131"/>
+        <location filename="../UI/UserInterface.py" line="5133"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5935"/>
+        <location filename="../UI/UserInterface.py" line="5937"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62108,12 +62126,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4510"/>
+        <location filename="../UI/UserInterface.py" line="4512"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6128"/>
+        <location filename="../UI/UserInterface.py" line="6130"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished">Seleziona cartella di lavoro</translation>
     </message>
@@ -62498,7 +62516,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">&lt;b&gt;Documentazione PyQt4&lt;/b&gt;&lt;p&gt;Visualizza la documentazione di Qt4. A seconda di come è configurato il tuo sistema, verrà mostrata nel visualizzatore interno di Eric o in un browser web. &lt;/p&gt; {5 ?} {5 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4925"/>
+        <location filename="../UI/UserInterface.py" line="4927"/>
         <source>&lt;p&gt;The PyQt5 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;L&apos;inizio della documentazione di PyQt4 non è stato configurato.&lt;/p&gt; {5 ?}</translation>
     </message>
@@ -62533,7 +62551,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5875"/>
+        <location filename="../UI/UserInterface.py" line="5877"/>
         <source>%v/%m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62553,7 +62571,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5879"/>
+        <location filename="../UI/UserInterface.py" line="5881"/>
         <source>Version Check</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62623,27 +62641,27 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="unfinished">&lt;b&gt;Documentazione API Eric&lt;/b&gt;&lt;p&gt;Mostra la documentazione delle API di Eric. La posizione della documentazione è la subdirectory Documentation/Source della directory in cui è installato eric5.&lt;/p&gt; {6 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4241"/>
+        <location filename="../UI/UserInterface.py" line="4243"/>
         <source>Qt v.3 is not supported by eric6.</source>
         <translation type="unfinished">Le Qt v.3 non sono supportate da eric5. {3 ?} {6.?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6025"/>
+        <location filename="../UI/UserInterface.py" line="6027"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric6 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished">L&apos;update alla versione &lt;b&gt;{0}&lt;/b&gt; di eric5 è disponibile presso &lt;b&gt;{1}&lt;/b&gt;. Vuoi prenderlo ? {0}?} {6 ?} {1}?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6038"/>
+        <location filename="../UI/UserInterface.py" line="6040"/>
         <source>Eric6 is up to date</source>
         <translation type="unfinished">Eric5 è aggiornato {6 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6038"/>
+        <location filename="../UI/UserInterface.py" line="6040"/>
         <source>You are using the latest version of eric6</source>
         <translation type="unfinished">Stai usando l&apos;ultima versione di eric6</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6109"/>
+        <location filename="../UI/UserInterface.py" line="6111"/>
         <source>eric6 has not been configured yet. The configuration dialog will be started.</source>
         <translation type="unfinished">eric5 non è ancora stato configurato. Il dialogo di configurazione verrà avviato. {6 ?}</translation>
     </message>
@@ -67606,12 +67624,12 @@ aggiunto alla dimensione del font nella finestra di edit.&lt;/p&gt;</translation
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="281"/>
+        <location filename="../eric6.py" line="295"/>
         <source>Starting...</source>
         <translation type="unfinished">Inizio...</translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="286"/>
+        <location filename="../eric6.py" line="300"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Generazione Main Window...</translation>
     </message>
