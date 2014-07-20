@@ -27,6 +27,8 @@ progName = None
 pyModDir = None
 progLanguages = ["Python", "Ruby", "QSS"]
 includePythonVariant = False
+defaultMacAppBundleName = "eric6.app"
+defaultMacAppBundlePath = "/Applications"
 
 # Define file name markers for Python variants
 PythonMarkers = {
@@ -174,13 +176,15 @@ def uninstallEric():
                 macAppBundlePath = getConfig("macAppBundlePath")
                 macAppBundleName = getConfig("macAppBundleName")
             except AttributeError:
-                macAppBundlePath = "/Applications"
-                macAppBundleName = "eric6.app"
-            if os.path.exists("/Applications/" + macAppBundleName):
-                shutil.rmtree("/Applications/" + macAppBundleName)
-            bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
-            if os.path.exists(bundlePath):
-                shutil.rmtree(bundlePath)
+                macAppBundlePath = defaultMacAppBundlePath
+                macAppBundleName = defaultMacAppBundleName
+            for bundlePath in [os.path.join(defaultMacAppBundleName,
+                                            macAppBundleName),
+                               os.path.join(macAppBundlePath,
+                                            macAppBundleName),
+                               ]:
+                if os.path.exists(bundlePath):
+                    shutil.rmtree(bundlePath)
     except (IOError, OSError) as msg:
         sys.stderr.write(
             'Error: {0}\nTry uninstall with admin rights.\n'.format(msg))

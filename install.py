@@ -43,6 +43,7 @@ progLanguages = ["Python", "Ruby", "QSS"]
 sourceDir = "eric"
 configName = 'eric6config.py'
 defaultMacAppBundleName = "eric6.app"
+defaultMacAppBundlePath = "/Applications"
 macAppBundleName = "eric6.app"
 macAppBundlePath = "/Applications"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
@@ -475,19 +476,19 @@ def cleanUp():
         
         if sys.platform == "darwin":
             # delete the Mac app bundle
-            if os.path.exists("/Developer/Applications/Eric6"):
-                shutil.rmtree("/Developer/Applications/Eric6")
             try:
                 macAppBundlePath = getConfig("macAppBundlePath")
                 macAppBundleName = getConfig("macAppBundleName")
             except AttributeError:
-                macAppBundlePath = "/Applications"
-                macAppBundleName = "eric6.app"
-            if os.path.exists("/Applications/" + macAppBundleName):
-                shutil.rmtree("/Applications/" + macAppBundleName)
-            bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
-            if os.path.exists(bundlePath):
-                shutil.rmtree(bundlePath)
+                macAppBundlePath = defaultMacAppBundlePath
+                macAppBundleName = defaultMacAppBundleName
+            for bundlePath in [os.path.join(defaultMacAppBundleName,
+                                            macAppBundleName),
+                               os.path.join(macAppBundlePath,
+                                            macAppBundleName),
+                               ]:
+                if os.path.exists(bundlePath):
+                    shutil.rmtree(bundlePath)
     except (IOError, OSError) as msg:
         sys.stderr.write(
             'Error: {0}\nTry install with admin rights.\n'.format(msg))
