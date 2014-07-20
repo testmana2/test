@@ -739,15 +739,21 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             args.append('--follow')
         if self.commandMode == "log":
             args.append('--copies')
-        args.append('--style')
-        if self.vcs.version >= (2, 1):
+        if self.vcs.version >= (3, 0):
+            args.append('--template')
             args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles",
-                                     "logBrowserBookmarkPhase.style"))
+                                     "templates",
+                                     "logBrowserBookmarkPhase.tmpl"))
         else:
-            args.append(os.path.join(os.path.dirname(__file__),
-                                     "styles",
-                                     "logBrowserBookmark.style"))
+            args.append('--style')
+            if self.vcs.version >= (2, 1):
+                args.append(os.path.join(os.path.dirname(__file__),
+                                         "styles",
+                                         "logBrowserBookmarkPhase.style"))
+            else:
+                args.append(os.path.join(os.path.dirname(__file__),
+                                         "styles",
+                                         "logBrowserBookmark.style"))
         if self.commandMode == "incoming":
             if self.__bundle:
                 args.append(self.__bundle)
