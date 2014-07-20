@@ -584,7 +584,7 @@ def installEric():
         copyTree(
             '{1}{0}Plugins'.format(os.sep, sourceDir),
             '{0}{1}Plugins'.format(cfg['ericDir'], os.sep),
-            ['*.png', '*.style'])
+            ['*.png', '*.style', '*.tmpl'])
         copyTree(
             '{1}{0}Documentation'.format(os.sep, sourceDir), cfg['ericDocDir'],
             ['*.html', '*.qch'])
