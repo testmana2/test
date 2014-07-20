@@ -192,9 +192,9 @@ class Prefs(object):
         "PluginRepositoryUrl5":
         "http://eric-ide.python-projects.org/plugins5/repository.xml",
         "VersionsUrls5": [
-            "http://die-offenbachs.homelinux.org:48888/eric/snapshots5/"
-            "versions",
-            "http://eric-ide.python-projects.org/snapshots5/versions",
+            "http://die-offenbachs.homelinux.org:48888/eric/versions/"
+            "versions5",
+            "http://eric-ide.python-projects.org/versions/versions5",
         ],
         
         "OpenOnStartup": 0,        # 0 = nothing
