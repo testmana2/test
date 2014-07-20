@@ -34,6 +34,7 @@ progLanguages = ["Python", "Ruby"]
 sourceDir = "eric"
 configName = 'eric5config.py'
 defaultMacAppBundleName = "eric5.app"
+defaultMacAppBundlePath = "/Applications"
 macAppBundleName = "eric5.app"
 macAppBundlePath = "/Applications"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
@@ -427,13 +428,15 @@ def cleanUp():
                 macAppBundlePath = getConfig("macAppBundlePath")
                 macAppBundleName = getConfig("macAppBundleName")
             except AttributeError:
-                macAppBundlePath = "/Applications"
-                macAppBundleName = "eric5.app"
-            if os.path.exists("/Applications/" + macAppBundleName):
-                shutil.rmtree("/Applications/" + macAppBundleName)
-            bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
-            if os.path.exists(bundlePath):
-                shutil.rmtree(bundlePath)
+                macAppBundlePath = defaultMacAppBundlePath
+                macAppBundleName = defaultMacAppBundleName
+            for bundlePath in [os.path.join(defaultMacAppBundleName,
+                                            macAppBundleName),
+                               os.path.join(macAppBundlePath,
+                                            macAppBundleName),
+                               ]:
+                if os.path.exists(bundlePath):
+                    shutil.rmtree(bundlePath)
         
     except (IOError, OSError) as msg:
         sys.stderr.write(

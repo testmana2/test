@@ -24,6 +24,8 @@ from eric5config import getConfig
 progName = None
 pyModDir = None
 progLanguages = ["Python", "Ruby"]
+defaultMacAppBundleName = "eric5.app"
+defaultMacAppBundlePath = "/Applications"
 
 
 def exit(rcode=0):
@@ -119,62 +121,70 @@ def uninstallEric():
         "eric5_webbrowser", "eric5_iconeditor",
         "eric5_snap",
     ]
-    for rem_wname in rem_wnames:
-        rwname = wrapperName(getConfig('bindir'), rem_wname)
-        if os.path.exists(rwname):
-            os.remove(rwname)
     
-    # Cleanup our config file(s)
-    for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
-        e5cfile = os.path.join(pyModDir, name)
-        if os.path.exists(e5cfile):
-            os.remove(e5cfile)
-        e5cfile = os.path.join(pyModDir, "__pycache__", name)
-        path, ext = os.path.splitext(e5cfile)
-        for f in glob.glob("{0}.*{1}".format(path, ext)):
-            os.remove(f)
-    
-    # Cleanup the install directories
-    for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
-                 'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
-                 'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
-                 'ericDir']:
-        dirpath = getConfig(name)
-        if os.path.exists(dirpath):
-            shutil.rmtree(dirpath, True)
-    
-    # Cleanup translations
-    for name in glob.glob(
-            os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
-        if os.path.exists(name):
-            os.remove(name)
-    
-    # Cleanup API files
-    apidir = getConfig('apidir')
-    for progLanguage in progLanguages:
-        for name in getConfig('apis'):
-            apiname = os.path.join(apidir, progLanguage.lower(), name)
-            if os.path.exists(apiname):
+    try:
+        for rem_wname in rem_wnames:
+            rwname = wrapperName(getConfig('bindir'), rem_wname)
+            if os.path.exists(rwname):
+                os.remove(rwname)
+        
+        # Cleanup our config file(s)
+        for name in ['eric5config.py', 'eric5config.pyc', 'eric5.pth']:
+            e5cfile = os.path.join(pyModDir, name)
+            if os.path.exists(e5cfile):
+                os.remove(e5cfile)
+            e5cfile = os.path.join(pyModDir, "__pycache__", name)
+            path, ext = os.path.splitext(e5cfile)
+            for f in glob.glob("{0}.*{1}".format(path, ext)):
+                os.remove(f)
+        
+        # Cleanup the install directories
+        for name in ['ericExamplesDir', 'ericDocDir', 'ericDTDDir', 'ericCSSDir',
+                     'ericIconDir', 'ericPixDir', 'ericTemplatesDir',
+                     'ericCodeTemplatesDir', 'ericOthersDir', 'ericStylesDir',
+                     'ericDir']:
+            dirpath = getConfig(name)
+            if os.path.exists(dirpath):
+                shutil.rmtree(dirpath, True)
+        
+        # Cleanup translations
+        for name in glob.glob(
+                os.path.join(getConfig('ericTranslationsDir'), 'eric5_*.qm')):
+            if os.path.exists(name):
+                os.remove(name)
+        
+        # Cleanup API files
+        apidir = getConfig('apidir')
+        for progLanguage in progLanguages:
+            for name in getConfig('apis'):
+                apiname = os.path.join(apidir, progLanguage.lower(), name)
+                if os.path.exists(apiname):
+                    os.remove(apiname)
+            for apiname in glob.glob(
+                    os.path.join(apidir, progLanguage.lower(), "*.bas")):
                 os.remove(apiname)
-        for apiname in glob.glob(
-                os.path.join(apidir, progLanguage.lower(), "*.bas")):
-            os.remove(apiname)
-    
-    if sys.platform == "darwin":
-        # delete the Mac app bundle
-        if os.path.exists("/Developer/Applications/Eric5"):
-            shutil.rmtree("/Developer/Applications/Eric5")
-        try:
-            macAppBundlePath = getConfig("macAppBundlePath")
-            macAppBundleName = getConfig("macAppBundleName")
-        except AttributeError:
-            macAppBundlePath = "/Applications"
-            macAppBundleName = "eric5.app"
-        if os.path.exists("/Applications/" + macAppBundleName):
-            shutil.rmtree("/Applications/" + macAppBundleName)
-        bundlePath = os.path.join(macAppBundlePath, macAppBundleName)
-        if os.path.exists(bundlePath):
-            shutil.rmtree(bundlePath)
+        
+        if sys.platform == "darwin":
+            # delete the Mac app bundle
+            if os.path.exists("/Developer/Applications/Eric5"):
+                shutil.rmtree("/Developer/Applications/Eric5")
+            try:
+                macAppBundlePath = getConfig("macAppBundlePath")
+                macAppBundleName = getConfig("macAppBundleName")
+            except AttributeError:
+                macAppBundlePath = defaultMacAppBundlePath
+                macAppBundleName = defaultMacAppBundleName
+            for bundlePath in [os.path.join(defaultMacAppBundleName,
+                                            macAppBundleName),
+                               os.path.join(macAppBundlePath,
+                                            macAppBundleName),
+                               ]:
+                if os.path.exists(bundlePath):
+                    shutil.rmtree(bundlePath)
+    except (IOError, OSError) as msg:
+        sys.stderr.write(
+            'Error: {0}\nTry uninstall with admin rights.\n'.format(msg))
+        exit(7)
 
 
 def main(argv):
