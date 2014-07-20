@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric5 project file for project eric5 -->
+<!-- eric project file for project eric5 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1625,6 +1625,8 @@
     <Other>APIs/Python3/PyQt5.bas</Other>
     <Other>APIs/Python3/PyQt4_Qt5.bas</Other>
     <Other>APIs/Python3/PyQt4_Qt4.bas</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/templates/logBrowserBookmarkPhase.tmpl</Other>
+    <Other>Plugins/VcsPlugins/vcsMercurial/templates/logDialogBookmarkPhase.tmpl</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>
