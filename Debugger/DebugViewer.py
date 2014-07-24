@@ -255,7 +255,7 @@ class DebugViewer(QWidget):
             if self.embeddedBrowser:
                 self.__tabWidget.setCurrentWidget(self.browser)
             else:
-                self.__tabWidget.setCurrentWidget(self.lvWidget)
+                self.__tabWidget.setCurrentWidget(self.glvWidget)
         
         # add the threads viewer
         self.__mainLayout.addWidget(QLabel(self.tr("Threads:")))
@@ -305,6 +305,8 @@ class DebugViewer(QWidget):
         """
         self.globalsViewer.handleResetUI()
         self.localsViewer.handleResetUI()
+        self.__setGlobalsFilter()
+        self.__setLocalsFilter()        
         self.sourceButton.setEnabled(False)
         self.currentStack = None
         self.stackComboBox.clear()
@@ -315,7 +317,7 @@ class DebugViewer(QWidget):
             if self.embeddedBrowser:
                 self.__tabWidget.setCurrentWidget(self.browser)
             else:
-                self.__tabWidget.setCurrentWidget(self.lvWidget)
+                self.__tabWidget.setCurrentWidget(self.glvWidget)
         self.breakpointViewer.handleResetUI()
         
     def handleRawInput(self):
@@ -465,8 +467,7 @@ class DebugViewer(QWidget):
         """
         filter = self.globalsFilterEdit.text()
         self.debugServer.remoteClientSetFilter(1, filter)
-        if self.currentStack:
-            self.debugServer.remoteClientVariables(2, self.globalsFilter)
+        self.debugServer.remoteClientVariables(2, self.globalsFilter)
         
     def __setLocalsFilter(self):
         """
