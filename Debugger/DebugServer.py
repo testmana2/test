@@ -440,6 +440,8 @@ class DebugServer(QTcpServer):
                 elif self.__autoClearShell:
                     self.__autoClearShell = False
                     self.remoteBanner()
+                self.remoteClientVariables(0, [], 0)
+                self.remoteClientVariables(1, [], 0)
             else:
                 if clType and self.lastClientType:
                     self.__setClientType(self.lastClientType)

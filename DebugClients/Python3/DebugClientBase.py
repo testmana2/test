@@ -177,6 +177,7 @@ class DebugClientBase(object):
         
         # The context to run the debugged program in.
         self.debugMod = imp.new_module('__main__')
+        self.debugMod.__dict__['__builtins__'] = __builtins__
 
         # The list of complete lines to execute.
         self.buffer = ''
@@ -1295,9 +1296,11 @@ class DebugClientBase(object):
             frmnr -= 1
         
         if f is None:
-            return
-        
-        if scope:
+            if scope:
+                dict = self.debugMod.__dict__
+            else:
+                scope = -1
+        elif scope:
             dict = f.f_globals
         else:
             dict = f.f_locals
@@ -1338,9 +1341,11 @@ class DebugClientBase(object):
             frmnr -= 1
         
         if f is None:
-            return
-        
-        if scope:
+            if scope:
+                dict = self.debugMod.__dict__
+            else:
+                scope = -1
+        elif scope:
             dict = f.f_globals
         else:
             dict = f.f_locals
