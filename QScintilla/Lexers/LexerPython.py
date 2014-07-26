@@ -49,10 +49,8 @@ class LexerPython(Lexer, QsciLexerPython):
         """
         Public slot to initialize the properties.
         """
-        if Preferences.getEditor("PythonBadIndentation"):
-            self.setIndentationWarning(QsciLexerPython.Inconsistent)
-        else:
-            self.setIndentationWarning(QsciLexerPython.NoWarning)
+        self.setIndentationWarning(
+            Preferences.getEditor("PythonBadIndentation"))
         self.setFoldComments(Preferences.getEditor("PythonFoldComment"))
         self.setFoldQuotes(Preferences.getEditor("PythonFoldString"))
         if not Preferences.getEditor("PythonAutoIndent"):
