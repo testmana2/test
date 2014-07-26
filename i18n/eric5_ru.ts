@@ -5384,30 +5384,30 @@ to display the configuration page.</source>
         <translation>изменено</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="679"/>
+        <location filename="../Debugger/DebugServer.py" line="681"/>
         <source>Connection from illegal host</source>
         <translation>соединение с запрещённого хоста</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1281"/>
+        <location filename="../Debugger/DebugServer.py" line="1283"/>
         <source>
 Not connected
 </source>
         <translation>Нет соединения</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="679"/>
+        <location filename="../Debugger/DebugServer.py" line="681"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Попытка соединения с недопустимого компьютора &lt;b&gt;{0}&lt;/b&gt;. Разрешить соединение?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1461"/>
+        <location filename="../Debugger/DebugServer.py" line="1463"/>
         <source>Passive debug connection received
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1475"/>
+        <location filename="../Debugger/DebugServer.py" line="1477"/>
         <source>Passive debug connection closed
 </source>
         <translation type="unfinished"></translation>
@@ -6157,12 +6157,12 @@ Not connected
         <translation>Состояние</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugViewer.py" line="519"/>
+        <location filename="../Debugger/DebugViewer.py" line="520"/>
         <source>waiting at breakpoint</source>
         <translation>В точке останова</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugViewer.py" line="521"/>
+        <location filename="../Debugger/DebugViewer.py" line="522"/>
         <source>running</source>
         <translation>Выполяется</translation>
     </message>
@@ -11572,12 +11572,12 @@ whole selection.&lt;/li&gt;
         <translation>Свойства лексического анализатора Bash</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="975"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="989"/>
         <source>Select whether folding of comments shall be possible</source>
         <translation>Возможно ли сворачивать комментарии</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="978"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="992"/>
         <source>Fold comments</source>
         <translation>Сворачивать комментарии</translation>
     </message>
@@ -11607,12 +11607,12 @@ whole selection.&lt;/li&gt;
         <translation>Выравнивать открывающую скобку</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="946"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="960"/>
         <source>Select whether folding at else statement should be possible</source>
         <translation>Возможно ли сворачивать оператор else</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="949"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="963"/>
         <source>Fold at else</source>
         <translation>Сворачивать else</translation>
     </message>
@@ -11692,22 +11692,22 @@ whole selection.&lt;/li&gt;
         <translation>Свойства лексического анализатора Python</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="691"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="766"/>
         <source>Select whether bad indentation shall be highlighted</source>
         <translation>Разрешить/запретить подсветку неверных отступов</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
         <source>Highlight bad indentation</source>
-        <translation>Подсвечивать неверные отступы</translation>
+        <translation type="obsolete">Подсвечивать неверные отступы</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="691"/>
         <source>Select whether text should be autoindented after a &apos;:&apos;</source>
         <translation>Нужно ли автоматически выравнивать текст (с отступом) после &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
         <source>Auto indentation after &apos;:&apos;</source>
         <translation>Автоотступ после &apos;:&apos;</translation>
     </message>
@@ -11722,42 +11722,42 @@ whole selection.&lt;/li&gt;
         <translation>Сворачивать строки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="783"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="797"/>
         <source>SQL Lexer Properties</source>
         <translation>Свойства лексического анализатора SQL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="819"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="833"/>
         <source>Select to enable Backslash Escapes</source>
         <translation>Включить экранирование обратной косой</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="822"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="836"/>
         <source>Backslash Escapes</source>
         <translation>Экранирование обратной косой</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="920"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="934"/>
         <source>VHDL Lexer Properties</source>
         <translation>Свойства лексического анализатора VHDL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="926"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="940"/>
         <source>Select whether folding of blocks at a parenthesis shall be possible</source>
         <translation>Возможно ли сворачивать блоки в круглых скобках</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="929"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="943"/>
         <source>Fold at parenthesis</source>
         <translation>Сворачивать круглые скобки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="936"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="950"/>
         <source>Select whether folding of begin blocks shall be possible</source>
         <translation>Возможно ли сворачивать блоки begin</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="939"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="953"/>
         <source>Fold at begin</source>
         <translation>Сворачивать begin</translation>
     </message>
@@ -11792,7 +11792,7 @@ whole selection.&lt;/li&gt;
         <translation>Выбрать PostScript level</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="969"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="983"/>
         <source>YAML Lexer Properties</source>
         <translation>Свойства лексического анализатора YAML</translation>
     </message>
@@ -11872,32 +11872,32 @@ whole selection.&lt;/li&gt;
         <translation>Сворачивать POD блоки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="731"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
         <source>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</source>
         <translation>Разрешить Python2 юникодные литералы (например u&quot;utf8&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
         <source>Allow v2 unicode string literals</source>
         <translation>Разрешить Python2 юникодные литералы</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="741"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
         <source>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</source>
         <translation>Разрешить Python3 двоичные и восьмеричные литералы (например 0b1011, 0o712)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
         <source>Allow v3 binary and octal literals</source>
         <translation>Разрешить Python3 двоичные и восьмеричные литералы</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="731"/>
         <source>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</source>
         <translation>Разрешить Python3 байтовые литералы (например b&quot;bytes&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
         <source>Allow v3 bytes string literals</source>
         <translation>Разрешить Python3 байтовые литералы</translation>
     </message>
@@ -11957,87 +11957,87 @@ whole selection.&lt;/li&gt;
         <translation>Сворачивать строки с тройными кавычками</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="701"/>
         <source>Select to allow strings to span newline characters</source>
         <translation>Выберите, чтобы разрешить завершение строки символом новой строки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="704"/>
         <source>Strings may span newline characters</source>
         <translation>Строка может быть завершена символом новой строки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="764"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="778"/>
         <source>Ruby Lexer Properties</source>
         <translation>Свойства лексического анализатора Ruby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="809"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="823"/>
         <source>Select whether only BEGIN blocks can be folded</source>
         <translation>Разрешить сворачивание только BEGIN блоков</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="812"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="826"/>
         <source>Only BEGIN blocks can be folded</source>
         <translation>Только BEGIN блоки могут быть свернуты</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="829"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="843"/>
         <source>Select if words may contain dots</source>
         <translation>Разрешить словам содержать точки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="832"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="846"/>
         <source>Words may contain dots</source>
         <translation>Слова могут содержать точки</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="839"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="853"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
         <translation>Разрешить символ &apos;#&apos; как символ коментариев</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="842"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="856"/>
         <source>Allow &apos;#&apos; as comment character</source>
         <translation>Разрешить символ &apos;#&apos; как символ коментариев</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="849"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="863"/>
         <source>Select to enable quoted identifiers</source>
         <translation>Разрешить заключать в кавычки идентификаторы</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="852"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="866"/>
         <source>Enable quoted identifiers</source>
         <translation>Разрешить заключать в кавычки идентификаторы</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="862"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="876"/>
         <source>TCL Lexer Properties</source>
         <translation>Свойства лексического анализатора TCL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="881"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="895"/>
         <source>TeX Lexer Properties</source>
         <translation>Свойства лексического анализатора TeX</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="897"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="911"/>
         <source>Select to treat comments as TeX source</source>
         <translation>Считать коментарии как TeX код</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="900"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="914"/>
         <source>Treat comments as TeX source</source>
         <translation>Считать коментарии как TeX код</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="907"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="921"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
         <translation>Считать \if&lt;unknown&gt;командой</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="910"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="924"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
         <translation>Считать \if&lt;unknown&gt;командой</translation>
     </message>
@@ -12047,7 +12047,7 @@ whole selection.&lt;/li&gt;
         <translation>Выделять строки с тройными кавычками</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="704"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
         <source>Highlight sub-identifiers</source>
         <translation>Выделять суб-идентификаторы</translation>
     </message>
@@ -12057,7 +12057,7 @@ whole selection.&lt;/li&gt;
         <translation>Разрешить выделение строк с тройными кавычками</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="701"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="741"/>
         <source>Select to highlight sub-identifiers defined in keyword set 2</source>
         <translation>Разрешить выделять суб-идентификаторы определенные в ключе set 2</translation>
     </message>
@@ -12110,6 +12110,36 @@ whole selection.&lt;/li&gt;
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="203"/>
         <source>CoffeeScript</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="753"/>
+        <source>Highlight bad indentation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>No Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Inconsistent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Tabs after Spaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Spaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Tabs</source>
+        <translation type="unfinished">Закладки</translation>
     </message>
 </context>
 <context>
