@@ -5378,30 +5378,30 @@ da mostrare nella pagina di configurazione.</translation>
         <translation>modificato</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="679"/>
+        <location filename="../Debugger/DebugServer.py" line="681"/>
         <source>Connection from illegal host</source>
         <translation>Connessione da un non vietato</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1281"/>
+        <location filename="../Debugger/DebugServer.py" line="1283"/>
         <source>
 Not connected
 </source>
         <translation>Non connesso</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="679"/>
+        <location filename="../Debugger/DebugServer.py" line="681"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Una connessione è stata tentata da un host vietato &lt;b&gt;{0}&lt;/b&gt;.  Accettare questa connessione ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1461"/>
+        <location filename="../Debugger/DebugServer.py" line="1463"/>
         <source>Passive debug connection received
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1475"/>
+        <location filename="../Debugger/DebugServer.py" line="1477"/>
         <source>Passive debug connection closed
 </source>
         <translation type="unfinished"></translation>
@@ -6130,12 +6130,12 @@ Not connected
         <translation>Stato</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugViewer.py" line="519"/>
+        <location filename="../Debugger/DebugViewer.py" line="520"/>
         <source>waiting at breakpoint</source>
         <translation>in attesa ad un breakpoint</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugViewer.py" line="521"/>
+        <location filename="../Debugger/DebugViewer.py" line="522"/>
         <source>running</source>
         <translation>in esecuzione</translation>
     </message>
@@ -11543,12 +11543,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Proprietà analizzatore lessicale della Bash</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="975"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="989"/>
         <source>Select whether folding of comments shall be possible</source>
         <translation>Selezione quando la compressione dei commenti deve essere possibile</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="978"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="992"/>
         <source>Fold comments</source>
         <translation>Comprimi commenti</translation>
     </message>
@@ -11578,12 +11578,12 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Indenta la parentesi aperta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="946"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="960"/>
         <source>Select whether folding at else statement should be possible</source>
         <translation>Selezione nel caso la compressione al costrutto else deve essere possibile</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="949"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="963"/>
         <source>Fold at else</source>
         <translation>Comprimi all&apos;else</translation>
     </message>
@@ -11663,22 +11663,22 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Proprietà analizzatore lessicale di Python</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="691"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="766"/>
         <source>Select whether bad indentation shall be highlighted</source>
         <translation>Seleziona quando una errata indentazione deve essere evidenziata</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
         <source>Highlight bad indentation</source>
-        <translation>Evidenzia indentazione errata</translation>
+        <translation type="obsolete">Evidenzia indentazione errata</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="691"/>
         <source>Select whether text should be autoindented after a &apos;:&apos;</source>
         <translation>Seleziona quando un testo deve essere indentato automaticamente dopo i &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
         <source>Auto indentation after &apos;:&apos;</source>
         <translation>Indenta automaticamento dopo &apos;:&apos;</translation>
     </message>
@@ -11693,42 +11693,42 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Comprimi stringhe</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="783"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="797"/>
         <source>SQL Lexer Properties</source>
         <translation>Proprietà analizzatore lessicale dell&apos;SQL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="819"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="833"/>
         <source>Select to enable Backslash Escapes</source>
         <translation>Seleziona per abilitare i Backslash Escapes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="822"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="836"/>
         <source>Backslash Escapes</source>
         <translation>Backslash Escapes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="920"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="934"/>
         <source>VHDL Lexer Properties</source>
         <translation>Proprietà analizzatore lessicale di VHDL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="926"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="940"/>
         <source>Select whether folding of blocks at a parenthesis shall be possible</source>
         <translation>Selezione se la compressione di blocchi alla parentesi deve essere possibile</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="929"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="943"/>
         <source>Fold at parenthesis</source>
         <translation>Comprimi alle parentesi</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="936"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="950"/>
         <source>Select whether folding of begin blocks shall be possible</source>
         <translation>Seleziona se la compressione all&apos;inizio dei blocchi deve essere possibile</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="939"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="953"/>
         <source>Fold at begin</source>
         <translation>Comprimi all&apos;inizio</translation>
     </message>
@@ -11763,7 +11763,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Selezione il PostScript level</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="969"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="983"/>
         <source>YAML Lexer Properties</source>
         <translation>Proprietà analizzatore lessicale di YAML</translation>
     </message>
@@ -11843,32 +11843,32 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Comprimi blocchi POD</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="731"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
         <source>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</source>
         <translation>Seleziona per permettere caratteri unicode Python v2 (es. u&quot;utf8&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="714"/>
         <source>Allow v2 unicode string literals</source>
         <translation>Permetti caratteri unicode v2</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="741"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
         <source>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</source>
         <translation>Seleziona per permettere caratteri binari e ottali Python v3 (es. 0b1011, 0o712)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
         <source>Allow v3 binary and octal literals</source>
         <translation>Consenti caratteri binari e ottali v3</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="751"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="731"/>
         <source>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</source>
         <translation>Seleziona per permettere byte Python v3 (es. b&quot;bytes&quot;)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="754"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="734"/>
         <source>Allow v3 bytes string literals</source>
         <translation>Permetti byte unicode v3</translation>
     </message>
@@ -11928,87 +11928,87 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Racchiudi stringhe tra virgolette triple</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="721"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="701"/>
         <source>Select to allow strings to span newline characters</source>
         <translation>Seleziona per permettere alle stringhe di unire i caratteri a capo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="724"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="704"/>
         <source>Strings may span newline characters</source>
         <translation>Le stringhe possono congiungere i caratteri a capo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="764"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="778"/>
         <source>Ruby Lexer Properties</source>
         <translation>Proprietà dell&apos;analizzatore lessicale Ruby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="809"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="823"/>
         <source>Select whether only BEGIN blocks can be folded</source>
         <translation>Seleziona se i soli blocchi BEGIN possono essere congiunti</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="812"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="826"/>
         <source>Only BEGIN blocks can be folded</source>
         <translation>Solo i blocchi BEGIN possono venir congiunti</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="829"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="843"/>
         <source>Select if words may contain dots</source>
         <translation>Seleziona se le voci possono contenere punti</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="832"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="846"/>
         <source>Words may contain dots</source>
         <translation>Le vosi possono contenere punti</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="839"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="853"/>
         <source>Select to allow &apos;#&apos; as a comment character</source>
         <translation>Seleziona per consentire &apos;#&apos; come carattere di commento</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="842"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="856"/>
         <source>Allow &apos;#&apos; as comment character</source>
         <translation>Consenti &apos;#&apos; come carattere di commento</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="849"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="863"/>
         <source>Select to enable quoted identifiers</source>
         <translation>Seleziona per abilitare identificatore tra virgolette</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="852"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="866"/>
         <source>Enable quoted identifiers</source>
         <translation>Abilita identificatori tra virgolette</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="862"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="876"/>
         <source>TCL Lexer Properties</source>
         <translation>Proprietà dell&apos;analizzatore lessicale TCL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="881"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="895"/>
         <source>TeX Lexer Properties</source>
         <translation>Proprietà dell&apos;analizzatore lessicale TeX</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="897"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="911"/>
         <source>Select to treat comments as TeX source</source>
         <translation>Seleziona per gestire i commenti come sorgenti TeX</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="900"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="914"/>
         <source>Treat comments as TeX source</source>
         <translation>Gestisci i commenti come sorgenti TeX</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="907"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="921"/>
         <source>Select to treat \if&lt;unknown&gt; as a command</source>
         <translation>Seleziona per gestire \if&lt;unknown&gt; come un comando</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="910"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="924"/>
         <source>Treat \if&lt;unknown&gt; as command</source>
         <translation>Gestisci \if&lt;unknown&gt; come un comando</translation>
     </message>
@@ -12018,7 +12018,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Evidenzia stringhe tra virgolette triple</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="704"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="744"/>
         <source>Highlight sub-identifiers</source>
         <translation>Evidenzia sotto-identificatori</translation>
     </message>
@@ -12028,7 +12028,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Seleziona per evidenziare stringhe tra virgolette triple</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="701"/>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="741"/>
         <source>Select to highlight sub-identifiers defined in keyword set 2</source>
         <translation>Seleziona per evidenziare i sotto-identificatori definiti nell&apos;insieme 2 di parole-chiave</translation>
     </message>
@@ -12081,6 +12081,36 @@ gli elementi visualizzati.&lt;/p&gt;
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="203"/>
         <source>CoffeeScript</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="753"/>
+        <source>Highlight bad indentation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>No Warning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Inconsistent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Tabs after Spaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Spaces</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
+        <source>Tabs</source>
+        <translation type="unfinished">Schede</translation>
     </message>
 </context>
 <context>
