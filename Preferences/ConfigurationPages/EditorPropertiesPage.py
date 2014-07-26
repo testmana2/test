@@ -192,12 +192,19 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.propertiesInitialSpacesCheckBox.setEnabled(False)
         
         # Python
+        self.pythonBadIndentationComboBox.addItems([
+            self.tr("No Warning"),
+            self.tr("Inconsistent"),
+            self.tr("Tabs after Spaces"),
+            self.tr("Spaces"),
+            self.tr("Tabs"),
+        ])
+        self.pythonBadIndentationComboBox.setCurrentIndex(
+            Preferences.getEditor("PythonBadIndentation"))
         self.foldPythonCommentCheckBox.setChecked(
             Preferences.getEditor("PythonFoldComment"))
         self.foldPythonStringCheckBox.setChecked(
             Preferences.getEditor("PythonFoldString"))
-        self.pythonBadIndentationCheckBox.setChecked(
-            Preferences.getEditor("PythonBadIndentation"))
         self.pythonAutoindentCheckBox.setChecked(
             Preferences.getEditor("PythonAutoIndent"))
         self.pythonV2UnicodeAllowedCheckBox.setChecked(
@@ -481,7 +488,7 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             self.foldPythonStringCheckBox.isChecked())
         Preferences.setEditor(
             "PythonBadIndentation",
-            self.pythonBadIndentationCheckBox.isChecked())
+            self.pythonBadIndentationComboBox.currentIndex())
         Preferences.setEditor(
             "PythonAutoIndent",
             self.pythonAutoindentCheckBox.isChecked())

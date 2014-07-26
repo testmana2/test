@@ -686,26 +686,6 @@
        </widget>
       </item>
       <item row="2" column="0">
-       <widget class="QCheckBox" name="pythonBadIndentationCheckBox">
-        <property name="toolTip">
-         <string>Select whether bad indentation shall be highlighted</string>
-        </property>
-        <property name="text">
-         <string>Highlight bad indentation</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QCheckBox" name="pythonHighlightSubidentifierCheckBox">
-        <property name="toolTip">
-         <string>Select to highlight sub-identifiers defined in keyword set 2</string>
-        </property>
-        <property name="text">
-         <string>Highlight sub-identifiers</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
        <widget class="QCheckBox" name="pythonAutoindentCheckBox">
         <property name="toolTip">
          <string>Select whether text should be autoindented after a ':'</string>
@@ -715,7 +695,7 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0">
+      <item row="3" column="0">
        <widget class="QCheckBox" name="pythonStringsOverNewlineCheckBox">
         <property name="toolTip">
          <string>Select to allow strings to span newline characters</string>
@@ -725,7 +705,7 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
+      <item row="4" column="0">
        <widget class="QCheckBox" name="pythonV2UnicodeAllowedCheckBox">
         <property name="toolTip">
          <string>Select to allow Python v2 unicode string literals (e.g. u&quot;utf8&quot;)</string>
@@ -735,7 +715,7 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
+      <item row="5" column="0">
        <widget class="QCheckBox" name="pythonV3BinaryAllowedCheckBox">
         <property name="toolTip">
          <string>Select to allow Python v3 binary and octal literals (e.g. 0b1011, 0o712)</string>
@@ -745,7 +725,7 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="1">
+      <item row="5" column="1">
        <widget class="QCheckBox" name="pythonV3BytesAllowedCheckBox">
         <property name="toolTip">
          <string>Select to allow Python v3 bytes string literals (e.g. b&quot;bytes&quot;)</string>
@@ -754,6 +734,40 @@
          <string>Allow v3 bytes string literals</string>
         </property>
        </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="pythonHighlightSubidentifierCheckBox">
+        <property name="toolTip">
+         <string>Select to highlight sub-identifiers defined in keyword set 2</string>
+        </property>
+        <property name="text">
+         <string>Highlight sub-identifiers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Highlight bad indentation:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="pythonBadIndentationComboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="toolTip">
+           <string>Select whether bad indentation shall be highlighted</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -1046,13 +1060,13 @@
   <tabstop>foldPythonCommentCheckBox</tabstop>
   <tabstop>foldPythonStringCheckBox</tabstop>
   <tabstop>foldPythonQuotesCheckBox</tabstop>
-  <tabstop>pythonBadIndentationCheckBox</tabstop>
-  <tabstop>pythonHighlightSubidentifierCheckBox</tabstop>
   <tabstop>pythonAutoindentCheckBox</tabstop>
   <tabstop>pythonStringsOverNewlineCheckBox</tabstop>
   <tabstop>pythonV2UnicodeAllowedCheckBox</tabstop>
   <tabstop>pythonV3BinaryAllowedCheckBox</tabstop>
   <tabstop>pythonV3BytesAllowedCheckBox</tabstop>
+  <tabstop>pythonHighlightSubidentifierCheckBox</tabstop>
+  <tabstop>pythonBadIndentationComboBox</tabstop>
   <tabstop>foldRubyCommentCheckBox</tabstop>
   <tabstop>foldSqlCommentCheckBox</tabstop>
   <tabstop>sqlFoldAtElseCheckBox</tabstop>

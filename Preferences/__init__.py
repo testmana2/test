@@ -30,7 +30,7 @@ from PyQt5.QtGui import QColor, QFont, QPalette
 from PyQt5.QtWidgets import QInputDialog, QApplication
 from PyQt5.QtNetwork import QNetworkRequest
 from PyQt5.QtWebKit import QWebSettings
-from PyQt5.Qsci import QsciScintilla
+from PyQt5.Qsci import QsciScintilla, QsciLexerPython
 
 from E5Gui import E5FileDialog
 
@@ -401,7 +401,7 @@ class Prefs(object):
         "PropertiesInitialSpaces": True,
         
         # Python specifics
-        "PythonBadIndentation": True,
+        "PythonBadIndentation": QsciLexerPython.Inconsistent,
         "PythonFoldComment": True,
         "PythonFoldString": True,
         "PythonAutoIndent": True,
@@ -1657,6 +1657,14 @@ def getEditor(key, prefClass=Prefs):
                  "PreviewQssFileNameExtensions"]:
         return toList(prefClass.settings.value(
             "Editor/" + key, prefClass.editorDefaults[key]))
+    elif key in ["PythonBadIndentation"]:
+        value = prefClass.settings.value(
+            "Editor/" + key, prefClass.editorDefaults[key])
+        if value in ["true", "True"]:
+            value = 1
+        elif value in ["false", "False"]:
+            value = 0
+        return QsciLexerPython.IndentationWarning(int(value))
     else:
         return toBool(prefClass.settings.value(
             "Editor/" + key, prefClass.editorDefaults[key]))
