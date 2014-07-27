@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="150"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="92"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="103"/>
@@ -11271,32 +11272,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="753"/>
         <source>Highlight bad indentation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar indentación errónea:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>No Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin Advertencia</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Inconsistent</source>
-        <translation type="unfinished"></translation>
+        <translation>Inconsistente</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Tabs after Spaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabuladores despues de Espacios en blanco</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Spaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Espacios en blanco</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Tabs</source>
-        <translation type="unfinished">Pestañas</translation>
+        <translation>Tabuladores</translation>
     </message>
 </context>
 <context>
@@ -15520,7 +15521,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1091"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -21923,7 +21924,8 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="362"/>
         <source>Branch: {0}&lt;br /&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Branch: {0}&lt;br /&gt;
+</translation>
     </message>
 </context>
 <context>
