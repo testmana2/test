@@ -61617,7 +61617,7 @@ puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuen
     <message>
         <location filename="../Utilities/py3flakes/messages.py" line="313"/>
         <source>&apos;return&apos; with argument inside generator</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;return&apos; con argumento dentro de un generator</translation>
     </message>
 </context>
 <context>
