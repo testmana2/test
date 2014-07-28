@@ -15,8 +15,8 @@ except NameError:
     pass
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
-    QUrl, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, QFile, \
-    QPoint, QByteArray, qVersion
+    QUrl, UrlQuery, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, \
+    QFile, QPoint, QByteArray, qVersion
 from PyQt5.QtGui import QDesktopServices, QClipboard, QMouseEvent, QColor, \
     QPalette
 from PyQt5.QtWidgets import qApp, QStyle, QMenu, QApplication, QInputDialog, \
