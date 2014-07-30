@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1906,8 +1905,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1980,8 +1979,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -4182,11 +4181,6 @@ para visualizar la página de configuración.</translation>
         <translation>Seguridad</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="422"/>
         <source>Enter filter text...</source>
         <translation>Introducir el texto de filtro...</translation>
@@ -6277,11 +6271,6 @@ Not connected
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
-        <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
-    </message>
-    <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation>Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric6</translation>
     </message>
@@ -6387,11 +6376,6 @@ Not connected
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="109"/>
         <source>Python Files (*.py *.py3)</source>
         <translation>Archivos Python (*.py, *.py3)</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="43"/>
@@ -6502,11 +6486,6 @@ Not connected
         <translation>Introduzca las extensiones de archivo a ser asociadas con el depurador de Python2 separadas por un espacio. No debe haber solapamiento con las que se usan para Python3.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="109"/>
         <source>Python Files (*.py *.py2)</source>
         <translation>Archivos Python (*.py *.py2)</translation>
@@ -6553,11 +6532,6 @@ Not connected
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="64"/>
         <source>Select Ruby interpreter for Debug Client</source>
         <translation>Seleccionar intérprete de Ruby para el Cliente de Depuración</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Seleccionar para redirigir stdin, stdout y stderr del programa en depuración hacia la IDE eric5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
@@ -9262,11 +9236,6 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6105"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric5. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/Editor.py" line="6292"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
@@ -10883,11 +10852,6 @@ selección completa.&lt;/li&gt;
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="766"/>
         <source>Select whether bad indentation shall be highlighted</source>
         <translation>Seleccionar si la indentación errónea debe ser resaltada</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
-        <source>Highlight bad indentation</source>
-        <translation type="obsolete">Resaltar indentación errónea</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="691"/>
@@ -13193,31 +13157,6 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EricapiPlugin</name>
     <message>
-        <location filename="../Plugins/PluginEricapi.py" line="57"/>
-        <source>Eric5 API File Generator</source>
-        <translation type="obsolete">Generador de archivo de API de Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="98"/>
-        <source>Generate API file (eric5_api)</source>
-        <translation type="obsolete">Generar archivo API (eric5_api)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="98"/>
-        <source>Generate &amp;API file (eric5_api)</source>
-        <translation type="obsolete">Generar archivo &amp;API (eric5_api)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="102"/>
-        <source>Generate an API file using eric5_api</source>
-        <translation type="obsolete">Generar un archivo API utilizando eric5_api</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="104"/>
-        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Generar un archivo API&lt;/b&gt;&lt;p&gt;Generar un archivo API utilizando eric5_api.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/PluginEricapi.py" line="58"/>
         <source>Eric6 API File Generator</source>
         <translation>Generador de archivo de API de Eric6</translation>
@@ -13632,31 +13571,6 @@ selección completa.&lt;/li&gt;
 </context>
 <context>
     <name>EricdocPlugin</name>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="57"/>
-        <source>Eric5 Documentation Generator</source>
-        <translation type="obsolete">Generador de Documentación de Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="133"/>
-        <source>Generate documentation (eric5_doc)</source>
-        <translation type="obsolete">Generar documentación (eric5_doc)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="133"/>
-        <source>Generate &amp;documentation (eric5_doc)</source>
-        <translation type="obsolete">Generar &amp;documentación (eric5_doc)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="137"/>
-        <source>Generate API documentation using eric5_doc</source>
-        <translation type="obsolete">Generar documentación de API utilizando eric5_doc</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="139"/>
-        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Generar documentación&lt;/b&gt;&lt;p&gt;Generar documentación de API utilizando eric5_doc.&lt;/p&gt;</translation>
-    </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="90"/>
         <source>Qt Help Tools</source>
@@ -15601,7 +15515,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -15790,11 +15704,6 @@ Razón: {0}</translation>
         <translation>Analizar Imagen con VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2406"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1110"/>
         <source>Send Link</source>
         <translation>Enviar Enlace</translation>
@@ -15880,11 +15789,6 @@ Razón: {0}</translation>
         <translation>Ir a la dirección web</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2374"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1279"/>
         <source>User Agent</source>
         <translation>Agente de Usuario</translation>
@@ -15928,11 +15832,6 @@ Razón: {0}</translation>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1191"/>
         <source>Save Media</source>
         <translation>Guardar Medio</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2406"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2422"/>
@@ -16162,11 +16061,6 @@ Razón: {0}</translation>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="145"/>
         <source>Select Qt4 documentation entry</source>
         <translation>Seleccionar la entrada de la documentación de Qt4</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="173"/>
-        <source>Select PyQt4 documentation entry</source>
-        <translation type="obsolete">Seleccionar la entrada de la documentación de PyQt4</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
@@ -16469,11 +16363,6 @@ Razón: {0}</translation>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="643"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="746"/>
         <source>Loading...</source>
         <translation>Cargando...</translation>
@@ -16520,11 +16409,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>Cerrar Pestaña Actua&amp;l</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="643"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="111"/>
         <source>Show a navigation menu for closed tabs</source>
         <translation>Mostrar un menú de navegación para pestañas cerradas</translation>
@@ -16548,11 +16432,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="../Helpviewer/HelpTabWidget.py" line="983"/>
         <source>Clear List</source>
         <translation>Borrar Lista</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="589"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt4. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
@@ -18577,11 +18456,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Abre un diálogo para configurar las suscripciones y reglas de AdBlock&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2871"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpWindow.py" line="599"/>
         <source>Print as PDF</source>
         <translation>Imprimir como PDF</translation>
@@ -18714,16 +18588,6 @@ Tiene %n pestañas abiertas.</numerusform>
 &lt;p&gt;Razón: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="682"/>
-        <source>Quit the eric5 Web Browser</source>
-        <translation type="obsolete">Salir del Navegador Web de eric5</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="683"/>
-        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Salir&lt;/b&gt;&lt;p&gt;Salir del Navegador Web de eric5.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1451"/>
         <source>RSS Feeds Dialog</source>
         <translation>Diálogo de RSS Feeds</translation>
@@ -18806,11 +18670,6 @@ Tiene %n pestañas abiertas.</numerusform>
         <location filename="../Helpviewer/HelpWindow.py" line="1427"/>
         <source>&lt;b&gt;Network Monitor...&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Monitor de Red...&lt;/b&gt;&lt;p&gt;Muestra el diálogo de monitor de red.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2071"/>
-        <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Navegador Web de eric5- {0}&lt;/b&gt;&lt;p&gt;El Navegador Web de eric5 is una combación de navegador de archivos de ayuda y de HTML. Es parte del conjunto de herramientas de desarrollo de eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="2376"/>
@@ -21947,13 +21806,6 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="349"/>
         <source>diff to {0}</source>
         <translation>diff con {0}</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="354"/>
-        <source>Branches: {0}&lt;br /&gt;
-</source>
-        <translation type="obsolete">Branches: {0}&lt;br /&gt;
-</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="363"/>
@@ -27652,11 +27504,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Archivo de Targa Graphic (*.tga)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1215"/>
-        <source>eric5 Icon Editor</source>
-        <translation type="obsolete">Editor de Iconos de eric5</translation>
-    </message>
-    <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1125"/>
         <source>The file &apos;{0}&apos; does not exist.</source>
         <translation>El archivo {0} no existe.</translation>
@@ -27679,16 +27526,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../IconEditor/IconEditorWindow.py" line="1197"/>
         <source>{0}[*] - {1}</source>
         <translation>{0}[*] - {1}</translation>
-    </message>
-    <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1305"/>
-        <source>About eric5 Icon Editor</source>
-        <translation type="obsolete">Acerca del Editor de Iconos de eric5</translation>
-    </message>
-    <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1305"/>
-        <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
-        <translation type="obsolete">El Editor de Iconos de eric5 es un componente de edición de iconos para llevar a cabo tareas de dibujado de iconos.</translation>
     </message>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1095"/>
@@ -29310,11 +29147,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcNetworkManager.py" line="34"/>
-        <source>IRC for eric5 IDE</source>
-        <translation type="obsolete">IRC para eric5 IDE</translation>
-    </message>
-    <message>
-        <location filename="../Network/IRC/IrcNetworkManager.py" line="34"/>
         <source>IRC for eric6 IDE</source>
         <translation>IRC para eric6 IDE</translation>
     </message>
@@ -30342,21 +30174,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="143"/>
         <source>Search results provided by {0}</source>
         <translation>Buscar resultados proporcionados por {0}</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="94"/>
-        <source>Welcome to eric5 Web Browser!</source>
-        <translation type="obsolete">¡Bienvenido al Navegador Web de eric5!</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="96"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="98"/>
-        <source>About eric5</source>
-        <translation type="obsolete">Acerca de eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="101"/>
@@ -32695,16 +32512,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Seleccionar el Analizador Léxico de Pygments a aplicar.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="251"/>
-        <source>About eric5 Mini Editor</source>
-        <translation type="obsolete">Acerca del Mini Editor de eric5</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/MiniEditor.py" line="251"/>
-        <source>The eric5 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
-        <translation type="obsolete">El Mini Editor de eric5 es un componente de edición basado en QScintilla. Puede utilizarse para tareas simples de edición que no necesitan la potencia de un editor más completo. </translation>
-    </message>
-    <message>
         <location filename="../QScintilla/MiniEditor.py" line="319"/>
         <source>Line: {0:5}</source>
         <translation>Línea: {0:5}</translation>
@@ -32713,11 +32520,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../QScintilla/MiniEditor.py" line="324"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2136"/>
-        <source>eric5 Mini Editor</source>
-        <translation type="obsolete">Mini Editor de eric5</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2203"/>
@@ -36682,11 +36484,6 @@ Seleccione Actualizar.</translation>
         <translation>Archivos Python3 (*.py *.py3);;Archivos de GUI Python3 (*.pyw *.pyw3);;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="248"/>
-        <source>Eric Plugin</source>
-        <translation type="obsolete">Plugin para Eric</translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="699"/>
         <source>&lt;p&gt;The project file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de proyecto &lt;b&gt;{0}&lt;/b&gt; no ha podido ser leído.&lt;/p&gt;</translation>
@@ -36782,36 +36579,6 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3707"/>
-        <source>Create an initial PKGLIST file for an eric5 plugin.</source>
-        <translation type="obsolete">Crear un archivo inicial PKGLIST para un plugin  para eric5.</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3709"/>
-        <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Crear Lista del Paquete&lt;/b&gt;&lt;p&gt;Crea una lista inicial de archivos a incluir en un archivo para plugin de eric5. Esta lista se crea a partir del archivo de proyecto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3723"/>
-        <source>Create an eric5 plugin archive file.</source>
-        <translation type="obsolete">Crear un archivo de plugin para eric5.</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3725"/>
-        <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Crear Archivo de Plugin&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin para eric5 utilizando la lista de archivos dada en el archivo PKGLIST. El nombre de archivo se determina a partir del nombr del script principal.&lt;/p&gt; </translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3739"/>
-        <source>Create an eric5 plugin archive file (snapshot release).</source>
-        <translation type="obsolete">Crear un archivo de plugin de eric5 (snapshot release).</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3741"/>
-        <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Crear un archivo de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin utilizando la lista de archivos proporcionada en el archivo PKGLIST. El nombre del archivo se determina por el nombre del script principal. La entrada para la versión del script proncipal se modifica para reflejar una versión snapshot.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="4253"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
@@ -36827,19 +36594,9 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4678"/>
-        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="4738"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="4727"/>
-        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;El archivo de plugin de eric5 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="4807"/>
@@ -36905,16 +36662,6 @@ Seleccione Actualizar.</translation>
         <location filename="../Project/Project.py" line="347"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El tipo de Proyecto &lt;b&gt;{0}&lt;/b&gt; ya está registrado con el Lenguaje de Programación &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="244"/>
-        <source>Qt GUI</source>
-        <translation type="obsolete">Qt GUI</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="245"/>
-        <source>Qt Console</source>
-        <translation type="obsolete">Consola Qt</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="258"/>
@@ -45349,11 +45096,6 @@ Not connected</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; está oculto por la acción &lt;b&gt;{1}&lt;/b&gt;. ¿Eliminar este enlace?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ShortcutsDialog.py" line="189"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ShortcutsDialog.py" line="190"/>
         <source>eric6 Web Browser</source>
         <translation>Navegador Web de eric6</translation>
@@ -45509,11 +45251,6 @@ Not connected</source>
 </context>
 <context>
     <name>SnapWidget</name>
-    <message>
-        <location filename="../Snapshot/SnapWidget.py" line="522"/>
-        <source>eric5 Snapshot</source>
-        <translation type="obsolete">Pantallazo de eric5 </translation>
-    </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="54"/>
         <source>Snapshot Mode:</source>
@@ -46282,11 +46019,6 @@ Not connected</source>
         <location filename="../SqlBrowser/SqlBrowserWidget.py" line="305"/>
         <source>Query OK.</source>
         <translation>Consulta OK.</translation>
-    </message>
-    <message>
-        <location filename="../SqlBrowser/SqlBrowserWidget.ui" line="14"/>
-        <source>eric5 SQL Browser</source>
-        <translation type="obsolete">Navegador SQL de eric5</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlBrowserWidget.py" line="163"/>
@@ -54935,20 +54667,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Seleccionar directorio para binarios de traducciones</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="49"/>
-        <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
-&lt;p&gt;Enter the path pattern for the translation files using %language% at the place of the language code (e.g. /path_to_eric/i18n/eric5_%language%.ts). This will result in translation files like /path_to_eric/i18n/eric5_de.ts.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Patrón de Traducción&lt;/b&gt;
-&lt;p&gt;Introduzca el patrón de la ruta de los archivos de traducción utilizando %language% en lugar del código de idioma (p. e. /path_to_eric/i18n/eric5_%language%.ts). Esto resultará en archivos de traducción como /path_to_eric/i18n/eric5_es.ts.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
-        <source>&amp;Translation Path Pattern:
-(Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</source>
-        <translation type="obsolete">Patrón de Ruta de &amp;Traducción:
-(Utilice &apos;%language%&apos; en el lugar donde se desea insertar el código de idioma, p. e. i18n/eric5_%language%.ts)</translation>
-    </message>
-    <message>
         <location filename="../Project/TranslationPropertiesDialog.py" line="66"/>
         <source>Source Files ({0});;</source>
         <translation>Archivos de fuentes ({0});;</translation>
@@ -55233,21 +54951,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Navegador SQL</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="77"/>
-        <source>Eric5 tray starter</source>
-        <translation type="obsolete">Lanzador de bandeja de sistema de Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="139"/>
-        <source>eric5 IDE</source>
-        <translation type="obsolete">eric5 IDE</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="142"/>
-        <source>eric5 Mini Editor</source>
-        <translation type="obsolete">Mini Editor de eric5</translation>
-    </message>
-    <message>
         <location filename="../Tools/TrayStarter.py" line="242"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar el proceso.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
@@ -55256,11 +54959,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <location filename="../Tools/TrayStarter.py" line="120"/>
         <source>Icon Editor</source>
         <translation>Editor de Iconos</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="99"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="117"/>
@@ -55700,11 +55398,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Guardar Diagrama</translation>
     </message>
     <message>
-        <location filename="../Graphics/UMLDialog.py" line="279"/>
-        <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
-        <translation type="obsolete">Archivo de Gráficos Eric5 (*.e5g);;Todos los Archivos (*)</translation>
-    </message>
-    <message>
         <location filename="../Graphics/UMLDialog.py" line="237"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Sobreescribirlo?&lt;/p&gt;</translation>
@@ -55738,11 +55431,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <location filename="../Graphics/UMLDialog.py" line="99"/>
         <source>Save as Image</source>
         <translation>Guardar como Imagen</translation>
-    </message>
-    <message>
-        <location filename="../Graphics/UMLDialog.py" line="280"/>
-        <source>Eric6 Graphics File (*.e5g);;All Files (*)</source>
-        <translation type="obsolete">Archivo de Gráficos Eric5 (*.e5g);;Todos los Archivos (*) {6 ?} {5g?}</translation>
     </message>
     <message>
         <location filename="../Graphics/UMLDialog.py" line="280"/>
@@ -57575,54 +57263,9 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>{0} - {1} - {2} - Modo Pasivo</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="1587"/>
-        <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Visor de ayuda&lt;/b&gt;&lt;p&gt;Mostrar el navegador web de eric5. Esta ventana mostrará archivos de ayuda HTML y ayuda de las colecciones de ayuda de Qt. Tiene la capacidad de navegar a hiperenlaces, establecer marcadores, imprimir la ayuda visualizada y algunas otras características.&lt;/p&gt;&lt;p&gt;Si se invoca con una palabra seleccionada, esta palabra se busca en la colección de ayuda de Qt.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1621"/>
-        <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Buscar actualizaciones...&lt;/b&gt;&lt;p&gt;Busca actualizaciones de eric5 en internet.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1634"/>
-        <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mostrar versiones descargables...&lt;/b&gt;&lt;p&gt;Muestra las versiones de eric5 disponibles para descarga de internet.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1894"/>
-        <source>Start the eric5 Web Browser</source>
-        <translation type="obsolete">Iniciar el Navegador Web de eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1908"/>
-        <source>Start the eric5 Icon Editor</source>
-        <translation type="obsolete">Iniciar el Editor de Iconos de eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1910"/>
-        <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Editor de Iconos&lt;/b&gt;&lt;p&gt;Inicia el Editor de Iconos de eric5 para editar iconos sencillos.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1996"/>
-        <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mostrar herramientas externas&lt;/b&gt;&lt;p&gt;Abre un diálogo para mostrar la ruta y versiones de todas las herramientas externas que utiliza eric5.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="2336"/>
-        <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Documentación de API de Eric&lt;/b&gt;&lt;p&gt;Muestra la documentación de API de Eric. La ubicación de la documentación es el subdirectorio Documentation/Source del directorio de instalación de eric5.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="2849"/>
         <source>External Tools/{0}</source>
         <translation>Herramientas Externas/{0}</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="4228"/>
-        <source>Qt v.3 is not supported by eric5.</source>
-        <translation type="obsolete">Qt v.3 no está soportado por eric5.</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="4422"/>
@@ -57728,26 +57371,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Probando host {0}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6006"/>
-        <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
-        <translation type="obsolete">La actualización para &lt;b&gt;{0}&lt;/b&gt; de eric5 está disponible en &lt;b&gt;{1}&lt;/b&gt;. ¿Le gustaría obtenerla?</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6018"/>
-        <source>Eric5 is up to date</source>
-        <translation type="obsolete">Eric5 está actualizado</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6018"/>
-        <source>You are using the latest version of eric5</source>
-        <translation type="obsolete">Está utilizando la última versión de eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6089"/>
-        <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
-        <translation type="obsolete">Eric5 todavía no está configurado. El diálogo de configuración va a ser iniciado.</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="823"/>
         <source>Cooperation</source>
         <translation>Cooperación</translation>
@@ -57843,21 +57466,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>La información de versiones no se ha podido descargar en los últimos 7 días. Póngase por favor online e inténtelo de nuevo.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="1889"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1889"/>
-        <source>eric5 &amp;Web Browser...</source>
-        <translation type="obsolete">Navegador &amp;Web de eric5...</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1896"/>
-        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Navegador Web de eric5&lt;/b&gt;&lt;p&gt;Navegar por Internet con el Navegador Web de eric5.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="540"/>
         <source>Setting View Profile...</source>
         <translation>Estableciendo Perfil de Vista...</translation>
@@ -57892,16 +57500,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <source>Ctrl+Shift+N</source>
         <comment>File|New Window</comment>
         <translation>Ctrl+Shift+N</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1223"/>
-        <source>Open a new eric5 instance</source>
-        <translation type="obsolete">Abre una nueva instancia de eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1225"/>
-        <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new instance of the eric5 IDE.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Nueva Ventana&lt;/b&gt;&lt;p&gt;Abre una nueva instancia del IDE eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1717"/>
@@ -63035,11 +62633,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
 <context>
     <name>XbelImporter</name>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="35"/>
-        <source>eric5 Web Browser stores its bookmarks in the &lt;b&gt;{0}&lt;/b&gt; XML file. This file is usually located in</source>
-        <translation type="obsolete">El navegador Web de eric5 almacena sus marcadores en el archivo de texto &lt;b&gt;bookmarks.adr&lt;/b&gt;. Este archivo se localiza habitualmente en</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="72"/>
         <source>Please choose the file to begin importing bookmarks.</source>
         <translation>Por favor, elija el archivo para comenzar la importación de marcadores.</translation>
@@ -63053,11 +62646,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="123"/>
         <source>File &apos;{0}&apos; does not exist.</source>
         <translation>El archivo {0} no existe.</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="150"/>
-        <source>eric5 Web Browser Import</source>
-        <translation type="obsolete">Importación de Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="156"/>
@@ -63141,19 +62729,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Factor de Zoom&lt;/b&gt;
 &lt;p&gt;Introduzca aquí el factor de zoom deseado. El factor de zoom
 puede estar entre -10 y +20, y es el incremento que se añade al tamaño de fuente utilizado en la ventana de edición</translation>
-    </message>
-</context>
-<context>
-    <name>eric5</name>
-    <message>
-        <location filename="../eric5.py" line="291"/>
-        <source>Generating Main Window...</source>
-        <translation type="obsolete">Generando Ventana Principal...</translation>
-    </message>
-    <message>
-        <location filename="../eric5.py" line="286"/>
-        <source>Starting...</source>
-        <translation type="obsolete">Comenzando...</translation>
     </message>
 </context>
 <context>
