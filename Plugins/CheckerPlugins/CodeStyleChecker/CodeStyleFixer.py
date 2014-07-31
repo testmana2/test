@@ -7,6 +7,7 @@
 Module implementing a class to fix certain code style issues.
 """
 
+from __future__ import unicode_literals
 try:
     # Python 2
     from StringIO import StringIO       # __IGNORE_EXCEPTION__
@@ -15,7 +16,6 @@ except ImportError:
     from io import StringIO             # __IGNORE_WARNING__
 import os
 import re
-import sys
 import tokenize
 
 # CodeStyleCheckerDialog tries to import FixableCodeStyleIssues what fail under
@@ -209,8 +209,8 @@ class CodeStyleFixer(object):
         
         txt = "".join(self.__source)
         try:
-            if sys.version_info[0] == 3:
-                txt = txt.encode(encoding)
+            enc = 'utf-8' if encoding == 'utf-8-bom' else encoding
+            txt = txt.encode(enc)
             if encoding == 'utf-8-bom':
                 txt = codecs.BOM_UTF8 + txt
             

@@ -104,14 +104,6 @@ def codeStyleCheck(filename, source, args):
         hangClosing, docType, errors, eol, encoding, backup = args
     
     stats = {}
-    # avoid 'Encoding declaration in unicode string' exception on Python2
-    if sys.version_info[0] == 2:
-        if encoding == 'utf-8-bom':
-            enc = 'utf-8'
-        else:
-            enc = encoding
-        source = [line.encode(enc) for line in source]
-    
     # Don't check an empty file
     if source == []:
         return stats, []
@@ -125,6 +117,14 @@ def codeStyleCheck(filename, source, args):
         fixer = None
     
     if not errors:
+        # avoid 'Encoding declaration in unicode string' exception on Python2
+        if sys.version_info[0] == 2:
+            if encoding == 'utf-8-bom':
+                enc = 'utf-8'
+            else:
+                enc = encoding
+            source = [line.encode(enc) for line in source]
+        
         if includeMessages:
             select = [s.strip() for s in
                       includeMessages.split(',') if s.strip()]
