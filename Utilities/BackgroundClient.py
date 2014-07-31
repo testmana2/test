@@ -20,6 +20,7 @@ import json
 import socket
 import struct
 import sys
+import time
 import traceback
 from zlib import adler32
 
@@ -129,6 +130,8 @@ class BackgroundClient(object):
             self.__send(
                 'EXCEPTION', '?', [str(exctype), str(excval), tbinfo])
 
+        # Give time to process latest response on server side
+        time.sleep(0.5)
         self.connection.shutdown(socket.SHUT_RDWR)
         self.connection.close()
 
