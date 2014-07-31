@@ -95,6 +95,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.__forProject = False
         self.__data = {}
         self.__statistics = {}
+        self.__onlyFixes = {}
         
         self.on_loadDefaultButton_clicked()
     
@@ -365,14 +366,13 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.files.sort()
             self.check()
         
-    def check(self, codestring='', onlyFixes={}):
+    def check(self, codestring=''):
         """
         Public method to start a style check for one file.
         
         The results are reported to the __processResult slot.
         
         @keyparam codestring optional sourcestring (str)
-        @keyparam onlyFixes dict which violations should be fixed (dict)
         """
         if not self.files:
             self.checkProgressLabel.setPath("")
@@ -416,7 +416,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         errors = []
         self.__itms = []
-        for error, itm in onlyFixes.get(self.filename, []):
+        for error, itm in self.__onlyFixes.pop(self.filename, []):
             errors.append(error)
             self.__itms.append(itm)
         
@@ -452,7 +452,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             for itm, (lineno, position, text, ignored, fixed, autofixing) in \
                     zip(self.__itms, results):
                 self.__modifyFixedResultItem(itm, text, fixed)
-                self.__updateFixerStatistics(fixes)
+            self.__updateFixerStatistics(fixes)
         else:
             for lineno, position, text, ignored, fixed, autofixing in results:
                 if ignored:
@@ -812,7 +812,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                                   itm.data(0, self.messageRole))),
                 itm
             ))
-        ##!
+    
         # update the configuration values (3: fixCodes, 4: noFixCodes,
         # 5: fixIssues, 6: maxLineLength)
         self.__options[3] = self.fixIssuesEdit.text()
@@ -825,7 +825,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.progress = 0
         self.files.sort()
         self.cancelled = False
-        self.check(onlyFixes=fixesDict)
+        self.__onlyFixes = fixesDict
+        self.check()
     
     def __getSelectedFixableItems(self):
         """
