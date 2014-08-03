@@ -15,8 +15,8 @@ except NameError:
     pass
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
-    QUrl, UrlQuery, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, QRect, \
-    QFile, QPoint, QByteArray, qVersion
+    QUrl, QUrlQuery, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, \
+    QRect, QFile, QPoint, QByteArray, qVersion
 from PyQt5.QtGui import QDesktopServices, QClipboard, QMouseEvent, QColor, \
     QPalette
 from PyQt5.QtWidgets import qApp, QStyle, QMenu, QApplication, QInputDialog, \
@@ -1531,7 +1531,7 @@ class HelpBrowser(QWebView):
         if searchUrl.scheme() != "http":
             return
         
-        searchUrlQuery = UrlQuery()
+        searchUrlQuery = QUrlQuery()
         searchEngines = {}
         inputFields = formElement.findAll("input")
         for inputField in inputFields.toList():
