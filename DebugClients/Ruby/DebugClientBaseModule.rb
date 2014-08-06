@@ -893,6 +893,11 @@ The formated variables list (a list of lists of 3 values) is returned.
             end
             next if matched
             
+            if key.to_s == '$KCODE' or key.to_s == '$=' or key.to_s == '$-K'
+                varlist << [key.to_s, "NilClass", "nil"]
+                next
+            end
+        
             begin
                 if access
                     if key.to_s == key
@@ -903,7 +908,7 @@ The formated variables list (a list of lists of 3 values) is returned.
                     k = "#{access}[%s]" % key
                     obj = eval(k, binding_)
                 else
-                    obj = eval(key, binding_)
+                    obj = eval(key.to_s, binding_)
                 end
             rescue NameError
                 next
@@ -933,7 +938,7 @@ The formated variables list (a list of lists of 3 values) is returned.
                     oval = "%d" % obj.length()
                 end
             end
-            varlist << [key, otype, oval]
+            varlist << [key.to_s, otype, oval]
         end
         return varlist
     end
