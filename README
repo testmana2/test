@@ -13,10 +13,10 @@ README for the eric5 IDE
         below mentioned address and tell me your reason. This might give me a hint on
         how to improve eric5.
         
-        If the required packages (Qt4, QScintilla2, sip and PyQt4) are not installed, 
+        If the required packages (Qt4 or Qt5, QScintilla2, sip and PyQt4) are not installed, 
         please get them and install them in the following order (order is important).
         
-            1. Install Qt4 (from Nokia)
+            1. Install Qt4 or Qt5 (from Nokia)
             
             2. Build and install QScintilla2 (from Riverbank Computing)
             
@@ -160,10 +160,6 @@ README for the eric5 IDE
             profile 
                 This is part of the standard Python distribution and is used to profile
                 Python source code.
-            
-            cyclops 
-                This is a tool to detect variable cycles which can cause the garbage
-                collector being unable to do his job.
     
     Interfaces to additional software packages via plugins
     
