@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Shortcuts SYSTEM "Shortcuts-3.6.dtd">
-<!-- Eric5 keyboard shortcuts -->
+<!-- Eric6 keyboard shortcuts -->
 <!-- Saved: 2012-01-01, 15:38:59-->
 <!-- Author: Detlev Offenbach <detlev@die-offenbachs.de> -->
 <Shortcuts version="3.6">
@@ -150,12 +150,12 @@
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Project">
-    <Name>doc_eric5_api</Name>
+    <Name>doc_eric6_api</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>
   <Shortcut category="Project">
-    <Name>doc_eric5_doc</Name>
+    <Name>doc_eric6_doc</Name>
     <Accel></Accel>
     <AltAccel></AltAccel>
   </Shortcut>

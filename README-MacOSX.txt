@@ -9,33 +9,10 @@ should be installed via a packaging system. The recommended one is MacPorts
 because of it's completeness. This is the way described below.
 
 
-1. Install Xcode 3 (for Snow Leopard)
-------------------
-The installation of various packages require the Xcode package that is
-available from Apple for free. Xcode 3 is contained on the Install DVD
-that came with your Mac. Just insert it and select the optional packages.
-In this window select Xcode. Make sure, you have the following selected:
-
- - Essentials
- - System Tools
- - UNIX Development
- - Documentation
-
-After the installation has finished perform an update of your system
-software via the Apple menu.
-
-Alternatively you may install the Xcode 3 package from the Apple developer
-web site. Just open your browser and enter the URL "http://developer.apple.com/xcode/".
-Follow the instructions on this page. This page requires to log in first. If
-you don't have an AppleID yet, follow the link next to the "Log in" button.
-After you have been logged in follow the download link for Xcode 3. After you
-downloaded the package install it as described above. 
-
-
-1. Install Xcode 4 (for Lion and Mountain Lion)
-------------------
+1. Install Xcode
+----------------
 Open the Mac App Store and enter "xcode" into the search entry at the top
-right of the window. From the list of results select the Xcode entry. Xcode 4
+right of the window. From the list of results select the Xcode entry. Xcode
 is provided free of charge. On the Xcode page select the button to get the
 package. Follow the usual procedure to start the download. Once the download
 has finished open the applications folder and select the "Install Xcode" entry.
@@ -43,8 +20,8 @@ In contrast to the Xcode 3 procedure described above, the installer does not
 ask for a selection of sub-packages.
 
 
-2. Install Python 3.2 or 3.3
-----------------------------
+2. Install Python 3.4
+---------------------
 Although Mac OS X comes with a python installation it is recommended to
 install the python package provided by the Python community. Download it
 from 
@@ -55,37 +32,11 @@ After the download finished open the downloaded package and install it.
 
 Note: The Python documentation can be found in these locations
 
-/Library/Frameworks/Python.framework/Versions/3.2/Resources/English.lproj/Documentation/index.html
-/Applications/Python 3.2/Python Documentation.html
+/Library/Frameworks/Python.framework/Versions/3.4/Resources/English.lproj/Documentation/index.html
+/Applications/Python 3.4/Python Documentation.html
 
-or
-
-/Library/Frameworks/Python.framework/Versions/3.3/Resources/English.lproj/Documentation/index.html
-/Applications/Python 3.3/Python Documentation.html
-
-3a. Install Qt4
----------------
-Download the Qt4 package from
-
-http://qt-project.org/downloads
-
-After the download finished open the downloaded package and install it. The
-tools (e.g. Designer, Linguist) can be found in the location
-
-/Developer/Tools/Qt
-
-The documentation can be found in these locations
-
-/Developer/Documentation/Qt/html (HTML format)
-/Developer/Documentation/Qt/qch (QtHelp format)
-
-The translation files can be found in this location
-
-/Developer/Applications/Qt/translations
-
-
-3b. Install Qt5
----------------
+3. Install Qt5
+--------------
 Download the Qt5 package from
 
 http://qt-project.org/downloads
@@ -94,7 +45,7 @@ After the download finished open the downloaded package and install it. The
 tools (e.g. Designer, Linguist) can be found in the location
 
 ˜/Qt<version>/<version>/<compiler>/bin
-e.g. ˜/Qt5.0.0/5.0.0/clang_64/bin
+e.g. ˜/Qt5.3.0/5.3.0/clang_64/bin
 
 The documentation can be found in these locations
 
@@ -117,11 +68,6 @@ archive in the Downloads folder (or any other folder of your choice). Change to
 the Qt4 directory within the extracted folder and enter these commands in a
 terminal window
 
-Qt4:
-qmake qscintilla.pro -spec macx-g++
-make -j x (number of cores including hyper threaded ones)
-sudo make install
-
 Qt5:
 qmake qscintilla.pro
 make -j x (number of cores including hyper threaded ones)
@@ -143,11 +89,11 @@ make -j x (number of cores including hyper threaded ones)
 sudo make install
 
 
-6. Install PyQt4
+6. Install PyQt5
 ----------------
-Download the PyQt4 source code package from
+Download the PyQt5 source code package from
 
-http://www.riverbankcomputing.com/software/pyqt/download
+http://www.riverbankcomputing.com/software/pyqt/download5
 
 After the download has finished open a Finder window and extract the downloaded
 archive in the Downloads folder (or any other folder of your choice). Change to
@@ -163,7 +109,7 @@ sudo make install
 Change back to the extracted QScintilla2 directory and in there change to the
 Python subdirectory. Enter these commands in a terminal window
 
-python3 configure.py -c -j x (number of cores including hyper threaded ones)
+python3 configure.py --pyqt=PyQt5 -c -j x (number of cores including hyper threaded ones)
 make -j x (number of cores including hyper threaded ones)
 sudo make install
 
@@ -231,7 +177,7 @@ sudo port install enchant
 ---------------------
 Get the penchant sources from
 
-http://pypi.python.org/pypi/pyenchant/1.6.5
+http://pypi.python.org/pypi/pyenchant/1.6.6
 
 Extract the downloaded sources, change to the sources directory and enter
 this command
@@ -256,7 +202,7 @@ are show for the second command) please recheck the installation checks.
 
 13. Install pysvn
 -----------------
-Mac OS X already provides subversion. However, best performance for eric5 is
+Mac OS X already provides subversion. However, best performance for eric6 is
 gained with the pysvn interface to subversion. Therefore it is recommended to
 install pysvn. Get pysvn via 
 
@@ -288,9 +234,9 @@ http://mercurial.selenic.com/
 Extract the downloaded package and install it.
 
 
-15. Install eric5
+15. Install eric6
 -----------------
-Get the latest eric5 distribution package from 
+Get the latest eric6 distribution package from 
 
 http://eric-ide.python-projects.org/eric-download.html
 
@@ -302,18 +248,18 @@ it with this command
 sudo python3 install.py
 
 This step concludes the installation procedure. You are ready for the first
-start of eric5.
+start of eric6.
 
-The eric5 installer created an application bundle in the location
+The eric6 installer created an application bundle in the location
 
-/Developer/Applications/Eric5
+/Applications/eric6
 
 You may drag it to the dock to have it ready.
 
 
-16. First start of eric5
+16. First start of eric6
 ------------------------
-When eric5 is started for the first time it will recognize that it hasn't been
+When eric6 is started for the first time it will recognize that it hasn't been
 configured yet. Therefore it will start the configuration dialog with the
 default configuration. At this point you could simply close the dialog by
 pressing the OK button. However, it is strongly recommended that you go through
@@ -324,11 +270,11 @@ and the paths to the various help pages on the Help Documentation page. The
 values to be entered are given above in the Python and Qt installation sections.
 
 
-17. Install optional packages for eric5 (for plug-ins)
+17. Install optional packages for eric6 (for plug-ins)
 ------------------------------------------------------
-eric5 provides an extension mechanism via plug-ins. Some of them require the
+eric6 provides an extension mechanism via plug-ins. Some of them require the
 installation of additional python packages. The plug-ins themselves are
-available via the Plugin Repository from within eric5.
+available via the Plugin Repository from within eric6.
 
 
 17.1 Installation of pylint
@@ -378,7 +324,7 @@ In the extracted cx_freeze directory execute the command
 
 sudo python3 setup.py install
 
-This completes this installation instruction. Please enjoy using eric5 and let
+This completes this installation instruction. Please enjoy using eric6 and let
 the world know about it.
 
 

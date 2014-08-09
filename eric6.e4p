@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
-<!-- eric6 project file for project eric6 -->
+<!-- eric project file for project eric6 -->
 <!-- Copyright (C) 2014 Detlev Offenbach, detlev@die-offenbachs.de -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -1544,7 +1544,6 @@
     <Other>DebugClients/Python/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/htmlfiles</Other>
-    <Other>README-eric5-doc.txt</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/mercurial.png</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/icons/preferences-mercurial.png</Other>
     <Other>.hgignore</Other>
@@ -1574,7 +1573,6 @@
     <Other>Helpviewer/data/icons/setting.png</Other>
     <Other>Helpviewer/data/javascript/jquery-ui.js</Other>
     <Other>Helpviewer/data/javascript/jquery.js</Other>
-    <Other>README-Raspberry.txt</Other>
     <Other>icons</Other>
     <Other>CSSs</Other>
     <Other>DTDs</Other>
@@ -1625,6 +1623,7 @@
     <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/templates/logBrowserBookmarkPhase.tmpl</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/templates/logDialogBookmarkPhase.tmpl</Other>
+    <Other>README-eric6-doc.txt</Other>
   </Others>
   <MainScript>eric6.py</MainScript>
   <Vcs>

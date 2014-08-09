@@ -13,7 +13,7 @@ README for the eric6 IDE
         below mentioned address and tell me your reason. This might give me a hint on
         how to improve eric6.
         
-        If the required packages (Qt4, QScintilla2, sip and PyQt4) are not installed, 
+        If the required packages (Qt5, QScintilla2, sip and PyQt5) are not installed, 
         please get them and install them in the following order (order is important).
         
             1. Install Qt5 (from Nokia)
@@ -33,7 +33,7 @@ README for the eric6 IDE
         install them in any order and at any time.
         
         Please note, that the QScintilla2 Python bindings have to be rebuild, if
-        the PyQt4 package gets updated. If this step is omitted, a bunch of strange
+        the PyQt5 package gets updated. If this step is omitted, a bunch of strange
         errors will occur.
     
     Installation of translations
@@ -160,10 +160,6 @@ README for the eric6 IDE
             profile 
                 This is part of the standard Python distribution and is used to profile
                 Python source code.
-            
-            cyclops 
-                This is a tool to detect variable cycles which can cause the garbage
-                collector being unable to do his job.
     
     Interfaces to additional software packages via plugins
     

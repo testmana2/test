@@ -1,6 +1,6 @@
 README for passive mode debugging
 
-    eric5 provides the capability to debug programms using the passive
+    eric6 provides the capability to debug programms using the passive
     mode. In this mode it is possible to start the debugger separate from
     the IDE. This may be done on a different computer as well. If the
     debugger is started on a remote machine, it is your responsibility
@@ -50,4 +50,4 @@ README for passive mode debugging
     variables ERICPORT and ERICHOST.
     
     Please send bug reports, feature requests or contributions to eric bugs address
-    <eric5-bugs@die-offenbachs.de> or using the buildt in bug reporting dialog.
+    <eric-bugs@die-offenbachs.de> or using the buildt in bug reporting dialog.

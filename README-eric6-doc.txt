@@ -1,6 +1,6 @@
-README for the eric5-doc documentation generator
+README for the eric6-doc documentation generator
 
-    eric5-doc is the documentation generator of the eric5 IDE. Python source
+    eric6-doc is the documentation generator of the eric6 IDE. Python source
     code documentation may be included as ordinary Python doc-strings or as 
     documentation comments. For Quixote Template files (PTL) only documentation 
     comments are available due to the inner workings of Quixote. Documentation 
@@ -20,7 +20,7 @@ README for the eric5-doc documentation generator
     the module, class, function or method. The second part, separated from the 
     first by a blank line, consists of one or more tags. These are described below.
     
-    eric5-doc produces HTML files from the documentation found within the source 
+    eric6-doc produces HTML files from the documentation found within the source 
     files scaned. It understands the following commandline parameters next to others.
     
     -o directory
@@ -36,7 +36,7 @@ README for the eric5-doc documentation generator
     -i
       Don't generate index files.
     
-    Just type "eric5-doc" to get some usage information.
+    Just type "eric6-doc" to get some usage information.
     
     Description
     -----------
@@ -89,7 +89,7 @@ README for the eric5-doc documentation generator
 
     Block Tags
     ----------
-    The block tags recogized by eric5-doc are:
+    The block tags recogized by eric6-doc are:
 
     @@
         This isn't really a tag. This is used to escape an at sign at the beginning
@@ -145,18 +145,18 @@ README for the eric5-doc documentation generator
         three different forms.
 
         @see "string"
-            Adds a text entry of string. No link is generated. eric5-doc distinguishes
+            Adds a text entry of string. No link is generated. eric6-doc distinguishes
             this form from the others by looking for a double-quote (") as the first
             character. For example:
 
-            @see "eric5-doc readme file"
+            @see "eric6-doc readme file"
 
         @see <a href="URL#value">label</a>
-            Adds a link as defined by URL#value. eric5-doc distinguishes this form from
+            Adds a link as defined by URL#value. eric6-doc distinguishes this form from
             the others by looking for a less-than symbol (<) as the first character.
             For example:
 
-            @see <a href="eric5.eric5-doc.html>eric5-doc documentation generator</a>
+            @see <a href="eric6.eric6-doc.html>eric6-doc documentation generator</a>
 
         @see package.module#member label
             Adds a link to "member" in "module" in "package". package can be a package
@@ -164,8 +164,8 @@ README for the eric5-doc documentation generator
             "package.module#member" part must not be split over several lines and
             must name a valid target within the documentation directory. For example:
 
-            @see eric5.eric5-doc#main eric5-doc main() function
-            @see eric5.DocumentationTools.ModuleDocumentor#ModuleDocument.__genModuleSection
+            @see eric6.eric6-doc#main eric6-doc main() function
+            @see eric6.DocumentationTools.ModuleDocumentor#ModuleDocument.__genModuleSection
                 ModuleDocument.__genModuleSection
 
     @signal signalname description
@@ -181,7 +181,7 @@ README for the eric5-doc documentation generator
 
     Inline Tags
     -----------
-    The inline tags recogized by eric5-doc are:
+    The inline tags recogized by eric6-doc are:
 
     {@link package.module#member label}
         Inserts an in-line link with visible text label that points to the documentation
