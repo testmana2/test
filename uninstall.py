@@ -89,9 +89,10 @@ def uninstallEric():
     global pyModDir
     
     # Remove the menu entry for Linux systems
-    if sys.platform.startswith("linux"):
+    if sys.platform.startswith("linux") and os.getuid() == 0:
         for name in ["/usr/share/pixmaps/eric.png",
                      "/usr/share/applications/eric5.desktop",
+                     "/usr/share/appdata/eric6.appdata.xml",
                      "/usr/share/pixmaps/ericWeb.png",
                      "/usr/share/applications/eric5_webbrowser.desktop"]:
             if os.path.exists(name):
