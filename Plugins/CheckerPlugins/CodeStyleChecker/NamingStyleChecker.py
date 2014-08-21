@@ -456,7 +456,7 @@ class NamingStyleChecker(object):
                 # we got a package
                 packageName = \
                     os.path.split(os.path.dirname(self.__filename))[1]
-                if packageName.lower != packageName:
+                if packageName.lower() != packageName:
                     yield self.__error(node, "N808")
     
     def __checkImportAs(self, node, parents):
