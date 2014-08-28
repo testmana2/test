@@ -1498,6 +1498,8 @@
     <Translation>i18n/eric5_ru.qm</Translation>
     <Translation>i18n/eric5_tr.qm</Translation>
     <Translation>i18n/eric5_zh_CN.GB2312.qm</Translation>
+    <Translation>i18n/eric5_pt.qm</Translation>
+    <Translation>i18n/eric5_pt.ts</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
