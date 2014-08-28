@@ -1498,6 +1498,8 @@
     <Translation>i18n/eric6_tr.ts</Translation>
     <Translation>i18n/eric6_zh_CN.GB2312.qm</Translation>
     <Translation>i18n/eric6_zh_CN.GB2312.ts</Translation>
+    <Translation>i18n/eric6_pt.qm</Translation>
+    <Translation>i18n/eric6_pt.ts</Translation>
   </Translations>
   <Resources>
     <Resource>IconEditor/cursors/cursors.qrc</Resource>
