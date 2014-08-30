@@ -5659,7 +5659,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="1084"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; contiene el error de sintaxis &lt;b&gt;{1}&lt;/b&gt; en la línea&lt;b&gt;{2}&lt;/b&gt;, carácter &lt;b&gt;{4}&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; contiene el error de sintaxis &lt;b&gt;{1}&lt;/b&gt; en la línea&lt;b&gt;{2}&lt;/b&gt;, carácter &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="1143"/>
