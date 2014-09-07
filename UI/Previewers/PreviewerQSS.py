@@ -54,7 +54,7 @@ class PreviewerQSS(QWidget, Ui_PreviewerQSS):
         else:
             self.tree.header().setResizeMode(
                 QHeaderView.ResizeToContents)
-            self.table.horizontalHeader().setSectionResizeMode(
+            self.table.horizontalHeader().setResizeMode(
                 QHeaderView.ResizeToContents)
         self.tree.topLevelItem(0).setExpanded(True)
         

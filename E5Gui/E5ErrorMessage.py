@@ -87,14 +87,20 @@ class E5ErrorMessage(QErrorMessage):
             self.settings.setValue("MessageFilters", filters)
 
 
-def messageHandler(msgType, context, message):
+def messageHandler(msgType, *args):
     """
     Module function handling messages.
     
     @param msgType type of the message (integer, QtMsgType)
-    @param context context information (QMessageLogContext)
-    @param message message to be shown (bytes)
+    @param args message handler arguments, for PyQt4 message to be shown
+        (bytes), for PyQt5 context information (QMessageLogContext) and 
+        message to be shown (bytes)
     """
+    if len(args) == 2:
+        context = args[0]
+        message = args[1]
+    else:
+        message = args[0]
     if __msgHandlerDialog:
         try:
             if msgType == QtDebugMsg:
@@ -114,10 +120,14 @@ def messageHandler(msgType, context, message):
             message = message.replace("\r\n", "<br/>")\
                              .replace("\n", "<br/>")\
                              .replace("\r", "<br/>")
-            msg = "<p><b>{0}</b></p><p>{1}</p><p>File: {2}</p>" \
-                "<p>Line: {3}</p><p>Function: {4}</p>".format(
-                    messageType, Utilities.html_uencode(message),
-                    context.file, context.line, context.function)
+            if len(args) == 2:
+                msg = "<p><b>{0}</b></p><p>{1}</p><p>File: {2}</p>" \
+                    "<p>Line: {3}</p><p>Function: {4}</p>".format(
+                        messageType, Utilities.html_uencode(message),
+                        context.file, context.line, context.function)
+            else:
+                msg = "<p><b>{0}</b></p><p>{1}</p>".format(
+                    messageType, Utilities.html_uencode(message))
             if QThread.currentThread() == qApp.thread():
                 __msgHandlerDialog.showMessage(msg)
             else:
@@ -147,8 +157,12 @@ def messageHandler(msgType, context, message):
             "E5ErrorMessage", "Fatal Error")
     if isinstance(message, bytes):
         message = message.decode()
-    print("{0}: {1} in {2} at line {3} ({4})".format(
-        messageType, message, context.file, context.line, context.function))
+    if len(args) == 2:
+        print("{0}: {1} in {2} at line {3} ({4})".format(
+            messageType, message, context.file, context.line,
+            context.function))
+    else:
+        print("{0}: {1}".format(messageType, message))
 
 
 def qtHandler():

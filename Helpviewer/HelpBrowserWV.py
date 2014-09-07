@@ -15,7 +15,7 @@ except NameError:
     pass
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QObject, QT_TRANSLATE_NOOP, \
-    QUrl, QUrlQuery, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, \
+    QUrl, QBuffer, QIODevice, QFileInfo, Qt, QTimer, QEvent, \
     QRect, QFile, QPoint, QByteArray, qVersion
 from PyQt5.QtGui import QDesktopServices, QClipboard, QMouseEvent, QColor, \
     QPalette
@@ -1531,7 +1531,9 @@ class HelpBrowser(QWebView):
         if searchUrl.scheme() != "http":
             return
         
-        searchUrlQuery = QUrlQuery()
+        if qVersion() >= "5.0.0":
+            from PyQt5.QtCore import QUrlQuery
+            searchUrlQuery = QUrlQuery()
         searchEngines = {}
         inputFields = formElement.findAll("input")
         for inputField in inputFields.toList():
@@ -1544,12 +1546,21 @@ class HelpBrowser(QWebView):
             elif type_ == "text":
                 if inputField == element:
                     value = "{searchTerms}"
-                searchUrlQuery.addQueryItem(name, value)
+                if qVersion() >= "5.0.0":
+                    searchUrlQuery.addQueryItem(name, value)
+                else:
+                    searchUrl.addQueryItem(name, value)
             elif type_ == "checkbox" or type_ == "radio":
                 if inputField.evaluateJavaScript("this.checked"):
-                    searchUrlQuery.addQueryItem(name, value)
+                    if qVersion() >= "5.0.0":
+                        searchUrlQuery.addQueryItem(name, value)
+                    else:
+                        searchUrl.addQueryItem(name, value)
             elif type_ == "hidden":
-                searchUrlQuery.addQueryItem(name, value)
+                if qVersion() >= "5.0.0":
+                    searchUrlQuery.addQueryItem(name, value)
+                else:
+                    searchUrl.addQueryItem(name, value)
         
         selectFields = formElement.findAll("select")
         for selectField in selectFields.toList():
@@ -1561,7 +1572,10 @@ class HelpBrowser(QWebView):
             
             options = selectField.findAll("option")
             value = options.at(selectedIndex).toPlainText()
-            searchUrlQuery.addQueryItem(name, value)
+            if qVersion() >= "5.0.0":
+                searchUrlQuery.addQueryItem(name, value)
+            else:
+                searchUrl.addQueryItem(name, value)
         
         ok = True
         if len(searchEngines) > 1:
@@ -1575,9 +1589,12 @@ class HelpBrowser(QWebView):
                 return
             
             if searchEngines[searchEngine] != "":
-                searchUrlQuery.addQueryItem(
-                    searchEngines[searchEngine], searchEngine)
-        
+                if qVersion() >= "5.0.0":
+                    searchUrlQuery.addQueryItem(
+                        searchEngines[searchEngine], searchEngine)
+                else:
+                    searchUrl.addQueryItem(        
+                        searchEngines[searchEngine], searchEngine)
         engineName = ""
         labels = formElement.findAll('label[for="{0}"]'.format(elementName))
         if labels.count() > 0:
@@ -1592,7 +1609,8 @@ class HelpBrowser(QWebView):
         if not ok:
             return
         
-        searchUrl.setQuery(searchUrlQuery)
+        if qVersion() >= "5.0.0":
+            searchUrl.setQuery(searchUrlQuery)
         
         from .OpenSearch.OpenSearchEngine import OpenSearchEngine
         engine = OpenSearchEngine()

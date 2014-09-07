@@ -15,8 +15,8 @@ import hashlib
 import base64
 
 from PyQt5.QtCore import pyqtSignal, Qt, QObject, QByteArray, QDateTime, \
-    QUrl, QUrlQuery, QCryptographicHash, QFile, QIODevice, QTextStream, \
-    QDate, QTime
+    QUrl, QCryptographicHash, QFile, QIODevice, QTextStream, QDate, QTime, \
+    qVersion
 from PyQt5.QtNetwork import QNetworkReply
 
 from E5Gui import E5MessageBox
@@ -113,22 +113,49 @@ class AdBlockSubscription(QObject):
         if url.path() != "subscribe":
             return
         
-        urlQuery = QUrlQuery(url)
-        self.__title = urlQuery.queryItemValue("title")
-        self.__enabled = urlQuery.queryItemValue("enabled") != "false"
-        self.__location = QByteArray(urlQuery.queryItemValue("location"))
-        
-        # Check for required subscription
-        self.__requiresLocation = urlQuery.queryItemValue("requiresLocation")
-        self.__requiresTitle = urlQuery.queryItemValue("requiresTitle")
-        if self.__requiresLocation and self.__requiresTitle:
-            import Helpviewer.HelpWindow
-            Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
-                .loadRequiredSubscription(self.__requiresLocation,
-                                          self.__requiresTitle)
-        
-        lastUpdateString = urlQuery.queryItemValue("lastUpdate")
-        self.__lastUpdate = QDateTime.fromString(lastUpdateString, Qt.ISODate)
+        if qVersion() >= "5.0.0":
+            from PyQt5.QtCore import QUrlQuery
+            urlQuery = QUrlQuery(url)
+            self.__title = urlQuery.queryItemValue("title")
+            self.__enabled = urlQuery.queryItemValue("enabled") != "false"
+            self.__location = QByteArray(urlQuery.queryItemValue("location"))
+            
+            # Check for required subscription
+            self.__requiresLocation = urlQuery.queryItemValue(
+                "requiresLocation")
+            self.__requiresTitle = urlQuery.queryItemValue("requiresTitle")
+            if self.__requiresLocation and self.__requiresTitle:
+                import Helpviewer.HelpWindow
+                Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
+                    .loadRequiredSubscription(self.__requiresLocation,
+                                              self.__requiresTitle)
+            
+            lastUpdateString = urlQuery.queryItemValue("lastUpdate")
+            self.__lastUpdate = QDateTime.fromString(lastUpdateString,
+                                                     Qt.ISODate)
+        else:
+            self.__title = \
+                QUrl.fromPercentEncoding(url.encodedQueryItemValue("title"))
+            self.__enabled = QUrl.fromPercentEncoding(
+                url.encodedQueryItemValue("enabled")) != "false"
+            self.__location = QByteArray(QUrl.fromPercentEncoding(
+                url.encodedQueryItemValue("location")))
+            
+            # Check for required subscription
+            self.__requiresLocation = QUrl.fromPercentEncoding(
+                url.encodedQueryItemValue("requiresLocation"))
+            self.__requiresTitle = QUrl.fromPercentEncoding(
+                url.encodedQueryItemValue("requiresTitle"))
+            if self.__requiresLocation and self.__requiresTitle:
+                import Helpviewer.HelpWindow
+                Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
+                    .loadRequiredSubscription(self.__requiresLocation,
+                                              self.__requiresTitle)
+            
+            lastUpdateByteArray = url.encodedQueryItemValue("lastUpdate")
+            lastUpdateString = QUrl.fromPercentEncoding(lastUpdateByteArray)
+            self.__lastUpdate = QDateTime.fromString(lastUpdateString,
+                                                     Qt.ISODate)
         
         self.__loadRules()
     
@@ -153,9 +180,13 @@ class AdBlockSubscription(QObject):
         if self.__lastUpdate.isValid():
             queryItems.append(("lastUpdate",
                                self.__lastUpdate.toString(Qt.ISODate)))
-        query = QUrlQuery()
-        query.setQueryItems(queryItems)
-        url.setQuery(query)
+        if qVersion() >= "5.0.0":
+            from PyQt5.QtCore import QUrlQuery
+            query = QUrlQuery()
+            query.setQueryItems(queryItems)
+            url.setQuery(query)
+        else:
+            url.setQueryItems(queryItems)
         return url
     
     def isEnabled(self):

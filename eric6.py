@@ -13,6 +13,8 @@ of the IDE and starts the Qt event loop.
 
 from __future__ import unicode_literals
 
+import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__ 
+
 try:  # Only for Py2
     import StringIO as io   # __IGNORE_EXCEPTION__
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__

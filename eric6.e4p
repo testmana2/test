@@ -1149,6 +1149,7 @@
     <Source>eric6config.py</Source>
     <Source>DebugClients/Python/eric6dbgstub.py</Source>
     <Source>DebugClients/Python3/eric6dbgstub.py</Source>
+    <Source>Toolbox/PyQt4ImportHook.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

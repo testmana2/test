@@ -12,8 +12,11 @@ from __future__ import unicode_literals
 from PyQt5.QtCore import pyqtSignal, Qt, QEvent, qVersion
 from PyQt5.QtGui import QPainter, QPalette
 from PyQt5.QtWidgets import QLineEdit, QStyle, QWidget, QHBoxLayout, \
-    QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy, \
-    QStyleOptionFrame
+    QBoxLayout, QLayout, QApplication, QSpacerItem, QSizePolicy
+if qVersion() >= "5.0.0":
+    from PyQt5.QtWidgets import QStyleOptionFrame
+else:
+    from PyQt5.QtWidgets import QStyleOptionFrameV2 as QStyleOptionFrame
 
 import UI.PixmapCache
 

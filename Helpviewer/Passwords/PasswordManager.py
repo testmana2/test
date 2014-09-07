@@ -11,8 +11,8 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt5.QtCore import pyqtSignal, QObject, QByteArray, QUrl, QUrlQuery, \
-    QCoreApplication, QXmlStreamReader
+from PyQt5.QtCore import pyqtSignal, QObject, QByteArray, QUrl, \
+    QCoreApplication, QXmlStreamReader, qVersion
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtNetwork import QNetworkRequest
 from PyQt5.QtWebKit import QWebSettings
@@ -437,7 +437,10 @@ class PasswordManager(QObject):
         @return stripped URL (QUrl)
         """
         cleanUrl = QUrl(url)
-        cleanUrl.setQuery("")
+        if qVersion() >= "5.0.0":
+            cleanUrl.setQuery("")
+        else:
+            cleanUrl.setQueryItems([])
         cleanUrl.setUserInfo("")
         
         authority = cleanUrl.authority()
@@ -463,10 +466,16 @@ class PasswordManager(QObject):
         if boundary is not None:
             args = self.__extractMultipartQueryItems(data, boundary)
         else:
-            argsUrl = QUrl.fromEncoded(
-                QByteArray("foo://bar.com/?" + QUrl.fromPercentEncoding(
-                    data.replace(b"+", b"%20"))))
-            encodedArgs = QUrlQuery(argsUrl).queryItems()
+            if qVersion() >= "5.0.0":
+                from PyQt5.QtCore import QUrlQuery
+                argsUrl = QUrl.fromEncoded(
+                    QByteArray("foo://bar.com/?" + QUrl.fromPercentEncoding(
+                        data.replace(b"+", b"%20"))))
+                encodedArgs = QUrlQuery(argsUrl).queryItems()
+            else:
+                argsUrl = QUrl.fromEncoded(
+                    QByteArray("foo://bar.com/?" + data.replace(b"+", b"%20")))
+                encodedArgs = argsUrl.queryItems()
             args = set()
             for arg in encodedArgs:
                 key = arg[0]

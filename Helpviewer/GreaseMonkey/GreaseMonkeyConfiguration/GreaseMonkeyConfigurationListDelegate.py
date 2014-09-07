@@ -10,10 +10,13 @@ scripts.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import Qt, QSize, QRect
+from PyQt5.QtCore import Qt, QSize, QRect, qVersion
 from PyQt5.QtGui import QFontMetrics, QPalette, QFont
-from PyQt5.QtWidgets import QStyle, QStyledItemDelegate, QApplication, \
-    QStyleOptionViewItem
+from PyQt5.QtWidgets import QStyle, QStyledItemDelegate, QApplication
+if qVersion() >= "5.0.0":
+    from PyQt5.QtWidgets import QStyleOptionViewItem
+else:
+    from PyQt5.QtWidgets import QStyleOptionViewItemV4 as QStyleOptionViewItem
 
 import UI.PixmapCache
 import Globals

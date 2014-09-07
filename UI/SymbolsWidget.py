@@ -495,7 +495,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
             self.symbolsTable.horizontalHeader().setSectionResizeMode(
                 QHeaderView.Fixed)
         else:
-            self.symbolsTable.horizontalHeader().setSectionResizeMode(
+            self.symbolsTable.horizontalHeader().setResizeMode(
                 QHeaderView.Fixed)
         fm = self.fontMetrics()
         em = fm.width("M")
