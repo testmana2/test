@@ -139,8 +139,8 @@ class E5SslInfoWidget(QMenu):
                 sslVersion = "SSL 3.0"
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityHigh32.png"))
-            elif proto == QSsl.TlsV1:
-                sslVersion = "TLS 1.0"
+            elif proto == QSsl.TlsV1SslV3:
+                sslVersion = "TLS 1.0/SSL 3.0"
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityHigh32.png"))
             elif proto == QSsl.SslV2:
@@ -151,6 +151,24 @@ class E5SslInfoWidget(QMenu):
                 sslVersion = self.tr("unknown")
                 imageLabel.setPixmap(
                     UI.PixmapCache.getPixmap("securityLow32.png"))
+            if qVersion() >= "5.0.0":
+                if proto == QSsl.TlsV1_0:
+                    sslVersion = "TLS 1.0"
+                    imageLabel.setPixmap(
+                        UI.PixmapCache.getPixmap("securityHigh32.png"))
+                elif proto == QSsl.TlsV1_1:
+                    sslVersion = "TLS 1.1"
+                    imageLabel.setPixmap(
+                        UI.PixmapCache.getPixmap("securityHigh32.png"))
+                elif proto == QSsl.TlsV1_2:
+                    sslVersion = "TLS 1.2"
+                    imageLabel.setPixmap(
+                        UI.PixmapCache.getPixmap("securityHigh32.png"))
+            else:
+                if proto == QSsl.TlsV1:
+                    sslVersion = "TLS 1.0"
+                    imageLabel.setPixmap(
+                        UI.PixmapCache.getPixmap("securityHigh32.png"))
             rows += 1
             
             label = QLabel(self)
