@@ -7,8 +7,8 @@ try:
     import PyQt5    # __IGNORE_WARNING__ 
 except ImportError:
     import sys
+    import importlib
 
-    # TODO: adapt this for Python2
     class PyQt4Importer(object):
         def __init__(self):
             """
@@ -44,9 +44,7 @@ except ImportError:
             else:
                 newname = fullname.replace("PyQt5", "PyQt4")
             
-            import importlib
-            loader = importlib.find_loader(newname, self.__path)
-            module = loader.load_module(newname)
+            module = importlib.import_module(newname)
             sys.modules[fullname] = module
             if fullname == "PyQt5.QtCore":
                 import PyQt4.QtGui
