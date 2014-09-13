@@ -78,7 +78,7 @@ class UIPreviewer(E5MainWindow):
         self.styleCombo.setEditable(False)
         self.styleCombo.setToolTip(self.tr("Select the GUI Theme"))
         self.styleLayout.addWidget(self.styleCombo)
-        self.styleCombo.addItems(list(QStyleFactory().keys()))
+        self.styleCombo.addItems(sorted(QStyleFactory().keys()))
         currentStyle = Preferences.Prefs.settings.value('UIPreviewer/style')
         if currentStyle is not None:
             self.styleCombo.setCurrentIndex(int(currentStyle))

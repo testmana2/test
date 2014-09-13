@@ -1726,8 +1726,12 @@ class HelpBrowser(QWebView):
         
         @param evt reference to the wheel event (QWheelEvent)
         """
+        if qVersion() >= "5.0.0":
+            delta = evt.angleDelta().y()
+        else:
+            delta = evt.delta()
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if delta < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()
@@ -1735,7 +1739,7 @@ class HelpBrowser(QWebView):
             return
         
         if evt.modifiers() & Qt.ShiftModifier:
-            if evt.angleDelta().y() < 0:
+            if delta < 0:
                 self.backward()
             else:
                 self.forward()

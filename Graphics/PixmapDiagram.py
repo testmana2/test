@@ -9,7 +9,7 @@ Module implementing a dialog showing a pixmap.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import Qt, QSize, QEvent
+from PyQt5.QtCore import Qt, QSize, QEvent, qVersion
 from PyQt5.QtGui import QPalette, QImage, QPixmap, QPainter, QFont, QColor
 from PyQt5.QtWidgets import QLabel, QSizePolicy, QScrollArea, QAction, QMenu, \
     QToolBar
@@ -187,7 +187,11 @@ class PixmapDiagram(E5MainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if qVersion() >= "5.0.0":
+                delta = evt.angleDelta().y()
+            else:
+                delta = evt.delta()
+            if delta < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()

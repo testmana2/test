@@ -10,7 +10,7 @@ Module implementing a sidebar class.
 from __future__ import unicode_literals
 
 from PyQt5.QtCore import QEvent, QSize, Qt, QByteArray, QDataStream, \
-    QIODevice, QTimer
+    QIODevice, QTimer, qVersion
 from PyQt5.QtWidgets import QTabBar, QWidget, QStackedWidget, QBoxLayout, \
     QToolButton, QSizePolicy
 
@@ -254,7 +254,11 @@ class E5SideBar(QWidget):
                 elif self.isMinimized():
                     self.expand()
             elif evt.type() == QEvent.Wheel:
-                if evt.angleDelta().y() > 0:
+                if qVersion() >= "5.0.0":
+                    delta = evt.angleDelta().y()
+                else:
+                    delta = evt.delta()
+                if delta > 0:
                     self.prevTab()
                 else:
                     self.nextTab()

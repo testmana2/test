@@ -94,9 +94,10 @@ def checkBlacklistedVersions():
     # always assume, that snapshots are good
     if "snapshot" not in pyqtVersion:
         # check for blacklisted versions
-        for vers in BlackLists["PyQt5"] + PlatformBlackLists["PyQt5"]:
+        pyqtVariant = "PyQt{0}".format(pyqtVersion[0])
+        for vers in BlackLists[pyqtVariant] + PlatformBlackLists[pyqtVariant]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt5 version {0} is not compatible with eric6.'
+                print('Sorry, PyQt version {0} is not compatible with eric6.'
                       .format(vers))
                 print('Please install another version.')
                 return False
@@ -160,6 +161,7 @@ def getPythonModulesDirectory():
     return distutils.sysconfig.get_python_lib(True)
 
 
+# TODO: modify to also work with PyQt4
 def getPyQt5ModulesDirectory():
     """
     Function to determine the path to PyQt5's modules directory.

@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 
 from PyQt5.QtCore import pyqtSignal, Qt, QSize, QSignalMapper, QFileInfo, \
-    QFile, QEvent
+    QFile, QEvent, qVersion
 from PyQt5.QtGui import QPalette, QImage, QImageReader, QImageWriter, \
     QKeySequence
 from PyQt5.QtWidgets import QScrollArea, QLabel, QDockWidget, QWhatsThis
@@ -1327,7 +1327,11 @@ class IconEditorWindow(E5MainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if qVersion() >= "5.0.0":
+                delta = evt.angleDelta().y()
+            else:
+                delta = evt.delta()
+            if delta < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()

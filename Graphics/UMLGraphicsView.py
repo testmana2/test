@@ -10,7 +10,7 @@ Module implementing a subclass of E5GraphicsView for our diagrams.
 from __future__ import unicode_literals
 
 from PyQt5.QtCore import pyqtSignal, Qt, QSignalMapper, QFileInfo, QEvent, \
-    QRectF
+    QRectF, qVersion
 from PyQt5.QtWidgets import QGraphicsView, QAction, QToolBar, QDialog
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
 
@@ -601,7 +601,11 @@ class UMLGraphicsView(E5GraphicsView):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if qVersion() >= "5.0.0":
+                delta = evt.angleDelta().y()
+            else:
+                delta = evt.delta()
+            if delta < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()

@@ -14,7 +14,7 @@ except NameError:
     pass
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QTime, QFile, QFileInfo, \
-    QUrl, QIODevice, QCryptographicHash, QStandardPaths
+    QUrl, QIODevice, QCryptographicHash, PYQT_VERSION_STR
 from PyQt5.QtGui import QPalette, QDesktopServices
 from PyQt5.QtWidgets import QWidget, QStyle, QDialog
 from PyQt5.QtNetwork import QNetworkRequest, QNetworkReply
@@ -210,9 +210,16 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 return
             
             self.__autoOpen = dlg.getAction() == "open"
-            fileName = QStandardPaths.storageLocation(
-                QStandardPaths.TempLocation) + \
-                '/' + QFileInfo(fileName).completeBaseName()
+            if PYQT_VERSION_STR >= "5.0.0":
+                from PyQt5.QtCore import QStandardPaths
+                tempLocation = QStandardPaths.storageLocation(
+                    QStandardPaths.TempLocation)
+            else:
+                from PyQt5.QtGui import QDesktopServices
+                tempLocation = QDesktopServices.storageLocation(
+                    QDesktopServices.TempLocation)
+            fileName = tempLocation + '/' + \
+                QFileInfo(fileName).completeBaseName()
         
         if ask and not self.__autoOpen and self.__requestFilename:
             self.__gettingFileName = True

@@ -16,7 +16,7 @@ from __future__ import unicode_literals
 import os
 
 from PyQt5.QtCore import pyqtSlot, QFile, QFileInfo, QTimer, QPoint, \
-    QMimeData, Qt, QEvent, QRegExp, qVersion, QStandardPaths
+    QMimeData, Qt, QEvent, QRegExp, qVersion, PYQT_VERSION_STR
 from PyQt5.QtGui import QImageWriter, QPixmap, QCursor, QDrag, QKeySequence
 from PyQt5.QtWidgets import QWidget, QApplication, QShortcut
 
@@ -75,12 +75,18 @@ class SnapWidget(QWidget, Ui_SnapWidget):
             Preferences.Prefs.settings.value("Snapshot/Delay", 0))
         self.delaySpin.setValue(self.__delay)
         
+        if PYQT_VERSION_STR >= "5.0.0":
+            from PyQt5.QtCore import QStandardPaths
+            picturesLocation = QStandardPaths.writableLocation(
+                QStandardPaths.PicturesLocation)
+        else:
+            from PyQt5.QtGui import QDesktopServices
+            picturesLocation = QDesktopServices.storageLocation(
+                QDesktopServices.PicturesLocation)
         self.__filename = Preferences.Prefs.settings.value(
             "Snapshot/Filename",
-            os.path.join(
-                QStandardPaths.writableLocation(
-                    QStandardPaths.PicturesLocation),
-                self.tr("snapshot") + "1.png"))
+            os.path.join(picturesLocation,
+                         self.tr("snapshot") + "1.png"))
         
         self.__grabber = None
         self.__snapshot = QPixmap()

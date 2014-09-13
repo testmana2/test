@@ -9,7 +9,7 @@ Module implementing a base class for showing a document map.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import Qt, QSize, QRect, QCoreApplication
+from PyQt5.QtCore import Qt, QSize, QRect, QCoreApplication, qVersion
 from PyQt5.QtGui import QColor, QBrush, QPainter
 from PyQt5.QtWidgets import QWidget, QAbstractScrollArea
 
@@ -219,10 +219,14 @@ class E5MapWidget(QWidget):
         
         @param event reference to the wheel event (QWheelEvent)
         """
+        if qVersion() >= "5.0.0":
+            isVertical = event.angleDelta().x() == 0
+        else:
+            isVertical = event.orientation() == Qt.Vertical
         if self._master and \
             event.modifiers() == Qt.NoModifier and \
-                event.angleDelta().x() == 0:
-            # TODO: test angleDelte() with Mac Trackpad
+                isVertical:
+            # TODO: test angleDelta() with Mac Trackpad
             QCoreApplication.sendEvent(self._master.verticalScrollBar(), event)
     
     def calculateGeometry(self):

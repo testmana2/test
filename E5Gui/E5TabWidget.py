@@ -9,7 +9,8 @@ Module implementing a TabWidget class substituting QTabWidget.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal
+from PyQt5.QtCore import Qt, QPoint, QMimeData, QByteArray, pyqtSignal, \
+    qVersion
 from PyQt5.QtGui import QDrag, QMovie
 from PyQt5.QtWidgets import QTabWidget, QTabBar, QApplication, QStyle, QLabel
 
@@ -35,7 +36,11 @@ class E5WheelTabBar(QTabBar):
         @param event reference to the wheel event (QWheelEvent)
         """
         try:
-            if event.angleDelta().y() > 0:
+            if qVersion() >= "5.0.0":
+                delta = event.angleDelta().y()
+            else:
+                delta = event.delta()
+            if delta > 0:
                 self._tabWidget.prevTab()
             else:
                 self._tabWidget.nextTab()

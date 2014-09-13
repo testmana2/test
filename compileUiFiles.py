@@ -19,10 +19,25 @@ def compileUiFiles():
     """
     Compile the .ui files to Python sources.
     """                                                 # __IGNORE_WARNING__
+    # step 1: determine PyQt variant, preferring PyQt5
     try:
-        from PyQt5.uic import compileUiDir
+        import PyQt5        # __IGNORE_WARNING__
+        pyqtVariant = "PyQt5"
     except ImportError:
-        from PyQt5.uic import compileUi
+        import PyQt4    # __IGNORE_WARNING__
+        pyqtVariant = "PyQt4"
+    
+    # step 2: compile the UI files
+    try:
+        if pyqtVariant == "PyQt4":
+            from PyQt4.uic import compileUiDir
+        else:
+            from PyQt5.uic import compileUiDir
+    except ImportError:
+        if pyqtVariant == "PyQt4":
+            from PyQt4.uic import compileUi
+        else:
+            from PyQt5.uic import compileUi
         
         def compileUiDir(dir, recurse=False,            # __IGNORE_WARNING__
                          map=None, **compileUi_args):

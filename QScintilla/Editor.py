@@ -18,7 +18,7 @@ import re
 import difflib
 
 from PyQt5.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
-    pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt
+    pyqtSlot, QCryptographicHash, QEvent, QDateTime, QRegExp, Qt, qVersion
 from PyQt5.QtGui import QCursor, QPalette, QFont, QPixmap, QPainter
 from PyQt5.QtWidgets import QLineEdit, QActionGroup, QDialog, QInputDialog, \
     QApplication, QMenu
@@ -6179,8 +6179,12 @@ class Editor(QsciScintillaCompat):
         
         @param evt reference to the wheel event (QWheelEvent)
         """
+        if qVersion() >= "5.0.0":
+            delta = evt.angleDelta().y()
+        else:
+            delta = evt.delta()
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if delta < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()
@@ -6188,7 +6192,7 @@ class Editor(QsciScintillaCompat):
             return
         
         if evt.modifiers() & Qt.ShiftModifier:
-            if evt.angleDelta().y() < 0:
+            if delta < 0:
                 self.gotoMethodClass(False)
             else:
                 self.gotoMethodClass(True)

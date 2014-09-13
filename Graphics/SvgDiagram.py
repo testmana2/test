@@ -9,7 +9,7 @@ Module implementing a dialog showing a SVG graphic.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import Qt, QSize, QEvent
+from PyQt5.QtCore import Qt, QSize, QEvent, qVersion
 from PyQt5.QtGui import QPalette, QPainter, QFont, QColor
 from PyQt5.QtWidgets import QSizePolicy, QScrollArea, QAction, QMenu, QToolBar
 from PyQt5.QtPrintSupport import QPrinter, QPrintDialog
@@ -157,7 +157,11 @@ class SvgDiagram(E5MainWindow):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if qVersion() >= "5.0.0":
+                delta = evt.angleDelta().y()
+            else:
+                delta = evt.delta()
+            if delta < 0:
                 self.__zoomOut()
             else:
                 self.__zoomIn()

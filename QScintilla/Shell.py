@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import sys
 import re
 
-from PyQt5.QtCore import pyqtSignal, QFileInfo, Qt, QEvent
+from PyQt5.QtCore import pyqtSignal, QFileInfo, Qt, QEvent,  qVersion
 from PyQt5.QtGui import QClipboard, QPalette, QFont
 from PyQt5.QtWidgets import QDialog, QInputDialog, QApplication, QMenu, \
     QWidget, QHBoxLayout, QVBoxLayout, QShortcut
@@ -857,7 +857,11 @@ class Shell(QsciScintillaCompat):
         @param evt reference to the wheel event (QWheelEvent)
         """
         if evt.modifiers() & Qt.ControlModifier:
-            if evt.angleDelta().y() < 0:
+            if qVersion() >= "5.0.0":
+                delta = evt.angleDelta().y()
+            else:
+                delta = evt.delta()
+            if delta < 0:
                 self.zoomOut()
             else:
                 self.zoomIn()

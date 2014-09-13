@@ -48,28 +48,33 @@ macAppBundleName = "eric6.app"
 macAppBundlePath = "/Applications"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
     sys.exec_prefix)
+pyqtVariant = ""
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
     "sip": ["4.11", "4.12.3"],
+    "PyQt4": [],
     "PyQt5": [],
     "QScintilla2": [],
 }
 PlatformsBlackLists = {
     "windows": {
         "sip": [],
+        "PyQt4": [],
         "PyQt5": [],
         "QScintilla2": [],
     },
     
     "linux": {
         "sip": [],
+        "PyQt4": [],
         "PyQt5": [],
         "QScintilla2": [],
     },
     
     "mac": {
         "sip": [],
+        "PyQt4": [],
         "PyQt5": [],
         "QScintilla2": [],
     },
@@ -166,12 +171,29 @@ def usage(rcode=2):
     exit(rcode)
 
 
+def determinePyQtVariant():
+    """
+    Module function to determine the PyQt variant to be used.
+    """
+    global pyqtVariant
+    
+    try:
+        import PyQt5        # __IGNORE_WARNING__
+        pyqtVariant = "PyQt5"
+    except ImportError:
+        try:
+            import PyQt4    # __IGNORE_WARNING__
+            pyqtVariant = "PyQt4"
+        except ImportError:
+            pyqtVariant = ""
+
+
 def initGlobals():
     """
     Module function to set the values of globals that need more than a
     simple assignment.
     """
-    global platBinDir, modDir, pyModDir, apisDir
+    global platBinDir, modDir, pyModDir, apisDir, pyqtVariant
 
     if sys.platform.startswith("win"):
         platBinDir = sys.exec_prefix
@@ -183,13 +205,16 @@ def initGlobals():
     modDir = distutils.sysconfig.get_python_lib(True)
     pyModDir = modDir
     
-    pyqtDataDir = os.path.join(modDir, "PyQt5")
+    pyqtDataDir = os.path.join(modDir, pyqtVariant)
     if os.path.exists(os.path.join(pyqtDataDir, "qsci")):
         # it's the installer
         qtDataDir = pyqtDataDir
     else:
         try:
-            from PyQt5.QtCore import QLibraryInfo
+            if pyqtVariant == "PyQt4":
+                from PyQt4.QtCore import QLibraryInfo
+            else:
+                from PyQt5.QtCore import QLibraryInfo
             qtDataDir = QLibraryInfo.location(QLibraryInfo.DataPath)
         except ImportError:
             qtDataDir = None
@@ -930,30 +955,48 @@ def doDependancyChecks():
         print('Please install it and try again.')
         exit(5)
     
-    try:
-        from PyQt5.QtCore import qVersion
-    except ImportError as msg:
-        print('Sorry, please install PyQt5.')
-        print('Error: {0}'.format(msg))
-        exit(1)
-    print("Found PyQt5")
+    if pyqtVariant == "PyQt4":
+        try:
+            from PyQt4.QtCore import qVersion
+        except ImportError as msg:
+            print('Sorry, please install PyQt5 or PyQt4.')
+            print('Error: {0}'.format(msg))
+            exit(1)
+        print("Found PyQt4")
+    else:
+        try:
+            from PyQt5.QtCore import qVersion
+        except ImportError as msg:
+            print('Sorry, please install PyQt5 or PyQt4.')
+            print('Error: {0}'.format(msg))
+            exit(1)
+        print("Found PyQt5")
     
     try:
-        from PyQt5 import Qsci      # __IGNORE_WARNING__
-
+        if pyqtVariant == "PyQt4":
+            from PyQt4 import Qsci      # __IGNORE_WARNING__
+        else:
+            from PyQt5 import Qsci      # __IGNORE_WARNING__
     except ImportError as msg:
         print("Sorry, please install QScintilla2 and")
-        print("its PyQt5 wrapper.")
+        print("its PyQt5/PyQt4 wrapper.")
         print('Error: {0}'.format(msg))
         exit(1)
     print("Found QScintilla2")
     
+    if pyqtVariant == "PyQt4":
+        impModulesList = [
+            "PyQt4.QtGui", "PyQt4.QtNetwork", "PyQt4.QtSql",
+            "PyQt4.QtSvg", "PyQt4.QtWebKit",
+        ]
+    else:
+        impModulesList = [
+            "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt5.QtPrintSupport",
+            "PyQt5.QtSql", "PyQt5.QtSvg", "PyQt5.QtWebKit",
+            "PyQt5.QtWebKitWidgets", "PyQt5.QtWidgets",
+        ]
     modulesOK = True
-    for impModule in [
-        "PyQt5.QtGui", "PyQt5.QtNetwork", "PyQt5.QtPrintSupport",
-        "PyQt5.QtSql", "PyQt5.QtSvg", "PyQt5.QtWebKit",
-        "PyQt5.QtWebKitWidgets", "PyQt5.QtWidgets",
-    ]:
+    for impModule in impModulesList:
         name = impModule.split(".")[1]
         try:
             __import__(impModule)
@@ -976,8 +1019,11 @@ def doDependancyChecks():
     # check version of Qt
     qtMajor = int(qVersion().split('.')[0])
     qtMinor = int(qVersion().split('.')[1])
-    if qtMajor < 5 or (qtMajor == 3 and qtMinor < 6):
-        print('Sorry, you must have Qt version 5.3.0 or higher.')
+    if qtMajor < 4 or \
+        (qtMajor == 4 and qtMinor < 8) or \
+            (qtMajor == 5 and qtMinor < 3):
+        print('Sorry, you must have Qt version 4.8.0 or better or')
+        print('5.3.0 or better.')
         exit(2)
     print("Qt Version: {0}".format(qVersion()))
     
@@ -1010,7 +1056,10 @@ def doDependancyChecks():
         pass
     
     # check version of PyQt
-    from PyQt5.QtCore import PYQT_VERSION_STR
+    if pyqtVariant == "PyQt4":
+        from PyQt4.QtCore import PYQT_VERSION_STR
+    else:
+        from PyQt5.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
     # always assume, that snapshots are new enough
     if "snapshot" not in pyqtVersion:
@@ -1020,21 +1069,27 @@ def doDependancyChecks():
         maj = int(maj)
         min = int(min)
         pat = int(pat)
-        if maj < 5 or (maj == 5 and min < 3):
-            print('Sorry, you must have PyQt 5.3.0 or higher or'
+        if maj < 4 or \
+            (maj == 4 and min < 10) or \
+                (maj == 5 and min < 3):
+            print('Sorry, you must have PyQt 4.10.0 or better or')
+            print('PyQt 5.3.0 or better or'
                   ' a recent snapshot release.')
             exit(4)
         # check for blacklisted versions
-        for vers in BlackLists["PyQt5"] + PlatformBlackLists["PyQt5"]:
+        for vers in BlackLists[pyqtVariant] + PlatformBlackLists[pyqtVariant]:
             if vers == pyqtVersion:
-                print('Sorry, PyQt5 version {0} is not compatible with eric6.'
+                print('Sorry, PyQt version {0} is not compatible with eric6.'
                       .format(vers))
                 print('Please install another version.')
                 exit(4)
     print("PyQt Version: ", pyqtVersion)
     
     # check version of QScintilla
-    from PyQt5.Qsci import QSCINTILLA_VERSION_STR
+    if pyqtVariant == "PyQt4":
+        from PyQt4.Qsci import QSCINTILLA_VERSION_STR
+    else:
+        from PyQt5.Qsci import QSCINTILLA_VERSION_STR
     scintillaVersion = QSCINTILLA_VERSION_STR
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
@@ -1062,15 +1117,22 @@ def doDependancyChecks():
     print()
 
 
+# TODO: PyQt4
 def compileUiFiles():
     """
     Compile the .ui files to Python sources.
     """                                                 # __IGNORE_WARNING__
     global sourceDir
     try:
-        from PyQt5.uic import compileUiDir
+        if pyqtVariant == "PyQt4":
+            from PyQt4.uic import compileUiDir
+        else:
+            from PyQt5.uic import compileUiDir
     except ImportError:
-        from PyQt5.uic import compileUi
+        if pyqtVariant == "PyQt4":
+            from PyQt4.uic import compileUi
+        else:
+            from PyQt5.uic import compileUi
         
         def compileUiDir(dir, recurse=False,            # __IGNORE_WARNING__
                          map=None, **compileUi_args):
@@ -1175,7 +1237,8 @@ def main(argv):
     
     if os.path.dirname(argv[0]):
         os.chdir(os.path.dirname(argv[0]))
-
+    
+    determinePyQtVariant()
     initGlobals()
 
     try:
