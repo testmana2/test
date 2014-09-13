@@ -1215,7 +1215,7 @@ eric6.E5Gui.E5ErrorMessage.E5ErrorMessage.editMessageFilters?4()
 eric6.E5Gui.E5ErrorMessage.E5ErrorMessage.showMessage?4(message, msgType="")
 eric6.E5Gui.E5ErrorMessage.E5ErrorMessage?1(parent=None)
 eric6.E5Gui.E5ErrorMessage.editMessageFilters?4()
-eric6.E5Gui.E5ErrorMessage.messageHandler?4(msgType, context, message)
+eric6.E5Gui.E5ErrorMessage.messageHandler?4(msgType, *args)
 eric6.E5Gui.E5ErrorMessage.messageHandlerInstalled?4()
 eric6.E5Gui.E5ErrorMessage.qtHandler?4()
 eric6.E5Gui.E5ErrorMessageFilterDialog.E5ErrorMessageFilterDialog.getFilters?4()
@@ -3778,7 +3778,7 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerR
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.codeStyleCheck?4(filename, source, args)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.extractLineFlags?4(line, startComment=")
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initService?4()
-eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='', onlyFixes={})
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='')
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.filenameRole?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.fixableRole?7
@@ -7853,6 +7853,9 @@ eric6.Templates.TemplateViewer.TemplateViewer.removeGroup?4(itm)
 eric6.Templates.TemplateViewer.TemplateViewer.save?4()
 eric6.Templates.TemplateViewer.TemplateViewer.writeTemplates?4(filename=None)
 eric6.Templates.TemplateViewer.TemplateViewer?1(parent, viewmanager)
+eric6.Toolbox.PyQt4ImportHook.PyQt4Importer.find_module?4(fullname, path=None)
+eric6.Toolbox.PyQt4ImportHook.PyQt4Importer.load_module?4(fullname)
+eric6.Toolbox.PyQt4ImportHook.PyQt4Importer?1()
 eric6.Toolbox.SingleApplication.SingleApplicationClient.connect?4()
 eric6.Toolbox.SingleApplication.SingleApplicationClient.disconnect?4()
 eric6.Toolbox.SingleApplication.SingleApplicationClient.errstr?4()
@@ -9033,6 +9036,8 @@ eric6.install.createMacAppBundle?4(pydir)
 eric6.install.createPyWrapper?4(pydir, wfile, isGuiScript=True)
 eric6.install.currDir?7
 eric6.install.defaultMacAppBundleName?7
+eric6.install.defaultMacAppBundlePath?7
+eric6.install.determinePyQtVariant?4()
 eric6.install.distDir?7
 eric6.install.doCleanup?7
 eric6.install.doCompile?7
@@ -9051,6 +9056,7 @@ eric6.install.progLanguages?7
 eric6.install.progName?7
 eric6.install.pyModDir?7
 eric6.install.pyName?4(py_dir, py_file)
+eric6.install.pyqtVariant?7
 eric6.install.shutilCopy?4(src, dst, perm=0o644)
 eric6.install.sourceDir?7
 eric6.install.usage?4(rcode=2)
@@ -9061,6 +9067,8 @@ eric6.patch_modpython.modDir?7
 eric6.patch_modpython.progName?7
 eric6.patch_modpython.usage?4(rcode=2)
 eric6.uninstall.PythonMarkers?7
+eric6.uninstall.defaultMacAppBundleName?7
+eric6.uninstall.defaultMacAppBundlePath?7
 eric6.uninstall.exit?4(rcode=0)
 eric6.uninstall.includePythonVariant?7
 eric6.uninstall.initGlobals?4()

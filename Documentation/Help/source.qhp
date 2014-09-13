@@ -932,6 +932,7 @@
             <section title="eric6.Templates.TemplateViewer" ref="eric6.Templates.TemplateViewer.html" />
           </section>
           <section title="eric6.Toolbox" ref="index-eric6.Toolbox.html">
+            <section title="eric6.Toolbox.PyQt4ImportHook" ref="eric6.Toolbox.PyQt4ImportHook.html" />
             <section title="eric6.Toolbox.SingleApplication" ref="eric6.Toolbox.SingleApplication.html" />
             <section title="eric6.Toolbox.Startup" ref="eric6.Toolbox.Startup.html" />
           </section>
@@ -9234,6 +9235,11 @@
       <keyword name="PyProfileDialog.__unfinish" id="PyProfileDialog.__unfinish" ref="eric6.DataViews.PyProfileDialog.html#PyProfileDialog.__unfinish" />
       <keyword name="PyProfileDialog.on_buttonBox_clicked" id="PyProfileDialog.on_buttonBox_clicked" ref="eric6.DataViews.PyProfileDialog.html#PyProfileDialog.on_buttonBox_clicked" />
       <keyword name="PyProfileDialog.start" id="PyProfileDialog.start" ref="eric6.DataViews.PyProfileDialog.html#PyProfileDialog.start" />
+      <keyword name="PyQt4ImportHook (Module)" id="PyQt4ImportHook (Module)" ref="eric6.Toolbox.PyQt4ImportHook.html" />
+      <keyword name="PyQt4Importer" id="PyQt4Importer" ref="eric6.Toolbox.PyQt4ImportHook.html#PyQt4Importer" />
+      <keyword name="PyQt4Importer (Constructor)" id="PyQt4Importer (Constructor)" ref="eric6.Toolbox.PyQt4ImportHook.html#PyQt4Importer.__init__" />
+      <keyword name="PyQt4Importer.find_module" id="PyQt4Importer.find_module" ref="eric6.Toolbox.PyQt4ImportHook.html#PyQt4Importer.find_module" />
+      <keyword name="PyQt4Importer.load_module" id="PyQt4Importer.load_module" ref="eric6.Toolbox.PyQt4ImportHook.html#PyQt4Importer.load_module" />
       <keyword name="PyRegExpWizard" id="PyRegExpWizard" ref="eric6.Plugins.PluginWizardPyRegExp.html#PyRegExpWizard" />
       <keyword name="PyRegExpWizard (Constructor)" id="PyRegExpWizard (Constructor)" ref="eric6.Plugins.PluginWizardPyRegExp.html#PyRegExpWizard.__init__" />
       <keyword name="PyRegExpWizard (Package)" id="PyRegExpWizard (Package)" ref="index-eric6.Plugins.WizardPlugins.PyRegExpWizard.html" />
@@ -13018,6 +13024,7 @@
       <keyword name="decodeBytes" id="decodeBytes" ref="eric6.Utilities.__init__.html#decodeBytes" />
       <keyword name="decodeString" id="decodeString" ref="eric6.Utilities.__init__.html#decodeString" />
       <keyword name="decryptData" id="decryptData" ref="eric6.Utilities.crypto.py3AES.html#decryptData" />
+      <keyword name="determinePyQtVariant" id="determinePyQtVariant" ref="eric6.install.html#determinePyQtVariant" />
       <keyword name="determinePythonVersion" id="determinePythonVersion" ref="eric6.Utilities.__init__.html#determinePythonVersion" />
       <keyword name="direntries" id="direntries" ref="eric6.Utilities.__init__.html#direntries" />
       <keyword name="displayString" id="displayString" ref="eric6.Plugins.PluginVcsMercurial.html#displayString" />
@@ -14260,6 +14267,7 @@
       <file>eric6.Templates.TemplatePropertiesDialog.html</file>
       <file>eric6.Templates.TemplateSingleVariableDialog.html</file>
       <file>eric6.Templates.TemplateViewer.html</file>
+      <file>eric6.Toolbox.PyQt4ImportHook.html</file>
       <file>eric6.Toolbox.SingleApplication.html</file>
       <file>eric6.Toolbox.Startup.html</file>
       <file>eric6.Tools.TRPreviewer.html</file>
