@@ -117,7 +117,7 @@ class E5GraphicsView(QGraphicsView):
         @param value zoom value in percent (integer)
         """
         if value != self.zoom():
-            self.resetMatrix()
+            self.resetTransform()
             factor = value / 100.0
             self.scale(factor, factor)
             self.zoomValueChanged.emit(value)
@@ -128,7 +128,7 @@ class E5GraphicsView(QGraphicsView):
         
         @return current zoom factor in percent (integer)
         """
-        return int(self.matrix().m11() * 100.0)
+        return int(self.transform().m11() * 100.0)
        
     def resizeScene(self, amount, isWidth=True):
         """
