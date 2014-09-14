@@ -5,6 +5,8 @@ Version 6.0-snapshot-2014mmdd:
 - General
   -- added Portugese translations provided by Candido Fontes
   -- extended the code base to be usable with PyQt4 as well
+- Web Browser
+  -- added DuckDuckGo to the list of default search engines
 
 Version 6.0-snapshot-20140720:
 - bug fixes

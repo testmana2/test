@@ -1627,6 +1627,7 @@
     <Other>Plugins/VcsPlugins/vcsMercurial/templates/logBrowserBookmarkPhase.tmpl</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/templates/logDialogBookmarkPhase.tmpl</Other>
     <Other>README-eric6-doc.txt</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/DuckDuckGo.xml</Other>
   </Others>
   <MainScript>eric6.py</MainScript>
   <Vcs>
