@@ -30,7 +30,7 @@
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.py" line="24"/>
         <source>&lt;p&gt;{0} is an Integrated Development Environment for the Python programming language. It is written using the PyQt Python bindings for the Qt GUI toolkit and the QScintilla editor widget.&lt;/p&gt;&lt;p&gt;For more information see &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Please send bug reports to &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;To request a new feature please send an email to &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0} uses third party software which is copyrighted by its respective copyright holder. For details see the copyright notice of the individual package.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;{0} é um Ambiente Integrado de Desenvolvimento para a linguagem de programação Python. Foi escrito usando as associações de Python PyQt às ferramentas de Qt GUI e o editor de QScintilla.&lt;/p&gt;&lt;p&gt;Para mais informação ver &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Por favor envie os relatórios de erros a &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Para pedir uma funcionalidade nova, por favor envie um correio a &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;{0} utiliza software de terceiros que está protegido por direitos de autor. Para mais detalhes ver o contrato da licença dos pacotes individuais.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;{0} é um Ambiente Integrado de Desenvolvimento para a linguagem de programação Python. Foi escrito usando as associações de Python PyQt às ferramentas de Qt GUI e o editor de QScintilla.&lt;/p&gt;&lt;p&gt;Para mais informação ver &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Por favor envie os relatórios de erros a &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Para pedir uma funcionalidade nova, por favor envie um correio a &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0} utiliza software de terceiros que está protegido por direitos de autor. Para mais detalhes ver o contrato da licença dos pacotes individuais.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -5461,7 +5461,7 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="452"/>
         <source>&lt;b&gt;Execute&lt;/b&gt;&lt;p&gt;Execute a one line statement in the current context of the debugged program.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Executar&lt;/b&gt;&lt;p&gt;Executa instrução de uma linha no contexto atual do programa depurado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="460"/>
@@ -5521,7 +5521,7 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="499"/>
         <source>&lt;b&gt;Ignored Exceptions&lt;/b&gt;&lt;p&gt;Configure the ignored exceptions. Only exception types that are not listed are highlighted during a debugging session.&lt;/p&gt;&lt;p&gt;Please note, that unhandled exceptions cannot be ignored.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Exceções Ignoradas&lt;/b&gt;&lt;p&gt;Configura as exceções ignoradas. Apenas os tipos de exceções que não estão listadas são realçadas durante uma sessão de depuração.&lt;/p&gt;&lt;p&gt;Note-se que não se podem ignorar as exceções sem tratamento.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="518"/>
@@ -5574,7 +5574,7 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="550"/>
         <source>&lt;b&gt;Next Breakpoint&lt;/b&gt;&lt;p&gt;Go to next breakpoint of the current editor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ponto de Interrupção Seguinte&lt;/b&gt;&lt;p&gt;Vai ao próximo ponto de interrupção do editor atual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="564"/>
@@ -5590,7 +5590,7 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="565"/>
         <source>&lt;b&gt;Previous Breakpoint&lt;/b&gt;&lt;p&gt;Go to previous breakpoint of the current editor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ponto de Interrupção Anterior&lt;/b&gt;&lt;p&gt;Vai ao ponto de interrupção anterior do editor atual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="578"/>
@@ -5783,7 +5783,7 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="306"/>
         <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Reiniciar&lt;/b&gt;&lt;p&gt;Define os argumentos da linha de comandos e define a linha atual como a primeira instrução Python executável do último script depurado. Poderão gravar-se primeiro as alterações não gravadas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="322"/>
@@ -6600,7 +6600,7 @@ Não conectado
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="110"/>
         <source>Select the multi threaded debug client</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar o cliente de depuração multi-segmento</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="113"/>
@@ -6713,12 +6713,12 @@ Não conectado
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="110"/>
         <source>Select the multi threaded debug client</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar o cliente de depuração multi-segmento</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="113"/>
         <source>Multi Threaded</source>
-        <translation type="unfinished">Multi-Segmento</translation>
+        <translation>Multi-Segmento</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="123"/>
@@ -8163,7 +8163,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="33"/>
         <source>You have saved certificates identifying these servers:</source>
-        <translation>Guardou certificados identificando estes servidores:</translation>
+        <translation>Gravou certificados que identificam estes servidores:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="140"/>
@@ -8228,7 +8228,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.ui" line="132"/>
         <source>You have saved certificates identifying these certification authorities:</source>
-        <translation>Guardou certificados identificando estas autoridades certificadoras:</translation>
+        <translation>Gravou certificados que identificam estas autoridades certificadoras:</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="310"/>
@@ -8278,12 +8278,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="450"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiro Certificado (PEM) (*.pem);;Ficheiro Certificado (DER) (*.der)</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="466"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O ficheiro &lt;b&gt;{0}&lt;/b&gt; já existe. Sobreescrever?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="477"/>
@@ -8293,12 +8293,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="499"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiros Certificado (*.pem *.crt *.cer *.ca);;Ficheiros Todos (*)</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="509"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Nmobilo se pôde ler o certificado desde o ficheiro &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Erro: {1}&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Não se pôde ler o certificado desde o ficheiro &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Erro: {1}&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -8486,12 +8486,12 @@ whole selection.&lt;/li&gt;
         <translation>desconhecido</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="158"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="176"/>
         <source>It uses protocol: {0}</source>
         <translation>Utiliza protocolo: {0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="165"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="183"/>
         <source>It is encrypted using {0} at {1} bits, with {2} for message authentication and {3} as key exchange mechanism.
 
 </source>
@@ -10248,7 +10248,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="17"/>
         <source>&lt;b&gt;Configure file handling settings&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar definições do tratamento de ficheiros&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="37"/>
@@ -10258,7 +10258,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="45"/>
         <source>Select, whether breakpoint belonging to an editor should be cleared, when the editor is closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar se deve limpar-se o ponto de interrupção pertencente ao editor quando este se feche</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="48"/>
@@ -10278,7 +10278,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="76"/>
         <source>Enter the filesize, a warning dialog should be shown.</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir o tamanho do ficheiro, deverá mostra-se um aviso.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="79"/>
@@ -10293,7 +10293,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="122"/>
         <source>End of Line Characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Caráter de Fim de Linha</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="128"/>
@@ -10328,7 +10328,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="161"/>
         <source>Select whether the eol type should be converted upon opening the file.</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione se o tipo de fim de linha deve ser convertido ao abrir o ficheiro.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="164"/>
@@ -13178,12 +13178,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="89"/>
         <source>Speed Dial</source>
-        <translation type="unfinished">Marcação Rápida</translation>
+        <translation>Marcação Rápida</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="90"/>
         <source>URL</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="91"/>
@@ -13193,12 +13193,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="92"/>
         <source>Apply</source>
-        <translation type="unfinished">Aplicar</translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="93"/>
         <source>New Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Página Nova</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="94"/>
@@ -13218,27 +13218,27 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="97"/>
         <source>Load title from page</source>
-        <translation type="unfinished"></translation>
+        <translation>Carregar título da página</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="99"/>
         <source>Speed Dial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Definições de Marcação Rápida</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="101"/>
         <source>Add New Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Adicionar Nova Página</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="102"/>
         <source>Maximum pages in a row:</source>
-        <translation type="unfinished"></translation>
+        <translation>Máximo de páginas numa fila:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="104"/>
         <source>Change size of pages:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mudar tamanho das páginas:</translation>
     </message>
 </context>
 <context>
@@ -13995,7 +13995,9 @@ whole selection.&lt;/li&gt;
         <source>&lt;b&gt;Exception Filter&lt;/b&gt;
 &lt;p&gt;This dialog is used to enter the exception types, that shall be highlighted during a debugging session. If this list is empty, all exception types will be highlighted. If the exception reporting flag in the &quot;Start Debugging&quot; dialog is unchecked, no exception will be reported at all.&lt;/p&gt;
 &lt;p&gt;Please note, that unhandled exceptions are always highlighted independent of these settings.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Filtro de Exceções&lt;/b&gt;
+&lt;p&gt;Esta caixa de diálogo usa-se para introduzir os tipos de exceções que se devem ressaltar durante a sessão de depuração. Se esta lista está vazia, todas os tipos de exceções serão ressaltados. Se o sinalizador de relatório de exceções na caixa de diálogo &quot;Começar Depuração&quot; está desmarcado, nenhuma exceção será reportada.&lt;/p&gt;
+&lt;p&gt;Por favor note-se que as exceções sem tratar sempre serão ressaltadas, independentemente das definições.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/ExceptionsFilterDialog.ui" line="27"/>
@@ -16081,7 +16083,7 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2384"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4.Por favor atualize.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1276"/>
@@ -16131,7 +16133,7 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2416"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4. Por favor atualize.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16580,7 +16582,7 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="97"/>
         <source>Show a navigation menu</source>
-        <translation type="unfinished">Mostrar um menú de navegação</translation>
+        <translation>Mostrar um menú de navegação</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="119"/>
@@ -16590,7 +16592,7 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="136"/>
         <source>Open a new help window tab</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="150"/>
@@ -16600,17 +16602,17 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="154"/>
         <source>Move Left</source>
-        <translation type="unfinished">Mover à esquerda</translation>
+        <translation>Mover à esquerda</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="157"/>
         <source>Move Right</source>
-        <translation type="unfinished">Mover à direita</translation>
+        <translation>Mover à direita</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="161"/>
         <source>Duplicate Page</source>
-        <translation type="unfinished">Duplicar Página</translation>
+        <translation>Duplicar Página</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="164"/>
@@ -16620,7 +16622,7 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="167"/>
         <source>Close Others</source>
-        <translation type="unfinished">Fechar Outros</translation>
+        <translation>Fechar Outros</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="192"/>
@@ -16645,43 +16647,43 @@ Razão: {0}</translation>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="197"/>
         <source>Bookmark All Tabs</source>
-        <translation type="unfinished">Marcar Todos os Separadores</translation>
+        <translation>Marcar Todos os Separadores</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="349"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4.Por favor atualize.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4.Por favor atualize.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="745"/>
         <source>Loading...</source>
-        <translation type="unfinished">Carregando...</translation>
+        <translation>Carregando...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="766"/>
         <source>Finished loading</source>
-        <translation type="unfinished">Acabou de carregar</translation>
+        <translation>Acabou de carregar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="768"/>
         <source>Failed to load</source>
-        <translation type="unfinished">Falhou ao carregar</translation>
+        <translation>Falhou ao carregar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="808"/>
         <source>Are you sure you want to close the window?</source>
-        <translation type="unfinished">Tem a certeza de que quer fechar a janela?</translation>
+        <translation>Tem a certeza de que quer fechar a janela?</translation>
     </message>
     <message numerus="yes">
         <location filename="../Helpviewer/HelpTabWidget.py" line="808"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Tem a certeza de que quer fechar a janela?
 Tem um separador aberto.</numerusform>
             <numerusform>Tem a certeza de que quer fechar a janela?
@@ -16701,42 +16703,42 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="823"/>
         <source>C&amp;lose Current Tab</source>
-        <translation type="unfinished">F&amp;echar o Separador Atual</translation>
+        <translation>F&amp;echar o Separador Atual</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5</translation>
+        <translation>Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="110"/>
         <source>Show a navigation menu for closed tabs</source>
-        <translation type="unfinished">Mostrar um menú de navegação para os separadores fechados</translation>
+        <translation>Mostrar um menú de navegação para os separadores fechados</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="194"/>
         <source>Reload All</source>
-        <translation type="unfinished">Recarregar Tudo</translation>
+        <translation>Recarregar Tudo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="201"/>
         <source>Restore Closed Tab</source>
-        <translation type="unfinished">Restaurar o Separador Fechado</translation>
+        <translation>Restaurar o Separador Fechado</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="980"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished">Restaurar Todos os Separadores Fechados</translation>
+        <translation>Restaurar Todos os Separadores Fechados</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="982"/>
         <source>Clear List</source>
-        <translation type="unfinished">Limpar Lista</translation>
+        <translation>Limpar Lista</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="590"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4. Por favor atualize.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4. Por favor atualize.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16921,47 +16923,47 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="17"/>
         <source>&lt;b&gt;Configure web browser&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar o navegador web&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="39"/>
         <source>Select to use a single help browser window only</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para usar uma única janela de navegador de ajuda</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="42"/>
         <source>Use single web browser window</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar uma única janela de navegação web</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="49"/>
         <source>Select to enable suggestions for web searches</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar sugestões nas buscas na web</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="52"/>
         <source>Show suggestions for web searches</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar sugestões para buscas web</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="59"/>
         <source>Select to save the window size and position</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para gravar o tamanho e posição da janela</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="62"/>
         <source>Save size and position upon exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar tamanho e posição ao sair</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="69"/>
         <source>Select to show a page preview when the mouse hovers over the tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para mostrar uma antevisão quando o rato se mantem sobre o separador</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="72"/>
         <source>Show preview when hovering tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar antevisão ao manter no separador</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="91"/>
@@ -16981,52 +16983,52 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="126"/>
         <source>Home Page:</source>
-        <translation type="unfinished"></translation>
+        <translation>Página de Início:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="133"/>
         <source>Enter the desired home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir a página de início desejada</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="140"/>
         <source>Press to set the current page as the home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Pressionar para definir a página atual como Página de Início</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="143"/>
         <source>Set to current page</source>
-        <translation type="unfinished"></translation>
+        <translation>Definir para a página atual</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="150"/>
         <source>Press to set the default home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Pressionar para definir a página de início padrão</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="153"/>
         <source>Set to default home page</source>
-        <translation type="unfinished"></translation>
+        <translation>Definir para página de início padrão</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="176"/>
         <source>Scheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Esquema</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="182"/>
         <source>Default Scheme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Esquema Padrão:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="195"/>
         <source>Select the default scheme</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar o esquema padrão</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="198"/>
         <source>&lt;b&gt;Default Scheme&lt;/b&gt;&lt;p&gt;Select the default scheme. This scheme is prepended to URLs, that don&apos;t contain one.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Esquema Padrão&lt;/b&gt;&lt;p&gt;Seleciona o esquema padrão.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="211"/>
@@ -17036,7 +17038,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="217"/>
         <source>Select to enable Java</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar Java</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="220"/>
@@ -17046,7 +17048,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="227"/>
         <source>Select to enable JavaScript</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar JavaScript</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="230"/>
@@ -17056,27 +17058,27 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="237"/>
         <source>Select to allow JavaScript to open windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar JavaScript abrir janelas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="240"/>
         <source>JavaScript can open windows</source>
-        <translation type="unfinished"></translation>
+        <translation>JavaScript pode abrir janelas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="247"/>
         <source>Select to allow JavaScript to access the clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para permitir o JavaScript aceder à área de transferência</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="250"/>
         <source>JavaScript can access clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>JavaScript pode aceder área de transferência</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="257"/>
         <source>Select to enable plugins in web pages</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar complementos nas páginas web</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="260"/>
@@ -17096,7 +17098,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="418"/>
         <source>Select the period for expiration of history entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecione a data em que expiram as entradas do historial</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="422"/>
@@ -17146,7 +17148,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="503"/>
         <source>Policy</source>
-        <translation type="unfinished"></translation>
+        <translation>Política</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="509"/>
@@ -17176,7 +17178,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="532"/>
         <source>Offline browsing mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de navegação desligado</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
@@ -17191,22 +17193,22 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="555"/>
         <source> MB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="623"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimindo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="629"/>
         <source>Select to print background colours and images</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para imprimir imagens e cores de fundo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="632"/>
         <source>Print background colours and images</source>
-        <translation type="unfinished"></translation>
+        <translation>Imprimir imagens e cores de fundo</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
@@ -17450,12 +17452,12 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpWebSearchWidget.py" line="141"/>
         <source>No Recent Searches</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscas Recentes Inexistentes</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWebSearchWidget.py" line="146"/>
         <source>Recent Searches</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscas Recentes</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWebSearchWidget.py" line="275"/>
@@ -17465,7 +17467,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpWebSearchWidget.py" line="285"/>
         <source>Clear Recent Searches</source>
-        <translation type="unfinished"></translation>
+        <translation>Limpar Buscas Recentes</translation>
     </message>
 </context>
 <context>
@@ -18121,7 +18123,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="890"/>
         <source>Bookmark All Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcar Todos os Separadores</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="890"/>
@@ -20010,7 +20012,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="165"/>
@@ -20038,7 +20040,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="32"/>
         <source>Enter the bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Introduzir o nome do marcador</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="45"/>
@@ -20118,7 +20120,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="180"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="196"/>
@@ -20146,27 +20148,27 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui" line="14"/>
         <source>Rename Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Renomear Marcador</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui" line="23"/>
         <source>New Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome Novo:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui" line="30"/>
         <source>Enter the bookmark name</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir o nome do marcador</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui" line="37"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkRenameDialog.ui" line="50"/>
         <source>Enter the bookmark name to be renamed</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir o nome do marcador a renomear</translation>
     </message>
 </context>
 <context>
@@ -20461,7 +20463,7 @@ Tem %n separadores abertos.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="104"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="120"/>
@@ -21240,7 +21242,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="165"/>
@@ -22260,7 +22262,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="153"/>
@@ -22318,7 +22320,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="116"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="132"/>
@@ -24535,7 +24537,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="25"/>
         <source>New Name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome Novo:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesRenamePatchDialog.ui" line="32"/>
@@ -24688,7 +24690,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="344"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="360"/>
@@ -24972,7 +24974,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="165"/>
@@ -25085,7 +25087,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="316"/>
         <source>Bookmark:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marcador:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="332"/>
@@ -26491,12 +26493,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/History/HistoryMenu.py" line="401"/>
         <source>Restore All Closed Tabs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Restaurar Todos os Separadores Fechados</translation>
     </message>
     <message>
         <location filename="../Helpviewer/History/HistoryMenu.py" line="404"/>
         <source>Clear List</source>
-        <translation type="unfinished">Limpa Lista</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -34296,7 +34298,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/Passwords/PasswordModel.py" line="32"/>
         <source>Website</source>
-        <translation type="unfinished">Sítio Web</translation>
+        <translation>Sítio Web</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Passwords/PasswordModel.py" line="33"/>
@@ -34425,7 +34427,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalDataDialog.ui" line="179"/>
         <source>Home Page:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Página de Início:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalDataDialog.ui" line="192"/>
@@ -34533,7 +34535,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalInformationManager.py" line="92"/>
         <source>Home Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Página de Início</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalInformationManager.py" line="93"/>
@@ -34558,7 +34560,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalInformationManager.py" line="141"/>
         <source>Insert Personal Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir Informação Pessoal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalInformationManager.py" line="151"/>
@@ -37444,7 +37446,7 @@ Select Update.</source>
     <message>
         <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erro na Geração Processo</translation>
     </message>
     <message>
         <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
@@ -37524,7 +37526,7 @@ Select Update.</source>
     <message>
         <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
         <source>%v/%m Forms</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Formulários</translation>
     </message>
 </context>
 <context>
@@ -45932,7 +45934,7 @@ Not connected</source>
     <message>
         <location filename="../SqlBrowser/SqlBrowser.py" line="106"/>
         <source>&lt;b&gt;Add Connection&lt;/b&gt;&lt;p&gt;This opens a dialog to add a new database connection.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Adicionar Conexão&lt;/b&gt;&lt;p&gt;Abre uma caixa de diálogo para adicionar uma nova conexão a base de dados.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlBrowser.py" line="115"/>
@@ -45953,7 +45955,7 @@ Not connected</source>
     <message>
         <location filename="../SqlBrowser/SqlBrowser.py" line="121"/>
         <source>Quit the SQL browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Sair do navegador SQL</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlBrowser.py" line="122"/>
@@ -46018,7 +46020,7 @@ Not connected</source>
     <message>
         <location filename="../SqlBrowser/SqlBrowser.py" line="188"/>
         <source>&lt;h3&gt;About SQL Browser&lt;/h3&gt;&lt;p&gt;The SQL browser window is a little tool to examine the data and the schema of a database and to execute queries on a database.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h3&gt;Acerca de Navegador SQL&lt;/h3&gt;&lt;p&gt;A janela do navegador SQL é uma pequena ferramenta para examinar dados e esquema de uma base de dados e executar consultas numa base de dados.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -52177,7 +52179,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncDataPage.ui" line="85"/>
         <source>Speed Dial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definições de Marcação Rápida</translation>
     </message>
 </context>
 <context>
@@ -52966,7 +52968,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="196"/>
         <source>Show a navigation menu</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mostrar um menú de navegação</translation>
     </message>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="206"/>
@@ -52976,12 +52978,12 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="238"/>
         <source>Move Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mover à esquerda</translation>
     </message>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
         <source>Move Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mover à direita</translation>
     </message>
     <message>
         <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="244"/>
@@ -57516,7 +57518,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="1902"/>
         <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Navegardor Web eric5&lt;/b&gt;Navegar por internet com o Navegador Web eric5.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Navegardor Web eric5&lt;/b&gt;&lt;p&gt;Navegar por internet com o Navegador Web eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="539"/>
@@ -57802,7 +57804,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="1531"/>
         <source>S&amp;ymbols-Viewer</source>
-        <translation type="unfinished">Visual&amp;izador de Símbolos</translation>
+        <translation>Visual&amp;izador de Símbolos</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1537"/>
