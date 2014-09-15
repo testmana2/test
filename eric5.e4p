@@ -1629,6 +1629,7 @@
     <Other>APIs/Python3/PyQt4_Qt4.bas</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/templates/logBrowserBookmarkPhase.tmpl</Other>
     <Other>Plugins/VcsPlugins/vcsMercurial/templates/logDialogBookmarkPhase.tmpl</Other>
+    <Other>Helpviewer/OpenSearch/DefaultSearchEngines/DuckDuckGo.xml</Other>
   </Others>
   <MainScript>eric5.py</MainScript>
   <Vcs>

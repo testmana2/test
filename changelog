@@ -4,6 +4,8 @@ Version 5.5.0:
 - bug fixes
 - General
   -- added Portugese translations provided by Candido Fontes
+- Web Browser
+  -- added DuckDuckGo to the list of default search engines
 
 Version 5.5-snapshot-20140628:
 - bug fixes
