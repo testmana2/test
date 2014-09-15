@@ -155,7 +155,7 @@ class OpenSearchEngine(QObject):
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":
                 from PyQt5.QtCore import QUrlQuery
-                urlQuery = QUrlQuery()
+                urlQuery = QUrlQuery(ret)
                 for parameter in self._searchParameters:
                     urlQuery.addQueryItem(
                         parameter[0],
@@ -210,7 +210,7 @@ class OpenSearchEngine(QObject):
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":
                 from PyQt5.QtCore import QUrlQuery
-                urlQuery = QUrlQuery()
+                urlQuery = QUrlQuery(ret)
                 for parameter in self._suggestionsParameters:
                     urlQuery.addQueryItem(
                         parameter[0],

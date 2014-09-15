@@ -1533,7 +1533,7 @@ class HelpBrowser(QWebView):
         
         if qVersion() >= "5.0.0":
             from PyQt5.QtCore import QUrlQuery
-            searchUrlQuery = QUrlQuery()
+            searchUrlQuery = QUrlQuery(searchUrl)
         searchEngines = {}
         inputFields = formElement.findAll("input")
         for inputField in inputFields.toList():

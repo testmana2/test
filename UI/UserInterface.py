@@ -3035,7 +3035,7 @@ class UserInterface(E5MainWindow):
         url = QUrl("mailto:{0}".format(address))
         if qVersion() >= "5.0.0":
             from PyQt5.QtCore import QUrlQuery
-            urlQuery = QUrlQuery()
+            urlQuery = QUrlQuery(url)
             urlQuery.addQueryItem("subject", subject)
             urlQuery.addQueryItem("body", body)
             url.setQuery(urlQuery)
