@@ -9,6 +9,8 @@ Module implementing a scheme access handler for Python resources.
 
 from PyQt4.QtCore import QFile, QByteArray
 
+import Utilities
+
 from .SchemeAccessHandler import SchemeAccessHandler
 
 
@@ -70,38 +72,39 @@ class EricAccessHandler(SchemeAccessHandler):
         if self._speedDialPage is None:
             htmlFile = QFile(":/html/speeddialPage.html")
             htmlFile.open(QFile.ReadOnly)
-            html = htmlFile.readAll()
+            html = bytes(htmlFile.readAll()).decode()
             
-            html.replace("@FAVICON@", "qrc:icons/ericWeb16.png")
-            html.replace("@IMG_PLUS@", "qrc:icons/plus.png")
-            html.replace("@IMG_CLOSE@", "qrc:icons/close.png")
-            html.replace("@IMG_EDIT@", "qrc:icons/edit.png")
-            html.replace("@IMG_RELOAD@", "qrc:icons/reload.png")
-            html.replace("@IMG_SETTINGS@", "qrc:icons/setting.png")
-            html.replace("@LOADING-IMG@", "qrc:icons/loading.gif")
-            html.replace("@BOX-BORDER@", "qrc:icons/box-border-small.png")
+            html = (html.replace("@FAVICON@", "qrc:icons/ericWeb16.png")
+                .replace("@IMG_PLUS@", "qrc:icons/plus.png")
+                .replace("@IMG_CLOSE@", "qrc:icons/close.png")
+                .replace("@IMG_EDIT@", "qrc:icons/edit.png")
+                .replace("@IMG_RELOAD@", "qrc:icons/reload.png")
+                .replace("@IMG_SETTINGS@", "qrc:icons/setting.png")
+                .replace("@LOADING-IMG@", "qrc:icons/loading.gif")
+                .replace("@BOX-BORDER@", "qrc:icons/box-border-small.png")
+                
+                .replace("@JQUERY@", "qrc:javascript/jquery.js")
+                .replace("@JQUERY-UI@", "qrc:javascript/jquery-ui.js")
+                
+                .replace("@SITE-TITLE@", self.tr("Speed Dial"))
+                .replace("@URL@", self.tr("URL"))
+                .replace("@TITLE@", self.tr("Title"))
+                .replace("@APPLY@", self.tr("Apply"))
+                .replace("@NEW-PAGE@", self.tr("New Page"))
+                .replace("@TITLE-EDIT@", self.tr("Edit"))
+                .replace("@TITLE-REMOVE@", self.tr("Remove"))
+                .replace("@TITLE-RELOAD@", self.tr("Reload"))
+                .replace(
+                "@TITLE-FETCHTITLE@", self.tr("Load title from page"))
+                .replace(
+                "@SETTINGS-TITLE@", self.tr("Speed Dial Settings"))
+                .replace("@ADD-TITLE@", self.tr("Add New Page"))
+                .replace(
+                "@TXT_NRROWS@", self.tr("Maximum pages in a row:"))
+                .replace("@TXT_SDSIZE@", self.tr("Change size of pages:"))
+            )
             
-            html.replace("@JQUERY@", "qrc:javascript/jquery.js")
-            html.replace("@JQUERY-UI@", "qrc:javascript/jquery-ui.js")
-            
-            html.replace("@SITE-TITLE@", self.trUtf8("Speed Dial"))
-            html.replace("@URL@", self.trUtf8("URL"))
-            html.replace("@TITLE@", self.trUtf8("Title"))
-            html.replace("@APPLY@", self.trUtf8("Apply"))
-            html.replace("@NEW-PAGE@", self.trUtf8("New Page"))
-            html.replace("@TITLE-EDIT@", self.trUtf8("Edit"))
-            html.replace("@TITLE-REMOVE@", self.trUtf8("Remove"))
-            html.replace("@TITLE-RELOAD@", self.trUtf8("Reload"))
-            html.replace(
-                "@TITLE-FETCHTITLE@", self.trUtf8("Load title from page"))
-            html.replace(
-                "@SETTINGS-TITLE@", self.trUtf8("Speed Dial Settings"))
-            html.replace("@ADD-TITLE@", self.trUtf8("Add New Page"))
-            html.replace(
-                "@TXT_NRROWS@", self.trUtf8("Maximum pages in a row:"))
-            html.replace("@TXT_SDSIZE@", self.trUtf8("Change size of pages:"))
-            
-            self._speedDialPage = html
+            self._speedDialPage = Utilities.html_uencode(html)
         
         import Helpviewer.HelpWindow
         html = QByteArray(self._speedDialPage)
