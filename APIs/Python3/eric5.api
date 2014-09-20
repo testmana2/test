@@ -3114,6 +3114,7 @@ eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.sdSize?4()
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.setPagesInRow?4(count)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.setSdSize?4(size)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.speedDialSaved?7
+eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.unescapeTitle?4(title)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.urlForShortcut?4(key)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial.urlFromUserInput?4(url)
 eric5.Helpviewer.SpeedDial.SpeedDial.SpeedDial?1(parent=None)
@@ -3778,7 +3779,7 @@ eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerR
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.codeStyleCheck?4(filename, source, args)
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.extractLineFlags?4(line, startComment=")
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initService?4()
-eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='', onlyFixes={})
+eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='')
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.filenameRole?7
 eric5.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.fixableRole?7
@@ -9033,6 +9034,7 @@ eric5.install.createMacAppBundle?4(pydir)
 eric5.install.createPyWrapper?4(pydir, wfile, isGuiScript=True)
 eric5.install.currDir?7
 eric5.install.defaultMacAppBundleName?7
+eric5.install.defaultMacAppBundlePath?7
 eric5.install.distDir?7
 eric5.install.doCleanup?7
 eric5.install.doCompile?7
@@ -9061,6 +9063,8 @@ eric5.patch_modpython.modDir?7
 eric5.patch_modpython.progName?7
 eric5.patch_modpython.usage?4(rcode=2)
 eric5.uninstall.PythonMarkers?7
+eric5.uninstall.defaultMacAppBundleName?7
+eric5.uninstall.defaultMacAppBundlePath?7
 eric5.uninstall.exit?4(rcode=0)
 eric5.uninstall.includePythonVariant?7
 eric5.uninstall.initGlobals?4()

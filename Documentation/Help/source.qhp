@@ -10158,6 +10158,7 @@
       <keyword name="SpeedDial.sdSize" id="SpeedDial.sdSize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.sdSize" />
       <keyword name="SpeedDial.setPagesInRow" id="SpeedDial.setPagesInRow" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.setPagesInRow" />
       <keyword name="SpeedDial.setSdSize" id="SpeedDial.setSdSize" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.setSdSize" />
+      <keyword name="SpeedDial.unescapeTitle" id="SpeedDial.unescapeTitle" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.unescapeTitle" />
       <keyword name="SpeedDial.urlForShortcut" id="SpeedDial.urlForShortcut" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.urlForShortcut" />
       <keyword name="SpeedDial.urlFromUserInput" id="SpeedDial.urlFromUserInput" ref="eric5.Helpviewer.SpeedDial.SpeedDial.html#SpeedDial.urlFromUserInput" />
       <keyword name="SpeedDialReader" id="SpeedDialReader" ref="eric5.Helpviewer.SpeedDial.SpeedDialReader.html#SpeedDialReader" />
