@@ -138,7 +138,8 @@ class SpeedDial(QObject):
                 
                 self.__initialScript += \
                     "addBox('{0}', '{1}', '{2}');\n".format(
-                        page.url, page.title, imgSource)
+                        page.url, Utilities.html_uencode(page.title),
+                        imgSource)
         
         return self.__initialScript
     
@@ -323,6 +324,16 @@ class SpeedDial(QObject):
         @return sanitized URL (string)
         """
         return QUrl.fromUserInput(url).toString()
+    
+    @pyqtSlot(str, result=str)
+    def unescapeTitle(self, title):
+        """
+        Public slot to unescape the titel string.
+        
+        @param title escaped title (string)
+        @return un-escaped title (string)
+        """
+        return Utilities.html_udecode(title)
 
     @pyqtSlot(int)
     def setPagesInRow(self, count):
@@ -398,7 +409,7 @@ class SpeedDial(QObject):
                                      url, fileName))
             if loadTitle:
                 frame.evaluateJavaScript("setTitleToUrl('{0}', '{1}');".format(
-                                         url, title))
+                                         url, Utilities.html_uencode(title)))
         
         thumbnailer.deleteLater()
         self.__thumbnailers.remove(thumbnailer)
