@@ -8196,12 +8196,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>unbekannt</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="158"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="176"/>
         <source>It uses protocol: {0}</source>
         <translation>Verwendetes Protokoll: {0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="165"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="183"/>
         <source>It is encrypted using {0} at {1} bits, with {2} for message authentication and {3} as key exchange mechanism.
 
 </source>
@@ -12886,69 +12886,79 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>EricAccessHandler</name>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="89"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial</source>
         <translation>Schnellwahl</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="90"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>URL</source>
         <translation>URL</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="91"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Title</source>
         <translation>Titel</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="92"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Apply</source>
         <translation>Anwenden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="93"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>New Page</source>
         <translation>Neue Seite</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="94"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="95"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Remove</source>
         <translation>Entfernen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="96"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Reload</source>
         <translation>Erneut laden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="97"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Load title from page</source>
         <translation>Titel von der Seite laden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="99"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial Settings</source>
         <translation>Schnellwahleinstellungen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="101"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Add New Page</source>
         <translation>Neue Seite hinzufügen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="102"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Maximum pages in a row:</source>
         <translation>Maximale Zahl an Seiten pro Zeile:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="104"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Change size of pages:</source>
         <translation>Größe der Seiten ändern:</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Close</source>
+        <translation>Schließen</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Are you sure to remove this speed dial?</source>
+        <translation>Soll diese Schnellwahl wirklich entfernt werden?</translation>
     </message>
 </context>
 <context>
@@ -45620,17 +45630,17 @@ nicht verbunden</translation>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="386"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="397"/>
         <source>Unable to load</source>
         <translation>Fehler beim Laden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>Saving Speed Dial data</source>
         <translation>Speichere Schnellwahldaten</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Schnellwahldaten konnten nicht in die Datei &lt;b&gt;{0}&lt;/b&gt; gespeichert werden&lt;/p&gt;</translation>
     </message>

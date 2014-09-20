@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1906,8 +1905,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="150"/>
@@ -1980,8 +1979,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="92"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="103"/>
@@ -8193,12 +8192,12 @@ selección completa.&lt;/li&gt;
         <translation>desconocido</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="158"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="176"/>
         <source>It uses protocol: {0}</source>
         <translation>Usa el protocolo: {0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="165"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="183"/>
         <source>It is encrypted using {0} at {1} bits, with {2} for message authentication and {3} as key exchange mechanism.
 
 </source>
@@ -12894,69 +12893,79 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EricAccessHandler</name>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="89"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial</source>
         <translation>Marcación rápida</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="90"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>URL</source>
         <translation>URL</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="91"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Title</source>
         <translation>Título</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="92"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="93"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>New Page</source>
         <translation>Página Nueva</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="94"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="95"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Remove</source>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="96"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Reload</source>
         <translation>Recargar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="97"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Load title from page</source>
         <translation>Cargar título desde la página</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="99"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial Settings</source>
         <translation>Ajustes de marcación rápida</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="101"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Add New Page</source>
         <translation>Añadir Página Nueva</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="102"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Maximum pages in a row:</source>
         <translation>Máximo número de páginas por fila:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="104"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Change size of pages:</source>
         <translation>Cambiar tamaño de páginas:</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Close</source>
+        <translation type="unfinished">Cerrar</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Are you sure to remove this speed dial?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15516,7 +15525,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1091"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -45588,17 +45597,17 @@ Not connected</source>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="386"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="397"/>
         <source>Unable to load</source>
         <translation>No se ha podido cargar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>Saving Speed Dial data</source>
         <translation>Guardando datos de Marcación Rápida</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Los datos de Marcación Rápido no se han podido guardar en &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>

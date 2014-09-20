@@ -8974,12 +8974,12 @@ whole selection.&lt;/li&gt;
         <translation>неизвестный</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="158"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="176"/>
         <source>It uses protocol: {0}</source>
         <translation>Используется протокол:&apos;{0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslInfoWidget.py" line="165"/>
+        <location filename="../E5Network/E5SslInfoWidget.py" line="183"/>
         <source>It is encrypted using {0} at {1} bits, with {2} for message authentication and {3} as key exchange mechanism.
 
 </source>
@@ -13787,69 +13787,79 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EricAccessHandler</name>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="89"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial</source>
         <translation>Быстрый набор</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="90"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>URL</source>
         <translation>URL</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="91"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Title</source>
         <translation>Заголовок</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="92"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Apply</source>
         <translation>Применить</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="93"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>New Page</source>
         <translation>Новая страница</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="94"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Edit</source>
         <translation>Редактировать</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="95"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="96"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Reload</source>
         <translation>Перезагрузить</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="97"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Load title from page</source>
         <translation>загрузить заголовок со страницы</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="99"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial Settings</source>
         <translation>Настройки быстрого набора</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="101"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Add New Page</source>
         <translation>Добавить новую страницу</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="102"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Maximum pages in a row:</source>
         <translation>Максимальное число страниц в ряду:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="104"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Change size of pages:</source>
         <translation>Изменить размер страниц:</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Close</source>
+        <translation type="unfinished">Закрыть</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Are you sure to remove this speed dial?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -48533,17 +48543,17 @@ Not connected</source>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="386"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="397"/>
         <source>Unable to load</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>Saving Speed Dial data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
