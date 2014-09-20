@@ -92,17 +92,20 @@ class EricAccessHandler(SchemeAccessHandler):
                 .replace("@URL@", self.tr("URL"))
                 .replace("@TITLE@", self.tr("Title"))
                 .replace("@APPLY@", self.tr("Apply"))
+                .replace("@CLOSE@", self.tr("Close"))
                 .replace("@NEW-PAGE@", self.tr("New Page"))
                 .replace("@TITLE-EDIT@", self.tr("Edit"))
                 .replace("@TITLE-REMOVE@", self.tr("Remove"))
                 .replace("@TITLE-RELOAD@", self.tr("Reload"))
-                .replace(
-                "@TITLE-FETCHTITLE@", self.tr("Load title from page"))
-                .replace(
-                "@SETTINGS-TITLE@", self.tr("Speed Dial Settings"))
+                .replace("@TITLE-WARN@",
+                         self.tr("Are you sure to remove this speed dial?"))
+                .replace("@TITLE-FETCHTITLE@",
+                         self.tr("Load title from page"))
+                .replace("@SETTINGS-TITLE@",
+                         self.tr("Speed Dial Settings"))
                 .replace("@ADD-TITLE@", self.tr("Add New Page"))
-                .replace(
-                "@TXT_NRROWS@", self.tr("Maximum pages in a row:"))
+                .replace("@TXT_NRROWS@",
+                         self.tr("Maximum pages in a row:"))
                 .replace("@TXT_SDSIZE@", self.tr("Change size of pages:"))
             )
             
