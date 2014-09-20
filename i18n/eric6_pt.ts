@@ -1670,69 +1670,6 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
-    <name>Bookmarks</name>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="127"/>
-        <source>Mercurial Bookmark</source>
-        <translation type="obsolete">Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="145"/>
-        <source>Delete Bookmark</source>
-        <translation type="obsolete">Apagar Marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="145"/>
-        <source>Select the bookmark to be deleted:</source>
-        <translation type="obsolete">Selecionar o marcador a apagar:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="157"/>
-        <source>Delete Mercurial Bookmark</source>
-        <translation type="obsolete">Apagar o Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="186"/>
-        <source>Rename Mercurial Bookmark</source>
-        <translation type="obsolete">Renomear o Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="220"/>
-        <source>Move Mercurial Bookmark</source>
-        <translation type="obsolete">Mover o Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="307"/>
-        <source>Pull Bookmark</source>
-        <translation type="obsolete">Puxar Marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="307"/>
-        <source>Select the bookmark to be pulled:</source>
-        <translation type="obsolete">Selecionar o marcador a puxar:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="319"/>
-        <source>Pulling bookmark from a remote Mercurial repository</source>
-        <translation type="obsolete">Puxando o marcador desde o repositório remoto de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="341"/>
-        <source>Push Bookmark</source>
-        <translation type="obsolete">Empurrar Marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="341"/>
-        <source>Select the bookmark to be push:</source>
-        <translation type="obsolete">Selecione o marcador a empurrar:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="353"/>
-        <source>Pushing bookmark to a remote Mercurial repository</source>
-        <translation type="obsolete">Empurrando o marcador para o repositório remoto de Mercurial</translation>
-    </message>
-</context>
-<context>
     <name>BookmarksDialog</name>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksDialog.ui" line="14"/>
@@ -2013,174 +1950,6 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
         <location filename="../Helpviewer/Bookmarks/BookmarksModel.py" line="48"/>
         <source>Address</source>
         <translation>Direção</translation>
-    </message>
-</context>
-<context>
-    <name>BookmarksProjectHelper</name>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="33"/>
-        <source>List bookmarks</source>
-        <translation type="obsolete">Listar marcadores</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="33"/>
-        <source>List bookmarks...</source>
-        <translation type="obsolete">Listar marcadores...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="38"/>
-        <source>List bookmarks of the project</source>
-        <translation type="obsolete">Listar marcadores do projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="41"/>
-        <source>&lt;b&gt;List bookmarks&lt;/b&gt;&lt;p&gt;This lists the bookmarks of the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Listar marcadores&lt;/b&gt;&lt;p&gt;Lista os marcadores do projeto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="48"/>
-        <source>Define bookmark</source>
-        <translation type="obsolete">Definir marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="48"/>
-        <source>Define bookmark...</source>
-        <translation type="obsolete">Definir marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="53"/>
-        <source>Define a bookmark for the project</source>
-        <translation type="obsolete">Definir um marcador para o projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="56"/>
-        <source>&lt;b&gt;Define bookmark&lt;/b&gt;&lt;p&gt;This defines a bookmark for the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Definir marcador&lt;/b&gt;&lt;p&gt;Define um marcador para o projeto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="63"/>
-        <source>Delete bookmark</source>
-        <translation type="obsolete">Apagar marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="63"/>
-        <source>Delete bookmark...</source>
-        <translation type="obsolete">Apagar Marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="68"/>
-        <source>Delete a bookmark of the project</source>
-        <translation type="obsolete">Apagar um marcador do projeto </translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="71"/>
-        <source>&lt;b&gt;Delete bookmark&lt;/b&gt;&lt;p&gt;This deletes a bookmark of the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Apagar marcador&lt;/b&gt;&lt;p&gt;Apaga um marcador do projeto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="78"/>
-        <source>Rename bookmark</source>
-        <translation type="obsolete">Renomear marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="78"/>
-        <source>Rename bookmark...</source>
-        <translation type="obsolete">Renomear marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="83"/>
-        <source>Rename a bookmark of the project</source>
-        <translation type="obsolete">Renomear um marcador do projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="86"/>
-        <source>&lt;b&gt;Rename bookmark&lt;/b&gt;&lt;p&gt;This renames a bookmark of the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Renomear marcador&lt;/b&gt;&lt;p&gt;Renomeia um marcador do projeto&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="93"/>
-        <source>Move bookmark</source>
-        <translation type="obsolete">Mover marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="93"/>
-        <source>Move bookmark...</source>
-        <translation type="obsolete">Mover marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="98"/>
-        <source>Move a bookmark of the project</source>
-        <translation type="obsolete">Mover um marcador do projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="101"/>
-        <source>&lt;b&gt;Move bookmark&lt;/b&gt;&lt;p&gt;This moves a bookmark of the project to another changeset.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mover marcador&lt;/b&gt;&lt;p&gt;Move o marcador do projeto.&lt;p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="109"/>
-        <source>Show incoming bookmarks</source>
-        <translation type="obsolete">Mostrar marcadores entrantes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="114"/>
-        <source>Show a list of incoming bookmarks</source>
-        <translation type="obsolete">Mostrar a lista de marcadores entrantes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="117"/>
-        <source>&lt;b&gt;Show incoming bookmarks&lt;/b&gt;&lt;p&gt;This shows a list of new bookmarks available at the remote repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mostrar marcadores entrantes&lt;/b&gt;&lt;p&gt;Mostra a lista de marcadores novos disponíveis no repositório remoto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="126"/>
-        <source>Pull bookmark</source>
-        <translation type="obsolete">Puxar marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="131"/>
-        <source>Pull a bookmark from a remote repository</source>
-        <translation type="obsolete">Puxa um marcador desde um repositório remoto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="134"/>
-        <source>&lt;b&gt;Pull bookmark&lt;/b&gt;&lt;p&gt;This pulls a bookmark from a remote repository into the local repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Puxar marcador&lt;/b&gt;&lt;p&gt;Puxa um marcador desde um repositório remoto para o repositório local (pull).&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="142"/>
-        <source>Show outgoing bookmarks</source>
-        <translation type="obsolete">Mostrar marcadores saintes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="147"/>
-        <source>Show a list of outgoing bookmarks</source>
-        <translation type="obsolete">Mostrar a lista de marcadores saintes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="150"/>
-        <source>&lt;b&gt;Show outgoing bookmarks&lt;/b&gt;&lt;p&gt;This shows a list of new bookmarks available at the local repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mostrar marcadores  saintes&lt;/b&gt;&lt;p&gt;Mostra a lista dos marcadores novos disponíveis no repositório local.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="159"/>
-        <source>Push bookmark</source>
-        <translation type="obsolete">Empurrar marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="164"/>
-        <source>Push a bookmark to a remote repository</source>
-        <translation type="obsolete">Empurrar um marcador a um repositório remoto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="167"/>
-        <source>&lt;b&gt;Push bookmark&lt;/b&gt;&lt;p&gt;This pushes a bookmark from the local repository to a remote repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Empurrar marcador&lt;/b&gt;&lt;p&gt;Empurra a um marcador do repositório local para o repositório remoto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="207"/>
-        <source>Bookmarks</source>
-        <translation type="obsolete">Marcadores</translation>
     </message>
 </context>
 <context>
@@ -3413,19 +3182,6 @@ linha e posição.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
-    <name>CodeStyleCheckerPy2</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleChecker.py" line="56"/>
-        <source>Python2 interpreter not configured.</source>
-        <translation type="obsolete">Interprete de Python2 não configurado.</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleChecker.py" line="133"/>
-        <source>Python2 interpreter did not finish within 15s.</source>
-        <translation type="obsolete">Interprete de Python2 não acabou em 15s.</translation>
-    </message>
-</context>
-<context>
     <name>CodeStyleCodeSelectionDialog</name>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="14"/>
@@ -3455,16 +3211,6 @@ linha e posição.&lt;/p&gt;</translation>
 </context>
 <context>
     <name>CodeStyleFixer</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="185"/>
-        <source>Fix Code Style Issues</source>
-        <translation type="obsolete">Reparar Problemas de Estilo do Código</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="185"/>
-        <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Não se pôde gravar o ficheiro &lt;b&gt;{0}&lt;/b&gt;. Ignorando-o.&lt;/p&gt;&lt;p&gt;Razão: {1}&lt;/p&gt;</translation>
-    </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="375"/>
         <source>Triple single quotes converted to triple double quotes.</source>
@@ -4432,11 +4178,6 @@ para mostrar a página de configuração.</translation>
         <translation>Segurança</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="422"/>
         <source>Enter filter text...</source>
         <translation>Introduzir texto do filtro...</translation>
@@ -5112,16 +4853,6 @@ Not connected
         <translation>
 Não conectado
 </translation>
-    </message>
-    <message>
-        <location filename="../Debugger/DebugServer.py" line="1417"/>
-        <source>Passive debug connection received</source>
-        <translation type="obsolete">Conexão de depuração passiva recebida</translation>
-    </message>
-    <message>
-        <location filename="../Debugger/DebugServer.py" line="1431"/>
-        <source>Passive debug connection closed</source>
-        <translation type="obsolete">Conexão de depuração passiva fechada</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugServer.py" line="1463"/>
@@ -6505,11 +6236,6 @@ Não conectado
 &lt;p&gt;Introduzir o comando consola (ex. xterm -e). Este comando usa-se para abrir uma janela de comandos para o depurador.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
-        <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5</translation>
-    </message>
-    <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="237"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
@@ -6556,16 +6282,6 @@ Não conectado
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="37"/>
         <source>Python3 Interpreter for Debug Client</source>
         <translation>Intérprete de Python3 para Cliente de Depuração</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="43"/>
-        <source>Select, whether a special Python interpreter should be used</source>
-        <translation type="obsolete">Selecionar, quando um intérprete de Python especial deve ser usado</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="46"/>
-        <source>Custom Python Interpreter</source>
-        <translation type="obsolete">Intérprete Python Personalizado</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="50"/>
@@ -6626,11 +6342,6 @@ Não conectado
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="129"/>
         <source>Enter the file extensions to be associated with the Python3 debugger separated by a space. They must not overlap with the ones for Python2.</source>
         <translation>Introduzir as extensões a associar com o depurador de Python3, separadas por um espaço. Não devem sobrepôr-se às de Python2.</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="148"/>
@@ -6746,11 +6457,6 @@ Não conectado
         <translation>Introduzir as extensões a associar com o depurador de Python2, separadas por um espaço. Não devem sobrepôr-se às de Python3.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="148"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Redirigir stdin/stdout/stderr</translation>
@@ -6812,11 +6518,6 @@ Não conectado
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="50"/>
         <source>Press to select the Ruby interpreter via a file selection dialog</source>
         <translation>Pressionar para selecionar o intérprete de Ruby através da caixa de diálogo de seleção de ficheiros</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation type="obsolete">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
@@ -7177,11 +6878,6 @@ Não conectado
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="439"/>
-        <source>no message for this code defined</source>
-        <translation type="obsolete">nenhuma mensagem definida para este código</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="326"/>
         <source>{0}: {1}</source>
         <translation></translation>
@@ -7253,39 +6949,6 @@ Não conectado
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="146"/>
         <source>&lt;b&gt;What do you want to do?&lt;/b&gt;</source>
         <translation>&lt;b&gt;O que é que deseja fazer?&lt;/b&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>DownloadDialog</name>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="14"/>
-        <source>Eric5 Download</source>
-        <translation type="obsolete">Descarga Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="22"/>
-        <source>Icon</source>
-        <translation type="obsolete">Ícone</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="31"/>
-        <source>Filename</source>
-        <translation type="obsolete">Nome do Ficheiro</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="41"/>
-        <source>Info</source>
-        <translation type="obsolete">Informação</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="52"/>
-        <source>Select to keep the dialog open when finished</source>
-        <translation type="obsolete">Selecionar para manter a caixa de diálogo aberta quando acabe</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="55"/>
-        <source>Keep open when finished</source>
-        <translation type="obsolete">Manter aberta quando acabe</translation>
     </message>
 </context>
 <context>
@@ -13201,69 +12864,79 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EricAccessHandler</name>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="89"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial</source>
         <translation>Marcação Rápida</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="90"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>URL</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="91"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Title</source>
         <translation>Título</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="92"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="93"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>New Page</source>
         <translation>Página Nova</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="94"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="95"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Remove</source>
         <translation>Retirar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="96"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Reload</source>
         <translation>Recarregar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="97"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Load title from page</source>
         <translation>Carregar título da página</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="99"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Speed Dial Settings</source>
         <translation>Definições de Marcação Rápida</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="101"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Add New Page</source>
         <translation>Adicionar Nova Página</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="102"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Maximum pages in a row:</source>
         <translation>Máximo de páginas numa fila:</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="104"/>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Change size of pages:</source>
         <translation>Mudar tamanho das páginas:</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Close</source>
+        <translation type="unfinished">Fechar</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
+        <source>Are you sure to remove this speed dial?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13464,31 +13137,6 @@ whole selection.&lt;/li&gt;
 </context>
 <context>
     <name>EricapiPlugin</name>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="58"/>
-        <source>Eric5 API File Generator</source>
-        <translation type="obsolete">Gerador de Ficheiros API de Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="99"/>
-        <source>Generate API file (eric5_api)</source>
-        <translation type="obsolete">Gerar ficheiro API (eric5_api)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="99"/>
-        <source>Generate &amp;API file (eric5_api)</source>
-        <translation type="obsolete">Gerar ficheiro &amp;API (eric5_api)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="103"/>
-        <source>Generate an API file using eric5_api</source>
-        <translation type="obsolete">Gerar um ficheiro API usando eric5_api</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricapi.py" line="105"/>
-        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Gerar ficheiro API&lt;/b&gt;&lt;p&gt;Gerar um ficheiro API usando eric5_api.&lt;/p&gt;</translation>
-    </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="58"/>
         <source>Eric6 API File Generator</source>
@@ -13906,31 +13554,6 @@ whole selection.&lt;/li&gt;
 </context>
 <context>
     <name>EricdocPlugin</name>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="58"/>
-        <source>Eric5 Documentation Generator</source>
-        <translation type="obsolete">Gerador de Documentação do Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="134"/>
-        <source>Generate documentation (eric5_doc)</source>
-        <translation type="obsolete">Criar documentação (eric5_doc)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="134"/>
-        <source>Generate &amp;documentation (eric5_doc)</source>
-        <translation type="obsolete">Criar &amp;documentação (eric5_doc)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="138"/>
-        <source>Generate API documentation using eric5_doc</source>
-        <translation type="obsolete">Criar documentação da API utilizando eric5_doc</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="140"/>
-        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Criar documentação&lt;/b&gt;&lt;p&gt;Criar documentação da API utilizando eric5_doc.&lt;/p&gt;</translation>
-    </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="90"/>
         <source>Qt Help Tools</source>
@@ -16066,11 +15689,6 @@ Razão: {0}</translation>
         <translation>Escanear Imagem com VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2416"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1110"/>
         <source>Send Link</source>
         <translation>Enviar Link</translation>
@@ -16156,11 +15774,6 @@ Razão: {0}</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2384"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4.Por favor atualize.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1279"/>
         <source>User Agent</source>
         <translation type="unfinished"></translation>
@@ -16204,11 +15817,6 @@ Razão: {0}</translation>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1191"/>
         <source>Save Media</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2416"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4. Por favor atualize.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2444"/>
@@ -16443,11 +16051,6 @@ Razão: {0}</translation>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation type="unfinished">Ficheiros HTML (*.html *.htm);;Ficheiros Todos (*)</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="173"/>
-        <source>Select PyQt4 documentation entry</source>
-        <translation type="obsolete">Selecionar a entrada de documentação de PyQt4</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
@@ -16745,11 +16348,6 @@ Razão: {0}</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4.Por favor atualize.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="746"/>
         <source>Loading...</source>
         <translation>Carregando...</translation>
@@ -16796,11 +16394,6 @@ Tem %n separadores abertos.</numerusform>
         <translation>F&amp;echar o Separador Atual</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="111"/>
         <source>Show a navigation menu for closed tabs</source>
         <translation>Mostrar um menú de navegação para os separadores fechados</translation>
@@ -16824,11 +16417,6 @@ Tem %n separadores abertos.</numerusform>
         <location filename="../Helpviewer/HelpTabWidget.py" line="983"/>
         <source>Clear List</source>
         <translation>Limpar Lista</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="590"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt4. Por favor atualize.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
@@ -17577,11 +17165,6 @@ Tem %n separadores abertos.</numerusform>
 </context>
 <context>
     <name>HelpWindow</name>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2874"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="182"/>
         <source>Contents</source>
@@ -29492,11 +29075,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Network/IRC/IrcNetworkManager.py" line="34"/>
-        <source>IRC for eric5 IDE</source>
-        <translation type="obsolete">IRC para o IDE eric5</translation>
-    </message>
-    <message>
-        <location filename="../Network/IRC/IrcNetworkManager.py" line="34"/>
         <source>IRC for eric6 IDE</source>
         <translation type="unfinished">IRC para o IDE eric5 {6 ?}</translation>
     </message>
@@ -30524,21 +30102,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="143"/>
         <source>Search results provided by {0}</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="98"/>
-        <source>Welcome to eric5 Web Browser!</source>
-        <translation type="obsolete">Bem-vindo ao Navegador Web de eric5!</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="100"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="102"/>
-        <source>About eric5</source>
-        <translation type="obsolete">Acerca do eric5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="101"/>
@@ -32318,11 +31881,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>MiniEditor</name>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="254"/>
-        <source>About eric5 Mini Editor</source>
-        <translation type="obsolete">Acerca do Mini Editor eric5</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/MiniEditor.py" line="319"/>
         <source>Line: {0:5}</source>
         <translation>Linha: {0:5}</translation>
@@ -32805,11 +32363,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">Preparado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2141"/>
-        <source>eric5 Mini Editor</source>
-        <translation type="obsolete">Mini Editor eric5</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/MiniEditor.py" line="2182"/>
         <source>The document has unsaved changes.</source>
         <translation>O documento tem alterações por gravar.</translation>
@@ -32966,11 +32519,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../MultiProject/MultiProject.py" line="630"/>
         <source>Open multiproject</source>
         <translation>Abrir multiprojeto</translation>
-    </message>
-    <message>
-        <location filename="../MultiProject/MultiProject.py" line="479"/>
-        <source>Multiproject Files (*.e4m)</source>
-        <translation type="obsolete">Ficheiros Multiprojeto (*.e4m)</translation>
     </message>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="668"/>
@@ -35626,16 +35174,6 @@ Select Update.</source>
         <translation>Ficheiro de Propriedades (*.ini);;Ficheiros Todos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1310"/>
-        <source>Select Python2 Interpreter</source>
-        <translation type="obsolete">Selecionar o Intérprete de Python2</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/__init__.py" line="1310"/>
-        <source>Select the Python2 interpreter to be used:</source>
-        <translation type="obsolete">Selecionar o intérprete de Python2 a usar:</translation>
-    </message>
-    <message>
         <location filename="../Preferences/__init__.py" line="1298"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
@@ -35675,29 +35213,6 @@ Select Update.</source>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="374"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Previewer</name>
-    <message>
-        <location filename="../UI/Previewer.ui" line="48"/>
-        <source>Enable JavaScript</source>
-        <translation type="obsolete">Habilitar JavaScript</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewer.py" line="276"/>
-        <source>Preview - {0}</source>
-        <translation type="obsolete">Antevisão - {0}</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewer.py" line="278"/>
-        <source>Preview</source>
-        <translation type="obsolete">Antevisão</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewer.py" line="236"/>
-        <source>&lt;p&gt;No preview available for this type of file.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;A antevisão para este tipo de ficheiro não está disponível.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -36026,11 +35541,6 @@ Select Update.</source>
         <location filename="../Project/Project.py" line="192"/>
         <source>Ruby Files (*.rb);;</source>
         <translation>Ficheiros Ruby (*.rb);;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="247"/>
-        <source>Eric Plugin</source>
-        <translation type="obsolete">Complemento de Eric</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="262"/>
@@ -37021,11 +36531,6 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4744"/>
-        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;O ficheiro de complemento de eric5 &lt;b&gt;{0}&lt;/b&gt; foi criado com êxito.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="4807"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -37079,16 +36584,6 @@ Select Update.</source>
         <location filename="../Project/Project.py" line="347"/>
         <source>&lt;p&gt;The Project type &lt;b&gt;{0}&lt;/b&gt; is already registered with Programming Language &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="243"/>
-        <source>Qt GUI</source>
-        <translation type="obsolete">GUI Qt</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="244"/>
-        <source>Qt Console</source>
-        <translation type="obsolete">Consola Qt</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="258"/>
@@ -45339,11 +44834,6 @@ Not connected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ShortcutsDialog.py" line="189"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ShortcutsDialog.py" line="190"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">Navegador Web de eric5 {6 ?}</translation>
@@ -45834,17 +45324,17 @@ Not connected</source>
 <context>
     <name>SpeedDial</name>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="386"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="397"/>
         <source>Unable to load</source>
         <translation>Incapaz de carregar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>Saving Speed Dial data</source>
         <translation>Gravando dados de Marcação Rápida</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="215"/>
+        <location filename="../Helpviewer/SpeedDial/SpeedDial.py" line="216"/>
         <source>&lt;p&gt;Speed Dial data could not be saved to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Os dados da Marcação Rápida não poderam ser gravados em &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -55081,11 +54571,6 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Preferências</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="142"/>
-        <source>eric5 Mini Editor</source>
-        <translation type="obsolete">Mini Editor eric5</translation>
-    </message>
-    <message>
         <location filename="../Tools/TrayStarter.py" line="162"/>
         <source>Quit</source>
         <translation>Sair</translation>
@@ -55109,11 +54594,6 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="../Tools/TrayStarter.py" line="120"/>
         <source>Icon Editor</source>
         <translation type="unfinished">Editor de Ícones</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="99"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="117"/>
@@ -55551,11 +55031,6 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="../Graphics/UMLDialog.py" line="264"/>
         <source>Save Diagram</source>
         <translation>Gravar Diagrama</translation>
-    </message>
-    <message>
-        <location filename="../Graphics/UMLDialog.py" line="280"/>
-        <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
-        <translation type="obsolete">Ficheiros Graficos de Eric5 (*.e5g);;Ficheiros Todos(*)</translation>
     </message>
     <message>
         <location filename="../Graphics/UMLDialog.py" line="237"/>
@@ -56811,11 +56286,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="1900"/>
-        <source>Start the eric5 Web Browser</source>
-        <translation type="obsolete">Iniciar o Navegador Web de eric5</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="1910"/>
         <source>Icon Editor</source>
         <translation>Editor de Ícones</translation>
@@ -56824,11 +56294,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <location filename="../UI/UserInterface.py" line="1910"/>
         <source>&amp;Icon Editor...</source>
         <translation>Editor de &amp;Ícones...</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1914"/>
-        <source>Start the eric5 Icon Editor</source>
-        <translation type="obsolete">Iniciar o Editor de Icones de eric5</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1939"/>
@@ -57366,11 +56831,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <translation>Suporte Qt3</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4234"/>
-        <source>Qt v.3 is not supported by eric5.</source>
-        <translation type="obsolete">Qt v.3 não está suportado por eric5.</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="4427"/>
         <source>Problem</source>
         <translation>Problema</translation>
@@ -57558,16 +57018,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <translation>Atualização disponível</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6031"/>
-        <source>Eric5 is up to date</source>
-        <translation type="obsolete">Eric5 está atualizado</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6031"/>
-        <source>You are using the latest version of eric5</source>
-        <translation type="obsolete">Utiliza a última versão do eric5</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="6052"/>
         <source>Error during updates check</source>
         <translation>Erro na verificação de atualizações</translation>
@@ -57586,11 +57036,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <location filename="../UI/UserInterface.py" line="6116"/>
         <source>First time usage</source>
         <translation>Usado a primeira vez</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6102"/>
-        <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
-        <translation type="obsolete">eric5 ainda não foi configurado. A caixa de diálogo de configuração vai iniciar-se.</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2300"/>
@@ -57651,21 +57096,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <location filename="../UI/UserInterface.py" line="5942"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1895"/>
-        <source>eric5 Web Browser</source>
-        <translation type="obsolete">Navegador Web de eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1895"/>
-        <source>eric5 &amp;Web Browser...</source>
-        <translation type="obsolete">Navegador &amp;Web de eric5...</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1902"/>
-        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Navegardor Web eric5&lt;/b&gt;&lt;p&gt;Navegar por internet com o Navegador Web eric5.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="540"/>
@@ -58334,16 +57764,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <location filename="../Utilities/__init__.py" line="1245"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pode usar códigos % como espaços reservados dentro da cadeia. Os códigos suportados são:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;coluna do cursor do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directório do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;nome do ficheiro do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;diretório home do usuário atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;linha do cursor do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;caminho do projeto atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;texto selecionado do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;nome de usuário do usuário atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;sinal de percentagem&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/__init__.py" line="1362"/>
-        <source>Python2 interpreter not configured.</source>
-        <translation type="obsolete">Intérprete de Python2 não configurado.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/__init__.py" line="1412"/>
-        <source>Python2 interpreter did not finish within 30s.</source>
-        <translation type="obsolete">O intérprete de Python2 não acabou em 30s.</translation>
     </message>
 </context>
 <context>
@@ -61498,11 +60918,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <translation>Limpar Mensagens de &amp;Aviso</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3842"/>
-        <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Limpar Mensagens de Aviso&lt;/b&gt;&lt;p&gt;Limpar mensagens de aviso de py3flakes em todos os editores.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="3927"/>
         <source>Next uncovered line</source>
         <translation type="unfinished"></translation>
@@ -62929,19 +62344,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
-    <name>eric5</name>
-    <message>
-        <location filename="../eric5.py" line="305"/>
-        <source>Generating Main Window...</source>
-        <translation type="obsolete">Gerando a Janela Principal...</translation>
-    </message>
-    <message>
-        <location filename="../eric5.py" line="300"/>
-        <source>Starting...</source>
-        <translation type="obsolete">Começando...</translation>
-    </message>
-</context>
-<context>
     <name>eric6</name>
     <message>
         <location filename="../eric6.py" line="297"/>
@@ -63183,11 +62585,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/pep8.py" line="285"/>
-        <source>no message for this code defined</source>
-        <translation type="obsolete">não há mensagem definida para este código</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="29"/>
         <source>continuation line indentation is not a multiple of four</source>
         <translation type="unfinished"></translation>
@@ -63331,24 +62728,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="207"/>
         <source>{0}</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>py3Flakes</name>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="60"/>
-        <source>{0!r} imported but unused.</source>
-        <translation type="obsolete">{0!r} importado mas sem usar.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="155"/>
-        <source>Undefined name {0!r}.</source>
-        <translation type="obsolete">Nome não definido {0!r}.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="293"/>
-        <source>Local variable {0!r} is assigned to but never used.</source>
-        <translation type="obsolete">A variável local {0!r} está assignada mas não é usada.</translation>
     </message>
 </context>
 <context>
