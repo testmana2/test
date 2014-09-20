@@ -3114,6 +3114,7 @@ eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.sdSize?4()
 eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.setPagesInRow?4(count)
 eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.setSdSize?4(size)
 eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.speedDialSaved?7
+eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.unescapeTitle?4(title)
 eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.urlForShortcut?4(key)
 eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial.urlFromUserInput?4(url)
 eric6.Helpviewer.SpeedDial.SpeedDial.SpeedDial?1(parent=None)
