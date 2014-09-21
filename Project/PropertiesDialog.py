@@ -132,7 +132,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.languageComboBox.setCurrentIndex(
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
-                self.projectTypeComboBox.findData("Qt4"))
+                self.projectTypeComboBox.findData("PyQt5"))
             self.dirEdit.setText(self.__initPaths[0])
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()
