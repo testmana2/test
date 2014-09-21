@@ -161,15 +161,19 @@ def getPythonModulesDirectory():
     return distutils.sysconfig.get_python_lib(True)
 
 
-# TODO: modify to also work with PyQt4
 def getPyQt5ModulesDirectory():
     """
-    Function to determine the path to PyQt5's modules directory.
+    Function to determine the path to PyQt5's (or PyQt4's) modules directory.
     
-    @return path to the PyQt5 modules directory (string)
+    @return path to the PyQt5/PyQt4 modules directory (string)
     """
     import distutils.sysconfig
-    return os.path.join(distutils.sysconfig.get_python_lib(True), "PyQt5")
+    for pyqt in ["PyQt5", "PyQt4"]:
+        pyqtPath = os.path.join(distutils.sysconfig.get_python_lib(True), pyqt)
+        if os.path.exists(pyqtPath):
+            return pyqtPath
+    
+    return ""
     
 
 def getQtBinariesPath():

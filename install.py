@@ -1117,7 +1117,6 @@ def doDependancyChecks():
     print()
 
 
-# TODO: PyQt4
 def compileUiFiles():
     """
     Compile the .ui files to Python sources.
