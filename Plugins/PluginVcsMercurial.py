@@ -225,7 +225,7 @@ class VcsMercurialPlugin(QObject):
                 "Mercurial/" + key, self.__mercurialDefaults[key]))
         elif key in ["Commits"]:
             return Preferences.toList(Preferences.Prefs.settings.value(
-                "Mercurial/" + key, self.__mercurialDefaults[key]))
+                "Mercurial/" + key))
         else:
             return Preferences.Prefs.settings.value(
                 "Mercurial/" + key, self.__mercurialDefaults[key])
