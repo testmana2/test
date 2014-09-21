@@ -370,6 +370,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
+        # TODO: add entry for configure
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -457,6 +458,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
+        # TODO: add entry for configure
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -489,6 +491,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
+        # TODO: add entry for configure
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -587,6 +590,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
+        # TODO: add entry for configure
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -671,6 +675,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
+        # TODO: add entry for configure
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
