@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# Copyright (c) 2014 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
 """
 Module implementing a dialog to enter some user data.
 """
