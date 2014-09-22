@@ -13,6 +13,8 @@ import os
 
 from PyQt5.QtWidgets import QMenu, QDialog
 
+from E5Gui.E5Application import e5App
+
 from Project.ProjectBrowserModel import ProjectBrowserFileItem
 
 from VCS.ProjectBrowserHelper import VcsProjectBrowserHelper
@@ -370,7 +372,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        # TODO: add entry for configure
+        menu.addAction(self.tr("Configure..."), self.__HgConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -458,7 +460,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        # TODO: add entry for configure
+        menu.addAction(self.tr("Configure..."), self.__HgConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -491,7 +493,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        # TODO: add entry for configure
+        menu.addAction(self.tr("Configure..."), self.__HgConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -590,7 +592,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        # TODO: add entry for configure
+        menu.addAction(self.tr("Configure..."), self.__HgConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -675,7 +677,7 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         menu.addAction(self.tr('Select all versioned directory entries'),
                        self.browser.selectVCSDirEntries)
         menu.addSeparator()
-        # TODO: add entry for configure
+        menu.addAction(self.tr("Configure..."), self.__HgConfigure)
         
         mainMenu.addSeparator()
         mainMenu.addMenu(menu)
@@ -846,3 +848,10 @@ class HgProjectBrowserHelper(VcsProjectBrowserHelper):
         
         for fn in names:
             self._updateVCSStatus(fn)
+    
+    def __HgConfigure(self):
+        """
+        Private method to open the configuration dialog.
+        """
+        e5App().getObject("UserInterface")\
+            .showPreferences("zzz_mercurialPage")
