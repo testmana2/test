@@ -1670,69 +1670,6 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
-    <name>Bookmarks</name>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="127"/>
-        <source>Mercurial Bookmark</source>
-        <translation type="obsolete">Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="145"/>
-        <source>Delete Bookmark</source>
-        <translation type="obsolete">Apagar Marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="145"/>
-        <source>Select the bookmark to be deleted:</source>
-        <translation type="obsolete">Selecionar o marcador a apagar:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="157"/>
-        <source>Delete Mercurial Bookmark</source>
-        <translation type="obsolete">Apagar o Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="186"/>
-        <source>Rename Mercurial Bookmark</source>
-        <translation type="obsolete">Renomear o Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="220"/>
-        <source>Move Mercurial Bookmark</source>
-        <translation type="obsolete">Mover o Marcador de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="307"/>
-        <source>Pull Bookmark</source>
-        <translation type="obsolete">Puxar Marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="307"/>
-        <source>Select the bookmark to be pulled:</source>
-        <translation type="obsolete">Selecionar o marcador a puxar:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="319"/>
-        <source>Pulling bookmark from a remote Mercurial repository</source>
-        <translation type="obsolete">Puxando o marcador desde o repositório remoto de Mercurial</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="341"/>
-        <source>Push Bookmark</source>
-        <translation type="obsolete">Empurrar Marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="341"/>
-        <source>Select the bookmark to be push:</source>
-        <translation type="obsolete">Selecione o marcador a empurrar:</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/bookmarks.py" line="353"/>
-        <source>Pushing bookmark to a remote Mercurial repository</source>
-        <translation type="obsolete">Empurrando o marcador para o repositório remoto de Mercurial</translation>
-    </message>
-</context>
-<context>
     <name>BookmarksDialog</name>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksDialog.ui" line="14"/>
@@ -2013,174 +1950,6 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
         <location filename="../Helpviewer/Bookmarks/BookmarksModel.py" line="48"/>
         <source>Address</source>
         <translation>Direção</translation>
-    </message>
-</context>
-<context>
-    <name>BookmarksProjectHelper</name>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="33"/>
-        <source>List bookmarks</source>
-        <translation type="obsolete">Listar marcadores</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="33"/>
-        <source>List bookmarks...</source>
-        <translation type="obsolete">Listar marcadores...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="38"/>
-        <source>List bookmarks of the project</source>
-        <translation type="obsolete">Listar marcadores do projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="41"/>
-        <source>&lt;b&gt;List bookmarks&lt;/b&gt;&lt;p&gt;This lists the bookmarks of the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Listar marcadores&lt;/b&gt;&lt;p&gt;Lista os marcadores do projeto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="48"/>
-        <source>Define bookmark</source>
-        <translation type="obsolete">Definir marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="48"/>
-        <source>Define bookmark...</source>
-        <translation type="obsolete">Definir marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="53"/>
-        <source>Define a bookmark for the project</source>
-        <translation type="obsolete">Definir um marcador para o projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="56"/>
-        <source>&lt;b&gt;Define bookmark&lt;/b&gt;&lt;p&gt;This defines a bookmark for the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Definir marcador&lt;/b&gt;&lt;p&gt;Define um marcador para o projeto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="63"/>
-        <source>Delete bookmark</source>
-        <translation type="obsolete">Apagar marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="63"/>
-        <source>Delete bookmark...</source>
-        <translation type="obsolete">Apagar Marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="68"/>
-        <source>Delete a bookmark of the project</source>
-        <translation type="obsolete">Apagar um marcador do projeto </translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="71"/>
-        <source>&lt;b&gt;Delete bookmark&lt;/b&gt;&lt;p&gt;This deletes a bookmark of the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Apagar marcador&lt;/b&gt;&lt;p&gt;Apaga um marcador do projeto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="78"/>
-        <source>Rename bookmark</source>
-        <translation type="obsolete">Renomear marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="78"/>
-        <source>Rename bookmark...</source>
-        <translation type="obsolete">Renomear marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="83"/>
-        <source>Rename a bookmark of the project</source>
-        <translation type="obsolete">Renomear um marcador do projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="86"/>
-        <source>&lt;b&gt;Rename bookmark&lt;/b&gt;&lt;p&gt;This renames a bookmark of the project.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Renomear marcador&lt;/b&gt;&lt;p&gt;Renomeia um marcador do projeto&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="93"/>
-        <source>Move bookmark</source>
-        <translation type="obsolete">Mover marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="93"/>
-        <source>Move bookmark...</source>
-        <translation type="obsolete">Mover marcador...</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="98"/>
-        <source>Move a bookmark of the project</source>
-        <translation type="obsolete">Mover um marcador do projeto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="101"/>
-        <source>&lt;b&gt;Move bookmark&lt;/b&gt;&lt;p&gt;This moves a bookmark of the project to another changeset.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mover marcador&lt;/b&gt;&lt;p&gt;Move o marcador do projeto.&lt;p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="109"/>
-        <source>Show incoming bookmarks</source>
-        <translation type="obsolete">Mostrar marcadores entrantes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="114"/>
-        <source>Show a list of incoming bookmarks</source>
-        <translation type="obsolete">Mostrar a lista de marcadores entrantes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="117"/>
-        <source>&lt;b&gt;Show incoming bookmarks&lt;/b&gt;&lt;p&gt;This shows a list of new bookmarks available at the remote repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mostrar marcadores entrantes&lt;/b&gt;&lt;p&gt;Mostra a lista de marcadores novos disponíveis no repositório remoto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="126"/>
-        <source>Pull bookmark</source>
-        <translation type="obsolete">Puxar marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="131"/>
-        <source>Pull a bookmark from a remote repository</source>
-        <translation type="obsolete">Puxa um marcador desde um repositório remoto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="134"/>
-        <source>&lt;b&gt;Pull bookmark&lt;/b&gt;&lt;p&gt;This pulls a bookmark from a remote repository into the local repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Puxar marcador&lt;/b&gt;&lt;p&gt;Puxa um marcador desde um repositório remoto para o repositório local (pull).&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="142"/>
-        <source>Show outgoing bookmarks</source>
-        <translation type="obsolete">Mostrar marcadores saintes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="147"/>
-        <source>Show a list of outgoing bookmarks</source>
-        <translation type="obsolete">Mostrar a lista de marcadores saintes</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="150"/>
-        <source>&lt;b&gt;Show outgoing bookmarks&lt;/b&gt;&lt;p&gt;This shows a list of new bookmarks available at the local repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Mostrar marcadores  saintes&lt;/b&gt;&lt;p&gt;Mostra a lista dos marcadores novos disponíveis no repositório local.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="159"/>
-        <source>Push bookmark</source>
-        <translation type="obsolete">Empurrar marcador</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="164"/>
-        <source>Push a bookmark to a remote repository</source>
-        <translation type="obsolete">Empurrar um marcador a um repositório remoto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="167"/>
-        <source>&lt;b&gt;Push bookmark&lt;/b&gt;&lt;p&gt;This pushes a bookmark from the local repository to a remote repository.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Empurrar marcador&lt;/b&gt;&lt;p&gt;Empurra a um marcador do repositório local para o repositório remoto.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/BookmarksExtension/ProjectHelper.py" line="207"/>
-        <source>Bookmarks</source>
-        <translation type="obsolete">Marcadores</translation>
     </message>
 </context>
 <context>
@@ -3413,19 +3182,6 @@ linha e posição.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
-    <name>CodeStyleCheckerPy2</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleChecker.py" line="56"/>
-        <source>Python2 interpreter not configured.</source>
-        <translation type="obsolete">Interprete de Python2 não configurado.</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleChecker.py" line="133"/>
-        <source>Python2 interpreter did not finish within 15s.</source>
-        <translation type="obsolete">Interprete de Python2 não acabou em 15s.</translation>
-    </message>
-</context>
-<context>
     <name>CodeStyleCodeSelectionDialog</name>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="14"/>
@@ -3455,16 +3211,6 @@ linha e posição.&lt;/p&gt;</translation>
 </context>
 <context>
     <name>CodeStyleFixer</name>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="185"/>
-        <source>Fix Code Style Issues</source>
-        <translation type="obsolete">Reparar Problemas de Estilo do Código</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py" line="185"/>
-        <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Não se pôde gravar o ficheiro &lt;b&gt;{0}&lt;/b&gt;. Ignorando-o.&lt;/p&gt;&lt;p&gt;Razão: {1}&lt;/p&gt;</translation>
-    </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="375"/>
         <source>Triple single quotes converted to triple double quotes.</source>
@@ -5109,16 +4855,6 @@ Não conectado
 </translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1417"/>
-        <source>Passive debug connection received</source>
-        <translation type="obsolete">Conexão de depuração passiva recebida</translation>
-    </message>
-    <message>
-        <location filename="../Debugger/DebugServer.py" line="1431"/>
-        <source>Passive debug connection closed</source>
-        <translation type="obsolete">Conexão de depuração passiva fechada</translation>
-    </message>
-    <message>
         <location filename="../Debugger/DebugServer.py" line="1463"/>
         <source>Passive debug connection received
 </source>
@@ -6548,16 +6284,6 @@ Não conectado
         <translation>Intérprete de Python3 para Cliente de Depuração</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="43"/>
-        <source>Select, whether a special Python interpreter should be used</source>
-        <translation type="obsolete">Selecionar, quando um intérprete de Python especial deve ser usado</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="46"/>
-        <source>Custom Python Interpreter</source>
-        <translation type="obsolete">Intérprete Python Personalizado</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="50"/>
         <source>Press to select the Python3 interpreter via a file selection dialog</source>
         <translation>Pressionar para selecionar o intérprete de Python3 através da caixa de diálogo de seleção de ficheiros</translation>
@@ -7152,11 +6878,6 @@ Não conectado
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py" line="439"/>
-        <source>no message for this code defined</source>
-        <translation type="obsolete">nenhuma mensagem definida para este código</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="326"/>
         <source>{0}: {1}</source>
         <translation></translation>
@@ -7228,39 +6949,6 @@ Não conectado
         <location filename="../Helpviewer/Download/DownloadAskActionDialog.ui" line="146"/>
         <source>&lt;b&gt;What do you want to do?&lt;/b&gt;</source>
         <translation>&lt;b&gt;O que é que deseja fazer?&lt;/b&gt;</translation>
-    </message>
-</context>
-<context>
-    <name>DownloadDialog</name>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="14"/>
-        <source>Eric5 Download</source>
-        <translation type="obsolete">Descarga Eric5</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="22"/>
-        <source>Icon</source>
-        <translation type="obsolete">Ícone</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="31"/>
-        <source>Filename</source>
-        <translation type="obsolete">Nome do Ficheiro</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="41"/>
-        <source>Info</source>
-        <translation type="obsolete">Informação</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="52"/>
-        <source>Select to keep the dialog open when finished</source>
-        <translation type="obsolete">Selecionar para manter a caixa de diálogo aberta quando acabe</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/DownloadDialog.ui" line="55"/>
-        <source>Keep open when finished</source>
-        <translation type="obsolete">Manter aberta quando acabe</translation>
     </message>
 </context>
 <context>
@@ -22542,129 +22230,134 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgProjectBrowserHelper</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="607"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="613"/>
         <source>Version Control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="619"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="625"/>
         <source>Commit changes to repository...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="626"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="632"/>
         <source>Add to repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="630"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="636"/>
         <source>Remove from repository (and disk)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="831"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="838"/>
         <source>Remove from repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="543"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="548"/>
         <source>Show log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="547"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="552"/>
         <source>Show log browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="636"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="642"/>
         <source>Show status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="345"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="347"/>
         <source>Show annotated file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="651"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="657"/>
         <source>Revert changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="665"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="671"/>
         <source>Select all local file entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="667"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="673"/>
         <source>Select all versioned file entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="669"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="675"/>
         <source>Select all local directory entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="671"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="677"/>
         <source>Select all versioned directory entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="831"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="838"/>
         <source>Do you really want to remove these files from the repository?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="538"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="543"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="540"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="545"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="641"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="647"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="331"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="333"/>
         <source>Show differences side-by-side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="645"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="651"/>
         <source>Show differences (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="340"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="342"/>
         <source>Show differences side-by-side (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="247"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="249"/>
         <source>Extensions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="655"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="661"/>
         <source>Conflicts resolved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="658"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="664"/>
         <source>Conflicts unresolved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="661"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="667"/>
         <source>Re-Merge</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="680"/>
+        <source>Configure...</source>
+        <translation type="unfinished">Configurar...</translation>
     </message>
 </context>
 <context>
@@ -32838,11 +32531,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Abrir multiprojeto</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProject.py" line="479"/>
-        <source>Multiproject Files (*.e4m)</source>
-        <translation type="obsolete">Ficheiros Multiprojeto (*.e4m)</translation>
-    </message>
-    <message>
         <location filename="../MultiProject/MultiProject.py" line="667"/>
         <source>Save multiproject as</source>
         <translation>Gravar multiprojeto como</translation>
@@ -35496,16 +35184,6 @@ Select Update.</source>
         <translation>Ficheiro de Propriedades (*.ini);;Ficheiros Todos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1310"/>
-        <source>Select Python2 Interpreter</source>
-        <translation type="obsolete">Selecionar o Intérprete de Python2</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/__init__.py" line="1310"/>
-        <source>Select the Python2 interpreter to be used:</source>
-        <translation type="obsolete">Selecionar o intérprete de Python2 a usar:</translation>
-    </message>
-    <message>
         <location filename="../Preferences/__init__.py" line="1291"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
@@ -35545,29 +35223,6 @@ Select Update.</source>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="374"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Previewer</name>
-    <message>
-        <location filename="../UI/Previewer.ui" line="48"/>
-        <source>Enable JavaScript</source>
-        <translation type="obsolete">Habilitar JavaScript</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewer.py" line="276"/>
-        <source>Preview - {0}</source>
-        <translation type="obsolete">Antevisão - {0}</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewer.py" line="278"/>
-        <source>Preview</source>
-        <translation type="obsolete">Antevisão</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewer.py" line="236"/>
-        <source>&lt;p&gt;No preview available for this type of file.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;A antevisão para este tipo de ficheiro não está disponível.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -58115,16 +57770,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Pode usar códigos % como espaços reservados dentro da cadeia. Os códigos suportados são:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;coluna do cursor do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directório do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;nome do ficheiro do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;diretório home do usuário atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;linha do cursor do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;caminho do projeto atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;texto selecionado do editor atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;nome de usuário do usuário atual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;sinal de percentagem&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
-    <message>
-        <location filename="../Utilities/__init__.py" line="1362"/>
-        <source>Python2 interpreter not configured.</source>
-        <translation type="obsolete">Intérprete de Python2 não configurado.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/__init__.py" line="1412"/>
-        <source>Python2 interpreter did not finish within 30s.</source>
-        <translation type="obsolete">O intérprete de Python2 não acabou em 30s.</translation>
-    </message>
 </context>
 <context>
     <name>Variable Types</name>
@@ -61278,11 +60923,6 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
         <translation>Limpar Mensagens de &amp;Aviso</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3842"/>
-        <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear py3flakes warning messages of all editors.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Limpar Mensagens de Aviso&lt;/b&gt;&lt;p&gt;Limpar mensagens de aviso de py3flakes em todos os editores.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="3859"/>
         <source>Next uncovered line</source>
         <translation type="unfinished"></translation>
@@ -62950,11 +62590,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/pep8.py" line="285"/>
-        <source>no message for this code defined</source>
-        <translation type="obsolete">não há mensagem definida para este código</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="29"/>
         <source>continuation line indentation is not a multiple of four</source>
         <translation type="unfinished"></translation>
@@ -63098,24 +62733,6 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="207"/>
         <source>{0}</source>
         <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>py3Flakes</name>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="60"/>
-        <source>{0!r} imported but unused.</source>
-        <translation type="obsolete">{0!r} importado mas sem usar.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="155"/>
-        <source>Undefined name {0!r}.</source>
-        <translation type="obsolete">Nome não definido {0!r}.</translation>
-    </message>
-    <message>
-        <location filename="../Utilities/py3flakes/messages.py" line="293"/>
-        <source>Local variable {0!r} is assigned to but never used.</source>
-        <translation type="obsolete">A variável local {0!r} está assignada mas não é usada.</translation>
     </message>
 </context>
 <context>

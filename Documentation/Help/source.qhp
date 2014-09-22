@@ -6144,6 +6144,7 @@
       <keyword name="HgProjectBrowserHelper" id="HgProjectBrowserHelper" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper" />
       <keyword name="HgProjectBrowserHelper (Constructor)" id="HgProjectBrowserHelper (Constructor)" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__init__" />
       <keyword name="HgProjectBrowserHelper.__HgAnnotate" id="HgProjectBrowserHelper.__HgAnnotate" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgAnnotate" />
+      <keyword name="HgProjectBrowserHelper.__HgConfigure" id="HgProjectBrowserHelper.__HgConfigure" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgConfigure" />
       <keyword name="HgProjectBrowserHelper.__HgCopy" id="HgProjectBrowserHelper.__HgCopy" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgCopy" />
       <keyword name="HgProjectBrowserHelper.__HgExtendedDiff" id="HgProjectBrowserHelper.__HgExtendedDiff" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgExtendedDiff" />
       <keyword name="HgProjectBrowserHelper.__HgForget" id="HgProjectBrowserHelper.__HgForget" ref="eric5.Plugins.VcsPlugins.vcsMercurial.ProjectBrowserHelper.html#HgProjectBrowserHelper.__HgForget" />
