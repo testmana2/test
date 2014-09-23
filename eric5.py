@@ -233,9 +233,7 @@ def main():
     
     app = E5Application(sys.argv)
     
-    import Utilities
     from Toolbox import Startup
-    
     ddindex = Startup.handleArgs(sys.argv, appinfo)
     
     logging.debug("Importing Preferences")
@@ -259,6 +257,7 @@ def main():
         splash = NoneSplashScreen()
     else:
         splash = SplashScreen()
+    QApplication.processEvents()
 
     # modify the executable search path for the PyQt4 installer
     if Globals.isWindowsPlatform():
@@ -277,6 +276,7 @@ def main():
         noopen = True
     for arg in sys.argv:
         if arg.startswith("--plugin=") and sys.argv.index(arg) < ddindex:
+            import Utilities
             # extract the plugin development option
             pluginFile = arg.replace("--plugin=", "").replace('"', "")
             sys.argv.remove(arg)
