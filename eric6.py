@@ -254,6 +254,7 @@ def main():
         splash = NoneSplashScreen()
     else:
         splash = SplashScreen()
+    QCoreApplication.processEvents()
 
     # modify the executable search path for the PyQt5 installer
     if Globals.isWindowsPlatform():
