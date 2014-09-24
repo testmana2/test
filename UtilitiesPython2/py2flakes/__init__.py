@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2011 - 2014 Detlev Offenbach <detlev@die-offenbachs.de>
+#
+
+"""
+Package containg pyflakes for Python2.
+"""
+
+__version__ = '0.8.1'
+    
+#
+# eflag: FileType = Python2
