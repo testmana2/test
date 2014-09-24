@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Network.E5NetworkProxyFactory</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.E5Network.E5NetworkProxyFactory</h1>
+<p>
+Module implementing a network proxy factory.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#E5NetworkProxyFactory">E5NetworkProxyFactory</a></td>
+<td>Class implementing a network proxy factory.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#proxyAuthenticationRequired">proxyAuthenticationRequired</a></td>
+<td>Module slot to handle a proxy authentication request.</td>
+</tr><tr>
+<td><a href="#schemeFromProxyType">schemeFromProxyType</a></td>
+<td>Module function to determine the scheme name from the proxy type.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="E5NetworkProxyFactory" ID="E5NetworkProxyFactory"></a>
+<h2>E5NetworkProxyFactory</h2>
+<p>
+    Class implementing a network proxy factory.
+</p>
+<h3>Derived from</h3>
+QNetworkProxyFactory
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#E5NetworkProxyFactory.__init__">E5NetworkProxyFactory</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#E5NetworkProxyFactory.queryProxy">queryProxy</a></td>
+<td>Public method to determine a proxy for a given query.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="E5NetworkProxyFactory.__init__" ID="E5NetworkProxyFactory.__init__"></a>
+<h4>E5NetworkProxyFactory (Constructor)</h4>
+<b>E5NetworkProxyFactory</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="E5NetworkProxyFactory.queryProxy" ID="E5NetworkProxyFactory.queryProxy"></a>
+<h4>E5NetworkProxyFactory.queryProxy</h4>
+<b>queryProxy</b>(<i>query</i>)
+<p>
+        Public method to determine a proxy for a given query.
+</p><dl>
+<dt><i>query</i></dt>
+<dd>
+reference to the query object (QNetworkProxyQuery)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of proxies in order of preference (list of QNetworkProxy)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="proxyAuthenticationRequired" ID="proxyAuthenticationRequired"></a>
+<h2>proxyAuthenticationRequired</h2>
+<b>proxyAuthenticationRequired</b>(<i>proxy, auth</i>)
+<p>
+    Module slot to handle a proxy authentication request.
+</p><dl>
+<dt><i>proxy</i></dt>
+<dd>
+reference to the proxy object (QNetworkProxy)
+</dd><dt><i>auth</i></dt>
+<dd>
+reference to the authenticator object (QAuthenticator)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="schemeFromProxyType" ID="schemeFromProxyType"></a>
+<h2>schemeFromProxyType</h2>
+<b>schemeFromProxyType</b>(<i>proxyType</i>)
+<p>
+    Module function to determine the scheme name from the proxy type.
+</p><dl>
+<dt><i>proxyType</i></dt>
+<dd>
+type of the proxy (QNetworkProxy.ProxyType)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+scheme (string, one of Http, Https, Ftp)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

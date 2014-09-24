@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Ruby.DebugClientBaseModule</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Ruby.DebugClientBaseModule</h1>
+<p>
+File implementing a debug client base module.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Modules</h3>
+<table>
+<tr>
+<td><a href="#DebugClientBase">DebugClientBase</a></td>
+<td>Module implementing the client side of the debugger.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="DebugClientBase" ID="DebugClientBase"></a>
+<h2>DebugClientBase</h2>
+<p>
+Module implementing the client side of the debugger.
+</p><p>
+It provides access to the Ruby interpeter from a debugger running in another
+process.
+</p><p>
+The protocol between the debugger and the client assumes that there will be
+a single source of debugger commands and a single source of Ruby
+statements.  Commands and statement are always exactly one line and may be
+interspersed.
+</p><p>
+The protocol is as follows.  First the client opens a connection to the
+debugger and then sends a series of one line commands.  A command is either
+&gt;Load&lt;, &gt;Step&lt;, &gt;StepInto&lt;, ... or a Ruby statement. 
+See DebugProtocol.rb for a listing of valid protocol tokens.
+</p><p>
+A Ruby statement consists of the statement to execute, followed (in a
+separate line) by &gt;OK?&lt;.  If the statement was incomplete then the response
+is &gt;Continue&lt;.  If there was an exception then the response is &gt;Exception&lt;.
+Otherwise the response is &gt;OK&lt;.  The reason for the &gt;OK?&lt; part is to
+provide a sentinal (ie. the responding &gt;OK&lt;) after any possible output as a
+result of executing the command.
+</p><p>
+The client may send any other lines at any other time which should be
+interpreted as program output.
+</p><p>
+If the debugger closes the session there is no response from the client.
+The client may close the session at any time as a result of the script
+being debugged closing or crashing.
+</p><p>
+<b>Note</b>: This module is meant to be mixed in by individual DebugClient classes.
+Do not use it directly.
+</p>
+<h3>Module Attributes</h3>
+<table>
+<tr><td>@@clientCapabilities</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#DebugClientBase.canEval?">canEval?</a></td>
+<td>Private method to check if the buffer's contents can be evaluated.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.completionList">completionList</a></td>
+<td>Method used to handle the command completion request</td>
+</tr><tr>
+<td><a href="#DebugClientBase.connectDebugger">connectDebugger</a></td>
+<td>Public method to establish a session with the debugger.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.dumpVariable">dumpVariable</a></td>
+<td>Private method to return the variables of a frame to the debug server.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.dumpVariables">dumpVariables</a></td>
+<td>Private method to return the variables of a frame to the debug server.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.eventLoop">eventLoop</a></td>
+<td>Private method implementing our event loop.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.eventPoll">eventPoll</a></td>
+<td>Private method to poll for events like 'set break point'.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.extractAddress">extractAddress</a></td>
+<td>Private method to extract the address part of an object description.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.extractTypeAndAddress">extractTypeAndAddress</a></td>
+<td>Private method to extract the address and type parts of an object description.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.formatVariablesList">formatVariablesList</a></td>
+<td>Private method to produce a formated variables list.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.generateFilterObjects">generateFilterObjects</a></td>
+<td>Private method to convert a filter string to a list of filter objects.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.handleException">handleException</a></td>
+<td>Private method called in the case of an exception</td>
+</tr><tr>
+<td><a href="#DebugClientBase.handleLine">handleLine</a></td>
+<td>Private method to handle the receipt of a complete line.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.inFilter?">inFilter?</a></td>
+<td>Private method to check, if a variable is to be filtered based on its type.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.initializeDebugClient">initializeDebugClient</a></td>
+<td>Method to initialize the module</td>
+</tr><tr>
+<td><a href="#DebugClientBase.interact">interact</a></td>
+<td>Private method to Interact with  the debugger.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.main">main</a></td>
+<td>Public method implementing the main method.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.progTerminated">progTerminated</a></td>
+<td>Private method to tell the debugger that the program has terminated.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.sessionClose">sessionClose</a></td>
+<td>Privat method to close the session with the debugger and terminate.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.startProgInDebugger">startProgInDebugger</a></td>
+<td>Method used to start the remote debugger.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.trace_func">trace_func</a></td>
+<td>Method executed by the tracing facility.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.unhandled_exception">unhandled_exception</a></td>
+<td>Private method to report an unhandled exception.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.write">write</a></td>
+<td>Private method to write data to the output stream.</td>
+</tr>
+</table>
+<hr />
+
+<a NAME="DebugClientBase.canEval?" ID="DebugClientBase.canEval?"></a>
+<h4>DebugClientBase.canEval?</h4>
+<b>canEval?</b>(<i></i>)
+<p>
+Private method to check if the buffer's contents can be evaluated.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating if an eval might succeed (boolean)
+</dd>
+</dl><a NAME="DebugClientBase.completionList" ID="DebugClientBase.completionList"></a>
+<h4>DebugClientBase.completionList</h4>
+<b>completionList</b>(<i></i>)
+<p>
+Method used to handle the command completion request
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+the text to be completed (string)
+</dd>
+</dl><a NAME="DebugClientBase.connectDebugger" ID="DebugClientBase.connectDebugger"></a>
+<h4>DebugClientBase.connectDebugger</h4>
+<b>connectDebugger</b>(<i>remoteAddress=nil, redirect=true</i>)
+<p>
+Public method to establish a session with the debugger. 
+</p><p>
+It opens a network connection to the debugger, connects it to stdin, 
+stdout and stderr and saves these file objects in case the application
+being debugged redirects them itself.
+</p><dl>
+<dt><i>port</i></dt>
+<dd>
+the port number to connect to (int)
+</dd><dt><i>remoteAddress</i></dt>
+<dd>
+the network address of the debug server host (string)
+</dd><dt><i>redirect</i></dt>
+<dd>
+flag indicating redirection of stdin, stdout and stderr (boolean)
+</dd>
+</dl><a NAME="DebugClientBase.dumpVariable" ID="DebugClientBase.dumpVariable"></a>
+<h4>DebugClientBase.dumpVariable</h4>
+<b>dumpVariable</b>(<i>frmnr, scope, filter</i>)
+<p>
+Private method to return the variables of a frame to the debug server.
+</p><dl>
+<dt><i>var</i></dt>
+<dd>
+list encoded name of the requested variable (list of strings)
+</dd><dt><i>frmnr</i></dt>
+<dd>
+distance of frame reported on. 0 is the current frame (int)
+</dd><dt><i>scope</i></dt>
+<dd>
+1 to report global variables, 0 for local variables (int)
+</dd><dt><i>filter</i></dt>
+<dd>
+the indices of variable types to be filtered (list of int)
+</dd>
+</dl><a NAME="DebugClientBase.dumpVariables" ID="DebugClientBase.dumpVariables"></a>
+<h4>DebugClientBase.dumpVariables</h4>
+<b>dumpVariables</b>(<i>scope, filter</i>)
+<p>
+Private method to return the variables of a frame to the debug server.
+</p><dl>
+<dt><i>frmnr</i></dt>
+<dd>
+distance of frame reported on. 0 is the current frame (int)
+</dd><dt><i>scope</i></dt>
+<dd>
+1 to report global variables, 0 for local variables (int)
+</dd><dt><i>filter</i></dt>
+<dd>
+the indices of variable types to be filtered (list of int)
+</dd>
+</dl><a NAME="DebugClientBase.eventLoop" ID="DebugClientBase.eventLoop"></a>
+<h4>DebugClientBase.eventLoop</h4>
+<b>eventLoop</b>(<i></i>)
+<p>
+Private method implementing our event loop.
+</p><a NAME="DebugClientBase.eventPoll" ID="DebugClientBase.eventPoll"></a>
+<h4>DebugClientBase.eventPoll</h4>
+<b>eventPoll</b>(<i></i>)
+<p>
+Private method to poll for events like 'set break point'.
+</p><a NAME="DebugClientBase.extractAddress" ID="DebugClientBase.extractAddress"></a>
+<h4>DebugClientBase.extractAddress</h4>
+<b>extractAddress</b>(<i></i>)
+<p>
+Private method to extract the address part of an object description.
+</p><dl>
+<dt><i>var</i></dt>
+<dd>
+object description (String)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the address contained in the object description (String)
+</dd>
+</dl><a NAME="DebugClientBase.extractTypeAndAddress" ID="DebugClientBase.extractTypeAndAddress"></a>
+<h4>DebugClientBase.extractTypeAndAddress</h4>
+<b>extractTypeAndAddress</b>(<i></i>)
+<p>
+Private method to extract the address and type parts of an object description.
+</p><dl>
+<dt><i>var</i></dt>
+<dd>
+object description (String)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list containing the type and address contained in the object
+    description (Array of two String)
+</dd>
+</dl><a NAME="DebugClientBase.formatVariablesList" ID="DebugClientBase.formatVariablesList"></a>
+<h4>DebugClientBase.formatVariablesList</h4>
+<b>formatVariablesList</b>(<i>binding_, scope, filter = [], excludeSelf = false, access = nil</i>)
+<p>
+Private method to produce a formated variables list.
+</p><p>
+The binding passed in to it is scanned. Variables are
+only added to the list, if their type is not contained 
+in the filter list and their name doesn't match any of the filter expressions.
+The formated variables list (a list of lists of 3 values) is returned.
+</p><dl>
+<dt><i>keylist</i></dt>
+<dd>
+keys of the dictionary
+</dd><dt><i>binding_</i></dt>
+<dd>
+the binding to be scanned
+</dd><dt><i>scope</i></dt>
+<dd>
+1 to filter using the globals filter, 0 using the locals filter (int).
+    Variables are only added to the list, if their name do not match any of the
+    filter expressions.
+</dd><dt><i>filter</i></dt>
+<dd>
+the indices of variable types to be filtered. Variables are
+    only added to the list, if their type is not contained in the filter 
+    list.
+</dd><dt><i>excludeSelf</i></dt>
+<dd>
+flag indicating if the self object should be excluded from
+    the listing (boolean)
+</dd><dt><i>access</i></dt>
+<dd>
+String specifying the access path to (String)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+A list consisting of a list of formatted variables. Each variable
+    entry is a list of three elements, the variable name, its type and 
+    value.
+</dd>
+</dl><a NAME="DebugClientBase.generateFilterObjects" ID="DebugClientBase.generateFilterObjects"></a>
+<h4>DebugClientBase.generateFilterObjects</h4>
+<b>generateFilterObjects</b>(<i>filterString</i>)
+<p>
+Private method to convert a filter string to a list of filter objects.
+</p><dl>
+<dt><i>scope</i></dt>
+<dd>
+1 to generate filter for global variables, 0 for local variables (int)
+</dd><dt><i>filterString</i></dt>
+<dd>
+string of filter patterns separated by ';'
+</dd>
+</dl><a NAME="DebugClientBase.handleException" ID="DebugClientBase.handleException"></a>
+<h4>DebugClientBase.handleException</h4>
+<b>handleException</b>(<i></i>)
+<p>
+Private method called in the case of an exception
+</p><p>
+It ensures that the debug server is informed of the raised exception.
+</p><a NAME="DebugClientBase.handleLine" ID="DebugClientBase.handleLine"></a>
+<h4>DebugClientBase.handleLine</h4>
+<b>handleLine</b>(<i></i>)
+<p>
+Private method to handle the receipt of a complete line.
+</p><p>
+It first looks for a valid protocol token at the start of the line. Thereafter
+it trys to execute the lines accumulated so far.
+</p><dl>
+<dt><i>line</i></dt>
+<dd>
+the received line
+</dd>
+</dl><a NAME="DebugClientBase.inFilter?" ID="DebugClientBase.inFilter?"></a>
+<h4>DebugClientBase.inFilter?</h4>
+<b>inFilter?</b>(<i>otype, oval</i>)
+<p>
+Private method to check, if a variable is to be filtered based on its type.
+</p><dl>
+<dt><i>filter</i></dt>
+<dd>
+the indices of variable types to be filtered (Array of int.
+</dd><dt><i>otype</i></dt>
+<dd>
+type of the variable to be checked (String)
+</dd><dt><i>oval</i></dt>
+<dd>
+variable value to be checked (String)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, whether the variable should be filtered (boolean)
+</dd>
+</dl><a NAME="DebugClientBase.initializeDebugClient" ID="DebugClientBase.initializeDebugClient"></a>
+<h4>DebugClientBase.initializeDebugClient</h4>
+<b>initializeDebugClient</b>(<i></i>)
+<p>
+Method to initialize the module
+</p><a NAME="DebugClientBase.interact" ID="DebugClientBase.interact"></a>
+<h4>DebugClientBase.interact</h4>
+<b>interact</b>(<i></i>)
+<p>
+Private method to Interact with  the debugger.
+</p><a NAME="DebugClientBase.main" ID="DebugClientBase.main"></a>
+<h4>DebugClientBase.main</h4>
+<b>main</b>(<i></i>)
+<p>
+Public method implementing the main method.
+</p><a NAME="DebugClientBase.progTerminated" ID="DebugClientBase.progTerminated"></a>
+<h4>DebugClientBase.progTerminated</h4>
+<b>progTerminated</b>(<i></i>)
+<p>
+Private method to tell the debugger that the program has terminated.
+</p><dl>
+<dt><i>status</i></dt>
+<dd>
+the return status
+</dd>
+</dl><a NAME="DebugClientBase.sessionClose" ID="DebugClientBase.sessionClose"></a>
+<h4>DebugClientBase.sessionClose</h4>
+<b>sessionClose</b>(<i></i>)
+<p>
+Privat method to close the session with the debugger and terminate.
+</p><a NAME="DebugClientBase.startProgInDebugger" ID="DebugClientBase.startProgInDebugger"></a>
+<h4>DebugClientBase.startProgInDebugger</h4>
+<b>startProgInDebugger</b>(<i>wd = '', host = nil, port = nil, exceptions = true, traceRuby = false, redirect=true</i>)
+<p>
+Method used to start the remote debugger.
+</p><dl>
+<dt><i>progargs</i></dt>
+<dd>
+commandline for the program to be debugged
+    (list of strings)
+</dd><dt><i>wd</i></dt>
+<dd>
+working directory for the program execution (string)
+</dd><dt><i>host</i></dt>
+<dd>
+hostname of the debug server (string)
+</dd><dt><i>port</i></dt>
+<dd>
+portnumber of the debug server (int)
+</dd><dt><i>exceptions</i></dt>
+<dd>
+flag to enable exception reporting of the IDE (boolean)
+</dd><dt><i>traceRuby</i></dt>
+<dd>
+flag to enable tracing into the Ruby library
+</dd><dt><i>redirect</i></dt>
+<dd>
+flag indicating redirection of stdin, stdout and stderr (boolean)
+</dd>
+</dl><a NAME="DebugClientBase.trace_func" ID="DebugClientBase.trace_func"></a>
+<h4>DebugClientBase.trace_func</h4>
+<b>trace_func</b>(<i>file, line, id, binding_, klass</i>)
+<p>
+Method executed by the tracing facility.
+</p><p>
+It is used to save the execution context of an exception.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the tracing event (String)
+</dd><dt><i>file</i></dt>
+<dd>
+the name of the file being traced (String)
+</dd><dt><i>line</i></dt>
+<dd>
+the line number being traced (int)
+</dd><dt><i>id</i></dt>
+<dd>
+object id
+</dd><dt><i>binding_</i></dt>
+<dd>
+a binding object
+</dd><dt><i>klass</i></dt>
+<dd>
+name of a class
+</dd>
+</dl><a NAME="DebugClientBase.unhandled_exception" ID="DebugClientBase.unhandled_exception"></a>
+<h4>DebugClientBase.unhandled_exception</h4>
+<b>unhandled_exception</b>(<i></i>)
+<p>
+Private method to report an unhandled exception.
+</p><dl>
+<dt><i>exc</i></dt>
+<dd>
+the exception object
+</dd>
+</dl><a NAME="DebugClientBase.write" ID="DebugClientBase.write"></a>
+<h4>DebugClientBase.write</h4>
+<b>write</b>(<i></i>)
+<p>
+Private method to write data to the output stream.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+data to be written (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
