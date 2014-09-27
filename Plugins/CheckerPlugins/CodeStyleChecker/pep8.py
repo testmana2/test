@@ -1516,7 +1516,7 @@ class Checker(object):
             # extended API for eric5 integration
             checker = cls(tree, self.filename, self.options)
             for lineno, offset, code, check, *args in checker.run():
-                if lineno == 0 or not noqa(self.lines[lineno - 1]):
+                if not self.lines or not noqa(self.lines[lineno - 1]):
                     self.report_error_args(lineno, offset, code, check, *args)
 
     def generate_tokens(self):
