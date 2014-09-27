@@ -9,6 +9,8 @@ Module implementing a class for reading an XML multi project file.
 
 from __future__ import unicode_literals
 
+import os
+
 from .Config import multiProjectFileFormatVersion
 from .XMLStreamReaderBase import XMLStreamReaderBase
 
@@ -32,6 +34,7 @@ class MultiProjectReader(XMLStreamReaderBase):
         XMLStreamReaderBase.__init__(self, device)
         
         self.multiProject = multiProject
+        self.path = os.path.dirname(device.fileName())
         
         self.version = ""
     
@@ -100,8 +103,8 @@ class MultiProjectReader(XMLStreamReaderBase):
                 if self.name() == "ProjectName":
                     project["name"] = self.readElementText()
                 elif self.name() == "ProjectFile":
-                    project["file"] = Utilities.toNativeSeparators(
-                        self.readElementText())
+                    project["file"] = Utilities.absoluteUniversalPath(
+                        self.readElementText(), self.path)
                 elif self.name() == "ProjectDescription":
                     project["description"] = self.readElementText()
                 elif self.name() == "ProjectCategory":
