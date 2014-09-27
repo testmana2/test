@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -525,7 +526,7 @@ Para seleccionarlo a través de un cuadro diálogo, presione el botón de la der
     <message>
         <location filename="../Project/AddDirectoryDialog.py" line="78"/>
         <source>Interface Files</source>
-        <translation>Archivos de Intefaces</translation>
+        <translation>Archivos de Interfaces</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.py" line="80"/>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="144"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="150"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="92"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="103"/>
@@ -5445,7 +5446,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="1016"/>
         <source>&lt;p&gt;The program has terminated with an exit status of {0}.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;The programa ha terminado con un estado de salida {0}.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;El programa ha terminado con un estado de salida {0}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="1021"/>
@@ -5491,7 +5492,7 @@ Not connected
         <location filename="../Debugger/DebugUI.py" line="1042"/>
         <source>The program has terminated with an exit status of {0}.
 </source>
-        <translation>The programa ha terminado con un estado de salida {0}.
+        <translation>El programa ha terminado con un estado de salida {0}.
 </translation>
     </message>
     <message>
@@ -9123,7 +9124,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="974"/>
         <source>End-of-Line Type</source>
-        <translation>Typo de fin-de-línea</translation>
+        <translation>Tipo de fin-de-línea</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="978"/>
@@ -12960,12 +12961,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Close</source>
-        <translation type="unfinished">Cerrar</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Are you sure to remove this speed dial?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea eliminar esta marcación rápida?</translation>
     </message>
 </context>
 <context>
@@ -15525,7 +15526,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1091"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -22429,7 +22430,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="680"/>
         <source>Configure...</source>
-        <translation type="unfinished">Configurar...</translation>
+        <translation>Configurar...</translation>
     </message>
 </context>
 <context>
@@ -59304,7 +59305,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="751"/>
         <source>Open &amp;Bookmarked Files</source>
-        <translation>Abrir Archvos &amp;Marcados</translation>
+        <translation>Abrir Archivos &amp;Marcados</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="796"/>
