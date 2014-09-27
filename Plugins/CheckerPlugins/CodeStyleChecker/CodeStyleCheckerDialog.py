@@ -475,33 +475,38 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
-                        if source and \
-                            "__IGNORE_WARNING__" not in \
-                            Utilities.extractLineFlags(
-                                source[lineno - 1].strip()):
-                            self.noResults = False
-                            if fixer:
-                                res, msg, id_ = fixer.fixIssue(lineno,
-                                                               position, text)
-                                if res == 1:
-                                    text += "\n" + \
+                        if source:
+                            if "__IGNORE_WARNING__" not in \
+                                Utilities.extractLineFlags(
+                                    source[lineno - 1].strip()):
+                                self.noResults = False
+                                if fixer:
+                                    res, msg, id_ = fixer.fixIssue(
+                                        lineno, position, text)
+                                    if res == 1:
+                                        text += "\n" + \
                                             self.trUtf8("Fix: {0}").format(msg)
-                                    self.__createResultItem(
-                                        fname, lineno, position, text, True,
-                                        True)
-                                elif res == 0:
+                                        self.__createResultItem(
+                                            fname, lineno, position, text,
+                                            True, True)
+                                    elif res == 0:
+                                        self.__createResultItem(
+                                            fname, lineno, position, text,
+                                            False, True)
+                                    else:
+                                        itm = self.__createResultItem(
+                                            fname, lineno, position,
+                                            text, False, False)
+                                        deferredFixes[id_] = itm
+                                else:
                                     self.__createResultItem(
                                         fname, lineno, position, text, False,
-                                        True)
-                                else:
-                                    itm = self.__createResultItem(
-                                        fname, lineno, position,
-                                        text, False, False)
-                                    deferredFixes[id_] = itm
-                            else:
-                                self.__createResultItem(
-                                    fname, lineno, position, text, False,
-                                    False)
+                                        False)
+                        else:
+                            self.noResults = False
+                            self.__createResultItem(
+                                fname, lineno, position, text, False,
+                                False)
                     if fixer:
                         deferredResults = fixer.finalize()
                         for id_ in deferredResults:
