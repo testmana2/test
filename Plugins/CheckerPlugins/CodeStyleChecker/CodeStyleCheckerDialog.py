@@ -475,7 +475,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                         fname, lineno, position, text = error
                         if lineno > len(source):
                             lineno = len(source)
-                        if "__IGNORE_WARNING__" not in \
+                        if lineno == 0 or "__IGNORE_WARNING__" not in \
                                 Utilities.extractLineFlags(
                                 source[lineno - 1].strip()):
                             self.noResults = False
