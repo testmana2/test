@@ -315,7 +315,7 @@ class DocStyleChecker(object):
         Public method to check the given source for violations of doc string
         conventions.
         """
-        if not self.__source or not self.__filename:
+        if not self.__filename:
             # don't do anything, if essential data is missing
             return
         
