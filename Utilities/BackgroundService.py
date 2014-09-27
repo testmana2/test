@@ -84,6 +84,7 @@ class BackgroundService(QTcpServer):
             getConfig('ericDir'),
             "Utilities", "BackgroundClient.py")
         proc = QProcess()
+        proc.setProcessChannelMode(QProcess.ForwardedChannels)
         args = [backgroundClient, self.hostAddress, str(port)]
         proc.start(interpreter, args)
         if not proc.waitForStarted(10000):
