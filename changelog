@@ -4,6 +4,9 @@ Version 5.5.0:
 - bug fixes
 - General
   -- added Portugese translations provided by Candido Fontes
+- Multi Project
+  -- changed multi project file format to contain relative paths to
+     the contained project files
 - Web Browser
   -- added DuckDuckGo to the list of default search engines
 
