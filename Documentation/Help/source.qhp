@@ -12891,6 +12891,8 @@
       <keyword name="_is_eol_token_1" id="_is_eol_token_1" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_is_eol_token_1" />
       <keyword name="_main" id="_main" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_main" />
       <keyword name="_percentReplacementFunc" id="_percentReplacementFunc" ref="eric6.Utilities.__init__.html#_percentReplacementFunc" />
+      <keyword name="absolutePath" id="absolutePath" ref="eric6.Utilities.__init__.html#absolutePath" />
+      <keyword name="absoluteUniversalPath" id="absoluteUniversalPath" ref="eric6.Utilities.__init__.html#absoluteUniversalPath" />
       <keyword name="addActions" id="addActions" ref="eric6.E5Gui.E5Action.html#addActions" />
       <keyword name="addSearchPath" id="addSearchPath" ref="eric6.UI.PixmapCache.html#addSearchPath" />
       <keyword name="amendConfig" id="amendConfig" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#amendConfig" />
@@ -13396,6 +13398,8 @@
       <keyword name="registerLexer" id="registerLexer" ref="eric6.QScintilla.Lexers.__init__.html#registerLexer" />
       <keyword name="register_check" id="register_check" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#register_check" />
       <keyword name="rehashPassword" id="rehashPassword" ref="eric6.Utilities.crypto.py3PBKDF2.html#rehashPassword" />
+      <keyword name="relativePath" id="relativePath" ref="eric6.Utilities.__init__.html#relativePath" />
+      <keyword name="relativeUniversalPath" id="relativeUniversalPath" ref="eric6.Utilities.__init__.html#relativeUniversalPath" />
       <keyword name="relpath" id="relpath" ref="eric6.Utilities.__init__.html#relpath" />
       <keyword name="removeMarkers" id="removeMarkers" ref="eric6.UI.CompareDialog.html#removeMarkers" />
       <keyword name="removeProjectBrowserFlags" id="removeProjectBrowserFlags" ref="eric6.Preferences.__init__.html#removeProjectBrowserFlags" />
@@ -13470,6 +13474,7 @@
       <keyword name="splitPath" id="splitPath" ref="eric6.Utilities.__init__.html#splitPath" />
       <keyword name="startDebugger" id="startDebugger" ref="eric6.DebugClients.Python.eric6dbgstub.html#startDebugger" />
       <keyword name="startDebugger" id="startDebugger" ref="eric6.DebugClients.Python3.eric6dbgstub.html#startDebugger" />
+      <keyword name="startswithPath" id="startswithPath" ref="eric6.Utilities.__init__.html#startswithPath" />
       <keyword name="stdin_get_value" id="stdin_get_value" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#stdin_get_value" />
       <keyword name="strip_PKCS7_padding" id="strip_PKCS7_padding" ref="eric6.Utilities.crypto.py3AES.html#strip_PKCS7_padding" />
       <keyword name="subversion (Module)" id="subversion (Module)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.subversion.html" />
