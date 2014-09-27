@@ -53,6 +53,8 @@ class MultiProjectBrowser(QListWidget):
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.__contextMenuRequested)
         self.itemActivated.connect(self.__openItem)
+        
+        self.setEnabled(False)
     
     ###########################################################################
     ## Slot handling methods below
@@ -63,6 +65,7 @@ class MultiProjectBrowser(QListWidget):
         Private slot to handle the creation of a new multi project.
         """
         self.clear()
+        self.setEnabled(True)
     
     def __multiProjectOpened(self):
         """
@@ -72,12 +75,15 @@ class MultiProjectBrowser(QListWidget):
             self.__addProject(project)
         
         self.sortItems()
+        
+        self.setEnabled(True)
     
     def __multiProjectClosed(self):
         """
         Private slot to handle the closing of a multi project.
         """
         self.clear()
+        self.setEnabled(False)
     
     def __projectAdded(self, project):
         """
