@@ -104,9 +104,6 @@ def codeStyleCheck(filename, source, args):
         hangClosing, docType, errors, eol, encoding, backup = args
     
     stats = {}
-    # Don't check an empty file
-    if source == []:
-        return stats, []
 
     if fixIssues:
         from CodeStyleFixer import CodeStyleFixer
@@ -162,20 +159,27 @@ def codeStyleCheck(filename, source, args):
     for fname, lineno, position, text in errors:
         if lineno > len(source):
             lineno = len(source)
-        if "__IGNORE_WARNING__" not in \
-                extractLineFlags(source[lineno - 1].strip()):
-            if fixer:
-                res, msg, id_ = fixer.fixIssue(lineno, position, text)
-                if res == -1:
-                    itm = [lineno, position, text]
-                    deferredFixes[id_] = itm
+        if source:
+            if "__IGNORE_WARNING__" not in \
+                    extractLineFlags(source[lineno - 1].strip()):
+                if fixer:
+                    res, msg, id_ = fixer.fixIssue(lineno, position, text)
+                    if res == -1:
+                        itm = [lineno, position, text]
+                        deferredFixes[id_] = itm
+                    else:
+                        itm = [lineno, position, text, False,
+                               res == 1, True, msg]
                 else:
-                    itm = [lineno, position, text, False, res == 1, True, msg]
+                    itm = [lineno, position, text, False,
+                           False, False, '']
+                results.append(itm)
             else:
-                itm = [lineno, position, text, False, False, False, '']
-            results.append(itm)
+                results.append([lineno, position, text, True,
+                                False, False, ''])
         else:
-            results.append([lineno, position, text, True, False, False, ''])
+            results.append([lineno, position, text, False,
+                            False, False, ''])
     
     if fixer:
         deferredResults = fixer.finalize()
