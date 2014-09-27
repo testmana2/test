@@ -8504,6 +8504,8 @@ eric5.Utilities._escape_map?8
 eric5.Utilities._percentReplacementFunc?5(matchobj)
 eric5.Utilities._uescape?8
 eric5.Utilities._uunescape?8
+eric5.Utilities.absolutePath?4(path, start)
+eric5.Utilities.absoluteUniversalPath?4(path, start)
 eric5.Utilities.binplistlib.BoolWrapper?1(value)
 eric5.Utilities.binplistlib.HashableWrapper?1(value)
 eric5.Utilities.binplistlib.PlistByteCounts?7
@@ -8666,10 +8668,13 @@ eric5.Utilities.readEncodedFile?4(filename)
 eric5.Utilities.readEncodedFileWithEncoding?4(filename, encoding)
 eric5.Utilities.readEncodedFileWithHash?4(filename)
 eric5.Utilities.readStringFromStream?4(stream)
+eric5.Utilities.relativePath?4(path, start)
+eric5.Utilities.relativeUniversalPath?4(path, start)
 eric5.Utilities.relpath?4(path, start=os.path.curdir)
 eric5.Utilities.samefilepath?4(f1, f2)
 eric5.Utilities.samepath?4(f1, f2)
 eric5.Utilities.splitPath?4(name)
+eric5.Utilities.startswithPath?4(path, start)
 eric5.Utilities.supportedCodecs?7
 eric5.Utilities.toBool?4(dataStr)
 eric5.Utilities.toNativeSeparators?4(path)

@@ -43,6 +43,12 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#_percentReplacementFunc">_percentReplacementFunc</a></td>
 <td>Protected function called for replacing % codes.</td>
 </tr><tr>
+<td><a href="#absolutePath">absolutePath</a></td>
+<td>Public method to convert a path relative to a start path to an absolute path.</td>
+</tr><tr>
+<td><a href="#absoluteUniversalPath">absoluteUniversalPath</a></td>
+<td>Public method to convert a path relative to a start path with universal separators to an absolute path.</td>
+</tr><tr>
 <td><a href="#checkPyside">checkPyside</a></td>
 <td>Module function to check the presence of PySide.</td>
 </tr><tr>
@@ -214,6 +220,12 @@ Package implementing various functions/classes needed everywhere within eric5.
 <td><a href="#readStringFromStream">readStringFromStream</a></td>
 <td>Module function to read a string from the given stream.</td>
 </tr><tr>
+<td><a href="#relativePath">relativePath</a></td>
+<td>Function to convert a file path to a path relative to a start path.</td>
+</tr><tr>
+<td><a href="#relativeUniversalPath">relativeUniversalPath</a></td>
+<td>Function to convert a file path to a path relative to a start path with universal separators.</td>
+</tr><tr>
 <td><a href="#relpath">relpath</a></td>
 <td>Return a relative version of a path.</td>
 </tr><tr>
@@ -225,6 +237,9 @@ Package implementing various functions/classes needed everywhere within eric5.
 </tr><tr>
 <td><a href="#splitPath">splitPath</a></td>
 <td>Function to split a pathname into a directory part and a file part.</td>
+</tr><tr>
+<td><a href="#startswithPath">startswithPath</a></td>
+<td>Function to check, if a path starts with a given start path.</td>
 </tr><tr>
 <td><a href="#toBool">toBool</a></td>
 <td>Module function to convert a string to a boolean value.</td>
@@ -362,6 +377,50 @@ matchobject for the code
 <dt>Returns:</dt>
 <dd>
 replacement string
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="absolutePath" ID="absolutePath"></a>
+<h2>absolutePath</h2>
+<b>absolutePath</b>(<i>path, start</i>)
+<p>
+    Public method to convert a path relative to a start path to an
+    absolute path.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd><dt><i>start</i></dt>
+<dd>
+start path (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+absolute path (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="absoluteUniversalPath" ID="absoluteUniversalPath"></a>
+<h2>absoluteUniversalPath</h2>
+<b>absoluteUniversalPath</b>(<i>path, start</i>)
+<p>
+    Public method to convert a path relative to a start path with
+    universal separators to an absolute path.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd><dt><i>start</i></dt>
+<dd>
+start path (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+absolute path with native separators (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -1466,6 +1525,51 @@ string read from the stream (string)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="relativePath" ID="relativePath"></a>
+<h2>relativePath</h2>
+<b>relativePath</b>(<i>path, start</i>)
+<p>
+    Function to convert a file path to a path relative to a start path.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd><dt><i>start</i></dt>
+<dd>
+start path (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+relative path or unchanged path, if path does not start with
+        the start path (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="relativeUniversalPath" ID="relativeUniversalPath"></a>
+<h2>relativeUniversalPath</h2>
+<b>relativeUniversalPath</b>(<i>path, start</i>)
+<p>
+    Function to convert a file path to a path relative to a start path
+    with universal separators.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+file or directory name to convert (string)
+</dd><dt><i>start</i></dt>
+<dd>
+start path (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+relative path or unchanged path, if path does not start with
+        the start path with universal separators (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="relpath" ID="relpath"></a>
 <h2>relpath</h2>
 <b>relpath</b>(<i>path, start=os.path.curdir</i>)
@@ -1550,6 +1654,28 @@ path name (string)
 <dt>Returns:</dt>
 <dd>
 a tuple of 2 strings (dirname, filename).
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="startswithPath" ID="startswithPath"></a>
+<h2>startswithPath</h2>
+<b>startswithPath</b>(<i>path, start</i>)
+<p>
+    Function to check, if a path starts with a given start path.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+path to be checked (string)
+</dd><dt><i>start</i></dt>
+<dd>
+start path (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the path starts with the given start
+        path (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
