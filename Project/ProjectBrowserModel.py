@@ -885,6 +885,7 @@ class ProjectBrowserModel(BrowserModel):
                     itemCache[name] = itm
             if itm:
                 itm.setVcsState(state)
+                itm.setVcsStatus(self.project.vcs.vcsName())
                 index1 = self.createIndex(itm.row(), 0, itm)
                 index2 = self.createIndex(
                     itm.row(), self.rootItem.columnCount(), itm)
