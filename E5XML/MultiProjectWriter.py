@@ -9,6 +9,7 @@ Module implementing the writer class for writing an XML multi project file.
 
 from __future__ import unicode_literals
 
+import os
 import time
 
 from .XMLStreamWriterBase import XMLStreamWriterBase
@@ -34,6 +35,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
         
         self.name = multiProjectName
         self.multiProject = multiProject
+        self.path = os.path.dirname(device.fileName())
     
     def writeXML(self):
         """
@@ -69,7 +71,7 @@ class MultiProjectWriter(XMLStreamWriterBase):
             self.writeTextElement("ProjectName", project['name'])
             self.writeTextElement(
                 "ProjectFile",
-                Utilities.fromNativeSeparators(project['file']))
+                Utilities.relativeUniversalPath(project['file'], self.path))
             self.writeTextElement("ProjectDescription", project['description'])
             self.writeTextElement("ProjectCategory", project['category'])
             self.writeEndElement()

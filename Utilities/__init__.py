@@ -798,7 +798,87 @@ def isinpath(file):
             return True
     
     return False
+
+
+def startswithPath(path, start):
+    """
+    Function to check, if a path starts with a given start path.
     
+    @param path path to be checked (string)
+    @param start start path (string)
+    @return flag indicating that the path starts with the given start
+        path (boolean)
+    """
+    if start:
+        if path == start:
+            return True
+        elif normcasepath(toNativeSeparators(path)).startswith(
+                normcasepath(toNativeSeparators(start + "/"))):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+def relativePath(path, start):
+    """
+    Function to convert a file path to a path relative to a start path.
+    
+    @param path file or directory name to convert (string)
+    @param start start path (string)
+    @return relative path or unchanged path, if path does not start with
+        the start path (string)
+    """
+    if startswithPath(path, start):
+        if path == start:
+            return ""
+        else:
+            return path[len(start) + 1:]
+    else:
+        return path
+
+
+def relativeUniversalPath(path, start):
+    """
+    Function to convert a file path to a path relative to a start path
+    with universal separators.
+    
+    @param path file or directory name to convert (string)
+    @param start start path (string)
+    @return relative path or unchanged path, if path does not start with
+        the start path with universal separators (string)
+    """
+    return fromNativeSeparators(relativePath(path, start))
+
+
+def absolutePath(path, start):
+    """
+    Public method to convert a path relative to a start path to an
+    absolute path.
+    
+    @param path file or directory name to convert (string)
+    @param start start path (string)
+    @return absolute path (string)
+    """
+    if not os.path.isabs(path):
+        path = os.path.join(start, path)
+    return path
+
+
+def absoluteUniversalPath(path, start):
+    """
+    Public method to convert a path relative to a start path with
+    universal separators to an absolute path.
+    
+    @param path file or directory name to convert (string)
+    @param start start path (string)
+    @return absolute path with native separators (string)
+    """
+    if not os.path.isabs(path):
+        path = toNativeSeparators(os.path.join(start, path))
+    return path
+
 
 def getExecutablePath(file):
     """
