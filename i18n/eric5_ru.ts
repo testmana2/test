@@ -30,7 +30,7 @@
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.py" line="24"/>
         <source>&lt;p&gt;{0} is an Integrated Development Environment for the Python programming language. It is written using the PyQt Python bindings for the Qt GUI toolkit and the QScintilla editor widget.&lt;/p&gt;&lt;p&gt;For more information see &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Please send bug reports to &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;To request a new feature please send an email to &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0} uses third party software which is copyrighted by its respective copyright holder. For details see the copyright notice of the individual package.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;{0} - это интегрированная среда разработки программ на языке Питон. Написана с использованием питоновского интерфейса к графической библиотеке Qt и библиотеке редактора текстов QScintilla.&lt;/p&gt;&lt;p&gt;Дополнительная информация имеется здесь: &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Сообщения об ошибках посылать сюда: &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Предложения и просьбы о новой функциональности посылать по адресу &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0}использует дополнительное программное обеспечение со своими собственными лицензионными правилами. Более детальную лицензионную информацию можно найти внутри соответствующего програмного пакета.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1122,22 +1122,22 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
         <source>Select to make this project the main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделать этот проект главным</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
         <source>Is &amp;main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Это &amp;главный проект</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
         <source>&amp;Category:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Тип</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
         <source>Select a project category</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите тип проекта</translation>
     </message>
 </context>
 <context>
@@ -1175,12 +1175,12 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="66"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Модули</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="69"/>
         <source>Application Diagram</source>
-        <translation type="unfinished">Диаграмма приложения</translation>
+        <translation>Диаграмма приложения</translation>
     </message>
 </context>
 <context>
@@ -1397,39 +1397,39 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="118"/>
+        <location filename="../Utilities/BackgroundService.py" line="119"/>
         <source>{0} not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} не сконфигурирован.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>Restart background client?</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезапустить клиент в фоновом режиме?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="190"/>
+        <location filename="../Utilities/BackgroundService.py" line="191"/>
         <source>An error in Erics background client stopped the service.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка в слиенте остановила сервис.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="357"/>
+        <location filename="../Utilities/BackgroundService.py" line="358"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
-        <translation type="unfinished"></translation>
+        <translation>Фоновый клиент прервал соединение по неизвестной причине.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>Background client disconnected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Соединение фонового клиента прервано.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
-        <translation type="unfinished"></translation>
+        <translation>Соединение фонового клиента&lt;b&gt;{0}&lt;/b&gt; прервано по неизвестной причине.&lt;br&gt;Перезапустить клиента?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Фоновый клиент&lt;b&gt;{0}&lt;/b&gt; прекратил выполнение из-за ошибки. Этот клиент необходим для работы различных плагинов.&lt;/p&gt;&lt;p&gt;Выберите&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Да&apos;&lt;/b&gt; чтобы перезапустить его и отменить последнее задание&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Повторить&apos;&lt;/b&gt;чтобы перезапустить его и последнее задание&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Нет&apos;&lt;/b&gt; чтобы не перезапускать клиент.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Заметте: Клиент можно перезапустить открыв и сохранив диалог настроек или закрыв и снова открыв текущий проект.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1886,7 +1886,8 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="../Helpviewer/Bookmarks/BookmarksManager.py" line="139"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
  {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка загрузки закладок в строке{0}, колонка{1}:
+ {2}  </translation>
     </message>
 </context>
 <context>
@@ -2172,7 +2173,8 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../UI/Browser.py" line="92"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierarchy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierarchies.&lt;/p&gt;&lt;p&gt;The first hierarchy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierarchy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierarchy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierarchies allow you navigate your system as a whole. On a UNIX system there will be a hierarchy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierarchy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierarchies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Окно обозревателя&lt;/b&gt;&lt;p&gt;Помогает легко перемещаться по дереву каталогов и файлов вашей системы, находить программы на Python и открывать их в окне исходных текстов. Окно показывает несколько разных деревьев&lt;/p&gt;
+&lt;p&gt;Первое дерево показывается только тогда, когда вы отлаживаете программу и корень дерева является каталогом, содержащим программу. Обычно все файлы, составляющие приложение на Python, находятся в одном каталоге, так что это дерево даёт почти всю необходимую информацию.&lt;/p&gt;&lt;p&gt;Следующее дерево используется для лёгкого перемещения по каталогам, перечисленным в переменной Python &lt;tt&gt;sys.path&lt;/tt&gt;&lt;p&gt;Оставшиеся деревья позволяют перемещаться по системе в целом. В системах UNIX будут показаны 2 дерева: дерево с вершиной в корневом каталоге (&lt;tt&gt;/&lt;/tt&gt;) и домашний каталог пользователя. В Windows для каждого диска будет показано своё дерево.&lt;/p&gt;&lt;p&gt;Программы на Python (с расширением &lt;tt&gt;.py&lt;/tt&gt;) показываются с пиктограммой Python. Доступно контекстное меню, позволяющее открыть программу в редакторе, запустить её на отладку или протестировать с помощью unittest.&lt;/p&gt;&lt;p&gt;Контекстное меню на классе, функции или методе откроет файл и перейдёт на нужное место&lt;/p&gt;&lt;p&gt;Файлы описания интерфейса ( &lt;tt&gt;.ui&lt;/tt&gt;, отмеченные пиктограммой Дизайнера) могут быть открыты Дизайнером через контекстное меню или по двойному щелчку&lt;/p&gt;&lt;p&gt;Файлы перевода (&lt;tt&gt;.ts&lt;/tt&gt;, отмеченные пиктограммой Лингвиста) могут быть отредактированы с помощью Лингвиста&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2208,60 +2210,63 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="50"/>
         <source>Show source</source>
-        <translation type="unfinished">Показать исходник</translation>
+        <translation>Показать исходник</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="52"/>
         <source>Clear</source>
-        <translation type="unfinished">Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="54"/>
         <source>Save</source>
-        <translation type="unfinished">Сохранить</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="61"/>
         <source>File: {0}
 Line: {1}
 {2}{3}</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл: {0}
+Строка: {1}
+{2}{3}</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="63"/>
         <source>File: {0}
 Line: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл: {0}
+Строка: {1}</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="172"/>
         <source>Save Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить стек вызовов</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="158"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
+        <translation>Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="172"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="191"/>
         <source>Error saving Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка при сохранении стека вызовов</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="191"/>
         <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Стек вызовов не записан в&lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="47"/>
         <source>Call Stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Стек вызовов</translation>
     </message>
 </context>
 <context>
@@ -2886,7 +2891,7 @@ Reason: {1}</source>
     <message>
         <location filename="../DataViews/CodeMetricsDialog.ui" line="158"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -2894,139 +2899,140 @@ Reason: {1}</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="14"/>
         <source>Code Style Check Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат проверки стиля</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="17"/>
         <source>&lt;b&gt;Code Style Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the code style check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Результаты проверки стиля&lt;/b&gt;
+&lt;p&gt;Диалог отображает результаты проверки стиля.Двойной щелчок по записи откроет окно редактора и поместит курсор на сообветствующую строчку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="46"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Не включать файлы:</translation>
+        <translation>Не включать файлы:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="53"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте маски файлов для исключения, разделённые запятой</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="72"/>
         <source>Press to start the code style check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить проверку стиля</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="75"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Начать</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="82"/>
         <source>Press to fix the selected issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать выбранные проблемы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="85"/>
         <source>Fix Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать выбранные</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="105"/>
         <source>Press to load the default values</source>
-        <translation type="unfinished">Восстановить значения по умолчанию</translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="108"/>
         <source>Load Defaults</source>
-        <translation type="unfinished">Восстановить значения по умолчанию</translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="115"/>
         <source>Press to store the current values as defaults</source>
-        <translation type="unfinished">Сохранить текущие значения как значения по умолчанию</translation>
+        <translation>Сохранить текущие значения как значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="118"/>
         <source>Store Defaults</source>
-        <translation type="unfinished">Сохранить значения по умолчанию</translation>
+        <translation>Сохранить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="125"/>
         <source>Press to reset the default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить умолчания</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="137"/>
         <source>Exclude Messages:</source>
-        <translation type="unfinished">Не включать сообщения:</translation>
+        <translation>Не включать сообщения:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="144"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
-        <translation type="unfinished">Задайте коды сообщений или категорий через запятую которые не включать в проверку</translation>
+        <translation>Задайте коды сообщений или категорий через запятую которые не включать в проверку</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="214"/>
         <source>Press to select the message codes from a list</source>
-        <translation type="unfinished">Выберите коды сообщений из списка</translation>
+        <translation>Выберите коды сообщений из списка</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="158"/>
         <source>Included Messages:</source>
-        <translation type="unfinished">Включить сообщения:</translation>
+        <translation>Включить сообщения:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="165"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation type="unfinished">Задайте коды сообщений или категорий через запятую которые включать в проверку</translation>
+        <translation>Задайте коды сообщений или категорий через запятую которые включать в проверку</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="179"/>
         <source>Fix Issues:</source>
-        <translation type="unfinished">Исправлять автоматически:</translation>
+        <translation>Исправлять автоматически:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="186"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
-        <translation type="unfinished">Задайте коды сообщений через запятую которые исправлять автоматически (если пусто, то исправлять всё)</translation>
+        <translation>Задайте коды сообщений через запятую которые исправлять автоматически (если пусто, то исправлять всё)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="200"/>
         <source>Don&apos;t Fix Issues:</source>
-        <translation type="unfinished"></translation>
+        <translation>Не исправлять:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="207"/>
         <source>Enter message codes of issues not to be fixed automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте коды сообщений через запятую которые не исправлять автоматически</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="221"/>
         <source>Max. Line Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Макс. длина строки:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="230"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте максимально допустимую длину строки (PEP-8: 79 символов)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="264"/>
         <source>Docstring Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип строки описания:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="273"/>
         <source>Select the rule set for docstrings</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте набор правил для строк описания</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="297"/>
@@ -3134,7 +3140,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="452"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="350"/>
@@ -3350,8 +3356,8 @@ the respective line and position.&lt;/p&gt;</source>
         <source>%n blank line(s) inserted.</source>
         <translation type="unfinished">
             <numerusform>Добавлена %n пустая строка.</numerusform>
-            <numerusform>Добавлено %n пустые строки.</numerusform>
-            <numerusform>Добавлено %n пустых строк.</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -3359,8 +3365,8 @@ the respective line and position.&lt;/p&gt;</source>
         <source>%n superfluous lines removed</source>
         <translation type="unfinished">
             <numerusform>Удалена %n излишняя пустая строчка</numerusform>
-            <numerusform>Удалены %n излишние пустые строчки</numerusform>
-            <numerusform>Удалены %n излишних пустых строчек</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -4180,11 +4186,6 @@ to display the configuration page.</source>
         <translation>Безопасность</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
-        <source>eric5 Web Browser</source>
-        <translation>WEB просмотрщик встроенный в Eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="422"/>
         <source>Enter filter text...</source>
         <translation>Задайте фильтр текста...</translation>
@@ -4203,6 +4204,16 @@ to display the configuration page.</source>
         <location filename="../Preferences/ConfigurationDialog.py" line="238"/>
         <source>Code Checkers</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -6286,8 +6297,13 @@ Not connected
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
+        <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
+        <translation type="obsolete">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5</translation>
+        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -6393,14 +6409,19 @@ Not connected
         <translation>Python файлы (*.py *.py3)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="43"/>
         <source>Enter the path of the Python3 interpreter to be used by the debug client. Leave empty to use the default.</source>
         <translation>Задайте путь до интерпретатора Python3 для клиента отладки. Оставьте пустым, чтобы использовать значение по умолчанию.</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
+        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
+        <translation type="obsolete">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
+        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
+        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -6501,11 +6522,6 @@ Not connected
         <translation>Введите расширения (через пробел) для ассоциации с отладчиком Python2. Они не должны пересекаться с раширениями ассоциированными с Python3.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
-        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="109"/>
         <source>Python Files (*.py *.py2)</source>
         <translation>Python файлы (*.py *.py2)}</translation>
@@ -6514,6 +6530,16 @@ Not connected
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="43"/>
         <source>Enter the path of the Python interpreter to be used by the debug client.</source>
         <translation>Выберите полный путь интерпретатора Python для отладки.</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
+        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
+        <translation type="obsolete">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
+        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
+        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -6550,8 +6576,13 @@ Not connected
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
+        <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
+        <translation type="obsolete">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric5 IDE</source>
-        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5</translation>
+        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -7160,7 +7191,7 @@ Do you want to quit anyway?</source>
     <message numerus="yes">
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="31"/>
         <source>%n seconds remaining</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -7189,10 +7220,10 @@ Do you want to quit anyway?</source>
     <message numerus="yes">
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="25"/>
         <source>%n:{0:02} minutes remaining</source>
-        <translation>
+        <translation type="unfinished">
             <numerusform>Осталось %n:{0:02} минута</numerusform>
-            <numerusform>Осталось %n:{0:02} минут</numerusform>
-            <numerusform>Осталось %n:{0:02} минут</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
 </context>
@@ -9269,11 +9300,6 @@ whole selection.&lt;/li&gt;
         <translation>&lt;p&gt;Невозможно сохранить файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6123"/>
-        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/Editor.py" line="1149"/>
         <source>Next warning</source>
         <translation>Следующее предупреждение</translation>
@@ -9402,6 +9428,16 @@ whole selection.&lt;/li&gt;
         <location filename="../QScintilla/Editor.py" line="955"/>
         <source>Re-Open With Encoding</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="6124"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt; {0}?} {6.?}</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="6123"/>
+        <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric5. Reread it?&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt; {0}?} {6.?} {0}?} {5.?}</translation>
     </message>
 </context>
 <context>
@@ -13190,28 +13226,53 @@ whole selection.&lt;/li&gt;
     <name>EricapiPlugin</name>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="58"/>
+        <source>Eric6 API File Generator</source>
+        <translation type="obsolete">Генератор файлов API {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricapi.py" line="99"/>
+        <source>Generate API file (eric6_api)</source>
+        <translation type="obsolete">Создать файл API (eric5_api) {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricapi.py" line="99"/>
+        <source>Generate &amp;API file (eric6_api)</source>
+        <translation type="obsolete">Создать файл &amp;API (eric5_api) {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricapi.py" line="103"/>
+        <source>Generate an API file using eric6_api</source>
+        <translation type="obsolete">Создать API с помощью eric5_api {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricapi.py" line="105"/>
+        <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric6_api.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric5_api.&lt;/p&gt; {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricapi.py" line="58"/>
         <source>Eric5 API File Generator</source>
-        <translation>Генератор файлов API</translation>
+        <translation type="unfinished">Генератор файлов API {6 ?} {5 ?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="99"/>
         <source>Generate API file (eric5_api)</source>
-        <translation>Создать файл API (eric5_api)</translation>
+        <translation type="unfinished">Создать файл API (eric5_api) {6_?} {5_?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="99"/>
         <source>Generate &amp;API file (eric5_api)</source>
-        <translation>Создать файл &amp;API (eric5_api)</translation>
+        <translation type="unfinished">Создать файл &amp;API (eric5_api) {6_?} {5_?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="103"/>
         <source>Generate an API file using eric5_api</source>
-        <translation>Создать API с помощью eric5_api</translation>
+        <translation type="unfinished">Создать API с помощью eric5_api {6_?} {5_?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="105"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric5_api.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric5_api.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric5_api.&lt;/p&gt; {6_?} {5_?}</translation>
     </message>
 </context>
 <context>
@@ -13605,34 +13666,59 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EricdocPlugin</name>
     <message>
+        <location filename="../Plugins/PluginEricdoc.py" line="90"/>
+        <source>Qt Help Tools</source>
+        <translation>Утилиты помощи Qt</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricdoc.py" line="58"/>
+        <source>Eric6 Documentation Generator</source>
+        <translation type="obsolete">Генератор документации Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricdoc.py" line="134"/>
+        <source>Generate documentation (eric6_doc)</source>
+        <translation type="obsolete">Создать документацию (eric5_doc) {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricdoc.py" line="134"/>
+        <source>Generate &amp;documentation (eric6_doc)</source>
+        <translation type="obsolete">Создать &amp;документацию (eric5_doc) {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricdoc.py" line="138"/>
+        <source>Generate API documentation using eric6_doc</source>
+        <translation type="obsolete">Создать документацию на API с помощью eric5_doc {6_?}</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginEricdoc.py" line="140"/>
+        <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric6_doc.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric5_doc&lt;/p&gt; {6_?}</translation>
+    </message>
+    <message>
         <location filename="../Plugins/PluginEricdoc.py" line="58"/>
         <source>Eric5 Documentation Generator</source>
-        <translation>Генератор документации Eric5</translation>
+        <translation type="unfinished">Генератор документации Eric5 {6 ?} {5 ?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate documentation (eric5_doc)</source>
-        <translation>Создать документацию (eric5_doc)</translation>
+        <translation type="unfinished">Создать документацию (eric5_doc) {6_?} {5_?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate &amp;documentation (eric5_doc)</source>
-        <translation>Создать &amp;документацию (eric5_doc)</translation>
+        <translation type="unfinished">Создать &amp;документацию (eric5_doc) {6_?} {5_?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="138"/>
         <source>Generate API documentation using eric5_doc</source>
-        <translation>Создать документацию на API с помощью eric5_doc</translation>
+        <translation type="unfinished">Создать документацию на API с помощью eric5_doc {6_?} {5_?}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="140"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric5_doc.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric5_doc&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/PluginEricdoc.py" line="90"/>
-        <source>Qt Help Tools</source>
-        <translation>Утилиты помощи Qt</translation>
+        <translation type="unfinished">&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric5_doc&lt;/p&gt; {6_?} {5_?}</translation>
     </message>
 </context>
 <context>
@@ -14795,7 +14881,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../UI/FindFileDialog.ui" line="344"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.py" line="493"/>
@@ -15745,11 +15831,6 @@ Reason: {0}</source>
         <translation>Сканировать изображение с VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2416"/>
-        <source>eric5 Web Browser</source>
-        <translation>WEB просмотрщик встроенный в Eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1107"/>
         <source>Send Link</source>
         <translation>Послать ссылку</translation>
@@ -15835,11 +15916,6 @@ Reason: {0}</source>
         <translation>Перейти на веб адрес</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2384"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1276"/>
         <source>User Agent</source>
         <translation>Агент пользователя</translation>
@@ -15885,9 +15961,29 @@ Reason: {0}</source>
         <translation>Сохранить медиа файл</translation>
     </message>
     <message>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2444"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2412"/>
+        <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt; {5.?}</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2416"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2416"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2384"/>
+        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt; {5.?} {4.?}</translation>
     </message>
 </context>
 <context>
@@ -16104,11 +16200,6 @@ Reason: {0}</source>
         <translation>Выберите каталог документации Qt4</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="173"/>
-        <source>Select PyQt4 documentation entry</source>
-        <translation>Выберите каталог документации PyQt4</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
         <source>Select PySide documentation entry</source>
         <translation>Задайте каталог документации PySide</translation>
@@ -16217,6 +16308,11 @@ Reason: {0}</source>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="187"/>
         <source>Select PyQt5 documentation entry</source>
         <translation type="unfinished">Выберите каталог документации PyQt4 {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="173"/>
+        <source>Select PyQt4 documentation entry</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16409,11 +16505,6 @@ Reason: {0}</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
-        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="745"/>
         <source>Loading...</source>
         <translation>Загружаю...</translation>
@@ -16462,11 +16553,6 @@ You have %n tab(s) open.</source>
         <translation>&amp;Закрыть текущую закладку</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
-        <source>eric5 Web Browser</source>
-        <translation>WEB просмотрщик встроенный в Eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="110"/>
         <source>Show a navigation menu for closed tabs</source>
         <translation>Показать меню для закрытых вкладок</translation>
@@ -16492,9 +16578,29 @@ You have %n tab(s) open.</source>
         <translation>Очистить список</translation>
     </message>
     <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
+        <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt; {5.?}</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="590"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt4. Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="644"/>
+        <source>&lt;p&gt;Printing is not available due to a bug in PyQt4.Please upgrade.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt; {5.?} {4.?}</translation>
     </message>
 </context>
 <context>
@@ -18511,11 +18617,6 @@ You have %n tab(s) open.</source>
         <translation>&lt;b&gt;Ad Block...&lt;/b&gt;&lt;p&gt;Показать диалог для настройки AdBlock подписок и правил.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2874"/>
-        <source>eric5 Web Browser</source>
-        <translation>WEB просмотрщик встроенный в Eric5</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpWindow.py" line="598"/>
         <source>Print as PDF</source>
         <translation>Печать как PDF</translation>
@@ -18647,16 +18748,6 @@ You have %n tab(s) open.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="683"/>
-        <source>Quit the eric5 Web Browser</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="684"/>
-        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1450"/>
         <source>RSS Feeds Dialog</source>
         <translation type="unfinished"></translation>
@@ -18738,11 +18829,6 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1426"/>
         <source>&lt;b&gt;Network Monitor...&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="2073"/>
-        <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -18938,6 +19024,31 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="542"/>
         <source>&lt;b&gt;Save Visible Page Screen...&lt;/b&gt;&lt;p&gt;Saves the visible part of the current page as a screen shot.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpWindow.py" line="2875"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpWindow.py" line="2874"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpWindow.py" line="683"/>
+        <source>Quit the eric5 Web Browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpWindow.py" line="684"/>
+        <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric5 Web Browser.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpWindow.py" line="2073"/>
+        <source>&lt;b&gt;eric5 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric5 Web Browser is a combined help file and HTML browser. It is part of the eric5 development toolset.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -27554,11 +27665,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Targa Graphic файл (*.tga)</translation>
     </message>
     <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1217"/>
-        <source>eric5 Icon Editor</source>
-        <translation>Eric5 редактор иконок</translation>
-    </message>
-    <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1124"/>
         <source>The file &apos;{0}&apos; does not exist.</source>
         <translation>Файл {0} не существует.</translation>
@@ -27576,16 +27682,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 {1}.</source>
         <translation>Невозможно записать файл {0}:
 {1}.</translation>
-    </message>
-    <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1307"/>
-        <source>About eric5 Icon Editor</source>
-        <translation>О редакторе иконок Eric5</translation>
-    </message>
-    <message>
-        <location filename="../IconEditor/IconEditorWindow.py" line="1307"/>
-        <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
-        <translation>Редакторе иконок Eric5 это простой редактор для рисования иконок.</translation>
     </message>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1094"/>
@@ -27616,6 +27712,36 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../IconEditor/IconEditorWindow.py" line="144"/>
         <source>WAP Bitmap File (*.wbmp)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1218"/>
+        <source>eric6 Icon Editor</source>
+        <translation type="obsolete">Eric5 редактор иконок {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1308"/>
+        <source>About eric6 Icon Editor</source>
+        <translation type="obsolete">О редакторе иконок Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1308"/>
+        <source>The eric6 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
+        <translation type="obsolete">Редакторе иконок Eric5 это простой редактор для рисования иконок. {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1217"/>
+        <source>eric5 Icon Editor</source>
+        <translation type="unfinished">Eric5 редактор иконок {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1307"/>
+        <source>About eric5 Icon Editor</source>
+        <translation type="unfinished">О редакторе иконок Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../IconEditor/IconEditorWindow.py" line="1307"/>
+        <source>The eric5 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
+        <translation type="unfinished">Редакторе иконок Eric5 это простой редактор для рисования иконок. {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -27747,7 +27873,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="92"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Модули</translation>
     </message>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="95"/>
@@ -30229,6 +30355,11 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Искать!</translation>
     </message>
     <message>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="103"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="98"/>
         <source>Welcome to eric5 Web Browser!</source>
         <translation type="unfinished"></translation>
@@ -30236,7 +30367,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="100"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="102"/>
@@ -32586,16 +32717,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="254"/>
-        <source>About eric5 Mini Editor</source>
-        <translation>О мини-редакторе eric5</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/MiniEditor.py" line="254"/>
-        <source>The eric5 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
-        <translation>Мини-редактор eric5 — это компонент, основанный на QScintilla. Его можно использовать для простых задач редактирования, не требующих полномасштабного редактора.</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/MiniEditor.py" line="318"/>
         <source>Line: {0:5}</source>
         <translation>Строка: {0:5}</translation>
@@ -32604,11 +32725,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../QScintilla/MiniEditor.py" line="323"/>
         <source>Pos: {0:5}</source>
         <translation>Позиция: {0:5}</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2141"/>
-        <source>eric5 Mini Editor</source>
-        <translation>Мини-редактор eric5</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2162"/>
@@ -32629,6 +32745,36 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../QScintilla/MiniEditor.py" line="2141"/>
         <source>The document has unsaved changes.</source>
         <translation>Изменения в текущем документе не сохранены.</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="255"/>
+        <source>About eric6 Mini Editor</source>
+        <translation type="obsolete">О мини-редакторе eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="255"/>
+        <source>The eric6 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
+        <translation type="obsolete">Мини-редактор eric5 — это компонент, основанный на QScintilla. Его можно использовать для простых задач редактирования, не требующих полномасштабного редактора. {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="2182"/>
+        <source>eric6 Mini Editor</source>
+        <translation type="obsolete">Мини-редактор eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="254"/>
+        <source>About eric5 Mini Editor</source>
+        <translation type="unfinished">О мини-редакторе eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="254"/>
+        <source>The eric5 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
+        <translation type="unfinished">Мини-редактор eric5 — это компонент, основанный на QScintilla. Его можно использовать для простых задач редактирования, не требующих полномасштабного редактора. {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="2141"/>
+        <source>eric5 Mini Editor</source>
+        <translation type="unfinished">Мини-редактор eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -32847,32 +32993,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="293"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="299"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="294"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="300"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="295"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="307"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="313"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="304"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="310"/>
         <source>Add Project...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="208"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="214"/>
         <source>Not categorized</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34006,7 +34152,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Graphics/PackageDiagramBuilder.py" line="155"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Модули</translation>
     </message>
     <message>
         <location filename="../Graphics/PackageDiagramBuilder.py" line="158"/>
@@ -34661,7 +34807,7 @@ Reason: {1}</source>
     <message>
         <location filename="../PluginManager/PluginInstallDialog.ui" line="150"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -36689,51 +36835,6 @@ Select Update.</source>
         <translation>Python3 файлы (*.py3);;Python3 GUI файлы (*.pyw3);;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="247"/>
-        <source>Eric Plugin</source>
-        <translation>Подключаемый модуль Eric</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3723"/>
-        <source>Create an initial PKGLIST file for an eric5 plugin.</source>
-        <translation>Создать начальный файл PKGLIST для подключаемого модуля eric5.</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3725"/>
-        <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать список пакетов&lt;/b&gt;&lt;p&gt;Создаёт начальный список файлов для включения в архив подключаемого модуля eric5. Список создаётся из файла проекта.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3739"/>
-        <source>Create an eric5 plugin archive file.</source>
-        <translation>Создать архив подключаемого модуля eric5.</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3741"/>
-        <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать архив подключаемого модуля&lt;/b&gt;&lt;p&gt;Создаёт файл арива подключаемого модуля eric5, используя список файлов, данный в файле PKGLIST. Имя архива берётся из имени главного сценария.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3755"/>
-        <source>Create an eric5 plugin archive file (snapshot release).</source>
-        <translation>Создать файл архива плагинов eric5 (снимок выпуска).</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="3757"/>
-        <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Создать файл архива плагинов (снимок выпуска)&lt;/b&gt;&lt;p&gt;Создаёт файл архива плагинов eric5, используя список файлов, указанный в файле PKGLIST. Имя архива строится из имени главного сценария. Версия главного сценария меняется, чтобы соответствовать версии выпуска снимка.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="4695"/>
-        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Невозможно создать подключаемый модуль eric5 &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="4744"/>
-        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Подключаемый модуль &lt;b&gt;{0}&lt;/b&gt; был успешно создан.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="1493"/>
         <source>&lt;p&gt;The selected file &lt;b&gt;{0}&lt;/b&gt; could not be added to &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно добавить файл &lt;b&gt;{0}&lt;/b&gt; в архив &lt;b&gt;{1}&lt;/b&gt;. &lt;/p&gt;&lt;p&gt;Причина: {2}&lt;/p&gt;</translation>
@@ -36794,16 +36895,6 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="243"/>
-        <source>Qt GUI</source>
-        <translation>Qt GUI</translation>
-    </message>
-    <message>
-        <location filename="../Project/Project.py" line="244"/>
-        <source>Qt Console</source>
-        <translation>Qt Консоль</translation>
-    </message>
-    <message>
         <location filename="../Project/Project.py" line="245"/>
         <source>PyQt5 GUI</source>
         <translation type="unfinished"></translation>
@@ -36822,6 +36913,101 @@ Select Update.</source>
         <location filename="../Project/Project.py" line="4832"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt; &lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3740"/>
+        <source>Create an initial PKGLIST file for an eric6 plugin.</source>
+        <translation type="obsolete">Создать начальный файл PKGLIST для подключаемого модуля eric5. {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3742"/>
+        <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric6 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Создать список пакетов&lt;/b&gt;&lt;p&gt;Создаёт начальный список файлов для включения в архив подключаемого модуля eric5. Список создаётся из файла проекта.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3756"/>
+        <source>Create an eric6 plugin archive file.</source>
+        <translation type="obsolete">Создать архив подключаемого модуля eric5. {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3758"/>
+        <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Создать архив подключаемого модуля&lt;/b&gt;&lt;p&gt;Создаёт файл арива подключаемого модуля eric5, используя список файлов, данный в файле PKGLIST. Имя архива берётся из имени главного сценария.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3772"/>
+        <source>Create an eric6 plugin archive file (snapshot release).</source>
+        <translation type="obsolete">Создать файл архива плагинов eric5 (снимок выпуска). {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3774"/>
+        <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Создать файл архива плагинов (снимок выпуска)&lt;/b&gt;&lt;p&gt;Создаёт файл архива плагинов eric5, используя список файлов, указанный в файле PKGLIST. Имя архива строится из имени главного сценария. Версия главного сценария меняется, чтобы соответствовать версии выпуска снимка.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="4712"/>
+        <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p&gt;Невозможно создать подключаемый модуль eric5 &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt; {6 ?} {0}?} {1}?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="4761"/>
+        <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;p&gt;Подключаемый модуль &lt;b&gt;{0}&lt;/b&gt; был успешно создан.&lt;/p&gt; {6 ?} {0}?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="243"/>
+        <source>Qt GUI</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="244"/>
+        <source>Qt Console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="247"/>
+        <source>Eric Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3723"/>
+        <source>Create an initial PKGLIST file for an eric5 plugin.</source>
+        <translation type="unfinished">Создать начальный файл PKGLIST для подключаемого модуля eric5. {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3725"/>
+        <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric5 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Создать список пакетов&lt;/b&gt;&lt;p&gt;Создаёт начальный список файлов для включения в архив подключаемого модуля eric5. Список создаётся из файла проекта.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3739"/>
+        <source>Create an eric5 plugin archive file.</source>
+        <translation type="unfinished">Создать архив подключаемого модуля eric5. {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3741"/>
+        <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Создать архив подключаемого модуля&lt;/b&gt;&lt;p&gt;Создаёт файл арива подключаемого модуля eric5, используя список файлов, данный в файле PKGLIST. Имя архива берётся из имени главного сценария.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3755"/>
+        <source>Create an eric5 plugin archive file (snapshot release).</source>
+        <translation type="unfinished">Создать файл архива плагинов eric5 (снимок выпуска). {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="3757"/>
+        <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric5 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Создать файл архива плагинов (снимок выпуска)&lt;/b&gt;&lt;p&gt;Создаёт файл архива плагинов eric5, используя список файлов, указанный в файле PKGLIST. Имя архива строится из имени главного сценария. Версия главного сценария меняется, чтобы соответствовать версии выпуска снимка.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="4695"/>
+        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Невозможно создать подключаемый модуль eric5 &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt; {6 ?} {0}?} {1}?} {5 ?} {0}?} {1}?}</translation>
+    </message>
+    <message>
+        <location filename="../Project/Project.py" line="4744"/>
+        <source>&lt;p&gt;The eric5 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Подключаемый модуль &lt;b&gt;{0}&lt;/b&gt; был успешно создан.&lt;/p&gt; {6 ?} {0}?} {5 ?} {0}?}</translation>
     </message>
 </context>
 <context>
@@ -38878,7 +39064,7 @@ Select Update.</source>
     <message>
         <location filename="../DataViews/PyCoverageDialog.py" line="347"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -39020,7 +39206,7 @@ Select Update.</source>
     <message>
         <location filename="../DataViews/PyProfileDialog.ui" line="141"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -40913,7 +41099,8 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="383"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Один символ из множества (напр. [abcd])&lt;/b&gt;
+&lt;p&gt;Вставить один символ из множества с помощью специального диалога.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="386"/>
@@ -40924,7 +41111,8 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="393"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
@@ -40932,19 +41120,23 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию). 
+Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="411"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Повторять содержимое&lt;/b&gt;
+&lt;p&gt;Задайте условия повторения с помощью специального диалога. Этот диалог поможет указать допустимые пределы для повторений.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="159"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Скобки без захвата: (?:)&lt;/b&gt;
+&lt;p&gt;Вставить скобки, которые группируют, но не попадают в выражения захвата.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="163"/>
@@ -40952,13 +41144,17 @@ character class is faster and more precise.&lt;/p&gt;</source>
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
 means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Скобки без захвата: (?:)&lt;/b&gt;
+&lt;p&gt;Вставить скобки, которые группируют, но не попадают в выражения захвата. Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
+группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.  &apos;?:&apos; внутри скобок
+означает, что содержимое скобок (называемое обратной ссылкой) не сохраняется для дальнейшего использования.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="419"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Группа: ()&lt;/b&gt;
+&lt;p&gt;Вставить скобки с захватом содержимого.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
@@ -40968,13 +41164,21 @@ characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &a
 the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Группа: ()&lt;/b&gt;
+&lt;p&gt;Вставить скобки с захватом содержимого.
+Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
+группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
+В отличие от  скобок без захвата, 
+обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера). 
+Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
+&lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="432"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ альтернатив &apos;|&apos;. &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
@@ -40983,64 +41187,77 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
+Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="204"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Начало строки: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ начала строки (^).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="208"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Начало строки: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ начала строки (^). Он используется, чтобы найти выражения с начала строк.
+Например, &apos;^[A-Z]&apos; совпадает заглавной латинской буквой, стоящей в начале строки. &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Окончание строки: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ окончания строки ($).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="221"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Конец строки: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ конца строки ($). Используется для поиска выражений в конце строк.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="229"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ границы слова (\b).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
+Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="242"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Не граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Не граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Вставить скобки положительной предварительной проверки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
@@ -41048,7 +41265,9 @@ does not. Effectively, \B matches at any position between two word characters as
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
+Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="269"/>
@@ -42173,18 +42392,21 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="66"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Один символ из множества (напр. [abcd])&lt;/b&gt;
+&lt;p&gt;Вставить один символ из множества с помощью специального диалога.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="69"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Один символ из множества (напр. [abcd])&lt;/b&gt;
+&lt;p&gt;Выбрать множество символов с помощью специального диалога. Этот диалог поможет выбрать множество символов и задать некоторые специфические ограничения.&lt;/p&gt;s</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="76"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
@@ -42192,19 +42414,23 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию). 
+Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="94"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Повторять содержимое&lt;/b&gt;
+&lt;p&gt;Задайте условия повторения с помощью специального диалога. Этот диалог поможет указать допустимые пределы для повторений.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="102"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Скобки без захвата: (?:)&lt;/b&gt;
+&lt;p&gt;Вставить скобки, которые группируют, но не попадают в выражения захвата.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="106"/>
@@ -42212,7 +42438,10 @@ character class is faster and more precise.&lt;/p&gt;</source>
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
 means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Скобки без захвата: (?:)&lt;/b&gt;
+&lt;p&gt;Вставить скобки, которые группируют, но не попадают в выражения захвата. Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
+группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.  &apos;?:&apos; внутри скобок
+означает, что содержимое скобок (называемое обратной ссылкой) не сохраняется для дальнейшего использования.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="116"/>
@@ -42232,7 +42461,8 @@ means that the content of the match (called the backreference) is not stored for
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="130"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Группа: ()&lt;/b&gt;
+&lt;p&gt;Вставить скобки с захватом содержимого.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
@@ -42242,7 +42472,14 @@ characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &a
 the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Группа: ()&lt;/b&gt;
+&lt;p&gt;Вставить скобки с захватом содержимого.
+Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
+группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
+В отличие от  скобок без захвата, 
+обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера). 
+Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
+&lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="146"/>
@@ -42283,7 +42520,8 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="175"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ альтернатив &apos;|&apos;. &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
@@ -42292,64 +42530,77 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
+Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="190"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Начало строки: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ начала строки (^).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="194"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Начало строки: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ начала строки (^). Он используется, чтобы найти выражения с начала строк.
+Например, &apos;^[A-Z]&apos; совпадает заглавной латинской буквой, стоящей в начале строки. &lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="203"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Окончание строки: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ окончания строки ($).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="207"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Конец строки: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Вставить символ конца строки ($). Используется для поиска выражений в конце строк.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="215"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ границы слова (\b).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
+Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Не граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Не граница слова&lt;/b&gt;
+&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Вставить скобки положительной предварительной проверки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
@@ -42357,7 +42608,9 @@ does not. Effectively, \B matches at any position between two word characters as
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
+Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
@@ -45065,9 +45318,14 @@ Not connected</source>
         <translation>Проверка орфографии</translation>
     </message>
     <message>
+        <location filename="../Preferences/ShortcutsDialog.py" line="190"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
         <location filename="../Preferences/ShortcutsDialog.py" line="189"/>
         <source>eric5 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -45220,11 +45478,6 @@ Not connected</source>
 </context>
 <context>
     <name>SnapWidget</name>
-    <message>
-        <location filename="../Snapshot/SnapWidget.py" line="522"/>
-        <source>eric5 Snapshot</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="54"/>
         <source>Snapshot Mode:</source>
@@ -45440,6 +45693,11 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="198"/>
         <source>Copy &amp;Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Snapshot/SnapWidget.py" line="522"/>
+        <source>eric5 Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -45996,14 +46254,19 @@ Not connected</source>
         <translation>OK, число задействованных строк: {0}</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlBrowserWidget.ui" line="14"/>
-        <source>eric5 SQL Browser</source>
-        <translation>Просмотрщик SQL</translation>
-    </message>
-    <message>
         <location filename="../SqlBrowser/SqlBrowserWidget.py" line="162"/>
         <source>An error occurred while opening the connection.</source>
         <translation>Ошибка при соединении.</translation>
+    </message>
+    <message>
+        <location filename="../SqlBrowser/SqlBrowserWidget.ui" line="14"/>
+        <source>eric6 SQL Browser</source>
+        <translation type="obsolete">Просмотрщик SQL {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../SqlBrowser/SqlBrowserWidget.ui" line="14"/>
+        <source>eric5 SQL Browser</source>
+        <translation type="unfinished">Просмотрщик SQL {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -52670,7 +52933,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="130"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -53111,7 +53374,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="136"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -53548,7 +53811,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="549"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="553"/>
@@ -54675,15 +54938,13 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="../Project/TranslationPropertiesDialog.ui" line="49"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Enter the path pattern for the translation files using %language% at the place of the language code (e.g. /path_to_eric/i18n/eric5_%language%.ts). This will result in translation files like /path_to_eric/i18n/eric5_de.ts.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Шаблон для каталога файлов переводов&lt;/b&gt;
-&lt;p&gt;Используйте &apos;%language%&apos; там где должен быть код языка, например - /path_to_eric/i18n/eric4_%language%.ts. В результате получится например файл /path_to_eric/i18n/eric_de.ts.&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric5_%language%.ts)</source>
-        <translation>&amp;Шаблон для каталога файлов переводов:
-(Используйте &apos;%language%&apos; там где должен быть код языка, например - i18n/eric5_%language%.ts) {18n?}</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -54951,29 +55212,9 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Просмотрщик SQL</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="77"/>
-        <source>Eric5 tray starter</source>
-        <translation>Запуск Eric5 в системном лотке</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="139"/>
-        <source>eric5 IDE</source>
-        <translation>eric5 IDE</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="142"/>
-        <source>eric5 Mini Editor</source>
-        <translation>Мини-редактор eric5</translation>
-    </message>
-    <message>
         <location filename="../Tools/TrayStarter.py" line="120"/>
         <source>Icon Editor</source>
         <translation>Редактор иконок</translation>
-    </message>
-    <message>
-        <location filename="../Tools/TrayStarter.py" line="99"/>
-        <source>eric5 Web Browser</source>
-        <translation>WEB просмотрщик встроенный в Eric5</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="117"/>
@@ -54984,6 +55225,46 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="../Tools/TrayStarter.py" line="147"/>
         <source>Configure Tray Starter</source>
         <translation>Настроить запуск в системном лотке</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="77"/>
+        <source>Eric6 tray starter</source>
+        <translation type="obsolete">Запуск Eric5 в системном лотке {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="99"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="139"/>
+        <source>eric6 IDE</source>
+        <translation type="obsolete">eric5 IDE {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="142"/>
+        <source>eric6 Mini Editor</source>
+        <translation type="obsolete">Мини-редактор eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="77"/>
+        <source>Eric5 tray starter</source>
+        <translation type="unfinished">Запуск Eric5 в системном лотке {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="99"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="139"/>
+        <source>eric5 IDE</source>
+        <translation type="unfinished">eric5 IDE {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Tools/TrayStarter.py" line="142"/>
+        <source>eric5 Mini Editor</source>
+        <translation type="unfinished">Мини-редактор eric5 {6 ?} {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -55394,11 +55675,6 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Сохранить диаграмму</translation>
     </message>
     <message>
-        <location filename="../Graphics/UMLDialog.py" line="280"/>
-        <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Graphics/UMLDialog.py" line="237"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
@@ -55431,6 +55707,11 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Graphics/UMLDialog.py" line="99"/>
         <source>Save as Image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Graphics/UMLDialog.py" line="280"/>
+        <source>Eric5 Graphics File (*.e5g);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -57382,71 +57663,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation>Открыть документацию PySide</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="1593"/>
-        <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Просмотрщик помощи&lt;/b&gt;&lt;p&gt;Открыть eric5 просмотрщик Web. Это окно будет показывать HTML файлы помощи. Оно поддерживает навигацию по ссылкам, закладки, печать и некоторые другие функции. Его можно использовать для просмотра интернета.&lt;/p&gt;&lt;p&gt;Если перед открытием просмотрщика помощи был подсвечен какой-либо текст, то будет произведён поиск этого текста в коллекции помощи Qt.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1627"/>
-        <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Проверить наличие обновлений...&lt;/b&gt;&lt;p&gt;Проверить наличие обновлений eric5 в интернет.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1640"/>
-        <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Показать версии, доступные для загрузки...&lt;/b&gt;&lt;p&gt;Показывает версии eric5, которые можно скачать с интернета.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1900"/>
-        <source>Start the eric5 Web Browser</source>
-        <translation>Запустить WEB просмотрщик встроенный в Eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1914"/>
-        <source>Start the eric5 Icon Editor</source>
-        <translation>Запустить редактор иконок</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1916"/>
-        <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="2002"/>
-        <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="2342"/>
-        <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="4234"/>
-        <source>Qt v.3 is not supported by eric5.</source>
-        <translation>Qt3 не поддерживается в eric5.</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6018"/>
-        <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
-        <translation>На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать?</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6031"/>
-        <source>Eric5 is up to date</source>
-        <translation>Eric5 не требует обновлений</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6031"/>
-        <source>You are using the latest version of eric5</source>
-        <translation>Вы используете самую последнюю версию eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="6102"/>
-        <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
-        <translation>eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации.</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="822"/>
         <source>Cooperation</source>
         <translation>Кооперация</translation>
@@ -57542,21 +57758,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="1895"/>
-        <source>eric5 Web Browser</source>
-        <translation>WEB просмотрщик встроенный в Eric5</translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1895"/>
-        <source>eric5 &amp;Web Browser...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1902"/>
-        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="539"/>
         <source>Setting View Profile...</source>
         <translation type="unfinished"></translation>
@@ -57590,16 +57791,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="../UI/UserInterface.py" line="1223"/>
         <source>Ctrl+Shift+N</source>
         <comment>File|New Window</comment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1229"/>
-        <source>Open a new eric5 instance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../UI/UserInterface.py" line="1231"/>
-        <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new instance of the eric5 IDE.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -58087,6 +58278,166 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <source>Version Check</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1594"/>
+        <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric6 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Просмотрщик помощи&lt;/b&gt;&lt;p&gt;Открыть eric5 просмотрщик Web. Это окно будет показывать HTML файлы помощи. Оно поддерживает навигацию по ссылкам, закладки, печать и некоторые другие функции. Его можно использовать для просмотра интернета.&lt;/p&gt;&lt;p&gt;Если перед открытием просмотрщика помощи был подсвечен какой-либо текст, то будет произведён поиск этого текста в коллекции помощи Qt.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1628"/>
+        <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric6.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Проверить наличие обновлений...&lt;/b&gt;&lt;p&gt;Проверить наличие обновлений eric5 в интернет.&lt;/p&gt; {6.?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1641"/>
+        <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric6 versions available for download from the internet.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Показать версии, доступные для загрузки...&lt;/b&gt;&lt;p&gt;Показывает версии eric5, которые можно скачать с интернета.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1896"/>
+        <source>eric6 Web Browser</source>
+        <translation type="obsolete">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1901"/>
+        <source>Start the eric6 Web Browser</source>
+        <translation type="obsolete">Запустить WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1915"/>
+        <source>Start the eric6 Icon Editor</source>
+        <translation type="obsolete">Запустить редактор иконок {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1917"/>
+        <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric6 Icon Editor for editing simple icons.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="2003"/>
+        <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric6.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt; {6.?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="2348"/>
+        <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric6 installation directory.&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt; {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="4248"/>
+        <source>Qt v.3 is not supported by eric6.</source>
+        <translation type="obsolete">Qt3 не поддерживается в eric5. {3 ?} {6.?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6032"/>
+        <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric6 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
+        <translation type="obsolete">На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать? {0}?} {6 ?} {1}?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6045"/>
+        <source>Eric6 is up to date</source>
+        <translation type="obsolete">Eric5 не требует обновлений {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6045"/>
+        <source>You are using the latest version of eric6</source>
+        <translation type="obsolete">Вы используете самую последнюю версию eric6</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6116"/>
+        <source>eric6 has not been configured yet. The configuration dialog will be started.</source>
+        <translation type="obsolete">eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации. {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1229"/>
+        <source>Open a new eric5 instance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1231"/>
+        <source>&lt;b&gt;New Window&lt;/b&gt;&lt;p&gt;This opens a new instance of the eric5 IDE.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1593"/>
+        <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric5 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Просмотрщик помощи&lt;/b&gt;&lt;p&gt;Открыть eric5 просмотрщик Web. Это окно будет показывать HTML файлы помощи. Оно поддерживает навигацию по ссылкам, закладки, печать и некоторые другие функции. Его можно использовать для просмотра интернета.&lt;/p&gt;&lt;p&gt;Если перед открытием просмотрщика помощи был подсвечен какой-либо текст, то будет произведён поиск этого текста в коллекции помощи Qt.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1627"/>
+        <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric5.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Проверить наличие обновлений...&lt;/b&gt;&lt;p&gt;Проверить наличие обновлений eric5 в интернет.&lt;/p&gt; {6.?} {5.?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1640"/>
+        <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric5 versions available for download from the internet.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Показать версии, доступные для загрузки...&lt;/b&gt;&lt;p&gt;Показывает версии eric5, которые можно скачать с интернета.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1895"/>
+        <source>eric5 Web Browser</source>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1895"/>
+        <source>eric5 &amp;Web Browser...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1900"/>
+        <source>Start the eric5 Web Browser</source>
+        <translation type="unfinished">Запустить WEB просмотрщик встроенный в Eric5 {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1902"/>
+        <source>&lt;b&gt;eric5 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric5 Web Browser.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1914"/>
+        <source>Start the eric5 Icon Editor</source>
+        <translation type="unfinished">Запустить редактор иконок {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="1916"/>
+        <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric5 Icon Editor for editing simple icons.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="2002"/>
+        <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric5.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt; {6.?} {5.?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="2342"/>
+        <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric5 installation directory.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt; {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="4234"/>
+        <source>Qt v.3 is not supported by eric5.</source>
+        <translation type="unfinished">Qt3 не поддерживается в eric5. {3 ?} {6.?} {3 ?} {5.?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6018"/>
+        <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric5 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
+        <translation type="unfinished">На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать? {0}?} {6 ?} {1}?} {0}?} {5 ?} {1}?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6031"/>
+        <source>Eric5 is up to date</source>
+        <translation type="unfinished">Eric5 не требует обновлений {6 ?} {5 ?}</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6031"/>
+        <source>You are using the latest version of eric5</source>
+        <translation type="unfinished">Вы используете самую последнюю версию eric5</translation>
+    </message>
+    <message>
+        <location filename="../UI/UserInterface.py" line="6102"/>
+        <source>eric5 has not been configured yet. The configuration dialog will be started.</source>
+        <translation type="unfinished">eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации. {6 ?} {5 ?}</translation>
+    </message>
 </context>
 <context>
     <name>UserPropertiesDialog</name>
@@ -58140,7 +58491,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="../Utilities/__init__.py" line="1245"/>
+        <location filename="../Utilities/__init__.py" line="1326"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;В строках вы можете использовать следующие %-коды::
 &lt;table&gt;
@@ -62694,11 +63045,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>XbelImporter</name>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="35"/>
-        <source>eric5 Web Browser stores its bookmarks in the &lt;b&gt;{0}&lt;/b&gt; XML file. This file is usually located in</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="72"/>
         <source>Please choose the file to begin importing bookmarks.</source>
         <translation type="unfinished">Пожалуйста выберете файл для импортирования закладок.</translation>
@@ -62712,11 +63058,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="123"/>
         <source>File &apos;{0}&apos; does not exist.</source>
         <translation>Файл &apos;{0}&apos; не существует.</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="152"/>
-        <source>eric5 Web Browser Import</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="156"/>
@@ -62747,6 +63088,16 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="154"/>
         <source>Konqueror Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="35"/>
+        <source>eric5 Web Browser stores its bookmarks in the &lt;b&gt;{0}&lt;/b&gt; XML file. This file is usually located in</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImporters/XbelImporter.py" line="152"/>
+        <source>eric5 Web Browser Import</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -62794,14 +63145,27 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric5</name>
     <message>
-        <location filename="../eric5.py" line="305"/>
-        <source>Generating Main Window...</source>
-        <translation>Создание главного окна...</translation>
-    </message>
-    <message>
         <location filename="../eric5.py" line="300"/>
         <source>Starting...</source>
-        <translation>Запуск...</translation>
+        <translation type="unfinished">Запуск...</translation>
+    </message>
+    <message>
+        <location filename="../eric5.py" line="305"/>
+        <source>Generating Main Window...</source>
+        <translation type="unfinished">Создание главного окна...</translation>
+    </message>
+</context>
+<context>
+    <name>eric6</name>
+    <message>
+        <location filename="../eric6.py" line="297"/>
+        <source>Starting...</source>
+        <translation type="obsolete">Запуск...</translation>
+    </message>
+    <message>
+        <location filename="../eric6.py" line="302"/>
+        <source>Generating Main Window...</source>
+        <translation type="obsolete">Создание главного окна...</translation>
     </message>
 </context>
 <context>
