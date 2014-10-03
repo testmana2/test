@@ -59,6 +59,8 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
     showMenu = pyqtSignal(str, QMenu)
     menusAboutToBeCreated = pyqtSignal()
     
+    PyuicIndentDefault = 4
+    
     def __init__(self, project, parent=None):
         """
         Constructor
@@ -784,6 +786,11 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
             dirname, filename = os.path.split(ofn)
             self.compiledFile = os.path.join(dirname, "Ui_" + filename + ".py")
             args.append("-x")
+            indentWidth = Preferences.getQt("PyuicIndent")
+            if indentWidth != self.PyuicIndentDefault:
+                args.append("--indent={0}".format(indentWidth))
+            if Preferences.getQt("PyuicFromImports"):
+                args.append("--from-imports")
         elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
             self.compiledFile = ofn + '.rb'
             args.append('-x')

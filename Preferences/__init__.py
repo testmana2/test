@@ -871,6 +871,8 @@ class Prefs(object):
         "Qt4TranslationsDir": "",
         "QtToolsPrefix4": "",
         "QtToolsPostfix4": "",
+        "PyuicIndent": 4,
+        "PyuicFromImports": False,
     }
     
     # defaults for corba related stuff
@@ -2399,6 +2401,12 @@ def getQt(key, prefClass=Prefs):
     """
     if key == "Qt4TranslationsDir":
         return getQt4TranslationsDir(prefClass)
+    elif key in ["PyuicIndent"]:
+        return int(prefClass.settings.value(
+            "Qt/" + key, prefClass.qtDefaults[key]))
+    elif key in ["PyuicFromImports"]:
+        return toBool(prefClass.settings.value(
+            "Qt/" + key, prefClass.qtDefaults[key]))
     else:
         return prefClass.settings.value("Qt/" + key, prefClass.qtDefaults[key])
     
