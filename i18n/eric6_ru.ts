@@ -30,7 +30,7 @@
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.py" line="25"/>
         <source>&lt;p&gt;{0} is an Integrated Development Environment for the Python programming language. It is written using the PyQt Python bindings for the Qt GUI toolkit and the QScintilla editor widget.&lt;/p&gt;&lt;p&gt;For more information see &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Please send bug reports to &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;To request a new feature please send an email to &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0} uses third party software which is copyrighted by its respective copyright holder. For details see the copyright notice of the individual package.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;{0} - это интегрированная среда разработки программ на языке Питон. Написана с использованием питоновского интерфейса к графической библиотеке Qt и библиотеке редактора текстов QScintilla.&lt;/p&gt;&lt;p&gt;Дополнительная информация имеется здесь: &lt;a href=&quot;{1}&quot;&gt;{1}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Сообщения об ошибках посылать сюда: &lt;a href=&quot;mailto:{2}&quot;&gt;{2}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Предложения и просьбы о новой функциональности посылать по адресу &lt;a href=&quot;mailto:{3}&quot;&gt;{3}&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;{0}использует дополнительное программное обеспечение со своими собственными лицензионными правилами. Более детальную лицензионную информацию можно найти внутри соответствующего програмного пакета.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1122,22 +1122,22 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
         <source>Select to make this project the main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделать этот проект главным</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
         <source>Is &amp;main project</source>
-        <translation type="unfinished"></translation>
+        <translation>Это &amp;главный проект</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
         <source>&amp;Category:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Тип</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
         <source>Select a project category</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите тип проекта</translation>
     </message>
 </context>
 <context>
@@ -1175,12 +1175,12 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="66"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Модули</translation>
     </message>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="69"/>
         <source>Application Diagram</source>
-        <translation type="unfinished">Диаграмма приложения</translation>
+        <translation>Диаграмма приложения</translation>
     </message>
 </context>
 <context>
@@ -1397,39 +1397,39 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="118"/>
+        <location filename="../Utilities/BackgroundService.py" line="119"/>
         <source>{0} not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} не сконфигурирован.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>Restart background client?</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезапустить клиент в фоновом режиме?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="190"/>
+        <location filename="../Utilities/BackgroundService.py" line="191"/>
         <source>An error in Erics background client stopped the service.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка в слиенте остановила сервис.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="357"/>
+        <location filename="../Utilities/BackgroundService.py" line="358"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
-        <translation type="unfinished"></translation>
+        <translation>Фоновый клиент прервал соединение по неизвестной причине.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>Background client disconnected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Соединение фонового клиента прервано.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
-        <translation type="unfinished"></translation>
+        <translation>Соединение фонового клиента&lt;b&gt;{0}&lt;/b&gt; прервано по неизвестной причине.&lt;br&gt;Перезапустить клиента?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Фоновый клиент&lt;b&gt;{0}&lt;/b&gt; прекратил выполнение из-за ошибки. Этот клиент необходим для работы различных плагинов.&lt;/p&gt;&lt;p&gt;Выберите&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Да&apos;&lt;/b&gt; чтобы перезапустить его и отменить последнее задание&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Повторить&apos;&lt;/b&gt;чтобы перезапустить его и последнее задание&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Нет&apos;&lt;/b&gt; чтобы не перезапускать клиент.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Заметте: Клиент можно перезапустить открыв и сохранив диалог настроек или закрыв и снова открыв текущий проект.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -1886,7 +1886,8 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="../Helpviewer/Bookmarks/BookmarksManager.py" line="140"/>
         <source>Error when loading bookmarks on line {0}, column {1}:
  {2}</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка загрузки закладок в строке{0}, колонка{1}:
+ {2}  </translation>
     </message>
 </context>
 <context>
@@ -2172,7 +2173,8 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../UI/Browser.py" line="94"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierarchy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierarchies.&lt;/p&gt;&lt;p&gt;The first hierarchy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierarchy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierarchy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierarchies allow you navigate your system as a whole. On a UNIX system there will be a hierarchy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierarchy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierarchies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Окно обозревателя&lt;/b&gt;&lt;p&gt;Помогает легко перемещаться по дереву каталогов и файлов вашей системы, находить программы на Python и открывать их в окне исходных текстов. Окно показывает несколько разных деревьев&lt;/p&gt;
+&lt;p&gt;Первое дерево показывается только тогда, когда вы отлаживаете программу и корень дерева является каталогом, содержащим программу. Обычно все файлы, составляющие приложение на Python, находятся в одном каталоге, так что это дерево даёт почти всю необходимую информацию.&lt;/p&gt;&lt;p&gt;Следующее дерево используется для лёгкого перемещения по каталогам, перечисленным в переменной Python &lt;tt&gt;sys.path&lt;/tt&gt;&lt;p&gt;Оставшиеся деревья позволяют перемещаться по системе в целом. В системах UNIX будут показаны 2 дерева: дерево с вершиной в корневом каталоге (&lt;tt&gt;/&lt;/tt&gt;) и домашний каталог пользователя. В Windows для каждого диска будет показано своё дерево.&lt;/p&gt;&lt;p&gt;Программы на Python (с расширением &lt;tt&gt;.py&lt;/tt&gt;) показываются с пиктограммой Python. Доступно контекстное меню, позволяющее открыть программу в редакторе, запустить её на отладку или протестировать с помощью unittest.&lt;/p&gt;&lt;p&gt;Контекстное меню на классе, функции или методе откроет файл и перейдёт на нужное место&lt;/p&gt;&lt;p&gt;Файлы описания интерфейса ( &lt;tt&gt;.ui&lt;/tt&gt;, отмеченные пиктограммой Дизайнера) могут быть открыты Дизайнером через контекстное меню или по двойному щелчку&lt;/p&gt;&lt;p&gt;Файлы перевода (&lt;tt&gt;.ts&lt;/tt&gt;, отмеченные пиктограммой Лингвиста) могут быть отредактированы с помощью Лингвиста&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2208,60 +2210,63 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="50"/>
         <source>Show source</source>
-        <translation type="unfinished">Показать исходник</translation>
+        <translation>Показать исходник</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="52"/>
         <source>Clear</source>
-        <translation type="unfinished">Очистить</translation>
+        <translation>Очистить</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="54"/>
         <source>Save</source>
-        <translation type="unfinished">Сохранить</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="61"/>
         <source>File: {0}
 Line: {1}
 {2}{3}</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл: {0}
+Строка: {1}
+{2}{3}</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="63"/>
         <source>File: {0}
 Line: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл: {0}
+Строка: {1}</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="172"/>
         <source>Save Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранить стек вызовов</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="158"/>
         <source>Text Files (*.txt);;All Files (*)</source>
-        <translation type="unfinished">Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
+        <translation>Текстовые Файлы (*.txt);;Все Файлы (*)</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="172"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="191"/>
         <source>Error saving Call Stack Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка при сохранении стека вызовов</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="191"/>
         <source>&lt;p&gt;The call stack info could not be written to &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Стек вызовов не записан в&lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/CallStackViewer.py" line="47"/>
         <source>Call Stack</source>
-        <translation type="unfinished"></translation>
+        <translation>Стек вызовов</translation>
     </message>
 </context>
 <context>
@@ -2886,7 +2891,7 @@ Reason: {1}</source>
     <message>
         <location filename="../DataViews/CodeMetricsDialog.ui" line="158"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation>%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -2894,139 +2899,140 @@ Reason: {1}</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="14"/>
         <source>Code Style Check Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат проверки стиля</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="17"/>
         <source>&lt;b&gt;Code Style Check Results&lt;/b&gt;
 &lt;p&gt;This dialog shows the results of the code style check. Double clicking an
 entry will open an editor window and position the cursor at the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Результаты проверки стиля&lt;/b&gt;
+&lt;p&gt;Диалог отображает результаты проверки стиля.Двойной щелчок по записи откроет окно редактора и поместит курсор на сообветствующую строчку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="46"/>
         <source>Exclude Files:</source>
-        <translation type="unfinished">Не включать файлы:</translation>
+        <translation>Не включать файлы:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="53"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте маски файлов для исключения, разделённые запятой</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="72"/>
         <source>Press to start the code style check run</source>
-        <translation type="unfinished"></translation>
+        <translation>Запустить проверку стиля</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="75"/>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translation>Начать</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="82"/>
         <source>Press to fix the selected issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать выбранные проблемы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="85"/>
         <source>Fix Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать выбранные</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="105"/>
         <source>Press to load the default values</source>
-        <translation type="unfinished">Восстановить значения по умолчанию</translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="108"/>
         <source>Load Defaults</source>
-        <translation type="unfinished">Восстановить значения по умолчанию</translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="115"/>
         <source>Press to store the current values as defaults</source>
-        <translation type="unfinished">Сохранить текущие значения как значения по умолчанию</translation>
+        <translation>Сохранить текущие значения как значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="118"/>
         <source>Store Defaults</source>
-        <translation type="unfinished">Сохранить значения по умолчанию</translation>
+        <translation>Сохранить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="125"/>
         <source>Press to reset the default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить значения по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить умолчания</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="137"/>
         <source>Exclude Messages:</source>
-        <translation type="unfinished">Не включать сообщения:</translation>
+        <translation>Не включать сообщения:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="144"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
-        <translation type="unfinished">Задайте коды сообщений или категорий через запятую которые не включать в проверку</translation>
+        <translation>Задайте коды сообщений или категорий через запятую которые не включать в проверку</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="214"/>
         <source>Press to select the message codes from a list</source>
-        <translation type="unfinished">Выберите коды сообщений из списка</translation>
+        <translation>Выберите коды сообщений из списка</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="158"/>
         <source>Included Messages:</source>
-        <translation type="unfinished">Включить сообщения:</translation>
+        <translation>Включить сообщения:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="165"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation type="unfinished">Задайте коды сообщений или категорий через запятую которые включать в проверку</translation>
+        <translation>Задайте коды сообщений или категорий через запятую которые включать в проверку</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="179"/>
         <source>Fix Issues:</source>
-        <translation type="unfinished">Исправлять автоматически:</translation>
+        <translation>Исправлять автоматически:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="186"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
-        <translation type="unfinished">Задайте коды сообщений через запятую которые исправлять автоматически (если пусто, то исправлять всё)</translation>
+        <translation>Задайте коды сообщений через запятую которые исправлять автоматически (если пусто, то исправлять всё)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="200"/>
         <source>Don&apos;t Fix Issues:</source>
-        <translation type="unfinished"></translation>
+        <translation>Не исправлять:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="207"/>
         <source>Enter message codes of issues not to be fixed automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте коды сообщений через запятую которые не исправлять автоматически</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="221"/>
         <source>Max. Line Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Макс. длина строки:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="230"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте максимально допустимую длину строки (PEP-8: 79 символов)</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="264"/>
         <source>Docstring Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип строки описания:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="273"/>
         <source>Select the rule set for docstrings</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте набор правил для строк описания</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="297"/>
@@ -3134,7 +3140,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="452"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="350"/>
@@ -14795,7 +14801,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../UI/FindFileDialog.ui" line="338"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.py" line="497"/>
@@ -27742,7 +27748,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="92"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Модули</translation>
     </message>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="95"/>
@@ -32842,32 +32848,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="293"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="299"/>
         <source>Open</source>
         <translation>Открыть</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="294"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="300"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="295"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="307"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="313"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="304"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="310"/>
         <source>Add Project...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="208"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="214"/>
         <source>Not categorized</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34001,7 +34007,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Graphics/PackageDiagramBuilder.py" line="155"/>
         <source>%v/%m Modules</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Модули</translation>
     </message>
     <message>
         <location filename="../Graphics/PackageDiagramBuilder.py" line="158"/>
@@ -34656,7 +34662,7 @@ Reason: {1}</source>
     <message>
         <location filename="../PluginManager/PluginInstallDialog.ui" line="150"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -38878,7 +38884,7 @@ Select Update.</source>
     <message>
         <location filename="../DataViews/PyCoverageDialog.py" line="347"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -39020,7 +39026,7 @@ Select Update.</source>
     <message>
         <location filename="../DataViews/PyProfileDialog.ui" line="141"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -52737,7 +52743,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="130"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -53178,7 +53184,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.ui" line="136"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
 </context>
 <context>
@@ -53615,7 +53621,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="549"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="553"/>
@@ -58205,7 +58211,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="../Utilities/__init__.py" line="1245"/>
+        <location filename="../Utilities/__init__.py" line="1326"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;В строках вы можете использовать следующие %-коды::
 &lt;table&gt;
