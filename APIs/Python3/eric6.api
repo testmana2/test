@@ -6735,6 +6735,7 @@ eric6.Project.ProjectBrowserModel.ProjectBrowserTranslationType?7
 eric6.Project.ProjectBrowserSortFilterProxyModel.ProjectBrowserSortFilterProxyModel.filterAcceptsRow?4(source_row, source_parent)
 eric6.Project.ProjectBrowserSortFilterProxyModel.ProjectBrowserSortFilterProxyModel.preferencesChanged?4()
 eric6.Project.ProjectBrowserSortFilterProxyModel.ProjectBrowserSortFilterProxyModel?1(filterType, parent=None)
+eric6.Project.ProjectFormsBrowser.ProjectFormsBrowser.PyuicIndentDefault?7
 eric6.Project.ProjectFormsBrowser.ProjectFormsBrowser._contextMenuRequested?5(coord)
 eric6.Project.ProjectFormsBrowser.ProjectFormsBrowser._createPopupMenus?5()
 eric6.Project.ProjectFormsBrowser.ProjectFormsBrowser._initHookMethods?5()

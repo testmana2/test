@@ -1393,37 +1393,37 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="118"/>
+        <location filename="../Utilities/BackgroundService.py" line="119"/>
         <source>{0} not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>Restart background client?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="190"/>
+        <location filename="../Utilities/BackgroundService.py" line="191"/>
         <source>An error in Erics background client stopped the service.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="357"/>
+        <location filename="../Utilities/BackgroundService.py" line="358"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>Background client disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32717,32 +32717,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="293"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="299"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="294"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="300"/>
         <source>Remove</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="295"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Properties</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="307"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="313"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="304"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="310"/>
         <source>Add Project...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="208"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="214"/>
         <source>Not categorized</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35165,27 +35165,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1168"/>
+        <location filename="../Preferences/__init__.py" line="1170"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1196"/>
+        <location filename="../Preferences/__init__.py" line="1198"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1196"/>
+        <location filename="../Preferences/__init__.py" line="1198"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1298"/>
+        <location filename="../Preferences/__init__.py" line="1300"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1298"/>
+        <location filename="../Preferences/__init__.py" line="1300"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36908,287 +36908,287 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="942"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="949"/>
         <source>Forms</source>
         <translation>Formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="77"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="79"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč formulářů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny formuláře aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="96"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="98"/>
         <source>Dialog</source>
         <translation>Dialog</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="97"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="99"/>
         <source>Widget</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="101"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="103"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>Dialog s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="103"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="105"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>Dialog s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="98"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="100"/>
         <source>Main Window</source>
         <translation>Hlavní okno aplikace</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="99"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="101"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>Dialog s boxem s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="100"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="102"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>Dialog s boxem s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="102"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="104"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>Dialog s tlačítky (dole uprostřed)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="152"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="154"/>
         <source>Compile form</source>
         <translation>Kompilovat formulář</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="330"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="332"/>
         <source>Compile all forms</source>
         <translation>Kompilovat všechny formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="241"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="243"/>
         <source>Open in Qt-Designer</source>
         <translation>Otevřít v Qt-Designeru</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="243"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="245"/>
         <source>Open in Editor</source>
         <translation>Otevřít v editoru</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="147"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="149"/>
         <source>Preview form</source>
         <translation>Náhled formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="246"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="248"/>
         <source>Preview translations</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="178"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="180"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="291"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="293"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="294"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="296"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="303"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="305"/>
         <source>New form...</source>
         <translation>Nový formulář...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="336"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="338"/>
         <source>Add forms...</source>
         <translation>Přidat formuláře...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="338"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="340"/>
         <source>Add forms directory...</source>
         <translation>Přidat adresář s formuláři...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="341"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="343"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="343"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="345"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="250"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="252"/>
         <source>Compile forms</source>
         <translation>Kompilovat formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="597"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="599"/>
         <source>New Form</source>
         <translation>Nový formulář</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="552"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="554"/>
         <source>Select a form type:</source>
         <translation>Vybrat typ formuláře:</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="585"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="587"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="624"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="626"/>
         <source>Delete forms</source>
         <translation>Smazat formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="624"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="626"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Opravdu chcete odebrat tyto formuláře z projektu?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="729"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="731"/>
         <source>Form Compilation</source>
         <translation>Kompilace formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="701"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="703"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Kompilace souboru s formulářem byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="729"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="731"/>
         <source>The compilation of the form file failed.</source>
         <translation>Kompilace souboru s formulářem selhala.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="900"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
         <source>Compiling forms...</source>
         <translation>Kompilovat formuláře...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="900"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
         <source>Determining changed forms...</source>
         <translation>Určení změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="967"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="974"/>
         <source>Compiling changed forms...</source>
         <translation>Kompilování změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="163"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="165"/>
         <source>Generate Dialog Code...</source>
         <translation>Generovat kód Dialog...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="260"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="262"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="566"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="568"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt User-Interface soubory (*.ui);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="346"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="348"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="312"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="314"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="597"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="599"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s formulářem &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="716"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="718"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace formuláře se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="105"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="107"/>
         <source>QWizard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="106"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="108"/>
         <source>QWizardPage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="107"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="109"/>
         <source>QDockWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="108"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="110"/>
         <source>QFrame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="109"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="111"/>
         <source>QGroupBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="110"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="112"/>
         <source>QScrollArea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="111"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="113"/>
         <source>QMdiArea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="112"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="114"/>
         <source>QTabWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="113"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="115"/>
         <source>QToolBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="114"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="116"/>
         <source>QStackedWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
         <source>%v/%m Forms</source>
         <translation type="unfinished"></translation>
     </message>
@@ -42806,7 +42806,7 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
         <translation>&lt;b&gt;Konfigurovat Qt&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="66"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Výběr adresáře s Qt4 překlady</translation>
     </message>
@@ -42873,6 +42873,26 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
         <source>Enter the postfix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="140"/>
+        <source>pyuic / pyside-uic Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="146"/>
+        <source>Indent Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="153"/>
+        <source>Select the indent width (default: 4)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="185"/>
+        <source>Generate imports relative to &apos;.&apos;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -57938,7 +57958,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="../Utilities/__init__.py" line="1245"/>
+        <location filename="../Utilities/__init__.py" line="1326"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Můžete použít %-kódy a rezervovaná místa ve stringu. Podporované kódy jsou:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;%C&lt;/td&gt;    &lt;td&gt;sloupec kurzoru v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%D&lt;/td&gt;    &lt;td&gt;adresář v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%F&lt;/td&gt;    &lt;td&gt;jméno souboru v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%H&lt;/td&gt;    &lt;td&gt;home adresář aktuálního uživatele&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%L&lt;/td&gt;    &lt;td&gt;řádek s kurzorem v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%P&lt;/td&gt;    &lt;td&gt;cesta aktuálního projektu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%S&lt;/td&gt;    &lt;td&gt;vybraný text v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%U&lt;/td&gt;    &lt;td&gt;uživatelské jméno aktuálního uživatele&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%%&lt;/td&gt;    &lt;td&gt;znak procenta&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
