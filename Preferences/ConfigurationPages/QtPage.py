@@ -43,6 +43,9 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         self.qt4PrefixEdit.setText(Preferences.getQt("QtToolsPrefix4"))
         self.qt4PostfixEdit.setText(Preferences.getQt("QtToolsPostfix4"))
         self.__updateQt4Sample()
+        self.pyuicIndentSpinBox.setValue(Preferences.getQt("PyuicIndent"))
+        self.pyuicImportsCheckBox.setChecked(
+            Preferences.getQt("PyuicFromImports"))
         
     def save(self):
         """
@@ -51,6 +54,9 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         Preferences.setQt("Qt4TranslationsDir", self.qt4TransEdit.text())
         Preferences.setQt("QtToolsPrefix4", self.qt4PrefixEdit.text())
         Preferences.setQt("QtToolsPostfix4", self.qt4PostfixEdit.text())
+        Preferences.setQt("PyuicIndent", self.pyuicIndentSpinBox.value())
+        Preferences.setQt("PyuicFromImports",
+                          self.pyuicImportsCheckBox.isChecked())
         
     @pyqtSlot()
     def on_qt4TransButton_clicked(self):
