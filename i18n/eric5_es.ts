@@ -35257,27 +35257,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1161"/>
+        <location filename="../Preferences/__init__.py" line="1163"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1189"/>
+        <location filename="../Preferences/__init__.py" line="1191"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1189"/>
+        <location filename="../Preferences/__init__.py" line="1191"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1291"/>
+        <location filename="../Preferences/__init__.py" line="1293"/>
         <source>Select Python{0} Interpreter</source>
         <translation>Seleccionar intérprete de Python{0}</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1291"/>
+        <location filename="../Preferences/__init__.py" line="1293"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python{0} a utilizar:</translation>
     </message>
@@ -36994,287 +36994,287 @@ Seleccione Actualizar.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="942"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="949"/>
         <source>Forms</source>
         <translation>Formularios</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="77"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="79"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Navegador de Formularios del Proyecto&lt;/b&gt;&lt;p&gt;Permite visualizar facilmente todos los formularios que contiene el proyecto actual. A través del menú de contexto se pueden ejecutar varias acciones.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="96"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="98"/>
         <source>Dialog</source>
         <translation>Diálogo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="97"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="99"/>
         <source>Widget</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="101"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="103"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>Diálogo con botones (abajo)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="103"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="105"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>Diálogo con botones (Derecha)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="98"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="100"/>
         <source>Main Window</source>
         <translation>Ventana principal</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="99"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="101"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>Diálogo con caja de botones (abajo)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="100"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="102"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>Diálogo con caja de botones (Derecha)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="102"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="104"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>Diálogo con botones (Abajo-Centro)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="152"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="154"/>
         <source>Compile form</source>
         <translation>Compilar formulario</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="330"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="332"/>
         <source>Compile all forms</source>
         <translation>Compilar todos los formularios</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="163"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="165"/>
         <source>Generate Dialog Code...</source>
         <translation>Generar código de Diálogo...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="241"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="243"/>
         <source>Open in Qt-Designer</source>
         <translation>Abrir en Qt-Designer</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="243"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="245"/>
         <source>Open in Editor</source>
         <translation>Abrir en Editor</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="147"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="149"/>
         <source>Preview form</source>
         <translation>Previsualizar form</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="246"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="248"/>
         <source>Preview translations</source>
         <translation>Previsualizar traducciones</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="260"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="262"/>
         <source>Open</source>
         <translation>Abrir</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="178"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="180"/>
         <source>Rename file</source>
         <translation>Renombrar archivo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="291"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="293"/>
         <source>Remove from project</source>
         <translation>Quitar del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="294"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="296"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="303"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="305"/>
         <source>New form...</source>
         <translation>Formulario nuevo...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="336"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="338"/>
         <source>Add forms...</source>
         <translation>Agregar formularios...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="338"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="340"/>
         <source>Add forms directory...</source>
         <translation>Agregar directorio de formularios...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="341"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="343"/>
         <source>Expand all directories</source>
         <translation>Expandir todos los directorios</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="343"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="345"/>
         <source>Collapse all directories</source>
         <translation>Contraer todos los directorios</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="250"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="252"/>
         <source>Compile forms</source>
         <translation>Compilar formularios</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="597"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="599"/>
         <source>New Form</source>
         <translation>Formulario nuevo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="552"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="554"/>
         <source>Select a form type:</source>
         <translation>Seleccione un tipo de formulario:</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="566"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="568"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Archivos de Interfaz de Usuario (*.ui);;Todos los Archivos(*)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="585"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="587"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>¿El archivo ya existe! ¿Sobreescribirlo?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="624"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="626"/>
         <source>Delete forms</source>
         <translation>Borrar formularios</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="624"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="626"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>¿Realmente quiere borrar estos formularios del proyecto?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="729"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="731"/>
         <source>Form Compilation</source>
         <translation>Compilación del Formulario</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="701"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="703"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Se ha compilado satisfactoriamente el archivo de formulario.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="729"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="731"/>
         <source>The compilation of the form file failed.</source>
         <translation>La compilación del archivo de formulario ha fallado.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
         <source>Process Generation Error</source>
         <translation>Error de Generación de Proceso</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="900"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
         <source>Compiling forms...</source>
         <translation>Compilando formularios...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="900"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
         <source>Determining changed forms...</source>
         <translation>Determinando que formularios han cambiado...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="967"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="974"/>
         <source>Compiling changed forms...</source>
         <translation>Compilando formularios que han cambiado...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="346"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="348"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="312"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="314"/>
         <source>Copy Path to Clipboard</source>
         <translation>Copiar Ruta al Portapapeles</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="597"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="599"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El nuevo archivo de formulario &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado.&lt;br&gt;Problema: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="716"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="718"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La compilación del archivo de formulario ha fallado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>No se ha podido ejecutar {0}.&lt;br&gt;Verifique que está en la ruta de búsqueda (search path).</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="105"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="107"/>
         <source>QWizard</source>
         <translation>QWizard</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="106"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="108"/>
         <source>QWizardPage</source>
         <translation>QWizardPage</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="107"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="109"/>
         <source>QDockWidget</source>
         <translation>QDockWidget</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="108"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="110"/>
         <source>QFrame</source>
         <translation>QFrame</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="109"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="111"/>
         <source>QGroupBox</source>
         <translation>QGroupBox</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="110"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="112"/>
         <source>QScrollArea</source>
         <translation>QScrollArea</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="111"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="113"/>
         <source>QMdiArea</source>
         <translation>QMdiArea</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="112"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="114"/>
         <source>QTabWidget</source>
         <translation>QTabWidget</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="113"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="115"/>
         <source>QToolBox</source>
         <translation>QToolBox</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="114"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="116"/>
         <source>QStackedWidget</source>
         <translation>QStackedWidget</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
         <source>%v/%m Forms</source>
         <translation>%v/%m Formularios</translation>
     </message>
@@ -42931,7 +42931,7 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <translation>designer</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="66"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Seleccionar el directorio de Traducciones Qt4</translation>
     </message>
@@ -42984,6 +42984,26 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation>Introducir el postfijo para nombre de las herramientas Qt</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="140"/>
+        <source>pyuic / pyside-uic Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="146"/>
+        <source>Indent Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="153"/>
+        <source>Select the indent width (default: 4)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="185"/>
+        <source>Generate imports relative to &apos;.&apos;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

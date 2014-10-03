@@ -7,6 +7,9 @@ Version 5.5.0:
 - Multi Project
   -- changed multi project file format to contain relative paths to
      the contained project files
+- Project Forms Browser
+  -- added functionality to modify some form code creation options (see
+     Qt configuration page)
 - Web Browser
   -- added DuckDuckGo to the list of default search engines
 

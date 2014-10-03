@@ -1393,37 +1393,37 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="118"/>
+        <location filename="../Utilities/BackgroundService.py" line="119"/>
         <source>{0} not configured.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>Restart background client?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="190"/>
+        <location filename="../Utilities/BackgroundService.py" line="191"/>
         <source>An error in Erics background client stopped the service.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="357"/>
+        <location filename="../Utilities/BackgroundService.py" line="358"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>Background client disconnected.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="363"/>
+        <location filename="../Utilities/BackgroundService.py" line="364"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="165"/>
+        <location filename="../Utilities/BackgroundService.py" line="166"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15609,7 +15609,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2055"/>
         <source>bytes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bajty</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2058"/>
@@ -24478,7 +24478,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="23"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Výchozí</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRepoConfigDataDialog.ui" line="93"/>
@@ -32722,32 +32722,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>MultiProjectBrowser</name>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="293"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="299"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="294"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="300"/>
         <source>Remove</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="295"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="301"/>
         <source>Properties</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="307"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="313"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="304"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="310"/>
         <source>Add Project...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/MultiProjectBrowser.py" line="208"/>
+        <location filename="../MultiProject/MultiProjectBrowser.py" line="214"/>
         <source>Not categorized</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35170,27 +35170,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1161"/>
+        <location filename="../Preferences/__init__.py" line="1163"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1189"/>
+        <location filename="../Preferences/__init__.py" line="1191"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1189"/>
+        <location filename="../Preferences/__init__.py" line="1191"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1291"/>
+        <location filename="../Preferences/__init__.py" line="1293"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1291"/>
+        <location filename="../Preferences/__init__.py" line="1293"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -36908,287 +36908,287 @@ Vyberte Obnovit.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="942"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="949"/>
         <source>Forms</source>
         <translation>Formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="77"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="79"/>
         <source>&lt;b&gt;Project Forms Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all forms contained in the current project. Several actions can be executed via the context menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prohlížeč formulářů projektu&lt;/b&gt;&lt;p&gt;Umožňuje jednoduše vidět všechny formuláře aktuálního projektu. Několik akcí lze provést i přes kontextové menu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="96"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="98"/>
         <source>Dialog</source>
         <translation>Dialog</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="97"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="99"/>
         <source>Widget</source>
         <translation>Widget</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="101"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="103"/>
         <source>Dialog with Buttons (Bottom)</source>
         <translation>Dialog s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="103"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="105"/>
         <source>Dialog with Buttons (Right)</source>
         <translation>Dialog s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="98"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="100"/>
         <source>Main Window</source>
         <translation>Hlavní okno aplikace</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="99"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="101"/>
         <source>Dialog with Buttonbox (Bottom)</source>
         <translation>Dialog s boxem s tlačítky (dole)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="100"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="102"/>
         <source>Dialog with Buttonbox (Right)</source>
         <translation>Dialog s boxem s tlačítky (vpravo)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="102"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="104"/>
         <source>Dialog with Buttons (Bottom-Center)</source>
         <translation>Dialog s tlačítky (dole uprostřed)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="152"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="154"/>
         <source>Compile form</source>
         <translation>Kompilovat formulář</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="330"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="332"/>
         <source>Compile all forms</source>
         <translation>Kompilovat všechny formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="241"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="243"/>
         <source>Open in Qt-Designer</source>
         <translation>Otevřít v Qt-Designeru</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="243"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="245"/>
         <source>Open in Editor</source>
         <translation>Otevřít v editoru</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="147"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="149"/>
         <source>Preview form</source>
         <translation>Náhled formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="246"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="248"/>
         <source>Preview translations</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="178"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="180"/>
         <source>Rename file</source>
         <translation>Přejmenovat soubor</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="291"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="293"/>
         <source>Remove from project</source>
         <translation>Odebrat z projektu</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="294"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="296"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="303"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="305"/>
         <source>New form...</source>
         <translation>Nový formulář...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="336"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="338"/>
         <source>Add forms...</source>
         <translation>Přidat formuláře...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="338"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="340"/>
         <source>Add forms directory...</source>
         <translation>Přidat adresář s formuláři...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="341"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="343"/>
         <source>Expand all directories</source>
         <translation>Rozložit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="343"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="345"/>
         <source>Collapse all directories</source>
         <translation>Složit všechny adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="250"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="252"/>
         <source>Compile forms</source>
         <translation>Kompilovat formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="597"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="599"/>
         <source>New Form</source>
         <translation>Nový formulář</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="552"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="554"/>
         <source>Select a form type:</source>
         <translation>Vybrat typ formuláře:</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="585"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="587"/>
         <source>The file already exists! Overwrite it?</source>
         <translation>Soubor již existuje! Přepsat jej?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="624"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="626"/>
         <source>Delete forms</source>
         <translation>Smazat formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="624"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="626"/>
         <source>Do you really want to delete these forms from the project?</source>
         <translation>Opravdu chcete odebrat tyto formuláře z projektu?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="729"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="731"/>
         <source>Form Compilation</source>
         <translation>Kompilace formuláře</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="701"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="703"/>
         <source>The compilation of the form file was successful.</source>
         <translation>Kompilace souboru s formulářem byla úspěšná.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="729"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="731"/>
         <source>The compilation of the form file failed.</source>
         <translation>Kompilace souboru s formulářem selhala.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="900"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
         <source>Compiling forms...</source>
         <translation>Kompilovat formuláře...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="900"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
         <source>Abort</source>
         <translation>Přerušit</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
         <source>Determining changed forms...</source>
         <translation>Určení změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="967"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="974"/>
         <source>Compiling changed forms...</source>
         <translation>Kompilování změněných formulářů...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="163"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="165"/>
         <source>Generate Dialog Code...</source>
         <translation>Generovat kód Dialog...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="260"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="262"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="566"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="568"/>
         <source>Qt User-Interface Files (*.ui);;All Files (*)</source>
         <translation>Qt User-Interface soubory (*.ui);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="346"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="348"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="312"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="314"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="597"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="599"/>
         <source>&lt;p&gt;The new form file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;br&gt;Problem: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nový soubor s formulářem &lt;b&gt;{0}&lt;/b&gt; se nepodařilo vytvořit..&lt;br&gt;Problém: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="716"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="718"/>
         <source>&lt;p&gt;The compilation of the form file failed.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Kompilace formuláře se nepodařila.&lt;/p&gt;&lt;p&gt;Důvod: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="808"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Nelze spustit {0}.&lt;br&gt;Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="105"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="107"/>
         <source>QWizard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="106"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="108"/>
         <source>QWizardPage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="107"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="109"/>
         <source>QDockWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="108"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="110"/>
         <source>QFrame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="109"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="111"/>
         <source>QGroupBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="110"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="112"/>
         <source>QScrollArea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="111"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="113"/>
         <source>QMdiArea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="112"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="114"/>
         <source>QTabWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="113"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="115"/>
         <source>QToolBox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="114"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="116"/>
         <source>QStackedWidget</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="938"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
         <source>%v/%m Forms</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40765,7 +40765,8 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="393"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nějaký znak: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení tečky (.) ve vašem regexp.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
@@ -40773,19 +40774,23 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nějaký znak: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení tečky (.) ve vašem regexp. Tečka porovnává (defaultně) jeden znak, kromě znaků konce řádky.
+Např. &apos;gr.y&apos; vyhodnotí výrazy &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, atd. Používejte tečku střídmě. Často bývá třída znaku nebo negace třídy znaku rychlejší a přesnější.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="411"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Opakovat obsah&lt;/b&gt;
+&lt;p&gt;Vybrat podmínku opakování přes konkrétní dialog. Tento dialog pomůže specifikovat povolený rozsah pro opakování.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="159"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nezachycované závorky (?:)&lt;/b&gt;
+&lt;p&gt;Výběr pro vložení závorek, ve kterých jejich obsah nevytváří skupinu (group).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="163"/>
@@ -40793,13 +40798,15 @@ character class is faster and more precise.&lt;/p&gt;</source>
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
 means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nezachycované závorky (?:)&lt;/b&gt;
+&lt;p&gt;Výběr pro vložení závorek, ve kterých obsah nevytváří skupinu. Může být použit i s regexp kvantifikátorem (např. &apos;?&apos; nebo &apos;+&apos;) pro celou skupinu uvnitř závorek. Např. regexp &apos;Set(?:Value)?&apos; nalezne &apos;Set&apos; nebo &apos;SetValue&apos;. Výraz &apos;?:&apos; za levou závorkou znamená, že obsah v závorkách (nazývaný zpětná reference) nebude uložen pro další použití.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="419"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Skupina ()&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek, které mají zachytit nějaký obsah.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
@@ -40809,13 +40816,17 @@ characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &a
 the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Skupina: ()&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek, které mají zachytit nějaký obsah. Může být použit i s regexp kvantifikátorem (např. &apos;?&apos; nebo &apos;+&apos;) pro celou skupinu uvnitř závorek. Např. regexp &apos;Set(Value)?&apos; nalezne &apos;Set&apos; nebo &apos;SetValue&apos;. Opačně oproti závorkám, které obsah nezachycují, je obsah uvnitř závorek uložen pro další použití (např. &apos;Value&apos; ve druhém příkladu dole).
+Jednička v následujícím pžíkladu umožňuje použít výraz nalezený v závorkách.&lt;/p&gt;
+&lt;p&gt;Příklad: &apos;([a-c])x\1x\1&apos; vyhledá &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="432"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Alternativy: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení symbol alternativy &apos;|&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
@@ -40824,64 +40835,75 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Alternativy: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení symbol alternativy &apos;|&apos;. Alternace se používá pro vyhledávání více možností vhledaném výrazu. Např. &apos;kočka|pes|myš|ryba&apos; nalezne slova &apos;kočka&apos;, &apos;pes&apos;, &apos;myš&apos; a &apos;ryba&apos;. Je nutné si uvědomit, že předchozí příklad nalezne tyto výrazy i uvnitř jiných slov. Pokud chcete získat pouze slova &apos;kočka&apos;, &apos;pes&apos;, ... musíte výraz zapsat takto: &apos;\b(kočka|pes|myš|ryba)\b&apos;. Pozor na české znaky! Kódování vzorku musí souhlasit s prohledávaným textem. V případě kódování UTF pak musí být vše převedeno na unicode:&lt;br&gt;
+# -*- coding: UTF-8 -*-&lt;br&gt;import re&lt;br&gt;print &apos;\n&apos;.join(re.findall(ur&apos;\b(pes|kočka|myš|ryba)\b&apos;, u&apos;pes, kočka, myš, ryba&apos;, re.U))&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="204"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Začátek řádky: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku začátku řádku (^).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="208"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Začátek řádky: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku začátku řádku (^). Používá se na vyhledání výrazů na začátku řádků. Např: &apos;^[A-Z]&apos; nalezne řádky začínající velkými znaky. Pozor! Diakritika do toho nepatří. V takovém případě zadejte např: &apos;[A-ZŽŠČŘĎŤŇ]&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Konec řádky: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku konce řádku ($).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="221"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Konec řádku: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku konce řádku ($). Používá se pro vyhledání výrazů na konci řádků.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="229"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku okraje slova (\b).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku okraje slova (\b). Využívá se k nalezení celých slov. Například  &apos;\bmyš\b&apos; nalezne pouze slovo &apos;myš&apos; ale slovo &apos;zamyšlený&apos; již nalezeno není.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="242"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Ne okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku \B, který je negací znaku \b a vyhledává výrazy, které nejsou okraji slova.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Ne okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku \B znamenající ne okraj slova. Je to přesný opak znaku \b. Znak \B nalezne kažodu pozici kde \b není. Výraz \B nalezne účinně každou pozici mezi dvěma znaky slov stejně jako mezi dvěma znaky znamenající ne-slovo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Pozitivní vyhlížení: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek pro pozitivní vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
@@ -40889,13 +40911,16 @@ does not. Effectively, \B matches at any position between two word characters as
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Pozitivní vyhlížení: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek pro pozitivní vyhlížení. Pozitivní vyhlížení se používá pro vyhledání znaků, které vyhovují následujícímu výrazu.
+Zápis &apos;q(?=u)&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že za ním následuje znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;q(?=[abc])&apos;, který vyhledá znak &apos;q&apos; pokud za ním následují znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="269"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Negativní vyhlížení: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro zadání závorek negativního vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="273"/>
@@ -40903,7 +40928,9 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
 trivial regexp which may be replaced by a more complex expression; &apos;q(?![abc])&apos; will match a &apos;q&apos; if it is followed by anything else than &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Negativní vyhlížení: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro zadání závorek negativního vyhlížení. Negativní vyhlížení se používá pro vyhledání znaků, které nevyhovují následujícímu výrazu.
+Zápis &apos;q(?!u)&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že za ním nenásleduje znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;q(?![abc])&apos;, který vyhledá znak &apos;q&apos; jen pokud za ním nenásledují znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="327"/>
@@ -42024,7 +42051,8 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="76"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nějaký znak: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení tečky (.) ve vašem regexp.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
@@ -42032,19 +42060,23 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 &lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nějaký znak: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení tečky (.) ve vašem regexp. Tečka porovnává (defaultně) jeden znak, kromě znaků konce řádky.
+Např. &apos;gr.y&apos; vyhodnotí výrazy &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, atd. Používejte tečku střídmě. Často bývá třída znaku nebo negace třídy znaku rychlejší a přesnější.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="94"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Opakovat obsah&lt;/b&gt;
+&lt;p&gt;Vybrat podmínku opakování přes konkrétní dialog. Tento dialog pomůže specifikovat povolený rozsah pro opakování.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="102"/>
         <source>&lt;b&gt;Non capturing parentheses: (?:)&lt;/b&gt;
 &lt;p&gt;Select to insert some non capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nezachycované závorky (?:)&lt;/b&gt;
+&lt;p&gt;Výběr pro vložení závorek, ve kterých jejich obsah nevytváří skupinu (group).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="106"/>
@@ -42052,7 +42084,8 @@ character class is faster and more precise.&lt;/p&gt;</source>
 &lt;p&gt;Select to insert some non capturing brackets. It can be used to apply a regexp quantifier (eg. &apos;?&apos; or &apos;+&apos;) to the entire
 group of characters inside the brakets. E.g. the regex &apos;Set(?:Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. The &apos;?:&apos; inside the brakets
 means that the content of the match (called the backreference) is not stored for further use.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Nezachycované závorky (?:)&lt;/b&gt;
+&lt;p&gt;Výběr pro vložení závorek, ve kterých obsah nevytváří skupinu. Může být použit i s regexp kvantifikátorem (např. &apos;?&apos; nebo &apos;+&apos;) pro celou skupinu uvnitř závorek. Např. regexp &apos;Set(?:Value)?&apos; nalezne &apos;Set&apos; nebo &apos;SetValue&apos;. Výraz &apos;?:&apos; za levou závorkou znamená, že obsah v závorkách (nazývaný zpětná reference) nebude uložen pro další použití.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="116"/>
@@ -42072,7 +42105,8 @@ means that the content of the match (called the backreference) is not stored for
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="130"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Skupina ()&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek, které mají zachytit nějaký obsah.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
@@ -42082,7 +42116,10 @@ characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &a
 the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Skupina: ()&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek, které mají zachytit nějaký obsah. Může být použit i s regexp kvantifikátorem (např. &apos;?&apos; nebo &apos;+&apos;) pro celou skupinu uvnitř závorek. Např. regexp &apos;Set(Value)?&apos; nalezne &apos;Set&apos; nebo &apos;SetValue&apos;. Opačně oproti závorkám, které obsah nezachycují, je obsah uvnitř závorek uložen pro další použití (např. &apos;Value&apos; ve druhém příkladu dole).
+Jednička v následujícím pžíkladu umožňuje použít výraz nalezený v závorkách.&lt;/p&gt;
+&lt;p&gt;Příklad: &apos;([a-c])x\1x\1&apos; vyhledá &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="146"/>
@@ -42123,7 +42160,8 @@ Příklad: (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x nalezne &apos;axaxax&apos;,&a
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="175"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Alternativy: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení symbol alternativy &apos;|&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
@@ -42132,64 +42170,75 @@ Příklad: (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x nalezne &apos;axaxax&apos;,&a
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Alternativy: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení symbol alternativy &apos;|&apos;. Alternace se používá pro vyhledávání více možností vhledaném výrazu. Např. &apos;kočka|pes|myš|ryba&apos; nalezne slova &apos;kočka&apos;, &apos;pes&apos;, &apos;myš&apos; a &apos;ryba&apos;. Je nutné si uvědomit, že předchozí příklad nalezne tyto výrazy i uvnitř jiných slov. Pokud chcete získat pouze slova &apos;kočka&apos;, &apos;pes&apos;, ... musíte výraz zapsat takto: &apos;\b(kočka|pes|myš|ryba)\b&apos;. Pozor na české znaky! Kódování vzorku musí souhlasit s prohledávaným textem. V případě kódování UTF pak musí být vše převedeno na unicode:&lt;br&gt;
+# -*- coding: UTF-8 -*-&lt;br&gt;import re&lt;br&gt;print &apos;\n&apos;.join(re.findall(ur&apos;\b(pes|kočka|myš|ryba)\b&apos;, u&apos;pes, kočka, myš, ryba&apos;, re.U))&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="190"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Začátek řádky: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku začátku řádku (^).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="194"/>
         <source>&lt;b&gt;Begin of line: &apos;^&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the start line character (^). It is used to find some expressions at the begining of lines.
 E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Začátek řádky: &apos;^&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku začátku řádku (^). Používá se na vyhledání výrazů na začátku řádků. Např: &apos;^[A-Z]&apos; nalezne řádky začínající velkými znaky. Pozor! Diakritika do toho nepatří. V takovém případě zadejte např: &apos;[A-ZŽŠČŘĎŤŇ]&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="203"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Konec řádky: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku konce řádku ($).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="207"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($). It is used to find some expressions at the end of lines.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Konec řádku: &apos;$&apos;&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku konce řádku ($). Používá se pro vyhledání výrazů na konci řádků.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="215"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b).&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku okraje slova (\b).&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku okraje slova (\b). Využívá se k nalezení celých slov. Například  &apos;\bmyš\b&apos; nalezne pouze slovo &apos;myš&apos; ale slovo &apos;zamyšlený&apos; již nalezeno není.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Ne okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku \B, který je negací znaku \b a vyhledává výrazy, které nejsou okraji slova.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Ne okraj slova&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení znaku \B znamenající ne okraj slova. Je to přesný opak znaku \b. Znak \B nalezne kažodu pozici kde \b není. Výraz \B nalezne účinně každou pozici mezi dvěma znaky slov stejně jako mezi dvěma znaky znamenající ne-slovo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Pozitivní vyhlížení: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek pro pozitivní vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
@@ -42197,13 +42246,16 @@ does not. Effectively, \B matches at any position between two word characters as
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
 Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Pozitivní vyhlížení: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro vložení závorek pro pozitivní vyhlížení. Pozitivní vyhlížení se používá pro vyhledání znaků, které vyhovují následujícímu výrazu.
+Zápis &apos;q(?=u)&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že za ním následuje znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;q(?=[abc])&apos;, který vyhledá znak &apos;q&apos; pokud za ním následují znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Negative lookahead: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookhead brackets.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Negativní vyhlížení: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro zadání závorek negativního vyhlížení.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="259"/>
@@ -42211,7 +42263,9 @@ regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will
 &lt;p&gt;Select to insert the negative lookhead brackets. Basically, negative lookhead is used to match a character only if it is not
 followed by a another one. Writting &apos;q(?!u)&apos; means that you want to match &apos;q&apos; only if it is not followed by &apos;u&apos;. In this statement, &apos;u&apos; is a
 trivial regexp which may be replaced by a more complex expression; &apos;q(?![abc])&apos; will match a &apos;q&apos; if it is followed by anything else than &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Negativní vyhlížení: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Vybrat pro zadání závorek negativního vyhlížení. Negativní vyhlížení se používá pro vyhledání znaků, které nevyhovují následujícímu výrazu.
+Zápis &apos;q(?!u)&apos; znamená, že chcete vyhledat znak &apos;q&apos; pouze v případě, že za ním nenásleduje znak &apos;u&apos;. To je jednoduchý příklad, ale je možné zadat mnohem složitější výraz, například &apos;q(?![abc])&apos;, který vyhledá znak &apos;q&apos; jen pokud za ním nenásledují znaky &apos;a&apos;, &apos;b&apos; nebo &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="269"/>
@@ -42752,7 +42806,7 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
         <translation>&lt;b&gt;Konfigurovat Qt&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.py" line="66"/>
         <source>Select Qt4 Translations Directory</source>
         <translation>Výběr adresáře s Qt4 překlady</translation>
     </message>
@@ -42819,6 +42873,26 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
         <source>Enter the postfix for the Qt tools name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="140"/>
+        <source>pyuic / pyside-uic Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="146"/>
+        <source>Indent Width:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="153"/>
+        <source>Select the indent width (default: 4)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="185"/>
+        <source>Generate imports relative to &apos;.&apos;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -57884,7 +57958,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="../Utilities/__init__.py" line="1245"/>
+        <location filename="../Utilities/__init__.py" line="1326"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Můžete použít %-kódy a rezervovaná místa ve stringu. Podporované kódy jsou:&lt;table&gt;&lt;tr&gt;    &lt;td&gt;%C&lt;/td&gt;    &lt;td&gt;sloupec kurzoru v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%D&lt;/td&gt;    &lt;td&gt;adresář v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%F&lt;/td&gt;    &lt;td&gt;jméno souboru v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%H&lt;/td&gt;    &lt;td&gt;home adresář aktuálního uživatele&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%L&lt;/td&gt;    &lt;td&gt;řádek s kurzorem v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%P&lt;/td&gt;    &lt;td&gt;cesta aktuálního projektu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%S&lt;/td&gt;    &lt;td&gt;vybraný text v aktuálním editoru&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%U&lt;/td&gt;    &lt;td&gt;uživatelské jméno aktuálního uživatele&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;    &lt;td&gt;%%&lt;/td&gt;    &lt;td&gt;znak procenta&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
@@ -62343,7 +62417,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../Helpviewer/OfflineStorage/WebDatabasesModel.py" line="210"/>
         <source>bytes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">bajty</translation>
     </message>
     <message>
         <location filename="../Helpviewer/OfflineStorage/WebDatabasesModel.py" line="213"/>
