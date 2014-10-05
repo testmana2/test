@@ -2114,7 +2114,7 @@ class Hg(VersionControl):
     
     def hgConflicts(self, name):
         """
-        Public method used to show a list of files containing.
+        Public method used to show a list of files containing conflicts.
         
         @param name file/directory name to be resolved (string)
         """
@@ -2229,7 +2229,7 @@ class Hg(VersionControl):
     
     def hgShowBranch(self, name):
         """
-        Public method used to show the current branch the working directory.
+        Public method used to show the current branch of the working directory.
         
         @param name file/directory name (string)
         """
