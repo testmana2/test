@@ -58,3 +58,9 @@ except ImportError:
             return module
 
     sys.meta_path.insert(0, PyQt4Importer())
+    
+    if sys.version_info[0] == 2:
+        import sip
+        sip.setapi('QString', 2)
+        sip.setapi('QVariant', 2)
+        sip.setapi('QTextStream', 2)
