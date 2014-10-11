@@ -57,7 +57,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
             self.__toggleInitialFilterAndResult)
         self.__toggleInitialFilterAndResult(1)
         
-        self.pyqtComboBox.addItems(["PyQt5", "PyQt5"])
+        self.pyqtComboBox.addItems(["PyQt4", "PyQt5"])
         if self.__pyqtVariant == 5:
             self.pyqtComboBox.setCurrentIndex(1)
         else:

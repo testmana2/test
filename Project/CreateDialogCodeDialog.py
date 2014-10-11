@@ -384,7 +384,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         tmplName = os.path.join(
                             getConfig('ericCodeTemplatesDir'),
                             "impl_pyside.py.tmpl")
-                    elif self.project.getProjectType() == "PyQt5":
+                    elif self.project.getProjectType() in [
+                            "PyQt5", "E6Plugin"]:
                         tmplName = os.path.join(
                             getConfig('ericCodeTemplatesDir'),
                             "impl_pyqt5.py.tmpl")
