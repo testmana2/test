@@ -10,7 +10,7 @@
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.ui" line="56"/>
         <source>&amp;About</source>
-        <translation>&amp;О</translation>
+        <translation>&amp;О программе</translation>
     </message>
     <message>
         <location filename="../Plugins/AboutPlugin/AboutDialog.ui" line="73"/>
@@ -969,7 +969,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../Project/AddLanguageDialog.ui" line="256"/>
         <source>no</source>
-        <translation></translation>
+        <translation>no</translation>
     </message>
     <message>
         <location filename="../Project/AddLanguageDialog.ui" line="261"/>
@@ -3037,32 +3037,32 @@ entry will open an editor window and position the cursor at the respective line 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="297"/>
         <source>Select to allow hanging closing brackets</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить непарные закрывающие скобки</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
         <source>Allow hanging closing brackets</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить непарные закрывающие скобки</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="324"/>
         <source>Select to repeat each message type</source>
-        <translation type="unfinished">Повторять однотипные сообщения</translation>
+        <translation>Повторять однотипные сообщения</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="327"/>
         <source>Repeat messages</source>
-        <translation type="unfinished">Повторять сообщения</translation>
+        <translation>Повторять сообщения</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="337"/>
         <source>Select to fix some issues</source>
-        <translation type="unfinished">Исправлять автоматически</translation>
+        <translation>Исправлять автоматически</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="340"/>
         <source>Fix issues automatically</source>
-        <translation type="unfinished">Исправлять автоматически</translation>
+        <translation>Исправлять автоматически</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="396"/>
@@ -3070,92 +3070,94 @@ entry will open an editor window and position the cursor at the respective line 
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
 the respective line and position.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Список результатов&lt;/p&gt;
+&lt;p&gt;Список отображает результаты проверки стиля. Двойной щелчок
+по элементу откроет редактор с курсором на соответствующей строке и колонке.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="412"/>
         <source>File/Line</source>
-        <translation type="unfinished">Файл/Строка</translation>
+        <translation>Файл/Строка</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="417"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="422"/>
         <source>Message</source>
-        <translation type="unfinished">Сообщение</translation>
+        <translation>Сообщение</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="63"/>
         <source>PEP-257</source>
-        <translation type="unfinished"></translation>
+        <translation>PEP-257</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="64"/>
         <source>Eric</source>
-        <translation type="unfinished"></translation>
+        <translation>Eric</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="66"/>
         <source>Statistics...</source>
-        <translation type="unfinished">Статистика...</translation>
+        <translation>Статистика...</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="68"/>
         <source>Press to show some statistics for the last run</source>
-        <translation type="unfinished">Показать результаты последней проверки</translation>
+        <translation>Показать результаты последней проверки</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="71"/>
         <source>Show</source>
-        <translation type="unfinished">Показать</translation>
+        <translation>Показать</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="73"/>
         <source>Press to show all files containing an issue</source>
-        <translation type="unfinished">Показать все файлы, содержащие синтаксические ошибки</translation>
+        <translation>Показать все файлы содержащие ошибки</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="410"/>
         <source>Error: {0}</source>
-        <translation type="unfinished">Ошибка: {0}</translation>
+        <translation>Ошибка: {0}</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="172"/>
         <source>Fix: {0}</source>
-        <translation type="unfinished">Исправлено: {0}</translation>
+        <translation>Исправлено: {0}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="505"/>
         <source>No issues found.</source>
-        <translation type="unfinished">Синтаксисические ошибки не найдены.</translation>
+        <translation>Проблем со стилем не найдено.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="443"/>
         <source>Shows the progress of the code style check</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображает прогресс проверки стиля</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="452"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished">%v/%m Файлы</translation>
+        <translation>%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="350"/>
         <source>Select to show ignored issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать проигнорированные проблемы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="353"/>
         <source>Show ignored</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать проигнорированные</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="463"/>
         <source>{0} (ignored)</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} (проигнорировано)</translation>
     </message>
 </context>
 <context>
@@ -3163,22 +3165,22 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="282"/>
         <source>Check Code Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить Стиль Кода</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="282"/>
         <source>&amp;Code Style...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Стиль Кода...</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="190"/>
         <source>Check code style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить Стиль Кода.</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="286"/>
         <source>&lt;b&gt;Check Code Style...&lt;/b&gt;&lt;p&gt;This checks Python files for compliance to the code style conventions given in various PEPs.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Проверить Стиль Кода...&lt;/b&gt;&lt;p&gt;Проверяет файлы Python на соответсвие стилю рекомендованному в различных PEP.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -3186,27 +3188,27 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="14"/>
         <source>Code Style Message Codes</source>
-        <translation type="unfinished"></translation>
+        <translation>Коды сообщений о стиле</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="23"/>
         <source>Select the message codes from the list:</source>
-        <translation type="unfinished">Выберите коды сообщений из списка:</translation>
+        <translation>Выберите коды сообщений из списка:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="30"/>
         <source>Select the message codes from this table</source>
-        <translation type="unfinished">Выберите коды сообщений из данной таблицы</translation>
+        <translation>Выберите коды сообщений из данной таблицы</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="55"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCodeSelectionDialog.ui" line="60"/>
         <source>Message</source>
-        <translation type="unfinished">Сообщение</translation>
+        <translation>Сообщение</translation>
     </message>
 </context>
 <context>
@@ -3214,235 +3216,235 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="375"/>
         <source>Triple single quotes converted to triple double quotes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Тройные одинарные кавычки заменены тройными двойными.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="378"/>
         <source>Introductory quotes corrected to be {0}&quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Кавычки во введении исправлены на {0}&quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="381"/>
         <source>Single line docstring put on one line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Одиночная строка описания размещена на одной строке.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="384"/>
         <source>Period added to summary line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлена точка в строке резюме.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="411"/>
         <source>Blank line before function/method docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалена пустая строка перед документацией функции или метода.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="390"/>
         <source>Blank line inserted before class docstring.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлена пустая строка перед документацией класса.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="393"/>
         <source>Blank line inserted after class docstring.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлена пустая строка после документации класса.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="396"/>
         <source>Blank line inserted after docstring summary.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлена пустая строка после строки резюме.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="399"/>
         <source>Blank line inserted after last paragraph of docstring.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлена пустая строка после последнего абзаца.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="402"/>
         <source>Leading quotes put on separate line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Открывающие кавычки размещены на отдельной строке.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="405"/>
         <source>Trailing quotes put on separate line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрывающие кавычки размещены на отдельной строке.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="408"/>
         <source>Blank line before class docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалена пустая строка перед документацией класса.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="414"/>
         <source>Blank line after class docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалена пустая строка после документации класса.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="417"/>
         <source>Blank line after function/method docstring removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалена пустая строка после документации функции или метода.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="420"/>
         <source>Blank line after last paragraph removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалена пустая строка после последнего абзаца.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="423"/>
         <source>Tab converted to 4 spaces.</source>
-        <translation type="unfinished">Символы табуляции заменены на 4 пробела.</translation>
+        <translation>Символы табуляции заменены на 4 пробела.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="426"/>
         <source>Indentation adjusted to be a multiple of four.</source>
-        <translation type="unfinished"></translation>
+        <translation>Величина отступа сделана кратной четырём.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="429"/>
         <source>Indentation of continuation line corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлена величина отступа строки продолжения.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="432"/>
         <source>Indentation of closing bracket corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлена величина отступа закрывающей скобки.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="435"/>
         <source>Missing indentation of continuation line corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлен отступ к строке продолжения.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="438"/>
         <source>Closing bracket aligned to opening bracket.</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрывающая скобка выровнена с открывающей.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="441"/>
         <source>Indentation level changed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменена величина отступа.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="444"/>
         <source>Indentation level of hanging indentation changed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменена величина неправильного отступа.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="447"/>
         <source>Visual indentation corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправленена величина визуального отступа.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="462"/>
         <source>Extraneous whitespace removed.</source>
-        <translation type="unfinished">Удалены излишние пробелы.</translation>
+        <translation>Удалены излишние пробелы.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="459"/>
         <source>Missing whitespace added.</source>
-        <translation type="unfinished">Добавлены недостающие пробелы.</translation>
+        <translation>Добавлены недостающие пробелы.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="465"/>
         <source>Whitespace around comment sign corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлены пробелы вокруг символа сомментария.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="468"/>
         <source>One blank line inserted.</source>
-        <translation type="unfinished">Добавлена одна пустая строка.</translation>
+        <translation>Добавлена одна пустая строка.</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="472"/>
         <source>%n blank line(s) inserted.</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Добавлена %n пустая строка.</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Добавлено %n пустых строки.</numerusform>
+            <numerusform>Добавлено %n пустых строк.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="475"/>
         <source>%n superfluous lines removed</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Удалена %n излишняя пустая строчка</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Удалены %n излишние пустые строчки</numerusform>
+            <numerusform>Удалено %n излишних пустые строчек</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="479"/>
         <source>Superfluous blank lines removed.</source>
-        <translation type="unfinished">Удалены излишние пустые строчки.</translation>
+        <translation>Удалены излишние пустые строчки.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="482"/>
         <source>Superfluous blank lines after function decorator removed.</source>
-        <translation type="unfinished">Удалены пустые строчки после декоратора функции.</translation>
+        <translation>Удалены пустые строчки после декоратора функции.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="485"/>
         <source>Imports were put on separate lines.</source>
-        <translation type="unfinished"></translation>
+        <translation>Операторы импорта помещены на отдельных строчках.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="488"/>
         <source>Long lines have been shortened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Укорочены длинные строчки.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="491"/>
         <source>Redundant backslash in brackets removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалены излишние символы &apos;\&apos;.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="497"/>
         <source>Compound statement corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлены составные выражения.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="500"/>
         <source>Comparison to None/True/False corrected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Исправлено сравнение с None/True/False.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="503"/>
         <source>&apos;{0}&apos; argument added.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлен &apos;{0}&apos; аргумент.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="506"/>
         <source>&apos;{0}&apos; argument removed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалён &apos;{0}&apos; аргумент.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="509"/>
         <source>Whitespace stripped from end of line.</source>
-        <translation type="unfinished">Завершающие пробелы обрезаны.</translation>
+        <translation>Завершающие пробелы обрезаны.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="512"/>
         <source>newline added to end of file.</source>
-        <translation type="unfinished">Перевод строки добавлен в конец файла.</translation>
+        <translation>Перевод строки добавлен в конец файла.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="515"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
-        <translation type="unfinished">Удалены пустые строчки в конце файла.</translation>
+        <translation>Удалены пустые строчки в конце файла.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="518"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
-        <translation type="unfinished">&apos;&lt;&gt;&apos; заменен на &apos;!=&apos;.</translation>
+        <translation>&apos;&lt;&gt;&apos; заменен на &apos;!=&apos;.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="522"/>
         <source>Could not save the file! Skipping it. Reason: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно сохранить файл! Игнорирую. Причина: {0}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="576"/>
         <source> no message defined for code &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет сообщения для кода &apos;{0}&apos;</translation>
     </message>
 </context>
 <context>
@@ -3450,27 +3452,27 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="14"/>
         <source>Code Style Checker Statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Результаты проверки стиля</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="30"/>
         <source>Count</source>
-        <translation type="unfinished">Количество</translation>
+        <translation>Количество</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="35"/>
         <source>Code</source>
-        <translation type="unfinished">Код</translation>
+        <translation>Код</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.ui" line="40"/>
         <source>Message</source>
-        <translation type="unfinished">Сообщение</translation>
+        <translation>Сообщение</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="61"/>
         <source>%n issue(s) found</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Найдена %n проблемма</numerusform>
             <numerusform>Найдено %n проблеммы</numerusform>
             <numerusform>Найдено %n проблемм</numerusform>
@@ -3479,7 +3481,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="65"/>
         <source>%n issue(s) fixed</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n ошибка исправлена</numerusform>
             <numerusform>%n ошибки исправлено</numerusform>
             <numerusform>%n ошибок исправлено</numerusform>
@@ -3488,7 +3490,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="67"/>
         <source>%n file(s) checked</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Проверен %n файл</numerusform>
             <numerusform>Проверено %n файла</numerusform>
             <numerusform>Проверено %n файлов</numerusform>
@@ -3497,7 +3499,7 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="69"/>
         <source>%n file(s) with issues found</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>%n файл содержит ошибки</numerusform>
             <numerusform>%n файла содержат ошибки</numerusform>
             <numerusform>%n файлов содержат ошибки</numerusform>
@@ -3506,10 +3508,10 @@ the respective line and position.&lt;/p&gt;</source>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="63"/>
         <source>%n issue(s) ignored</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Проигнорировано %n ошибок</numerusform>
+            <numerusform>Проигнорировано %n ошибки</numerusform>
+            <numerusform>Проигнорирована %n ошибка</numerusform>
         </translation>
     </message>
 </context>
@@ -3760,57 +3762,57 @@ the respective line and position.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="55"/>
         <source>Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="61"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте имя результирующей переменной</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="292"/>
         <source>Colour Variable</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя переменной содержащей цвет</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="87"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="93"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;self&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;self&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="96"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="106"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;None&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;None&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="109"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="118"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="121"/>
         <source>Expression:</source>
-        <translation type="unfinished">Выражение:</translation>
+        <translation>Выражение:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/ColorDialogWizard/ColorDialogWizardDialog.ui" line="131"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
 </context>
 <context>
@@ -4173,7 +4175,7 @@ to display the configuration page.</source>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="361"/>
         <source>Tray Starter</source>
-        <translation>Запуск Eric5 в системном лотке</translation>
+        <translation>Запуск Eric в системном лотке</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="346"/>
@@ -4203,12 +4205,12 @@ to display the configuration page.</source>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="238"/>
         <source>Code Checkers</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверяльщики кода</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
 </context>
 <context>
@@ -4863,13 +4865,15 @@ Not connected
         <location filename="../Debugger/DebugServer.py" line="1463"/>
         <source>Passive debug connection received
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Получен запрос на соединение для пассивной отладки
+</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugServer.py" line="1477"/>
         <source>Passive debug connection closed
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Соединение для пассивной отладки закрыто
+</translation>
     </message>
 </context>
 <context>
@@ -5539,17 +5543,17 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="301"/>
         <source>Restart</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезапуск</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="307"/>
         <source>&lt;b&gt;Restart&lt;/b&gt;&lt;p&gt;Set the command line arguments and set the current line to be the first executable Python statement of the script that was debugged last. If there are unsaved changes, they may be saved first.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Перезапуск&lt;/b&gt;&lt;p&gt;Задать аргументы командной строки и установить текущую строку первой исполняемой строкой программы для отладки. При необходимости сначала сохранить текст программы.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="323"/>
         <source>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;This stops the script running in the debugger backend.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Остановка&lt;/b&gt;&lt;p&gt;Остановит выполнение программы в отлачике.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6029,7 +6033,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebuggerInterfacePython.py" line="163"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Интерпретатор Python2 не настроен.&lt;/p&gt; {2 ?}</translation>
+        <translation>&lt;p&gt;Интерпретатор Python2 не настроен.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6067,7 +6071,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebuggerInterfacePython3.py" line="160"/>
         <source>&lt;p&gt;No Python3 interpreter configured.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Интерпретатор Python2 не настроен.&lt;/p&gt; {2 ?} {3 ?}</translation>
+        <translation>&lt;p&gt;Интерпретатор Python3 не настроен.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6085,7 +6089,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebuggerInterfaceRuby.py" line="153"/>
         <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Интерпретатор Ruby не настроен.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6293,7 +6297,7 @@ Not connected
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в Eric</translation>
     </message>
 </context>
 <context>
@@ -6406,7 +6410,7 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в Eric</translation>
     </message>
 </context>
 <context>
@@ -6519,7 +6523,7 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в Eric</translation>
     </message>
 </context>
 <context>
@@ -6557,7 +6561,7 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в eric5 {6 ?}</translation>
+        <translation>Следует ли перенаправлять потоки stdin, stdout и stderr отлаживаемой программы в Eric</translation>
     </message>
 </context>
 <context>
@@ -6725,197 +6729,197 @@ Not connected
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="212"/>
         <source>module is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>В модуле отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="214"/>
         <source>public function/method is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>В public функции/методе отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="217"/>
         <source>private function/method may be missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>В public функции/методе возможно отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="220"/>
         <source>public class is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>В public классе отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="222"/>
         <source>private class may be missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>В public классе возможно отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="224"/>
         <source>docstring not surrounded by &quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание не заключено в &quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="226"/>
         <source>docstring containing \ not surrounded by r&quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание содержащее \ не заключено в r&quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="229"/>
         <source>docstring containing unicode character not surrounded by u&quot;&quot;&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Описание содержащее unicode не заключено в u&quot;&quot;&quot;</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="232"/>
         <source>one-liner docstring on multiple lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Короткое однострочное описания размещено на нескольких строчках</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="234"/>
         <source>docstring has wrong indentation</source>
-        <translation type="unfinished"></translation>
+        <translation>у описания неправильный отступ</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="277"/>
         <source>docstring summary does not end with a period</source>
-        <translation type="unfinished"></translation>
+        <translation>резюме в документации не заканчивается точкой</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="240"/>
         <source>docstring summary is not in imperative mood (Does instead of Do)</source>
-        <translation type="unfinished"></translation>
+        <translation>Резюме документации не в повелительном наклонении</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="244"/>
         <source>docstring summary looks like a function&apos;s/method&apos;s signature</source>
-        <translation type="unfinished"></translation>
+        <translation>резюме в документации выглядит как описание функции</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="247"/>
         <source>docstring does not mention the return value type</source>
-        <translation type="unfinished"></translation>
+        <translation>документация не описывает тип результата</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="250"/>
         <source>function/method docstring is separated by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>документация функции разделена пустыми строками</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="253"/>
         <source>class docstring is not preceded by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствует пустая строка перед документацией класса</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="256"/>
         <source>class docstring is not followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствует пустая строка после документации класса</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="311"/>
         <source>docstring summary is not followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствует пустая строка после строки резюме</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="262"/>
         <source>last paragraph of docstring is not followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>отсутствует пустая строка после последнего абзаца</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="266"/>
         <source>private function/method is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>в private функции/методе отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="269"/>
         <source>private class is missing a docstring</source>
-        <translation type="unfinished"></translation>
+        <translation>в private классе отсутствует описание</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="271"/>
         <source>leading quotes of docstring not on separate line</source>
-        <translation type="unfinished"></translation>
+        <translation>открывающие кавычки размещены не на отдельной строке</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="274"/>
         <source>trailing quotes of docstring not on separate line</source>
-        <translation type="unfinished"></translation>
+        <translation>закрывающие кавычки размещены не на отдельной строке</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="281"/>
         <source>docstring does not contain a @return line but function/method returns something</source>
-        <translation type="unfinished"></translation>
+        <translation>в документации функции возвращающей что либо отсутствует строка с @return</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="285"/>
         <source>docstring contains a @return line but function/method doesn&apos;t return anything</source>
-        <translation type="unfinished"></translation>
+        <translation>в документации функции не возвращающей ничего присутствует строка с @return</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="289"/>
         <source>docstring does not contain enough @param/@keyparam lines</source>
-        <translation type="unfinished"></translation>
+        <translation>в документации недостаточно строк с @param/@keyparam</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="292"/>
         <source>docstring contains too many @param/@keyparam lines</source>
-        <translation type="unfinished"></translation>
+        <translation>в документации слишком много строк с @param/@keyparam</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="295"/>
         <source>keyword only arguments must be documented with @keyparam lines</source>
-        <translation type="unfinished"></translation>
+        <translation>ключевые аргументы должны быть описаны с помощью строк @keyparam</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="298"/>
         <source>order of @param/@keyparam lines does not match the function/method signature</source>
-        <translation type="unfinished"></translation>
+        <translation>порядок следования строк @param/@keyparam не соответствует сигнатуре функции</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="301"/>
         <source>class docstring is preceded by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка перед документацией класса</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="303"/>
         <source>class docstring is followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка после документации класса</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="305"/>
         <source>function/method docstring is preceded by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка перед документацией функции или метода</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="308"/>
         <source>function/method docstring is followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка после документации функции или метода</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="314"/>
         <source>last paragraph of docstring is followed by a blank line</source>
-        <translation type="unfinished"></translation>
+        <translation>пустая строка после последнего абзаца</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="317"/>
         <source>docstring does not contain a @exception line but function/method raises an exception</source>
-        <translation type="unfinished"></translation>
+        <translation>в документации функции вызывающей исключительную ситуацию отсутствует строка с @exception</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="321"/>
         <source>docstring contains a @exception line but function/method doesn&apos;t raise an exception</source>
-        <translation type="unfinished"></translation>
+        <translation>в документации функции не вызывающей исключительную ситуацию присутствует строка с @exception</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="326"/>
         <source>{0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>{0}: {1}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="236"/>
         <source>docstring does not contain a summary</source>
-        <translation type="unfinished"></translation>
+        <translation>документация не содержит резюме</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="279"/>
         <source>docstring summary does not start with &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>резюме не начинается с &apos;{0}&apos;</translation>
     </message>
 </context>
 <context>
@@ -7166,10 +7170,10 @@ Do you want to quit anyway?</source>
     <message numerus="yes">
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="31"/>
         <source>%n seconds remaining</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>остаётся %n секунд</numerusform>
+            <numerusform>остаётся %n секунды</numerusform>
+            <numerusform>остаётся %n секунд</numerusform>
         </translation>
     </message>
     <message>
@@ -7195,10 +7199,10 @@ Do you want to quit anyway?</source>
     <message numerus="yes">
         <location filename="../Helpviewer/Download/DownloadUtilities.py" line="25"/>
         <source>%n:{0:02} minutes remaining</source>
-        <translation type="unfinished">
+        <translation>
             <numerusform>Осталось %n:{0:02} минута</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Осталось %n:{0:02} минуты</numerusform>
+            <numerusform>Осталось %n:{0:02} минут</numerusform>
         </translation>
     </message>
 </context>
@@ -7207,47 +7211,47 @@ Do you want to quit anyway?</source>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="107"/>
         <source>Debug Message:</source>
-        <translation type="unfinished"></translation>
+        <translation>Отладочное сообщение:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="110"/>
         <source>Warning:</source>
-        <translation type="unfinished"></translation>
+        <translation>Предупреждение:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="113"/>
         <source>Critical:</source>
-        <translation type="unfinished"></translation>
+        <translation>Критическое:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="116"/>
         <source>Fatal Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Фатальная ошибка:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="150"/>
         <source>Warning</source>
-        <translation type="unfinished">Предупреждение</translation>
+        <translation>Предупреждение</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="153"/>
         <source>Critical</source>
-        <translation type="unfinished">Ошибка</translation>
+        <translation>Критическое</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="156"/>
         <source>Fatal Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Фатальная ошибка</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="147"/>
         <source>Debug Message</source>
-        <translation type="unfinished"></translation>
+        <translation>Отладочное сообщение</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessage.py" line="192"/>
         <source>No message handler installed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Обработчик ошибок не установлен.</translation>
     </message>
 </context>
 <context>
@@ -7255,47 +7259,47 @@ Do you want to quit anyway?</source>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="51"/>
         <source>Error Messages Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Фильтр сообщений об ошибке</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="40"/>
         <source>Enter search term for message</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите образец для поиска</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="77"/>
         <source>Press to add filter to the list</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить новый фильтр</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="80"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Добавить...</translation>
+        <translation>&amp;Добавить...</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="97"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить выбранные элементы</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="100"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished">&amp;Удалить</translation>
+        <translation>&amp;Удалить</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="110"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить все элементы</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>У&amp;далить всё</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="51"/>
         <source>Enter message filter to add to the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите новый фильтр сообщений для добавления в список:</translation>
     </message>
 </context>
 <context>
@@ -7523,7 +7527,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="204"/>
         <source>self</source>
-        <translation></translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="214"/>
@@ -7723,12 +7727,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="150"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="157"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте имя результирующей переменной</translation>
     </message>
 </context>
 <context>
@@ -9232,7 +9236,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="1265"/>
         <source>Pygments Lexer</source>
-        <translation></translation>
+        <translation>Pygments лексер</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="1265"/>
@@ -9362,52 +9366,52 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="7336"/>
         <source>Sort Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Сортировать строки</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="7336"/>
         <source>The selection contains illegal data for a numerical sort.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выборка содержит данные неподходящие для сортировки как числа.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5732"/>
         <source>Warning</source>
-        <translation type="unfinished">Предупреждение</translation>
+        <translation>Предупреждение</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5732"/>
         <source>No warning messages available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет предупреждающего сообщения.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5793"/>
         <source>Style: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль: {0}</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="742"/>
         <source>New Document View</source>
-        <translation type="unfinished"></translation>
+        <translation>Новое окно для документа</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="745"/>
         <source>New Document View (with new split)</source>
-        <translation type="unfinished"></translation>
+        <translation>Новое окно для документа (в новом разделе)</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="828"/>
         <source>Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Инструменты</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="956"/>
         <source>Re-Open With Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть заново с кодировкой</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="6124"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в eric5. Обновить?&lt;/p&gt; {0}?} {6.?}</translation>
+        <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в Eric. Обновить?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10261,12 +10265,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="493"/>
         <source>Extensions of QSS files:</source>
-        <translation type="unfinished"></translation>
+        <translation>Расширения QSS файлов:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="500"/>
         <source>Enter the filename extensions of Qt Stylesheet files that may be previewed (separated by a space)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ввести расширения Qt Stylesheet файлов которые будут промотрены (резделённые пробелом)</translation>
     </message>
 </context>
 <context>
@@ -10384,32 +10388,32 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="222"/>
         <source>Virtual Space</source>
-        <translation type="unfinished"></translation>
+        <translation>Виртуальное пространство</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="228"/>
         <source>Virtual space is the space after the last character of a line. It is not allocated unless some text is entered or copied into it. Usage of virtual space can be configured with these selections.</source>
-        <translation type="unfinished"></translation>
+        <translation>Виртуальное пространство это пространство за концом строки которое не выделяется до тех пор пока оно не потребуется.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="238"/>
         <source>Select to enable a rectangular selection to extend into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить прямоугольному выделению заходить в виртуальное пространство</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="241"/>
         <source>Selection may access virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить выделению заходить в виртуальное пространство</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="248"/>
         <source>Select to allow the cursor to be moved into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить курсору заходить в виртуальное пространство</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorGeneralPage.ui" line="251"/>
         <source>Cursor can move into virtual space</source>
-        <translation type="unfinished"></translation>
+        <translation>Курсор может заходить в виртуальное пространство</translation>
     </message>
 </context>
 <context>
@@ -10695,7 +10699,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="126"/>
         <source>Press to set the current style to its default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Установить стиль по умолчанию</translation>
     </message>
 </context>
 <context>
@@ -11281,42 +11285,42 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="340"/>
         <source>Gettext Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Свойства лексического анализатора Gettext</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="203"/>
         <source>CoffeeScript</source>
-        <translation type="unfinished"></translation>
+        <translation>CoffeeScript</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="753"/>
         <source>Highlight bad indentation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Подсветить неправильный отступ:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>No Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Без предупреждения</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Inconsistent</source>
-        <translation type="unfinished"></translation>
+        <translation>Несоответствующее</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Tabs after Spaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Символ табуляции после пробела</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Spaces</source>
-        <translation type="unfinished"></translation>
+        <translation>Пробелы</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>Tabs</source>
-        <translation type="unfinished">Закладки</translation>
+        <translation>Символы табуляции</translation>
     </message>
 </context>
 <context>
@@ -12296,127 +12300,127 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1203"/>
         <source>Warning: There might be an issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Предупреждение: Возможно есть проблема.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1248"/>
         <source>Error: There is an issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка: Есть проблема.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1264"/>
         <source>Style</source>
-        <translation type="unfinished">Стиль</translation>
+        <translation>Стиль</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1293"/>
         <source>Style: There is a style issue.</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль: Есть проблема со стилем.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="592"/>
         <source>Select, whether the caretline should be highlighted even if the editor doesn&apos;t have the focus</source>
-        <translation type="unfinished"></translation>
+        <translation>Нужно-ли подсвечивать текущую строку если окно редактора не находится в фокусе</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="595"/>
         <source>Caretline always visible</source>
-        <translation type="unfinished"></translation>
+        <translation>Текущая строка всегда видима</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1561"/>
         <source>Marker Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Таблица цвета маркеров</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1567"/>
         <source>Errors:</source>
-        <translation type="unfinished">Ошибки:</translation>
+        <translation>Ошибки:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1580"/>
         <source>Select the colour for error markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки ошибок</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1590"/>
         <source>Warnings:</source>
-        <translation type="unfinished"></translation>
+        <translation>Предупреждения:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1603"/>
         <source>Select the colour for warning markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки предупреждений</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1613"/>
         <source>Bookmarks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Закладки:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1626"/>
         <source>Select the colour for bookmark markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки закладок</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1636"/>
         <source>Breakpoints:</source>
-        <translation type="unfinished"></translation>
+        <translation>Точки останова:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1649"/>
         <source>Select the colour for breakpoint markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки точек останова</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1659"/>
         <source>Tasks:</source>
-        <translation type="unfinished"></translation>
+        <translation>Задачи:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1672"/>
         <source>Select the colour for task markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки задач</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1682"/>
         <source>Changes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменения:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1695"/>
         <source>Select the colour for change markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки изменений</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1705"/>
         <source>Coverage:</source>
-        <translation type="unfinished"></translation>
+        <translation>Покрытие:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1718"/>
         <source>Select the colour for coverage markers</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте цвет для отображения покрытия</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1728"/>
         <source>Current Line:</source>
-        <translation type="unfinished"></translation>
+        <translation>Текущая строка:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1741"/>
         <source>Select the colour for the current line marker</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите цвет для пометки текущей строки</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1751"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Фон:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1764"/>
         <source>Select the background colour for the marker map</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте цвет фона маркеров</translation>
     </message>
 </context>
 <context>
@@ -12474,32 +12478,32 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="20"/>
         <source>&lt;b&gt;Configure Code Checker settings&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Настроить параметры проверки кода&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="115"/>
         <source>PyFlakes</source>
-        <translation type="unfinished">PyFlakes</translation>
+        <translation>PyFlakes</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="121"/>
         <source>Select to include a PyFlakes check after the syntax check</source>
-        <translation type="unfinished"></translation>
+        <translation>Выполнять проверку с помощью PyFlakes после проверки ситаксиса</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="124"/>
         <source>Include PyFlakes Checks after syntax check</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить проверку PyFlakes после проверки ситаксиса</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="131"/>
         <source>Select to suppress star import warnings</source>
-        <translation type="unfinished">Подавлять предупреждения об &apos;import *&apos;</translation>
+        <translation>Подавлять предупреждения об &apos;import *&apos;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSyntaxPage.ui" line="134"/>
         <source>Suppress star import warnings</source>
-        <translation type="unfinished">Подавлять предупреждения об &apos;import *&apos;</translation>
+        <translation>Подавлять предупреждения об &apos;import *&apos;</translation>
     </message>
 </context>
 <context>
@@ -12986,12 +12990,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Close</source>
-        <translation type="unfinished">Закрыть</translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Are you sure to remove this speed dial?</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить элемент?</translation>
     </message>
 </context>
 <context>
@@ -13197,27 +13201,27 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="58"/>
         <source>Eric6 API File Generator</source>
-        <translation type="unfinished">Генератор файлов API {6 ?}</translation>
+        <translation>Генератор файлов API</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="99"/>
         <source>Generate API file (eric6_api)</source>
-        <translation type="unfinished">Создать файл API (eric5_api) {6_?}</translation>
+        <translation>Создать файл API (eric6_api)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="99"/>
         <source>Generate &amp;API file (eric6_api)</source>
-        <translation type="unfinished">Создать файл &amp;API (eric5_api) {6_?}</translation>
+        <translation>Создать файл &amp;API (eric6_api)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="103"/>
         <source>Generate an API file using eric6_api</source>
-        <translation type="unfinished">Создать API с помощью eric5_api {6_?}</translation>
+        <translation>Создать API с помощью eric6_api</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="105"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric6_api.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric5_api.&lt;/p&gt; {6_?}</translation>
+        <translation>&lt;b&gt;Создать файл API &lt;/b&gt;&lt;p&gt;Создать файл API с помощью eric6_api.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -13618,27 +13622,27 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="58"/>
         <source>Eric6 Documentation Generator</source>
-        <translation type="unfinished">Генератор документации Eric5 {6 ?}</translation>
+        <translation>Генератор документации Eric6</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate documentation (eric6_doc)</source>
-        <translation type="unfinished">Создать документацию (eric5_doc) {6_?}</translation>
+        <translation>Создать документацию (eric6_doc)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate &amp;documentation (eric6_doc)</source>
-        <translation type="unfinished">Создать &amp;документацию (eric5_doc) {6_?}</translation>
+        <translation>Создать &amp;документацию (eric6_doc)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="138"/>
         <source>Generate API documentation using eric6_doc</source>
-        <translation type="unfinished">Создать документацию на API с помощью eric5_doc {6_?}</translation>
+        <translation>Создать документацию на API с помощью eric6_doc</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="140"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric6_doc.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric5_doc&lt;/p&gt; {6_?}</translation>
+        <translation>&lt;b&gt;Создать документацию&lt;/b&gt;&lt;p&gt;Создать документацию на API с помощью eric6_doc&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -13686,17 +13690,17 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="43"/>
         <source>Delete</source>
-        <translation type="unfinished">Удалить</translation>
+        <translation>Удалить</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="44"/>
         <source>Close</source>
-        <translation type="unfinished">Закрыть</translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../UI/ErrorLogDialog.py" line="45"/>
         <source>Error Log</source>
-        <translation type="unfinished">Журнал ошибок</translation>
+        <translation>Журнал ошибок</translation>
     </message>
 </context>
 <context>
@@ -14349,82 +14353,82 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="25"/>
         <source>PyQt Variant:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия PyQt:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="173"/>
         <source>Enter the title text</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте текст заголовка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="195"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="201"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;self&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;self&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="204"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="214"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;None&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;None&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="217"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="226"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="229"/>
         <source>Expression:</source>
-        <translation type="unfinished">Выражение:</translation>
+        <translation>Выражение:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="239"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="305"/>
         <source>Initial Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Начальный фильтр</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="312"/>
         <source>Enter the initial filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите начальный фильтр</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
         <source>Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Результаты</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="141"/>
         <source>Name Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя переменной:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="151"/>
         <source>Filter Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Переменная фильтра:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="166"/>
         <source>Title:</source>
-        <translation type="unfinished">Заголовок:</translation>
+        <translation>Заголовок:</translation>
     </message>
 </context>
 <context>
@@ -14801,30 +14805,30 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../UI/FindFileDialog.ui" line="338"/>
         <source>%v/%m Files</source>
-        <translation type="unfinished">%v/%m Файлы</translation>
+        <translation>%v/%m Файлы</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.py" line="497"/>
         <source>{0} / {1}</source>
         <comment>occurrences / files</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0} / {1}</translation>
     </message>
     <message numerus="yes">
         <location filename="../UI/FindFileDialog.py" line="498"/>
         <source>%n occurrence(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>найден %n</numerusform>
+            <numerusform>найдено %n</numerusform>
+            <numerusform>найдено %n</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../UI/FindFileDialog.py" line="498"/>
         <source>%n file(s)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n файл</numerusform>
+            <numerusform>%n файла</numerusform>
+            <numerusform>%n файлов</numerusform>
         </translation>
     </message>
 </context>
@@ -15030,67 +15034,67 @@ Reason: {0}</source>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="23"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="30"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте имя результирующей переменной</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="153"/>
         <source>Font Variable:</source>
-        <translation type="unfinished"></translation>
+        <translation>Переменная шрифта:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="37"/>
         <source>Title:</source>
-        <translation type="unfinished">Заголовок:</translation>
+        <translation>Заголовок:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="44"/>
         <source>Enter the title for the message box</source>
-        <translation type="unfinished">Задайте заголовок QMessageBox</translation>
+        <translation>Задайте заголовок QMessageBox</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="51"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="57"/>
         <source>Select &quot;self&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;self&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;self&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="60"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation>self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="70"/>
         <source>Select &quot;None&quot; as parent</source>
-        <translation type="unfinished">Выбрать &quot;None&quot; в качестве предка</translation>
+        <translation>Выбрать &quot;None&quot; в качестве предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="73"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="82"/>
         <source>Select to enter a parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="85"/>
         <source>Expression:</source>
-        <translation type="unfinished">Выражение:</translation>
+        <translation>Выражение:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FontDialogWizard/FontDialogWizardDialog.ui" line="95"/>
         <source>Enter the parent expression</source>
-        <translation type="unfinished">Ввести выражение для предка</translation>
+        <translation>Ввести выражение для предка</translation>
     </message>
 </context>
 <context>
@@ -15848,7 +15852,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1167"/>
         <source>Play</source>
-        <translation>Играть</translation>
+        <translation>Воспроизведение</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1171"/>
@@ -15883,17 +15887,17 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2444"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2444"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt5. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="2412"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt; {5.?}</translation>
+        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt5. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16029,7 +16033,7 @@ Reason: {0}</source>
     <message>
         <location filename="../Helpviewer/HelpDocsInstaller.py" line="214"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered. &lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно зарегистрировать файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16197,27 +16201,27 @@ Reason: {0}</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="202"/>
         <source>PyQt5 Documentation</source>
-        <translation type="unfinished">Документация PyQt4 {5 ?}</translation>
+        <translation>Документация PyQt5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="225"/>
         <source>Press to select the PyQt5 documentation directory via a dialog</source>
-        <translation type="unfinished">Выберите путь к каталогу документации PyQt4 с помощью диалога {5 ?}</translation>
+        <translation>Выберите путь к каталогу документации PyQt5 с помощью диалога</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="208"/>
         <source>Enter the PyQt5 documentation directory</source>
-        <translation type="unfinished">Задайте каталог документации PyQt4 {5 ?}</translation>
+        <translation>Задайте каталог документации PyQt5</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="215"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</source>
-        <translation type="unfinished">&lt;b&gt;Примечание&lt;/b&gt;: Оставьте поле пустым, чтобы использовать переменную окружения PYQT4DOCDIR. {5D?}</translation>
+        <translation>&lt;b&gt;Примечание&lt;/b&gt;: Оставьте поле пустым, чтобы использовать переменную окружения PYQT5DOCDIR.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="187"/>
         <source>Select PyQt5 documentation entry</source>
-        <translation type="unfinished">Выберите каталог документации PyQt4 {5 ?}</translation>
+        <translation>Выберите каталог документации PyQt5</translation>
     </message>
 </context>
 <context>
@@ -16485,17 +16489,17 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="591"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt5. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Печать невозможна из-за ошибки в PyQt4. Пожалуйста установите обновление.&lt;/p&gt; {5.?}</translation>
+        <translation>&lt;p&gt;Печать невозможна из-за ошибки в PyQt5. Пожалуйста установите обновление.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17121,12 +17125,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
         <source>Press to edit the list of hosts exempted from caching</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать список хостов исключённых из кэширования</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
         <source>Edit Exempted Hosts ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать исключённые хосты ...</translation>
     </message>
 </context>
 <context>
@@ -18719,7 +18723,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1420"/>
         <source>&amp;Network Monitor...</source>
-        <translation type="unfinished"></translation>
+        <translation>Мо&amp;нитор сети...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1427"/>
@@ -18924,7 +18928,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="2875"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="684"/>
@@ -19142,12 +19146,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2860"/>
         <source>Rollback last transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Откатить последнюю транзакцию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2853"/>
         <source>Are you sure you want to rollback the last transaction?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы действительно хотите откатить последнюю транзакцию?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="573"/>
@@ -19157,72 +19161,72 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3509"/>
         <source>Mercurial Command Server</source>
-        <translation type="unfinished"></translation>
+        <translation>Mercurial сервер</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3349"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно перезапустить Mercurial сервер.&lt;br&gt;Причина: {0}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3509"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно запустить Mercurial сервер.&lt;br&gt;Причина: {0}.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2928"/>
         <source>Import Patch</source>
-        <translation type="unfinished">Импортировать патч</translation>
+        <translation>Импортировать патч</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2975"/>
         <source>Export Patches</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспортировать патчи</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3022"/>
         <source>Change Phase</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменить фазу</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3075"/>
         <source>Copy Changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Копировать изменения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3101"/>
         <source>Copy Changesets (Continue)</source>
-        <translation type="unfinished"></translation>
+        <translation>Копировать изменения (продолжить)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3218"/>
         <source>Add Sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить Sub-репозиторий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3251"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно прочитать файл .hgsub sub-репозитория.&lt;b&gt;&lt;/b&gt;Причина {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3199"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Файл .hgsub sub-репозитория уже содержит запись.&lt;b&gt;{0}&lt;/b&gt;Отмена...&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3270"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно записать файл .hgsub sub-репозитория.&lt;b&gt;&lt;/b&gt;Причина {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3270"/>
         <source>Remove Sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить Sub-репозитории</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3239"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Отсутствует файл .hgsub sub-репозитория. Отмена...&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="508"/>
@@ -19252,42 +19256,42 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3136"/>
         <source>Create Unversioned Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
         <source>Mercurial Side-by-Side Difference</source>
-        <translation type="unfinished"></translation>
+        <translation>Mercurial просмотрщик изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1898"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно прочитать файл: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Невозможно прочитать файл: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1831"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="966"/>
         <source>Tagging in the Mercurial repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Создание тегов в репозитории</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
         <source>Created new branch &lt;{0}&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Создана ветвь &lt;{0}&gt;.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1143"/>
         <source>Current branch tip</source>
-        <translation type="unfinished"></translation>
+        <translation>Вершина текущей ветви</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2207"/>
         <source>Cancelling uncommitted merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Отмена незавершённого слияния</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3617"/>
@@ -19352,32 +19356,32 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1113"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторить слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1104"/>
         <source>Do you really want to re-merge these files or directories?</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторить слияние?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1113"/>
         <source>Do you really want to re-merge the project?</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторить слияние проекта?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1118"/>
         <source>Re-Merging</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторное слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2178"/>
         <source>Marking as &apos;unresolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Помечаем как &apos;unresolved&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2180"/>
         <source>Marking as &apos;resolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Помечаем как &apos;resolved&apos;</translation>
     </message>
 </context>
 <context>
@@ -19395,22 +19399,22 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="35"/>
         <source>Enter the path of the sub-repository relative to the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте путь sub-репозитория относительно проекта</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="42"/>
         <source>Select the path of the sub-repository with a directory selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите путь sub-репозитория с помощью диалога</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="51"/>
         <source>&amp;Type:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Тип:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="63"/>
         <source>Select the type of the sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите тип sub-репозитория</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="85"/>
@@ -19420,12 +19424,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="95"/>
         <source>Enter the URL of the sub-repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте URL sub-репозитория</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="103"/>
         <source>The sub-repository path must be inside the project.</source>
-        <translation type="unfinished"></translation>
+        <translation>Sub-репозиторий должен быть внутри проекта.</translation>
     </message>
 </context>
 <context>
@@ -19521,127 +19525,127 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="14"/>
         <source>Mercurial Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Mercurial архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="23"/>
         <source>Archive:</source>
-        <translation type="unfinished"></translation>
+        <translation>Архив:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="30"/>
         <source>Enter the file name of the archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте имя архива</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="85"/>
         <source>Press to select the archive file name via a file selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите файл архива с помощью диалога</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
         <source>Type:</source>
-        <translation type="unfinished">Тип:</translation>
+        <translation>Тип:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="44"/>
         <source>Select the archive type</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите тип архива</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="51"/>
         <source>Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Префикс:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="58"/>
         <source>Enter the directory prefix for the files in the archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте префикс для файлов в архиве</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="65"/>
         <source>Select to recurse into subrepositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить подкаталоги</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
         <source>Include Subrepositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить Sub-репозитории</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="46"/>
         <source>Detect Automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Определять автоматически</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="48"/>
         <source>Directory of Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Каталог файлов</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="50"/>
         <source>Uncompressed TAR-Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Некомпрессированный TAR-архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="52"/>
         <source>Bzip2 compressed TAR-Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Bzip2 компрессированный TAR-архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="54"/>
         <source>Gzip compressed TAR-Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Gzip компрессированный TAR-архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
         <source>Uncompressed ZIP-Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Некомпрессированный ZIP-архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="58"/>
         <source>Compressed ZIP-Archive</source>
-        <translation type="unfinished"></translation>
+        <translation>Компрессированный ZIP-архив</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
         <source>Bzip2 compressed TAR-Archive (*.tar.bz2)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bzip2 компрессированный TAR-архив (*.tar.bz2)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="63"/>
         <source>Gzip compressed TAR-Archive (*.tar.gz)</source>
-        <translation type="unfinished"></translation>
+        <translation>Gzip компрессированный TAR-архив (*.tar.gz)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="64"/>
         <source>Uncompressed TAR-Archive (*.tar)</source>
-        <translation type="unfinished"></translation>
+        <translation>Некомпрессированный TAR-архив (*.tar)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="67"/>
         <source>Compressed ZIP-Archive (*.zip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Компрессированный ZIP-архив (*.zip)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="68"/>
         <source>Uncompressed ZIP-Archive (*.uzip)</source>
-        <translation type="unfinished"></translation>
+        <translation>Некомпрессированный ZIP-архив (*.uzip)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="76"/>
         <source>All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Все файлы (*)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="117"/>
         <source>Select Archive Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите каталог для архивов</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="123"/>
         <source>Select Archive File</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите файл архива</translation>
     </message>
 </context>
 <context>
@@ -19774,22 +19778,22 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished">Закладка:</translation>
+        <translation>Закладка:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished">Введите имя закладки</translation>
+        <translation>Введите имя закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBackoutDialog.ui" line="178"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
 </context>
 <context>
@@ -19797,7 +19801,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.py" line="48"/>
         <source>Define Bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Определить закладку</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="25"/>
@@ -19807,12 +19811,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="32"/>
         <source>Enter the bookmark name</source>
-        <translation type="unfinished">Введите имя закладки</translation>
+        <translation>Введите имя закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="45"/>
         <source>Select a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать закладку</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="54"/>
@@ -19882,17 +19886,17 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="177"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="180"/>
         <source>Bookmark:</source>
-        <translation type="unfinished">Закладка:</translation>
+        <translation>Закладка:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="196"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished">Введите имя закладки</translation>
+        <translation>Введите имя закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="206"/>
@@ -19907,7 +19911,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarkDialog.ui" line="209"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
 </context>
 <context>
@@ -19944,7 +19948,7 @@ You have %n tab(s) open.</source>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="29"/>
         <source>&lt;b&gt;Bookmarks List&lt;/b&gt;
 &lt;p&gt;This shows a list of the bookmarks.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Список закладок&lt;/b&gt;&lt;p&gt;Отображает список закладок.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="46"/>
@@ -19979,7 +19983,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="112"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="119"/>
@@ -20004,12 +20008,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="54"/>
         <source>Mercurial Incoming Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Входящие закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="56"/>
         <source>Mercurial Outgoing Bookmarks</source>
-        <translation type="unfinished"></translation>
+        <translation>Изходящие закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="143"/>
@@ -20019,12 +20023,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="143"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="178"/>
         <source>no bookmarks found</source>
-        <translation type="unfinished"></translation>
+        <translation>Закладки не найдены</translation>
     </message>
 </context>
 <context>
@@ -20225,7 +20229,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="101"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="104"/>
@@ -20489,7 +20493,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="106"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Повторить слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="113"/>
@@ -20831,7 +20835,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="78"/>
         <source>Export Patches</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Экспортировать патчи</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="25"/>
@@ -21010,7 +21014,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
@@ -21191,7 +21195,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="14"/>
         <source>Copy Changesets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Копировать изменения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="23"/>
@@ -21674,12 +21678,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="164"/>
         <source>Change Phase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Изменить фазу</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1560"/>
         <source>Copy Changesets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Копировать изменения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
@@ -22039,7 +22043,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="134"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
@@ -22102,7 +22106,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="113"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="116"/>
@@ -22442,7 +22446,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="667"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Повторить слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="680"/>
@@ -23240,7 +23244,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="885"/>
         <source>Rollback last transaction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Откатить последнюю транзакцию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="889"/>
@@ -23360,7 +23364,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="941"/>
         <source>Export Patches</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Экспортировать патчи</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="941"/>
@@ -23380,7 +23384,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="955"/>
         <source>Change Phase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Изменить фазу</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="955"/>
@@ -23400,7 +23404,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1747"/>
         <source>Copy Changesets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Копировать изменения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="974"/>
@@ -23435,7 +23439,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1762"/>
         <source>Copy Changesets (Continue)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Копировать изменения (продолжить)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="462"/>
@@ -23770,7 +23774,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="431"/>
         <source>Re-Merge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Повторить слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="436"/>
@@ -24478,7 +24482,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="341"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="344"/>
@@ -24543,7 +24547,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="373"/>
         <source>Current branch tip</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вершина текущей ветви</translation>
     </message>
 </context>
 <context>
@@ -24551,7 +24555,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="14"/>
         <source>Remove Sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Удалить Sub-репозитории</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRemoveSubrepositoriesDialog.ui" line="36"/>
@@ -24762,7 +24766,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionSelectionDialog.ui" line="149"/>
@@ -24875,7 +24879,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="313"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgRevisionsSelectionDialog.ui" line="316"/>
@@ -27606,17 +27610,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1218"/>
         <source>eric6 Icon Editor</source>
-        <translation type="unfinished">Eric5 редактор иконок {6 ?}</translation>
+        <translation type="unfinished">Eric редактор иконок</translation>
     </message>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1308"/>
         <source>About eric6 Icon Editor</source>
-        <translation type="unfinished">О редакторе иконок Eric5 {6 ?}</translation>
+        <translation type="unfinished">О редакторе иконок Eric</translation>
     </message>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="1308"/>
         <source>The eric6 Icon Editor is a simple editor component to perform icon drawing tasks.</source>
-        <translation type="unfinished">Редакторе иконок Eric5 это простой редактор для рисования иконок. {6 ?}</translation>
+        <translation type="unfinished">Редакторе иконок Eric это простой редактор для рисования иконок.</translation>
     </message>
 </context>
 <context>
@@ -27910,12 +27914,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="63"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Результат:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="70"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задайте имя результирующей переменной</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="97"/>
@@ -27930,7 +27934,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="106"/>
         <source>self</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="116"/>
@@ -30237,7 +30241,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="103"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="105"/>
@@ -31305,7 +31309,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="162"/>
         <source>CoffeeScript</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CoffeeScript</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="691"/>
@@ -31962,7 +31966,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="164"/>
         <source>self</source>
-        <translation></translation>
+        <translation type="unfinished">self</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="174"/>
@@ -31997,12 +32001,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="110"/>
         <source>Result:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Результат:</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the result variable name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задайте имя результирующей переменной</translation>
     </message>
 </context>
 <context>
@@ -32619,17 +32623,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="255"/>
         <source>About eric6 Mini Editor</source>
-        <translation type="unfinished">О мини-редакторе eric5 {6 ?}</translation>
+        <translation type="unfinished">О мини-редакторе eric</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="255"/>
         <source>The eric6 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
-        <translation type="unfinished">Мини-редактор eric5 — это компонент, основанный на QScintilla. Его можно использовать для простых задач редактирования, не требующих полномасштабного редактора. {6 ?}</translation>
+        <translation type="unfinished">Мини-редактор eric — это компонент, основанный на QScintilla. Его можно использовать для простых задач редактирования, не требующих полномасштабного редактора.</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2182"/>
         <source>eric6 Mini Editor</source>
-        <translation type="unfinished">Мини-редактор eric5 {6 ?}</translation>
+        <translation type="unfinished">Мини-редактор eric</translation>
     </message>
 </context>
 <context>
@@ -36772,42 +36776,42 @@ Select Update.</source>
     <message>
         <location filename="../Project/Project.py" line="3740"/>
         <source>Create an initial PKGLIST file for an eric6 plugin.</source>
-        <translation type="unfinished">Создать начальный файл PKGLIST для подключаемого модуля eric5. {6 ?}</translation>
+        <translation type="unfinished">Создать начальный файл PKGLIST для подключаемого модуля eric.</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="3742"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric6 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Создать список пакетов&lt;/b&gt;&lt;p&gt;Создаёт начальный список файлов для включения в архив подключаемого модуля eric5. Список создаётся из файла проекта.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Создать список пакетов&lt;/b&gt;&lt;p&gt;Создаёт начальный список файлов для включения в архив подключаемого модуля eric. Список создаётся из файла проекта.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="3756"/>
         <source>Create an eric6 plugin archive file.</source>
-        <translation type="unfinished">Создать архив подключаемого модуля eric5. {6 ?}</translation>
+        <translation type="unfinished">Создать архив подключаемого модуля eric.</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="3758"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Создать архив подключаемого модуля&lt;/b&gt;&lt;p&gt;Создаёт файл арива подключаемого модуля eric5, используя список файлов, данный в файле PKGLIST. Имя архива берётся из имени главного сценария.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Создать архив подключаемого модуля&lt;/b&gt;&lt;p&gt;Создаёт файл арива подключаемого модуля eric, используя список файлов, данный в файле PKGLIST. Имя архива берётся из имени главного сценария.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="3772"/>
         <source>Create an eric6 plugin archive file (snapshot release).</source>
-        <translation type="unfinished">Создать файл архива плагинов eric5 (снимок выпуска). {6 ?}</translation>
+        <translation type="unfinished">Создать файл архива плагинов eric (снимок выпуска).</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="3774"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Создать файл архива плагинов (снимок выпуска)&lt;/b&gt;&lt;p&gt;Создаёт файл архива плагинов eric5, используя список файлов, указанный в файле PKGLIST. Имя архива строится из имени главного сценария. Версия главного сценария меняется, чтобы соответствовать версии выпуска снимка.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Создать файл архива плагинов (снимок выпуска)&lt;/b&gt;&lt;p&gt;Создаёт файл архива плагинов eric, используя список файлов, указанный в файле PKGLIST. Имя архива строится из имени главного сценария. Версия главного сценария меняется, чтобы соответствовать версии выпуска снимка.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="4712"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Невозможно создать подключаемый модуль eric5 &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt; {6 ?} {0}?} {1}?}</translation>
+        <translation type="unfinished">&lt;p&gt;Невозможно создать подключаемый модуль eric &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt; {0}?} {1}?}</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="4761"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Подключаемый модуль &lt;b&gt;{0}&lt;/b&gt; был успешно создан.&lt;/p&gt; {6 ?} {0}?}</translation>
+        <translation type="unfinished">&lt;p&gt;Подключаемый модуль &lt;b&gt;{0}&lt;/b&gt; был успешно создан.&lt;/p&gt; {0}?}</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="256"/>
@@ -40403,7 +40407,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="214"/>
         <source>Latin Extended Additional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">11111</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="214"/>
@@ -40633,7 +40637,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="214"/>
         <source>Specials</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Специфический</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="214"/>
@@ -44283,7 +44287,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="../QScintilla/SearchWidget.ui" line="113"/>
         <source>Selection only</source>
-        <translation></translation>
+        <translation type="unfinished">Выделенный</translation>
     </message>
     <message>
         <location filename="../Helpviewer/SearchWidget.py" line="98"/>
@@ -45160,7 +45164,7 @@ Not connected</source>
     <message>
         <location filename="../Preferences/ShortcutsDialog.py" line="190"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric</translation>
     </message>
 </context>
 <context>
@@ -46096,7 +46100,7 @@ Not connected</source>
     <message>
         <location filename="../SqlBrowser/SqlBrowserWidget.ui" line="14"/>
         <source>eric6 SQL Browser</source>
-        <translation type="unfinished">Просмотрщик SQL {6 ?}</translation>
+        <translation type="unfinished">Просмотрщик SQL</translation>
     </message>
 </context>
 <context>
@@ -50971,7 +50975,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../UI/SymbolsWidget.py" line="46"/>
         <source>Hex</source>
-        <translation></translation>
+        <translation type="unfinished">Шестнадцатиричный</translation>
     </message>
     <message>
         <location filename="../UI/SymbolsWidget.py" line="47"/>
@@ -51441,7 +51445,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../UI/SymbolsWidget.py" line="214"/>
         <source>Specials</source>
-        <translation></translation>
+        <translation type="unfinished">Специфический</translation>
     </message>
     <message>
         <location filename="../UI/SymbolsWidget.py" line="130"/>
@@ -52132,7 +52136,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.ui" line="78"/>
         <source>Bookmarks:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закладки:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.ui" line="101"/>
@@ -55059,22 +55063,22 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Tools/TrayStarter.py" line="77"/>
         <source>Eric6 tray starter</source>
-        <translation type="unfinished">Запуск Eric5 в системном лотке {6 ?}</translation>
+        <translation type="unfinished">Запуск Eric в системном лотке</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="99"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="139"/>
         <source>eric6 IDE</source>
-        <translation type="unfinished">eric5 IDE {6 ?}</translation>
+        <translation type="unfinished">eric IDE</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="142"/>
         <source>eric6 Mini Editor</source>
-        <translation type="unfinished">Мини-редактор eric5 {6 ?}</translation>
+        <translation type="unfinished">Мини-редактор eric</translation>
     </message>
 </context>
 <context>
@@ -58101,22 +58105,22 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../UI/UserInterface.py" line="1594"/>
         <source>&lt;b&gt;Helpviewer&lt;/b&gt;&lt;p&gt;Display the eric6 web browser. This window will show HTML help files and help from Qt help collections. It has the capability to navigate to links, set bookmarks, print the displayed help and some more features. You may use it to browse the internet as well&lt;/p&gt;&lt;p&gt;If called with a word selected, this word is search in the Qt help collection.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Просмотрщик помощи&lt;/b&gt;&lt;p&gt;Открыть eric5 просмотрщик Web. Это окно будет показывать HTML файлы помощи. Оно поддерживает навигацию по ссылкам, закладки, печать и некоторые другие функции. Его можно использовать для просмотра интернета.&lt;/p&gt;&lt;p&gt;Если перед открытием просмотрщика помощи был подсвечен какой-либо текст, то будет произведён поиск этого текста в коллекции помощи Qt.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Просмотрщик помощи&lt;/b&gt;&lt;p&gt;Открыть eric просмотрщик Web. Это окно будет показывать HTML файлы помощи. Оно поддерживает навигацию по ссылкам, закладки, печать и некоторые другие функции. Его можно использовать для просмотра интернета.&lt;/p&gt;&lt;p&gt;Если перед открытием просмотрщика помощи был подсвечен какой-либо текст, то будет произведён поиск этого текста в коллекции помощи Qt.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1628"/>
         <source>&lt;b&gt;Check for Updates...&lt;/b&gt;&lt;p&gt;Checks the internet for updates of eric6.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Проверить наличие обновлений...&lt;/b&gt;&lt;p&gt;Проверить наличие обновлений eric5 в интернет.&lt;/p&gt; {6.?}</translation>
+        <translation type="unfinished">&lt;b&gt;Проверить наличие обновлений...&lt;/b&gt;&lt;p&gt;Проверить наличие обновлений eric в интернет.&lt;/p&gt; {6.?}</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1641"/>
         <source>&lt;b&gt;Show downloadable versions...&lt;/b&gt;&lt;p&gt;Shows the eric6 versions available for download from the internet.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Показать версии, доступные для загрузки...&lt;/b&gt;&lt;p&gt;Показывает версии eric5, которые можно скачать с интернета.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Показать версии, доступные для загрузки...&lt;/b&gt;&lt;p&gt;Показывает версии eric, которые можно скачать с интернета.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1896"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation type="unfinished">WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1896"/>
@@ -58126,7 +58130,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../UI/UserInterface.py" line="1901"/>
         <source>Start the eric6 Web Browser</source>
-        <translation type="unfinished">Запустить WEB просмотрщик встроенный в Eric5 {6 ?}</translation>
+        <translation type="unfinished">Запустить WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1903"/>
@@ -58136,37 +58140,37 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../UI/UserInterface.py" line="1915"/>
         <source>Start the eric6 Icon Editor</source>
-        <translation type="unfinished">Запустить редактор иконок {6 ?}</translation>
+        <translation type="unfinished">Запустить редактор иконок</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1917"/>
         <source>&lt;b&gt;Icon Editor&lt;/b&gt;&lt;p&gt;Starts the eric6 Icon Editor for editing simple icons.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Редактор иконок&lt;/b&gt;&lt;p&gt;Запустить редактор иконок.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2003"/>
         <source>&lt;b&gt;Show external tools&lt;/b&gt;&lt;p&gt;Opens a dialog to show the path and versions of all extenal tools used by eric6.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric5.&lt;/p&gt; {6.?}</translation>
+        <translation type="unfinished">&lt;b&gt;Показать внешние инструменты&lt;/b&gt;&lt;p&gt;Открывает диалог для отображения пути и версий внешних инструментов, используемых eric.&lt;/p&gt; {6.?}</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2348"/>
         <source>&lt;b&gt;Eric API Documentation&lt;/b&gt;&lt;p&gt;Display the Eric API documentation. The location for the documentation is the Documentation/Source subdirectory of the eric6 installation directory.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric5.&lt;/p&gt; {6 ?}</translation>
+        <translation type="unfinished">&lt;b&gt;Документация Eric API&lt;/b&gt;&lt;p&gt;Показать документацию Eric API. Местонахождение документации - каталог Documentation/Source, расположенный в каталоге инсталляции eric.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="4248"/>
         <source>Qt v.3 is not supported by eric6.</source>
-        <translation type="unfinished">Qt3 не поддерживается в eric5. {3 ?} {6.?}</translation>
+        <translation type="unfinished">Qt3 не поддерживается в eric.</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="6032"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric6 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
-        <translation type="unfinished">На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric5 до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать? {0}?} {6 ?} {1}?}</translation>
+        <translation type="unfinished">На сайте &lt;b&gt;{1}&lt;/b&gt; доступно обновление eric до версии &lt;b&gt;{0}&lt;/b&gt;. Скачать? {0}?} {1}?}</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="6045"/>
         <source>Eric6 is up to date</source>
-        <translation type="unfinished">Eric5 не требует обновлений {6 ?}</translation>
+        <translation type="unfinished">Eric не требует обновлений</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="6045"/>
@@ -58176,7 +58180,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../UI/UserInterface.py" line="6116"/>
         <source>eric6 has not been configured yet. The configuration dialog will be started.</source>
-        <translation type="unfinished">eric5 ещё не сконфигурирован. Будет запущен диалог конфигурации. {6 ?}</translation>
+        <translation type="unfinished">eric ещё не сконфигурирован. Будет запущен диалог конфигурации.</translation>
     </message>
 </context>
 <context>
@@ -62310,7 +62314,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3437"/>
         <source>New Document View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Новое окно для документа</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3437"/>
@@ -62330,7 +62334,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3454"/>
         <source>New Document View (with new split)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Новое окно для документа (в новом разделе)</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3461"/>
@@ -63238,7 +63242,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="204"/>
         <source>{0}: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">{0}: {1}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="42"/>
