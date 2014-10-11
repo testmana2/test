@@ -1943,6 +1943,9 @@ class Editor(QsciScintillaCompat):
                     index2 = self.breakpointModel.index(index1.row(), 1)
                     self.breakpointModel.setData(index2, line)
                 self.inLinesChanged = False
+        elif mtype & self.SC_MOD_CHANGEANNOTATION:
+            vsb = self.verticalScrollBar()
+            vsb.setMaximum(vsb.maximum() + annotationLinesAdded)
         
     def __restoreBreakpoints(self):
         """
