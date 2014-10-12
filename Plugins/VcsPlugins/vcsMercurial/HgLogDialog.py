@@ -400,7 +400,7 @@ class HgLogDialog(QWidget, Ui_HgLogDialog):
                     html += self.tr('Deleted {0}<br />\n')\
                         .format(Utilities.html_encode(f))
             
-            html += '</p>{0}<br/>\n'.format(80 * "=")
+            html += '</p>{0}<br/>\n'.format(60 * "=")
         
         self.contents.setHtml(html)
         tc = self.contents.textCursor()

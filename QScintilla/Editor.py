@@ -216,6 +216,7 @@ class Editor(QsciScintillaCompat):
         self.acAPI = False
         
         self.__lastEditPosition = None
+        self.__annotationLines = 0
         
         # list of clones
         self.__clones = []
@@ -1948,7 +1949,9 @@ class Editor(QsciScintillaCompat):
             vsb = self.verticalScrollBar()
             vsbMax = vsb.maximum()
             vsbValue = vsb.value()
-            vsb.setMaximum(vsbMax + annotationLinesAdded)
+            self.__annotationLines += annotationLinesAdded
+            vsb.setMaximum(max(self.lines() + self.__annotationLines - 
+                               self.linesOnScreen(), 0))
             if vsbValue == vsbMax:
                 vsb.setValue(vsb.maximum())
         
