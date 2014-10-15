@@ -448,7 +448,7 @@
         <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог назначенияy&lt;/b&gt;
+        <translation>&lt;b&gt;Каталог назначения&lt;/b&gt;
 &lt;p&gt;Выберите каталог назначения с помощью диалога.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -491,7 +491,7 @@
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог назначенияy&lt;/b&gt;
+        <translation>&lt;b&gt;Каталог назначения&lt;/b&gt;
 &lt;p&gt;Введите имя каталога назначения. Вы можете выбрать
 его с помощью диалога, нажав кнопку справа.&lt;/p&gt;</translation>
     </message>
@@ -617,7 +617,7 @@
         <location filename="../Project/AddFileDialog.ui" line="82"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог назначенияy&lt;/b&gt;
+        <translation>&lt;b&gt;Каталог назначения&lt;/b&gt;
 &lt;p&gt;Выберите каталог назначения с помощью диалога.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -634,11 +634,11 @@
         <location filename="../Project/AddFileDialog.ui" line="64"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Enter the name of files to add to the current project separated
-by the path separator. You may select them with a dialog by pressing 
+by the path separator. You may select them with a dialog by pressing
 the button to the right.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Файлы с исходниками&lt;/b&gt;
-&lt;p&gt;Задайте имена файлов для добавления, разделённые символом 
-разделения элементов пути. Их также можно выбрать, нажав 
+        <translation type="obsolete">&lt;b&gt;Файлы с исходниками&lt;/b&gt;
+&lt;p&gt;Задайте имена файлов для добавления, разделённые символом
+разделения элементов пути. Их также можно выбрать, нажав
 кнопку справа&lt;/p&gt;</translation>
     </message>
     <message>
@@ -695,6 +695,14 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="../Project/AddFileDialog.py" line="103"/>
         <source>Source Files ({0});;Forms Files ({1});;Resource Files ({2});;Interface Files ({3});;Translation Files ({4});;All Files (*)</source>
         <translation>Файлы исходных текстов ({0});;Файлы форм ({1});;Файлы ресурсов ({2});;Файлы интерфейсов ({3});;Файлы переводов ({4});;Все файлы (*)</translation>
+    </message>
+    <message>
+        <location filename="../Project/AddFileDialog.ui" line="64"/>
+        <source>&lt;b&gt;Source Files&lt;/b&gt;
+&lt;p&gt;Enter the name of files to add to the current project separated
+by the path separator. You may select them with a dialog by pressing 
+the button to the right.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2737,7 +2745,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui" line="139"/>
         <source>R&amp;emove All</source>
-        <translation>З&amp;аменить всё</translation>
+        <translation>У&amp;далить всё</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.py" line="54"/>
@@ -4142,9 +4150,9 @@ the respective line and position.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="489"/>
-        <source>Please select an entry of the list 
+        <source>Please select an entry of the list
 to display the configuration page.</source>
-        <translation>Выберите элемент в списке, чтобы 
+        <translation type="obsolete">Выберите элемент в списке, чтобы
 показать страницу конфигурации.</translation>
     </message>
     <message>
@@ -4211,6 +4219,12 @@ to display the configuration page.</source>
         <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
         <source>eric6 Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationDialog.py" line="489"/>
+        <source>Please select an entry of the list 
+to display the configuration page.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4317,7 +4331,7 @@ to display the configuration page.</source>
     <message>
         <location filename="../Helpviewer/CookieJar/CookieModel.py" line="30"/>
         <source>Website</source>
-        <translation></translation>
+        <translation>WEB сайт</translation>
     </message>
     <message>
         <location filename="../Helpviewer/CookieJar/CookieModel.py" line="31"/>
@@ -4337,7 +4351,7 @@ to display the configuration page.</source>
     <message>
         <location filename="../Helpviewer/CookieJar/CookieModel.py" line="34"/>
         <source>Expires</source>
-        <translation></translation>
+        <translation>Истекают</translation>
     </message>
     <message>
         <location filename="../Helpviewer/CookieJar/CookieModel.py" line="35"/>
@@ -4767,22 +4781,22 @@ to display the configuration page.</source>
         <translation>Фильтровать &amp;по:</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="516"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="517"/>
         <source>Code Generation</source>
         <translation>Генерация кода</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="401"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="402"/>
         <source>&lt;p&gt;Could not open the code template file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно открыть файл с шаблоном кода &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="437"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="438"/>
         <source>&lt;p&gt;Could not open the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно открыть файл с исходными текстами &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="516"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="517"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно записать файл с исходными текстами &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
@@ -5586,7 +5600,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebugViewer.py" line="263"/>
         <source>ID</source>
-        <translation></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugViewer.py" line="263"/>
@@ -7307,22 +7321,22 @@ Do you want to quit anyway?</source>
     <message>
         <location filename="../E5Graphics/E5GraphicsView.py" line="57"/>
         <source>&lt;b&gt;Graphics View&lt;/b&gt;
-&lt;p&gt;This graphics view is used to show a diagram. 
-There are various actions available to manipulate the 
+&lt;p&gt;This graphics view is used to show a diagram.
+There are various actions available to manipulate the
 shown items.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Clicking on an item selects it.&lt;/li&gt;
 &lt;li&gt;Ctrl-clicking adds an item to the selection.&lt;/li&gt;
 &lt;li&gt;Ctrl-clicking a selected item deselects it.&lt;/li&gt;
 &lt;li&gt;Clicking on an empty spot of the canvas resets the selection.&lt;/li&gt;
-&lt;li&gt;Dragging the mouse over the canvas spans a rubberband to 
+&lt;li&gt;Dragging the mouse over the canvas spans a rubberband to
 select multiple items.&lt;/li&gt;
-&lt;li&gt;Dragging the mouse over a selected item moves the 
+&lt;li&gt;Dragging the mouse over a selected item moves the
 whole selection.&lt;/li&gt;
 &lt;/ul&gt;
 </source>
-        <translation>&lt;b&gt;Диаграмма&lt;/b&gt;
-&lt;p&gt;Данный экран отображает диаграмму. 
+        <translation type="obsolete">&lt;b&gt;Диаграмма&lt;/b&gt;
+&lt;p&gt;Данный экран отображает диаграмму.
 Возможны следующие действия для управления диаграммой.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Щелчок на объекте его выделяет.&lt;/li&gt;
@@ -7339,6 +7353,25 @@ whole selection.&lt;/li&gt;
         <location filename="../E5Graphics/E5GraphicsView.py" line="372"/>
         <source>{0}, Page {1}</source>
         <translation>{0}, Страница {1}</translation>
+    </message>
+    <message>
+        <location filename="../E5Graphics/E5GraphicsView.py" line="57"/>
+        <source>&lt;b&gt;Graphics View&lt;/b&gt;
+&lt;p&gt;This graphics view is used to show a diagram. 
+There are various actions available to manipulate the 
+shown items.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clicking on an item selects it.&lt;/li&gt;
+&lt;li&gt;Ctrl-clicking adds an item to the selection.&lt;/li&gt;
+&lt;li&gt;Ctrl-clicking a selected item deselects it.&lt;/li&gt;
+&lt;li&gt;Clicking on an empty spot of the canvas resets the selection.&lt;/li&gt;
+&lt;li&gt;Dragging the mouse over the canvas spans a rubberband to 
+select multiple items.&lt;/li&gt;
+&lt;li&gt;Dragging the mouse over a selected item moves the 
+whole selection.&lt;/li&gt;
+&lt;/ul&gt;
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7537,7 +7570,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="217"/>
         <source>None</source>
-        <translation></translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="226"/>
@@ -8554,862 +8587,862 @@ whole selection.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="840"/>
+        <location filename="../QScintilla/Editor.py" line="841"/>
         <source>Code metrics...</source>
         <translation>Статистика кода...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="841"/>
+        <location filename="../QScintilla/Editor.py" line="842"/>
         <source>Code coverage...</source>
         <translation>Охват кода...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="849"/>
+        <location filename="../QScintilla/Editor.py" line="850"/>
         <source>Profile data...</source>
         <translation>Данные профайлера...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="642"/>
+        <location filename="../QScintilla/Editor.py" line="643"/>
         <source>Undo</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="645"/>
+        <location filename="../QScintilla/Editor.py" line="646"/>
         <source>Redo</source>
         <translation>Повтор</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="652"/>
+        <location filename="../QScintilla/Editor.py" line="653"/>
         <source>Cut</source>
         <translation>Вырезать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="655"/>
+        <location filename="../QScintilla/Editor.py" line="656"/>
         <source>Copy</source>
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="658"/>
+        <location filename="../QScintilla/Editor.py" line="659"/>
         <source>Paste</source>
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="663"/>
+        <location filename="../QScintilla/Editor.py" line="664"/>
         <source>Indent</source>
         <translation>Увеличить отступ</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="666"/>
+        <location filename="../QScintilla/Editor.py" line="667"/>
         <source>Unindent</source>
         <translation>Уменьшить отступ</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="669"/>
+        <location filename="../QScintilla/Editor.py" line="670"/>
         <source>Comment</source>
         <translation>Закомментировать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="672"/>
+        <location filename="../QScintilla/Editor.py" line="673"/>
         <source>Uncomment</source>
         <translation>Раскомментировать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="675"/>
+        <location filename="../QScintilla/Editor.py" line="676"/>
         <source>Stream Comment</source>
         <translation>Поточный комментарий</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="678"/>
+        <location filename="../QScintilla/Editor.py" line="679"/>
         <source>Box Comment</source>
         <translation>Прямоугольный комментарий</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="682"/>
+        <location filename="../QScintilla/Editor.py" line="683"/>
         <source>Select to brace</source>
         <translation>Выбрать до скобки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="684"/>
+        <location filename="../QScintilla/Editor.py" line="685"/>
         <source>Select all</source>
         <translation>Выбрать всё</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="685"/>
+        <location filename="../QScintilla/Editor.py" line="686"/>
         <source>Deselect all</source>
         <translation>Снять выделение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="818"/>
+        <location filename="../QScintilla/Editor.py" line="819"/>
         <source>Check</source>
         <translation>Проверки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="838"/>
+        <location filename="../QScintilla/Editor.py" line="839"/>
         <source>Show</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="750"/>
+        <location filename="../QScintilla/Editor.py" line="751"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="756"/>
+        <location filename="../QScintilla/Editor.py" line="757"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="759"/>
+        <location filename="../QScintilla/Editor.py" line="760"/>
         <source>Save As...</source>
         <translation>Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="772"/>
+        <location filename="../QScintilla/Editor.py" line="773"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1717"/>
+        <location filename="../QScintilla/Editor.py" line="1718"/>
         <source>Modification of Read Only file</source>
         <translation>Редактирование файла, открытого только на чтение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1717"/>
+        <location filename="../QScintilla/Editor.py" line="1718"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Попытка редактирования файла, открытого только на чтение. Пожалуйста, сначала сохраните изменения в другой файл.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2409"/>
+        <location filename="../QScintilla/Editor.py" line="2410"/>
         <source>Printing...</source>
         <translation>Печать...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2426"/>
+        <location filename="../QScintilla/Editor.py" line="2427"/>
         <source>Printing completed</source>
         <translation>Печать завершена</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2428"/>
+        <location filename="../QScintilla/Editor.py" line="2429"/>
         <source>Error while printing</source>
         <translation>Ошибка печати</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2431"/>
+        <location filename="../QScintilla/Editor.py" line="2432"/>
         <source>Printing aborted</source>
         <translation>Печать отменена</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2844"/>
+        <location filename="../QScintilla/Editor.py" line="2845"/>
         <source>Open File</source>
         <translation>Открыть файл</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3014"/>
+        <location filename="../QScintilla/Editor.py" line="3015"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2789"/>
+        <location filename="../QScintilla/Editor.py" line="2790"/>
         <source>File Modified</source>
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6134"/>
+        <location filename="../QScintilla/Editor.py" line="6135"/>
         <source>File changed</source>
         <translation>Файл изменён</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="648"/>
+        <location filename="../QScintilla/Editor.py" line="649"/>
         <source>Revert to last saved state</source>
         <translation>Вернуть к последнему записанному состоянию</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="888"/>
+        <location filename="../QScintilla/Editor.py" line="889"/>
         <source>Languages</source>
         <translation>Языки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1134"/>
+        <location filename="../QScintilla/Editor.py" line="1135"/>
         <source>Toggle bookmark</source>
         <translation>Поставить/убрать закладку</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1136"/>
+        <location filename="../QScintilla/Editor.py" line="1137"/>
         <source>Next bookmark</source>
         <translation>Следующая закладка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1138"/>
+        <location filename="../QScintilla/Editor.py" line="1139"/>
         <source>Previous bookmark</source>
         <translation>Предыдущая закладка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1140"/>
+        <location filename="../QScintilla/Editor.py" line="1141"/>
         <source>Clear all bookmarks</source>
         <translation>Стереть все закладки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1160"/>
+        <location filename="../QScintilla/Editor.py" line="1161"/>
         <source>Toggle breakpoint</source>
         <translation>Поставить/убрать точку останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1165"/>
+        <location filename="../QScintilla/Editor.py" line="1166"/>
         <source>Edit breakpoint...</source>
         <translation>Редактировать точку останова...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4856"/>
+        <location filename="../QScintilla/Editor.py" line="4857"/>
         <source>Enable breakpoint</source>
         <translation>Разрешить точку останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1170"/>
+        <location filename="../QScintilla/Editor.py" line="1171"/>
         <source>Next breakpoint</source>
         <translation>Следующая точка останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1172"/>
+        <location filename="../QScintilla/Editor.py" line="1173"/>
         <source>Previous breakpoint</source>
         <translation>Предыдущая точка останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1174"/>
+        <location filename="../QScintilla/Editor.py" line="1175"/>
         <source>Clear all breakpoints</source>
         <translation>Убрать все точки останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1194"/>
+        <location filename="../QScintilla/Editor.py" line="1195"/>
         <source>LMB toggles bookmarks</source>
         <translation>Левая клавиша мыши ставит закладки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1198"/>
+        <location filename="../QScintilla/Editor.py" line="1199"/>
         <source>LMB toggles breakpoints</source>
         <translation>Левая клавиша мыши ставит точки останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4859"/>
+        <location filename="../QScintilla/Editor.py" line="4860"/>
         <source>Disable breakpoint</source>
         <translation>Запретить точку останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5203"/>
+        <location filename="../QScintilla/Editor.py" line="5204"/>
         <source>Code Coverage</source>
         <translation>Охват кода</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5203"/>
+        <location filename="../QScintilla/Editor.py" line="5204"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5857"/>
+        <location filename="../QScintilla/Editor.py" line="5858"/>
         <source>Macro Name</source>
         <translation>Имя макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5857"/>
+        <location filename="../QScintilla/Editor.py" line="5858"/>
         <source>Select a macro name:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5928"/>
+        <location filename="../QScintilla/Editor.py" line="5929"/>
         <source>Macro files (*.macro)</source>
         <translation>Макросы (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5885"/>
+        <location filename="../QScintilla/Editor.py" line="5886"/>
         <source>Load macro file</source>
         <translation>Загрузить макрос</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5908"/>
+        <location filename="../QScintilla/Editor.py" line="5909"/>
         <source>Error loading macro</source>
         <translation>Ошибка при загрузке макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5928"/>
+        <location filename="../QScintilla/Editor.py" line="5929"/>
         <source>Save macro file</source>
         <translation>Сохранить файл с макросами</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5945"/>
+        <location filename="../QScintilla/Editor.py" line="5946"/>
         <source>Save macro</source>
         <translation>Сохранить макрос</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5961"/>
+        <location filename="../QScintilla/Editor.py" line="5962"/>
         <source>Error saving macro</source>
         <translation>Ошибка при сохранении макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5974"/>
+        <location filename="../QScintilla/Editor.py" line="5975"/>
         <source>Start Macro Recording</source>
         <translation>Начало записи макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6000"/>
+        <location filename="../QScintilla/Editor.py" line="6001"/>
         <source>Macro Recording</source>
         <translation>Запись макроса</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6000"/>
+        <location filename="../QScintilla/Editor.py" line="6001"/>
         <source>Enter name of the macro:</source>
         <translation>Задайте имя макроса:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5382"/>
+        <location filename="../QScintilla/Editor.py" line="5383"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5382"/>
+        <location filename="../QScintilla/Editor.py" line="5383"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="722"/>
+        <location filename="../QScintilla/Editor.py" line="723"/>
         <source>Autocompletion enabled</source>
         <translation>Автозавершение разрешено</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4329"/>
+        <location filename="../QScintilla/Editor.py" line="4330"/>
         <source>Autocompletion</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4329"/>
+        <location filename="../QScintilla/Editor.py" line="4330"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Автозавершение недоступно, так как не задан источник автозавершения.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="706"/>
+        <location filename="../QScintilla/Editor.py" line="707"/>
         <source>Use Monospaced Font</source>
         <translation>Использовать моноширинный шрифт</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="699"/>
+        <location filename="../QScintilla/Editor.py" line="700"/>
         <source>Shorten empty lines</source>
         <translation>Укоротить пустые строки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1143"/>
+        <location filename="../QScintilla/Editor.py" line="1144"/>
         <source>Goto syntax error</source>
         <translation>Перейти к синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1147"/>
+        <location filename="../QScintilla/Editor.py" line="1148"/>
         <source>Clear syntax error</source>
         <translation>Очистить синтаксическую ошибку</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="711"/>
+        <location filename="../QScintilla/Editor.py" line="712"/>
         <source>Autosave enabled</source>
         <translation>Автосохранение разрешено</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6436"/>
+        <location filename="../QScintilla/Editor.py" line="6437"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1145"/>
+        <location filename="../QScintilla/Editor.py" line="1146"/>
         <source>Show syntax error message</source>
         <translation>Показать сообщение о синтаксической ошибке</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5542"/>
+        <location filename="../QScintilla/Editor.py" line="5543"/>
         <source>Syntax Error</source>
         <translation>Синтаксическая ошибка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5542"/>
+        <location filename="../QScintilla/Editor.py" line="5543"/>
         <source>No syntax error message available.</source>
         <translation>Нет сообщения о синтаксической ошибке.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1162"/>
+        <location filename="../QScintilla/Editor.py" line="1163"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Установить/удалить временную точку останова</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="843"/>
+        <location filename="../QScintilla/Editor.py" line="844"/>
         <source>Show code coverage annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="846"/>
+        <location filename="../QScintilla/Editor.py" line="847"/>
         <source>Hide code coverage annotations</source>
         <translation>Не показывать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1177"/>
+        <location filename="../QScintilla/Editor.py" line="1178"/>
         <source>Next uncovered line</source>
         <translation>Следующая неохваченная строка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1180"/>
+        <location filename="../QScintilla/Editor.py" line="1181"/>
         <source>Previous uncovered line</source>
         <translation>Предыдущая невыполняемая строка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5267"/>
+        <location filename="../QScintilla/Editor.py" line="5268"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Показать аннотации по охвату</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5260"/>
+        <location filename="../QScintilla/Editor.py" line="5261"/>
         <source>All lines have been covered.</source>
         <translation>Все строки выполняются.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5267"/>
+        <location filename="../QScintilla/Editor.py" line="5268"/>
         <source>There is no coverage file available.</source>
         <translation>Нет файла с информацией по охвату.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2789"/>
+        <location filename="../QScintilla/Editor.py" line="2790"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;В файле &lt;b&gt;{0}&lt;/b&gt; есть несохранённые изменения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5899"/>
+        <location filename="../QScintilla/Editor.py" line="5900"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5908"/>
+        <location filename="../QScintilla/Editor.py" line="5909"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл с макросами &lt;b&gt;{0}&lt;/b&gt; повреждён&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5961"/>
+        <location filename="../QScintilla/Editor.py" line="5962"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл с макросами: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6436"/>
+        <location filename="../QScintilla/Editor.py" line="6437"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="331"/>
+        <location filename="../QScintilla/Editor.py" line="332"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; занимает &lt;b&gt;{1} KB&lt;/b&gt;. Ввы действительно хотите его загрузить?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="862"/>
+        <location filename="../QScintilla/Editor.py" line="863"/>
         <source>Diagrams</source>
         <translation>Диаграммы</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="864"/>
+        <location filename="../QScintilla/Editor.py" line="865"/>
         <source>Class Diagram...</source>
         <translation>Диаграмма классов...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="866"/>
+        <location filename="../QScintilla/Editor.py" line="867"/>
         <source>Package Diagram...</source>
         <translation>Диаграмма пакетов...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="868"/>
+        <location filename="../QScintilla/Editor.py" line="869"/>
         <source>Imports Diagram...</source>
         <translation>Диаграмма импортирования...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="870"/>
+        <location filename="../QScintilla/Editor.py" line="871"/>
         <source>Application Diagram...</source>
         <translation>Диаграмма приложения...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="891"/>
+        <location filename="../QScintilla/Editor.py" line="892"/>
         <source>No Language</source>
         <translation>Нет языка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6296"/>
+        <location filename="../QScintilla/Editor.py" line="6297"/>
         <source>{0} (ro)</source>
         <translation>{0} (только чтение)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6457"/>
+        <location filename="../QScintilla/Editor.py" line="6458"/>
         <source>Resources</source>
         <translation>Ресурсы</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6459"/>
+        <location filename="../QScintilla/Editor.py" line="6460"/>
         <source>Add file...</source>
         <translation>Добавить файл...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6461"/>
+        <location filename="../QScintilla/Editor.py" line="6462"/>
         <source>Add files...</source>
         <translation>Добавить файлы...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6463"/>
+        <location filename="../QScintilla/Editor.py" line="6464"/>
         <source>Add aliased file...</source>
         <translation>Добавить файл под другим именем...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6466"/>
+        <location filename="../QScintilla/Editor.py" line="6467"/>
         <source>Add localized resource...</source>
         <translation>Добавить локализованный ресурс...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6489"/>
+        <location filename="../QScintilla/Editor.py" line="6490"/>
         <source>Add file resource</source>
         <translation>Добавить файл ресурсов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6505"/>
+        <location filename="../QScintilla/Editor.py" line="6506"/>
         <source>Add file resources</source>
         <translation>Добавить файлы ресурсов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6533"/>
+        <location filename="../QScintilla/Editor.py" line="6534"/>
         <source>Add aliased file resource</source>
         <translation>Добавить файл ресурсов под другим именем</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6533"/>
+        <location filename="../QScintilla/Editor.py" line="6534"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Другое имя для файла &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6597"/>
+        <location filename="../QScintilla/Editor.py" line="6598"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6597"/>
+        <location filename="../QScintilla/Editor.py" line="6598"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6631"/>
+        <location filename="../QScintilla/Editor.py" line="6632"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6631"/>
+        <location filename="../QScintilla/Editor.py" line="6632"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6470"/>
+        <location filename="../QScintilla/Editor.py" line="6471"/>
         <source>Add resource frame</source>
         <translation>Добавить фрагмент ресурсов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5974"/>
+        <location filename="../QScintilla/Editor.py" line="5975"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Запись макроса уже идёт. Начать новую запись?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1183"/>
+        <location filename="../QScintilla/Editor.py" line="1184"/>
         <source>Next task</source>
         <translation>Следующая задача</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1185"/>
+        <location filename="../QScintilla/Editor.py" line="1186"/>
         <source>Previous task</source>
         <translation>Предыдущая задача</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="793"/>
+        <location filename="../QScintilla/Editor.py" line="794"/>
         <source>Autocomplete</source>
         <translation>Автозавершение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="798"/>
+        <location filename="../QScintilla/Editor.py" line="799"/>
         <source>from Document</source>
         <translation>из документа</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="800"/>
+        <location filename="../QScintilla/Editor.py" line="801"/>
         <source>from APIs</source>
         <translation>из файлов API</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="802"/>
+        <location filename="../QScintilla/Editor.py" line="803"/>
         <source>from Document and APIs</source>
         <translation>Из документа и файлов API</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1011"/>
+        <location filename="../QScintilla/Editor.py" line="1012"/>
         <source>Export as</source>
         <translation>Экспортировать как</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1234"/>
+        <location filename="../QScintilla/Editor.py" line="1235"/>
         <source>Export source</source>
         <translation>Экспортировать исходник</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1226"/>
+        <location filename="../QScintilla/Editor.py" line="1227"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не найден экспортёр для формата &lt;b&gt;{0}&lt;/b&gt;. Отмена...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1234"/>
+        <location filename="../QScintilla/Editor.py" line="1235"/>
         <source>No export format given. Aborting...</source>
         <translation>Не задан формат экспорта. Отмена...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6617"/>
+        <location filename="../QScintilla/Editor.py" line="6618"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6617"/>
+        <location filename="../QScintilla/Editor.py" line="6618"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="795"/>
+        <location filename="../QScintilla/Editor.py" line="796"/>
         <source>dynamic</source>
         <translation>динамический</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="805"/>
+        <location filename="../QScintilla/Editor.py" line="806"/>
         <source>Calltip</source>
         <translation>Подсказка</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="769"/>
+        <location filename="../QScintilla/Editor.py" line="770"/>
         <source>Print Preview</source>
         <translation>Предварительный просмотр печати</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="384"/>
+        <location filename="../QScintilla/Editor.py" line="385"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окно редактора&lt;/b&gt;&lt;p&gt;Это окно используется для просмотра и редактирования исходных текстов приложений. Вы можете открыть несколько окон одновременно. Имя редактируемого файла отображается в заголовке окна.&lt;/p&gt;&lt;p&gt;Чтобы установить точку останова кликните в пространство между номером строки и меткой свёртки на нужной строке. Появившийся маркер точки останова можно настроить через контекстное меню.&lt;/p&gt;&lt;p&gt;Чтобы установить закладку кликните в пространство между номером строки и меткой свёртки на нужной строке при нажатой клавише Shift.&lt;/p&gt;&lt;p&gt;Эти действия можно отменить через контекстное меню.&lt;/p&gt;&lt;p&gt;Если при нажатой клавише Ctrl кликнуть на маркер синтаксической ошибки, то будет показана дополнительная информация об ошибке.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="715"/>
+        <location filename="../QScintilla/Editor.py" line="716"/>
         <source>Typing aids enabled</source>
         <translation>Разрешить помощь при наборе</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="975"/>
+        <location filename="../QScintilla/Editor.py" line="976"/>
         <source>End-of-Line Type</source>
         <translation>Тип конца строки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="979"/>
+        <location filename="../QScintilla/Editor.py" line="980"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="986"/>
+        <location filename="../QScintilla/Editor.py" line="987"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="993"/>
+        <location filename="../QScintilla/Editor.py" line="994"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="934"/>
+        <location filename="../QScintilla/Editor.py" line="935"/>
         <source>Encodings</source>
         <translation>Кодировки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="914"/>
+        <location filename="../QScintilla/Editor.py" line="915"/>
         <source>Guessed</source>
         <translation>Догадки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1249"/>
+        <location filename="../QScintilla/Editor.py" line="1250"/>
         <source>Alternatives</source>
         <translation>Альтернативы</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1245"/>
+        <location filename="../QScintilla/Editor.py" line="1246"/>
         <source>Alternatives ({0})</source>
         <translation>Альтернативы ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1265"/>
+        <location filename="../QScintilla/Editor.py" line="1266"/>
         <source>Pygments Lexer</source>
         <translation>Pygments лексер</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1265"/>
+        <location filename="../QScintilla/Editor.py" line="1266"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Задайте язык лексического анализатора.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6919"/>
+        <location filename="../QScintilla/Editor.py" line="6920"/>
         <source>Check spelling...</source>
         <translation>Проверка орфографии...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="691"/>
+        <location filename="../QScintilla/Editor.py" line="692"/>
         <source>Check spelling of selection...</source>
         <translation>Проверка орфографии подсвеченного участка...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6922"/>
+        <location filename="../QScintilla/Editor.py" line="6923"/>
         <source>Add to dictionary</source>
         <translation>Добавить в слварь</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6924"/>
+        <location filename="../QScintilla/Editor.py" line="6925"/>
         <source>Ignore All</source>
         <translation>Игнорировать всё</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="695"/>
+        <location filename="../QScintilla/Editor.py" line="696"/>
         <source>Remove from dictionary</source>
         <translation>Удалить из словаря</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2844"/>
+        <location filename="../QScintilla/Editor.py" line="2845"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2947"/>
+        <location filename="../QScintilla/Editor.py" line="2948"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1150"/>
+        <location filename="../QScintilla/Editor.py" line="1151"/>
         <source>Next warning</source>
         <translation>Следующее предупреждение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1153"/>
+        <location filename="../QScintilla/Editor.py" line="1154"/>
         <source>Previous warning</source>
         <translation>Предыдущее предупреждение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1155"/>
+        <location filename="../QScintilla/Editor.py" line="1156"/>
         <source>Show warning message</source>
         <translation>Показать предупреждение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1157"/>
+        <location filename="../QScintilla/Editor.py" line="1158"/>
         <source>Clear warnings</source>
         <translation>Очистить предупреждения</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3014"/>
+        <location filename="../QScintilla/Editor.py" line="3015"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5945"/>
+        <location filename="../QScintilla/Editor.py" line="5946"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Макро &lt;b&gt;{0}&lt;/b&gt; уже сущеструет. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5796"/>
+        <location filename="../QScintilla/Editor.py" line="5797"/>
         <source>Warning: {0}</source>
         <translation>Предупреждение: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5803"/>
+        <location filename="../QScintilla/Editor.py" line="5804"/>
         <source>Error: {0}</source>
         <translation>Ошибка: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6130"/>
+        <location filename="../QScintilla/Editor.py" line="6131"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Предупреждение:&lt;/b&gt; При переоткрытии все изменения будут потеряны.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4430"/>
+        <location filename="../QScintilla/Editor.py" line="4431"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Активация Автозавершения</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4430"/>
+        <location filename="../QScintilla/Editor.py" line="4431"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Автозавершение не может быть подключено, потому что уже активны. Пожалуйста проверьте конфигурацию.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4620"/>
+        <location filename="../QScintilla/Editor.py" line="4621"/>
         <source>Activating Calltip Provider</source>
         <translation>Активация подсказок</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4620"/>
+        <location filename="../QScintilla/Editor.py" line="4621"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Подсказки не могут быть подключены, потому что уже активны. Пожалуйста проверьте конфигурацию.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="765"/>
+        <location filename="../QScintilla/Editor.py" line="766"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Открыть &apos;отбракованный&apos; файл</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="874"/>
+        <location filename="../QScintilla/Editor.py" line="875"/>
         <source>Load Diagram...</source>
         <translation>Загрузить диаграмму...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1188"/>
+        <location filename="../QScintilla/Editor.py" line="1189"/>
         <source>Next change</source>
         <translation>Следующее изменение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1191"/>
+        <location filename="../QScintilla/Editor.py" line="1192"/>
         <source>Previous change</source>
         <translation>Предыдущее изменение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7336"/>
+        <location filename="../QScintilla/Editor.py" line="7337"/>
         <source>Sort Lines</source>
         <translation>Сортировать строки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7336"/>
+        <location filename="../QScintilla/Editor.py" line="7337"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation>Выборка содержит данные неподходящие для сортировки как числа.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5732"/>
+        <location filename="../QScintilla/Editor.py" line="5733"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5732"/>
+        <location filename="../QScintilla/Editor.py" line="5733"/>
         <source>No warning messages available.</source>
         <translation>Нет предупреждающего сообщения.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5793"/>
+        <location filename="../QScintilla/Editor.py" line="5794"/>
         <source>Style: {0}</source>
         <translation>Стиль: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="742"/>
+        <location filename="../QScintilla/Editor.py" line="743"/>
         <source>New Document View</source>
         <translation>Новое окно для документа</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="745"/>
+        <location filename="../QScintilla/Editor.py" line="746"/>
         <source>New Document View (with new split)</source>
         <translation>Новое окно для документа (в новом разделе)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="828"/>
+        <location filename="../QScintilla/Editor.py" line="829"/>
         <source>Tools</source>
         <translation>Инструменты</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="956"/>
+        <location filename="../QScintilla/Editor.py" line="957"/>
         <source>Re-Open With Encoding</source>
         <translation>Открыть заново с кодировкой</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6124"/>
+        <location filename="../QScintilla/Editor.py" line="6125"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл &lt;b&gt;{0}&lt;/b&gt; был изменён, будучи открытым в Eric. Обновить?&lt;/p&gt;</translation>
     </message>
@@ -13174,7 +13207,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiExecDialog.py" line="93"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiExecDialog.py" line="132"/>
@@ -13590,7 +13623,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocExecDialog.py" line="93"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocExecDialog.py" line="132"/>
@@ -18623,64 +18656,72 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1835"/>
         <source>&lt;h2&gt;File search&lt;/h2&gt;&lt;p&gt;In order to search for the last VirusTotal report on a given file just enter its hash. Currently the allowed hashes are MD5, SHA1 and SHA256. You can also search for a particular file report by typing in its permalink id.&lt;/p&gt;&lt;h2&gt;URL search&lt;/h2&gt;&lt;p&gt;URL searches are simple, just type in the given URL, the application will normalize it and compare it with the entries in VirusTotal&apos;s database. Alternatively you may enter the MD5 hash of an URL preceded by &quot;url:&quot;, e.g. url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;User search&lt;/h2&gt;&lt;p&gt;Do you want to know whether a friend has a VT Community account? Simply type in his nick preceded by the symbol &quot;@&quot;, e.g. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Search through comments&lt;/h2&gt;&lt;p&gt;The comments in VT Community may often help in disinfecting your PC or may proof themselves useful when analysing a particular malware sample, comment tags enable users to search through the VT Community reviews. The standard file tags are: {0} The standard URL tags are: {1}User generated tags are preceded by the symbol &quot;#&quot;, e.g. #disinfect.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;h2&gt;Поиск файлов&lt;/h2&gt;
+&lt;p&gt;Чтобы найти последний VirusTotal отчёт о данном файле введите его хэш. Допустимые хэши -  MD5, SHA1 и SHA256. Возможно также использовать permalink id.&lt;/p&gt;
+&lt;h2&gt;Поиск URL&lt;/h2&gt;
+&lt;p&gt;Для поиска введите URL. программа нормализует его и сравнит с имеющимися записями в базе данных VirusTotal. Можно также ввести MD5 хэш искомого URL с префиксом &quot;url:&quot;, например: url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;
+&lt;h2&gt;Поиск пользователя&lt;/h2&gt;
+&lt;p&gt;Чтобы найти пользователя VT введите его имя с символом &quot;@&quot;, например: @EmilianoMartinez.&lt;/p&gt;
+&lt;h2&gt;Поиск в комментариях&lt;/h2&gt;
+&lt;p&gt;Комментарии форума VT могут содержать информацию полезную для удаления вирусов с вашего сомпьютера. Искать в сомментариях помогают тэги. Стандартные тэги файлов: {0} Стандартные тэги URL: {1}. Пользовательские тэги начинаются с символа &quot;#&quot;, например: #disinfect.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1883"/>
         <source>Search VirusTotal</source>
-        <translation type="unfinished"></translation>
+        <translation>Поиск в  VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1889"/>
         <source>Scan current site</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить текущий сервер</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3636"/>
         <source>VirusTotal Scan</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверка VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3636"/>
         <source>&lt;p&gt;The VirusTotal scan could not be scheduled.&lt;p&gt;
 &lt;p&gt;Reason: {0}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Невозможно запланировать проверку VirusTotal.&lt;p&gt;
+&lt;p&gt;Причина: {0}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1451"/>
         <source>RSS Feeds Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Каналы RSS</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1451"/>
         <source>&amp;RSS Feeds Dialog...</source>
-        <translation type="unfinished"></translation>
+        <translation>Каналы &amp;RSS...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1451"/>
         <source>Ctrl+Shift+F</source>
         <comment>Help|RSS Feeds Dialog</comment>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1457"/>
         <source>Open a dialog showing the configured RSS feeds.</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сконфигурированные каналы RSS.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1459"/>
         <source>&lt;b&gt;RSS Feeds Dialog...&lt;/b&gt;&lt;p&gt;Open a dialog to show the configured RSS feeds. It can be used to mange the feeds and to show their contents.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Каналы RSS...&lt;/b&gt;&lt;p&gt;Показывает сконфигурированные каналы RSS. Позволяет изменить их настройки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1469"/>
         <source>Siteinfo Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Информация о сервере</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1469"/>
         <source>&amp;Siteinfo Dialog...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Информация о сервере...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1469"/>
@@ -18691,12 +18732,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1475"/>
         <source>Open a dialog showing some information about the current site.</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть диалог с информацией о текущем сервере.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1477"/>
         <source>&lt;b&gt;Siteinfo Dialog...&lt;/b&gt;&lt;p&gt;Opens a dialog showing some information about the current site.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Информация о сервере...&lt;/b&gt;&lt;p&gt;Открыть диалог с информацией о текущем сервере.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1761"/>
@@ -18728,37 +18769,37 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1427"/>
         <source>&lt;b&gt;Network Monitor...&lt;/b&gt;&lt;p&gt;Shows the network monitor dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Сетевой монитор...&lt;/b&gt;&lt;p&gt;Открыть диалог сетевого монитора.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="2376"/>
         <source>Restore Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить окно</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1486"/>
         <source>Manage User Agent Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка агента пользователя</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1486"/>
         <source>Manage &amp;User Agent Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка &amp;агента пользователя</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1490"/>
         <source>Shows a dialog to manage the User Agent settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывает диалог настройки агента пользователя</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1492"/>
         <source>&lt;b&gt;Manage User Agent Settings&lt;/b&gt;&lt;p&gt;Shows a dialog to manage the User Agent settings.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Настройка агента пользователя&lt;/b&gt;&lt;p&gt;Показывает диалог настройки агента пользователя.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1648"/>
         <source>Global User Agent</source>
-        <translation type="unfinished"></translation>
+        <translation>Глобальный агент пользователя</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="504"/>
@@ -18768,182 +18809,182 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="520"/>
         <source>Save Page Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранение страницы</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="520"/>
         <source>Save Page Screen...</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранение страницы...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="525"/>
         <source>Save the current page as a screen shot</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохраненить изображение текущей страницы</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="527"/>
         <source>&lt;b&gt;Save Page Screen...&lt;/b&gt;&lt;p&gt;Saves the current page as a screen shot.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Сохранение страницы...&lt;/b&gt;&lt;p&gt;Сохраненить изображение текущей страницы.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1501"/>
         <source>Synchronize data</source>
-        <translation type="unfinished"></translation>
+        <translation>Синхронизация данных</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1501"/>
         <source>&amp;Synchronize Data...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Синхронизация данных...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1506"/>
         <source>Shows a dialog to synchronize data via the network</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывает диалог синхронизации данных через сеть</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1508"/>
         <source>&lt;b&gt;Synchronize Data...&lt;/b&gt;&lt;p&gt;This shows a dialog to synchronize data via the network.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Синхронизация данных...&lt;/b&gt;&lt;p&gt;Показывает диалог синхронизации данных через сеть.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1383"/>
         <source>ClickToFlash</source>
-        <translation type="unfinished"></translation>
+        <translation>ClickToFlash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1383"/>
         <source>&amp;ClickToFlash...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;ClickToFlash...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1389"/>
         <source>Configure ClickToFlash whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка белого списка ClickToFlash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1391"/>
         <source>&lt;b&gt;ClickToFlash...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the ClickToFlash whitelist.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;ClickToFlash...&lt;/b&gt;&lt;p&gt;Показать диалог для редактирования белого списка ClickToFlash.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1140"/>
         <source>Personal Information</source>
-        <translation type="unfinished">Личная информация</translation>
+        <translation>Личная информация</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1140"/>
         <source>Personal Information...</source>
-        <translation type="unfinished"></translation>
+        <translation>Личная информация...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1146"/>
         <source>Configure personal information for completing form fields</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройка Вашей личной информации, которая будет использована на веб страницах</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1148"/>
         <source>&lt;b&gt;Personal Information...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the personal information used for completing form fields.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Личная информация...&lt;/b&gt;&lt;p&gt;Настройка Вашей личной информации, которая будет использована на веб страницах.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1158"/>
         <source>GreaseMonkey Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>GreaseMonkey скрипты</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1158"/>
         <source>GreaseMonkey Scripts...</source>
-        <translation type="unfinished"></translation>
+        <translation>GreaseMonkey скрипты...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1164"/>
         <source>Configure the GreaseMonkey Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Конфигурация GreaseMonkey скриптов</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1166"/>
         <source>&lt;b&gt;GreaseMonkey Scripts...&lt;/b&gt;&lt;p&gt;Opens a dialog to configure the available GreaseMonkey Scripts.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;GreaseMonkey скрипты...&lt;/b&gt;&lt;p&gt;Конфигурация GreaseMonkey скриптов.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1402"/>
         <source>Manage SSL Certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Менеджер SLL сертификатов</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1402"/>
         <source>Manage SSL Certificates...</source>
-        <translation type="unfinished"></translation>
+        <translation>Менеджер SLL сертификатов...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1408"/>
         <source>Manage the saved SSL certificates</source>
-        <translation type="unfinished"></translation>
+        <translation>Менеджер сохранённых SLL сертификатов</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1410"/>
         <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Менеджер SLL сертификатов...&lt;/b&gt;&lt;p&gt;Менеджер сохранённых SLL сертификатов.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1176"/>
         <source>Edit Message Filters</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать фильтры сообщений</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1176"/>
         <source>Edit Message Filters...</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать фильтры сообщений...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1181"/>
         <source>Edit the message filters used to suppress unwanted messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать фильтры нежелательных сообщений</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1183"/>
         <source>&lt;b&gt;Edit Message Filters&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the message filters used to suppress unwanted messages been shown in an error window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Редактировать фильтры сообщений&lt;/b&gt;&lt;p&gt;Редактировать фильтры нежелательных сообщений об ошибках.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="535"/>
         <source>Save Visible Page Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранение текущей страницы</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="535"/>
         <source>Save Visible Page Screen...</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранение текущей страницы...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="540"/>
         <source>Save the visible part of the current page as a screen shot</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохраненить изображение текущей страницы</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="543"/>
         <source>&lt;b&gt;Save Visible Page Screen...&lt;/b&gt;&lt;p&gt;Saves the visible part of the current page as a screen shot.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Сохранение текущей страницы...&lt;/b&gt;&lt;p&gt;Сохраненить изображение текущей страницы.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="2875"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">WEB просмотрщик встроенный в Eric</translation>
+        <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="684"/>
         <source>Quit the eric6 Web Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Выйти из Web просмотрщика</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="685"/>
         <source>&lt;b&gt;Quit&lt;/b&gt;&lt;p&gt;Quit the eric6 Web Browser.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Выход&lt;/b&gt;&lt;p&gt;Выйти из Web просмотрщика.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="2074"/>
         <source>&lt;b&gt;eric6 Web Browser - {0}&lt;/b&gt;&lt;p&gt;The eric6 Web Browser is a combined help file and HTML browser. It is part of the eric6 development toolset.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Eric Web просмотрщик - {0}&lt;/b&gt;&lt;p&gt;Eric Web просмотрщик позволяет просматривать HTML файлы и файлы документации. Я вляется частью инструментов разработчика.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19271,7 +19312,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="1831"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="966"/>
@@ -19389,7 +19430,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="103"/>
         <source>Add Sub-repository</source>
-        <translation></translation>
+        <translation>Добавить Sub-репозиторий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="23"/>
@@ -19993,7 +20034,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="126"/>
         <source>Select to switch the input field to password mode</source>
-        <translation>Задать режим ввода пароля для поля ввод пароля</translation>
+        <translation>Задать режим ввода пароля для поля ввода пароля</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="129"/>
@@ -20003,7 +20044,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.ui" line="132"/>
         <source>Alt+P</source>
-        <translation></translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="54"/>
@@ -20023,7 +20064,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="143"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksInOutDialog.py" line="178"/>
@@ -20042,13 +20083,15 @@ You have %n tab(s) open.</source>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui" line="17"/>
         <source>&lt;b&gt;Mercurial Bookmarks&lt;/b&gt;
 &lt;p&gt;This dialog shows a list of the projects bookmarks.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Закладки Mercurial&lt;/b&gt;
+&lt;p&gt;Этот диалог отображает список закладок проекта.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui" line="33"/>
         <source>&lt;b&gt;Bookmarks List&lt;/b&gt;
 &lt;p&gt;This shows a list of the projects bookmarks.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Список закладок&lt;/b&gt;
+&lt;p&gt;Этот диалог отображает список закладок проекта.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui" line="50"/>
@@ -20093,7 +20136,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui" line="126"/>
         <source>Alt+S</source>
-        <translation></translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui" line="133"/>
@@ -20113,7 +20156,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui" line="146"/>
         <source>Alt+P</source>
-        <translation></translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py" line="125"/>
@@ -20123,12 +20166,12 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py" line="125"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py" line="160"/>
         <source>no bookmarks defined</source>
-        <translation type="unfinished"></translation>
+        <translation>Закладок нет</translation>
     </message>
 </context>
 <context>
@@ -20136,27 +20179,27 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="14"/>
         <source>Create Branch</source>
-        <translation type="unfinished">Создать ветвь</translation>
+        <translation>Создать ветвь</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="23"/>
         <source>Enter branch name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя ветви:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="30"/>
         <source>Enter the new branch name (spaces will be converted to _)</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя новой ветви (пробелы будут заменены символами _)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="40"/>
         <source>Select to commit the branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Зафиксировать ветвь</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBranchInputDialog.ui" line="43"/>
         <source>Commit Branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Зафиксировать ветвь</translation>
     </message>
 </context>
 <context>
@@ -20229,7 +20272,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="101"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
+        <translation>Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="104"/>
@@ -20239,37 +20282,37 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="120"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished">Введите имя закладки</translation>
+        <translation>Введите имя закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="29"/>
         <source>Select to specify multiple revisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать несколько ревизий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="155"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте именения с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="148"/>
         <source>Base Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Базовые ревизии:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="172"/>
         <source>Compression:</source>
-        <translation type="unfinished"></translation>
+        <translation>Сжатие:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="32"/>
         <source>Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ревизии:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBundleDialog.ui" line="42"/>
         <source>Enter revisions by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте ревизии с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
 </context>
 <context>
@@ -20277,42 +20320,42 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="90"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="137"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение &apos;hello&apos; не получено.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="139"/>
         <source>Received data on unexpected channel.</source>
-        <translation type="unfinished"></translation>
+        <translation>Получены данные по неожиданному каналу.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="144"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неправильное &apos;hello&apos; сообщение, ожидалось &apos;capabilities: &apos;, а получено &apos;{0}&apos;.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="149"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение &apos;capabilities&apos; пусто.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="157"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неправильное &apos;hello&apos; сообщение, ожидалось &apos;encoding: &apos;, а получено &apos;{0}&apos;.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="162"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение &apos;encoding&apos; пусто.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="346"/>
         <source>For message see output dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение можно увидеть в окне вывода.</translation>
     </message>
 </context>
 <context>
@@ -20320,27 +20363,27 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="14"/>
         <source>Mercurial Client Input</source>
-        <translation type="unfinished"></translation>
+        <translation>Ввод для Mercurial</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="23"/>
         <source>Message:</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщение:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="30"/>
         <source>Shows the message sent by the Mercurial server</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывает сообщение от сервера</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="43"/>
         <source>Input:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ввод:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="50"/>
         <source>Enter the response to be sent to the Mercurial server</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите ответ серверу</translation>
     </message>
 </context>
 <context>
@@ -20363,11 +20406,11 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.ui" line="39"/>
         <source>&lt;b&gt;Mercurial Command&lt;/b&gt;
-&lt;p&gt;Enter the Mercurial command to be executed including all necessary 
-parameters. If a parameter of the commandline includes a space you have to 
-surround this parameter by single or double quotes. Do not include the name 
+&lt;p&gt;Enter the Mercurial command to be executed including all necessary
+parameters. If a parameter of the commandline includes a space you have to
+surround this parameter by single or double quotes. Do not include the name
 of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Команда Mercurial&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Команда Mercurial&lt;/b&gt;
 &lt;p&gt;Введите команду Mercurial и необходимые параметры. Не вводите
 имя исполняемого файла клиента Mercurial (т.е. hg). Если параметр
 содержит пробелы то заключите его в одинарные или двойные кавычки.&lt;/p&gt;</translation>
@@ -20387,6 +20430,15 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <source>project directory</source>
         <translation>каталог проекта</translation>
     </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.ui" line="39"/>
+        <source>&lt;b&gt;Mercurial Command&lt;/b&gt;
+&lt;p&gt;Enter the Mercurial command to be executed including all necessary 
+parameters. If a parameter of the commandline includes a space you have to 
+surround this parameter by single or double quotes. Do not include the name 
+of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>HgCommitDialog</name>
@@ -20398,7 +20450,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="20"/>
         <source>Commit Message</source>
-        <translation>Фиксировать сообщение</translation>
+        <translation>Описание изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="26"/>
@@ -20425,22 +20477,22 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="60"/>
         <source>Select to amend the last commit (leave message empty to keep it)</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменить последнюю ревизию (оставьте сообщение пустым если его не нужно менять)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="63"/>
         <source>Amend the last commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменить последнюю ревизию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="70"/>
         <source>Select to commit sub-repositories as well</source>
-        <translation type="unfinished"></translation>
+        <translation>Зафиксировать изменения в sub-репозиториях</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommitDialog.ui" line="73"/>
         <source>Commit sub-repositories</source>
-        <translation type="unfinished"></translation>
+        <translation>Зафиксировать sub-репозитории</translation>
     </message>
 </context>
 <context>
@@ -20448,132 +20500,132 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="14"/>
         <source>Mercurial Conflicts</source>
-        <translation type="unfinished"></translation>
+        <translation>Конфликты</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="23"/>
         <source>&lt;b&gt;Conflicts List&lt;/b&gt;\n&lt;p&gt;This shows a list of files  which had or still have conflicts.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Список конфликтов&lt;/b&gt;\n&lt;p&gt;Список файлов в которых есть или были конфликты.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="42"/>
         <source>Status</source>
-        <translation type="unfinished">Статус</translation>
+        <translation>Статус</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="47"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="70"/>
         <source>Press to mark the selected entries as &apos;resolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Пометить выбранные конфликты как &apos;resolved&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="247"/>
         <source>Resolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешённые</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="80"/>
         <source>Press to mark the selected entries as &apos;unresolved&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Пометить выбранные конфликты как &apos;unresolved&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="245"/>
         <source>Unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Неразрешённые</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="103"/>
         <source>Press to re-merge the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Повторить слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="106"/>
         <source>Re-Merge</source>
-        <translation type="unfinished">Повторить слияние</translation>
+        <translation>Повторить</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="113"/>
         <source>Press to edit the selected entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать выбранные конфликты</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="116"/>
         <source>Edit</source>
-        <translation type="unfinished">Редактировать</translation>
+        <translation>Редактировать</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="144"/>
         <source>Errors</source>
-        <translation type="unfinished">Ошибки</translation>
+        <translation>Ошибки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="163"/>
         <source>Input</source>
-        <translation type="unfinished">Ввод</translation>
+        <translation>Ввод</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="185"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished">Отправить данные процессу hg</translation>
+        <translation>Отправить данные процессу hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="188"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Отправить</translation>
+        <translation>&amp;Отправить</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="191"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="198"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished">Задайте данные, которые будут посланы процессу hg</translation>
+        <translation>Задайте данные, которые будут посланы процессу hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="205"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать режим ввода пароля</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="208"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">&amp;Парольный режим</translation>
+        <translation>&amp;Парольный режим</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="211"/>
         <source>Alt+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="55"/>
         <source>&amp;Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Обновить</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="57"/>
         <source>Press to refresh the list of conflicts</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить список конфликтов</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="158"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Ошибка процесса генерации</translation>
+        <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="158"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.py" line="249"/>
         <source>Unknown Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Статус неизвестен</translation>
     </message>
 </context>
 <context>
@@ -20592,7 +20644,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог назначенияy&lt;/b&gt;
+        <translation>&lt;b&gt;Каталог назначения&lt;/b&gt;
 &lt;p&gt;Выберите имя каталога назначения с помощью диалога выбора.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -20646,7 +20698,8 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Новое имя&lt;/b&gt;
+&lt;p&gt;Введите новое имя. Новое имя может быть относительным или абсолютныи путём.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -20817,17 +20870,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="121"/>
         <source>Patch Contents</source>
-        <translation type="unfinished"></translation>
+        <translation>Содержимое паича</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="240"/>
         <source>&lt;Start&gt;</source>
-        <translation type="unfinished">&lt;Начало&gt;</translation>
+        <translation>&lt;Начало&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="241"/>
         <source>&lt;End&gt;</source>
-        <translation type="unfinished">&lt;Конец&gt;</translation>
+        <translation>&lt;Конец&gt;</translation>
     </message>
 </context>
 <context>
@@ -20835,27 +20888,88 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="78"/>
         <source>Export Patches</source>
-        <translation type="unfinished">Экспортировать патчи</translation>
+        <translation>Экспортировать патчи</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="25"/>
         <source>Export Directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Каталог для экспорта:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="85"/>
         <source>Press to select the export directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать каталог для экспорта</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
         <source>File Name Pattern:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаблон имени файла:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="42"/>
         <source>Enter the file name pattern for the export files</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте шаблон имени файла для экспорта</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
+        <source>&lt;b&gt;File Name Pattern&lt;/b&gt;
+&lt;p&gt;Enter the file name pattern to be used to generate the export files
+here. Valid recognized patterns are:&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;literal &quot;%&quot; character&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;changeset hash (40 hexadecimal digits)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%N&lt;/td&gt;&lt;td&gt;number of patches being generated&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%R&lt;/td&gt;&lt;td&gt;changeset revision number&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%b&lt;/td&gt;&lt;td&gt;basename of the exporting repository&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;short-form changeset hash (12 hexadecimal digits)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;zero-padded sequence number, starting at 1&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%r&lt;/td&gt;&lt;td&gt;zero-padded changeset revision number&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</source>
+        <translation type="obsolete">&lt;b&gt;Шаблон имени файла&lt;/b&gt;
+&lt;p&gt;Задайте шаблон имени файла для экспорта.
+Возможные элементы шаблона:&lt;/p&gt;
+&lt;table&gt;
+&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;символ &quot;%&quot;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;хэш изменений (40 шестнадцатеричных цифр)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%N&lt;/td&gt;&lt;td&gt;число генерируемых патчей&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%R&lt;/td&gt;&lt;td&gt;ревизия изменений&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%b&lt;/td&gt;&lt;td&gt;базовое имя репозитория&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;короткая версия хэша изменений (12 шестнадцатеричных цифр)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;дополненный нулями порядковый номер, начиная с 1&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;%r&lt;/td&gt;&lt;td&gt;дополненный нулями номер ревизии изменений&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
+        <source>Changesets:</source>
+        <translation>Изменения:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="72"/>
+        <source>Enter changesets by number, id, range or revset expression one per line</source>
+        <translation>Задайте именения с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="97"/>
+        <source>Compare Against Second Parent</source>
+        <translation>Сравнивать со вторым предком</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="107"/>
+        <source>Treat all Files as Text</source>
+        <translation>Считать все файлы текстовыми</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="114"/>
+        <source>Omit Dates</source>
+        <translation>Исключить дату</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="121"/>
+        <source>Use Git extended Diff-Format</source>
+        <translation>Генерировать патч в расширенном Git-формате</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
@@ -20875,73 +20989,43 @@ here. Valid recognized patterns are:&lt;/p&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
-        <source>Changesets:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="72"/>
-        <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="97"/>
-        <source>Compare Against Second Parent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="107"/>
-        <source>Treat all Files as Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="114"/>
-        <source>Omit Dates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="121"/>
-        <source>Use Git extended Diff-Format</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>HgFetchDialog</name>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="14"/>
         <source>Fetch Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Запрос изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="23"/>
         <source>Commit Message</source>
-        <translation type="unfinished">Commit сообщение</translation>
+        <translation>Описание изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="29"/>
         <source>Enter commit message or leave empty to use the default message</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите описание изменений, иначе будет использовано описание по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="39"/>
         <source>Recent commit messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Недавние описания</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="46"/>
         <source>Select a recent commit message to use</source>
-        <translation type="unfinished">Выберите недавнее сообщение</translation>
+        <translation>Выберите недавнее описание</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="56"/>
         <source>Select to switch the merge order</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменить порядок предков при слиянии</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/HgFetchDialog.ui" line="59"/>
         <source>Switch Parents when Merging</source>
-        <translation type="unfinished"></translation>
+        <translation>Изменить порядок слияния</translation>
     </message>
 </context>
 <context>
@@ -20949,142 +21033,142 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="23"/>
         <source>Revision</source>
-        <translation type="unfinished">Версия (ревизия)</translation>
+        <translation>Версия (ревизия)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="29"/>
         <source>Select to specify a revision by number</source>
-        <translation type="unfinished">Задать ревизию порядковым номером</translation>
+        <translation>Задать ревизию порядковым номером</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="32"/>
         <source>Number</source>
-        <translation type="unfinished"></translation>
+        <translation>Номер</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="42"/>
         <source>Enter a revision number</source>
-        <translation type="unfinished">Задайте номер ревизии</translation>
+        <translation>Задайте номер ревизии</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="68"/>
         <source>Select to specify a revision by changeset id</source>
-        <translation type="unfinished">Задать ревизию идентификатором изменений</translation>
+        <translation>Задать ревизию идентификатором изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="71"/>
         <source>Id:</source>
-        <translation type="unfinished">Id:</translation>
+        <translation>Id:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="81"/>
         <source>Enter a changeset id</source>
-        <translation type="unfinished">Задайте идентификатор изменений</translation>
+        <translation>Задайте идентификатор изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="88"/>
         <source>Select to specify a revision by a tag</source>
-        <translation type="unfinished">Задать ревизию с помощью метки</translation>
+        <translation>Задать ревизию с помощью метки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="91"/>
         <source>Tag:</source>
-        <translation type="unfinished">Метка:</translation>
+        <translation>Метка:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="107"/>
         <source>Enter a tag name</source>
-        <translation type="unfinished">Введите имя метки</translation>
+        <translation>Введите имя метки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="117"/>
         <source>Select to specify a revision by a branch</source>
-        <translation type="unfinished">Задать ревизию с помощью имени ветви</translation>
+        <translation>Задать ревизию с помощью имени ветви</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="120"/>
         <source>Branch:</source>
-        <translation type="unfinished">Ветвь:</translation>
+        <translation>Ветвь:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="136"/>
         <source>Enter a branch name</source>
-        <translation type="unfinished">Введите имя ветви</translation>
+        <translation>Введите имя ветви</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="146"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
+        <translation>Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="149"/>
         <source>Bookmark:</source>
-        <translation type="unfinished">Закладка:</translation>
+        <translation>Закладка:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="165"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished">Введите имя закладки</translation>
+        <translation>Введите имя закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="175"/>
         <source>Select tip revision of repository</source>
-        <translation type="unfinished">Головная ревизия репозитория</translation>
+        <translation>Головная ревизия репозитория</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="191"/>
         <source>Commit Message</source>
-        <translation type="unfinished">Commit сообщение</translation>
+        <translation>Описание изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="197"/>
         <source>Select to not commit the signature</source>
-        <translation type="unfinished"></translation>
+        <translation>Не фиксировать сигнатуру</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="200"/>
         <source>Do Not Commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Не фиксировать</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="207"/>
         <source>Enter a commit message (leave empty to use default)</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите описание изменений, иначе будет использовано описание по умолчанию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="222"/>
         <source>Key-ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Key-ID:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="229"/>
         <source>Enter the ID of the key to be used</source>
-        <translation type="unfinished"></translation>
+        <translation>Залайте идентификатор ключа</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="236"/>
         <source>Select to make the signature local</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать локальную сигнатуру</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="239"/>
         <source>Local Signature</source>
-        <translation type="unfinished"></translation>
+        <translation>Локальная сигнатура</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="246"/>
         <source>Select to sign even if the signature file is modified</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписать даже если файл сигнатуры изменён</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="249"/>
         <source>Force Signature</source>
-        <translation type="unfinished"></translation>
+        <translation>Обязательная сигнатура</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignDialog.ui" line="178"/>
         <source>Parent</source>
-        <translation type="unfinished">Предок</translation>
+        <translation>Предок</translation>
     </message>
 </context>
 <context>
@@ -21092,102 +21176,103 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="14"/>
         <source>Signed Changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Подписанные ревизии</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="51"/>
         <source>Select the category to filter on</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте поле, по которому фильтровать</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="318"/>
         <source>Revision</source>
-        <translation type="unfinished">Версия (ревизия)</translation>
+        <translation>Ревизия</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="60"/>
         <source>Signature</source>
-        <translation type="unfinished"></translation>
+        <translation>Подпись</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="68"/>
         <source>Enter the regular expression to filter on</source>
-        <translation type="unfinished">Задайте регулярное выражения для фильтра</translation>
+        <translation>Задайте регулярное выражения для фильтра</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="106"/>
         <source>Press to verify the signatures of the selected revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверить подпись отмеченной ревизии</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="109"/>
         <source>&amp;Verify...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Проверить...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="137"/>
         <source>Errors</source>
-        <translation type="unfinished">Ошибки</translation>
+        <translation>Ошибки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="143"/>
         <source>&lt;b&gt;Mercurial errors&lt;/b&gt;&lt;p&gt;This shows possible error messages.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Ошибки&lt;/b&gt;
+&lt;p&gt;Возможные сообщения об ошибках.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="159"/>
         <source>Input</source>
-        <translation type="unfinished">Ввод</translation>
+        <translation>Ввод</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="181"/>
         <source>Press to send the input to the hg process</source>
-        <translation type="unfinished">Отправить данные процессу hg</translation>
+        <translation>Отправить данные процессу hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="184"/>
         <source>&amp;Send</source>
-        <translation type="unfinished">&amp;Отправить</translation>
+        <translation>&amp;Отправить</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="187"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="194"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation type="unfinished">Задайте данные, которые будут посланы процессу hg</translation>
+        <translation>Задайте данные, которые будут посланы процессу hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="201"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished">Задать режим ввода пароля для поля ввода пароля</translation>
+        <translation>Задать режим ввода пароля для поля ввода пароля</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="204"/>
         <source>&amp;Password Mode</source>
-        <translation type="unfinished">&amp;Парольный режим</translation>
+        <translation>&amp;Парольный режим</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.ui" line="207"/>
         <source>Alt+P</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="119"/>
         <source>Process Generation Error</source>
-        <translation type="unfinished">Ошибка процесса генерации</translation>
+        <translation>Ошибка процесса генерации</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="119"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/GpgExtension/HgGpgSignaturesDialog.py" line="154"/>
         <source>no signatures found</source>
-        <translation type="unfinished"></translation>
+        <translation>Подпись не найдена</translation>
     </message>
 </context>
 <context>
@@ -21195,17 +21280,17 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="14"/>
         <source>Copy Changesets</source>
-        <translation type="unfinished">Копировать изменения</translation>
+        <translation>Копировать изменения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="23"/>
         <source>Revisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Ревизии</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="29"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте именения с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="45"/>
@@ -21215,7 +21300,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="48"/>
         <source>User</source>
-        <translation type="unfinished">Пользователь</translation>
+        <translation>Пользователь</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="60"/>
@@ -21230,12 +21315,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="70"/>
         <source>Username:</source>
-        <translation type="unfinished">Имя пользователя:</translation>
+        <translation>Имя пользователя:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="77"/>
         <source>Enter the user name to be used</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите имя пользователя</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgGraftDialog.ui" line="87"/>
@@ -21647,17 +21732,17 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="149"/>
         <source>Bookmarks</source>
-        <translation type="unfinished">Закладки</translation>
+        <translation>Закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="85"/>
         <source>Press to refresh the list of changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить список изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="83"/>
         <source>&amp;Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Обновить</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="253"/>
@@ -21683,22 +21768,22 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1560"/>
         <source>Copy Changesets</source>
-        <translation type="unfinished">Копировать изменения</translation>
+        <translation>Копировать изменения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished">Необходимо перезагрузить проект. Сделать это?</translation>
+        <translation>Необходимо перезагрузить проект. Сделать это?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="444"/>
         <source>Select to show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="447"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="454"/>
@@ -21708,27 +21793,27 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="158"/>
         <source>Copy the selected changesets to the current branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Скопировать выбранные изменения в текущую ветвь</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="175"/>
         <source>Tag</source>
-        <translation type="unfinished">Метка</translation>
+        <translation>Метка</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="177"/>
         <source>Tag the selected revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Помеченная ревизия</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
         <source>Switch</source>
-        <translation type="unfinished">Переключиться</translation>
+        <translation>Переключиться</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="181"/>
         <source>Switch the working directory to the selected revision</source>
-        <translation type="unfinished"></translation>
+        <translation>Переключить рабочий каталог на другую ревизию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="185"/>
@@ -21923,7 +22008,8 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="366"/>
         <source>Bookmarks: {0}&lt;br /&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Закладки: {0}&lt;br /&gt;
+</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="357"/>
@@ -21934,18 +22020,19 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui" line="45"/>
         <source>Select to show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.ui" line="48"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogDialog.py" line="360"/>
         <source>Branch: {0}&lt;br /&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Ветвь: {0}&lt;br /&gt;
+</translation>
     </message>
 </context>
 <context>
@@ -22043,7 +22130,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="134"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
+        <translation>Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMergeDialog.ui" line="137"/>
@@ -22061,7 +22148,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="14"/>
         <source>Mercurial Revisions</source>
-        <translation type="unfinished"></translation>
+        <translation>Ревизии</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="23"/>
@@ -22071,7 +22158,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="29"/>
         <source>Select to specify a list of changesets</source>
-        <translation type="unfinished"></translation>
+        <translation>Задать список изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="55"/>
@@ -22106,37 +22193,37 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="113"/>
         <source>Select to specify a revision by a bookmark</source>
-        <translation type="unfinished">Задать ревизию с помощью закладки</translation>
+        <translation>Задать ревизию с помощью закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="116"/>
         <source>Bookmark:</source>
-        <translation type="unfinished">Закладка:</translation>
+        <translation>Закладка:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="132"/>
         <source>Enter a bookmark name</source>
-        <translation type="unfinished">Введите имя закладки</translation>
+        <translation>Введите имя закладки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="145"/>
         <source>Limit Results</source>
-        <translation type="unfinished"></translation>
+        <translation>Ограничить количество элементов для отображения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="157"/>
         <source>Enter number of entries to show:</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте количество элементов для отображения:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="32"/>
         <source>Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ревизии:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgMultiRevisionSelectionDialog.ui" line="42"/>
         <source>Enter revisions by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте ревизии с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
 </context>
 <context>
@@ -22193,9 +22280,9 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="102"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the new project. It will be retrieved from 
+&lt;p&gt;Enter the directory of the new project. It will be retrieved from
 the repository and be placed in this directory.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог проекта&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Каталог проекта&lt;/b&gt;
 &lt;p&gt;Задайте каталог проекта. Он будет получен из репозитория и помещён в этот каталог.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -22216,16 +22303,23 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="55"/>
         <source>Enter the url path of the repository (without protocol part)</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте URL репозитория (без указания протокола)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="114"/>
         <source>Download all versions of all large files</source>
-        <translation type="unfinished"></translation>
+        <translation>Загружать большие файлы</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="121"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; This option increases the download time and volume.</source>
+        <translation>&lt;b&gt;Примечание:&lt;/b&gt; Эта опция увеличит время и объём загрузки.</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="102"/>
+        <source>&lt;b&gt;Project Directory&lt;/b&gt;
+&lt;p&gt;Enter the directory of the new project. It will be retrieved from 
+the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -22278,7 +22372,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="23"/>
         <source>&amp;Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ревизии:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="46"/>
@@ -22318,7 +22412,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgPhaseDialog.ui" line="33"/>
         <source>Enter revisions by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте ревизии с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
 </context>
 <context>
@@ -22411,47 +22505,47 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="249"/>
         <source>Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Расширения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="647"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать различие</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="333"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="651"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сводку различий (подробно)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="342"/>
         <source>Show differences side-by-side (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать сводку различий (подробно)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="661"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished">Конфликт решён</translation>
+        <translation>Конфликт разрешён</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="664"/>
         <source>Conflicts unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation>Конфликт не разрешён</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="667"/>
         <source>Re-Merge</source>
-        <translation type="unfinished">Повторить слияние</translation>
+        <translation>Повторить слияние</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectBrowserHelper.py" line="680"/>
         <source>Configure...</source>
-        <translation type="unfinished">Настроить...</translation>
+        <translation>Настроить...</translation>
     </message>
 </context>
 <context>
@@ -23229,7 +23323,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="551"/>
         <source>Push new branch</source>
-        <translation type="unfinished"></translation>
+        <translation>Послать изменения новой ветви</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="555"/>
@@ -23244,17 +23338,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="885"/>
         <source>Rollback last transaction</source>
-        <translation type="unfinished">Откатить последнюю транзакцию</translation>
+        <translation>Откатить последнюю транзакцию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="889"/>
         <source>Rollback the last transaction</source>
-        <translation type="unfinished"></translation>
+        <translation>Откатить последнюю транзакцию</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1302"/>
         <source>Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Расширения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="655"/>
@@ -23359,7 +23453,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1727"/>
         <source>Revert Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Отмена изменений</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="941"/>
@@ -23564,12 +23658,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="280"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать различие</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="296"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий (подробно)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="288"/>
@@ -23804,7 +23898,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="477"/>
         <source>Conflicts unresolved</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Конфликт не разрешён</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="481"/>
@@ -23948,7 +24042,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="23"/>
         <source>Message:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сообщение:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesFoldDialog.ui" line="39"/>
@@ -24014,12 +24108,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="107"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesHeaderDialog.py" line="195"/>
         <source>Error: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ошибка:</translation>
     </message>
 </context>
 <context>
@@ -24102,7 +24196,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="129"/>
         <source>Alt+S</source>
-        <translation></translation>
+        <translation type="unfinished">Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="136"/>
@@ -24122,7 +24216,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.ui" line="149"/>
         <source>Alt+P</source>
-        <translation></translation>
+        <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="195"/>
@@ -24132,7 +24226,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="195"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="230"/>
@@ -24152,7 +24246,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="59"/>
         <source>missing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">отсутствует</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesListDialog.py" line="304"/>
@@ -24223,7 +24317,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="37"/>
         <source>Message:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сообщение:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/HgQueuesNewPatchDialog.ui" line="47"/>
@@ -24417,7 +24511,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="67"/>
         <source>&amp;Revision</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Ревизия:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="236"/>
@@ -24427,7 +24521,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="239"/>
         <source>Number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Номер</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/HgRebaseDialog.ui" line="249"/>
@@ -24985,7 +25079,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="99"/>
         <source>Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Изменения:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="104"/>
@@ -25020,7 +25114,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="206"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="213"/>
@@ -25030,7 +25124,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="220"/>
         <source>Select to switch the input field to password mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задать режим ввода пароля для поля ввода пароля</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="223"/>
@@ -25040,12 +25134,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.ui" line="226"/>
         <source>Alt+P</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="53"/>
         <source>&amp;Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Обновить</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="55"/>
@@ -25075,7 +25169,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="184"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message numerus="yes">
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="367"/>
@@ -25140,7 +25234,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="74"/>
         <source>Message:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сообщение:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveDataDialog.ui" line="84"/>
@@ -25418,7 +25512,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="103"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать различие</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="115"/>
@@ -25428,7 +25522,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="528"/>
         <source>all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Все</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="799"/>
@@ -25478,7 +25572,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="106"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgStatusDialog.py" line="134"/>
@@ -25539,7 +25633,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="113"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="339"/>
@@ -25963,7 +26057,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="53"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Версия (ревизия)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="60"/>
@@ -26017,12 +26111,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="23"/>
         <source>Name:</source>
-        <translation type="unfinished">Имя:</translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="36"/>
         <source>Enter the name of the shelve</source>
-        <translation type="unfinished"></translation>
+        <translation>Задайте имя полки</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgUnshelveDataDialog.ui" line="46"/>
@@ -26075,7 +26169,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="57"/>
         <source>Email:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">E-mail</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="64"/>
@@ -26085,7 +26179,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="74"/>
         <source>Extensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Расширения</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgUserConfigDataDialog.ui" line="80"/>
@@ -27757,7 +27851,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Graphics/ImportsDiagramBuilder.py" line="95"/>
         <source>Imports Diagramm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Диаграмма импортов</translation>
     </message>
 </context>
 <context>
@@ -27944,7 +28038,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="119"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Нет</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/InputDialogWizard/InputDialogWizardDialog.ui" line="128"/>
@@ -28414,7 +28508,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="578"/>
         <source>Join Channel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зайти на канал:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="597"/>
@@ -28429,7 +28523,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="611"/>
         <source>Leave Channel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Уйти с канала:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="630"/>
@@ -28652,7 +28746,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="964"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="982"/>
@@ -28968,7 +29062,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="25"/>
         <source>Identity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Идентифицировать</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="38"/>
@@ -29013,7 +29107,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="99"/>
         <source>Nick Names</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ник:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="105"/>
@@ -29093,7 +29187,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="257"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">р</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcIdentitiesEditDialog.ui" line="263"/>
@@ -29229,7 +29323,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcNetworkEditDialog.ui" line="37"/>
         <source>Identity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Идентифицировать</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcNetworkEditDialog.ui" line="44"/>
@@ -30012,7 +30106,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcWidget.py" line="591"/>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Режим:</translation>
     </message>
     <message>
         <location filename="../Network/IRC/IrcWidget.py" line="598"/>
@@ -31385,7 +31479,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfRevisionsInputDialog.ui" line="33"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задайте именения с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
 </context>
 <context>
@@ -31699,7 +31793,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="43"/>
         <source>Encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кодировка</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="56"/>
@@ -31976,7 +32070,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="177"/>
         <source>None</source>
-        <translation></translation>
+        <translation type="unfinished">Нет</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="186"/>
@@ -32937,7 +33031,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="37"/>
         <source>Workspace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">р</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="43"/>
@@ -33297,7 +33391,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
         <source>OPEN</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">О</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="55"/>
@@ -33419,7 +33513,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Network/NoCacheHostsDialog.ui" line="97"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Удалить выбранные записи</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/NoCacheHostsDialog.ui" line="100"/>
@@ -33429,12 +33523,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Network/NoCacheHostsDialog.ui" line="110"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Удалить все записи</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/NoCacheHostsDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">У&amp;далить всё</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/NoCacheHostsDialog.py" line="52"/>
@@ -34029,7 +34123,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/PageScreenDialog.py" line="101"/>
         <source>Save Page Screen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сохранение страницы</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PageScreenDialog.py" line="69"/>
@@ -34120,7 +34214,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/Passwords/PasswordManager.py" line="636"/>
         <source>Passwords</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пароль</translation>
     </message>
 </context>
 <context>
@@ -34252,7 +34346,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalDataDialog.ui" line="166"/>
         <source>E-mail:</source>
-        <translation></translation>
+        <translation type="unfinished">E-mail</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PersonalInformationManager/PersonalDataDialog.ui" line="179"/>
@@ -35171,7 +35265,7 @@ Select Update.</source>
     <message>
         <location filename="../PluginManager/PluginRepositoryDialog.py" line="101"/>
         <source>Hide</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">С</translation>
     </message>
     <message>
         <location filename="../PluginManager/PluginRepositoryDialog.py" line="103"/>
@@ -35425,7 +35519,7 @@ Select Update.</source>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="45"/>
         <source>MDI</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">M</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerQSS.py" line="62"/>
@@ -38387,7 +38481,7 @@ Select Update.</source>
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Главный сценарий&lt;/b&gt;
-&lt;p&gt;Выберите главный сценарий проекта. Диалог выбора вызывается 
+&lt;p&gt;Выберите главный сценарий проекта. Диалог выбора вызывается
 с помощью кнопки справа.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39269,11 +39363,11 @@ Select Update.</source>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="132"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default).
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию). 
+        <translation type="obsolete">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию).
 Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39311,17 +39405,17 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="172"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
-the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses,
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above).
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Группа: ()&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Группа: ()&lt;/b&gt;
 &lt;p&gt;Вставить скобки с захватом содержимого.
 Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
 группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
-В отличие от  скобок без захвата, 
-обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера). 
+В отличие от  скобок без захвата,
+обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера).
 Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
 &lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
@@ -39372,9 +39466,9 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="257"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Граница слова&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
 Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
     </message>
@@ -39388,9 +39482,9 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="270"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Не граница слова&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Не граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39425,11 +39519,11 @@ does not. Effectively, \B matches at any position between two word characters as
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="108"/>
         <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
-&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
+&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket.
 The following example could clarify the regexp which match a valid date: &lt;/p&gt;
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Комментарий: (?#)&lt;/b&gt;
-&lt;p&gt;Вставить комментарий в регулярное выражение (?# и до первой закрывающей круглой скобки. 
+        <translation type="obsolete">&lt;b&gt;Комментарий: (?#)&lt;/b&gt;
+&lt;p&gt;Вставить комментарий в регулярное выражение (?# и до первой закрывающей круглой скобки.
 Следующий пример может пояснить регулярное выражение, описывающее корректную дату: &lt;/p&gt;
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
     </message>
@@ -39442,11 +39536,11 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="188"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
-backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
+&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched
+backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when
 the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
 E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки именованной группы. Использование этой группы аналогично использованию стандартной группы. Отличие состоит в том, что обратной ссылке присваивается имя. Это полезно, когда работа с группами становится достаточно сложной. Доступ к обратной ссылке можно получить по имени (напр. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x совпадает с &apos;axaxax&apos;,&apos;bxbxbx&apos; или &apos;cxcxcx&apos; (&apos;foo&apos; — это имя группы)&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39470,11 +39564,11 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
 Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
@@ -39489,9 +39583,9 @@ Be aware that in the above example, the alternatives refer to whole or part of w
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
-Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
 Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
@@ -39506,10 +39600,10 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="311"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
-It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
+&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards.
+It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character
 only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним находится ещё один. Выражение &apos;(?&amp;lt;=u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;=[abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним находится ещё один. Выражение &apos;(?&amp;lt;=u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;=[abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="321"/>
@@ -39521,11 +39615,11 @@ only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be 
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="325"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
-but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
-character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex 
+&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead,
+but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos;
+character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex
 expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Отрицательная ретроспективная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Отрицательная ретроспективная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки отрицательной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним не находится ещё один. Выражение &apos;(?&amp;lt;!u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним не находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;![abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится всё, кроме &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39547,6 +39641,89 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="434"/>
         <source>ASCII</source>
         <translation>ASCII</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="108"/>
+        <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
+&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
+The following example could clarify the regexp which match a valid date: &lt;/p&gt;
+&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="132"/>
+        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
+character class is faster and more precise.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="172"/>
+        <source>&lt;b&gt;Group: ()&lt;/b&gt;
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
+&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="188"/>
+        <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
+backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
+the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
+E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
+        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
+Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
+ words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="257"/>
+        <source>&lt;b&gt;Word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="270"/>
+        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
+        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="311"/>
+        <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
+It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
+only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="325"/>
+        <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
+but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
+character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex 
+expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -40447,7 +40624,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="214"/>
         <source>Arrows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Стрелка</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="214"/>
@@ -40941,11 +41118,11 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default).
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию). 
+        <translation type="obsolete">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию).
 Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -40983,17 +41160,17 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
-the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses,
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above).
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Группа: ()&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Группа: ()&lt;/b&gt;
 &lt;p&gt;Вставить скобки с захватом содержимого.
 Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
 группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
-В отличие от  скобок без захвата, 
-обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера). 
+В отличие от  скобок без захвата,
+обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера).
 Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
 &lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
@@ -41007,11 +41184,11 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
 Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
@@ -41055,9 +41232,9 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Граница слова&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
 Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
     </message>
@@ -41071,9 +41248,9 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Не граница слова&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Не граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
     </message>
     <message>
@@ -41087,9 +41264,9 @@ does not. Effectively, \B matches at any position between two word characters as
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
-Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
 Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
@@ -41114,13 +41291,6 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="331"/>
-        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a question mark (?) in your regexp. The question mark matches a single character. 
-E.g. &apos;gr?y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="340"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Inserts a repetition (*) character into the regexp.&lt;/p&gt;</source>
@@ -41130,20 +41300,6 @@ E.g. &apos;gr?y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apo
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="344"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Inserts a repetition (*) character into the regexp. That will match zero or more of any character.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="423"/>
-        <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="436"/>
-        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
-several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -41164,7 +41320,7 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="499"/>
         <source>Alt+S</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="509"/>
@@ -41175,6 +41331,76 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="512"/>
         <source>Alt+M</source>
         <translation type="unfinished">Alt+M</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
+        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
+character class is faster and more precise.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
+        <source>&lt;b&gt;Group: ()&lt;/b&gt;
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
+&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
+        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
+Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
+ words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
+        <source>&lt;b&gt;Word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
+        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
+        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="331"/>
+        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert a question mark (?) in your regexp. The question mark matches a single character. 
+E.g. &apos;gr?y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="423"/>
+        <source>&lt;b&gt;Group: ()&lt;/b&gt;
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="436"/>
+        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -42205,11 +42431,11 @@ several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matche
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="56"/>
         <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
-&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
+&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket.
 The following example could clarify the regexp which match a valid date: &lt;/p&gt;
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Комментарий: (?#)&lt;/b&gt;
-&lt;p&gt;Вставить комментарий в регулярное выражение (?# и до первой закрывающей круглой скобки. 
+        <translation type="obsolete">&lt;b&gt;Комментарий: (?#)&lt;/b&gt;
+&lt;p&gt;Вставить комментарий в регулярное выражение (?# и до первой закрывающей круглой скобки.
 Следующий пример может пояснить регулярное выражение, описывающее корректную дату: &lt;/p&gt;
 &lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
     </message>
@@ -42235,11 +42461,11 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
         <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default).
 E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
 character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию). 
+        <translation type="obsolete">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию).
 Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -42291,17 +42517,17 @@ means that the content of the match (called the backreference) is not stored for
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
         <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
-the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses,
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above).
 One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
 &lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Группа: ()&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Группа: ()&lt;/b&gt;
 &lt;p&gt;Вставить скобки с захватом содержимого.
 Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
 группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
-В отличие от  скобок без захвата, 
-обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера). 
+В отличие от  скобок без захвата,
+обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера).
 Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
 &lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
@@ -42315,11 +42541,11 @@ One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="150"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
-backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
+&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched
+backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when
 the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
 E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки именованной группы. Использование этой группы аналогично использованию стандартной группы. Отличие состоит в том, что обратной ссылке присваивается имя. Это полезно, когда работа с группами становится достаточно сложной. Доступ к обратной ссылке можно получить по имени (напр. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x совпадает с &apos;axaxax&apos;,&apos;bxbxbx&apos; или &apos;cxcxcx&apos; (&apos;foo&apos; — это имя группы)&lt;/p&gt;</translation>
     </message>
     <message>
@@ -42350,11 +42576,11 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of
 several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
 Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
  words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
 Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
@@ -42398,9 +42624,9 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
         <source>&lt;b&gt;Word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word
 must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Граница слова&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
 Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
     </message>
@@ -42414,9 +42640,9 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b
 does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Не граница слова&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Не граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
     </message>
     <message>
@@ -42430,9 +42656,9 @@ does not. Effectively, \B matches at any position between two word characters as
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
-Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial
 regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
 Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
@@ -42459,10 +42685,10 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="273"/>
         <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
-It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
+&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards.
+It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character
 only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним находится ещё один. Выражение &apos;(?&amp;lt;=u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;=[abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним находится ещё один. Выражение &apos;(?&amp;lt;=u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;=[abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
@@ -42474,11 +42700,11 @@ only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be 
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
-but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
-character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex 
+&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead,
+but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos;
+character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex
 expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Отрицательная ретроспективная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Отрицательная ретроспективная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки отрицательной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним не находится ещё один. Выражение &apos;(?&amp;lt;!u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним не находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;![abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится всё, кроме &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -42549,6 +42775,89 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="447"/>
         <source>Don&apos;t Capture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="56"/>
+        <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
+&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket. 
+The following example could clarify the regexp which match a valid date: &lt;/p&gt;
+&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
+        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default). 
+E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
+character class is faster and more precise.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
+        <source>&lt;b&gt;Group: ()&lt;/b&gt;
+&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of 
+characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses, 
+the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above). 
+One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
+&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="150"/>
+        <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched 
+backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when 
+the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
+E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
+        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
+&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of 
+several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
+Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
+ words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
+        <source>&lt;b&gt;Word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word 
+must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
+        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
+&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b 
+does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
+        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
+Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial 
+regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="273"/>
+        <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards. 
+It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character 
+only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
+        <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
+&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead, 
+but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos; 
+character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex 
+expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -43913,7 +44222,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="213"/>
         <source>Show Status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать статус</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="213"/>
@@ -44310,7 +44619,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/SecurityPage.ui" line="37"/>
         <source>Passwords</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пароль</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/SecurityPage.ui" line="43"/>
@@ -45187,7 +45496,7 @@ Not connected</source>
     <message>
         <location filename="../Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui" line="62"/>
         <source>Encoding:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кодировка</translation>
     </message>
     <message>
         <location filename="../Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui" line="309"/>
@@ -45272,7 +45581,7 @@ Not connected</source>
     <message>
         <location filename="../Helpviewer/SiteInfo/SiteInfoDialog.py" line="262"/>
         <source>All Files (*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Все файлы(*);;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/SiteInfo/SiteInfoDialog.py" line="274"/>
@@ -45282,7 +45591,7 @@ Not connected</source>
     <message>
         <location filename="../Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui" line="241"/>
         <source>Databases</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">База данных</translation>
     </message>
     <message>
         <location filename="../Helpviewer/SiteInfo/SiteInfoNoSslDialog.ui" line="254"/>
@@ -45512,7 +45821,7 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="86"/>
         <source>snapshot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Снимок</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="500"/>
@@ -45588,7 +45897,7 @@ Not connected</source>
     <message>
         <location filename="../QScintilla/SortOptionsDialog.ui" line="32"/>
         <source>Ascending</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">П</translation>
     </message>
     <message>
         <location filename="../QScintilla/SortOptionsDialog.ui" line="42"/>
@@ -45598,7 +45907,7 @@ Not connected</source>
     <message>
         <location filename="../QScintilla/SortOptionsDialog.ui" line="45"/>
         <source>Descending</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">П</translation>
     </message>
     <message>
         <location filename="../QScintilla/SortOptionsDialog.ui" line="58"/>
@@ -45810,7 +46119,7 @@ Not connected</source>
     <message>
         <location filename="../QScintilla/SpellingDictionaryEditDialog.ui" line="117"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished">З&amp;аменить всё</translation>
+        <translation type="unfinished">У&amp;далить всё</translation>
     </message>
 </context>
 <context>
@@ -47381,7 +47690,7 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1976"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2212"/>
@@ -47570,7 +47879,7 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.py" line="100"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
 </context>
 <context>
@@ -47620,7 +47929,7 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="127"/>
         <source>Alt+S</source>
-        <translation></translation>
+        <translation type="unfinished">Alt+S</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="134"/>
@@ -47640,7 +47949,7 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.ui" line="147"/>
         <source>Alt+P</source>
-        <translation></translation>
+        <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="83"/>
@@ -47660,7 +47969,7 @@ Not connected</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnChangeListsDialog.py" line="119"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
 </context>
 <context>
@@ -47701,10 +48010,10 @@ Not connected</source>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory for the Subversion command.
-This is an optional entry. The button to the right will open a 
+This is an optional entry. The button to the right will open a
 directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Рабочий каталог&lt;/b&gt;
-&lt;p&gt;Задайте имя рабочего каталога для программы Subversion. 
+        <translation type="obsolete">&lt;b&gt;Рабочий каталог&lt;/b&gt;
+&lt;p&gt;Задайте имя рабочего каталога для программы Subversion.
 Это опционально. Вы можете выбрать
 его с помощью диалога, нажав кнопку справа.&lt;/p&gt;</translation>
     </message>
@@ -47736,14 +48045,31 @@ directory selection dialog.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="41"/>
         <source>&lt;b&gt;Subversion Command&lt;/b&gt;
+&lt;p&gt;Enter the Subversion command to be executed including all necessary
+parameters. If a parameter of the commandline includes a space you have to
+surround this parameter by single or double quotes. Do not include the name
+of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
+        <translation type="obsolete">&lt;b&gt;Команда Subversion&lt;/b&gt;
+&lt;p&gt;Введите команду Subversion и необходимые параметры. Не вводите
+имя исполняемого файла клиента subversion (т.е. svn). Если параметр
+содержит пробелы то заключите его в одинарные или двойные кавычки.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="41"/>
+        <source>&lt;b&gt;Subversion Command&lt;/b&gt;
 &lt;p&gt;Enter the Subversion command to be executed including all necessary 
 parameters. If a parameter of the commandline includes a space you have to 
 surround this parameter by single or double quotes. Do not include the name 
 of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Команда Subversion&lt;/b&gt;
-&lt;p&gt;Введите команду Subversion и необходимые параметры. Не вводите
-имя исполняемого файла клиента subversion (т.е. svn). Если параметр
-содержит пробелы то заключите его в одинарные или двойные кавычки.&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
+        <source>&lt;b&gt;Working directory&lt;/b&gt;
+&lt;p&gt;Enter the working directory for the Subversion command.
+This is an optional entry. The button to the right will open a 
+directory selection dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -47827,7 +48153,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог назначенияy&lt;/b&gt;
+        <translation>&lt;b&gt;Каталог назначения&lt;/b&gt;
 &lt;p&gt;Выберите имя каталога назначения с помощью диалога выбора.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -47877,7 +48203,8 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Новое имя&lt;/b&gt;
+&lt;p&gt;Введите новое имя. Новое имя может быть относительным или абсолютныи путём.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -47963,7 +48290,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDialog.py" line="155"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
 </context>
 <context>
@@ -48096,7 +48423,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="185"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="436"/>
@@ -48418,7 +48745,7 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="288"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui" line="22"/>
@@ -48468,12 +48795,12 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui" line="274"/>
         <source>Select to show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.ui" line="277"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
 </context>
 <context>
@@ -48603,17 +48930,17 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="141"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="42"/>
         <source>Select to show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="45"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
 </context>
 <context>
@@ -48696,7 +49023,7 @@ the working copy.&lt;/p&gt;</source>
 get the target URL from the working copy.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This entry is only needed, if you enter revision numbers above.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Назначение&lt;/b&gt;
-&lt;p&gt;Задайте назначение для объединения в этом поле. Оставьте его пустым, чтобы 
+&lt;p&gt;Задайте назначение для объединения в этом поле. Оставьте его пустым, чтобы
 использовать URL из локальной копии.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Примечание:&lt;/b&gt; Это поле необходимо только в том случае,
 если выше указаны версии.&lt;/p&gt;</translation>
@@ -48783,9 +49110,9 @@ get the target URL from the working copy.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="81"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the new project. It will be retrieved from 
+&lt;p&gt;Enter the directory of the new project. It will be retrieved from
 the repository and be placed in this directory.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Каталог проекта&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Каталог проекта&lt;/b&gt;
 &lt;p&gt;Задайте каталог проекта. Он будет добыт из репозитория и сложен в этот каталог.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -48837,6 +49164,13 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="81"/>
+        <source>&lt;b&gt;Project Directory&lt;/b&gt;
+&lt;p&gt;Enter the directory of the new project. It will be retrieved from 
+the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -49084,22 +49418,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="693"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать различие</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="277"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="697"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий (подробно)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="286"/>
         <source>Show differences side-by-side (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий (подробно)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="702"/>
@@ -49664,12 +49998,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="130"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать различие</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="146"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий (подробно)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="162"/>
@@ -49776,7 +50110,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="134"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="70"/>
@@ -50002,7 +50336,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.py" line="267"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRepoBrowserDialog.ui" line="105"/>
@@ -50430,7 +50764,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="402"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="88"/>
@@ -50520,7 +50854,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="93"/>
         <source>Show differences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать различие</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="99"/>
@@ -50530,7 +50864,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="521"/>
         <source>all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Все</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="713"/>
@@ -50570,7 +50904,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="95"/>
         <source>Show differences side-by-side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показать сводку различий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="741"/>
@@ -50796,7 +51130,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="166"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="155"/>
@@ -52141,17 +52475,17 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.ui" line="101"/>
         <source>History:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">История</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.ui" line="124"/>
         <source>Passwords:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пароль</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.ui" line="147"/>
         <source>User Agent Settings:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройка агента пользователя</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.py" line="56"/>
@@ -52176,7 +52510,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.ui" line="170"/>
         <source>Speed Dial Settings:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Настройки быстрого набора</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncCheckPage.py" line="61"/>
@@ -52239,7 +52573,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncDataPage.ui" line="65"/>
         <source>Passwords</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Пароль</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncDataPage.ui" line="72"/>
@@ -52664,7 +52998,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/Sync/SyncHostTypePage.ui" line="52"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Нет</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Sync/SyncHostTypePage.ui" line="39"/>
@@ -53635,7 +53969,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="514"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задайте маски файлов для исключения, разделённые запятой</translation>
     </message>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="83"/>
@@ -54832,7 +55166,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.ui" line="23"/>
         <source>&amp;Revisions:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ревизии:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.ui" line="49"/>
@@ -54892,7 +55226,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/TransplantExtension/TransplantDialog.ui" line="112"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задайте именения с помощю номера, id, диапазона или выражения revset (по одному в строке)</translation>
     </message>
 </context>
 <context>
@@ -57975,42 +58309,42 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../UI/UserInterface.py" line="2088"/>
         <source>Manage SSL Certificates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Менеджер SLL сертификатов</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2088"/>
         <source>Manage SSL Certificates...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Менеджер SLL сертификатов...</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2093"/>
         <source>Manage the saved SSL certificates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Менеджер сохранённых SLL сертификатов</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2095"/>
         <source>&lt;b&gt;Manage SSL Certificates...&lt;/b&gt;&lt;p&gt;Opens a dialog to manage the saved SSL certificates.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Менеджер SLL сертификатов...&lt;/b&gt;&lt;p&gt;Менеджер сохранённых SLL сертификатов.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2104"/>
         <source>Edit Message Filters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Редактировать фильтры сообщений</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2104"/>
         <source>Edit Message Filters...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Редактировать фильтры сообщений...</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2109"/>
         <source>Edit the message filters used to suppress unwanted messages</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Редактировать фильтры нежелательных сообщений</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2111"/>
         <source>&lt;b&gt;Edit Message Filters&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the message filters used to suppress unwanted messages been shown in an error window.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;b&gt;Редактировать фильтры сообщений&lt;/b&gt;&lt;p&gt;Редактировать фильтры нежелательных сообщений об ошибках.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2258"/>
@@ -59166,7 +59500,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../VCS/VersionControl.py" line="596"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
-        <translation>Не могу запустить процесс &apos;{0}&apos;. Убедитесь, что он находится в пути поиска.</translation>
+        <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
         <location filename="../VCS/VersionControl.py" line="727"/>
@@ -61634,7 +61968,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="../ViewManager/ViewManager.py" line="3052"/>
         <source>Ctrl+Shift+Up</source>
         <comment>Search|Goto Previous Method or Class</comment>
-        <translation></translation>
+        <translation type="unfinished">Ctrl+Shift+U</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3062"/>
@@ -61785,7 +62119,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="1100"/>
         <source>Ctrl+Shift+Up</source>
-        <translation></translation>
+        <translation type="unfinished">Ctrl+Shift+U</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="1109"/>
@@ -62094,7 +62428,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3998"/>
         <source>Next Change</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Следующее изменение</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3992"/>
@@ -62109,7 +62443,7 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
     <message>
         <location filename="../ViewManager/ViewManager.py" line="4016"/>
         <source>Previous Change</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Предыдущее изменение</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="4009"/>
@@ -62879,11 +63213,19 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="../QScintilla/ZoomDialog.ui" line="34"/>
         <source>&lt;b&gt;Zoom Factor&lt;/b&gt;
 &lt;p&gt;Enter the desired zoom factor here. The zoom factor
-may be between -10 and +20 and is the increment that is 
+may be between -10 and +20 and is the increment that is
 added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Масштаб&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Масштаб&lt;/b&gt;
 &lt;p&gt;Задайте масштаб. Масштаб может быть
 от -10 до +20.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/ZoomDialog.ui" line="34"/>
+        <source>&lt;b&gt;Zoom Factor&lt;/b&gt;
+&lt;p&gt;Enter the desired zoom factor here. The zoom factor
+may be between -10 and +20 and is the increment that is 
+added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
