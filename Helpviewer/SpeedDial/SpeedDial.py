@@ -193,8 +193,8 @@ class SpeedDial(QObject):
                 'url:"http://eric-ide.python-projects.org/"|'\
                 'title:"Eric Web Site";'\
                 'url:"http://www.riverbankcomputing.com/"|'\
-                'title:"PyQt5 Web Site";'\
-                'url:"http://qt.digia.com/"|title:"Qt Web Site";'\
+                'title:"PyQt Web Site";'\
+                'url:"http://www.qt.io/"|title:"Qt Web Site";'\
                 'url:"http://blog.qt.digia.com/"|title:"Qt Blog";'\
                 'url:"http://www.python.org"|title:"Python Language Website";'\
                 'url:"http://www.google.com"|title:"Google";'
