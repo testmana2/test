@@ -9,6 +9,7 @@ Module implementing the Mercurial command dialog.
 
 from __future__ import unicode_literals
 
+from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import QDialog, QDialogButtonBox
 
 from .Ui_HgCommandDialog import Ui_HgCommandDialog
@@ -53,6 +54,7 @@ class HgCommandDialog(QDialog, Ui_HgCommandDialog):
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
     
+    @pyqtSlot(str)
     def on_commandCombo_editTextChanged(self, text):
         """
         Private method used to enable/disable the OK-button.
