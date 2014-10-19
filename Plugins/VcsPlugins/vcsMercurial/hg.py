@@ -2014,7 +2014,6 @@ class Hg(VersionControl):
         res = dia.startProcess(args, repodir)
         if res:
             dia.exec_()
-            res = dia.hasAddOrDelete()
         self.checkVCSStatus()
     
     def hgInfo(self, ppath, mode="heads"):
