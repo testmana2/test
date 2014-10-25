@@ -142,6 +142,8 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
             else:
                 args.append(
                     os.path.join(self.ppath, self.parameters['outputFile']))
+        else:
+            self.parameters['outputFile'] = self.defaults['outputFile']
         if self.parameters['basePackage'] != self.defaults['basePackage']:
             parms['basePackage'] = self.parameters['basePackage']
             args.append('-b')

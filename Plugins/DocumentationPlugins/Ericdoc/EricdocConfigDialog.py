@@ -190,6 +190,9 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             else:
                 args.append(os.path.join(
                     self.ppath, self.parameters['outputDirectory']))
+        else:
+            self.parameters['outputDirectory'] = \
+                self.defaults['outputDirectory']
         if self.parameters['ignoreDirectories'] != \
                 self.defaults['ignoreDirectories']:
             parms['ignoreDirectories'] = \
