@@ -1873,7 +1873,7 @@ class Hg(VersionControl):
                 f1 = open(name, "r", encoding="utf-8")
                 output2 = f1.read()
                 f1.close()
-                name2 = name
+                name2 = "{0} (Work)".format(name)
             except IOError:
                 E5MessageBox.critical(
                     self.__ui,
