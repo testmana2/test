@@ -226,7 +226,6 @@ class E5MapWidget(QWidget):
         if self._master and \
             event.modifiers() == Qt.NoModifier and \
                 isVertical:
-            # TODO: test angleDelta() with Mac Trackpad
             QCoreApplication.sendEvent(self._master.verticalScrollBar(), event)
     
     def calculateGeometry(self):
