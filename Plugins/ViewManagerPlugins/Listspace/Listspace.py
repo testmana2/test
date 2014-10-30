@@ -778,6 +778,7 @@ class Listspace(QSplitter, ViewManager):
         """
         if event.type() == QEvent.MouseButtonPress and \
            not event.button() == Qt.RightButton:
+            switched = True
             if isinstance(watched, QStackedWidget):
                 switched = watched is not self.currentStack
                 self.currentStack = watched

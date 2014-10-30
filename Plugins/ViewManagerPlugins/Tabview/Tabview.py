@@ -1184,6 +1184,7 @@ class Tabview(QSplitter, ViewManager):
         """
         if event.type() == QEvent.MouseButtonPress and \
            not event.button() == Qt.RightButton:
+            switched = True
             self.currentTabWidget.showIndicator(False)
             if isinstance(watched, E5TabWidget):
                 switched = watched is not self.currentTabWidget
