@@ -596,7 +596,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         
         @param coord the position of the mouse pointer (QPoint)
         """
-        self.menu.popup(self.mapToGlobal(coord))
+        self.menu.popup(self.statusList.mapToGlobal(coord))
         
     def __commit(self):
         """
