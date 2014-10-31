@@ -822,6 +822,8 @@ def createMacAppBundle(pydir):
         '''    <string>????</string>\n'''
         '''    <key>CFBundleVersion</key>\n'''
         '''    <string>1.0</string>\n'''
+        '''    <keyCFBundleIdentifier</key>\n'''
+        '''    <string>org.python-projects.eric-ide</string>\n'''
         '''</dict>\n'''
         '''</plist>\n'''.format(macAppBundleName.replace(".app", "")))
 
