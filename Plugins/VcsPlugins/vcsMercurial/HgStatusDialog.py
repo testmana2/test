@@ -630,7 +630,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             enable = False
         for act in self.lfActions:
             act.setEnabled(enable)
-        self.menu.popup(self.mapToGlobal(coord))
+        self.menu.popup(self.statusList.mapToGlobal(coord))
     
     def __showAddMenu(self):
         """
