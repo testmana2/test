@@ -206,8 +206,8 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         @param revision revision string (string)
         @param changeset changeset string (string)
         @param author author of the change (string)
-        @param date date of the tag (string)
-        @param text name (path) of the tag (string)
+        @param date date of the change (string)
+        @param text text of the change (string)
         """
         itm = QTreeWidgetItem(
             self.annotateList,
@@ -283,7 +283,7 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
     @pyqtSlot()
     def on_sendButton_clicked(self):
         """
-        Private slot to send the input to the subversion process.
+        Private slot to send the input to the hg process.
         """
         input = self.input.text()
         input += os.linesep
