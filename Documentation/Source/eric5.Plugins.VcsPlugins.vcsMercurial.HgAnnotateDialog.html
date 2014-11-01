@@ -100,7 +100,7 @@ QDialog, Ui_HgAnnotateDialog
 <td>Private slot to handle the password checkbox toggled.</td>
 </tr><tr>
 <td><a href="#HgAnnotateDialog.on_sendButton_clicked">on_sendButton_clicked</a></td>
-<td>Private slot to send the input to the subversion process.</td>
+<td>Private slot to send the input to the hg process.</td>
 </tr><tr>
 <td><a href="#HgAnnotateDialog.start">start</a></td>
 <td>Public slot to start the annotate command.</td>
@@ -146,10 +146,10 @@ changeset string (string)
 author of the change (string)
 </dd><dt><i>date</i></dt>
 <dd>
-date of the tag (string)
+date of the change (string)
 </dd><dt><i>text</i></dt>
 <dd>
-name (path) of the tag (string)
+text of the change (string)
 </dd>
 </dl><a NAME="HgAnnotateDialog.__procFinished" ID="HgAnnotateDialog.__procFinished"></a>
 <h4>HgAnnotateDialog.__procFinished</h4>
@@ -254,7 +254,7 @@ flag indicating the status of the check box (boolean)
 <h4>HgAnnotateDialog.on_sendButton_clicked</h4>
 <b>on_sendButton_clicked</b>(<i></i>)
 <p>
-        Private slot to send the input to the subversion process.
+        Private slot to send the input to the hg process.
 </p><a NAME="HgAnnotateDialog.start" ID="HgAnnotateDialog.start"></a>
 <h4>HgAnnotateDialog.start</h4>
 <b>start</b>(<i>fn</i>)
