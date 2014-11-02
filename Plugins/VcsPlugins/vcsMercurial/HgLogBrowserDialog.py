@@ -1465,7 +1465,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     @pyqtSlot()
     def on_sendButton_clicked(self):
         """
-        Private slot to send the input to the merurial process.
+        Private slot to send the input to the mercurial process.
         """
         input = self.input.text()
         input += os.linesep
