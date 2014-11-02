@@ -362,6 +362,9 @@ class HgShelveBrowserDialog(QWidget, Ui_HgShelveBrowserDialog):
         if current:
             for dataSet in current.data(0, self.__fileStatisticsRole):
                 QTreeWidgetItem(self.statisticsList, list(dataSet))
+            self.statisticsList.header().resizeSections(
+                QHeaderView.ResizeToContents)
+            self.statisticsList.header().setStretchLastSection(True)
             
             totals = current.data(0, self.__totalStatisticsRole)
             self.filesLabel.setText(
