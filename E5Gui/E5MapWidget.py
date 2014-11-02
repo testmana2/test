@@ -70,7 +70,6 @@ class E5MapWidget(QWidget):
         self._master = master
         self._master.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self._master.verticalScrollBar().valueChanged.connect(self.repaint)
-        self._master.verticalScrollBar().rangeChanged.connect(self.repaint)
         self.__updateMasterViewportWidth()
     
     def setWidth(self, width):
