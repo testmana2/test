@@ -631,17 +631,6 @@
         <translation>Задайте имена файлов для добавления, разделённые символом разделения элементов пути</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="64"/>
-        <source>&lt;b&gt;Source Files&lt;/b&gt;
-&lt;p&gt;Enter the name of files to add to the current project separated
-by the path separator. You may select them with a dialog by pressing
-the button to the right.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Файлы с исходниками&lt;/b&gt;
-&lt;p&gt;Задайте имена файлов для добавления, разделённые символом
-разделения элементов пути. Их также можно выбрать, нажав
-кнопку справа&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Project/AddFileDialog.ui" line="92"/>
         <source>Select, if the files should be added as sourcecode (overriding automatic detection)</source>
         <translation>Файлы должны быть добавлены как исходники (вопреки автоматическому определению)</translation>
@@ -4152,13 +4141,6 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="489"/>
-        <source>Please select an entry of the list
-to display the configuration page.</source>
-        <translation type="obsolete">Выберите элемент в списке, чтобы
-показать страницу конфигурации.</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="326"/>
         <source>Network</source>
         <translation>Сеть</translation>
@@ -7322,37 +7304,6 @@ Do you want to quit anyway?</source>
 </context>
 <context>
     <name>E5GraphicsView</name>
-    <message>
-        <location filename="../E5Graphics/E5GraphicsView.py" line="57"/>
-        <source>&lt;b&gt;Graphics View&lt;/b&gt;
-&lt;p&gt;This graphics view is used to show a diagram.
-There are various actions available to manipulate the
-shown items.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Clicking on an item selects it.&lt;/li&gt;
-&lt;li&gt;Ctrl-clicking adds an item to the selection.&lt;/li&gt;
-&lt;li&gt;Ctrl-clicking a selected item deselects it.&lt;/li&gt;
-&lt;li&gt;Clicking on an empty spot of the canvas resets the selection.&lt;/li&gt;
-&lt;li&gt;Dragging the mouse over the canvas spans a rubberband to
-select multiple items.&lt;/li&gt;
-&lt;li&gt;Dragging the mouse over a selected item moves the
-whole selection.&lt;/li&gt;
-&lt;/ul&gt;
-</source>
-        <translation type="obsolete">&lt;b&gt;Диаграмма&lt;/b&gt;
-&lt;p&gt;Данный экран отображает диаграмму.
-Возможны следующие действия для управления диаграммой.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Щелчок на объекте его выделяет.&lt;/li&gt;
-&lt;li&gt;Щелчок с нажатой клавишей Ctrl добавляет элемент в выделение.&lt;/li&gt;
-&lt;li&gt;Щелчок с нажатой клавишей Ctrl на выделенном элементе снимает выделение с элемента.&lt;/li&gt;
-&lt;li&gt;Щелчок на пустом месте снимает выделение.&lt;/li&gt;
-&lt;li&gt;Нажатие и перетаскивание мыши на диаграмме создаёт прямоугольное выделение.&lt;/li&gt;
-&lt;li&gt;Нажатие и перетаскивание мыши на диаграмме добавляет прямоугольное выделение к существующему.&lt;/li&gt;
-&lt;li&gt;Нажатие и перетаскивание мыши на выделенном элементе перемещает всё выделение.&lt;/li&gt;
-&lt;/ul&gt;
-</translation>
-    </message>
     <message>
         <location filename="../E5Graphics/E5GraphicsView.py" line="372"/>
         <source>{0}, Page {1}</source>
@@ -20420,18 +20371,6 @@ You have %n tab(s) open.</source>
         <translation>Введите команду Mercurial со всеми необходимыми параметрами</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.ui" line="39"/>
-        <source>&lt;b&gt;Mercurial Command&lt;/b&gt;
-&lt;p&gt;Enter the Mercurial command to be executed including all necessary
-parameters. If a parameter of the commandline includes a space you have to
-surround this parameter by single or double quotes. Do not include the name
-of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Команда Mercurial&lt;/b&gt;
-&lt;p&gt;Введите команду Mercurial и необходимые параметры. Не вводите
-имя исполняемого файла клиента Mercurial (т.е. hg). Если параметр
-содержит пробелы то заключите его в одинарные или двойные кавычки.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCommandDialog.ui" line="65"/>
         <source>Project Directory:</source>
         <translation>Каталог проекта:</translation>
@@ -20928,37 +20867,6 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="42"/>
         <source>Enter the file name pattern for the export files</source>
         <translation>Задайте шаблон имени файла для экспорта</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
-        <source>&lt;b&gt;File Name Pattern&lt;/b&gt;
-&lt;p&gt;Enter the file name pattern to be used to generate the export files
-here. Valid recognized patterns are:&lt;/p&gt;
-&lt;table&gt;
-&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;literal &quot;%&quot; character&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;changeset hash (40 hexadecimal digits)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%N&lt;/td&gt;&lt;td&gt;number of patches being generated&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%R&lt;/td&gt;&lt;td&gt;changeset revision number&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%b&lt;/td&gt;&lt;td&gt;basename of the exporting repository&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;short-form changeset hash (12 hexadecimal digits)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;zero-padded sequence number, starting at 1&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%r&lt;/td&gt;&lt;td&gt;zero-padded changeset revision number&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</source>
-        <translation type="obsolete">&lt;b&gt;Шаблон имени файла&lt;/b&gt;
-&lt;p&gt;Задайте шаблон имени файла для экспорта.
-Возможные элементы шаблона:&lt;/p&gt;
-&lt;table&gt;
-&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;символ &quot;%&quot;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;хэш изменений (40 шестнадцатеричных цифр)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%N&lt;/td&gt;&lt;td&gt;число генерируемых патчей&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%R&lt;/td&gt;&lt;td&gt;ревизия изменений&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%b&lt;/td&gt;&lt;td&gt;базовое имя репозитория&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%h&lt;/td&gt;&lt;td&gt;короткая версия хэша изменений (12 шестнадцатеричных цифр)&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;дополненный нулями порядковый номер, начиная с 1&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;%r&lt;/td&gt;&lt;td&gt;дополненный нулями номер ревизии изменений&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
@@ -22310,14 +22218,6 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="99"/>
         <source>Enter the directory of the new project.</source>
         <translation>Задайте каталог нового проекта.</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="102"/>
-        <source>&lt;b&gt;Project Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the new project. It will be retrieved from
-the repository and be placed in this directory.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Каталог проекта&lt;/b&gt;
-&lt;p&gt;Задайте каталог проекта. Он будет получен из репозитория и помещён в этот каталог.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="98"/>
@@ -25209,7 +25109,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="367"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="370"/>
         <source>%n file(s) changed</source>
         <translation>
             <numerusform>%n файл изменён</numerusform>
@@ -25218,7 +25118,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="369"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="372"/>
         <source>%n line(s) inserted</source>
         <translation>
             <numerusform>%n строка добавлена</numerusform>
@@ -25227,7 +25127,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="371"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="374"/>
         <source>%n line(s) deleted</source>
         <translation>
             <numerusform>%n строка удалена</numerusform>
@@ -39406,16 +39306,6 @@ Select Update.</source>
 &lt;p&gt;Вставить точку (.) в регулярное выражение.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="132"/>
-        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default).
-E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
-character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию).
-Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="146"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
@@ -39446,23 +39336,6 @@ means that the content of the match (called the backreference) is not stored for
 &lt;p&gt;Select to insert some capturing brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Группа: ()&lt;/b&gt;
 &lt;p&gt;Вставить скобки с захватом содержимого.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="172"/>
-        <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses,
-the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above).
-One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
-&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Группа: ()&lt;/b&gt;
-&lt;p&gt;Вставить скобки с захватом содержимого.
-Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
-группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
-В отличие от  скобок без захвата,
-обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера).
-Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
-&lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="184"/>
@@ -39509,28 +39382,11 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 &lt;p&gt;Вставить символ границы слова (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="257"/>
-        <source>&lt;b&gt;Word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word
-must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Граница слова&lt;/b&gt;
-&lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
-Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="266"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Не граница слова&lt;/b&gt;
 &lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="270"/>
-        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b
-does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Не граница слова&lt;/b&gt;
-&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="279"/>
@@ -39562,31 +39418,10 @@ does not. Effectively, \B matches at any position between two word characters as
         <translation>&lt;b&gt;Восстановить последнее отменённое изменение&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="108"/>
-        <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
-&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket.
-The following example could clarify the regexp which match a valid date: &lt;/p&gt;
-&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Комментарий: (?#)&lt;/b&gt;
-&lt;p&gt;Вставить комментарий в регулярное выражение (?# и до первой закрывающей круглой скобки.
-Следующий пример может пояснить регулярное выражение, описывающее корректную дату: &lt;/p&gt;
-&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="121"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog. This dialog will help to edit the range of characters and add some specific conditions.&lt;/p&gt;s</source>
         <translation>&lt;b&gt;Один символ из множества (напр. [abcd])&lt;/b&gt;
 &lt;p&gt;Выбрать множество символов с помощью специального диалога. Этот диалог поможет выбрать множество символов и задать некоторые специфические ограничения.&lt;/p&gt;s</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="188"/>
-        <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched
-backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when
-the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
-E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки именованной группы. Использование этой группы аналогично использованию стандартной группы. Отличие состоит в том, что обратной ссылке присваивается имя. Это полезно, когда работа с группами становится достаточно сложной. Доступ к обратной ссылке можно получить по имени (напр. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x совпадает с &apos;axaxax&apos;,&apos;bxbxbx&apos; или &apos;cxcxcx&apos; (&apos;foo&apos; — это имя группы)&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="199"/>
@@ -39607,32 +39442,11 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 &lt;p&gt;Напр. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x совпадает с &apos;axaxax&apos;,&apos;bxbxbx&apos; или &apos;cxcxcx&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="217"/>
-        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of
-several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
-Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
- words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
-Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;End of line: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the end of line character ($).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Окончание строки: &apos;$&apos;&lt;/b&gt;
 &lt;p&gt;Вставить символ окончания строки ($).&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="283"/>
-        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
-Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial
-regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
-Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="297"/>
@@ -39643,29 +39457,11 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>&lt;b&gt;Отрицательная предварительная проверка: (?!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки отрицательной предварительной проверки. В основном, отрицательная предварительная проверка используется для совпадения с символом, за которым не следует другой символВыражение &apos;q(?!u)&apos; совпадает с символом &apos;q&apos;, только если за ним не следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?![abc])&apos; совпадает с &apos;q&apos;, если за ним следует что угодно, кроме &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="311"/>
-        <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards.
-It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character
-only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним находится ещё один. Выражение &apos;(?&amp;lt;=u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;=[abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="321"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отрицательная предварительная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки отрицательной предварительной проверки.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="325"/>
-        <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead,
-but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos;
-character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex
-expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Отрицательная ретроспективная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки отрицательной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним не находится ещё один. Выражение &apos;(?&amp;lt;!u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним не находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;![abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится всё, кроме &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/PyRegExpWizard/PyRegExpWizardDialog.ui" line="23"/>
@@ -40240,22 +40036,22 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.ui" line="78"/>
         <source>Initial name character</source>
-        <translation type="unfinished"></translation>
+        <translation>Первый именной символ</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.ui" line="85"/>
         <source>Name character</source>
-        <translation type="unfinished"></translation>
+        <translation>Именной символ</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.ui" line="92"/>
         <source>Non-initial name character</source>
-        <translation type="unfinished"></translation>
+        <translation>Непервый именной символ</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.ui" line="99"/>
         <source>Non-name character</source>
-        <translation type="unfinished"></translation>
+        <translation>Неименной символ</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardCharactersDialog.py" line="77"/>
@@ -41189,16 +40985,6 @@ Translate from: Irish
 &lt;p&gt;Вставить точку (.) в регулярное выражение.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="397"/>
-        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default).
-E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
-character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию).
-Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="411"/>
         <source>&lt;b&gt;Repeat contents&lt;/b&gt;
 &lt;p&gt;Select a repetition condition via a specific dialog. This dialog will help to specify the allowed range for repetitions.&lt;/p&gt;</source>
@@ -41231,39 +41017,11 @@ means that the content of the match (called the backreference) is not stored for
 &lt;p&gt;Вставить скобки с захватом содержимого.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="177"/>
-        <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses,
-the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above).
-One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
-&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Группа: ()&lt;/b&gt;
-&lt;p&gt;Вставить скобки с захватом содержимого.
-Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
-группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
-В отличие от  скобок без захвата,
-обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера).
-Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
-&lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="432"/>
         <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Вставить символ альтернатив &apos;|&apos;. &lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="193"/>
-        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of
-several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
-Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
- words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
-Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="204"/>
@@ -41303,15 +41061,6 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 &lt;p&gt;Вставить символ границы слова (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="233"/>
-        <source>&lt;b&gt;Word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word
-must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Граница слова&lt;/b&gt;
-&lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
-Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="242"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
@@ -41319,29 +41068,11 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 &lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="246"/>
-        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b
-does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Не граница слова&lt;/b&gt;
-&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="255"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки положительной предварительной проверки.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="259"/>
-        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
-Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial
-regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
-Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegExpWizard/QRegExpWizardDialog.ui" line="269"/>
@@ -42529,17 +42260,6 @@ Translate from: Irish
 &lt;p&gt;Вставить комментарий внутрь регулярного выражения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="56"/>
-        <source>&lt;b&gt;Comment: (?#)&lt;/b&gt;
-&lt;p&gt;Insert some comment inside your regexp.The regex engine ignores everything after the (?# until the first closing round bracket.
-The following example could clarify the regexp which match a valid date: &lt;/p&gt;
-&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Комментарий: (?#)&lt;/b&gt;
-&lt;p&gt;Вставить комментарий в регулярное выражение (?# и до первой закрывающей круглой скобки.
-Следующий пример может пояснить регулярное выражение, описывающее корректную дату: &lt;/p&gt;
-&lt;p&gt;(?#year)(19|20)\d\d[- /.](?#month)(0[1-9]|1[012])[- /.](?#day)(0[1-9]|[12][0-9]|3[01])&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="66"/>
         <source>&lt;b&gt;Single character of a range (e.g. [abcd])&lt;/b&gt;&lt;p&gt;Select a single character of a range via a specific dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Один символ из множества (напр. [abcd])&lt;/b&gt;
@@ -42557,16 +42277,6 @@ The following example could clarify the regexp which match a valid date: &lt;/p&
 &lt;p&gt;Select to insert a dot (.) in your regexp.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Любой символ: &apos;.&apos;&lt;/b&gt;
 &lt;p&gt;Вставить точку (.) в регулярное выражение.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="80"/>
-        <source>&lt;b&gt;Any character: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert a dot (.) in your regexp. The dot matches a single character, except line break characters (by default).
-E.g. &apos;gr.y&apos; matches &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, etc. Use the dot sparingly. Often, a character class or negated
-character class is faster and more precise.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;любой символ: &apos;.&apos;&lt;/b&gt;
-&lt;p&gt;Вставить точку (.) в регулярное выражение. Точка совпадает с любым символом, кроме символа окончания строки (по умолчанию).
-Например, &apos;gr.y&apos; совпадает с &apos;gray&apos;, &apos;grey&apos;, &apos;gr%y&apos;, и т.д. Используйте точку без фанатизма. Часто использование класса символов или дополнения до класса символов быстрее и более точно.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="94"/>
@@ -42619,38 +42329,11 @@ means that the content of the match (called the backreference) is not stored for
 &lt;p&gt;Вставить скобки с захватом содержимого.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="134"/>
-        <source>&lt;b&gt;Group: ()&lt;/b&gt;
-&lt;p&gt;Select to insert some capturing brackets. They can be used to apply a regexp quantifier (e.g. &apos;?&apos; or &apos;+&apos;) to the entire group of
-characters inside the brakets. E.g. the regex &apos;Set(Value)?&apos; matches &apos;Set&apos; or &apos;SetValue&apos;. Contrary to non-capturing parentheses,
-the backreference matched inside the brakets is stored for further use (i.e. &apos;Value&apos; in the second example above).
-One can access the backereference with the &apos;\1&apos; expression. &lt;/p&gt;
-&lt;p&gt;E.g. &apos;([a-c])x\1x\1&apos; will match &apos;axaxa&apos;, &apos;bxbxb&apos; and &apos;cxcxc&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Группа: ()&lt;/b&gt;
-&lt;p&gt;Вставить скобки с захватом содержимого.
-Они могут использоваться для того, чтобы применить квантификаторы (&apos;?&apos;, &apos;*&apos;, или &apos;+&apos;) ко всей
-группе символов внутри скобок. Например, регулярное выражение &apos;Set(?:Value)?&apos; совпадает с &apos;Set&apos; или &apos;SetValue&apos;.
-В отличие от  скобок без захвата,
-обратная ссылка сохраняется для дальнейшего использования  (т.е. &apos;Value&apos; из примера).
-Значение обратной ссылки можно получить с помощью выражения &apos;\1&apos;. &lt;/p&gt;
-&lt;p&gt;Например, &apos;([a-c])x\1x\1&apos; совпадёт с &apos;axaxa&apos;, &apos;bxbxb&apos; и &apos;cxcxc&apos;.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="146"/>
         <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert some named group brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки именованной группы.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="150"/>
-        <source>&lt;b&gt;Named group: (?P&amp;lt;&lt;i&gt;groupname&lt;/i&gt;&amp;gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert some named group brackets. Usage is similar to standard group parentheses as the matched
-backreference is also stored for further usage. The difference is that a name is given to the match. This is useful when
-the work to do on the match becomes a bit complicated. One can access the backreference via the group name (i.e (?P=&lt;i&gt;groupname&lt;/i&gt;)).
-E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bxbxbx&apos; or &apos;cxcxcx&apos; (&apos;foo&apos; is the group name)&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Именованная группа: (?P&amp;lt;&lt;i&gt;имя&lt;/i&gt;&amp;gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки именованной группы. Использование этой группы аналогично использованию стандартной группы. Отличие состоит в том, что обратной ссылке присваивается имя. Это полезно, когда работа с группами становится достаточно сложной. Доступ к обратной ссылке можно получить по имени (напр. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x совпадает с &apos;axaxax&apos;,&apos;bxbxbx&apos; или &apos;cxcxcx&apos; (&apos;foo&apos; — это имя группы)&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="161"/>
@@ -42676,17 +42359,6 @@ E.g. (?P&lt;foo&gt;[abc])x(?P=foo)x(?P=foo)x matches &apos;axaxax&apos;,&apos;bx
 &lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
 &lt;p&gt;Вставить символ альтернатив &apos;|&apos;. &lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="179"/>
-        <source>&lt;b&gt;Alternatives: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Select to insert the alternation symbol &apos;|&apos;. The alternation is used to match a single regular expression out of
-several possible regular expressions. E.g. &apos;cat|dog|mouse|fish&apos; matches words containing the word &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; or &apos;fish&apos;.
-Be aware that in the above example, the alternatives refer to whole or part of words. If you want to match exactly the
- words &apos;cat&apos;, &apos;dog&apos;, ... you should express the fact that you only want to match complete words: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Альтернативы: &apos;|&apos;&lt;/b&gt;
-&lt;p&gt;Вставить симвот альтернатив &apos;|&apos; в регулярное выражение. Альтернативы используются для совпадения с одним из нескольких возможных регулярных выражений. Например, &apos;cat|dog|mouse|fish&apos; совпадает со словами, содержащими слово &apos;cat&apos;, &apos;dog&apos;,&apos;mouse&apos; или &apos;fish&apos;.
-Обратите внимание, что в приведённом примере альтернативы ссылаются как на целые слова, так и на части слов. Если необходимо совпадение с целыми словами &apos;cat&apos;, &apos;dog&apos;, ... необходимо выразить это следующим образом: &apos;\b(cat|dog|mouse|fish)\b&apos;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="190"/>
@@ -42726,15 +42398,6 @@ E.g. &apos;^[A-Z]&apos; match lines starting with a capitalized character. &lt;/
 &lt;p&gt;Вставить символ границы слова (\b).&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="219"/>
-        <source>&lt;b&gt;Word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\b). This character is used to express the fact that word
-must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the word &apos;cat&apos; while &apos;concatenation&apos; is ignored.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Граница слова&lt;/b&gt;
-&lt;p&gt;Вставить символ границы слова (\b). Этот символ используется для обозначения того, что на данной позиции должно начинаться или заканчиваться слово.
-Например, &apos;\bcat\b&apos; совпадает исключительно со словом &apos;cat&apos;, в то время как слово &apos;concatenation&apos; будет пропущено.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="228"/>
         <source>&lt;b&gt;Non word boundary&lt;/b&gt;
 &lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b.&lt;/p&gt;</source>
@@ -42742,29 +42405,11 @@ must begin or end at this position. E.g. &apos;\bcat\b&apos; matches exactly the
 &lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="232"/>
-        <source>&lt;b&gt;Non word boundary&lt;/b&gt;
-&lt;p&gt;Select to insert the word boudary character (\B). \B is the negated version of \b. \B matches at every position where \b
-does not. Effectively, \B matches at any position between two word characters as well as at any position between two non-word characters.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Не граница слова&lt;/b&gt;
-&lt;p&gt;Вставить символ не границы слова (\B). Это выражение, обратное выражению \b. \B совпадает с любой позицией, с которой не совпадает \b. Фактически, \B совпадает с любой позицией между символов в слове, и также с любой позицией между символов дополнения до слова&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="241"/>
         <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the positive lookhead brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки положительной предварительной проверки.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="245"/>
-        <source>&lt;b&gt;Positive lookahead: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookhead brackets. Basically, positive lookhead is used to match a character only if followed by another one.
-Writting &apos;q(?=u)&apos; means that you want to match the &apos;q&apos; character only if it is followed by &apos;u&apos;. In this statement &apos;u&apos; is a trivial
-regexp which may be replaced by a more complex expression; q(?=[abc])&apos; will match a &apos;q&apos; if followed by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Положительная предварительная проверка: (?=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки положительной предварительной проверки. В основном, положительная предварительная проверка используется для совпадения с символом, за которым следует другой символ
-Выражение &apos;q(?=u)&apos; совпадает с символом &apos;q&apos;, только если за ним следует символ &apos;u&apos;. В этом примере, &apos;u&apos; — это простейшее регулярное выражение, которое можно заменить на более сложное: q(?=[abc])&apos; совпадает с &apos;q&apos;, если за ним следует &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="255"/>
@@ -42787,29 +42432,11 @@ trivial regexp which may be replaced by a more complex expression; &apos;q(?![ab
         <translation>&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="273"/>
-        <source>&lt;b&gt;Positive lookbehind: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the positive lookbehind brackets. Lookbehind has the same effect as lookahead, but works backwards.
-It is used to match a character only if preceded by another one. Writting &apos;(?&amp;lt;=u)q&apos; means that you want to match the &apos;q&apos; character
-only if it is preceded by &apos;u&apos;. As with lookhead, &apos;u&apos; may be replaced by a more complex expression; &apos;(?&amp;lt;=[abc])q&apos; will match a &apos;q&apos; if preceded by either &apos;a&apos;, &apos;b&apos; or &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Положительная ретроспективная проверка: (?&amp;lt;=&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;&lt;p&gt;Вставить скобки положительной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним находится ещё один. Выражение &apos;(?&amp;lt;=u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;=[abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="283"/>
         <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Select to insert the negative lookbehind brackets.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Отрицательная предварительная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
 &lt;p&gt;Вставить скобки отрицательной предварительной проверки.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="287"/>
-        <source>&lt;b&gt;Negative lookbehind (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Select to insert the negative lookbehind brackets. Lookbehind has the same effect as lookahead,
-but works backwards. It is used to match a character only if not preceded by another one. Writting &apos;(?&amp;lt;!u)q&apos; means that you want to match the &apos;q&apos;
-character only if it is not preceded by &apos;u&apos;. As other lookaround, &apos;u&apos; may be replaced by a more complex
-expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if not preceded by either &apos;a&apos;, &apos;b&apos; nor &apos;c&apos;.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Отрицательная ретроспективная проверка: (?&amp;lt;!&lt;i&gt;regexpr&lt;/i&gt;)&lt;/b&gt;
-&lt;p&gt;Вставить скобки отрицательной ретроспективной проверки.&lt;/p&gt;. Ретроспективная проверка работает аналогично предварительной, но в обратную сторону. Она используется, чтобы выразить совпадение с символом, если перед ним не находится ещё один. Выражение &apos;(?&amp;lt;!u)q&apos; совпадает с символом &apos;q&apos;, только если перед ним не находится символ &apos;u&apos;. Как и при предварительной проверке, &apos;u&apos; можно заменить на более сложное регулярное выражение; &apos;(?&amp;lt;![abc])q&apos; совпадёт с &apos;q&apos;, если перед ней находится всё, кроме &apos;a&apos;, &apos;b&apos; или &apos;c&apos;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/QRegularExpressionWizard/QRegularExpressionWizardDialog.ui" line="314"/>
@@ -48152,17 +47779,6 @@ Not connected</source>
         <translation>Задайте рабочий каталог для команды Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
-        <source>&lt;b&gt;Working directory&lt;/b&gt;
-&lt;p&gt;Enter the working directory for the Subversion command.
-This is an optional entry. The button to the right will open a
-directory selection dialog.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Рабочий каталог&lt;/b&gt;
-&lt;p&gt;Задайте имя рабочего каталога для программы Subversion.
-Это опционально. Вы можете выбрать
-его с помощью диалога, нажав кнопку справа.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="89"/>
         <source>Working Directory:&lt;br&gt;(optional)</source>
         <translation>Рабочий каталог:&lt;br&gt;(опционально)</translation>
@@ -48186,18 +47802,6 @@ directory selection dialog.&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="38"/>
         <source>Enter the Subversion command to be executed with all necessary parameters</source>
         <translation>Введите команду Subversion и необходимые параметры</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="41"/>
-        <source>&lt;b&gt;Subversion Command&lt;/b&gt;
-&lt;p&gt;Enter the Subversion command to be executed including all necessary
-parameters. If a parameter of the commandline includes a space you have to
-surround this parameter by single or double quotes. Do not include the name
-of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Команда Subversion&lt;/b&gt;
-&lt;p&gt;Введите команду Subversion и необходимые параметры. Не вводите
-имя исполняемого файла клиента subversion (т.е. svn). Если параметр
-содержит пробелы то заключите его в одинарные или двойные кавычки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="41"/>
@@ -49257,14 +48861,6 @@ get the target URL from the working copy.&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="78"/>
         <source>Enter the directory of the new project.</source>
         <translation>Задайте каталог нового проекта.</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="81"/>
-        <source>&lt;b&gt;Project Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the new project. It will be retrieved from
-the repository and be placed in this directory.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Каталог проекта&lt;/b&gt;
-&lt;p&gt;Задайте каталог проекта. Он будет добыт из репозитория и сложен в этот каталог.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="90"/>
@@ -63371,16 +62967,6 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
         <location filename="../QScintilla/ZoomDialog.ui" line="31"/>
         <source>Enter zoom factor</source>
         <translation>Задайте масштаб</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/ZoomDialog.ui" line="34"/>
-        <source>&lt;b&gt;Zoom Factor&lt;/b&gt;
-&lt;p&gt;Enter the desired zoom factor here. The zoom factor
-may be between -10 and +20 and is the increment that is
-added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Масштаб&lt;/b&gt;
-&lt;p&gt;Задайте масштаб. Масштаб может быть
-от -10 до +20.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../QScintilla/ZoomDialog.ui" line="34"/>
