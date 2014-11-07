@@ -26,6 +26,15 @@ class EditorMarkerMap(E5MapWidget):
         """
         super(EditorMarkerMap, self).__init__(parent)
         
+        self.setWhatsThis(self.tr(
+            """<b>Editor Map</b>"""
+            """<p>This shows a 'map' of the editor. The visible area is"""
+            """ highlighted by the box and all markers like bookmarks,"""
+            """ breakpoints, errors or changed lines are indicated"""
+            """ by differently colored lines configurable via the"""
+            """ Editor\u279dStyle page of the configuration dialog.</p>"""
+        ))
+        
         # initialize colors for various markers
         self.initColors()
     

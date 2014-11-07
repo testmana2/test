@@ -10731,6 +10731,14 @@ whole selection.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>EditorMarkerMap</name>
+    <message>
+        <location filename="../QScintilla/EditorMarkerMap.py" line="29"/>
+        <source>&lt;b&gt;Editor Map&lt;/b&gt;&lt;p&gt;This shows a &apos;map&apos; of the editor. The visible area is highlighted by the box and all markers like bookmarks, breakpoints, errors or changed lines are indicated by differently colored lines configurable via the Editoru279dStyle page of the configuration dialog.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>EditorPropertiesPage</name>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="17"/>

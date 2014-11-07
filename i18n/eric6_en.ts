@@ -4737,22 +4737,22 @@ to display the configuration page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="516"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="517"/>
         <source>Code Generation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="401"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="402"/>
         <source>&lt;p&gt;Could not open the code template file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="437"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="438"/>
         <source>&lt;p&gt;Could not open the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="516"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="517"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8443,862 +8443,862 @@ whole selection.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2844"/>
+        <location filename="../QScintilla/Editor.py" line="2845"/>
         <source>Open File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="331"/>
+        <location filename="../QScintilla/Editor.py" line="332"/>
         <source>&lt;p&gt;The size of the file &lt;b&gt;{0}&lt;/b&gt; is &lt;b&gt;{1} KB&lt;/b&gt;. Do you really want to load it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="384"/>
+        <location filename="../QScintilla/Editor.py" line="385"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="642"/>
+        <location filename="../QScintilla/Editor.py" line="643"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="645"/>
+        <location filename="../QScintilla/Editor.py" line="646"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="648"/>
+        <location filename="../QScintilla/Editor.py" line="649"/>
         <source>Revert to last saved state</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="652"/>
+        <location filename="../QScintilla/Editor.py" line="653"/>
         <source>Cut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="655"/>
+        <location filename="../QScintilla/Editor.py" line="656"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="658"/>
+        <location filename="../QScintilla/Editor.py" line="659"/>
         <source>Paste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="663"/>
+        <location filename="../QScintilla/Editor.py" line="664"/>
         <source>Indent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="666"/>
+        <location filename="../QScintilla/Editor.py" line="667"/>
         <source>Unindent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="669"/>
+        <location filename="../QScintilla/Editor.py" line="670"/>
         <source>Comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="672"/>
+        <location filename="../QScintilla/Editor.py" line="673"/>
         <source>Uncomment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="675"/>
+        <location filename="../QScintilla/Editor.py" line="676"/>
         <source>Stream Comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="678"/>
+        <location filename="../QScintilla/Editor.py" line="679"/>
         <source>Box Comment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="682"/>
+        <location filename="../QScintilla/Editor.py" line="683"/>
         <source>Select to brace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="684"/>
+        <location filename="../QScintilla/Editor.py" line="685"/>
         <source>Select all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="685"/>
+        <location filename="../QScintilla/Editor.py" line="686"/>
         <source>Deselect all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6919"/>
+        <location filename="../QScintilla/Editor.py" line="6920"/>
         <source>Check spelling...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="691"/>
+        <location filename="../QScintilla/Editor.py" line="692"/>
         <source>Check spelling of selection...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="695"/>
+        <location filename="../QScintilla/Editor.py" line="696"/>
         <source>Remove from dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="699"/>
+        <location filename="../QScintilla/Editor.py" line="700"/>
         <source>Shorten empty lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="706"/>
+        <location filename="../QScintilla/Editor.py" line="707"/>
         <source>Use Monospaced Font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="711"/>
+        <location filename="../QScintilla/Editor.py" line="712"/>
         <source>Autosave enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="715"/>
+        <location filename="../QScintilla/Editor.py" line="716"/>
         <source>Typing aids enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="722"/>
+        <location filename="../QScintilla/Editor.py" line="723"/>
         <source>Autocompletion enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="750"/>
+        <location filename="../QScintilla/Editor.py" line="751"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="756"/>
+        <location filename="../QScintilla/Editor.py" line="757"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="759"/>
+        <location filename="../QScintilla/Editor.py" line="760"/>
         <source>Save As...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="769"/>
+        <location filename="../QScintilla/Editor.py" line="770"/>
         <source>Print Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="772"/>
+        <location filename="../QScintilla/Editor.py" line="773"/>
         <source>Print</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="793"/>
+        <location filename="../QScintilla/Editor.py" line="794"/>
         <source>Autocomplete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="795"/>
+        <location filename="../QScintilla/Editor.py" line="796"/>
         <source>dynamic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="798"/>
+        <location filename="../QScintilla/Editor.py" line="799"/>
         <source>from Document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="800"/>
+        <location filename="../QScintilla/Editor.py" line="801"/>
         <source>from APIs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="802"/>
+        <location filename="../QScintilla/Editor.py" line="803"/>
         <source>from Document and APIs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="805"/>
+        <location filename="../QScintilla/Editor.py" line="806"/>
         <source>Calltip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="818"/>
+        <location filename="../QScintilla/Editor.py" line="819"/>
         <source>Check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="838"/>
+        <location filename="../QScintilla/Editor.py" line="839"/>
         <source>Show</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="840"/>
+        <location filename="../QScintilla/Editor.py" line="841"/>
         <source>Code metrics...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="841"/>
+        <location filename="../QScintilla/Editor.py" line="842"/>
         <source>Code coverage...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="843"/>
+        <location filename="../QScintilla/Editor.py" line="844"/>
         <source>Show code coverage annotations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="846"/>
+        <location filename="../QScintilla/Editor.py" line="847"/>
         <source>Hide code coverage annotations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="849"/>
+        <location filename="../QScintilla/Editor.py" line="850"/>
         <source>Profile data...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="862"/>
+        <location filename="../QScintilla/Editor.py" line="863"/>
         <source>Diagrams</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="864"/>
+        <location filename="../QScintilla/Editor.py" line="865"/>
         <source>Class Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="866"/>
+        <location filename="../QScintilla/Editor.py" line="867"/>
         <source>Package Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="868"/>
+        <location filename="../QScintilla/Editor.py" line="869"/>
         <source>Imports Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="870"/>
+        <location filename="../QScintilla/Editor.py" line="871"/>
         <source>Application Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="888"/>
+        <location filename="../QScintilla/Editor.py" line="889"/>
         <source>Languages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="891"/>
+        <location filename="../QScintilla/Editor.py" line="892"/>
         <source>No Language</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="914"/>
+        <location filename="../QScintilla/Editor.py" line="915"/>
         <source>Guessed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1249"/>
+        <location filename="../QScintilla/Editor.py" line="1250"/>
         <source>Alternatives</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="934"/>
+        <location filename="../QScintilla/Editor.py" line="935"/>
         <source>Encodings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="975"/>
+        <location filename="../QScintilla/Editor.py" line="976"/>
         <source>End-of-Line Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="979"/>
+        <location filename="../QScintilla/Editor.py" line="980"/>
         <source>Unix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="986"/>
+        <location filename="../QScintilla/Editor.py" line="987"/>
         <source>Windows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="993"/>
+        <location filename="../QScintilla/Editor.py" line="994"/>
         <source>Macintosh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1011"/>
+        <location filename="../QScintilla/Editor.py" line="1012"/>
         <source>Export as</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1134"/>
+        <location filename="../QScintilla/Editor.py" line="1135"/>
         <source>Toggle bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1136"/>
+        <location filename="../QScintilla/Editor.py" line="1137"/>
         <source>Next bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1138"/>
+        <location filename="../QScintilla/Editor.py" line="1139"/>
         <source>Previous bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1140"/>
+        <location filename="../QScintilla/Editor.py" line="1141"/>
         <source>Clear all bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1160"/>
+        <location filename="../QScintilla/Editor.py" line="1161"/>
         <source>Toggle breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1162"/>
+        <location filename="../QScintilla/Editor.py" line="1163"/>
         <source>Toggle temporary breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1165"/>
+        <location filename="../QScintilla/Editor.py" line="1166"/>
         <source>Edit breakpoint...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4856"/>
+        <location filename="../QScintilla/Editor.py" line="4857"/>
         <source>Enable breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1170"/>
+        <location filename="../QScintilla/Editor.py" line="1171"/>
         <source>Next breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1172"/>
+        <location filename="../QScintilla/Editor.py" line="1173"/>
         <source>Previous breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1174"/>
+        <location filename="../QScintilla/Editor.py" line="1175"/>
         <source>Clear all breakpoints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1143"/>
+        <location filename="../QScintilla/Editor.py" line="1144"/>
         <source>Goto syntax error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1145"/>
+        <location filename="../QScintilla/Editor.py" line="1146"/>
         <source>Show syntax error message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1147"/>
+        <location filename="../QScintilla/Editor.py" line="1148"/>
         <source>Clear syntax error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1150"/>
+        <location filename="../QScintilla/Editor.py" line="1151"/>
         <source>Next warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1153"/>
+        <location filename="../QScintilla/Editor.py" line="1154"/>
         <source>Previous warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1155"/>
+        <location filename="../QScintilla/Editor.py" line="1156"/>
         <source>Show warning message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1157"/>
+        <location filename="../QScintilla/Editor.py" line="1158"/>
         <source>Clear warnings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1177"/>
+        <location filename="../QScintilla/Editor.py" line="1178"/>
         <source>Next uncovered line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1180"/>
+        <location filename="../QScintilla/Editor.py" line="1181"/>
         <source>Previous uncovered line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1183"/>
+        <location filename="../QScintilla/Editor.py" line="1184"/>
         <source>Next task</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1185"/>
+        <location filename="../QScintilla/Editor.py" line="1186"/>
         <source>Previous task</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1194"/>
+        <location filename="../QScintilla/Editor.py" line="1195"/>
         <source>LMB toggles bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1198"/>
+        <location filename="../QScintilla/Editor.py" line="1199"/>
         <source>LMB toggles breakpoints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1234"/>
+        <location filename="../QScintilla/Editor.py" line="1235"/>
         <source>Export source</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1226"/>
+        <location filename="../QScintilla/Editor.py" line="1227"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1234"/>
+        <location filename="../QScintilla/Editor.py" line="1235"/>
         <source>No export format given. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1245"/>
+        <location filename="../QScintilla/Editor.py" line="1246"/>
         <source>Alternatives ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1265"/>
+        <location filename="../QScintilla/Editor.py" line="1266"/>
         <source>Pygments Lexer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1265"/>
+        <location filename="../QScintilla/Editor.py" line="1266"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1717"/>
+        <location filename="../QScintilla/Editor.py" line="1718"/>
         <source>Modification of Read Only file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1717"/>
+        <location filename="../QScintilla/Editor.py" line="1718"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2409"/>
+        <location filename="../QScintilla/Editor.py" line="2410"/>
         <source>Printing...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2426"/>
+        <location filename="../QScintilla/Editor.py" line="2427"/>
         <source>Printing completed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2428"/>
+        <location filename="../QScintilla/Editor.py" line="2429"/>
         <source>Error while printing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2431"/>
+        <location filename="../QScintilla/Editor.py" line="2432"/>
         <source>Printing aborted</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2789"/>
+        <location filename="../QScintilla/Editor.py" line="2790"/>
         <source>File Modified</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2789"/>
+        <location filename="../QScintilla/Editor.py" line="2790"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2844"/>
+        <location filename="../QScintilla/Editor.py" line="2845"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3014"/>
+        <location filename="../QScintilla/Editor.py" line="3015"/>
         <source>Save File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2947"/>
+        <location filename="../QScintilla/Editor.py" line="2948"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3014"/>
+        <location filename="../QScintilla/Editor.py" line="3015"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4329"/>
+        <location filename="../QScintilla/Editor.py" line="4330"/>
         <source>Autocompletion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4329"/>
+        <location filename="../QScintilla/Editor.py" line="4330"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4859"/>
+        <location filename="../QScintilla/Editor.py" line="4860"/>
         <source>Disable breakpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5203"/>
+        <location filename="../QScintilla/Editor.py" line="5204"/>
         <source>Code Coverage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5203"/>
+        <location filename="../QScintilla/Editor.py" line="5204"/>
         <source>Please select a coverage file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5267"/>
+        <location filename="../QScintilla/Editor.py" line="5268"/>
         <source>Show Code Coverage Annotations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5260"/>
+        <location filename="../QScintilla/Editor.py" line="5261"/>
         <source>All lines have been covered.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5267"/>
+        <location filename="../QScintilla/Editor.py" line="5268"/>
         <source>There is no coverage file available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5382"/>
+        <location filename="../QScintilla/Editor.py" line="5383"/>
         <source>Profile Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5382"/>
+        <location filename="../QScintilla/Editor.py" line="5383"/>
         <source>Please select a profile file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5542"/>
+        <location filename="../QScintilla/Editor.py" line="5543"/>
         <source>Syntax Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5542"/>
+        <location filename="../QScintilla/Editor.py" line="5543"/>
         <source>No syntax error message available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5857"/>
+        <location filename="../QScintilla/Editor.py" line="5858"/>
         <source>Macro Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5857"/>
+        <location filename="../QScintilla/Editor.py" line="5858"/>
         <source>Select a macro name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5885"/>
+        <location filename="../QScintilla/Editor.py" line="5886"/>
         <source>Load macro file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5928"/>
+        <location filename="../QScintilla/Editor.py" line="5929"/>
         <source>Macro files (*.macro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5908"/>
+        <location filename="../QScintilla/Editor.py" line="5909"/>
         <source>Error loading macro</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5899"/>
+        <location filename="../QScintilla/Editor.py" line="5900"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5908"/>
+        <location filename="../QScintilla/Editor.py" line="5909"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5928"/>
+        <location filename="../QScintilla/Editor.py" line="5929"/>
         <source>Save macro file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5945"/>
+        <location filename="../QScintilla/Editor.py" line="5946"/>
         <source>Save macro</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5945"/>
+        <location filename="../QScintilla/Editor.py" line="5946"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5961"/>
+        <location filename="../QScintilla/Editor.py" line="5962"/>
         <source>Error saving macro</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5961"/>
+        <location filename="../QScintilla/Editor.py" line="5962"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5974"/>
+        <location filename="../QScintilla/Editor.py" line="5975"/>
         <source>Start Macro Recording</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5974"/>
+        <location filename="../QScintilla/Editor.py" line="5975"/>
         <source>Macro recording is already active. Start new?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6000"/>
+        <location filename="../QScintilla/Editor.py" line="6001"/>
         <source>Macro Recording</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6000"/>
+        <location filename="../QScintilla/Editor.py" line="6001"/>
         <source>Enter name of the macro:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6134"/>
+        <location filename="../QScintilla/Editor.py" line="6135"/>
         <source>File changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6296"/>
+        <location filename="../QScintilla/Editor.py" line="6297"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6436"/>
+        <location filename="../QScintilla/Editor.py" line="6437"/>
         <source>Drop Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6436"/>
+        <location filename="../QScintilla/Editor.py" line="6437"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6457"/>
+        <location filename="../QScintilla/Editor.py" line="6458"/>
         <source>Resources</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6459"/>
+        <location filename="../QScintilla/Editor.py" line="6460"/>
         <source>Add file...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6461"/>
+        <location filename="../QScintilla/Editor.py" line="6462"/>
         <source>Add files...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6463"/>
+        <location filename="../QScintilla/Editor.py" line="6464"/>
         <source>Add aliased file...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6466"/>
+        <location filename="../QScintilla/Editor.py" line="6467"/>
         <source>Add localized resource...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6470"/>
+        <location filename="../QScintilla/Editor.py" line="6471"/>
         <source>Add resource frame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6489"/>
+        <location filename="../QScintilla/Editor.py" line="6490"/>
         <source>Add file resource</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6505"/>
+        <location filename="../QScintilla/Editor.py" line="6506"/>
         <source>Add file resources</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6533"/>
+        <location filename="../QScintilla/Editor.py" line="6534"/>
         <source>Add aliased file resource</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6533"/>
+        <location filename="../QScintilla/Editor.py" line="6534"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6597"/>
+        <location filename="../QScintilla/Editor.py" line="6598"/>
         <source>Package Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6597"/>
+        <location filename="../QScintilla/Editor.py" line="6598"/>
         <source>Include class attributes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6617"/>
+        <location filename="../QScintilla/Editor.py" line="6618"/>
         <source>Imports Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6617"/>
+        <location filename="../QScintilla/Editor.py" line="6618"/>
         <source>Include imports from external modules?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6631"/>
+        <location filename="../QScintilla/Editor.py" line="6632"/>
         <source>Application Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6631"/>
+        <location filename="../QScintilla/Editor.py" line="6632"/>
         <source>Include module names?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6922"/>
+        <location filename="../QScintilla/Editor.py" line="6923"/>
         <source>Add to dictionary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6924"/>
+        <location filename="../QScintilla/Editor.py" line="6925"/>
         <source>Ignore All</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5796"/>
+        <location filename="../QScintilla/Editor.py" line="5797"/>
         <source>Warning: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5803"/>
+        <location filename="../QScintilla/Editor.py" line="5804"/>
         <source>Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6130"/>
+        <location filename="../QScintilla/Editor.py" line="6131"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4430"/>
+        <location filename="../QScintilla/Editor.py" line="4431"/>
         <source>Activating Auto-Completion Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4430"/>
+        <location filename="../QScintilla/Editor.py" line="4431"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4620"/>
+        <location filename="../QScintilla/Editor.py" line="4621"/>
         <source>Activating Calltip Provider</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4620"/>
+        <location filename="../QScintilla/Editor.py" line="4621"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="765"/>
+        <location filename="../QScintilla/Editor.py" line="766"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="874"/>
+        <location filename="../QScintilla/Editor.py" line="875"/>
         <source>Load Diagram...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1188"/>
+        <location filename="../QScintilla/Editor.py" line="1189"/>
         <source>Next change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1191"/>
+        <location filename="../QScintilla/Editor.py" line="1192"/>
         <source>Previous change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7336"/>
+        <location filename="../QScintilla/Editor.py" line="7337"/>
         <source>Sort Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7336"/>
+        <location filename="../QScintilla/Editor.py" line="7337"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5732"/>
+        <location filename="../QScintilla/Editor.py" line="5733"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5732"/>
+        <location filename="../QScintilla/Editor.py" line="5733"/>
         <source>No warning messages available.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5793"/>
+        <location filename="../QScintilla/Editor.py" line="5794"/>
         <source>Style: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="742"/>
+        <location filename="../QScintilla/Editor.py" line="743"/>
         <source>New Document View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="745"/>
+        <location filename="../QScintilla/Editor.py" line="746"/>
         <source>New Document View (with new split)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="828"/>
+        <location filename="../QScintilla/Editor.py" line="829"/>
         <source>Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="956"/>
+        <location filename="../QScintilla/Editor.py" line="957"/>
         <source>Re-Open With Encoding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6124"/>
+        <location filename="../QScintilla/Editor.py" line="6125"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10614,6 +10614,14 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorKeywordsPage.ui" line="84"/>
         <source>Enter the keywords separated by a blank</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>EditorMarkerMap</name>
+    <message>
+        <location filename="../QScintilla/EditorMarkerMap.py" line="29"/>
+        <source>&lt;b&gt;Editor Map&lt;/b&gt;&lt;p&gt;This shows a &apos;map&apos; of the editor. The visible area is highlighted by the box and all markers like bookmarks, breakpoints, errors or changed lines are indicated by differently colored lines configurable via the Editoru279dStyle page of the configuration dialog.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -13002,17 +13010,17 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="192"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="194"/>
         <source>Select output file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="192"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="194"/>
         <source>API files (*.api);;All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="223"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="225"/>
         <source>Select directory to exclude</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13405,27 +13413,27 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="302"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="305"/>
         <source>Select output directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="327"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="330"/>
         <source>Select directory to exclude</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="367"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="370"/>
         <source>Select CSS style sheet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="367"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="370"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="516"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="519"/>
         <source>Select output directory for QtHelp files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18884,117 +18892,117 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2240"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2239"/>
         <source>Creating branch in the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2269"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2268"/>
         <source>Showing current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2393"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2392"/>
         <source>Verifying the integrity of the Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2418"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2417"/>
         <source>Showing the combined configuration settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2442"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2441"/>
         <source>Showing aliases for remote repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2466"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2465"/>
         <source>Recovering from interrupted transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2490"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2489"/>
         <source>Identifying project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2528"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2527"/>
         <source>Create .hgignore file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2528"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2527"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; exists already. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2619"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2618"/>
         <source>Create changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2576"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2575"/>
         <source>Mercurial Changegroup Files (*.hg)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2593"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2592"/>
         <source>&lt;p&gt;The Mercurial changegroup file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2640"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2639"/>
         <source>Preview changegroup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2679"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2678"/>
         <source>Mercurial Changegroup Files (*.hg);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2699"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2698"/>
         <source>Apply changegroups</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2687"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2686"/>
         <source>Shall the working directory be updated?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2717"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2716"/>
         <source>Bisect subcommand ({0}) invalid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2747"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2746"/>
         <source>Mercurial Bisect ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2779"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2778"/>
         <source>Removing files from the Mercurial repository only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2833"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2832"/>
         <source>Backing out changeset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2813"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2812"/>
         <source>No revision given. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2860"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2859"/>
         <source>Rollback last transaction</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2853"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2852"/>
         <source>Are you sure you want to rollback the last transaction?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19004,72 +19012,72 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3509"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3508"/>
         <source>Mercurial Command Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3349"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3348"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be restarted.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3509"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3508"/>
         <source>&lt;p&gt;The Mercurial Command Server could not be started.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2928"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2927"/>
         <source>Import Patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2975"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2974"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3022"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3021"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3075"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3074"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3101"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3100"/>
         <source>Copy Changesets (Continue)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3218"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3217"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3251"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3250"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3199"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3198"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub already contains an entry &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3270"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3269"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub could not be written to.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3270"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3269"/>
         <source>Remove Sub-repositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3239"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3238"/>
         <source>&lt;p&gt;The sub-repositories file .hgsub does not exist. Aborting...&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19099,7 +19107,7 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3136"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3135"/>
         <source>Create Unversioned Archive</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19124,7 +19132,7 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2247"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2246"/>
         <source>Created new branch &lt;{0}&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19134,67 +19142,67 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2207"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2206"/>
         <source>Cancelling uncommitted merge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3617"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3616"/>
         <source>Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3635"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3634"/>
         <source>Delete Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3635"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3634"/>
         <source>Select the bookmark to be deleted:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3646"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3645"/>
         <source>Delete Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3674"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3673"/>
         <source>Rename Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3707"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3706"/>
         <source>Move Mercurial Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3792"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3791"/>
         <source>Pull Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3792"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3791"/>
         <source>Select the bookmark to be pulled:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3803"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3802"/>
         <source>Pulling bookmark from a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3825"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3824"/>
         <source>Push Bookmark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3825"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3824"/>
         <source>Select the bookmark to be push:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3836"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="3835"/>
         <source>Pushing bookmark to a remote Mercurial repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19219,12 +19227,12 @@ You have %n tabs open.</numerusform>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2178"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2177"/>
         <source>Marking as &apos;unresolved&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2180"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2179"/>
         <source>Marking as &apos;resolved&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24902,7 +24910,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="367"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="370"/>
         <source>%n file(s) changed</source>
         <translation>
             <numerusform>%n file changed</numerusform>
@@ -24910,7 +24918,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="369"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="372"/>
         <source>%n line(s) inserted</source>
         <translation>
             <numerusform>%n line inserted</numerusform>
@@ -24918,7 +24926,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="371"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/HgShelveBrowserDialog.py" line="374"/>
         <source>%n line(s) deleted</source>
         <translation>
             <numerusform>%n line deleted</numerusform>
@@ -52737,7 +52745,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1248"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1249"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62284,12 +62292,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2107"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2106"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2117"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2116"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branches&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62301,23 +62309,23 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2099"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2098"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tip&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2102"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2101"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Changeset&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2122"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2121"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2126"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2125"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Last author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;
 &lt;tr&gt;&lt;td&gt;&lt;b&gt;Committed time&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;
@@ -62325,7 +62333,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2112"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2111"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
         <translation type="unfinished"></translation>
     </message>
