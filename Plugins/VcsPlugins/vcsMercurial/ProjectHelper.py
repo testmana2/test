@@ -1584,7 +1584,7 @@ class HgProjectHelper(VcsProjectHelper):
     
     def __hgEditUserConfig(self):
         """
-        Private slot used to edit the repository configuration file.
+        Private slot used to edit the user configuration file.
         """
         self.vcs.hgEditUserConfig()
     
