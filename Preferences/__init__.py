@@ -17,6 +17,10 @@ needed with the statement 'import Preferences'. Do not use
 """
 
 from __future__ import unicode_literals
+try:
+    basestring    # __IGNORE_WARNING__
+except NameError:
+    basestring = str
 
 import os
 import fnmatch
@@ -1505,6 +1509,8 @@ def getUI(key, prefClass=Prefs):
             except TypeError:
                 profiles = None
             if profiles is not None:
+                if isinstance(profiles, basestring):
+                    profiles = eval(profiles)
                 viewProfiles = {}
                 for name in ["edit", "debug"]:
                     viewProfiles[name] = [
@@ -1514,6 +1520,13 @@ def getUI(key, prefClass=Prefs):
                     ]
                     for b in profiles[name][6]:
                         viewProfiles[name][2].append(QByteArray(b))
+                    # correct some entries
+                    while (len(viewProfiles[name][1]) < len(
+                            prefClass.uiDefaults["ViewProfiles2"][name][1])):
+                        viewProfiles[name][1].append(True)
+                    while len(viewProfiles[name][2]) < len(
+                            prefClass.uiDefaults["ViewProfiles2"][name][2]):
+                        viewProfiles[name][2].append(QByteArray())
             else:
                 # use the defaults
                 viewProfiles = prefClass.uiDefaults["ViewProfiles2"]
