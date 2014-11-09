@@ -1510,10 +1510,8 @@ def getUI(key, prefClass=Prefs):
             else:
                 # use the defaults
                 viewProfiles = prefClass.uiDefaults["ViewProfiles2"]
-        # Remove unused setting in Python 2. Otherwise Eric 5.3
-        # would get problems
-        if sys.version_info[0] == 2:
-            prefClass.settings.remove("UI/ViewProfiles")
+        # Remove unused setting
+        prefClass.settings.remove("UI/ViewProfiles")
         return viewProfiles
     elif key in ["ToolbarManagerState", "PreviewSplitterState"]:
         state = prefClass.settings.value("UI/" + key)
