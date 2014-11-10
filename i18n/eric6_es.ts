@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -10706,7 +10707,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/EditorMarkerMap.py" line="29"/>
         <source>&lt;b&gt;Editor Map&lt;/b&gt;&lt;p&gt;This shows a &apos;map&apos; of the editor. The visible area is highlighted by the box and all markers like bookmarks, breakpoints, errors or changed lines are indicated by differently colored lines configurable via the Editoru279dStyle page of the configuration dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mapa del Editor&lt;/b&gt;&lt;p&gt;Muestra un mapa del editor. El área visible está resaltada por la caja, y todos los marcadores como marcas, puntos de ruptura, errores o líneas cambiadas se indican con líneas de distintos colores configurables a través del diálogo de configuración de página.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15533,7 +15534,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -18737,12 +18738,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="525"/>
         <source>Save the current page as a screen shot</source>
-        <translation>Guardar la página actual como pantallazo</translation>
+        <translation>Guardar la página actual como captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="527"/>
         <source>&lt;b&gt;Save Page Screen...&lt;/b&gt;&lt;p&gt;Saves the current page as a screen shot.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Guardar Pantalla de Página...&lt;/b&gt;&lt;p&gt;Guarda la página actual como un pantallazo.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Guardar Pantalla de Página...&lt;/b&gt;&lt;p&gt;Guarda la página actual como una captura de pantalla.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1501"/>
@@ -18867,22 +18868,22 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="535"/>
         <source>Save Visible Page Screen</source>
-        <translation>Guardar Pantallazo de la parte Visible de la Página</translation>
+        <translation>Guardar Captura de Pantalla de la parte Visible de la Página</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="535"/>
         <source>Save Visible Page Screen...</source>
-        <translation>Guardar Pantallazo de la parte Visible de la Página...</translation>
+        <translation>Guardar Captura de Pantalla de la parte Visible de la Página...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="540"/>
         <source>Save the visible part of the current page as a screen shot</source>
-        <translation>Guardar la parte visible de la página actual como un pantallazo</translation>
+        <translation>Guardar la parte visible de la página actual como una captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="543"/>
         <source>&lt;b&gt;Save Visible Page Screen...&lt;/b&gt;&lt;p&gt;Saves the visible part of the current page as a screen shot.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Guardar Pantallazo de la parte Visible de la Página...&lt;/b&gt;&lt;p&gt;Guarda la parte visible de la página actual como un pantallazo.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Guardar Captura de Pantalla de la parte Visible de la Página...&lt;/b&gt;&lt;p&gt;Guarda la parte visible de la página actual como una captura de pantalla.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="2875"/>
@@ -33979,12 +33980,12 @@ Razón: {1}</translation>
     <message>
         <location filename="../Helpviewer/PageScreenDialog.ui" line="14"/>
         <source>Page Screen</source>
-        <translation>Pantallazo</translation>
+        <translation>Captura de Pantalla</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PageScreenDialog.py" line="101"/>
         <source>Save Page Screen</source>
-        <translation>Guardar Pantallazo</translation>
+        <translation>Guardar Captura de Pantalla</translation>
     </message>
     <message>
         <location filename="../Helpviewer/PageScreenDialog.py" line="69"/>
@@ -42996,22 +42997,22 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="140"/>
         <source>pyuic / pyside-uic Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de pyuic / pyside-uic</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="146"/>
         <source>Indent Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ancho de indentación:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="153"/>
         <source>Select the indent width (default: 4)</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el ancho de indentación (valor por defecto: 4)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="185"/>
         <source>Generate imports relative to &apos;.&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Generar imports relativos a &apos;.&apos;</translation>
     </message>
 </context>
 <context>
@@ -45297,12 +45298,12 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="54"/>
         <source>Snapshot Mode:</source>
-        <translation>Modo Pantallazo:</translation>
+        <translation>Modo Captura de Pantalla:</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="67"/>
         <source>Select the snapshot mode</source>
-        <translation>Seleccionar el modo pantallazo</translation>
+        <translation>Seleccionar el modo captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="74"/>
@@ -45312,27 +45313,27 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="83"/>
         <source>Enter the delay before taking the snapshot</source>
-        <translation>Introducir el retraso antes de tomar el pantallazo</translation>
+        <translation>Introducir el retraso antes de tomar la captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="156"/>
         <source>Press to save the snapshot</source>
-        <translation>Pulsar para guardar el pantallazo</translation>
+        <translation>Pulsar para guardar la captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="159"/>
         <source>&amp;Save Snapshot ...</source>
-        <translation>&amp;Guardar Pantallazo ...</translation>
+        <translation>&amp;Guardar Captura de Pantalla ...</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="218"/>
         <source>Press to take a snapshot</source>
-        <translation>Pulsar para tomar un pantallazo</translation>
+        <translation>Pulsar para tomar una captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="221"/>
         <source>&amp;Take Snapshot ...</source>
-        <translation>&amp;Tomar Pantallazo ...</translation>
+        <translation>&amp;Tomar Captura de Pantalla ...</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="57"/>
@@ -45427,7 +45428,7 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="251"/>
         <source>Save Snapshot</source>
-        <translation>Guardar Pantallazo</translation>
+        <translation>Guardar Captura de Pantalla</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="230"/>
@@ -45444,7 +45445,7 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="182"/>
         <source>Press to copy the snapshot to the clipboard</source>
-        <translation>Pulsar para copiar el pantallazo al portapapeles</translation>
+        <translation>Pulsar para copiar la captura de pantalla al portapapeles</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="185"/>
@@ -45489,17 +45490,17 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="86"/>
         <source>snapshot</source>
-        <translation>pantallazo</translation>
+        <translation>captura de pantalla</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="500"/>
         <source>The application contains an unsaved snapshot.</source>
-        <translation>La aplicación contiene un pantallazo sin guardar.</translation>
+        <translation>La aplicación contiene una captura de pantalla sin guardar.</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="451"/>
         <source>Preview of the snapshot image ({0:n} x {1:n})</source>
-        <translation>Vista preliminar de la imagen del pantallazo ({0:n} x {1:n})</translation>
+        <translation>Vista preliminar de la imagen de captura de pantalla ({0:n} x {1:n})</translation>
     </message>
     <message>
         <location filename="../Snapshot/SnapWidget.ui" line="195"/>
@@ -45514,7 +45515,7 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapWidget.py" line="528"/>
         <source>eric6 Snapshot</source>
-        <translation>Pantallazo de eric6</translation>
+        <translation>Captura de Pantalla de eric6</translation>
     </message>
 </context>
 <context>
@@ -45522,7 +45523,7 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapshotFreehandGrabber.py" line="69"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
-        <translation>Seleccionar una región utilizando el ratón. Para tomar el pantallazo, pulsar la tecla Enter o hacer doble click. Pulsar Esc para salir.</translation>
+        <translation>Seleccionar una región utilizando el ratón. Para tomar la captura de pantalla, pulsar la tecla Enter o hacer doble click. Pulsar Esc para salir.</translation>
     </message>
 </context>
 <context>
@@ -45530,7 +45531,7 @@ Not connected</source>
     <message>
         <location filename="../Snapshot/SnapshotRegionGrabber.py" line="98"/>
         <source>Select a region using the mouse. To take the snapshot, press the Enter key or double click. Press Esc to quit.</source>
-        <translation>Seleccionar una región utilizando el ratón. Para tomar el pantallazo, pulsar la tecla Enter o hacer doble click. Pulsar Esc para salir.</translation>
+        <translation>Seleccionar una región utilizando el ratón. Para tomar la captura de pantalla, pulsar la tecla Enter o hacer doble click. Pulsar Esc para salir.</translation>
     </message>
 </context>
 <context>
@@ -45539,8 +45540,8 @@ Not connected</source>
         <location filename="../Snapshot/SnapshotTimer.py" line="103"/>
         <source>Snapshot will be taken in %n seconds</source>
         <translation>
-            <numerusform>El pantallazo se tomará en %n segundo</numerusform>
-            <numerusform>El pantallazo se tomará en %n segundos</numerusform>
+            <numerusform>La captura de pantalla se tomará en %n segundo</numerusform>
+            <numerusform>La captura de pantalla se tomará en %n segundos</numerusform>
         </translation>
     </message>
 </context>
@@ -55006,7 +55007,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="../Tools/TrayStarter.py" line="117"/>
         <source>Snapshot</source>
-        <translation>Pantallazo</translation>
+        <translation>Captura de Pantalla</translation>
     </message>
     <message>
         <location filename="../Tools/TrayStarter.py" line="147"/>
@@ -57572,27 +57573,27 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../UI/UserInterface.py" line="1924"/>
         <source>Snapshot</source>
-        <translation>Pantallazo</translation>
+        <translation>Captura de Pantalla</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1924"/>
         <source>&amp;Snapshot...</source>
-        <translation>&amp;Pantallazo...</translation>
+        <translation>Captura de &amp;Pantalla...</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1929"/>
         <source>Take snapshots of a screen region</source>
-        <translation>Tomar un pantallazo de una región de la pantalla</translation>
+        <translation>Tomar capturas de una región de la pantalla</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1931"/>
         <source>&lt;b&gt;Snapshot&lt;/b&gt;&lt;p&gt;This opens a dialog to take snapshots of a screen region.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Pantallazo&lt;/b&gt;&lt;p&gt;Abre un diálogo para tomar pantallazos de una región de la pantalla.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Captura de Pantalla&lt;/b&gt;&lt;p&gt;Abre un diálogo para tomar capturas de pantalla de una región de la pantalla.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="4517"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;No se ha podido ejecutar la herramienta de Pantallazos.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;No se ha podido ejecutar la herramienta de Captura de Pantalla.&lt;br&gt;Asegúrese de que esta disponible como &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="6135"/>
