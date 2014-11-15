@@ -74,8 +74,12 @@ class DebuggerInterfacePython(QObject):
         
         self.qsock = None
         self.queue = []
+        
         # set default values for capabilities of clients
         self.clientCapabilities = ClientDefaultCapabilities
+        
+        # set translation function
+        self.translate = self.__identityTranslation
         
         self.codec = QTextCodec.codecForName(
             Preferences.getSystem("StringEncoding"))
