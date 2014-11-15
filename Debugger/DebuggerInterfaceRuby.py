@@ -69,8 +69,12 @@ class DebuggerInterfaceRuby(QObject):
         
         self.qsock = None
         self.queue = []
+        
         # set default values for capabilities of clients
         self.clientCapabilities = ClientDefaultCapabilities
+        
+        # set translation function
+        self.translate = self.__identityTranslation
         
         self.codec = QTextCodec.codecForName(
             str(Preferences.getSystem("StringEncoding")))

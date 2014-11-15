@@ -80,10 +80,6 @@ class Prefs(object):
         "DebugClientType3": "standard",
         # supported "standard", "threaded", "custom"
         "DebugClient3": "",
-        "PythonExtensions": ".py2 .pyw2 .ptl",
-        # space separated list of Python extensions
-        "Python3Extensions": ".py .pyw .py3 .pyw3",
-        # space separated list of Python3 extensions
         "DebugEnvironmentReplace": False,
         "DebugEnvironment": "",
         "PythonRedirect": True,
@@ -100,6 +96,16 @@ class Prefs(object):
         "AutoViewSourceCode": False,
     }
     debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "::1%0"]
+    if sys.version_info[0] == 2:
+        debuggerDefaults["PythonExtensions"] = ".py .pyw .py2 .pyw2 .ptl",
+        # space separated list of Python extensions
+        debuggerDefaults["Python3Extensions"] = ".py .pyw .py3 .pyw3",
+        # space separated list of Python3 extensions
+    else:
+        debuggerDefaults["PythonExtensions"] = ".py2 .pyw2 .ptl",
+        # space separated list of Python extensions
+        debuggerDefaults["Python3Extensions"] = ".py .pyw .py3 .pyw3",
+        # space separated list of Python3 extensions
     
     # defaults for the UI settings
     uiDefaults = {
