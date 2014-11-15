@@ -110,6 +110,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.__bundle = ""
         self.__filename = ""
         self.__isFile = False
+        self.__currentRevision = ""
         
         self.__initData()
         
@@ -1054,6 +1055,14 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         self.__updateDiffButtons()
         self.__updateToolMenuActions()
+        
+        # restore current item
+        if self.__currentRevision:
+            items = self.logTree.findItems(
+                self.__currentRevision, Qt.MatchExactly, self.RevisionColumn)
+            if items:
+                self.logTree.setCurrentItem(items[0])
+                self.__currentRevision = ""
     
     def __readStdout(self):
         """
@@ -1440,6 +1449,13 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.inputGroup.setEnabled(True)
         self.inputGroup.show()
         self.refreshButton.setEnabled(False)
+        
+        # save the current items commit ID
+        itm = self.logTree.currentItem()
+        if itm is not None:
+            self.__currentRevision = itm.text(self.RevisionColumn)
+        else:
+            self.__currentRevision = ""
         
         if self.initialCommandMode in ("incoming", "outgoing"):
             self.nextButton.setEnabled(False)
