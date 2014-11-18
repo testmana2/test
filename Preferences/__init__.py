@@ -98,14 +98,14 @@ class Prefs(object):
     }
     debuggerDefaults["AllowedHosts"] = ["127.0.0.1", "::1%0"]
     if sys.version_info[0] == 2:
-        debuggerDefaults["PythonExtensions"] = ".py .pyw .py2 .pyw2 .ptl",
+        debuggerDefaults["PythonExtensions"] = ".py .pyw .py2 .pyw2 .ptl"
         # space separated list of Python extensions
-        debuggerDefaults["Python3Extensions"] = ".py .pyw .py3 .pyw3",
+        debuggerDefaults["Python3Extensions"] = ".py .pyw .py3 .pyw3"
         # space separated list of Python3 extensions
     else:
-        debuggerDefaults["PythonExtensions"] = ".py2 .pyw2 .ptl",
+        debuggerDefaults["PythonExtensions"] = ".py2 .pyw2 .ptl"
         # space separated list of Python extensions
-        debuggerDefaults["Python3Extensions"] = ".py .pyw .py3 .pyw3",
+        debuggerDefaults["Python3Extensions"] = ".py .pyw .py3 .pyw3"
         # space separated list of Python3 extensions
     
     # defaults for the UI settings
