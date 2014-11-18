@@ -238,6 +238,26 @@ def copyToFile(name, text):
     f.close()
 
 
+def copyDesktopFile(src, dst, marker):
+    """
+    Modify a desktop file and write it to its destination.
+    
+    @param src source file name (string)
+    @param dst destination file name (string)
+    @param marker marker to be used (string)
+    """
+    f = open(src, "r")
+    text = f.read()
+    f.close()
+    
+    text = text.replace("@MARKER@", marker)
+    
+    f = open(dst, "w")
+    f.write(text)
+    f.close()
+    os.chmod(dst, 0o644)
+
+
 def wrapperName(dname, wfile):
     """
     Create the platform specific name for the wrapper script.
@@ -428,10 +448,17 @@ def cleanUp():
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux") and os.getuid() == 0:
         for name in ["/usr/share/pixmaps/eric.png",
-                     "/usr/share/applications/eric6.desktop",
-                     "/usr/share/appdata/eric6.appdata.xml",
-                     "/usr/share/pixmaps/ericWeb.png",
-                     "/usr/share/applications/eric6_webbrowser.desktop"]:
+                     "/usr/share/pixmaps/ericWeb.png"]:
+            if os.path.exists(name):
+                os.remove(name)
+        if includePythonVariant:
+            marker = PythonMarkers[sys.version_info.major]
+        else:
+            marker = ""
+        for name in ["/usr/share/applications/eric6" + marker + ".desktop",
+                     "/usr/share/appdata/eric6" + marker + ".appdata.xml",
+                     "/usr/share/applications/eric6_webbrowser" + marker + 
+                     ".desktop"]:
             if os.path.exists(name):
                 os.remove(name)
     
@@ -541,6 +568,7 @@ def installEric():
     @return result code (integer)
     """
     global distDir, doCleanup, cfg, progLanguages, sourceDir, configName
+    global includePythonVariant
     
     # Create the platform specific wrappers.
     wnames = []
@@ -701,6 +729,12 @@ def installEric():
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):
+        # TODO: respect Python variant
+        if includePythonVariant:
+            marker = PythonMarkers[sys.version_info.major]
+        else:
+            marker = ""
+    
         if distDir:
             dst = os.path.normpath(os.path.join(distDir, "usr/share/pixmaps"))
             if not os.path.exists(dst):
@@ -715,31 +749,42 @@ def installEric():
                 os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutilCopy(os.path.join(sourceDir, "eric6.desktop"), dst)
-            shutilCopy(os.path.join(sourceDir, "eric6_webbrowser.desktop"),
-                       dst)
+            copyDesktopFile(os.path.join(sourceDir, "eric6.desktop"),
+                            os.path.join(dst, "eric6" + marker + ".desktop"),
+                            marker)
+            copyDesktopFile(
+                os.path.join(sourceDir, "eric6_webbrowser.desktop"),
+                os.path.join(dst, "eric6_webbrowser" + marker + ".desktop"),
+                marker)
             dst = os.path.normpath(
                 os.path.join(distDir, "usr/share/appdata"))
             if not os.path.exists(dst):
                 os.makedirs(dst)
-            shutilCopy(os.path.join(sourceDir, "eric6.appdata.xml"), dst)
+            copyDesktopFile(
+                os.path.join(sourceDir, "eric6.appdata.xml"),
+                os.path.join(dst, "eric6" + marker + ".appdata.xml"),
+                marker)
         elif os.getuid() == 0:
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "eric.png"),
                 "/usr/share/pixmaps/eric.png")
-            shutilCopy(os.path.join(
-                sourceDir, "eric6.desktop"),
-                "/usr/share/applications")
+            copyDesktopFile(
+                os.path.join(sourceDir, "eric6.desktop"),
+                "/usr/share/applications/eric6" + marker + ".desktop",
+                marker)
             if os.path.exists("/usr/share/appdata"):
-                shutilCopy(os.path.join(
-                    sourceDir, "eric6.appdata.xml"),
-                    "/usr/share/appdata")
+                copyDesktopFile(
+                    os.path.join(sourceDir, "eric6.appdata.xml"),
+                    "/usr/share/appdata/eric6" + marker + ".appdata.xml",
+                    marker)
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "ericWeb48.png"),
                 "/usr/share/pixmaps/ericWeb.png")
-            shutilCopy(os.path.join(
-                sourceDir, "eric6_webbrowser.desktop"),
-                "/usr/share/applications")
+            copyDesktopFile(
+                os.path.join(sourceDir, "eric6_webbrowser.desktop"),
+                "/usr/share/applications/eric6_webbrowser" + marker +
+                ".desktop",
+                marker)
     
     # Create a Mac application bundle
     if sys.platform == "darwin":
