@@ -101,10 +101,17 @@ def uninstallEric():
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux") and os.getuid() == 0:
         for name in ["/usr/share/pixmaps/eric.png",
-                     "/usr/share/applications/eric5.desktop",
-                     "/usr/share/appdata/eric5.appdata.xml",
-                     "/usr/share/pixmaps/ericWeb.png",
-                     "/usr/share/applications/eric5_webbrowser.desktop"]:
+                     "/usr/share/pixmaps/ericWeb.png"]:
+            if os.path.exists(name):
+                os.remove(name)
+        if includePythonVariant:
+            marker = PythonMarkers[sys.version_info.major]
+        else:
+            marker = ""
+        for name in ["/usr/share/applications/eric5" + marker + ".desktop",
+                     "/usr/share/appdata/eric5" + marker + ".appdata.xml",
+                     "/usr/share/applications/eric5_webbrowser" + marker + 
+                     ".desktop"]:
             if os.path.exists(name):
                 os.remove(name)
     
@@ -180,7 +187,7 @@ def uninstallEric():
                     os.remove(apiname)
             for apiname in glob.glob(
                     os.path.join(apidir, progLanguage.lower(), "*.bas")):
-                if os.path.basename(apiname) != "eric6.bas":
+                if os.path.basename(apiname) != "eric5.bas":
                     os.remove(apiname)
         
         if sys.platform == "darwin":

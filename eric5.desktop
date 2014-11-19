@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=eric5
+Exec=eric5@MARKER@
 MimeType=text/x-python;
 Icon=eric
 Terminal=false
