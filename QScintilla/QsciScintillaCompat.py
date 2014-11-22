@@ -272,7 +272,15 @@ class QsciScintillaCompat(QsciScintilla):
             while len(ch) < utf8Len:
                 pos += 1
                 ch += self.byteAt(pos)
-            return ch.decode('utf8')
+            try:
+                return ch.decode('utf8')
+            except UnicodeDecodeError:
+                if pos > 0:
+                    # try it one position before; maybe we are in the
+                    # middle of a unicode character
+                    return self.charAt(pos - 1)
+                else:
+                    return ""
         else:
             return ch.decode()
     
