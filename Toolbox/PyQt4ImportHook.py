@@ -3,10 +3,13 @@
 # Copyright (c) 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+import sys
 try:
+    if "--pyqt4" in sys.argv:
+        # fake a failed PyQt5 import
+        raise ImportError
     import PyQt5    # __IGNORE_WARNING__ 
 except ImportError:
-    import sys
     import importlib
 
     class PyQt4Importer(object):

@@ -182,15 +182,24 @@ def determinePyQtVariant():
     """
     global pyqtVariant
     
-    try:
-        import PyQt5        # __IGNORE_WARNING__
+    pyqtVariant = ""
+    # need to handle the --pyqt= option here
+    if "--pyqt=4" in sys.argv:
+        pyqtVariant = "PyQt4"
+    elif "--pyqt=5" in sys.argv:
         pyqtVariant = "PyQt5"
-    except ImportError:
+    else:
         try:
-            import PyQt4    # __IGNORE_WARNING__
-            pyqtVariant = "PyQt4"
+            import PyQt5        # __IGNORE_WARNING__
+            pyqtVariant = "PyQt5"
+            del sys.modules["PyQt5"]
         except ImportError:
-            pyqtVariant = ""
+            try:
+                import PyQt4    # __IGNORE_WARNING__
+                pyqtVariant = "PyQt4"
+                del sys.modules["PyQt4"]
+            except ImportError:
+                pyqtVariant = ""
 
 
 def initGlobals():
@@ -290,12 +299,17 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         application (boolean)
     @return the platform specific name of the wrapper (string)
     """
-    global includePythonVariant
+    global includePythonVariant, pyqtVariant
     
     if includePythonVariant:
         marker = PythonMarkers[sys.version_info.major]
     else:
         marker = ""
+    
+    if pyqtVariant == "PyQt4":
+        pyqt4opt = " --pyqt4"
+    else:
+        pyqt4opt = ""
     
     # all kinds of Windows systems
     if sys.platform.startswith("win"):
@@ -304,14 +318,14 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
             wrapper = \
                 '''@echo off\n''' \
                 '''start "" "{2}\\pythonw.exe"''' \
-                ''' "{0}\\{1}.pyw"''' \
+                ''' "{0}\\{1}.pyw"{3}''' \
                 ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(
-                    pydir, wfile, sys.exec_prefix)
+                    pydir, wfile, sys.exec_prefix, pyqt4opt)
         else:
             wrapper = \
-                '''@"{0}\\python" "{1}\\{2}.py"''' \
+                '''@"{0}\\python" "{1}\\{2}.py"{3}''' \
                 ''' %1 %2 %3 %4 %5 %6 %7 %8 %9\n'''.format(
-                    sys.exec_prefix, pydir, wfile)
+                    sys.exec_prefix, pydir, wfile, pyqt4opt)
 
     # Mac OS X
     elif sys.platform == "darwin":
@@ -322,16 +336,16 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         wname = wfile + marker
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
-                   '''exec "{0}" "{1}/{2}.py" "$@"\n'''
-                   .format(pyexec, pydir, wfile))
+                   '''exec "{0}" "{1}/{2}.py"{3} "$@"\n'''
+                   .format(pyexec, pydir, wfile, pyqt4opt))
 
     # *nix systems
     else:
         wname = wfile + marker
         wrapper = ('''#!/bin/sh\n'''
                    '''\n'''
-                   '''exec "{0}" "{1}/{2}.py" "$@"\n'''
-                   .format(sys.executable, pydir, wfile))
+                   '''exec "{0}" "{1}/{2}.py"{3} "$@"\n'''
+                   .format(sys.executable, pydir, wfile, pyqt4opt))
 
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
