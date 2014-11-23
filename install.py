@@ -115,47 +115,52 @@ def usage(rcode=2):
     """
     global progName, modDir, distDir, apisDir
     global macAppBundleName, macAppBundlePath, macPythonExe
+    global pyqtVariant
 
     print()
     print("Usage:")
     if sys.platform == "darwin":
         print("    {0} [-chxyz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
-              " [-m name] [-p python]".format(progName))
+              " [-m name] [-p python] [--pyqt=version]".format(progName))
     elif sys.platform.startswith("win"):
         print("    {0} [-chxyz] [-a dir] [-b dir] [-d dir] [-f file]"
+              " [--pyqt=version]"
               .format(progName))
     else:
         print("    {0} [-chxyz] [-a dir] [-b dir] [-d dir] [-f file] [-i dir]"
+              " [--pyqt=version]"
               .format(progName))
     print("where:")
-    print("    -h        display this help message")
-    print("    -a dir    where the API files will be installed")
+    print("    -h, --help display this help message")
+    print("    -a dir     where the API files will be installed")
     if apisDir:
-        print("              (default: {0})".format(apisDir))
+        print("               (default: {0})".format(apisDir))
     else:
-        print("              (no default value)")
-    print("    -b dir    where the binaries will be installed")
-    print("              (default: {0})".format(platBinDir))
-    print("    -d dir    where eric6 python files will be installed")
-    print("              (default: {0})".format(modDir))
-    print("    -f file   configuration file naming the various installation"
+        print("               (no default value)")
+    print("    -b dir     where the binaries will be installed")
+    print("               (default: {0})".format(platBinDir))
+    print("    -d dir     where eric6 python files will be installed")
+    print("               (default: {0})".format(modDir))
+    print("    -f file    configuration file naming the various installation"
           " paths")
     if not sys.platform.startswith("win"):
-        print("    -i dir    temporary install prefix")
-        print("              (default: {0})".format(distDir))
+        print("    -i dir     temporary install prefix")
+        print("               (default: {0})".format(distDir))
     if sys.platform == "darwin":
-        print("    -m name   name of the Mac app bundle")
-        print("              (default: {0})".format(macAppBundleName))
-        print("    -n path   path of the directory the Mac app bundle will")
-        print("              be created in")
-        print("              (default: {0}".format(macAppBundlePath))
-        print("    -p python name of the python executable")
-        print("              (default: {0})".format(macPythonExe))
-    print("    -c        don't cleanup old installation first")
-    print("    -x        don't perform dependency checks (use on your own"
+        print("    -m name    name of the Mac app bundle")
+        print("               (default: {0})".format(macAppBundleName))
+        print("    -n path    path of the directory the Mac app bundle will")
+        print("               be created in")
+        print("               (default: {0})".format(macAppBundlePath))
+        print("    -p python  name of the python executable")
+        print("               (default: {0})".format(macPythonExe))
+    print("    -c         don't cleanup old installation first")
+    print("    -x         don't perform dependency checks (use on your own"
           " risk)")
-    print("    -y        add the Python variant to the executable names")
-    print("    -z        don't compile the installed python files")
+    print("    -y         add the Python variant to the executable names")
+    print("    -z         don't compile the installed python files")
+    print("    --pyqt=version version of PyQt to be used (one of 4 or 5)")
+    print("                   (default: {0})".format(pyqtVariant[-1]))
     print()
     print("The file given to the -f option must be valid Python code"
           " defining a")
@@ -729,7 +734,6 @@ def installEric():
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):
-        # TODO: respect Python variant
         if includePythonVariant:
             marker = PythonMarkers[sys.version_info.major]
         else:
@@ -1006,7 +1010,7 @@ def doDependancyChecks():
         try:
             from PyQt4.QtCore import qVersion
         except ImportError as msg:
-            print('Sorry, please install PyQt5 or PyQt4.')
+            print('Sorry, please install PyQt4.')
             print('Error: {0}'.format(msg))
             exit(1)
         print("Found PyQt4")
@@ -1014,7 +1018,7 @@ def doDependancyChecks():
         try:
             from PyQt5.QtCore import qVersion
         except ImportError as msg:
-            print('Sorry, please install PyQt5 or PyQt4.')
+            print('Sorry, please install PyQt5.')
             print('Error: {0}'.format(msg))
             exit(1)
         print("Found PyQt5")
@@ -1273,6 +1277,7 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, includePythonVariant
     global macAppBundlePath, macAppBundleName, macPythonExe
+    global pyqtVariant
     
     if sys.version_info < (2, 7, 0) or sys.version_info > (3, 9, 9):
         print('Sorry, eric6 requires at least Python 2.7 or '
@@ -1289,12 +1294,16 @@ def main(argv):
 
     try:
         if sys.platform.startswith("win"):
-            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:")
+            optlist, args = getopt.getopt(
+                argv[1:], "chxyza:b:d:f:", ["help", "pyqt="])
         elif sys.platform == "darwin":
-            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:i:m:n:p:")
+            optlist, args = getopt.getopt(
+                argv[1:], "chxyza:b:d:f:i:m:n:p:", ["help", "pyqt="])
         else:
-            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:i:")
-    except getopt.GetoptError:
+            optlist, args = getopt.getopt(
+                argv[1:], "chxyza:b:d:f:i:", ["help", "pyqt="])
+    except getopt.GetoptError as err:
+        print(err)
         usage()
 
     global platBinDir
@@ -1302,7 +1311,7 @@ def main(argv):
     depChecks = True
 
     for opt, arg in optlist:
-        if opt == "-h":
+        if opt in ["-h", "--help"]:
             usage(0)
         elif opt == "-a":
             apisDir = arg
@@ -1335,6 +1344,11 @@ def main(argv):
             macAppBundlePath = arg
         elif opt == "-p":
             macPythonExe = arg
+        elif opt == "--pyqt":
+            if arg not in ["4", "5"]:
+                print("Invalid PyQt version given; should be 4 or 5. Aborting")
+                exit(6)
+            pyqtVariant = "PyQt{0}".format(arg)
     
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:

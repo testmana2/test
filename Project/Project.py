@@ -41,7 +41,6 @@ import Preferences
 import Utilities
 
 
-# TODO: add file system watcher to detect external modification of project file
 class Project(QObject):
     """
     Class implementing the project management functionality.
