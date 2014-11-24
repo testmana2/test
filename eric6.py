@@ -13,6 +13,13 @@ of the IDE and starts the Qt event loop.
 
 from __future__ import unicode_literals
 
+import sys
+
+# generate list of arguments to be remembered for a restart
+restartArgsList = ["--nosplash", "--plugin", "--debug", "--config", "--pyqt4"]
+restartArgs = [arg for arg in sys.argv[1:]
+               if arg.split("=", 1)[0] in restartArgsList]
+
 import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__ 
 
 try:  # Only for Py2
@@ -29,7 +36,6 @@ except AttributeError:
     pass
 
 
-import sys
 import os
 import traceback
 import time
@@ -55,11 +61,6 @@ except ImportError:
 args = None
 mainWindow = None
 splash = None
-
-# generate list of arguments to be remembered for a restart
-restartArgsList = ["--nosplash", "--plugin", "--debug", "--config"]
-restartArgs = [arg for arg in sys.argv[1:]
-               if arg.split("=", 1)[0] in restartArgsList]
 
 if "--debug" in sys.argv:
     del sys.argv[sys.argv.index("--debug")]

@@ -49,6 +49,7 @@ macAppBundlePath = "/Applications"
 macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
     sys.exec_prefix)
 pyqtVariant = ""
+pyqtOverride = False
 
 # Define blacklisted versions of the prerequisites
 BlackLists = {
@@ -180,14 +181,16 @@ def determinePyQtVariant():
     """
     Module function to determine the PyQt variant to be used.
     """
-    global pyqtVariant
+    global pyqtVariant, pyqtOverride
     
     pyqtVariant = ""
     # need to handle the --pyqt= option here
     if "--pyqt=4" in sys.argv:
         pyqtVariant = "PyQt4"
+        pyqtOverride = True
     elif "--pyqt=5" in sys.argv:
         pyqtVariant = "PyQt5"
+        pyqtOverride = True
     else:
         try:
             import PyQt5        # __IGNORE_WARNING__
@@ -299,14 +302,14 @@ def createPyWrapper(pydir, wfile, isGuiScript=True):
         application (boolean)
     @return the platform specific name of the wrapper (string)
     """
-    global includePythonVariant, pyqtVariant
+    global includePythonVariant, pyqtVariant, pyqtOverride
     
     if includePythonVariant:
         marker = PythonMarkers[sys.version_info.major]
     else:
         marker = ""
     
-    if pyqtVariant == "PyQt4":
+    if pyqtOverride and pyqtVariant == "PyQt4":
         pyqt4opt = " --pyqt4"
     else:
         pyqt4opt = ""
@@ -1291,7 +1294,7 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, includePythonVariant
     global macAppBundlePath, macAppBundleName, macPythonExe
-    global pyqtVariant
+    global pyqtVariant, pyqtOverride
     
     if sys.version_info < (2, 7, 0) or sys.version_info > (3, 9, 9):
         print('Sorry, eric6 requires at least Python 2.7 or '
@@ -1363,6 +1366,7 @@ def main(argv):
                 print("Invalid PyQt version given; should be 4 or 5. Aborting")
                 exit(6)
             pyqtVariant = "PyQt{0}".format(arg)
+            pyqtOverride = True
     
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:

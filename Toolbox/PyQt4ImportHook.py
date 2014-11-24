@@ -6,6 +6,7 @@
 import sys
 try:
     if "--pyqt4" in sys.argv:
+        sys.argv.remove("--pyqt4")
         # fake a failed PyQt5 import
         raise ImportError
     import PyQt5    # __IGNORE_WARNING__ 
