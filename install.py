@@ -13,6 +13,10 @@ from __future__ import unicode_literals
 from __future__ import print_function
 try:
     import cStringIO as io
+    import sip
+    sip.setapi('QString', 2)
+    sip.setapi('QVariant', 2)
+    sip.setapi('QTextStream', 2)
 except (ImportError):
     import io    # __IGNORE_WARNING__
 
@@ -26,12 +30,6 @@ import shutil
 import fnmatch
 import distutils.sysconfig
 import codecs
-
-if sys.version_info[0] == 2:
-    import sip
-    sip.setapi('QString', 2)
-    sip.setapi('QVariant', 2)
-    sip.setapi('QTextStream', 2)
 
 # Define the globals.
 progName = None
