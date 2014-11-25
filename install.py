@@ -225,13 +225,19 @@ def copyDesktopFile(src, dst, marker):
     @param dst destination file name (string)
     @param marker marker to be used (string)
     """
-    f = open(src, "r")
+    if sys.version_info[0] == 2:
+        f = codecs.open(src, "r", "utf-8")
+    else:
+        f = open(src, "r")
     text = f.read()
     f.close()
     
     text = text.replace("@MARKER@", marker)
     
-    f = open(dst, "w")
+    if sys.version_info[0] == 2:
+        f = codecs.open(src, "w", "utf-8")
+    else:
+        f = open(dst, "w")
     f.write(text)
     f.close()
     os.chmod(dst, 0o644)
