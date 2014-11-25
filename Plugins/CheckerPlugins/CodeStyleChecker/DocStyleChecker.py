@@ -445,12 +445,18 @@ class DocStyleChecker(object):
             arguments = []
             arguments.extend([arg.arg for arg in node.args.args])
             if node.args.vararg is not None:
-                arguments.append(node.args.vararg)
+                if sys.version_info[1] < 4:
+                    arguments.append(node.args.vararg)
+                else:
+                    arguments.append(node.args.vararg.arg)
             
             kwarguments = []
             kwarguments.extend([arg.arg for arg in node.args.kwonlyargs])
             if node.args.kwarg is not None:
-                kwarguments.append(node.args.kwarg)
+                if sys.version_info[1] < 4:
+                    kwarguments.append(node.args.kwarg)
+                else:
+                    kwarguments.append(node.args.kwarg.arg)
             return arguments, kwarguments
     
     ##################################################################
