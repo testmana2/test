@@ -100,10 +100,6 @@ def uninstallEric():
     
     # Remove the menu entry for Linux systems
     if sys.platform.startswith("linux") and os.getuid() == 0:
-        for name in ["/usr/share/pixmaps/eric.png",
-                     "/usr/share/pixmaps/ericWeb.png"]:
-            if os.path.exists(name):
-                os.remove(name)
         if includePythonVariant:
             marker = PythonMarkers[sys.version_info.major]
         else:
@@ -111,7 +107,9 @@ def uninstallEric():
         for name in ["/usr/share/applications/eric6" + marker + ".desktop",
                      "/usr/share/appdata/eric6" + marker + ".appdata.xml",
                      "/usr/share/applications/eric6_webbrowser" + marker + 
-                     ".desktop"]:
+                     ".desktop",
+                     "/usr/share/pixmaps/eric" + marker + ".png",
+                     "/usr/share/pixmaps/ericWeb" + marker + ".png"]:
             if os.path.exists(name):
                 os.remove(name)
     

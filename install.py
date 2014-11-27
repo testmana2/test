@@ -39,6 +39,7 @@ pyModDir = None
 platBinDir = None
 distDir = None
 apisDir = None
+installApis = True
 doCleanup = True
 doCompile = True
 includePythonVariant = False
@@ -142,6 +143,7 @@ def usage(rcode=2):
         print("               (default: {0})".format(apisDir))
     else:
         print("               (no default value)")
+    print("    --noapis   don't install API files")
     print("    -b dir     where the binaries will be installed")
     print("               (default: {0})".format(platBinDir))
     print("    -d dir     where eric6 python files will be installed")
@@ -600,7 +602,7 @@ def installEric():
     @return result code (integer)
     """
     global distDir, doCleanup, cfg, progLanguages, sourceDir, configName
-    global includePythonVariant
+    global includePythonVariant, installApis
     
     # Create the platform specific wrappers.
     wnames = []
@@ -725,39 +727,40 @@ def installEric():
                 os.sep, name, sourceDir))
     
     # install the API file
-    for progLanguage in progLanguages:
-        apidir = os.path.join(cfg['apidir'], progLanguage.lower())
-        if not os.path.exists(apidir):
-            os.makedirs(apidir)
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                              progLanguage, "*.api")):
-            try:
-                shutilCopy(apiName, apidir)
-            except EnvironmentError:
-                print("Could not install '{0}'.".format(apiName))
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                              progLanguage, "*.bas")):
-            try:
-                shutilCopy(apiName, apidir)
-            except EnvironmentError:
-                print("Could not install '{0}'.".format(apiName))
-        if progLanguage == "Python":
-            # copy Python3 API files to the same destination
+    if installApis:
+        for progLanguage in progLanguages:
+            apidir = os.path.join(cfg['apidir'], progLanguage.lower())
+            if not os.path.exists(apidir):
+                os.makedirs(apidir)
             for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                                  "Python3", "*.api")):
+                                                  progLanguage, "*.api")):
                 try:
                     shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
             for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                                  "Python3", "*.bas")):
-                if os.path.exists(os.path.join(
-                    apidir, os.path.basename(
-                        apiName.replace(".bas", ".api")))):
+                                                  progLanguage, "*.bas")):
+                try:
+                    shutilCopy(apiName, apidir)
+                except EnvironmentError:
+                    print("Could not install '{0}'.".format(apiName))
+            if progLanguage == "Python":
+                # copy Python3 API files to the same destination
+                for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                                      "Python3", "*.api")):
                     try:
                         shutilCopy(apiName, apidir)
                     except EnvironmentError:
                         print("Could not install '{0}'.".format(apiName))
+                for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                                      "Python3", "*.bas")):
+                    if os.path.exists(os.path.join(
+                        apidir, os.path.basename(
+                            apiName.replace(".bas", ".api")))):
+                        try:
+                            shutilCopy(apiName, apidir)
+                        except EnvironmentError:
+                            print("Could not install '{0}'.".format(apiName))
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):
@@ -772,10 +775,10 @@ def installEric():
                 os.makedirs(dst)
             shutilCopy(
                 os.path.join(sourceDir, "icons", "default", "eric.png"),
-                os.path.join(dst, "eric.png"))
+                os.path.join(dst, "eric" + marker + ".png"))
             shutilCopy(
                 os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
-                os.path.join(dst, "ericWeb.png"))
+                os.path.join(dst, "ericWeb" + marker + ".png"))
             dst = os.path.normpath(
                 os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
@@ -798,7 +801,7 @@ def installEric():
         elif os.getuid() == 0:
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "eric.png"),
-                "/usr/share/pixmaps/eric.png")
+                "/usr/share/pixmaps/eric" + marker + ".png")
             copyDesktopFile(
                 os.path.join(sourceDir, "eric6.desktop"),
                 "/usr/share/applications/eric6" + marker + ".desktop",
@@ -810,7 +813,7 @@ def installEric():
                     marker)
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "ericWeb48.png"),
-                "/usr/share/pixmaps/ericWeb.png")
+                "/usr/share/pixmaps/ericWeb" + marker + ".png")
             copyDesktopFile(
                 os.path.join(sourceDir, "eric6_webbrowser.desktop"),
                 "/usr/share/applications/eric6_webbrowser" + marker +
@@ -1304,7 +1307,7 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, includePythonVariant
     global macAppBundlePath, macAppBundleName, macPythonExe
-    global pyqtVariant, pyqtOverride
+    global pyqtVariant, pyqtOverride, installApis
     
     if sys.version_info < (2, 7, 0) or sys.version_info > (3, 9, 9):
         print('Sorry, eric6 requires at least Python 2.7 or '
@@ -1322,13 +1325,13 @@ def main(argv):
     try:
         if sys.platform.startswith("win"):
             optlist, args = getopt.getopt(
-                argv[1:], "chxyza:b:d:f:", ["help", "pyqt="])
+                argv[1:], "chxyza:b:d:f:", ["help", "pyqt=", "noapis"])
         elif sys.platform == "darwin":
             optlist, args = getopt.getopt(
-                argv[1:], "chxyza:b:d:f:i:m:n:p:", ["help", "pyqt="])
+                argv[1:], "chxyza:b:d:f:i:m:n:p:", ["help", "pyqt=", "noapis"])
         else:
             optlist, args = getopt.getopt(
-                argv[1:], "chxyza:b:d:f:i:", ["help", "pyqt="])
+                argv[1:], "chxyza:b:d:f:i:", ["help", "pyqt=", "noapis"])
     except getopt.GetoptError as err:
         print(err)
         usage()
@@ -1377,6 +1380,8 @@ def main(argv):
                 exit(6)
             pyqtVariant = "PyQt{0}".format(arg)
             pyqtOverride = True
+        elif "--noapis":
+            installApis = False
     
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:
