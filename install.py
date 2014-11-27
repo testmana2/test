@@ -39,6 +39,7 @@ pyModDir = None
 platBinDir = None
 distDir = None
 apisDir = None
+installApis = True
 doCleanup = True
 doCompile = True
 includePythonVariant = False
@@ -133,6 +134,7 @@ def usage(rcode=2):
         print("              (default: {0})".format(apisDir))
     else:
         print("              (no default value)")
+    print("    --noapis  don't install API files")
     print("    -b dir    where the binaries will be installed")
     print("              (default: {0})".format(platBinDir))
     print("    -d dir    where eric5 python files will be installed")
@@ -569,7 +571,7 @@ def installEric():
     @return result code (integer)
     """
     global distDir, doCleanup, cfg, progLanguages, sourceDir, configName
-    global includePythonVariant
+    global includePythonVariant, installApis
     
     # Create the platform specific wrappers.
     wnames = []
@@ -694,47 +696,49 @@ def installEric():
                 os.sep, name, sourceDir))
     
     # install the API file
-    from PyQt4.QtCore import qVersion
-    for progLanguage in progLanguages:
-        apidir = os.path.join(cfg['apidir'], progLanguage.lower())
-        if not os.path.exists(apidir):
-            os.makedirs(apidir)
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                              progLanguage, "*.api")):
-            try:
-                shutilCopy(apiName, apidir)
-            except EnvironmentError:
-                print("Could not install '{0}'.".format(apiName))
-        for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                              progLanguage, "*.bas")):
-            try:
-                shutilCopy(apiName, apidir)
-            except EnvironmentError:
-                print("Could not install '{0}'.".format(apiName))
-        if progLanguage == "Python":
-            # copy Python3 API files to the same destination
+    if installApis:
+        for progLanguage in progLanguages:
+            apidir = os.path.join(cfg['apidir'], progLanguage.lower())
+            if not os.path.exists(apidir):
+                os.makedirs(apidir)
             for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                                  "Python3", "*.api")):
+                                                  progLanguage, "*.api")):
                 try:
                     shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
             for apiName in glob.glob(os.path.join(sourceDir, "APIs",
-                                                  "Python3", "*.bas")):
+                                                  progLanguage, "*.bas")):
                 try:
-                    if os.path.basename(apiName).startswith("PyQt4"):
-                        # only install the PyQt4 file matching the Qt version
-                        if os.path.splitext(apiName)[0].endswith(
-                                qVersion().split(".")[0]):
-                            shutilCopy(apiName,
-                                       os.path.join(apidir, "PyQt4.bas"))
-                        continue
-                    if os.path.exists(os.path.join(
-                        apidir, os.path.basename(
-                            apiName.replace(".bas", ".api")))):
-                        shutilCopy(apiName, apidir)
+                    shutilCopy(apiName, apidir)
                 except EnvironmentError:
                     print("Could not install '{0}'.".format(apiName))
+            if progLanguage == "Python":
+                # copy Python3 API files to the same destination
+                for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                                      "Python3", "*.api")):
+                    try:
+                        shutilCopy(apiName, apidir)
+                    except EnvironmentError:
+                        print("Could not install '{0}'.".format(apiName))
+                for apiName in glob.glob(os.path.join(sourceDir, "APIs",
+                                                      "Python3", "*.bas")):
+                    try:
+                        if os.path.basename(apiName).startswith("PyQt4"):
+                            # only install the PyQt4 file matching the
+                            #  Qt version
+                            from PyQt4.QtCore import qVersion
+                            if os.path.splitext(apiName)[0].endswith(
+                                    qVersion().split(".")[0]):
+                                shutilCopy(apiName,
+                                           os.path.join(apidir, "PyQt4.bas"))
+                            continue
+                        if os.path.exists(os.path.join(
+                            apidir, os.path.basename(
+                                apiName.replace(".bas", ".api")))):
+                            shutilCopy(apiName, apidir)
+                    except EnvironmentError:
+                        print("Could not install '{0}'.".format(apiName))
     
     # create menu entry for Linux systems
     if sys.platform.startswith("linux"):
@@ -749,10 +753,10 @@ def installEric():
                 os.makedirs(dst)
             shutilCopy(
                 os.path.join(sourceDir, "icons", "default", "eric.png"),
-                os.path.join(dst, "eric.png"))
+                os.path.join(dst, "eric" + marker + ".png"))
             shutilCopy(
                 os.path.join(sourceDir, "icons", "default", "ericWeb48.png"),
-                os.path.join(dst, "ericWeb.png"))
+                os.path.join(dst, "ericWeb" + marker + ".png"))
             dst = os.path.normpath(
                 os.path.join(distDir, "usr/share/applications"))
             if not os.path.exists(dst):
@@ -775,7 +779,7 @@ def installEric():
         elif os.getuid() == 0:
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "eric.png"),
-                "/usr/share/pixmaps/eric.png")
+                "/usr/share/pixmaps/eric" + marker + ".png")
             copyDesktopFile(
                 os.path.join(sourceDir, "eric5.desktop"),
                 "/usr/share/applications/eric5" + marker + ".desktop",
@@ -787,7 +791,7 @@ def installEric():
                     marker)
             shutilCopy(os.path.join(
                 sourceDir, "icons", "default", "ericWeb48.png"),
-                "/usr/share/pixmaps/ericWeb.png")
+                "/usr/share/pixmaps/ericWeb" + marker + ".png")
             copyDesktopFile(
                 os.path.join(sourceDir, "eric5_webbrowser.desktop"),
                 "/usr/share/applications/eric5_webbrowser" + marker +
@@ -1243,6 +1247,8 @@ def main(argv):
     global progName, modDir, doCleanup, doCompile, distDir, cfg, apisDir
     global sourceDir, configName, includePythonVariant
     global macAppBundlePath, macAppBundleName, macPythonExe
+    global installApis
+    
     
     if sys.version_info < (2, 6, 0) or sys.version_info > (3, 9, 9):
         print('Sorry, eric5 requires at least Python 2.6 or '
@@ -1258,11 +1264,14 @@ def main(argv):
 
     try:
         if sys.platform.startswith("win"):
-            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:")
+            optlist, args = getopt.getopt(
+                argv[1:], "chxyza:b:d:f:", ["help", "noapis"])
         elif sys.platform == "darwin":
-            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:i:m:n:p:")
+            optlist, args = getopt.getopt(
+                argv[1:], "chxyza:b:d:f:i:m:n:p:", ["help", "noapis"])
         else:
-            optlist, args = getopt.getopt(argv[1:], "chxyza:b:d:f:i:")
+            optlist, args = getopt.getopt(
+                argv[1:], "chxyza:b:d:f:i:", ["help", "noapis"])
     except getopt.GetoptError:
         usage()
 
@@ -1304,6 +1313,8 @@ def main(argv):
             macAppBundlePath = arg
         elif opt == "-p":
             macPythonExe = arg
+        elif "--noapis":
+            installApis = False
     
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:
