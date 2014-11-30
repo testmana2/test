@@ -594,8 +594,8 @@ def installEric():
     try:
         # Install the files
         # make the install directories
-        for key in list(cfg.keys()):
-            if not os.path.isdir(cfg[key]):
+        for key in cfg.keys():
+            if cfg[key] and not os.path.isdir(cfg[key]):
                 os.makedirs(cfg[key])
         
         # copy the eric5 config file
@@ -889,7 +889,7 @@ def createInstallConfig():
     """
     Create the installation config dictionary.
     """
-    global modDir, platBinDir, cfg, apisDir
+    global modDir, platBinDir, cfg, apisDir, installApis
         
     ericdir = os.path.join(modDir, "eric5")
     cfg = {
@@ -908,10 +908,13 @@ def createInstallConfig():
         'bindir': platBinDir,
         'mdir': modDir,
     }
-    if apisDir:
-        cfg['apidir'] = apisDir
+    if installApis:
+        if apisDir:
+            cfg['apidir'] = apisDir
+        else:
+            cfg['apidir'] = os.path.join(ericdir, "api")
     else:
-        cfg['apidir'] = os.path.join(ericdir, "api")
+        cfg['apidir'] = ""
 configLength = 15
     
 
@@ -922,15 +925,16 @@ def createConfig():
     global cfg, sourceDir, macAppBundlePath
     
     apis = []
-    for progLanguage in progLanguages:
-        for apiName in glob.glob(
-                os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
-            apis.append(os.path.basename(apiName))
-        if progLanguage == "Python":
-            # treat Python3 API files the same as Python API files
+    if installApis:
+        for progLanguage in progLanguages:
             for apiName in glob.glob(
-                    os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+                    os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
                 apis.append(os.path.basename(apiName))
+            if progLanguage == "Python":
+                # treat Python3 API files the same as Python API files
+                for apiName in glob.glob(
+                        os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+                    apis.append(os.path.basename(apiName))
     
     fn = 'eric5config.py'
     config = (
@@ -1419,5 +1423,5 @@ if __name__ == "__main__":
     except:
         print("""An internal error occured.  Please report all the output"""
               """ of the program,\nincluding the following traceback, to"""
-              """ eric5-bugs@eric-ide.python-projects.org.\n""")
+              """ eric-bugs@eric-ide.python-projects.org.\n""")
         raise

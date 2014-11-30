@@ -178,15 +178,16 @@ def uninstallEric():
         
         # Cleanup API files
         apidir = getConfig('apidir')
-        for progLanguage in progLanguages:
-            for name in getConfig('apis'):
-                apiname = os.path.join(apidir, progLanguage.lower(), name)
-                if os.path.exists(apiname):
-                    os.remove(apiname)
-            for apiname in glob.glob(
-                    os.path.join(apidir, progLanguage.lower(), "*.bas")):
-                if os.path.basename(apiname) != "eric5.bas":
-                    os.remove(apiname)
+        if apidir:
+            for progLanguage in progLanguages:
+                for name in getConfig('apis'):
+                    apiname = os.path.join(apidir, progLanguage.lower(), name)
+                    if os.path.exists(apiname):
+                        os.remove(apiname)
+                for apiname in glob.glob(
+                        os.path.join(apidir, progLanguage.lower(), "*.bas")):
+                    if os.path.basename(apiname) != "eric5.bas":
+                        os.remove(apiname)
         
         if sys.platform == "darwin":
             # delete the Mac app bundle
@@ -261,5 +262,5 @@ if __name__ == "__main__":
         print("""An internal error occured.  Please report all the output of"""
               """ the program,\n"""
               """including the following traceback, to"""
-              """ eric5-bugs@eric-ide.python-projects.org.\n""")
+              """ eric-bugs@eric-ide.python-projects.org.\n""")
         raise
