@@ -625,8 +625,8 @@ def installEric():
     try:
         # Install the files
         # make the install directories
-        for key in list(cfg.keys()):
-            if not os.path.isdir(cfg[key]):
+        for key in cfg.keys():
+            if cfg[key] and not os.path.isdir(cfg[key]):
                 os.makedirs(cfg[key])
         
         # copy the eric6 config file
@@ -911,7 +911,7 @@ def createInstallConfig():
     """
     Create the installation config dictionary.
     """
-    global modDir, platBinDir, cfg, apisDir
+    global modDir, platBinDir, cfg, apisDir, installApis
         
     ericdir = os.path.join(modDir, "eric6")
     cfg = {
@@ -930,10 +930,13 @@ def createInstallConfig():
         'bindir': platBinDir,
         'mdir': modDir,
     }
-    if apisDir:
-        cfg['apidir'] = apisDir
+    if installApis:
+        if apisDir:
+            cfg['apidir'] = apisDir
+        else:
+            cfg['apidir'] = os.path.join(ericdir, "api")
     else:
-        cfg['apidir'] = os.path.join(ericdir, "api")
+        cfg['apidir'] = ""
 configLength = 15
     
 
@@ -944,15 +947,16 @@ def createConfig():
     global cfg, sourceDir, macAppBundlePath
     
     apis = []
-    for progLanguage in progLanguages:
-        for apiName in glob.glob(
-                os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
-            apis.append(os.path.basename(apiName))
-        if progLanguage == "Python":
-            # treat Python3 API files the same as Python API files
+    if installApis:
+        for progLanguage in progLanguages:
             for apiName in glob.glob(
-                    os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+                    os.path.join(sourceDir, "APIs", progLanguage, "*.api")):
                 apis.append(os.path.basename(apiName))
+            if progLanguage == "Python":
+                # treat Python3 API files the same as Python API files
+                for apiName in glob.glob(
+                        os.path.join(sourceDir, "APIs", "Python3", "*.api")):
+                    apis.append(os.path.basename(apiName))
     
     fn = 'eric6config.py'
     config = (

@@ -164,15 +164,16 @@ def uninstallEric():
         
         # Cleanup API files
         apidir = getConfig('apidir')
-        for progLanguage in progLanguages:
-            for name in getConfig('apis'):
-                apiname = os.path.join(apidir, progLanguage.lower(), name)
-                if os.path.exists(apiname):
-                    os.remove(apiname)
-            for apiname in glob.glob(
-                    os.path.join(apidir, progLanguage.lower(), "*.bas")):
-                if os.path.basename(apiname) != "eric6.bas":
-                    os.remove(apiname)
+        if apidir:
+            for progLanguage in progLanguages:
+                for name in getConfig('apis'):
+                    apiname = os.path.join(apidir, progLanguage.lower(), name)
+                    if os.path.exists(apiname):
+                        os.remove(apiname)
+                for apiname in glob.glob(
+                        os.path.join(apidir, progLanguage.lower(), "*.bas")):
+                    if os.path.basename(apiname) != "eric6.bas":
+                        os.remove(apiname)
         
         if sys.platform == "darwin":
             # delete the Mac app bundle
