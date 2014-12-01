@@ -237,7 +237,7 @@ def copyDesktopFile(src, dst, marker):
     text = text.replace("@MARKER@", marker)
     
     if sys.version_info[0] == 2:
-        f = codecs.open(src, "w", "utf-8")
+        f = codecs.open(dst, "w", "utf-8")
     else:
         f = open(dst, "w")
     f.write(text)
