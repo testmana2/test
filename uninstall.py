@@ -185,7 +185,7 @@ def uninstallEric():
             except AttributeError:
                 macAppBundlePath = defaultMacAppBundlePath
                 macAppBundleName = defaultMacAppBundleName
-            for bundlePath in [os.path.join(defaultMacAppBundleName,
+            for bundlePath in [os.path.join(defaultMacAppBundlePath,
                                             macAppBundleName),
                                os.path.join(macAppBundlePath,
                                             macAppBundleName),

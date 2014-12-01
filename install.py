@@ -49,10 +49,11 @@ sourceDir = "eric"
 configName = 'eric6config.py'
 defaultMacAppBundleName = "eric6.app"
 defaultMacAppBundlePath = "/Applications"
-macAppBundleName = "eric6.app"
-macAppBundlePath = "/Applications"
-macPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
+defaultMacPythonExe = "{0}/Resources/Python.app/Contents/MacOS/Python".format(
     sys.exec_prefix)
+macAppBundleName = defaultMacAppBundleName
+macAppBundlePath = defaultMacAppBundlePath
+macPythonExe = defaultMacPythonExe
 pyqtVariant = ""
 pyqtOverride = False
 
@@ -159,7 +160,7 @@ def usage(rcode=2):
         print("    -n path    path of the directory the Mac app bundle will")
         print("               be created in")
         print("               (default: {0})".format(macAppBundlePath))
-        print("    -p python  name of the python executable")
+        print("    -p python  path of the python executable")
         print("               (default: {0})".format(macPythonExe))
     print("    -c         don't cleanup old installation first")
     print("    -x         don't perform dependency checks (use on your own"
@@ -568,7 +569,7 @@ def cleanUp():
             except AttributeError:
                 macAppBundlePath = defaultMacAppBundlePath
                 macAppBundleName = defaultMacAppBundleName
-            for bundlePath in [os.path.join(defaultMacAppBundleName,
+            for bundlePath in [os.path.join(defaultMacAppBundlePath,
                                             macAppBundleName),
                                os.path.join(macAppBundlePath,
                                             macAppBundleName),
@@ -848,7 +849,7 @@ def createMacAppBundle(pydir):
     os.makedirs(dirs["exe"])
     os.makedirs(dirs["icns"])
     
-    if macAppBundleName == defaultMacAppBundleName:
+    if macPythonExe == defaultMacPythonExe:
         starter = os.path.join(dirs["exe"], "eric")
         os.symlink(macPythonExe, starter)
     else:
