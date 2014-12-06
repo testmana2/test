@@ -231,7 +231,7 @@ def copyDesktopFile(src, dst, marker):
     if sys.version_info[0] == 2:
         f = codecs.open(src, "r", "utf-8")
     else:
-        f = open(src, "r")
+        f = open(src, "r", encoding="utf-8")
     text = f.read()
     f.close()
     
@@ -240,7 +240,7 @@ def copyDesktopFile(src, dst, marker):
     if sys.version_info[0] == 2:
         f = codecs.open(dst, "w", "utf-8")
     else:
-        f = open(dst, "w")
+        f = open(dst, "w", encoding="utf-8")
     f.write(text)
     f.close()
     os.chmod(dst, 0o644)
