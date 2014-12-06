@@ -316,9 +316,16 @@ class EditorHighlightingStylesPage(ConfigurationPageBase,
         
         @param on flag indicating enabled or disabled state (boolean)
         """
-        self.lexer.setEolFill(on, self.style)
         checkState = Qt.Checked if on else Qt.Unchecked
-        self.styleElementList.currentItem().setCheckState(checkState)
+        if len(self.styleElementList.selectedItems()) > 1:
+            for selItem in self.styleElementList.selectedItems():
+                style = self.lexer.ind2style[
+                    self.styleElementList.row(selItem)]
+                self.lexer.setEolFill(on, style)
+                selItem.setCheckState(checkState)
+        else:
+            self.lexer.setEolFill(on, self.style)
+            self.styleElementList.currentItem().setCheckState(checkState)
         
     @pyqtSlot()
     def on_allEolFillButton_clicked(self):
