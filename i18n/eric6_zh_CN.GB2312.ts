@@ -5948,37 +5948,37 @@ Not connected
 <context>
     <name>DebuggerInterfacePython</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="372"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="376"/>
         <source>Start Debugger</source>
         <translation>启动调试器</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="372"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="376"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;调试器后端无法启动。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="813"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="817"/>
         <source>Parent Process</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="814"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="818"/>
         <source>Child process</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="815"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="819"/>
         <source>Client forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="815"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="819"/>
         <source>Select the fork branch to follow.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="163"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="167"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5986,37 +5986,37 @@ Not connected
 <context>
     <name>DebuggerInterfacePython3</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="369"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="373"/>
         <source>Start Debugger</source>
         <translation type="unfinished">启动调试器</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="369"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="373"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;调试器后端无法启动。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="810"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="814"/>
         <source>Parent Process</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="811"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="815"/>
         <source>Child process</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="812"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="816"/>
         <source>Client forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="812"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="816"/>
         <source>Select the fork branch to follow.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="160"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="164"/>
         <source>&lt;p&gt;No Python3 interpreter configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6024,17 +6024,17 @@ Not connected
 <context>
     <name>DebuggerInterfaceRuby</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="342"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="346"/>
         <source>Start Debugger</source>
         <translation>启动调试器</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="342"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="346"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;调试器后端无法启动。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="153"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="157"/>
         <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10406,47 +10406,47 @@ whole selection.&lt;/li&gt;
 <context>
     <name>EditorHighlightingStylesPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure syntax highlighting&lt;/b&gt;</source>
         <translation>&lt;b&gt;配置语法高亮&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="41"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="42"/>
         <source>Lexer Language:</source>
         <translation>词法分析器语言：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="58"/>
         <source>Select the lexer language to be configured.</source>
         <translation>选择要配置的词法分析器语言。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="66"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="67"/>
         <source>Style Element</source>
         <translation>风格元素</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="80"/>
         <source>Select the foreground colour.</source>
         <translation>选择前景色。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="82"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="83"/>
         <source>Foreground Colour</source>
         <translation>前景色</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="89"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="90"/>
         <source>Select the background colour.</source>
         <translation>选择背景色。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="93"/>
         <source>Background Colour</source>
         <translation>背景色</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="99"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="100"/>
         <source>Select the font.</source>
         <translation>选择字体。</translation>
     </message>
@@ -10456,142 +10456,142 @@ whole selection.&lt;/li&gt;
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="110"/>
         <source>Select end of line fill.</source>
         <translation>选择行尾填充。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="331"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="338"/>
         <source>Fill to end of line</source>
         <translation>填充到行尾</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="130"/>
         <source>to Default</source>
         <translation>默认</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="149"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="150"/>
         <source>Select the background colour for all styles</source>
         <translation>为所有风格选择背景色</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="152"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="153"/>
         <source>All Background Colours</source>
         <translation>所有背景色</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="159"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="160"/>
         <source>Select the font for all styles.</source>
         <translation>为所有风格选择字体</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="162"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="163"/>
         <source>All Fonts</source>
         <translation>所有字体</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="169"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="170"/>
         <source>Select the eol fill for all styles</source>
         <translation>为所有风格选择行尾填充</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="172"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="173"/>
         <source>All Fill to end of line</source>
         <translation>所有行尾填充</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="186"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="187"/>
         <source>Press to set all styles to their default values</source>
         <translation>点击将所有风格恢复成其默认值</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="190"/>
         <source>All to Default</source>
         <translation>全部默认</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="199"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="200"/>
         <source>Sample Text</source>
         <translation>示例文本 Sample Text</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="220"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="231"/>
         <source>Imports all styles of the currently selected language</source>
         <translation>导入当前选择语言的所有风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="223"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="234"/>
         <source>Import styles</source>
         <translation>导入风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="244"/>
         <source>Exports all styles of the currently selected language</source>
         <translation>导出当前选择语言的所有风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="236"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="247"/>
         <source>Export styles</source>
         <translation>导出风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="243"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="254"/>
         <source>Imports all styles of all languages</source>
         <translation>导入所有语言的所有风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="246"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="257"/>
         <source>Import all styles</source>
         <translation>导入所有风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="253"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="264"/>
         <source>Exports all styles of all languages</source>
         <translation>导出所有语言的所有风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="256"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="267"/>
         <source>Export all styles</source>
         <translation>导出所有风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="329"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="336"/>
         <source>Enabled</source>
         <translation>已开启</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="330"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="337"/>
         <source>Disabled</source>
         <translation>已禁用</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="331"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="338"/>
         <source>Select fill to end of line for all styles</source>
         <translation>为所有风格选择行尾填充</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="439"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="446"/>
         <source>Export Highlighting Styles</source>
         <translation>导出高亮风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="478"/>
         <source>Import Highlighting Styles</source>
         <translation>导入高亮风格</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="455"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="462"/>
         <source>Highlighting styles file (*.e4h)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="439"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="446"/>
         <source>&lt;p&gt;The highlighting styles could not be exported to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="478"/>
         <source>&lt;p&gt;The highlighting styles could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10611,8 +10611,13 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="126"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="127"/>
         <source>Press to set the current style to its default values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="213"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; The tick in the list above indicates the entrie&apos;s &apos;fill to end of line&apos; setting.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -21306,17 +21311,17 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished">选择要过滤的区域</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1401"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1412"/>
         <source>Revision</source>
         <translation type="unfinished">修订</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1398"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1409"/>
         <source>Author</source>
         <translation type="unfinished">作者</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="258"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="260"/>
         <source>Message</source>
         <translation type="unfinished">消息</translation>
     </message>
@@ -21441,42 +21446,42 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="138"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="140"/>
         <source>Added</source>
         <translation type="unfinished">已添加</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="141"/>
         <source>Deleted</source>
         <translation type="unfinished">已删除</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="140"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="142"/>
         <source>Modified</source>
         <translation type="unfinished">已修改</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="830"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="832"/>
         <source>Process Generation Error</source>
         <translation type="unfinished">进程生成错误</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="830"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="832"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="596"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="598"/>
         <source>The hg process did not finish within 30s.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="599"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="601"/>
         <source>Could not start the hg executable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="602"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="604"/>
         <source>Mercurial Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21516,7 +21521,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="118"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
         <source>All</source>
         <translation type="unfinished">全部</translation>
     </message>
@@ -21531,7 +21536,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="151"/>
         <source>Bookmarks</source>
         <translation type="unfinished">书签</translation>
     </message>
@@ -21551,28 +21556,28 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="166"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="168"/>
         <source>Change the phase of the selected revisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="170"/>
         <source>&lt;b&gt;Change Phase&lt;/b&gt;
 &lt;p&gt;This changes the phase of the selected revisions. The selected revisions have to have the same current phase.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="164"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="166"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1560"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1579"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1616"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21592,42 +21597,42 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="158"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="160"/>
         <source>Copy the selected changesets to the current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="175"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="177"/>
         <source>Tag</source>
         <translation type="unfinished">标签</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="177"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="179"/>
         <source>Tag the selected revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1616"/>
         <source>Switch</source>
         <translation type="unfinished">转换</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="183"/>
         <source>Switch the working directory to the selected revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="185"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="187"/>
         <source>Pull Large Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="187"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="189"/>
         <source>Pull large files for selected revisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="920"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="922"/>
         <source>{0} (large file)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35123,27 +35128,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1170"/>
+        <location filename="../Preferences/__init__.py" line="1180"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1208"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1208"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1300"/>
+        <location filename="../Preferences/__init__.py" line="1310"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1300"/>
+        <location filename="../Preferences/__init__.py" line="1310"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62580,12 +62585,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="297"/>
+        <location filename="../eric6.py" line="298"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="302"/>
+        <location filename="../eric6.py" line="303"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">正在产生主窗口……</translation>
     </message>

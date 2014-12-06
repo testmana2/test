@@ -5961,37 +5961,37 @@ Nepřipojen
 <context>
     <name>DebuggerInterfacePython</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="372"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="376"/>
         <source>Start Debugger</source>
         <translation>Spustit debuger</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="372"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="376"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="813"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="817"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="814"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="818"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="815"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="819"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="815"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="819"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython.py" line="163"/>
+        <location filename="../Debugger/DebuggerInterfacePython.py" line="167"/>
         <source>&lt;p&gt;No Python2 interpreter configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Python2 interpreter není nakonfigurován.&lt;/p&gt;</translation>
     </message>
@@ -5999,37 +5999,37 @@ Nepřipojen
 <context>
     <name>DebuggerInterfacePython3</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="369"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="373"/>
         <source>Start Debugger</source>
         <translation>Spustit debuger</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="369"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="373"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Debugovací backend nelze spustit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="810"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="814"/>
         <source>Parent Process</source>
         <translation>Rodičovský proces</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="811"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="815"/>
         <source>Child process</source>
         <translation>Dětský proces</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="812"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="816"/>
         <source>Client forking</source>
         <translation>Větvení klienta</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="812"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="816"/>
         <source>Select the fork branch to follow.</source>
         <translation>Pokračovat ve fork větvi.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfacePython3.py" line="160"/>
+        <location filename="../Debugger/DebuggerInterfacePython3.py" line="164"/>
         <source>&lt;p&gt;No Python3 interpreter configured.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Python2 interpreter není nakonfigurován.&lt;/p&gt; {3 ?}</translation>
     </message>
@@ -6037,17 +6037,17 @@ Nepřipojen
 <context>
     <name>DebuggerInterfaceRuby</name>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="342"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="346"/>
         <source>Start Debugger</source>
         <translation>Spustit debuger</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="342"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="346"/>
         <source>&lt;p&gt;The debugger backend could not be started.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Debugovací backend nelze spustit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="153"/>
+        <location filename="../Debugger/DebuggerInterfaceRuby.py" line="157"/>
         <source>&lt;p&gt;No Ruby interpreter configured.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10434,72 +10434,72 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>EditorHighlightingStylesPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="16"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure syntax highlighting&lt;/b&gt;</source>
         <translation>&lt;b&gt;Konfigurace zvýraznění syntaxe&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="41"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="42"/>
         <source>Lexer Language:</source>
         <translation>Jazyk lexeru:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="58"/>
         <source>Select the lexer language to be configured.</source>
         <translation>Výběr jazyka, který se bude konfigurovat.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="66"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="67"/>
         <source>Style Element</source>
         <translation>Element stylu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="110"/>
         <source>Select end of line fill.</source>
         <translation>Výběr výplně konce řádku.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="331"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="338"/>
         <source>Fill to end of line</source>
         <translation>Vyplnit do konce řádku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="159"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="160"/>
         <source>Select the font for all styles.</source>
         <translation>Výběr fontu pro všechny styly.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="162"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="163"/>
         <source>All Fonts</source>
         <translation>Všechny fonty</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="149"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="150"/>
         <source>Select the background colour for all styles</source>
         <translation>Výběr barvy pozadí pro všechny styly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="152"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="153"/>
         <source>All Background Colours</source>
         <translation>Všechny barvy pozadí</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="199"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="200"/>
         <source>Sample Text</source>
         <translation>Ukázka textu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="89"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="90"/>
         <source>Select the background colour.</source>
         <translation>Výběr barvy pozadí.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="93"/>
         <source>Background Colour</source>
         <translation>Barva pozadí</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="99"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="100"/>
         <source>Select the font.</source>
         <translation>Vybrat font.</translation>
     </message>
@@ -10509,117 +10509,117 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="79"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="80"/>
         <source>Select the foreground colour.</source>
         <translation>Vybrat barvu popředí.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="82"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="83"/>
         <source>Foreground Colour</source>
         <translation>Barva popředí</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="169"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="170"/>
         <source>Select the eol fill for all styles</source>
         <translation>Vybrat pro eol vyplní všechny styly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="172"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="173"/>
         <source>All Fill to end of line</source>
         <translation>Vše Vyplnit do konce řádku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="329"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="336"/>
         <source>Enabled</source>
         <translation>Zapnuto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="330"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="337"/>
         <source>Disabled</source>
         <translation>Vypnuto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="331"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="338"/>
         <source>Select fill to end of line for all styles</source>
         <translation>Vybrat pro doplnit do konce řádku pro všechny styly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="130"/>
         <source>to Default</source>
         <translation>na výchozí hodnotu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="186"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="187"/>
         <source>Press to set all styles to their default values</source>
         <translation>Stisknout pro nastavení všech stylů na výchozí hodnoty</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="189"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="190"/>
         <source>All to Default</source>
         <translation>Vše na výchozí hodnoty</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="220"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="231"/>
         <source>Imports all styles of the currently selected language</source>
         <translation>Importovat všechny styly právě vybraného jazyka</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="223"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="234"/>
         <source>Import styles</source>
         <translation>Import stylů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="233"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="244"/>
         <source>Exports all styles of the currently selected language</source>
         <translation>Exportovat všechny styly právě vybraného jazyka</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="236"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="247"/>
         <source>Export styles</source>
         <translation>Export stylů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="243"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="254"/>
         <source>Imports all styles of all languages</source>
         <translation>Importovat všechny styly všech jazyků</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="246"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="257"/>
         <source>Import all styles</source>
         <translation>Import všech stylů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="253"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="264"/>
         <source>Exports all styles of all languages</source>
         <translation>Exportovat všechny styly všech jazyků</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="256"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="267"/>
         <source>Export all styles</source>
         <translation>Export všech stylů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="439"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="446"/>
         <source>Export Highlighting Styles</source>
         <translation>Export stylů zvýraznění</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="478"/>
         <source>Import Highlighting Styles</source>
         <translation>Importovat styly zvýraznění</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="455"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="462"/>
         <source>Highlighting styles file (*.e4h)</source>
         <translation>Soubor se styly zvýrazňování (*.e4h)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="439"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="446"/>
         <source>&lt;p&gt;The highlighting styles could not be exported to file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Styly zvýraznění syntaxe se do souboru &lt;b&gt;{0}&lt;/b&gt; nepodařilo exportovat.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.py" line="478"/>
         <source>&lt;p&gt;The highlighting styles could not be read from file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Styly zvýraznění syntaxe se ze souboru &lt;b&gt;{0}&lt;/b&gt; nepodařilo načít.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
@@ -10639,8 +10639,13 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Jen velikost</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="126"/>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="127"/>
         <source>Press to set the current style to its default values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="213"/>
+        <source>&lt;b&gt;Note:&lt;/b&gt; The tick in the list above indicates the entrie&apos;s &apos;fill to end of line&apos; setting.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -21326,17 +21331,17 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Vybrat pole pro filtrování</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1401"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1412"/>
         <source>Revision</source>
         <translation>Revize</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1398"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1409"/>
         <source>Author</source>
         <translation>Autor</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="258"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="260"/>
         <source>Message</source>
         <translation>Zpráva</translation>
     </message>
@@ -21461,42 +21466,42 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="138"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="140"/>
         <source>Added</source>
         <translation>Přidáno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="141"/>
         <source>Deleted</source>
         <translation>Smazáno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="140"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="142"/>
         <source>Modified</source>
         <translation>Změněno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="830"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="832"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="830"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="832"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Proces {0} nelze spustit. Ověřte, že je umístěn v požadované cestě.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="596"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="598"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Hg proces neskončil do 30s.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="599"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="601"/>
         <source>Could not start the hg executable.</source>
         <translation>Nelze spustit hg program.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="602"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="604"/>
         <source>Mercurial Error</source>
         <translation>Mercurial chyba</translation>
     </message>
@@ -21536,7 +21541,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="118"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
         <source>All</source>
         <translation type="unfinished">Vše</translation>
     </message>
@@ -21551,7 +21556,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="149"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="151"/>
         <source>Bookmarks</source>
         <translation type="unfinished">Záložky</translation>
     </message>
@@ -21571,28 +21576,28 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="166"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="168"/>
         <source>Change the phase of the selected revisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="170"/>
         <source>&lt;b&gt;Change Phase&lt;/b&gt;
 &lt;p&gt;This changes the phase of the selected revisions. The selected revisions have to have the same current phase.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="164"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="166"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1560"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1579"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1616"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished">Projekt bude znovu načten. Má se provést?</translation>
     </message>
@@ -21612,42 +21617,42 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="158"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="160"/>
         <source>Copy the selected changesets to the current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="175"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="177"/>
         <source>Tag</source>
         <translation type="unfinished">Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="177"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="179"/>
         <source>Tag the selected revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1597"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1616"/>
         <source>Switch</source>
         <translation type="unfinished">Přepnout</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="183"/>
         <source>Switch the working directory to the selected revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="185"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="187"/>
         <source>Pull Large Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="187"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="189"/>
         <source>Pull large files for selected revisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="920"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="922"/>
         <source>{0} (large file)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -35173,27 +35178,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1170"/>
+        <location filename="../Preferences/__init__.py" line="1180"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1208"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1198"/>
+        <location filename="../Preferences/__init__.py" line="1208"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1300"/>
+        <location filename="../Preferences/__init__.py" line="1310"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1300"/>
+        <location filename="../Preferences/__init__.py" line="1310"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62593,12 +62598,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="297"/>
+        <location filename="../eric6.py" line="298"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="302"/>
+        <location filename="../eric6.py" line="303"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Generování hlavního okna...</translation>
     </message>
