@@ -69,7 +69,9 @@ r"""
         (?: [ \t]* \[ (?: plain | html ) \] )?
         [ \t]* \(
         (?P<MethodSignature> (?: [^)] | \)[ \t]*,? )*? )
-        \) [ \t]* :
+        \) [ \t]*
+        (?P<MethodReturnAnnotation> (?: -> [ \t]* [^:]+ )? )
+        [ \t]* :
     )
 
 |   (?P<Class>
@@ -152,7 +154,7 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
     Class to represent a Python function.
     """
     def __init__(self, module, name, file, lineno, signature='', separator=',',
-                 modifierType=ClbrBaseClasses.Function.General):
+                 modifierType=ClbrBaseClasses.Function.General, annotation=""):
         """
         Constructor
         
@@ -163,9 +165,11 @@ class Function(ClbrBaseClasses.Function, VisibilityMixin):
         @param signature parameterlist of the method
         @param separator string separating the parameters
         @param modifierType type of the function
+        @param annotation return annotation
         """
         ClbrBaseClasses.Function.__init__(self, module, name, file, lineno,
-                                          signature, separator, modifierType)
+                                          signature, separator, modifierType,
+                                          annotation)
         VisibilityMixin.__init__(self)
 
 
@@ -297,6 +301,9 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             meth_sig = m.group("MethodSignature")
             meth_sig = meth_sig.replace('\\\n', '')
             meth_sig = _commentsub('', meth_sig)
+            meth_ret = m.group("MethodReturnAnnotation")
+            meth_ret = meth_ret.replace('\\\n', '')
+            meth_ret = _commentsub('', meth_ret)
             lineno = lineno + src.count('\n', last_lineno_pos, start)
             last_lineno_pos = start
             if modifierType and modifierIndent == thisindent:
@@ -336,12 +343,14 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
                 if cur_class:
                     # it's a method/nested def
                     f = Function(None, meth_name,
-                                 file, lineno, meth_sig, modifierType=modifier)
+                                 file, lineno, meth_sig, annotation=meth_ret,
+                                 modifierType=modifier)
                     cur_class._addmethod(meth_name, f)
             else:
                 # it's a function
                 f = Function(module, meth_name,
-                             file, lineno, meth_sig, modifierType=modifier)
+                             file, lineno, meth_sig, annotation=meth_ret,
+                             modifierType=modifier)
                 if meth_name in dict_counts:
                     dict_counts[meth_name] += 1
                     meth_name = "{0}_{1:d}".format(

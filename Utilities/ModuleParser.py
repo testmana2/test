@@ -139,7 +139,9 @@ r"""
         (?: [ \t]* \[ (?: plain | html ) \] )?
         [ \t]* \(
         (?P<MethodSignature> (?: [^)] | \)[ \t]*,? )*? )
-        \) [ \t]* :
+        \) [ \t]*
+        (?P<MethodReturnAnnotation> (?: -> [ \t]* [^:]+ )? )
+        [ \t]* :
     )
 
 |   (?P<Class>
@@ -538,6 +540,8 @@ class Module(object):
                 meth_name = m.group("MethodName")
                 meth_sig = m.group("MethodSignature")
                 meth_sig = meth_sig.replace('\\\n', '')
+                meth_ret = m.group("MethodReturnAnnotation")
+                meth_ret = meth_ret.replace('\\\n', '')
                 if m.group("MethodPyQtSignature") is not None:
                     meth_pyqtSig = m.group("MethodPyQtSignature")\
                                     .replace('\\\n', '')\
@@ -595,7 +599,8 @@ class Module(object):
                             # it's a class method
                             f = Function(
                                 None, meth_name, None, lineno,
-                                meth_sig, meth_pyqtSig, modifierType=modifier)
+                                meth_sig, meth_pyqtSig, modifierType=modifier,
+                                annotation=meth_ret)
                             self.__py_setVisibility(f)
                             cur_class.addMethod(meth_name, f)
                             break
@@ -603,13 +608,15 @@ class Module(object):
                         # it's a nested function of a module function
                         f = Function(
                             self.name, meth_name, self.file, lineno,
-                            meth_sig, meth_pyqtSig, modifierType=modifier)
+                            meth_sig, meth_pyqtSig, modifierType=modifier,
+                            annotation=meth_ret)
                         self.__py_setVisibility(f)
                         self.addFunction(meth_name, f)
                 else:
                     # it's a module function
                     f = Function(self.name, meth_name, self.file, lineno,
-                                 meth_sig, meth_pyqtSig, modifierType=modifier)
+                                 meth_sig, meth_pyqtSig, modifierType=modifier,
+                                 annotation=meth_ret)
                     self.__py_setVisibility(f)
                     self.addFunction(meth_name, f)
                 if not classstack:
@@ -1354,7 +1361,7 @@ class Function(VisibilityBase):
     Class = 2
     
     def __init__(self, module, name, file, lineno, signature='',
-                 pyqtSignature=None, modifierType=General):
+                 pyqtSignature=None, modifierType=General, annotation=""):
         """
         Constructor
         
@@ -1365,6 +1372,7 @@ class Function(VisibilityBase):
         @param signature the functions call signature (string)
         @param pyqtSignature the functions PyQt signature (string)
         @param modifierType type of the function
+        @param annotation return annotation
         """
         self.module = module
         self.name = name
@@ -1376,6 +1384,7 @@ class Function(VisibilityBase):
         self.description = ""
         self.pyqtSignature = pyqtSignature
         self.modifier = modifierType
+        self.annotation = annotation
         self.setPublic()
     
     def addDescription(self, description):

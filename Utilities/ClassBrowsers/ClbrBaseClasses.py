@@ -255,7 +255,7 @@ class Function(ClbrBase):
     Class = 2
     
     def __init__(self, module, name, file, lineno, signature='', separator=',',
-                 modifierType=General):
+                 modifierType=General, annotation=""):
         """
         Constructor
         
@@ -266,10 +266,12 @@ class Function(ClbrBase):
         @param signature parameterlist of the method
         @param separator string separating the parameters
         @param modifierType type of the function
+        @param annotation return annotation
         """
         ClbrBase.__init__(self, module, name, file, lineno)
         self.parameters = [e.strip() for e in signature.split(separator)]
         self.modifier = modifierType
+        self.annotation = annotation
 
 
 class Coding(ClbrBase):

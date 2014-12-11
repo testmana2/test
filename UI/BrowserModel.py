@@ -1348,6 +1348,9 @@ class BrowserClassItem(BrowserItem):
                 self.icon = UI.PixmapCache.getIcon("method.png")
             self.itemData[0] = "{0}({1})".format(
                 name, ", ".join(self._classObject.parameters))
+            if self._classObject.annotation:
+                self.itemData[0] = "{0} {1}".format(
+                    self.itemData[0], self._classObject.annotation)
             # if no defaults are wanted
             # ....format(name,
             #            ", ".join([e.split('=')[0].strip() \
@@ -1473,6 +1476,9 @@ class BrowserMethodItem(BrowserItem):
             self.icon = UI.PixmapCache.getIcon("method.png")
         self.itemData[0] = "{0}({1})".format(
             name, ", ".join(self._functionObject.parameters))
+        if self._functionObject.annotation:
+            self.itemData[0] = "{0} {1}".format(
+                self.itemData[0], self._functionObject.annotation)
         # if no defaults are wanted
         # ....format(name,
         #            ", ".join([e.split('=')[0].strip()
