@@ -8372,7 +8372,7 @@ eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Coding?1(module, file, lineno, cod
 eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Function.Class?7
 eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Function.General?7
 eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Function.Static?7
-eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=General)
+eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=General, annotation="")
 eric6.Utilities.ClassBrowsers.ClbrBaseClasses.Module?1(module, name, file, lineno)
 eric6.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase.setEndLine?4(endLineNo)
 eric6.Utilities.ClassBrowsers.ClbrBaseClasses._ClbrBase?2(module, name, file, lineno)
@@ -8409,7 +8409,7 @@ eric6.Utilities.ClassBrowsers.jsclbr._modules?8
 eric6.Utilities.ClassBrowsers.jsclbr.readmodule_ex?4(module, path=[])
 eric6.Utilities.ClassBrowsers.pyclbr.Attribute?1(module, name, file, lineno)
 eric6.Utilities.ClassBrowsers.pyclbr.Class?1(module, name, super, file, lineno)
-eric6.Utilities.ClassBrowsers.pyclbr.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=ClbrBaseClasses.Function.General)
+eric6.Utilities.ClassBrowsers.pyclbr.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=ClbrBaseClasses.Function.General, annotation="")
 eric6.Utilities.ClassBrowsers.pyclbr.Publics?1(module, file, lineno, idents)
 eric6.Utilities.ClassBrowsers.pyclbr.SUPPORTED_TYPES?7
 eric6.Utilities.ClassBrowsers.pyclbr.TABWIDTH?7
@@ -8454,7 +8454,7 @@ eric6.Utilities.ModuleParser.Function.General?7
 eric6.Utilities.ModuleParser.Function.Static?7
 eric6.Utilities.ModuleParser.Function.addDescription?4(description)
 eric6.Utilities.ModuleParser.Function.setEndLine?4(endLineNo)
-eric6.Utilities.ModuleParser.Function?1(module, name, file, lineno, signature='', pyqtSignature=None, modifierType=General)
+eric6.Utilities.ModuleParser.Function?1(module, name, file, lineno, signature='', pyqtSignature=None, modifierType=General, annotation="")
 eric6.Utilities.ModuleParser.Module.addClass?4(name, _class)
 eric6.Utilities.ModuleParser.Module.addDescription?4(description)
 eric6.Utilities.ModuleParser.Module.addFunction?4(name, function)
@@ -9034,6 +9034,7 @@ eric6.install.compileUiFiles?4()
 eric6.install.compile_ui?4(ui_dir, ui_file)
 eric6.install.configLength?7
 eric6.install.configName?7
+eric6.install.copyDesktopFile?4(src, dst, marker)
 eric6.install.copyToFile?4(name, text)
 eric6.install.copyTree?4(src, dst, filters, excludeDirs=[], excludePatterns=[])
 eric6.install.createConfig?4()
@@ -9044,6 +9045,7 @@ eric6.install.createPyWrapper?4(pydir, wfile, isGuiScript=True)
 eric6.install.currDir?7
 eric6.install.defaultMacAppBundleName?7
 eric6.install.defaultMacAppBundlePath?7
+eric6.install.defaultMacPythonExe?7
 eric6.install.determinePyQtVariant?4()
 eric6.install.distDir?7
 eric6.install.doCleanup?7
@@ -9052,6 +9054,7 @@ eric6.install.doDependancyChecks?4()
 eric6.install.exit?4(rcode=0)
 eric6.install.includePythonVariant?7
 eric6.install.initGlobals?4()
+eric6.install.installApis?7
 eric6.install.installEric?4()
 eric6.install.macAppBundleName?7
 eric6.install.macAppBundlePath?7
@@ -9063,6 +9066,7 @@ eric6.install.progLanguages?7
 eric6.install.progName?7
 eric6.install.pyModDir?7
 eric6.install.pyName?4(py_dir, py_file)
+eric6.install.pyqtOverride?7
 eric6.install.pyqtVariant?7
 eric6.install.shutilCopy?4(src, dst, perm=0o644)
 eric6.install.sourceDir?7

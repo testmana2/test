@@ -12933,6 +12933,7 @@
       <keyword name="continued_indentation" id="continued_indentation" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#continued_indentation" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric6.Utilities.__init__.html#convertLineEnds" />
       <keyword name="convertPasswords" id="convertPasswords" ref="eric6.Preferences.__init__.html#convertPasswords" />
+      <keyword name="copyDesktopFile" id="copyDesktopFile" ref="eric6.install.html#copyDesktopFile" />
       <keyword name="copyToFile" id="copyToFile" ref="eric6.install.html#copyToFile" />
       <keyword name="copyTree" id="copyTree" ref="eric6.install.html#copyTree" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.ApplicationPage.html#create" />

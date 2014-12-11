@@ -25,7 +25,7 @@ Installation script for the eric6 IDE and all eric6 related tools.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>BlackLists</td></tr><tr><td>PlatformsBlackLists</td></tr><tr><td>PythonMarkers</td></tr><tr><td>apisDir</td></tr><tr><td>cfg</td></tr><tr><td>configLength</td></tr><tr><td>configName</td></tr><tr><td>currDir</td></tr><tr><td>defaultMacAppBundleName</td></tr><tr><td>defaultMacAppBundlePath</td></tr><tr><td>distDir</td></tr><tr><td>doCleanup</td></tr><tr><td>doCompile</td></tr><tr><td>includePythonVariant</td></tr><tr><td>macAppBundleName</td></tr><tr><td>macAppBundlePath</td></tr><tr><td>macPythonExe</td></tr><tr><td>modDir</td></tr><tr><td>platBinDir</td></tr><tr><td>progLanguages</td></tr><tr><td>progName</td></tr><tr><td>pyModDir</td></tr><tr><td>pyqtVariant</td></tr><tr><td>sourceDir</td></tr>
+<tr><td>BlackLists</td></tr><tr><td>PlatformsBlackLists</td></tr><tr><td>PythonMarkers</td></tr><tr><td>apisDir</td></tr><tr><td>cfg</td></tr><tr><td>configLength</td></tr><tr><td>configName</td></tr><tr><td>currDir</td></tr><tr><td>defaultMacAppBundleName</td></tr><tr><td>defaultMacAppBundlePath</td></tr><tr><td>defaultMacPythonExe</td></tr><tr><td>distDir</td></tr><tr><td>doCleanup</td></tr><tr><td>doCompile</td></tr><tr><td>includePythonVariant</td></tr><tr><td>installApis</td></tr><tr><td>macAppBundleName</td></tr><tr><td>macAppBundlePath</td></tr><tr><td>macPythonExe</td></tr><tr><td>modDir</td></tr><tr><td>platBinDir</td></tr><tr><td>progLanguages</td></tr><tr><td>progName</td></tr><tr><td>pyModDir</td></tr><tr><td>pyqtOverride</td></tr><tr><td>pyqtVariant</td></tr><tr><td>sourceDir</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -48,6 +48,9 @@ Installation script for the eric6 IDE and all eric6 related tools.
 </tr><tr>
 <td><a href="#compile_ui">compile_ui</a></td>
 <td>Local function to compile a single .ui file.</td>
+</tr><tr>
+<td><a href="#copyDesktopFile">copyDesktopFile</a></td>
+<td>Modify a desktop file and write it to its destination.</td>
 </tr><tr>
 <td><a href="#copyToFile">copyToFile</a></td>
 <td>Copy a string to a file.</td>
@@ -179,6 +182,25 @@ directory containing the .ui file (string)
 </dd><dt><i>ui_file</i></dt>
 <dd>
 file name of the .ui file (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="copyDesktopFile" ID="copyDesktopFile"></a>
+<h2>copyDesktopFile</h2>
+<b>copyDesktopFile</b>(<i>src, dst, marker</i>)
+<p>
+    Modify a desktop file and write it to its destination.
+</p><dl>
+<dt><i>src</i></dt>
+<dd>
+source file name (string)
+</dd><dt><i>dst</i></dt>
+<dd>
+destination file name (string)
+</dd><dt><i>marker</i></dt>
+<dd>
+marker to be used (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
