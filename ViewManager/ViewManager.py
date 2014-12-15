@@ -2757,15 +2757,14 @@ class ViewManager(QObject):
         tb.addAction(self.pasteAct)
         tb.addAction(self.deleteAct)
         tb.addSeparator()
-        tb.addAction(self.indentAct)
-        tb.addAction(self.unindentAct)
-        tb.addSeparator()
         tb.addAction(self.commentAct)
         tb.addAction(self.uncommentAct)
         tb.addAction(self.toggleCommentAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
         toolbarManager.addAction(self.smartIndentAct, tb.windowTitle())
+        toolbarManager.addAction(self.indentAct, tb.windowTitle())
+        toolbarManager.addAction(self.unindentAct, tb.windowTitle())
         
         return tb
         
