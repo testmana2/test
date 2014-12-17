@@ -316,6 +316,7 @@ class Editor(QsciScintillaCompat):
         self.__setTextDisplay()
         
         # initialize the online syntax check timer
+        # TODO: add code to handle a KeyError here (i.e. service is not loaded)
         self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
         self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
         self.__initOnlineSyntaxCheck()

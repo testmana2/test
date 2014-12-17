@@ -65,6 +65,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
         
+        # TODO: add code to handle a KeyError here (i.e. service is not loaded)
         self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
         self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
         self.filename = None
