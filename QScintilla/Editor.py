@@ -315,9 +315,12 @@ class Editor(QsciScintillaCompat):
         self.__setTextDisplay()
         
         # initialize the online syntax check timer
-        self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
-        self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
-        self.__initOnlineSyntaxCheck()
+        try:
+            self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
+            self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+            self.__initOnlineSyntaxCheck()
+        except KeyError:
+            self.syntaxCheckService = None
         
         self.isResourcesFile = False
         if editor is None:
@@ -5072,7 +5075,8 @@ class Editor(QsciScintillaCompat):
         """
         Public method to perform an automatic syntax check of the file.
         """
-        if self.filetype not in self.syntaxCheckService.getLanguages():
+        if self.syntaxCheckService is None or \
+                self.filetype not in self.syntaxCheckService.getLanguages():
             return
         
         if Preferences.getEditor("AutoCheckSyntax"):
@@ -6043,7 +6047,9 @@ class Editor(QsciScintillaCompat):
         self.breakpointModel.rowsInserted.disconnect(
             self.__addBreakPoints)
         
-        self.syntaxCheckService.syntaxChecked.disconnect(self.__processResult)
+        if self.syntaxCheckService is not None:
+            self.syntaxCheckService.syntaxChecked.disconnect(
+                self.__processResult)
         
         if self.spell:
             self.spell.stopIncrementalCheck()
