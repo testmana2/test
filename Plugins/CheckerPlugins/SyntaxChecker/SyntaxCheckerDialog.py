@@ -65,9 +65,11 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgressLabel.setVisible(False)
         self.checkProgressLabel.setMaximumWidth(600)
         
-        # TODO: add code to handle a KeyError here (i.e. service is not loaded)
-        self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
-        self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+        try:
+            self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
+            self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+        except KeyError:
+            self.syntaxCheckService = None
         self.filename = None
         
     def __resort(self):
@@ -141,37 +143,38 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param codestring string containing the code to be checked (string).
             If this is given, fn must be a single file name.
         """
-        if self.__project is None:
-            self.__project = e5App().getObject("Project")
-        
-        self.cancelled = False
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
-        self.checkProgress.setVisible(True)
-        QApplication.processEvents()
-        
-        if isinstance(fn, list):
-            self.files = fn
-        elif os.path.isdir(fn):
-            self.files = []
-            for ext in self.syntaxCheckService.getExtensions():
-                self.files.extend(
-                    Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
-        else:
-            self.files = [fn]
-        
-        self.__clearErrors(self.files)
-        
-        if codestring or len(self.files) > 0:
-            self.checkProgress.setMaximum(max(1, len(self.files)))
-            self.checkProgress.setVisible(len(self.files) > 1)
-            self.checkProgressLabel.setVisible(len(self.files) > 1)
+        if self.syntaxCheckService is not None:
+            if self.__project is None:
+                self.__project = e5App().getObject("Project")
+            
+            self.cancelled = False
+            self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+            self.checkProgress.setVisible(True)
             QApplication.processEvents()
+            
+            if isinstance(fn, list):
+                self.files = fn
+            elif os.path.isdir(fn):
+                self.files = []
+                for ext in self.syntaxCheckService.getExtensions():
+                    self.files.extend(
+                        Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
+            else:
+                self.files = [fn]
+            
+            self.__clearErrors(self.files)
+            
+            if codestring or len(self.files) > 0:
+                self.checkProgress.setMaximum(max(1, len(self.files)))
+                self.checkProgress.setVisible(len(self.files) > 1)
+                self.checkProgressLabel.setVisible(len(self.files) > 1)
+                QApplication.processEvents()
 
-            # now go through all the files
-            self.progress = 0
-            self.check(codestring)
+                # now go through all the files
+                self.progress = 0
+                self.check(codestring)
     
     def check(self, codestring=''):
         """
@@ -180,7 +183,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         The results are reported to the __processResult slot.
         @keyparam codestring optional sourcestring (str)
         """
-        if not self.files:
+        if self.syntaxCheckService is None or not self.files:
             self.__finish()
             return
         
