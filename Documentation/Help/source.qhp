@@ -9868,7 +9868,9 @@
       <keyword name="Shell.__clearHistory" id="Shell.__clearHistory" ref="eric6.QScintilla.Shell.html#Shell.__clearHistory" />
       <keyword name="Shell.__clientCapabilities" id="Shell.__clientCapabilities" ref="eric6.QScintilla.Shell.html#Shell.__clientCapabilities" />
       <keyword name="Shell.__clientError" id="Shell.__clientError" ref="eric6.QScintilla.Shell.html#Shell.__clientError" />
+      <keyword name="Shell.__clientException" id="Shell.__clientException" ref="eric6.QScintilla.Shell.html#Shell.__clientException" />
       <keyword name="Shell.__clientStatement" id="Shell.__clientStatement" ref="eric6.QScintilla.Shell.html#Shell.__clientStatement" />
+      <keyword name="Shell.__clientSyntaxError" id="Shell.__clientSyntaxError" ref="eric6.QScintilla.Shell.html#Shell.__clientSyntaxError" />
       <keyword name="Shell.__completionListSelected" id="Shell.__completionListSelected" ref="eric6.QScintilla.Shell.html#Shell.__completionListSelected" />
       <keyword name="Shell.__configure" id="Shell.__configure" ref="eric6.QScintilla.Shell.html#Shell.__configure" />
       <keyword name="Shell.__executeCommand" id="Shell.__executeCommand" ref="eric6.QScintilla.Shell.html#Shell.__executeCommand" />

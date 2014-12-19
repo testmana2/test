@@ -157,8 +157,14 @@ QsciScintillaCompat
 <td><a href="#Shell.__clientError">__clientError</a></td>
 <td>Private method to handle an error in the client.</td>
 </tr><tr>
+<td><a href="#Shell.__clientException">__clientException</a></td>
+<td>Private method to handle an exception of the client.</td>
+</tr><tr>
 <td><a href="#Shell.__clientStatement">__clientStatement</a></td>
 <td>Private method to handle the response from the debugger client.</td>
+</tr><tr>
+<td><a href="#Shell.__clientSyntaxError">__clientSyntaxError</a></td>
+<td>Private method to handle a syntax error in the debugged program.</td>
 </tr><tr>
 <td><a href="#Shell.__completionListSelected">__completionListSelected</a></td>
 <td>Private slot to handle the selection from the completion list.</td>
@@ -581,7 +587,23 @@ type of the debug client (string)
 <b>__clientError</b>(<i></i>)
 <p>
         Private method to handle an error in the client.
-</p><a NAME="Shell.__clientStatement" ID="Shell.__clientStatement"></a>
+</p><a NAME="Shell.__clientException" ID="Shell.__clientException"></a>
+<h4>Shell.__clientException</h4>
+<b>__clientException</b>(<i>exceptionType, exceptionMessage, stackTrace</i>)
+<p>
+        Private method to handle an exception of the client.
+</p><dl>
+<dt><i>exceptionType</i></dt>
+<dd>
+type of exception raised (string)
+</dd><dt><i>exceptionMessage</i></dt>
+<dd>
+message given by the exception (string)
+</dd><dt><i>stackTrace</i></dt>
+<dd>
+list of stack entries (list of string)
+</dd>
+</dl><a NAME="Shell.__clientStatement" ID="Shell.__clientStatement"></a>
 <h4>Shell.__clientStatement</h4>
 <b>__clientStatement</b>(<i>more</i>)
 <p>
@@ -590,6 +612,27 @@ type of the debug client (string)
 <dt><i>more</i></dt>
 <dd>
 flag indicating that more user input is required (boolean)
+</dd>
+</dl><a NAME="Shell.__clientSyntaxError" ID="Shell.__clientSyntaxError"></a>
+<h4>Shell.__clientSyntaxError</h4>
+<b>__clientSyntaxError</b>(<i>message, filename, lineNo, characterNo</i>)
+<p>
+        Private method to handle a syntax error in the debugged program.
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+message of the syntax error (string)
+</dd><dt><i>filename</i></dt>
+<dd>
+translated filename of the syntax error position
+            (string)
+</dd><dt><i>lineNo</i></dt>
+<dd>
+line number of the syntax error position (integer)
+</dd><dt><i>characterNo</i></dt>
+<dd>
+character number of the syntax error position
+            (integer)
 </dd>
 </dl><a NAME="Shell.__completionListSelected" ID="Shell.__completionListSelected"></a>
 <h4>Shell.__completionListSelected</h4>

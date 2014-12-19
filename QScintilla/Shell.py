@@ -158,8 +158,8 @@ class Shell(QsciScintillaCompat):
         dbs.clientBanner.connect(self.__writeBanner)
         dbs.clientCompletionList.connect(self.__showCompletions)
         dbs.clientCapabilities.connect(self.__clientCapabilities)
-        dbs.clientException.connect(self.__clientError)
-        dbs.clientSyntaxError.connect(self.__clientError)
+        dbs.clientException.connect(self.__clientException)
+        dbs.clientSyntaxError.connect(self.__clientSyntaxError)
         self.dbs = dbs
         
         # Initialize instance variables.
@@ -656,6 +656,59 @@ class Shell(QsciScintillaCompat):
             self.inContinue = more
             self.__writePrompt()
         self.inCommandExecution = False
+        
+    def __clientException(self, exceptionType, exceptionMessage, stackTrace):
+        """
+        Private method to handle an exception of the client.
+        
+        @param exceptionType type of exception raised (string)
+        @param exceptionMessage message given by the exception (string)
+        @param stackTrace list of stack entries (list of string)
+        """
+        self .__clientError()
+        
+        if Preferences.getDebugger("ShowExceptionInShell"):
+            if exceptionType is not None:
+                if stackTrace:
+                    self.__write(
+                        self.tr('Exception "{0}"\n{1}\nFile: {2}, Line: {3}\n')
+                        .format(
+                            exceptionType,
+                            exceptionMessage,
+                            stackTrace[0][0],
+                            stackTrace[0][1]
+                        )
+                    )
+                else:
+                    self.__write(
+                        self.tr('Exception "{0}"\n{1}\n')
+                        .format(
+                            exceptionType,
+                            exceptionMessage)
+                    )
+        
+    def __clientSyntaxError(self, message, filename, lineNo, characterNo):
+        """
+        Private method to handle a syntax error in the debugged program.
+        
+        @param message message of the syntax error (string)
+        @param filename translated filename of the syntax error position
+            (string)
+        @param lineNo line number of the syntax error position (integer)
+        @param characterNo character number of the syntax error position
+            (integer)
+        """
+        self .__clientError()
+        
+        if Preferences.getDebugger("ShowExceptionInShell"):
+            if message is None:
+                self.__write(self.tr("Unspecified syntax error.\n"))
+            else:
+                self.__write(
+                    self.tr('Syntax error "{1}" in file {0} at line {2},'
+                            ' character {3}.\n')
+                        .format(filename, message, lineNo, characterNo)
+                )
         
     def __clientError(self):
         """

@@ -1094,7 +1094,7 @@ class DebugUI(QObject):
         
         @param exceptionType type of exception raised (string)
         @param exceptionMessage message given by the exception (string)
-        @param stackTrace list of stack entries.
+        @param stackTrace list of stack entries (list of string)
         """
         self.ui.raise_()
         self.ui.activateWindow()

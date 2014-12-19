@@ -72,6 +72,7 @@ class Prefs(object):
         "ThreeStateBreakPoints": False,
         "SuppressClientExit": False,
         "BreakAlways": False,
+        "ShowExceptionInShell": True,
         "PythonInterpreter": "",
         "Python3Interpreter": "",
         "RubyInterpreter": "",

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>643</width>
-    <height>1367</height>
+    <height>1600</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -552,6 +552,16 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QCheckBox" name="exceptionShellCheckBox">
+        <property name="toolTip">
+         <string>Select to show exception information in the shell window</string>
+        </property>
+        <property name="text">
+         <string>Show exceptions in Shell</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -616,6 +626,8 @@
   <tabstop>dontShowClientExitCheckBox</tabstop>
   <tabstop>debugThreeStateBreakPoint</tabstop>
   <tabstop>exceptionBreakCheckBox</tabstop>
+  <tabstop>exceptionShellCheckBox</tabstop>
+  <tabstop>autoViewSourcecodeCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

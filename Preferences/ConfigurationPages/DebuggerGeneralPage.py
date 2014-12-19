@@ -139,6 +139,8 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
             Preferences.getDebugger("SuppressClientExit"))
         self.exceptionBreakCheckBox.setChecked(
             Preferences.getDebugger("BreakAlways"))
+        self.exceptionShellCheckBox.setChecked(
+            Preferences.getDebugger("ShowExceptionInShell"))
         self.autoViewSourcecodeCheckBox.setChecked(
             Preferences.getDebugger("AutoViewSourceCode"))
         
@@ -219,6 +221,9 @@ class DebuggerGeneralPage(ConfigurationPageBase, Ui_DebuggerGeneralPage):
         Preferences.setDebugger(
             "BreakAlways",
             self.exceptionBreakCheckBox.isChecked())
+        Preferences.setDebugger(
+            "ShowExceptionInShell",
+            self.exceptionShellCheckBox.isChecked())
         Preferences.setDebugger(
             "AutoViewSourceCode",
             self.autoViewSourcecodeCheckBox.isChecked())
