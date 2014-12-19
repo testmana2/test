@@ -604,7 +604,7 @@ class E5SideBar(QWidget):
         stream.readUInt16()  # version
         minimized = stream.readBool()
         
-        if minimized:
+        if minimized and not self.__minimized:
             self.shrink()
         
         stream >> self.__bigSize
