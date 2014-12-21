@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -5976,12 +5977,12 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="558"/>
         <source>Select to show exception information in the shell window</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para mostrar información de excepciones en la ventana de shell</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="561"/>
         <source>Show exceptions in Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar excepciones en Shell</translation>
     </message>
 </context>
 <context>
@@ -10256,12 +10257,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="507"/>
         <source>Select to use &apos;sphinx&apos; to generate the ReST preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para usar &apos;sphinx&apos; para generar la vista preliminar ReST</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="510"/>
         <source>Use &apos;sphinx&apos; for ReST preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar &apos;sphinx&apos; para la vista preliminar de ReST</translation>
     </message>
 </context>
 <context>
@@ -10695,7 +10696,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="213"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; The tick in the list above indicates the entrie&apos;s &apos;fill to end of line&apos; setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; El checkbox en la lista de arriba indica el ajuste &apos;llenar hasta final de línea&apos; para la entrada.</translation>
     </message>
 </context>
 <context>
@@ -15558,7 +15559,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -35333,7 +35334,7 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="492"/>
         <source>&lt;p&gt;Markdown preview requires the &lt;b&gt;python-markdown&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;La previsualización de Markdown requiere el package &lt;b&gt;python-markdown&lt;/b&gt;.&lt;br/&gt;Instalar con el gestor de paquetes o ver &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;las instrucciones de instalación.&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;La previsualización de Markdown requiere el package &lt;b&gt;python-markdown&lt;/b&gt;.&lt;br/&gt;Instalar con el gestor de paquetes o ver &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;las instrucciones de instalación.&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="374"/>
@@ -35343,12 +35344,12 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="472"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager, &apos;pip install docutils&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La previsualización de ReStructuredText requiere el package &lt;b&gt;python-docutils&lt;/b&gt; .&lt;br/&gt;Installar con el gestor de paquetes, &apos;pip install docutils&apos; o ver &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;esta página .&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="410"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;sphinx&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager,&apos;pip install Sphinx&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/Sphinx&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Alternatively you may disable Sphinx usage on the Editor, Filehandling configuration page.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;La previsualización de ReStructuredText requiere el package &lt;b&gt;sphinx&lt;/b&gt; .&lt;br/&gt;Installar con el gestor de paquetes, &apos;pip install sphinx&apos; o ver &lt;a href=&quot;http://pypi.python.org/pypi/Sphinx&quot;&gt;esta página .&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Como alternativa, se puede deshabilitar el uso de Sphinx en el Editor, página de configuración de Gestión de Archivos.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -44573,26 +44574,32 @@ Not connected</source>
 {1}
 File: {2}, Line: {3}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Excepción &quot;{0}&quot;
+{1}
+Archivo: {2}, Línea: {3}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="709"/>
         <source>Unspecified syntax error.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Error de sintaxis sin especificar.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="687"/>
         <source>Exception &quot;{0}&quot;
 {1}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Excepción &quot;{0}&quot;
+{1}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="711"/>
         <source>Syntax error &quot;{1}&quot; in file {0} at line {2}, character {3}.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Error de sintaxis &quot;{1}&quot; en archivo {0} en la línea {2}, carácter {3}.
+</translation>
     </message>
 </context>
 <context>
