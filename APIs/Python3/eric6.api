@@ -8223,8 +8223,11 @@ eric6.UI.Previewer.Previewer.hide?4()
 eric6.UI.Previewer.Previewer.show?4()
 eric6.UI.Previewer.Previewer.shutdown?4()
 eric6.UI.Previewer.Previewer?1(viewmanager, splitter, parent=None)
+eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.DefaultStaticPath?7
+eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.StaticRegexp?7
 eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.htmlReady?7
-eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.process?4(filePath, language, text, ssiEnabled, rootPath)
+eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.process?4(filePath, language, text, ssiEnabled, rootPath, useSphinx)
+eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.replace?4()
 eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread.run?4()
 eric6.UI.Previewers.PreviewerHTML.PreviewProcessingThread?1(parent=None)
 eric6.UI.Previewers.PreviewerHTML.PreviewerHTML.on_jsCheckBox_clicked?4(checked)

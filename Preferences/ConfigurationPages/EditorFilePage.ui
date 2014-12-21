@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>1032</height>
+    <height>1193</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -498,6 +498,16 @@
        <widget class="QLineEdit" name="previewQssExtensionsEdit">
         <property name="toolTip">
          <string>Enter the filename extensions of Qt Stylesheet files that may be previewed (separated by a space)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QCheckBox" name="previewRestSphinxCheckBox">
+        <property name="toolTip">
+         <string>Select to use 'sphinx' to generate the ReST preview</string>
+        </property>
+        <property name="text">
+         <string>Use 'sphinx' for ReST preview</string>
         </property>
        </widget>
       </item>

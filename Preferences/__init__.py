@@ -336,6 +336,7 @@ class Prefs(object):
         "PreviewMarkdownFileNameExtensions": ["md", "markdown"],
         "PreviewRestFileNameExtensions": ["rst"],
         "PreviewQssFileNameExtensions": ["qss"],
+        "PreviewRestUseSphinx": False,
         
         "VirtualSpaceOptions": QsciScintilla.SCVS_NONE,
         

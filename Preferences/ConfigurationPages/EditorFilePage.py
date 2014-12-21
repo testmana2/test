@@ -89,6 +89,8 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             " ".join(Preferences.getEditor("PreviewRestFileNameExtensions")))
         self.previewQssExtensionsEdit.setText(
             " ".join(Preferences.getEditor("PreviewQssFileNameExtensions")))
+        self.previewRestSphinxCheckBox.setChecked(
+            Preferences.getEditor("PreviewRestUseSphinx"))
         
     def save(self):
         """
@@ -156,6 +158,9 @@ class EditorFilePage(ConfigurationPageBase, Ui_EditorFilePage):
             "PreviewQssFileNameExtensions",
             [ext.strip() for ext in
              self.previewQssExtensionsEdit.text().split()])
+        Preferences.setEditor(
+            "PreviewRestUseSphinx",
+            self.previewRestSphinxCheckBox.isChecked())
     
     def __setDefaultFiltersLists(self, keepSelection=False):
         """

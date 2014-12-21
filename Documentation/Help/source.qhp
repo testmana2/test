@@ -8607,9 +8607,12 @@
       <keyword name="PreviewProcessingThread (Constructor)" id="PreviewProcessingThread (Constructor)" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__init__" />
       <keyword name="PreviewProcessingThread.__convertMarkdown" id="PreviewProcessingThread.__convertMarkdown" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__convertMarkdown" />
       <keyword name="PreviewProcessingThread.__convertReST" id="PreviewProcessingThread.__convertReST" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__convertReST" />
+      <keyword name="PreviewProcessingThread.__convertReSTDocutils" id="PreviewProcessingThread.__convertReSTDocutils" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__convertReSTDocutils" />
+      <keyword name="PreviewProcessingThread.__convertReSTSphinx" id="PreviewProcessingThread.__convertReSTSphinx" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__convertReSTSphinx" />
       <keyword name="PreviewProcessingThread.__getHtml" id="PreviewProcessingThread.__getHtml" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__getHtml" />
       <keyword name="PreviewProcessingThread.__processSSI" id="PreviewProcessingThread.__processSSI" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.__processSSI" />
       <keyword name="PreviewProcessingThread.process" id="PreviewProcessingThread.process" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.process" />
+      <keyword name="PreviewProcessingThread.replace" id="PreviewProcessingThread.replace" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.replace" />
       <keyword name="PreviewProcessingThread.run" id="PreviewProcessingThread.run" ref="eric6.UI.Previewers.PreviewerHTML.html#PreviewProcessingThread.run" />
       <keyword name="Previewer" id="Previewer" ref="eric6.UI.Previewer.html#Previewer" />
       <keyword name="Previewer (Constructor)" id="Previewer (Constructor)" ref="eric6.UI.Previewer.html#Previewer.__init__" />

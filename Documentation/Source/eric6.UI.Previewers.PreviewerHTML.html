@@ -62,7 +62,7 @@ emitted with the file name and processed HTML
 QThread
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>DefaultStaticPath</td></tr><tr><td>StaticRegexp</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -80,6 +80,12 @@ QThread
 <td><a href="#PreviewProcessingThread.__convertReST">__convertReST</a></td>
 <td>Private method to convert ReST text into HTML.</td>
 </tr><tr>
+<td><a href="#PreviewProcessingThread.__convertReSTDocutils">__convertReSTDocutils</a></td>
+<td>Private method to convert ReST text into HTML using 'docutils'.</td>
+</tr><tr>
+<td><a href="#PreviewProcessingThread.__convertReSTSphinx">__convertReSTSphinx</a></td>
+<td>Private method to convert ReST text into HTML using 'sphinx'.</td>
+</tr><tr>
 <td><a href="#PreviewProcessingThread.__getHtml">__getHtml</a></td>
 <td>Private method to process the given text depending upon the given language.</td>
 </tr><tr>
@@ -88,6 +94,9 @@ QThread
 </tr><tr>
 <td><a href="#PreviewProcessingThread.process">process</a></td>
 <td>Public method to convert the given text to HTML.</td>
+</tr><tr>
+<td><a href="#PreviewProcessingThread.replace">replace</a></td>
+<td></td>
 </tr><tr>
 <td><a href="#PreviewProcessingThread.run">run</a></td>
 <td>Public thread method to convert the stored data.</td>
@@ -124,9 +133,43 @@ processed HTML (string)
 </dd>
 </dl><a NAME="PreviewProcessingThread.__convertReST" ID="PreviewProcessingThread.__convertReST"></a>
 <h4>PreviewProcessingThread.__convertReST</h4>
-<b>__convertReST</b>(<i>text</i>)
+<b>__convertReST</b>(<i>text, useSphinx</i>)
 <p>
         Private method to convert ReST text into HTML.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text to be processed (string)
+</dd><dt><i>useSphinx</i></dt>
+<dd>
+flag indicating to use Sphinx to generate the
+            ReST preview (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed HTML (string)
+</dd>
+</dl><a NAME="PreviewProcessingThread.__convertReSTDocutils" ID="PreviewProcessingThread.__convertReSTDocutils"></a>
+<h4>PreviewProcessingThread.__convertReSTDocutils</h4>
+<b>__convertReSTDocutils</b>(<i>text</i>)
+<p>
+        Private method to convert ReST text into HTML using 'docutils'.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text to be processed (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed HTML (string)
+</dd>
+</dl><a NAME="PreviewProcessingThread.__convertReSTSphinx" ID="PreviewProcessingThread.__convertReSTSphinx"></a>
+<h4>PreviewProcessingThread.__convertReSTSphinx</h4>
+<b>__convertReSTSphinx</b>(<i>text</i>)
+<p>
+        Private method to convert ReST text into HTML using 'sphinx'.
 </p><dl>
 <dt><i>text</i></dt>
 <dd>
@@ -139,7 +182,7 @@ processed HTML (string)
 </dd>
 </dl><a NAME="PreviewProcessingThread.__getHtml" ID="PreviewProcessingThread.__getHtml"></a>
 <h4>PreviewProcessingThread.__getHtml</h4>
-<b>__getHtml</b>(<i>language, text, ssiEnabled, filePath, rootPath</i>)
+<b>__getHtml</b>(<i>language, text, ssiEnabled, filePath, rootPath, useSphinx</i>)
 <p>
         Private method to process the given text depending upon the given
         language.
@@ -160,6 +203,10 @@ file path of the text (string)
 </dd><dt><i>rootPath</i></dt>
 <dd>
 root path to be used for SSI processing (str)
+</dd><dt><i>useSphinx</i></dt>
+<dd>
+flag indicating to use Sphinx to generate the
+            ReST preview (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -192,7 +239,7 @@ processed HTML (string)
 </dd>
 </dl><a NAME="PreviewProcessingThread.process" ID="PreviewProcessingThread.process"></a>
 <h4>PreviewProcessingThread.process</h4>
-<b>process</b>(<i>filePath, language, text, ssiEnabled, rootPath</i>)
+<b>process</b>(<i>filePath, language, text, ssiEnabled, rootPath, useSphinx</i>)
 <p>
         Public method to convert the given text to HTML.
 </p><dl>
@@ -212,8 +259,15 @@ flag indicating to do some (limited) SSI processing
 </dd><dt><i>rootPath</i></dt>
 <dd>
 root path to be used for SSI processing (str)
+</dd><dt><i>useSphinx</i></dt>
+<dd>
+flag indicating to use Sphinx to generate the
+            ReST preview (boolean)
 </dd>
-</dl><a NAME="PreviewProcessingThread.run" ID="PreviewProcessingThread.run"></a>
+</dl><a NAME="PreviewProcessingThread.replace" ID="PreviewProcessingThread.replace"></a>
+<h4>PreviewProcessingThread.replace</h4>
+<b>replace</b>(<i></i>)
+<a NAME="PreviewProcessingThread.run" ID="PreviewProcessingThread.run"></a>
 <h4>PreviewProcessingThread.run</h4>
 <b>run</b>(<i></i>)
 <p>

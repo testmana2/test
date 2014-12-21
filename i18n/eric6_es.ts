@@ -10184,22 +10184,22 @@ selección completa.&lt;/li&gt;
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="250"/>
+        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="255"/>
         <source>Add File Filter</source>
         <translation>Añadir Filtro de Archivo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="210"/>
+        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="215"/>
         <source>A Save File Filter must contain exactly one wildcard pattern. Yours contains {0}.</source>
         <translation>Un Filtro para Guardar Archivo debe tener exactamente un carácter de comodín. El suyo contiene {0}.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="219"/>
+        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="224"/>
         <source>A File Filter must contain at least one wildcard pattern.</source>
         <translation>Un Filtro de Archivo debe contener al menos un carácter de comodín.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="250"/>
+        <location filename="../Preferences/ConfigurationPages/EditorFilePage.py" line="255"/>
         <source>Enter the file filter entry:</source>
         <translation>Introducir la entrada para filtro de archivo:</translation>
     </message>
@@ -10252,6 +10252,16 @@ selección completa.&lt;/li&gt;
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="500"/>
         <source>Enter the filename extensions of Qt Stylesheet files that may be previewed (separated by a space)</source>
         <translation>Introducir las extensiones de nombre de archivo para archivos de Hoja de Estilos de Qt que pueden ser previsualizados (separadas por un espacio)</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="507"/>
+        <source>Select to use &apos;sphinx&apos; to generate the ReST preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="510"/>
+        <source>Use &apos;sphinx&apos; for ReST preview</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -35275,27 +35285,27 @@ Seleccione Actualizar.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1181"/>
+        <location filename="../Preferences/__init__.py" line="1182"/>
         <source>Export Preferences</source>
         <translation>Exportar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1209"/>
+        <location filename="../Preferences/__init__.py" line="1210"/>
         <source>Import Preferences</source>
         <translation>Importar Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1209"/>
+        <location filename="../Preferences/__init__.py" line="1210"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Archivo de Propiedades (*.ini);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1311"/>
+        <location filename="../Preferences/__init__.py" line="1312"/>
         <source>Select Python{0} Interpreter</source>
         <translation>Seleccionar intérprete de Python{0}</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1311"/>
+        <location filename="../Preferences/__init__.py" line="1312"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation>Seleccionar el intérprete de Python{0} a utilizar:</translation>
     </message>
@@ -35316,19 +35326,29 @@ Seleccione Actualizar.</translation>
 <context>
     <name>PreviewProcessingThread</name>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="311"/>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="333"/>
         <source>&lt;p&gt;No preview available for this type of file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No hay vista previa disponible para este tipo de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="394"/>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="492"/>
         <source>&lt;p&gt;Markdown preview requires the &lt;b&gt;python-markdown&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;La previsualización de Markdown requiere el package &lt;b&gt;python-markdown&lt;/b&gt;.&lt;br/&gt;Instalar con el gestor de paquetes o ver &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;las instrucciones de instalación.&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;La previsualización de Markdown requiere el package &lt;b&gt;python-markdown&lt;/b&gt;.&lt;br/&gt;Instalar con el gestor de paquetes o ver &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;las instrucciones de instalación.&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="374"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;La previsualización de ReStructuredText requiere el package &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Installar con el gestor de paquetes o ver &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;esta página .&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;La previsualización de ReStructuredText requiere el package &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Installar con el gestor de paquetes o ver &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;esta página .&lt;/a&gt;&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="472"/>
+        <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager, &apos;pip install docutils&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="410"/>
+        <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;sphinx&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager,&apos;pip install Sphinx&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/Sphinx&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Alternatively you may disable Sphinx usage on the Editor, Filehandling configuration page.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -35359,17 +35379,17 @@ Seleccione Actualizar.</translation>
         <translation>Habilitar Includes del Lado del Servidor</translation>
     </message>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="128"/>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="136"/>
         <source>&lt;p&gt;No preview available for this type of file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No hay vista previa disponible para este tipo de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="169"/>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="178"/>
         <source>Preview - {0}</source>
         <translation>Vista Previa - {0}</translation>
     </message>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="171"/>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="180"/>
         <source>Preview</source>
         <translation>Vista Previa</translation>
     </message>

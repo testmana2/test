@@ -9,9 +9,17 @@ Module implementing a previewer widget for HTML, Markdown and ReST files.
 
 from __future__ import unicode_literals
 
+try:  # Only for Py2
+    import StringIO as io   # __IGNORE_EXCEPTION__
+except ImportError:
+    import io       # __IGNORE_WARNING__
+
 import os
 import threading
 import re
+import shutil
+import tempfile
+import sys
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, Qt, QUrl, QSize, QThread
 from PyQt5.QtWidgets import QWidget
@@ -139,7 +147,8 @@ class PreviewerHTML(QWidget, Ui_PreviewerHTML):
             
             self.__processingThread.process(
                 fn, language, editor.text(),
-                self.ssiCheckBox.isChecked(), rootPath)
+                self.ssiCheckBox.isChecked(), rootPath,
+                Preferences.getEditor("PreviewRestUseSphinx"))
 
     def __setHtml(self, filePath, html):
         """
@@ -229,6 +238,11 @@ class PreviewProcessingThread(QThread):
     """
     htmlReady = pyqtSignal(str, str)
     
+    DefaultStaticPath = os.path.join(
+        os.path.abspath(os.path.dirname(__file__)), 'sphinx_default')
+    StaticRegexp = re.compile(r'(src|href)=["\']_static([\s\w/\.]+?)["\']',
+                              re.IGNORECASE)
+    
     def __init__(self, parent=None):
         """
         Constructor
@@ -239,7 +253,8 @@ class PreviewProcessingThread(QThread):
         
         self.__lock = threading.Lock()
     
-    def process(self, filePath, language, text, ssiEnabled, rootPath):
+    def process(self, filePath, language, text, ssiEnabled, rootPath,
+                useSphinx):
         """
         Public method to convert the given text to HTML.
         
@@ -249,6 +264,8 @@ class PreviewProcessingThread(QThread):
         @param ssiEnabled flag indicating to do some (limited) SSI processing
             (boolean)
         @param rootPath root path to be used for SSI processing (str)
+        @param useSphinx flag indicating to use Sphinx to generate the
+            ReST preview (boolean)
         """
         with self.__lock:
             self.__filePath = filePath
@@ -257,6 +274,7 @@ class PreviewProcessingThread(QThread):
             self.__ssiEnabled = ssiEnabled
             self.__rootPath = rootPath
             self.__haveData = True
+            self.__useSphinx = useSphinx
             if not self.isRunning():
                 self.start(QThread.LowPriority)
     
@@ -272,10 +290,11 @@ class PreviewProcessingThread(QThread):
                 text = self.__text
                 ssiEnabled = self.__ssiEnabled
                 rootPath = self.__rootPath
+                useSphinx = self.__useSphinx
                 self.__haveData = False
             
             html = self.__getHtml(language, text, ssiEnabled, filePath,
-                                  rootPath)
+                                  rootPath, useSphinx)
             
             with self.__lock:
                 if not self.__haveData:
@@ -283,7 +302,8 @@ class PreviewProcessingThread(QThread):
                     break
                 # else - next iteration
     
-    def __getHtml(self, language, text, ssiEnabled, filePath, rootPath):
+    def __getHtml(self, language, text, ssiEnabled, filePath, rootPath,
+                  useSphinx):
         """
         Private method to process the given text depending upon the given
         language.
@@ -294,6 +314,8 @@ class PreviewProcessingThread(QThread):
             (boolean)
         @param filePath file path of the text (string)
         @param rootPath root path to be used for SSI processing (str)
+        @param useSphinx flag indicating to use Sphinx to generate the
+            ReST preview (boolean)
         @return processed HTML text (string)
         """
         if language == "HTML":
@@ -304,7 +326,7 @@ class PreviewProcessingThread(QThread):
         elif language == "Markdown":
             return self.__convertMarkdown(text)
         elif language == "ReST":
-            return self.__convertReST(text)
+            return self.__convertReST(text, useSphinx)
         else:
             return self.tr(
                 "<p>No preview available for this type of file.</p>")
@@ -356,20 +378,96 @@ class PreviewProcessingThread(QThread):
         
         return txt
     
-    def __convertReST(self, text):
+    def __convertReST(self, text, useSphinx):
         """
         Private method to convert ReST text into HTML.
+        
+        @param text text to be processed (string)
+        @param useSphinx flag indicating to use Sphinx to generate the
+            ReST preview (boolean)
+        @return processed HTML (string)
+        """
+        if useSphinx:
+            return self.__convertReSTSphinx(text)
+        else:
+            return self.__convertReSTDocutils(text)
+    
+    def __convertReSTSphinx(self, text):
+        """
+        Private method to convert ReST text into HTML using 'sphinx'.
         
         @param text text to be processed (string)
         @return processed HTML (string)
         """
         try:
-            import docutils.core    # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
+            from sphinx.application import Sphinx   # __IGNORE_EXCEPTION__
+        except ImportError:
+            return self.tr(
+                """<p>ReStructuredText preview requires the"""
+                """ <b>sphinx</b> package.<br/>Install it with"""
+                """ your package manager,'pip install Sphinx' or see"""
+                """ <a href="http://pypi.python.org/pypi/Sphinx">"""
+                """this page.</a></p>"""
+                """<p>Alternatively you may disable Sphinx usage"""
+                """ on the Editor, Filehandling configuration page.</p>""")
+        
+        tempDir = tempfile.mkdtemp(prefix='eric-rest-')
+        try:
+            filename = 'sphinx_preview'
+            basePath = os.path.join(tempDir, filename)
+            fh = open(basePath + '.rst', 'w', encoding='utf-8')
+            fh.write(text)
+            fh.close()
+
+            overrides = {'html_add_permalinks': False,
+                         'html_copy_source': False,
+                         'html_title': 'Sphinx preview',
+                         'html_use_index': False,
+                         'html_use_modindex': False,
+                         'html_use_smartypants': True,
+                         'master_doc': filename }
+            app = Sphinx(srcdir=tempDir, confdir=None, outdir=tempDir,
+                         doctreedir=tempDir, buildername='html',
+                         confoverrides=overrides, status=None,
+                         warning=io.StringIO())
+            app.build(force_all=True, filenames=None)
+
+            fh = open(basePath + '.html', 'r', encoding='utf-8')
+            html = fh.read()
+            fh.close()
+        finally:
+            shutil.rmtree(tempDir)
+
+        # Replace the "_static/..." references inserted by Sphinx with absolute
+        # links to the specified DefaultStaticPath replacement.
+        def replace(m):
+            return '{0}="file://{1}{2}"'.format(
+                m.group(1), self.DefaultStaticPath, m.group(2))
+        html = re.sub(self.StaticRegexp, replace, html)
+        
+        return html
+    
+    def __convertReSTDocutils(self, text):
+        """
+        Private method to convert ReST text into HTML using 'docutils'.
+        
+        @param text text to be processed (string)
+        @return processed HTML (string)
+        """
+        if 'sphinx' in sys.modules:
+            # Make sure any Sphinx polution of docutils has been removed.
+            unloadKeys = [k for k in sys.modules.keys()
+                          if k.startswith(('docutils', 'sphinx'))]
+            for key in unloadKeys:
+                sys.modules.pop(key)
+        
+        try:
+            import docutils.core    # __IGNORE_EXCEPTION__
         except ImportError:
             return self.tr(
                 """<p>ReStructuredText preview requires the"""
                 """ <b>python-docutils</b> package.<br/>Install it with"""
-                """ your package manager or see"""
+                """ your package manager, 'pip install docutils' or see"""
                 """ <a href="http://pypi.python.org/pypi/docutils">"""
                 """this page.</a></p>""")
         
@@ -384,7 +482,7 @@ class PreviewProcessingThread(QThread):
         @return processed HTML (string)
         """
         try:
-            import markdown     # __IGNORE_EXCEPTION__ __IGNORE_WARNING__
+            import markdown     # __IGNORE_EXCEPTION__
         except ImportError:
             return self.tr(
                 """<p>Markdown preview requires the <b>python-markdown</b> """
