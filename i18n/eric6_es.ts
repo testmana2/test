@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -2993,7 +2994,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="165"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
-        <translation>Introduzcir códigos de mensaje o categorías a incluir separados por comas</translation>
+        <translation>Introducir códigos de mensaje o categorías a incluir separados por comas</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="179"/>
@@ -5976,12 +5977,12 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="558"/>
         <source>Select to show exception information in the shell window</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para mostrar información de excepciones en la ventana de shell</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="561"/>
         <source>Show exceptions in Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar excepciones en Shell</translation>
     </message>
 </context>
 <context>
@@ -10685,7 +10686,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="213"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; The tick in the list above indicates the entrie&apos;s &apos;fill to end of line&apos; setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota:&lt;/b&gt; El check box en la lista de arriba indica el ajuste &apos;llenar hasta final de línea&apos; en la entrada.</translation>
     </message>
 </context>
 <context>
@@ -15548,7 +15549,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -20511,7 +20512,7 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="198"/>
         <source>Enter data to be sent to the hg process</source>
-        <translation>Introduzcir los datos a enviar al proceso de hg</translation>
+        <translation>Introducir los datos a enviar al proceso de hg</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui" line="205"/>
@@ -21593,7 +21594,7 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="388"/>
         <source>Press to generate a diff to the first parent revision</source>
-        <translation>Pulse para generar un diff con la primera revisión padre</translation>
+        <translation>Pulse para generar un diff con revisión primer padre</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="391"/>
@@ -22985,7 +22986,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="760"/>
         <source>Create a .hgignore file with default values</source>
-        <translation>Creare un archivo .hgignore con valores por defecto</translation>
+        <translation>Crear un archivo .hgignore con valores por defecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="763"/>
@@ -23425,7 +23426,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="993"/>
         <source>&lt;b&gt;Continue Copying Session&lt;/b&gt;&lt;p&gt;This continues the last copying session after conflicts were resolved.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Continuar Sesión de C opia&lt;/b&gt;&lt;p&gt;Continua la última sesión de copia despues de resolver los conflictos.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Continuar Sesión de Copia&lt;/b&gt;&lt;p&gt;Continua la última sesión de copia despues de resolver los conflictos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1314"/>
@@ -25080,7 +25081,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <source>%n file(s) changed</source>
         <translation>
             <numerusform>%n archivo cambiado</numerusform>
-            <numerusform>%n archivo cambiados</numerusform>
+            <numerusform>%n archivos cambiados</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -25539,7 +25540,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="339"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Paren&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgSummaryDialog.py" line="343"/>
@@ -25969,7 +25970,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <source>&lt;b&gt;Create Tag&lt;/b&gt;
 &lt;p&gt;Select this entry in order to create a tag.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Tag&lt;/b&gt;
-&lt;p&gt;Seleccionar esta entrada para cerar una tag.&lt;/p&gt;</translation>
+&lt;p&gt;Seleccionar esta entrada para crear una tag.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgTagDialog.ui" line="80"/>
@@ -31602,7 +31603,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="300"/>
         <source>Edit configuration file</source>
-        <translation>Editar archivo de c onfiguración</translation>
+        <translation>Editar archivo de configuración</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ConfigurationPage/MercurialPage.ui" line="274"/>
@@ -44553,26 +44554,32 @@ Not connected</source>
 {1}
 File: {2}, Line: {3}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Excepción &quot;{0}&quot;
+{1}
+Archivo: {2}, Línea: {3}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="709"/>
         <source>Unspecified syntax error.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Error de sintaxis sin especificar.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="687"/>
         <source>Exception &quot;{0}&quot;
 {1}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Excepción &quot;{0}&quot;
+{1}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="711"/>
         <source>Syntax error &quot;{1}&quot; in file {0} at line {2}, character {3}.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Error de sintaxis &quot;{1}&quot; en archivo {0} en línea {2}, carácter {3}.
+</translation>
     </message>
 </context>
 <context>
