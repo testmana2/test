@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Python3.AsyncIO</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Python3.AsyncIO</h1>
+<p>
+Module implementing a base class of an asynchronous interface for the debugger.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#AsyncIO">AsyncIO</a></td>
+<td>Class implementing asynchronous reading and writing.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="AsyncIO" ID="AsyncIO"></a>
+<h2>AsyncIO</h2>
+<p>
+    Class implementing asynchronous reading and writing.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#AsyncIO.__init__">AsyncIO</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#AsyncIO.disconnect">disconnect</a></td>
+<td>Public method to disconnect any current connection.</td>
+</tr><tr>
+<td><a href="#AsyncIO.readReady">readReady</a></td>
+<td>Public method called when there is data ready to be read.</td>
+</tr><tr>
+<td><a href="#AsyncIO.setDescriptors">setDescriptors</a></td>
+<td>Public method called to set the descriptors for the connection.</td>
+</tr><tr>
+<td><a href="#AsyncIO.write">write</a></td>
+<td>Public method to write a string.</td>
+</tr><tr>
+<td><a href="#AsyncIO.writeReady">writeReady</a></td>
+<td>Public method called when we are ready to write data.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="AsyncIO.__init__" ID="AsyncIO.__init__"></a>
+<h4>AsyncIO (Constructor)</h4>
+<b>AsyncIO</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="AsyncIO.disconnect" ID="AsyncIO.disconnect"></a>
+<h4>AsyncIO.disconnect</h4>
+<b>disconnect</b>(<i></i>)
+<p>
+        Public method to disconnect any current connection.
+</p><a NAME="AsyncIO.readReady" ID="AsyncIO.readReady"></a>
+<h4>AsyncIO.readReady</h4>
+<b>readReady</b>(<i>fd</i>)
+<p>
+        Public method called when there is data ready to be read.
+</p><dl>
+<dt><i>fd</i></dt>
+<dd>
+file descriptor of the file that has data to be read (int)
+</dd>
+</dl><a NAME="AsyncIO.setDescriptors" ID="AsyncIO.setDescriptors"></a>
+<h4>AsyncIO.setDescriptors</h4>
+<b>setDescriptors</b>(<i>rfd, wfd</i>)
+<p>
+        Public method called to set the descriptors for the connection.
+</p><dl>
+<dt><i>rfd</i></dt>
+<dd>
+file descriptor of the input file (int)
+</dd><dt><i>wfd</i></dt>
+<dd>
+file descriptor of the output file (int)
+</dd>
+</dl><a NAME="AsyncIO.write" ID="AsyncIO.write"></a>
+<h4>AsyncIO.write</h4>
+<b>write</b>(<i>s</i>)
+<p>
+        Public method to write a string.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+the data to be written (string)
+</dd>
+</dl><a NAME="AsyncIO.writeReady" ID="AsyncIO.writeReady"></a>
+<h4>AsyncIO.writeReady</h4>
+<b>writeReady</b>(<i>fd</i>)
+<p>
+        Public method called when we are ready to write data.
+</p><dl>
+<dt><i>fd</i></dt>
+<dd>
+file descriptor of the file that has data to be written (int)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
