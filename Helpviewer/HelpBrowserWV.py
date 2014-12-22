@@ -1593,7 +1593,7 @@ class HelpBrowser(QWebView):
                     searchUrlQuery.addQueryItem(
                         searchEngines[searchEngine], searchEngine)
                 else:
-                    searchUrl.addQueryItem(        
+                    searchUrl.addQueryItem(
                         searchEngines[searchEngine], searchEngine)
         engineName = ""
         labels = formElement.findAll('label[for="{0}"]'.format(elementName))

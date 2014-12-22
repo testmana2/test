@@ -425,7 +425,7 @@ class PreviewProcessingThread(QThread):
                          'html_use_index': False,
                          'html_use_modindex': False,
                          'html_use_smartypants': True,
-                         'master_doc': filename }
+                         'master_doc': filename}
             app = Sphinx(srcdir=tempDir, confdir=None, outdir=tempDir,
                          doctreedir=tempDir, buildername='html',
                          confoverrides=overrides, status=None,

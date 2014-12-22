@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import sys
 import re
 
-from PyQt5.QtCore import pyqtSignal, QFileInfo, Qt, QEvent,  qVersion
+from PyQt5.QtCore import pyqtSignal, QFileInfo, Qt, QEvent, qVersion
 from PyQt5.QtGui import QClipboard, QPalette, QFont
 from PyQt5.QtWidgets import QDialog, QInputDialog, QApplication, QMenu, \
     QWidget, QHBoxLayout, QVBoxLayout, QShortcut

@@ -492,7 +492,7 @@ def cleanUp():
             marker = ""
         for name in ["/usr/share/applications/eric6" + marker + ".desktop",
                      "/usr/share/appdata/eric6" + marker + ".appdata.xml",
-                     "/usr/share/applications/eric6_webbrowser" + marker + 
+                     "/usr/share/applications/eric6_webbrowser" + marker +
                      ".desktop"]:
             if os.path.exists(name):
                 os.remove(name)

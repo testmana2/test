@@ -76,7 +76,8 @@ class EricAccessHandler(SchemeAccessHandler):
             htmlFile.open(QFile.ReadOnly)
             html = bytes(htmlFile.readAll()).decode()
             
-            html = (html.replace("@FAVICON@", "qrc:icons/ericWeb16.png")
+            html = (
+                html.replace("@FAVICON@", "qrc:icons/ericWeb16.png")
                 .replace("@IMG_PLUS@", "qrc:icons/plus.png")
                 .replace("@IMG_CLOSE@", "qrc:icons/close.png")
                 .replace("@IMG_EDIT@", "qrc:icons/edit.png")

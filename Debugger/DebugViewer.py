@@ -306,7 +306,7 @@ class DebugViewer(QWidget):
         self.globalsViewer.handleResetUI()
         self.localsViewer.handleResetUI()
         self.__setGlobalsFilter()
-        self.__setLocalsFilter()        
+        self.__setLocalsFilter()
         self.sourceButton.setEnabled(False)
         self.currentStack = None
         self.stackComboBox.clear()
