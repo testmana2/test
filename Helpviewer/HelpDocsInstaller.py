@@ -69,12 +69,18 @@ class HelpDocsInstaller(QThread):
         
         qt4Docs = ["designer", "linguist", "qt"]
         qt5Docs = [
-            "activeqt", "qtconcurrent", "qtcore", "qtdbus", "qtdesigner",
-            "qtdoc", "qtgraphicaleffects", "qtgui", "qthelp", "qtimageformats",
-            "qtlinguist", "qtmultimedia", "qtnetwork", "qtopengl",
-            "qtprintsupport", "qtqml", "qtquick", "qtscript", "qtsql", "qtsvg",
-            "qttestlib", "qtuitools", "qtwebkit", "qtwebkitexamples",
-            "qtwidgets", "qtxml", "qtxmlpatterns"]
+            "activeqt", "qtandroidextras", "qtbluetooth", "qtconcurrent",
+            "qtcore", "qtdbus", "qtdesigner", "qtdoc", "qtenginio",
+            "qtenginiooverview", "qtenginoqml", "qtgraphicaleffects", "qtgui",
+            "qthelp", "qtimageformats", "qtlinguist", "qtlocation",
+            "qtmaxextras", "qtmultimedia", "qtmultimediawidgets", "qtnetwork",
+            "qtnfc", "qtopengl", "qtpositioning", "qtprintsupport", "qtqml",
+            "qtquick", "qtquickcontrols", "qtquickdialogs", "qtquicklayouts",
+            "qtscript", "qtscripttools", "qtsensors", "qtserialport", "qtsql",
+            "qtsvg", "qttestlib", "qtuitools", "qtwebchannel", "qtwebengine",
+            "qtwebenginewidgets", "qtwebkit", "qtwebkitexamples",
+            "qtwebsockets", "qtwidgets", "qtwinextras", "qtx11extras", "qtxml",
+            "qtxmlpatterns"]
         for qtDocs, version in [(qt4Docs, 4), (qt5Docs, 5)]:
             for doc in qtDocs:
                 changes |= self.__installQtDoc(doc, version, engine)
