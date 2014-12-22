@@ -179,15 +179,7 @@ class TaskViewer(QTreeWidget):
         Private method to refresh the display.
         """
         for task in self.tasks:
-            index = self.indexOfTopLevelItem(task)
-            if self.taskFilter.showTask(task):
-                # show the task
-                if index == -1:
-                    self.addTopLevelItem(task)
-            else:
-                # hide the task
-                if index != -1:
-                    self.takeTopLevelItem(index)
+            task.setHidden(not self.taskFilter.showTask(task))
         self.__resort()
         self.__resizeColumns()
         
@@ -271,10 +263,10 @@ class TaskViewer(QTreeWidget):
                     _time, isProjectTask, taskType,
                     self.project, description)
         self.tasks.append(task)
-        if self.taskFilter.showTask(task):
-            self.addTopLevelItem(task)
-            self.__resort()
-            self.__resizeColumns()
+        self.addTopLevelItem(task)
+        task.setHidden(not self.taskFilter.showTask(task))
+        self.__resort()
+        self.__resizeColumns()
         
         if isProjectTask:
             self.__projectTasksSaveTimer.changeOccurred()
