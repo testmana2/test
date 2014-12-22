@@ -60,7 +60,16 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         self.completedCheckBox.setEnabled(False)
         self.priorityCombo.setEnabled(False)
         self.projectCheckBox.setEnabled(False)
+    
+    def setSubTaskMode(self, projectTask):
+        """
+        Public slot to set the sub-task mode.
         
+        @param projectTask flag indicating a project related task (boolean)
+        """
+        self.projectCheckBox.setChecked(projectTask)
+        self.projectCheckBox.setEnabled(False)
+    
     def getData(self):
         """
         Public method to retrieve the dialogs data.

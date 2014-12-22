@@ -984,7 +984,7 @@ class Project(QObject):
         
     def __readTasks(self):
         """
-        Private method to read in the project tasks file (.e4t).
+        Private method to read in the project tasks file (.e6t).
         """
         if self.pfile is None:
             E5MessageBox.critical(
@@ -993,10 +993,15 @@ class Project(QObject):
                 self.tr("Please save the project first."))
             return
             
-        fn, ext = os.path.splitext(os.path.basename(self.pfile))
-        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
+        base, ext = os.path.splitext(os.path.basename(self.pfile))
+        fn = os.path.join(self.getProjectManagementDir(),
+                          '{0}.e6t'.format(base))
         if not os.path.exists(fn):
-            return
+            # try again with the old extension
+            fn = os.path.join(self.getProjectManagementDir(),
+                              '{0}.e4t'.format(base))
+            if not os.path.exists(fn):
+                return
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
             from E5XML.TasksReader import TasksReader
@@ -1013,14 +1018,14 @@ class Project(QObject):
         
     def writeTasks(self):
         """
-        Public method to write the tasks data to an XML file (.e4t).
+        Public method to write the tasks data to an XML file (.e6t).
         """
         if self.pfile is None:
             return
             
         fn, ext = os.path.splitext(os.path.basename(self.pfile))
         
-        fn = os.path.join(self.getProjectManagementDir(), '{0}.e4t'.format(fn))
+        fn = os.path.join(self.getProjectManagementDir(), '{0}.e6t'.format(fn))
         f = QFile(fn)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:

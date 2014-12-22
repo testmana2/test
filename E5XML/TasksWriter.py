@@ -78,6 +78,12 @@ class TasksWriter(XMLStreamWriterBase):
             self.writeAttribute("priority", str(task.priority))
             self.writeAttribute("completed", str(task.completed))
             self.writeAttribute("type", str(task.taskType))
+            self.writeAttribute("uid", task.uid)
+            if task.parentUid:
+                self.writeAttribute("parent_uid", task.parentUid)
+            if task.childCount() > 0:
+                self.writeAttribute("expanded", str(task.isExpanded()))
+            
             self.writeTextElement("Summary", task.summary.strip())
             self.writeTextElement("Description", task.description.strip())
             self.writeTextElement("Created", time.strftime(

@@ -51,8 +51,6 @@ class TaskViewer(QTreeWidget):
         """
         super(TaskViewer, self).__init__(parent)
         
-        self.setRootIsDecorated(False)
-        self.setItemsExpandable(False)
         self.setSortingEnabled(True)
         
         self.__headerItem = QTreeWidgetItem(
@@ -91,6 +89,8 @@ class TaskViewer(QTreeWidget):
         
         self.__menu = QMenu(self)
         self.__menu.addAction(self.tr("&New Task..."), self.__newTask)
+        self.subtaskItem = self.__menu.addAction(
+            self.tr("New &Sub-Task..."), self.__newSubTask)
         self.__menu.addSeparator()
         self.projectTasksMenuItem = self.__menu.addMenu(
             self.__projectTasksMenu)
@@ -102,6 +102,8 @@ class TaskViewer(QTreeWidget):
             self.tr("&Copy"), self.__copyTask)
         self.pasteItem = self.__menu.addAction(
             self.tr("&Paste"), self.__pasteTask)
+        self.pasteMainItem = self.__menu.addAction(
+            self.tr("Paste as &Main Task"), self.__pasteMainTask)
         self.deleteItem = self.__menu.addAction(
             self.tr("&Delete"), self.__deleteTask)
         self.__menu.addSeparator()
@@ -134,6 +136,8 @@ class TaskViewer(QTreeWidget):
         self.__backMenu.addSeparator()
         self.backPasteItem = self.__backMenu.addAction(
             self.tr("&Paste"), self.__pasteTask)
+        self.backPasteMainItem = self.__menu.addAction(
+            self.tr("Paste as &Main Task"), self.__pasteMainTask)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(
             self.tr("Delete Completed &Tasks"), self.__deleteCompleted)
@@ -166,28 +170,38 @@ class TaskViewer(QTreeWidget):
         Private method to resort the tree.
         """
         self.sortItems(self.sortColumn(), self.header().sortIndicatorOrder())
-        
+    
     def __resizeColumns(self):
         """
         Private method to resize the list columns.
         """
         self.header().resizeSections(QHeaderView.ResizeToContents)
         self.header().setStretchLastSection(True)
+    
+    def findParentTask(self, parentUid):
+        """
+        Public method to find a parent task by its ID.
         
+        @param parentUid uid of the parent task (string)
+        @return reference to the task (Task)
+        """
+        if not parentUid:
+            return None
+        
+        parentTask = None
+        for task in self.tasks:
+            if task.getUuid() == parentUid:
+                parentTask = task
+                break
+        
+        return parentTask
+    
     def __refreshDisplay(self):
         """
         Private method to refresh the display.
         """
         for task in self.tasks:
-            index = self.indexOfTopLevelItem(task)
-            if self.taskFilter.showTask(task):
-                # show the task
-                if index == -1:
-                    self.addTopLevelItem(task)
-            else:
-                # hide the task
-                if index != -1:
-                    self.takeTopLevelItem(index)
+            task.setHidden(not self.taskFilter.showTask(task))
         self.__resort()
         self.__resizeColumns()
         
@@ -219,8 +233,10 @@ class TaskViewer(QTreeWidget):
             self.backProjectTasksMenuItem.setEnabled(self.projectOpen)
             if self.copyTask:
                 self.backPasteItem.setEnabled(True)
+                self.backPasteMainItem.setEnabled(True)
             else:
                 self.backPasteItem.setEnabled(False)
+                self.backPasteMainItem.setEnabled(False)
             self.__backMenu.popup(coord)
         else:
             self.projectTasksMenuItem.setEnabled(self.projectOpen)
@@ -229,15 +245,19 @@ class TaskViewer(QTreeWidget):
                 self.deleteItem.setEnabled(True)
                 self.markCompletedItem.setEnabled(False)
                 self.copyItem.setEnabled(False)
+                self.subtaskItem.setEnabled(False)
             else:
                 self.gotoItem.setEnabled(False)
                 self.deleteItem.setEnabled(True)
                 self.markCompletedItem.setEnabled(True)
                 self.copyItem.setEnabled(True)
+                self.subtaskItem.setEnabled(True)
             if self.copyTask:
                 self.pasteItem.setEnabled(True)
+                self.pasteMainItem.setEnabled(True)
             else:
                 self.pasteItem.setEnabled(False)
+                self.pasteMainItem.setEnabled(False)
             
             self.__menu.popup(coord)
     
@@ -251,7 +271,8 @@ class TaskViewer(QTreeWidget):
     
     def addTask(self, summary, priority=1, filename="", lineno=0,
                 completed=False, _time=0, isProjectTask=False,
-                taskType=Task.TypeTodo, description=""):
+                taskType=Task.TypeTodo, description="", uid="",
+                parentTask=None):
         """
         Public slot to add a task.
         
@@ -266,18 +287,31 @@ class TaskViewer(QTreeWidget):
         @param taskType type of the task (one of Task.TypeFixme, Task.TypeTodo,
             Task.TypeWarning, Task.TypeNote)
         @param description explanatory text of the task (string)
+        @param uid unique id of the task (string)
+        @param parentTask reference to the parent task item (Task)
+        @return reference to the task item (Task)
         """
+        if parentTask:
+            parentUid = parentTask.getUuid()
+        else:
+            parentUid = ""
         task = Task(summary, priority, filename, lineno, completed,
                     _time, isProjectTask, taskType,
-                    self.project, description)
+                    self.project, description, uid, parentUid)
         self.tasks.append(task)
-        if self.taskFilter.showTask(task):
+        if parentTask:
+            parentTask.addChild(task)
+            parentTask.setExpanded(True)
+        else:
             self.addTopLevelItem(task)
-            self.__resort()
-            self.__resizeColumns()
+        task.setHidden(not self.taskFilter.showTask(task))
+        self.__resort()
+        self.__resizeColumns()
         
         if isProjectTask:
             self.__projectTasksSaveTimer.changeOccurred()
+        
+        return task
     
     def addFileTask(self, summary, filename, lineno, taskType=Task.TypeTodo,
                     description=""):
@@ -329,13 +363,17 @@ class TaskViewer(QTreeWidget):
         @keyparam fileOnly flag indicating to clear only file related
             project tasks (boolean)
         """
-        for task in self.tasks[:]:
+        for task in reversed(self.tasks[:]):
             if (fileOnly and task.isProjectFileTask()) or \
                (not fileOnly and task.isProjectTask()):
                 if self.copyTask == task:
                     self.copyTask = None
-                index = self.indexOfTopLevelItem(task)
-                self.takeTopLevelItem(index)
+                parent = task.parent()
+                if parent:
+                    parent.removeChild(task)
+                else:
+                    index = self.indexOfTopLevelItem(task)
+                    self.takeTopLevelItem(index)
                 self.tasks.remove(task)
                 del task
         
@@ -375,12 +413,13 @@ class TaskViewer(QTreeWidget):
         if ro:
             dlg.setReadOnly()
         if dlg.exec_() == QDialog.Accepted and not ro:
-            data = dlg.getData()
-            task.setSummary(data[0])
-            task.setPriority(data[1])
-            task.setCompleted(data[2])
-            task.setProjectTask(data[3])
-            task.setDescription(data[4])
+            summary, priority, completed, isProjectTask, description = \
+                dlg.getData()
+            task.setSummary(summary)
+            task.setPriority(priority)
+            task.setCompleted(completed)
+            task.setProjectTask(isProjectTask)
+            task.setDescription(description)
             self.__projectTasksSaveTimer.changeOccurred()
     
     def __newTask(self):
@@ -390,9 +429,27 @@ class TaskViewer(QTreeWidget):
         from .TaskPropertiesDialog import TaskPropertiesDialog
         dlg = TaskPropertiesDialog(None, self, self.projectOpen)
         if dlg.exec_() == QDialog.Accepted:
-            data = dlg.getData()
-            self.addTask(data[0], data[1], completed=data[2],
-                         isProjectTask=data[3], description=data[4])
+            summary, priority, completed, isProjectTask, description = \
+                dlg.getData()
+            self.addTask(summary, priority, completed=completed,
+                         isProjectTask=isProjectTask, description=description)
+    
+    def __newSubTask(self):
+        """
+        Private slot to handle the "New Sub-Task" context menu entry.
+        """
+        parentTask = self.currentItem()
+        projectTask = parentTask.isProjectTask()
+        
+        from .TaskPropertiesDialog import TaskPropertiesDialog
+        dlg = TaskPropertiesDialog(None, self, self.projectOpen)
+        dlg.setSubTaskMode(projectTask)
+        if dlg.exec_() == QDialog.Accepted:
+            summary, priority, completed, isProjectTask, description = \
+                dlg.getData()
+            self.addTask(summary, priority, completed=completed,
+                         isProjectTask=isProjectTask, description=description,
+                         parentTask=parentTask)
     
     def __markCompleted(self):
         """
@@ -405,12 +462,16 @@ class TaskViewer(QTreeWidget):
         """
         Private slot to handle the "Delete Completed Tasks" context menu entry.
         """
-        for task in self.tasks[:]:
+        for task in reversed(self.tasks[:]):
             if task.isCompleted():
                 if self.copyTask == task:
                     self.copyTask = None
-                index = self.indexOfTopLevelItem(task)
-                self.takeTopLevelItem(index)
+                parent = task.parent()
+                if parent:
+                    parent.removeChild(task)
+                else:
+                    index = self.indexOfTopLevelItem(task)
+                    self.takeTopLevelItem(index)
                 self.tasks.remove(task)
                 if task.isProjectTask:
                     self.__projectTasksSaveTimer.changeOccurred()
@@ -436,7 +497,32 @@ class TaskViewer(QTreeWidget):
                          priority=self.copyTask.priority,
                          completed=self.copyTask.completed,
                          description=self.copyTask.description,
+                         isProjectTask=self.copyTask._isProjectTask,
+                         parentTask=self.copyTask.parent())
+    
+    def __pasteMainTask(self):
+        """
+        Private slot to handle the "Paste as Main Task" context menu entry.
+        """
+        if self.copyTask:
+            self.addTask(self.copyTask.summary,
+                         priority=self.copyTask.priority,
+                         completed=self.copyTask.completed,
+                         description=self.copyTask.description,
                          isProjectTask=self.copyTask._isProjectTask)
+    
+    def __deleteSubTasks(self, task):
+        """
+        Private method to delete all sub-tasks.
+        
+        @param task task to delete sub-tasks of (Task)
+        """
+        for subtask in task.takeChildren():
+            if self.copyTask == subtask:
+                self.copyTask = None
+            if subtask.childCount() > 0:
+                self.__deleteSubTasks(subtask)
+            self.tasks.remove(subtask)
     
     def __deleteTask(self):
         """
@@ -445,8 +531,14 @@ class TaskViewer(QTreeWidget):
         task = self.currentItem()
         if self.copyTask == task:
             self.copyTask = None
-        index = self.indexOfTopLevelItem(task)
-        self.takeTopLevelItem(index)
+        if task.childCount() > 0:
+            self.__deleteSubTasks(task)
+        parent = task.parent()
+        if parent:
+            parent.removeChild(task)
+        else:
+            index = self.indexOfTopLevelItem(task)
+            self.takeTopLevelItem(index)
         self.tasks.remove(task)
         if task.isProjectTask:
             self.__projectTasksSaveTimer.changeOccurred()

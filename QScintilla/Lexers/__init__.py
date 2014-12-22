@@ -831,6 +831,7 @@ def getDefaultLexerAssociations():
         '*.e4q': "XML",
         '*.e4s': "XML",
         '*.e4t': "XML",
+        '*.e6t': "XML",
         '*.e5d': "XML",
         '*.e5k': "XML",
         '*.e5m': "XML",

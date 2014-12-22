@@ -11473,7 +11473,10 @@
       <keyword name="Task.colorizeTask" id="Task.colorizeTask" ref="eric6.Tasks.Task.html#Task.colorizeTask" />
       <keyword name="Task.getFilename" id="Task.getFilename" ref="eric6.Tasks.Task.html#Task.getFilename" />
       <keyword name="Task.getLineno" id="Task.getLineno" ref="eric6.Tasks.Task.html#Task.getLineno" />
+      <keyword name="Task.getParentUuid" id="Task.getParentUuid" ref="eric6.Tasks.Task.html#Task.getParentUuid" />
+      <keyword name="Task.getUuid" id="Task.getUuid" ref="eric6.Tasks.Task.html#Task.getUuid" />
       <keyword name="Task.isCompleted" id="Task.isCompleted" ref="eric6.Tasks.Task.html#Task.isCompleted" />
+      <keyword name="Task.isFileTask" id="Task.isFileTask" ref="eric6.Tasks.Task.html#Task.isFileTask" />
       <keyword name="Task.isProjectFileTask" id="Task.isProjectFileTask" ref="eric6.Tasks.Task.html#Task.isProjectFileTask" />
       <keyword name="Task.isProjectTask" id="Task.isProjectTask" ref="eric6.Tasks.Task.html#Task.isProjectTask" />
       <keyword name="Task.setCompleted" id="Task.setCompleted" ref="eric6.Tasks.Task.html#Task.setCompleted" />
@@ -11502,6 +11505,7 @@
       <keyword name="TaskPropertiesDialog (Module)" id="TaskPropertiesDialog (Module)" ref="eric6.Tasks.TaskPropertiesDialog.html" />
       <keyword name="TaskPropertiesDialog.getData" id="TaskPropertiesDialog.getData" ref="eric6.Tasks.TaskPropertiesDialog.html#TaskPropertiesDialog.getData" />
       <keyword name="TaskPropertiesDialog.setReadOnly" id="TaskPropertiesDialog.setReadOnly" ref="eric6.Tasks.TaskPropertiesDialog.html#TaskPropertiesDialog.setReadOnly" />
+      <keyword name="TaskPropertiesDialog.setSubTaskMode" id="TaskPropertiesDialog.setSubTaskMode" ref="eric6.Tasks.TaskPropertiesDialog.html#TaskPropertiesDialog.setSubTaskMode" />
       <keyword name="TaskViewer" id="TaskViewer" ref="eric6.Tasks.TaskViewer.html#TaskViewer" />
       <keyword name="TaskViewer (Constructor)" id="TaskViewer (Constructor)" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__init__" />
       <keyword name="TaskViewer (Module)" id="TaskViewer (Module)" ref="eric6.Tasks.TaskViewer.html" />
@@ -11511,11 +11515,14 @@
       <keyword name="TaskViewer.__configureProjectTasksScanOptions" id="TaskViewer.__configureProjectTasksScanOptions" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__configureProjectTasksScanOptions" />
       <keyword name="TaskViewer.__copyTask" id="TaskViewer.__copyTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__copyTask" />
       <keyword name="TaskViewer.__deleteCompleted" id="TaskViewer.__deleteCompleted" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__deleteCompleted" />
+      <keyword name="TaskViewer.__deleteSubTasks" id="TaskViewer.__deleteSubTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__deleteSubTasks" />
       <keyword name="TaskViewer.__deleteTask" id="TaskViewer.__deleteTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__deleteTask" />
       <keyword name="TaskViewer.__editTaskProperties" id="TaskViewer.__editTaskProperties" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__editTaskProperties" />
       <keyword name="TaskViewer.__goToTask" id="TaskViewer.__goToTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__goToTask" />
       <keyword name="TaskViewer.__markCompleted" id="TaskViewer.__markCompleted" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__markCompleted" />
+      <keyword name="TaskViewer.__newSubTask" id="TaskViewer.__newSubTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__newSubTask" />
       <keyword name="TaskViewer.__newTask" id="TaskViewer.__newTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__newTask" />
+      <keyword name="TaskViewer.__pasteMainTask" id="TaskViewer.__pasteMainTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__pasteMainTask" />
       <keyword name="TaskViewer.__pasteTask" id="TaskViewer.__pasteTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__pasteTask" />
       <keyword name="TaskViewer.__refreshDisplay" id="TaskViewer.__refreshDisplay" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__refreshDisplay" />
       <keyword name="TaskViewer.__regenerateProjectTasks" id="TaskViewer.__regenerateProjectTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__regenerateProjectTasks" />
@@ -11528,6 +11535,7 @@
       <keyword name="TaskViewer.clearFileTasks" id="TaskViewer.clearFileTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.clearFileTasks" />
       <keyword name="TaskViewer.clearProjectTasks" id="TaskViewer.clearProjectTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.clearProjectTasks" />
       <keyword name="TaskViewer.clearTasks" id="TaskViewer.clearTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.clearTasks" />
+      <keyword name="TaskViewer.findParentTask" id="TaskViewer.findParentTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.findParentTask" />
       <keyword name="TaskViewer.getGlobalTasks" id="TaskViewer.getGlobalTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.getGlobalTasks" />
       <keyword name="TaskViewer.getProjectTasks" id="TaskViewer.getProjectTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.getProjectTasks" />
       <keyword name="TaskViewer.handlePreferencesChanged" id="TaskViewer.handlePreferencesChanged" ref="eric6.Tasks.TaskViewer.html#TaskViewer.handlePreferencesChanged" />

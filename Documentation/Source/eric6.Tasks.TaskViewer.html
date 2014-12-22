@@ -88,6 +88,9 @@ QTreeWidget
 <td><a href="#TaskViewer.__deleteCompleted">__deleteCompleted</a></td>
 <td>Private slot to handle the "Delete Completed Tasks" context menu entry.</td>
 </tr><tr>
+<td><a href="#TaskViewer.__deleteSubTasks">__deleteSubTasks</a></td>
+<td>Private method to delete all sub-tasks.</td>
+</tr><tr>
 <td><a href="#TaskViewer.__deleteTask">__deleteTask</a></td>
 <td>Private slot to handle the "Delete Task" context menu entry.</td>
 </tr><tr>
@@ -100,8 +103,14 @@ QTreeWidget
 <td><a href="#TaskViewer.__markCompleted">__markCompleted</a></td>
 <td>Private slot to handle the "Mark Completed" context menu entry.</td>
 </tr><tr>
+<td><a href="#TaskViewer.__newSubTask">__newSubTask</a></td>
+<td>Private slot to handle the "New Sub-Task" context menu entry.</td>
+</tr><tr>
 <td><a href="#TaskViewer.__newTask">__newTask</a></td>
 <td>Private slot to handle the "New Task" context menu entry.</td>
+</tr><tr>
+<td><a href="#TaskViewer.__pasteMainTask">__pasteMainTask</a></td>
+<td>Private slot to handle the "Paste as Main Task" context menu entry.</td>
 </tr><tr>
 <td><a href="#TaskViewer.__pasteTask">__pasteTask</a></td>
 <td>Private slot to handle the "Paste" context menu entry.</td>
@@ -138,6 +147,9 @@ QTreeWidget
 </tr><tr>
 <td><a href="#TaskViewer.clearTasks">clearTasks</a></td>
 <td>Public slot to clear all tasks from display.</td>
+</tr><tr>
+<td><a href="#TaskViewer.findParentTask">findParentTask</a></td>
+<td>Public method to find a parent task by its ID.</td>
 </tr><tr>
 <td><a href="#TaskViewer.getGlobalTasks">getGlobalTasks</a></td>
 <td>Public method to retrieve all non project related tasks.</td>
@@ -207,7 +219,17 @@ flag indicating the filter state (boolean)
 <b>__deleteCompleted</b>(<i></i>)
 <p>
         Private slot to handle the "Delete Completed Tasks" context menu entry.
-</p><a NAME="TaskViewer.__deleteTask" ID="TaskViewer.__deleteTask"></a>
+</p><a NAME="TaskViewer.__deleteSubTasks" ID="TaskViewer.__deleteSubTasks"></a>
+<h4>TaskViewer.__deleteSubTasks</h4>
+<b>__deleteSubTasks</b>(<i>task</i>)
+<p>
+        Private method to delete all sub-tasks.
+</p><dl>
+<dt><i>task</i></dt>
+<dd>
+task to delete sub-tasks of (Task)
+</dd>
+</dl><a NAME="TaskViewer.__deleteTask" ID="TaskViewer.__deleteTask"></a>
 <h4>TaskViewer.__deleteTask</h4>
 <b>__deleteTask</b>(<i></i>)
 <p>
@@ -227,11 +249,21 @@ flag indicating the filter state (boolean)
 <b>__markCompleted</b>(<i></i>)
 <p>
         Private slot to handle the "Mark Completed" context menu entry.
+</p><a NAME="TaskViewer.__newSubTask" ID="TaskViewer.__newSubTask"></a>
+<h4>TaskViewer.__newSubTask</h4>
+<b>__newSubTask</b>(<i></i>)
+<p>
+        Private slot to handle the "New Sub-Task" context menu entry.
 </p><a NAME="TaskViewer.__newTask" ID="TaskViewer.__newTask"></a>
 <h4>TaskViewer.__newTask</h4>
 <b>__newTask</b>(<i></i>)
 <p>
         Private slot to handle the "New Task" context menu entry.
+</p><a NAME="TaskViewer.__pasteMainTask" ID="TaskViewer.__pasteMainTask"></a>
+<h4>TaskViewer.__pasteMainTask</h4>
+<b>__pasteMainTask</b>(<i></i>)
+<p>
+        Private slot to handle the "Paste as Main Task" context menu entry.
 </p><a NAME="TaskViewer.__pasteTask" ID="TaskViewer.__pasteTask"></a>
 <h4>TaskViewer.__pasteTask</h4>
 <b>__pasteTask</b>(<i></i>)
@@ -306,7 +338,7 @@ explanatory text of the task (string)
 </dd>
 </dl><a NAME="TaskViewer.addTask" ID="TaskViewer.addTask"></a>
 <h4>TaskViewer.addTask</h4>
-<b>addTask</b>(<i>summary, priority=1, filename="", lineno=0, completed=False, _time=0, isProjectTask=False, taskType=Task.TypeTodo, description=""</i>)
+<b>addTask</b>(<i>summary, priority=1, filename="", lineno=0, completed=False, _time=0, isProjectTask=False, taskType=Task.TypeTodo, description="", uid="", parentTask=None</i>)
 <p>
         Public slot to add a task.
 </p><dl>
@@ -339,6 +371,17 @@ type of the task (one of Task.TypeFixme, Task.TypeTodo,
 </dd><dt><i>description</i></dt>
 <dd>
 explanatory text of the task (string)
+</dd><dt><i>uid</i></dt>
+<dd>
+unique id of the task (string)
+</dd><dt><i>parentTask</i></dt>
+<dd>
+reference to the parent task item (Task)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the task item (Task)
 </dd>
 </dl><a NAME="TaskViewer.clearFileTasks" ID="TaskViewer.clearFileTasks"></a>
 <h4>TaskViewer.clearFileTasks</h4>
@@ -370,7 +413,22 @@ flag indicating to clear only file related
 <b>clearTasks</b>(<i></i>)
 <p>
         Public slot to clear all tasks from display.
-</p><a NAME="TaskViewer.getGlobalTasks" ID="TaskViewer.getGlobalTasks"></a>
+</p><a NAME="TaskViewer.findParentTask" ID="TaskViewer.findParentTask"></a>
+<h4>TaskViewer.findParentTask</h4>
+<b>findParentTask</b>(<i>parentUid</i>)
+<p>
+        Public method to find a parent task by its ID.
+</p><dl>
+<dt><i>parentUid</i></dt>
+<dd>
+uid of the parent task (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the task (Task)
+</dd>
+</dl><a NAME="TaskViewer.getGlobalTasks" ID="TaskViewer.getGlobalTasks"></a>
 <h4>TaskViewer.getGlobalTasks</h4>
 <b>getGlobalTasks</b>(<i></i>)
 <p>

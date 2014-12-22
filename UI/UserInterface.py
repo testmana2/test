@@ -5454,9 +5454,9 @@ class UserInterface(E5MainWindow):
     
     def __writeTasks(self):
         """
-        Private slot to write the tasks data to an XML file (.e4t).
+        Private slot to write the tasks data to an XML file (.e6t).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e4t")
+        fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e6t")
         f = QFile(fn)
         ok = f.open(QIODevice.WriteOnly)
         if not ok:
@@ -5474,11 +5474,14 @@ class UserInterface(E5MainWindow):
         
     def __readTasks(self):
         """
-        Private slot to read in the tasks file (.e4t).
+        Private slot to read in the tasks file (.e6t).
         """
-        fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e4t")
+        fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e6t")
         if not os.path.exists(fn):
-            return
+            # try again with the old extension
+            fn = os.path.join(Utilities.getConfigDir(), "eric6tasks.e4t")
+            if not os.path.exists(fn):
+                return
         f = QFile(fn)
         if f.open(QIODevice.ReadOnly):
             from E5XML.TasksReader import TasksReader

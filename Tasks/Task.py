@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 import time
 
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QUuid
 from PyQt5.QtWidgets import QTreeWidgetItem
 
 import UI.PixmapCache
@@ -31,7 +31,8 @@ class Task(QTreeWidgetItem):
     
     def __init__(self, summary, priority=1, filename="", lineno=0,
                  completed=False, _time=0, isProjectTask=False,
-                 taskType=TypeTodo, project=None, description=""):
+                 taskType=TypeTodo, project=None, description="",
+                 uid="", parentUid=""):
         """
         Constructor
         
@@ -47,6 +48,8 @@ class Task(QTreeWidgetItem):
             TypeWarning, TypeNote)
         @param project reference to the project object (Project)
         @param description explanatory text of the task (string)
+        @param uid unique id of the task (string)
+        @param parentUid unique id of the parent task (string)
         """
         super(Task, self).__init__()
         
@@ -63,6 +66,11 @@ class Task(QTreeWidgetItem):
         self._isProjectTask = isProjectTask
         self.taskType = taskType
         self.project = project
+        if uid:
+            self.uid = uid
+        else:
+            self.uid = QUuid.createUuid().toString()
+        self.parentUid = parentUid
         
         if isProjectTask:
             self.filename = self.project.getRelativePath(self.filename)
@@ -181,6 +189,10 @@ class Task(QTreeWidgetItem):
             f = self.font(column)
             f.setStrikeOut(strikeOut)
             self.setFont(column, f)
+        
+        # set the completion status for all children
+        for index in range(self.childCount()):
+            self.child(index).setCompleted(completed)
     
     def isCompleted(self):
         """
@@ -192,7 +204,7 @@ class Task(QTreeWidgetItem):
     
     def getFilename(self):
         """
-        Public method to retrieve the tasks filename.
+        Public method to retrieve the task's filename.
         
         @return filename (string)
         """
@@ -201,13 +213,37 @@ class Task(QTreeWidgetItem):
         else:
             return self.filename
     
+    def isFileTask(self):
+        """
+        Public slot to get an indication, if this task is related to a file.
+        
+        @return flag indicating a file task (boolean)
+        """
+        return self.filename != ""
+    
     def getLineno(self):
         """
-        Public method to retrieve the tasks linenumber.
+        Public method to retrieve the task's linenumber.
         
         @return linenumber (integer)
         """
         return self.lineno
+    
+    def getUuid(self):
+        """
+        Public method to get the task's uid.
+        
+        @return uid (string)
+        """
+        return self.uid
+    
+    def getParentUuid(self):
+        """
+        Public method to get the parent task's uid.
+        
+        @return parent uid (string)
+        """
+        return self.parentUid
     
     def setProjectTask(self, pt):
         """

@@ -23,7 +23,7 @@ sessionFileFormatVersion = "5.0"
 shortcutsFileFormatVersion = "3.6"
 
 # version number of the tasks file
-tasksFileFormatVersion = "5.1"
+tasksFileFormatVersion = "6.0"
 
 # version number of the debugger properties file
 debuggerPropertiesFileFormatVersion = "3.9"

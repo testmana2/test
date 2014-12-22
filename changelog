@@ -4,6 +4,9 @@ Version 6.1-snapshot-2015mmdd:
 - bug fixes
 - Previewers
   -- added capability to use 'Sphinx' to preview ReST files
+- Task Viewer
+  -- added capability to add sub-tasks (i.e. a task hierarchy) for
+     manually generated tasks
 
 Version 6.0.0:
 - bug fixes
