@@ -93,7 +93,7 @@ def messageHandler(msgType, *args):
     
     @param msgType type of the message (integer, QtMsgType)
     @param args message handler arguments, for PyQt4 message to be shown
-        (bytes), for PyQt5 context information (QMessageLogContext) and 
+        (bytes), for PyQt5 context information (QMessageLogContext) and
         message to be shown (bytes)
     """
     if len(args) == 2:

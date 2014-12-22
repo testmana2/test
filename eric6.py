@@ -44,7 +44,7 @@ import logging
 try:
     from PyQt5.QtCore import qWarning, QLibraryInfo, QTimer, QCoreApplication
 except ImportError:
-    try:    # Py2 
+    try:    # Py2
         import tkMessageBox as messagebox
     except ImportError:
         try:    # Py3
@@ -231,7 +231,7 @@ def main():
     
     app = E5Application(sys.argv)
     
-    from Toolbox import Startup  
+    from Toolbox import Startup
     ddindex = Startup.handleArgs(sys.argv, appinfo)
     
     logging.debug("Importing Preferences")

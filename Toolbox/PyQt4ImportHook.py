@@ -3,6 +3,10 @@
 # Copyright (c) 2014 Detlev Offenbach <detlev@die-offenbachs.de>
 #
 
+"""
+Module implementing an import hook converting PyQt5 imports to PyQt4 imports.
+"""
+
 import sys
 try:
     if "--pyqt4" in sys.argv:
@@ -14,6 +18,10 @@ except ImportError:
     import importlib
 
     class PyQt4Importer(object):
+        """
+        Class implementing an importer converting PyQt5 imports to PyQt4
+        imports.
+        """
         def __init__(self):
             """
             Constructor
