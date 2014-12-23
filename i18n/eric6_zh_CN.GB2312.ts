@@ -15961,7 +15961,7 @@ Reason: {0}</source>
 <context>
     <name>HelpDocsInstaller</name>
     <message>
-        <location filename="../Helpviewer/HelpDocsInstaller.py" line="214"/>
+        <location filename="../Helpviewer/HelpDocsInstaller.py" line="220"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered. &lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53336,149 +53336,159 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Summary</source>
         <translation>摘要</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Filename</source>
         <translation>文件名</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Line</source>
         <translation>行</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="133"/>
+        <location filename="../Tasks/TaskViewer.py" line="134"/>
         <source>&amp;New Task...</source>
         <translation>新建任务(&amp;N)……</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="83"/>
+        <location filename="../Tasks/TaskViewer.py" line="84"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>重新生成项目任务(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="99"/>
+        <location filename="../Tasks/TaskViewer.py" line="100"/>
         <source>&amp;Go To</source>
         <translation>转到(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="102"/>
+        <location filename="../Tasks/TaskViewer.py" line="103"/>
         <source>&amp;Copy</source>
         <translation>复制(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="138"/>
+        <location filename="../Tasks/TaskViewer.py" line="139"/>
         <source>&amp;Paste</source>
         <translation>粘贴(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="108"/>
+        <location filename="../Tasks/TaskViewer.py" line="109"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="111"/>
+        <location filename="../Tasks/TaskViewer.py" line="112"/>
         <source>&amp;Mark Completed</source>
         <translation>标记已完成(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="143"/>
+        <location filename="../Tasks/TaskViewer.py" line="144"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>删除已完成的任务(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="116"/>
+        <location filename="../Tasks/TaskViewer.py" line="117"/>
         <source>P&amp;roperties...</source>
         <translation>属性(&amp;r)……</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="146"/>
+        <location filename="../Tasks/TaskViewer.py" line="147"/>
         <source>&amp;Filtered display</source>
         <translation>显示被过滤的(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="152"/>
+        <location filename="../Tasks/TaskViewer.py" line="153"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>过滤器配置(&amp;o)……</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="155"/>
+        <location filename="../Tasks/TaskViewer.py" line="156"/>
         <source>Resi&amp;ze columns</source>
         <translation>改变列宽(&amp;z)</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="158"/>
+        <location filename="../Tasks/TaskViewer.py" line="159"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="575"/>
+        <location filename="../Tasks/TaskViewer.py" line="625"/>
         <source>Activate task filter</source>
         <translation>激活任务过滤器</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="575"/>
+        <location filename="../Tasks/TaskViewer.py" line="625"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>任务过滤器不包含任务激活过滤器。要配置过滤器设置吗？</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>Extracting project tasks...</source>
         <translation>提取项目任务……</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>Abort</source>
         <translation>终止</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="650"/>
+        <location filename="../Tasks/TaskViewer.py" line="700"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="87"/>
+        <location filename="../Tasks/TaskViewer.py" line="88"/>
         <source>&amp;Configure scan options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="607"/>
+        <location filename="../Tasks/TaskViewer.py" line="657"/>
         <source>Scan Filter Patterns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="607"/>
+        <location filename="../Tasks/TaskViewer.py" line="657"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="81"/>
+        <location filename="../Tasks/TaskViewer.py" line="82"/>
         <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="646"/>
+        <location filename="../Tasks/TaskViewer.py" line="696"/>
         <source>Tasks</source>
         <translation type="unfinished">任务</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="93"/>
+        <location filename="../Tasks/TaskViewer.py" line="94"/>
         <source>New &amp;Sub-Task...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="140"/>
+        <location filename="../Tasks/TaskViewer.py" line="141"/>
         <source>Paste as &amp;Main Task</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Tasks/TaskViewer.py" line="176"/>
+        <source>Extracted Tasks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Tasks/TaskViewer.py" line="178"/>
+        <source>Manual Tasks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

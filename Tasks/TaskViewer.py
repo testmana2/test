@@ -52,6 +52,7 @@ class TaskViewer(QTreeWidget):
         super(TaskViewer, self).__init__(parent)
         
         self.setSortingEnabled(True)
+        self.setExpandsOnDoubleClick(False)
         
         self.__headerItem = QTreeWidgetItem(
             ["", "", self.tr("Summary"), self.tr("Filename"),
@@ -164,6 +165,35 @@ class TaskViewer(QTreeWidget):
         self.itemActivated.connect(self.__taskItemActivated)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
+        
+        self.__generateTopLevelItems()
+    
+    def __generateTopLevelItems(self):
+        """
+        Private method to generate the 'Extracted Tasks' item.
+        """
+        self.__extractedItem = QTreeWidgetItem(self,
+                                               [self.tr("Extracted Tasks")])
+        self.__manualItem = QTreeWidgetItem(self,
+                                            [self.tr("Manual Tasks")])
+        for itm in [self.__extractedItem, self.__manualItem]:
+            itm.setFirstColumnSpanned(True)
+            itm.setExpanded(True)
+            itm.setHidden(True)
+            font = itm.font(0)
+            font.setUnderline(True)
+            itm.setFont(0, font)
+    
+    def __checkTopLevelItems(self):
+        """
+        Private slot to check the 'Extracted Tasks' item for children.
+        """
+        for itm in [self.__extractedItem, self.__manualItem]:
+            visibleCount = itm.childCount()
+            for index in range(itm.childCount()):
+                if itm.child(index).isHidden():
+                    visibleCount -= 1
+            itm.setHidden(visibleCount == 0)
     
     def __resort(self):
         """
@@ -202,9 +232,11 @@ class TaskViewer(QTreeWidget):
         """
         for task in self.tasks:
             task.setHidden(not self.taskFilter.showTask(task))
+        
+        self.__checkTopLevelItems()
         self.__resort()
         self.__resizeColumns()
-        
+    
     def __taskItemActivated(self, itm, col):
         """
         Private slot to handle the activation of an item.
@@ -212,7 +244,9 @@ class TaskViewer(QTreeWidget):
         @param itm reference to the activated item (QTreeWidgetItem)
         @param col column the item was activated in (integer)
         """
-        if not self.__activating:
+        if not self.__activating and \
+                itm is not self.__extractedItem and \
+                itm is not self.__manualItem:
             self.__activating = True
             fn = itm.getFilename()
             if fn:
@@ -229,7 +263,9 @@ class TaskViewer(QTreeWidget):
         """
         itm = self.itemAt(coord)
         coord = self.mapToGlobal(coord)
-        if itm is None:
+        if itm is None or \
+                itm is self.__extractedItem or \
+                itm is self.__manualItem:
             self.backProjectTasksMenuItem.setEnabled(self.projectOpen)
             if self.copyTask:
                 self.backPasteItem.setEnabled(True)
@@ -302,9 +338,13 @@ class TaskViewer(QTreeWidget):
         if parentTask:
             parentTask.addChild(task)
             parentTask.setExpanded(True)
+        elif filename:
+            self.__extractedItem.addChild(task)
         else:
-            self.addTopLevelItem(task)
+            self.__manualItem.addChild(task)
         task.setHidden(not self.taskFilter.showTask(task))
+        
+        self.__checkTopLevelItems()
         self.__resort()
         self.__resizeColumns()
         
@@ -330,7 +370,7 @@ class TaskViewer(QTreeWidget):
                          self.project and
                          self.project.isProjectSource(filename)),
                      taskType=taskType, description=description)
-        
+    
     def getProjectTasks(self):
         """
         Public method to retrieve all project related tasks.
@@ -339,7 +379,7 @@ class TaskViewer(QTreeWidget):
         """
         tasks = [task for task in self.tasks if task.isProjectTask()]
         return tasks[:]
-        
+    
     def getGlobalTasks(self):
         """
         Public method to retrieve all non project related tasks.
@@ -348,14 +388,15 @@ class TaskViewer(QTreeWidget):
         """
         tasks = [task for task in self.tasks if not task.isProjectTask()]
         return tasks[:]
-        
+    
     def clearTasks(self):
         """
         Public slot to clear all tasks from display.
         """
         self.tasks = []
         self.clear()
-        
+        self.__generateTopLevelItems()
+    
     def clearProjectTasks(self, fileOnly=False):
         """
         Public slot to clear project related tasks.
@@ -369,14 +410,14 @@ class TaskViewer(QTreeWidget):
                 if self.copyTask == task:
                     self.copyTask = None
                 parent = task.parent()
-                if parent:
-                    parent.removeChild(task)
-                else:
-                    index = self.indexOfTopLevelItem(task)
-                    self.takeTopLevelItem(index)
+                parent.removeChild(task)
                 self.tasks.remove(task)
                 del task
         
+        self.__checkTopLevelItems()
+        self.__resort()
+        self.__resizeColumns()
+    
     def clearFileTasks(self, filename, conditionally=False):
         """
         Public slot to clear all tasks related to a file.
@@ -395,13 +436,16 @@ class TaskViewer(QTreeWidget):
             if task.getFilename() == filename:
                 if self.copyTask == task:
                     self.copyTask = None
-                index = self.indexOfTopLevelItem(task)
-                self.takeTopLevelItem(index)
+                self.__extractedItem.removeChild(task)
                 self.tasks.remove(task)
                 if task.isProjectTask:
                     self.__projectTasksSaveTimer.changeOccurred()
                 del task
         
+        self.__checkTopLevelItems()
+        self.__resort()
+        self.__resizeColumns()
+    
     def __editTaskProperties(self):
         """
         Private slot to handle the "Properties" context menu entry.
@@ -467,15 +511,16 @@ class TaskViewer(QTreeWidget):
                 if self.copyTask == task:
                     self.copyTask = None
                 parent = task.parent()
-                if parent:
-                    parent.removeChild(task)
-                else:
-                    index = self.indexOfTopLevelItem(task)
-                    self.takeTopLevelItem(index)
+                parent.removeChild(task)
                 self.tasks.remove(task)
                 if task.isProjectTask:
                     self.__projectTasksSaveTimer.changeOccurred()
                 del task
+        
+        self.__checkTopLevelItems()
+        self.__resort()
+        self.__resizeColumns()
+        
         ci = self.currentItem()
         if ci:
             ind = self.indexFromItem(ci, self.currentColumn())
@@ -493,12 +538,16 @@ class TaskViewer(QTreeWidget):
         Private slot to handle the "Paste" context menu entry.
         """
         if self.copyTask:
+            parent = self.copyTask.parent()
+            if not isinstance(parent, Task):
+                parent = None
+            
             self.addTask(self.copyTask.summary,
                          priority=self.copyTask.priority,
                          completed=self.copyTask.completed,
                          description=self.copyTask.description,
                          isProjectTask=self.copyTask._isProjectTask,
-                         parentTask=self.copyTask.parent())
+                         parentTask=parent)
     
     def __pasteMainTask(self):
         """
@@ -534,15 +583,16 @@ class TaskViewer(QTreeWidget):
         if task.childCount() > 0:
             self.__deleteSubTasks(task)
         parent = task.parent()
-        if parent:
-            parent.removeChild(task)
-        else:
-            index = self.indexOfTopLevelItem(task)
-            self.takeTopLevelItem(index)
+        parent.removeChild(task)
         self.tasks.remove(task)
         if task.isProjectTask:
             self.__projectTasksSaveTimer.changeOccurred()
         del task
+        
+        self.__checkTopLevelItems()
+        self.__resort()
+        self.__resizeColumns()
+        
         ci = self.currentItem()
         if ci:
             ind = self.indexFromItem(ci, self.currentColumn())

@@ -16408,7 +16408,7 @@ Razão: {0}</translation>
 <context>
     <name>HelpDocsInstaller</name>
     <message>
-        <location filename="../Helpviewer/HelpDocsInstaller.py" line="214"/>
+        <location filename="../Helpviewer/HelpDocsInstaller.py" line="220"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered. &lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;O ficheiro &lt;b&gt;{0}&lt;/b&gt; não se pôde registar. &lt;br/&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -53694,149 +53694,159 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Summary</source>
         <translation>Sumário</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Filename</source>
         <translation>Nome do Ficheiro</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Line</source>
         <translation>Linha</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="133"/>
+        <location filename="../Tasks/TaskViewer.py" line="134"/>
         <source>&amp;New Task...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="83"/>
+        <location filename="../Tasks/TaskViewer.py" line="84"/>
         <source>&amp;Regenerate project tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="99"/>
+        <location filename="../Tasks/TaskViewer.py" line="100"/>
         <source>&amp;Go To</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="102"/>
+        <location filename="../Tasks/TaskViewer.py" line="103"/>
         <source>&amp;Copy</source>
         <translation>&amp;Copiar</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="138"/>
+        <location filename="../Tasks/TaskViewer.py" line="139"/>
         <source>&amp;Paste</source>
         <translation>Co&amp;lar</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="108"/>
+        <location filename="../Tasks/TaskViewer.py" line="109"/>
         <source>&amp;Delete</source>
         <translation>&amp;Apagar</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="111"/>
+        <location filename="../Tasks/TaskViewer.py" line="112"/>
         <source>&amp;Mark Completed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="143"/>
+        <location filename="../Tasks/TaskViewer.py" line="144"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>Apagar &amp;Tareias Completas</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="116"/>
+        <location filename="../Tasks/TaskViewer.py" line="117"/>
         <source>P&amp;roperties...</source>
         <translation>P&amp;ropriedades...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="146"/>
+        <location filename="../Tasks/TaskViewer.py" line="147"/>
         <source>&amp;Filtered display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="152"/>
+        <location filename="../Tasks/TaskViewer.py" line="153"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="155"/>
+        <location filename="../Tasks/TaskViewer.py" line="156"/>
         <source>Resi&amp;ze columns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="158"/>
+        <location filename="../Tasks/TaskViewer.py" line="159"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="575"/>
+        <location filename="../Tasks/TaskViewer.py" line="625"/>
         <source>Activate task filter</source>
         <translation>Ativar filtro de tareias</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="575"/>
+        <location filename="../Tasks/TaskViewer.py" line="625"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>Extracting project tasks...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>Abort</source>
         <translation>Abortar</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="650"/>
+        <location filename="../Tasks/TaskViewer.py" line="700"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="87"/>
+        <location filename="../Tasks/TaskViewer.py" line="88"/>
         <source>&amp;Configure scan options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="607"/>
+        <location filename="../Tasks/TaskViewer.py" line="657"/>
         <source>Scan Filter Patterns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="607"/>
+        <location filename="../Tasks/TaskViewer.py" line="657"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="81"/>
+        <location filename="../Tasks/TaskViewer.py" line="82"/>
         <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Ficheiros</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="646"/>
+        <location filename="../Tasks/TaskViewer.py" line="696"/>
         <source>Tasks</source>
         <translation type="unfinished">Tarefas</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="93"/>
+        <location filename="../Tasks/TaskViewer.py" line="94"/>
         <source>New &amp;Sub-Task...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="140"/>
+        <location filename="../Tasks/TaskViewer.py" line="141"/>
         <source>Paste as &amp;Main Task</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Tasks/TaskViewer.py" line="176"/>
+        <source>Extracted Tasks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Tasks/TaskViewer.py" line="178"/>
+        <source>Manual Tasks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

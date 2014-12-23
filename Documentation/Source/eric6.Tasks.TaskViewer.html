@@ -73,6 +73,9 @@ QTreeWidget
 <td><a href="#TaskViewer.__activateFilter">__activateFilter</a></td>
 <td>Private slot to handle the "Filtered display" context menu entry.</td>
 </tr><tr>
+<td><a href="#TaskViewer.__checkTopLevelItems">__checkTopLevelItems</a></td>
+<td>Private slot to check the 'Extracted Tasks' item for children.</td>
+</tr><tr>
 <td><a href="#TaskViewer.__configure">__configure</a></td>
 <td>Private method to open the configuration dialog.</td>
 </tr><tr>
@@ -96,6 +99,9 @@ QTreeWidget
 </tr><tr>
 <td><a href="#TaskViewer.__editTaskProperties">__editTaskProperties</a></td>
 <td>Private slot to handle the "Properties" context menu entry.</td>
+</tr><tr>
+<td><a href="#TaskViewer.__generateTopLevelItems">__generateTopLevelItems</a></td>
+<td>Private method to generate the 'Extracted Tasks' item.</td>
 </tr><tr>
 <td><a href="#TaskViewer.__goToTask">__goToTask</a></td>
 <td>Private slot to handle the "Go To" context menu entry.</td>
@@ -194,7 +200,12 @@ reference to the project object
 <dd>
 flag indicating the filter state (boolean)
 </dd>
-</dl><a NAME="TaskViewer.__configure" ID="TaskViewer.__configure"></a>
+</dl><a NAME="TaskViewer.__checkTopLevelItems" ID="TaskViewer.__checkTopLevelItems"></a>
+<h4>TaskViewer.__checkTopLevelItems</h4>
+<b>__checkTopLevelItems</b>(<i></i>)
+<p>
+        Private slot to check the 'Extracted Tasks' item for children.
+</p><a NAME="TaskViewer.__configure" ID="TaskViewer.__configure"></a>
 <h4>TaskViewer.__configure</h4>
 <b>__configure</b>(<i></i>)
 <p>
@@ -239,6 +250,11 @@ task to delete sub-tasks of (Task)
 <b>__editTaskProperties</b>(<i></i>)
 <p>
         Private slot to handle the "Properties" context menu entry.
+</p><a NAME="TaskViewer.__generateTopLevelItems" ID="TaskViewer.__generateTopLevelItems"></a>
+<h4>TaskViewer.__generateTopLevelItems</h4>
+<b>__generateTopLevelItems</b>(<i></i>)
+<p>
+        Private method to generate the 'Extracted Tasks' item.
 </p><a NAME="TaskViewer.__goToTask" ID="TaskViewer.__goToTask"></a>
 <h4>TaskViewer.__goToTask</h4>
 <b>__goToTask</b>(<i></i>)

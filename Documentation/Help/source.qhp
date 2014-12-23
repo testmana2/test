@@ -11510,6 +11510,7 @@
       <keyword name="TaskViewer (Constructor)" id="TaskViewer (Constructor)" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__init__" />
       <keyword name="TaskViewer (Module)" id="TaskViewer (Module)" ref="eric6.Tasks.TaskViewer.html" />
       <keyword name="TaskViewer.__activateFilter" id="TaskViewer.__activateFilter" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__activateFilter" />
+      <keyword name="TaskViewer.__checkTopLevelItems" id="TaskViewer.__checkTopLevelItems" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__checkTopLevelItems" />
       <keyword name="TaskViewer.__configure" id="TaskViewer.__configure" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__configure" />
       <keyword name="TaskViewer.__configureFilter" id="TaskViewer.__configureFilter" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__configureFilter" />
       <keyword name="TaskViewer.__configureProjectTasksScanOptions" id="TaskViewer.__configureProjectTasksScanOptions" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__configureProjectTasksScanOptions" />
@@ -11518,6 +11519,7 @@
       <keyword name="TaskViewer.__deleteSubTasks" id="TaskViewer.__deleteSubTasks" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__deleteSubTasks" />
       <keyword name="TaskViewer.__deleteTask" id="TaskViewer.__deleteTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__deleteTask" />
       <keyword name="TaskViewer.__editTaskProperties" id="TaskViewer.__editTaskProperties" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__editTaskProperties" />
+      <keyword name="TaskViewer.__generateTopLevelItems" id="TaskViewer.__generateTopLevelItems" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__generateTopLevelItems" />
       <keyword name="TaskViewer.__goToTask" id="TaskViewer.__goToTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__goToTask" />
       <keyword name="TaskViewer.__markCompleted" id="TaskViewer.__markCompleted" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__markCompleted" />
       <keyword name="TaskViewer.__newSubTask" id="TaskViewer.__newSubTask" ref="eric6.Tasks.TaskViewer.html#TaskViewer.__newSubTask" />

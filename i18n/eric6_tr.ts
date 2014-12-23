@@ -15974,7 +15974,7 @@ Reason: {0}</source>
 <context>
     <name>HelpDocsInstaller</name>
     <message>
-        <location filename="../Helpviewer/HelpDocsInstaller.py" line="214"/>
+        <location filename="../Helpviewer/HelpDocsInstaller.py" line="220"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered. &lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53186,150 +53186,160 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TaskViewer</name>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Summary</source>
         <translation>Özet</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Filename</source>
         <translation>Dosyaadı</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="56"/>
+        <location filename="../Tasks/TaskViewer.py" line="57"/>
         <source>Line</source>
         <translation>Satır</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="133"/>
+        <location filename="../Tasks/TaskViewer.py" line="134"/>
         <source>&amp;New Task...</source>
         <translation>Ye&amp;ni Görev...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="83"/>
+        <location filename="../Tasks/TaskViewer.py" line="84"/>
         <source>&amp;Regenerate project tasks</source>
         <translation>P&amp;roje görevlerini yeniden üret</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="99"/>
+        <location filename="../Tasks/TaskViewer.py" line="100"/>
         <source>&amp;Go To</source>
         <translation>Buraya &amp;Git</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="102"/>
+        <location filename="../Tasks/TaskViewer.py" line="103"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopyala</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="138"/>
+        <location filename="../Tasks/TaskViewer.py" line="139"/>
         <source>&amp;Paste</source>
         <translation>Ya&amp;pıştır</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="108"/>
+        <location filename="../Tasks/TaskViewer.py" line="109"/>
         <source>&amp;Delete</source>
         <translation>&amp;Sil</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="111"/>
+        <location filename="../Tasks/TaskViewer.py" line="112"/>
         <source>&amp;Mark Completed</source>
         <translation>İşaretle&amp;me Tamamlandı</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="143"/>
+        <location filename="../Tasks/TaskViewer.py" line="144"/>
         <source>Delete Completed &amp;Tasks</source>
         <translation>&amp;Tamalanan Görevleri Sil</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="116"/>
+        <location filename="../Tasks/TaskViewer.py" line="117"/>
         <source>P&amp;roperties...</source>
         <translation>Özellikle&amp;r...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="146"/>
+        <location filename="../Tasks/TaskViewer.py" line="147"/>
         <source>&amp;Filtered display</source>
         <translation>Süzgeçlenmiş Görüntü &amp;f</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="152"/>
+        <location filename="../Tasks/TaskViewer.py" line="153"/>
         <source>Filter c&amp;onfiguration...</source>
         <translation>Süzgeç Ayarları &amp;o...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="155"/>
+        <location filename="../Tasks/TaskViewer.py" line="156"/>
         <source>Resi&amp;ze columns</source>
         <translation>Sütünları yeniden boyutlandır &amp;z</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="158"/>
+        <location filename="../Tasks/TaskViewer.py" line="159"/>
         <source>Configure...</source>
         <translation>Ayarlanıyor...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="575"/>
+        <location filename="../Tasks/TaskViewer.py" line="625"/>
         <source>Activate task filter</source>
         <translation>Görev süzgeçini etkinleştir</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="575"/>
+        <location filename="../Tasks/TaskViewer.py" line="625"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Görev süzgeçlerinin etkin olan hiç süzgeçi yok. Bu süzgeçlerin ayarlarını yapmak ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>Extracting project tasks...</source>
         <translation>Proje görevleri çıkarılıyor...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>Abort</source>
         <translation>Vazgeç</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="650"/>
+        <location filename="../Tasks/TaskViewer.py" line="700"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Proje görevleri çıkarılıyor...
 {0}</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="87"/>
+        <location filename="../Tasks/TaskViewer.py" line="88"/>
         <source>&amp;Configure scan options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="607"/>
+        <location filename="../Tasks/TaskViewer.py" line="657"/>
         <source>Scan Filter Patterns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="607"/>
+        <location filename="../Tasks/TaskViewer.py" line="657"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="81"/>
+        <location filename="../Tasks/TaskViewer.py" line="82"/>
         <source>P&amp;roject Tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="642"/>
+        <location filename="../Tasks/TaskViewer.py" line="692"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="646"/>
+        <location filename="../Tasks/TaskViewer.py" line="696"/>
         <source>Tasks</source>
         <translation type="unfinished">Görevler</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="93"/>
+        <location filename="../Tasks/TaskViewer.py" line="94"/>
         <source>New &amp;Sub-Task...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="140"/>
+        <location filename="../Tasks/TaskViewer.py" line="141"/>
         <source>Paste as &amp;Main Task</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Tasks/TaskViewer.py" line="176"/>
+        <source>Extracted Tasks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Tasks/TaskViewer.py" line="178"/>
+        <source>Manual Tasks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
