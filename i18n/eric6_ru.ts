@@ -6000,12 +6000,12 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="558"/>
         <source>Select to show exception information in the shell window</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать информацию об исключениях в окне командной строки</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="561"/>
         <source>Show exceptions in Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать исключения в окне командной строки</translation>
     </message>
 </context>
 <context>
@@ -10285,12 +10285,12 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="507"/>
         <source>Select to use &apos;sphinx&apos; to generate the ReST preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Генерировать ReST предпросмотр с помощью &apos;sphinx&apos;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorFilePage.ui" line="510"/>
         <source>Use &apos;sphinx&apos; for ReST preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать &apos;sphinx&apos; для предпросмотра ReST</translation>
     </message>
 </context>
 <context>
@@ -10724,7 +10724,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="213"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; The tick in the list above indicates the entrie&apos;s &apos;fill to end of line&apos; setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Примечание:&lt;/b&gt; Галочка в списке отражает значение параметра &quot;заполнение до конца строки».</translation>
     </message>
 </context>
 <context>
@@ -10760,7 +10760,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/EditorMarkerMap.py" line="29"/>
         <source>&lt;b&gt;Editor Map&lt;/b&gt;&lt;p&gt;This shows a &apos;map&apos; of the editor. The visible area is highlighted by the box and all markers like bookmarks, breakpoints, errors or changed lines are indicated by differently colored lines configurable via the Editoru279dStyle page of the configuration dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mapкеры Редактора&lt;/b&gt;&lt;p&gt;Показывает маркеры редактора. Все маркеры, такие как закладки, точки останова, ошибки или маркеры измененных линий обозначены различными цветами настраиваемыми с помощью страницы стилей редактора в диалоге конфигурации.</translation>
     </message>
 </context>
 <context>
@@ -35424,24 +35424,17 @@ Select Update.</source>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="497"/>
         <source>&lt;p&gt;Markdown preview requires the &lt;b&gt;python-markdown&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Для предварительного просмотра Markdown файлов необходим пакет &lt;b&gt;python-markdown&lt;/b&gt;. Установите его с помощью менеджера пакетов 
-или ознакомтесь с инструкцией по установке &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="374"/>
-        <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Для предварительного просмотра ReStructuredText файлов необходим пакет &lt;b&gt;python-docutils&lt;/b&gt;. Установите его с помощью менеджера пакетов 
-или ознакомтесь с инструкцией по установке &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Для предварительного просмотра Markdown файлов необходим пакет &lt;b&gt;python-markdown&lt;/b&gt;. Установите его с помощью менеджера пакетов или ознакомтесь с инструкцией по установке &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="472"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager, &apos;pip install docutils&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Для предварительного просмотра ReStructuredText файлов необходим пакет &lt;b&gt;python-docutils&lt;/b&gt;. Установите его с помощью менеджера пакетов: &apos;pip install docutils&apos; или ознакомтесь с &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;этой страницей.&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="410"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;sphinx&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager,&apos;pip install Sphinx&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/Sphinx&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Alternatively you may disable Sphinx usage on the Editor, Filehandling configuration page.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Для предварительного просмотра ReStructuredText файлов необходим пакет &lt;b&gt;sphinx&lt;/b&gt;. Установите его с помощью менеджера пакетов: &apos;pip install Sphinx&apos; или ознакомтесь с &lt;a href=&quot;http://pypi.python.org/pypi/Sphinx&quot;&gt;этой страницей.&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Также вы можете отключить использование Sphinx на странице редактора конфигурации, Filehandling.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -44683,26 +44676,32 @@ Not connected</source>
 {1}
 File: {2}, Line: {3}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Исключение &quot;{0}&quot;
+{1}
+Файл: {2}, Строка: {3}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="709"/>
         <source>Unspecified syntax error.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Неустановленная ситаксическая ошибка.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="687"/>
         <source>Exception &quot;{0}&quot;
 {1}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Exception &quot;{0}&quot;
+{1}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="711"/>
         <source>Syntax error &quot;{1}&quot; in file {0} at line {2}, character {3}.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Синтаксическая ошибка &quot;{1}&quot; в файле {0} в строке {2}, позиция {3}.
+</translation>
     </message>
 </context>
 <context>
@@ -53815,22 +53814,22 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="94"/>
         <source>New &amp;Sub-Task...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Новая подзадача...</translation>
     </message>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="141"/>
         <source>Paste as &amp;Main Task</source>
-        <translation type="unfinished"></translation>
+        <translation>Вставить как &amp;Главная задача</translation>
     </message>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="176"/>
         <source>Extracted Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделенные задачи</translation>
     </message>
     <message>
         <location filename="../Tasks/TaskViewer.py" line="178"/>
         <source>Manual Tasks</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
