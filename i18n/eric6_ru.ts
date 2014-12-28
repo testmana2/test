@@ -6000,12 +6000,12 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="558"/>
         <source>Select to show exception information in the shell window</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать информацию об исключениях в окне командной строки</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerGeneralPage.ui" line="561"/>
         <source>Show exceptions in Shell</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать исключения в окне командной строки</translation>
     </message>
 </context>
 <context>
@@ -10714,7 +10714,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui" line="213"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; The tick in the list above indicates the entrie&apos;s &apos;fill to end of line&apos; setting.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Примечание:&lt;/b&gt; Галочка в списке отражает значение параметра &quot;заполнение до конца строки».</translation>
     </message>
 </context>
 <context>
@@ -10750,7 +10750,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/EditorMarkerMap.py" line="29"/>
         <source>&lt;b&gt;Editor Map&lt;/b&gt;&lt;p&gt;This shows a &apos;map&apos; of the editor. The visible area is highlighted by the box and all markers like bookmarks, breakpoints, errors or changed lines are indicated by differently colored lines configurable via the Editoru279dStyle page of the configuration dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mapкеры Редактора&lt;/b&gt;&lt;p&gt;Показывает маркеры редактора. Все маркеры, такие как закладки, точки останова, ошибки или маркеры измененных линий обозначены различными цветами настраиваемыми с помощью страницы стилей редактора в диалоге конфигурации.</translation>
     </message>
 </context>
 <context>
@@ -16054,7 +16054,7 @@ Reason: {0}</source>
 <context>
     <name>HelpDocsInstaller</name>
     <message>
-        <location filename="../Helpviewer/HelpDocsInstaller.py" line="214"/>
+        <location filename="../Helpviewer/HelpDocsInstaller.py" line="220"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be registered. &lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно зарегистрировать файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
@@ -35414,14 +35414,12 @@ Select Update.</source>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="394"/>
         <source>&lt;p&gt;Markdown preview requires the &lt;b&gt;python-markdown&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Для предварительного просмотра Markdown файлов необходим пакет &lt;b&gt;python-markdown&lt;/b&gt;. Установите его с помощью менеджера пакетов 
-или ознакомтесь с инструкцией по установке &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Для предварительного просмотра Markdown файлов необходим пакет &lt;b&gt;python-markdown&lt;/b&gt;. Установите его с помощью менеджера пакетов или ознакомтесь с инструкцией по установке &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/Previewers/PreviewerHTML.py" line="374"/>
         <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Для предварительного просмотра ReStructuredText файлов необходим пакет &lt;b&gt;python-docutils&lt;/b&gt;. Установите его с помощью менеджера пакетов 
-или ознакомтесь с инструкцией по установке &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -44663,26 +44661,32 @@ Not connected</source>
 {1}
 File: {2}, Line: {3}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Исключение &quot;{0}&quot;
+{1}
+Файл: {2}, Строка: {3}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="709"/>
         <source>Unspecified syntax error.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Неустановленная ситаксическая ошибка.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="687"/>
         <source>Exception &quot;{0}&quot;
 {1}
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Exception &quot;{0}&quot;
+{1}
+</translation>
     </message>
     <message>
         <location filename="../QScintilla/Shell.py" line="711"/>
         <source>Syntax error &quot;{1}&quot; in file {0} at line {2}, character {3}.
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Синтаксическая ошибка &quot;{1}&quot; в файле {0} в строке {2}, позиция {3}.
+</translation>
     </message>
 </context>
 <context>
@@ -53721,12 +53725,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>Изменить размер &amp;колонок</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="482"/>
+        <location filename="../Tasks/TaskViewer.py" line="474"/>
         <source>Activate task filter</source>
         <translation>Включить фильтр задач</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="482"/>
+        <location filename="../Tasks/TaskViewer.py" line="474"/>
         <source>The task filter doesn&apos;t have any active filters. Do you want to configure the filter settings?</source>
         <translation>Фильтр задач не содержит ни одного активного фильтра. Настроить фильтры?</translation>
     </message>
@@ -53736,17 +53740,17 @@ the respective line.&lt;/p&gt;</source>
         <translation>&amp;Перегенерировать задачи проекта</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="549"/>
+        <location filename="../Tasks/TaskViewer.py" line="541"/>
         <source>Extracting project tasks...</source>
         <translation>Извлечение задач проекта...</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="549"/>
+        <location filename="../Tasks/TaskViewer.py" line="541"/>
         <source>Abort</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="557"/>
+        <location filename="../Tasks/TaskViewer.py" line="549"/>
         <source>Extracting project tasks...
 {0}</source>
         <translation>Извлечение задач проекта...
@@ -53768,12 +53772,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>&amp;Настроить параметры сканирования</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="514"/>
+        <location filename="../Tasks/TaskViewer.py" line="506"/>
         <source>Scan Filter Patterns</source>
         <translation>Шаблоны фильтров</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="514"/>
+        <location filename="../Tasks/TaskViewer.py" line="506"/>
         <source>Enter filename patterns of files to be excluded separated by a comma:</source>
         <translation>Задайте маски файлов для исключения, разделённые запятой:</translation>
     </message>
@@ -53783,12 +53787,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>&amp;Задачи проекта</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="549"/>
+        <location filename="../Tasks/TaskViewer.py" line="541"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Файлы</translation>
     </message>
     <message>
-        <location filename="../Tasks/TaskViewer.py" line="553"/>
+        <location filename="../Tasks/TaskViewer.py" line="545"/>
         <source>Tasks</source>
         <translation>Задачи</translation>
     </message>
