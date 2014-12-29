@@ -1455,7 +1455,7 @@ def determinePythonVersion(filename, source, editor=None):
             pyVer = 2
         elif ext in py3Ext and ext not in py2Ext:
             pyVer = 3
-        else:
+        elif source:
             if isinstance(source, basestring):
                 line0 = source.splitlines()[0]
             else:
