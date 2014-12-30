@@ -22240,38 +22240,49 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="14"/>
         <source>Repository Infos</source>
-        <translation>Información del Repositorio</translation>
+        <translation type="obsolete">Información del Repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="17"/>
         <source>&lt;b&gt;Repository Infos Dialog&lt;/b&gt;
 &lt;p&gt;Enter the various infos into the entry fields. These values are used to generate a new project in the repository. If the checkbox is selected, the URL must end in the project name. A directory tree with project/tags, project/branches and project/trunk will be generated in the repository. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
 &lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Diálogo de Información del Repositorio&lt;/b&gt;￼
+        <translation type="obsolete">&lt;b&gt;Diálogo de Información del Repositorio&lt;/b&gt;￼
 &lt;p&gt;Introduzca la informacion diversa en los campos de entrada. Estos valores se usan para generar un nuevo proyecto en el repositorio. Si se marca el checkbox, la URL debe terminar con el nombre del proyecto. En el repositorio se generará un árbol de directorios con proyecto/tags, proyecto/branches y proyecto/trunk. Si el checkbox no esta seleccionado, la URL debe contener la ruta completa en el repositorio.&lt;/p&gt;
 ￼&lt;p&gt;Para repositorios remotos la URL debe contener el nombre de host.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="29"/>
         <source>Commit &amp;Message:</source>
         <translation>&amp;Mensaje de Commit:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="40"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="39"/>
         <source>Enter the log message for the new project.</source>
         <translation>Introduzca el mensaje de log para el nuevo proyecto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="42"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Mensaje de Log&lt;/b&gt;￼
 &lt;p&gt;Introduzca el mensaje de log para utilizar para el nuevo proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="46"/>
         <source>new project started</source>
         <translation>se ha iniciado el nuevo proyecto</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="14"/>
+        <source>Initial Commit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="17"/>
+        <source>&lt;b&gt;Initial Commit Dialog&lt;/b&gt;
+&lt;p&gt;Enter the message for the initial commit.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

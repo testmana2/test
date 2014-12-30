@@ -11,12 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Repository Infos</string>
+   <string>Initial Commit</string>
   </property>
   <property name="whatsThis">
-   <string>&lt;b&gt;Repository Infos Dialog&lt;/b&gt;
-&lt;p&gt;Enter the various infos into the entry fields. These values are used to generate a new project in the repository. If the checkbox is selected, the URL must end in the project name. A directory tree with project/tags, project/branches and project/trunk will be generated in the repository. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
-&lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</string>
+   <string>&lt;b&gt;Initial Commit Dialog&lt;/b&gt;
+&lt;p&gt;Enter the message for the initial commit.&lt;/p&gt;</string>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
