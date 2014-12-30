@@ -160,8 +160,10 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.projectTypeComboBox.addItem(
                 projectTypes[projectType], projectType)
         
-        self.projectTypeComboBox.setCurrentIndex(
-            self.projectTypeComboBox.findData(curProjectType))
+        index = self.projectTypeComboBox.findData(curProjectType)
+        if index == -1:
+            index = 0
+        self.projectTypeComboBox.setCurrentIndex(index)
     
     @pyqtSlot(str)
     def on_dirEdit_textChanged(self, txt):
