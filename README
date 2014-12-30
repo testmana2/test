@@ -5,8 +5,8 @@ README for the eric6 IDE
         Installing eric6 is a simple process. Just execute the install.py script
         (type python install.py -h for some help). Please note that the installation
         has to be performed using the administrators account (i.e. root on linux). 
-        This installs a wrapper script in the standard executable directory 
-        (default: /usr/local/bin on linux) called eric6.
+        This installs a wrapper script in the standard executable directory called
+        eric6.
         
         If you want to uninstall the package just execute the uninstall script. This 
         gets rid of all installed files. In this case please send an email to the
@@ -161,18 +161,6 @@ README for the eric6 IDE
                 This is part of the standard Python distribution and is used to profile
                 Python source code.
     
-    Interfaces to additional software packages via plugins
-    
-        Some of the interfaces provided as plugins are as follows.
-        
-            pylint
-                This is a tool to check the source code according to various rules.
-                It is available from <http://www.logilab.org/projects/pylint>.
-            
-            cx_Freeze
-                This is a tool for packaging Python programs. It is available from
-                <http://starship.python.net/crew/atuining/cx_Freeze>
-    
     Internationalization
     
         eric6 and it's tools are prepared to show the UI in different
@@ -205,5 +193,7 @@ README for the eric6 IDE
     Bugs and other reports
     
         Please send bug reports, feature requests or contributions to eric bugs address.
-        After the IDE is installed you can use the "Report Bug..." entry of the Help menu.
-        This will send a message to <eric-bugs@die-offenbachs.de>
+        After the IDE is installed you can use the "Report Bug..." entry of the Help menu,
+        which will send an email to <eric-bugs@eric-ide.python-projects.org. To request
+        a new feature use the "Request Feature..." entry of the Help menu, which will
+        send an email to <eric-featurerequest@eric-ide.python-projects.org.
