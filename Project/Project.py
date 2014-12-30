@@ -268,6 +268,7 @@ class Project(QObject):
             "Python3": ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
                         "E6Plugin", "Console", "Other"],
             "Ruby": ["Qt4", "Qt4C", "Console", "Other"],
+            "JavaScript": ["Other"],
         }
         
         pyside2, pyside3 = Utilities.checkPyside()
