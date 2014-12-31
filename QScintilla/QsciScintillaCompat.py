@@ -714,7 +714,7 @@ class QsciScintillaCompat(QsciScintilla):
     
     def setCursorFlashTime(self, time):
         """
-        Public method to get the flash (blink) time of the cursor in
+        Public method to set the flash (blink) time of the cursor in
         milliseconds.
         
         The flash time is the time required to display, invert and restore the
