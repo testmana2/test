@@ -172,7 +172,16 @@ emitted after an editor window was opened
 </dd><dt>editorOpenedEd(Editor)</dt>
 <dd>
 emitted after an editor window was opened
+</dd><dt>editorRenamed(str)</dt>
+<dd>
+emitted after an editor was renamed
+</dd><dt>editorRenamedEd(Editor)</dt>
+<dd>
+emitted after an editor was renamed
 </dd><dt>editorSaved(str)</dt>
+<dd>
+emitted after an editor window was saved
+</dd><dt>editorSavedEd(Editor)</dt>
 <dd>
 emitted after an editor window was saved
 </dd><dt>editorTextChanged(Editor)</dt>
@@ -356,6 +365,9 @@ QObject
 </tr><tr>
 <td><a href="#ViewManager.__editorOpened">__editorOpened</a></td>
 <td>Private slot to handle the editorOpened signal.</td>
+</tr><tr>
+<td><a href="#ViewManager.__editorRenamed">__editorRenamed</a></td>
+<td>Private slot to handle the editorRenamed signal.</td>
 </tr><tr>
 <td><a href="#ViewManager.__editorSaved">__editorSaved</a></td>
 <td>Private slot to handle the editorSaved signal.</td>
@@ -1267,7 +1279,19 @@ the scintilla command to be sent
 <b>__editorOpened</b>(<i></i>)
 <p>
         Private slot to handle the editorOpened signal.
-</p><a NAME="ViewManager.__editorSaved" ID="ViewManager.__editorSaved"></a>
+</p><a NAME="ViewManager.__editorRenamed" ID="ViewManager.__editorRenamed"></a>
+<h4>ViewManager.__editorRenamed</h4>
+<b>__editorRenamed</b>(<i>fn</i>)
+<p>
+        Private slot to handle the editorRenamed signal.
+</p><p>
+        It simply reemits the signal.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename of the renamed editor (string)
+</dd>
+</dl><a NAME="ViewManager.__editorSaved" ID="ViewManager.__editorSaved"></a>
 <h4>ViewManager.__editorSaved</h4>
 <b>__editorSaved</b>(<i>fn</i>)
 <p>
@@ -1277,7 +1301,7 @@ the scintilla command to be sent
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
-filename of the saved editor
+filename of the saved editor (string)
 </dd>
 </dl><a NAME="ViewManager.__editorSelectionChanged" ID="ViewManager.__editorSelectionChanged"></a>
 <h4>ViewManager.__editorSelectionChanged</h4>
