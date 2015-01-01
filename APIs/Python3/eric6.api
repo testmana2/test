@@ -5624,7 +5624,10 @@ eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLanguageCha
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorLineChanged?7
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpened?7
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorOpenedEd?7
+eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorRenamed?7
+eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorRenamedEd?7
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSaved?7
+eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorSavedEd?7
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.editorTextChanged?7
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.eventFilter?4(watched, event)
 eric6.Plugins.ViewManagerPlugins.Listspace.Listspace.Listspace.getSplitOrientation?4()
@@ -5694,7 +5697,10 @@ eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLanguageChanged?7
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorLineChanged?7
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpened?7
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorOpenedEd?7
+eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorRenamed?7
+eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorRenamedEd?7
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSaved?7
+eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorSavedEd?7
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.editorTextChanged?7
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.eventFilter?4(watched, event)
 eric6.Plugins.ViewManagerPlugins.Tabview.Tabview.Tabview.getSplitOrientation?4()
@@ -8872,7 +8878,10 @@ eric6.ViewManager.ViewManager.ViewManager.editorLanguageChanged?7
 eric6.ViewManager.ViewManager.ViewManager.editorLineChanged?7
 eric6.ViewManager.ViewManager.ViewManager.editorOpened?7
 eric6.ViewManager.ViewManager.ViewManager.editorOpenedEd?7
+eric6.ViewManager.ViewManager.ViewManager.editorRenamed?7
+eric6.ViewManager.ViewManager.ViewManager.editorRenamedEd?7
 eric6.ViewManager.ViewManager.ViewManager.editorSaved?7
+eric6.ViewManager.ViewManager.ViewManager.editorSavedEd?7
 eric6.ViewManager.ViewManager.ViewManager.editorTextChanged?7
 eric6.ViewManager.ViewManager.ViewManager.editorsCheckFocusInEnabled?4()
 eric6.ViewManager.ViewManager.ViewManager.enableEditorsCheckFocusIn?4(enabled)

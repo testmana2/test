@@ -12445,6 +12445,7 @@
       <keyword name="ViewManager.__editorCommand" id="ViewManager.__editorCommand" ref="eric6.ViewManager.ViewManager.html#ViewManager.__editorCommand" />
       <keyword name="ViewManager.__editorConfigChanged" id="ViewManager.__editorConfigChanged" ref="eric6.ViewManager.ViewManager.html#ViewManager.__editorConfigChanged" />
       <keyword name="ViewManager.__editorOpened" id="ViewManager.__editorOpened" ref="eric6.ViewManager.ViewManager.html#ViewManager.__editorOpened" />
+      <keyword name="ViewManager.__editorRenamed" id="ViewManager.__editorRenamed" ref="eric6.ViewManager.ViewManager.html#ViewManager.__editorRenamed" />
       <keyword name="ViewManager.__editorSaved" id="ViewManager.__editorSaved" ref="eric6.ViewManager.ViewManager.html#ViewManager.__editorSaved" />
       <keyword name="ViewManager.__editorSelectionChanged" id="ViewManager.__editorSelectionChanged" ref="eric6.ViewManager.ViewManager.html#ViewManager.__editorSelectionChanged" />
       <keyword name="ViewManager.__enableSpellingActions" id="ViewManager.__enableSpellingActions" ref="eric6.ViewManager.ViewManager.html#ViewManager.__enableSpellingActions" />
