@@ -101,7 +101,10 @@ class ViewManager(QObject):
     @signal editorClosed(str) emitted just before an editor window gets closed
     @signal editorClosedEd(Editor) emitted just before an editor window gets
         closed
+    @signal editorRenamed(str) emitted after an editor was renamed
+    @signal editorRenamedEd(Editor) emitted after an editor was renamed
     @signal editorSaved(str) emitted after an editor window was saved
+    @signal editorSavedEd(Editor) emitted after an editor window was saved
     @signal checkActions(Editor) emitted when some actions should be checked
         for their status
     @signal cursorChanged(Editor) emitted after the cursor position of the
@@ -126,7 +129,10 @@ class ViewManager(QObject):
     editorOpenedEd = pyqtSignal(Editor)
     editorClosed = pyqtSignal(str)
     editorClosedEd = pyqtSignal(Editor)
+    editorRenamed = pyqtSignal(str)
+    editorRenamedEd = pyqtSignal(Editor)
     editorSaved = pyqtSignal(str)
+    editorSavedEd = pyqtSignal(Editor)
     checkActions = pyqtSignal(Editor)
     cursorChanged = pyqtSignal(Editor)
     breakpointToggled = pyqtSignal(Editor)
@@ -4440,6 +4446,7 @@ class ViewManager(QObject):
             self._modificationStatusChanged)
         editor.cursorChanged.connect(self.__cursorChanged)
         editor.editorSaved.connect(self.__editorSaved)
+        editor.editorRenamed.connect(self.__editorRenamed)
         editor.breakpointToggled.connect(self.__breakpointToggled)
         editor.bookmarkToggled.connect(self.__bookmarkToggled)
         editor.syntaxerrorToggled.connect(self._syntaxErrorToggled)
@@ -6471,9 +6478,25 @@ class ViewManager(QObject):
         
         It simply reemits the signal.
         
-        @param fn filename of the saved editor
+        @param fn filename of the saved editor (string)
         """
         self.editorSaved.emit(fn)
+        editor = self.sender()
+        if editor:
+            self.editorSavedEd.emit(editor)
+        
+    def __editorRenamed(self, fn):
+        """
+        Private slot to handle the editorRenamed signal.
+        
+        It simply reemits the signal.
+        
+        @param fn filename of the renamed editor (string)
+        """
+        self.editorRenamed.emit(fn)
+        editor = self.sender()
+        if editor:
+            self.editorRenamedEd.emit(editor)
         
     def __cursorChanged(self, fn, line, pos):
         """
