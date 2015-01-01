@@ -148,7 +148,10 @@ class Listspace(QSplitter, ViewManager):
     @signal editorClosed(str) emitted just before an editor window gets closed
     @signal editorClosedEd(Editor) emitted just before an editor window gets
         closed
+    @signal editorRenamed(str) emitted after an editor was renamed
+    @signal editorRenamedEd(Editor) emitted after an editor was renamed
     @signal editorSaved(str) emitted after an editor window was saved
+    @signal editorSavedEd(Editor) emitted after an editor window was saved
     @signal checkActions(Editor) emitted when some actions should be checked
         for their status
     @signal cursorChanged(Editor) emitted after the cursor position of the
@@ -173,7 +176,10 @@ class Listspace(QSplitter, ViewManager):
     editorOpenedEd = pyqtSignal(Editor)
     editorClosed = pyqtSignal(str)
     editorClosedEd = pyqtSignal(Editor)
+    editorRenamed = pyqtSignal(str)
+    editorRenamedEd = pyqtSignal(Editor)
     editorSaved = pyqtSignal(str)
+    editorSavedEd = pyqtSignal(Editor)
     checkActions = pyqtSignal(Editor)
     cursorChanged = pyqtSignal(Editor)
     breakpointToggled = pyqtSignal(Editor)
