@@ -4742,8 +4742,6 @@ class Editor(QsciScintillaCompat):
             self.menuActs["NewSplit"].setIcon(
                 UI.PixmapCache.getIcon("splitVertical.png"))
         
-        self.menuActs["Tools"].setEnabled(not self.toolsMenu.isEmpty())
-        
         self.showMenu.emit("Main", self.menu, self)
         
     def __showContextMenuAutocompletion(self):
