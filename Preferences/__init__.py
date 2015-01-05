@@ -1283,7 +1283,7 @@ def getDebugger(key, prefClass=Prefs):
                "ConsoleDbgEnabled", "PathTranslation",
                "Autosave", "ThreeStateBreakPoints",
                "SuppressClientExit", "BreakAlways",
-               "AutoViewSourceCode",
+               "AutoViewSourceCode", "ShowExceptionInShell",
                ]:
         return toBool(prefClass.settings.value(
             "Debugger/" + key, prefClass.debuggerDefaults[key]))
