@@ -644,7 +644,8 @@ def installEric():
         copyTree(
             sourceDir, cfg['ericDir'],
             ['*.py', '*.pyc', '*.pyo', '*.pyw'],
-            ['{1}{0}Examples'.format(os.sep, sourceDir)],
+            ['{1}{0}Examples'.format(os.sep, sourceDir),
+             '{1}{0}.ropeproject'.format(os.sep, sourceDir)],
             excludePatterns=["eric6config.py*"])
         copyTree(
             sourceDir, cfg['ericDir'], ['*.rb'],
