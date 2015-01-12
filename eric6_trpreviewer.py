@@ -71,6 +71,9 @@ def main():
                                   "TR file previewer",
                                   options)
     
+    # set the library paths for plugins
+    Startup.setLibraryPaths()
+    
     app = E5Application(sys.argv)
     client = TRSingleApplicationClient()
     res = client.connect()
