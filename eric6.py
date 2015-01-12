@@ -229,9 +229,11 @@ def main():
     if not Globals.checkBlacklistedVersions():
         sys.exit(100)
     
-    app = E5Application(sys.argv)
-    
     from Toolbox import Startup
+    # set the library paths for plugins
+    Startup.setLibraryPaths()
+
+    app = E5Application(sys.argv)
     ddindex = Startup.handleArgs(sys.argv, appinfo)
     
     logging.debug("Importing Preferences")
@@ -240,9 +242,6 @@ def main():
     if Preferences.getUI("SingleApplicationMode"):
         handleSingleApplication(ddindex)
     
-    # set the library paths for plugins
-    Startup.setLibraryPaths()
-
     # set the search path for icons
     Startup.initializeResourceSearchPath()
 

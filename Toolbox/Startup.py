@@ -222,13 +222,14 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
     """
     handleArgs(argv, appinfo)
     if app is None:
+        # set the library paths for plugins
+        setLibraryPaths()
         app = E5Application(argv)
     app.setQuitOnLastWindowClosed(quitOnLastWindowClosed)
     
     # the following code depends upon a valid application object
     import Preferences
     
-    setLibraryPaths()
     initializeResourceSearchPath()
     QApplication.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
     
