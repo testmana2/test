@@ -28,6 +28,7 @@ import Utilities
 import Preferences
 
 
+# TODO: add simple search functionality (s. LogViewer)
 class HgDiffDialog(QWidget, Ui_HgDiffDialog):
     """
     Class implementing a dialog to show the output of the hg diff command

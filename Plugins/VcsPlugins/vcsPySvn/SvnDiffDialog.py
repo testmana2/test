@@ -29,6 +29,7 @@ import Utilities
 import Preferences
 
 
+# TODO: add simple search functionality (s. LogViewer)
 class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
     """
     Class implementing a dialog to show the output of the svn diff command.
