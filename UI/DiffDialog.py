@@ -232,6 +232,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.saveButton.setEnabled(False)
         self.diffButton.setDefault(True)
         
+        self.searchWidget.attachTextEdit(self.contents)
+        
         self.filename1 = ''
         self.filename2 = ''
         

@@ -139,6 +139,7 @@
             <section title="eric6.E5Gui.E5SqueezeLabels" ref="eric6.E5Gui.E5SqueezeLabels.html" />
             <section title="eric6.E5Gui.E5TabWidget" ref="eric6.E5Gui.E5TabWidget.html" />
             <section title="eric6.E5Gui.E5TableView" ref="eric6.E5Gui.E5TableView.html" />
+            <section title="eric6.E5Gui.E5TextEditSearchWidget" ref="eric6.E5Gui.E5TextEditSearchWidget.html" />
             <section title="eric6.E5Gui.E5TextSpinBox" ref="eric6.E5Gui.E5TextSpinBox.html" />
             <section title="eric6.E5Gui.E5ToolBarDialog" ref="eric6.E5Gui.E5ToolBarDialog.html" />
             <section title="eric6.E5Gui.E5ToolBarManager" ref="eric6.E5Gui.E5ToolBarManager.html" />
@@ -3939,6 +3940,17 @@
       <keyword name="E5TableView.keyPressEvent" id="E5TableView.keyPressEvent" ref="eric6.E5Gui.E5TableView.html#E5TableView.keyPressEvent" />
       <keyword name="E5TableView.removeAll" id="E5TableView.removeAll" ref="eric6.E5Gui.E5TableView.html#E5TableView.removeAll" />
       <keyword name="E5TableView.removeSelected" id="E5TableView.removeSelected" ref="eric6.E5Gui.E5TableView.html#E5TableView.removeSelected" />
+      <keyword name="E5TextEditSearchWidget" id="E5TextEditSearchWidget" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget" />
+      <keyword name="E5TextEditSearchWidget (Constructor)" id="E5TextEditSearchWidget (Constructor)" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.__init__" />
+      <keyword name="E5TextEditSearchWidget (Module)" id="E5TextEditSearchWidget (Module)" ref="eric6.E5Gui.E5TextEditSearchWidget.html" />
+      <keyword name="E5TextEditSearchWidget.__find" id="E5TextEditSearchWidget.__find" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.__find" />
+      <keyword name="E5TextEditSearchWidget.__findByReturnPressed" id="E5TextEditSearchWidget.__findByReturnPressed" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.__findByReturnPressed" />
+      <keyword name="E5TextEditSearchWidget.__setSearchButtons" id="E5TextEditSearchWidget.__setSearchButtons" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.__setSearchButtons" />
+      <keyword name="E5TextEditSearchWidget.attachTextEdit" id="E5TextEditSearchWidget.attachTextEdit" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.attachTextEdit" />
+      <keyword name="E5TextEditSearchWidget.keyPressEvent" id="E5TextEditSearchWidget.keyPressEvent" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.keyPressEvent" />
+      <keyword name="E5TextEditSearchWidget.on_findNextButton_clicked" id="E5TextEditSearchWidget.on_findNextButton_clicked" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.on_findNextButton_clicked" />
+      <keyword name="E5TextEditSearchWidget.on_findPrevButton_clicked" id="E5TextEditSearchWidget.on_findPrevButton_clicked" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.on_findPrevButton_clicked" />
+      <keyword name="E5TextEditSearchWidget.on_findtextCombo_editTextChanged" id="E5TextEditSearchWidget.on_findtextCombo_editTextChanged" ref="eric6.E5Gui.E5TextEditSearchWidget.html#E5TextEditSearchWidget.on_findtextCombo_editTextChanged" />
       <keyword name="E5TextSpinBox" id="E5TextSpinBox" ref="eric6.E5Gui.E5TextSpinBox.html#E5TextSpinBox" />
       <keyword name="E5TextSpinBox (Constructor)" id="E5TextSpinBox (Constructor)" ref="eric6.E5Gui.E5TextSpinBox.html#E5TextSpinBox.__init__" />
       <keyword name="E5TextSpinBox (Module)" id="E5TextSpinBox (Module)" ref="eric6.E5Gui.E5TextSpinBox.html" />
@@ -13666,6 +13678,7 @@
       <file>eric6.E5Gui.E5SqueezeLabels.html</file>
       <file>eric6.E5Gui.E5TabWidget.html</file>
       <file>eric6.E5Gui.E5TableView.html</file>
+      <file>eric6.E5Gui.E5TextEditSearchWidget.html</file>
       <file>eric6.E5Gui.E5TextSpinBox.html</file>
       <file>eric6.E5Gui.E5ToolBarDialog.html</file>
       <file>eric6.E5Gui.E5ToolBarManager.html</file>

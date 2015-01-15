@@ -7,6 +7,9 @@ Version 6.1-snapshot-2015mmdd:
 - Task Viewer
   -- added capability to add sub-tasks (i.e. a task hierarchy) for
      manually generated tasks
+- Tools
+  -- Diff Dialog
+     --- added capability to search in the output
 
 Version 6.0.0:
 - bug fixes

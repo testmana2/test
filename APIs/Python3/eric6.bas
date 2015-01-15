@@ -179,6 +179,7 @@ E5SslInfoWidget QMenu
 E5StringListCompleter QCompleter
 E5TabWidget QTabWidget
 E5TableView QTableView
+E5TextEditSearchWidget QWidget Ui_E5TextEditSearchWidget
 E5TextSpinBox QSpinBox
 E5ToolBarDialog QDialog Ui_E5ToolBarDialog
 E5ToolBarManager QObject
