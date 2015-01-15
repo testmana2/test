@@ -31,7 +31,7 @@
     </widget>
    </item>
    <item>
-    <widget class="E5ClearableComboBox" name="findtextCombo">
+    <widget class="QComboBox" name="findtextCombo">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -85,13 +85,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>E5ClearableComboBox</class>
-   <extends>QComboBox</extends>
-   <header>E5Gui/E5ComboBox.h</header>
-  </customwidget>
- </customwidgets>
  <tabstops>
   <tabstop>findtextCombo</tabstop>
   <tabstop>caseCheckBox</tabstop>
