@@ -2144,8 +2144,18 @@ class Project(QObject):
                 
                 self.saveProject()
             else:
-                # create management directory if not present
-                self.createProjectManagementDir()
+                try:
+                    # create management directory if not present
+                    self.createProjectManagementDir()
+                except EnvironmentError:
+                    E5MessageBox.critical(
+                        self.ui,
+                        self.tr("Create project management directory"),
+                        self.tr(
+                            "<p>The project directory <b>{0}</b> is not"
+                            " writable.</p>")
+                        .format(self.ppath))
+                    return
                 
                 try:
                     ms = os.path.join(self.ppath, self.pdata["MAINSCRIPT"][0])
@@ -2153,7 +2163,7 @@ class Project(QObject):
                         try:
                             f = open(ms, "w")
                             f.close()
-                        except IOError as err:
+                        except EnvironmentError as err:
                             E5MessageBox.critical(
                                 self.ui,
                                 self.tr("Create main script"),
@@ -2579,8 +2589,18 @@ class Project(QObject):
                     QApplication.restoreOverrideCursor()
                     QApplication.processEvents()
                     
-                    # create the management directory if not present
-                    self.createProjectManagementDir()
+                    try:
+                        # create management directory if not present
+                        self.createProjectManagementDir()
+                    except EnvironmentError:
+                        E5MessageBox.critical(
+                            self.ui,
+                            self.tr("Create project management directory"),
+                            self.tr(
+                                "<p>The project directory <b>{0}</b> is not"
+                                " writable.</p>")
+                            .format(self.ppath))
+                        return
                     
                     # read a user specific project file
                     self.__readUserProperties()
@@ -2777,7 +2797,7 @@ class Project(QObject):
             self.projectClosed.emit()
             self.projectOpenedHooks.emit()
             self.projectOpened.emit()
-            return True
+            return ok
         else:
             return False
     
