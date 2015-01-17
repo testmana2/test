@@ -223,15 +223,26 @@ class Project(QObject):
         @return source extensions (list of string)
         """
         if language == "Python2":
-            return Preferences.getPython("PythonExtensions")
+            extensions = Preferences.getPython("PythonExtensions")
+            # *.py and *.pyw should always be associated with source files
+            for ext in [".py", ".pyw"]:
+                if ext not in extensions:
+                    extensions.append(ext)
+            return extensions
         elif language == "Python3":
-            return Preferences.getPython("Python3Extensions")
+            extensions = Preferences.getPython("Python3Extensions")
+            # *.py and *.pyw should always be associated with source files
+            for ext in [".py", ".pyw"]:
+                if ext not in extensions:
+                    extensions.append(ext)
+            return extensions
         elif language == "Ruby":
             return ['.rb']
         elif language == "JavaScript":
             return ['.js']
         elif language == "Mixed":
             return (Preferences.getPython("Python3Extensions") +
+                    Preferences.getPython("PythonExtensions") +
                     ['.rb', '.js'])
         else:
             return [""]
