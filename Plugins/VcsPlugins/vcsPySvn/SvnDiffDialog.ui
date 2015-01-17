@@ -30,6 +30,13 @@
        <widget class="QComboBox" name="filesCombo"/>
       </item>
       <item>
+       <widget class="E5TextEditSearchWidget" name="searchWidget" native="true">
+        <property name="focusPolicy">
+         <enum>Qt::WheelFocus</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QTextEdit" name="contents">
         <property name="whatsThis">
          <string>&lt;b&gt;Subversion Diff&lt;/b&gt;&lt;p&gt;This shows the output of the svn diff command.&lt;/p&gt;</string>
@@ -88,11 +95,19 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5TextEditSearchWidget</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5TextEditSearchWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>filesCombo</tabstop>
+  <tabstop>searchWidget</tabstop>
   <tabstop>contents</tabstop>
   <tabstop>errors</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

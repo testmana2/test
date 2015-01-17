@@ -200,7 +200,6 @@ def context_diff(a, b, fromfile='', tofile='',
                         yield prefixmap[tag] + line
 
 
-# TODO: add simple search functionality (s. LogViewer)
 class DiffDialog(QWidget, Ui_DiffDialog):
     """
     Class implementing a dialog to compare two files.

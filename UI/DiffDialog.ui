@@ -125,7 +125,11 @@
     </widget>
    </item>
    <item>
-    <widget class="E5TextEditSearchWidget" name="searchWidget" native="true"/>
+    <widget class="E5TextEditSearchWidget" name="searchWidget" native="true">
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QTextEdit" name="contents">

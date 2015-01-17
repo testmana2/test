@@ -10,6 +10,9 @@ Version 6.1-snapshot-2015mmdd:
 - Tools
   -- Diff Dialog
      --- added capability to search in the output
+- Version Control System Interfaces
+  -- All
+     --- added capability to search in the output of Diff dialogs
 
 Version 6.0.0:
 - bug fixes

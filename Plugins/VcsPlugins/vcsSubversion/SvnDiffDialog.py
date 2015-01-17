@@ -29,7 +29,6 @@ import Utilities
 import Preferences
 
 
-# TODO: add simple search functionality (s. LogViewer)
 class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
     """
     Class implementing a dialog to show the output of the svn diff command
@@ -47,6 +46,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        
+        self.searchWidget.attachTextEdit(self.contents)
         
         self.process = QProcess()
         self.vcs = vcs

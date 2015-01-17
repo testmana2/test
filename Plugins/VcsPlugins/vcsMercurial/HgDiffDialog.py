@@ -28,7 +28,6 @@ import Utilities
 import Preferences
 
 
-# TODO: add simple search functionality (s. LogViewer)
 class HgDiffDialog(QWidget, Ui_HgDiffDialog):
     """
     Class implementing a dialog to show the output of the hg diff command
@@ -46,6 +45,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+        
+        self.searchWidget.attachTextEdit(self.contents)
         
         self.process = QProcess()
         self.vcs = vcs
