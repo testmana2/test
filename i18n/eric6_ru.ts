@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="ru">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1132,7 +1133,7 @@ the button to the right.&lt;/p&gt;</source>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
         <source>&amp;Category:</source>
-        <translation>&amp;Тип</translation>
+        <translation>&amp;Тип:</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
@@ -1904,8 +1905,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1978,8 +1979,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -2644,7 +2645,7 @@ Reason: {1}</source>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.ui" line="43"/>
         <source>Press to activate the content; context menu for more options</source>
-        <translation></translation>
+        <translation>Нажмите чтобы активизировать; контекстное меню содержит дополнительные команды</translation>
     </message>
     <message>
         <location filename="../Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py" line="100"/>
@@ -7105,9 +7106,9 @@ MD5: {2}</translation>
         <location filename="../Helpviewer/Download/DownloadManager.py" line="385"/>
         <source>%n Download(s)</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n Закачка</numerusform>
+            <numerusform>%n Закачки</numerusform>
+            <numerusform>%n Закачек</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -7115,9 +7116,12 @@ MD5: {2}</translation>
         <source>There are %n downloads in progress.
 Do you want to quit anyway?</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Активна %n закачка.
+Прервать?</numerusform>
+            <numerusform>Активно %n закачки.
+Прервать?</numerusform>
+            <numerusform>Активно %n закачек.
+Прервать?</numerusform>
         </translation>
     </message>
     <message>
@@ -7452,7 +7456,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="84"/>
         <source>Yes/No</source>
-        <translation></translation>
+        <translation>Да/Нет</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="91"/>
@@ -7462,7 +7466,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="94"/>
         <source>Retry/Abort</source>
-        <translation></translation>
+        <translation>Повторить/Прервать</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="101"/>
@@ -7472,7 +7476,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="104"/>
         <source>OK to clear data</source>
-        <translation></translation>
+        <translation>Очищать данные</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/E5MessageBoxWizard/E5MessageBoxWizardDialog.ui" line="114"/>
@@ -10750,7 +10754,7 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/EditorMarkerMap.py" line="29"/>
         <source>&lt;b&gt;Editor Map&lt;/b&gt;&lt;p&gt;This shows a &apos;map&apos; of the editor. The visible area is highlighted by the box and all markers like bookmarks, breakpoints, errors or changed lines are indicated by differently colored lines configurable via the Editoru279dStyle page of the configuration dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mapкеры Редактора&lt;/b&gt;&lt;p&gt;Показывает маркеры редактора. Все маркеры, такие как закладки, точки останова, ошибки или маркеры измененных линий обозначены различными цветами настраиваемыми с помощью страницы стилей редактора в диалоге конфигурации.</translation>
+        <translation>&lt;b&gt;Mapкеры Редактора&lt;/b&gt;&lt;p&gt;Показывает маркеры редактора. Все маркеры, такие как закладки, точки останова, ошибки или маркеры измененных линий обозначены различными цветами настраиваемыми с помощью страницы стилей редактора в диалоге конфигурации.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -15594,8 +15598,8 @@ Reason: {0}</source>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Открыть ссылку в новой закладке	Shift+Левая кнопка мыши</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="838"/>
@@ -19425,7 +19429,7 @@ You have %n tab(s) open.</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="23"/>
         <source>&amp;Path within Project:</source>
-        <translation></translation>
+        <translation>&amp;Путь внутри проекта:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="35"/>
@@ -22284,20 +22288,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>HgOptionsDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="14"/>
-        <source>Repository Infos</source>
-        <translation>Информация о репозитории</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="17"/>
-        <source>&lt;b&gt;Repository Infos Dialog&lt;/b&gt;
-&lt;p&gt;Enter the various infos into the entry fields. These values are used to generate a new project in the repository. If the checkbox is selected, the URL must end in the project name. A directory tree with project/tags, project/branches and project/trunk will be generated in the repository. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
-&lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Информация о репозитории&lt;/b&gt;
-&lt;p&gt;Задайте информацию о репозитории в полях ввода. Эти значения будут использованы для создания проекта в репозитории. Если установлена пометка, URL должен завершиться именем проекта. Будет использовано стандартное расположение репозитория (&lt;code&gt;проект/tags&lt;/code&gt;, &lt;code&gt;проект/branches&lt;/code&gt; and &lt;code&gt;проект/trunk&lt;/code&gt;). В этом случае, Вы можете ввести тег или ветвь в виде (&lt;code&gt;tags/тег&lt;/code&gt;, или &lt;code&gt;branches/ветвь&lt;/code&gt;. Если пометка снята, необходимо ввести полный путь в репозитории.&lt;/p&gt;
-&lt;p&gt;Для удалённых репозиториев URL должен содержать имя сервера.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="30"/>
         <source>Commit &amp;Message:</source>
         <translation>&amp;Описание изменений:</translation>
@@ -22318,6 +22308,20 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="47"/>
         <source>new project started</source>
         <translation>Начат новый проект</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="14"/>
+        <source>Repository Infos</source>
+        <translation>Информация о репозитории</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgOptionsDialog.ui" line="17"/>
+        <source>&lt;b&gt;Repository Infos Dialog&lt;/b&gt;
+&lt;p&gt;Enter the various infos into the entry fields. These values are used to generate a new project in the repository. If the checkbox is selected, the URL must end in the project name. A directory tree with project/tags, project/branches and project/trunk will be generated in the repository. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
+&lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Информация о репозитории&lt;/b&gt;
+&lt;p&gt;Задайте информацию о репозитории в полях ввода. Эти значения будут использованы для создания проекта в репозитории. Если установлена пометка, URL должен завершиться именем проекта. Будет использовано стандартное расположение репозитория (&lt;code&gt;проект/tags&lt;/code&gt;, &lt;code&gt;проект/branches&lt;/code&gt; and &lt;code&gt;проект/trunk&lt;/code&gt;). В этом случае, Вы можете ввести тег или ветвь в виде (&lt;code&gt;tags/тег&lt;/code&gt;, или &lt;code&gt;branches/ветвь&lt;/code&gt;. Если пометка снята, необходимо ввести полный путь в репозитории.&lt;/p&gt;
+&lt;p&gt;Для удалённых репозиториев URL должен содержать имя сервера.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -23446,7 +23450,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="959"/>
         <source>Change the phase of revisions</source>
-        <translation></translation>
+        <translation>Изменить фазу ревизий</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="962"/>
@@ -23476,12 +23480,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="990"/>
         <source>Continue the last copying session after conflicts were resolved</source>
-        <translation>Копировать изменения (продолжить после рарешения конфликтов)</translation>
+        <translation>Копировать изменения (продолжить после разрешения конфликтов)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="993"/>
         <source>&lt;b&gt;Continue Copying Session&lt;/b&gt;&lt;p&gt;This continues the last copying session after conflicts were resolved.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Копировать изменения (продолжить)&lt;/b&gt;&lt;p&gt;Продолжить копировать изменения после рарешения конфликтов.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Копировать изменения (продолжить)&lt;/b&gt;&lt;p&gt;Продолжить копировать изменения после разрешения конфликтов.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1314"/>
@@ -27096,7 +27100,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="412"/>
         <source>&amp;Select All</source>
-        <translation></translation>
+        <translation>&amp;Выбрать всё</translation>
     </message>
     <message>
         <location filename="../IconEditor/IconEditorWindow.py" line="412"/>
@@ -28546,9 +28550,9 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="782"/>
         <source>limited to %n user(s)</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Не более %n пользователя</numerusform>
+            <numerusform>Не более %n пользователей</numerusform>
+            <numerusform>Не более %n пользователей</numerusform>
         </translation>
     </message>
     <message>
@@ -28625,9 +28629,9 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="893"/>
         <source>{0} sets the channel limit to %n nick(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>{0} устанавливает максимальное число пользователей для канала в %n.</numerusform>
+            <numerusform>{0} устанавливает максимальное число пользователей для канала в %n.</numerusform>
+            <numerusform>{0} устанавливает максимальное число пользователей для канала в %n.</numerusform>
         </translation>
     </message>
     <message>
@@ -28869,36 +28873,36 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1616"/>
         <source>%n day(s)</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n день</numerusform>
+            <numerusform>%n дня</numerusform>
+            <numerusform>%n дней</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1630"/>
         <source>%n hour(s)</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n час</numerusform>
+            <numerusform>%n часа</numerusform>
+            <numerusform>%n часов</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1642"/>
         <source>%n minute(s)</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n минута</numerusform>
+            <numerusform>%n минуты</numerusform>
+            <numerusform>%n минут</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1643"/>
         <source>%n second(s)</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n секунда</numerusform>
+            <numerusform>%n секунды</numerusform>
+            <numerusform>%n секунд</numerusform>
         </translation>
     </message>
     <message>
@@ -28923,9 +28927,9 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1652"/>
         <source>{0} has been idle for %n second(s).</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>{0} бездействовал %n секунду.</numerusform>
+            <numerusform>{0} бездействовал %n секунды.</numerusform>
+            <numerusform>{0} бездействовал %n секунд.</numerusform>
         </translation>
     </message>
     <message>
@@ -29011,7 +29015,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Network/IRC/IrcChannelWidget.py" line="1811"/>
         <source>Enter the topic for this channel:</source>
-        <translation>Введите тему для канала</translation>
+        <translation>Введите тему для канала:</translation>
     </message>
 </context>
 <context>
@@ -30667,7 +30671,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/Lexers/LexerPygments.py" line="173"/>
         <source>Entity</source>
-        <translation></translation>
+        <translation>Объект</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/LexerPygments.py" line="174"/>
@@ -36896,12 +36900,12 @@ Select Update.</source>
     <message>
         <location filename="../Project/Project.py" line="2602"/>
         <source>Create project management directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Создать служебный каталог проекта</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="2602"/>
         <source>&lt;p&gt;The project directory &lt;b&gt;{0}&lt;/b&gt; is not writable.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Каталог проекта &lt;b&gt;{0}&lt;/b&gt; не доступен для записи.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -38950,9 +38954,9 @@ Select Update.</source>
         <location filename="../DataViews/PyCoverageDialog.py" line="243"/>
         <source>%n file(s) could not be parsed. Coverage info for these is not available.</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n файл не может быть разобран. Информация о покрытии для него недоступна.</numerusform>
+            <numerusform>%n файла не могут быть разобраны. Информация о покрытии для них недоступна.</numerusform>
+            <numerusform>%n файлов не могут быть разобраны. Информация о покрытии для них недоступна.</numerusform>
         </translation>
     </message>
     <message>
@@ -45705,9 +45709,9 @@ File: {2}, Line: {3}
         <location filename="../Snapshot/SnapshotTimer.py" line="103"/>
         <source>Snapshot will be taken in %n seconds</source>
         <translation>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>Снимок будет зделан через %n секунду</numerusform>
+            <numerusform>Снимок будет зделан через %n секунды</numerusform>
+            <numerusform>Снимок будет зделан через %n секунд</numerusform>
         </translation>
     </message>
 </context>
@@ -53867,7 +53871,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/TasksPage.ui" line="206"/>
         <source>Select the background colour for these tasks.</source>
-        <translation>Задайте цвет фона для отображения задач</translation>
+        <translation>Задайте цвет фона для отображения задач.</translation>
     </message>
 </context>
 <context>
