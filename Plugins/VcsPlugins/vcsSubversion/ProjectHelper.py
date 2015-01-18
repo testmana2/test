@@ -503,9 +503,6 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsUpdateAct)
         menu.addAction(self.vcsCommitAct)
         menu.addSeparator()
-        menu.addAction(self.vcsNewAct)
-        menu.addAction(self.vcsExportAct)
-        menu.addSeparator()
         menu.addAction(self.vcsTagAct)
         if self.vcs.otherData["standardLayout"]:
             menu.addAction(self.svnTagListAct)
@@ -543,6 +540,9 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsPropsAct)
         menu.addSeparator()
         menu.addAction(self.svnConfigAct)
+        menu.addSeparator()
+        menu.addAction(self.vcsNewAct)
+        menu.addAction(self.vcsExportAct)
     
     def __svnResolve(self):
         """

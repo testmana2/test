@@ -1327,12 +1327,16 @@ class HgProjectHelper(VcsProjectHelper):
         changesMenu = QMenu(self.tr("Manage Changes"), menu)
         changesMenu.setTearOffEnabled(True)
         changesMenu.addAction(self.vcsRevertAct)
+        changesMenu.addSeparator()
         changesMenu.addAction(self.vcsMergeAct)
         changesMenu.addAction(self.hgShowConflictsAct)
         changesMenu.addAction(self.vcsResolveAct)
         changesMenu.addAction(self.hgUnresolveAct)
         changesMenu.addAction(self.hgReMergeAct)
         changesMenu.addAction(self.hgCancelMergeAct)
+        if self.vcs.version >= (2, 1):
+            changesMenu.addSeparator()
+            changesMenu.addAction(self.hgPhaseAct)
         
         act = menu.addAction(
             UI.PixmapCache.getIcon(
@@ -1352,16 +1356,13 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.hgOutgoingAct)
         menu.addAction(self.hgPushAct)
         menu.addSeparator()
+        menu.addMenu(changesMenu)
+        menu.addSeparator()
         if graftMenu is not None:
             menu.addMenu(graftMenu)
             menu.addSeparator()
         menu.addMenu(bundleMenu)
         menu.addMenu(patchMenu)
-        menu.addSeparator()
-        menu.addMenu(self.__extensionsMenu)
-        menu.addSeparator()
-        menu.addAction(self.vcsNewAct)
-        menu.addAction(self.vcsExportAct)
         menu.addSeparator()
         menu.addMenu(tagsMenu)
         menu.addMenu(branchesMenu)
@@ -1376,10 +1377,7 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addAction(self.vcsDiffAct)
         menu.addAction(self.hgExtDiffAct)
         menu.addSeparator()
-        if self.vcs.version >= (2, 1):
-            menu.addAction(self.hgPhaseAct)
-            menu.addSeparator()
-        menu.addMenu(changesMenu)
+        menu.addMenu(self.__extensionsMenu)
         menu.addSeparator()
         menu.addAction(self.vcsSwitchAct)
         menu.addSeparator()
@@ -1396,6 +1394,9 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.hgEditUserConfigAct)
         menu.addAction(self.hgConfigAct)
+        menu.addSeparator()
+        menu.addAction(self.vcsNewAct)
+        menu.addAction(self.vcsExportAct)
     
     def showMenu(self):
         """
