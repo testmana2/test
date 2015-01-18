@@ -96,6 +96,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.fieldCombo.addItem(self.tr("Revision"), "revision")
         self.fieldCombo.addItem(self.tr("Author"), "author")
         self.fieldCombo.addItem(self.tr("Message"), "message")
+        self.fieldCombo.addItem(self.tr("File"), "file")
         
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
@@ -1428,31 +1429,22 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
             branch = self.branchCombo.currentText()
             closedBranch = branch + '--'
-            fieldIndex, searchRx = self.__prepareFieldSearch()
+            fieldIndex, searchRx, indexIsRole = self.__prepareFieldSearch()
             
-##            txt = self.fieldCombo.currentText()
-##            if txt == self.tr("Author"):
-##                fieldIndex = self.AuthorColumn
-##                searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-##            elif txt == self.tr("Revision"):
-##                fieldIndex = self.RevisionColumn
-##                txt = self.rxEdit.text()
-##                if txt.startswith("^"):
-##                    searchRx = QRegExp("^\s*{0}".format(txt[1:]),
-##                                       Qt.CaseInsensitive)
-##                else:
-##                    searchRx = QRegExp(txt, Qt.CaseInsensitive)
-##            else:
-##                fieldIndex = self.MessageColumn
-##                searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-##            
             visibleItemCount = self.logTree.topLevelItemCount()
             currentItem = self.logTree.currentItem()
             for topIndex in range(self.logTree.topLevelItemCount()):
                 topItem = self.logTree.topLevelItem(topIndex)
-                if fieldIndex == self.MessageColumn:
-                    # Find based on complete message text
-                    txt = "\n".join(topItem.data(0, self.__messageRole))
+                if indexIsRole:
+                    if fieldIndex == self.__changesRole:
+                        changes = topItem.data(0, self.__changesRole)
+                        txt = "\n".join(
+                            [c["path"] for c in changes] +
+                            [c["copyfrom"] for c in changes]
+                        )
+                    else:
+                        # Find based on complete message text
+                        txt = "\n".join(topItem.data(0, self.__messageRole))
                 else:
                     txt = topItem.text(fieldIndex)
                 if topItem.text(self.DateColumn) <= to_ and \
@@ -1478,8 +1470,10 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         """
         Private slot to prepare the filed search data.
         
-        @return tuple of field index and search expression (integer, string)
+        @return tuple of field index, search expression and flag indicating
+            that the field index is a data role (integer, string, boolean)
         """
+        indexIsRole = False
         txt = self.fieldCombo.itemData(self.fieldCombo.currentIndex())
         if txt == "author":
             fieldIndex = self.AuthorColumn
@@ -1492,11 +1486,16 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                                    Qt.CaseInsensitive)
             else:
                 searchRx = QRegExp(txt, Qt.CaseInsensitive)
-        else:
-            fieldIndex = self.MessageColumn
+        elif txt == "file":
+            fieldIndex = self.__changesRole
             searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
+            indexIsRole = True
+        else:
+            fieldIndex = self.__messageRole
+            searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
+            indexIsRole = True
         
-        return fieldIndex, searchRx
+        return fieldIndex, searchRx, indexIsRole
     
     @pyqtSlot(bool)
     def on_stopCheckBox_clicked(self, checked):
@@ -1751,7 +1750,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         """
         self.__findBackwards = backwards
         
-        fieldIndex, searchRx = self.__prepareFieldSearch()
+        fieldIndex, searchRx, indexIsRole = self.__prepareFieldSearch()
         currentIndex = self.logTree.indexOfTopLevelItem(
             self.logTree.currentItem())
         if backwards:
@@ -1768,9 +1767,16 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         for index in indexes:
             topItem = self.logTree.topLevelItem(index)
-            if fieldIndex == self.MessageColumn:
-                # Find based on complete message text
-                txt = "\n".join(topItem.data(0, self.__messageRole))
+            if indexIsRole:
+                if fieldIndex == self.__changesRole:
+                    changes = topItem.data(0, self.__changesRole)
+                    txt = "\n".join(
+                        [c["path"] for c in changes] +
+                        [c["copyfrom"] for c in changes]
+                    )
+                else:
+                    # Find based on complete message text
+                    txt = "\n".join(topItem.data(0, self.__messageRole))
             else:
                 txt = topItem.text(fieldIndex)
             if searchRx.indexIn(txt) > -1:
