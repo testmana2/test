@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2013 First Lastname <your@email.com> -->
 <application>
  <id type="desktop">eric6@MARKER@.desktop</id>
  <metadata_license>CC-BY-3.0</metadata_license>
@@ -13,8 +12,8 @@
     the highly flexible Scintilla editor control. It is designed to be
     usable as everdays' quick and dirty editor as well as being usable as a
     professional project management tool integrating many advanced features
-    Python offers the professional coder. eric4 includes a plugin system, which
-    allows easy extension of the IDE functionality with plugins downloadable
+    Python offers the professional coder. Eric includes a plug-in system, which
+    allows easy extension of the IDE functionality with plug-ins downloadable
     from the net.
   </p>
  </description>

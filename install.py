@@ -92,6 +92,11 @@ PythonMarkers = {
     2: "_py2",
     3: "_py3",
 }
+# Define a mapping of markers to full text
+PythonTextMarkers = {
+    "_py2": "Python 2",
+    "_py3": "Python 3",
+}
 
 
 def exit(rcode=0):
@@ -278,6 +283,11 @@ def copyDesktopFile(src, dst, marker):
     f.close()
     
     text = text.replace("@MARKER@", marker)
+    if marker:
+        t_marker = " ({0})".format(PythonTextMarkers[marker])
+    else:
+        t_marker = ""
+    text = text.replace("@PY_MARKER@", t_marker)
     
     if sys.version_info[0] == 2:
         f = codecs.open(dst, "w", "utf-8")
