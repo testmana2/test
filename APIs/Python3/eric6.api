@@ -4666,13 +4666,17 @@ eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_d
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_diffP2Button_clicked?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_diffRevisionsButton_clicked?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_fieldCombo_activated?4(txt)
+eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_findNextButton_clicked?4()
+eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_findPrevButton_clicked?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_fromDate_dateChanged?4(date)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_input_returnPressed?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_logTree_currentItemChanged?4(current, previous)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_logTree_itemSelectionChanged?4()
+eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_modeComboBox_currentIndexChanged?4(index)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_nextButton_clicked?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_passwordCheckBox_toggled?4(isOn)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_refreshButton_clicked?4()
+eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_rxEdit_returnPressed?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_rxEdit_textChanged?4(txt)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_sendButton_clicked?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.HgLogBrowserDialog.on_stopCheckBox_clicked?4(checked)
@@ -9048,6 +9052,7 @@ eric6.install-i18n.usage?4(rcode=2)
 eric6.install.BlackLists?7
 eric6.install.PlatformsBlackLists?7
 eric6.install.PythonMarkers?7
+eric6.install.PythonTextMarkers?7
 eric6.install.apisDir?7
 eric6.install.cfg?7
 eric6.install.cleanUp?4()

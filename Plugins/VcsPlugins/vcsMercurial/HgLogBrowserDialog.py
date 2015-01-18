@@ -86,6 +86,17 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.tr("Press to refresh the list of changesets"))
         self.refreshButton.setEnabled(False)
         
+        self.findPrevButton.setIcon(UI.PixmapCache.getIcon("1leftarrow.png"))
+        self.findNextButton.setIcon(UI.PixmapCache.getIcon("1rightarrow.png"))
+        self.__findBackwards = False
+        
+        self.modeComboBox.addItem(self.tr("Find"), "find")
+        self.modeComboBox.addItem(self.tr("Filter"), "filter")
+        
+        self.fieldCombo.addItem(self.tr("Revision"), "revision")
+        self.fieldCombo.addItem(self.tr("Author"), "author")
+        self.fieldCombo.addItem(self.tr("Message"), "message")
+        
         self.vcs = vcs
         if mode in ("log", "incoming", "outgoing"):
             self.commandMode = mode
@@ -101,10 +112,15 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             "<tr><td><b>Date</b></td><td>{1}</td></tr>"
             "<tr><td><b>Author</b></td><td>{2}</td></tr>"
             "<tr><td><b>Branch</b></td><td>{3}</td></tr>"
-            "<tr><td><b>Tags</b></td><td>{4}</td></tr>"
-            "<tr><td><b>Bookmarks</b></td><td>{5}</td></tr>"
-            "<tr><td><b>Parents</b></td><td>{6}</td></tr>"
+            "<tr><td><b>Parents</b></td><td>{4}</td></tr>"
+            "{5}"
             "</table>"
+        )
+        self.__tagsTemplate = self.tr(
+            "<tr><td><b>Tags</b></td><td>{0}</td></tr>"
+        )
+        self.__bookmarksTemplate = self.tr(
+            "<tr><td><b>Bookmarks</b></td><td>{0}</td></tr>"
         )
         
         self.__bundle = ""
@@ -253,8 +269,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.branchCombo.clear()
         self.fromDate.setDate(QDate.currentDate())
         self.toDate.setDate(QDate.currentDate())
-        self.fieldCombo.setCurrentIndex(self.fieldCombo.findText(
-            self.tr("Message")))
+        self.fieldCombo.setCurrentIndex(self.fieldCombo.findData("message"))
         self.limitSpinBox.setValue(self.vcs.getPlugin().getPreferences(
             "LogLimit"))
         self.stopCheckBox.setChecked(self.vcs.getPlugin().getPreferences(
@@ -1051,8 +1066,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.branchCombo.findText(branchFilter))
         
         self.__filterLogsEnabled = True
-        self.__filterLogs()
-        
+        if self.__actionMode() == "filter":
+            self.__filterLogs()        
         self.__updateDiffButtons()
         self.__updateToolMenuActions()
         
@@ -1227,17 +1242,25 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.filesTree.clear()
         
         if itm is not None:
+            if itm.text(self.TagsColumn):
+                tagsStr = self.__tagsTemplate.format(itm.text(self.TagsColumn))
+            else:
+                tagsStr = ""
+            if itm.text(self.BookmarksColumn):
+                bookmarksStr = self.__bookmarksTemplate.format(
+                    itm.text(self.BookmarksColumn))
+            else:
+                bookmarksStr = ""
             self.detailsEdit.setHtml(self.__detailsTemplate.format(
                 itm.text(self.RevisionColumn),
                 itm.text(self.DateColumn),
                 itm.text(self.AuthorColumn),
                 itm.text(self.BranchColumn).replace(
                     self.ClosedIndicator, ""),
-                itm.text(self.TagsColumn),
-                itm.text(self.BookmarksColumn),
                 ", ".join(
                     [str(x) for x in itm.data(0, self.__parentsRole)]
                 ),
+                tagsStr + bookmarksStr,
             ))
             
             for line in itm.data(0, self.__messageRole):
@@ -1343,7 +1366,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         @param date new date (QDate)
         """
-        self.__filterLogs()
+        if self.__actionMode() == "filter":
+            self.__filterLogs()
     
     @pyqtSlot(QDate)
     def on_toDate_dateChanged(self, date):
@@ -1352,7 +1376,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         @param date new date (QDate)
         """
-        self.__filterLogs()
+        if self.__actionMode() == "filter":
+            self.__filterLogs()
     
     @pyqtSlot(str)
     def on_branchCombo_activated(self, txt):
@@ -1361,7 +1386,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         @param txt text of the selected branch (string)
         """
-        self.__filterLogs()
+        if self.__actionMode() == "filter":
+            self.__filterLogs()
     
     @pyqtSlot(str)
     def on_fieldCombo_activated(self, txt):
@@ -1370,7 +1396,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         @param txt text of the selected field (string)
         """
-        self.__filterLogs()
+        if self.__actionMode() == "filter":
+            self.__filterLogs()
     
     @pyqtSlot(str)
     def on_rxEdit_textChanged(self, txt):
@@ -1379,7 +1406,18 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         @param txt filter expression (string)
         """
-        self.__filterLogs()
+        if self.__actionMode() == "filter":
+            self.__filterLogs()
+        elif self.__actionMode() == "find":
+            self.__findItem(self.__findBackwards, interactive=True)
+    
+    @pyqtSlot()
+    def on_rxEdit_returnPressed(self):
+        """
+        Private slot handling a press of the Return key in the rxEdit input.
+        """
+        if self.__actionMode() == "find":
+            self.__findItem(self.__findBackwards, interactive=True)
     
     def __filterLogs(self):
         """
@@ -1390,32 +1428,39 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             to_ = self.toDate.date().addDays(1).toString("yyyy-MM-dd")
             branch = self.branchCombo.currentText()
             closedBranch = branch + '--'
+            fieldIndex, searchRx = self.__prepareFieldSearch()
             
-            txt = self.fieldCombo.currentText()
-            if txt == self.tr("Author"):
-                fieldIndex = self.AuthorColumn
-                searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-            elif txt == self.tr("Revision"):
-                fieldIndex = self.RevisionColumn
-                txt = self.rxEdit.text()
-                if txt.startswith("^"):
-                    searchRx = QRegExp("^\s*{0}".format(txt[1:]),
-                                       Qt.CaseInsensitive)
-                else:
-                    searchRx = QRegExp(txt, Qt.CaseInsensitive)
-            else:
-                fieldIndex = self.MessageColumn
-                searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
-            
+##            txt = self.fieldCombo.currentText()
+##            if txt == self.tr("Author"):
+##                fieldIndex = self.AuthorColumn
+##                searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
+##            elif txt == self.tr("Revision"):
+##                fieldIndex = self.RevisionColumn
+##                txt = self.rxEdit.text()
+##                if txt.startswith("^"):
+##                    searchRx = QRegExp("^\s*{0}".format(txt[1:]),
+##                                       Qt.CaseInsensitive)
+##                else:
+##                    searchRx = QRegExp(txt, Qt.CaseInsensitive)
+##            else:
+##                fieldIndex = self.MessageColumn
+##                searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
+##            
+            visibleItemCount = self.logTree.topLevelItemCount()
             currentItem = self.logTree.currentItem()
             for topIndex in range(self.logTree.topLevelItemCount()):
                 topItem = self.logTree.topLevelItem(topIndex)
+                if fieldIndex == self.MessageColumn:
+                    # Find based on complete message text
+                    txt = "\n".join(topItem.data(0, self.__messageRole))
+                else:
+                    txt = topItem.text(fieldIndex)
                 if topItem.text(self.DateColumn) <= to_ and \
                    topItem.text(self.DateColumn) >= from_ and \
                    (branch == self.__allBranchesFilter or
                     topItem.text(self.BranchColumn) in
                         [branch, closedBranch]) and \
-                   searchRx.indexIn(topItem.text(fieldIndex)) > -1:
+                   searchRx.indexIn(txt) > -1:
                     topItem.setHidden(False)
                     if topItem is currentItem:
                         self.on_logTree_currentItemChanged(topItem, None)
@@ -1424,6 +1469,34 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                     if topItem is currentItem:
                         self.messageEdit.clear()
                         self.filesTree.clear()
+                    visibleItemCount -= 1
+            self.logTree.header().setSectionHidden(
+                self.IconColumn,
+                visibleItemCount != self.logTree.topLevelItemCount())
+    
+    def __prepareFieldSearch(self):
+        """
+        Private slot to prepare the filed search data.
+        
+        @return tuple of field index and search expression (integer, string)
+        """
+        txt = self.fieldCombo.itemData(self.fieldCombo.currentIndex())
+        if txt == "author":
+            fieldIndex = self.AuthorColumn
+            searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
+        elif txt == "revision":
+            fieldIndex = self.RevisionColumn
+            txt = self.rxEdit.text()
+            if txt.startswith("^"):
+                searchRx = QRegExp("^\s*{0}".format(txt[1:]),
+                                   Qt.CaseInsensitive)
+            else:
+                searchRx = QRegExp(txt, Qt.CaseInsensitive)
+        else:
+            fieldIndex = self.MessageColumn
+            searchRx = QRegExp(self.rxEdit.text(), Qt.CaseInsensitive)
+        
+        return fieldIndex, searchRx
     
     @pyqtSlot(bool)
     def on_stopCheckBox_clicked(self, checked):
@@ -1623,3 +1696,88 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         if revs:
             self.vcs.getExtensionObject("largefiles").hgLfPull(
                 self.repodir, revisions=revs)
+    
+    def __actionMode(self):
+        """
+        Private method to get the selected action mode.
+        
+        @return selected action mode (string, one of filter or find)
+        """
+        return self.modeComboBox.itemData(
+            self.modeComboBox.currentIndex())
+    
+    @pyqtSlot(int)
+    def on_modeComboBox_currentIndexChanged(self, index):
+        """
+        Private slot to react on mode changes.
+        """
+        mode = self.modeComboBox.itemData(index)
+        findMode = mode == "find"
+        filterMode = mode == "filter"
+        
+        self.fromDate.setEnabled(filterMode)
+        self.toDate.setEnabled(filterMode)
+        self.branchCombo.setEnabled(filterMode)
+        self.findPrevButton.setVisible(findMode)
+        self.findNextButton.setVisible(findMode)
+        
+        if findMode:
+            for topIndex in range(self.logTree.topLevelItemCount()):
+                self.logTree.topLevelItem(topIndex).setHidden(False)
+            self.logTree.header().setSectionHidden(self.IconColumn, False)
+        elif filterMode:
+            self.__filterLogs()
+    
+    @pyqtSlot()
+    def on_findPrevButton_clicked(self):
+        """
+        Private slot to find the previous item matching the entered criteria.
+        """
+        self.__findItem(True)
+    
+    @pyqtSlot()
+    def on_findNextButton_clicked(self):
+        """
+        Private slot to find the next item matching the entered criteria.
+        """
+        self.__findItem(False)
+    
+    def __findItem(self, backwards=False, interactive=False):
+        """
+        Private slot to find an item matching the entered criteria.
+        
+        @param backwards flag indicating to search backwards (boolean)
+        @param interactive flag indicating an interactive search (boolean)
+        """
+        self.__findBackwards = backwards
+        
+        fieldIndex, searchRx = self.__prepareFieldSearch()
+        currentIndex = self.logTree.indexOfTopLevelItem(
+            self.logTree.currentItem())
+        if backwards:
+            if interactive:
+                indexes = range(currentIndex, -1, -1)
+            else:
+                indexes = range(currentIndex - 1, -1, -1)
+        else:
+            if interactive:
+                indexes = range(currentIndex, self.logTree.topLevelItemCount())
+            else:
+                indexes = range(currentIndex + 1,
+                                self.logTree.topLevelItemCount())
+        
+        for index in indexes:
+            topItem = self.logTree.topLevelItem(index)
+            if fieldIndex == self.MessageColumn:
+                # Find based on complete message text
+                txt = "\n".join(topItem.data(0, self.__messageRole))
+            else:
+                txt = topItem.text(fieldIndex)
+            if searchRx.indexIn(txt) > -1:
+                self.logTree.setCurrentItem(self.logTree.topLevelItem(index))
+                break
+        else:
+            E5MessageBox.information(
+                self,
+                self.tr("Find Commit"),
+                self.tr("""'{0}' was not found.""").format(self.rxEdit.text()))

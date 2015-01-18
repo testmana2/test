@@ -60,6 +60,9 @@ QWidget, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__init__">HgLogBrowserDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__actionMode">__actionMode</a></td>
+<td>Private method to get the selected action mode.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__branchColor">__branchColor</a></td>
 <td>Private method to calculate a color for a given branch name.</td>
 </tr><tr>
@@ -68,6 +71,9 @@ QWidget, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__filterLogs">__filterLogs</a></td>
 <td>Private method to filter the log entries.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__findItem">__findItem</a></td>
+<td>Private slot to find an item matching the entered criteria.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__finish">__finish</a></td>
 <td>Private slot called when the process finished or the user pressed the button.</td>
@@ -113,6 +119,9 @@ QWidget, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__phaseActTriggered">__phaseActTriggered</a></td>
 <td>Private slot to handle the Change Phase action.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__prepareFieldSearch">__prepareFieldSearch</a></td>
+<td>Private slot to prepare the filed search data.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__procFinished">__procFinished</a></td>
 <td>Private slot connected to the finished signal.</td>
@@ -183,6 +192,12 @@ QWidget, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_fieldCombo_activated">on_fieldCombo_activated</a></td>
 <td>Private slot called, when a new filter field is selected.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.on_findNextButton_clicked">on_findNextButton_clicked</a></td>
+<td>Private slot to find the next item matching the entered criteria.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.on_findPrevButton_clicked">on_findPrevButton_clicked</a></td>
+<td>Private slot to find the previous item matching the entered criteria.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.on_fromDate_dateChanged">on_fromDate_dateChanged</a></td>
 <td>Private slot called, when the from date changes.</td>
 </tr><tr>
@@ -195,6 +210,9 @@ QWidget, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.on_logTree_itemSelectionChanged">on_logTree_itemSelectionChanged</a></td>
 <td>Private slot called, when the selection has changed.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.on_modeComboBox_currentIndexChanged">on_modeComboBox_currentIndexChanged</a></td>
+<td>Private slot to react on mode changes.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.on_nextButton_clicked">on_nextButton_clicked</a></td>
 <td>Private slot to handle the Next button.</td>
 </tr><tr>
@@ -203,6 +221,9 @@ QWidget, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
 <td>Private slot to refresh the log.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.on_rxEdit_returnPressed">on_rxEdit_returnPressed</a></td>
+<td>Private slot handling a press of the Return key in the rxEdit input.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.on_rxEdit_textChanged">on_rxEdit_textChanged</a></td>
 <td>Private slot called, when a filter expression is entered.</td>
@@ -243,6 +264,16 @@ mode of the dialog (string; one of log, incoming, outgoing)
 <dd>
 parent widget (QWidget)
 </dd>
+</dl><a NAME="HgLogBrowserDialog.__actionMode" ID="HgLogBrowserDialog.__actionMode"></a>
+<h4>HgLogBrowserDialog.__actionMode</h4>
+<b>__actionMode</b>(<i></i>)
+<p>
+        Private method to get the selected action mode.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+selected action mode (string, one of filter or find)
+</dd>
 </dl><a NAME="HgLogBrowserDialog.__branchColor" ID="HgLogBrowserDialog.__branchColor"></a>
 <h4>HgLogBrowserDialog.__branchColor</h4>
 <b>__branchColor</b>(<i>branchName</i>)
@@ -276,7 +307,20 @@ second revision number (integer)
 <b>__filterLogs</b>(<i></i>)
 <p>
         Private method to filter the log entries.
-</p><a NAME="HgLogBrowserDialog.__finish" ID="HgLogBrowserDialog.__finish"></a>
+</p><a NAME="HgLogBrowserDialog.__findItem" ID="HgLogBrowserDialog.__findItem"></a>
+<h4>HgLogBrowserDialog.__findItem</h4>
+<b>__findItem</b>(<i>backwards=False, interactive=False</i>)
+<p>
+        Private slot to find an item matching the entered criteria.
+</p><dl>
+<dt><i>backwards</i></dt>
+<dd>
+flag indicating to search backwards (boolean)
+</dd><dt><i>interactive</i></dt>
+<dd>
+flag indicating an interactive search (boolean)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__finish" ID="HgLogBrowserDialog.__finish"></a>
 <h4>HgLogBrowserDialog.__finish</h4>
 <b>__finish</b>(<i></i>)
 <p>
@@ -491,7 +535,17 @@ processed file name (string)
 <b>__phaseActTriggered</b>(<i></i>)
 <p>
         Private slot to handle the Change Phase action.
-</p><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
+</p><a NAME="HgLogBrowserDialog.__prepareFieldSearch" ID="HgLogBrowserDialog.__prepareFieldSearch"></a>
+<h4>HgLogBrowserDialog.__prepareFieldSearch</h4>
+<b>__prepareFieldSearch</b>(<i></i>)
+<p>
+        Private slot to prepare the filed search data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of field index and search expression (integer, string)
+</dd>
+</dl><a NAME="HgLogBrowserDialog.__procFinished" ID="HgLogBrowserDialog.__procFinished"></a>
 <h4>HgLogBrowserDialog.__procFinished</h4>
 <b>__procFinished</b>(<i>exitCode, exitStatus</i>)
 <p>
@@ -665,7 +719,17 @@ button that was clicked (QAbstractButton)
 <dd>
 text of the selected field (string)
 </dd>
-</dl><a NAME="HgLogBrowserDialog.on_fromDate_dateChanged" ID="HgLogBrowserDialog.on_fromDate_dateChanged"></a>
+</dl><a NAME="HgLogBrowserDialog.on_findNextButton_clicked" ID="HgLogBrowserDialog.on_findNextButton_clicked"></a>
+<h4>HgLogBrowserDialog.on_findNextButton_clicked</h4>
+<b>on_findNextButton_clicked</b>(<i></i>)
+<p>
+        Private slot to find the next item matching the entered criteria.
+</p><a NAME="HgLogBrowserDialog.on_findPrevButton_clicked" ID="HgLogBrowserDialog.on_findPrevButton_clicked"></a>
+<h4>HgLogBrowserDialog.on_findPrevButton_clicked</h4>
+<b>on_findPrevButton_clicked</b>(<i></i>)
+<p>
+        Private slot to find the previous item matching the entered criteria.
+</p><a NAME="HgLogBrowserDialog.on_fromDate_dateChanged" ID="HgLogBrowserDialog.on_fromDate_dateChanged"></a>
 <h4>HgLogBrowserDialog.on_fromDate_dateChanged</h4>
 <b>on_fromDate_dateChanged</b>(<i>date</i>)
 <p>
@@ -698,6 +762,11 @@ reference to the old current item (QTreeWidgetItem)
 <b>on_logTree_itemSelectionChanged</b>(<i></i>)
 <p>
         Private slot called, when the selection has changed.
+</p><a NAME="HgLogBrowserDialog.on_modeComboBox_currentIndexChanged" ID="HgLogBrowserDialog.on_modeComboBox_currentIndexChanged"></a>
+<h4>HgLogBrowserDialog.on_modeComboBox_currentIndexChanged</h4>
+<b>on_modeComboBox_currentIndexChanged</b>(<i>index</i>)
+<p>
+        Private slot to react on mode changes.
 </p><a NAME="HgLogBrowserDialog.on_nextButton_clicked" ID="HgLogBrowserDialog.on_nextButton_clicked"></a>
 <h4>HgLogBrowserDialog.on_nextButton_clicked</h4>
 <b>on_nextButton_clicked</b>(<i></i>)
@@ -718,6 +787,11 @@ flag indicating the status of the check box (boolean)
 <b>on_refreshButton_clicked</b>(<i></i>)
 <p>
         Private slot to refresh the log.
+</p><a NAME="HgLogBrowserDialog.on_rxEdit_returnPressed" ID="HgLogBrowserDialog.on_rxEdit_returnPressed"></a>
+<h4>HgLogBrowserDialog.on_rxEdit_returnPressed</h4>
+<b>on_rxEdit_returnPressed</b>(<i></i>)
+<p>
+        Private slot handling a press of the Return key in the rxEdit input.
 </p><a NAME="HgLogBrowserDialog.on_rxEdit_textChanged" ID="HgLogBrowserDialog.on_rxEdit_textChanged"></a>
 <h4>HgLogBrowserDialog.on_rxEdit_textChanged</h4>
 <b>on_rxEdit_textChanged</b>(<i>txt</i>)

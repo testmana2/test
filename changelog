@@ -13,6 +13,8 @@ Version 6.1-snapshot-2015mmdd:
 - Version Control System Interfaces
   -- All
      --- added capability to search in the output of Diff dialogs
+  -- Mercurial
+     --- enhanced the log browser functionality by a search mode
 
 Version 6.0.0:
 - bug fixes
