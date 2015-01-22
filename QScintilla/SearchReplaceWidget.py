@@ -159,6 +159,12 @@ and so on.</td></tr>
         self.findPrevAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findPrevAct)
         
+        self.ensurePolished()
+        msh = self.minimumSizeHint()
+        self.resize(max(self.width(), msh.width()),
+                    max(self.height(), msh.height())
+                    )
+        
         self.havefound = False
         self.__pos = None
         self.__findBackwards = False
