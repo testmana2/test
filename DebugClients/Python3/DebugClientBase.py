@@ -294,7 +294,10 @@ class DebugClientBase(object):
             d = {}
             d["id"] = -1
             d["name"] = "MainThread"
-            d["broken"] = self.isBroken()
+            if hasattr(self, "isBroken"):
+                d["broken"] = self.isBroken()
+            else:
+                d["broken"] = False
             threadList.append(d)
         
         self.write("{0}{1!r}\n".format(DebugProtocol.ResponseThreadList,
