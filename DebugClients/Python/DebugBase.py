@@ -636,6 +636,11 @@ class DebugBase(bdb.Bdb):
         @param exctb traceback for the exception
         @param unhandled flag indicating an uncaught exception
         """
+        
+        if exctype in [GeneratorExit, StopIteration]:
+            # ignore these
+            return
+        
         if exctype in [SystemExit, bdb.BdbQuit]:
             atexit._run_exitfuncs()
             if excval is None:
