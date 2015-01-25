@@ -267,11 +267,11 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.__finish()
         
         if self.paras == 0:
-            self.contents.insertPlainText(
+            self.contents.setCurrentCharFormat(self.cNormalFormat)
+            self.contents.setPlainText(
                 self.tr('There is no difference.'))
-            return
         
-        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
         
     def __appendText(self, line):
         """
