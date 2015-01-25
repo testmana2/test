@@ -1178,6 +1178,7 @@ class ViewManager(QObject):
         
         self.selectAllAct = E5Action(
             QCoreApplication.translate('ViewManager', 'Select all'),
+            UI.PixmapCache.getIcon("editSelectAll.png"),
             QCoreApplication.translate('ViewManager', '&Select all'),
             QKeySequence(QCoreApplication.translate(
                 'ViewManager', "Ctrl+A", "Edit|Select all")),
