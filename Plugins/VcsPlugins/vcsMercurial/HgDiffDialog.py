@@ -224,11 +224,11 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.inputGroup.hide()
         
         if self.paras == 0:
-            self.contents.insertPlainText(
+            self.contents.setCurrentCharFormat(self.cNormalFormat)
+            self.contents.setPlainText(
                 self.tr('There is no difference.'))
-            return
         
-        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
