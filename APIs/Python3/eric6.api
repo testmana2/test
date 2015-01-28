@@ -7589,6 +7589,7 @@ eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.selectionChanged
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.show?4(text='')
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.updateSelectionCheckBox?4(editor)
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget?1(replace, vm, parent=None)
+eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.changeEvent?4(evt)
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.findNext?4()
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.findPrev?4()
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.keyPressEvent?4(event)

@@ -9789,6 +9789,7 @@
       <keyword name="SearchReplaceWidget.__selectionBoundary" id="SearchReplaceWidget.__selectionBoundary" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__selectionBoundary" />
       <keyword name="SearchReplaceWidget.__showFind" id="SearchReplaceWidget.__showFind" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showFind" />
       <keyword name="SearchReplaceWidget.__showReplace" id="SearchReplaceWidget.__showReplace" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showReplace" />
+      <keyword name="SearchReplaceWidget.changeEvent" id="SearchReplaceWidget.changeEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.changeEvent" />
       <keyword name="SearchReplaceWidget.findNext" id="SearchReplaceWidget.findNext" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.findNext" />
       <keyword name="SearchReplaceWidget.findPrev" id="SearchReplaceWidget.findPrev" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.findPrev" />
       <keyword name="SearchReplaceWidget.keyPressEvent" id="SearchReplaceWidget.keyPressEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.keyPressEvent" />
