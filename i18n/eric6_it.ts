@@ -7277,6 +7277,12 @@ Vuoi uscire comunque ?</numerusform>
         <source>Enter message filter to add to the list:</source>
         <translation>Digita un filtro dei messaggi da aggiungere alla lista:</translation>
     </message>
+    <message>
+        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="123"/>
+        <source>&lt;b&gt;Error Message Filter&lt;/b&gt;
+&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>E5GraphicsView</name>

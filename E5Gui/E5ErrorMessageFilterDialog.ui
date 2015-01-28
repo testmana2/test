@@ -119,6 +119,10 @@
      </item>
      <item row="0" column="0" rowspan="5">
       <widget class="E5ListView" name="filterList">
+       <property name="whatsThis">
+        <string>&lt;b&gt;Error Message Filter&lt;/b&gt;
+&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</string>
+       </property>
        <property name="alternatingRowColors">
         <bool>true</bool>
        </property>
