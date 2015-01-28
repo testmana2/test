@@ -9,7 +9,7 @@ Module implementing the search and replace widget.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSignal, Qt, pyqtSlot
+from PyQt5.QtCore import pyqtSignal, Qt, pyqtSlot, QEvent
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton, QScrollArea, \
     QSizePolicy, QFrame
 
@@ -170,6 +170,19 @@ and so on.</td></tr>
         self.__findBackwards = False
         self.__selections = []
         self.__finding = False
+    
+    def changeEvent(self, evt):
+        """
+        Protected method handling state changes.
+        
+        @param evt event containing the state change (QEvent)
+        """
+        if evt.type() == QEvent.FontChange:
+            self.ensurePolished()
+            msh = self.minimumSizeHint()
+            self.resize(max(self.width(), msh.width()),
+                        max(self.height(), msh.height())
+                        )
     
     def __selectionBoundary(self, selections=None):
         """
