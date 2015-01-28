@@ -1016,7 +1016,7 @@ class Subversion(VersionControl):
         self.diff = SvnDiffDialog(self)
         self.diff.show()
         QApplication.processEvents()
-        self.diff.start(name)
+        self.diff.start(name, refreshable=True)
         
     def vcsStatus(self, name):
         """

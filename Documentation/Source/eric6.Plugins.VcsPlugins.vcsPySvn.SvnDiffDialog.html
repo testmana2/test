@@ -88,6 +88,9 @@ QWidget, SvnDialogMixin, Ui_SvnDiffDialog
 <td><a href="#SvnDiffDialog.on_filesCombo_activated">on_filesCombo_activated</a></td>
 <td>Private slot to handle the selection of a file.</td>
 </tr><tr>
+<td><a href="#SvnDiffDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
+<td>Private slot to refresh the display.</td>
+</tr><tr>
 <td><a href="#SvnDiffDialog.on_saveButton_clicked">on_saveButton_clicked</a></td>
 <td>Private slot to handle the Save button press.</td>
 </tr><tr>
@@ -213,7 +216,12 @@ button that was clicked (QAbstractButton)
 <dd>
 activated row (integer)
 </dd>
-</dl><a NAME="SvnDiffDialog.on_saveButton_clicked" ID="SvnDiffDialog.on_saveButton_clicked"></a>
+</dl><a NAME="SvnDiffDialog.on_refreshButton_clicked" ID="SvnDiffDialog.on_refreshButton_clicked"></a>
+<h4>SvnDiffDialog.on_refreshButton_clicked</h4>
+<b>on_refreshButton_clicked</b>(<i></i>)
+<p>
+        Private slot to refresh the display.
+</p><a NAME="SvnDiffDialog.on_saveButton_clicked" ID="SvnDiffDialog.on_saveButton_clicked"></a>
 <h4>SvnDiffDialog.on_saveButton_clicked</h4>
 <b>on_saveButton_clicked</b>(<i></i>)
 <p>
@@ -223,7 +231,7 @@ activated row (integer)
         filesystem.
 </p><a NAME="SvnDiffDialog.start" ID="SvnDiffDialog.start"></a>
 <h4>SvnDiffDialog.start</h4>
-<b>start</b>(<i>fn, versions=None, urls=None, summary=False, pegRev=None</i>)
+<b>start</b>(<i>fn, versions=None, urls=None, summary=False, pegRev=None, refreshable=False</i>)
 <p>
         Public slot to start the svn diff command.
 </p><dl>
@@ -244,6 +252,9 @@ flag indicating a summarizing diff
 </dd><dt><i>pegRev=</i></dt>
 <dd>
 revision number the filename is valid (integer)
+</dd><dt><i>refreshable=</i></dt>
+<dd>
+flag indicating a refreshable diff (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

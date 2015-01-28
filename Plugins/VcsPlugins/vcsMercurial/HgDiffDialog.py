@@ -43,6 +43,11 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         super(HgDiffDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.refreshButton = self.buttonBox.addButton(
+            self.tr("Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.tr("Press to refresh the display"))
+        self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
@@ -98,18 +103,23 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         else:
             return str(version)
     
-    def start(self, fn, versions=None, bundle=None, qdiff=False):
+    def start(self, fn, versions=None, bundle=None, qdiff=False,
+              refreshable=False):
         """
         Public slot to start the hg diff command.
         
         @param fn filename to be diffed (string)
-        @param versions list of versions to be diffed (list of up to 2 strings
-            or None)
-        @param bundle name of a bundle file (string)
-        @param qdiff flag indicating qdiff command shall be used (boolean)
+        @keyparam versions list of versions to be diffed (list of up to
+            2 strings or None)
+        @keyparam bundle name of a bundle file (string)
+        @keyparam qdiff flag indicating qdiff command shall be used (boolean)
+        @keyparam refreshable flag indicating a refreshable diff (boolean)
         """
+        self.refreshButton.setVisible(refreshable)
+        
         self.errorGroup.hide()
         self.inputGroup.show()
+        self.inputGroup.setEnabled(True)
         self.intercept = False
         self.filename = fn
         
@@ -222,6 +232,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         QApplication.restoreOverrideCursor()
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
+        self.refreshButton.setEnabled(True)
         
         if self.paras == 0:
             self.contents.setCurrentCharFormat(self.cNormalFormat)
@@ -229,6 +240,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
                 self.tr('There is no difference.'))
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
@@ -351,6 +363,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         """
         if button == self.buttonBox.button(QDialogButtonBox.Save):
             self.on_saveButton_clicked()
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
     
     @pyqtSlot(int)
     def on_filesCombo_activated(self, index):
@@ -445,6 +459,18 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
                     '<p>The patch file <b>{0}</b> could not be saved.'
                     '<br>Reason: {1}</p>')
                 .format(fname, str(why)))
+    
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the display.
+        """
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        
+        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
+        self.refreshButton.setEnabled(False)
+        
+        self.start(self.filename, refreshable=True)
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

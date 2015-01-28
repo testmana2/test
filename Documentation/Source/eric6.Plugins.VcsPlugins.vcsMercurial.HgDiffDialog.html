@@ -109,6 +109,9 @@ QWidget, Ui_HgDiffDialog
 <td><a href="#HgDiffDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
 <td>Private slot to handle the password checkbox toggled.</td>
 </tr><tr>
+<td><a href="#HgDiffDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
+<td>Private slot to refresh the display.</td>
+</tr><tr>
 <td><a href="#HgDiffDialog.on_saveButton_clicked">on_saveButton_clicked</a></td>
 <td>Private slot to handle the Save button press.</td>
 </tr><tr>
@@ -299,7 +302,12 @@ activated row (integer)
 <dd>
 flag indicating the status of the check box (boolean)
 </dd>
-</dl><a NAME="HgDiffDialog.on_saveButton_clicked" ID="HgDiffDialog.on_saveButton_clicked"></a>
+</dl><a NAME="HgDiffDialog.on_refreshButton_clicked" ID="HgDiffDialog.on_refreshButton_clicked"></a>
+<h4>HgDiffDialog.on_refreshButton_clicked</h4>
+<b>on_refreshButton_clicked</b>(<i></i>)
+<p>
+        Private slot to refresh the display.
+</p><a NAME="HgDiffDialog.on_saveButton_clicked" ID="HgDiffDialog.on_saveButton_clicked"></a>
 <h4>HgDiffDialog.on_saveButton_clicked</h4>
 <b>on_saveButton_clicked</b>(<i></i>)
 <p>
@@ -314,23 +322,26 @@ flag indicating the status of the check box (boolean)
         Private slot to send the input to the subversion process.
 </p><a NAME="HgDiffDialog.start" ID="HgDiffDialog.start"></a>
 <h4>HgDiffDialog.start</h4>
-<b>start</b>(<i>fn, versions=None, bundle=None, qdiff=False</i>)
+<b>start</b>(<i>fn, versions=None, bundle=None, qdiff=False, refreshable=False</i>)
 <p>
         Public slot to start the hg diff command.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to be diffed (string)
-</dd><dt><i>versions</i></dt>
+</dd><dt><i>versions=</i></dt>
 <dd>
-list of versions to be diffed (list of up to 2 strings
-            or None)
-</dd><dt><i>bundle</i></dt>
+list of versions to be diffed (list of up to
+            2 strings or None)
+</dd><dt><i>bundle=</i></dt>
 <dd>
 name of a bundle file (string)
-</dd><dt><i>qdiff</i></dt>
+</dd><dt><i>qdiff=</i></dt>
 <dd>
 flag indicating qdiff command shall be used (boolean)
+</dd><dt><i>refreshable=</i></dt>
+<dd>
+flag indicating a refreshable diff (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

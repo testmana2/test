@@ -101,6 +101,9 @@ QWidget, Ui_SvnDiffDialog
 <td><a href="#SvnDiffDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
 <td>Private slot to handle the password checkbox toggled.</td>
 </tr><tr>
+<td><a href="#SvnDiffDialog.on_refreshButton_clicked">on_refreshButton_clicked</a></td>
+<td>Private slot to refresh the display.</td>
+</tr><tr>
 <td><a href="#SvnDiffDialog.on_saveButton_clicked">on_saveButton_clicked</a></td>
 <td>Private slot to handle the Save button press.</td>
 </tr><tr>
@@ -265,7 +268,12 @@ activated row (integer)
 <dd>
 flag indicating the status of the check box (boolean)
 </dd>
-</dl><a NAME="SvnDiffDialog.on_saveButton_clicked" ID="SvnDiffDialog.on_saveButton_clicked"></a>
+</dl><a NAME="SvnDiffDialog.on_refreshButton_clicked" ID="SvnDiffDialog.on_refreshButton_clicked"></a>
+<h4>SvnDiffDialog.on_refreshButton_clicked</h4>
+<b>on_refreshButton_clicked</b>(<i></i>)
+<p>
+        Private slot to refresh the display.
+</p><a NAME="SvnDiffDialog.on_saveButton_clicked" ID="SvnDiffDialog.on_saveButton_clicked"></a>
 <h4>SvnDiffDialog.on_saveButton_clicked</h4>
 <b>on_saveButton_clicked</b>(<i></i>)
 <p>
@@ -280,7 +288,7 @@ flag indicating the status of the check box (boolean)
         Private slot to send the input to the subversion process.
 </p><a NAME="SvnDiffDialog.start" ID="SvnDiffDialog.start"></a>
 <h4>SvnDiffDialog.start</h4>
-<b>start</b>(<i>fn, versions=None, urls=None, summary=False</i>)
+<b>start</b>(<i>fn, versions=None, urls=None, summary=False, refreshable=False</i>)
 <p>
         Public slot to start the svn diff command.
 </p><dl>
@@ -298,6 +306,9 @@ list of repository URLs (list of 2 strings)
 <dd>
 flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
+</dd><dt><i>refreshable=</i></dt>
+<dd>
+flag indicating a refreshable diff (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

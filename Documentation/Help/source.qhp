@@ -5943,6 +5943,7 @@
       <keyword name="HgDiffDialog.on_filesCombo_activated" id="HgDiffDialog.on_filesCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_filesCombo_activated" />
       <keyword name="HgDiffDialog.on_input_returnPressed" id="HgDiffDialog.on_input_returnPressed" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_input_returnPressed" />
       <keyword name="HgDiffDialog.on_passwordCheckBox_toggled" id="HgDiffDialog.on_passwordCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgDiffDialog.on_refreshButton_clicked" id="HgDiffDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_refreshButton_clicked" />
       <keyword name="HgDiffDialog.on_saveButton_clicked" id="HgDiffDialog.on_saveButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_saveButton_clicked" />
       <keyword name="HgDiffDialog.on_sendButton_clicked" id="HgDiffDialog.on_sendButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_sendButton_clicked" />
       <keyword name="HgDiffDialog.start" id="HgDiffDialog.start" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.start" />
@@ -10703,6 +10704,8 @@
       <keyword name="SvnDiffDialog.on_filesCombo_activated" id="SvnDiffDialog.on_filesCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_filesCombo_activated" />
       <keyword name="SvnDiffDialog.on_input_returnPressed" id="SvnDiffDialog.on_input_returnPressed" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_input_returnPressed" />
       <keyword name="SvnDiffDialog.on_passwordCheckBox_toggled" id="SvnDiffDialog.on_passwordCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_passwordCheckBox_toggled" />
+      <keyword name="SvnDiffDialog.on_refreshButton_clicked" id="SvnDiffDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffDialog.html#SvnDiffDialog.on_refreshButton_clicked" />
+      <keyword name="SvnDiffDialog.on_refreshButton_clicked" id="SvnDiffDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_refreshButton_clicked" />
       <keyword name="SvnDiffDialog.on_saveButton_clicked" id="SvnDiffDialog.on_saveButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffDialog.html#SvnDiffDialog.on_saveButton_clicked" />
       <keyword name="SvnDiffDialog.on_saveButton_clicked" id="SvnDiffDialog.on_saveButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_saveButton_clicked" />
       <keyword name="SvnDiffDialog.on_sendButton_clicked" id="SvnDiffDialog.on_sendButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_sendButton_clicked" />

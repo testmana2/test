@@ -807,7 +807,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             from .HgDiffDialog import HgDiffDialog
             self.diff = HgDiffDialog(self.vcs)
         self.diff.show()
-        self.diff.start(names)
+        self.diff.start(names, refreshable=True)
     
     def __sbsDiff(self):
         """

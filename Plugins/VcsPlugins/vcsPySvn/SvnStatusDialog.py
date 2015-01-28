@@ -721,7 +721,7 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
             self.diff = SvnDiffDialog(self.vcs)
         self.diff.show()
         QApplication.processEvents()
-        self.diff.start(names)
+        self.diff.start(names, refreshable=True)
     
     def __sbsDiff(self):
         """

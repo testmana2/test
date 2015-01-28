@@ -877,7 +877,7 @@ class Hg(VersionControl):
         self.diff = HgDiffDialog(self)
         self.diff.show()
         QApplication.processEvents()
-        self.diff.start(name)
+        self.diff.start(name, refreshable=True)
     
     def vcsStatus(self, name):
         """

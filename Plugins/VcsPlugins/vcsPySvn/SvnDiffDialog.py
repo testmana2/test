@@ -44,6 +44,11 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
+        self.refreshButton = self.buttonBox.addButton(
+            self.tr("Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.tr("Press to refresh the display"))
+        self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
@@ -117,7 +122,8 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         else:
             return " "
         
-    def start(self, fn, versions=None, urls=None, summary=False, pegRev=None):
+    def start(self, fn, versions=None, urls=None, summary=False, pegRev=None,
+              refreshable=False):
         """
         Public slot to start the svn diff command.
         
@@ -128,7 +134,10 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         @keyparam summary flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
         @keyparam pegRev revision number the filename is valid (integer)
+        @keyparam refreshable flag indicating a refreshable diff (boolean)
         """
+        self.refreshButton.setVisible(refreshable)
+        
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
@@ -330,7 +339,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         """
         QApplication.restoreOverrideCursor()
         
+        self.refreshButton.setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
@@ -362,7 +373,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
             self.__finish()
         elif button == self.buttonBox.button(QDialogButtonBox.Save):
             self.on_saveButton_clicked()
-        
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
+    
     @pyqtSlot(int)
     def on_filesCombo_activated(self, index):
         """
@@ -457,6 +470,18 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
                     '<br>Reason: {1}</p>')
                 .format(fname, str(why)))
         
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the display.
+        """
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        
+        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
+        self.refreshButton.setEnabled(False)
+        
+        self.start(self.filename, refreshable=True)
+    
     def __showError(self, msg):
         """
         Private slot to show an error message.

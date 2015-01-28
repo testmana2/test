@@ -44,6 +44,11 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         super(SvnDiffDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.refreshButton = self.buttonBox.addButton(
+            self.tr("Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.tr("Press to refresh the display"))
+        self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
@@ -94,7 +99,8 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         else:
             return str(version)
         
-    def start(self, fn, versions=None, urls=None, summary=False):
+    def start(self, fn, versions=None, urls=None, summary=False,
+              refreshable=False):
         """
         Public slot to start the svn diff command.
         
@@ -104,9 +110,13 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         @keyparam urls list of repository URLs (list of 2 strings)
         @keyparam summary flag indicating a summarizing diff
             (only valid for URL diffs) (boolean)
+        @keyparam refreshable flag indicating a refreshable diff (boolean)
         """
+        self.refreshButton.setVisible(refreshable)
+        
         self.errorGroup.hide()
         self.inputGroup.show()
+        self.inputGroup.setEnabled(True)
         self.intercept = False
         self.filename = fn
         
@@ -199,6 +209,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         """
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
+        self.refreshButton.setEnabled(True)
         
         if self.paras == 0:
             self.contents.setCurrentCharFormat(self.cNormalFormat)
@@ -206,6 +217,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
                 self.tr('There is no difference.'))
             
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
@@ -317,7 +329,9 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         """
         if button == self.buttonBox.button(QDialogButtonBox.Save):
             self.on_saveButton_clicked()
-        
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
+    
     @pyqtSlot(int)
     def on_filesCombo_activated(self, index):
         """
@@ -412,6 +426,18 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
                     '<br>Reason: {1}</p>')
                 .format(fname, str(why)))
         
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the display.
+        """
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        
+        self.buttonBox.button(QDialogButtonBox.Save).setEnabled(False)
+        self.refreshButton.setEnabled(False)
+        
+        self.start(self.filename, refreshable=True)
+    
     def on_passwordCheckBox_toggled(self, isOn):
         """
         Private slot to handle the password checkbox toggled.
