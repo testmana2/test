@@ -2395,7 +2395,7 @@ class Editor(QsciScintillaCompat):
         sb = e5App().getObject("UserInterface").statusBar()
         printDialog = QPrintDialog(printer, self)
         if self.hasSelectedText():
-            printDialog.addEnabledOption(QAbstractPrintDialog.PrintSelection)
+            printDialog.setOption(QAbstractPrintDialog.PrintSelection, True)
         if printDialog.exec_() == QDialog.Accepted:
             sb.showMessage(self.tr('Printing...'))
             QApplication.processEvents()

@@ -2523,7 +2523,7 @@ class MiniEditor(E5MainWindow):
         sb = self.statusBar()
         printDialog = QPrintDialog(printer, self)
         if self.__textEdit.hasSelectedText():
-            printDialog.addEnabledOption(QAbstractPrintDialog.PrintSelection)
+            printDialog.setOption(QAbstractPrintDialog.PrintSelection, True)
         if printDialog.exec_() == QDialog.Accepted:
             sb.showMessage(self.tr('Printing...'))
             QApplication.processEvents()
