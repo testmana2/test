@@ -172,7 +172,7 @@ class UserInterface(E5MainWindow):
         self.locale = locale
         self.__noOpenAtStartup = noOpenAtStartup
         
-        self.layout, self.embeddedShell, self.embeddedFileBrowser = \
+        self.layoutType, self.embeddedShell, self.embeddedFileBrowser = \
             Preferences.getUILayout()
         
         self.passiveMode = Preferences.getDebugger("PassiveDbgEnabled")
@@ -610,18 +610,18 @@ class UserInterface(E5MainWindow):
         splitter.addWidget(self.__previewer)
         
         # Create layout with toolbox windows embedded in dock windows
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             logging.debug("Creating toolboxes...")
             self.__createToolboxesLayout(debugServer)
         
         # Create layout with sidebar windows embedded in dock windows
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             logging.debug("Creating sidebars...")
             self.__createSidebarsLayout(debugServer)
         
         else:
             raise ValueError("Wrong layout type given ({0})".format(
-                self.layout))
+                self.layoutType))
         logging.debug("Created Layout")
 
     def __createToolboxesLayout(self, debugServer):
@@ -938,14 +938,14 @@ class UserInterface(E5MainWindow):
         """
         assert side in [UserInterface.LeftSide, UserInterface.BottomSide]
         
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             if side == UserInterface.LeftSide:
                 self.lToolbox.addItem(widget, icon, label)
             elif side == UserInterface.BottomSide:
                 self.hToolbox.addItem(widget, icon, label)
             elif side == UserInterface.RightSide:
                 self.rToolbox.addItem(widget, icon, label)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             if side == UserInterface.LeftSide:
                 self.leftSidebar.addTab(widget, icon, label)
             elif side == UserInterface.BottomSide:
@@ -959,12 +959,12 @@ class UserInterface(E5MainWindow):
         
         @param widget reference to the widget to remove (QWidget)
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             for container in [self.lToolbox, self.hToolbox, self.rToolbox]:
                 index = container.indexOf(widget)
                 if index != -1:
                     container.removeItem(index)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             for container in [self.leftSidebar, self.bottomSidebar,
                               self.rightSidebar]:
                 index = container.indexOf(widget)
@@ -978,11 +978,11 @@ class UserInterface(E5MainWindow):
         @param tabname string naming the tab to be shown (string)
         """
         if Preferences.getUI("LogViewerAutoRaise"):
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.hToolboxDock.show()
                 self.hToolbox.setCurrentWidget(self.logViewer)
                 self.hToolboxDock.raise_()
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.bottomSidebar.show()
                 self.bottomSidebar.setCurrentWidget(self.logViewer)
                 self.bottomSidebar.raise_()
@@ -3402,14 +3402,14 @@ class UserInterface(E5MainWindow):
         self.__menus["window"].addActions(self.viewProfileActGrp.actions())
         self.__menus["window"].addSeparator()
         
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.__menus["window"].addAction(self.ltAct)
             self.ltAct.setChecked(not self.lToolboxDock.isHidden())
             self.__menus["window"].addAction(self.rtAct)
             self.rtAct.setChecked(not self.lToolboxDock.isHidden())
             self.__menus["window"].addAction(self.htAct)
             self.htAct.setChecked(not self.hToolboxDock.isHidden())
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.__menus["window"].addAction(self.lsbAct)
             self.lsbAct.setChecked(not self.leftSidebar.isHidden())
             self.__menus["window"].addAction(self.rsbAct)
@@ -3492,10 +3492,10 @@ class UserInterface(E5MainWindow):
         """
         if self.currentProfile and save:
             # step 1: save the window geometries of the active profile
-            if self.layout in ["Toolboxes", "Sidebars"]:
+            if self.layoutType in ["Toolboxes", "Sidebars"]:
                 state = self.saveState()
                 self.profiles[self.currentProfile][0] = state
-                if self.layout == "Sidebars":
+                if self.layoutType == "Sidebars":
                     state = self.leftSplitter.saveState()
                     self.profiles[self.currentProfile][2][0] = state
                     state = self.verticalSplitter.saveState()
@@ -3509,14 +3509,14 @@ class UserInterface(E5MainWindow):
                     state = self.rightSidebar.saveState()
                     self.profiles[self.currentProfile][2][5] = state
             # step 2: save the visibility of the windows of the active profile
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.profiles[self.currentProfile][1][0] = \
                     self.lToolboxDock.isVisible()
                 self.profiles[self.currentProfile][1][1] = \
                     self.hToolboxDock.isVisible()
                 self.profiles[self.currentProfile][1][2] = \
                     self.rToolboxDock.isVisible()
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.profiles[self.currentProfile][1][0] = \
                     self.leftSidebar.isVisible()
                 self.profiles[self.currentProfile][1][1] = \
@@ -3538,11 +3538,11 @@ class UserInterface(E5MainWindow):
             self.__saveCurrentViewProfile(save)
             
             # step 2: set the window geometries of the new profile
-            if self.layout in ["Toolboxes", "Sidebars"]:
+            if self.layoutType in ["Toolboxes", "Sidebars"]:
                 state = self.profiles[name][0]
                 if not state.isEmpty():
                     self.restoreState(state)
-                if self.layout == "Sidebars":
+                if self.layoutType == "Sidebars":
                     state = self.profiles[name][2][0]
                     if not state.isEmpty():
                         self.leftSplitter.restoreState(state)
@@ -3564,11 +3564,11 @@ class UserInterface(E5MainWindow):
                 self.__configureDockareaCornerUsage()
             
             # step 3: activate the windows of the new profile
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.lToolboxDock.setVisible(self.profiles[name][1][0])
                 self.hToolboxDock.setVisible(self.profiles[name][1][1])
                 self.rToolboxDock.setVisible(self.profiles[name][1][2])
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.leftSidebar.setVisible(self.profiles[name][1][0])
                 self.bottomSidebar.setVisible(self.profiles[name][1][1])
                 self.rightSidebar.setVisible(self.profiles[name][1][2])
@@ -3591,13 +3591,13 @@ class UserInterface(E5MainWindow):
         Private slot to handle the start of a debugging session.
         """
         self.setDebugProfile()
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.__currentRightWidget = self.rToolbox.currentWidget()
             self.rToolbox.setCurrentWidget(self.debugViewer)
             if not self.embeddedShell:
                 self.__currentBottomWidget = self.hToolbox.currentWidget()
                 self.hToolbox.setCurrentWidget(self.shellAssembly)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.__currentRightWidget = self.rightSidebar.currentWidget()
             self.rightSidebar.setCurrentWidget(self.debugViewer)
             if not self.embeddedShell:
@@ -3609,12 +3609,12 @@ class UserInterface(E5MainWindow):
         Private slot to handle the end of a debugging session.
         """
         self.__setEditProfile()
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             if self.__currentRightWidget:
                 self.rToolbox.setCurrentWidget(self.__currentRightWidget)
             if self.__currentBottomWidget:
                 self.hToolbox.setCurrentWidget(self.__currentBottomWidget)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             if self.__currentRightWidget:
                 self.rightSidebar.setCurrentWidget(self.__currentRightWidget)
             if self.__currentBottomWidget:
@@ -3659,10 +3659,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the project browser.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.lToolboxDock.show()
             self.lToolbox.setCurrentWidget(self.projectBrowser)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.projectBrowser)
         else:
@@ -3674,10 +3674,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the project browser.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.lToolboxDock.show()
             self.lToolbox.setCurrentWidget(self.multiProjectBrowser)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.multiProjectBrowser)
         else:
@@ -3688,10 +3688,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the debug viewer.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.rToolboxDock.show()
             self.rToolbox.setCurrentWidget(self.debugViewer)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.rightSidebar.show()
             self.rightSidebar.setCurrentWidget(self.debugViewer)
         else:
@@ -3703,20 +3703,20 @@ class UserInterface(E5MainWindow):
         Private slot to handle the activation of the Shell window.
         """
         if self.embeddedShell:              # embedded in debug browser
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.rToolboxDock.show()
                 self.rToolbox.setCurrentWidget(self.debugViewer)
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.rightSidebar.show()
                 self.rightSidebar.setCurrentWidget(self.debugViewer)
             else:
                 self.debugViewer.show()
             self.debugViewer.setCurrentWidget(self.shellAssembly)
         else:                               # separate window
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.hToolboxDock.show()
                 self.hToolbox.setCurrentWidget(self.shellAssembly)
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.bottomSidebar.show()
                 self.bottomSidebar.setCurrentWidget(self.shellAssembly)
             else:
@@ -3727,10 +3727,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the Log Viewer.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.hToolboxDock.show()
             self.hToolbox.setCurrentWidget(self.logViewer)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.bottomSidebar.show()
             self.bottomSidebar.setCurrentWidget(self.logViewer)
         else:
@@ -3741,10 +3741,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the Task Viewer.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.hToolboxDock.show()
             self.hToolbox.setCurrentWidget(self.taskViewer)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.bottomSidebar.show()
             self.bottomSidebar.setCurrentWidget(self.taskViewer)
         else:
@@ -3755,10 +3755,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the Template Viewer.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.lToolboxDock.show()
             self.lToolbox.setCurrentWidget(self.templateViewer)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.templateViewer)
         else:
@@ -3770,29 +3770,29 @@ class UserInterface(E5MainWindow):
         Private slot to handle the activation of the file browser.
         """
         if self.embeddedFileBrowser == 0:   # separate window
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.lToolboxDock.show()
                 self.lToolbox.setCurrentWidget(self.browser)
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.leftSidebar.show()
                 self.leftSidebar.setCurrentWidget(self.browser)
             else:
                 self.browser.show()
         elif self.embeddedFileBrowser == 1:  # embedded in debug browser
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.rToolboxDock.show()
                 self.rToolbox.setCurrentWidget(self.debugViewer)
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.rightSidebar.show()
                 self.rightSidebar.setCurrentWidget(self.debugViewer)
             else:
                 self.debugViewer.show()
             self.debugViewer.setCurrentWidget(self.browser)
         else:                               # embedded in project browser
-            if self.layout == "Toolboxes":
+            if self.layoutType == "Toolboxes":
                 self.lToolboxDock.show()
                 self.lToolbox.setCurrentWidget(self.projectBrowser)
-            elif self.layout == "Sidebars":
+            elif self.layoutType == "Sidebars":
                 self.leftSidebar.show()
                 self.leftSidebar.setCurrentWidget(self.projectBrowser)
             else:
@@ -3879,10 +3879,10 @@ class UserInterface(E5MainWindow):
         """
         Public slot to handle the activation of the cooperation window.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.rToolboxDock.show()
             self.rToolbox.setCurrentWidget(self.cooperation)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.rightSidebar.show()
             self.rightSidebar.setCurrentWidget(self.cooperation)
         else:
@@ -3893,10 +3893,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the IRC window.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.rToolboxDock.show()
             self.rToolbox.setCurrentWidget(self.irc)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.rightSidebar.show()
             self.rightSidebar.setCurrentWidget(self.irc)
         else:
@@ -3907,10 +3907,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the Symbols Viewer.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.lToolboxDock.show()
             self.lToolbox.setCurrentWidget(self.symbolsViewer)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.leftSidebar.show()
             self.leftSidebar.setCurrentWidget(self.symbolsViewer)
         else:
@@ -3921,10 +3921,10 @@ class UserInterface(E5MainWindow):
         """
         Private slot to handle the activation of the Numbers Viewer.
         """
-        if self.layout == "Toolboxes":
+        if self.layoutType == "Toolboxes":
             self.hToolboxDock.show()
             self.hToolboxDock.setCurrentWidget(self.numbersViewer)
-        elif self.layout == "Sidebars":
+        elif self.layoutType == "Sidebars":
             self.bottomSidebar.show()
             self.bottomSidebar.setCurrentWidget(self.numbersViewer)
         else:
@@ -5222,7 +5222,7 @@ class UserInterface(E5MainWindow):
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
-        if self.layout == "Sidebars":
+        if self.layoutType == "Sidebars":
             delay = Preferences.getUI("SidebarDelay")
             self.leftSidebar.setDelay(delay)
             self.bottomSidebar.setDelay(delay)
@@ -5267,7 +5267,7 @@ class UserInterface(E5MainWindow):
         """
         from Preferences.ViewProfileDialog import ViewProfileDialog
         dlg = ViewProfileDialog(
-            self.layout, self.profiles['edit'][1], self.profiles['debug'][1])
+            self.layoutType, self.profiles['edit'][1], self.profiles['debug'][1])
         if dlg.exec_() == QDialog.Accepted:
             edit, debug = dlg.getVisibilities()
             self.profiles['edit'][1] = edit
@@ -5800,7 +5800,7 @@ class UserInterface(E5MainWindow):
         
         self.pluginManager.doShutdown()
         
-        if self.layout == "Sidebars":
+        if self.layoutType == "Sidebars":
             self.leftSidebar.shutdown()
             self.bottomSidebar.shutdown()
             self.rightSidebar.shutdown()
