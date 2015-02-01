@@ -718,7 +718,7 @@ class UserInterface(E5MainWindow):
 
         # Create the log viewer part of the user interface
         from .LogView import LogViewer
-        self.logViewer = LogViewer()
+        self.logViewer = LogViewer(self)
         self.hToolbox.addItem(self.logViewer,
                               UI.PixmapCache.getIcon("logViewer.png"),
                               self.tr("Log-Viewer"))
@@ -848,7 +848,7 @@ class UserInterface(E5MainWindow):
         # Create the log viewer part of the user interface
         logging.debug("Creating Log Viewer...")
         from .LogView import LogViewer
-        self.logViewer = LogViewer()
+        self.logViewer = LogViewer(self)
         self.bottomSidebar.addTab(self.logViewer,
                                   UI.PixmapCache.getIcon("logViewer.png"),
                                   self.tr("Log-Viewer"))
@@ -981,11 +981,9 @@ class UserInterface(E5MainWindow):
                 if index != -1:
                     container.removeTab(index)
         
-    def showLogTab(self, tabname):
+    def showLogViewer(self):
         """
-        Public method to show a particular Log-Viewer tab.
-        
-        @param tabname string naming the tab to be shown (string)
+        Public method to show the Log-Viewer.
         """
         if Preferences.getUI("LogViewerAutoRaise"):
             if self.layoutType == "Toolboxes":
@@ -5626,7 +5624,6 @@ class UserInterface(E5MainWindow):
         
         @param s output to be appended (string)
         """
-        self.showLogTab("stdout")
         self.appendStdout.emit(s)
     
     def appendToStderr(self, s):
@@ -5635,7 +5632,6 @@ class UserInterface(E5MainWindow):
         
         @param s output to be appended (string)
         """
-        self.showLogTab("stderr")
         self.appendStderr.emit(s)
     
     ##########################################################

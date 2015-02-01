@@ -24,15 +24,18 @@ class LogViewer(QWidget):
     """
     Class implementing the containing widget for the log viewer.
     """
-    def __init__(self, parent=None):
+    def __init__(self, ui, parent=None):
         """
         Constructor
         
+        @param ui reference to the main window (UserInterface)
         @param parent reference to the parent widget (QWidget)
         """
         super(LogViewer, self).__init__(parent)
         
         self.setWindowIcon(UI.PixmapCache.getIcon("eric.png"))
+        
+        self.__ui = ui
         
         self.__logViewer = LogViewerEdit(self)
         from .SearchWidget import SearchWidget
@@ -55,7 +58,9 @@ class LogViewer(QWidget):
         
         @param txt text to be appended (string)
         """
-        self.__logViewer.appendToStdout(txt)
+        added = self.__logViewer.appendToStdout(txt)
+        if added:
+            self.__ui.showLogViewer()
         
     def appendToStderr(self, txt):
         """
@@ -63,7 +68,9 @@ class LogViewer(QWidget):
         
         @param txt text to be appended (string)
         """
-        self.__logViewer.appendToStderr(txt)
+        added = self.__logViewer.appendToStderr(txt)
+        if added:
+            self.__ui.showLogViewer()
         
     def preferencesChanged(self):
         """
@@ -87,6 +94,9 @@ class LogViewerEdit(QTextEdit):
     @signal searchStringFound(found) emitted to indicate the search result
         (boolean)
     """
+    # TODO: implement a filter for messages (separate for stdout and stderr,
+    #       maybe a combined one as well
+    # TODO: add an entry to the config dialog for the filters
     searchStringFound = pyqtSignal(bool)
     
     def __init__(self, parent=None):
@@ -122,6 +132,10 @@ class LogViewerEdit(QTextEdit):
         self.cErrorFormat.setForeground(
             QBrush(Preferences.getUI("LogStdErrColour")))
         
+        self.__stdoutFilter = Preferences.getUI("LogViewerStdoutFilter")
+        self.__stderrFilter = Preferences.getUI("LogViewerStderrFilter")
+        self.__stdxxxFilter = Preferences.getUI("LogViewerStdxxxFilter")
+        
     def __handleShowContextMenu(self, coord):
         """
         Private slot to show the context menu.
@@ -131,40 +145,70 @@ class LogViewerEdit(QTextEdit):
         coord = self.mapToGlobal(coord)
         self.__menu.popup(coord)
         
-    def __appendText(self, txt, error=False):
+    def __appendText(self, txt, isErrorMessage=False):
         """
         Private method to append text to the end.
         
         @param txt text to insert (string)
-        @param error flag indicating to insert error text (boolean)
+        @param isErrorMessage flag indicating to insert error text (boolean)
         """
         tc = self.textCursor()
         tc.movePosition(QTextCursor.End)
         self.setTextCursor(tc)
-        if error:
+        if isErrorMessage:
             self.setCurrentCharFormat(self.cErrorFormat)
         else:
             self.setCurrentCharFormat(self.cNormalFormat)
         self.insertPlainText(txt)
         self.ensureCursorVisible()
         
+    def __filterMessage(self, message, isErrorMessage=False):
+        """
+        Private method to filter messages.
+        
+        @param message message to be checked (string)
+        @param isErrorMessage flag indicating to check an error message
+            (boolean)
+        @return flag indicating that the message should be filtered out
+            (boolean)
+        """
+        if isErrorMessage:
+            filters = self.__stderrFilter + self.__stdxxxFilter
+        else:
+            filters = self.__stdoutFilter + self.__stdxxxFilter
+        for filter in filters:
+            if filter in message:
+                return True
+        
+        return False
+        
     def appendToStdout(self, txt):
         """
         Public slot to appand text to the "stdout" tab.
         
         @param txt text to be appended (string)
+        @return flag indicating text was appended (boolean)
         """
-        self.__appendText(txt, error=False)
+        if self.__filterMessage(txt, isErrorMessage=False):
+            return False
+        
+        self.__appendText(txt, isErrorMessage=False)
         QApplication.processEvents()
+        return True
         
     def appendToStderr(self, txt):
         """
         Public slot to appand text to the "stderr" tab.
         
         @param txt text to be appended (string)
+        @return flag indicating text was appended (boolean)
         """
-        self.__appendText(txt, error=True)
+        if self.__filterMessage(txt, isErrorMessage=True):
+            return False
+        
+        self.__appendText(txt, isErrorMessage=True)
         QApplication.processEvents()
+        return True
         
     def preferencesChanged(self):
         """
@@ -172,6 +216,10 @@ class LogViewerEdit(QTextEdit):
         """
         self.cErrorFormat.setForeground(
             QBrush(Preferences.getUI("LogStdErrColour")))
+        
+        self.__stdoutFilter = Preferences.getUI("LogViewerStdoutFilter")
+        self.__stderrFilter = Preferences.getUI("LogViewerStderrFilter")
+        self.__stdxxxFilter = Preferences.getUI("LogViewerStdxxxFilter")
         
     def __configure(self):
         """

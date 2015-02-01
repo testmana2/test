@@ -129,6 +129,9 @@ class Prefs(object):
         "BrowsersListHiddenFiles": False,
         "BrowsersFileFilters": "*.py[co];*.so;*.dll",
         "LogViewerAutoRaise": True,
+        "LogViewerStdoutFilter": [],
+        "LogViewerStderrFilter": [],
+        "LogViewerStdxxxFilter": [],
         "SingleApplicationMode": False,
         "CaptionShowsFilename": True,
         "CaptionFilenameLength": 100,
@@ -1554,6 +1557,10 @@ def getUI(key, prefClass=Prefs):
             return prefClass.uiDefaults[key]
         else:
             return urls
+    elif key in ["LogViewerStdoutFilter", "LogViewerStderrFilter",
+                 "LogViewerStdxxxFilter"]:
+        return toList(
+            prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key]))
     else:
         return prefClass.settings.value("UI/" + key, prefClass.uiDefaults[key])
     
