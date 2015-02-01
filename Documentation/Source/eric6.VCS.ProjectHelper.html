@@ -117,8 +117,14 @@ QObject
 <td><a href="#VcsProjectHelper.initActions">initActions</a></td>
 <td>Public method to generate the action objects.</td>
 </tr><tr>
+<td><a href="#VcsProjectHelper.initBasicToolbar">initBasicToolbar</a></td>
+<td>Public slot to initialize the basic VCS toolbar.</td>
+</tr><tr>
 <td><a href="#VcsProjectHelper.initMenu">initMenu</a></td>
 <td>Public method to generate the VCS menu.</td>
+</tr><tr>
+<td><a href="#VcsProjectHelper.initToolbar">initToolbar</a></td>
+<td>Public slot to initialize the VCS toolbar.</td>
 </tr><tr>
 <td><a href="#VcsProjectHelper.revertChanges">revertChanges</a></td>
 <td>Local function to revert the changes made to the project object.</td>
@@ -266,7 +272,26 @@ flag indicating whether an export or a checkout
 <b>initActions</b>(<i></i>)
 <p>
         Public method to generate the action objects.
-</p><a NAME="VcsProjectHelper.initMenu" ID="VcsProjectHelper.initMenu"></a>
+</p><a NAME="VcsProjectHelper.initBasicToolbar" ID="VcsProjectHelper.initBasicToolbar"></a>
+<h4>VcsProjectHelper.initBasicToolbar</h4>
+<b>initBasicToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public slot to initialize the basic VCS toolbar.
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the toolbar generated (QToolBar)
+</dd>
+</dl><a NAME="VcsProjectHelper.initMenu" ID="VcsProjectHelper.initMenu"></a>
 <h4>VcsProjectHelper.initMenu</h4>
 <b>initMenu</b>(<i>menu</i>)
 <p>
@@ -275,6 +300,25 @@ flag indicating whether an export or a checkout
 <dt><i>menu</i></dt>
 <dd>
 reference to the menu to be populated (QMenu)
+</dd>
+</dl><a NAME="VcsProjectHelper.initToolbar" ID="VcsProjectHelper.initToolbar"></a>
+<h4>VcsProjectHelper.initToolbar</h4>
+<b>initToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public slot to initialize the VCS toolbar.
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the toolbar generated (QToolBar)
 </dd>
 </dl><a NAME="VcsProjectHelper.revertChanges" ID="VcsProjectHelper.revertChanges"></a>
 <h4>VcsProjectHelper.revertChanges</h4>

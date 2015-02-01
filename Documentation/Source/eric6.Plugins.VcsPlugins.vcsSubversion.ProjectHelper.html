@@ -107,6 +107,9 @@ VcsProjectHelper
 </tr><tr>
 <td><a href="#SvnProjectHelper.initMenu">initMenu</a></td>
 <td>Public method to generate the VCS menu.</td>
+</tr><tr>
+<td><a href="#SvnProjectHelper.initToolbar">initToolbar</a></td>
+<td>Public slot to initialize the VCS toolbar.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -223,6 +226,25 @@ list of all actions (list of E5Action)
 <dt><i>menu</i></dt>
 <dd>
 reference to the menu to be populated (QMenu)
+</dd>
+</dl><a NAME="SvnProjectHelper.initToolbar" ID="SvnProjectHelper.initToolbar"></a>
+<h4>SvnProjectHelper.initToolbar</h4>
+<b>initToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public slot to initialize the VCS toolbar.
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the toolbar generated (QToolBar)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

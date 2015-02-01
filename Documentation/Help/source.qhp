@@ -6253,6 +6253,7 @@
       <keyword name="HgProjectHelper.getProject" id="HgProjectHelper.getProject" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.getProject" />
       <keyword name="HgProjectHelper.initActions" id="HgProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initActions" />
       <keyword name="HgProjectHelper.initMenu" id="HgProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initMenu" />
+      <keyword name="HgProjectHelper.initToolbar" id="HgProjectHelper.initToolbar" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initToolbar" />
       <keyword name="HgProjectHelper.setObjects" id="HgProjectHelper.setObjects" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.setObjects" />
       <keyword name="HgProjectHelper.showMenu" id="HgProjectHelper.showMenu" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.showMenu" />
       <keyword name="HgProjectHelper.shutdown" id="HgProjectHelper.shutdown" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.shutdown" />
@@ -8811,7 +8812,7 @@
       <keyword name="Project.initActions" id="Project.initActions" ref="eric6.Project.Project.html#Project.initActions" />
       <keyword name="Project.initFileTypes" id="Project.initFileTypes" ref="eric6.Project.Project.html#Project.initFileTypes" />
       <keyword name="Project.initMenu" id="Project.initMenu" ref="eric6.Project.Project.html#Project.initMenu" />
-      <keyword name="Project.initToolbar" id="Project.initToolbar" ref="eric6.Project.Project.html#Project.initToolbar" />
+      <keyword name="Project.initToolbars" id="Project.initToolbars" ref="eric6.Project.Project.html#Project.initToolbars" />
       <keyword name="Project.initVCS" id="Project.initVCS" ref="eric6.Project.Project.html#Project.initVCS" />
       <keyword name="Project.isDebugPropertiesLoaded" id="Project.isDebugPropertiesLoaded" ref="eric6.Project.Project.html#Project.isDebugPropertiesLoaded" />
       <keyword name="Project.isDirty" id="Project.isDirty" ref="eric6.Project.Project.html#Project.isDirty" />
@@ -9328,6 +9329,26 @@
       <keyword name="PyRegExpWizardWindow" id="PyRegExpWizardWindow" ref="eric6.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardDialog.html#PyRegExpWizardWindow" />
       <keyword name="PyRegExpWizardWindow (Constructor)" id="PyRegExpWizardWindow (Constructor)" ref="eric6.Plugins.WizardPlugins.PyRegExpWizard.PyRegExpWizardDialog.html#PyRegExpWizardWindow.__init__" />
       <keyword name="PySideImporter (Module)" id="PySideImporter (Module)" ref="eric6.Utilities.PySideImporter.html" />
+      <keyword name="PySvnProjectHelper" id="PySvnProjectHelper" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper" />
+      <keyword name="PySvnProjectHelper (Constructor)" id="PySvnProjectHelper (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__init__" />
+      <keyword name="PySvnProjectHelper.__svnBranchList" id="PySvnProjectHelper.__svnBranchList" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnBranchList" />
+      <keyword name="PySvnProjectHelper.__svnChangeLists" id="PySvnProjectHelper.__svnChangeLists" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnChangeLists" />
+      <keyword name="PySvnProjectHelper.__svnConfigure" id="PySvnProjectHelper.__svnConfigure" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnConfigure" />
+      <keyword name="PySvnProjectHelper.__svnExtendedDiff" id="PySvnProjectHelper.__svnExtendedDiff" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnExtendedDiff" />
+      <keyword name="PySvnProjectHelper.__svnInfo" id="PySvnProjectHelper.__svnInfo" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnInfo" />
+      <keyword name="PySvnProjectHelper.__svnPropDel" id="PySvnProjectHelper.__svnPropDel" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnPropDel" />
+      <keyword name="PySvnProjectHelper.__svnPropList" id="PySvnProjectHelper.__svnPropList" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnPropList" />
+      <keyword name="PySvnProjectHelper.__svnPropSet" id="PySvnProjectHelper.__svnPropSet" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnPropSet" />
+      <keyword name="PySvnProjectHelper.__svnRelocate" id="PySvnProjectHelper.__svnRelocate" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnRelocate" />
+      <keyword name="PySvnProjectHelper.__svnRepoBrowser" id="PySvnProjectHelper.__svnRepoBrowser" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnRepoBrowser" />
+      <keyword name="PySvnProjectHelper.__svnResolve" id="PySvnProjectHelper.__svnResolve" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnResolve" />
+      <keyword name="PySvnProjectHelper.__svnTagList" id="PySvnProjectHelper.__svnTagList" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnTagList" />
+      <keyword name="PySvnProjectHelper.__svnUpgrade" id="PySvnProjectHelper.__svnUpgrade" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnUpgrade" />
+      <keyword name="PySvnProjectHelper.__svnUrlDiff" id="PySvnProjectHelper.__svnUrlDiff" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.__svnUrlDiff" />
+      <keyword name="PySvnProjectHelper.getActions" id="PySvnProjectHelper.getActions" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.getActions" />
+      <keyword name="PySvnProjectHelper.initActions" id="PySvnProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.initActions" />
+      <keyword name="PySvnProjectHelper.initMenu" id="PySvnProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.initMenu" />
+      <keyword name="PySvnProjectHelper.initToolbar" id="PySvnProjectHelper.initToolbar" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.initToolbar" />
       <keyword name="PyUnit (Package)" id="PyUnit (Package)" ref="index-eric6.PyUnit.html" />
       <keyword name="Python (Package)" id="Python (Package)" ref="index-eric6.DebugClients.Python.html" />
       <keyword name="Python3 (Package)" id="Python3 (Package)" ref="index-eric6.DebugClients.Python3.html" />
@@ -10918,43 +10939,25 @@
       <keyword name="SvnProjectBrowserHelper.showContextMenuDirMulti" id="SvnProjectBrowserHelper.showContextMenuDirMulti" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.showContextMenuDirMulti" />
       <keyword name="SvnProjectBrowserHelper.showContextMenuMulti" id="SvnProjectBrowserHelper.showContextMenuMulti" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.showContextMenuMulti" />
       <keyword name="SvnProjectBrowserHelper.showContextMenuMulti" id="SvnProjectBrowserHelper.showContextMenuMulti" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper.showContextMenuMulti" />
-      <keyword name="SvnProjectHelper" id="SvnProjectHelper" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper" />
       <keyword name="SvnProjectHelper" id="SvnProjectHelper" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper" />
-      <keyword name="SvnProjectHelper (Constructor)" id="SvnProjectHelper (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__init__" />
       <keyword name="SvnProjectHelper (Constructor)" id="SvnProjectHelper (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__init__" />
-      <keyword name="SvnProjectHelper.__svnBranchList" id="SvnProjectHelper.__svnBranchList" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnBranchList" />
       <keyword name="SvnProjectHelper.__svnBranchList" id="SvnProjectHelper.__svnBranchList" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnBranchList" />
-      <keyword name="SvnProjectHelper.__svnChangeLists" id="SvnProjectHelper.__svnChangeLists" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnChangeLists" />
       <keyword name="SvnProjectHelper.__svnChangeLists" id="SvnProjectHelper.__svnChangeLists" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnChangeLists" />
-      <keyword name="SvnProjectHelper.__svnConfigure" id="SvnProjectHelper.__svnConfigure" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnConfigure" />
       <keyword name="SvnProjectHelper.__svnConfigure" id="SvnProjectHelper.__svnConfigure" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnConfigure" />
-      <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
       <keyword name="SvnProjectHelper.__svnExtendedDiff" id="SvnProjectHelper.__svnExtendedDiff" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnExtendedDiff" />
-      <keyword name="SvnProjectHelper.__svnInfo" id="SvnProjectHelper.__svnInfo" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnInfo" />
-      <keyword name="SvnProjectHelper.__svnPropDel" id="SvnProjectHelper.__svnPropDel" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropDel" />
       <keyword name="SvnProjectHelper.__svnPropDel" id="SvnProjectHelper.__svnPropDel" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropDel" />
-      <keyword name="SvnProjectHelper.__svnPropList" id="SvnProjectHelper.__svnPropList" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropList" />
       <keyword name="SvnProjectHelper.__svnPropList" id="SvnProjectHelper.__svnPropList" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropList" />
-      <keyword name="SvnProjectHelper.__svnPropSet" id="SvnProjectHelper.__svnPropSet" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnPropSet" />
       <keyword name="SvnProjectHelper.__svnPropSet" id="SvnProjectHelper.__svnPropSet" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnPropSet" />
-      <keyword name="SvnProjectHelper.__svnRelocate" id="SvnProjectHelper.__svnRelocate" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnRelocate" />
       <keyword name="SvnProjectHelper.__svnRelocate" id="SvnProjectHelper.__svnRelocate" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnRelocate" />
-      <keyword name="SvnProjectHelper.__svnRepoBrowser" id="SvnProjectHelper.__svnRepoBrowser" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnRepoBrowser" />
       <keyword name="SvnProjectHelper.__svnRepoBrowser" id="SvnProjectHelper.__svnRepoBrowser" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnRepoBrowser" />
-      <keyword name="SvnProjectHelper.__svnResolve" id="SvnProjectHelper.__svnResolve" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnResolve" />
       <keyword name="SvnProjectHelper.__svnResolve" id="SvnProjectHelper.__svnResolve" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnResolve" />
-      <keyword name="SvnProjectHelper.__svnTagList" id="SvnProjectHelper.__svnTagList" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnTagList" />
       <keyword name="SvnProjectHelper.__svnTagList" id="SvnProjectHelper.__svnTagList" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnTagList" />
-      <keyword name="SvnProjectHelper.__svnUpgrade" id="SvnProjectHelper.__svnUpgrade" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnUpgrade" />
       <keyword name="SvnProjectHelper.__svnUpgrade" id="SvnProjectHelper.__svnUpgrade" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnUpgrade" />
-      <keyword name="SvnProjectHelper.__svnUrlDiff" id="SvnProjectHelper.__svnUrlDiff" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.__svnUrlDiff" />
       <keyword name="SvnProjectHelper.__svnUrlDiff" id="SvnProjectHelper.__svnUrlDiff" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.__svnUrlDiff" />
-      <keyword name="SvnProjectHelper.getActions" id="SvnProjectHelper.getActions" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.getActions" />
       <keyword name="SvnProjectHelper.getActions" id="SvnProjectHelper.getActions" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.getActions" />
-      <keyword name="SvnProjectHelper.initActions" id="SvnProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.initActions" />
       <keyword name="SvnProjectHelper.initActions" id="SvnProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.initActions" />
-      <keyword name="SvnProjectHelper.initMenu" id="SvnProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#SvnProjectHelper.initMenu" />
       <keyword name="SvnProjectHelper.initMenu" id="SvnProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.initMenu" />
+      <keyword name="SvnProjectHelper.initToolbar" id="SvnProjectHelper.initToolbar" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.initToolbar" />
       <keyword name="SvnPropDelDialog" id="SvnPropDelDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropDelDialog.html#SvnPropDelDialog" />
       <keyword name="SvnPropDelDialog (Constructor)" id="SvnPropDelDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropDelDialog.html#SvnPropDelDialog.__init__" />
       <keyword name="SvnPropDelDialog (Module)" id="SvnPropDelDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropDelDialog.html" />
@@ -12328,7 +12331,9 @@
       <keyword name="VcsProjectHelper._vcsTag" id="VcsProjectHelper._vcsTag" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper._vcsTag" />
       <keyword name="VcsProjectHelper._vcsUpdate" id="VcsProjectHelper._vcsUpdate" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper._vcsUpdate" />
       <keyword name="VcsProjectHelper.initActions" id="VcsProjectHelper.initActions" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.initActions" />
+      <keyword name="VcsProjectHelper.initBasicToolbar" id="VcsProjectHelper.initBasicToolbar" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.initBasicToolbar" />
       <keyword name="VcsProjectHelper.initMenu" id="VcsProjectHelper.initMenu" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.initMenu" />
+      <keyword name="VcsProjectHelper.initToolbar" id="VcsProjectHelper.initToolbar" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.initToolbar" />
       <keyword name="VcsProjectHelper.revertChanges" id="VcsProjectHelper.revertChanges" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.revertChanges" />
       <keyword name="VcsProjectHelper.setObjects" id="VcsProjectHelper.setObjects" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.setObjects" />
       <keyword name="VcsProjectHelper.showMenu" id="VcsProjectHelper.showMenu" ref="eric6.VCS.ProjectHelper.html#VcsProjectHelper.showMenu" />
@@ -13146,6 +13151,7 @@
       <keyword name="generatePySideToolPath" id="generatePySideToolPath" ref="eric6.Utilities.__init__.html#generatePySideToolPath" />
       <keyword name="generateQtToolName" id="generateQtToolName" ref="eric6.Utilities.__init__.html#generateQtToolName" />
       <keyword name="generateVersionInfo" id="generateVersionInfo" ref="eric6.Utilities.__init__.html#generateVersionInfo" />
+      <keyword name="getBasicHelper" id="getBasicHelper" ref="eric6.VCS.__init__.html#getBasicHelper" />
       <keyword name="getChannelModesDict" id="getChannelModesDict" ref="eric6.Network.IRC.IrcUtilities.html#getChannelModesDict" />
       <keyword name="getCombinedIcon" id="getCombinedIcon" ref="eric6.UI.PixmapCache.html#getCombinedIcon" />
       <keyword name="getCompleter" id="getCompleter" ref="eric6.QScintilla.TypingCompleters.__init__.html#getCompleter" />

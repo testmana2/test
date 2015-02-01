@@ -31,7 +31,7 @@ interfaces (i.e. CVS) have to be subclasses of this base class.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>VcsBasicHelperSingleton</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -42,6 +42,9 @@ interfaces (i.e. CVS) have to be subclasses of this base class.
 <tr>
 <td><a href="#factory">factory</a></td>
 <td>Modul factory function to generate the right vcs object.</td>
+</tr><tr>
+<td><a href="#getBasicHelper">getBasicHelper</a></td>
+<td>Module function to get a reference to the basic project helper singleton.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -59,6 +62,25 @@ name of the VCS system to be used (string)
 <dt>Returns:</dt>
 <dd>
 the instantiated VCS object
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getBasicHelper" ID="getBasicHelper"></a>
+<h2>getBasicHelper</h2>
+<b>getBasicHelper</b>(<i>project</i>)
+<p>
+    Module function to get a reference to the basic project helper singleton.
+</p><dl>
+<dt><i>project</i></dt>
+<dd>
+reference to the project object (Project)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the basic VCS project helper singleton
+        (VcsProjectHelper)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

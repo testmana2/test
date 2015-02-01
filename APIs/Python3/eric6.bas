@@ -554,6 +554,7 @@ PyRegExpWizardDialog QDialog
 PyRegExpWizardRepeatDialog QDialog Ui_PyRegExpWizardRepeatDialog
 PyRegExpWizardWidget QWidget Ui_PyRegExpWizardDialog
 PyRegExpWizardWindow E5MainWindow
+PySvnProjectHelper VcsProjectHelper
 PythonPage ConfigurationPageBase Ui_PythonPage
 QRegExpWizard QObject
 QRegExpWizardCharactersDialog QDialog Ui_QRegExpWizardCharactersDialog

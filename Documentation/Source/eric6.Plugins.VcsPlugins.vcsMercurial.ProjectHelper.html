@@ -252,6 +252,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.initMenu">initMenu</a></td>
 <td>Public method to generate the VCS menu.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.initToolbar">initToolbar</a></td>
+<td>Public slot to initialize the VCS toolbar.</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.setObjects">setObjects</a></td>
 <td>Public method to set references to the vcs and project objects.</td>
 </tr><tr>
@@ -625,6 +628,25 @@ reference to the project object (Project)
 <dt><i>menu</i></dt>
 <dd>
 reference to the menu to be populated (QMenu)
+</dd>
+</dl><a NAME="HgProjectHelper.initToolbar" ID="HgProjectHelper.initToolbar"></a>
+<h4>HgProjectHelper.initToolbar</h4>
+<b>initToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public slot to initialize the VCS toolbar.
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the toolbar generated (QToolBar)
 </dd>
 </dl><a NAME="HgProjectHelper.setObjects" ID="HgProjectHelper.setObjects"></a>
 <h4>HgProjectHelper.setObjects</h4>

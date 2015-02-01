@@ -542,8 +542,8 @@ QObject
 <td><a href="#Project.initMenu">initMenu</a></td>
 <td>Public slot to initialize the project menu.</td>
 </tr><tr>
-<td><a href="#Project.initToolbar">initToolbar</a></td>
-<td>Public slot to initialize the project toolbar.</td>
+<td><a href="#Project.initToolbars">initToolbars</a></td>
+<td>Public slot to initialize the project toolbar and the basic VCS toolbar.</td>
 </tr><tr>
 <td><a href="#Project.initVCS">initVCS</a></td>
 <td>Public method used to instantiate a vcs system.</td>
@@ -1877,11 +1877,12 @@ flag indicating presence of the project type (boolean)
 <dd>
 the menu generated (QMenu)
 </dd>
-</dl><a NAME="Project.initToolbar" ID="Project.initToolbar"></a>
-<h4>Project.initToolbar</h4>
-<b>initToolbar</b>(<i>toolbarManager</i>)
+</dl><a NAME="Project.initToolbars" ID="Project.initToolbars"></a>
+<h4>Project.initToolbars</h4>
+<b>initToolbars</b>(<i>toolbarManager</i>)
 <p>
-        Public slot to initialize the project toolbar.
+        Public slot to initialize the project toolbar and the basic VCS
+        toolbar.
 </p><dl>
 <dt><i>toolbarManager</i></dt>
 <dd>
@@ -1891,7 +1892,7 @@ reference to a toolbar manager object
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-the toolbar generated (QToolBar)
+tuple of the generated toolbars (tuple of two QToolBar)
 </dd>
 </dl><a NAME="Project.initVCS" ID="Project.initVCS"></a>
 <h4>Project.initVCS</h4>
