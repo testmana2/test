@@ -523,6 +523,16 @@ class UserInterface(E5MainWindow):
         # now activate plugins having autoload set to True
         splash.showMessage(self.tr("Activating Plugins..."))
         self.pluginManager.activatePlugins()
+        splash.showMessage(self.tr("Generating Plugins Toolbars..."))
+        self.pluginManager.initOnDemandPlugins()
+        for name, ref in e5App().getPluginObjects():
+            try:
+                tb = ref.initToolbar(self, self.toolbarManager)
+                if tb is not None:
+                    self.addToolBar(tb)
+            except AttributeError:
+                # ignore it
+                pass
         
         # now read the keyboard shortcuts for all the actions
         from Preferences import Shortcuts
@@ -2559,7 +2569,7 @@ class UserInterface(E5MainWindow):
         viewtb = self.viewmanager.initViewToolbar(self.toolbarManager)
         starttb, debugtb = self.debuggerUI.initToolbars(self.toolbarManager)
         multiprojecttb = self.multiProject.initToolbar(self.toolbarManager)
-        projecttb = self.project.initToolbar(self.toolbarManager)
+        projecttb, vcstb = self.project.initToolbars(self.toolbarManager)
         toolstb = QToolBar(self.tr("Tools"), self)
         unittesttb = QToolBar(self.tr("Unittest"), self)
         bookmarktb = self.viewmanager.initBookmarkToolbar(self.toolbarManager)
@@ -2666,6 +2676,7 @@ class UserInterface(E5MainWindow):
         self.addToolBar(debugtb)
         self.addToolBar(multiprojecttb)
         self.addToolBar(projecttb)
+        self.addToolBar(vcstb)
         self.addToolBar(Qt.RightToolBarArea, settingstb)
         self.addToolBar(Qt.RightToolBarArea, toolstb)
         self.addToolBar(helptb)
@@ -2708,6 +2719,7 @@ class UserInterface(E5MainWindow):
         self.__toolbars["multiproject"] = [multiprojecttb.windowTitle(),
                                            multiprojecttb]
         self.__toolbars["spelling"] = [spellingtb.windowTitle(), spellingtb]
+        self.__toolbars["vcs"] = [vcstb.windowTitle(), vcstb]
         
     def __initDebugToolbarsLayout(self):
         """
@@ -5266,8 +5278,8 @@ class UserInterface(E5MainWindow):
         Private slot to configure the various view profiles.
         """
         from Preferences.ViewProfileDialog import ViewProfileDialog
-        dlg = ViewProfileDialog(
-            self.layoutType, self.profiles['edit'][1], self.profiles['debug'][1])
+        dlg = ViewProfileDialog(self.layoutType, self.profiles['edit'][1],
+                                self.profiles['debug'][1])
         if dlg.exec_() == QDialog.Accepted:
             edit, debug = dlg.getVisibilities()
             self.profiles['edit'][1] = edit

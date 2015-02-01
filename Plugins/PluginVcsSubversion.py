@@ -190,6 +190,15 @@ class VcsSubversionPlugin(QObject):
         """
         from VcsPlugins.vcsSubversion.subversion import Subversion
         self.__object = Subversion(self, self.__ui)
+        
+        tb = self.__ui.getToolbar("vcs")[1]
+        tb.setVisible(False)
+        tb.setEnabled(False)
+        
+        tb = self.__ui.getToolbar("subversion")[1]
+        tb.setVisible(True)
+        tb.setEnabled(True)
+        
         return self.__object, True
     
     def deactivate(self):
@@ -197,6 +206,14 @@ class VcsSubversionPlugin(QObject):
         Public method to deactivate this plugin.
         """
         self.__object = None
+        
+        tb = self.__ui.getToolbar("subversion")[1]
+        tb.setVisible(False)
+        tb.setEnabled(False)
+        
+        tb = self.__ui.getToolbar("vcs")[1]
+        tb.setVisible(True)
+        tb.setEnabled(True)
     
     def getPreferences(self, key):
         """

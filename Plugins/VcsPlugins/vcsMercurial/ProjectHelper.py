@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt5.QtWidgets import QMenu
+from PyQt5.QtWidgets import QMenu, QToolBar
 
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
@@ -1397,6 +1397,64 @@ class HgProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
+    
+    def initToolbar(self, ui, toolbarManager):
+        """
+        Public slot to initialize the VCS toolbar.
+        
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        @return the toolbar generated (QToolBar)
+        """
+        tb = QToolBar(self.tr("Mercurial"), ui)
+        tb.setIconSize(UI.Config.ToolBarIconSize)
+        tb.setObjectName("MercurialToolbar")
+        tb.setToolTip(self.tr('Mercurial'))
+        
+        tb.addAction(self.hgLogBrowserAct)
+        tb.addAction(self.vcsStatusAct)
+        tb.addSeparator()
+        tb.addAction(self.vcsDiffAct)
+        tb.addSeparator()
+        tb.addAction(self.vcsNewAct)
+        tb.addAction(self.vcsExportAct)
+        tb.addSeparator()
+        
+        title = tb.windowTitle()
+        toolbarManager.addToolBar(tb, title)
+        toolbarManager.addAction(self.hgPullAct, title)
+        toolbarManager.addAction(self.vcsUpdateAct, title)
+        toolbarManager.addAction(self.vcsCommitAct, title)
+        toolbarManager.addAction(self.hgPushAct, title)
+        toolbarManager.addAction(self.hgPushForcedAct, title)
+        toolbarManager.addAction(self.vcsLogAct, title)
+        toolbarManager.addAction(self.hgExtDiffAct, title)
+        toolbarManager.addAction(self.hgSummaryAct, title)
+        toolbarManager.addAction(self.vcsRevertAct, title)
+        toolbarManager.addAction(self.vcsMergeAct, title)
+        toolbarManager.addAction(self.hgReMergeAct, title)
+        toolbarManager.addAction(self.vcsTagAct, title)
+        toolbarManager.addAction(self.hgBranchAct, title)
+        toolbarManager.addAction(self.vcsSwitchAct, title)
+        toolbarManager.addAction(self.hgGraftAct, title)
+        toolbarManager.addAction(self.hgAddSubrepoAct, title)
+        toolbarManager.addAction(self.hgRemoveSubreposAct, title)
+        toolbarManager.addAction(self.hgArchiveAct, title)
+        toolbarManager.addAction(self.hgBookmarksListAct, title)
+        toolbarManager.addAction(self.hgBookmarkDefineAct, title)
+        toolbarManager.addAction(self.hgBookmarkDeleteAct, title)
+        toolbarManager.addAction(self.hgBookmarkRenameAct, title)
+        toolbarManager.addAction(self.hgBookmarkMoveAct, title)
+        toolbarManager.addAction(self.hgBookmarkPullAct, title)
+        toolbarManager.addAction(self.hgBookmarkPushAct, title)
+        
+        tb.setEnabled(False)
+        tb.setVisible(False)
+        
+        ui.registerToolbar("mercurial", tb.windowTitle(), tb)
+        
+        return tb
     
     def showMenu(self):
         """

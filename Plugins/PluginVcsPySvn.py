@@ -158,8 +158,8 @@ class VcsPySvnPlugin(QObject):
             "CommitMessages": 20,
         }
         
-        from VcsPlugins.vcsPySvn.ProjectHelper import SvnProjectHelper
-        self.__projectHelperObject = SvnProjectHelper(None, None)
+        from VcsPlugins.vcsPySvn.ProjectHelper import PySvnProjectHelper
+        self.__projectHelperObject = PySvnProjectHelper(None, None)
         try:
             e5App().registerPluginObject(
                 pluginTypename, self.__projectHelperObject, pluginType)
@@ -184,6 +184,15 @@ class VcsPySvnPlugin(QObject):
         """
         from VcsPlugins.vcsPySvn.subversion import Subversion
         self.__object = Subversion(self, self.__ui)
+        
+        tb = self.__ui.getToolbar("vcs")[1]
+        tb.setVisible(False)
+        tb.setEnabled(False)
+        
+        tb = self.__ui.getToolbar("pysvn")[1]
+        tb.setVisible(True)
+        tb.setEnabled(True)
+        
         return self.__object, True
     
     def deactivate(self):
@@ -191,6 +200,14 @@ class VcsPySvnPlugin(QObject):
         Public method to deactivate this plugin.
         """
         self.__object = None
+        
+        tb = self.__ui.getToolbar("pysvn")[1]
+        tb.setVisible(False)
+        tb.setEnabled(False)
+        
+        tb = self.__ui.getToolbar("vcs")[1]
+        tb.setVisible(True)
+        tb.setEnabled(True)
     
     def getPreferences(self, key):
         """

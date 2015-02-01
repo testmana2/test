@@ -3931,13 +3931,14 @@ class Project(QObject):
         self.menu = menu
         return menu
         
-    def initToolbar(self, toolbarManager):
+    def initToolbars(self, toolbarManager):
         """
-        Public slot to initialize the project toolbar.
+        Public slot to initialize the project toolbar and the basic VCS
+        toolbar.
         
         @param toolbarManager reference to a toolbar manager object
             (E5ToolBarManager)
-        @return the toolbar generated (QToolBar)
+        @return tuple of the generated toolbars (tuple of two QToolBar)
         """
         tb = QToolBar(self.tr("Project"), self.ui)
         tb.setIconSize(UI.Config.ToolBarIconSize)
@@ -3957,7 +3958,11 @@ class Project(QObject):
         toolbarManager.addAction(self.propsAct, tb.windowTitle())
         toolbarManager.addAction(self.userPropsAct, tb.windowTitle())
         
-        return tb
+        import VCS
+        vcstb = VCS.getBasicHelper(self).initBasicToolbar(
+            self.ui, toolbarManager)
+        
+        return tb, vcstb
         
     def __showMenu(self):
         """
@@ -4300,8 +4305,8 @@ class Project(QObject):
                 pass
         
         if vcs is None:
-            from VCS.ProjectHelper import VcsProjectHelper
-            self.vcsProjectHelper = VcsProjectHelper(None, self)
+            import VCS
+            self.vcsProjectHelper = VCS.getBasicHelper(self)
             self.vcsBasicHelper = True
         else:
             self.vcsProjectHelper = vcs.vcsGetProjectHelper(self)

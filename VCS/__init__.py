@@ -58,3 +58,23 @@ def factory(vcs):
                                 break
                 break
     return vc
+
+
+VcsBasicHelperSingleton = None
+
+
+def getBasicHelper(project):
+    """
+    Module function to get a reference to the basic project helper singleton.
+    
+    @param project reference to the project object (Project)
+    @return reference to the basic VCS project helper singleton
+        (VcsProjectHelper)
+    """
+    global VcsBasicHelperSingleton
+    
+    if VcsBasicHelperSingleton is None:
+        from .ProjectHelper import VcsProjectHelper
+        VcsBasicHelperSingleton = VcsProjectHelper(None, project)
+    
+    return VcsBasicHelperSingleton

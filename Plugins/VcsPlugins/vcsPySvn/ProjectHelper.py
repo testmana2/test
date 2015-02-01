@@ -11,16 +11,17 @@ from __future__ import unicode_literals
 
 import os
 
-from E5Gui.E5Application import e5App
+from PyQt5.QtWidgets import QToolBar
 
 from VCS.ProjectHelper import VcsProjectHelper
 
 from E5Gui.E5Action import E5Action
+from E5Gui.E5Application import e5App
 
 import UI.PixmapCache
 
 
-class SvnProjectHelper(VcsProjectHelper):
+class PySvnProjectHelper(VcsProjectHelper):
     """
     Class implementing the VCS project helper for Subversion.
     """
@@ -559,6 +560,52 @@ class SvnProjectHelper(VcsProjectHelper):
         menu.addSeparator()
         menu.addAction(self.vcsNewAct)
         menu.addAction(self.vcsExportAct)
+    
+    def initToolbar(self, ui, toolbarManager):
+        """
+        Public slot to initialize the VCS toolbar.
+        
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        @return the toolbar generated (QToolBar)
+        """
+        tb = QToolBar(self.tr("Subversion (pysvn)"), ui)
+        tb.setIconSize(UI.Config.ToolBarIconSize)
+        tb.setObjectName("PySvnToolbar")
+        tb.setToolTip(self.tr('Subversion (pysvn)'))
+        
+        tb.addAction(self.svnLogBrowserAct)
+        tb.addAction(self.vcsStatusAct)
+        tb.addSeparator()
+        tb.addAction(self.vcsDiffAct)
+        tb.addSeparator()
+        tb.addAction(self.svnRepoBrowserAct)
+        tb.addAction(self.vcsNewAct)
+        tb.addAction(self.vcsExportAct)
+        tb.addSeparator()
+        
+        title = tb.windowTitle()
+        toolbarManager.addToolBar(tb, title)
+        toolbarManager.addAction(self.vcsUpdateAct, title)
+        toolbarManager.addAction(self.vcsCommitAct, title)
+        toolbarManager.addAction(self.vcsLogAct, title)
+        toolbarManager.addAction(self.svnExtDiffAct, title)
+        toolbarManager.addAction(self.svnUrlDiffAct, title)
+        toolbarManager.addAction(self.svnChangeListsAct, title)
+        toolbarManager.addAction(self.svnRepoInfoAct, title)
+        toolbarManager.addAction(self.vcsTagAct, title)
+        toolbarManager.addAction(self.vcsRevertAct, title)
+        toolbarManager.addAction(self.vcsMergeAct, title)
+        toolbarManager.addAction(self.vcsSwitchAct, title)
+        toolbarManager.addAction(self.svnRelocateAct, title)
+        
+        tb.setEnabled(False)
+        tb.setVisible(False)
+        
+        ui.registerToolbar("pysvn", tb.windowTitle(), tb)
+        
+        return tb
     
     def __svnResolve(self):
         """

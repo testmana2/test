@@ -14,13 +14,15 @@ import shutil
 import copy
 
 from PyQt5.QtCore import pyqtSlot, QDir, QFileInfo, QObject
-from PyQt5.QtWidgets import QDialog, QInputDialog
+from PyQt5.QtWidgets import QDialog, QInputDialog, QToolBar
 
 from E5Gui.E5Action import E5Action
 from E5Gui import E5MessageBox
 from E5Gui.E5Application import e5App
 
 import Preferences
+import UI.PixmapCache
+import UI.Config
 
 
 class VcsProjectHelper(QObject):
@@ -65,6 +67,7 @@ class VcsProjectHelper(QObject):
         """
         self.vcsNewAct = E5Action(
             self.tr('New from repository'),
+            UI.PixmapCache.getIcon("vcsCheckout.png"),
             self.tr('&New from repository...'),
             0, 0, self, 'vcs_new')
         self.vcsNewAct.setStatusTip(self.tr(
@@ -80,6 +83,7 @@ class VcsProjectHelper(QObject):
         
         self.vcsExportAct = E5Action(
             self.tr('Export from repository'),
+            UI.PixmapCache.getIcon("vcsExport.png"),
             self.tr('&Export from repository...'),
             0, 0, self, 'vcs_export')
         self.vcsExportAct.setStatusTip(self.tr(
@@ -94,6 +98,7 @@ class VcsProjectHelper(QObject):
         
         self.vcsAddAct = E5Action(
             self.tr('Add to repository'),
+            UI.PixmapCache.getIcon("vcsCommit.png"),
             self.tr('&Add to repository...'),
             0, 0, self, 'vcs_add')
         self.vcsAddAct.setStatusTip(self.tr(
@@ -121,6 +126,40 @@ class VcsProjectHelper(QObject):
         menu.addAction(self.vcsAddAct)
         menu.addSeparator()
 
+    def initToolbar(self, ui, toolbarManager):
+        """
+        Public slot to initialize the VCS toolbar.
+        
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        @return the toolbar generated (QToolBar)
+        """
+        return None
+    
+    def initBasicToolbar(self, ui, toolbarManager):
+        """
+        Public slot to initialize the basic VCS toolbar.
+        
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        @return the toolbar generated (QToolBar)
+        """
+        tb = QToolBar(self.tr("VCS"), ui)
+        tb.setIconSize(UI.Config.ToolBarIconSize)
+        tb.setObjectName("VersionControlToolbar")
+        tb.setToolTip(self.tr('VCS'))
+        
+        tb.addAction(self.vcsNewAct)
+        tb.addAction(self.vcsExportAct)
+        tb.addSeparator()
+        tb.addAction(self.vcsAddAct)
+        
+        toolbarManager.addToolBar(tb, tb.windowTitle())
+        
+        return tb
+    
     def showMenu(self):
         """
         Public slot called before the vcs menu is shown.
