@@ -1068,7 +1068,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         
         self.__filterLogsEnabled = True
         if self.__actionMode() == "filter":
-            self.__filterLogs()        
+            self.__filterLogs()
         self.__updateDiffButtons()
         self.__updateToolMenuActions()
         
@@ -1709,6 +1709,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     def on_modeComboBox_currentIndexChanged(self, index):
         """
         Private slot to react on mode changes.
+        
+        @param index index of the selected entry (integer)
         """
         mode = self.modeComboBox.itemData(index)
         findMode = mode == "find"

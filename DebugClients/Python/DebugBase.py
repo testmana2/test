@@ -636,7 +636,6 @@ class DebugBase(bdb.Bdb):
         @param exctb traceback for the exception
         @param unhandled flag indicating an uncaught exception
         """
-        
         if exctype in [GeneratorExit, StopIteration]:
             # ignore these
             return
