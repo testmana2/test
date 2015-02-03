@@ -81,6 +81,9 @@ QWidget
 <td><a href="#SearchReplaceSlidingWidget.__slideRight">__slideRight</a></td>
 <td>Private slot to move the widget to the right, i.e.</td>
 </tr><tr>
+<td><a href="#SearchReplaceSlidingWidget.changeEvent">changeEvent</a></td>
+<td>Protected method handling state changes.</td>
+</tr><tr>
 <td><a href="#SearchReplaceSlidingWidget.findNext">findNext</a></td>
 <td>Public slot to find the next occurrence of text.</td>
 </tr><tr>
@@ -147,7 +150,17 @@ flag indicating to move to the left (boolean)
 <p>
         Private slot to move the widget to the right, i.e. show contents to
         the left.
-</p><a NAME="SearchReplaceSlidingWidget.findNext" ID="SearchReplaceSlidingWidget.findNext"></a>
+</p><a NAME="SearchReplaceSlidingWidget.changeEvent" ID="SearchReplaceSlidingWidget.changeEvent"></a>
+<h4>SearchReplaceSlidingWidget.changeEvent</h4>
+<b>changeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling state changes.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+event containing the state change (QEvent)
+</dd>
+</dl><a NAME="SearchReplaceSlidingWidget.findNext" ID="SearchReplaceSlidingWidget.findNext"></a>
 <h4>SearchReplaceSlidingWidget.findNext</h4>
 <b>findNext</b>(<i></i>)
 <p>
@@ -242,6 +255,9 @@ QWidget
 </tr><tr>
 <td><a href="#SearchReplaceWidget.__showReplace">__showReplace</a></td>
 <td>Private slot to display this widget in replace mode.</td>
+</tr><tr>
+<td><a href="#SearchReplaceWidget.changeEvent">changeEvent</a></td>
+<td>Protected method handling state changes.</td>
 </tr><tr>
 <td><a href="#SearchReplaceWidget.findNext">findNext</a></td>
 <td>Public slot to find the next occurrence of text.</td>
@@ -388,6 +404,16 @@ text to be shown in the findtext edit (string)
 <dt><i>text</i></dt>
 <dd>
 text to be shown in the findtext edit
+</dd>
+</dl><a NAME="SearchReplaceWidget.changeEvent" ID="SearchReplaceWidget.changeEvent"></a>
+<h4>SearchReplaceWidget.changeEvent</h4>
+<b>changeEvent</b>(<i>evt</i>)
+<p>
+        Protected method handling state changes.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+event containing the state change (QEvent)
 </dd>
 </dl><a NAME="SearchReplaceWidget.findNext" ID="SearchReplaceWidget.findNext"></a>
 <h4>SearchReplaceWidget.findNext</h4>

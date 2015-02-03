@@ -9751,6 +9751,7 @@
       <keyword name="SearchReplaceSlidingWidget.__slide" id="SearchReplaceSlidingWidget.__slide" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slide" />
       <keyword name="SearchReplaceSlidingWidget.__slideLeft" id="SearchReplaceSlidingWidget.__slideLeft" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideLeft" />
       <keyword name="SearchReplaceSlidingWidget.__slideRight" id="SearchReplaceSlidingWidget.__slideRight" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideRight" />
+      <keyword name="SearchReplaceSlidingWidget.changeEvent" id="SearchReplaceSlidingWidget.changeEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.changeEvent" />
       <keyword name="SearchReplaceSlidingWidget.findNext" id="SearchReplaceSlidingWidget.findNext" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findNext" />
       <keyword name="SearchReplaceSlidingWidget.findPrev" id="SearchReplaceSlidingWidget.findPrev" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findPrev" />
       <keyword name="SearchReplaceSlidingWidget.resizeEvent" id="SearchReplaceSlidingWidget.resizeEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.resizeEvent" />
@@ -9767,6 +9768,7 @@
       <keyword name="SearchReplaceWidget.__selectionBoundary" id="SearchReplaceWidget.__selectionBoundary" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__selectionBoundary" />
       <keyword name="SearchReplaceWidget.__showFind" id="SearchReplaceWidget.__showFind" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showFind" />
       <keyword name="SearchReplaceWidget.__showReplace" id="SearchReplaceWidget.__showReplace" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.__showReplace" />
+      <keyword name="SearchReplaceWidget.changeEvent" id="SearchReplaceWidget.changeEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.changeEvent" />
       <keyword name="SearchReplaceWidget.findNext" id="SearchReplaceWidget.findNext" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.findNext" />
       <keyword name="SearchReplaceWidget.findPrev" id="SearchReplaceWidget.findPrev" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.findPrev" />
       <keyword name="SearchReplaceWidget.keyPressEvent" id="SearchReplaceWidget.keyPressEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceWidget.keyPressEvent" />

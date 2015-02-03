@@ -7571,6 +7571,7 @@ eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomOut?4(zoom=1)
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomTo?4(zoom)
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomValueChanged?7
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat?1(parent=None)
+eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.changeEvent?4(evt)
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.findNext?4()
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.findPrev?4()
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.resizeEvent?4(evt)
@@ -7579,6 +7580,7 @@ eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.selectionChanged
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.show?4(text='')
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget.updateSelectionCheckBox?4(editor)
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceSlidingWidget?1(replace, vm, parent=None)
+eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.changeEvent?4(evt)
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.findNext?4()
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.findPrev?4()
 eric6.QScintilla.SearchReplaceWidget.SearchReplaceWidget.keyPressEvent?4(event)
@@ -9034,6 +9036,7 @@ eric6.install-i18n.usage?4(rcode=2)
 eric6.install.BlackLists?7
 eric6.install.PlatformsBlackLists?7
 eric6.install.PythonMarkers?7
+eric6.install.PythonTextMarkers?7
 eric6.install.apisDir?7
 eric6.install.cfg?7
 eric6.install.cleanUp?4()
