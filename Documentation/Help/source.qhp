@@ -7676,6 +7676,7 @@
       <keyword name="LogViewerEdit (Constructor)" id="LogViewerEdit (Constructor)" ref="eric6.UI.LogView.html#LogViewerEdit.__init__" />
       <keyword name="LogViewerEdit.__appendText" id="LogViewerEdit.__appendText" ref="eric6.UI.LogView.html#LogViewerEdit.__appendText" />
       <keyword name="LogViewerEdit.__configure" id="LogViewerEdit.__configure" ref="eric6.UI.LogView.html#LogViewerEdit.__configure" />
+      <keyword name="LogViewerEdit.__filterMessage" id="LogViewerEdit.__filterMessage" ref="eric6.UI.LogView.html#LogViewerEdit.__filterMessage" />
       <keyword name="LogViewerEdit.__find" id="LogViewerEdit.__find" ref="eric6.UI.LogView.html#LogViewerEdit.__find" />
       <keyword name="LogViewerEdit.__handleShowContextMenu" id="LogViewerEdit.__handleShowContextMenu" ref="eric6.UI.LogView.html#LogViewerEdit.__handleShowContextMenu" />
       <keyword name="LogViewerEdit.appendToStderr" id="LogViewerEdit.appendToStderr" ref="eric6.UI.LogView.html#LogViewerEdit.appendToStderr" />
@@ -9795,6 +9796,7 @@
       <keyword name="SearchReplaceSlidingWidget.__slide" id="SearchReplaceSlidingWidget.__slide" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slide" />
       <keyword name="SearchReplaceSlidingWidget.__slideLeft" id="SearchReplaceSlidingWidget.__slideLeft" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideLeft" />
       <keyword name="SearchReplaceSlidingWidget.__slideRight" id="SearchReplaceSlidingWidget.__slideRight" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.__slideRight" />
+      <keyword name="SearchReplaceSlidingWidget.changeEvent" id="SearchReplaceSlidingWidget.changeEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.changeEvent" />
       <keyword name="SearchReplaceSlidingWidget.findNext" id="SearchReplaceSlidingWidget.findNext" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findNext" />
       <keyword name="SearchReplaceSlidingWidget.findPrev" id="SearchReplaceSlidingWidget.findPrev" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.findPrev" />
       <keyword name="SearchReplaceSlidingWidget.resizeEvent" id="SearchReplaceSlidingWidget.resizeEvent" ref="eric6.QScintilla.SearchReplaceWidget.html#SearchReplaceSlidingWidget.resizeEvent" />
@@ -12211,7 +12213,7 @@
       <keyword name="UserInterface.showEvent" id="UserInterface.showEvent" ref="eric6.UI.UserInterface.html#UserInterface.showEvent" />
       <keyword name="UserInterface.showFindFileByNameDialog" id="UserInterface.showFindFileByNameDialog" ref="eric6.UI.UserInterface.html#UserInterface.showFindFileByNameDialog" />
       <keyword name="UserInterface.showFindFilesDialog" id="UserInterface.showFindFilesDialog" ref="eric6.UI.UserInterface.html#UserInterface.showFindFilesDialog" />
-      <keyword name="UserInterface.showLogTab" id="UserInterface.showLogTab" ref="eric6.UI.UserInterface.html#UserInterface.showLogTab" />
+      <keyword name="UserInterface.showLogViewer" id="UserInterface.showLogViewer" ref="eric6.UI.UserInterface.html#UserInterface.showLogViewer" />
       <keyword name="UserInterface.showNotification" id="UserInterface.showNotification" ref="eric6.UI.UserInterface.html#UserInterface.showNotification" />
       <keyword name="UserInterface.showPluginsAvailable" id="UserInterface.showPluginsAvailable" ref="eric6.UI.UserInterface.html#UserInterface.showPluginsAvailable" />
       <keyword name="UserInterface.showPreferences" id="UserInterface.showPreferences" ref="eric6.UI.UserInterface.html#UserInterface.showPreferences" />

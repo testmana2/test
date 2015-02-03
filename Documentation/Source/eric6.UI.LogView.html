@@ -82,11 +82,14 @@ QWidget
 </table>
 <a NAME="LogViewer.__init__" ID="LogViewer.__init__"></a>
 <h4>LogViewer (Constructor)</h4>
-<b>LogViewer</b>(<i>parent=None</i>)
+<b>LogViewer</b>(<i>ui, parent=None</i>)
 <p>
         Constructor
 </p><dl>
-<dt><i>parent</i></dt>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>parent</i></dt>
 <dd>
 reference to the parent widget (QWidget)
 </dd>
@@ -162,6 +165,9 @@ QTextEdit
 <td><a href="#LogViewerEdit.__configure">__configure</a></td>
 <td>Private method to open the configuration dialog.</td>
 </tr><tr>
+<td><a href="#LogViewerEdit.__filterMessage">__filterMessage</a></td>
+<td>Private method to filter messages.</td>
+</tr><tr>
 <td><a href="#LogViewerEdit.__find">__find</a></td>
 <td>Private slot to show the find widget.</td>
 </tr><tr>
@@ -203,14 +209,14 @@ reference to the parent widget (QWidget)
 </dd>
 </dl><a NAME="LogViewerEdit.__appendText" ID="LogViewerEdit.__appendText"></a>
 <h4>LogViewerEdit.__appendText</h4>
-<b>__appendText</b>(<i>txt, error=False</i>)
+<b>__appendText</b>(<i>txt, isErrorMessage=False</i>)
 <p>
         Private method to append text to the end.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>
 text to insert (string)
-</dd><dt><i>error</i></dt>
+</dd><dt><i>isErrorMessage</i></dt>
 <dd>
 flag indicating to insert error text (boolean)
 </dd>
@@ -219,7 +225,27 @@ flag indicating to insert error text (boolean)
 <b>__configure</b>(<i></i>)
 <p>
         Private method to open the configuration dialog.
-</p><a NAME="LogViewerEdit.__find" ID="LogViewerEdit.__find"></a>
+</p><a NAME="LogViewerEdit.__filterMessage" ID="LogViewerEdit.__filterMessage"></a>
+<h4>LogViewerEdit.__filterMessage</h4>
+<b>__filterMessage</b>(<i>message, isErrorMessage=False</i>)
+<p>
+        Private method to filter messages.
+</p><dl>
+<dt><i>message</i></dt>
+<dd>
+message to be checked (string)
+</dd><dt><i>isErrorMessage</i></dt>
+<dd>
+flag indicating to check an error message
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the message should be filtered out
+            (boolean)
+</dd>
+</dl><a NAME="LogViewerEdit.__find" ID="LogViewerEdit.__find"></a>
 <h4>LogViewerEdit.__find</h4>
 <b>__find</b>(<i></i>)
 <p>
@@ -244,6 +270,11 @@ the position of the mouse pointer (QPoint)
 <dd>
 text to be appended (string)
 </dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating text was appended (boolean)
+</dd>
 </dl><a NAME="LogViewerEdit.appendToStdout" ID="LogViewerEdit.appendToStdout"></a>
 <h4>LogViewerEdit.appendToStdout</h4>
 <b>appendToStdout</b>(<i>txt</i>)
@@ -253,6 +284,11 @@ text to be appended (string)
 <dt><i>txt</i></dt>
 <dd>
 text to be appended (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating text was appended (boolean)
 </dd>
 </dl><a NAME="LogViewerEdit.keyPressEvent" ID="LogViewerEdit.keyPressEvent"></a>
 <h4>LogViewerEdit.keyPressEvent</h4>
