@@ -159,11 +159,7 @@ and so on.</td></tr>
         self.findPrevAct.setEnabled(False)
         self.ui.findtextCombo.addAction(self.findPrevAct)
         
-        self.ensurePolished()
-        msh = self.minimumSizeHint()
-        self.resize(max(self.width(), msh.width()),
-                    max(self.height(), msh.height())
-                    )
+        self.adjustSize()
         
         self.havefound = False
         self.__pos = None
@@ -178,11 +174,7 @@ and so on.</td></tr>
         @param evt event containing the state change (QEvent)
         """
         if evt.type() == QEvent.FontChange:
-            self.ensurePolished()
-            msh = self.minimumSizeHint()
-            self.resize(max(self.width(), msh.width()),
-                        max(self.height(), msh.height())
-                        )
+            self.adjustSize()
     
     def __selectionBoundary(self, selections=None):
         """
@@ -907,7 +899,6 @@ class SearchReplaceSlidingWidget(QWidget):
         
         self.__searchReplaceWidget = \
             SearchReplaceWidget(replace, vm, self, True)
-        srHeight = self.__searchReplaceWidget.height()
         
         self.__layout = QHBoxLayout(self)
         self.setLayout(self.__layout)
@@ -924,7 +915,6 @@ class SearchReplaceSlidingWidget(QWidget):
         self.__scroller.setWidget(self.__searchReplaceWidget)
         self.__scroller.setSizePolicy(
             QSizePolicy.Expanding, QSizePolicy.Minimum)
-        self.__scroller.setMaximumHeight(srHeight)
         self.__scroller.setFrameShape(QFrame.NoFrame)
         self.__scroller.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.__scroller.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
@@ -940,12 +930,24 @@ class SearchReplaceSlidingWidget(QWidget):
         self.__layout.addWidget(self.__scroller)
         self.__layout.addWidget(self.__rightButton)
         
-        self.setMaximumHeight(srHeight)
+        self.setMaximumHeight(self.__searchReplaceWidget.sizeHint().height())
+        self.adjustSize()
         
         self.__searchReplaceWidget.searchListChanged.connect(
             self.searchListChanged)
         self.__leftButton.clicked.connect(self.__slideLeft)
         self.__rightButton.clicked.connect(self.__slideRight)
+    
+    def changeEvent(self, evt):
+        """
+        Protected method handling state changes.
+
+        @param evt event containing the state change (QEvent)
+        """
+        if evt.type() == QEvent.FontChange:
+            self.setMaximumHeight(
+                self.__searchReplaceWidget.sizeHint().height())
+            self.adjustSize()
     
     def findNext(self):
         """
