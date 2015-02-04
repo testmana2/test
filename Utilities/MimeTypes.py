@@ -11,8 +11,10 @@ from __future__ import unicode_literals
 
 import mimetypes
 
+# TODO: make this configurable
 TextMimeTypes = [
     "application/bookmarks.xbel",
+    "application/x-xbel",
     "application/opensearchdescription+xml",
     "application/x-actionscript",
     "application/x-actionscript3",
