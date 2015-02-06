@@ -141,6 +141,9 @@ class ConfigurationWidget(QWidget):
                 "ircPage":
                 [self.tr("IRC"), "irc.png",
                  "IrcPage", None, None],
+                "logViewerPage":
+                [self.tr("Log-Viewer"), "preferences-logviewer.png", 
+                 "LogViewerPage", None, None],
                 "networkPage":
                 [self.tr("Network"), "preferences-network.png",
                  "NetworkPage", None, None],

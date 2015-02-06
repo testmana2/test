@@ -99,61 +99,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="title">
-      <string>Log-Viewer</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0" colspan="3">
-       <widget class="QCheckBox" name="lvAutoRaiseCheckBox">
-        <property name="toolTip">
-         <string>Select to show the log-viewer upon new output</string>
-        </property>
-        <property name="text">
-         <string>Show upon new output</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="TextLabel3_2_2">
-        <property name="text">
-         <string>Stderr Colour:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="stderrTextColourButton">
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="toolTip">
-         <string>Select the colour for text sent to stderr</string>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>319</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
     <widget class="QGroupBox" name="uiCaptionShowsFilenameGroupBox">
      <property name="focusPolicy">
       <enum>Qt::StrongFocus</enum>
@@ -624,8 +569,6 @@
   <tabstop>uiBrowsersSortByOccurrenceCheckBox</tabstop>
   <tabstop>uiBrowsersShowHiddenCheckBox</tabstop>
   <tabstop>fileFiltersEdit</tabstop>
-  <tabstop>lvAutoRaiseCheckBox</tabstop>
-  <tabstop>stderrTextColourButton</tabstop>
   <tabstop>uiCaptionShowsFilenameGroupBox</tabstop>
   <tabstop>filenameLengthSpinBox</tabstop>
   <tabstop>styleComboBox</tabstop>

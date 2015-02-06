@@ -59,9 +59,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.fileFiltersEdit.setText(
             Preferences.getUI("BrowsersFileFilters"))
         
-        self.lvAutoRaiseCheckBox.setChecked(
-            Preferences.getUI("LogViewerAutoRaise"))
-        
         self.uiCaptionShowsFilenameGroupBox.setChecked(
             Preferences.getUI("CaptionShowsFilename"))
         self.filenameLengthSpinBox.setValue(
@@ -108,10 +105,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.tabsCloseButtonCheckBox.setChecked(
             Preferences.getUI("SingleCloseButton"))
         
-        self.initColour(
-            "LogStdErrColour", self.stderrTextColourButton,
-            Preferences.getUI)
-        
         self.delaySpinBox.setValue(Preferences.getUI("SidebarDelay"))
         
     def save(self):
@@ -140,9 +133,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             "BrowsersFileFilters",
             self.fileFiltersEdit.text())
         
-        Preferences.setUI(
-            "LogViewerAutoRaise",
-            self.lvAutoRaiseCheckBox.isChecked())
         Preferences.setUI(
             "CaptionShowsFilename",
             self.uiCaptionShowsFilenameGroupBox.isChecked())
@@ -201,8 +191,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.tabsCloseButtonCheckBox.isChecked())
         
         Preferences.setUI("SidebarDelay", self.delaySpinBox.value())
-        
-        self.saveColours(Preferences.setUI)
         
     def __populateStyleCombo(self):
         """

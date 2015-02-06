@@ -3,7 +3,7 @@ Change Log
 Version 6.1-snapshot-2015mmdd:
 - bug fixes
 - Log Viewer
-  -- added a message filter
+  -- added a message filter including a configuration page
 - Previewers
   -- added capability to use 'Sphinx' to preview ReST files
 - Task Viewer

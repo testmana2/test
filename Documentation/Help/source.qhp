@@ -774,6 +774,7 @@
               <section title="eric6.Preferences.ConfigurationPages.IconsPreviewDialog" ref="eric6.Preferences.ConfigurationPages.IconsPreviewDialog.html" />
               <section title="eric6.Preferences.ConfigurationPages.InterfacePage" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html" />
               <section title="eric6.Preferences.ConfigurationPages.IrcPage" ref="eric6.Preferences.ConfigurationPages.IrcPage.html" />
+              <section title="eric6.Preferences.ConfigurationPages.LogViewerPage" ref="eric6.Preferences.ConfigurationPages.LogViewerPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.MasterPasswordEntryDialog" ref="eric6.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html" />
               <section title="eric6.Preferences.ConfigurationPages.MultiProjectPage" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.NetworkPage" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html" />
@@ -7692,6 +7693,10 @@
       <keyword name="LogViewerEdit.preferencesChanged" id="LogViewerEdit.preferencesChanged" ref="eric6.UI.LogView.html#LogViewerEdit.preferencesChanged" />
       <keyword name="LogViewerEdit.searchNext" id="LogViewerEdit.searchNext" ref="eric6.UI.LogView.html#LogViewerEdit.searchNext" />
       <keyword name="LogViewerEdit.searchPrev" id="LogViewerEdit.searchPrev" ref="eric6.UI.LogView.html#LogViewerEdit.searchPrev" />
+      <keyword name="LogViewerPage" id="LogViewerPage" ref="eric6.Preferences.ConfigurationPages.LogViewerPage.html#LogViewerPage" />
+      <keyword name="LogViewerPage (Constructor)" id="LogViewerPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.LogViewerPage.html#LogViewerPage.__init__" />
+      <keyword name="LogViewerPage (Module)" id="LogViewerPage (Module)" ref="eric6.Preferences.ConfigurationPages.LogViewerPage.html" />
+      <keyword name="LogViewerPage.save" id="LogViewerPage.save" ref="eric6.Preferences.ConfigurationPages.LogViewerPage.html#LogViewerPage.save" />
       <keyword name="LoginForm" id="LoginForm" ref="eric6.Helpviewer.Passwords.LoginForm.html#LoginForm" />
       <keyword name="LoginForm (Constructor)" id="LoginForm (Constructor)" ref="eric6.Helpviewer.Passwords.LoginForm.html#LoginForm.__init__" />
       <keyword name="LoginForm (Module)" id="LoginForm (Module)" ref="eric6.Helpviewer.Passwords.LoginForm.html" />
@@ -13024,6 +13029,7 @@
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.IrcPage.html#create" />
+      <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.LogViewerPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.NotificationsPage.html#create" />
@@ -14195,6 +14201,7 @@
       <file>eric6.Preferences.ConfigurationPages.IconsPreviewDialog.html</file>
       <file>eric6.Preferences.ConfigurationPages.InterfacePage.html</file>
       <file>eric6.Preferences.ConfigurationPages.IrcPage.html</file>
+      <file>eric6.Preferences.ConfigurationPages.LogViewerPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html</file>
       <file>eric6.Preferences.ConfigurationPages.MultiProjectPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.NetworkPage.html</file>

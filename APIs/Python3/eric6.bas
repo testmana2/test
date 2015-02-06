@@ -439,6 +439,7 @@ LfRevisionsInputDialog QDialog Ui_LfRevisionsInputDialog
 Listspace QSplitter ViewManager
 LogViewer QWidget
 LogViewerEdit QTextEdit
+LogViewerPage ConfigurationPageBase Ui_LogViewerPage
 MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
 MessageBoxWizard QObject

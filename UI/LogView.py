@@ -94,9 +94,6 @@ class LogViewerEdit(QTextEdit):
     @signal searchStringFound(found) emitted to indicate the search result
         (boolean)
     """
-    # TODO: implement a filter for messages (separate for stdout and stderr,
-    #       maybe a combined one as well
-    # TODO: add an entry to the config dialog for the filters
     searchStringFound = pyqtSignal(bool)
     
     def __init__(self, parent=None):
@@ -225,7 +222,7 @@ class LogViewerEdit(QTextEdit):
         """
         Private method to open the configuration dialog.
         """
-        e5App().getObject("UserInterface").showPreferences("interfacePage")
+        e5App().getObject("UserInterface").showPreferences("logViewerPage")
         
     def __find(self):
         """

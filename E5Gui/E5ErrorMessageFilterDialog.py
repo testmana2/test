@@ -31,7 +31,7 @@ class E5ErrorMessageFilterDialog(QDialog, Ui_E5ErrorMessageFilterDialog):
         
         self.filtersEditWidget.setList(messageFilters)
         self.filtersEditWidget.setListWhatsThis(self.tr(
-            "<b>Error Message Filter</b>"
+            "<b>Error Message Filters</b>"
             "<p>This list shows the configured message filters used to"
             " suppress error messages from within Qt.</p>"
         ))

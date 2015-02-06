@@ -4205,229 +4205,229 @@ linha e posição.&lt;/p&gt;</translation>
         <translation>Ícones</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="326"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="329"/>
         <source>Network</source>
         <translation>Rede</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="152"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="155"/>
         <source>Plugin Manager</source>
         <translation>Gestor de Plugins</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="329"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="332"/>
         <source>Printer</source>
         <translation>Impressora</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="191"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="194"/>
         <source>Python</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="162"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="165"/>
         <source>Qt</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="168"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="171"/>
         <source>Shell</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="171"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="174"/>
         <source>Tasks</source>
         <translation>Tarefas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="174"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="177"/>
         <source>Templates</source>
         <translation>Modelos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="180"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="183"/>
         <source>Version Control Systems</source>
         <translation>Sistemas de Control de Versão</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="185"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="188"/>
         <source>Debugger</source>
         <translation>Depurador</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="221"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="224"/>
         <source>General</source>
         <translation>Geral</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="194"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="197"/>
         <source>Python3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="197"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="200"/>
         <source>Ruby</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="201"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="204"/>
         <source>Editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="204"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="207"/>
         <source>APIs</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="207"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="210"/>
         <source>Autocompletion</source>
         <translation>Autocompletar</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="218"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="221"/>
         <source>QScintilla</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="215"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="218"/>
         <source>Calltips</source>
         <translation>Dicas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="224"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="227"/>
         <source>Filehandling</source>
         <translation>Tratamento de Ficheiros</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="228"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="231"/>
         <source>Searching</source>
         <translation>Procurando</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="231"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="234"/>
         <source>Spell checking</source>
         <translation>Verificação ortográfica</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="235"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="238"/>
         <source>Style</source>
         <translation>Estilo</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="241"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="244"/>
         <source>Typing</source>
         <translation>Digitação</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="247"/>
         <source>Exporters</source>
         <translation>Exportadores</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="248"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="251"/>
         <source>Highlighters</source>
         <translation>Realçadores</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="252"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="255"/>
         <source>Filetype Associations</source>
         <translation>Associações de Tipos de Ficheiros</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="256"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="259"/>
         <source>Styles</source>
         <translation>Estilos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="260"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="263"/>
         <source>Keywords</source>
         <translation>Palavras Chave</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="263"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="266"/>
         <source>Properties</source>
         <translation>Propriedades</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="336"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="339"/>
         <source>Help</source>
         <translation>Ajuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="339"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="342"/>
         <source>Appearance</source>
         <translation>Aparência</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="342"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="345"/>
         <source>Help Documentation</source>
         <translation>Documentação de Ajuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="277"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="280"/>
         <source>Help Viewers</source>
         <translation>Visualizadores de Ajuda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="294"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="297"/>
         <source>Project</source>
         <translation>Projeto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="291"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="294"/>
         <source>Project Viewer</source>
         <translation>Visualizador de Projeto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="297"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="300"/>
         <source>Multiproject</source>
         <translation>Multiprojeto</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="323"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="326"/>
         <source>Interface</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="308"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="311"/>
         <source>Viewmanager</source>
         <translation>Gestor de Vista</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="484"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="487"/>
         <source>Preferences</source>
         <translation>Preferências</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="489"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="492"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Por favor selecione uma entrada da lista 
 para mostrar a página de configuração.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="561"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="564"/>
         <source>Configuration Page Error</source>
         <translation>Erro na Página de Configuração</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="561"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="564"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;A página de configuração &lt;b&gt;{0}&lt;/b&gt; não pôde ser carregada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="361"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="364"/>
         <source>Tray Starter</source>
         <translation>Iniciador de Bandeja de Sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="346"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
         <source>VirusTotal Interface</source>
         <translation>Interface de VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="332"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="335"/>
         <source>Security</source>
         <translation>Segurança</translation>
     </message>
@@ -4437,12 +4437,12 @@ para mostrar a página de configuração.</translation>
         <translation type="obsolete">Navegador Web de eric5</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="422"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="425"/>
         <source>Enter filter text...</source>
         <translation>Introduzir texto do filtro...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="148"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="151"/>
         <source>Notifications</source>
         <translation>Notificações</translation>
     </message>
@@ -4452,14 +4452,19 @@ para mostrar a página de configuração.</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="238"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="241"/>
         <source>Code Checkers</source>
         <translation>Verificadores de Código</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="352"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">Navegador Web de eric5 {6 ?}</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationDialog.py" line="145"/>
+        <source>Log-Viewer</source>
+        <translation type="unfinished">Visualizador de Registos</translation>
     </message>
 </context>
 <context>
@@ -5027,32 +5032,32 @@ para mostrar a página de configuração.</translation>
         <translation>O ficheiro &lt;b&gt;{0}&lt;/b&gt; existe mas não tem classes.</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="332"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="335"/>
         <source>uic error</source>
         <translation>erro uic</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="332"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="335"/>
         <source>&lt;p&gt;There was an error loading the form &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Houve um erro ao carregar o form &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="517"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="520"/>
         <source>Code Generation</source>
         <translation>Geração de Código</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="402"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="405"/>
         <source>&lt;p&gt;Could not open the code template file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Não se pode abrir o ficheiro modelo de código &quot;{0}&quot;&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="438"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="441"/>
         <source>&lt;p&gt;Could not open the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Não se pode abrir o ficheiro fonte &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="517"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="520"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Não se pode escrever o ficheiro fonte &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -7618,7 +7623,7 @@ Ainda assim deseja abandonar?</numerusform>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="33"/>
-        <source>&lt;b&gt;Error Message Filter&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
+        <source>&lt;b&gt;Error Message Filters&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -28522,281 +28527,261 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="104"/>
         <source>Log-Viewer</source>
-        <translation>Visualizador de Registos</translation>
+        <translation type="obsolete">Visualizador de Registos</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="110"/>
-        <source>Select to show the log-viewer upon new output</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="113"/>
-        <source>Show upon new output</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="120"/>
-        <source>Stderr Colour:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="133"/>
-        <source>Select the colour for text sent to stderr</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="162"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="107"/>
         <source>Select, if the caption of the main window should show the filename of the current editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="165"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="110"/>
         <source>Caption shows filename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="174"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="119"/>
         <source>Filename Length</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="181"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="126"/>
         <source>Enter the number of characters to be shown in the main window title.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="218"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="163"/>
         <source>Style:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="225"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="170"/>
         <source>Select the interface style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="232"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="177"/>
         <source>Style Sheet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="239"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="184"/>
         <source>Enter the name of the style sheet file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="191"/>
         <source>Select the style sheet file via a file selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="255"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="200"/>
         <source>Dockarea Corner Usage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="261"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="206"/>
         <source>Top Left Corner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="267"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="212"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="244"/>
         <source>Top dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="277"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="222"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="283"/>
         <source>Left dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="290"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="235"/>
         <source>Top Right Corner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="296"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="241"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="306"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="251"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="367"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="312"/>
         <source>Right dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="319"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
         <source>Bottom Left Corner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="325"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="357"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
         <source>Bottom dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="335"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="348"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
         <source>Bottom Right Corner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="354"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="364"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="441"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="456"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="401"/>
         <source>Language:</source>
         <translation type="unfinished">Linguagem:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="472"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="417"/>
         <source>Select the interface language.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="475"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="420"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="482"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="427"/>
         <source>Layout:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="495"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="440"/>
         <source>Select the layout type.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="504"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="449"/>
         <source>Toolboxes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="499"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="444"/>
         <source>Sidebars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="461"/>
         <source>Shell</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="522"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="467"/>
         <source>Select to get a separate shell window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="554"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="499"/>
         <source>separate window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="532"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="477"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="564"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="509"/>
         <source>embed in Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="545"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="490"/>
         <source>File-Browser</source>
         <translation type="unfinished">Navegador de Ficheiros</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="551"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="496"/>
         <source>Select to get a separate file browser window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="561"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="506"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="571"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="574"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
         <source>embed in Project-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="586"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="531"/>
         <source>Tabs</source>
         <translation type="unfinished">Separadores</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="592"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="537"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished">Apenas mostrar um botão de fechar em vez de um por separador</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="615"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="560"/>
         <source>Reset layout to factory defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="256"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="244"/>
         <source>System</source>
         <translation type="unfinished">Sistema</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="238"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="226"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>English</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="266"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
         <source>Select style sheet file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="266"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28811,12 +28796,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="331"/>
         <source>Delay:</source>
         <translation type="unfinished">Atraso:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="396"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
         <source> ms</source>
         <translation type="unfinished"></translation>
     </message>
@@ -31990,6 +31975,69 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../UI/LogView.py" line="125"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
+    </message>
+</context>
+<context>
+    <name>LogViewerPage</name>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="17"/>
+        <source>&lt;b&gt;Configure Log Viewer&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="37"/>
+        <source>Select to show the log-viewer upon new output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="40"/>
+        <source>Show upon new output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="49"/>
+        <source>Error Colour:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="62"/>
+        <source>Select the colour for text sent to stderr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="87"/>
+        <source>Message Filters:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="98"/>
+        <source>Standard Output</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="108"/>
+        <source>Standard Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="118"/>
+        <source>Both</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="35"/>
+        <source>&lt;b&gt;Message Filters for Standard Output&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="40"/>
+        <source>&lt;b&gt;Message Filters for Standard Error &lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stderr.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="45"/>
+        <source>&lt;b&gt;Message Filters for both&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout or stderr.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
