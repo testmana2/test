@@ -137,6 +137,7 @@
             <section title="eric6.E5Gui.E5SideBar" ref="eric6.E5Gui.E5SideBar.html" />
             <section title="eric6.E5Gui.E5SingleApplication" ref="eric6.E5Gui.E5SingleApplication.html" />
             <section title="eric6.E5Gui.E5SqueezeLabels" ref="eric6.E5Gui.E5SqueezeLabels.html" />
+            <section title="eric6.E5Gui.E5StringListEditWidget" ref="eric6.E5Gui.E5StringListEditWidget.html" />
             <section title="eric6.E5Gui.E5TabWidget" ref="eric6.E5Gui.E5TabWidget.html" />
             <section title="eric6.E5Gui.E5TableView" ref="eric6.E5Gui.E5TableView.html" />
             <section title="eric6.E5Gui.E5TextEditSearchWidget" ref="eric6.E5Gui.E5TextEditSearchWidget.html" />
@@ -3535,7 +3536,6 @@
       <keyword name="E5ErrorMessageFilterDialog (Constructor)" id="E5ErrorMessageFilterDialog (Constructor)" ref="eric6.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.__init__" />
       <keyword name="E5ErrorMessageFilterDialog (Module)" id="E5ErrorMessageFilterDialog (Module)" ref="eric6.E5Gui.E5ErrorMessageFilterDialog.html" />
       <keyword name="E5ErrorMessageFilterDialog.getFilters" id="E5ErrorMessageFilterDialog.getFilters" ref="eric6.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.getFilters" />
-      <keyword name="E5ErrorMessageFilterDialog.on_addButton_clicked" id="E5ErrorMessageFilterDialog.on_addButton_clicked" ref="eric6.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.on_addButton_clicked" />
       <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric6.E5Gui.E5Completers.html#E5FileCompleter" />
       <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric6.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
       <keyword name="E5FileDialog (Module)" id="E5FileDialog (Module)" ref="eric6.E5Gui.E5FileDialog.html" />
@@ -3920,6 +3920,13 @@
       <keyword name="E5SslInfoWidget.showAt" id="E5SslInfoWidget.showAt" ref="eric6.E5Network.E5SslInfoWidget.html#E5SslInfoWidget.showAt" />
       <keyword name="E5StringListCompleter" id="E5StringListCompleter" ref="eric6.E5Gui.E5Completers.html#E5StringListCompleter" />
       <keyword name="E5StringListCompleter (Constructor)" id="E5StringListCompleter (Constructor)" ref="eric6.E5Gui.E5Completers.html#E5StringListCompleter.__init__" />
+      <keyword name="E5StringListEditWidget" id="E5StringListEditWidget" ref="eric6.E5Gui.E5StringListEditWidget.html#E5StringListEditWidget" />
+      <keyword name="E5StringListEditWidget (Constructor)" id="E5StringListEditWidget (Constructor)" ref="eric6.E5Gui.E5StringListEditWidget.html#E5StringListEditWidget.__init__" />
+      <keyword name="E5StringListEditWidget (Module)" id="E5StringListEditWidget (Module)" ref="eric6.E5Gui.E5StringListEditWidget.html" />
+      <keyword name="E5StringListEditWidget.getList" id="E5StringListEditWidget.getList" ref="eric6.E5Gui.E5StringListEditWidget.html#E5StringListEditWidget.getList" />
+      <keyword name="E5StringListEditWidget.on_addButton_clicked" id="E5StringListEditWidget.on_addButton_clicked" ref="eric6.E5Gui.E5StringListEditWidget.html#E5StringListEditWidget.on_addButton_clicked" />
+      <keyword name="E5StringListEditWidget.setList" id="E5StringListEditWidget.setList" ref="eric6.E5Gui.E5StringListEditWidget.html#E5StringListEditWidget.setList" />
+      <keyword name="E5StringListEditWidget.setListWhatsThis" id="E5StringListEditWidget.setListWhatsThis" ref="eric6.E5Gui.E5StringListEditWidget.html#E5StringListEditWidget.setListWhatsThis" />
       <keyword name="E5TabWidget" id="E5TabWidget" ref="eric6.E5Gui.E5TabWidget.html#E5TabWidget" />
       <keyword name="E5TabWidget (Constructor)" id="E5TabWidget (Constructor)" ref="eric6.E5Gui.E5TabWidget.html#E5TabWidget.__init__" />
       <keyword name="E5TabWidget (Module)" id="E5TabWidget (Module)" ref="eric6.E5Gui.E5TabWidget.html" />
@@ -13695,6 +13702,7 @@
       <file>eric6.E5Gui.E5SideBar.html</file>
       <file>eric6.E5Gui.E5SingleApplication.html</file>
       <file>eric6.E5Gui.E5SqueezeLabels.html</file>
+      <file>eric6.E5Gui.E5StringListEditWidget.html</file>
       <file>eric6.E5Gui.E5TabWidget.html</file>
       <file>eric6.E5Gui.E5TableView.html</file>
       <file>eric6.E5Gui.E5TextEditSearchWidget.html</file>

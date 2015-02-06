@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="ru">
+<!DOCTYPE TS><TS version="2.0" language="ru" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1904,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1979,8 +1978,8 @@ the button to the right.&lt;/p&gt;</source>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Открыть файл в новой &amp;закладке	Ctrl+LMB</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Открыть файл в новой &amp;закладке<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -7271,56 +7270,61 @@ Do you want to quit anyway?</source>
 <context>
     <name>E5ErrorMessageFilterDialog</name>
     <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="51"/>
+        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="14"/>
         <source>Error Messages Filter</source>
         <translation>Фильтр сообщений об ошибке</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="40"/>
         <source>Enter search term for message</source>
-        <translation>Введите образец для поиска</translation>
+        <translation type="obsolete">Введите образец для поиска</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="77"/>
         <source>Press to add filter to the list</source>
-        <translation>Добавить новый фильтр</translation>
+        <translation type="obsolete">Добавить новый фильтр</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="80"/>
         <source>&amp;Add...</source>
-        <translation>&amp;Добавить...</translation>
+        <translation type="obsolete">&amp;Добавить...</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="97"/>
         <source>Press to remove the selected entries</source>
-        <translation>Удалить выбранные элементы</translation>
+        <translation type="obsolete">Удалить выбранные элементы</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="100"/>
         <source>&amp;Remove</source>
-        <translation>&amp;Удалить</translation>
+        <translation type="obsolete">&amp;Удалить</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="110"/>
         <source>Press to remove all entries</source>
-        <translation>Удалить все элементы</translation>
+        <translation type="obsolete">Удалить все элементы</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="113"/>
         <source>R&amp;emove All</source>
-        <translation>У&amp;далить всё</translation>
+        <translation type="obsolete">У&amp;далить всё</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="51"/>
         <source>Enter message filter to add to the list:</source>
-        <translation>Введите новый фильтр сообщений для добавления в список:</translation>
+        <translation type="obsolete">Введите новый фильтр сообщений для добавления в список:</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="123"/>
         <source>&lt;b&gt;Error Message Filter&lt;/b&gt;
 &lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Фильтры сообщений об ошибках&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Фильтры сообщений об ошибках&lt;/b&gt;
 &lt;p&gt;Показывает список фильтров нежелательных сообщений об ошибках Qt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="33"/>
+        <source>&lt;b&gt;Error Message Filter&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8258,6 +8262,54 @@ whole selection.&lt;/li&gt;
         <location filename="../E5Network/E5SslInfoWidget.py" line="88"/>
         <source>The certificate for this site is NOT valid.</source>
         <translation>Сертификат для этого сайта НЕДЕЙСТВИТЕЛЕН.</translation>
+    </message>
+</context>
+<context>
+    <name>E5StringListEditWidget</name>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="49"/>
+        <source>Enter search term for strings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="86"/>
+        <source>Press to add an entry</source>
+        <translation type="unfinished">Добавить элемент</translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="89"/>
+        <source>&amp;Add...</source>
+        <translation type="unfinished">&amp;Добавить...</translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="106"/>
+        <source>Press to remove the selected entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="109"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished">&amp;Удалить</translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="119"/>
+        <source>Press to remove all entries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.ui" line="122"/>
+        <source>R&amp;emove All</source>
+        <translation type="unfinished">У&amp;далить всё</translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.py" line="72"/>
+        <source>Add Entry</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5StringListEditWidget.py" line="72"/>
+        <source>Enter the entry to add to the list:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15653,8 +15705,8 @@ Reason: {0}</source>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
-        <translation>Открыть ссылку в новой закладке	Shift+Левая кнопка мыши</translation>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Открыть ссылку в новой закладке<byte value="x9"/>Shift+Левая кнопка мыши</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="838"/>
@@ -44951,17 +45003,17 @@ Reason: {0}</source>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="666"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="658"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; не найдено.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="788"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="780"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Заменено в {0} местах.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="793"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="785"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>Ничего не заменено, потому что &apos;{0}&apos; не найдено.</translation>
     </message>

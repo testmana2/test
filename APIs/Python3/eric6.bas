@@ -177,6 +177,7 @@ E5SslCertificatesInfoWidget QWidget Ui_E5SslCertificatesInfoWidget
 E5SslErrorHandler QObject
 E5SslInfoWidget QMenu
 E5StringListCompleter QCompleter
+E5StringListEditWidget QWidget Ui_E5StringListEditWidget
 E5TabWidget QTabWidget
 E5TableView QTableView
 E5TextEditSearchWidget QWidget Ui_E5TextEditSearchWidget

@@ -1151,6 +1151,7 @@
     <Source>DebugClients/Python3/eric6dbgstub.py</Source>
     <Source>Toolbox/PyQt4ImportHook.py</Source>
     <Source>E5Gui/E5TextEditSearchWidget.py</Source>
+    <Source>E5Gui/E5StringListEditWidget.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1481,6 +1482,7 @@
     <Form>Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.ui</Form>
     <Form>Plugins/VcsPlugins/vcsMercurial/HgConflictsListDialog.ui</Form>
     <Form>E5Gui/E5TextEditSearchWidget.ui</Form>
+    <Form>E5Gui/E5StringListEditWidget.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric6_cs.qm</Translation>
