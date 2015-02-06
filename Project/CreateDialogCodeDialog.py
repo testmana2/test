@@ -142,7 +142,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         @return object name (string)
         """
         try:
-            dlg = uic.loadUi(self.formFile)
+            dlg = uic.loadUi(
+                self.formFile, package=self.project.getProjectPath())
             return dlg.objectName()
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(
@@ -160,7 +161,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         @return class name (sting)
         """
         try:
-            dlg = uic.loadUi(self.formFile)
+            dlg = uic.loadUi(
+                self.formFile, package=self.project.getProjectPath())
             return dlg.metaObject().className()
         except (AttributeError, ImportError) as err:
             E5MessageBox.critical(
@@ -229,7 +231,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
         self.filterEdit.clear()
         
         try:
-            dlg = uic.loadUi(self.formFile)
+            dlg = uic.loadUi(
+                self.formFile, package=self.project.getProjectPath())
             objects = dlg.findChildren(QWidget) + dlg.findChildren(QAction)
             
             signatureList = self.__signatures()
