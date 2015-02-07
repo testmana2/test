@@ -1133,12 +1133,12 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
         <source>&amp;Category:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Categoria:</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
         <source>Select a project category</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar uma categoria de projecto</translation>
     </message>
 </context>
 <context>
@@ -1181,7 +1181,7 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
     <message>
         <location filename="../Graphics/ApplicationDiagramBuilder.py" line="69"/>
         <source>Application Diagram</source>
-        <translation type="unfinished">Diagrama da Aplicação</translation>
+        <translation>Diagrama da Aplicação</translation>
     </message>
 </context>
 <context>
@@ -1400,7 +1400,7 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="119"/>
         <source>{0} not configured.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} sem configurar.</translation>
     </message>
     <message>
         <location filename="../Utilities/BackgroundService.py" line="166"/>
@@ -3376,17 +3376,17 @@ linha e posição.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="350"/>
         <source>Select to show ignored issues</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para mostrar falhos ignorados</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="353"/>
         <source>Show ignored</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar ignorado</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="463"/>
         <source>{0} (ignored)</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} (ignorado)</translation>
     </message>
 </context>
 <context>
@@ -3689,12 +3689,12 @@ linha e posição.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="522"/>
         <source>Could not save the file! Skipping it. Reason: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Não se pode gravar ficheiro! Saltando-o. Motivo: {0}</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="576"/>
         <source> no message defined for code &apos;{0}&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>sem mensagem definida para código &apos;{0}&apos;</translation>
     </message>
 </context>
 <context>
@@ -3754,9 +3754,9 @@ linha e posição.&lt;/p&gt;</translation>
     <message numerus="yes">
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py" line="63"/>
         <source>%n issue(s) ignored</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n falho ignorado</numerusform>
+            <numerusform>%n falhos ignorados</numerusform>
         </translation>
     </message>
 </context>
@@ -4459,7 +4459,7 @@ para mostrar a página de configuração.</translation>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="352"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5 {6 ?}</translation>
+        <translation>Navegador Web de eric6</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="145"/>
@@ -5132,13 +5132,15 @@ Não conectado
         <location filename="../Debugger/DebugServer.py" line="1463"/>
         <source>Passive debug connection received
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Conexão de depuração passiva recebida
+</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugServer.py" line="1477"/>
         <source>Passive debug connection closed
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Conexão de depuração passiva fechada
+</translation>
     </message>
 </context>
 <context>
@@ -5186,17 +5188,17 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="206"/>
         <source>Coverage run of Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Execução Cobertura de Script</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="206"/>
         <source>Coverage run of Script...</source>
-        <translation type="unfinished"></translation>
+        <translation>Execução Cobertura de Script...</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="211"/>
         <source>Perform a coverage run of the current Script</source>
-        <translation type="unfinished"></translation>
+        <translation>Realizar execução de cobertura do Script actual</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="213"/>
@@ -5376,12 +5378,12 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="380"/>
         <source>Step Over</source>
-        <translation type="unfinished"></translation>
+        <translation>Saltar</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="380"/>
         <source>Step &amp;Over</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Saltar</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="385"/>
@@ -5396,12 +5398,12 @@ Não conectado
     <message>
         <location filename="../Debugger/DebugUI.py" line="399"/>
         <source>Step Out</source>
-        <translation type="unfinished"></translation>
+        <translation>Sair</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="399"/>
         <source>Step Ou&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>Sai&amp;r</translation>
     </message>
     <message>
         <location filename="../Debugger/DebugUI.py" line="404"/>
@@ -6326,7 +6328,7 @@ Não conectado
     <message>
         <location filename="../Debugger/DebuggerInterfacePython3.py" line="164"/>
         <source>&lt;p&gt;No Python3 interpreter configured.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;Interpretador de Python2 não configurado.&lt;/p&gt; {3 ?}</translation>
+        <translation>&lt;p&gt;Interpretador de Python3 não configurado.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -6557,7 +6559,7 @@ Não conectado
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5 {6 ?}</translation>
+        <translation>Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric6</translation>
     </message>
 </context>
 <context>
@@ -6685,7 +6687,7 @@ Não conectado
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5 {6 ?}</translation>
+        <translation>Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric6</translation>
     </message>
 </context>
 <context>
@@ -6803,7 +6805,7 @@ Não conectado
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5 {6 ?}</translation>
+        <translation>Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric6</translation>
     </message>
 </context>
 <context>
@@ -6846,7 +6848,7 @@ Não conectado
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric5 {6 ?}</translation>
+        <translation>Selecionar para redirigir stdin, stdout e stderr do programa a depurar para o IDE eric6</translation>
     </message>
 </context>
 <context>
@@ -7646,7 +7648,7 @@ select multiple items.&lt;/li&gt;
 whole selection.&lt;/li&gt;
 &lt;/ul&gt;
 </source>
-        <translation type="unfinished">&lt;b&gt;Vista Gráfica&lt;b&gt;
+        <translation>&lt;b&gt;Vista Gráfica&lt;b&gt;
 &lt;p&gt;Esta vista gráfica usa-se para mostrar um diagrama. 
 Há várias ações disponíveis para manipular os artigos
 mostrados.&lt;/p&gt;
@@ -7658,7 +7660,8 @@ mostrados.&lt;/p&gt;
 &lt;li&gt;Selecionar vários artigos arrastando o rato sobre o lenço.&lt;/li&gt;
 &lt;li&gt;Mover toda a seleção arrastando um artigo selecionado 
 com o rato.&lt;/li&gt;
-&lt;/ul&gt;</translation>
+&lt;/ul&gt;
+</translation>
     </message>
     <message>
         <location filename="../E5Graphics/E5GraphicsView.py" line="372"/>
@@ -8315,7 +8318,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="411"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O certificado &lt;b&gt;{0}&lt;/b&gt; já existe. Ignorando.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="362"/>
@@ -8345,7 +8348,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="477"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O certificado não se pode escrever no ficheiro &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Erro: {1}&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslCertificatesDialog.py" line="499"/>
@@ -8464,7 +8467,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="133"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Erros de SSL para &lt;br/&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Deseja ignorar estes erros?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Erros de SSL para &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Deseja ignorar estes erros?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="148"/>
@@ -8489,12 +8492,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="216"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br/&gt;Remitente: {0}</translation>
     </message>
     <message>
         <location filename="../E5Network/E5SslErrorHandler.py" line="220"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;br/&gt;Inválido antes de: {0}&lt;br/&gt;Válido Até: {1}</translation>
     </message>
 </context>
 <context>
@@ -9015,7 +9018,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="670"/>
         <source>Unindent</source>
-        <translation type="unfinished"></translation>
+        <translation>Tirar Indentação</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="673"/>
@@ -9050,7 +9053,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="689"/>
         <source>Deselect all</source>
-        <translation>Desmarcar tudo</translation>
+        <translation>Desselecionar tudo</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="6924"/>
@@ -9145,7 +9148,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="809"/>
         <source>Calltip</source>
-        <translation type="unfinished"></translation>
+        <translation>Dica</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="822"/>
@@ -9220,7 +9223,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="918"/>
         <source>Guessed</source>
-        <translation type="unfinished"></translation>
+        <translation>Adivinhado</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="1253"/>
@@ -9350,12 +9353,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="1181"/>
         <source>Next uncovered line</source>
-        <translation type="unfinished"></translation>
+        <translation>Linha seguinte sem cobrir</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="1184"/>
         <source>Previous uncovered line</source>
-        <translation type="unfinished"></translation>
+        <translation>Linha anterior sem cobrir</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="1187"/>
@@ -9500,7 +9503,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="5263"/>
         <source>All lines have been covered.</source>
-        <translation type="unfinished"></translation>
+        <translation>Foram cobertas as linhas todas.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5270"/>
@@ -9555,12 +9558,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="5902"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O ficheiro macro &lt;b&gt;{0}&lt;/b&gt; não se pode ler.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5911"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O ficheiro macro &lt;b&gt;{0}&lt;/b&gt; está corrompido.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5931"/>
@@ -9575,7 +9578,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="5948"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O ficheiro macro &lt;b&gt;{0}&lt;/b&gt; já existe. Sobreescrever-lo?&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5964"/>
@@ -9585,7 +9588,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="5964"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;O ficheiro macro &lt;b&gt;{0}&lt;/b&gt; não pode ser escrito.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="5977"/>
@@ -9755,12 +9758,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="4624"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
-        <translation type="unfinished"></translation>
+        <translation>O fornecedor de dicas não pode ser conetado porque já há outro activado. Por favor verifique a sua configuração.</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="769"/>
         <source>Open &apos;rejection&apos; file</source>
-        <translation type="unfinished">Abrir ficheiro de &apos;rejeição&apos;</translation>
+        <translation>Abrir ficheiro de &apos;rejeição&apos;</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="878"/>
@@ -9820,12 +9823,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="960"/>
         <source>Re-Open With Encoding</source>
-        <translation type="unfinished"></translation>
+        <translation>Reabrir Com Codificação</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="6129"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;O ficheiro &lt;b&gt;{0}&lt;/b&gt; foi alterado enquanto estava aberto em eric5. Recarregar?&lt;/p&gt; {0}?} {6.?}</translation>
+        <translation>&lt;p&gt;O ficheiro &lt;b&gt;{0}&lt;/b&gt; foi alterado enquanto estava aberto em eric6. Recarregar?&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -10054,7 +10057,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="59"/>
         <source>Source</source>
-        <translation type="unfinished">Fonte</translation>
+        <translation>Fonte</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="65"/>
@@ -10064,7 +10067,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="68"/>
         <source>from Document</source>
-        <translation type="unfinished">desde o Documento</translation>
+        <translation>desde o Documento</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="75"/>
@@ -10074,7 +10077,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="78"/>
         <source>from API files</source>
-        <translation type="unfinished">desde ficheiros API</translation>
+        <translation>desde ficheiros API</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="85"/>
@@ -10084,7 +10087,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="88"/>
         <source>from Document and API files</source>
-        <translation type="unfinished">desde Documento e ficheiros API</translation>
+        <translation>desde Documento e ficheiros API</translation>
     </message>
 </context>
 <context>
@@ -10849,7 +10852,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightersPage.ui" line="46"/>
         <source>Filename Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Padrão de Nome Ficheiro</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightersPage.ui" line="51"/>
@@ -10859,7 +10862,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightersPage.ui" line="61"/>
         <source>Filename Pattern:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Padrão de Nome Ficheiro:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorHighlightersPage.ui" line="68"/>
@@ -11145,7 +11148,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorKeywordsPage.ui" line="58"/>
         <source>Select the language to be configured.</source>
-        <translation type="unfinished">Selecionar a linguagem a ser configurada.</translation>
+        <translation>Selecionar a linguagem a ser configurada.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorKeywordsPage.ui" line="65"/>
@@ -11271,27 +11274,27 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="184"/>
         <source>CMake Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico CMake</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="242"/>
         <source>CSS Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico CSS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="291"/>
         <source>D Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico D</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="359"/>
         <source>HTML Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico HTML</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="375"/>
         <source>Select to enable folding of script comments</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar dobragem de comentários de script</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="378"/>
@@ -11321,7 +11324,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="425"/>
         <source>XML Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico XML</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="431"/>
@@ -11336,22 +11339,22 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="447"/>
         <source>Pascal Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico Pascal</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="473"/>
         <source>Select to enable smart highlighting of keywords</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para habilitar realce inteligente de palavras chave</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="476"/>
         <source>Smart Highlighting</source>
-        <translation type="unfinished"></translation>
+        <translation>Realce Inteligente</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="486"/>
         <source>Perl Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico Perl</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="502"/>
@@ -11416,7 +11419,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="655"/>
         <source>Python Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico Python</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="766"/>
@@ -11441,7 +11444,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="694"/>
         <source>Auto indentation after &apos;:&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Indentação automática após &apos;:&apos;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="711"/>
@@ -11476,7 +11479,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="797"/>
         <source>SQL Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico SQL</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="833"/>
@@ -11491,7 +11494,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="934"/>
         <source>VHDL Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico VHDL</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="940"/>
@@ -11516,7 +11519,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="983"/>
         <source>YAML Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico YAML</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="229"/>
@@ -11551,7 +11554,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="636"/>
         <source>Properties Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico Propriedades</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="642"/>
@@ -11631,12 +11634,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="876"/>
         <source>TCL Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico TCL</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="895"/>
         <source>TeX Lexer Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades Léxico TeX</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="911"/>
@@ -11736,7 +11739,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
         <source>No Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Sem Aviso</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.py" line="195"/>
@@ -11779,7 +11782,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSearchPage.ui" line="45"/>
         <source>Highlight all occurrences of current word</source>
-        <translation type="unfinished"></translation>
+        <translation>Realçar todas as ocurrências da palavra actual</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSearchPage.ui" line="52"/>
@@ -11789,7 +11792,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSearchPage.ui" line="55"/>
         <source>Highlight all occurrences of search text</source>
-        <translation type="unfinished"></translation>
+        <translation>Realçar todas as ocurrências do texto buscado</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSearchPage.ui" line="62"/>
@@ -11847,7 +11850,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="68"/>
         <source>Spell checking enabled</source>
-        <translation>Verificação ortográfica ativada</translation>
+        <translation>Verificação ortográfica habilitada</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="75"/>
@@ -11882,7 +11885,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="129"/>
         <source>Minimum word size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tamanho mínimo palavra:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="136"/>
@@ -11957,7 +11960,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="289"/>
         <source>Automatic spell checking</source>
-        <translation type="unfinished">Verificação ortográfica automática</translation>
+        <translation>Verificação ortográfica automática</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
@@ -13415,7 +13418,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
         <source>Close</source>
-        <translation type="unfinished">Fechar</translation>
+        <translation>Fechar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Network/EricAccessHandler.py" line="79"/>
@@ -13518,7 +13521,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="185"/>
         <source>Enter a directory basename to be ignored</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Introduzir nome base de directório a ignorar</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="192"/>
@@ -13548,7 +13551,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="212"/>
         <source>List of directory basenames to be ignored</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista de nomes base de directórios a ignorar</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="194"/>
@@ -13649,27 +13652,27 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="58"/>
         <source>Eric6 API File Generator</source>
-        <translation type="unfinished">Gerador de Ficheiros API de Eric5 {6 ?}</translation>
+        <translation>Gerador de Ficheiros API de Eric6</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="99"/>
         <source>Generate API file (eric6_api)</source>
-        <translation type="unfinished">Gerar ficheiro API (eric5_api) {6_?}</translation>
+        <translation>Gerar ficheiro API (eric6_api)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="99"/>
         <source>Generate &amp;API file (eric6_api)</source>
-        <translation type="unfinished">Gerar ficheiro &amp;API (eric5_api) {6_?}</translation>
+        <translation>Gerar ficheiro &amp;API (eric6_api)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="103"/>
         <source>Generate an API file using eric6_api</source>
-        <translation type="unfinished">Gerar um ficheiro API usando eric5_api {6_?}</translation>
+        <translation>Gerar um ficheiro API usando eric6_api</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricapi.py" line="105"/>
         <source>&lt;b&gt;Generate API file&lt;/b&gt;&lt;p&gt;Generate an API file using eric6_api.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Gerar ficheiro API&lt;/b&gt;&lt;p&gt;Gerar um ficheiro API usando eric5_api.&lt;/p&gt; {6_?}</translation>
+        <translation>&lt;b&gt;Gerar ficheiro API&lt;/b&gt;&lt;p&gt;Gerar um ficheiro API usando eric6_api.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -13757,7 +13760,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="173"/>
         <source>Enter a directory basename to be ignored</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir nome base de directório a ignorar</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="180"/>
@@ -13782,7 +13785,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="200"/>
         <source>List of directory basenames to be ignored</source>
-        <translation type="unfinished"></translation>
+        <translation>Lista de nomes base de directórios a ignorar</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="221"/>
@@ -13847,7 +13850,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="292"/>
         <source>Level 2 Header Foreground</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabeçalho de Nivel 2</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="299"/>
@@ -13857,7 +13860,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="302"/>
         <source>Level 1 Header Background</source>
-        <translation>Fundo de Cabeçalho de Nível 1</translation>
+        <translation>Cor de Fundo de Cabeçalho de Nível 1</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="309"/>
@@ -13867,7 +13870,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="312"/>
         <source>Level 1 Header Foreground</source>
-        <translation type="unfinished"></translation>
+        <translation>Cabeçalho de Nivel 1</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="319"/>
@@ -13887,7 +13890,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="332"/>
         <source>Body Foreground</source>
-        <translation type="unfinished"></translation>
+        <translation>Corpo</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="339"/>
@@ -13907,7 +13910,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="363"/>
         <source>QtHelp</source>
-        <translation></translation>
+        <translation>QtHelp</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="369"/>
@@ -13927,12 +13930,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="423"/>
         <source>Virtual Folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>Directório Virtual:</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="430"/>
         <source>Enter the name of the virtual folder (must not contain &apos;/&apos;)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir nome de directório virtual (sem conter &apos;/&apos;)</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="437"/>
@@ -13942,7 +13945,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="444"/>
         <source>Enter the name of the custom filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir nome de filtro personalizado</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="451"/>
@@ -13952,7 +13955,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="458"/>
         <source>Enter the filter attributes separated by &apos;:&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir atributos de filtro separados por &apos;:&apos;</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="465"/>
@@ -13967,7 +13970,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="479"/>
         <source>Select to generate the QtHelp collection files</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para criar coleção de ficheiros de QtHelp</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="482"/>
@@ -14096,27 +14099,27 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="58"/>
         <source>Eric6 Documentation Generator</source>
-        <translation type="unfinished">Gerador de Documentação do Eric5 {6 ?}</translation>
+        <translation>Gerador de Documentação do Eric6</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate documentation (eric6_doc)</source>
-        <translation type="unfinished">Criar documentação (eric5_doc) {6_?}</translation>
+        <translation>Criar documentação (eric6_doc)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="134"/>
         <source>Generate &amp;documentation (eric6_doc)</source>
-        <translation type="unfinished">Criar &amp;documentação (eric5_doc) {6_?}</translation>
+        <translation>Criar &amp;documentação (eric6_doc)</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="138"/>
         <source>Generate API documentation using eric6_doc</source>
-        <translation type="unfinished">Criar documentação da API utilizando eric5_doc {6_?}</translation>
+        <translation>Criar documentação da API utilizando eric6_doc</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginEricdoc.py" line="140"/>
         <source>&lt;b&gt;Generate documentation&lt;/b&gt;&lt;p&gt;Generate API documentation using eric6_doc.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Criar documentação&lt;/b&gt;&lt;p&gt;Criar documentação da API utilizando eric5_doc.&lt;/p&gt; {6_?}</translation>
+        <translation>&lt;b&gt;Criar documentação&lt;/b&gt;&lt;p&gt;Criar documentação da API utilizando eric6_doc.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -14623,7 +14626,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/FetchExtension/ProjectHelper.py" line="93"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation>O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
 </context>
 <context>
@@ -14759,7 +14762,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="371"/>
         <source>Is Variable</source>
-        <translation type="unfinished"></translation>
+        <translation>É Variavel</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="288"/>
@@ -14804,22 +14807,22 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="361"/>
         <source>Working Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Directório de Trabalho</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="378"/>
         <source>Check to display directories only</source>
-        <translation type="unfinished"></translation>
+        <translation>Marcar para apenas mostrar directórios</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="381"/>
         <source>Show Directories Only</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar Apenas Directórios</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="73"/>
         <source>Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Teste</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="25"/>
@@ -14874,12 +14877,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="305"/>
         <source>Initial Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro Inicial</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="312"/>
         <source>Enter the initial filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzir o filtro inicial</translation>
     </message>
     <message>
         <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.ui" line="135"/>
@@ -14933,17 +14936,17 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="13"/>
         <source>Filetype Associations</source>
-        <translation type="unfinished">Associações de Tipos de Ficheiros</translation>
+        <translation>Associações de Tipos de Ficheiros</translation>
     </message>
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="35"/>
         <source>Filename Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão de Nome Ficheiro</translation>
     </message>
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="40"/>
         <source>Filetype</source>
-        <translation type="unfinished">Tipo de Ficheiro</translation>
+        <translation>Tipo de Ficheiro</translation>
     </message>
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="58"/>
@@ -14973,7 +14976,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="89"/>
         <source>Filename Pattern:</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrão de Nome Ficheiro:</translation>
     </message>
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="99"/>
@@ -14983,12 +14986,12 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Project/FiletypeAssociationDialog.ui" line="102"/>
         <source>Add/Change</source>
-        <translation type="unfinished">Adicionar/Alterar</translation>
+        <translation>Adicionar/Alterar</translation>
     </message>
     <message>
         <location filename="../Project/FiletypeAssociationDialog.py" line="40"/>
         <source>Sources</source>
-        <translation type="unfinished">Fontes</translation>
+        <translation>Fontes</translation>
     </message>
     <message>
         <location filename="../Project/FiletypeAssociationDialog.py" line="40"/>
@@ -15018,7 +15021,7 @@ com o rato.&lt;/li&gt;
     <message>
         <location filename="../Project/FiletypeAssociationDialog.py" line="45"/>
         <source>Ignore</source>
-        <translation type="unfinished">Ignorar</translation>
+        <translation>Ignorar</translation>
     </message>
 </context>
 <context>
@@ -22172,7 +22175,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1690"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="402"/>
@@ -22260,6 +22263,11 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished">Filtro</translation>
     </message>
     <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="99"/>
+        <source>File</source>
+        <translation type="unfinished">Ficheiro</translation>
+    </message>
+    <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="110"/>
         <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branch&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;{5}&lt;/table&gt;</source>
         <translation type="unfinished"></translation>
@@ -22283,11 +22291,6 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1805"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="99"/>
-        <source>File</source>
-        <translation type="unfinished">Ficheiro</translation>
     </message>
 </context>
 <context>
@@ -23748,7 +23751,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1821"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="551"/>
@@ -30714,12 +30717,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="104"/>
         <source>Search!</source>
-        <translation type="unfinished"></translation>
+        <translation>Procurar!</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="143"/>
         <source>Search results provided by {0}</source>
-        <translation type="unfinished"></translation>
+        <translation>Procurar resultados fornecidos por {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="88"/>
@@ -30739,17 +30742,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="101"/>
         <source>Welcome to eric6 Web Browser!</source>
-        <translation type="unfinished">Bem-vindo ao Navegador Web de eric5! {6 ?}</translation>
+        <translation>Bem-vindo ao Navegador Web de eric6!</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="103"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5 {6 ?}</translation>
+        <translation>Navegador Web de eric6</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="105"/>
         <source>About eric6</source>
-        <translation type="unfinished">Acerca do eric6</translation>
+        <translation>Acerca do eric6</translation>
     </message>
 </context>
 <context>
@@ -30966,7 +30969,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Project/LexerAssociationDialog.ui" line="32"/>
         <source>Filename Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Padrão de Nome Ficheiro</translation>
     </message>
     <message>
         <location filename="../Project/LexerAssociationDialog.ui" line="37"/>
@@ -31079,7 +31082,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/Lexers/LexerPygments.py" line="166"/>
         <source>Function or method name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nome de função ou método</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/LexerPygments.py" line="167"/>
@@ -31322,7 +31325,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="109"/>
         <source>JavaScript</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="111"/>
@@ -31672,7 +31675,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="620"/>
         <source>TeX Files (*.tex)</source>
-        <translation type="unfinished">Ficheiros TeX (*.tex)</translation>
+        <translation>Ficheiros TeX (*.tex)</translation>
     </message>
     <message>
         <location filename="../QScintilla/Lexers/__init__.py" line="623"/>
@@ -31855,7 +31858,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="60"/>
         <source> MB</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="86"/>
@@ -31952,27 +31955,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>LogViewerEdit</name>
     <message>
-        <location filename="../UI/LogView.py" line="118"/>
+        <location filename="../UI/LogView.py" line="115"/>
         <source>Clear</source>
         <translation>Limpar</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="119"/>
+        <location filename="../UI/LogView.py" line="116"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="121"/>
+        <location filename="../UI/LogView.py" line="118"/>
         <source>Find</source>
         <translation>Encontrar</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="123"/>
+        <location filename="../UI/LogView.py" line="120"/>
         <source>Select All</source>
         <translation>Selecionar Tudo</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="125"/>
+        <location filename="../UI/LogView.py" line="122"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
@@ -32025,17 +32028,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="35"/>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="32"/>
         <source>&lt;b&gt;Message Filters for Standard Output&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="40"/>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="37"/>
         <source>&lt;b&gt;Message Filters for Standard Error &lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stderr.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="45"/>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="42"/>
         <source>&lt;b&gt;Message Filters for both&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout or stderr.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33121,22 +33124,22 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2534"/>
         <source>Printing...</source>
-        <translation type="unfinished">Imprimindo...</translation>
+        <translation>Imprimindo...</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2551"/>
         <source>Printing completed</source>
-        <translation type="unfinished">Impressão completa</translation>
+        <translation>Impressão completa</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2553"/>
         <source>Error while printing</source>
-        <translation type="unfinished">Erro durante a impressão</translation>
+        <translation>Erro durante a impressão</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2556"/>
         <source>Printing aborted</source>
-        <translation type="unfinished">Impressão cancelada</translation>
+        <translation>Impressão cancelada</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2611"/>
@@ -33146,7 +33149,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2612"/>
         <source>Deselect all</source>
-        <translation type="unfinished">Desmarcar tudo</translation>
+        <translation>Desselecionar tudo</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2626"/>
@@ -33156,37 +33159,37 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2629"/>
         <source>No Language</source>
-        <translation type="unfinished">Sem Idioma</translation>
+        <translation>Sem Idioma</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2652"/>
         <source>Guessed</source>
-        <translation type="unfinished"></translation>
+        <translation>Adivinhado</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2673"/>
         <source>Alternatives</source>
-        <translation type="unfinished">Alternativas</translation>
+        <translation>Alternativas</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2670"/>
         <source>Alternatives ({0})</source>
-        <translation type="unfinished">Alternativas ({0})</translation>
+        <translation>Alternativas ({0})</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2687"/>
         <source>Pygments Lexer</source>
-        <translation type="unfinished">Analizador Léxico Pygments</translation>
+        <translation>Analizador Léxico Pygments</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2687"/>
         <source>Select the Pygments lexer to apply.</source>
-        <translation type="unfinished">Selecionar o analizador léxico Pygments a aplicar.</translation>
+        <translation>Selecionar o analizador léxico Pygments a aplicar.</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="255"/>
         <source>About eric6 Mini Editor</source>
-        <translation type="unfinished">Acerca do Mini Editor eric5 {6 ?}</translation>
+        <translation>Acerca do Mini Editor eric6</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="255"/>
@@ -33196,7 +33199,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="2182"/>
         <source>eric6 Mini Editor</source>
-        <translation type="unfinished">Mini Editor eric5 {6 ?}</translation>
+        <translation>Mini Editor eric6</translation>
     </message>
 </context>
 <context>
@@ -33339,7 +33342,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="673"/>
         <source>Save the current multiproject to a new file</source>
-        <translation type="unfinished"></translation>
+        <translation>Gravar o multiprojeto atual num ficheiro novo</translation>
     </message>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="675"/>
@@ -33379,7 +33382,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="702"/>
         <source>Show the multiproject properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar as propriedades do multiprojeto</translation>
     </message>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="704"/>
@@ -33394,7 +33397,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="725"/>
         <source>Open &amp;Recent Multiprojects</source>
-        <translation>Abrir Multiprojetos &amp;Rececntes</translation>
+        <translation>Abrir Multiprojetos &amp;Recentes</translation>
     </message>
     <message>
         <location filename="../MultiProject/MultiProject.py" line="766"/>
@@ -35926,8 +35929,8 @@ Select Update.</source>
         <translation type="unfinished">&lt;p&gt;A antevisão para este tipo de ficheiro não está disponível.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="472"/>
-        <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager, &apos;pip install docutils&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="497"/>
+        <source>&lt;p&gt;Markdown preview requires the &lt;b&gt;python-markdown&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -35936,8 +35939,8 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Previewers/PreviewerHTML.py" line="497"/>
-        <source>&lt;p&gt;Markdown preview requires the &lt;b&gt;python-markdown&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager or see &lt;a href=&quot;http://pythonhosted.org/Markdown/install.html&quot;&gt;installation instructions.&lt;/a&gt;&lt;/p&gt;</source>
+        <location filename="../UI/Previewers/PreviewerHTML.py" line="472"/>
+        <source>&lt;p&gt;ReStructuredText preview requires the &lt;b&gt;python-docutils&lt;/b&gt; package.&lt;br/&gt;Install it with your package manager, &apos;pip install docutils&apos; or see &lt;a href=&quot;http://pypi.python.org/pypi/docutils&quot;&gt;this page.&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -37152,7 +37155,7 @@ Select Update.</source>
     <message>
         <location filename="../Project/Project.py" line="3841"/>
         <source>Open &amp;Recent Projects</source>
-        <translation>Abrir Projetos &amp;Rececntes</translation>
+        <translation>Abrir Projetos &amp;Recentes</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="3842"/>
@@ -37247,7 +37250,7 @@ Select Update.</source>
     <message>
         <location filename="../Project/Project.py" line="4486"/>
         <source>Please select a profile file</source>
-        <translation type="unfinished">Escolha um ficheiro de perfil por favor</translation>
+        <translation>Escolha um ficheiro de perfil por favor</translation>
     </message>
     <message>
         <location filename="../Project/Project.py" line="4540"/>
@@ -44928,7 +44931,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="835"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/QueuesExtension/ProjectHelper.py" line="835"/>
@@ -45084,7 +45087,7 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="141"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/RebaseExtension/ProjectHelper.py" line="126"/>
@@ -45872,7 +45875,7 @@ File: {2}, Line: {3}
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectBrowserHelper.py" line="96"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
 </context>
 <context>
@@ -46010,7 +46013,7 @@ File: {2}, Line: {3}
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="175"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ShelveExtension/ProjectHelper.py" line="204"/>
@@ -55899,7 +55902,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="135"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/TransplantExtension/ProjectHelper.py" line="135"/>
@@ -57627,7 +57630,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="1829"/>
         <source>Start the UI Previewer</source>
-        <translation type="unfinished">Iniciar a Antevisão de UI</translation>
+        <translation>Iniciar a Antevisão de UI</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1830"/>
@@ -57687,7 +57690,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="1878"/>
         <source>SQL Browser</source>
-        <translation type="unfinished">Navegador SQL</translation>
+        <translation>Navegador SQL</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1878"/>
@@ -59120,27 +59123,27 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="1904"/>
         <source>eric6 Web Browser</source>
-        <translation type="unfinished">Navegador Web de eric5 {6 ?}</translation>
+        <translation>Navegador Web de eric6</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1904"/>
         <source>eric6 &amp;Web Browser...</source>
-        <translation type="unfinished">Navegador &amp;Web de eric5... {6 ?}</translation>
+        <translation>Navegador &amp;Web de eric6...</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1909"/>
         <source>Start the eric6 Web Browser</source>
-        <translation type="unfinished">Iniciar o Navegador Web de eric5 {6 ?}</translation>
+        <translation>Iniciar o Navegador Web de eric6</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1911"/>
         <source>&lt;b&gt;eric6 Web Browser&lt;/b&gt;&lt;p&gt;Browse the Internet with the eric6 Web Browser.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Navegardor Web eric5&lt;/b&gt;&lt;p&gt;Navegar por internet com o Navegador Web eric5.&lt;/p&gt; {6 ?} {6 ?}</translation>
+        <translation>&lt;b&gt;Navegardor Web eric6&lt;/b&gt;&lt;p&gt;Navegar por internet com o Navegador Web eric6.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1923"/>
         <source>Start the eric6 Icon Editor</source>
-        <translation type="unfinished">Iniciar o Editor de Icones de eric5 {6 ?}</translation>
+        <translation>Iniciar o Editor de Icones de eric6</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="1925"/>
@@ -59160,7 +59163,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="4258"/>
         <source>Qt v.3 is not supported by eric6.</source>
-        <translation type="unfinished">Qt v.3 não está suportado por eric5. {3 ?} {6.?}</translation>
+        <translation>Qt v.3 não está suportado por eric6.</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="5897"/>
@@ -59175,17 +59178,17 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../UI/UserInterface.py" line="6056"/>
         <source>Eric6 is up to date</source>
-        <translation type="unfinished">Eric5 está atualizado {6 ?}</translation>
+        <translation>Eric6 está atualizado</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="6056"/>
         <source>You are using the latest version of eric6</source>
-        <translation type="unfinished">Utiliza a última versão do eric6</translation>
+        <translation>Utiliza a última versão do eric6</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="6127"/>
         <source>eric6 has not been configured yet. The configuration dialog will be started.</source>
-        <translation type="unfinished">eric5 ainda não foi configurado. A caixa de diálogo de configuração vai iniciar-se. {6 ?}</translation>
+        <translation>eric6 ainda não foi configurado. A caixa de diálogo de configuração vai iniciar-se.</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="529"/>
@@ -59198,48 +59201,49 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="14"/>
         <source>User Project Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriedades de Projecto de Usuário</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="17"/>
         <source>&lt;b&gt;User Project Properties&lt;/b&gt;
 &lt;p&gt;This dialog is used to show and edit the user specific project properties.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Propriedades de Projecto de Usuário&lt;/b&gt;
+&lt;p&gt;Esta caixa de diálogo usa-se para mostrar e editar as propriedades específicas de projecto do usuário.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="27"/>
         <source>VCS Status Monitor</source>
-        <translation type="unfinished">Monitor VCS de Estado</translation>
+        <translation>Monitor VCS de Estado</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="33"/>
         <source>Select the interval in seconds for VCS status updates (0 to disable)</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar o intervalo em segundos para a actualização de estado VCS (0 para desactivar)</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="36"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation> seg</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="62"/>
         <source>VCS Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Interface VCS</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="68"/>
         <source>Select the vcs interface to be used</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar a interface vcs a usar</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="75"/>
         <source>Select to make the interface selection the default for the project</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecionar para que a interface selecionada seja padrão para o projecto</translation>
     </message>
     <message>
         <location filename="../Project/UserPropertiesDialog.ui" line="78"/>
         <source>Make interface selection the default</source>
-        <translation type="unfinished"></translation>
+        <translation>Fazer padrão à interface selecionada</translation>
     </message>
 </context>
 <context>
@@ -59420,7 +59424,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../Debugger/Config.py" line="48"/>
         <source>Other</source>
-        <translation type="unfinished">Outro</translation>
+        <translation>Outro</translation>
     </message>
 </context>
 <context>
@@ -59827,12 +59831,12 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../Preferences/ConfigurationPages/VcsPage.ui" line="79"/>
         <source>Select the interval in seconds for VCS status updates (0 to disable)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Selecionar o intervalo em segundos para a actualização de estado VCS (0 para desactivar)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/VcsPage.ui" line="82"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> seg</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/VcsPage.ui" line="105"/>
@@ -60063,7 +60067,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../VCS/ProjectHelper.py" line="532"/>
         <source>The project should be reread. Do this now?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O projecto deveria ser relido. Fazer-lo agora?</translation>
     </message>
     <message>
         <location filename="../VCS/ProjectHelper.py" line="462"/>
@@ -60671,7 +60675,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1030"/>
         <source>Unindent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tirar Indentação</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1030"/>
@@ -60852,12 +60856,12 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1197"/>
         <source>Deselect all</source>
-        <translation>Desmarcar tudo</translation>
+        <translation>Desselecionar tudo</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1197"/>
         <source>&amp;Deselect all</source>
-        <translation>&amp;Desmarcar tudo</translation>
+        <translation>&amp;Desselecionar tudo</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1197"/>
@@ -60868,7 +60872,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1204"/>
         <source>Deselect all text</source>
-        <translation>Desmarcar todo o texto</translation>
+        <translation>Desselecionar todo o texto</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1206"/>
@@ -62424,7 +62428,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3933"/>
         <source>Next uncovered line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linha seguinte sem cobrir</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3927"/>
@@ -62439,7 +62443,7 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3952"/>
         <source>Previous uncovered line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linha anterior sem cobrir</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="3944"/>
@@ -63865,12 +63869,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../eric6.py" line="297"/>
         <source>Starting...</source>
-        <translation type="unfinished">Começando...</translation>
+        <translation>Começando...</translation>
     </message>
     <message>
         <location filename="../eric6.py" line="302"/>
         <source>Generating Main Window...</source>
-        <translation type="unfinished">Gerando a Janela Principal...</translation>
+        <translation>Gerando a Janela Principal...</translation>
     </message>
 </context>
 <context>
@@ -64249,7 +64253,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="207"/>
         <source>{0}</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -64275,7 +64279,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="17"/>
         <source>{0!r} imported but unused.</source>
-        <translation type="unfinished">{0!r} importado mas sem usar.</translation>
+        <translation>{0!r} importado mas sem usar.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="20"/>
@@ -64295,7 +64299,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="29"/>
         <source>Undefined name {0!r}.</source>
-        <translation type="unfinished">Nome não definido {0!r}.</translation>
+        <translation>Nome não definido {0!r}.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="32"/>
@@ -64325,7 +64329,7 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="48"/>
         <source>Local variable {0!r} is assigned to but never used.</source>
-        <translation type="unfinished">A variável local {0!r} está assignada mas não é usada.</translation>
+        <translation>A variável local {0!r} está assignada mas não é usada.</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/pyflakes/translations.py" line="51"/>
