@@ -444,6 +444,7 @@ MasterPasswordEntryDialog QDialog Ui_MasterPasswordEntryDialog
 MercurialPage ConfigurationPageBase Ui_MercurialPage
 MessageBoxWizard QObject
 MessageBoxWizardDialog QDialog Ui_MessageBoxWizardDialog
+MimeTypesPage ConfigurationPageBase Ui_MimeTypesPage
 MiniEditor E5MainWindow
 MiniScintilla QsciScintillaCompat
 Module ClbrBaseClasses.Module VisibilityMixin

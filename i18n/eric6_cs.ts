@@ -3943,213 +3943,213 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Ikony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="155"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="158"/>
         <source>Plugin Manager</source>
         <translation>Plugin Manažer</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="332"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="335"/>
         <source>Printer</source>
         <translation>Tiskárna</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="194"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="197"/>
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="165"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="168"/>
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="171"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="174"/>
         <source>Shell</source>
         <translation>Shell</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="174"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="177"/>
         <source>Tasks</source>
         <translation>Úlohy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="177"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="180"/>
         <source>Templates</source>
         <translation>Šablony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="183"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="186"/>
         <source>Version Control Systems</source>
         <translation>Version Control Systems</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="188"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="191"/>
         <source>Debugger</source>
         <translation>Debugger</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="200"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="203"/>
         <source>Ruby</source>
         <translation>Ruby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="204"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="207"/>
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="207"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="210"/>
         <source>APIs</source>
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="210"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="213"/>
         <source>Autocompletion</source>
         <translation>Autodoplňování</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="218"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="221"/>
         <source>Calltips</source>
         <translation>Rychlé tipy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="224"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="227"/>
         <source>General</source>
         <translation>Hlavní</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="244"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="247"/>
         <source>Typing</source>
         <translation>Psaní</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="247"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="250"/>
         <source>Exporters</source>
         <translation>Exportery</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="251"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="254"/>
         <source>Highlighters</source>
         <translation>Zvýrazňovače</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="255"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="258"/>
         <source>Filetype Associations</source>
         <translation>Asociace typů souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="259"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="262"/>
         <source>Styles</source>
         <translation>Styly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="339"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="342"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="345"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="348"/>
         <source>Help Documentation</source>
         <translation>Dokumenty nápovědy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="280"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="283"/>
         <source>Help Viewers</source>
         <translation>Prohlížeče nápovědy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="297"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="300"/>
         <source>Project</source>
         <translation>Projekt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="294"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="297"/>
         <source>Project Viewer</source>
         <translation>Prohlížeč projektu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="300"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="303"/>
         <source>Multiproject</source>
         <translation>Multiprojekt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="326"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="329"/>
         <source>Interface</source>
         <translation>Interface</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="311"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="314"/>
         <source>Viewmanager</source>
         <translation>Viewmanager</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="564"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="567"/>
         <source>Configuration Page Error</source>
         <translation>Chyba na straně konfigurace</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="227"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="230"/>
         <source>Filehandling</source>
         <translation>Manažer souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="231"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="234"/>
         <source>Searching</source>
         <translation>Vyhledávání</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="342"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="345"/>
         <source>Appearance</source>
         <translation>Vzhled</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="221"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="224"/>
         <source>QScintilla</source>
         <translation>QScintilla</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="238"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="241"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="266"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="269"/>
         <source>Properties</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="487"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="490"/>
         <source>Preferences</source>
         <translation>Předvolby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="492"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="495"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Pro zobrazení strany s konfigurací vyberte položku ze seznamu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="329"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="332"/>
         <source>Network</source>
         <translation>Síť</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="234"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="237"/>
         <source>Spell checking</source>
         <translation>Kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="197"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="200"/>
         <source>Python3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="564"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="567"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Konfigurační stranu &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="263"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="266"/>
         <source>Keywords</source>
         <translation>Klíčová slova</translation>
     </message>
@@ -4159,27 +4159,27 @@ to display the configuration page.</source>
         <translation>Spolupráce</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="364"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="367"/>
         <source>Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="349"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="352"/>
         <source>VirusTotal Interface</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="335"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="338"/>
         <source>Security</source>
         <translation type="unfinished">Bezpečnost</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="425"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="428"/>
         <source>Enter filter text...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="151"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="154"/>
         <source>Notifications</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4189,12 +4189,12 @@ to display the configuration page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="241"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="244"/>
         <source>Code Checkers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="352"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="355"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">eric5 web prohlížeč {6 ?}</translation>
     </message>
@@ -4202,6 +4202,11 @@ to display the configuration page.</source>
         <location filename="../Preferences/ConfigurationDialog.py" line="145"/>
         <source>Log-Viewer</source>
         <translation type="unfinished">Prohlížeč logu</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationDialog.py" line="148"/>
+        <source>Mimetypes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -31507,27 +31512,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>LogViewerEdit</name>
     <message>
-        <location filename="../UI/LogView.py" line="118"/>
+        <location filename="../UI/LogView.py" line="115"/>
         <source>Clear</source>
         <translation type="unfinished">Vyčistit</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="119"/>
+        <location filename="../UI/LogView.py" line="116"/>
         <source>Copy</source>
         <translation type="unfinished">Kopírovat</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="121"/>
+        <location filename="../UI/LogView.py" line="118"/>
         <source>Find</source>
         <translation type="unfinished">Hledat</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="123"/>
+        <location filename="../UI/LogView.py" line="120"/>
         <source>Select All</source>
         <translation type="unfinished">Vybrat vše</translation>
     </message>
     <message>
-        <location filename="../UI/LogView.py" line="125"/>
+        <location filename="../UI/LogView.py" line="122"/>
         <source>Configure...</source>
         <translation type="unfinished">Konfigurovat...</translation>
     </message>
@@ -31580,17 +31585,17 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="35"/>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="32"/>
         <source>&lt;b&gt;Message Filters for Standard Output&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="40"/>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="37"/>
         <source>&lt;b&gt;Message Filters for Standard Error &lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stderr.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="45"/>
+        <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="42"/>
         <source>&lt;b&gt;Message Filters for both&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout or stderr.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32126,6 +32131,39 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/WizardPlugins/MessageBoxWizard/MessageBoxWizardDialog.ui" line="117"/>
         <source>Enter the result variable name</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MimeTypesPage</name>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="17"/>
+        <source>&lt;b&gt;Configure Text Mimetypes&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="60"/>
+        <source>Press to reset the list to default values</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="63"/>
+        <source>Reset to Defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/MimeTypesPage.py" line="51"/>
+        <source>Reset Mime Types</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/MimeTypesPage.py" line="51"/>
+        <source>Do you really want to reset the configured list of mime types?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="37"/>
+        <source>Files of the mime types configured below are opened in an eric editor (in addition to all &apos;text&apos; mime types).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -35408,27 +35446,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1185"/>
+        <location filename="../Preferences/__init__.py" line="1289"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1213"/>
+        <location filename="../Preferences/__init__.py" line="1317"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1213"/>
+        <location filename="../Preferences/__init__.py" line="1317"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1315"/>
+        <location filename="../Preferences/__init__.py" line="1419"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1315"/>
+        <location filename="../Preferences/__init__.py" line="1419"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>

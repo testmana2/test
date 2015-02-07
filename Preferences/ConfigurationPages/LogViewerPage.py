@@ -19,7 +19,7 @@ class LogViewerPage(ConfigurationPageBase, Ui_LogViewerPage):
     """
     Class implementing the Log Viewer configuration page.
     """
-    def __init__(self):
+    def __init__(self, parent=None):
         """
         Constructor
         

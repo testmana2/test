@@ -144,6 +144,9 @@ class ConfigurationWidget(QWidget):
                 "logViewerPage":
                 [self.tr("Log-Viewer"), "preferences-logviewer.png", 
                  "LogViewerPage", None, None],
+                "mimeTypesPage":
+                [self.tr("Mimetypes"), "preferences-mimetypes.png",
+                 "MimeTypesPage", None, None],
                 "networkPage":
                 [self.tr("Network"), "preferences-network.png",
                  "NetworkPage", None, None],

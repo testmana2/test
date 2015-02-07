@@ -1153,6 +1153,7 @@
     <Source>E5Gui/E5TextEditSearchWidget.py</Source>
     <Source>E5Gui/E5StringListEditWidget.py</Source>
     <Source>Preferences/ConfigurationPages/LogViewerPage.py</Source>
+    <Source>Preferences/ConfigurationPages/MimeTypesPage.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
@@ -1485,6 +1486,7 @@
     <Form>E5Gui/E5TextEditSearchWidget.ui</Form>
     <Form>E5Gui/E5StringListEditWidget.ui</Form>
     <Form>Preferences/ConfigurationPages/LogViewerPage.ui</Form>
+    <Form>Preferences/ConfigurationPages/MimeTypesPage.ui</Form>
   </Forms>
   <Translations>
     <Translation>i18n/eric6_cs.qm</Translation>
