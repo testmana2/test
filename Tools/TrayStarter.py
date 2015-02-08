@@ -31,13 +31,17 @@ class TrayStarter(QSystemTrayIcon):
     """
     Class implementing a starter for the system tray.
     """
-    def __init__(self):
+    def __init__(self, usePyQt4):
         """
         Constructor
+        
+        @param usePyQt4 flag indicating to use PyQt4 (boolean)
         """
         super(TrayStarter, self).__init__(
             UI.PixmapCache.getIcon(
                 Preferences.getTrayStarter("TrayStarterIcon")))
+        
+        self.usePyQt4 = usePyQt4
         
         self.maxMenuFilePathLen = 75
         
@@ -234,6 +238,8 @@ class TrayStarter(QSystemTrayIcon):
         
         args = []
         args.append(applPath)
+        if self.usePyQt4:
+            args.append("--pyqt4")
         for arg in applArgs:
             args.append(arg)
         
@@ -442,7 +448,10 @@ class TrayStarter(QSystemTrayIcon):
         """
         filename = act.data()
         if filename:
-            self.__startProc("eric6.py", filename)
+            self.__startProc(
+                "eric6.py",
+                "--config={0}".format(Utilities.getConfigDir()),
+                filename)
     
     def __showPreferences(self):
         """
