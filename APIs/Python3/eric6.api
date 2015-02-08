@@ -1475,6 +1475,7 @@ eric6.E5Gui.E5SingleApplication.E5SingleApplicationServer?1()
 eric6.E5Gui.E5SingleApplication.SAArguments?7
 eric6.E5Gui.E5SingleApplication.SAFile?7
 eric6.E5Gui.E5SingleApplication.SAOpenFile?7
+eric6.E5Gui.E5SingleApplication.SAOpenMultiProject?7
 eric6.E5Gui.E5SingleApplication.SAOpenProject?7
 eric6.E5Gui.E5SqueezeLabels.E5SqueezeLabel.paintEvent?4(event)
 eric6.E5Gui.E5SqueezeLabels.E5SqueezeLabel.setText?4(txt)

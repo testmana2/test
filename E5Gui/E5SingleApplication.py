@@ -27,6 +27,7 @@ SAFile = "eric6"
 # define the protocol tokens
 SAOpenFile = '>OpenFile<'
 SAOpenProject = '>OpenProject<'
+SAOpenMultiProject = '>OpenMultiProject<'
 SAArguments = '>Arguments<'
 
 
@@ -55,6 +56,10 @@ class E5SingleApplicationServer(SingleApplicationServer):
             self.__saOpenProject(params)
             return
 
+        if cmd == SAOpenMultiProject:
+            self.__saOpenMultiProject(params)
+            return
+
         if cmd == SAArguments:
             self.__saArguments(params)
             return
@@ -74,6 +79,14 @@ class E5SingleApplicationServer(SingleApplicationServer):
         @param pfname filename of the project to be opened (string)
         """
         e5App().getObject("Project").openProject(pfname)
+        
+    def __saOpenMultiProject(self, pfname):
+        """
+        Private method used to handle the "Open Multi-Project" command.
+        
+        @param pfname filename of the multi project to be opened (string)
+        """
+        e5App().getObject("MultiProject").openMultiProject(pfname)
         
     def __saArguments(self, argsStr):
         """
@@ -131,6 +144,8 @@ class E5SingleApplicationClient(SingleApplicationClient):
             
             if ext in ['.e4p']:
                 self.__openProject(arg)
+            elif ext in ['.e4m', '.e5m']:
+                self.__openMultiProject(arg)
             else:
                 self.__openFile(arg)
         
@@ -156,6 +171,16 @@ class E5SingleApplicationClient(SingleApplicationClient):
         @param pfname name of the projectfile to be opened (string)
         """
         cmd = "{0}{1}\n".format(SAOpenProject, Utilities.normabspath(pfname))
+        self.sendCommand(cmd)
+        
+    def __openMultiProject(self, pfname):
+        """
+        Private method to open a project in the application server.
+        
+        @param pfname name of the projectfile to be opened (string)
+        """
+        cmd = "{0}{1}\n".format(SAOpenMultiProject,
+                                Utilities.normabspath(pfname))
         self.sendCommand(cmd)
         
     def __sendArguments(self, argsStr):

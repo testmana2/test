@@ -25,7 +25,7 @@ Module implementing the single application server and client.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>SAArguments</td></tr><tr><td>SAFile</td></tr><tr><td>SAOpenFile</td></tr><tr><td>SAOpenProject</td></tr>
+<tr><td>SAArguments</td></tr><tr><td>SAFile</td></tr><tr><td>SAOpenFile</td></tr><tr><td>SAOpenMultiProject</td></tr><tr><td>SAOpenProject</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -66,6 +66,9 @@ SingleApplicationClient
 <td><a href="#E5SingleApplicationClient.__openFile">__openFile</a></td>
 <td>Private method to open a file in the application server.</td>
 </tr><tr>
+<td><a href="#E5SingleApplicationClient.__openMultiProject">__openMultiProject</a></td>
+<td>Private method to open a project in the application server.</td>
+</tr><tr>
 <td><a href="#E5SingleApplicationClient.__openProject">__openProject</a></td>
 <td>Private method to open a project in the application server.</td>
 </tr><tr>
@@ -94,6 +97,16 @@ SingleApplicationClient
 <dt><i>fname</i></dt>
 <dd>
 name of file to be opened (string)
+</dd>
+</dl><a NAME="E5SingleApplicationClient.__openMultiProject" ID="E5SingleApplicationClient.__openMultiProject"></a>
+<h4>E5SingleApplicationClient.__openMultiProject</h4>
+<b>__openMultiProject</b>(<i>pfname</i>)
+<p>
+        Private method to open a project in the application server.
+</p><dl>
+<dt><i>pfname</i></dt>
+<dd>
+name of the projectfile to be opened (string)
 </dd>
 </dl><a NAME="E5SingleApplicationClient.__openProject" ID="E5SingleApplicationClient.__openProject"></a>
 <h4>E5SingleApplicationClient.__openProject</h4>
@@ -155,6 +168,9 @@ SingleApplicationServer
 <td><a href="#E5SingleApplicationServer.__saOpenFile">__saOpenFile</a></td>
 <td>Private method used to handle the "Open File" command.</td>
 </tr><tr>
+<td><a href="#E5SingleApplicationServer.__saOpenMultiProject">__saOpenMultiProject</a></td>
+<td>Private method used to handle the "Open Multi-Project" command.</td>
+</tr><tr>
 <td><a href="#E5SingleApplicationServer.__saOpenProject">__saOpenProject</a></td>
 <td>Private method used to handle the "Open Project" command.</td>
 </tr><tr>
@@ -190,6 +206,16 @@ space delimited list of command args(string)
 <dt><i>fname</i></dt>
 <dd>
 filename to be opened (string)
+</dd>
+</dl><a NAME="E5SingleApplicationServer.__saOpenMultiProject" ID="E5SingleApplicationServer.__saOpenMultiProject"></a>
+<h4>E5SingleApplicationServer.__saOpenMultiProject</h4>
+<b>__saOpenMultiProject</b>(<i>pfname</i>)
+<p>
+        Private method used to handle the "Open Multi-Project" command.
+</p><dl>
+<dt><i>pfname</i></dt>
+<dd>
+filename of the multi project to be opened (string)
 </dd>
 </dl><a NAME="E5SingleApplicationServer.__saOpenProject" ID="E5SingleApplicationServer.__saOpenProject"></a>
 <h4>E5SingleApplicationServer.__saOpenProject</h4>

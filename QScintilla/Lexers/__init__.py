@@ -831,7 +831,6 @@ def getDefaultLexerAssociations():
         '*.e4q': "XML",
         '*.e4s': "XML",
         '*.e4t': "XML",
-        '*.e6t': "XML",
         '*.e5d': "XML",
         '*.e5k': "XML",
         '*.e5m': "XML",
@@ -839,6 +838,13 @@ def getDefaultLexerAssociations():
         '*.e5q': "XML",
         '*.e5s': "XML",
         '*.e5t': "XML",
+        '*.e6d': "XML",
+        '*.e6k': "XML",
+        '*.e6m': "XML",
+        '*.e6p': "XML",
+        '*.e6q': "XML",
+        '*.e6s': "XML",
+        '*.e6t': "XML",
     }
     
     if QSCINTILLA_VERSION() >= 0x020501:

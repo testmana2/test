@@ -3851,6 +3851,7 @@
       <keyword name="E5SingleApplicationClient" id="E5SingleApplicationClient" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient" />
       <keyword name="E5SingleApplicationClient (Constructor)" id="E5SingleApplicationClient (Constructor)" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__init__" />
       <keyword name="E5SingleApplicationClient.__openFile" id="E5SingleApplicationClient.__openFile" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__openFile" />
+      <keyword name="E5SingleApplicationClient.__openMultiProject" id="E5SingleApplicationClient.__openMultiProject" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__openMultiProject" />
       <keyword name="E5SingleApplicationClient.__openProject" id="E5SingleApplicationClient.__openProject" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__openProject" />
       <keyword name="E5SingleApplicationClient.__sendArguments" id="E5SingleApplicationClient.__sendArguments" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.__sendArguments" />
       <keyword name="E5SingleApplicationClient.processArgs" id="E5SingleApplicationClient.processArgs" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationClient.processArgs" />
@@ -3858,6 +3859,7 @@
       <keyword name="E5SingleApplicationServer (Constructor)" id="E5SingleApplicationServer (Constructor)" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__init__" />
       <keyword name="E5SingleApplicationServer.__saArguments" id="E5SingleApplicationServer.__saArguments" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saArguments" />
       <keyword name="E5SingleApplicationServer.__saOpenFile" id="E5SingleApplicationServer.__saOpenFile" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saOpenFile" />
+      <keyword name="E5SingleApplicationServer.__saOpenMultiProject" id="E5SingleApplicationServer.__saOpenMultiProject" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saOpenMultiProject" />
       <keyword name="E5SingleApplicationServer.__saOpenProject" id="E5SingleApplicationServer.__saOpenProject" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.__saOpenProject" />
       <keyword name="E5SingleApplicationServer.handleCommand" id="E5SingleApplicationServer.handleCommand" ref="eric6.E5Gui.E5SingleApplication.html#E5SingleApplicationServer.handleCommand" />
       <keyword name="E5SqueezeLabel" id="E5SqueezeLabel" ref="eric6.E5Gui.E5SqueezeLabels.html#E5SqueezeLabel" />
