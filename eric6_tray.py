@@ -14,14 +14,16 @@ context menu to start the eric6 IDE and the eric6 tools.
 
 from __future__ import unicode_literals
 
+import sys
+
+PyQt4Option = "--pyqt4" in sys.argv
+
 import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__ 
 
 try:  # Only for Py2
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass
-
-import sys
 
 for arg in sys.argv:
     if arg.startswith("--config="):
@@ -43,8 +45,10 @@ def createMainWidget(argv):
     @param argv list of commandline parameters (list of strings)
     @return reference to the main widget (QWidget)
     """
+    global PyQt4Option
+    
     from Tools.TrayStarter import TrayStarter
-    return TrayStarter()
+    return TrayStarter(PyQt4Option)
 
 
 def main():
