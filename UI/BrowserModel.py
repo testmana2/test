@@ -1232,7 +1232,7 @@ class BrowserFileItem(BrowserItem):
         
         @return flag indicating an eric project file (boolean)
         """
-        return self.fileext in ['.e4m']
+        return self.fileext in ['.e4m', '.e5m']
     
     def isIdlFile(self):
         """

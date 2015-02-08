@@ -1044,7 +1044,7 @@ class UserInterface(E5MainWindow):
             for the debugger. All files named before the '--' option
             are opened in a text editor, unless the argument ends in
             .e4p, then it is opened as a project file. If it ends in
-            .e4m, it is opened as a multiproject.
+            .e4m or .e5m, it is opened as a multiproject.
         """
         # no args, return
         if args is None:
@@ -1103,7 +1103,7 @@ class UserInterface(E5MainWindow):
             if ext in ['.e4p']:
                 self.project.openProject(arg)
                 opens += 1
-            elif ext in ['.e4m']:
+            elif ext in ['.e4m', '.e5m']:
                 self.multiProject.openMultiProject(arg)
                 opens += 1
             else:
