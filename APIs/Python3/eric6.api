@@ -7954,7 +7954,7 @@ eric6.Tools.TRSingleApplication.TRSingleApplicationServer.loadForm?7
 eric6.Tools.TRSingleApplication.TRSingleApplicationServer.loadTranslation?7
 eric6.Tools.TRSingleApplication.TRSingleApplicationServer?1(parent)
 eric6.Tools.TrayStarter.TrayStarter.preferencesChanged?4()
-eric6.Tools.TrayStarter.TrayStarter?1()
+eric6.Tools.TrayStarter.TrayStarter?1(usePyQt4)
 eric6.Tools.UIPreviewer.UIPreviewer.eventFilter?4(obj, ev)
 eric6.Tools.UIPreviewer.UIPreviewer.show?4()
 eric6.Tools.UIPreviewer.UIPreviewer?1(filename=None, parent=None, name=None)
@@ -9053,6 +9053,7 @@ eric6.eric6_snap.createMainWidget?4(argv)
 eric6.eric6_snap.main?4()
 eric6.eric6_sqlbrowser.createMainWidget?4(argv)
 eric6.eric6_sqlbrowser.main?4()
+eric6.eric6_tray.PyQt4Option?7
 eric6.eric6_tray.createMainWidget?4(argv)
 eric6.eric6_tray.main?4()
 eric6.eric6_trpreviewer.createMainWidget?4(argv)
