@@ -60,7 +60,7 @@ CallTraceViewer QWidget Ui_CallTraceViewer
 ChangeBookmarkCommand QUndoCommand
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
-Class ClbrBase
+Class ClbrBaseClasses.Class VisibilityMixin
 ClassItem UMLItem
 ClassModel UMLModel
 ClbrBase _ClbrBase
@@ -145,6 +145,7 @@ E5ErrorMessageFilterDialog QDialog Ui_E5ErrorMessageFilterDialog
 E5FileCompleter QCompleter
 E5Ftp ftplib.FTP
 E5FtpProxyError ftplib.Error
+E5GenericDiffHighlighter QSyntaxHighlighter
 E5GraphicsView QGraphicsView
 E5HorizontalToolBox E5TabWidget
 E5Led QWidget

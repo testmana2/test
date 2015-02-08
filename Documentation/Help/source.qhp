@@ -122,6 +122,7 @@
             <section title="eric6.E5Gui.E5ErrorMessage" ref="eric6.E5Gui.E5ErrorMessage.html" />
             <section title="eric6.E5Gui.E5ErrorMessageFilterDialog" ref="eric6.E5Gui.E5ErrorMessageFilterDialog.html" />
             <section title="eric6.E5Gui.E5FileDialog" ref="eric6.E5Gui.E5FileDialog.html" />
+            <section title="eric6.E5Gui.E5GenericDiffHighlighter" ref="eric6.E5Gui.E5GenericDiffHighlighter.html" />
             <section title="eric6.E5Gui.E5Led" ref="eric6.E5Gui.E5Led.html" />
             <section title="eric6.E5Gui.E5LineEdit" ref="eric6.E5Gui.E5LineEdit.html" />
             <section title="eric6.E5Gui.E5LineEditButton" ref="eric6.E5Gui.E5LineEditButton.html" />
@@ -3551,6 +3552,14 @@
       <keyword name="E5Ftp.setProxyAuthentication" id="E5Ftp.setProxyAuthentication" ref="eric6.E5Network.E5Ftp.html#E5Ftp.setProxyAuthentication" />
       <keyword name="E5FtpProxyError" id="E5FtpProxyError" ref="eric6.E5Network.E5Ftp.html#E5FtpProxyError" />
       <keyword name="E5FtpProxyType" id="E5FtpProxyType" ref="eric6.E5Network.E5Ftp.html#E5FtpProxyType" />
+      <keyword name="E5GenericDiffHighlighter" id="E5GenericDiffHighlighter" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter" />
+      <keyword name="E5GenericDiffHighlighter (Constructor)" id="E5GenericDiffHighlighter (Constructor)" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter.__init__" />
+      <keyword name="E5GenericDiffHighlighter (Module)" id="E5GenericDiffHighlighter (Module)" ref="eric6.E5Gui.E5GenericDiffHighlighter.html" />
+      <keyword name="E5GenericDiffHighlighter.createRules" id="E5GenericDiffHighlighter.createRules" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter.createRules" />
+      <keyword name="E5GenericDiffHighlighter.formats" id="E5GenericDiffHighlighter.formats" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter.formats" />
+      <keyword name="E5GenericDiffHighlighter.generateRules" id="E5GenericDiffHighlighter.generateRules" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter.generateRules" />
+      <keyword name="E5GenericDiffHighlighter.highlightBlock" id="E5GenericDiffHighlighter.highlightBlock" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter.highlightBlock" />
+      <keyword name="E5GenericDiffHighlighter.makeFormat" id="E5GenericDiffHighlighter.makeFormat" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#E5GenericDiffHighlighter.makeFormat" />
       <keyword name="E5Graphics (Package)" id="E5Graphics (Package)" ref="index-eric6.E5Graphics.html" />
       <keyword name="E5GraphicsView" id="E5GraphicsView" ref="eric6.E5Graphics.E5GraphicsView.html#E5GraphicsView" />
       <keyword name="E5GraphicsView (Constructor)" id="E5GraphicsView (Constructor)" ref="eric6.E5Graphics.E5GraphicsView.html#E5GraphicsView.__init__" />
@@ -11386,6 +11395,7 @@
       <keyword name="SyntaxCheckerPlugin.serviceErrorJavaScript" id="SyntaxCheckerPlugin.serviceErrorJavaScript" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorJavaScript" />
       <keyword name="SyntaxCheckerPlugin.serviceErrorPy2" id="SyntaxCheckerPlugin.serviceErrorPy2" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorPy2" />
       <keyword name="SyntaxCheckerPlugin.serviceErrorPy3" id="SyntaxCheckerPlugin.serviceErrorPy3" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorPy3" />
+      <keyword name="TERMINAL" id="TERMINAL" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#TERMINAL" />
       <keyword name="TRPreviewer" id="TRPreviewer" ref="eric6.Tools.TRPreviewer.html#TRPreviewer" />
       <keyword name="TRPreviewer (Constructor)" id="TRPreviewer (Constructor)" ref="eric6.Tools.TRPreviewer.html#TRPreviewer.__init__" />
       <keyword name="TRPreviewer (Module)" id="TRPreviewer (Module)" ref="eric6.Tools.TRPreviewer.html" />
@@ -13705,6 +13715,7 @@
       <file>eric6.E5Gui.E5ErrorMessage.html</file>
       <file>eric6.E5Gui.E5ErrorMessageFilterDialog.html</file>
       <file>eric6.E5Gui.E5FileDialog.html</file>
+      <file>eric6.E5Gui.E5GenericDiffHighlighter.html</file>
       <file>eric6.E5Gui.E5Led.html</file>
       <file>eric6.E5Gui.E5LineEdit.html</file>
       <file>eric6.E5Gui.E5LineEditButton.html</file>

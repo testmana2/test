@@ -1236,6 +1236,14 @@ eric6.E5Gui.E5FileDialog.getOpenFileNames?4(parent=None, caption="", directory="
 eric6.E5Gui.E5FileDialog.getOpenFileNamesAndFilter?4(parent=None, caption="", directory="", filter="", initialFilter="", options=QFileDialog.Options())
 eric6.E5Gui.E5FileDialog.getSaveFileName?4(parent=None, caption="", directory="", filter="", options=QFileDialog.Options())
 eric6.E5Gui.E5FileDialog.getSaveFileNameAndFilter?4(parent=None, caption="", directory="", filter="", initialFilter="", options=QFileDialog.Options())
+eric6.E5Gui.E5GenericDiffHighlighter.E5GenericDiffHighlighter.createRules?4(*rules)
+eric6.E5Gui.E5GenericDiffHighlighter.E5GenericDiffHighlighter.formats?4(line)
+eric6.E5Gui.E5GenericDiffHighlighter.E5GenericDiffHighlighter.generateRules?4()
+eric6.E5Gui.E5GenericDiffHighlighter.E5GenericDiffHighlighter.highlightBlock?4(text)
+eric6.E5Gui.E5GenericDiffHighlighter.E5GenericDiffHighlighter.makeFormat?4(fg=None, bg=None, bold=False)
+eric6.E5Gui.E5GenericDiffHighlighter.E5GenericDiffHighlighter?1(doc)
+eric6.E5Gui.E5GenericDiffHighlighter.TERMINAL?4(pattern)
+eric6.E5Gui.E5GenericDiffHighlighter._REGEX_CACHE?8
 eric6.E5Gui.E5Led.E5ClickableLed.clicked?7
 eric6.E5Gui.E5Led.E5ClickableLed.middleClicked?7
 eric6.E5Gui.E5Led.E5ClickableLed.mouseReleaseEvent?4(evt)
