@@ -1756,6 +1756,7 @@
       <keyword name="Browser.__refreshDirectory" id="Browser.__refreshDirectory" ref="eric6.UI.Browser.html#Browser.__refreshDirectory" />
       <keyword name="Browser.__removeToplevel" id="Browser.__removeToplevel" ref="eric6.UI.Browser.html#Browser.__removeToplevel" />
       <keyword name="Browser.__replaceInDirectory" id="Browser.__replaceInDirectory" ref="eric6.UI.Browser.html#Browser.__replaceInDirectory" />
+      <keyword name="Browser.__showMimeType" id="Browser.__showMimeType" ref="eric6.UI.Browser.html#Browser.__showMimeType" />
       <keyword name="Browser._contextMenuRequested" id="Browser._contextMenuRequested" ref="eric6.UI.Browser.html#Browser._contextMenuRequested" />
       <keyword name="Browser._copyToClipboard" id="Browser._copyToClipboard" ref="eric6.UI.Browser.html#Browser._copyToClipboard" />
       <keyword name="Browser._editPixmap" id="Browser._editPixmap" ref="eric6.UI.Browser.html#Browser._editPixmap" />
@@ -9078,6 +9079,7 @@
       <keyword name="ProjectOthersBrowser.__showContextMenu" id="ProjectOthersBrowser.__showContextMenu" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser.__showContextMenu" />
       <keyword name="ProjectOthersBrowser.__showContextMenuBack" id="ProjectOthersBrowser.__showContextMenuBack" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser.__showContextMenuBack" />
       <keyword name="ProjectOthersBrowser.__showContextMenuMulti" id="ProjectOthersBrowser.__showContextMenuMulti" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser.__showContextMenuMulti" />
+      <keyword name="ProjectOthersBrowser.__showMimeType" id="ProjectOthersBrowser.__showMimeType" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser.__showMimeType" />
       <keyword name="ProjectOthersBrowser._contextMenuRequested" id="ProjectOthersBrowser._contextMenuRequested" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser._contextMenuRequested" />
       <keyword name="ProjectOthersBrowser._createPopupMenus" id="ProjectOthersBrowser._createPopupMenus" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser._createPopupMenus" />
       <keyword name="ProjectOthersBrowser._editPixmap" id="ProjectOthersBrowser._editPixmap" ref="eric6.Project.ProjectOthersBrowser.html#ProjectOthersBrowser._editPixmap" />
@@ -13386,6 +13388,7 @@
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#maximum_line_length" />
       <keyword name="messageHandler" id="messageHandler" ref="eric6.E5Gui.E5ErrorMessage.html#messageHandler" />
       <keyword name="messageHandlerInstalled" id="messageHandlerInstalled" ref="eric6.E5Gui.E5ErrorMessage.html#messageHandlerInstalled" />
+      <keyword name="mimeType" id="mimeType" ref="eric6.Utilities.MimeTypes.html#mimeType" />
       <keyword name="missing_whitespace" id="missing_whitespace" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_whitespace" />
       <keyword name="missing_whitespace_around_operator" id="missing_whitespace_around_operator" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#missing_whitespace_around_operator" />
       <keyword name="mute_string" id="mute_string" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#mute_string" />

@@ -2099,7 +2099,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>文件浏览器</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="221"/>
+        <location filename="../UI/Browser.py" line="229"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
@@ -2109,68 +2109,88 @@ the button to the right.&lt;/p&gt;</source>
         <translation>运行单元测试……</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="285"/>
+        <location filename="../UI/Browser.py" line="293"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="280"/>
+        <location filename="../UI/Browser.py" line="288"/>
         <source>New toplevel directory...</source>
         <translation>新顶层文件夹……</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="234"/>
+        <location filename="../UI/Browser.py" line="242"/>
         <source>Add as toplevel directory</source>
         <translation>添加为顶层文件夹</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="237"/>
+        <location filename="../UI/Browser.py" line="245"/>
         <source>Remove from toplevel</source>
         <translation>从顶层移除</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="245"/>
+        <location filename="../UI/Browser.py" line="253"/>
         <source>Find in this directory</source>
         <translation>在该文件夹中查找</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="248"/>
+        <location filename="../UI/Browser.py" line="256"/>
         <source>Find&amp;&amp;Replace in this directory</source>
         <translation>在该文件夹中查找和替换(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="490"/>
+        <location filename="../UI/Browser.py" line="538"/>
         <source>New toplevel directory</source>
         <translation>新建顶层文件夹</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="207"/>
+        <location filename="../UI/Browser.py" line="211"/>
         <source>Open in Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="252"/>
+        <location filename="../UI/Browser.py" line="260"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="241"/>
+        <location filename="../UI/Browser.py" line="249"/>
         <source>Refresh directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="262"/>
+        <location filename="../UI/Browser.py" line="270"/>
         <source>Goto</source>
         <translation type="unfinished">跳转</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="366"/>
+        <location filename="../UI/Browser.py" line="374"/>
         <source>Line {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../UI/Browser.py" line="94"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierarchy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierarchies.&lt;/p&gt;&lt;p&gt;The first hierarchy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierarchy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierarchy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierarchies allow you navigate your system as a whole. On a UNIX system there will be a hierarchy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierarchy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierarchies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="481"/>
+        <source>Show Mime-Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="461"/>
+        <source>The mime type of the file could not be determined.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="475"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="481"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -37568,78 +37588,98 @@ Select Update.</source>
 <context>
     <name>ProjectOthersBrowser</name>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="55"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="58"/>
         <source>Others</source>
         <translation>其它</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="57"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="60"/>
         <source>&lt;b&gt;Project Others Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all other files and directories contained in the current project. Several actions can be executed via the context menu. The entry which is registered in the project is shown in a different colour.&lt;/p&gt;</source>
         <translation>&lt;b&gt;项目其它浏览器&lt;/b&gt;&lt;p&gt;可以方便地观察当前项目中的所有其它文件和文件夹。可通过上下文菜单执行多个行为。在项目中注册过的条目将显示成其它颜色。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="77"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="83"/>
         <source>Rename file</source>
         <translation>重命名文件</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="118"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="124"/>
         <source>Remove from project</source>
         <translation>从项目移除</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="121"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="127"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="104"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="110"/>
         <source>Add files...</source>
         <translation>添加文件……</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="106"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="112"/>
         <source>Add directory...</source>
         <translation>添加文件夹……</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="91"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="97"/>
         <source>Refresh</source>
         <translation>刷新</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="125"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="131"/>
         <source>Expand all directories</source>
         <translation>展开所有文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="127"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="133"/>
         <source>Collapse all directories</source>
         <translation>折叠所有文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="130"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="136"/>
         <source>Configure...</source>
         <translation>配置……</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="342"/>
         <source>Delete files/directories</source>
         <translation>删除文件或文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="342"/>
         <source>Do you really want to delete these entries from the project?</source>
         <translation>确定要从项目中删除这些条目吗？</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="74"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="77"/>
         <source>Open in Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="93"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="99"/>
         <source>Copy Path to Clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="281"/>
+        <source>Show Mime-Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="261"/>
+        <source>The mime type of the file could not be determined.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="275"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="281"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

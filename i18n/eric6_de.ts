@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1918,8 +1919,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -1987,8 +1988,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2100,7 +2101,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>Browser</name>
     <message>
-        <location filename="../UI/Browser.py" line="221"/>
+        <location filename="../UI/Browser.py" line="229"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
@@ -2115,62 +2116,62 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Dateibrowser</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="280"/>
+        <location filename="../UI/Browser.py" line="288"/>
         <source>New toplevel directory...</source>
         <translation>Neuer übergeordneter Ordner …</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="237"/>
+        <location filename="../UI/Browser.py" line="245"/>
         <source>Remove from toplevel</source>
         <translation>Vom Anfang entfernen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="234"/>
+        <location filename="../UI/Browser.py" line="242"/>
         <source>Add as toplevel directory</source>
         <translation>Als übergeordneten Ordner hinzufügen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="490"/>
+        <location filename="../UI/Browser.py" line="538"/>
         <source>New toplevel directory</source>
         <translation>Neuer übergeordneter Ordner</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="245"/>
+        <location filename="../UI/Browser.py" line="253"/>
         <source>Find in this directory</source>
         <translation>In diesem Verzeichnis suchen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="248"/>
+        <location filename="../UI/Browser.py" line="256"/>
         <source>Find&amp;&amp;Replace in this directory</source>
         <translation>In diesem Verzeichnis suchen&amp;&amp;ersetzen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="285"/>
+        <location filename="../UI/Browser.py" line="293"/>
         <source>Configure...</source>
         <translation>Einstellungen …</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="207"/>
+        <location filename="../UI/Browser.py" line="211"/>
         <source>Open in Icon Editor</source>
         <translation>Mit Icon-Editor öffnen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="252"/>
+        <location filename="../UI/Browser.py" line="260"/>
         <source>Copy Path to Clipboard</source>
         <translation>Pfad in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="241"/>
+        <location filename="../UI/Browser.py" line="249"/>
         <source>Refresh directory</source>
         <translation>Verzeichnis aktualisieren</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="262"/>
+        <location filename="../UI/Browser.py" line="270"/>
         <source>Goto</source>
         <translation>Gehe zu</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="366"/>
+        <location filename="../UI/Browser.py" line="374"/>
         <source>Line {0}</source>
         <translation>Zeile {0}</translation>
     </message>
@@ -2178,6 +2179,26 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <location filename="../UI/Browser.py" line="94"/>
         <source>&lt;b&gt;The Browser Window&lt;/b&gt;&lt;p&gt;This allows you to easily navigate the hierarchy of directories and files on your system, identify the Python programs and open them up in a Source Viewer window. The window displays several separate hierarchies.&lt;/p&gt;&lt;p&gt;The first hierarchy is only shown if you have opened a program for debugging and its root is the directory containing that program. Usually all of the separate files that make up a Python application are held in the same directory, so this hierarchy gives you easy access to most of what you will need.&lt;/p&gt;&lt;p&gt;The next hierarchy is used to easily navigate the directories that are specified in the Python &lt;tt&gt;sys.path&lt;/tt&gt; variable.&lt;/p&gt;&lt;p&gt;The remaining hierarchies allow you navigate your system as a whole. On a UNIX system there will be a hierarchy with &lt;tt&gt;/&lt;/tt&gt; at its root and another with the user home directory. On a Windows system there will be a hierarchy for each drive on the system.&lt;/p&gt;&lt;p&gt;Python programs (i.e. those with a &lt;tt&gt;.py&lt;/tt&gt; file name suffix) are identified in the hierarchies with a Python icon. The right mouse button will popup a menu which lets you open the file in a Source Viewer window, open the file for debugging or use it for a unittest run.&lt;/p&gt;&lt;p&gt;The context menu of a class, function or method allows you to open the file defining this class, function or method and will ensure, that the correct source line is visible.&lt;/p&gt;&lt;p&gt;Qt-Designer files (i.e. those with a &lt;tt&gt;.ui&lt;/tt&gt; file name suffix) are shown with a Designer icon. The context menu of these files allows you to start Qt-Designer with that file.&lt;/p&gt;&lt;p&gt;Qt-Linguist files (i.e. those with a &lt;tt&gt;.ts&lt;/tt&gt; file name suffix) are shown with a Linguist icon. The context menu of these files allows you to start Qt-Linguist with that file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Das Browserfenster&lt;/b&gt;&lt;p&gt;Dies erlaubt es Ihnen, sich leicht in der Verzeichnishierarchie Ihres Systems zu bewegen, Python-Programme zu identifizieren und diese in einem Quelltextfenster zu öffnen. Das Fenster stellt verschiedene Hierarchien dar.&lt;/p&gt;&lt;p&gt;Die erste wird nur angezeigt, wenn ein Programm zum debuggen geöffnet ist. Gewöhnlich werden alle zum Programm zugehörigen Python-Dateien im selben Verzeichnis gespeichert, so dass Sie über diese Hierarchie Zugriff auf das am meisten Benötigte haben.&lt;/p&gt;&lt;p&gt;Die nächste Hierarchie wird verwendet, um sich in den in der Python-Variable &lt;tt&gt;sys.path&lt;/tt&gt; gespeicherten Verzeichnissen zu bewegen.&lt;/p&gt;&lt;p&gt;Die restlichen Hierachien erlauben die Navigation im gesamten System. Unter Unix wird gewöhnlich ein Verzeichnis mit &lt;tt&gt;/&lt;/tt&gt; als Wurzel und eines mit dem Home-Verzeichnis des Nutzers angezeigt. Auf einem Windows-System wird eine Hierarchie pro Laufwerk angezeigt.&lt;/p&gt;&lt;p&gt;Python-Programme (Dateien mit der Endung &lt;tt&gt;.py&lt;/tt&gt;) werden mit einem Python-Symbol dargestellt. Ein Rechtsklick bringt ein Kontextmenü, über das die Datei in einem Editor, zum Debuggen oder für einen Modultest geöffnet werden kann.&lt;/p&gt;&lt;p&gt;Das Kontextmenü einer Klasse, einer Funktion oder einer Methode öffnet die Datei, in der diese Klasse, Funktion oder Methode definiert ist, und stellt sicher, dass die richtige Codezeile sichtbar ist.&lt;/p&gt;&lt;p&gt;Qt-Designer-Dateien (Dateien mit der Endung &lt;tt&gt;.ui&lt;/tt&gt;) werden mit einem Designer-Symbol dargestellt. Das Kontextmenü dieser Dateien erlaubt es, sie im Qt Designer zu öffnen.&lt;/p&gt;&lt;p&gt;Qt-Linguist-Dateien (Dateien mit der Endung &lt;tt&gt;.ts&lt;/tt&gt;) werden mit einem Linguist-Symbol dargestellt. Das Kontextmenü dieser Dateien erlaubt es, sie im Qt Linguist zu öffnen.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="481"/>
+        <source>Show Mime-Type</source>
+        <translation>MIME-Typ anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="461"/>
+        <source>The mime type of the file could not be determined.</source>
+        <translation>Der MIME-Typ der Datei konnte nicht ermittelt werden.</translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="475"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
+        <translation>Die Datei hat den MIME-Typ &lt;b&gt;{0}&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../UI/Browser.py" line="481"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
+        <translation>Die Datei hat den MIME-Typ &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Soll sie zur Liste der Text MIME-Typen hinzugefügt werden?</translation>
     </message>
 </context>
 <context>
@@ -15899,8 +15920,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1167"/>
@@ -37662,79 +37683,99 @@ Bitte „Aktualisieren“ drücken.</translation>
 <context>
     <name>ProjectOthersBrowser</name>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="55"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="58"/>
         <source>Others</source>
         <translation>Weiteres</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="118"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="124"/>
         <source>Remove from project</source>
         <translation>Aus dem Projekt entfernen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="121"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="127"/>
         <source>Delete</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="106"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="112"/>
         <source>Add directory...</source>
         <translation>Verzeichnis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="57"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="60"/>
         <source>&lt;b&gt;Project Others Browser&lt;/b&gt;&lt;p&gt;This allows to easily see all other files and directories contained in the current project. Several actions can be executed via the context menu. The entry which is registered in the project is shown in a different colour.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Projekt Weitere Browser&lt;/b&gt;&lt;p&gt;Dies bietet eine Übersicht aller anderen im Projekt enthaltenen Dateien und Verzeichnisse an. Verschiedene Aktionen können über das Kontextmenü ausgeführt werden. Der im Projekt registrierte Eintrag ist farblich hervorgehoben.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="125"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="131"/>
         <source>Expand all directories</source>
         <translation>Alle Verzeichnisse aufklappen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="127"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="133"/>
         <source>Collapse all directories</source>
         <translation>Alle Verzeichnisse einklappen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="77"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="83"/>
         <source>Rename file</source>
         <translation>Datei umbenennen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="342"/>
         <source>Delete files/directories</source>
         <translation>Dateien/Verzeichnisse löschen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="296"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="342"/>
         <source>Do you really want to delete these entries from the project?</source>
         <translation>Wollen Sie wirklich diese Einträge aus dem Projekt löschen?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="104"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="110"/>
         <source>Add files...</source>
         <translation>Dateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="91"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="97"/>
         <source>Refresh</source>
         <translation>Erneuern</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="130"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="136"/>
         <source>Configure...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="74"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="77"/>
         <source>Open in Icon Editor</source>
         <translation>Mit Icon-Editor öffnen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectOthersBrowser.py" line="93"/>
+        <location filename="../Project/ProjectOthersBrowser.py" line="99"/>
         <source>Copy Path to Clipboard</source>
         <translation>Pfad in die Zwischenablage kopieren</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="281"/>
+        <source>Show Mime-Type</source>
+        <translation>MIME-Typ anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="261"/>
+        <source>The mime type of the file could not be determined.</source>
+        <translation>Der MIME-Typ der Datei konnte nicht ermittelt werden.</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="275"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
+        <translation>Die Datei hat den MIME-Typ &lt;b&gt;{0}&lt;/b&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../Project/ProjectOthersBrowser.py" line="281"/>
+        <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
+        <translation>Die Datei hat den MIME-Typ &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Soll sie zur Liste der Text MIME-Typen hinzugefügt werden?</translation>
     </message>
 </context>
 <context>

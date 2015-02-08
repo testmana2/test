@@ -14,12 +14,15 @@ from PyQt5.QtCore import QModelIndex, pyqtSignal, QUrl
 from PyQt5.QtGui import QDesktopServices
 from PyQt5.QtWidgets import QDialog, QMenu
 
+from E5Gui import E5MessageBox
+
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
     ProjectBrowserOthersType
 from .ProjectBaseBrowser import ProjectBaseBrowser
 
 import Utilities.MimeTypes
+import Preferences
 
 
 class ProjectOthersBrowser(ProjectBaseBrowser):
@@ -73,6 +76,9 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
         
         self.editPixmapAct = self.menu.addAction(
             self.tr('Open in Icon Editor'), self._editPixmap)
+        self.menu.addSeparator()
+        self.mimeTypeAct = self.menu.addAction(
+            self.tr('Show Mime-Type'), self.__showMimeType)
         self.menu.addSeparator()
         self.renameFileAct = self.menu.addAction(
             self.tr('Rename file'), self._renameFile)
@@ -159,9 +165,11 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
                     itm = self.model().item(index)
                     if isinstance(itm, ProjectBrowserFileItem):
                         self.editPixmapAct.setVisible(itm.isPixmapFile())
+                        self.mimeTypeAct.setVisible(True)
                         self.menu.popup(self.mapToGlobal(coord))
                     elif isinstance(itm, ProjectBrowserDirectoryItem):
                         self.editPixmapAct.setVisible(False)
+                        self.mimeTypeAct.setVisible(False)
                         self.menu.popup(self.mapToGlobal(coord))
                     else:
                         self.backMenu.popup(self.mapToGlobal(coord))
@@ -241,6 +249,44 @@ class ProjectOthersBrowser(ProjectBaseBrowser):
                         self.sourceFile.emit(itm.fileName())
                     else:
                         QDesktopServices.openUrl(QUrl(itm.fileName()))
+        
+    def __showMimeType(self):
+        """
+        Private slot to show the mime type of the selected entry.
+        """
+        itmList = self.getSelectedItems()
+        if itmList:
+            mimetype = Utilities.MimeTypes.mimeType(itmList[0].fileName())
+            if mimetype is None:
+                E5MessageBox.warning(
+                    self,
+                    self.tr("Show Mime-Type"),
+                    self.tr("""The mime type of the file could not be"""
+                            """ determined."""))
+            elif mimetype.split("/")[0] == "text":
+                E5MessageBox.information(
+                    self,
+                    self.tr("Show Mime-Type"),
+                    self.tr("""The file has the mime type <b>{0}</b>.""")
+                    .format(mimetype))
+            else:
+                textMimeTypesList = Preferences.getUI("TextMimeTypes")
+                if mimetype in textMimeTypesList:
+                    E5MessageBox.information(
+                        self,
+                        self.tr("Show Mime-Type"),
+                        self.tr("""The file has the mime type <b>{0}</b>.""")
+                        .format(mimetype))
+                else:
+                    ok = E5MessageBox.yesNo(
+                        self,
+                        self.tr("Show Mime-Type"),
+                        self.tr("""The file has the mime type <b>{0}</b>."""
+                                """<br/> Shall it be added to the list of"""
+                                """ text mime types?""").format(mimetype))
+                    if ok:
+                        textMimeTypesList.append(mimetype)
+                        Preferences.setUI("TextMimeTypes", textMimeTypesList)
         
     def __removeItem(self):
         """

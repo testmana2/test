@@ -28,3 +28,13 @@ def isTextFile(filename):
         return True
     else:
         return False
+
+
+def mimeType(filename):
+    """
+    Function to get the mime type of a file.
+    
+    @param filename name of the file to be checked (string)
+    @return mime type of the file (string)
+    """
+    return mimetypes.guess_type(filename)[0]

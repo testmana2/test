@@ -8481,6 +8481,7 @@ eric6.Utilities.FtpUtilities.FtpDirLineParser.WindowsMode?7
 eric6.Utilities.FtpUtilities.FtpDirLineParser.parseLine?4(line)
 eric6.Utilities.FtpUtilities.FtpDirLineParser?1(parent=None)
 eric6.Utilities.MimeTypes.isTextFile?4(filename)
+eric6.Utilities.MimeTypes.mimeType?4(filename)
 eric6.Utilities.ModuleParser.Attribute.addAssignment?4(lineno)
 eric6.Utilities.ModuleParser.Attribute?1(module, name, file, lineno, isSignal=False)
 eric6.Utilities.ModuleParser.Class.addAttribute?4(name, attr)

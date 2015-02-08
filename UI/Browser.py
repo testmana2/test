@@ -17,7 +17,7 @@ from PyQt5.QtGui import QDesktopServices
 from PyQt5.QtWidgets import QTreeView, QApplication, QMenu, QAbstractItemView
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5FileDialog
+from E5Gui import E5FileDialog, E5MessageBox
 
 from .BrowserModel import BrowserModel, BrowserDirectoryItem, \
     BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
@@ -196,6 +196,10 @@ class Browser(QTreeView):
         self.unittestAct = self.sourceMenu.addAction(
             QCoreApplication.translate('Browser', 'Run unittest...'),
             self.handleUnittest)
+        self.sourceMenu.addSeparator()
+        self.mimeTypeAct = self.sourceMenu.addAction(
+            self.tr('Show Mime-Type'), self.__showMimeType)
+        self.sourceMenu.addSeparator()
         self.sourceMenu.addAction(
             QCoreApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
@@ -207,6 +211,10 @@ class Browser(QTreeView):
         self.editPixmapAct = self.menu.addAction(
             QCoreApplication.translate('Browser', 'Open in Icon Editor'),
             self._editPixmap)
+        self.menu.addSeparator()
+        self.mimeTypeAct = self.menu.addAction(
+            self.tr('Show Mime-Type'), self.__showMimeType)
+        self.menu.addSeparator()
         self.menu.addAction(
             QCoreApplication.translate('Browser', 'Copy Path to Clipboard'),
             self._copyToClipboard)
@@ -439,6 +447,46 @@ class Browser(QTreeView):
                     self.sourceFile[str, int].emit(
                         itm.fileName(), itm.attributeObject().lineno)
             self._activating = False
+        
+    def __showMimeType(self):
+        """
+        Private slot to show the mime type of the selected entry.
+        """
+        itmList = self.getSelectedItems(
+            [BrowserFileItem, BrowserClassItem,
+             BrowserMethodItem, BrowserClassAttributeItem])
+        if itmList:
+            mimetype = Utilities.MimeTypes.mimeType(itmList[0].fileName())
+            if mimetype is None:
+                E5MessageBox.warning(
+                    self,
+                    self.tr("Show Mime-Type"),
+                    self.tr("""The mime type of the file could not be"""
+                            """ determined."""))
+            elif mimetype.split("/")[0] == "text":
+                E5MessageBox.information(
+                    self,
+                    self.tr("Show Mime-Type"),
+                    self.tr("""The file has the mime type <b>{0}</b>.""")
+                    .format(mimetype))
+            else:
+                textMimeTypesList = Preferences.getUI("TextMimeTypes")
+                if mimetype in textMimeTypesList:
+                    E5MessageBox.information(
+                        self,
+                        self.tr("Show Mime-Type"),
+                        self.tr("""The file has the mime type <b>{0}</b>.""")
+                        .format(mimetype))
+                else:
+                    ok = E5MessageBox.yesNo(
+                        self,
+                        self.tr("Show Mime-Type"),
+                        self.tr("""The file has the mime type <b>{0}</b>."""
+                                """<br/> Shall it be added to the list of"""
+                                """ text mime types?""").format(mimetype))
+                    if ok:
+                        textMimeTypesList.append(mimetype)
+                        Preferences.setUI("TextMimeTypes", textMimeTypesList)
         
     def _editPixmap(self):
         """
