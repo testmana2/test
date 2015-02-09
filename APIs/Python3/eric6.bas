@@ -123,6 +123,7 @@ DebuggerPythonPage ConfigurationPageBase Ui_DebuggerPythonPage
 DebuggerRubyPage ConfigurationPageBase Ui_DebuggerRubyPage
 DeleteFilesConfirmationDialog QDialog Ui_DeleteFilesConfirmationDialog
 DiffDialog QWidget Ui_DiffDialog
+DiffHighlighter E5GenericDiffHighlighter
 DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler

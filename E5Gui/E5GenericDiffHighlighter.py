@@ -44,7 +44,7 @@ class E5GenericDiffHighlighter(QSyntaxHighlighter):
         self.removedColor = QColor(237, 190, 190)
         self.replacedColor = QColor(190, 190, 237)
         self.contextColor = QColor(255, 220, 168)
-        self.headerColor = QColor(190, 190, 237)
+        self.headerColor = QColor(237, 237, 190)
         
         self.normalFormat = self.makeFormat()
         

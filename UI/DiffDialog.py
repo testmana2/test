@@ -13,7 +13,7 @@ import os
 import time
 
 from PyQt5.QtCore import QFileInfo, QEvent, pyqtSlot
-from PyQt5.QtGui import QColor, QBrush, QTextCursor
+from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
 from E5Gui.E5Completers import E5FileCompleter
@@ -21,6 +21,7 @@ from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
 
 from .Ui_DiffDialog import Ui_DiffDialog
+from .DiffHighlighter import DiffHighlighter
 
 import Utilities
 import Preferences
@@ -242,15 +243,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.contents.setFontFamily(font.family())
         self.contents.setFontPointSize(font.pointSize())
         
-        self.cNormalFormat = self.contents.currentCharFormat()
-        self.cAddedFormat = self.contents.currentCharFormat()
-        self.cAddedFormat.setBackground(QBrush(QColor(190, 237, 190)))
-        self.cRemovedFormat = self.contents.currentCharFormat()
-        self.cRemovedFormat.setBackground(QBrush(QColor(237, 190, 190)))
-        self.cReplacedFormat = self.contents.currentCharFormat()
-        self.cReplacedFormat.setBackground(QBrush(QColor(190, 190, 237)))
-        self.cLineNoFormat = self.contents.currentCharFormat()
-        self.cLineNoFormat.setBackground(QBrush(QColor(255, 220, 168)))
+        self.highlighter = DiffHighlighter(self.contents.document())
         
         # connect some of our widgets explicitly
         self.file1Edit.textChanged.connect(self.__fileChanged)
@@ -393,17 +386,15 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         
         self.saveButton.setEnabled(True)
 
-    def __appendText(self, txt, format):
+    def __appendText(self, txt):
         """
         Private method to append text to the end of the contents pane.
         
         @param txt text to insert (string)
-        @param format text format to be used (QTextCharFormat)
         """
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.End)
         self.contents.setTextCursor(tc)
-        self.contents.setCurrentCharFormat(format)
         self.contents.insertPlainText(txt)
         
     def __generateUnifiedDiff(self, a, b, fromfile, tofile,
@@ -421,15 +412,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         paras = 0
         for line in unified_diff(a, b, fromfile, tofile,
                                  fromfiledate, tofiledate):
-            if line.startswith('+') or line.startswith('>'):
-                format = self.cAddedFormat
-            elif line.startswith('-') or line.startswith('<'):
-                format = self.cRemovedFormat
-            elif line.startswith('@@'):
-                format = self.cLineNoFormat
-            else:
-                format = self.cNormalFormat
-            self.__appendText(line, format)
+            self.__appendText(line)
             paras += 1
             if not (paras % self.updateInterval):
                 QApplication.processEvents()
@@ -453,18 +436,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         paras = 0
         for line in context_diff(a, b, fromfile, tofile,
                                  fromfiledate, tofiledate):
-            if line.startswith('+ '):
-                format = self.cAddedFormat
-            elif line.startswith('- '):
-                format = self.cRemovedFormat
-            elif line.startswith('! '):
-                format = self.cReplacedFormat
-            elif (line.startswith('*** ') or line.startswith('--- ')) and \
-                    paras > 1:
-                format = self.cLineNoFormat
-            else:
-                format = self.cNormalFormat
-            self.__appendText(line, format)
+            self.__appendText(line)
             paras += 1
             if not (paras % self.updateInterval):
                 QApplication.processEvents()

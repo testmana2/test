@@ -1155,6 +1155,7 @@
     <Source>Preferences/ConfigurationPages/LogViewerPage.py</Source>
     <Source>Preferences/ConfigurationPages/MimeTypesPage.py</Source>
     <Source>E5Gui/E5GenericDiffHighlighter.py</Source>
+    <Source>UI/DiffHighlighter.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

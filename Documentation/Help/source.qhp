@@ -960,6 +960,7 @@
             <section title="eric6.UI.Config" ref="eric6.UI.Config.html" />
             <section title="eric6.UI.DeleteFilesConfirmationDialog" ref="eric6.UI.DeleteFilesConfirmationDialog.html" />
             <section title="eric6.UI.DiffDialog" ref="eric6.UI.DiffDialog.html" />
+            <section title="eric6.UI.DiffHighlighter" ref="eric6.UI.DiffHighlighter.html" />
             <section title="eric6.UI.EmailDialog" ref="eric6.UI.EmailDialog.html" />
             <section title="eric6.UI.ErrorLogDialog" ref="eric6.UI.ErrorLogDialog.html" />
             <section title="eric6.UI.FindFileDialog" ref="eric6.UI.FindFileDialog.html" />
@@ -3315,6 +3316,10 @@
       <keyword name="DiffDialog.on_file2Button_clicked" id="DiffDialog.on_file2Button_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_file2Button_clicked" />
       <keyword name="DiffDialog.on_saveButton_clicked" id="DiffDialog.on_saveButton_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_saveButton_clicked" />
       <keyword name="DiffDialog.show" id="DiffDialog.show" ref="eric6.UI.DiffDialog.html#DiffDialog.show" />
+      <keyword name="DiffHighlighter" id="DiffHighlighter" ref="eric6.UI.DiffHighlighter.html#DiffHighlighter" />
+      <keyword name="DiffHighlighter (Constructor)" id="DiffHighlighter (Constructor)" ref="eric6.UI.DiffHighlighter.html#DiffHighlighter.__init__" />
+      <keyword name="DiffHighlighter (Module)" id="DiffHighlighter (Module)" ref="eric6.UI.DiffHighlighter.html" />
+      <keyword name="DiffHighlighter.generateRules" id="DiffHighlighter.generateRules" ref="eric6.UI.DiffHighlighter.html#DiffHighlighter.generateRules" />
       <keyword name="DiffReport" id="DiffReport" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#DiffReport" />
       <keyword name="DiffReport (Constructor)" id="DiffReport (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#DiffReport.__init__" />
       <keyword name="DiffReport.error" id="DiffReport.error" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#DiffReport.error" />
@@ -14377,6 +14382,7 @@
       <file>eric6.UI.Config.html</file>
       <file>eric6.UI.DeleteFilesConfirmationDialog.html</file>
       <file>eric6.UI.DiffDialog.html</file>
+      <file>eric6.UI.DiffHighlighter.html</file>
       <file>eric6.UI.EmailDialog.html</file>
       <file>eric6.UI.ErrorLogDialog.html</file>
       <file>eric6.UI.FindFileDialog.html</file>
