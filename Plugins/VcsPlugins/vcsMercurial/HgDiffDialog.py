@@ -275,7 +275,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         f = line.split(None, 1)[1]
         f = f.rsplit(None, 6)[0]
         if f == "/dev/null":
-            f = ""
+            f = "__NULL__"
         else:
             f = f.split("/", 1)[1]
         return f
@@ -290,9 +290,13 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
             self.__oldFileLine = self.paras
             self.__oldFile = self.__extractFileName(line)
         else:
-            self.__fileSeparators.append(
-                (self.__oldFile, self.__extractFileName(line),
-                 self.__oldFileLine))
+            newFile = self.__extractFileName(line)
+            if self.__oldFile == "__NULL__":
+                self.__fileSeparators.append(
+                    (newFile, newFile, self.__oldFileLine))
+            else:
+                self.__fileSeparators.append(
+                    (self.__oldFile, newFile, self.__oldFileLine))
     
     def __processOutputLine(self, line):
         """
