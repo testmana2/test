@@ -418,8 +418,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 QApplication.processEvents()
             
         if paras == 0:
-            self.__appendText(
-                self.tr('There is no difference.'), self.cNormalFormat)
+            self.__appendText(self.tr('There is no difference.'))
 
     def __generateContextDiff(self, a, b, fromfile, tofile,
                               fromfiledate, tofiledate):
@@ -442,8 +441,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 QApplication.processEvents()
             
         if paras == 0:
-            self.__appendText(
-                self.tr('There is no difference.'), self.cNormalFormat)
+            self.__appendText(self.tr('There is no difference.'))
 
     def __fileChanged(self):
         """

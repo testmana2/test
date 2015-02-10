@@ -16,7 +16,7 @@ import sys
 import pysvn
 
 from PyQt5.QtCore import QMutexLocker, QFileInfo, QDateTime, Qt, pyqtSlot
-from PyQt5.QtGui import QColor, QCursor, QBrush, QTextCursor
+from PyQt5.QtGui import QCursor, QTextCursor
 from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
@@ -24,6 +24,7 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 from .SvnDialogMixin import SvnDialogMixin
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
+from .SvnDiffHighlighter import SvnDiffHighlighter
 
 import Utilities
 import Preferences
@@ -61,13 +62,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.contents.setFontFamily(font.family())
         self.contents.setFontPointSize(font.pointSize())
         
-        self.cNormalFormat = self.contents.currentCharFormat()
-        self.cAddedFormat = self.contents.currentCharFormat()
-        self.cAddedFormat.setBackground(QBrush(QColor(190, 237, 190)))
-        self.cRemovedFormat = self.contents.currentCharFormat()
-        self.cRemovedFormat.setBackground(QBrush(QColor(237, 190, 190)))
-        self.cLineNoFormat = self.contents.currentCharFormat()
-        self.cLineNoFormat.setBackground(QBrush(QColor(255, 220, 168)))
+        self.highlighter = SvnDiffHighlighter(self.contents.document())
         
         self.client = self.vcs.getClient()
         self.client.callback_cancel = \
@@ -278,9 +273,7 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         self.__finish()
         
         if self.paras == 0:
-            self.contents.setCurrentCharFormat(self.cNormalFormat)
-            self.contents.setPlainText(
-                self.tr('There is no difference.'))
+            self.contents.setPlainText(self.tr('There is no difference.'))
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
         
@@ -290,21 +283,9 @@ class SvnDiffDialog(QWidget, SvnDialogMixin, Ui_SvnDiffDialog):
         
         @param line line of text to insert (string)
         """
-        if line.startswith('+') or line.startswith('>') or \
-                line.startswith('A '):
-            format = self.cAddedFormat
-        elif line.startswith('-') or line.startswith('<') or \
-                line.startswith('D '):
-            format = self.cRemovedFormat
-        elif line.startswith('@@'):
-            format = self.cLineNoFormat
-        else:
-            format = self.cNormalFormat
-        
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.End)
         self.contents.setTextCursor(tc)
-        self.contents.setCurrentCharFormat(format)
         self.contents.insertPlainText(line)
         self.paras += 1
         

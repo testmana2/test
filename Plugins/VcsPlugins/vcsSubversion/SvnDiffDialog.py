@@ -17,13 +17,14 @@ except NameError:
 import os
 
 from PyQt5.QtCore import QTimer, QFileInfo, QProcess, pyqtSlot, Qt
-from PyQt5.QtGui import QColor, QBrush, QTextCursor
+from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QLineEdit, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox, E5FileDialog
 
 from .Ui_SvnDiffDialog import Ui_SvnDiffDialog
+from .SvnDiffHighlighter import SvnDiffHighlighter
 
 import Utilities
 import Preferences
@@ -61,13 +62,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         self.contents.setFontFamily(font.family())
         self.contents.setFontPointSize(font.pointSize())
         
-        self.cNormalFormat = self.contents.currentCharFormat()
-        self.cAddedFormat = self.contents.currentCharFormat()
-        self.cAddedFormat.setBackground(QBrush(QColor(190, 237, 190)))
-        self.cRemovedFormat = self.contents.currentCharFormat()
-        self.cRemovedFormat.setBackground(QBrush(QColor(237, 190, 190)))
-        self.cLineNoFormat = self.contents.currentCharFormat()
-        self.cLineNoFormat.setBackground(QBrush(QColor(255, 220, 168)))
+        self.highlighter = SvnDiffHighlighter(self.contents.document())
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -212,9 +207,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
         self.refreshButton.setEnabled(True)
         
         if self.paras == 0:
-            self.contents.setCurrentCharFormat(self.cNormalFormat)
-            self.contents.setPlainText(
-                self.tr('There is no difference.'))
+            self.contents.setPlainText(self.tr('There is no difference.'))
             
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
@@ -236,17 +229,15 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             else:
                 self.filesCombo.addItem(oldFile, pos)
         
-    def __appendText(self, txt, format):
+    def __appendText(self, txt):
         """
         Private method to append text to the end of the contents pane.
         
         @param txt text to insert (string)
-        @param format text format to be used (QTextCharFormat)
         """
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.End)
         self.contents.setTextCursor(tc)
-        self.contents.setCurrentCharFormat(format)
         self.contents.insertPlainText(txt)
         
     def __extractFileName(self, line):
@@ -293,17 +284,7 @@ class SvnDiffDialog(QWidget, Ui_SvnDiffDialog):
             if line.startswith("--- ") or line.startswith("+++ "):
                     self.__processFileLine(line)
                 
-            if line.startswith('+') or line.startswith('>') or \
-                    line.startswith('A '):
-                format = self.cAddedFormat
-            elif line.startswith('-') or line.startswith('<') or \
-                    line.startswith('D '):
-                format = self.cRemovedFormat
-            elif line.startswith('@@'):
-                format = self.cLineNoFormat
-            else:
-                format = self.cNormalFormat
-            self.__appendText(line, format)
+            self.__appendText(line)
             self.paras += 1
         
     def __readStderr(self):

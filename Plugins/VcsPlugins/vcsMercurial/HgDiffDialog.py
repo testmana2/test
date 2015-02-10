@@ -16,13 +16,14 @@ except NameError:
 import os
 
 from PyQt5.QtCore import pyqtSlot, QProcess, QTimer, QFileInfo, Qt
-from PyQt5.QtGui import QBrush, QColor, QTextCursor, QCursor
+from PyQt5.QtGui import QTextCursor, QCursor
 from PyQt5.QtWidgets import QWidget, QDialogButtonBox, QLineEdit, QApplication
 
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5Application import e5App
 
 from .Ui_HgDiffDialog import Ui_HgDiffDialog
+from .HgDiffHighlighter import HgDiffHighlighter
 
 import Utilities
 import Preferences
@@ -61,13 +62,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.contents.setFontFamily(font.family())
         self.contents.setFontPointSize(font.pointSize())
         
-        self.cNormalFormat = self.contents.currentCharFormat()
-        self.cAddedFormat = self.contents.currentCharFormat()
-        self.cAddedFormat.setBackground(QBrush(QColor(190, 237, 190)))
-        self.cRemovedFormat = self.contents.currentCharFormat()
-        self.cRemovedFormat.setBackground(QBrush(QColor(237, 190, 190)))
-        self.cLineNoFormat = self.contents.currentCharFormat()
-        self.cLineNoFormat.setBackground(QBrush(QColor(255, 220, 168)))
+        self.highlighter = HgDiffHighlighter(self.contents.document())
         
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
@@ -235,9 +230,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.refreshButton.setEnabled(True)
         
         if self.paras == 0:
-            self.contents.setCurrentCharFormat(self.cNormalFormat)
-            self.contents.setPlainText(
-                self.tr('There is no difference.'))
+            self.contents.setPlainText(self.tr('There is no difference.'))
         
         self.buttonBox.button(QDialogButtonBox.Save).setEnabled(self.paras > 0)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
@@ -253,23 +246,23 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         self.filesCombo.addItem(self.tr("<Start>"), 0)
         self.filesCombo.addItem(self.tr("<End>"), -1)
         for oldFile, newFile, pos in sorted(self.__fileSeparators):
-            if oldFile != newFile:
+            if not oldFile:
+                self.filesCombo.addItem(newFile, pos)
+            elif oldFile != newFile:
                 self.filesCombo.addItem(
                     "{0}\n{1}".format(oldFile, newFile), pos)
             else:
                 self.filesCombo.addItem(oldFile, pos)
     
-    def __appendText(self, txt, format):
+    def __appendText(self, txt):
         """
         Private method to append text to the end of the contents pane.
         
         @param txt text to insert (string)
-        @param format text format to be used (QTextCharFormat)
         """
         tc = self.contents.textCursor()
         tc.movePosition(QTextCursor.End)
         self.contents.setTextCursor(tc)
-        self.contents.setCurrentCharFormat(format)
         self.contents.insertPlainText(txt)
     
     def __extractFileName(self, line):
@@ -281,7 +274,10 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         """
         f = line.split(None, 1)[1]
         f = f.rsplit(None, 6)[0]
-        f = f.split("/", 1)[1]
+        if f == "/dev/null":
+            f = ""
+        else:
+            f = f.split("/", 1)[1]
         return f
     
     def __processFileLine(self, line):
@@ -308,15 +304,7 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
            line.startswith("+++ "):
             self.__processFileLine(line)
         
-        if line.startswith('+'):
-            format = self.cAddedFormat
-        elif line.startswith('-'):
-            format = self.cRemovedFormat
-        elif line.startswith('@@'):
-            format = self.cLineNoFormat
-        else:
-            format = self.cNormalFormat
-        self.__appendText(line, format)
+        self.__appendText(line)
         self.paras += 1
     
     def __readStdout(self):

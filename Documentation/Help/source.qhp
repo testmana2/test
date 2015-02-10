@@ -570,6 +570,7 @@
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html" />
+                <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html" />
@@ -615,6 +616,7 @@
                 <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialogMixin" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialogMixin.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffDialog.html" />
+                <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnInfoDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnInfoDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogDialog.html" />
@@ -651,6 +653,7 @@
                 <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html" />
+                <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsSubversion.SvnMergeDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnMergeDialog.html" />
@@ -5973,6 +5976,10 @@
       <keyword name="HgDiffDialog.on_saveButton_clicked" id="HgDiffDialog.on_saveButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_saveButton_clicked" />
       <keyword name="HgDiffDialog.on_sendButton_clicked" id="HgDiffDialog.on_sendButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_sendButton_clicked" />
       <keyword name="HgDiffDialog.start" id="HgDiffDialog.start" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.start" />
+      <keyword name="HgDiffHighlighter" id="HgDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html#HgDiffHighlighter" />
+      <keyword name="HgDiffHighlighter (Constructor)" id="HgDiffHighlighter (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html#HgDiffHighlighter.__init__" />
+      <keyword name="HgDiffHighlighter (Module)" id="HgDiffHighlighter (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html" />
+      <keyword name="HgDiffHighlighter.generateRules" id="HgDiffHighlighter.generateRules" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html#HgDiffHighlighter.generateRules" />
       <keyword name="HgExportDialog" id="HgExportDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog" />
       <keyword name="HgExportDialog (Constructor)" id="HgExportDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.__init__" />
       <keyword name="HgExportDialog (Module)" id="HgExportDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html" />
@@ -10770,6 +10777,14 @@
       <keyword name="SvnDiffDialog.on_sendButton_clicked" id="SvnDiffDialog.on_sendButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.on_sendButton_clicked" />
       <keyword name="SvnDiffDialog.start" id="SvnDiffDialog.start" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffDialog.html#SvnDiffDialog.start" />
       <keyword name="SvnDiffDialog.start" id="SvnDiffDialog.start" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html#SvnDiffDialog.start" />
+      <keyword name="SvnDiffHighlighter" id="SvnDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter.html#SvnDiffHighlighter" />
+      <keyword name="SvnDiffHighlighter" id="SvnDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter.html#SvnDiffHighlighter" />
+      <keyword name="SvnDiffHighlighter (Constructor)" id="SvnDiffHighlighter (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter.html#SvnDiffHighlighter.__init__" />
+      <keyword name="SvnDiffHighlighter (Constructor)" id="SvnDiffHighlighter (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter.html#SvnDiffHighlighter.__init__" />
+      <keyword name="SvnDiffHighlighter (Module)" id="SvnDiffHighlighter (Module)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter.html" />
+      <keyword name="SvnDiffHighlighter (Module)" id="SvnDiffHighlighter (Module)" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter.html" />
+      <keyword name="SvnDiffHighlighter.generateRules" id="SvnDiffHighlighter.generateRules" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter.html#SvnDiffHighlighter.generateRules" />
+      <keyword name="SvnDiffHighlighter.generateRules" id="SvnDiffHighlighter.generateRules" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter.html#SvnDiffHighlighter.generateRules" />
       <keyword name="SvnInfoDialog" id="SvnInfoDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnInfoDialog.html#SvnInfoDialog" />
       <keyword name="SvnInfoDialog (Constructor)" id="SvnInfoDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnInfoDialog.html#SvnInfoDialog.__init__" />
       <keyword name="SvnInfoDialog (Module)" id="SvnInfoDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnInfoDialog.html" />
@@ -14048,6 +14063,7 @@
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html</file>
+      <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgExtensionProjectBrowserHelper.html</file>
@@ -14123,6 +14139,7 @@
       <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialogMixin.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffDialog.html</file>
+      <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnDiffHighlighter.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnInfoDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogBrowserDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogDialog.html</file>
@@ -14155,6 +14172,7 @@
       <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffDialog.html</file>
+      <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnDiffHighlighter.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogBrowserDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsSubversion.SvnMergeDialog.html</file>

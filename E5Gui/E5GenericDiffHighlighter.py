@@ -15,17 +15,19 @@ from PyQt5.QtGui import QSyntaxHighlighter, QColor, QTextCharFormat, QFont
 
 import Preferences
 
+
 def TERMINAL(pattern):
     """
     Function to mark a pattern as the final one to search for.
     
     @param pattern pattern to be marked (string)
-    @param return marked pattern (string)
+    @return marked pattern (string)
     """
     return "__TERMINAL__:{0}".format(pattern)
 
 # Cache the results of re.compile for performance reasons
 _REGEX_CACHE = {}
+
 
 class E5GenericDiffHighlighter(QSyntaxHighlighter):
     """

@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 from E5Gui.E5GenericDiffHighlighter import TERMINAL, E5GenericDiffHighlighter
 
 
-class DiffHighlighter(E5GenericDiffHighlighter):
+class SvnDiffHighlighter(E5GenericDiffHighlighter):
     """
     Class implementing a diff highlighter for Git.
     """
@@ -22,12 +22,14 @@ class DiffHighlighter(E5GenericDiffHighlighter):
         
         @param doc reference to the text document (QTextDocument)
         """
-        super(DiffHighlighter, self).__init__(doc)
+        super(SvnDiffHighlighter, self).__init__(doc)
 
     def generateRules(self):
         """
         Public method to generate the rule set.
         """
+        diffHeader = self.makeFormat(fg=self.textColor,
+                                     bg=self.headerColor)
         diffHeaderBold = self.makeFormat(fg=self.textColor,
                                          bg=self.headerColor,
                                          bold=True)
@@ -38,24 +40,23 @@ class DiffHighlighter(E5GenericDiffHighlighter):
                                     bg=self.addedColor)
         diffRemoved = self.makeFormat(fg=self.textColor,
                                       bg=self.removedColor)
-        diffReplaced = self.makeFormat(fg=self.textColor,
-                                       bg=self.replacedColor)
         
-        diffBarRegex = TERMINAL(r'^\*+$')
+        diffBarRegex = TERMINAL(r'^=+$')
 
+        diffHeaderRegex = TERMINAL(r'^[iI]ndex: \S+')
+        
         diffOldRegex = TERMINAL(r'^--- ')
-        diffNewRegex = TERMINAL(r'^\+\+\+ |^\*\*\*')
+        diffNewRegex = TERMINAL(r'^\+\+\+')
         diffContextRegex = TERMINAL(r'^@@ ')
         
-        diffAddedRegex = TERMINAL(r'^[+>]')
-        diffRemovedRegex = TERMINAL(r'^[-<]')
-        diffReplacedRegex = TERMINAL(r'^!')
+        diffAddedRegex = TERMINAL(r'^[+>]|^A ')
+        diffRemovedRegex = TERMINAL(r'^[-<]|^D ')
         
-        self.createRules((diffBarRegex, diffHeaderBold),
-                         (diffOldRegex, diffRemoved),
+        self.createRules((diffOldRegex, diffRemoved),
                          (diffNewRegex, diffAdded),
                          (diffContextRegex, diffContext),
+                         (diffHeaderRegex, diffHeader),
+                         (diffBarRegex, diffHeaderBold),
                          (diffAddedRegex, diffAdded),
                          (diffRemovedRegex, diffRemoved),
-                         (diffReplacedRegex, diffReplaced),
                          )

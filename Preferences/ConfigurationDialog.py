@@ -142,7 +142,7 @@ class ConfigurationWidget(QWidget):
                 [self.tr("IRC"), "irc.png",
                  "IrcPage", None, None],
                 "logViewerPage":
-                [self.tr("Log-Viewer"), "preferences-logviewer.png", 
+                [self.tr("Log-Viewer"), "preferences-logviewer.png",
                  "LogViewerPage", None, None],
                 "mimeTypesPage":
                 [self.tr("Mimetypes"), "preferences-mimetypes.png",

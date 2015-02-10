@@ -307,6 +307,7 @@ HgConflictsListDialog QWidget Ui_HgConflictsListDialog
 HgCopyDialog QDialog Ui_HgCopyDialog
 HgDialog QDialog Ui_HgDialog
 HgDiffDialog QWidget Ui_HgDiffDialog
+HgDiffHighlighter E5GenericDiffHighlighter
 HgExportDialog QDialog Ui_HgExportDialog
 HgExtension QObject
 HgExtensionProjectBrowserHelper QObject
@@ -647,6 +648,7 @@ SvnCommitDialog QWidget Ui_SvnCommitDialog
 SvnCopyDialog QDialog Ui_SvnCopyDialog
 SvnDialog QDialog Ui_SvnDialog
 SvnDiffDialog QWidget Ui_SvnDiffDialog
+SvnDiffHighlighter E5GenericDiffHighlighter
 SvnInfoDialog QDialog SvnDialogMixin Ui_VcsRepositoryInfoDialog
 SvnLogBrowserDialog QWidget Ui_SvnLogBrowserDialog
 SvnLogDialog QWidget Ui_SvnLogDialog

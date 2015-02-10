@@ -1156,6 +1156,9 @@
     <Source>Preferences/ConfigurationPages/MimeTypesPage.py</Source>
     <Source>E5Gui/E5GenericDiffHighlighter.py</Source>
     <Source>UI/DiffHighlighter.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgDiffHighlighter.py</Source>
+    <Source>Plugins/VcsPlugins/vcsSubversion/SvnDiffHighlighter.py</Source>
+    <Source>Plugins/VcsPlugins/vcsPySvn/SvnDiffHighlighter.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
