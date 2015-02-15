@@ -52,7 +52,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('New from repository'),
             UI.PixmapCache.getIcon("vcsCheckout.png"),
             self.tr('&New from repository...'), 0, 0, self,
-            'subversion_new')
+            'pysvn_new')
         self.vcsNewAct.setStatusTip(self.tr(
             'Create a new project from the VCS repository'
         ))
@@ -68,7 +68,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Update from repository'),
             UI.PixmapCache.getIcon("vcsUpdate.png"),
             self.tr('&Update from repository'), 0, 0, self,
-            'subversion_update')
+            'pysvn_update')
         self.vcsUpdateAct.setStatusTip(self.tr(
             'Update the local project from the VCS repository'
         ))
@@ -84,7 +84,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Commit changes to repository'),
             UI.PixmapCache.getIcon("vcsCommit.png"),
             self.tr('&Commit changes to repository...'), 0, 0, self,
-            'subversion_commit')
+            'pysvn_commit')
         self.vcsCommitAct.setStatusTip(self.tr(
             'Commit changes to the local project to the VCS repository'
         ))
@@ -100,7 +100,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show log'),
             UI.PixmapCache.getIcon("vcsLog.png"),
             self.tr('Show &log'),
-            0, 0, self, 'subversion_log')
+            0, 0, self, 'pysvn_log')
         self.vcsLogAct.setStatusTip(self.tr(
             'Show the log of the local project'
         ))
@@ -115,7 +115,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show log browser'),
             UI.PixmapCache.getIcon("vcsLog.png"),
             self.tr('Show log browser'),
-            0, 0, self, 'subversion_log_browser')
+            0, 0, self, 'pysvn_log_browser')
         self.svnLogBrowserAct.setStatusTip(self.tr(
             'Show a dialog to browse the log of the local project'
         ))
@@ -132,7 +132,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show differences'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.tr('Show &difference'),
-            0, 0, self, 'subversion_diff')
+            0, 0, self, 'pysvn_diff')
         self.vcsDiffAct.setStatusTip(self.tr(
             'Show the difference of the local project to the repository'
         ))
@@ -148,7 +148,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show differences (extended)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.tr('Show differences (extended)'),
-            0, 0, self, 'subversion_extendeddiff')
+            0, 0, self, 'pysvn_extendeddiff')
         self.svnExtDiffAct.setStatusTip(self.tr(
             'Show the difference of revisions of the project to the repository'
         ))
@@ -164,7 +164,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show differences (URLs)'),
             UI.PixmapCache.getIcon("vcsDiff.png"),
             self.tr('Show differences (URLs)'),
-            0, 0, self, 'subversion_urldiff')
+            0, 0, self, 'pysvn_urldiff')
         self.svnUrlDiffAct.setStatusTip(self.tr(
             'Show the difference of the project between two repository URLs'
         ))
@@ -180,7 +180,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show status'),
             UI.PixmapCache.getIcon("vcsStatus.png"),
             self.tr('Show &status'),
-            0, 0, self, 'subversion_status')
+            0, 0, self, 'pysvn_status')
         self.vcsStatusAct.setStatusTip(self.tr(
             'Show the status of the local project'
         ))
@@ -195,7 +195,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show change lists'),
             UI.PixmapCache.getIcon("vcsChangeLists.png"),
             self.tr('Show change lists'),
-            0, 0, self, 'subversion_changelists')
+            0, 0, self, 'pysvn_changelists')
         self.svnChangeListsAct.setStatusTip(self.tr(
             'Show the change lists and associated files of the local project'
         ))
@@ -211,7 +211,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Show repository info'),
             UI.PixmapCache.getIcon("vcsRepo.png"),
             self.tr('Show repository info'),
-            0, 0, self, 'subversion_repoinfo')
+            0, 0, self, 'pysvn_repoinfo')
         self.svnRepoInfoAct.setStatusTip(self.tr(
             'Show some repository related information for the local project'
         ))
@@ -227,7 +227,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Tag in repository'),
             UI.PixmapCache.getIcon("vcsTag.png"),
             self.tr('&Tag in repository...'),
-            0, 0, self, 'subversion_tag')
+            0, 0, self, 'pysvn_tag')
         self.vcsTagAct.setStatusTip(self.tr(
             'Tag the local project in the repository'
         ))
@@ -242,7 +242,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Export from repository'),
             UI.PixmapCache.getIcon("vcsExport.png"),
             self.tr('&Export from repository...'),
-            0, 0, self, 'subversion_export')
+            0, 0, self, 'pysvn_export')
         self.vcsExportAct.setStatusTip(self.tr(
             'Export a project from the repository'
         ))
@@ -256,7 +256,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.vcsPropsAct = E5Action(
             self.tr('Command options'),
             self.tr('Command &options...'), 0, 0, self,
-            'subversion_options')
+            'pysvn_options')
         self.vcsPropsAct.setStatusTip(self.tr(
             'Show the VCS command options'))
         self.vcsPropsAct.setWhatsThis(self.tr(
@@ -270,7 +270,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Revert changes'),
             UI.PixmapCache.getIcon("vcsRevert.png"),
             self.tr('Re&vert changes'),
-            0, 0, self, 'subversion_revert')
+            0, 0, self, 'pysvn_revert')
         self.vcsRevertAct.setStatusTip(self.tr(
             'Revert all changes made to the local project'
         ))
@@ -285,7 +285,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Merge'),
             UI.PixmapCache.getIcon("vcsMerge.png"),
             self.tr('Mer&ge changes...'),
-            0, 0, self, 'subversion_merge')
+            0, 0, self, 'pysvn_merge')
         self.vcsMergeAct.setStatusTip(self.tr(
             'Merge changes of a tag/revision into the local project'
         ))
@@ -301,7 +301,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Switch'),
             UI.PixmapCache.getIcon("vcsSwitch.png"),
             self.tr('S&witch...'),
-            0, 0, self, 'subversion_switch')
+            0, 0, self, 'pysvn_switch')
         self.vcsSwitchAct.setStatusTip(self.tr(
             'Switch the local copy to another tag/branch'
         ))
@@ -315,7 +315,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.vcsResolveAct = E5Action(
             self.tr('Conflicts resolved'),
             self.tr('Con&flicts resolved'),
-            0, 0, self, 'subversion_resolve')
+            0, 0, self, 'pysvn_resolve')
         self.vcsResolveAct.setStatusTip(self.tr(
             'Mark all conflicts of the local project as resolved'
         ))
@@ -330,7 +330,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.vcsCleanupAct = E5Action(
             self.tr('Cleanup'),
             self.tr('Cleanu&p'),
-            0, 0, self, 'subversion_cleanup')
+            0, 0, self, 'pysvn_cleanup')
         self.vcsCleanupAct.setStatusTip(self.tr(
             'Cleanup the local project'
         ))
@@ -344,7 +344,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.vcsCommandAct = E5Action(
             self.tr('Execute command'),
             self.tr('E&xecute command...'),
-            0, 0, self, 'subversion_command')
+            0, 0, self, 'pysvn_command')
         self.vcsCommandAct.setStatusTip(self.tr(
             'Execute an arbitrary VCS command'
         ))
@@ -358,7 +358,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnTagListAct = E5Action(
             self.tr('List tags'),
             self.tr('List tags...'),
-            0, 0, self, 'subversion_list_tags')
+            0, 0, self, 'pysvn_list_tags')
         self.svnTagListAct.setStatusTip(self.tr(
             'List tags of the project'
         ))
@@ -372,7 +372,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnBranchListAct = E5Action(
             self.tr('List branches'),
             self.tr('List branches...'),
-            0, 0, self, 'subversion_list_branches')
+            0, 0, self, 'pysvn_list_branches')
         self.svnBranchListAct.setStatusTip(self.tr(
             'List branches of the project'
         ))
@@ -386,7 +386,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnListAct = E5Action(
             self.tr('List repository contents'),
             self.tr('List repository contents...'),
-            0, 0, self, 'subversion_contents')
+            0, 0, self, 'pysvn_contents')
         self.svnListAct.setStatusTip(self.tr(
             'Lists the contents of the repository'
         ))
@@ -400,7 +400,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnPropSetAct = E5Action(
             self.tr('Set Property'),
             self.tr('Set Property...'),
-            0, 0, self, 'subversion_property_set')
+            0, 0, self, 'pysvn_property_set')
         self.svnPropSetAct.setStatusTip(self.tr(
             'Set a property for the project files'
         ))
@@ -414,7 +414,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnPropListAct = E5Action(
             self.tr('List Properties'),
             self.tr('List Properties...'),
-            0, 0, self, 'subversion_property_list')
+            0, 0, self, 'pysvn_property_list')
         self.svnPropListAct.setStatusTip(self.tr(
             'List properties of the project files'
         ))
@@ -428,7 +428,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnPropDelAct = E5Action(
             self.tr('Delete Property'),
             self.tr('Delete Property...'),
-            0, 0, self, 'subversion_property_delete')
+            0, 0, self, 'pysvn_property_delete')
         self.svnPropDelAct.setStatusTip(self.tr(
             'Delete a property for the project files'
         ))
@@ -443,7 +443,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Relocate'),
             UI.PixmapCache.getIcon("vcsSwitch.png"),
             self.tr('Relocate...'),
-            0, 0, self, 'subversion_relocate')
+            0, 0, self, 'pysvn_relocate')
         self.svnRelocateAct.setStatusTip(self.tr(
             'Relocate the working copy to a new repository URL'
         ))
@@ -459,7 +459,7 @@ class PySvnProjectHelper(VcsProjectHelper):
             self.tr('Repository Browser'),
             UI.PixmapCache.getIcon("vcsRepoBrowser.png"),
             self.tr('Repository Browser...'),
-            0, 0, self, 'subversion_repo_browser')
+            0, 0, self, 'pysvn_repo_browser')
         self.svnRepoBrowserAct.setStatusTip(self.tr(
             'Show the Repository Browser dialog'
         ))
@@ -473,7 +473,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnConfigAct = E5Action(
             self.tr('Configure'),
             self.tr('Configure...'),
-            0, 0, self, 'subversion_configure')
+            0, 0, self, 'pysvn_configure')
         self.svnConfigAct.setStatusTip(self.tr(
             'Show the configuration dialog with the Subversion page selected'
         ))
@@ -488,7 +488,7 @@ class PySvnProjectHelper(VcsProjectHelper):
         self.svnUpgradeAct = E5Action(
             self.tr('Upgrade'),
             self.tr('Upgrade...'),
-            0, 0, self, 'subversion_upgrade')
+            0, 0, self, 'pysvn_upgrade')
         self.svnUpgradeAct.setStatusTip(self.tr(
             'Upgrade the working copy to the current format'
         ))
