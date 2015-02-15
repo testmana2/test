@@ -21,6 +21,7 @@ from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, \
     QNetworkReply
 
 from E5Gui import E5MessageBox
+from E5Gui.E5Application import e5App
 
 from E5Network.E5NetworkProxyFactory import proxyAuthenticationRequired
 try:
@@ -482,6 +483,23 @@ class PluginManager(QObject):
                 self.__onDemandInactivePlugins[name] = pluginObject
         except PluginActivationError:
             return
+    
+    def initPluginToolbars(self, toolbarManager):
+        """
+        Public method to initialize plug-in toolbars.
+        
+        @param toolbarManager reference to the toolbar manager object
+            (E5ToolBarManager)
+        """
+        self.initOnDemandPlugins()
+        for name, ref in e5App().getPluginObjects():
+            try:
+                tb = ref.initToolbar(self.__ui, toolbarManager)
+                if tb is not None:
+                    self.__ui.addToolBar(tb)
+            except AttributeError:
+                # ignore it
+                pass
     
     def activatePlugins(self):
         """

@@ -4028,6 +4028,7 @@
       <keyword name="E5ToolBarManager.isWidgetAction" id="E5ToolBarManager.isWidgetAction" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.isWidgetAction" />
       <keyword name="E5ToolBarManager.mainWindow" id="E5ToolBarManager.mainWindow" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.mainWindow" />
       <keyword name="E5ToolBarManager.removeAction" id="E5ToolBarManager.removeAction" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeAction" />
+      <keyword name="E5ToolBarManager.removeCategoryActions" id="E5ToolBarManager.removeCategoryActions" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeCategoryActions" />
       <keyword name="E5ToolBarManager.removeToolBar" id="E5ToolBarManager.removeToolBar" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeToolBar" />
       <keyword name="E5ToolBarManager.removeWidgetActions" id="E5ToolBarManager.removeWidgetActions" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.removeWidgetActions" />
       <keyword name="E5ToolBarManager.renameToolBar" id="E5ToolBarManager.renameToolBar" ref="eric6.E5Gui.E5ToolBarManager.html#E5ToolBarManager.renameToolBar" />
@@ -8548,6 +8549,7 @@
       <keyword name="PluginManager.getVcsSystemIndicators" id="PluginManager.getVcsSystemIndicators" ref="eric6.PluginManager.PluginManager.html#PluginManager.getVcsSystemIndicators" />
       <keyword name="PluginManager.initOnDemandPlugin" id="PluginManager.initOnDemandPlugin" ref="eric6.PluginManager.PluginManager.html#PluginManager.initOnDemandPlugin" />
       <keyword name="PluginManager.initOnDemandPlugins" id="PluginManager.initOnDemandPlugins" ref="eric6.PluginManager.PluginManager.html#PluginManager.initOnDemandPlugins" />
+      <keyword name="PluginManager.initPluginToolbars" id="PluginManager.initPluginToolbars" ref="eric6.PluginManager.PluginManager.html#PluginManager.initPluginToolbars" />
       <keyword name="PluginManager.isPluginActive" id="PluginManager.isPluginActive" ref="eric6.PluginManager.PluginManager.html#PluginManager.isPluginActive" />
       <keyword name="PluginManager.isPluginLoaded" id="PluginManager.isPluginLoaded" ref="eric6.PluginManager.PluginManager.html#PluginManager.isPluginLoaded" />
       <keyword name="PluginManager.isValidPluginName" id="PluginManager.isValidPluginName" ref="eric6.PluginManager.PluginManager.html#PluginManager.isValidPluginName" />

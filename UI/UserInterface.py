@@ -524,15 +524,7 @@ class UserInterface(E5MainWindow):
         splash.showMessage(self.tr("Activating Plugins..."))
         self.pluginManager.activatePlugins()
         splash.showMessage(self.tr("Generating Plugins Toolbars..."))
-        self.pluginManager.initOnDemandPlugins()
-        for name, ref in e5App().getPluginObjects():
-            try:
-                tb = ref.initToolbar(self, self.toolbarManager)
-                if tb is not None:
-                    self.addToolBar(tb)
-            except AttributeError:
-                # ignore it
-                pass
+        self.pluginManager.initPluginToolbars(self.toolbarManager)
         
         # now read the keyboard shortcuts for all the actions
         from Preferences import Shortcuts

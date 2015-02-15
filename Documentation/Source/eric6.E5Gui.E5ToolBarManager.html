@@ -108,6 +108,9 @@ QObject
 <td><a href="#E5ToolBarManager.removeAction">removeAction</a></td>
 <td>Public method to remove an action from the manager.</td>
 </tr><tr>
+<td><a href="#E5ToolBarManager.removeCategoryActions">removeCategoryActions</a></td>
+<td>Public method to remove the actions belonging to a category.</td>
+</tr><tr>
 <td><a href="#E5ToolBarManager.removeToolBar">removeToolBar</a></td>
 <td>Public method to remove a toolbar added with addToolBar().</td>
 </tr><tr>
@@ -275,7 +278,7 @@ list of categories (list of string)
 </p><dl>
 <dt><i>category</i></dt>
 <dd>
-category for the toolbar (string)
+category for the actions (string)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -384,6 +387,16 @@ reference to the main window (QMainWindow)
 <dt><i>action</i></dt>
 <dd>
 reference to the action to be removed (QAction)
+</dd>
+</dl><a NAME="E5ToolBarManager.removeCategoryActions" ID="E5ToolBarManager.removeCategoryActions"></a>
+<h4>E5ToolBarManager.removeCategoryActions</h4>
+<b>removeCategoryActions</b>(<i>category</i>)
+<p>
+        Public method to remove the actions belonging to a category.
+</p><dl>
+<dt><i>category</i></dt>
+<dd>
+category for the actions (string)
 </dd>
 </dl><a NAME="E5ToolBarManager.removeToolBar" ID="E5ToolBarManager.removeToolBar"></a>
 <h4>E5ToolBarManager.removeToolBar</h4>

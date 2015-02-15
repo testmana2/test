@@ -179,6 +179,9 @@ QObject
 <td><a href="#PluginManager.initOnDemandPlugins">initOnDemandPlugins</a></td>
 <td>Public method to create plugin objects for all on demand plugins.</td>
 </tr><tr>
+<td><a href="#PluginManager.initPluginToolbars">initPluginToolbars</a></td>
+<td>Public method to initialize plug-in toolbars.</td>
+</tr><tr>
 <td><a href="#PluginManager.isPluginActive">isPluginActive</a></td>
 <td>Public method to check, if a certain plugin is active.</td>
 </tr><tr>
@@ -692,7 +695,18 @@ raised to indicate an issue during the
         Public method to create plugin objects for all on demand plugins.
 </p><p>
         Note: The plugins are not activated.
-</p><a NAME="PluginManager.isPluginActive" ID="PluginManager.isPluginActive"></a>
+</p><a NAME="PluginManager.initPluginToolbars" ID="PluginManager.initPluginToolbars"></a>
+<h4>PluginManager.initPluginToolbars</h4>
+<b>initPluginToolbars</b>(<i>toolbarManager</i>)
+<p>
+        Public method to initialize plug-in toolbars.
+</p><dl>
+<dt><i>toolbarManager</i></dt>
+<dd>
+reference to the toolbar manager object
+            (E5ToolBarManager)
+</dd>
+</dl><a NAME="PluginManager.isPluginActive" ID="PluginManager.isPluginActive"></a>
 <h4>PluginManager.isPluginActive</h4>
 <b>isPluginActive</b>(<i>pluginName</i>)
 <p>

@@ -451,6 +451,15 @@ class E5ToolBarManager(QObject):
             if action in self.__categoryToActions[category]:
                 self.__categoryToActions[category].remove(action)
     
+    def removeCategoryActions(self, category):
+        """
+        Public method to remove the actions belonging to a category.
+        
+        @param category category for the actions (string)
+        """
+        for action in self.categoryActions(category):
+            self.removeAction(action)
+    
     def saveState(self, version=0):
         """
         Public method to save the state of the toolbar manager.
@@ -639,7 +648,7 @@ class E5ToolBarManager(QObject):
         """
         Public method to get the actions belonging to a category.
         
-        @param category category for the toolbar (string)
+        @param category category for the actions (string)
         @return list of actions (list of QAction)
         """
         if category not in self.__categoryToActions:
