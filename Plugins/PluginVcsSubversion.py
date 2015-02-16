@@ -181,6 +181,17 @@ class VcsSubversionPlugin(QObject):
         """
         return self.__projectHelperObject
 
+    def initToolbar(self, ui, toolbarManager):
+        """
+        Public slot to initialize the VCS toolbar.
+        
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        """
+        if self.__projectHelperObject:
+            self.__projectHelperObject.initToolbar(ui, toolbarManager)
+    
     def activate(self):
         """
         Public method to activate this plugin.
@@ -264,4 +275,13 @@ class VcsSubversionPlugin(QObject):
         """
         Public method to prepare for an uninstallation.
         """
+        e5App().unregisterPluginObject(pluginTypename)
+    
+    def prepareUnload(self):
+        """
+        Public method to prepare for an unload.
+        """
+        if self.__projectHelperObject:
+            self.__projectHelperObject.removeToolbar(
+                self.__ui, e5App().getObject("ToolbarManager"))
         e5App().unregisterPluginObject(pluginTypename)

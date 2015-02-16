@@ -552,25 +552,24 @@ class SvnProjectHelper(VcsProjectHelper):
         @param ui reference to the main window (UserInterface)
         @param toolbarManager reference to a toolbar manager object
             (E5ToolBarManager)
-        @return the toolbar generated (QToolBar)
         """
-        tb = QToolBar(self.tr("Subversion (svn)"), ui)
-        tb.setIconSize(UI.Config.ToolBarIconSize)
-        tb.setObjectName("SubversionToolbar")
-        tb.setToolTip(self.tr('Subversion (svn)'))
+        self.__toolbar = QToolBar(self.tr("Subversion (svn)"), ui)
+        self.__toolbar.setIconSize(UI.Config.ToolBarIconSize)
+        self.__toolbar.setObjectName("SubversionToolbar")
+        self.__toolbar.setToolTip(self.tr('Subversion (svn)'))
         
-        tb.addAction(self.svnLogBrowserAct)
-        tb.addAction(self.vcsStatusAct)
-        tb.addSeparator()
-        tb.addAction(self.vcsDiffAct)
-        tb.addSeparator()
-        tb.addAction(self.svnRepoBrowserAct)
-        tb.addAction(self.vcsNewAct)
-        tb.addAction(self.vcsExportAct)
-        tb.addSeparator()
+        self.__toolbar.addAction(self.svnLogBrowserAct)
+        self.__toolbar.addAction(self.vcsStatusAct)
+        self.__toolbar.addSeparator()
+        self.__toolbar.addAction(self.vcsDiffAct)
+        self.__toolbar.addSeparator()
+        self.__toolbar.addAction(self.svnRepoBrowserAct)
+        self.__toolbar.addAction(self.vcsNewAct)
+        self.__toolbar.addAction(self.vcsExportAct)
+        self.__toolbar.addSeparator()
         
-        title = tb.windowTitle()
-        toolbarManager.addToolBar(tb, title)
+        title = self.__toolbar.windowTitle()
+        toolbarManager.addToolBar(self.__toolbar, title)
         toolbarManager.addAction(self.vcsUpdateAct, title)
         toolbarManager.addAction(self.vcsCommitAct, title)
         toolbarManager.addAction(self.vcsLogAct, title)
@@ -583,12 +582,30 @@ class SvnProjectHelper(VcsProjectHelper):
         toolbarManager.addAction(self.vcsSwitchAct, title)
         toolbarManager.addAction(self.svnRelocateAct, title)
         
-        tb.setEnabled(False)
-        tb.setVisible(False)
+        self.__toolbar.setEnabled(False)
+        self.__toolbar.setVisible(False)
         
-        ui.registerToolbar("subversion", tb.windowTitle(), tb)
+        ui.registerToolbar("subversion", self.__toolbar.windowTitle(),
+                           self.__toolbar)
+        ui.addToolBar(self.__toolbar)
+    
+    def removeToolbar(self, ui, toolbarManager):
+        """
+        Public method to remove a toolbar created by initToolbar().
         
-        return tb
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        """
+        ui.removeToolBar(self.__toolbar)
+        ui.unregisterToolbar("subversion")
+        
+        title = self.__toolbar.windowTitle()
+        toolbarManager.removeCategoryActions(title)
+        toolbarManager.removeToolBar(self.__toolbar)
+        
+        self.__toolbar.deleteLater()
+        self.__toolbar = None
     
     def __svnResolve(self):
         """

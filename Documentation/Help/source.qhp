@@ -6288,6 +6288,7 @@
       <keyword name="HgProjectHelper.initActions" id="HgProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initActions" />
       <keyword name="HgProjectHelper.initMenu" id="HgProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initMenu" />
       <keyword name="HgProjectHelper.initToolbar" id="HgProjectHelper.initToolbar" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.initToolbar" />
+      <keyword name="HgProjectHelper.removeToolbar" id="HgProjectHelper.removeToolbar" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.removeToolbar" />
       <keyword name="HgProjectHelper.setObjects" id="HgProjectHelper.setObjects" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.setObjects" />
       <keyword name="HgProjectHelper.showMenu" id="HgProjectHelper.showMenu" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.showMenu" />
       <keyword name="HgProjectHelper.shutdown" id="HgProjectHelper.shutdown" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ProjectHelper.html#HgProjectHelper.shutdown" />
@@ -9395,6 +9396,7 @@
       <keyword name="PySvnProjectHelper.initActions" id="PySvnProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.initActions" />
       <keyword name="PySvnProjectHelper.initMenu" id="PySvnProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.initMenu" />
       <keyword name="PySvnProjectHelper.initToolbar" id="PySvnProjectHelper.initToolbar" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.initToolbar" />
+      <keyword name="PySvnProjectHelper.removeToolbar" id="PySvnProjectHelper.removeToolbar" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectHelper.html#PySvnProjectHelper.removeToolbar" />
       <keyword name="PyUnit (Package)" id="PyUnit (Package)" ref="index-eric6.PyUnit.html" />
       <keyword name="Python (Package)" id="Python (Package)" ref="index-eric6.DebugClients.Python.html" />
       <keyword name="Python3 (Package)" id="Python3 (Package)" ref="index-eric6.DebugClients.Python3.html" />
@@ -11013,6 +11015,7 @@
       <keyword name="SvnProjectHelper.initActions" id="SvnProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.initActions" />
       <keyword name="SvnProjectHelper.initMenu" id="SvnProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.initMenu" />
       <keyword name="SvnProjectHelper.initToolbar" id="SvnProjectHelper.initToolbar" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.initToolbar" />
+      <keyword name="SvnProjectHelper.removeToolbar" id="SvnProjectHelper.removeToolbar" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectHelper.html#SvnProjectHelper.removeToolbar" />
       <keyword name="SvnPropDelDialog" id="SvnPropDelDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropDelDialog.html#SvnPropDelDialog" />
       <keyword name="SvnPropDelDialog (Constructor)" id="SvnPropDelDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropDelDialog.html#SvnPropDelDialog.__init__" />
       <keyword name="SvnPropDelDialog (Module)" id="SvnPropDelDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropDelDialog.html" />
@@ -12339,7 +12342,9 @@
       <keyword name="VcsMercurialPlugin.getGlobalOptions" id="VcsMercurialPlugin.getGlobalOptions" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getGlobalOptions" />
       <keyword name="VcsMercurialPlugin.getPreferences" id="VcsMercurialPlugin.getPreferences" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getPreferences" />
       <keyword name="VcsMercurialPlugin.getProjectHelper" id="VcsMercurialPlugin.getProjectHelper" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.getProjectHelper" />
+      <keyword name="VcsMercurialPlugin.initToolbar" id="VcsMercurialPlugin.initToolbar" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.initToolbar" />
       <keyword name="VcsMercurialPlugin.prepareUninstall" id="VcsMercurialPlugin.prepareUninstall" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.prepareUninstall" />
+      <keyword name="VcsMercurialPlugin.prepareUnload" id="VcsMercurialPlugin.prepareUnload" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.prepareUnload" />
       <keyword name="VcsMercurialPlugin.setPreferences" id="VcsMercurialPlugin.setPreferences" ref="eric6.Plugins.PluginVcsMercurial.html#VcsMercurialPlugin.setPreferences" />
       <keyword name="VcsPage" id="VcsPage" ref="eric6.Preferences.ConfigurationPages.VcsPage.html#VcsPage" />
       <keyword name="VcsPage (Constructor)" id="VcsPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.VcsPage.html#VcsPage.__init__" />
@@ -12401,7 +12406,9 @@
       <keyword name="VcsPySvnPlugin.getPreferences" id="VcsPySvnPlugin.getPreferences" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.getPreferences" />
       <keyword name="VcsPySvnPlugin.getProjectHelper" id="VcsPySvnPlugin.getProjectHelper" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.getProjectHelper" />
       <keyword name="VcsPySvnPlugin.getServersPath" id="VcsPySvnPlugin.getServersPath" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.getServersPath" />
+      <keyword name="VcsPySvnPlugin.initToolbar" id="VcsPySvnPlugin.initToolbar" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.initToolbar" />
       <keyword name="VcsPySvnPlugin.prepareUninstall" id="VcsPySvnPlugin.prepareUninstall" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.prepareUninstall" />
+      <keyword name="VcsPySvnPlugin.prepareUnload" id="VcsPySvnPlugin.prepareUnload" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.prepareUnload" />
       <keyword name="VcsPySvnPlugin.setPreferences" id="VcsPySvnPlugin.setPreferences" ref="eric6.Plugins.PluginVcsPySvn.html#VcsPySvnPlugin.setPreferences" />
       <keyword name="VcsRepositoryInfoDialog" id="VcsRepositoryInfoDialog" ref="eric6.VCS.RepositoryInfoDialog.html#VcsRepositoryInfoDialog" />
       <keyword name="VcsRepositoryInfoDialog (Constructor)" id="VcsRepositoryInfoDialog (Constructor)" ref="eric6.VCS.RepositoryInfoDialog.html#VcsRepositoryInfoDialog.__init__" />
@@ -12425,7 +12432,9 @@
       <keyword name="VcsSubversionPlugin.getPreferences" id="VcsSubversionPlugin.getPreferences" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.getPreferences" />
       <keyword name="VcsSubversionPlugin.getProjectHelper" id="VcsSubversionPlugin.getProjectHelper" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.getProjectHelper" />
       <keyword name="VcsSubversionPlugin.getServersPath" id="VcsSubversionPlugin.getServersPath" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.getServersPath" />
+      <keyword name="VcsSubversionPlugin.initToolbar" id="VcsSubversionPlugin.initToolbar" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.initToolbar" />
       <keyword name="VcsSubversionPlugin.prepareUninstall" id="VcsSubversionPlugin.prepareUninstall" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.prepareUninstall" />
+      <keyword name="VcsSubversionPlugin.prepareUnload" id="VcsSubversionPlugin.prepareUnload" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.prepareUnload" />
       <keyword name="VcsSubversionPlugin.setPreferences" id="VcsSubversionPlugin.setPreferences" ref="eric6.Plugins.PluginVcsSubversion.html#VcsSubversionPlugin.setPreferences" />
       <keyword name="VersionControl" id="VersionControl" ref="eric6.VCS.VersionControl.html#VersionControl" />
       <keyword name="VersionControl (Constructor)" id="VersionControl (Constructor)" ref="eric6.VCS.VersionControl.html#VersionControl.__init__" />

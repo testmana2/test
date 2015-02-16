@@ -1405,24 +1405,23 @@ class HgProjectHelper(VcsProjectHelper):
         @param ui reference to the main window (UserInterface)
         @param toolbarManager reference to a toolbar manager object
             (E5ToolBarManager)
-        @return the toolbar generated (QToolBar)
         """
-        tb = QToolBar(self.tr("Mercurial"), ui)
-        tb.setIconSize(UI.Config.ToolBarIconSize)
-        tb.setObjectName("MercurialToolbar")
-        tb.setToolTip(self.tr('Mercurial'))
+        self.__toolbar = QToolBar(self.tr("Mercurial"), ui)
+        self.__toolbar.setIconSize(UI.Config.ToolBarIconSize)
+        self.__toolbar.setObjectName("MercurialToolbar")
+        self.__toolbar.setToolTip(self.tr('Mercurial'))
         
-        tb.addAction(self.hgLogBrowserAct)
-        tb.addAction(self.vcsStatusAct)
-        tb.addSeparator()
-        tb.addAction(self.vcsDiffAct)
-        tb.addSeparator()
-        tb.addAction(self.vcsNewAct)
-        tb.addAction(self.vcsExportAct)
-        tb.addSeparator()
+        self.__toolbar.addAction(self.hgLogBrowserAct)
+        self.__toolbar.addAction(self.vcsStatusAct)
+        self.__toolbar.addSeparator()
+        self.__toolbar.addAction(self.vcsDiffAct)
+        self.__toolbar.addSeparator()
+        self.__toolbar.addAction(self.vcsNewAct)
+        self.__toolbar.addAction(self.vcsExportAct)
+        self.__toolbar.addSeparator()
         
-        title = tb.windowTitle()
-        toolbarManager.addToolBar(tb, title)
+        title = self.__toolbar.windowTitle()
+        toolbarManager.addToolBar(self.__toolbar, title)
         toolbarManager.addAction(self.hgPullAct, title)
         toolbarManager.addAction(self.vcsUpdateAct, title)
         toolbarManager.addAction(self.vcsCommitAct, title)
@@ -1449,12 +1448,30 @@ class HgProjectHelper(VcsProjectHelper):
         toolbarManager.addAction(self.hgBookmarkPullAct, title)
         toolbarManager.addAction(self.hgBookmarkPushAct, title)
         
-        tb.setEnabled(False)
-        tb.setVisible(False)
+        self.__toolbar.setEnabled(False)
+        self.__toolbar.setVisible(False)
         
-        ui.registerToolbar("mercurial", tb.windowTitle(), tb)
+        ui.registerToolbar("mercurial", self.__toolbar.windowTitle(),
+                           self.__toolbar)
+        ui.addToolBar(self.__toolbar)
+    
+    def removeToolbar(self, ui, toolbarManager):
+        """
+        Public method to remove a toolbar created by initToolbar().
         
-        return tb
+        @param ui reference to the main window (UserInterface)
+        @param toolbarManager reference to a toolbar manager object
+            (E5ToolBarManager)
+        """
+        ui.removeToolBar(self.__toolbar)
+        ui.unregisterToolbar("mercurial")
+        
+        title = self.__toolbar.windowTitle()
+        toolbarManager.removeCategoryActions(title)
+        toolbarManager.removeToolBar(self.__toolbar)
+        
+        self.__toolbar.deleteLater()
+        self.__toolbar = None
     
     def showMenu(self):
         """

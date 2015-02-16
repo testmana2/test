@@ -255,6 +255,9 @@ VcsProjectHelper
 <td><a href="#HgProjectHelper.initToolbar">initToolbar</a></td>
 <td>Public slot to initialize the VCS toolbar.</td>
 </tr><tr>
+<td><a href="#HgProjectHelper.removeToolbar">removeToolbar</a></td>
+<td>Public method to remove a toolbar created by initToolbar().</td>
+</tr><tr>
 <td><a href="#HgProjectHelper.setObjects">setObjects</a></td>
 <td>Public method to set references to the vcs and project objects.</td>
 </tr><tr>
@@ -643,10 +646,19 @@ reference to the main window (UserInterface)
 reference to a toolbar manager object
             (E5ToolBarManager)
 </dd>
-</dl><dl>
-<dt>Returns:</dt>
+</dl><a NAME="HgProjectHelper.removeToolbar" ID="HgProjectHelper.removeToolbar"></a>
+<h4>HgProjectHelper.removeToolbar</h4>
+<b>removeToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public method to remove a toolbar created by initToolbar().
+</p><dl>
+<dt><i>ui</i></dt>
 <dd>
-the toolbar generated (QToolBar)
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
 </dd>
 </dl><a NAME="HgProjectHelper.setObjects" ID="HgProjectHelper.setObjects"></a>
 <h4>HgProjectHelper.setObjects</h4>

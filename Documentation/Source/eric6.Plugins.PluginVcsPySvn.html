@@ -96,8 +96,14 @@ QObject
 <td><a href="#VcsPySvnPlugin.getServersPath">getServersPath</a></td>
 <td>Public method to get the filename of the servers file.</td>
 </tr><tr>
+<td><a href="#VcsPySvnPlugin.initToolbar">initToolbar</a></td>
+<td>Public slot to initialize the VCS toolbar.</td>
+</tr><tr>
 <td><a href="#VcsPySvnPlugin.prepareUninstall">prepareUninstall</a></td>
 <td>Public method to prepare for an uninstallation.</td>
+</tr><tr>
+<td><a href="#VcsPySvnPlugin.prepareUnload">prepareUnload</a></td>
+<td>Public method to prepare for an unload.</td>
 </tr><tr>
 <td><a href="#VcsPySvnPlugin.setPreferences">setPreferences</a></td>
 <td>Public method to store the various settings.</td>
@@ -178,11 +184,30 @@ reference to the project helper object
 <dd>
 filename of the servers file (string)
 </dd>
+</dl><a NAME="VcsPySvnPlugin.initToolbar" ID="VcsPySvnPlugin.initToolbar"></a>
+<h4>VcsPySvnPlugin.initToolbar</h4>
+<b>initToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public slot to initialize the VCS toolbar.
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
+</dd>
 </dl><a NAME="VcsPySvnPlugin.prepareUninstall" ID="VcsPySvnPlugin.prepareUninstall"></a>
 <h4>VcsPySvnPlugin.prepareUninstall</h4>
 <b>prepareUninstall</b>(<i></i>)
 <p>
         Public method to prepare for an uninstallation.
+</p><a NAME="VcsPySvnPlugin.prepareUnload" ID="VcsPySvnPlugin.prepareUnload"></a>
+<h4>VcsPySvnPlugin.prepareUnload</h4>
+<b>prepareUnload</b>(<i></i>)
+<p>
+        Public method to prepare for an unload.
 </p><a NAME="VcsPySvnPlugin.setPreferences" ID="VcsPySvnPlugin.setPreferences"></a>
 <h4>VcsPySvnPlugin.setPreferences</h4>
 <b>setPreferences</b>(<i>key, value</i>)

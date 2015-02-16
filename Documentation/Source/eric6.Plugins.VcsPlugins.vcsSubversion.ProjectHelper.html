@@ -110,6 +110,9 @@ VcsProjectHelper
 </tr><tr>
 <td><a href="#SvnProjectHelper.initToolbar">initToolbar</a></td>
 <td>Public slot to initialize the VCS toolbar.</td>
+</tr><tr>
+<td><a href="#SvnProjectHelper.removeToolbar">removeToolbar</a></td>
+<td>Public method to remove a toolbar created by initToolbar().</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -241,10 +244,19 @@ reference to the main window (UserInterface)
 reference to a toolbar manager object
             (E5ToolBarManager)
 </dd>
-</dl><dl>
-<dt>Returns:</dt>
+</dl><a NAME="SvnProjectHelper.removeToolbar" ID="SvnProjectHelper.removeToolbar"></a>
+<h4>SvnProjectHelper.removeToolbar</h4>
+<b>removeToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public method to remove a toolbar created by initToolbar().
+</p><dl>
+<dt><i>ui</i></dt>
 <dd>
-the toolbar generated (QToolBar)
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

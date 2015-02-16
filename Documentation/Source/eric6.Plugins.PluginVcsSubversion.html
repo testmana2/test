@@ -96,8 +96,14 @@ QObject
 <td><a href="#VcsSubversionPlugin.getServersPath">getServersPath</a></td>
 <td>Public method to get the filename of the servers file.</td>
 </tr><tr>
+<td><a href="#VcsSubversionPlugin.initToolbar">initToolbar</a></td>
+<td>Public slot to initialize the VCS toolbar.</td>
+</tr><tr>
 <td><a href="#VcsSubversionPlugin.prepareUninstall">prepareUninstall</a></td>
 <td>Public method to prepare for an uninstallation.</td>
+</tr><tr>
+<td><a href="#VcsSubversionPlugin.prepareUnload">prepareUnload</a></td>
+<td>Public method to prepare for an unload.</td>
 </tr><tr>
 <td><a href="#VcsSubversionPlugin.setPreferences">setPreferences</a></td>
 <td>Public method to store the various settings.</td>
@@ -178,11 +184,30 @@ reference to the project helper object
 <dd>
 filename of the servers file (string)
 </dd>
+</dl><a NAME="VcsSubversionPlugin.initToolbar" ID="VcsSubversionPlugin.initToolbar"></a>
+<h4>VcsSubversionPlugin.initToolbar</h4>
+<b>initToolbar</b>(<i>ui, toolbarManager</i>)
+<p>
+        Public slot to initialize the VCS toolbar.
+</p><dl>
+<dt><i>ui</i></dt>
+<dd>
+reference to the main window (UserInterface)
+</dd><dt><i>toolbarManager</i></dt>
+<dd>
+reference to a toolbar manager object
+            (E5ToolBarManager)
+</dd>
 </dl><a NAME="VcsSubversionPlugin.prepareUninstall" ID="VcsSubversionPlugin.prepareUninstall"></a>
 <h4>VcsSubversionPlugin.prepareUninstall</h4>
 <b>prepareUninstall</b>(<i></i>)
 <p>
         Public method to prepare for an uninstallation.
+</p><a NAME="VcsSubversionPlugin.prepareUnload" ID="VcsSubversionPlugin.prepareUnload"></a>
+<h4>VcsSubversionPlugin.prepareUnload</h4>
+<b>prepareUnload</b>(<i></i>)
+<p>
+        Public method to prepare for an unload.
 </p><a NAME="VcsSubversionPlugin.setPreferences" ID="VcsSubversionPlugin.setPreferences"></a>
 <h4>VcsSubversionPlugin.setPreferences</h4>
 <b>setPreferences</b>(<i>key, value</i>)

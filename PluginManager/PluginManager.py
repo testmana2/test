@@ -375,6 +375,13 @@ class PluginManager(QObject):
             self.__modulesCount += 1
             if reload_:
                 imp.reload(module)
+                self.initOnDemandPlugin(name)
+                try:
+                    pluginObject = self.__onDemandInactivePlugins[name]
+                    pluginObject.initToolbar(
+                        self.__ui, e5App().getObject("ToolbarManager"))
+                except (KeyError, AttributeError):
+                    pass
         except PluginLoadError:
             print("Error loading plug-in module:", name)
         except PluginPy2IncompatibleError:
@@ -404,12 +411,22 @@ class PluginManager(QObject):
         
         if name in self.__inactiveModules:
             try:
+                pluginObject = self.__inactivePlugins[name]
+                try:
+                    pluginObject.prepareUnload()
+                except AttributeError:
+                    pass
                 del self.__inactivePlugins[name]
             except KeyError:
                 pass
             del self.__inactiveModules[name]
         elif name in self.__onDemandInactiveModules:
             try:
+                pluginObject = self.__onDemandInactivePlugins[name]
+                try:
+                    pluginObject.prepareUnload()
+                except AttributeError:
+                    pass
                 del self.__onDemandInactivePlugins[name]
             except KeyError:
                 pass
@@ -492,11 +509,9 @@ class PluginManager(QObject):
             (E5ToolBarManager)
         """
         self.initOnDemandPlugins()
-        for name, ref in e5App().getPluginObjects():
+        for pluginObject in self.__onDemandInactivePlugins.values():
             try:
-                tb = ref.initToolbar(self.__ui, toolbarManager)
-                if tb is not None:
-                    self.__ui.addToolBar(tb)
+                pluginObject.initToolbar(self.__ui, toolbarManager)
             except AttributeError:
                 # ignore it
                 pass
