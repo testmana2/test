@@ -3438,52 +3438,97 @@ class UserInterface(E5MainWindow):
         """
         self.showMenu.emit("Subwindows", self.__menus["subwindow"])
         
-    def __showToolbarsMenu(self):
+    def __populateToolbarsMenu(self, menu):
         """
-        Private slot to display the Toolbars menu.
+        Private method to populate a toolbars menu.
+        
+        @param menu reference to the menu to be populated (QMenu)
         """
-        self.__menus["toolbars"].clear()
+        menu.clear()
         
         tbList = []
         for name, (text, tb) in list(self.__toolbars.items()):
             tbList.append((text, tb, name))
         
-        tbList.sort()
-        for text, tb, name in tbList:
-            act = self.__menus["toolbars"].addAction(text)
+        for text, tb, name in sorted(tbList):
+            act = menu.addAction(text)
             act.setCheckable(True)
-            act.setData(name)
             act.setChecked(not tb.isHidden())
-        self.__menus["toolbars"].addSeparator()
-        self.__toolbarsShowAllAct = \
-            self.__menus["toolbars"].addAction(self.tr("&Show all"))
-        self.__toolbarsHideAllAct = \
-            self.__menus["toolbars"].addAction(self.tr("&Hide all"))
+            act.setData(name)
+        menu.addSeparator()
+        act = menu.addAction(self.tr("&Show all"))
+        act.setData("__SHOW__")
+        act = menu.addAction(self.tr("&Hide all"))
+        act.setData("__HIDE__")
+        
+    def createPopupMenu(self):
+        """
+        Public method to create the toolbars menu for Qt.
+        
+        @return toolbars menu (QMenu)
+        """
+        menu = QMenu(self)
+        menu.triggered.connect(self.__TBPopupMenuTriggered)
+        
+        self.__populateToolbarsMenu(menu)
+        
+        return menu
+        
+    def __showToolbarsMenu(self):
+        """
+        Private slot to display the Toolbars menu.
+        """
+        self.__populateToolbarsMenu(self.__menus["toolbars"])
 
     def __TBMenuTriggered(self, act):
         """
-        Private method to handle the toggle of a toolbar.
+        Private method to handle the toggle of a toolbar via the Window->
+        Toolbars submenu.
         
         @param act reference to the action that was triggered (QAction)
         """
-        if act == self.__toolbarsShowAllAct:
-            for text, tb in list(self.__toolbars.values()):
-                tb.show()
-            if self.__menus["toolbars"].isTearOffMenuVisible():
-                self.__showToolbarsMenu()
-        elif act == self.__toolbarsHideAllAct:
-            for text, tb in list(self.__toolbars.values()):
-                tb.hide()
-            if self.__menus["toolbars"].isTearOffMenuVisible():
-                self.__showToolbarsMenu()
-        else:
-            name = act.data()
-            if name:
+        name = act.data()
+        if name:
+            if name == "__SHOW__":
+                for text, tb in list(self.__toolbars.values()):
+                    tb.show()
+                if self.__menus["toolbars"].isTearOffMenuVisible():
+                    self.__menus["toolbars"].hideTearOffMenu()
+            elif name == "__HIDE__":
+                for text, tb in list(self.__toolbars.values()):
+                    tb.hide()
+                if self.__menus["toolbars"].isTearOffMenuVisible():
+                    self.__menus["toolbars"].hideTearOffMenu()
+            else:
                 tb = self.__toolbars[name][1]
                 if act.isChecked():
                     tb.show()
                 else:
                     tb.hide()
+
+    def __TBPopupMenuTriggered(self, act):
+        """
+        Private method to handle the toggle of a toolbar via the QMainWindow
+        Toolbars popup menu.
+        
+        @param act reference to the action that was triggered (QAction)
+        """
+        name = act.data()
+        if name:
+            if name == "__SHOW__":
+                for text, tb in list(self.__toolbars.values()):
+                    tb.show()
+            elif name == "__HIDE__":
+                for text, tb in list(self.__toolbars.values()):
+                    tb.hide()
+            else:
+                tb = self.__toolbars[name][1]
+                if act.isChecked():
+                    tb.show()
+                else:
+                    tb.hide()
+            if self.__menus["toolbars"].isTearOffMenuVisible():
+                self.__menus["toolbars"].hideTearOffMenu()
         
     def __saveCurrentViewProfile(self, save):
         """

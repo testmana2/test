@@ -183,7 +183,10 @@ E5MainWindow
 <td>Constructor</td>
 </tr><tr>
 <td><a href="#UserInterface.__TBMenuTriggered">__TBMenuTriggered</a></td>
-<td>Private method to handle the toggle of a toolbar.</td>
+<td>Private method to handle the toggle of a toolbar via the Window-> Toolbars submenu.</td>
+</tr><tr>
+<td><a href="#UserInterface.__TBPopupMenuTriggered">__TBPopupMenuTriggered</a></td>
+<td>Private method to handle the toggle of a toolbar via the QMainWindow Toolbars popup menu.</td>
 </tr><tr>
 <td><a href="#UserInterface.__TRPreviewer">__TRPreviewer</a></td>
 <td>Private slot to start the Translation Previewer executable.</td>
@@ -385,6 +388,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#UserInterface.__pluginsConfigure">__pluginsConfigure</a></td>
 <td>Private slot to show the plugin manager configuration page.</td>
+</tr><tr>
+<td><a href="#UserInterface.__populateToolbarsMenu">__populateToolbarsMenu</a></td>
+<td>Private method to populate a toolbars menu.</td>
 </tr><tr>
 <td><a href="#UserInterface.__preferencesChanged">__preferencesChanged</a></td>
 <td>Private slot to handle a change of the preferences.</td>
@@ -665,6 +671,9 @@ E5MainWindow
 <td><a href="#UserInterface.closeEvent">closeEvent</a></td>
 <td>Protected event handler for the close event.</td>
 </tr><tr>
+<td><a href="#UserInterface.createPopupMenu">createPopupMenu</a></td>
+<td>Public method to create the toolbars menu for Qt.</td>
+</tr><tr>
 <td><a href="#UserInterface.dragEnterEvent">dragEnterEvent</a></td>
 <td>Protected method to handle the drag enter event.</td>
 </tr><tr>
@@ -805,7 +814,19 @@ list of command line parameters to be used for
 <h4>UserInterface.__TBMenuTriggered</h4>
 <b>__TBMenuTriggered</b>(<i>act</i>)
 <p>
-        Private method to handle the toggle of a toolbar.
+        Private method to handle the toggle of a toolbar via the Window->
+        Toolbars submenu.
+</p><dl>
+<dt><i>act</i></dt>
+<dd>
+reference to the action that was triggered (QAction)
+</dd>
+</dl><a NAME="UserInterface.__TBPopupMenuTriggered" ID="UserInterface.__TBPopupMenuTriggered"></a>
+<h4>UserInterface.__TBPopupMenuTriggered</h4>
+<b>__TBPopupMenuTriggered</b>(<i>act</i>)
+<p>
+        Private method to handle the toggle of a toolbar via the QMainWindow
+        Toolbars popup menu.
 </p><dl>
 <dt><i>act</i></dt>
 <dd>
@@ -1290,7 +1311,17 @@ type of startup requested (string, one of
 <b>__pluginsConfigure</b>(<i></i>)
 <p>
         Private slot to show the plugin manager configuration page.
-</p><a NAME="UserInterface.__preferencesChanged" ID="UserInterface.__preferencesChanged"></a>
+</p><a NAME="UserInterface.__populateToolbarsMenu" ID="UserInterface.__populateToolbarsMenu"></a>
+<h4>UserInterface.__populateToolbarsMenu</h4>
+<b>__populateToolbarsMenu</b>(<i>menu</i>)
+<p>
+        Private method to populate a toolbars menu.
+</p><dl>
+<dt><i>menu</i></dt>
+<dd>
+reference to the menu to be populated (QMenu)
+</dd>
+</dl><a NAME="UserInterface.__preferencesChanged" ID="UserInterface.__preferencesChanged"></a>
 <h4>UserInterface.__preferencesChanged</h4>
 <b>__preferencesChanged</b>(<i></i>)
 <p>
@@ -1951,6 +1982,16 @@ output to be appended (string)
 <dt><i>event</i></dt>
 <dd>
 close event (QCloseEvent)
+</dd>
+</dl><a NAME="UserInterface.createPopupMenu" ID="UserInterface.createPopupMenu"></a>
+<h4>UserInterface.createPopupMenu</h4>
+<b>createPopupMenu</b>(<i></i>)
+<p>
+        Public method to create the toolbars menu for Qt.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+toolbars menu (QMenu)
 </dd>
 </dl><a NAME="UserInterface.dragEnterEvent" ID="UserInterface.dragEnterEvent"></a>
 <h4>UserInterface.dragEnterEvent</h4>

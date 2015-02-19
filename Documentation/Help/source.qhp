@@ -12083,6 +12083,7 @@
       <keyword name="UserInterface (Constructor)" id="UserInterface (Constructor)" ref="eric6.UI.UserInterface.html#UserInterface.__init__" />
       <keyword name="UserInterface (Module)" id="UserInterface (Module)" ref="eric6.UI.UserInterface.html" />
       <keyword name="UserInterface.__TBMenuTriggered" id="UserInterface.__TBMenuTriggered" ref="eric6.UI.UserInterface.html#UserInterface.__TBMenuTriggered" />
+      <keyword name="UserInterface.__TBPopupMenuTriggered" id="UserInterface.__TBPopupMenuTriggered" ref="eric6.UI.UserInterface.html#UserInterface.__TBPopupMenuTriggered" />
       <keyword name="UserInterface.__TRPreviewer" id="UserInterface.__TRPreviewer" ref="eric6.UI.UserInterface.html#UserInterface.__TRPreviewer" />
       <keyword name="UserInterface.__UIPreviewer" id="UserInterface.__UIPreviewer" ref="eric6.UI.UserInterface.html#UserInterface.__UIPreviewer" />
       <keyword name="UserInterface.__activateBrowser" id="UserInterface.__activateBrowser" ref="eric6.UI.UserInterface.html#UserInterface.__activateBrowser" />
@@ -12150,6 +12151,7 @@
       <keyword name="UserInterface.__openMiniEditor" id="UserInterface.__openMiniEditor" ref="eric6.UI.UserInterface.html#UserInterface.__openMiniEditor" />
       <keyword name="UserInterface.__openOnStartup" id="UserInterface.__openOnStartup" ref="eric6.UI.UserInterface.html#UserInterface.__openOnStartup" />
       <keyword name="UserInterface.__pluginsConfigure" id="UserInterface.__pluginsConfigure" ref="eric6.UI.UserInterface.html#UserInterface.__pluginsConfigure" />
+      <keyword name="UserInterface.__populateToolbarsMenu" id="UserInterface.__populateToolbarsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__populateToolbarsMenu" />
       <keyword name="UserInterface.__preferencesChanged" id="UserInterface.__preferencesChanged" ref="eric6.UI.UserInterface.html#UserInterface.__preferencesChanged" />
       <keyword name="UserInterface.__processToolStderr" id="UserInterface.__processToolStderr" ref="eric6.UI.UserInterface.html#UserInterface.__processToolStderr" />
       <keyword name="UserInterface.__processToolStdout" id="UserInterface.__processToolStdout" ref="eric6.UI.UserInterface.html#UserInterface.__processToolStdout" />
@@ -12243,6 +12245,7 @@
       <keyword name="UserInterface.checkPluginUpdatesAvailable" id="UserInterface.checkPluginUpdatesAvailable" ref="eric6.UI.UserInterface.html#UserInterface.checkPluginUpdatesAvailable" />
       <keyword name="UserInterface.checkProjectsWorkspace" id="UserInterface.checkProjectsWorkspace" ref="eric6.UI.UserInterface.html#UserInterface.checkProjectsWorkspace" />
       <keyword name="UserInterface.closeEvent" id="UserInterface.closeEvent" ref="eric6.UI.UserInterface.html#UserInterface.closeEvent" />
+      <keyword name="UserInterface.createPopupMenu" id="UserInterface.createPopupMenu" ref="eric6.UI.UserInterface.html#UserInterface.createPopupMenu" />
       <keyword name="UserInterface.dragEnterEvent" id="UserInterface.dragEnterEvent" ref="eric6.UI.UserInterface.html#UserInterface.dragEnterEvent" />
       <keyword name="UserInterface.dragLeaveEvent" id="UserInterface.dragLeaveEvent" ref="eric6.UI.UserInterface.html#UserInterface.dragLeaveEvent" />
       <keyword name="UserInterface.dragMoveEvent" id="UserInterface.dragMoveEvent" ref="eric6.UI.UserInterface.html#UserInterface.dragMoveEvent" />
