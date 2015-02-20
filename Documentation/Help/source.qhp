@@ -2732,8 +2732,8 @@
       <keyword name="DebugClientBase.__dumpVariables" id="DebugClientBase.__dumpVariables" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__dumpVariables" />
       <keyword name="DebugClientBase.__exceptionRaised" id="DebugClientBase.__exceptionRaised" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__exceptionRaised" />
       <keyword name="DebugClientBase.__exceptionRaised" id="DebugClientBase.__exceptionRaised" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__exceptionRaised" />
-      <keyword name="DebugClientBase.__formatQt4Variable" id="DebugClientBase.__formatQt4Variable" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__formatQt4Variable" />
-      <keyword name="DebugClientBase.__formatQt4Variable" id="DebugClientBase.__formatQt4Variable" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__formatQt4Variable" />
+      <keyword name="DebugClientBase.__formatQtVariable" id="DebugClientBase.__formatQtVariable" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__formatQtVariable" />
+      <keyword name="DebugClientBase.__formatQtVariable" id="DebugClientBase.__formatQtVariable" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__formatQtVariable" />
       <keyword name="DebugClientBase.__formatVariablesList" id="DebugClientBase.__formatVariablesList" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__formatVariablesList" />
       <keyword name="DebugClientBase.__formatVariablesList" id="DebugClientBase.__formatVariablesList" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__formatVariablesList" />
       <keyword name="DebugClientBase.__generateFilterObjects" id="DebugClientBase.__generateFilterObjects" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__generateFilterObjects" />
