@@ -1447,7 +1447,8 @@ class DebugClientBase(object):
                                  .format(access), globals(), loc)
                             mdict = loc["mdict"]
                             obj = loc["obj"]
-                            if "PyQt4." in str(type(obj)):
+                            if "PyQt4." in str(type(obj)) or \
+                                    "PyQt5." in str(type(obj)):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
@@ -1480,7 +1481,8 @@ class DebugClientBase(object):
                                  globals(), loc)
                             obj = loc["obj"]
                             access = ""
-                            if "PyQt4." in str(type(obj)):
+                            if "PyQt4." in str(type(obj)) or \
+                                    "PyQt5." in str(type(obj)):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
@@ -1492,7 +1494,8 @@ class DebugClientBase(object):
                             ndict.update(dict[var[i]].__class__.__dict__)
                             del rvar[0]
                             obj = dict[var[i]]
-                            if "PyQt4." in str(type(obj)):
+                            if "PyQt4." in str(type(obj)) or \
+                                    "PyQt5." in str(type(obj)):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
@@ -1512,7 +1515,8 @@ class DebugClientBase(object):
                                     pass
                             ndict.update(loc["cdict"])
                             obj = dict[var[i]]
-                            if "PyQt4." in str(type(obj)):
+                            if "PyQt4." in str(type(obj)) or \
+                                    "PyQt5." in str(type(obj)):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
@@ -1523,7 +1527,7 @@ class DebugClientBase(object):
                 i += 1
             
             if qtVariable:
-                vlist = self.__formatQt4Variable(qvar, qvtype)
+                vlist = self.__formatQtVariable(qvar, qvtype)
             elif ("sipThis" in dict.keys() and len(dict) == 1) or \
                     (len(dict) == 0 and len(udict) > 0):
                 if access:
@@ -1540,8 +1544,8 @@ class DebugClientBase(object):
                 else:
                     qvar = udict[var[-1]]
                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
-                if qvtype.startswith("PyQt4"):
-                    vlist = self.__formatQt4Variable(qvar, qvtype)
+                if qvtype.startswith(("PyQt4", "PyQt5")):
+                    vlist = self.__formatQtVariable(qvar, qvtype)
                 else:
                     vlist = []
             else:
@@ -1561,11 +1565,11 @@ class DebugClientBase(object):
                     else:
                         qvar = udict[var[-1]]
                     qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
-                    if qvtype.startswith("PyQt4"):
+                    if qvtype.startswith(("PyQt4", "PyQt5")):
                         qtVariable = True
                 
                 if qtVariable:
-                    vlist = self.__formatQt4Variable(qvar, qvtype)
+                    vlist = self.__formatQtVariable(qvar, qvtype)
                 else:
                     # format the dictionary found
                     if dictkeys is None:
@@ -1604,7 +1608,7 @@ class DebugClientBase(object):
         self.write('{0}{1}\n'.format(
             DebugProtocol.ResponseVariable, str(varlist)))
         
-    def __formatQt4Variable(self, value, vtype):
+    def __formatQtVariable(self, value, vtype):
         """
         Private method to produce a formatted output of a simple Qt4/Qt5 type.
         
@@ -1654,15 +1658,15 @@ class DebugClientBase(object):
             varlist.append(("name", "str", "{0}".format(value.name())))
             r, g, b, a = value.getRgb()
             varlist.append(
-                ("rgb", "int",
+                ("rgba", "int",
                  "{0:d}, {1:d}, {2:d}, {3:d}".format(r, g, b, a)))
             h, s, v, a = value.getHsv()
             varlist.append(
-                ("hsv", "int",
+                ("hsva", "int",
                  "{0:d}, {1:d}, {2:d}, {3:d}".format(h, s, v, a)))
             c, m, y, k, a = value.getCmyk()
             varlist.append(
-                ("cmyk", "int",
+                ("cmyka", "int",
                  "{0:d}, {1:d}, {2:d}, {3:d}, {4:d}".format(c, m, y, k, a)))
         elif qttype == 'QDate':
             varlist.append(("", "QDate", "{0}".format(value.toString())))
