@@ -904,6 +904,7 @@ class Subversion(VersionControl):
             from .SvnLogDialog import SvnLogDialog
             self.log = SvnLogDialog(self, isFile=isFile)
             self.log.show()
+            self.log.raise_()
             self.log.start(name, noEntries)
         
     def vcsDiff(self, name):
@@ -931,9 +932,11 @@ class Subversion(VersionControl):
                 project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
-        from .SvnDiffDialog import SvnDiffDialog
-        self.diff = SvnDiffDialog(self)
+        if self.diff is None:
+            from .SvnDiffDialog import SvnDiffDialog
+            self.diff = SvnDiffDialog(self)
         self.diff.show()
+        self.diff.raise_()
         QApplication.processEvents()
         self.diff.start(name, refreshable=True)
         
@@ -945,9 +948,11 @@ class Subversion(VersionControl):
         @param name file/directory name(s) to show the status of
             (string or list of strings)
         """
-        from .SvnStatusDialog import SvnStatusDialog
-        self.status = SvnStatusDialog(self)
+        if self.status is None:
+            from .SvnStatusDialog import SvnStatusDialog
+            self.status = SvnStatusDialog(self)
         self.status.show()
+        self.status.raise_()
         self.status.start(name)
         
     def vcsTag(self, name):
@@ -1725,9 +1730,11 @@ class Subversion(VersionControl):
         @param name file/directory name (string or list of strings)
         @param recursive flag indicating a recursive list is requested
         """
-        from .SvnPropListDialog import SvnPropListDialog
-        self.propList = SvnPropListDialog(self)
+        if self.propList is None:
+            from .SvnPropListDialog import SvnPropListDialog
+            self.propList = SvnPropListDialog(self)
         self.propList.show()
+        self.propList.raise_()
         self.propList.start(name, recursive)
         
     def svnSetProp(self, name, recursive=False):
@@ -1820,9 +1827,11 @@ class Subversion(VersionControl):
         @param tags flag indicating listing of branches or tags
                 (False = branches, True = tags)
         """
-        from .SvnTagBranchListDialog import SvnTagBranchListDialog
-        self.tagbranchList = SvnTagBranchListDialog(self)
+        if self.tagbranchList is None:
+            from .SvnTagBranchListDialog import SvnTagBranchListDialog
+            self.tagbranchList = SvnTagBranchListDialog(self)
         self.tagbranchList.show()
+        self.tagbranchList.raise_()
         if tags:
             if not self.showedTags:
                 self.showedTags = True
@@ -1848,9 +1857,11 @@ class Subversion(VersionControl):
         
         @param name file name to show the blame for (string)
         """
-        from .SvnBlameDialog import SvnBlameDialog
-        self.blame = SvnBlameDialog(self)
+        if self.blame is None:
+            from .SvnBlameDialog import SvnBlameDialog
+            self.blame = SvnBlameDialog(self)
         self.blame.show()
+        self.blame.raise_()
         self.blame.start(name)
         
     def svnExtendedDiff(self, name):
@@ -2037,6 +2048,7 @@ class Subversion(VersionControl):
             from UI.CompareDialog import CompareDialog
             self.sbsDiff = CompareDialog()
         self.sbsDiff.show()
+        self.sbsDiff.raise_()
         self.sbsDiff.compare(output1, output2, name1, name2)
     
     def vcsLogBrowser(self, name, isFile=False):
@@ -2051,6 +2063,7 @@ class Subversion(VersionControl):
             from .SvnLogBrowserDialog import SvnLogBrowserDialog
             self.logBrowser = SvnLogBrowserDialog(self)
         self.logBrowser.show()
+        self.logBrowser.raise_()
         self.logBrowser.start(name, isFile=isFile)
         
     def svnLock(self, name, stealIt=False, parent=None):
@@ -2153,9 +2166,11 @@ class Subversion(VersionControl):
             if not ok or not url:
                 return
         
-        from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
-        self.repoBrowser = SvnRepoBrowserDialog(self)
+        if self.repoBrowser is None:
+            from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+            self.repoBrowser = SvnRepoBrowserDialog(self)
         self.repoBrowser.show()
+        self.repoBrowser.raise_()
         self.repoBrowser.start(url)
         
     def svnRemoveFromChangelist(self, names):

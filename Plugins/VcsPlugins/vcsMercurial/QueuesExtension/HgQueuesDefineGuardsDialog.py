@@ -15,7 +15,7 @@ except NameError:
 
 import os
 
-from PyQt5.QtCore import pyqtSlot, Qt, QProcess, QTimer, QCoreApplication
+from PyQt5.QtCore import pyqtSlot, Qt, QProcess, QCoreApplication
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QAbstractButton, \
     QListWidgetItem
 
@@ -42,7 +42,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         super(HgQueuesDefineGuardsDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.process = None
         self.vcs = vcs
         self.extension = extension
         self.__hgClient = vcs.getClient()
@@ -68,12 +67,6 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         if self.__hgClient:
             if self.__hgClient.isExecuting():
                 self.__hgClient.cancel()
-        else:
-            if self.process is not None and \
-               self.process.state() != QProcess.NotRunning:
-                self.process.terminate()
-                QTimer.singleShot(2000, self.process.kill)
-                self.process.waitForFinished(3000)
         
         if self.__dirtyList:
             res = E5MessageBox.question(

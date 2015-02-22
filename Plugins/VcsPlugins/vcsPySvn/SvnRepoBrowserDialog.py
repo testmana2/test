@@ -225,9 +225,13 @@ class SvnRepoBrowserDialog(QDialog, SvnDialogMixin, Ui_SvnRepoBrowserDialog):
         
         @param url the repository URL to browser (string)
         """
+        self.repoTree.clear()
+        
         self.url = ""
         
-        self.urlCombo.addItem(self.__normalizeUrl(url))
+        url = self.__normalizeUrl(url)
+        if self.urlCombo.findText(url) == -1:
+            self.urlCombo.addItem(url)
     
     @pyqtSlot(str)
     def on_urlCombo_currentIndexChanged(self, text):

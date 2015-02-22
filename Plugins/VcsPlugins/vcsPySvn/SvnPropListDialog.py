@@ -15,7 +15,7 @@ import sys
 
 import pysvn
 
-from PyQt5.QtCore import QMutexLocker, Qt
+from PyQt5.QtCore import pyqtSlot, QMutexLocker, Qt
 from PyQt5.QtWidgets import QWidget, QHeaderView, QApplication, \
     QDialogButtonBox, QTreeWidgetItem
 
@@ -39,6 +39,12 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
         
+        self.refreshButton = \
+            self.buttonBox.addButton(self.tr("Refresh"),
+                                     QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.tr("Press to refresh the properties display"))
+        self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
@@ -88,6 +94,16 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         @param recursive flag indicating a recursive list is requested
         """
         self.errorGroup.hide()
+        
+        self.propsList.clear()
+        
+        self.__args = fn
+        self.__recursive = recursive
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        self.refreshButton.setEnabled(False)
         
         QApplication.processEvents()
         self.propsFound = False
@@ -142,6 +158,8 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
+        self.refreshButton.setEnabled(True)
+        
         self._cancel()
         
     def on_buttonBox_clicked(self, button):
@@ -154,6 +172,15 @@ class SvnPropListDialog(QWidget, SvnDialogMixin, Ui_SvnPropListDialog):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             self.__finish()
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
+        
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the status display.
+        """
+        self.start(self.__args, recursive=self.__recursive)
         
     def __showError(self, msg):
         """

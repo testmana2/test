@@ -43,7 +43,6 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = QProcess()
         self.vcs = vcs
         self.tagsList = None
         self.allTagsList = None
@@ -51,6 +50,7 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         self.tagList.headerItem().setText(self.tagList.columnCount(), "")
         self.tagList.header().setSortIndicator(3, Qt.AscendingOrder)
         
+        self.process = QProcess()
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
@@ -85,6 +85,8 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         @param allTagsList reference to string list all tags (list of strings)
         """
         self.errorGroup.hide()
+        
+        self.tagList.clear()
         
         self.intercept = False
         if not tags:
@@ -193,8 +195,6 @@ class SvnTagBranchListDialog(QDialog, Ui_SvnTagBranchListDialog):
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
-        
-        self.process = None
         
         self.__resizeColumns()
         self.__resort()

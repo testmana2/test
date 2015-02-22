@@ -42,15 +42,18 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = QProcess()
         self.vcs = vcs
         self.__hgClient = vcs.getClient()
         
         self.patchesList.header().setSortIndicator(0, Qt.AscendingOrder)
         
-        self.process.finished.connect(self.__procFinished)
-        self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardError.connect(self.__readStderr)
+        if self.__hgClient:
+            self.process = None
+        else:
+            self.process = QProcess()
+            self.process.finished.connect(self.__procFinished)
+            self.process.readyReadStandardOutput.connect(self.__readStdout)
+            self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.__statusDict = {
             "A": self.tr("applied"),
@@ -221,8 +224,6 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
-        
-        self.process = None
         
         if self.patchesList.topLevelItemCount() == 0:
             # no patches present

@@ -41,13 +41,16 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = QProcess()
         self.vcs = vcs
         self.__hgClient = vcs.getClient()
         
-        self.process.finished.connect(self.__procFinished)
-        self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardError.connect(self.__readStderr)
+        if self.__hgClient:
+            self.process = None
+        else:
+            self.process = QProcess()
+            self.process.finished.connect(self.__procFinished)
+            self.process.readyReadStandardOutput.connect(self.__readStdout)
+            self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.show()
         QCoreApplication.processEvents()
@@ -128,8 +131,6 @@ class HgQueuesHeaderDialog(QDialog, Ui_HgQueuesHeaderDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
-        
-        self.process = None
     
     def on_buttonBox_clicked(self, button):
         """

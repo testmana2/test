@@ -41,7 +41,6 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = QProcess()
         self.vcs = vcs
         self.tagsList = None
         self.allTagsList = None
@@ -50,9 +49,13 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.tagList.headerItem().setText(self.tagList.columnCount(), "")
         self.tagList.header().setSortIndicator(3, Qt.AscendingOrder)
         
-        self.process.finished.connect(self.__procFinished)
-        self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardError.connect(self.__readStderr)
+        if self.__hgClient:
+            self.process = None
+        else:
+            self.process = QProcess()
+            self.process.finished.connect(self.__procFinished)
+            self.process.readyReadStandardOutput.connect(self.__readStdout)
+            self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.show()
         QCoreApplication.processEvents()
@@ -165,8 +168,6 @@ class HgTagBranchListDialog(QDialog, Ui_HgTagBranchListDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
-        
-        self.process = None
         
         self.__resizeColumns()
         self.__resort()

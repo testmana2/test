@@ -14,7 +14,8 @@ try:
 except NameError:
     pass
 
-from PyQt5.QtCore import QTimer, QProcess, QProcessEnvironment, QRegExp, Qt
+from PyQt5.QtCore import pyqtSlot, QTimer, QProcess, QProcessEnvironment, \
+    QRegExp, Qt
 from PyQt5.QtWidgets import QWidget, QHeaderView, QDialogButtonBox, \
     QTreeWidgetItem
 
@@ -30,6 +31,7 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
     Class implementing a dialog to show the output of the svn proplist command
     process.
     """
+    # TODO: add refresh button
     def __init__(self, vcs, parent=None):
         """
         Constructor
@@ -40,6 +42,12 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         super(SvnPropListDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.refreshButton = \
+            self.buttonBox.addButton(self.tr("Refresh"),
+                                     QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.tr("Press to refresh the properties display"))
+        self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
@@ -58,9 +66,6 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         
         self.rx_path = QRegExp(r"Properties on '([^']+)':\s*")
         self.rx_prop = QRegExp(r"  (.*) *: *(.*)[\r\n]")
-        self.lastPath = None
-        self.lastProp = None
-        self.propBuffer = ""
         
     def __resort(self):
         """
@@ -110,6 +115,19 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         """
         self.errorGroup.hide()
         
+        self.propsList.clear()
+        self.lastPath = None
+        self.lastProp = None
+        self.propBuffer = ""
+        
+        self.__args = fn
+        self.__recursive = recursive
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        self.refreshButton.setEnabled(False)
+        
         self.process.kill()
         
         args = []
@@ -153,7 +171,8 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         
-        self.process = None
+        self.refreshButton.setEnabled(True)
+        
         if self.lastProp:
             self.__generateItem(self.lastPath, self.lastProp, self.propBuffer)
         
@@ -170,6 +189,15 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             self.__finish()
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
+        
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the status display.
+        """
+        self.start(self.__args, recursive=self.__recursive)
         
     def __procFinished(self, exitCode, exitStatus):
         """

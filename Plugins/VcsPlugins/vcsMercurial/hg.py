@@ -873,9 +873,11 @@ class Hg(VersionControl):
                 project = e5App().getObject("Project")
                 if nam == project.ppath and not project.saveAllScripts():
                     return
-        from .HgDiffDialog import HgDiffDialog
-        self.diff = HgDiffDialog(self)
+        if self.diff is None:
+            from .HgDiffDialog import HgDiffDialog
+            self.diff = HgDiffDialog(self)
         self.diff.show()
+        self.diff.raise_()
         QApplication.processEvents()
         self.diff.start(name, refreshable=True)
     
@@ -887,9 +889,11 @@ class Hg(VersionControl):
         @param name file/directory name(s) to show the status of
             (string or list of strings)
         """
-        from .HgStatusDialog import HgStatusDialog
-        self.status = HgStatusDialog(self)
+        if self.status is None:
+            from .HgStatusDialog import HgStatusDialog
+            self.status = HgStatusDialog(self)
         self.status.show()
+        self.status.raise_()
         self.status.start(name)
     
     def hgSummary(self, mq=False, largefiles=False):
@@ -901,9 +905,11 @@ class Hg(VersionControl):
         @param largefiles flag indicating to show the largefiles status as
             well (boolean)
         """
-        from .HgSummaryDialog import HgSummaryDialog
-        self.summary = HgSummaryDialog(self)
+        if self.summary is None:
+            from .HgSummaryDialog import HgSummaryDialog
+            self.summary = HgSummaryDialog(self)
         self.summary.show()
+        self.summary.raise_()
         self.summary.start(self.__projectHelper.getProject().getProjectPath(),
                            mq=mq, largefiles=largefiles)
     
@@ -1713,9 +1719,11 @@ class Hg(VersionControl):
         
         @param name file name to show the annotations for (string)
         """
-        from .HgAnnotateDialog import HgAnnotateDialog
-        self.annotate = HgAnnotateDialog(self)
+        if self.annotate is None:
+            from .HgAnnotateDialog import HgAnnotateDialog
+            self.annotate = HgAnnotateDialog(self)
         self.annotate.show()
+        self.annotate.raise_()
         self.annotate.start(name)
     
     def hgExtendedDiff(self, name):
@@ -1761,9 +1769,11 @@ class Hg(VersionControl):
                                          self.hgGetBookmarksList(repodir))
         if dlg.exec_() == QDialog.Accepted:
             revisions = dlg.getRevisions()
-            from .HgDiffDialog import HgDiffDialog
-            self.diff = HgDiffDialog(self)
+            if self.diff is None:
+                from .HgDiffDialog import HgDiffDialog
+                self.diff = HgDiffDialog(self)
             self.diff.show()
+            self.diff.raise_()
             self.diff.start(name, revisions)
     
     def __hgGetFileForRevision(self, name, rev=""):
@@ -1887,6 +1897,7 @@ class Hg(VersionControl):
             from UI.CompareDialog import CompareDialog
             self.sbsDiff = CompareDialog()
         self.sbsDiff.show()
+        self.sbsDiff.raise_()
         self.sbsDiff.compare(output1, output2, name1, name2)
     
     def vcsLogBrowser(self, name, isFile=False):
@@ -1902,6 +1913,7 @@ class Hg(VersionControl):
             from .HgLogBrowserDialog import HgLogBrowserDialog
             self.logBrowser = HgLogBrowserDialog(self)
         self.logBrowser.show()
+        self.logBrowser.raise_()
         self.logBrowser.start(name, isFile=isFile)
     
     def hgIncoming(self, name):
@@ -1917,6 +1929,7 @@ class Hg(VersionControl):
                 self.logBrowserIncoming = HgLogBrowserDialog(
                     self, mode="incoming")
             self.logBrowserIncoming.show()
+            self.logBrowserIncoming.raise_()
             self.logBrowserIncoming.start(name)
         else:
             from .HgLogDialog import HgLogDialog
@@ -1937,6 +1950,7 @@ class Hg(VersionControl):
                 self.logBrowserOutgoing = HgLogBrowserDialog(
                     self, mode="outgoing")
             self.logBrowserOutgoing.show()
+            self.logBrowserOutgoing.raise_()
             self.logBrowserOutgoing.start(name)
         else:
             from .HgLogDialog import HgLogDialog
@@ -2122,6 +2136,7 @@ class Hg(VersionControl):
             from .HgConflictsListDialog import HgConflictsListDialog
             self.conflictsDlg = HgConflictsListDialog(self)
         self.conflictsDlg.show()
+        self.conflictsDlg.raise_()
         self.conflictsDlg.start(name)
     
     def hgResolved(self, name, unresolve=False):
@@ -2629,6 +2644,7 @@ class Hg(VersionControl):
                     self.logBrowserIncoming = \
                         HgLogBrowserDialog(self, mode="incoming")
                 self.logBrowserIncoming.show()
+                self.logBrowserIncoming.raise_()
                 self.logBrowserIncoming.start(name, bundle=file)
             else:
                 from .HgLogDialog import HgLogDialog
@@ -3518,9 +3534,11 @@ class Hg(VersionControl):
         """
         self.bookmarksList = []
         
-        from .HgBookmarksListDialog import HgBookmarksListDialog
-        self.bookmarksListDlg = HgBookmarksListDialog(self)
+        if self.bookmarksListDlg is None:
+            from .HgBookmarksListDialog import HgBookmarksListDialog
+            self.bookmarksListDlg = HgBookmarksListDialog(self)
         self.bookmarksListDlg.show()
+        self.bookmarksListDlg.raise_()
         self.bookmarksListDlg.start(path, self.bookmarksList)
     
     def hgGetBookmarksList(self, repodir):

@@ -58,11 +58,17 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
         self.diff = None
-        self.process = None
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
         self.__hgClient = self.vcs.getClient()
         self.__mq = mq
+        if self.__hgClient:
+            self.process = None
+        else:
+            self.process = QProcess()
+            self.process.finished.connect(self.__procFinished)
+            self.process.readyReadStandardOutput.connect(self.__readStdout)
+            self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(
@@ -249,6 +255,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         self.statusFilterCombo.clear()
         self.__statusFilters = []
+        self.statusList.clear()
         
         if self.__mq:
             self.setWindowTitle(
@@ -284,6 +291,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
+            self.refreshButton.setEnabled(False)
             
             out, err = self.__hgClient.runcommand(args)
             if err:
@@ -297,11 +305,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         else:
             if self.process:
                 self.process.kill()
-            else:
-                self.process = QProcess()
-                self.process.finished.connect(self.__procFinished)
-                self.process.readyReadStandardOutput.connect(self.__readStdout)
-                self.process.readyReadStandardError.connect(self.__readStderr)
             
             self.process.setWorkingDirectory(repodir)
             
@@ -318,8 +321,13 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
             else:
+                self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+                self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+                self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+                
                 self.inputGroup.setEnabled(True)
                 self.inputGroup.show()
+                self.refreshButton.setEnabled(False)
     
     def __finish(self):
         """
@@ -348,8 +356,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         for act in self.menuactions:
             act.setEnabled(True)
-        
-        self.process = None
         
         self.__resort()
         self.__resizeColumns()
@@ -484,16 +490,6 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private slot to refresh the status display.
         """
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
-        
-        self.inputGroup.setEnabled(True)
-        self.inputGroup.show()
-        self.refreshButton.setEnabled(False)
-        
-        self.statusList.clear()
-        
         self.start(self.args)
     
     def __updateButtons(self):

@@ -171,8 +171,6 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
         
-        self.process = None
-        
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
             self.__generateItem(self.tr("no bookmarks found"), "")

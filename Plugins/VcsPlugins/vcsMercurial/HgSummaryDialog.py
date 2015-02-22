@@ -47,9 +47,14 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.tr("Press to refresh the summary display"))
         self.refreshButton.setEnabled(False)
         
-        self.process = None
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
+        
+        self.process = QProcess()
+        prepareProcess(self.process, language="C")
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardError.connect(self.__readStderr)
     
     def closeEvent(self, e):
         """
@@ -75,6 +80,9 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             well (boolean)
         """
         self.errorGroup.hide()
+        self.refreshButton.setEnabled(False)
+        self.summary.clear()
+        
         self.__path = path
         self.__mq = mq
         self.__largefiles = largefiles
@@ -96,12 +104,6 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         
         if self.process:
             self.process.kill()
-        else:
-            self.process = QProcess()
-            prepareProcess(self.process, language="C")
-            self.process.finished.connect(self.__procFinished)
-            self.process.readyReadStandardOutput.connect(self.__readStdout)
-            self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.process.setWorkingDirectory(repodir)
         
@@ -130,7 +132,6 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
             self.process.waitForFinished(3000)
         
         self.refreshButton.setEnabled(True)
-        self.process = None
     
     def on_buttonBox_clicked(self, button):
         """
@@ -195,9 +196,6 @@ class HgSummaryDialog(QDialog, Ui_HgSummaryDialog):
         """
         Private slot to refresh the status display.
         """
-        self.refreshButton.setEnabled(False)
-        self.summary.clear()
-        
         self.start(self.__path, mq=self.__mq)
     
     def __committed(self):

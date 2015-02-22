@@ -65,9 +65,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
         self.diff = None
-        self.process = None
         self.vcs = vcs
         self.vcs.committed.connect(self.__committed)
+        
+        self.process = QProcess()
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(self.__pathColumn,
@@ -348,6 +352,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         self.statusFilterCombo.clear()
         self.__statusFilters = []
+        self.statusList.clear()
         
         self.currentChangelist = ""
         self.changelistFound = False
@@ -358,13 +363,7 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         self.hideHistoryColumn = True
         self.hideSwitchedColumn = True
         
-        if self.process:
-            self.process.kill()
-        else:
-            self.process = QProcess()
-            self.process.finished.connect(self.__procFinished)
-            self.process.readyReadStandardOutput.connect(self.__readStdout)
-            self.process.readyReadStandardError.connect(self.__readStderr)
+        self.process.kill()
         
         args = []
         args.append('status')
@@ -404,8 +403,13 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
                     'Ensure, that it is in the search path.'
                 ).format('svn'))
         else:
+            self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+            
             self.inputGroup.setEnabled(True)
             self.inputGroup.show()
+            self.refreshButton.setEnabled(False)
         
     def __finish(self):
         """
@@ -434,8 +438,6 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         
         for act in self.menuactions:
             act.setEnabled(True)
-        
-        self.process = None
         
         self.__resort()
         self.__resizeColumns()
@@ -585,16 +587,6 @@ class SvnStatusDialog(QWidget, Ui_SvnStatusDialog):
         """
         Private slot to refresh the status display.
         """
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
-        
-        self.inputGroup.setEnabled(True)
-        self.inputGroup.show()
-        self.refreshButton.setEnabled(False)
-        
-        self.statusList.clear()
-        
         self.start(self.args)
         
     def __updateButtons(self):

@@ -88,8 +88,9 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         """
         Public slot to start the annotate command.
         
-        @param fn filename to show the log for (string)
+        @param fn filename to show the annotation for (string)
         """
+        self.annotateList.clear()
         self.errorGroup.hide()
         self.intercept = False
         self.activateWindow()
@@ -165,8 +166,6 @@ class HgAnnotateDialog(QDialog, Ui_HgAnnotateDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
-        
-        self.process = None
         
         self.__resizeColumns()
     

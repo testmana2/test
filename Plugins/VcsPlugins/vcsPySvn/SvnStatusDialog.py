@@ -277,6 +277,13 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
 
         self.statusFilterCombo.clear()
         self.__statusFilters = []
+        self.statusList.clear()
+        self.shouldCancel = False
+        
+        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+        self.refreshButton.setEnabled(False)
         
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         QApplication.processEvents()
@@ -468,15 +475,6 @@ class SvnStatusDialog(QWidget, SvnDialogMixin, Ui_SvnStatusDialog):
         """
         Private slot to refresh the status display.
         """
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
-        
-        self.refreshButton.setEnabled(False)
-        
-        self.statusList.clear()
-        
-        self.shouldCancel = False
         self.start(self.args)
         
     def __showError(self, msg):

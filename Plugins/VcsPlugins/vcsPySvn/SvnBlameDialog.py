@@ -58,10 +58,11 @@ class SvnBlameDialog(QDialog, SvnDialogMixin, Ui_SvnBlameDialog):
         
     def start(self, fn):
         """
-        Public slot to start the svn status command.
+        Public slot to start the svn blame command.
         
-        @param fn filename to show the log for (string)
+        @param fn filename to show the blame for (string)
         """
+        self.blameList.clear()
         self.errorGroup.hide()
         self.activateWindow()
         

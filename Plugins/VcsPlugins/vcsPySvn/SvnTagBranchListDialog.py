@@ -68,6 +68,8 @@ class SvnTagBranchListDialog(QDialog, SvnDialogMixin,
         """
         self.errorGroup.hide()
         
+        self.tagList.clear()
+        
         if not tags:
             self.setWindowTitle(self.tr("Subversion Branches List"))
         self.activateWindow()

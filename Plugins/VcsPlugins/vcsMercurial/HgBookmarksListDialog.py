@@ -38,12 +38,19 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         super(HgBookmarksListDialog, self).__init__(parent)
         self.setupUi(self)
         
+        
+        self.refreshButton = self.buttonBox.addButton(
+            self.tr("Refresh"), QDialogButtonBox.ActionRole)
+        self.refreshButton.setToolTip(
+            self.tr("Press to refresh the bookmarks display"))
+        self.refreshButton.setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
         self.process = QProcess()
         self.vcs = vcs
         self.__bookmarksList = None
+        self.__path = None
         self.__hgClient = vcs.getClient()
         
         self.bookmarksList.headerItem().setText(
@@ -83,12 +90,17 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         @param bookmarksList reference to string list receiving the bookmarks
             (list of strings)
         """
+        self.bookmarksList.clear()
+        
         self.errorGroup.hide()
         
         self.intercept = False
         self.activateWindow()
         
         self.__bookmarksList = bookmarksList
+        del self.__bookmarksList[:]     # clear the list
+        self.__path = path
+        
         dname, fname = self.vcs.splitPath(path)
         
         # find the root of the repo
@@ -103,6 +115,7 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         if self.__hgClient:
             self.inputGroup.setEnabled(False)
             self.inputGroup.hide()
+            self.refreshButton.setEnabled(False)
             
             out, err = self.__hgClient.runcommand(args)
             if err:
@@ -130,8 +143,13 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
                         'Ensure, that it is in the search path.'
                     ).format('hg'))
             else:
+                self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
+                self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(True)
+                self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
+                
                 self.inputGroup.setEnabled(True)
                 self.inputGroup.show()
+                self.refreshButton.setEnabled(False)
     
     def __finish(self):
         """
@@ -146,14 +164,13 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
+        self.refreshButton.setEnabled(True)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
-        
-        self.process = None
         
         if self.bookmarksList.topLevelItemCount() == 0:
             # no bookmarks defined
@@ -175,6 +192,8 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
                 self.__hgClient.cancel()
             else:
                 self.__finish()
+        elif button == self.refreshButton:
+            self.on_refreshButton_clicked()
     
     def __procFinished(self, exitCode, exitStatus):
         """
@@ -330,3 +349,10 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
             evt.accept()
             return
         super(HgBookmarksListDialog, self).keyPressEvent(evt)
+    
+    @pyqtSlot()
+    def on_refreshButton_clicked(self):
+        """
+        Private slot to refresh the status display.
+        """
+        self.start(self.__path, self.__bookmarksList)

@@ -147,8 +147,6 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setFocus(
             Qt.OtherFocusReason)
         
-        self.process = None
-        
         if self.signaturesList.topLevelItemCount() == 0:
             # no patches present
             self.__generateItem("", "", self.tr("no signatures found"))

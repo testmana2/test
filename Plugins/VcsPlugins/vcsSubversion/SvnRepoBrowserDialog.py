@@ -47,9 +47,13 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         self.repoTree.headerItem().setText(self.repoTree.columnCount(), "")
         self.repoTree.header().setSortIndicator(0, Qt.AscendingOrder)
         
-        self.process = None
         self.vcs = vcs
         self.mode = mode
+        
+        self.process = QProcess()
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardError.connect(self.__readStderr)
         
         if self.mode == "select":
             self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
@@ -206,6 +210,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         @param parent reference to the item, the data should be appended to
             (QTreeWidget or QTreeWidgetItem)
         """
+        self.errorGroup.hide()
+        
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
         QApplication.processEvents()
         
@@ -241,13 +247,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         
         self.intercept = False
         
-        if self.process:
-            self.process.kill()
-        else:
-            self.process = QProcess()
-            self.process.finished.connect(self.__procFinished)
-            self.process.readyReadStandardOutput.connect(self.__readStdout)
-            self.process.readyReadStandardError.connect(self.__readStderr)
+        self.process.kill()
         
         args = []
         args.append('list')
@@ -290,9 +290,13 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         
         @param url the repository URL to browser (string)
         """
+        self.repoTree.clear()
+        
         self.url = ""
         
-        self.urlCombo.addItem(self.__normalizeUrl(url))
+        url = self.__normalizeUrl(url)
+        if self.urlCombo.findText(url) == -1:
+            self.urlCombo.addItem(url)
     
     @pyqtSlot(str)
     def on_urlCombo_currentIndexChanged(self, text):
@@ -407,6 +411,8 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                         name = name[:-1]
                     size = ""
                     nodekind = "dir"
+                    if name == ".":
+                        continue
                 elif self.__rx_file.exactMatch(s):
                     revision = self.__rx_file.cap(1)
                     author = self.__rx_file.cap(2)
@@ -433,6 +439,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
                     'replace')
             self.errors.insertPlainText(s)
             self.errors.ensureCursorVisible()
+            self.errorGroup.show()
     
     def on_passwordCheckBox_toggled(self, isOn):
         """

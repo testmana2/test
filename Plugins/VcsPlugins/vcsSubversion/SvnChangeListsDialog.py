@@ -43,8 +43,12 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = None
         self.vcs = vcs
+        
+        self.process = QProcess()
+        self.process.finished.connect(self.__procFinished)
+        self.process.readyReadStandardOutput.connect(self.__readStdout)
+        self.process.readyReadStandardError.connect(self.__readStderr)
         
         self.rx_status = QRegExp(
             '(.{8,9})\\s+([0-9-]+)\\s+([0-9?]+)\\s+(\\S+)\\s+(.+)\\s*')
@@ -88,11 +92,6 @@ class SvnChangeListsDialog(QDialog, Ui_SvnChangeListsDialog):
         
         self.path = path
         self.currentChangelist = ""
-        
-        self.process = QProcess()
-        self.process.finished.connect(self.__procFinished)
-        self.process.readyReadStandardOutput.connect(self.__readStdout)
-        self.process.readyReadStandardError.connect(self.__readStderr)
         
         args = []
         args.append('status')

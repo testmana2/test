@@ -5843,6 +5843,7 @@
       <keyword name="HgBookmarksListDialog.on_buttonBox_clicked" id="HgBookmarksListDialog.on_buttonBox_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_buttonBox_clicked" />
       <keyword name="HgBookmarksListDialog.on_input_returnPressed" id="HgBookmarksListDialog.on_input_returnPressed" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_input_returnPressed" />
       <keyword name="HgBookmarksListDialog.on_passwordCheckBox_toggled" id="HgBookmarksListDialog.on_passwordCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_passwordCheckBox_toggled" />
+      <keyword name="HgBookmarksListDialog.on_refreshButton_clicked" id="HgBookmarksListDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_refreshButton_clicked" />
       <keyword name="HgBookmarksListDialog.on_sendButton_clicked" id="HgBookmarksListDialog.on_sendButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.on_sendButton_clicked" />
       <keyword name="HgBookmarksListDialog.start" id="HgBookmarksListDialog.start" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBookmarksListDialog.html#HgBookmarksListDialog.start" />
       <keyword name="HgBranchInputDialog" id="HgBranchInputDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBranchInputDialog.html#HgBranchInputDialog" />
@@ -11042,6 +11043,8 @@
       <keyword name="SvnPropListDialog.closeEvent" id="SvnPropListDialog.closeEvent" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropListDialog.html#SvnPropListDialog.closeEvent" />
       <keyword name="SvnPropListDialog.on_buttonBox_clicked" id="SvnPropListDialog.on_buttonBox_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropListDialog.html#SvnPropListDialog.on_buttonBox_clicked" />
       <keyword name="SvnPropListDialog.on_buttonBox_clicked" id="SvnPropListDialog.on_buttonBox_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropListDialog.html#SvnPropListDialog.on_buttonBox_clicked" />
+      <keyword name="SvnPropListDialog.on_refreshButton_clicked" id="SvnPropListDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropListDialog.html#SvnPropListDialog.on_refreshButton_clicked" />
+      <keyword name="SvnPropListDialog.on_refreshButton_clicked" id="SvnPropListDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropListDialog.html#SvnPropListDialog.on_refreshButton_clicked" />
       <keyword name="SvnPropListDialog.start" id="SvnPropListDialog.start" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropListDialog.html#SvnPropListDialog.start" />
       <keyword name="SvnPropListDialog.start" id="SvnPropListDialog.start" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropListDialog.html#SvnPropListDialog.start" />
       <keyword name="SvnPropSetDialog" id="SvnPropSetDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropSetDialog.html#SvnPropSetDialog" />

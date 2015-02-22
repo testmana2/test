@@ -43,7 +43,6 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
         
-        self.process = QProcess()
         self.vcs = vcs
         
         self.blameList.headerItem().setText(self.blameList.columnCount(), "")
@@ -52,6 +51,7 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
         self.__ioEncoding = Preferences.getSystem("IOEncoding")
         
+        self.process = QProcess()
         self.process.finished.connect(self.__procFinished)
         self.process.readyReadStandardOutput.connect(self.__readStdout)
         self.process.readyReadStandardError.connect(self.__readStderr)
@@ -72,10 +72,11 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
     def start(self, fn):
         """
-        Public slot to start the svn status command.
+        Public slot to start the svn blame command.
         
-        @param fn filename to show the log for (string)
+        @param fn filename to show the blame for (string)
         """
+        self.blameList.clear()
         self.errorGroup.hide()
         self.intercept = False
         self.activateWindow()
@@ -127,8 +128,6 @@ class SvnBlameDialog(QDialog, Ui_SvnBlameDialog):
         
         self.inputGroup.setEnabled(False)
         self.inputGroup.hide()
-        
-        self.process = None
         
         self.__resizeColumns()
         
