@@ -31,7 +31,6 @@ class SvnPropListDialog(QWidget, Ui_SvnPropListDialog):
     Class implementing a dialog to show the output of the svn proplist command
     process.
     """
-    # TODO: add refresh button
     def __init__(self, vcs, parent=None):
         """
         Constructor
