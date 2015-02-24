@@ -4116,12 +4116,12 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Управление видом</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="567"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="568"/>
         <source>Configuration Page Error</source>
         <translation>Ошибка страницы конфигурации</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="567"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="568"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Страница конфигурации &lt;b&gt;{0}&lt;/b&gt; не может быть загружена.&lt;/p&gt;</translation>
     </message>
@@ -7303,53 +7303,6 @@ Do you want to quit anyway?</source>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="14"/>
         <source>Error Messages Filter</source>
         <translation>Фильтр сообщений об ошибке</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="40"/>
-        <source>Enter search term for message</source>
-        <translation type="obsolete">Введите образец для поиска</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="77"/>
-        <source>Press to add filter to the list</source>
-        <translation type="obsolete">Добавить новый фильтр</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="80"/>
-        <source>&amp;Add...</source>
-        <translation type="obsolete">&amp;Добавить...</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="97"/>
-        <source>Press to remove the selected entries</source>
-        <translation type="obsolete">Удалить выбранные элементы</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="100"/>
-        <source>&amp;Remove</source>
-        <translation type="obsolete">&amp;Удалить</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="110"/>
-        <source>Press to remove all entries</source>
-        <translation type="obsolete">Удалить все элементы</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="113"/>
-        <source>R&amp;emove All</source>
-        <translation type="obsolete">У&amp;далить всё</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="51"/>
-        <source>Enter message filter to add to the list:</source>
-        <translation type="obsolete">Введите новый фильтр сообщений для добавления в список:</translation>
-    </message>
-    <message>
-        <location filename="../E5Gui/E5ErrorMessageFilterDialog.ui" line="123"/>
-        <source>&lt;b&gt;Error Message Filter&lt;/b&gt;
-&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Фильтры сообщений об ошибках&lt;/b&gt;
-&lt;p&gt;Показывает список фильтров нежелательных сообщений об ошибках Qt.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="33"/>
@@ -20925,102 +20878,62 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation>Ошибки</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="89"/>
-        <source>Input</source>
-        <translation>Ввод</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="111"/>
-        <source>Press to send the input to the hg process</source>
-        <translation>Отправить данные процессу hg</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="114"/>
-        <source>&amp;Send</source>
-        <translation>&amp;Отправить</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="117"/>
-        <source>Alt+S</source>
-        <translation>Alt+О</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="124"/>
-        <source>Enter data to be sent to the hg process</source>
-        <translation>Задайте данные, которые будут посланы процессу hg</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="131"/>
-        <source>Select to switch the input field to password mode</source>
-        <translation>Задать режим ввода пароля для поля ввода пароля</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="134"/>
-        <source>&amp;Password Mode</source>
-        <translation>&amp;Парольный режим</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.ui" line="137"/>
-        <source>Alt+P</source>
-        <translation>Alt+П</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="206"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="104"/>
         <source>Process Generation Error</source>
         <translation>Ошибка при запуске процесса</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="206"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="104"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="234"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="124"/>
         <source>There is no difference.</source>
         <translation>Различий нет.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="449"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="252"/>
         <source>Save Diff</source>
         <translation>Сохранить изменения</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="416"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="219"/>
         <source>Patch Files (*.diff)</source>
         <translation>Файлы изменений (*.diff)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="449"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="252"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить патч в файл &lt;b&gt;{0}&lt;/b&gt;:&lt;br&gt;Причина: {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="433"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="236"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Файл изменений &lt;b&gt;{0}&lt;/b&gt; уже существует. Переписать?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="95"/>
         <source>Patch Contents</source>
         <translation>Содержимое паича</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="247"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="143"/>
         <source>&lt;Start&gt;</source>
         <translation>&lt;Начало&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="248"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="144"/>
         <source>&lt;End&gt;</source>
         <translation>&lt;Конец&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="46"/>
         <source>Refresh</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="48"/>
         <source>Press to refresh the display</source>
         <translation>Нажмите, чтобы обновить отображение</translation>
     </message>
@@ -28471,21 +28384,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Стили Qt (*.qss);;Каскадные стили (*.css);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="104"/>
-        <source>Log-Viewer</source>
-        <translation type="obsolete">Просмотрщик журнала</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="120"/>
-        <source>Stderr Colour:</source>
-        <translation type="obsolete">Цвет для Stderr:</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="133"/>
-        <source>Select the colour for text sent to stderr</source>
-        <translation type="obsolete">Выберите цвет текста в stderr</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="449"/>
         <source>Toolboxes</source>
         <translation>Наборы иструментов</translation>
@@ -28534,16 +28432,6 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="66"/>
         <source>Sort contents by occurrence</source>
         <translation>Сортировать содержимое</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="110"/>
-        <source>Select to show the log-viewer upon new output</source>
-        <translation type="obsolete">Показывть журнал при появлении новых записей</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="113"/>
-        <source>Show upon new output</source>
-        <translation type="obsolete">Показывть при появлении новых записей</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="531"/>
@@ -50829,7 +50717,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 &lt;p&gt;Показывает возможные ошибки команды subversion proplist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="151"/>
         <source>Process Generation Error</source>
         <translation>Ошибка при запуске процесса</translation>
     </message>
@@ -50839,7 +50727,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="152"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="151"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Не могу запустить процесс {0}. Убедитесь, что он находится в пути поиска.</translation>
     </message>

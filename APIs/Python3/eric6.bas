@@ -307,6 +307,7 @@ HgConflictsListDialog QWidget Ui_HgConflictsListDialog
 HgCopyDialog QDialog Ui_HgCopyDialog
 HgDialog QDialog Ui_HgDialog
 HgDiffDialog QWidget Ui_HgDiffDialog
+HgDiffGenerator QObject
 HgDiffHighlighter E5GenericDiffHighlighter
 HgExportDialog QDialog Ui_HgExportDialog
 HgExtension QObject

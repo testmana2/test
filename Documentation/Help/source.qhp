@@ -570,6 +570,7 @@
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html" />
+                <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html" />
                 <section title="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension.html" />
@@ -5958,26 +5959,26 @@
       <keyword name="HgDiffDialog" id="HgDiffDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog" />
       <keyword name="HgDiffDialog (Constructor)" id="HgDiffDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__init__" />
       <keyword name="HgDiffDialog (Module)" id="HgDiffDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html" />
-      <keyword name="HgDiffDialog.__appendText" id="HgDiffDialog.__appendText" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__appendText" />
-      <keyword name="HgDiffDialog.__extractFileName" id="HgDiffDialog.__extractFileName" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__extractFileName" />
-      <keyword name="HgDiffDialog.__finish" id="HgDiffDialog.__finish" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__finish" />
-      <keyword name="HgDiffDialog.__getVersionArg" id="HgDiffDialog.__getVersionArg" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__getVersionArg" />
-      <keyword name="HgDiffDialog.__procFinished" id="HgDiffDialog.__procFinished" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__procFinished" />
-      <keyword name="HgDiffDialog.__processFileLine" id="HgDiffDialog.__processFileLine" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__processFileLine" />
-      <keyword name="HgDiffDialog.__processOutputLine" id="HgDiffDialog.__processOutputLine" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__processOutputLine" />
-      <keyword name="HgDiffDialog.__readStderr" id="HgDiffDialog.__readStderr" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__readStderr" />
-      <keyword name="HgDiffDialog.__readStdout" id="HgDiffDialog.__readStdout" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__readStdout" />
-      <keyword name="HgDiffDialog.__showError" id="HgDiffDialog.__showError" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__showError" />
+      <keyword name="HgDiffDialog.__generatorFinished" id="HgDiffDialog.__generatorFinished" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.__generatorFinished" />
       <keyword name="HgDiffDialog.closeEvent" id="HgDiffDialog.closeEvent" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.closeEvent" />
-      <keyword name="HgDiffDialog.keyPressEvent" id="HgDiffDialog.keyPressEvent" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.keyPressEvent" />
       <keyword name="HgDiffDialog.on_buttonBox_clicked" id="HgDiffDialog.on_buttonBox_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_buttonBox_clicked" />
       <keyword name="HgDiffDialog.on_filesCombo_activated" id="HgDiffDialog.on_filesCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_filesCombo_activated" />
-      <keyword name="HgDiffDialog.on_input_returnPressed" id="HgDiffDialog.on_input_returnPressed" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_input_returnPressed" />
-      <keyword name="HgDiffDialog.on_passwordCheckBox_toggled" id="HgDiffDialog.on_passwordCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgDiffDialog.on_refreshButton_clicked" id="HgDiffDialog.on_refreshButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_refreshButton_clicked" />
       <keyword name="HgDiffDialog.on_saveButton_clicked" id="HgDiffDialog.on_saveButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_saveButton_clicked" />
-      <keyword name="HgDiffDialog.on_sendButton_clicked" id="HgDiffDialog.on_sendButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.on_sendButton_clicked" />
       <keyword name="HgDiffDialog.start" id="HgDiffDialog.start" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html#HgDiffDialog.start" />
+      <keyword name="HgDiffGenerator" id="HgDiffGenerator" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator" />
+      <keyword name="HgDiffGenerator (Constructor)" id="HgDiffGenerator (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__init__" />
+      <keyword name="HgDiffGenerator (Module)" id="HgDiffGenerator (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html" />
+      <keyword name="HgDiffGenerator.__extractFileName" id="HgDiffGenerator.__extractFileName" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__extractFileName" />
+      <keyword name="HgDiffGenerator.__finish" id="HgDiffGenerator.__finish" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__finish" />
+      <keyword name="HgDiffGenerator.__getVersionArg" id="HgDiffGenerator.__getVersionArg" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__getVersionArg" />
+      <keyword name="HgDiffGenerator.__processFileLine" id="HgDiffGenerator.__processFileLine" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__processFileLine" />
+      <keyword name="HgDiffGenerator.__processOutputLine" id="HgDiffGenerator.__processOutputLine" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__processOutputLine" />
+      <keyword name="HgDiffGenerator.__readStderr" id="HgDiffGenerator.__readStderr" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__readStderr" />
+      <keyword name="HgDiffGenerator.__readStdout" id="HgDiffGenerator.__readStdout" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.__readStdout" />
+      <keyword name="HgDiffGenerator.getResult" id="HgDiffGenerator.getResult" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.getResult" />
+      <keyword name="HgDiffGenerator.start" id="HgDiffGenerator.start" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.start" />
+      <keyword name="HgDiffGenerator.stopProcess" id="HgDiffGenerator.stopProcess" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html#HgDiffGenerator.stopProcess" />
       <keyword name="HgDiffHighlighter" id="HgDiffHighlighter" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html#HgDiffHighlighter" />
       <keyword name="HgDiffHighlighter (Constructor)" id="HgDiffHighlighter (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html#HgDiffHighlighter.__init__" />
       <keyword name="HgDiffHighlighter (Module)" id="HgDiffHighlighter (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html" />
@@ -14080,6 +14081,7 @@
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffDialog.html</file>
+      <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffGenerator.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgDiffHighlighter.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html</file>
       <file>eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension.html</file>

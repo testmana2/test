@@ -1159,6 +1159,7 @@
     <Source>Plugins/VcsPlugins/vcsMercurial/HgDiffHighlighter.py</Source>
     <Source>Plugins/VcsPlugins/vcsSubversion/SvnDiffHighlighter.py</Source>
     <Source>Plugins/VcsPlugins/vcsPySvn/SvnDiffHighlighter.py</Source>
+    <Source>Plugins/VcsPlugins/vcsMercurial/HgDiffGenerator.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>
