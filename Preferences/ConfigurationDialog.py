@@ -524,7 +524,8 @@ class ConfigurationWidget(QWidget):
         for index in range(parent.childCount()):
             itm = parent.child(index)
             if itm.childCount() > 0:
-                visible = self.__filterChildItems(itm, filter)
+                visible = filter in itm.text(0).lower() or \
+                    self.__filterChildItems(itm, filter)
             else:
                 visible = filter == "" or filter in itm.text(0).lower()
             if visible:
