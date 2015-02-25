@@ -20,6 +20,7 @@ Version 6.1-snapshot-2015mmdd:
      --- added capability to search in the output of Diff dialogs
   -- Mercurial
      --- enhanced the log browser functionality by a search mode
+     --- enhanced the status dialog functionality by a diff view
 
 Version 6.0.0:
 - bug fixes

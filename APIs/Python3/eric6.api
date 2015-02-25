@@ -4807,6 +4807,7 @@ eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_sendButto
 eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_statusFilterCombo_activated?4(txt)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_statusList_itemChanged?4(item, column)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.on_statusList_itemSelectionChanged?4()
+eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.show?4()
 eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog.start?4(fn)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.HgStatusDialog?1(vcs, mq=False, parent=None)
 eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.HgStatusMonitorThread._performMonitor?5()

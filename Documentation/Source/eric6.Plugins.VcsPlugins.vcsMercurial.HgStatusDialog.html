@@ -89,8 +89,14 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.__forget">__forget</a></td>
 <td>Private slot to handle the Remove context menu entry.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.__generateDiffs">__generateDiffs</a></td>
+<td>Private slot to generate diff outputs for the selected item.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.__generateItem">__generateItem</a></td>
 <td>Private method to generate a status item in the status list.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__generatorFinished">__generatorFinished</a></td>
+<td>Private slot connected to the finished signal of the diff generator.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__getCommitableItems">__getCommitableItems</a></td>
 <td>Private method to retrieve all entries the user wants to commit.</td>
@@ -118,6 +124,9 @@ QWidget, Ui_HgStatusDialog
 </tr><tr>
 <td><a href="#HgStatusDialog.__readStdout">__readStdout</a></td>
 <td>Private slot to handle the readyReadStandardOutput signal.</td>
+</tr><tr>
+<td><a href="#HgStatusDialog.__refreshDiff">__refreshDiff</a></td>
+<td>Private method to refresh the diff output after a refresh.</td>
 </tr><tr>
 <td><a href="#HgStatusDialog.__resizeColumns">__resizeColumns</a></td>
 <td>Private method to resize the list columns.</td>
@@ -200,6 +209,9 @@ QWidget, Ui_HgStatusDialog
 <td><a href="#HgStatusDialog.on_statusList_itemSelectionChanged">on_statusList_itemSelectionChanged</a></td>
 <td>Private slot to act upon changes of selected items.</td>
 </tr><tr>
+<td><a href="#HgStatusDialog.show">show</a></td>
+<td>Public slot to show the dialog.</td>
+</tr><tr>
 <td><a href="#HgStatusDialog.start">start</a></td>
 <td>Public slot to start the hg status command.</td>
 </tr>
@@ -275,6 +287,11 @@ commit selection state to be set (boolean)
 <b>__forget</b>(<i></i>)
 <p>
         Private slot to handle the Remove context menu entry.
+</p><a NAME="HgStatusDialog.__generateDiffs" ID="HgStatusDialog.__generateDiffs"></a>
+<h4>HgStatusDialog.__generateDiffs</h4>
+<b>__generateDiffs</b>(<i></i>)
+<p>
+        Private slot to generate diff outputs for the selected item.
 </p><a NAME="HgStatusDialog.__generateItem" ID="HgStatusDialog.__generateItem"></a>
 <h4>HgStatusDialog.__generateItem</h4>
 <b>__generateItem</b>(<i>status, path</i>)
@@ -288,7 +305,12 @@ status indicator (string)
 <dd>
 path of the file or directory (string)
 </dd>
-</dl><a NAME="HgStatusDialog.__getCommitableItems" ID="HgStatusDialog.__getCommitableItems"></a>
+</dl><a NAME="HgStatusDialog.__generatorFinished" ID="HgStatusDialog.__generatorFinished"></a>
+<h4>HgStatusDialog.__generatorFinished</h4>
+<b>__generatorFinished</b>(<i></i>)
+<p>
+        Private slot connected to the finished signal of the diff generator.
+</p><a NAME="HgStatusDialog.__getCommitableItems" ID="HgStatusDialog.__getCommitableItems"></a>
 <h4>HgStatusDialog.__getCommitableItems</h4>
 <b>__getCommitableItems</b>(<i></i>)
 <p>
@@ -378,6 +400,11 @@ output line to be processed (string)
 </p><p>
         It reads the output of the process, formats it and inserts it into
         the contents pane.
+</p><a NAME="HgStatusDialog.__refreshDiff" ID="HgStatusDialog.__refreshDiff"></a>
+<h4>HgStatusDialog.__refreshDiff</h4>
+<b>__refreshDiff</b>(<i></i>)
+<p>
+        Private method to refresh the diff output after a refresh.
 </p><a NAME="HgStatusDialog.__resizeColumns" ID="HgStatusDialog.__resizeColumns"></a>
 <h4>HgStatusDialog.__resizeColumns</h4>
 <b>__resizeColumns</b>(<i></i>)
@@ -556,6 +583,11 @@ index of column that changed (integer)
 <b>on_statusList_itemSelectionChanged</b>(<i></i>)
 <p>
         Private slot to act upon changes of selected items.
+</p><a NAME="HgStatusDialog.show" ID="HgStatusDialog.show"></a>
+<h4>HgStatusDialog.show</h4>
+<b>show</b>(<i></i>)
+<p>
+        Public slot to show the dialog.
 </p><a NAME="HgStatusDialog.start" ID="HgStatusDialog.start"></a>
 <h4>HgStatusDialog.start</h4>
 <b>start</b>(<i>fn</i>)

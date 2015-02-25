@@ -6525,7 +6525,9 @@
       <keyword name="HgStatusDialog.__diff" id="HgStatusDialog.__diff" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__diff" />
       <keyword name="HgStatusDialog.__finish" id="HgStatusDialog.__finish" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__finish" />
       <keyword name="HgStatusDialog.__forget" id="HgStatusDialog.__forget" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__forget" />
+      <keyword name="HgStatusDialog.__generateDiffs" id="HgStatusDialog.__generateDiffs" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__generateDiffs" />
       <keyword name="HgStatusDialog.__generateItem" id="HgStatusDialog.__generateItem" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__generateItem" />
+      <keyword name="HgStatusDialog.__generatorFinished" id="HgStatusDialog.__generatorFinished" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__generatorFinished" />
       <keyword name="HgStatusDialog.__getCommitableItems" id="HgStatusDialog.__getCommitableItems" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getCommitableItems" />
       <keyword name="HgStatusDialog.__getMissingItems" id="HgStatusDialog.__getMissingItems" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getMissingItems" />
       <keyword name="HgStatusDialog.__getModifiedItems" id="HgStatusDialog.__getModifiedItems" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__getModifiedItems" />
@@ -6535,6 +6537,7 @@
       <keyword name="HgStatusDialog.__processOutputLine" id="HgStatusDialog.__processOutputLine" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__processOutputLine" />
       <keyword name="HgStatusDialog.__readStderr" id="HgStatusDialog.__readStderr" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__readStderr" />
       <keyword name="HgStatusDialog.__readStdout" id="HgStatusDialog.__readStdout" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__readStdout" />
+      <keyword name="HgStatusDialog.__refreshDiff" id="HgStatusDialog.__refreshDiff" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__refreshDiff" />
       <keyword name="HgStatusDialog.__resizeColumns" id="HgStatusDialog.__resizeColumns" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__resizeColumns" />
       <keyword name="HgStatusDialog.__resort" id="HgStatusDialog.__resort" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__resort" />
       <keyword name="HgStatusDialog.__restoreMissing" id="HgStatusDialog.__restoreMissing" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.__restoreMissing" />
@@ -6562,6 +6565,7 @@
       <keyword name="HgStatusDialog.on_statusFilterCombo_activated" id="HgStatusDialog.on_statusFilterCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusFilterCombo_activated" />
       <keyword name="HgStatusDialog.on_statusList_itemChanged" id="HgStatusDialog.on_statusList_itemChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemChanged" />
       <keyword name="HgStatusDialog.on_statusList_itemSelectionChanged" id="HgStatusDialog.on_statusList_itemSelectionChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.on_statusList_itemSelectionChanged" />
+      <keyword name="HgStatusDialog.show" id="HgStatusDialog.show" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.show" />
       <keyword name="HgStatusDialog.start" id="HgStatusDialog.start" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusDialog.html#HgStatusDialog.start" />
       <keyword name="HgStatusMonitorThread" id="HgStatusMonitorThread" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html#HgStatusMonitorThread" />
       <keyword name="HgStatusMonitorThread (Constructor)" id="HgStatusMonitorThread (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgStatusMonitorThread.html#HgStatusMonitorThread.__init__" />

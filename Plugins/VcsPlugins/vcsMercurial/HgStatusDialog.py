@@ -17,6 +17,7 @@ except NameError:
 import os
 
 from PyQt5.QtCore import pyqtSlot, Qt, QProcess, QTimer
+from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QDialogButtonBox, QMenu, QHeaderView, \
     QTreeWidgetItem, QLineEdit
 
@@ -24,6 +25,9 @@ from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
 
 from .Ui_HgStatusDialog import Ui_HgStatusDialog
+
+from .HgDiffHighlighter import HgDiffHighlighter
+from .HgDiffGenerator import HgDiffGenerator
 
 import Preferences
 
@@ -70,9 +74,21 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.process.readyReadStandardOutput.connect(self.__readStdout)
             self.process.readyReadStandardError.connect(self.__readStderr)
         
+        self.__hDiffSplitterState = None
+        
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(
             self.__pathColumn, Qt.AscendingOrder)
+        
+        font = Preferences.getEditorOtherFonts("MonospacedFont")
+        self.diffEdit.setFontFamily(font.family())
+        self.diffEdit.setFontPointSize(font.pointSize())
+        
+        self.diffHighlighter = HgDiffHighlighter(self.diffEdit.document())
+        self.__diffGenerator = HgDiffGenerator(vcs, self)
+        self.__diffGenerator.finished.connect(self.__generatorFinished)
+        
+        self.__selectedName = ""
         
         if mq:
             self.buttonsLine.setVisible(False)
@@ -82,6 +98,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.revertButton.setVisible(False)
             self.forgetButton.setVisible(False)
             self.restoreButton.setVisible(False)
+            
+            self.diffEdit.setVisible(False)
         
         self.menuactions = []
         self.lfActions = []
@@ -170,6 +188,15 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             '!': self.tr('missing'),
         }
     
+    def show(self):
+        """
+        Public slot to show the dialog.
+        """
+        super(HgStatusDialog, self).show()
+        
+        if not self.__mq and self.__hDiffSplitterState:
+            self.diffSplitter.restoreState(self.__hDiffSplitterState)
+    
     def __resort(self):
         """
         Private method to resort the tree.
@@ -226,6 +253,9 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.process.terminate()
                 QTimer.singleShot(2000, self.process.kill)
                 self.process.waitForFinished(3000)
+        
+        if not self.__mq:
+            self.__hDiffSplitterState = self.diffSplitter.saveState()
         
         e.accept()
     
@@ -362,6 +392,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         
         self.__updateButtons()
         self.__updateCommitButton()
+        
+        self.__refreshDiff()
     
     def on_buttonBox_clicked(self, button):
         """
@@ -490,6 +522,12 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         Private slot to refresh the status display.
         """
+        selectedItems = self.statusList.selectedItems()
+        if len(selectedItems) == 1:
+            self.__selectedName = selectedItems[0].text(self.__pathColumn)
+        else:
+            self.__selectedName = ""
+        
         self.start(self.args)
     
     def __updateButtons(self):
@@ -547,6 +585,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         Private slot to act upon changes of selected items.
         """
         self.__updateButtons()
+        self.__generateDiffs()
     
     @pyqtSlot()
     def on_commitButton_clicked(self):
@@ -891,3 +930,52 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                     itm.setCheckState(self.__toBeCommittedColumn, Qt.Checked)
                 else:
                     itm.setCheckState(self.__toBeCommittedColumn, Qt.Unchecked)
+    
+    ###########################################################################
+    ## Diff handling methods below
+    ###########################################################################
+    
+    def __generateDiffs(self):
+        """
+        Private slot to generate diff outputs for the selected item.
+        """
+        self.diffEdit.clear()
+        
+        if not self.__mq:
+            selectedItems = self.statusList.selectedItems()
+            if len(selectedItems) == 1:
+                fn = os.path.join(self.dname,
+                                  selectedItems[0].text(self.__pathColumn))
+                self.__diffGenerator.start(fn)
+    
+    def __generatorFinished(self):
+        """
+        Private slot connected to the finished signal of the diff generator.
+        """
+        diff = self.__diffGenerator.getResult()[0]
+        
+        if diff:
+            for line in diff[:]:
+                if line.startswith("@@ "):
+                    break
+                else:
+                    diff.pop(0)
+            self.diffEdit.setPlainText("".join(diff))
+        
+        tc = self.diffEdit.textCursor()
+        tc.movePosition(QTextCursor.Start)
+        self.diffEdit.setTextCursor(tc)
+        self.diffEdit.ensureCursorVisible()
+    
+    def __refreshDiff(self):
+        """
+        Private method to refresh the diff output after a refresh.
+        """
+        if self.__selectedName and not self.__mq:
+            for index in range(self.statusList.topLevelItemCount()):
+                itm = self.statusList.topLevelItem(index)
+                if itm.text(self.__pathColumn) == self.__selectedName:
+                    itm.setSelected(True)
+                    break
+        
+        self.__selectedName = ""
