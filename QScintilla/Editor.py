@@ -1561,7 +1561,7 @@ class Editor(QsciScintillaCompat):
         
         # initialize the lexer APIs settings
         api = self.vm.getAPIsManager().getAPIs(self.apiLanguage)
-        if api is not None:
+        if api is not None and not api.isEmpty():
             self.lexer_.setAPIs(api.getQsciAPIs())
             self.acAPI = True
         else:
@@ -4627,6 +4627,23 @@ class Editor(QsciScintillaCompat):
         """
         return self.__ctHookFunction
     
+    def canProvideCallTipps(self):
+        """
+        Public method to test the calltips availability.
+        
+        @return flag indicating the availability of calltips (boolean)
+        """
+        return self.acAPI or self.__ctHookFunction is not None
+    
+    def canProvideDynamicAutoCompletion(self):
+        """
+        Public method to test the dynamic auto-completion availability.
+        
+        @return flag indicating the availability of dynamic auto-completion
+            (boolean)
+        """
+        return self.acAPI or self.__acHookFunction is not None
+    
     #################################################################
     ## Methods needed by the context menu
     #################################################################
@@ -4749,10 +4766,10 @@ class Editor(QsciScintillaCompat):
         Private slot called before the autocompletion menu is shown.
         """
         self.menuActs["acDynamic"].setEnabled(
-            self.acAPI or self.__acHookFunction is not None)
+            self.canProvideDynamicAutoCompletion())
         self.menuActs["acAPI"].setEnabled(self.acAPI)
         self.menuActs["acAPIDocument"].setEnabled(self.acAPI)
-        self.menuActs["calltip"].setEnabled(self.acAPI)
+        self.menuActs["calltip"].setEnabled(self.canProvideCallTipps())
         
         self.showMenu.emit("Autocompletion", self.autocompletionMenu, self)
         
