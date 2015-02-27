@@ -6918,6 +6918,7 @@ eric6.QScintilla.APIsManager.APIs.apiPreparationStarted?7
 eric6.QScintilla.APIsManager.APIs.cancelPreparation?4()
 eric6.QScintilla.APIsManager.APIs.getQsciAPIs?4()
 eric6.QScintilla.APIsManager.APIs.installedAPIFiles?4()
+eric6.QScintilla.APIsManager.APIs.isEmpty?4()
 eric6.QScintilla.APIsManager.APIs.prepareAPIs?4(ondemand=False, rawList=None)
 eric6.QScintilla.APIsManager.APIs.reloadAPIs?4()
 eric6.QScintilla.APIsManager.APIs?1(language, forPreparation=False, parent=None)
@@ -6958,6 +6959,8 @@ eric6.QScintilla.Editor.Editor.breakpointToggled?7
 eric6.QScintilla.Editor.Editor.callTip?4()
 eric6.QScintilla.Editor.Editor.callTipHook?4()
 eric6.QScintilla.Editor.Editor.canAutoCompleteFromAPIs?4()
+eric6.QScintilla.Editor.Editor.canProvideCallTipps?4()
+eric6.QScintilla.Editor.Editor.canProvideDynamicAutoCompletion?4()
 eric6.QScintilla.Editor.Editor.cancelSharedEdit?4(send=True)
 eric6.QScintilla.Editor.Editor.captionChanged?7
 eric6.QScintilla.Editor.Editor.changeEvent?4(evt)

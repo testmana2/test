@@ -1101,6 +1101,7 @@
       <keyword name="APIs.cancelPreparation" id="APIs.cancelPreparation" ref="eric6.QScintilla.APIsManager.html#APIs.cancelPreparation" />
       <keyword name="APIs.getQsciAPIs" id="APIs.getQsciAPIs" ref="eric6.QScintilla.APIsManager.html#APIs.getQsciAPIs" />
       <keyword name="APIs.installedAPIFiles" id="APIs.installedAPIFiles" ref="eric6.QScintilla.APIsManager.html#APIs.installedAPIFiles" />
+      <keyword name="APIs.isEmpty" id="APIs.isEmpty" ref="eric6.QScintilla.APIsManager.html#APIs.isEmpty" />
       <keyword name="APIs.prepareAPIs" id="APIs.prepareAPIs" ref="eric6.QScintilla.APIsManager.html#APIs.prepareAPIs" />
       <keyword name="APIs.reloadAPIs" id="APIs.reloadAPIs" ref="eric6.QScintilla.APIsManager.html#APIs.reloadAPIs" />
       <keyword name="APIsManager" id="APIsManager" ref="eric6.QScintilla.APIsManager.html#APIsManager" />
@@ -4314,6 +4315,8 @@
       <keyword name="Editor.callTip" id="Editor.callTip" ref="eric6.QScintilla.Editor.html#Editor.callTip" />
       <keyword name="Editor.callTipHook" id="Editor.callTipHook" ref="eric6.QScintilla.Editor.html#Editor.callTipHook" />
       <keyword name="Editor.canAutoCompleteFromAPIs" id="Editor.canAutoCompleteFromAPIs" ref="eric6.QScintilla.Editor.html#Editor.canAutoCompleteFromAPIs" />
+      <keyword name="Editor.canProvideCallTipps" id="Editor.canProvideCallTipps" ref="eric6.QScintilla.Editor.html#Editor.canProvideCallTipps" />
+      <keyword name="Editor.canProvideDynamicAutoCompletion" id="Editor.canProvideDynamicAutoCompletion" ref="eric6.QScintilla.Editor.html#Editor.canProvideDynamicAutoCompletion" />
       <keyword name="Editor.cancelSharedEdit" id="Editor.cancelSharedEdit" ref="eric6.QScintilla.Editor.html#Editor.cancelSharedEdit" />
       <keyword name="Editor.changeEvent" id="Editor.changeEvent" ref="eric6.QScintilla.Editor.html#Editor.changeEvent" />
       <keyword name="Editor.checkDirty" id="Editor.checkDirty" ref="eric6.QScintilla.Editor.html#Editor.checkDirty" />
