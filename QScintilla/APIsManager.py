@@ -100,6 +100,14 @@ class APIs(QObject):
             self.prepareAPIs()
         return self.__apis
     
+    def isEmpty(self):
+        """
+        Public method to check, if the object has API files configured.
+        
+        @return flag indicating no API files have been configured (boolean)
+        """
+        return len(self.__apifiles) == 0
+    
     def __apiPreparationFinished(self):
         """
         Private method called to save an API, after it has been prepared.

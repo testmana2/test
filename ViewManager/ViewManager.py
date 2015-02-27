@@ -5283,7 +5283,12 @@ class ViewManager(QObject):
         @param available flag indicating the availability of API
         autocompletion (boolean)
         """
+        editor = self.sender()
+        self.autoCompleteAct.setEnabled(
+            editor.canProvideDynamicAutoCompletion())
         self.autoCompleteFromAPIsAct.setEnabled(available)
+        self.autoCompleteFromAllAct.setEnabled(available)
+        self.calltipsAct.setEnabled(editor.canProvideCallTipps())
         
     def __editShowCallTips(self):
         """
@@ -6407,8 +6412,13 @@ class ViewManager(QObject):
             
             if editor.canAutoCompleteFromAPIs():
                 self.autoCompleteFromAPIsAct.setEnabled(True)
+                self.autoCompleteFromAllAct.setEnabled(True)
             else:
                 self.autoCompleteFromAPIsAct.setEnabled(False)
+                self.autoCompleteFromAllAct.setEnabled(False)
+            self.autoCompleteAct.setEnabled(
+                editor.canProvideDynamicAutoCompletion())
+            self.calltipsAct.setEnabled(editor.canProvideCallTipps())
             
             if editor.isPyFile() or editor.isRubyFile():
                 self.gotoPreviousDefAct.setEnabled(True)
