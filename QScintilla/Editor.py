@@ -366,6 +366,7 @@ class Editor(QsciScintillaCompat):
         self.__setTextDisplay()
         
         # set the autocompletion and calltips function
+        # TODO: make this work with multiple providers
         self.__acHookFunction = None
         self.__setAutoCompletion()
         self.__ctHookFunction = None
