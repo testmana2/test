@@ -2261,7 +2261,7 @@ class UserInterface(E5MainWindow):
                 """ internal help viewer, or execute a web browser or"""
                 """ Qt Assistant. </p>"""
             ))
-            self.pyqt4DocAct.triggered.connect(self.__showPyQt5Doc)
+            self.pyqt4DocAct.triggered.connect(self.__showPyQt4Doc)
             self.actions.append(self.pyqt4DocAct)
         except ImportError:
             self.pyqt4DocAct = None
