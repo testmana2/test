@@ -4732,7 +4732,7 @@ class UserInterface(E5MainWindow):
             else:
                 pythonDocDir = Utilities.getEnvironmentEntry(
                     "PYTHON3DOCDIR",
-                    '/usr/share/doc/packages/python/html')
+                    '/usr/share/doc/packages/python3/html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
             if pythonDocDir.startswith("file://"):
@@ -4796,7 +4796,7 @@ class UserInterface(E5MainWindow):
             else:
                 pythonDocDir = Utilities.getEnvironmentEntry(
                     "PYTHON2DOCDIR",
-                    '/usr/share/doc/packages/python/html/python-docs-html')
+                    '/usr/share/doc/packages/python/html')
         if not pythonDocDir.startswith("http://") and \
            not pythonDocDir.startswith("https://"):
             if pythonDocDir.startswith("file://"):

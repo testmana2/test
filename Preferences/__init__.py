@@ -805,7 +805,7 @@ class Prefs(object):
         "QtDocDir": "",
         "Qt4DocDir": "",
         "Qt5DocDir": "",
-        "PyQt5DocDir": "",
+        "PyQt4DocDir": "",
         "PyQt5DocDir": "",
         "PySideDocDir": "",
         "SingleHelpWindow": True,
