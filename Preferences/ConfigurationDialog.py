@@ -606,7 +606,7 @@ class ConfigurationWidget(QWidget):
         @param pageName name of the configuration page to show (string)
         @param setCurrent flag indicating to set the current item (boolean)
         """
-        if pageName == "empty":
+        if pageName == "empty" or pageName not in self.configItems:
             page = self.emptyPage
         else:
             pageData = self.configItems[pageName]
