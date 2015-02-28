@@ -71,7 +71,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         self.qt5DocDirEdit.setText(
             Preferences.getHelp("Qt5DocDir"))
         self.pyqt4DocDirEdit.setText(
-            Preferences.getHelp("PyQt5DocDir"))
+            Preferences.getHelp("PyQt4DocDir"))
         self.pyqt5DocDirEdit.setText(
             Preferences.getHelp("PyQt5DocDir"))
         self.pysideDocDirEdit.setText(
@@ -94,7 +94,7 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
             "Qt5DocDir",
             self.qt5DocDirEdit.text())
         Preferences.setHelp(
-            "PyQt5DocDir",
+            "PyQt4DocDir",
             self.pyqt4DocDirEdit.text())
         Preferences.setHelp(
             "PyQt5DocDir",
