@@ -350,36 +350,6 @@
        </widget>
       </item>
      </layout>
-     <zorder>md5Label</zorder>
-     <zorder>label_14</zorder>
-     <zorder>label_15</zorder>
-     <zorder>sha1Label</zorder>
-     <zorder>label_13</zorder>
-     <zorder>verticalSpacer</zorder>
-     <zorder>expiresLabel</zorder>
-     <zorder>label_10</zorder>
-     <zorder>label_11</zorder>
-     <zorder>label_12</zorder>
-     <zorder>expiredLabel</zorder>
-     <zorder>effectiveLabel</zorder>
-     <zorder>verticalSpacer_2</zorder>
-     <zorder>label_7</zorder>
-     <zorder>label_9</zorder>
-     <zorder>label_8</zorder>
-     <zorder>issuerOrganizationalUnitLabel</zorder>
-     <zorder>issuerCommonNameLabel</zorder>
-     <zorder>label_6</zorder>
-     <zorder>issuerOrganizationLabel</zorder>
-     <zorder>verticalSpacer_3</zorder>
-     <zorder>label_2</zorder>
-     <zorder>serialNumberLabel</zorder>
-     <zorder>label_3</zorder>
-     <zorder>subjectCommonNameLabel</zorder>
-     <zorder>subjectOrganizationLabel</zorder>
-     <zorder>subjectOrganizationalUnitLabel</zorder>
-     <zorder>label_5</zorder>
-     <zorder>label_4</zorder>
-     <zorder>label</zorder>
     </widget>
    </item>
   </layout>
