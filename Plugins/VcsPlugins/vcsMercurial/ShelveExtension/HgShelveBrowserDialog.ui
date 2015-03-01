@@ -238,11 +238,6 @@
     </widget>
    </item>
   </layout>
-  <zorder>buttonBox</zorder>
-  <zorder>shelveList</zorder>
-  <zorder>errorGroup</zorder>
-  <zorder>inputGroup</zorder>
-  <zorder>groupBox</zorder>
  </widget>
  <tabstops>
   <tabstop>shelveList</tabstop>
