@@ -20,16 +20,10 @@
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QSplitter" name="diffSplitter">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>3</verstretch>
-      </sizepolicy>
-     </property>
      <property name="orientation">
-      <enum>Qt::Horizontal</enum>
+      <enum>Qt::Vertical</enum>
      </property>
-     <widget class="QWidget" name="layoutWidget">
+     <widget class="QWidget" name="">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -105,6 +99,100 @@
          </column>
         </widget>
        </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="commitButton">
+           <property name="toolTip">
+            <string>Commit the selected changes</string>
+           </property>
+           <property name="text">
+            <string>&amp;Commit</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="buttonsLine">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addButton">
+           <property name="toolTip">
+            <string>Add the selected entries to the repository</string>
+           </property>
+           <property name="text">
+            <string>&amp;Add</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="diffButton">
+           <property name="toolTip">
+            <string>Show differences of the selected entries to the repository</string>
+           </property>
+           <property name="text">
+            <string>&amp;Differences</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="sbsDiffButton">
+           <property name="toolTip">
+            <string>Show differences of the selected entry to the repository in a side-by-side manner</string>
+           </property>
+           <property name="text">
+            <string>Side-b&amp;y-Side Diff</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="revertButton">
+           <property name="toolTip">
+            <string>Revert the selected entries to the last revision in the repository</string>
+           </property>
+           <property name="text">
+            <string>Re&amp;vert</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="forgetButton">
+           <property name="toolTip">
+            <string>Forget about the selected missing entries</string>
+           </property>
+           <property name="text">
+            <string>For&amp;get</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="restoreButton">
+           <property name="toolTip">
+            <string>Restore the selected missing entries from the repository</string>
+           </property>
+           <property name="text">
+            <string>&amp;Restore</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="layoutWidget">
@@ -118,6 +206,12 @@
        </item>
        <item>
         <widget class="QTextEdit" name="diffEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
          <property name="tabChangesFocus">
           <bool>true</bool>
          </property>
@@ -135,100 +229,6 @@
       </layout>
      </widget>
     </widget>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="commitButton">
-       <property name="toolTip">
-        <string>Commit the selected changes</string>
-       </property>
-       <property name="text">
-        <string>&amp;Commit</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="Line" name="buttonsLine">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="addButton">
-       <property name="toolTip">
-        <string>Add the selected entries to the repository</string>
-       </property>
-       <property name="text">
-        <string>&amp;Add</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="diffButton">
-       <property name="toolTip">
-        <string>Show differences of the selected entries to the repository</string>
-       </property>
-       <property name="text">
-        <string>&amp;Differences</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="sbsDiffButton">
-       <property name="toolTip">
-        <string>Show differences of the selected entry to the repository in a side-by-side manner</string>
-       </property>
-       <property name="text">
-        <string>Side-b&amp;y-Side Diff</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="revertButton">
-       <property name="toolTip">
-        <string>Revert the selected entries to the last revision in the repository</string>
-       </property>
-       <property name="text">
-        <string>Re&amp;vert</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="forgetButton">
-       <property name="toolTip">
-        <string>Forget about the selected missing entries</string>
-       </property>
-       <property name="text">
-        <string>For&amp;get</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="restoreButton">
-       <property name="toolTip">
-        <string>Restore the selected missing entries from the repository</string>
-       </property>
-       <property name="text">
-        <string>&amp;Restore</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
    </item>
    <item>
     <widget class="QGroupBox" name="errorGroup">
@@ -330,7 +330,6 @@
  <tabstops>
   <tabstop>statusFilterCombo</tabstop>
   <tabstop>statusList</tabstop>
-  <tabstop>diffEdit</tabstop>
   <tabstop>commitButton</tabstop>
   <tabstop>addButton</tabstop>
   <tabstop>diffButton</tabstop>
@@ -338,6 +337,7 @@
   <tabstop>revertButton</tabstop>
   <tabstop>forgetButton</tabstop>
   <tabstop>restoreButton</tabstop>
+  <tabstop>diffEdit</tabstop>
   <tabstop>errors</tabstop>
   <tabstop>input</tabstop>
   <tabstop>passwordCheckBox</tabstop>

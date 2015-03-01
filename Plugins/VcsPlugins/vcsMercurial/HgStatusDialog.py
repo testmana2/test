@@ -74,7 +74,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
             self.process.readyReadStandardOutput.connect(self.__readStdout)
             self.process.readyReadStandardError.connect(self.__readStderr)
         
-        self.__hDiffSplitterState = None
+        self.diffSplitter.setSizes([350, 250])
+        self.__diffSplitterState = None
         
         self.statusList.headerItem().setText(self.__lastColumn, "")
         self.statusList.header().setSortIndicator(
@@ -194,8 +195,8 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
         """
         super(HgStatusDialog, self).show()
         
-        if not self.__mq and self.__hDiffSplitterState:
-            self.diffSplitter.restoreState(self.__hDiffSplitterState)
+        if not self.__mq and self.__diffSplitterState:
+            self.diffSplitter.restoreState(self.__diffSplitterState)
     
     def __resort(self):
         """
@@ -255,7 +256,7 @@ class HgStatusDialog(QWidget, Ui_HgStatusDialog):
                 self.process.waitForFinished(3000)
         
         if not self.__mq:
-            self.__hDiffSplitterState = self.diffSplitter.saveState()
+            self.__diffSplitterState = self.diffSplitter.saveState()
         
         e.accept()
     
