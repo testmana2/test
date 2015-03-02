@@ -512,11 +512,13 @@ class CodeStyleFixer(object):
             fix (integer)
         """
         line = line - 1
-        left, right = self.__source[line].split("'''", 1)
+        quotes = re.match(r"""\s*[ru]?('''|'|\")""",
+                          self.__source[line]).group(1)
+        left, right = self.__source[line].split(quotes, 1)
         self.__source[line] = left + '"""' + right
         while line < len(self.__source):
-            if self.__source[line].rstrip().endswith("'''"):
-                left, right = self.__source[line].rsplit("'''", 1)
+            if self.__source[line].rstrip().endswith(quotes):
+                left, right = self.__source[line].rsplit(quotes, 1)
                 self.__source[line] = left + '"""' + right
                 break
             line += 1
