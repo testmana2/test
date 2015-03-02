@@ -53,6 +53,8 @@ class HgDiffDialog(QWidget, Ui_HgDiffDialog):
         
         self.searchWidget.attachTextEdit(self.contents)
         
+        self.vcs = vcs
+        
         font = Preferences.getEditorOtherFonts("MonospacedFont")
         self.contents.setFontFamily(font.family())
         self.contents.setFontPointSize(font.pointSize())
