@@ -720,13 +720,15 @@ class Editor(QsciScintillaCompat):
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
         self.menuActs["AutoCompletionEnable"] = self.menu.addAction(
-            self.tr("Autocompletion enabled"),
+            self.tr("Automatic Completion enabled"),
             self.__toggleAutoCompletionEnable)
         self.menuActs["AutoCompletionEnable"].setCheckable(True)
         self.menuActs["AutoCompletionEnable"].setChecked(
             self.autoCompletionThreshold() != -1)
         if not self.isResourcesFile:
             self.menu.addMenu(self.autocompletionMenu)
+            self.menuActs["calltip"] = self.menu.addAction(
+                self.tr('Calltip'), self.callTip)
         self.menu.addSeparator()
         if self.isResourcesFile:
             self.menu.addMenu(self.resourcesMenu)
@@ -790,7 +792,7 @@ class Editor(QsciScintillaCompat):
         
         @return reference to the generated menu (QMenu)
         """
-        menu = QMenu(self.tr('Autocomplete'))
+        menu = QMenu(self.tr('Complete'))
         
         self.menuActs["acDynamic"] = menu.addAction(
             self.tr('dynamic'), self.autoComplete)
@@ -801,9 +803,6 @@ class Editor(QsciScintillaCompat):
             self.tr('from APIs'), self.autoCompleteFromAPIs)
         self.menuActs["acAPIDocument"] = menu.addAction(
             self.tr('from Document and APIs'), self.autoCompleteFromAll)
-        menu.addSeparator()
-        self.menuActs["calltip"] = menu.addAction(
-            self.tr('Calltip'), self.callTip)
         
         menu.aboutToShow.connect(self.__showContextMenuAutocompletion)
         
@@ -4734,6 +4733,8 @@ class Editor(QsciScintillaCompat):
             self.completer is not None)
         self.menuActs["TypingAidsEnabled"].setChecked(
             self.completer is not None and self.completer.isEnabled())
+        
+        self.menuActs["calltip"].setEnabled(self.acAPI)
         
         from .SpellChecker import SpellChecker
         spellingAvailable = SpellChecker.isAvailable()

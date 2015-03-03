@@ -14,7 +14,7 @@
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
-      <string>&lt;b&gt;Configure Autocompletion&lt;/b&gt;</string>
+      <string>&lt;b&gt;Configure Completion Support&lt;/b&gt;</string>
      </property>
     </widget>
    </item>
@@ -40,7 +40,7 @@
       <string>&lt;b&gt;Autocompletion Enabled&lt;/b&gt;&lt;p&gt;Select to enable autocompletion. In order to get autocompletion from alternative autocompletion providers (if installed), these have to be enabled on their respective configuration page. Only one alternative provider might be enabled.&lt;/p&gt;</string>
      </property>
      <property name="text">
-      <string>Autocompletion Enabled</string>
+      <string>Automatic Completion Enabled</string>
      </property>
     </widget>
    </item>

@@ -1246,18 +1246,18 @@ class ViewManager(QObject):
         self.editActions.append(self.shortenEmptyAct)
         
         self.autoCompleteAct = E5Action(
-            QCoreApplication.translate('ViewManager', 'Autocomplete'),
-            QCoreApplication.translate('ViewManager', '&Autocomplete'),
+            QCoreApplication.translate('ViewManager', 'Complete'),
+            QCoreApplication.translate('ViewManager', '&Complete'),
             QKeySequence(QCoreApplication.translate(
-                'ViewManager', "Ctrl+Space", "Edit|Autocomplete")),
+                'ViewManager', "Ctrl+Space", "Edit|Complete")),
             0,
             self.editActGrp, 'vm_edit_autocomplete')
         self.autoCompleteAct.setStatusTip(QCoreApplication.translate(
-            'ViewManager', 'Autocomplete current word'))
+            'ViewManager', 'Complete current word'))
         self.autoCompleteAct.setWhatsThis(QCoreApplication.translate(
             'ViewManager',
-            """<b>Autocomplete</b>"""
-            """<p>Performs an autocompletion of the word containing"""
+            """<b>Complete</b>"""
+            """<p>Performs a completion of the word containing"""
             """ the cursor.</p>"""
         ))
         self.autoCompleteAct.triggered.connect(self.__editAutoComplete)
@@ -1265,21 +1265,21 @@ class ViewManager(QObject):
         
         self.autoCompleteFromDocAct = E5Action(
             QCoreApplication.translate(
-                'ViewManager', 'Autocomplete from Document'),
+                'ViewManager', 'Complete from Document'),
             QCoreApplication.translate(
-                'ViewManager', 'Autocomplete from Document'),
+                'ViewManager', 'Complete from Document'),
             QKeySequence(QCoreApplication.translate(
                 'ViewManager', "Ctrl+Shift+Space",
-                "Edit|Autocomplete from Document")),
+                "Edit|Complete from Document")),
             0,
             self.editActGrp, 'vm_edit_autocomplete_from_document')
         self.autoCompleteFromDocAct.setStatusTip(QCoreApplication.translate(
             'ViewManager',
-            'Autocomplete current word from Document'))
+            'Complete current word from Document'))
         self.autoCompleteFromDocAct.setWhatsThis(QCoreApplication.translate(
             'ViewManager',
-            """<b>Autocomplete from Document</b>"""
-            """<p>Performs an autocompletion from document of the word"""
+            """<b>Complete from Document</b>"""
+            """<p>Performs a completion from document of the word"""
             """ containing the cursor.</p>"""
         ))
         self.autoCompleteFromDocAct.triggered.connect(
@@ -1288,21 +1288,21 @@ class ViewManager(QObject):
         
         self.autoCompleteFromAPIsAct = E5Action(
             QCoreApplication.translate('ViewManager',
-                                       'Autocomplete from APIs'),
+                                       'Complete from APIs'),
             QCoreApplication.translate('ViewManager',
-                                       'Autocomplete from APIs'),
+                                       'Complete from APIs'),
             QKeySequence(QCoreApplication.translate(
                 'ViewManager', "Ctrl+Alt+Space",
-                "Edit|Autocomplete from APIs")),
+                "Edit|Complete from APIs")),
             0,
             self.editActGrp, 'vm_edit_autocomplete_from_api')
         self.autoCompleteFromAPIsAct.setStatusTip(QCoreApplication.translate(
             'ViewManager',
-            'Autocomplete current word from APIs'))
+            'Complete current word from APIs'))
         self.autoCompleteFromAPIsAct.setWhatsThis(QCoreApplication.translate(
             'ViewManager',
-            """<b>Autocomplete from APIs</b>"""
-            """<p>Performs an autocompletion from APIs of the word"""
+            """<b>Complete from APIs</b>"""
+            """<p>Performs a completion from APIs of the word"""
             """ containing the cursor.</p>"""
         ))
         self.autoCompleteFromAPIsAct.triggered.connect(
@@ -1311,21 +1311,21 @@ class ViewManager(QObject):
         
         self.autoCompleteFromAllAct = E5Action(
             QCoreApplication.translate(
-                'ViewManager', 'Autocomplete from Document and APIs'),
+                'ViewManager', 'Complete from Document and APIs'),
             QCoreApplication.translate(
-                'ViewManager', 'Autocomplete from Document and APIs'),
+                'ViewManager', 'Complete from Document and APIs'),
             QKeySequence(QCoreApplication.translate(
                 'ViewManager', "Alt+Shift+Space",
-                "Edit|Autocomplete from Document and APIs")),
+                "Edit|Complete from Document and APIs")),
             0,
             self.editActGrp, 'vm_edit_autocomplete_from_all')
         self.autoCompleteFromAllAct.setStatusTip(QCoreApplication.translate(
             'ViewManager',
-            'Autocomplete current word from Document and APIs'))
+            'Complete current word from Document and APIs'))
         self.autoCompleteFromAllAct.setWhatsThis(QCoreApplication.translate(
             'ViewManager',
-            """<b>Autocomplete from Document and APIs</b>"""
-            """<p>Performs an autocompletion from document and APIs"""
+            """<b>Complete from Document and APIs</b>"""
+            """<p>Performs a completion from document and APIs"""
             """ of the word containing the cursor.</p>"""
         ))
         self.autoCompleteFromAllAct.triggered.connect(
@@ -2666,15 +2666,13 @@ class ViewManager(QObject):
         @return the generated menu
         """
         autocompletionMenu = QMenu(
-            QCoreApplication.translate('ViewManager', '&Autocomplete'),
+            QCoreApplication.translate('ViewManager', 'Complete'),
             self.ui)
         autocompletionMenu.setTearOffEnabled(True)
         autocompletionMenu.addAction(self.autoCompleteAct)
         autocompletionMenu.addAction(self.autoCompleteFromDocAct)
         autocompletionMenu.addAction(self.autoCompleteFromAPIsAct)
         autocompletionMenu.addAction(self.autoCompleteFromAllAct)
-        autocompletionMenu.addSeparator()
-        autocompletionMenu.addAction(self.calltipsAct)
         
         searchMenu = QMenu(
             QCoreApplication.translate('ViewManager', '&Search'),
@@ -2724,6 +2722,7 @@ class ViewManager(QObject):
         menu.addAction(self.sortAct)
         menu.addSeparator()
         menu.addMenu(autocompletionMenu)
+        menu.addAction(self.calltipsAct)
         menu.addSeparator()
         menu.addMenu(searchMenu)
         menu.addSeparator()
