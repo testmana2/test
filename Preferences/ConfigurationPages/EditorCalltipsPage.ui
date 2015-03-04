@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>406</width>
-    <height>369</height>
+    <width>408</width>
+    <height>373</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -37,7 +37,7 @@
       <string>Select this to enable calltips</string>
      </property>
      <property name="text">
-      <string>Calltips Enabled</string>
+      <string>Automatic Calltips Enabled</string>
      </property>
     </widget>
    </item>
@@ -47,7 +47,16 @@
       <bool>false</bool>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="margin">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
        <number>0</number>
       </property>
      </layout>
