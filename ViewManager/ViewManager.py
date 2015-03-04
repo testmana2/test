@@ -1336,7 +1336,7 @@ class ViewManager(QObject):
             QCoreApplication.translate('ViewManager', 'Calltip'),
             QCoreApplication.translate('ViewManager', '&Calltip'),
             QKeySequence(QCoreApplication.translate(
-                'ViewManager', "Alt+Space", "Edit|Calltip")),
+                'ViewManager', "Meta+Alt+Space", "Edit|Calltip")),
             0,
             self.editActGrp, 'vm_edit_calltip')
         self.calltipsAct.setStatusTip(QCoreApplication.translate(
