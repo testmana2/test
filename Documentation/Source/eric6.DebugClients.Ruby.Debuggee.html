@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Ruby.Debuggee</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Ruby.Debuggee</h1>
+<p>
+File implementing the real debugger, which is connected to the IDE frontend.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Client">Client</a></td>
+<td>Class handling the connection to the IDE.</td>
+</tr><tr>
+<td><a href="#Context">Context</a></td>
+<td>Class defining the current execution context.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__">DEBUGGER__</a></td>
+<td>Class defining a singleton object for the debugger.</td>
+</tr><tr>
+<td><a href="#SilentObject">SilentObject</a></td>
+<td>Class defining an object that ignores all messages.</td>
+</tr>
+</table>
+<h3>Modules</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#context">context</a></td>
+<td>Method returning the context of a thread.</td>
+</tr><tr>
+<td><a href="#debug_thread_info">debug_thread_info</a></td>
+<td>Method handling the thread related debug commands.</td>
+</tr><tr>
+<td><a href="#eventLoop">eventLoop</a></td>
+<td>Method calling the main event loop.</td>
+</tr><tr>
+<td><a href="#eventPoll">eventPoll</a></td>
+<td>Method calling the main function polling for an event sent by the IDE.</td>
+</tr><tr>
+<td><a href="#get_thread">get_thread</a></td>
+<td>Method returning a thread by number.</td>
+</tr><tr>
+<td><a href="#interrupt">interrupt</a></td>
+<td>Method to stop execution at the next instruction.</td>
+</tr><tr>
+<td><a href="#make_thread_list">make_thread_list</a></td>
+<td>Method to create a thread list.</td>
+</tr><tr>
+<td><a href="#thread_list">thread_list</a></td>
+<td>Method to list the state of a thread.</td>
+</tr><tr>
+<td><a href="#thread_list_all">thread_list_all</a></td>
+<td>Method to list the state of all threads.</td>
+</tr><tr>
+<td><a href="#traceRuby?">traceRuby?</a></td>
+<td>Method to check, if we should trace into the Ruby interpreter libraries.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="Client" ID="Client"></a>
+<h2>Client</h2>
+<p>
+Class handling the connection to the IDE.
+</p>
+<h3>Derived from</h3>
+None
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Client.eventLoop">eventLoop</a></td>
+<td>Method calling the main event loop.</td>
+</tr><tr>
+<td><a href="#Client.eventPoll">eventPoll</a></td>
+<td>Method calling the main function polling for an event sent by the IDE.</td>
+</tr><tr>
+<td><a href="#Client.initialize">initialize</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Client.printf">printf</a></td>
+<td>Method to print something to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.printf_clear_breakpoint">printf_clear_breakpoint</a></td>
+<td>Method to report the deletion of a temporary breakpoint to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.printf_clear_watchexpression">printf_clear_watchexpression</a></td>
+<td>Method to report the deletion of a temporary watch expression to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.printf_excn">printf_excn</a></td>
+<td>Method to report an exception to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.printf_exit">printf_exit</a></td>
+<td>Method to report the exit status to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.printf_line">printf_line</a></td>
+<td>Method to report the current line and the current stack trace to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.printf_scriptExcn">printf_scriptExcn</a></td>
+<td>Method to report a ScriptError to the IDE.</td>
+</tr><tr>
+<td><a href="#Client.traceRuby?">traceRuby?</a></td>
+<td>Method to check, if we should trace into the Ruby interpreter libraries.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Client.eventLoop" ID="Client.eventLoop"></a>
+<h4>Client.eventLoop</h4>
+<b>eventLoop</b>(<i></i>)
+<p>
+Method calling the main event loop.
+</p><a NAME="Client.eventPoll" ID="Client.eventPoll"></a>
+<h4>Client.eventPoll</h4>
+<b>eventPoll</b>(<i></i>)
+<p>
+Method calling the main function polling for an event sent by the IDE.
+</p><a NAME="Client.initialize" ID="Client.initialize"></a>
+<h4>Client.initialize</h4>
+<b>initialize</b>(<i></i>)
+<p>
+Constructor
+</p><dl>
+<dt><i>debugger</i></dt>
+<dd>
+reference to the object having the IDE connection.
+</dd>
+</dl><a NAME="Client.printf" ID="Client.printf"></a>
+<h4>Client.printf</h4>
+<b>printf</b>(<i></i>)
+<p>
+Method to print something to the IDE.
+</p><dl>
+<dt><i>*args</i></dt>
+<dd>
+Arguments to be printed.
+</dd>
+</dl><a NAME="Client.printf_clear_breakpoint" ID="Client.printf_clear_breakpoint"></a>
+<h4>Client.printf_clear_breakpoint</h4>
+<b>printf_clear_breakpoint</b>(<i>line</i>)
+<p>
+Method to report the deletion of a temporary breakpoint to the IDE.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename of the breakpoint (String)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the breakpoint (int)
+</dd>
+</dl><a NAME="Client.printf_clear_watchexpression" ID="Client.printf_clear_watchexpression"></a>
+<h4>Client.printf_clear_watchexpression</h4>
+<b>printf_clear_watchexpression</b>(<i></i>)
+<p>
+Method to report the deletion of a temporary watch expression to the IDE.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (String)
+</dd>
+</dl><a NAME="Client.printf_excn" ID="Client.printf_excn"></a>
+<h4>Client.printf_excn</h4>
+<b>printf_excn</b>(<i></i>)
+<p>
+Method to report an exception to the IDE.
+</p><dl>
+<dt><i>exclist</i></dt>
+<dd>
+info about the exception to be reported
+</dd>
+</dl><a NAME="Client.printf_exit" ID="Client.printf_exit"></a>
+<h4>Client.printf_exit</h4>
+<b>printf_exit</b>(<i></i>)
+<p>
+Method to report the exit status to the IDE.
+</p><dl>
+<dt><i>status</i></dt>
+<dd>
+exit status of the program (int)
+</dd>
+</dl><a NAME="Client.printf_line" ID="Client.printf_line"></a>
+<h4>Client.printf_line</h4>
+<b>printf_line</b>(<i></i>)
+<p>
+Method to report the current line and the current stack trace to the IDE.
+</p><dl>
+<dt><i>frames</i></dt>
+<dd>
+reference to the array containing the stack trace.
+</dd>
+</dl><a NAME="Client.printf_scriptExcn" ID="Client.printf_scriptExcn"></a>
+<h4>Client.printf_scriptExcn</h4>
+<b>printf_scriptExcn</b>(<i></i>)
+<p>
+Method to report a ScriptError to the IDE.
+</p><dl>
+<dt><i>exclist</i></dt>
+<dd>
+info about the exception to be reported
+</dd>
+</dl><a NAME="Client.traceRuby?" ID="Client.traceRuby?"></a>
+<h4>Client.traceRuby?</h4>
+<b>traceRuby?</b>(<i></i>)
+<p>
+Method to check, if we should trace into the Ruby interpreter libraries.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="Context" ID="Context"></a>
+<h2>Context</h2>
+<p>
+Class defining the current execution context.
+</p>
+<h3>Derived from</h3>
+None
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Context.clear_suspend">clear_suspend</a></td>
+<td>Method to clear the suspend state.</td>
+</tr><tr>
+<td><a href="#Context.current_binding">current_binding</a></td>
+<td>Method returning the binding object of the current execution frame.</td>
+</tr><tr>
+<td><a href="#Context.current_frame">current_frame</a></td>
+<td>Method returning the current execution frame.</td>
+</tr><tr>
+<td><a href="#Context.eventLoop">eventLoop</a></td>
+<td>Method calling the main event loop.</td>
+</tr><tr>
+<td><a href="#Context.eventPoll">eventPoll</a></td>
+<td>Method calling the main function polling for an event sent by the IDE.</td>
+</tr><tr>
+<td><a href="#Context.get_binding">get_binding</a></td>
+<td>Method returning the binding object of a specific execution frame.</td>
+</tr><tr>
+<td><a href="#Context.get_frame">get_frame</a></td>
+<td>Method returning a specific execution frame.</td>
+</tr><tr>
+<td><a href="#Context.initialize">initialize</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Context.set_suspend">set_suspend</a></td>
+<td>Method to suspend all threads.</td>
+</tr><tr>
+<td><a href="#Context.step_continue">step_continue</a></td>
+<td>Method to continue execution until next breakpoint or watch expression.</td>
+</tr><tr>
+<td><a href="#Context.step_out">step_out</a></td>
+<td>Method to set the next stop point after the function call returns.</td>
+</tr><tr>
+<td><a href="#Context.step_over">step_over</a></td>
+<td>Method to set the next stop point skipping function calls.</td>
+</tr><tr>
+<td><a href="#Context.step_quit">step_quit</a></td>
+<td>Method to stop debugging.</td>
+</tr><tr>
+<td><a href="#Context.stop_next">stop_next</a></td>
+<td>Method to set the next stop point (i.e.</td>
+</tr><tr>
+<td><a href="#Context.suspend_all">suspend_all</a></td>
+<td>Method to suspend all threads.</td>
+</tr><tr>
+<td><a href="#Context.traceRuby?">traceRuby?</a></td>
+<td>Method to check, if we should trace into the Ruby interpreter libraries.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Context.clear_suspend" ID="Context.clear_suspend"></a>
+<h4>Context.clear_suspend</h4>
+<b>clear_suspend</b>(<i></i>)
+<p>
+Method to clear the suspend state.
+</p><a NAME="Context.current_binding" ID="Context.current_binding"></a>
+<h4>Context.current_binding</h4>
+<b>current_binding</b>(<i></i>)
+<p>
+Method returning the binding object of the current execution frame.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+binding object of the current execution frame
+</dd>
+</dl><a NAME="Context.current_frame" ID="Context.current_frame"></a>
+<h4>Context.current_frame</h4>
+<b>current_frame</b>(<i></i>)
+<p>
+Method returning the current execution frame.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current execution frame
+</dd>
+</dl><a NAME="Context.eventLoop" ID="Context.eventLoop"></a>
+<h4>Context.eventLoop</h4>
+<b>eventLoop</b>(<i></i>)
+<p>
+Method calling the main event loop.
+</p><a NAME="Context.eventPoll" ID="Context.eventPoll"></a>
+<h4>Context.eventPoll</h4>
+<b>eventPoll</b>(<i></i>)
+<p>
+Method calling the main function polling for an event sent by the IDE.
+</p><a NAME="Context.get_binding" ID="Context.get_binding"></a>
+<h4>Context.get_binding</h4>
+<b>get_binding</b>(<i></i>)
+<p>
+Method returning the binding object of a specific execution frame.
+</p><dl>
+<dt><i>frameno</i></dt>
+<dd>
+frame number of the frame (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the requested binding object
+</dd>
+</dl><a NAME="Context.get_frame" ID="Context.get_frame"></a>
+<h4>Context.get_frame</h4>
+<b>get_frame</b>(<i></i>)
+<p>
+Method returning a specific execution frame.
+</p><dl>
+<dt><i>frameno</i></dt>
+<dd>
+frame number of the frame to be returned (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the requested execution frame
+</dd>
+</dl><a NAME="Context.initialize" ID="Context.initialize"></a>
+<h4>Context.initialize</h4>
+<b>initialize</b>(<i></i>)
+<p>
+Constructor
+</p><a NAME="Context.set_suspend" ID="Context.set_suspend"></a>
+<h4>Context.set_suspend</h4>
+<b>set_suspend</b>(<i></i>)
+<p>
+Method to suspend all threads.
+</p><a NAME="Context.step_continue" ID="Context.step_continue"></a>
+<h4>Context.step_continue</h4>
+<b>step_continue</b>(<i></i>)
+<p>
+Method to continue execution until next breakpoint or watch expression.
+</p><a NAME="Context.step_out" ID="Context.step_out"></a>
+<h4>Context.step_out</h4>
+<b>step_out</b>(<i></i>)
+<p>
+Method to set the next stop point after the function call returns.
+</p><a NAME="Context.step_over" ID="Context.step_over"></a>
+<h4>Context.step_over</h4>
+<b>step_over</b>(<i></i>)
+<p>
+Method to set the next stop point skipping function calls.
+</p><dl>
+<dt><i>counter</i></dt>
+<dd>
+defining the stop point (int)
+</dd>
+</dl><a NAME="Context.step_quit" ID="Context.step_quit"></a>
+<h4>Context.step_quit</h4>
+<b>step_quit</b>(<i></i>)
+<p>
+Method to stop debugging.
+</p><a NAME="Context.stop_next" ID="Context.stop_next"></a>
+<h4>Context.stop_next</h4>
+<b>stop_next</b>(<i></i>)
+<p>
+Method to set the next stop point (i.e. stop at next line).
+</p><dl>
+<dt><i>counter</i></dt>
+<dd>
+defining the stop point (int)
+</dd>
+</dl><a NAME="Context.suspend_all" ID="Context.suspend_all"></a>
+<h4>Context.suspend_all</h4>
+<b>suspend_all</b>(<i></i>)
+<p>
+Method to suspend all threads.
+</p><a NAME="Context.traceRuby?" ID="Context.traceRuby?"></a>
+<h4>Context.traceRuby?</h4>
+<b>traceRuby?</b>(<i></i>)
+<p>
+Method to check, if we should trace into the Ruby interpreter libraries.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="DEBUGGER__" ID="DEBUGGER__"></a>
+<h2>DEBUGGER__</h2>
+<p>
+Class defining a singleton object for the debugger.
+</p>
+<h3>Derived from</h3>
+None
+<h3>Class Attributes</h3>
+<table>
+<tr><td>MUTEX</td></tr><tr><td>SilentClient</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DEBUGGER__.add_break_point">add_break_point</a></td>
+<td>Method to add a breakpoint.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.add_watch_point">add_watch_point</a></td>
+<td>Method to add a watch expression.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.attach">attach</a></td>
+<td>Method to connect the debugger to the IDE.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.attached?">attached?</a></td>
+<td>Method returning the attached state.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.break_points">break_points</a></td>
+<td>Method to return the list of breakpoints</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.check_break_points">check_break_points</a></td>
+<td>Method to check, if the given position contains an active breakpoint.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.check_suspend">check_suspend</a></td>
+<td>Method to check the suspend state.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.clear_break_point">clear_break_point</a></td>
+<td>Method to delete a specific breakpoint.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.clear_watch_point">clear_watch_point</a></td>
+<td>Method to delete a specific watch expression.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.client">client</a></td>
+<td>Method returning a reference to the client object.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.context">context</a></td>
+<td>Method returning the context of a thread.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.debug_command">debug_command</a></td>
+<td>Method to execute the next debug command.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.debug_silent_eval">debug_silent_eval</a></td>
+<td>Method to eval a string without output.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.delete_break_point">delete_break_point</a></td>
+<td>Method to delete a breakpoint.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.delete_watch_point">delete_watch_point</a></td>
+<td>Method to delete a watch expression.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.enable_break_point">enable_break_point</a></td>
+<td>Method to set the enabled state of a breakpoint.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.enable_watch_point">enable_watch_point</a></td>
+<td>Method to set the enabled state of a watch expression.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.excn_handle">excn_handle</a></td>
+<td>Method to handle an exception</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.frame_set_pos">frame_set_pos</a></td>
+<td>Method to set the frame position of the current frame.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.ignore_break_point">ignore_break_point</a></td>
+<td>Method to set the ignore count of a breakpoint.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.ignore_watch_point">ignore_watch_point</a></td>
+<td>Method to set the ignore count of a watch expression.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.last_thread">last_thread</a></td>
+<td>Method returning the last active thread.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.quit">quit</a></td>
+<td>Method to quit the debugger.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.resume">resume</a></td>
+<td>Method to resume the program being debugged.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.resume_all">resume_all</a></td>
+<td>Method to resume all threads.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.set_client">set_client</a></td>
+<td>Method to set the client handling the connection.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.set_last_thread">set_last_thread</a></td>
+<td>Method to remember the last thread.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.skip_it?">skip_it?</a></td>
+<td>Method to filter out debugger files.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.stdout">stdout</a></td>
+<td>Method returning the stdout object.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.stdout=">stdout=</a></td>
+<td>Method to set the stdout object.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.suspend">suspend</a></td>
+<td>Method to suspend the program being debugged.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.thnum">thnum</a></td>
+<td>Method returning the thread number of the current thread.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.trace_func">trace_func</a></td>
+<td>Method executed by the tracing facility.</td>
+</tr><tr>
+<td><a href="#DEBUGGER__.waiting">waiting</a></td>
+<td>Method returning the waiting list.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="DEBUGGER__.add_break_point" ID="DEBUGGER__.add_break_point"></a>
+<h4>DEBUGGER__.add_break_point</h4>
+<b>add_break_point</b>(<i>pos, temp = false, cond = nil</i>)
+<p>
+Method to add a breakpoint.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename for the breakpoint (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number for the breakpoint (int)
+</dd><dt><i>temp</i></dt>
+<dd>
+flag indicating a temporary breakpoint (boolean)
+</dd><dt><i>cond</i></dt>
+<dd>
+condition of a conditional breakpoint (String)
+</dd>
+</dl><a NAME="DEBUGGER__.add_watch_point" ID="DEBUGGER__.add_watch_point"></a>
+<h4>DEBUGGER__.add_watch_point</h4>
+<b>add_watch_point</b>(<i>temp = false</i>)
+<p>
+Method to add a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (String)
+</dd><dt><i>temp</i></dt>
+<dd>
+flag indicating a temporary watch expression (boolean)
+</dd>
+</dl><a NAME="DEBUGGER__.attach" ID="DEBUGGER__.attach"></a>
+<h4>DEBUGGER__.attach</h4>
+<b>attach</b>(<i></i>)
+<p>
+Method to connect the debugger to the IDE.
+</p><dl>
+<dt><i>debugger</i></dt>
+<dd>
+reference to the object handling the
+    communication with the IDE.
+</dd>
+</dl><a NAME="DEBUGGER__.attached?" ID="DEBUGGER__.attached?"></a>
+<h4>DEBUGGER__.attached?</h4>
+<b>attached?</b>(<i></i>)
+<p>
+Method returning the attached state.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, whether the debugger is attached to the IDE.
+</dd>
+</dl><a NAME="DEBUGGER__.break_points" ID="DEBUGGER__.break_points"></a>
+<h4>DEBUGGER__.break_points</h4>
+<b>break_points</b>(<i></i>)
+<p>
+Method to return the list of breakpoints
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+Array containing all breakpoints.
+</dd>
+</dl><a NAME="DEBUGGER__.check_break_points" ID="DEBUGGER__.check_break_points"></a>
+<h4>DEBUGGER__.check_break_points</h4>
+<b>check_break_points</b>(<i>pos, binding_, id</i>)
+<p>
+Method to check, if the given position contains an active breakpoint.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename containing the currently executed line (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number currently executed (int)
+</dd><dt><i>binding_</i></dt>
+<dd>
+current binding object
+</dd><dt><i>id</i></dt>
+<dd>
+(ignored)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an active breakpoint (boolean)
+</dd>
+</dl><a NAME="DEBUGGER__.check_suspend" ID="DEBUGGER__.check_suspend"></a>
+<h4>DEBUGGER__.check_suspend</h4>
+<b>check_suspend</b>(<i></i>)
+<p>
+Method to check the suspend state.
+</p><a NAME="DEBUGGER__.clear_break_point" ID="DEBUGGER__.clear_break_point"></a>
+<h4>DEBUGGER__.clear_break_point</h4>
+<b>clear_break_point</b>(<i>pos</i>)
+<p>
+Method to delete a specific breakpoint.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename containing the breakpoint (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number containing the breakpoint (int)
+</dd>
+</dl><a NAME="DEBUGGER__.clear_watch_point" ID="DEBUGGER__.clear_watch_point"></a>
+<h4>DEBUGGER__.clear_watch_point</h4>
+<b>clear_watch_point</b>(<i></i>)
+<p>
+Method to delete a specific watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression specifying the watch expression (String)
+</dd>
+</dl><a NAME="DEBUGGER__.client" ID="DEBUGGER__.client"></a>
+<h4>DEBUGGER__.client</h4>
+<b>client</b>(<i></i>)
+<p>
+Method returning a reference to the client object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the client object.
+</dd>
+</dl><a NAME="DEBUGGER__.context" ID="DEBUGGER__.context"></a>
+<h4>DEBUGGER__.context</h4>
+<b>context</b>(<i></i>)
+<p>
+Method returning the context of a thread.
+</p><dl>
+<dt><i>th</i></dt>
+<dd>
+thread object to get the context for
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the context for the thread
+</dd>
+</dl><a NAME="DEBUGGER__.debug_command" ID="DEBUGGER__.debug_command"></a>
+<h4>DEBUGGER__.debug_command</h4>
+<b>debug_command</b>(<i>line, id, binding_</i>)
+<p>
+Method to execute the next debug command.
+</p><a NAME="DEBUGGER__.debug_silent_eval" ID="DEBUGGER__.debug_silent_eval"></a>
+<h4>DEBUGGER__.debug_silent_eval</h4>
+<b>debug_silent_eval</b>(<i>binding_</i>)
+<p>
+Method to eval a string without output.
+</p><dl>
+<dt><i>str</i></dt>
+<dd>
+String containing the expression to be evaluated
+</dd><dt><i>binding_</i></dt>
+<dd>
+the binding for the evaluation
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the result of the evaluation
+</dd>
+</dl><a NAME="DEBUGGER__.delete_break_point" ID="DEBUGGER__.delete_break_point"></a>
+<h4>DEBUGGER__.delete_break_point</h4>
+<b>delete_break_point</b>(<i>pos</i>)
+<p>
+Method to delete a breakpoint.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename of the breakpoint (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number of the breakpoint (int)
+</dd>
+</dl><a NAME="DEBUGGER__.delete_watch_point" ID="DEBUGGER__.delete_watch_point"></a>
+<h4>DEBUGGER__.delete_watch_point</h4>
+<b>delete_watch_point</b>(<i></i>)
+<p>
+Method to delete a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (String)
+</dd>
+</dl><a NAME="DEBUGGER__.enable_break_point" ID="DEBUGGER__.enable_break_point"></a>
+<h4>DEBUGGER__.enable_break_point</h4>
+<b>enable_break_point</b>(<i>pos, enable</i>)
+<p>
+Method to set the enabled state of a breakpoint.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename of the breakpoint (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number of the breakpoint (int)
+</dd><dt><i>enable</i></dt>
+<dd>
+flag indicating the new enabled state (boolean)
+</dd>
+</dl><a NAME="DEBUGGER__.enable_watch_point" ID="DEBUGGER__.enable_watch_point"></a>
+<h4>DEBUGGER__.enable_watch_point</h4>
+<b>enable_watch_point</b>(<i>enable</i>)
+<p>
+Method to set the enabled state of a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (String)
+</dd><dt><i>enable</i></dt>
+<dd>
+flag indicating the new enabled state (boolean)
+</dd>
+</dl><a NAME="DEBUGGER__.excn_handle" ID="DEBUGGER__.excn_handle"></a>
+<h4>DEBUGGER__.excn_handle</h4>
+<b>excn_handle</b>(<i>line, id, binding_</i>)
+<p>
+Method to handle an exception
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename containing the currently executed line (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number currently executed (int)
+</dd><dt><i>id</i></dt>
+<dd>
+(ignored)
+</dd><dt><i>binding_</i></dt>
+<dd>
+current binding object
+</dd>
+</dl><a NAME="DEBUGGER__.frame_set_pos" ID="DEBUGGER__.frame_set_pos"></a>
+<h4>DEBUGGER__.frame_set_pos</h4>
+<b>frame_set_pos</b>(<i>line</i>)
+<p>
+Method to set the frame position of the current frame.
+</p><a NAME="DEBUGGER__.ignore_break_point" ID="DEBUGGER__.ignore_break_point"></a>
+<h4>DEBUGGER__.ignore_break_point</h4>
+<b>ignore_break_point</b>(<i>pos, count</i>)
+<p>
+Method to set the ignore count of a breakpoint.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+filename of the breakpoint (String)
+</dd><dt><i>pos</i></dt>
+<dd>
+line number of the breakpoint (int)
+</dd><dt><i>count</i></dt>
+<dd>
+ignore count to be set (int)
+</dd>
+</dl><a NAME="DEBUGGER__.ignore_watch_point" ID="DEBUGGER__.ignore_watch_point"></a>
+<h4>DEBUGGER__.ignore_watch_point</h4>
+<b>ignore_watch_point</b>(<i>count</i>)
+<p>
+Method to set the ignore count of a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (String)
+</dd><dt><i>count</i></dt>
+<dd>
+ignore count to be set (int)
+</dd>
+</dl><a NAME="DEBUGGER__.last_thread" ID="DEBUGGER__.last_thread"></a>
+<h4>DEBUGGER__.last_thread</h4>
+<b>last_thread</b>(<i></i>)
+<p>
+Method returning the last active thread.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+active thread
+</dd>
+</dl><a NAME="DEBUGGER__.quit" ID="DEBUGGER__.quit"></a>
+<h4>DEBUGGER__.quit</h4>
+<b>quit</b>(<i></i>)
+<p>
+Method to quit the debugger.
+</p><dl>
+<dt><i>status</i></dt>
+<dd>
+exit status of the program
+</dd>
+</dl><a NAME="DEBUGGER__.resume" ID="DEBUGGER__.resume"></a>
+<h4>DEBUGGER__.resume</h4>
+<b>resume</b>(<i></i>)
+<p>
+Method to resume the program being debugged.
+</p><a NAME="DEBUGGER__.resume_all" ID="DEBUGGER__.resume_all"></a>
+<h4>DEBUGGER__.resume_all</h4>
+<b>resume_all</b>(<i></i>)
+<p>
+Method to resume all threads.
+</p><a NAME="DEBUGGER__.set_client" ID="DEBUGGER__.set_client"></a>
+<h4>DEBUGGER__.set_client</h4>
+<b>set_client</b>(<i></i>)
+<p>
+Method to set the client handling the connection.
+</p><dl>
+<dt><i>debugger</i></dt>
+<dd>
+reference to the object handling the connection
+</dd>
+</dl><a NAME="DEBUGGER__.set_last_thread" ID="DEBUGGER__.set_last_thread"></a>
+<h4>DEBUGGER__.set_last_thread</h4>
+<b>set_last_thread</b>(<i></i>)
+<p>
+Method to remember the last thread.
+</p><dl>
+<dt><i>th</i></dt>
+<dd>
+thread to be remembered.
+</dd>
+</dl><a NAME="DEBUGGER__.skip_it?" ID="DEBUGGER__.skip_it?"></a>
+<h4>DEBUGGER__.skip_it?</h4>
+<b>skip_it?</b>(<i></i>)
+<p>
+Method to filter out debugger files.
+</p><p>
+Tracing is turned off for files that are part of the
+debugger that are called from the application being debugged.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+name of the file to be checked (String)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating, whether the file should be skipped (boolean)
+</dd>
+</dl><a NAME="DEBUGGER__.stdout" ID="DEBUGGER__.stdout"></a>
+<h4>DEBUGGER__.stdout</h4>
+<b>stdout</b>(<i></i>)
+<p>
+Method returning the stdout object.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the stdout object
+</dd>
+</dl><a NAME="DEBUGGER__.stdout=" ID="DEBUGGER__.stdout="></a>
+<h4>DEBUGGER__.stdout=</h4>
+<b>stdout=</b>(<i></i>)
+<p>
+Method to set the stdout object.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+reference to the stdout object
+</dd>
+</dl><a NAME="DEBUGGER__.suspend" ID="DEBUGGER__.suspend"></a>
+<h4>DEBUGGER__.suspend</h4>
+<b>suspend</b>(<i></i>)
+<p>
+Method to suspend the program being debugged.
+</p><a NAME="DEBUGGER__.thnum" ID="DEBUGGER__.thnum"></a>
+<h4>DEBUGGER__.thnum</h4>
+<b>thnum</b>(<i></i>)
+<p>
+Method returning the thread number of the current thread.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+thread number of the current thread.
+</dd>
+</dl><a NAME="DEBUGGER__.trace_func" ID="DEBUGGER__.trace_func"></a>
+<h4>DEBUGGER__.trace_func</h4>
+<b>trace_func</b>(<i>file, line, id, binding_, klass</i>)
+<p>
+Method executed by the tracing facility.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+the tracing event (String)
+</dd><dt><i>file</i></dt>
+<dd>
+the name of the file being traced (String)
+</dd><dt><i>line</i></dt>
+<dd>
+the line number being traced (int)
+</dd><dt><i>id</i></dt>
+<dd>
+object id
+</dd><dt><i>binding_</i></dt>
+<dd>
+a binding object
+</dd><dt><i>klass</i></dt>
+<dd>
+name of a class
+</dd>
+</dl><a NAME="DEBUGGER__.waiting" ID="DEBUGGER__.waiting"></a>
+<h4>DEBUGGER__.waiting</h4>
+<b>waiting</b>(<i></i>)
+<p>
+Method returning the waiting list.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the waiting list
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="SilentObject" ID="SilentObject"></a>
+<h2>SilentObject</h2>
+<p>
+Class defining an object that ignores all messages.
+</p>
+<h3>Derived from</h3>
+None
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#SilentObject.method_missing">method_missing</a></td>
+<td>Method invoked for all messages it cannot handle.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="SilentObject.method_missing" ID="SilentObject.method_missing"></a>
+<h4>SilentObject.method_missing</h4>
+<b>method_missing</b>(<i>*a, &b</i>)
+<p>
+Method invoked for all messages it cannot handle.
+</p><dl>
+<dt><i>msg_id</i></dt>
+<dd>
+symbol for the method called
+</dd><dt><i>*a</i></dt>
+<dd>
+arguments passed to the missing method
+</dd><dt><i>&b</i></dt>
+<dd>
+unknown
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="context" ID="context"></a>
+<h2>context</h2>
+<b>context</b>(<i>thread=Thread.current</i>)
+<p>
+Method returning the context of a thread.
+</p><dl>
+<dt><i>th</i></dt>
+<dd>
+threat the context is requested for
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+context object for the thread
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="debug_thread_info" ID="debug_thread_info"></a>
+<h2>debug_thread_info</h2>
+<b>debug_thread_info</b>(<i>input, binding_</i>)
+<p>
+Method handling the thread related debug commands.
+</p><dl>
+<dt><i>input</i></dt>
+<dd>
+debug command (String)
+</dd><dt><i>binding_</i></dt>
+<dd>
+reference to the binding object
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="eventLoop" ID="eventLoop"></a>
+<h2>eventLoop</h2>
+<b>eventLoop</b>(<i></i>)
+<p>
+Method calling the main event loop.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="eventPoll" ID="eventPoll"></a>
+<h2>eventPoll</h2>
+<b>eventPoll</b>(<i></i>)
+<p>
+Method calling the main function polling for an event sent by the IDE.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="get_thread" ID="get_thread"></a>
+<h2>get_thread</h2>
+<b>get_thread</b>(<i>num</i>)
+<p>
+Method returning a thread by number.
+</p><dl>
+<dt><i>num</i></dt>
+<dd>
+thread number (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+thread with the requested number
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="interrupt" ID="interrupt"></a>
+<h2>interrupt</h2>
+<b>interrupt</b>(<i></i>)
+<p>
+Method to stop execution at the next instruction.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="make_thread_list" ID="make_thread_list"></a>
+<h2>make_thread_list</h2>
+<b>make_thread_list</b>(<i></i>)
+<p>
+Method to create a thread list.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="thread_list" ID="thread_list"></a>
+<h2>thread_list</h2>
+<b>thread_list</b>(<i>num</i>)
+<p>
+Method to list the state of a thread.
+</p><dl>
+<dt><i>num</i></dt>
+<dd>
+thread number (int)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="thread_list_all" ID="thread_list_all"></a>
+<h2>thread_list_all</h2>
+<b>thread_list_all</b>(<i></i>)
+<p>
+Method to list the state of all threads.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="traceRuby?" ID="traceRuby?"></a>
+<h2>traceRuby?</h2>
+<b>traceRuby?</b>(<i></i>)
+<p>
+Method to check, if we should trace into the Ruby interpreter libraries.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
