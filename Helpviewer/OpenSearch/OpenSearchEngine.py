@@ -15,7 +15,8 @@ import json
 from PyQt5.QtCore import pyqtSignal, pyqtSlot, QLocale, QUrl, QByteArray, \
     QBuffer, QIODevice, QObject, qVersion
 from PyQt5.QtGui import QImage
-from PyQt5.QtNetwork import QNetworkRequest, QNetworkAccessManager
+from PyQt5.QtNetwork import QNetworkRequest, QNetworkAccessManager, \
+    QNetworkReply
 
 from UI.Info import Program
 
@@ -468,27 +469,29 @@ class OpenSearchEngine(QObject):
         """
         Private slot to receive the suggestions.
         """
-        buffer = bytes(self.__suggestionsReply.readAll())
-        response = Utilities.decodeBytes(buffer)
-        response = response.strip()
-        
-        self.__suggestionsReply.close()
-        self.__suggestionsReply = None
-        
-        if len(response) == 0:
-            return
-        
-        try:
-            result = json.loads(response)
-        except ValueError:
-            return
-        
-        try:
-            suggestions = result[1]
-        except IndexError:
-            return
-        
-        self.suggestions.emit(suggestions)
+        if self.__suggestionsReply.error() == QNetworkReply.NoError:
+            buffer = bytes(self.__suggestionsReply.readAll())
+            response = Utilities.decodeBytes(buffer)
+            response = response.strip()
+            
+            self.__suggestionsReply.close()
+            self.__suggestionsReply.deleteLater()
+            self.__suggestionsReply = None
+            
+            if len(response) == 0:
+                return
+            
+            try:
+                result = json.loads(response)
+            except ValueError:
+                return
+            
+            try:
+                suggestions = result[1]
+            except IndexError:
+                return
+            
+            self.suggestions.emit(suggestions)
     
     def networkAccessManager(self):
         """
