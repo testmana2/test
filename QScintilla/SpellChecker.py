@@ -525,8 +525,12 @@ class SpellChecker(QObject):
                 self.pos = wordEnd
                 if (wordEnd - wordStart) >= self.minimumWordSize and \
                    self.__checkRegion(wordStart):
-                    if spell.check(word):
-                        continue
+                    try:
+                        if spell.check(word):
+                            continue
+                    except enchant.errors.Error:
+                        # ignore these
+                        pass
                     if word in self.__ignoreWords:
                         continue
                     self.word = word
