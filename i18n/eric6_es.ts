@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -2179,22 +2180,22 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../UI/Browser.py" line="481"/>
         <source>Show Mime-Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar Mime-Type</translation>
     </message>
     <message>
         <location filename="../UI/Browser.py" line="461"/>
         <source>The mime type of the file could not be determined.</source>
-        <translation type="unfinished"></translation>
+        <translation>El mime type del archivo no se puede determinar.</translation>
     </message>
     <message>
         <location filename="../UI/Browser.py" line="475"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo tiene el mime type &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
         <location filename="../UI/Browser.py" line="481"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo tiene el mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; ¿Añadirlo a la lista de mime types?</translation>
     </message>
 </context>
 <context>
@@ -4228,12 +4229,12 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="145"/>
         <source>Log-Viewer</source>
-        <translation type="unfinished">Visor Log</translation>
+        <translation>Visor de Log</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="148"/>
         <source>Mimetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Mimetypes</translation>
     </message>
 </context>
 <context>
@@ -7276,7 +7277,7 @@ Do you want to quit anyway?</source>
     <message>
         <location filename="../E5Gui/E5ErrorMessageFilterDialog.py" line="33"/>
         <source>&lt;b&gt;Error Message Filters&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress error messages from within Qt.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Filtros de Mensajes de Error&lt;/b&gt;&lt;p&gt;Esta lista muestra los filtros de mensaje configurados que se usan para suprimir mensajes de error desde Qt.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -8221,47 +8222,47 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="49"/>
         <source>Enter search term for strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir el término de búsqueda para cadenas</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="86"/>
         <source>Press to add an entry</source>
-        <translation type="unfinished">Pulsar para añadir una entrada</translation>
+        <translation>Pulsar para añadir una entrada</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="89"/>
         <source>&amp;Add...</source>
-        <translation type="unfinished">&amp;Añadir...</translation>
+        <translation>&amp;Añadir...</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="106"/>
         <source>Press to remove the selected entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para eliminar las entradas seleccionadas</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="109"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Elimina&amp;r</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="119"/>
         <source>Press to remove all entries</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulse para eliminar todas las entradas</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.ui" line="122"/>
         <source>R&amp;emove All</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eliminar Todas</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.py" line="72"/>
         <source>Add Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir entrada</translation>
     </message>
     <message>
         <location filename="../E5Gui/E5StringListEditWidget.py" line="72"/>
         <source>Enter the entry to add to the list:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la entrada a añadir a la lista:</translation>
     </message>
 </context>
 <context>
@@ -8712,11 +8713,6 @@ selección completa.&lt;/li&gt;
         <translation>Autoguardar habilitado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="726"/>
-        <source>Autocompletion enabled</source>
-        <translation type="obsolete">Autocompletar habilitado</translation>
-    </message>
-    <message>
         <location filename="../QScintilla/Editor.py" line="757"/>
         <source>Close</source>
         <translation>Cerrar</translation>
@@ -8735,11 +8731,6 @@ selección completa.&lt;/li&gt;
         <location filename="../QScintilla/Editor.py" line="779"/>
         <source>Print</source>
         <translation>Imprimir</translation>
-    </message>
-    <message>
-        <location filename="../QScintilla/Editor.py" line="797"/>
-        <source>Autocomplete</source>
-        <translation type="obsolete">Autocompletar</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="805"/>
@@ -9479,12 +9470,12 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="727"/>
         <source>Automatic Completion enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Autocompletar habilitado</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="800"/>
         <source>Complete</source>
-        <translation type="unfinished"></translation>
+        <translation>Completo</translation>
     </message>
 </context>
 <context>
@@ -9618,19 +9609,9 @@ selección completa.&lt;/li&gt;
 <context>
     <name>EditorAutocompletionPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="17"/>
-        <source>&lt;b&gt;Configure Autocompletion&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Configurar autocompletar&lt;/b&gt;</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="37"/>
         <source>Select this to enable autocompletion</source>
-        <translation>Seleccione para habilitar autocompletar</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="43"/>
-        <source>Autocompletion Enabled</source>
-        <translation type="obsolete">Autocompletar habilitado</translation>
+        <translation>Seleccionar para habilitar autocompletar</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="40"/>
@@ -9680,21 +9661,16 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Completion Support&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar soporte a Completado&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="43"/>
         <source>Automatic Completion Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar Automático Habilitado</translation>
     </message>
 </context>
 <context>
     <name>EditorAutocompletionQScintillaPage</name>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="16"/>
-        <source>&lt;b&gt;Configure QScintilla Autocompletion&lt;/b&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Configurar autocompletado de QScintilla&lt;/b&gt;</translation>
-    </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="37"/>
         <source>Select this, if single entries shall be inserted automatically</source>
@@ -9758,7 +9734,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui" line="17"/>
         <source>&lt;b&gt;Configure QScintilla Completion&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar Completado de QScintilla&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -9772,11 +9748,6 @@ selección completa.&lt;/li&gt;
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="37"/>
         <source>Select this to enable calltips</source>
         <translation>Seleccionar para habilitar consejos de llamada</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="40"/>
-        <source>Calltips Enabled</source>
-        <translation type="obsolete">Consejos de llamada (Calltips) habilitados</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="131"/>
@@ -9851,7 +9822,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="40"/>
         <source>Automatic Calltips Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Calltips Automáticos Habilitados</translation>
     </message>
 </context>
 <context>
@@ -15669,7 +15640,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -20231,12 +20202,12 @@ Tiene %n pestañas abiertas.</numerusform>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py" line="42"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgBookmarksListDialog.py" line="44"/>
         <source>Press to refresh the bookmarks display</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para actualizar la visualización de marcadores</translation>
     </message>
 </context>
 <context>
@@ -20902,12 +20873,12 @@ del cliente ejecutable de MErcurial (p.ej. hg).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="46"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgDiffDialog.py" line="48"/>
         <source>Press to refresh the display</source>
-        <translation type="unfinished"></translation>
+        <translation>Presione para actualizar la pantalla</translation>
     </message>
 </context>
 <context>
@@ -21836,62 +21807,62 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="22"/>
         <source>Select the mode (find or filter)</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar modo (buscar o filtrar)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="126"/>
         <source>Enter the regular expression to filter on or search for</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la expresión regular para filtrar o buscar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="133"/>
         <source>Press to find the previous occurrence</source>
-        <translation type="unfinished">Pulsar para encontrar la ocurrencia anterior</translation>
+        <translation>Pulsar para encontrar la ocurrencia anterior</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.ui" line="140"/>
         <source>Press to find the next occurrence</source>
-        <translation type="unfinished">Pulsar para encontrar la ocurrencia siguiente</translation>
+        <translation>Pulsar para encontrar la ocurrencia siguiente</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="93"/>
         <source>Find</source>
-        <translation type="unfinished">Buscar</translation>
+        <translation>Buscar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="94"/>
         <source>Filter</source>
-        <translation type="unfinished">Filtro</translation>
+        <translation>Filtro</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="110"/>
         <source>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revision&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Date&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branch&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;{5}&lt;/table&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Revisión&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Fecha&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Autor&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{2}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Branch&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{3}&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parents&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{4}&lt;/td&gt;&lt;/tr&gt;{5}&lt;/table&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="120"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tags&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation type="unfinished">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Etiquetas&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Etiquetas&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="123"/>
         <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Bookmarks&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</source>
-        <translation type="unfinished">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Marcadores&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Marcadores&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1805"/>
         <source>Find Commit</source>
-        <translation type="unfinished"></translation>
+        <translation>Buscar Commit</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1805"/>
         <source>&apos;{0}&apos; was not found.</source>
-        <translation type="unfinished">&apos;{0}&apos; no se ha encontrado.</translation>
+        <translation>&apos;{0}&apos; no se ha encontrado.</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="99"/>
         <source>File</source>
-        <translation type="unfinished">Archivo</translation>
+        <translation>Archivo</translation>
     </message>
 </context>
 <context>
@@ -22689,7 +22660,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="177"/>
         <source>&lt;b&gt;Commit changes to repository&lt;/b&gt;&lt;p&gt;This commits changes to the local project to the Mercurial repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;Envia los cambios del proyecto local al repositorio Mercurial.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;&lt;p&gt;Envía los cambios del proyecto local al repositorio Mercurial.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="185"/>
@@ -23974,7 +23945,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/ProjectHelper.py" line="1412"/>
         <source>Mercurial</source>
-        <translation type="unfinished">Mercurial</translation>
+        <translation>Mercurial</translation>
     </message>
 </context>
 <context>
@@ -31588,62 +31559,62 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Log Viewer&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar Visor de Log&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="37"/>
         <source>Select to show the log-viewer upon new output</source>
-        <translation type="unfinished">Seleccionar para mostrar el visor de log con el siguiente output</translation>
+        <translation>Seleccionar para mostrar el visor de log con el siguiente output</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="40"/>
         <source>Show upon new output</source>
-        <translation type="unfinished">Mostrar con el siguiente output</translation>
+        <translation>Mostrar con el siguiente output</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="49"/>
         <source>Error Colour:</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de Error:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="62"/>
         <source>Select the colour for text sent to stderr</source>
-        <translation type="unfinished">Seleccionar el color para el texto enviado a stderr</translation>
+        <translation>Seleccionar el color para el texto enviado a stderr</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="87"/>
         <source>Message Filters:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtros de Mensaje:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="98"/>
         <source>Standard Output</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard Output</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="108"/>
         <source>Standard Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard Error</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.ui" line="118"/>
         <source>Both</source>
-        <translation type="unfinished"></translation>
+        <translation>Ambos</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="32"/>
         <source>&lt;b&gt;Message Filters for Standard Output&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Filtros de Mensajes para Standard Output&lt;/b&gt;&lt;p&gt;Esta lista muestra los filtros de mensaje configurados que se usan para suprimir mensajes recibidos vía stdout.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="37"/>
         <source>&lt;b&gt;Message Filters for Standard Error &lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stderr.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Filtros de Mensajes para Standard Error&lt;/b&gt;&lt;p&gt;Esta lista muestra los filtros de mensaje configurados que se usan para suprimir mensajes recibidos vía stderr.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/LogViewerPage.py" line="42"/>
         <source>&lt;b&gt;Message Filters for both&lt;/b&gt;&lt;p&gt;This list shows the configured message filters used to suppress messages received via stdout or stderr.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Filtros de Mensajes para ambos&lt;/b&gt;&lt;p&gt;Esta lista muestra los filtros de mensaje configurados que se usan para suprimir mensajes recibidos vía stdout o stderr.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -32187,32 +32158,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Text Mimetypes&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar Mimetypes de Texto&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="60"/>
         <source>Press to reset the list to default values</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para resetear la lista a valores por defecto</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="63"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetear a Valores por Defecto</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MimeTypesPage.py" line="51"/>
         <source>Reset Mime Types</source>
-        <translation type="unfinished"></translation>
+        <translation>Resetear Mime Types</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MimeTypesPage.py" line="51"/>
         <source>Do you really want to reset the configured list of mime types?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente desea resetear la lista configurada de mime types?</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/MimeTypesPage.ui" line="37"/>
         <source>Files of the mime types configured below are opened in an eric editor (in addition to all &apos;text&apos; mime types).</source>
-        <translation type="unfinished"></translation>
+        <translation>Los archivos con los mime types configurados debajo se abrirán en un editor eric (además de todos los mime types de texto).</translation>
     </message>
 </context>
 <context>
@@ -37760,22 +37731,22 @@ Seleccione Actualizar.</translation>
     <message>
         <location filename="../Project/ProjectOthersBrowser.py" line="281"/>
         <source>Show Mime-Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar Mime-Type</translation>
     </message>
     <message>
         <location filename="../Project/ProjectOthersBrowser.py" line="261"/>
         <source>The mime type of the file could not be determined.</source>
-        <translation type="unfinished"></translation>
+        <translation>El mime type del archivo no se puede determinar.</translation>
     </message>
     <message>
         <location filename="../Project/ProjectOthersBrowser.py" line="275"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo tiene el mime type &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
         <location filename="../Project/ProjectOthersBrowser.py" line="281"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo tiene el mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; ¿Añadirlo a la lista de mime types?</translation>
     </message>
 </context>
 <context>
@@ -39989,582 +39960,582 @@ compleja;  &apos;(?&amp;lt;![abc])q&apos; coincidirá con una &apos;q&apos; sola
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="51"/>
         <source>New from repository</source>
-        <translation type="unfinished">Nuevo desde repositorio</translation>
+        <translation>Nuevo desde repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="51"/>
         <source>&amp;New from repository...</source>
-        <translation type="unfinished">&amp;Nuevo desde repositorio...</translation>
+        <translation>&amp;Nuevo desde repositorio...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="56"/>
         <source>Create a new project from the VCS repository</source>
-        <translation type="unfinished">Crear un nuevo proyecto desde el repositorio VCS</translation>
+        <translation>Crear un nuevo proyecto desde el repositorio VCS</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="59"/>
         <source>&lt;b&gt;New from repository&lt;/b&gt;&lt;p&gt;This creates a new local project from the VCS repository.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Nuevo desde repositorio&lt;/b&gt;&lt;p&gt;Crea un nuevo proyecto local desde el repositorio VCS.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Nuevo desde repositorio&lt;/b&gt;&lt;p&gt;Crea un nuevo proyecto local desde el repositorio VCS.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="67"/>
         <source>Update from repository</source>
-        <translation type="unfinished">Hacer update desde repositorio</translation>
+        <translation>Hacer update desde repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="67"/>
         <source>&amp;Update from repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer &amp;update desde repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="72"/>
         <source>Update the local project from the VCS repository</source>
-        <translation type="unfinished">Actualizar el proyecto local desde el repositorio VCS</translation>
+        <translation>Actualizar el proyecto local desde el repositorio VCS</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="75"/>
         <source>&lt;b&gt;Update from repository&lt;/b&gt;&lt;p&gt;This updates the local project from the VCS repository.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Hacer update desde repositorio&lt;/b&gt;&lt;p&gt;Actualiza el proyecto local desde el repositorio VCS utilizando el comando update.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Hacer update desde repositorio&lt;/b&gt;&lt;p&gt;Actualiza el proyecto local desde el repositorio VCS utilizando el comando update.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="83"/>
         <source>Commit changes to repository</source>
-        <translation type="unfinished">Hacer commit de los cambios al repositorio</translation>
+        <translation>Hacer commit de los cambios al repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="83"/>
         <source>&amp;Commit changes to repository...</source>
-        <translation type="unfinished">Hacer &amp;commit de los cambios al repositorio...</translation>
+        <translation>Hacer &amp;commit de los cambios al repositorio...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="88"/>
         <source>Commit changes to the local project to the VCS repository</source>
-        <translation type="unfinished">Hacer commit de los cambios en el proyecto local al repositorio VCS</translation>
+        <translation>Hacer commit de los cambios en el proyecto local al repositorio VCS</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="91"/>
         <source>&lt;b&gt;Commit changes to repository&lt;/b&gt;&lt;p&gt;This commits changes to the local project to the VCS repository.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;Envia los cambios del proyecto local al repositorio VCS utilizando el comando commit.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;&lt;p&gt;Envía los cambios del proyecto local al repositorio VCS utilizando el comando commit.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="99"/>
         <source>Show log</source>
-        <translation type="unfinished">Mostrar log</translation>
+        <translation>Mostrar log</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="99"/>
         <source>Show &amp;log</source>
-        <translation type="unfinished">Mostrar &amp;log</translation>
+        <translation>Mostrar &amp;log</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="104"/>
         <source>Show the log of the local project</source>
-        <translation type="unfinished">Mostrar el log del proyecto local</translation>
+        <translation>Mostrar el log del proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="107"/>
         <source>&lt;b&gt;Show log&lt;/b&gt;&lt;p&gt;This shows the log of the local project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar log&lt;/b&gt;&lt;p&gt;Muestra el log del proyecto local.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar log&lt;/b&gt;&lt;p&gt;Muestra el log del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="114"/>
         <source>Show log browser</source>
-        <translation type="unfinished">Mostrar navegador de log</translation>
+        <translation>Mostrar navegador de log</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="119"/>
         <source>Show a dialog to browse the log of the local project</source>
-        <translation type="unfinished">Mostrar un diálogo para navegar el log del proyecto local</translation>
+        <translation>Mostrar un diálogo para navegar el log del proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="122"/>
         <source>&lt;b&gt;Show log browser&lt;/b&gt;&lt;p&gt;This shows a dialog to browse the log of the local project. A limited number of entries is shown first. More can be retrieved later on.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar navegador de log&lt;/b&gt;&lt;p&gt;Muestra un diálogo para navegar el log del proyecto local. Al principio se muestra un número limitado de entradas. Se pueden recuperar más entradas despues.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar navegador de log&lt;/b&gt;&lt;p&gt;Muestra un diálogo para navegar el log del proyecto local. Al principio se muestra un número limitado de entradas. Se pueden recuperar más entradas despues.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="131"/>
         <source>Show differences</source>
-        <translation type="unfinished">Mostrar diferencias</translation>
+        <translation>Mostrar diferencias</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="131"/>
         <source>Show &amp;difference</source>
-        <translation type="unfinished">Mostrar &amp;diferencia</translation>
+        <translation>Mostrar &amp;diferencia</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="136"/>
         <source>Show the difference of the local project to the repository</source>
-        <translation type="unfinished">Muestra las diferencias entre el proyecto local y el repositorio</translation>
+        <translation>Mostrar las diferencias entre el proyecto local y el repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="139"/>
         <source>&lt;b&gt;Show differences&lt;/b&gt;&lt;p&gt;This shows differences of the local project to the repository.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar diferencias&lt;/b&gt;&lt;p&gt;Muestra diferencias entre el proyecto local y el repositorio.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar diferencias&lt;/b&gt;&lt;p&gt;Muestra diferencias entre el proyecto local y el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="147"/>
         <source>Show differences (extended)</source>
-        <translation type="unfinished">Mostrar diferencias (extendido)</translation>
+        <translation>Mostrar diferencias (extendido)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="152"/>
         <source>Show the difference of revisions of the project to the repository</source>
-        <translation type="unfinished">Muestra la diferencia de revisiones entre el proyecto local y el repositorio</translation>
+        <translation>Muestra la diferencia de revisiones entre el proyecto y el repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="155"/>
         <source>&lt;b&gt;Show differences (extended)&lt;/b&gt;&lt;p&gt;This shows differences of selectable revisions of the project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Mostrar diferencias (extendido)&lt;/b&gt;&lt;p&gt;Muestra diferencias entre revisiones seleccionables del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="163"/>
         <source>Show differences (URLs)</source>
-        <translation type="unfinished">Mostrar diferencias (URLs)</translation>
+        <translation>Mostrar diferencias (URLs)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="168"/>
         <source>Show the difference of the project between two repository URLs</source>
-        <translation type="unfinished">Muestra la diferencia de revisiones entre dos URLs de repositorios</translation>
+        <translation>Muestra la diferencia en el proyecto entre dos URLs de repositorios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="171"/>
         <source>&lt;b&gt;Show differences (URLs)&lt;/b&gt;&lt;p&gt;This shows differences of the project between two repository URLs.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar diferencias (URLs)&lt;/b&gt;&lt;p&gt;Muestra diferencias para el proyecto entre dos URLs de repositorios.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar diferencias (URLs)&lt;/b&gt;&lt;p&gt;Muestra diferencias para el proyecto entre dos URLs de repositorios.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="179"/>
         <source>Show status</source>
-        <translation type="unfinished">Mostrar estado</translation>
+        <translation>Mostrar estado</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="179"/>
         <source>Show &amp;status</source>
-        <translation type="unfinished">Mostrar e&amp;stado</translation>
+        <translation>Mostrar e&amp;stado</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="184"/>
         <source>Show the status of the local project</source>
-        <translation type="unfinished">Mostrar el estado del proyecto local</translation>
+        <translation>Mostrar el estado del proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="187"/>
         <source>&lt;b&gt;Show status&lt;/b&gt;&lt;p&gt;This shows the status of the local project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar estado&lt;/b&gt;&lt;p&gt;Muestra el estado del proyecto local.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar estado&lt;/b&gt;&lt;p&gt;Muestra el estado del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="194"/>
         <source>Show change lists</source>
-        <translation type="unfinished">Mostrar listas de cambios</translation>
+        <translation>Mostrar listas de cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="199"/>
         <source>Show the change lists and associated files of the local project</source>
-        <translation type="unfinished">Mostrar las listas de cambios y los archivos asociados del proyecto local</translation>
+        <translation>Mostrar las listas de cambios y los archivos asociados del proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="202"/>
         <source>&lt;b&gt;Show change lists&lt;/b&gt;&lt;p&gt;This shows the change lists and associated files of the local project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar listas de cambios&lt;/b&gt;&lt;p&gt;Muestra las listas de cambios y los archivos asociados del proyecto local.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar listas de cambios&lt;/b&gt;&lt;p&gt;Muestra las listas de cambios y los archivos asociados del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="210"/>
         <source>Show repository info</source>
-        <translation type="unfinished">Mostrar informacion del repositorio</translation>
+        <translation>Mostrar informacion del repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="215"/>
         <source>Show some repository related information for the local project</source>
-        <translation type="unfinished">Mostrar información relacionada con el repositorio para el proyecto local</translation>
+        <translation>Mostrar información relacionada con el repositorio para el proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="218"/>
         <source>&lt;b&gt;Show repository info&lt;/b&gt;&lt;p&gt;This shows some repository related information for the local project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Mostrar información del repositorio&lt;/b&gt;&lt;p&gt;Muestra información relacionada con el repositorio para el proyecto local.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Mostrar información del repositorio&lt;/b&gt;&lt;p&gt;Muestra información relacionada con el repositorio para el proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="226"/>
         <source>Tag in repository</source>
-        <translation type="unfinished">Crear un Tag en el repositorio</translation>
+        <translation>Crear un Tag en el repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="226"/>
         <source>&amp;Tag in repository...</source>
-        <translation type="unfinished">Crear un &amp;Tag en el repositorio...</translation>
+        <translation>Crear un &amp;Tag en el repositorio...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="231"/>
         <source>Tag the local project in the repository</source>
-        <translation type="unfinished">Crea un tag del proyecto local en el repositorio</translation>
+        <translation>Crear un tag del proyecto local en el repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="234"/>
         <source>&lt;b&gt;Tag in repository&lt;/b&gt;&lt;p&gt;This tags the local project in the repository.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Crear un Tag en el repositorio&lt;/b&gt;&lt;p&gt;Crea un tag del proyecto local en el repositorio.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Crear un Tag en el repositorio&lt;/b&gt;&lt;p&gt;Crea un tag del proyecto local en el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="241"/>
         <source>Export from repository</source>
-        <translation type="unfinished">Exportar desde repositorio</translation>
+        <translation>Exportar desde repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="241"/>
         <source>&amp;Export from repository...</source>
-        <translation type="unfinished">&amp;Exportar desde repositorio...</translation>
+        <translation>&amp;Exportar desde repositorio...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="246"/>
         <source>Export a project from the repository</source>
-        <translation type="unfinished">Exportar un proyecto desde el repositorio</translation>
+        <translation>Exportar un proyecto desde el repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="249"/>
         <source>&lt;b&gt;Export from repository&lt;/b&gt;&lt;p&gt;This exports a project from the repository.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Exportar desde repositorio&lt;/b&gt;&lt;p&gt;Exporta un proyecto desde el repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="256"/>
         <source>Command options</source>
-        <translation type="unfinished">Opciones de comando</translation>
+        <translation>Opciones de comando</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="256"/>
         <source>Command &amp;options...</source>
-        <translation type="unfinished">&amp;Opciones de comando...</translation>
+        <translation>&amp;Opciones de comando...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="260"/>
         <source>Show the VCS command options</source>
-        <translation type="unfinished">Mostrar opciones de comando VCS</translation>
+        <translation>Mostrar opciones de comando VCS</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="262"/>
         <source>&lt;b&gt;Command options...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the VCS command options.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Opciones de comando...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las opciones de comando VCS.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Opciones de comando...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las opciones de comando VCS.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="269"/>
         <source>Revert changes</source>
-        <translation type="unfinished">Revertir cambios</translation>
+        <translation>Revertir cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="269"/>
         <source>Re&amp;vert changes</source>
-        <translation type="unfinished">Re&amp;vertir cambios</translation>
+        <translation>Re&amp;vertir cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="274"/>
         <source>Revert all changes made to the local project</source>
-        <translation type="unfinished">Revertir todos los cambios hechos al proyecto local</translation>
+        <translation>Revertir todos los cambios hechos al proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="277"/>
         <source>&lt;b&gt;Revert changes&lt;/b&gt;&lt;p&gt;This reverts all changes made to the local project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Revertir cambios&lt;/b&gt;&lt;p&gt;Revierte todos los cambios hechos al proyecto local.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Revertir cambios&lt;/b&gt;&lt;p&gt;Revierte todos los cambios hechos al proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="284"/>
         <source>Merge</source>
-        <translation type="unfinished">Hacer merge</translation>
+        <translation>Hacer merge</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="284"/>
         <source>Mer&amp;ge changes...</source>
-        <translation type="unfinished">Hacer mer&amp;ge de los cambios...</translation>
+        <translation>Hacer mer&amp;ge de los cambios...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="289"/>
         <source>Merge changes of a tag/revision into the local project</source>
-        <translation type="unfinished">Hacer merge de los cambios de una tag/revision en el proyecto local</translation>
+        <translation>Hacer merge de los cambios de una tag/revision al proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="292"/>
         <source>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;This merges changes of a tag/revision into the local project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;Hace un merge de los cambios de una tag/revision al proyecto local.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Merge&lt;/b&gt;&lt;p&gt;Hace un merge de los cambios de una tag/revision al proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
         <source>Switch</source>
-        <translation type="unfinished">Hacer switch</translation>
+        <translation>Hacer switch</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="300"/>
         <source>S&amp;witch...</source>
-        <translation type="unfinished">Hacer s&amp;witch...</translation>
+        <translation>Hacer s&amp;witch...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="305"/>
         <source>Switch the local copy to another tag/branch</source>
-        <translation type="unfinished">Hace un switch de la copia local a otra tag/branch</translation>
+        <translation>Hace un switch de la copia local a otra tag/branch</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="308"/>
         <source>&lt;b&gt;Switch&lt;/b&gt;&lt;p&gt;This switches the local copy to another tag/branch.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Hacer switch&lt;/b&gt;&lt;p&gt;Hace un switch de la copia local a otra tag/branch.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Hacer switch&lt;/b&gt;&lt;p&gt;Hace un switch de la copia local a otra tag/branch.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="315"/>
         <source>Conflicts resolved</source>
-        <translation type="unfinished">Conflictos resueltos</translation>
+        <translation>Conflictos resueltos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="315"/>
         <source>Con&amp;flicts resolved</source>
-        <translation type="unfinished">Con&amp;flictos resueltos</translation>
+        <translation>Con&amp;flictos resueltos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="319"/>
         <source>Mark all conflicts of the local project as resolved</source>
-        <translation type="unfinished">Marcar todos los conflictos del proyecto local como resueltos</translation>
+        <translation>Marcar todos los conflictos del proyecto local como resueltos</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="322"/>
         <source>&lt;b&gt;Conflicts resolved&lt;/b&gt;&lt;p&gt;This marks all conflicts of the local project as resolved.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Conflictos resueltos&lt;/b&gt;&lt;p&gt;Marca todos los conflictos del proyecto local como resueltos.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Conflictos resueltos&lt;/b&gt;&lt;p&gt;Marca todos los conflictos del proyecto local como resueltos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="330"/>
         <source>Cleanup</source>
-        <translation type="unfinished"></translation>
+        <translation>Limpiar (cleanup)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="330"/>
         <source>Cleanu&amp;p</source>
-        <translation type="unfinished">Lim&amp;piar  (cleanup)</translation>
+        <translation>Lim&amp;piar  (cleanup)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="334"/>
         <source>Cleanup the local project</source>
-        <translation type="unfinished"></translation>
+        <translation>Limpiar (cleanup) el proyecto local</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="337"/>
         <source>&lt;b&gt;Cleanup&lt;/b&gt;&lt;p&gt;This performs a cleanup of the local project.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Limpieza (cleanup)&lt;/b&gt;&lt;p&gt;Lleva a cabo un cleanup del proyecto local.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="344"/>
         <source>Execute command</source>
-        <translation type="unfinished">Ejecutar comando</translation>
+        <translation>Ejecutar comando</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="344"/>
         <source>E&amp;xecute command...</source>
-        <translation type="unfinished">E&amp;jecutar comando...</translation>
+        <translation>E&amp;jecutar comando...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="348"/>
         <source>Execute an arbitrary VCS command</source>
-        <translation type="unfinished">Ejecuta un comando VCS arbitrario</translation>
+        <translation>Ejecuta un comando VCS arbitrario</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="351"/>
         <source>&lt;b&gt;Execute command&lt;/b&gt;&lt;p&gt;This opens a dialog to enter an arbitrary VCS command.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Ejecutar comando&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir un comando VCS arbitrario.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Ejecutar comando&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir un comando VCS arbitrario.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="358"/>
         <source>List tags</source>
-        <translation type="unfinished">Listar tags</translation>
+        <translation>Listar tags</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="358"/>
         <source>List tags...</source>
-        <translation type="unfinished">Listar tags...</translation>
+        <translation>Listar tags...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="362"/>
         <source>List tags of the project</source>
-        <translation type="unfinished">Lista los tags del proyecto</translation>
+        <translation>Lista los tags del proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="365"/>
         <source>&lt;b&gt;List tags&lt;/b&gt;&lt;p&gt;This lists the tags of the project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Listar tags&lt;/b&gt;&lt;p&gt;Lista los tags del proyecto.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Listar tags&lt;/b&gt;&lt;p&gt;Lista los tags del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="372"/>
         <source>List branches</source>
-        <translation type="unfinished">Listar branches</translation>
+        <translation>Listar branches</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="372"/>
         <source>List branches...</source>
-        <translation type="unfinished">Listar branches...</translation>
+        <translation>Listar branches...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="376"/>
         <source>List branches of the project</source>
-        <translation type="unfinished">Lista las branches del proyecto</translation>
+        <translation>Lista las branches del proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="379"/>
         <source>&lt;b&gt;List branches&lt;/b&gt;&lt;p&gt;This lists the branches of the project.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Listar branches&lt;/b&gt;&lt;p&gt;Lista las branches del proyecto.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Listar branches&lt;/b&gt;&lt;p&gt;Lista las branches del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="386"/>
         <source>List repository contents</source>
-        <translation type="unfinished">Listar contenido del repositorio</translation>
+        <translation>Listar contenido del repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="386"/>
         <source>List repository contents...</source>
-        <translation type="unfinished">Listar contenido del repositorio...</translation>
+        <translation>Listar contenido del repositorio...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="390"/>
         <source>Lists the contents of the repository</source>
-        <translation type="unfinished">Lista el contenido del repositorio</translation>
+        <translation>Lista el contenido del repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="393"/>
         <source>&lt;b&gt;List repository contents&lt;/b&gt;&lt;p&gt;This lists the contents of the repository.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Listar contenido del repositorio&lt;/b&gt;&lt;p&gt;Lista el contenido del repositorio.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Listar contenido del repositorio&lt;/b&gt;&lt;p&gt;Lista el contenido del repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="400"/>
         <source>Set Property</source>
-        <translation type="unfinished">Establecer propiedad</translation>
+        <translation>Establecer propiedad</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="400"/>
         <source>Set Property...</source>
-        <translation type="unfinished">Establecer propiedad...</translation>
+        <translation>Establecer propiedad...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="404"/>
         <source>Set a property for the project files</source>
-        <translation type="unfinished">Establece una propiedad para los archivos del proyecto</translation>
+        <translation>Establece una propiedad para los archivos del proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="407"/>
         <source>&lt;b&gt;Set Property&lt;/b&gt;&lt;p&gt;This sets a property for the project files.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Establecer Propiedad&lt;/b&gt;&lt;p&gt;Establece una propiedad para los archivos del proyecto.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Establecer Propiedad&lt;/b&gt;&lt;p&gt;Establece una propiedad para los archivos del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="414"/>
         <source>List Properties</source>
-        <translation type="unfinished">Listar propiedades</translation>
+        <translation>Listar propiedades</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="414"/>
         <source>List Properties...</source>
-        <translation type="unfinished">Listar propiedades...</translation>
+        <translation>Listar propiedades...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="418"/>
         <source>List properties of the project files</source>
-        <translation type="unfinished">Listar propiedades de los archivos del proyecto</translation>
+        <translation>Listar propiedades de los archivos del proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="421"/>
         <source>&lt;b&gt;List Properties&lt;/b&gt;&lt;p&gt;This lists the properties of the project files.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Listar Propiedades&lt;/b&gt;&lt;p&gt;Lista las propiedades de los archivos del proyecto.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Listar Propiedades&lt;/b&gt;&lt;p&gt;Lista las propiedades de los archivos del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="428"/>
         <source>Delete Property</source>
-        <translation type="unfinished">Borrar propiedad</translation>
+        <translation>Borrar propiedad</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="428"/>
         <source>Delete Property...</source>
-        <translation type="unfinished">Borrar propiedad...</translation>
+        <translation>Borrar propiedad...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="432"/>
         <source>Delete a property for the project files</source>
-        <translation type="unfinished">Borrar una propiedad de los archivos del proyecto</translation>
+        <translation>Borrar una propiedad de los archivos del proyecto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="435"/>
         <source>&lt;b&gt;Delete Property&lt;/b&gt;&lt;p&gt;This deletes a property for the project files.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Borrar Propiedad&lt;/b&gt;&lt;p&gt;Borra una propiedad de los archivos del proyecto.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Borrar Propiedad&lt;/b&gt;&lt;p&gt;Borra una propiedad de los archivos del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="442"/>
         <source>Relocate</source>
-        <translation type="unfinished">Trasladar (relocate)</translation>
+        <translation>Trasladar (relocate)</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="442"/>
         <source>Relocate...</source>
-        <translation type="unfinished">Trasladar (relocate)...</translation>
+        <translation>Trasladar (relocate)...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="447"/>
         <source>Relocate the working copy to a new repository URL</source>
-        <translation type="unfinished">Trasladar la copia de trabajo a una nueva URL de repositorio</translation>
+        <translation>Trasladar la copia de trabajo a una nueva URL de repositorio</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="450"/>
         <source>&lt;b&gt;Relocate&lt;/b&gt;&lt;p&gt;This relocates the working copy to a new repository URL.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Trasladar (relocate)&lt;/b&gt;&lt;p&gt;Traslada la copia de trabajo a una nueva URL de repositorio.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Trasladar (relocate)&lt;/b&gt;&lt;p&gt;Traslada la copia de trabajo a una nueva URL de repositorio.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="458"/>
         <source>Repository Browser</source>
-        <translation type="unfinished">Navegador de Repositorios</translation>
+        <translation>Navegador de Repositorios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="458"/>
         <source>Repository Browser...</source>
-        <translation type="unfinished">Navegador de Repositorios...</translation>
+        <translation>Navegador de Repositorios...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="463"/>
         <source>Show the Repository Browser dialog</source>
-        <translation type="unfinished">Mostrar diálogo de Navegador de Repositorios</translation>
+        <translation>Mostrar diálogo de Navegador de Repositorios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="466"/>
         <source>&lt;b&gt;Repository Browser&lt;/b&gt;&lt;p&gt;This shows the Repository Browser dialog.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Navegador de Repositorios&lt;/b&gt;&lt;p&gt;Muestra el diálogo de Navegador de Repositorios.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Navegador de Repositorios&lt;/b&gt;&lt;p&gt;Muestra el diálogo de Navegador de Repositorios.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="473"/>
         <source>Configure</source>
-        <translation type="unfinished">Configurar</translation>
+        <translation>Configurar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="473"/>
         <source>Configure...</source>
-        <translation type="unfinished">Configurar...</translation>
+        <translation>Configurar...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="477"/>
         <source>Show the configuration dialog with the Subversion page selected</source>
-        <translation type="unfinished">Mostrar el diálogo de configuración con la página de Subversion seleccionada</translation>
+        <translation>Mostrar el diálogo de configuración con la página de Subversion seleccionada</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="480"/>
         <source>&lt;b&gt;Configure&lt;/b&gt;&lt;p&gt;Show the configuration dialog with the Subversion page selected.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Configurar&lt;/b&gt;&lt;p&gt;Mostrar el diálogo de configuración con la página de Subversion seleccionada.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Configurar&lt;/b&gt;&lt;p&gt;Mostrar el diálogo de configuración con la página de Subversion seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="488"/>
         <source>Upgrade</source>
-        <translation type="unfinished">Actualizar versión</translation>
+        <translation>Actualizar versión</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="488"/>
         <source>Upgrade...</source>
-        <translation type="unfinished">Actualizar versión...</translation>
+        <translation>Actualizar versión...</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="492"/>
         <source>Upgrade the working copy to the current format</source>
-        <translation type="unfinished">Actualizar la copia de trabajo al formato actual</translation>
+        <translation>Actualizar la copia de trabajo al formato actual</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="495"/>
         <source>&lt;b&gt;Upgrade&lt;/b&gt;&lt;p&gt;Upgrades the working copy to the current format.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;Actualizar versión&lt;/b&gt;&lt;p&gt;Actualiza la versión de la copia de trabajo al formato actual.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Actualizar versión&lt;/b&gt;&lt;p&gt;Actualiza la versión de la copia de trabajo al formato actual.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectHelper.py" line="575"/>
         <source>Subversion (pysvn)</source>
-        <translation type="unfinished">Subversion (pysvn)</translation>
+        <translation>Subversion (pysvn)</translation>
     </message>
 </context>
 <context>
@@ -48986,12 +48957,12 @@ del cliente ejecutable de Subversion (p.ej. svn).&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="48"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="50"/>
         <source>Press to refresh the display</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para actualizar la pantalla</translation>
     </message>
 </context>
 <context>
@@ -50045,7 +50016,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectHelper.py" line="91"/>
         <source>&lt;b&gt;Commit changes to repository&lt;/b&gt;&lt;p&gt;This commits changes to the local project to the VCS repository.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;Envia los cambios del proyecto local al repositorio VCS utilizando el comando commit.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Hacer commit de los cambios al repositorio&lt;/b&gt;&lt;p&gt;Envía los cambios del proyecto local al repositorio VCS utilizando el comando commit.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectHelper.py" line="99"/>
@@ -50550,7 +50521,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectHelper.py" line="559"/>
         <source>Subversion (svn)</source>
-        <translation type="unfinished">Subversión (svn)</translation>
+        <translation>Subversion (svn)</translation>
     </message>
 </context>
 <context>
@@ -50647,12 +50618,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.py" line="43"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.py" line="45"/>
         <source>Press to refresh the properties display</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para actualizar la visualización de propiedades</translation>
     </message>
 </context>
 <context>
@@ -59043,7 +59014,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../UI/UserInterface.py" line="529"/>
         <source>Generating Plugins Toolbars...</source>
-        <translation type="unfinished"></translation>
+        <translation>Generando Barras de Herramientas para Plugins...</translation>
     </message>
 </context>
 <context>
@@ -59943,7 +59914,7 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../VCS/ProjectHelper.py" line="152"/>
         <source>VCS</source>
-        <translation type="unfinished"></translation>
+        <translation>VCS</translation>
     </message>
 </context>
 <context>
@@ -60728,95 +60699,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="../ViewManager/ViewManager.py" line="1239"/>
         <source>&lt;b&gt;Shorten empty lines&lt;/b&gt;&lt;p&gt;Shorten lines consisting solely of whitespace characters.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Convertir lineas vacías&lt;/b&gt;&lt;p&gt;Convierte líneas que contienen solamente espacios a un caracter de salto de línea.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1248"/>
-        <source>Autocomplete</source>
-        <translation type="obsolete">Autocompletar</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="2668"/>
-        <source>&amp;Autocomplete</source>
-        <translation type="obsolete">&amp;Autocompletar</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1248"/>
-        <source>Ctrl+Space</source>
-        <comment>Edit|Autocomplete</comment>
-        <translation type="obsolete">Ctrl+Space</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1255"/>
-        <source>Autocomplete current word</source>
-        <translation type="obsolete">Autocompletar la palabra actual</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1257"/>
-        <source>&lt;b&gt;Autocomplete&lt;/b&gt;&lt;p&gt;Performs an autocompletion of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Autocompletar&lt;/b&gt;&lt;p&gt;Lleva a cabo un autocompletado de la palabra que contiene el cursor.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1266"/>
-        <source>Autocomplete from Document</source>
-        <translation type="obsolete">Autocompletar desde documento</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1266"/>
-        <source>Ctrl+Shift+Space</source>
-        <comment>Edit|Autocomplete from Document</comment>
-        <translation type="obsolete">Ctrl+Shift+Space</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1276"/>
-        <source>Autocomplete current word from Document</source>
-        <translation type="obsolete">Autocompletar palabra actual desde documento</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1279"/>
-        <source>&lt;b&gt;Autocomplete from Document&lt;/b&gt;&lt;p&gt;Performs an autocompletion from document of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Autocompletar desde Documento&lt;/b&gt;&lt;p&gt;Lleva a cabo un autocompletado de la palabra que contiene el cursor a partir del documento.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1289"/>
-        <source>Autocomplete from APIs</source>
-        <translation type="obsolete">Autocompletar desde APIs</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1289"/>
-        <source>Ctrl+Alt+Space</source>
-        <comment>Edit|Autocomplete from APIs</comment>
-        <translation type="obsolete">Ctrl+Alt+Space</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1299"/>
-        <source>Autocomplete current word from APIs</source>
-        <translation type="obsolete">Autocompletar palabra actual desde APIs</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1302"/>
-        <source>&lt;b&gt;Autocomplete from APIs&lt;/b&gt;&lt;p&gt;Performs an autocompletion from APIs of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Autocompletar desde APIs&lt;/b&gt;&lt;p&gt;Lleva a cabo un autocompletado de la palabra que contiene el cursor a partir de las APIs.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1312"/>
-        <source>Autocomplete from Document and APIs</source>
-        <translation type="obsolete">Autocompletar desde Documento y de APIs</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1312"/>
-        <source>Alt+Shift+Space</source>
-        <comment>Edit|Autocomplete from Document and APIs</comment>
-        <translation type="obsolete">Alt+Shift+Space</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1322"/>
-        <source>Autocomplete current word from Document and APIs</source>
-        <translation type="obsolete">Autocompletar palabra actual desde Documento y  APIs</translation>
-    </message>
-    <message>
-        <location filename="../ViewManager/ViewManager.py" line="1325"/>
-        <source>&lt;b&gt;Autocomplete from Document and APIs&lt;/b&gt;&lt;p&gt;Performs an autocompletion from document and APIs of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;b&gt;Autocompletar desde Documento y APIs&lt;/b&gt;&lt;p&gt;Lleva a cabo un autocompletado de la palabra que contiene el cursor a partir del documento y de las APIs.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="584"/>
@@ -62254,12 +62136,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>&amp;Consejo de llamada (calltip)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1335"/>
-        <source>Alt+Space</source>
-        <comment>Edit|Calltip</comment>
-        <translation>Alt+Space</translation>
-    </message>
-    <message>
         <location filename="../ViewManager/ViewManager.py" line="1342"/>
         <source>Show Calltips</source>
         <translation>Mostrar Consejos de llamada (calltips)</translation>
@@ -63182,91 +63058,97 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="2668"/>
         <source>Complete</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1248"/>
         <source>&amp;Complete</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Completar</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1248"/>
         <source>Ctrl+Space</source>
         <comment>Edit|Complete</comment>
-        <translation type="unfinished">Ctrl+Space</translation>
+        <translation>Ctrl+Space</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1255"/>
         <source>Complete current word</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar la palabra actual</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1257"/>
         <source>&lt;b&gt;Complete&lt;/b&gt;&lt;p&gt;Performs a completion of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Completar&lt;/b&gt;&lt;p&gt;Lleva a cabo un completado de la palabra que contiene el cursor.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1266"/>
         <source>Complete from Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar desde documento</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1266"/>
         <source>Ctrl+Shift+Space</source>
         <comment>Edit|Complete from Document</comment>
-        <translation type="unfinished">Ctrl+Shift+Space</translation>
+        <translation>Ctrl+Shift+Space</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1276"/>
         <source>Complete current word from Document</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar palabra actual desde Documento</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1279"/>
         <source>&lt;b&gt;Complete from Document&lt;/b&gt;&lt;p&gt;Performs a completion from document of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Completar desde Documento&lt;/b&gt;&lt;p&gt;Lleva a cabo un completado de la palabra que contiene el cursor a partir del documento.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1289"/>
         <source>Complete from APIs</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar desde APIs</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1289"/>
         <source>Ctrl+Alt+Space</source>
         <comment>Edit|Complete from APIs</comment>
-        <translation type="unfinished">Ctrl+Alt+Space</translation>
+        <translation>Ctrl+Alt+Space</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1299"/>
         <source>Complete current word from APIs</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar palabra actual desde APIs</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1302"/>
         <source>&lt;b&gt;Complete from APIs&lt;/b&gt;&lt;p&gt;Performs a completion from APIs of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Completar desde APIs&lt;/b&gt;&lt;p&gt;Lleva a cabo un completado de la palabra que contiene el cursor a partir de las APIs.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1312"/>
         <source>Complete from Document and APIs</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar desde Documento y de APIs</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1312"/>
         <source>Alt+Shift+Space</source>
         <comment>Edit|Complete from Document and APIs</comment>
-        <translation type="unfinished">Alt+Shift+Space</translation>
+        <translation>Alt+Shift+Space</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1322"/>
         <source>Complete current word from Document and APIs</source>
-        <translation type="unfinished"></translation>
+        <translation>Completar palabra actual desde Documento y  APIs</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="1325"/>
         <source>&lt;b&gt;Complete from Document and APIs&lt;/b&gt;&lt;p&gt;Performs a completion from document and APIs of the word containing the cursor.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Completar desde Documento y APIs&lt;/b&gt;&lt;p&gt;Lleva a cabo un completado de la palabra que contiene el cursor a partir del documento y de las APIs.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="1335"/>
+        <source>Meta+Alt+Space</source>
+        <comment>Edit|Calltip</comment>
+        <translation>Meta+Alt+Space</translation>
     </message>
 </context>
 <context>
