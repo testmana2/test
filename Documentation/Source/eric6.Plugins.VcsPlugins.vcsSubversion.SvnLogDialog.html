@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsSubversion.SvnLogDialog</h1>
+<p>
+Module implementing a dialog to show the output of the svn log command process.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#SvnLogDialog">SvnLogDialog</a></td>
+<td>Class implementing a dialog to show the output of the svn log command process.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="SvnLogDialog" ID="SvnLogDialog"></a>
+<h2>SvnLogDialog</h2>
+<p>
+    Class implementing a dialog to show the output of the svn log command
+    process.
+</p><p>
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
+    a diff of the versions.
+</p>
+<h3>Derived from</h3>
+QWidget, Ui_SvnLogDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#SvnLogDialog.__init__">SvnLogDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__procFinished">__procFinished</a></td>
+<td>Private slot connected to the finished signal.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__readStderr">__readStderr</a></td>
+<td>Private slot to handle the readyReadStandardError signal.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__readStdout">__readStdout</a></td>
+<td>Private slot to handle the readyReadStandardOutput signal.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__sourceChanged">__sourceChanged</a></td>
+<td>Private slot to handle the sourceChanged signal of the contents pane.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.closeEvent">closeEvent</a></td>
+<td>Protected slot implementing a close event handler.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.keyPressEvent">keyPressEvent</a></td>
+<td>Protected slot to handle a key press event.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.on_input_returnPressed">on_input_returnPressed</a></td>
+<td>Private slot to handle the press of the return key in the input field.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
+<td>Private slot to handle the password checkbox toggled.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.on_sendButton_clicked">on_sendButton_clicked</a></td>
+<td>Private slot to send the input to the subversion process.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.start">start</a></td>
+<td>Public slot to start the cvs log command.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="SvnLogDialog.__init__" ID="SvnLogDialog.__init__"></a>
+<h4>SvnLogDialog (Constructor)</h4>
+<b>SvnLogDialog</b>(<i>vcs, isFile=False, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vcs</i></dt>
+<dd>
+reference to the vcs object
+</dd><dt><i>isFile</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="SvnLogDialog.__procFinished" ID="SvnLogDialog.__procFinished"></a>
+<h4>SvnLogDialog.__procFinished</h4>
+<b>__procFinished</b>(<i>exitCode, exitStatus</i>)
+<p>
+        Private slot connected to the finished signal.
+</p><dl>
+<dt><i>exitCode</i></dt>
+<dd>
+exit code of the process (integer)
+</dd><dt><i>exitStatus</i></dt>
+<dd>
+exit status of the process (QProcess.ExitStatus)
+</dd>
+</dl><a NAME="SvnLogDialog.__readStderr" ID="SvnLogDialog.__readStderr"></a>
+<h4>SvnLogDialog.__readStderr</h4>
+<b>__readStderr</b>(<i></i>)
+<p>
+        Private slot to handle the readyReadStandardError signal.
+</p><p>
+        It reads the error output of the process and inserts it into the
+        error pane.
+</p><a NAME="SvnLogDialog.__readStdout" ID="SvnLogDialog.__readStdout"></a>
+<h4>SvnLogDialog.__readStdout</h4>
+<b>__readStdout</b>(<i></i>)
+<p>
+        Private slot to handle the readyReadStandardOutput signal.
+</p><p>
+        It reads the output of the process and inserts it into a buffer.
+</p><a NAME="SvnLogDialog.__sourceChanged" ID="SvnLogDialog.__sourceChanged"></a>
+<h4>SvnLogDialog.__sourceChanged</h4>
+<b>__sourceChanged</b>(<i>url</i>)
+<p>
+        Private slot to handle the sourceChanged signal of the contents pane.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+the url that was clicked (QUrl)
+</dd>
+</dl><a NAME="SvnLogDialog.closeEvent" ID="SvnLogDialog.closeEvent"></a>
+<h4>SvnLogDialog.closeEvent</h4>
+<b>closeEvent</b>(<i>e</i>)
+<p>
+        Protected slot implementing a close event handler.
+</p><dl>
+<dt><i>e</i></dt>
+<dd>
+close event (QCloseEvent)
+</dd>
+</dl><a NAME="SvnLogDialog.keyPressEvent" ID="SvnLogDialog.keyPressEvent"></a>
+<h4>SvnLogDialog.keyPressEvent</h4>
+<b>keyPressEvent</b>(<i>evt</i>)
+<p>
+        Protected slot to handle a key press event.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+the key press event (QKeyEvent)
+</dd>
+</dl><a NAME="SvnLogDialog.on_input_returnPressed" ID="SvnLogDialog.on_input_returnPressed"></a>
+<h4>SvnLogDialog.on_input_returnPressed</h4>
+<b>on_input_returnPressed</b>(<i></i>)
+<p>
+        Private slot to handle the press of the return key in the input field.
+</p><a NAME="SvnLogDialog.on_passwordCheckBox_toggled" ID="SvnLogDialog.on_passwordCheckBox_toggled"></a>
+<h4>SvnLogDialog.on_passwordCheckBox_toggled</h4>
+<b>on_passwordCheckBox_toggled</b>(<i>isOn</i>)
+<p>
+        Private slot to handle the password checkbox toggled.
+</p><dl>
+<dt><i>isOn</i></dt>
+<dd>
+flag indicating the status of the check box (boolean)
+</dd>
+</dl><a NAME="SvnLogDialog.on_sendButton_clicked" ID="SvnLogDialog.on_sendButton_clicked"></a>
+<h4>SvnLogDialog.on_sendButton_clicked</h4>
+<b>on_sendButton_clicked</b>(<i></i>)
+<p>
+        Private slot to send the input to the subversion process.
+</p><a NAME="SvnLogDialog.start" ID="SvnLogDialog.start"></a>
+<h4>SvnLogDialog.start</h4>
+<b>start</b>(<i>fn, noEntries=0</i>)
+<p>
+        Public slot to start the cvs log command.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename to show the log for (string)
+</dd><dt><i>noEntries</i></dt>
+<dd>
+number of entries to show (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

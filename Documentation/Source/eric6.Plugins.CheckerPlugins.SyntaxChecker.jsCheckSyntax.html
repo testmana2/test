@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax</h1>
+<p>
+Module implementing the syntax check for Python 2/3.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#initService">initService</a></td>
+<td>Initialize the service and return the entry point.</td>
+</tr><tr>
+<td><a href="#jsCheckSyntax">jsCheckSyntax</a></td>
+<td>Function to check a Javascript source file for syntax errors.</td>
+</tr><tr>
+<td><a href="#normalizeCode">normalizeCode</a></td>
+<td>Function to normalize the given code.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="initService" ID="initService"></a>
+<h2>initService</h2>
+<b>initService</b>(<i></i>)
+<p>
+    Initialize the service and return the entry point.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the entry point for the background client (function)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="jsCheckSyntax" ID="jsCheckSyntax"></a>
+<h2>jsCheckSyntax</h2>
+<b>jsCheckSyntax</b>(<i>file, codestring</i>)
+<p>
+    Function to check a Javascript source file for syntax errors.
+</p><dl>
+<dt><i>file</i></dt>
+<dd>
+source filename (string)
+</dd><dt><i>codestring</i></dt>
+<dd>
+string containing the code to check (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+dictionary with the keys 'error' and 'warnings' which
+            hold a list containing details about the error/ warnings
+            (file name, line number, column, codestring (only at syntax
+            errors), the message, a list with arguments for the message)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="normalizeCode" ID="normalizeCode"></a>
+<h2>normalizeCode</h2>
+<b>normalizeCode</b>(<i>codestring</i>)
+<p>
+    Function to normalize the given code.
+</p><dl>
+<dt><i>codestring</i></dt>
+<dd>
+code to be normalized (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+normalized code (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

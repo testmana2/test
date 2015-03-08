@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Python.DebugClientThreads</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Python.DebugClientThreads</h1>
+<p>
+Module implementing the multithreaded version of the debug client.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>_original_start_thread</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#DebugClientThreads">DebugClientThreads</a></td>
+<td>Class implementing the client side of the debugger.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#_debugclient_start_new_thread">_debugclient_start_new_thread</a></td>
+<td>Module function used to allow for debugging of multiple threads.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="DebugClientThreads" ID="DebugClientThreads"></a>
+<h2>DebugClientThreads</h2>
+<p>
+    Class implementing the client side of the debugger.
+</p><p>
+    This variant of the debugger implements a threaded debugger client
+    by subclassing all relevant base classes.
+</p>
+<h3>Derived from</h3>
+DebugClientBase.DebugClientBase, AsyncIO
+<h3>Class Attributes</h3>
+<table>
+<tr><td>debugClient</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DebugClientThreads.__init__">DebugClientThreads</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.attachThread">attachThread</a></td>
+<td>Public method to setup a thread for DebugClient to debug.</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.eventLoop">eventLoop</a></td>
+<td>Public method implementing our event loop.</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.lockClient">lockClient</a></td>
+<td>Public method to acquire the lock for this client.</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.setCurrentThread">setCurrentThread</a></td>
+<td>Public method to set the current thread.</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.set_quit">set_quit</a></td>
+<td>Public method to do a 'set quit' on all threads.</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.threadTerminated">threadTerminated</a></td>
+<td>Public method called when a DebugThread has exited.</td>
+</tr><tr>
+<td><a href="#DebugClientThreads.unlockClient">unlockClient</a></td>
+<td>Public method to release the lock for this client.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="DebugClientThreads.__init__" ID="DebugClientThreads.__init__"></a>
+<h4>DebugClientThreads (Constructor)</h4>
+<b>DebugClientThreads</b>(<i></i>)
+<p>
+        Constructor
+</p><a NAME="DebugClientThreads.attachThread" ID="DebugClientThreads.attachThread"></a>
+<h4>DebugClientThreads.attachThread</h4>
+<b>attachThread</b>(<i>target=None, args=None, kwargs=None, mainThread=0</i>)
+<p>
+        Public method to setup a thread for DebugClient to debug.
+</p><p>
+        If mainThread is non-zero, then we are attaching to the already
+        started mainthread of the app and the rest of the args are ignored.
+</p><dl>
+<dt><i>target</i></dt>
+<dd>
+the start function of the target thread (i.e. the
+            user code)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments to pass to target
+</dd><dt><i>kwargs</i></dt>
+<dd>
+keyword arguments to pass to target
+</dd><dt><i>mainThread</i></dt>
+<dd>
+non-zero, if we are attaching to the already
+              started mainthread of the app
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+The identifier of the created thread
+</dd>
+</dl><a NAME="DebugClientThreads.eventLoop" ID="DebugClientThreads.eventLoop"></a>
+<h4>DebugClientThreads.eventLoop</h4>
+<b>eventLoop</b>(<i>disablePolling=False</i>)
+<p>
+        Public method implementing our event loop.
+</p><dl>
+<dt><i>disablePolling</i></dt>
+<dd>
+flag indicating to enter an event loop with
+            polling disabled (boolean)
+</dd>
+</dl><a NAME="DebugClientThreads.lockClient" ID="DebugClientThreads.lockClient"></a>
+<h4>DebugClientThreads.lockClient</h4>
+<b>lockClient</b>(<i>blocking=1</i>)
+<p>
+        Public method to acquire the lock for this client.
+</p><dl>
+<dt><i>blocking</i></dt>
+<dd>
+flag to indicating a blocking lock
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating successful locking
+</dd>
+</dl><a NAME="DebugClientThreads.setCurrentThread" ID="DebugClientThreads.setCurrentThread"></a>
+<h4>DebugClientThreads.setCurrentThread</h4>
+<b>setCurrentThread</b>(<i>id</i>)
+<p>
+        Public method to set the current thread.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+the id the current thread should be set to.
+</dd>
+</dl><a NAME="DebugClientThreads.set_quit" ID="DebugClientThreads.set_quit"></a>
+<h4>DebugClientThreads.set_quit</h4>
+<b>set_quit</b>(<i></i>)
+<p>
+        Public method to do a 'set quit' on all threads.
+</p><a NAME="DebugClientThreads.threadTerminated" ID="DebugClientThreads.threadTerminated"></a>
+<h4>DebugClientThreads.threadTerminated</h4>
+<b>threadTerminated</b>(<i>dbgThread</i>)
+<p>
+        Public method called when a DebugThread has exited.
+</p><dl>
+<dt><i>dbgThread</i></dt>
+<dd>
+the DebugThread that has exited
+</dd>
+</dl><a NAME="DebugClientThreads.unlockClient" ID="DebugClientThreads.unlockClient"></a>
+<h4>DebugClientThreads.unlockClient</h4>
+<b>unlockClient</b>(<i></i>)
+<p>
+        Public method to release the lock for this client.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="_debugclient_start_new_thread" ID="_debugclient_start_new_thread"></a>
+<h2>_debugclient_start_new_thread</h2>
+<b>_debugclient_start_new_thread</b>(<i>target, args, kwargs={}</i>)
+<p>
+    Module function used to allow for debugging of multiple threads.
+</p><p>
+    The way it works is that below, we reset thread._start_new_thread to
+    this function object. Thus, providing a hook for us to see when
+    threads are started. From here we forward the request onto the
+    DebugClient which will create a DebugThread object to allow tracing
+    of the thread then start up the thread. These actions are always
+    performed in order to allow dropping into debug mode.
+</p><p>
+    See DebugClientThreads.attachThread and DebugThread.DebugThread in
+    DebugThread.py
+</p><dl>
+<dt><i>target</i></dt>
+<dd>
+the start function of the target thread (i.e. the user code)
+</dd><dt><i>args</i></dt>
+<dd>
+arguments to pass to target
+</dd><dt><i>kwargs</i></dt>
+<dd>
+keyword arguments to pass to target
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+The identifier of the created thread
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

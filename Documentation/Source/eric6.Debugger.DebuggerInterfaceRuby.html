@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Debugger.DebuggerInterfaceRuby</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Debugger.DebuggerInterfaceRuby</h1>
+<p>
+Module implementing the Ruby debugger interface for the debug server.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>ClientDefaultCapabilities</td></tr><tr><td>ClientTypeAssociations</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#DebuggerInterfaceRuby">DebuggerInterfaceRuby</a></td>
+<td>Class implementing the Ruby debugger interface for the debug server.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#getRegistryData">getRegistryData</a></td>
+<td>Module function to get characterising data for the debugger interface.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="DebuggerInterfaceRuby" ID="DebuggerInterfaceRuby"></a>
+<h2>DebuggerInterfaceRuby</h2>
+<p>
+    Class implementing the Ruby debugger interface for the debug server.
+</p>
+<h3>Derived from</h3>
+QObject
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DebuggerInterfaceRuby.__init__">DebuggerInterfaceRuby</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.__identityTranslation">__identityTranslation</a></td>
+<td>Private method to perform the identity path translation.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.__parseClientLine">__parseClientLine</a></td>
+<td>Private method to handle data from the client.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.__remoteTranslation">__remoteTranslation</a></td>
+<td>Private method to perform the path translation.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.__sendCommand">__sendCommand</a></td>
+<td>Private method to send a single line command to the client.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.__startProcess">__startProcess</a></td>
+<td>Private method to start the debugger client process.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.flush">flush</a></td>
+<td>Public slot to flush the queue.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.getClientCapabilities">getClientCapabilities</a></td>
+<td>Public method to retrieve the debug clients capabilities.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.isConnected">isConnected</a></td>
+<td>Public method to test, if a debug client has connected.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.newConnection">newConnection</a></td>
+<td>Public slot to handle a new connection.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteBanner">remoteBanner</a></td>
+<td>Public slot to get the banner info of the remote client.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteBreakpoint">remoteBreakpoint</a></td>
+<td>Public method to set or clear a breakpoint.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteBreakpointEnable">remoteBreakpointEnable</a></td>
+<td>Public method to enable or disable a breakpoint.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteBreakpointIgnore">remoteBreakpointIgnore</a></td>
+<td>Public method to ignore a breakpoint the next couple of occurrences.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteCapabilities">remoteCapabilities</a></td>
+<td>Public slot to get the debug clients capabilities.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteClientSetFilter">remoteClientSetFilter</a></td>
+<td>Public method to set a variables filter list.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteClientVariable">remoteClientVariable</a></td>
+<td>Public method to request the variables of the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteClientVariables">remoteClientVariables</a></td>
+<td>Public method to request the variables of the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteCompletion">remoteCompletion</a></td>
+<td>Public slot to get the a list of possible commandline completions from the remote client.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteContinue">remoteContinue</a></td>
+<td>Public method to continue the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteCoverage">remoteCoverage</a></td>
+<td>Public method to load a new program to collect coverage data.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteEnvironment">remoteEnvironment</a></td>
+<td>Public method to set the environment for a program to debug, run, ...</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteEval">remoteEval</a></td>
+<td>Public method to evaluate arg in the current context of the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteExec">remoteExec</a></td>
+<td>Public method to execute stmt in the current context of the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteLoad">remoteLoad</a></td>
+<td>Public method to load a new program to debug.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteProfile">remoteProfile</a></td>
+<td>Public method to load a new program to collect profiling data.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteRawInput">remoteRawInput</a></td>
+<td>Public method to send the raw input to the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteRun">remoteRun</a></td>
+<td>Public method to load a new program to run.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteSetThread">remoteSetThread</a></td>
+<td>Public method to request to set the given thread as current thread.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteStatement">remoteStatement</a></td>
+<td>Public method to execute a Ruby statement.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteStep">remoteStep</a></td>
+<td>Public method to single step the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteStepOut">remoteStepOut</a></td>
+<td>Public method to step out the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteStepOver">remoteStepOver</a></td>
+<td>Public method to step over the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteStepQuit">remoteStepQuit</a></td>
+<td>Public method to stop the debugged program.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteThreadList">remoteThreadList</a></td>
+<td>Public method to request the list of threads from the client.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteUTPrepare">remoteUTPrepare</a></td>
+<td>Public method to prepare a new unittest run.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteUTRun">remoteUTRun</a></td>
+<td>Public method to start a unittest run.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteUTStop">remoteUTStop</a></td>
+<td>Public method to stop a unittest run.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteWatchpoint">remoteWatchpoint</a></td>
+<td>Public method to set or clear a watch expression.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteWatchpointEnable">remoteWatchpointEnable</a></td>
+<td>Public method to enable or disable a watch expression.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.remoteWatchpointIgnore">remoteWatchpointIgnore</a></td>
+<td>Public method to ignore a watch expression the next couple of occurrences.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.setCallTraceEnabled">setCallTraceEnabled</a></td>
+<td>Public method to set the call trace state.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.shutdown">shutdown</a></td>
+<td>Public method to cleanly shut down.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.startRemote">startRemote</a></td>
+<td>Public method to start a remote Ruby interpreter.</td>
+</tr><tr>
+<td><a href="#DebuggerInterfaceRuby.startRemoteForProject">startRemoteForProject</a></td>
+<td>Public method to start a remote Ruby interpreter for a project.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="DebuggerInterfaceRuby.__init__" ID="DebuggerInterfaceRuby.__init__"></a>
+<h4>DebuggerInterfaceRuby (Constructor)</h4>
+<b>DebuggerInterfaceRuby</b>(<i>debugServer, passive</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>debugServer</i></dt>
+<dd>
+reference to the debug server (DebugServer)
+</dd><dt><i>passive</i></dt>
+<dd>
+flag indicating passive connection mode (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.__identityTranslation" ID="DebuggerInterfaceRuby.__identityTranslation"></a>
+<h4>DebuggerInterfaceRuby.__identityTranslation</h4>
+<b>__identityTranslation</b>(<i>fn, remote2local=True</i>)
+<p>
+        Private method to perform the identity path translation.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename to be translated (string)
+</dd><dt><i>remote2local</i></dt>
+<dd>
+flag indicating the direction of translation
+            (False = local to remote, True = remote to local [default])
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+translated filename (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.__parseClientLine" ID="DebuggerInterfaceRuby.__parseClientLine"></a>
+<h4>DebuggerInterfaceRuby.__parseClientLine</h4>
+<b>__parseClientLine</b>(<i></i>)
+<p>
+        Private method to handle data from the client.
+</p><a NAME="DebuggerInterfaceRuby.__remoteTranslation" ID="DebuggerInterfaceRuby.__remoteTranslation"></a>
+<h4>DebuggerInterfaceRuby.__remoteTranslation</h4>
+<b>__remoteTranslation</b>(<i>fn, remote2local=True</i>)
+<p>
+        Private method to perform the path translation.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename to be translated (string)
+</dd><dt><i>remote2local</i></dt>
+<dd>
+flag indicating the direction of translation
+            (False = local to remote, True = remote to local [default])
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+translated filename (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.__sendCommand" ID="DebuggerInterfaceRuby.__sendCommand"></a>
+<h4>DebuggerInterfaceRuby.__sendCommand</h4>
+<b>__sendCommand</b>(<i>cmd</i>)
+<p>
+        Private method to send a single line command to the client.
+</p><dl>
+<dt><i>cmd</i></dt>
+<dd>
+command to send to the debug client (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.__startProcess" ID="DebuggerInterfaceRuby.__startProcess"></a>
+<h4>DebuggerInterfaceRuby.__startProcess</h4>
+<b>__startProcess</b>(<i>program, arguments, environment=None</i>)
+<p>
+        Private method to start the debugger client process.
+</p><dl>
+<dt><i>program</i></dt>
+<dd>
+name of the executable to start (string)
+</dd><dt><i>arguments</i></dt>
+<dd>
+arguments to be passed to the program (list of string)
+</dd><dt><i>environment</i></dt>
+<dd>
+dictionary of environment settings to pass
+            (dict of string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+the process object (QProcess) or None
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.flush" ID="DebuggerInterfaceRuby.flush"></a>
+<h4>DebuggerInterfaceRuby.flush</h4>
+<b>flush</b>(<i></i>)
+<p>
+        Public slot to flush the queue.
+</p><a NAME="DebuggerInterfaceRuby.getClientCapabilities" ID="DebuggerInterfaceRuby.getClientCapabilities"></a>
+<h4>DebuggerInterfaceRuby.getClientCapabilities</h4>
+<b>getClientCapabilities</b>(<i></i>)
+<p>
+        Public method to retrieve the debug clients capabilities.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+debug client capabilities (integer)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.isConnected" ID="DebuggerInterfaceRuby.isConnected"></a>
+<h4>DebuggerInterfaceRuby.isConnected</h4>
+<b>isConnected</b>(<i></i>)
+<p>
+        Public method to test, if a debug client has connected.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the connection status (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.newConnection" ID="DebuggerInterfaceRuby.newConnection"></a>
+<h4>DebuggerInterfaceRuby.newConnection</h4>
+<b>newConnection</b>(<i>sock</i>)
+<p>
+        Public slot to handle a new connection.
+</p><dl>
+<dt><i>sock</i></dt>
+<dd>
+reference to the socket object (QTcpSocket)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteBanner" ID="DebuggerInterfaceRuby.remoteBanner"></a>
+<h4>DebuggerInterfaceRuby.remoteBanner</h4>
+<b>remoteBanner</b>(<i></i>)
+<p>
+        Public slot to get the banner info of the remote client.
+</p><a NAME="DebuggerInterfaceRuby.remoteBreakpoint" ID="DebuggerInterfaceRuby.remoteBreakpoint"></a>
+<h4>DebuggerInterfaceRuby.remoteBreakpoint</h4>
+<b>remoteBreakpoint</b>(<i>fn, line, set, cond=None, temp=False</i>)
+<p>
+        Public method to set or clear a breakpoint.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename the breakpoint belongs to (string)
+</dd><dt><i>line</i></dt>
+<dd>
+linenumber of the breakpoint (int)
+</dd><dt><i>set</i></dt>
+<dd>
+flag indicating setting or resetting a breakpoint (boolean)
+</dd><dt><i>cond</i></dt>
+<dd>
+condition of the breakpoint (string)
+</dd><dt><i>temp</i></dt>
+<dd>
+flag indicating a temporary breakpoint (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteBreakpointEnable" ID="DebuggerInterfaceRuby.remoteBreakpointEnable"></a>
+<h4>DebuggerInterfaceRuby.remoteBreakpointEnable</h4>
+<b>remoteBreakpointEnable</b>(<i>fn, line, enable</i>)
+<p>
+        Public method to enable or disable a breakpoint.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename the breakpoint belongs to (string)
+</dd><dt><i>line</i></dt>
+<dd>
+linenumber of the breakpoint (int)
+</dd><dt><i>enable</i></dt>
+<dd>
+flag indicating enabling or disabling a breakpoint
+            (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteBreakpointIgnore" ID="DebuggerInterfaceRuby.remoteBreakpointIgnore"></a>
+<h4>DebuggerInterfaceRuby.remoteBreakpointIgnore</h4>
+<b>remoteBreakpointIgnore</b>(<i>fn, line, count</i>)
+<p>
+        Public method to ignore a breakpoint the next couple of occurrences.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename the breakpoint belongs to (string)
+</dd><dt><i>line</i></dt>
+<dd>
+linenumber of the breakpoint (int)
+</dd><dt><i>count</i></dt>
+<dd>
+number of occurrences to ignore (int)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteCapabilities" ID="DebuggerInterfaceRuby.remoteCapabilities"></a>
+<h4>DebuggerInterfaceRuby.remoteCapabilities</h4>
+<b>remoteCapabilities</b>(<i></i>)
+<p>
+        Public slot to get the debug clients capabilities.
+</p><a NAME="DebuggerInterfaceRuby.remoteClientSetFilter" ID="DebuggerInterfaceRuby.remoteClientSetFilter"></a>
+<h4>DebuggerInterfaceRuby.remoteClientSetFilter</h4>
+<b>remoteClientSetFilter</b>(<i>scope, filter</i>)
+<p>
+        Public method to set a variables filter list.
+</p><dl>
+<dt><i>scope</i></dt>
+<dd>
+the scope of the variables (0 = local, 1 = global)
+</dd><dt><i>filter</i></dt>
+<dd>
+regexp string for variable names to filter out (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteClientVariable" ID="DebuggerInterfaceRuby.remoteClientVariable"></a>
+<h4>DebuggerInterfaceRuby.remoteClientVariable</h4>
+<b>remoteClientVariable</b>(<i>scope, filter, var, framenr=0</i>)
+<p>
+        Public method to request the variables of the debugged program.
+</p><dl>
+<dt><i>scope</i></dt>
+<dd>
+the scope of the variables (0 = local, 1 = global)
+</dd><dt><i>filter</i></dt>
+<dd>
+list of variable types to filter out (list of int)
+</dd><dt><i>var</i></dt>
+<dd>
+list encoded name of variable to retrieve (string)
+</dd><dt><i>framenr</i></dt>
+<dd>
+framenumber of the variables to retrieve (int)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteClientVariables" ID="DebuggerInterfaceRuby.remoteClientVariables"></a>
+<h4>DebuggerInterfaceRuby.remoteClientVariables</h4>
+<b>remoteClientVariables</b>(<i>scope, filter, framenr=0</i>)
+<p>
+        Public method to request the variables of the debugged program.
+</p><dl>
+<dt><i>scope</i></dt>
+<dd>
+the scope of the variables (0 = local, 1 = global)
+</dd><dt><i>filter</i></dt>
+<dd>
+list of variable types to filter out (list of int)
+</dd><dt><i>framenr</i></dt>
+<dd>
+framenumber of the variables to retrieve (int)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteCompletion" ID="DebuggerInterfaceRuby.remoteCompletion"></a>
+<h4>DebuggerInterfaceRuby.remoteCompletion</h4>
+<b>remoteCompletion</b>(<i>text</i>)
+<p>
+        Public slot to get the a list of possible commandline completions
+        from the remote client.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+the text to be completed (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteContinue" ID="DebuggerInterfaceRuby.remoteContinue"></a>
+<h4>DebuggerInterfaceRuby.remoteContinue</h4>
+<b>remoteContinue</b>(<i>special=False</i>)
+<p>
+        Public method to continue the debugged program.
+</p><dl>
+<dt><i>special</i></dt>
+<dd>
+flag indicating a special continue operation (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteCoverage" ID="DebuggerInterfaceRuby.remoteCoverage"></a>
+<h4>DebuggerInterfaceRuby.remoteCoverage</h4>
+<b>remoteCoverage</b>(<i>fn, argv, wd, erase=False</i>)
+<p>
+        Public method to load a new program to collect coverage data.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+the filename to run (string)
+</dd><dt><i>argv</i></dt>
+<dd>
+the commandline arguments to pass to the program (string)
+</dd><dt><i>wd</i></dt>
+<dd>
+the working directory for the program (string)
+</dd><dt><i>erase=</i></dt>
+<dd>
+flag indicating that coverage info should be
+            cleared first (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteEnvironment" ID="DebuggerInterfaceRuby.remoteEnvironment"></a>
+<h4>DebuggerInterfaceRuby.remoteEnvironment</h4>
+<b>remoteEnvironment</b>(<i>env</i>)
+<p>
+        Public method to set the environment for a program to debug, run, ...
+</p><dl>
+<dt><i>env</i></dt>
+<dd>
+environment settings (dictionary)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteEval" ID="DebuggerInterfaceRuby.remoteEval"></a>
+<h4>DebuggerInterfaceRuby.remoteEval</h4>
+<b>remoteEval</b>(<i>arg</i>)
+<p>
+        Public method to evaluate arg in the current context of the debugged
+        program.
+</p><dl>
+<dt><i>arg</i></dt>
+<dd>
+the arguments to evaluate (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteExec" ID="DebuggerInterfaceRuby.remoteExec"></a>
+<h4>DebuggerInterfaceRuby.remoteExec</h4>
+<b>remoteExec</b>(<i>stmt</i>)
+<p>
+        Public method to execute stmt in the current context of the debugged
+        program.
+</p><dl>
+<dt><i>stmt</i></dt>
+<dd>
+statement to execute (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteLoad" ID="DebuggerInterfaceRuby.remoteLoad"></a>
+<h4>DebuggerInterfaceRuby.remoteLoad</h4>
+<b>remoteLoad</b>(<i>fn, argv, wd, traceInterpreter=False, autoContinue=True, autoFork=False, forkChild=False</i>)
+<p>
+        Public method to load a new program to debug.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+the filename to debug (string)
+</dd><dt><i>argv</i></dt>
+<dd>
+the commandline arguments to pass to the program (string)
+</dd><dt><i>wd</i></dt>
+<dd>
+the working directory for the program (string)
+</dd><dt><i>traceInterpreter=</i></dt>
+<dd>
+flag indicating if the interpreter library
+            should be traced as well (boolean)
+</dd><dt><i>autoContinue=</i></dt>
+<dd>
+flag indicating, that the debugger should not
+            stop at the first executable line (boolean)
+</dd><dt><i>autoFork=</i></dt>
+<dd>
+flag indicating the automatic fork mode (boolean)
+            (ignored)
+</dd><dt><i>forkChild=</i></dt>
+<dd>
+flag indicating to debug the child after forking
+            (boolean) (ignored)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteProfile" ID="DebuggerInterfaceRuby.remoteProfile"></a>
+<h4>DebuggerInterfaceRuby.remoteProfile</h4>
+<b>remoteProfile</b>(<i>fn, argv, wd, erase=False</i>)
+<p>
+        Public method to load a new program to collect profiling data.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+the filename to run (string)
+</dd><dt><i>argv</i></dt>
+<dd>
+the commandline arguments to pass to the program (string)
+</dd><dt><i>wd</i></dt>
+<dd>
+the working directory for the program (string)
+</dd><dt><i>erase=</i></dt>
+<dd>
+flag indicating that timing info should be cleared
+            first (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteRawInput" ID="DebuggerInterfaceRuby.remoteRawInput"></a>
+<h4>DebuggerInterfaceRuby.remoteRawInput</h4>
+<b>remoteRawInput</b>(<i>s</i>)
+<p>
+        Public method to send the raw input to the debugged program.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+the raw input (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteRun" ID="DebuggerInterfaceRuby.remoteRun"></a>
+<h4>DebuggerInterfaceRuby.remoteRun</h4>
+<b>remoteRun</b>(<i>fn, argv, wd, autoFork=False, forkChild=False</i>)
+<p>
+        Public method to load a new program to run.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+the filename to run (string)
+</dd><dt><i>argv</i></dt>
+<dd>
+the commandline arguments to pass to the program (string)
+</dd><dt><i>wd</i></dt>
+<dd>
+the working directory for the program (string)
+</dd><dt><i>autoFork=</i></dt>
+<dd>
+flag indicating the automatic fork mode (boolean)
+            (ignored)
+</dd><dt><i>forkChild=</i></dt>
+<dd>
+flag indicating to debug the child after forking
+            (boolean) (ignored)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteSetThread" ID="DebuggerInterfaceRuby.remoteSetThread"></a>
+<h4>DebuggerInterfaceRuby.remoteSetThread</h4>
+<b>remoteSetThread</b>(<i>tid</i>)
+<p>
+        Public method to request to set the given thread as current thread.
+</p><dl>
+<dt><i>tid</i></dt>
+<dd>
+id of the thread (integer)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteStatement" ID="DebuggerInterfaceRuby.remoteStatement"></a>
+<h4>DebuggerInterfaceRuby.remoteStatement</h4>
+<b>remoteStatement</b>(<i>stmt</i>)
+<p>
+        Public method to execute a Ruby statement.
+</p><dl>
+<dt><i>stmt</i></dt>
+<dd>
+the Ruby statement to execute (string). It
+              should not have a trailing newline.
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteStep" ID="DebuggerInterfaceRuby.remoteStep"></a>
+<h4>DebuggerInterfaceRuby.remoteStep</h4>
+<b>remoteStep</b>(<i></i>)
+<p>
+        Public method to single step the debugged program.
+</p><a NAME="DebuggerInterfaceRuby.remoteStepOut" ID="DebuggerInterfaceRuby.remoteStepOut"></a>
+<h4>DebuggerInterfaceRuby.remoteStepOut</h4>
+<b>remoteStepOut</b>(<i></i>)
+<p>
+        Public method to step out the debugged program.
+</p><a NAME="DebuggerInterfaceRuby.remoteStepOver" ID="DebuggerInterfaceRuby.remoteStepOver"></a>
+<h4>DebuggerInterfaceRuby.remoteStepOver</h4>
+<b>remoteStepOver</b>(<i></i>)
+<p>
+        Public method to step over the debugged program.
+</p><a NAME="DebuggerInterfaceRuby.remoteStepQuit" ID="DebuggerInterfaceRuby.remoteStepQuit"></a>
+<h4>DebuggerInterfaceRuby.remoteStepQuit</h4>
+<b>remoteStepQuit</b>(<i></i>)
+<p>
+        Public method to stop the debugged program.
+</p><a NAME="DebuggerInterfaceRuby.remoteThreadList" ID="DebuggerInterfaceRuby.remoteThreadList"></a>
+<h4>DebuggerInterfaceRuby.remoteThreadList</h4>
+<b>remoteThreadList</b>(<i></i>)
+<p>
+        Public method to request the list of threads from the client.
+</p><a NAME="DebuggerInterfaceRuby.remoteUTPrepare" ID="DebuggerInterfaceRuby.remoteUTPrepare"></a>
+<h4>DebuggerInterfaceRuby.remoteUTPrepare</h4>
+<b>remoteUTPrepare</b>(<i>fn, tn, tfn, failed, cov, covname, coverase</i>)
+<p>
+        Public method to prepare a new unittest run.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+the filename to load (string)
+</dd><dt><i>tn</i></dt>
+<dd>
+the testname to load (string)
+</dd><dt><i>tfn</i></dt>
+<dd>
+the test function name to load tests from (string)
+</dd><dt><i>failed</i></dt>
+<dd>
+list of failed test, if only failed test should be run
+            (list of strings)
+</dd><dt><i>cov</i></dt>
+<dd>
+flag indicating collection of coverage data is requested
+            (boolean)
+</dd><dt><i>covname</i></dt>
+<dd>
+filename to be used to assemble the coverage caches
+            filename (string)
+</dd><dt><i>coverase</i></dt>
+<dd>
+flag indicating erasure of coverage data is requested
+            (boolean)
+</dd>
+</dl><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteUTRun" ID="DebuggerInterfaceRuby.remoteUTRun"></a>
+<h4>DebuggerInterfaceRuby.remoteUTRun</h4>
+<b>remoteUTRun</b>(<i></i>)
+<p>
+        Public method to start a unittest run.
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteUTStop" ID="DebuggerInterfaceRuby.remoteUTStop"></a>
+<h4>DebuggerInterfaceRuby.remoteUTStop</h4>
+<b>remoteUTStop</b>(<i></i>)
+<p>
+        Public method to stop a unittest run.
+</p><dl>
+<dt>Raises <b>NotImplementedError</b>:</dt>
+<dd>
+raised to indicate that this interface
+            is not supported
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteWatchpoint" ID="DebuggerInterfaceRuby.remoteWatchpoint"></a>
+<h4>DebuggerInterfaceRuby.remoteWatchpoint</h4>
+<b>remoteWatchpoint</b>(<i>cond, set, temp=False</i>)
+<p>
+        Public method to set or clear a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (string)
+</dd><dt><i>set</i></dt>
+<dd>
+flag indicating setting or resetting a watch expression
+            (boolean)
+</dd><dt><i>temp</i></dt>
+<dd>
+flag indicating a temporary watch expression (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteWatchpointEnable" ID="DebuggerInterfaceRuby.remoteWatchpointEnable"></a>
+<h4>DebuggerInterfaceRuby.remoteWatchpointEnable</h4>
+<b>remoteWatchpointEnable</b>(<i>cond, enable</i>)
+<p>
+        Public method to enable or disable a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (string)
+</dd><dt><i>enable</i></dt>
+<dd>
+flag indicating enabling or disabling a watch expression
+            (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.remoteWatchpointIgnore" ID="DebuggerInterfaceRuby.remoteWatchpointIgnore"></a>
+<h4>DebuggerInterfaceRuby.remoteWatchpointIgnore</h4>
+<b>remoteWatchpointIgnore</b>(<i>cond, count</i>)
+<p>
+        Public method to ignore a watch expression the next couple of
+        occurrences.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (string)
+</dd><dt><i>count</i></dt>
+<dd>
+number of occurrences to ignore (int)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.setCallTraceEnabled" ID="DebuggerInterfaceRuby.setCallTraceEnabled"></a>
+<h4>DebuggerInterfaceRuby.setCallTraceEnabled</h4>
+<b>setCallTraceEnabled</b>(<i>on</i>)
+<p>
+        Public method to set the call trace state.
+</p><dl>
+<dt><i>on</i></dt>
+<dd>
+flag indicating to enable the call trace function (boolean)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.shutdown" ID="DebuggerInterfaceRuby.shutdown"></a>
+<h4>DebuggerInterfaceRuby.shutdown</h4>
+<b>shutdown</b>(<i></i>)
+<p>
+        Public method to cleanly shut down.
+</p><p>
+        It closes our socket and shuts down
+        the debug client. (Needed on Win OS)
+</p><a NAME="DebuggerInterfaceRuby.startRemote" ID="DebuggerInterfaceRuby.startRemote"></a>
+<h4>DebuggerInterfaceRuby.startRemote</h4>
+<b>startRemote</b>(<i>port, runInConsole</i>)
+<p>
+        Public method to start a remote Ruby interpreter.
+</p><dl>
+<dt><i>port</i></dt>
+<dd>
+portnumber the debug server is listening on (integer)
+</dd><dt><i>runInConsole</i></dt>
+<dd>
+flag indicating to start the debugger in a
+            console window (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
+</dd>
+</dl><a NAME="DebuggerInterfaceRuby.startRemoteForProject" ID="DebuggerInterfaceRuby.startRemoteForProject"></a>
+<h4>DebuggerInterfaceRuby.startRemoteForProject</h4>
+<b>startRemoteForProject</b>(<i>port, runInConsole</i>)
+<p>
+        Public method to start a remote Ruby interpreter for a project.
+</p><dl>
+<dt><i>port</i></dt>
+<dd>
+portnumber the debug server is listening on (integer)
+</dd><dt><i>runInConsole</i></dt>
+<dd>
+flag indicating to start the debugger in a
+            console window (boolean)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+client process object (QProcess), a flag to indicate
+            a network connection (boolean) and the name of the interpreter
+            in case of a local execution (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="getRegistryData" ID="getRegistryData"></a>
+<h2>getRegistryData</h2>
+<b>getRegistryData</b>(<i></i>)
+<p>
+    Module function to get characterising data for the debugger interface.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of the following data. Client type (string), client
+        capabilities (integer), client type association (list of strings)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
