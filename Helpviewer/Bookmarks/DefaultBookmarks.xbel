@@ -7,7 +7,7 @@
             <title>Eric Web Site</title>
         </bookmark>
         <bookmark href="http://www.riverbankcomputing.com/">
-            <title>PyQt4 Web Site</title>
+            <title>PyQt Web Site</title>
         </bookmark>
         <folder folded="no">
             <title>Qt Web Sites</title>
@@ -22,6 +22,9 @@
             </bookmark>
             <bookmark href="http://blog.qt.io/">
                 <title>Qt Blog</title>
+            </bookmark>
+            <bookmark href="http://forum.qt.io/">
+                <title>Qt Forum</title>
             </bookmark>
             <bookmark href="http://planet.qt.io/">
                 <title>Planet Qt</title>
