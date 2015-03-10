@@ -24,6 +24,8 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
     """
     Class implementing the Editor Styles configuration page.
     """
+    # TODO: configure foreground and background of indentation guides
+    # setIndentationGuidesBackgroundColor, setIndentationGuidesForegroundColor
     def __init__(self):
         """
         Constructor
