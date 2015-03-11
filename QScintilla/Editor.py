@@ -1508,7 +1508,8 @@ class Editor(QsciScintillaCompat):
                 language = Preferences.getEditorLexerAssoc(basename)
             if not language:
                 bindName = self.__bindName(self.text(0))
-                language = Preferences.getEditorLexerAssoc(bindName)
+                if bindName:
+                    language = Preferences.getEditorLexerAssoc(bindName)
             if language == "Python":
                 # correction for Python
                 pyVer = Utilities.determinePythonVersion(
