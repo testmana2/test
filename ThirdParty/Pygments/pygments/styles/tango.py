@@ -33,11 +33,9 @@
     have been chosen to have the same style.  Similarly, keywords (Keyword.*),
     and Operator.Word (and, or, in) have been assigned the same style.
 
-    :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-
-from __future__ import unicode_literals
 
 from pygments.style import Style
 from pygments.token import Keyword, Name, Comment, String, Error, \

@@ -5,28 +5,15 @@
 
     Basic style object.
 
-    :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
 
 from pygments.token import Token, STANDARD_TYPES
-
-def with_metaclass(meta, base=object):
-    """
-    Python independent version to create a base class with a metaclass.
-    Taken from six 1.3.0 (http://pythonhosted.org/six)
-    """
-    return meta("NewBase", (base,), {})
+from pygments.util import add_metaclass
 
 
 class StyleMeta(type):
-    background_color = '#ffffff'
-
-    #: highlight background color
-    highlight_color = '#ffffcc'
-
-    #: Style definitions for individual token types.
-    styles = {}
 
     def __new__(mcs, name, bases, dct):
         obj = type.__new__(mcs, name, bases, dct)
@@ -118,5 +105,14 @@ class StyleMeta(type):
         return len(cls._styles)
 
 
-class Style(with_metaclass(StyleMeta, object)):
-    pass
+@add_metaclass(StyleMeta)
+class Style(object):
+
+    #: overall background color (``None`` means transparent)
+    background_color = '#ffffff'
+
+    #: highlight background color
+    highlight_color = '#ffffcc'
+
+    #: Style definitions for individual token types.
+    styles = {}

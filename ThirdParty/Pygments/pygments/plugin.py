@@ -32,11 +32,9 @@
         yourfilter = yourfilter:YourFilter
 
 
-    :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-from __future__ import unicode_literals
-
 try:
     import pkg_resources
 except ImportError:

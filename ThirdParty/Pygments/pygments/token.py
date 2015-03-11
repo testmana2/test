@@ -5,11 +5,9 @@
 
     Basic token types and the standard tokens.
 
-    :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-
-from __future__ import unicode_literals
 
 class _TokenType(tuple):
     parent = None
@@ -51,6 +49,7 @@ Token       = _TokenType()
 # Special token types
 Text        = Token.Text
 Whitespace  = Text.Whitespace
+Escape      = Token.Escape
 Error       = Token.Error
 # Text that doesn't belong to this lexer (e.g. HTML in PHP)
 Other       = Token.Other
@@ -118,6 +117,7 @@ STANDARD_TYPES = {
 
     Text:                          '',
     Whitespace:                    'w',
+    Escape:                        'esc',
     Error:                         'err',
     Other:                         'x',
 
@@ -166,6 +166,7 @@ STANDARD_TYPES = {
     String.Symbol:                 'ss',
 
     Number:                        'm',
+    Number.Bin:                    'mb',
     Number.Float:                  'mf',
     Number.Hex:                    'mh',
     Number.Integer:                'mi',

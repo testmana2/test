@@ -5,12 +5,10 @@
 
     Module that implements the default filter.
 
-    :copyright: Copyright 2006-2013 by the Pygments team, see AUTHORS.
+    :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
 
-
-from __future__ import unicode_literals
 
 def apply_filters(stream, filters, lexer=None):
     """

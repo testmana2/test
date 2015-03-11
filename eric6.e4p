@@ -478,18 +478,14 @@
     <Source>ThirdParty/Pygments/pygments/lexers/_mapping.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/functional.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/compiled.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_clbuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/other.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/math.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/special.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/text.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/asm.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_vimbuiltins.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_phpbuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/web.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/templates.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/dotnet.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_luabuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/__init__.py</Source>
     <Source>ThirdParty/Pygments/pygments/formatters/_mapping.py</Source>
     <Source>ThirdParty/Pygments/pygments/formatters/terminal.py</Source>
@@ -782,7 +778,6 @@
     <Source>Helpviewer/Download/DownloadUtilities.py</Source>
     <Source>Helpviewer/Download/DownloadManager.py</Source>
     <Source>Helpviewer/Download/DownloadModel.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_asybuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/styles/monokai.py</Source>
     <Source>Preferences/ConfigurationPages/TrayStarterPage.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/hdl.py</Source>
@@ -988,12 +983,8 @@
     <Source>E5Network/E5SslErrorHandler.py</Source>
     <Source>E5Network/E5SslCertificatesDialog.py</Source>
     <Source>UI/Previewer.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_robotframeworklexer.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/foxpro.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_lassobuiltins.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_sourcemodbuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/_stan_builtins.py</Source>
-    <Source>ThirdParty/Pygments/pygments/lexers/_openedgebuiltins.py</Source>
     <Source>ThirdParty/Pygments/pygments/lexers/dalvik.py</Source>
     <Source>E5Network/E5SslCertificatesInfoWidget.py</Source>
     <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
@@ -1160,6 +1151,97 @@
     <Source>Plugins/VcsPlugins/vcsSubversion/SvnDiffHighlighter.py</Source>
     <Source>Plugins/VcsPlugins/vcsPySvn/SvnDiffHighlighter.py</Source>
     <Source>Plugins/VcsPlugins/vcsMercurial/HgDiffGenerator.py</Source>
+    <Source>ThirdParty/Pygments/pygments/modeline.py</Source>
+    <Source>ThirdParty/Pygments/pygments/sphinxext.py</Source>
+    <Source>ThirdParty/Pygments/pygments/regexopt.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/lisp.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_lasso_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/scripting.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_vim_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_php_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/julia.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_cl_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/rebol.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/haskell.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/graphics.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/diff.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/factor.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/go.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/data.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/prolog.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/modeling.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/objective.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/fantom.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/iolang.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_mql_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/ecl.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/esoteric.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/dylan.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/matlab.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/snobol.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/nit.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/igor.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/nimrod.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/php.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/ambient.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/pascal.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/ruby.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/erlang.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/javascript.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/html.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/dsls.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/robotframework.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/nix.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/ml.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/idl.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/ooc.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/make.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/haxe.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/felix.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/chapel.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/theorem.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/tcl.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/r.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/css.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/fortran.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_sourcemod_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/textedit.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/urbi.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_cocoa_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/c_cpp.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/perl.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/algebra.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/webmisc.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/console.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/eiffel.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/graph.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/automation.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/markup.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/configs.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/rust.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/smalltalk.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/int_fiction.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_asy_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/business.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/installers.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/apl.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/python.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/basic.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/resource.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/inferno.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_openedge_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/testing.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/textfmts.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/pawn.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/d.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/rdf.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/c_like.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/actionscript.py</Source>
+    <Source>ThirdParty/Pygments/pygments/lexers/_lua_builtins.py</Source>
+    <Source>ThirdParty/Pygments/pygments/styles/igor.py</Source>
+    <Source>ThirdParty/Pygments/pygments/styles/paraiso_light.py</Source>
+    <Source>ThirdParty/Pygments/pygments/styles/xcode.py</Source>
+    <Source>ThirdParty/Pygments/pygments/styles/paraiso_dark.py</Source>
   </Sources>
   <Forms>
     <Form>PyUnit/UnittestDialog.ui</Form>

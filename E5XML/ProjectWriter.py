@@ -112,6 +112,7 @@ class ProjectWriter(XMLStreamWriterBase):
             self.writeAttribute("index", str(int(self.pdata["EOL"][0])))
         
         # do the sources
+        # TODO: write in sorted order
         self.writeStartElement("Sources")
         for name in self.pdata["SOURCES"]:
             self.writeTextElement(
@@ -119,12 +120,14 @@ class ProjectWriter(XMLStreamWriterBase):
         self.writeEndElement()
         
         # do the forms
+        # TODO: write in sorted order
         self.writeStartElement("Forms")
         for name in self.pdata["FORMS"]:
             self.writeTextElement("Form", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the translations
+        # TODO: write in sorted order
         self.writeStartElement("Translations")
         for name in self.pdata["TRANSLATIONS"]:
             self.writeTextElement(
@@ -132,6 +135,7 @@ class ProjectWriter(XMLStreamWriterBase):
         self.writeEndElement()
         
         # do the translation exceptions
+        # TODO: write in sorted order
         if self.pdata["TRANSLATIONEXCEPTIONS"]:
             self.writeStartElement("TranslationExceptions")
             for name in self.pdata["TRANSLATIONEXCEPTIONS"]:
@@ -141,6 +145,7 @@ class ProjectWriter(XMLStreamWriterBase):
             self.writeEndElement()
         
         # do the resources
+        # TODO: write in sorted order
         self.writeStartElement("Resources")
         for name in self.pdata["RESOURCES"]:
             self.writeTextElement(
@@ -148,6 +153,7 @@ class ProjectWriter(XMLStreamWriterBase):
         self.writeEndElement()
         
         # do the interfaces (IDL)
+        # TODO: write in sorted order
         self.writeStartElement("Interfaces")
         for name in self.pdata["INTERFACES"]:
             self.writeTextElement(
@@ -155,6 +161,7 @@ class ProjectWriter(XMLStreamWriterBase):
         self.writeEndElement()
         
         # do the others
+        # TODO: write in sorted order
         self.writeStartElement("Others")
         for name in self.pdata["OTHERS"]:
             self.writeTextElement(
