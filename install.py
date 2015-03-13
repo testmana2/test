@@ -1033,6 +1033,7 @@ def doDependancyChecks():
     print('Checking dependencies')
     
     # perform dependency checks
+    print("Python Version: {0:d}.{1:d}.{2:d}".format(*sys.version_info[:3]))
     if sys.version_info < (2, 7, 0):
         print('Sorry, you must have Python 2.7.0 or higher or '
               'Python 3.1.0 or higher.')
@@ -1043,7 +1044,6 @@ def doDependancyChecks():
     if sys.version_info > (3, 9, 9):
         print('Sorry, eric6 requires Python 3 or Python 2 for running.')
         exit(5)
-    print("Python Version: {0:d}.{1:d}.{2:d}".format(*sys.version_info[:3]))
     
     try:
         import xml.etree            # __IGNORE_WARNING__
@@ -1116,18 +1116,19 @@ def doDependancyChecks():
     # check version of Qt
     qtMajor = int(qVersion().split('.')[0])
     qtMinor = int(qVersion().split('.')[1])
+    print("Qt Version: {0}".format(qVersion().strip()))
     if qtMajor < 4 or \
         (qtMajor == 4 and qtMinor < 8) or \
             (qtMajor == 5 and qtMinor < 3):
         print('Sorry, you must have Qt version 4.8.0 or better or')
         print('5.3.0 or better.')
         exit(2)
-    print("Qt Version: {0}".format(qVersion()))
     
     # check version of sip
     try:
         import sip
         sipVersion = sip.SIP_VERSION_STR
+        print("sip Version: ", sipVersion.strip())
         # always assume, that snapshots are new enough
         if "snapshot" not in sipVersion:
             while sipVersion.count('.') < 2:
@@ -1158,6 +1159,7 @@ def doDependancyChecks():
     else:
         from PyQt5.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
+    print("PyQt Version: ", pyqtVersion.strip())
     # always assume, that snapshots are new enough
     if "snapshot" not in pyqtVersion:
         while pyqtVersion.count('.') < 2:
@@ -1180,7 +1182,6 @@ def doDependancyChecks():
                       .format(vers))
                 print('Please install another version.')
                 exit(4)
-    print("PyQt Version: ", pyqtVersion)
     
     # check version of QScintilla
     if pyqtVariant == "PyQt4":
@@ -1188,6 +1189,7 @@ def doDependancyChecks():
     else:
         from PyQt5.Qsci import QSCINTILLA_VERSION_STR
     scintillaVersion = QSCINTILLA_VERSION_STR
+    print("QScintilla Version: ", QSCINTILLA_VERSION_STR.strip())
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
         while scintillaVersion.count('.') < 2:
@@ -1209,7 +1211,7 @@ def doDependancyChecks():
                     ' eric6.'.format(vers))
                 print('Please install another version.')
                 exit(5)
-    print("QScintilla Version: ", QSCINTILLA_VERSION_STR)
+    
     print("All dependencies ok.")
     print()
 
