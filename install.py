@@ -1128,7 +1128,7 @@ def doDependancyChecks():
     try:
         import sip
         sipVersion = sip.SIP_VERSION_STR
-        print("sip Version: ", sipVersion.strip())
+        print("sip Version:", sipVersion.strip())
         # always assume, that snapshots are new enough
         if "snapshot" not in sipVersion:
             while sipVersion.count('.') < 2:
@@ -1159,7 +1159,7 @@ def doDependancyChecks():
     else:
         from PyQt5.QtCore import PYQT_VERSION_STR
     pyqtVersion = PYQT_VERSION_STR
-    print("PyQt Version: ", pyqtVersion.strip())
+    print("PyQt Version:", pyqtVersion.strip())
     # always assume, that snapshots are new enough
     if "snapshot" not in pyqtVersion:
         while pyqtVersion.count('.') < 2:
@@ -1189,7 +1189,7 @@ def doDependancyChecks():
     else:
         from PyQt5.Qsci import QSCINTILLA_VERSION_STR
     scintillaVersion = QSCINTILLA_VERSION_STR
-    print("QScintilla Version: ", QSCINTILLA_VERSION_STR.strip())
+    print("QScintilla Version:", QSCINTILLA_VERSION_STR.strip())
     # always assume, that snapshots are new enough
     if "snapshot" not in scintillaVersion:
         while scintillaVersion.count('.') < 2:
