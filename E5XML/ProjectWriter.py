@@ -112,58 +112,51 @@ class ProjectWriter(XMLStreamWriterBase):
             self.writeAttribute("index", str(int(self.pdata["EOL"][0])))
         
         # do the sources
-        # TODO: write in sorted order
         self.writeStartElement("Sources")
-        for name in self.pdata["SOURCES"]:
+        for name in sorted(self.pdata["SOURCES"]):
             self.writeTextElement(
                 "Source", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the forms
-        # TODO: write in sorted order
         self.writeStartElement("Forms")
-        for name in self.pdata["FORMS"]:
+        for name in sorted(self.pdata["FORMS"]):
             self.writeTextElement("Form", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the translations
-        # TODO: write in sorted order
         self.writeStartElement("Translations")
-        for name in self.pdata["TRANSLATIONS"]:
+        for name in sorted(self.pdata["TRANSLATIONS"]):
             self.writeTextElement(
                 "Translation", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the translation exceptions
-        # TODO: write in sorted order
         if self.pdata["TRANSLATIONEXCEPTIONS"]:
             self.writeStartElement("TranslationExceptions")
-            for name in self.pdata["TRANSLATIONEXCEPTIONS"]:
+            for name in sorted(self.pdata["TRANSLATIONEXCEPTIONS"]):
                 self.writeTextElement(
                     "TranslationException",
                     Utilities.fromNativeSeparators(name))
             self.writeEndElement()
         
         # do the resources
-        # TODO: write in sorted order
         self.writeStartElement("Resources")
-        for name in self.pdata["RESOURCES"]:
+        for name in sorted(self.pdata["RESOURCES"]):
             self.writeTextElement(
                 "Resource", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the interfaces (IDL)
-        # TODO: write in sorted order
         self.writeStartElement("Interfaces")
-        for name in self.pdata["INTERFACES"]:
+        for name in sorted(self.pdata["INTERFACES"]):
             self.writeTextElement(
                 "Interface", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
         
         # do the others
-        # TODO: write in sorted order
         self.writeStartElement("Others")
-        for name in self.pdata["OTHERS"]:
+        for name in sorted(self.pdata["OTHERS"]):
             self.writeTextElement(
                 "Other", Utilities.fromNativeSeparators(name))
         self.writeEndElement()
