@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>2019</height>
+    <height>2146</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_5">
+  <layout class="QVBoxLayout" name="verticalLayout_7">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -1537,20 +1537,70 @@
     </widget>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox_10">
+    <widget class="QGroupBox" name="groupBox_15">
      <property name="title">
-      <string>Various</string>
+      <string>Indentation Guides</string>
      </property>
-     <layout class="QGridLayout" name="_14">
-      <item row="0" column="0">
-       <widget class="QCheckBox" name="miniMenuCheckBox">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QCheckBox" name="indentguidesCheckBox">
         <property name="toolTip">
-         <string>Select to show a minimalistic context menu</string>
+         <string>Select whether indentation guides should be shown.</string>
         </property>
         <property name="text">
-         <string>Show minimal context menu</string>
+         <string>Show Indentation Guides</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="_18">
+        <item>
+         <widget class="QLabel" name="TextLabel2_2_2_2_2_13">
+          <property name="text">
+           <string>Indentation Guides foreground:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="indentationGuidesForegroundButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the foreground colour for indentation guides</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="TextLabel2_2_2_2_2_14">
+          <property name="text">
+           <string>Indentation Guides background:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="indentationGuidesBackgroundButton">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Select the background colour for indentation guides</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -1772,6 +1822,25 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_10">
+     <property name="title">
+      <string>Various</string>
+     </property>
+     <layout class="QGridLayout" name="_14">
+      <item row="0" column="0">
+       <widget class="QCheckBox" name="miniMenuCheckBox">
+        <property name="toolTip">
+         <string>Select to show a minimalistic context menu</string>
+        </property>
+        <property name="text">
+         <string>Show minimal context menu</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <spacer>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -1842,6 +1911,18 @@
   <tabstop>whitespaceSizeSpinBox</tabstop>
   <tabstop>whitespaceForegroundButton</tabstop>
   <tabstop>whitespaceBackgroundButton</tabstop>
+  <tabstop>indentguidesCheckBox</tabstop>
+  <tabstop>indentationGuidesForegroundButton</tabstop>
+  <tabstop>indentationGuidesBackgroundButton</tabstop>
+  <tabstop>errorsMapButton</tabstop>
+  <tabstop>warningsMapButton</tabstop>
+  <tabstop>bookmarksMapButton</tabstop>
+  <tabstop>breakpointsMapButton</tabstop>
+  <tabstop>tasksMapButton</tabstop>
+  <tabstop>changesMapButton</tabstop>
+  <tabstop>coverageMapButton</tabstop>
+  <tabstop>currentMapButton</tabstop>
+  <tabstop>markerMapBackgroundButton</tabstop>
   <tabstop>miniMenuCheckBox</tabstop>
  </tabstops>
  <resources/>

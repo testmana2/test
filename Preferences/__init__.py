@@ -605,6 +605,8 @@ class Prefs(object):
         "WhitespaceBackground": QColor(Qt.white),
         "OnlineChangeTraceMarkerUnsaved": QColor("#ff8888"),
         "OnlineChangeTraceMarkerSaved": QColor("#88ff88"),
+        "IndentationGuidesBackground": QColor(Qt.white),
+        "IndentationGuidesForeground": QColor(Qt.black),
         # colors for the marker map
         "BookmarksMap": QColor("#f8c700"),
         "ErrorsMap": QColor("#dd0000"),

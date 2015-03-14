@@ -4114,6 +4114,10 @@ class Editor(QsciScintillaCompat):
         self.setTabIndents(Preferences.getEditor("TabIndents"))
         self.setBackspaceUnindents(Preferences.getEditor("TabIndents"))
         self.setIndentationGuides(Preferences.getEditor("IndentationGuides"))
+        self.setIndentationGuidesBackgroundColor(
+            Preferences.getEditorColour("IndentationGuidesBackground"))
+        self.setIndentationGuidesForegroundColor(
+            Preferences.getEditorColour("IndentationGuidesForeground"))
         if Preferences.getEditor("ShowWhitespace"):
             self.setWhitespaceVisibility(QsciScintilla.WsVisible)
             try:

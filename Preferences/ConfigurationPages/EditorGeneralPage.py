@@ -34,8 +34,6 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
             Preferences.getEditor("TabWidth"))
         self.indentwidthSlider.setValue(
             Preferences.getEditor("IndentWidth"))
-        self.indentguidesCheckBox.setChecked(
-            Preferences.getEditor("IndentationGuides"))
         self.tabforindentationCheckBox.setChecked(
             Preferences.getEditor("TabForIndentation"))
         self.tabindentsCheckBox.setChecked(
@@ -63,9 +61,6 @@ class EditorGeneralPage(ConfigurationPageBase, Ui_EditorGeneralPage):
         Preferences.setEditor(
             "IndentWidth",
             self.indentwidthSlider.value())
-        Preferences.setEditor(
-            "IndentationGuides",
-            self.indentguidesCheckBox.isChecked())
         Preferences.setEditor(
             "TabForIndentation",
             self.tabforindentationCheckBox.isChecked())

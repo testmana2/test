@@ -2404,6 +2404,10 @@ class MiniEditor(E5MainWindow):
             Preferences.getEditor("TabIndents"))
         self.__textEdit.setIndentationGuides(
             Preferences.getEditor("IndentationGuides"))
+        self.__textEdit.setIndentationGuidesBackgroundColor(
+            Preferences.getEditorColour("IndentationGuidesBackground"))
+        self.__textEdit.setIndentationGuidesForegroundColor(
+            Preferences.getEditorColour("IndentationGuidesForeground"))
         if Preferences.getEditor("ShowWhitespace"):
             self.__textEdit.setWhitespaceVisibility(QsciScintilla.WsVisible)
             try:

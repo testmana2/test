@@ -5,6 +5,8 @@ Version 6.1-snapshot-2015mmdd:
 - General
   -- added a configuration page to edit the list of mime types to
      be opened in an eric editor
+- Editor
+  -- added capability to configure the indentation guides colors
 - Log Viewer
   -- added a message filter including a configuration page
 - Previewers

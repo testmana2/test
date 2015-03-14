@@ -24,8 +24,6 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
     """
     Class implementing the Editor Styles configuration page.
     """
-    # TODO: configure foreground and background of indentation guides
-    # setIndentationGuidesBackgroundColor, setIndentationGuidesForegroundColor
     def __init__(self):
         """
         Constructor
@@ -244,6 +242,15 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.initColour("MarkerMapBackground",
                         self.markerMapBackgroundButton,
                         Preferences.getEditorColour)
+        
+        self.indentguidesCheckBox.setChecked(
+            Preferences.getEditor("IndentationGuides"))
+        self.initColour("IndentationGuidesBackground",
+                        self.indentationGuidesBackgroundButton,
+                        Preferences.getEditorColour)
+        self.initColour("IndentationGuidesForeground",
+                        self.indentationGuidesForegroundButton,
+                        Preferences.getEditorColour)
     
     def save(self):
         """
@@ -322,6 +329,10 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         Preferences.setEditor(
             "OnlineChangeTraceInterval",
             self.changeTraceTimeoutSpinBox.value())
+        
+        Preferences.setEditor(
+            "IndentationGuides",
+            self.indentguidesCheckBox.isChecked())
         
         self.saveColours(Preferences.setEditorColour)
         for key in list(self.editorColours.keys()):
