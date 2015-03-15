@@ -58,6 +58,7 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         self.__toggleInitialFilterAndResult(1)
         
         self.pyqtComboBox.addItems(["PyQt4", "PyQt5"])
+        self.__pyqtVariant = pyqtVariant
         if self.__pyqtVariant == 5:
             self.pyqtComboBox.setCurrentIndex(1)
         else:
@@ -94,9 +95,9 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
         
         @param txt text of the selected combo box entry (string)
         """
-        self.rfOpenFile.setEnabled(txt == "PyQt5")
-        self.rfOpenFiles.setEnabled(txt == "PyQt5")
-        self.rfSaveFile.setEnabled(txt == "PyQt5")
+        self.rfOpenFile.setEnabled(txt == "PyQt4")
+        self.rfOpenFiles.setEnabled(txt == "PyQt4")
+        self.rfSaveFile.setEnabled(txt == "PyQt4")
         
         if txt == "PyQt5":
             if self.rfOpenFile.isChecked():
@@ -132,20 +133,38 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options()
             options = self.__adjustOptions(options)
             if self.rOpenFile.isChecked() and self.__pyqtVariant == 4:
-                QFileDialog.getOpenFileName(
-                    None,
-                    self.eCaption.text(),
-                    self.eStartWith.text(),
-                    self.eFilters.text(),
-                    options)
+                try:
+                    QFileDialog.getOpenFileName(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        options)
+                except TypeError:
+                    QFileDialog.getOpenFileName(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
             else:
-                QFileDialog.getOpenFileNameAndFilter(
-                    None,
-                    self.eCaption.text(),
-                    self.eStartWith.text(),
-                    self.eFilters.text(),
-                    self.eInitialFilter.text(),
-                    options)
+                try:
+                    QFileDialog.getOpenFileNameAndFilter(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
+                except AttributeError:
+                    QFileDialog.getOpenFileName(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
         elif self.rOpenFiles.isChecked() or self.rfOpenFiles.isChecked():
             if not self.cSymlinks.isChecked():
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
@@ -153,20 +172,38 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options()
             options = self.__adjustOptions(options)
             if self.rOpenFiles.isChecked() and self.__pyqtVariant == 4:
-                QFileDialog.getOpenFileNames(
-                    None,
-                    self.eCaption.text(),
-                    self.eStartWith.text(),
-                    self.eFilters.text(),
-                    options)
+                try:
+                    QFileDialog.getOpenFileNames(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        options)
+                except TypeError:
+                    QFileDialog.getOpenFileNames(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
             else:
-                QFileDialog.getOpenFileNamesAndFilter(
-                    None,
-                    self.eCaption.text(),
-                    self.eStartWith.text(),
-                    self.eFilters.text(),
-                    self.eInitialFilter.text(),
-                    options)
+                try:
+                    QFileDialog.getOpenFileNamesAndFilter(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
+                except AttributeError:
+                    QFileDialog.getOpenFileNames(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
         elif self.rSaveFile.isChecked() or self.rfSaveFile.isChecked():
             if not self.cSymlinks.isChecked():
                 options = QFileDialog.Options(QFileDialog.DontResolveSymlinks)
@@ -174,20 +211,38 @@ class FileDialogWizardDialog(QDialog, Ui_FileDialogWizardDialog):
                 options = QFileDialog.Options()
             options = self.__adjustOptions(options)
             if self.rSaveFile.isChecked() and self.__pyqtVariant == 4:
-                QFileDialog.getSaveFileName(
-                    None,
-                    self.eCaption.text(),
-                    self.eStartWith.text(),
-                    self.eFilters.text(),
-                    options)
+                try:
+                    QFileDialog.getSaveFileName(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        options)
+                except TypeError:
+                    QFileDialog.getSaveFileName(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
             else:
-                QFileDialog.getSaveFileNameAndFilter(
-                    None,
-                    self.eCaption.text(),
-                    self.eStartWith.text(),
-                    self.eFilters.text(),
-                    self.eInitialFilter.text(),
-                    options)
+                try:
+                    QFileDialog.getSaveFileNameAndFilter(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
+                except AttributeError:
+                    QFileDialog.getSaveFileName(
+                        None,
+                        self.eCaption.text(),
+                        self.eStartWith.text(),
+                        self.eFilters.text(),
+                        self.eInitialFilter.text(),
+                        options)
         elif self.rDirectory.isChecked():
             options = QFileDialog.Options()
             if not self.cSymlinks.isChecked():
