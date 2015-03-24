@@ -171,7 +171,7 @@ r"""
 
 |   (?P<Import>
         ^ [ \t]* (?: import | from [ \t]+ \. [ \t]+ import ) [ \t]+
-        (?P<ImportList> (?: [^#;\\\n]+ (?: \\\n )* )* )
+        (?P<ImportList> (?: [^#;\\\n]* (?: \\\n )* )* )
     )
 
 |   (?P<ImportFrom>
@@ -184,7 +184,10 @@ r"""
         )
         [ \t]+
         import [ \t]+
-        (?P<ImportFromList> (?: [^#;\\\n]+ (?: \\\n )* )* )
+        (?P<ImportFromList>
+            (?: \( \s* .*? \s* \) )
+            |
+            (?: [^#;\\\n]* (?: \\\n )* )* )
     )
 
 |   (?P<ConditionalDefine>
@@ -766,19 +769,27 @@ class Module(object):
                 names = [n.strip() for n in
                          "".join(m.group("ImportList").splitlines())
                          .replace("\\", "").split(',')]
-                for name in names:
-                    if name not in self.imports:
-                        self.imports.append(name)
+                self.imports.extend(
+                    [name for name in names
+                     if name not in self.imports])
             
             elif m.start("ImportFrom") >= 0:
                 # from module import stuff
                 mod = m.group("ImportFromPath")
+                namesLines = (m.group("ImportFromList")
+                              .replace("(", "").replace(")", "")
+                              .replace("\\", "")
+                              .strip().splitlines())
+                namesLines = [line.split("#")[0].strip()
+                              for line in namesLines]
                 names = [n.strip() for n in
-                         "".join(m.group("ImportFromList").splitlines())
-                         .replace("\\", "").split(',')]
+                         "".join(namesLines)
+                         .split(',')]
                 if mod not in self.from_imports:
                     self.from_imports[mod] = []
-                self.from_imports[mod].extend(names)
+                self.from_imports[mod].extend(
+                    [name for name in names
+                     if name not in self.from_imports[mod]])
             
             elif m.start("ConditionalDefine") >= 0:
                 # a conditional function/method definition
