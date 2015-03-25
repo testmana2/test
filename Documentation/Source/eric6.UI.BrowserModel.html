@@ -25,7 +25,7 @@ Module implementing the browser model.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>BrowserItemAttribute</td></tr><tr><td>BrowserItemAttributes</td></tr><tr><td>BrowserItemClass</td></tr><tr><td>BrowserItemCoding</td></tr><tr><td>BrowserItemDirectory</td></tr><tr><td>BrowserItemFile</td></tr><tr><td>BrowserItemMethod</td></tr><tr><td>BrowserItemRoot</td></tr><tr><td>BrowserItemSysPath</td></tr>
+<tr><td>BrowserItemAttribute</td></tr><tr><td>BrowserItemAttributes</td></tr><tr><td>BrowserItemClass</td></tr><tr><td>BrowserItemCoding</td></tr><tr><td>BrowserItemDirectory</td></tr><tr><td>BrowserItemFile</td></tr><tr><td>BrowserItemImport</td></tr><tr><td>BrowserItemImports</td></tr><tr><td>BrowserItemMethod</td></tr><tr><td>BrowserItemRoot</td></tr><tr><td>BrowserItemSysPath</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -47,6 +47,12 @@ Module implementing the browser model.
 </tr><tr>
 <td><a href="#BrowserFileItem">BrowserFileItem</a></td>
 <td>Class implementing the data structure for browser file items.</td>
+</tr><tr>
+<td><a href="#BrowserImportItem">BrowserImportItem</a></td>
+<td>Class implementing the data structure for browser imported module and imported names items.</td>
+</tr><tr>
+<td><a href="#BrowserImportsItem">BrowserImportsItem</a></td>
+<td>Class implementing the data structure for browser import items.</td>
 </tr><tr>
 <td><a href="#BrowserItem">BrowserItem</a></td>
 <td>Class implementing the data structure for browser items.</td>
@@ -953,6 +959,188 @@ the string for the file (string)
 </dd><dt><i>full</i></dt>
 <dd>
 flag indicating full pathname should be displayed (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="BrowserImportItem" ID="BrowserImportItem"></a>
+<h2>BrowserImportItem</h2>
+<p>
+    Class implementing the data structure for browser imported module and
+    imported names items.
+</p>
+<h3>Derived from</h3>
+BrowserItem
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#BrowserImportItem.__init__">BrowserImportItem</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#BrowserImportItem.fileName">fileName</a></td>
+<td>Public method returning the filename.</td>
+</tr><tr>
+<td><a href="#BrowserImportItem.lessThan">lessThan</a></td>
+<td>Public method to check, if the item is less than the other one.</td>
+</tr><tr>
+<td><a href="#BrowserImportItem.lineno">lineno</a></td>
+<td>Public method returning the line number of the first import.</td>
+</tr><tr>
+<td><a href="#BrowserImportItem.linenos">linenos</a></td>
+<td>Public method returning the line numbers of all imports.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="BrowserImportItem.__init__" ID="BrowserImportItem.__init__"></a>
+<h4>BrowserImportItem (Constructor)</h4>
+<b>BrowserImportItem</b>(<i>parent, text, filename, lineNumbers, isModule=True</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+parent item
+</dd><dt><i>text</i></dt>
+<dd>
+text to be shown by this item (string)
+</dd><dt><i>filename</i></dt>
+<dd>
+name of the file (string)
+</dd><dt><i>lineNumbers</i></dt>
+<dd>
+list of line numbers of the import statement
+            (list of integer)
+</dd><dt><i>isModule</i></dt>
+<dd>
+flag indicating a module item entry (boolean)
+</dd>
+</dl><a NAME="BrowserImportItem.fileName" ID="BrowserImportItem.fileName"></a>
+<h4>BrowserImportItem.fileName</h4>
+<b>fileName</b>(<i></i>)
+<p>
+        Public method returning the filename.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+filename (string)
+</dd>
+</dl><a NAME="BrowserImportItem.lessThan" ID="BrowserImportItem.lessThan"></a>
+<h4>BrowserImportItem.lessThan</h4>
+<b>lessThan</b>(<i>other, column, order</i>)
+<p>
+        Public method to check, if the item is less than the other one.
+</p><dl>
+<dt><i>other</i></dt>
+<dd>
+reference to item to compare against (BrowserItem)
+</dd><dt><i>column</i></dt>
+<dd>
+column number to use for the comparison (integer)
+</dd><dt><i>order</i></dt>
+<dd>
+sort order (Qt.SortOrder) (for special sorting)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+true, if this item is less than other (boolean)
+</dd>
+</dl><a NAME="BrowserImportItem.lineno" ID="BrowserImportItem.lineno"></a>
+<h4>BrowserImportItem.lineno</h4>
+<b>lineno</b>(<i></i>)
+<p>
+        Public method returning the line number of the first import.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+line number of the first import (integer)
+</dd>
+</dl><a NAME="BrowserImportItem.linenos" ID="BrowserImportItem.linenos"></a>
+<h4>BrowserImportItem.linenos</h4>
+<b>linenos</b>(<i></i>)
+<p>
+        Public method returning the line numbers of all imports.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+line numbers of all imports (list of integers)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="BrowserImportsItem" ID="BrowserImportsItem"></a>
+<h2>BrowserImportsItem</h2>
+<p>
+    Class implementing the data structure for browser import items.
+</p>
+<h3>Derived from</h3>
+BrowserItem
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#BrowserImportsItem.__init__">BrowserImportsItem</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#BrowserImportsItem.lessThan">lessThan</a></td>
+<td>Public method to check, if the item is less than the other one.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="BrowserImportsItem.__init__" ID="BrowserImportsItem.__init__"></a>
+<h4>BrowserImportsItem (Constructor)</h4>
+<b>BrowserImportsItem</b>(<i>parent, text</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+parent item
+</dd><dt><i>text</i></dt>
+<dd>
+text to be shown by this item (string)
+</dd>
+</dl><a NAME="BrowserImportsItem.lessThan" ID="BrowserImportsItem.lessThan"></a>
+<h4>BrowserImportsItem.lessThan</h4>
+<b>lessThan</b>(<i>other, column, order</i>)
+<p>
+        Public method to check, if the item is less than the other one.
+</p><dl>
+<dt><i>other</i></dt>
+<dd>
+reference to item to compare against (BrowserItem)
+</dd><dt><i>column</i></dt>
+<dd>
+column number to use for the comparison (integer)
+</dd><dt><i>order</i></dt>
+<dd>
+sort order (Qt.SortOrder) (for special sorting)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+true, if this item is less than other (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

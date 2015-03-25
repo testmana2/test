@@ -7,10 +7,14 @@ Version 6.1-snapshot-2015mmdd:
      be opened in an eric editor
 - Editor
   -- added capability to configure the indentation guides colors
+- File Browser
+  -- added capability to show imports of a Python script
 - Log Viewer
   -- added a message filter including a configuration page
 - Previewers
   -- added capability to use 'Sphinx' to preview ReST files
+- Project Browser
+  -- added capability to show imports of a Python script
 - Task Viewer
   -- added capability to add sub-tasks (i.e. a task hierarchy) for
      manually generated tasks

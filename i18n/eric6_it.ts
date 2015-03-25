@@ -2129,7 +2129,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Aggiungi come directory principale</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="538"/>
+        <location filename="../UI/Browser.py" line="545"/>
         <source>New toplevel directory</source>
         <translation>Nuova directory principale</translation>
     </message>
@@ -2169,7 +2169,7 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Vai a</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="374"/>
+        <location filename="../UI/Browser.py" line="376"/>
         <source>Line {0}</source>
         <translation>Linea {0}</translation>
     </message>
@@ -2179,22 +2179,22 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;La finestra di navigazione&lt;/b&gt;Questa ti permette di navigare facilmente nella struttura delle directory e dei file sul tuo sistema, identificare i programmi Python e aprirli nella finestra di Visualizzazione dei Sorgenti. La finestra mostra diverse strutture separate.&lt;/p&gt;&lt;p&gt;La prima struttura è mostrata solo se hai aperto un programma da debuggare e la sua radice è la cartella che contiene il programma. Normalmente tutti i file che compongono un&apos;applicazione Python sono contenuti nella stessa cartella, così questa vista permette un accesso veloce a molto di quello che ti serve.&lt;/p&gt;&lt;p&gt;La vista successiva è usata per navigare facilmente nelle cartelle specificate nella variabile Python &lt;tt&gt;sys.path&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;La vista rimanente permette di navigare in tutto il sistema. Su un sistema UNIX c&apos;è una struttura con &lt;tt&gt;/&lt;/tt&gt; come radice e un&apos;altra con la home dell&apos;utente. Su un sistema Windows c&apos;è una struttura per ogni disco del sistema.&lt;/p&gt;&lt;p&gt;I programmi Python (es. quelli con l&apos;estensione &lt;tt&gt;.py&lt;/tt&gt;) sono identificati nella vista con l&apos;icona di Python. Il pulsante destro del mouse fa apparire un menù che consente di aprire il file nel Visualizzatore dei Sorgenti, aprire il file per il debug o usarlo per uno unittest.&lt;/p&gt;&lt;p&gt;Il menù contestuale di una classe, funzione o metodo consente di aprire il file che la definisce e di posizionarsi sulla riga corretta.&lt;/p&gt;&lt;p&gt;I file di Qt-Designer (es. quelli con estensione &lt;tt&gt;.ui&lt;/tt&gt;) sono mostrati con l&apos;icona del Designer. Il menù contestuale  di questi file consente di avviare Qt-Designer per quel file.&lt;/p&gt;&lt;p&gt;I file di Qt-Linguist (es. quelli con estensione &lt;tt&gt;.ts&lt;/tt&gt;) sono mostrati con l&apos;icona di Linguist. Il menù contestuale di questi file consente di avviare Qt-Linguist per quel file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>Show Mime-Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="461"/>
+        <location filename="../UI/Browser.py" line="468"/>
         <source>The mime type of the file could not be determined.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="475"/>
+        <location filename="../UI/Browser.py" line="482"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2202,29 +2202,34 @@ con il dialogo premendo il pulsante sulla destra.&lt;/p&gt;</translation>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="../UI/BrowserModel.py" line="65"/>
+        <location filename="../UI/BrowserModel.py" line="67"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="686"/>
+        <location filename="../UI/BrowserModel.py" line="711"/>
         <source>Attributes</source>
         <translation>Attributi</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="641"/>
+        <location filename="../UI/BrowserModel.py" line="643"/>
         <source>Globals</source>
         <translation>Globali</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="635"/>
+        <location filename="../UI/BrowserModel.py" line="637"/>
         <source>Coding: {0}</source>
         <translation>Codifica: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="696"/>
+        <location filename="../UI/BrowserModel.py" line="721"/>
         <source>Class Attributes</source>
         <translation>Attributi della Classe</translation>
+    </message>
+    <message>
+        <location filename="../UI/BrowserModel.py" line="649"/>
+        <source>Imports</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14498,7 +14503,7 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Mostra solo le directory</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="73"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="74"/>
         <source>Test</source>
         <translation>Test</translation>
     </message>
@@ -38351,32 +38356,32 @@ Selezionare Aggiorna.</translation>
         <translation>Rinomina file</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Code Coverage</source>
         <translation>Analisi codice</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Please select a coverage file</source>
         <translation>Per favore seleziona un file per l&apos;analisi</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Profile Data</source>
         <translation>Profilazione dati</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Please select a profile file</source>
         <translation>Per favore seleziona un file per la profilazione</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Delete files</source>
         <translation>Cancella file</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Vuoi veramente cancellare queste file dal progetto ?</translation>
     </message>
@@ -38391,27 +38396,27 @@ Selezionare Aggiorna.</translation>
         <translation>Aggiungi directory dei sorgenti...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1064"/>
         <source>Class Diagram</source>
         <translation>Diagramma della classe</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Include class attributes?</source>
         <translation>Includi gli attributi della classe ?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Package Diagram</source>
         <translation>Diagrammi del package</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Application Diagram</source>
         <translation>Diagrammi dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Include module names?</source>
         <translation>Includi i nomi dei moduli ?</translation>
     </message>
@@ -38426,17 +38431,17 @@ Selezionare Aggiorna.</translation>
         <translation>Nuovo package...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>Add new Python package</source>
         <translation>Aggiungi un nuovo package Python</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Imports Diagram</source>
         <translation>Importa diagrammi</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Include imports from external modules?</source>
         <translation>Includi gli import dai moduli esterni ?</translation>
     </message>
@@ -38451,12 +38456,12 @@ Selezionare Aggiorna.</translation>
         <translation>Copia il path nella Clipboard</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="818"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="823"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;La directory del package &lt;b&gt;{0}&lt;/b&gt; non può essere creata. Esco...&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file del package &lt;b&gt;{0}&lt;/b&gt; non può essere creato. Esco...&lt;/p&gt;&lt;p&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>

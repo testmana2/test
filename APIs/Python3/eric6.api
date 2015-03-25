@@ -8075,6 +8075,13 @@ eric6.UI.BrowserModel.BrowserFileItem.moduleName?4()
 eric6.UI.BrowserModel.BrowserFileItem.name?4()
 eric6.UI.BrowserModel.BrowserFileItem.setName?4(finfo, full=True)
 eric6.UI.BrowserModel.BrowserFileItem?1(parent, finfo, full=True, sourceLanguage="")
+eric6.UI.BrowserModel.BrowserImportItem.fileName?4()
+eric6.UI.BrowserModel.BrowserImportItem.lessThan?4(other, column, order)
+eric6.UI.BrowserModel.BrowserImportItem.lineno?4()
+eric6.UI.BrowserModel.BrowserImportItem.linenos?4()
+eric6.UI.BrowserModel.BrowserImportItem?1(parent, text, filename, lineNumbers, isModule=True)
+eric6.UI.BrowserModel.BrowserImportsItem.lessThan?4(other, column, order)
+eric6.UI.BrowserModel.BrowserImportsItem?1(parent, text)
 eric6.UI.BrowserModel.BrowserItem.appendChild?4(child)
 eric6.UI.BrowserModel.BrowserItem.child?4(row)
 eric6.UI.BrowserModel.BrowserItem.childCount?4()
@@ -8099,6 +8106,8 @@ eric6.UI.BrowserModel.BrowserItemClass?7
 eric6.UI.BrowserModel.BrowserItemCoding?7
 eric6.UI.BrowserModel.BrowserItemDirectory?7
 eric6.UI.BrowserModel.BrowserItemFile?7
+eric6.UI.BrowserModel.BrowserItemImport?7
+eric6.UI.BrowserModel.BrowserItemImports?7
 eric6.UI.BrowserModel.BrowserItemMethod?7
 eric6.UI.BrowserModel.BrowserItemRoot?7
 eric6.UI.BrowserModel.BrowserItemSysPath?7
@@ -8490,6 +8499,12 @@ eric6.Utilities.ClassBrowsers.jsclbr.readmodule_ex?4(module, path=[])
 eric6.Utilities.ClassBrowsers.pyclbr.Attribute?1(module, name, file, lineno)
 eric6.Utilities.ClassBrowsers.pyclbr.Class?1(module, name, super, file, lineno)
 eric6.Utilities.ClassBrowsers.pyclbr.Function?1(module, name, file, lineno, signature='', separator=', ', modifierType=ClbrBaseClasses.Function.General, annotation="")
+eric6.Utilities.ClassBrowsers.pyclbr.ImportedModule.addImport?4(lineno, importedNames)
+eric6.Utilities.ClassBrowsers.pyclbr.ImportedModule?1(module, file, importedModule)
+eric6.Utilities.ClassBrowsers.pyclbr.Imports.addImport?4(moduleName, names, lineno)
+eric6.Utilities.ClassBrowsers.pyclbr.Imports.getImport?4(moduleName)
+eric6.Utilities.ClassBrowsers.pyclbr.Imports.getImports?4()
+eric6.Utilities.ClassBrowsers.pyclbr.Imports?1(module, file)
 eric6.Utilities.ClassBrowsers.pyclbr.Publics?1(module, file, lineno, idents)
 eric6.Utilities.ClassBrowsers.pyclbr.SUPPORTED_TYPES?7
 eric6.Utilities.ClassBrowsers.pyclbr.TABWIDTH?7

@@ -36,6 +36,8 @@ BrowserItemMethod = 5
 BrowserItemAttributes = 6
 BrowserItemAttribute = 7
 BrowserItemCoding = 8
+BrowserItemImports = 9
+BrowserItemImport = 10
 
 
 class BrowserModel(QAbstractItemModel):
@@ -639,6 +641,29 @@ class BrowserModel(QAbstractItemModel):
                     dict["@@Globals@@"].globals,
                     QCoreApplication.translate("BrowserModel", "Globals"))
                 self._addItem(node, parentItem)
+            if "@@Import@@" in keys or "@@ImportFrom@@" in keys:
+                node = BrowserImportsItem(
+                    parentItem,
+                    QCoreApplication.translate("BrowserModel", "Imports"))
+                self._addItem(node, parentItem)
+                if "@@Import@@" in keys:
+                    for importedModule in \
+                            dict["@@Import@@"].getImports().values():
+                        m_node = BrowserImportItem(
+                            node,
+                            importedModule.importedModuleName,
+                            importedModule.file,
+                            importedModule.linenos)
+                        self._addItem(m_node, node)
+                        for importedName, linenos in \
+                                importedModule.importedNames.items():
+                            mn_node = BrowserImportItem(
+                                m_node,
+                                importedName,
+                                importedModule.file,
+                                linenos,
+                                isModule=False)
+                            self._addItem(mn_node, m_node)
             if repopulate:
                 self.endInsertRows()
         parentItem._populated = True
@@ -1741,7 +1766,110 @@ class BrowserCodingItem(BrowserItem):
         @return true, if this item is less than other (boolean)
         """
         if issubclass(other.__class__, BrowserClassItem) or \
+           issubclass(other.__class__, BrowserClassAttributesItem) or \
+           issubclass(other.__class__, BrowserImportItem):
+            return order == Qt.AscendingOrder
+        
+        return BrowserItem.lessThan(self, other, column, order)
+
+
+class BrowserImportsItem(BrowserItem):
+    """
+    Class implementing the data structure for browser import items.
+    """
+    def __init__(self, parent, text):
+        """
+        Constructor
+        
+        @param parent parent item
+        @param text text to be shown by this item (string)
+        """
+        BrowserItem.__init__(self, parent, text)
+        
+        self.type_ = BrowserItemImports
+        self.icon = UI.PixmapCache.getIcon("imports.png")
+    
+    def lessThan(self, other, column, order):
+        """
+        Public method to check, if the item is less than the other one.
+        
+        @param other reference to item to compare against (BrowserItem)
+        @param column column number to use for the comparison (integer)
+        @param order sort order (Qt.SortOrder) (for special sorting)
+        @return true, if this item is less than other (boolean)
+        """
+        if issubclass(other.__class__, BrowserClassItem) or \
            issubclass(other.__class__, BrowserClassAttributesItem):
             return order == Qt.AscendingOrder
+        
+        return BrowserItem.lessThan(self, other, column, order)
+
+
+class BrowserImportItem(BrowserItem):
+    """
+    Class implementing the data structure for browser imported module and
+    imported names items.
+    """
+    def __init__(self, parent, text, filename, lineNumbers, isModule=True):
+        """
+        Constructor
+        
+        @param parent parent item
+        @param text text to be shown by this item (string)
+        @param filename name of the file (string)
+        @param lineNumbers list of line numbers of the import statement
+            (list of integer)
+        @param isModule flag indicating a module item entry (boolean)
+        """
+        BrowserItem.__init__(self, parent, text)
+        
+        self.__filename = filename
+        self.__linenos = lineNumbers[:]
+        
+        self.type_ = BrowserItemImport
+        if isModule:
+            self.icon = UI.PixmapCache.getIcon("importedModule.png")
+        else:
+            self.icon = UI.PixmapCache.getIcon("importedName.png")
+    
+    def fileName(self):
+        """
+        Public method returning the filename.
+        
+        @return filename (string)
+        """
+        return self.__filename
+    
+    def lineno(self):
+        """
+        Public method returning the line number of the first import.
+        
+        @return line number of the first import (integer)
+        """
+        return self.__linenos[0]
+    
+    def linenos(self):
+        """
+        Public method returning the line numbers of all imports.
+        
+        @return line numbers of all imports (list of integers)
+        """
+        return self.__linenos[:]
+    
+    def lessThan(self, other, column, order):
+        """
+        Public method to check, if the item is less than the other one.
+        
+        @param other reference to item to compare against (BrowserItem)
+        @param column column number to use for the comparison (integer)
+        @param order sort order (Qt.SortOrder) (for special sorting)
+        @return true, if this item is less than other (boolean)
+        """
+        if Preferences.getUI("BrowsersListContentsByOccurrence") and \
+                column == 0:
+            if order == Qt.AscendingOrder:
+                return self.lineno() < other.lineno()
+            else:
+                return self.lineno() > other.lineno()
         
         return BrowserItem.lessThan(self, other, column, order)

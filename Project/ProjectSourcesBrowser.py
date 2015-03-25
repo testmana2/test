@@ -17,7 +17,7 @@ from PyQt5.QtWidgets import QDialog, QInputDialog, QMenu
 from E5Gui import E5MessageBox
 
 from UI.BrowserModel import BrowserFileItem, BrowserClassItem, \
-    BrowserMethodItem, BrowserClassAttributeItem
+    BrowserMethodItem, BrowserClassAttributeItem, BrowserImportItem
 
 from .ProjectBrowserModel import ProjectBrowserFileItem, \
     ProjectBrowserSimpleDirectoryItem, ProjectBrowserDirectoryItem, \
@@ -590,7 +590,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             categories = self.getSelectedItemsCountCategorized(
                 [ProjectBrowserFileItem, BrowserClassItem,
                  BrowserMethodItem, ProjectBrowserSimpleDirectoryItem,
-                 BrowserClassAttributeItem])
+                 BrowserClassAttributeItem, BrowserImportItem])
             cnt = categories["sum"]
             if cnt <= 1:
                 index = self.indexAt(coord)
@@ -599,13 +599,14 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                     categories = self.getSelectedItemsCountCategorized(
                         [ProjectBrowserFileItem, BrowserClassItem,
                          BrowserMethodItem, ProjectBrowserSimpleDirectoryItem,
-                         BrowserClassAttributeItem])
+                         BrowserClassAttributeItem, BrowserImportItem])
                     cnt = categories["sum"]
             
             bfcnt = categories[str(ProjectBrowserFileItem)]
             cmcnt = categories[str(BrowserClassItem)] + \
                 categories[str(BrowserMethodItem)] + \
-                categories[str(BrowserClassAttributeItem)]
+                categories[str(BrowserClassAttributeItem)] + \
+                categories[str(BrowserImportItem)]
             sdcnt = categories[str(ProjectBrowserSimpleDirectoryItem)]
             if cnt > 1 and cnt == bfcnt:
                 self.multiMenu.popup(self.mapToGlobal(coord))
@@ -656,7 +657,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                                         True)
                             self.sourceMenu.popup(self.mapToGlobal(coord))
                         elif isinstance(itm, BrowserClassItem) or \
-                                isinstance(itm, BrowserMethodItem):
+                            isinstance(itm, BrowserMethodItem) or \
+                                isinstance(itm, BrowserImportItem):
                             self.menu.popup(self.mapToGlobal(coord))
                         elif isinstance(itm, BrowserClassAttributeItem):
                             self.attributeMenu.popup(self.mapToGlobal(coord))
@@ -756,7 +758,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         """
         itmList = self.getSelectedItems(
             [BrowserFileItem, BrowserClassItem, BrowserMethodItem,
-             BrowserClassAttributeItem])
+             BrowserClassAttributeItem, BrowserImportItem])
         
         for itm in itmList:
             if isinstance(itm, BrowserFileItem):
@@ -781,6 +783,9 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
             elif isinstance(itm, BrowserClassAttributeItem):
                 self.sourceFile[str, int].emit(
                     itm.fileName(), itm.attributeObject().lineno)
+            elif isinstance(itm, BrowserImportItem):
+                self.sourceFile[str, int].emit(
+                    itm.fileName(), itm.lineno())
         
     def __addNewPackage(self):
         """

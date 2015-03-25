@@ -51,6 +51,8 @@ BrowserClassItem BrowserItem
 BrowserCodingItem BrowserItem
 BrowserDirectoryItem BrowserItem
 BrowserFileItem BrowserItem
+BrowserImportItem BrowserItem
+BrowserImportsItem BrowserItem
 BrowserMethodItem BrowserItem
 BrowserModel QAbstractItemModel
 BrowserSortFilterProxyModel QSortFilterProxyModel

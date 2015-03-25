@@ -105,6 +105,27 @@ r"""
         (?: (?: if | elif ) [ \t]+ [^:]* | else [ \t]* ) : (?= \s* def)
     )
 
+|   (?P<Import>
+        ^ [ \t]* (?: import | from [ \t]+ \. [ \t]+ import ) [ \t]+
+        (?P<ImportList> (?: [^#;\\\n]* (?: \\\n )* )* )
+    )
+
+|   (?P<ImportFrom>
+        ^ [ \t]* from [ \t]+
+        (?P<ImportFromPath>
+            \.* \w+
+            (?:
+                [ \t]* \. [ \t]* \w+
+            )*
+        )
+        [ \t]+
+        import [ \t]+
+        (?P<ImportFromList>
+            (?: \( \s* .*? \s* \) )
+            |
+            (?: [^#;\\\n]* (?: \\\n )* )* )
+    )
+
 |   (?P<CodingLine>
         ^ \# \s* [*_-]* \s* coding[:=] \s* (?P<Coding> [-\w_.]+ ) \s* [*_-]* $
     )
@@ -209,6 +230,97 @@ class Publics(object):
         self.lineno = lineno
         self.identifiers = [e.replace('"', '').replace("'", "").strip()
                             for e in idents.split(',')]
+
+
+class Imports(object):
+    """
+    Class to represent the list of imported modules.
+    """
+    def __init__(self, module, file):
+        """
+        Constructor
+        
+        @param module name of the module containing the import (string)
+        @param file file name containing the import (string)
+        """
+        self.module = module
+        self.name = 'import'
+        self.file = file
+        self.imports = {}
+    
+    def addImport(self, moduleName, names, lineno):
+        """
+        Public method to add a list of imported names.
+        
+        @param moduleName name of the imported module (string)
+        @param names list of names (list of strings)
+        @param lineno line number of the import
+        """
+        if moduleName not in self.imports:
+            module = ImportedModule(self.module, self.file, moduleName)
+            self.imports[moduleName] = module
+        else:
+            module = self.imports[moduleName]
+        module.addImport(lineno, names)
+    
+    def getImport(self, moduleName):
+        """
+        Public method to get an imported module item.
+        
+        @param moduleName name of the imported module (string)
+        @return imported module item (ImportedModule) or None
+        """
+        if moduleName in self.imports:
+            return self.imports[moduleName]
+        else:
+            return None
+    
+    def getImports(self):
+        """
+        Public method to get all imported module names.
+        
+        @return dictionary of imported module names with name as key and list
+            of line numbers of imports as value
+        """
+        return self.imports
+
+
+class ImportedModule(object):
+    """
+    Class to represent an imported module.
+    """
+    def __init__(self, module, file, importedModule):
+        """
+        Constructor
+        
+        @param module name of the module containing the import (string)
+        @param file file name containing the import (string)
+        @param importedModule name of the imported module (string)
+        """
+        self.module = module
+        self.name = 'import'
+        self.file = file
+        self.importedModuleName = importedModule
+        self.linenos = []
+        self.importedNames = {}
+        # dictionary of imported names with name as key and list of line
+        # numbers as value
+    
+    def addImport(self, lineno, importedNames):
+        """
+        Public method to add a list of imported names.
+        
+        @param lineno line number of the import
+        @param importedNames list of imported names (list of strings)
+        """
+        if lineno not in self.linenos:
+            self.linenos.append(lineno)
+        
+        for name in importedNames:
+            if name not in self.importedNames:
+                self.importedNames[name] = [lineno]
+            else:
+                self.importedNames[name].append(lineno)
     
 
 def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
@@ -479,6 +591,36 @@ def readmodule_ex(module, path=[], inpackage=False, isPyFile=False):
             last_lineno_pos = start
             pubs = Publics(module, file, lineno, idents)
             dict['__all__'] = pubs
+        
+        elif m.start("Import") >= 0:
+            # import module
+            names = [n.strip() for n in
+                     "".join(m.group("ImportList").splitlines())
+                     .replace("\\", "").split(',')]
+            lineno = lineno + src.count('\n', last_lineno_pos, start)
+            last_lineno_pos = start
+            if "@@Import@@" not in dict:
+                dict["@@Import@@"] = Imports(module, file)
+            for name in names:
+                dict["@@Import@@"].addImport(name, [], lineno)
+        
+        elif m.start("ImportFrom") >= 0:
+            # from module import stuff
+            mod = m.group("ImportFromPath")
+            namesLines = (m.group("ImportFromList")
+                          .replace("(", "").replace(")", "")
+                          .replace("\\", "")
+                          .strip().splitlines())
+            namesLines = [line.split("#")[0].strip()
+                          for line in namesLines]
+            names = [n.strip() for n in
+                     "".join(namesLines)
+                     .split(',')]
+            lineno = lineno + src.count('\n', last_lineno_pos, start)
+            last_lineno_pos = start
+            if "@@Import@@" not in dict:
+                dict["@@Import@@"] = Imports(module, file)
+            dict["@@Import@@"].addImport(mod, names, lineno)
         
         elif m.start("ConditionalDefine") >= 0:
             # a conditional function/method definition

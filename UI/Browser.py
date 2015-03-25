@@ -21,7 +21,7 @@ from E5Gui import E5FileDialog, E5MessageBox
 
 from .BrowserModel import BrowserModel, BrowserDirectoryItem, \
     BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
-    BrowserClassAttributeItem
+    BrowserClassAttributeItem, BrowserImportItem
 from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 
 import UI.PixmapCache
@@ -343,7 +343,9 @@ class Browser(QTreeView):
                         self.editPixmapAct.setVisible(itm.isPixmapFile())
                         self.menu.popup(coord)
                 elif isinstance(itm, BrowserClassItem) or \
-                        isinstance(itm, BrowserMethodItem):
+                    isinstance(itm, BrowserMethodItem) or \
+                        isinstance(itm, BrowserImportItem):
+                    self.editPixmapAct.setVisible(False)
                     self.menu.popup(coord)
                 elif isinstance(itm, BrowserClassAttributeItem):
                     self.attributeMenu.popup(coord)
@@ -397,7 +399,8 @@ class Browser(QTreeView):
         """
         itmList = self.getSelectedItems(
             [BrowserFileItem, BrowserClassItem,
-             BrowserMethodItem, BrowserClassAttributeItem])
+             BrowserMethodItem, BrowserClassAttributeItem,
+             BrowserImportItem])
         
         if not self._activating:
             self._activating = True
@@ -446,6 +449,9 @@ class Browser(QTreeView):
                 elif isinstance(itm, BrowserClassAttributeItem):
                     self.sourceFile[str, int].emit(
                         itm.fileName(), itm.attributeObject().lineno)
+                elif isinstance(itm, BrowserImportItem):
+                    self.sourceFile[str, int].emit(
+                        itm.fileName(), itm.lineno())
             self._activating = False
         
     def __showMimeType(self):
@@ -454,7 +460,8 @@ class Browser(QTreeView):
         """
         itmList = self.getSelectedItems(
             [BrowserFileItem, BrowserClassItem,
-             BrowserMethodItem, BrowserClassAttributeItem])
+             BrowserMethodItem, BrowserClassAttributeItem,
+             BrowserImportItem])
         if itmList:
             mimetype = Utilities.MimeTypes.mimeType(itmList[0].fileName())
             if mimetype is None:

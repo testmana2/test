@@ -2126,7 +2126,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Добавить как каталог верхнего уровня</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="538"/>
+        <location filename="../UI/Browser.py" line="545"/>
         <source>New toplevel directory</source>
         <translation>Новый каталог верхнего уровня</translation>
     </message>
@@ -2166,7 +2166,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Перейти</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="374"/>
+        <location filename="../UI/Browser.py" line="376"/>
         <source>Line {0}</source>
         <translation>Строка: {0}</translation>
     </message>
@@ -2177,22 +2177,22 @@ the button to the right.&lt;/p&gt;</source>
 &lt;p&gt;Первое дерево показывается только тогда, когда вы отлаживаете программу и корень дерева является каталогом, содержащим программу. Обычно все файлы, составляющие приложение на Python, находятся в одном каталоге, так что это дерево даёт почти всю необходимую информацию.&lt;/p&gt;&lt;p&gt;Следующее дерево используется для лёгкого перемещения по каталогам, перечисленным в переменной Python &lt;tt&gt;sys.path&lt;/tt&gt;&lt;p&gt;Оставшиеся деревья позволяют перемещаться по системе в целом. В системах UNIX будут показаны 2 дерева: дерево с вершиной в корневом каталоге (&lt;tt&gt;/&lt;/tt&gt;) и домашний каталог пользователя. В Windows для каждого диска будет показано своё дерево.&lt;/p&gt;&lt;p&gt;Программы на Python (с расширением &lt;tt&gt;.py&lt;/tt&gt;) показываются с пиктограммой Python. Доступно контекстное меню, позволяющее открыть программу в редакторе, запустить её на отладку или протестировать с помощью unittest.&lt;/p&gt;&lt;p&gt;Контекстное меню на классе, функции или методе откроет файл и перейдёт на нужное место&lt;/p&gt;&lt;p&gt;Файлы описания интерфейса ( &lt;tt&gt;.ui&lt;/tt&gt;, отмеченные пиктограммой Дизайнера) могут быть открыты Дизайнером через контекстное меню или по двойному щелчку&lt;/p&gt;&lt;p&gt;Файлы перевода (&lt;tt&gt;.ts&lt;/tt&gt;, отмеченные пиктограммой Лингвиста) могут быть отредактированы с помощью Лингвиста&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>Show Mime-Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="461"/>
+        <location filename="../UI/Browser.py" line="468"/>
         <source>The mime type of the file could not be determined.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="475"/>
+        <location filename="../UI/Browser.py" line="482"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2200,29 +2200,34 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="../UI/BrowserModel.py" line="65"/>
+        <location filename="../UI/BrowserModel.py" line="67"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="686"/>
+        <location filename="../UI/BrowserModel.py" line="711"/>
         <source>Attributes</source>
         <translation>Атрибуты</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="635"/>
+        <location filename="../UI/BrowserModel.py" line="637"/>
         <source>Coding: {0}</source>
         <translation>Кодировка: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="641"/>
+        <location filename="../UI/BrowserModel.py" line="643"/>
         <source>Globals</source>
         <translation>Глобальные переменные</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="696"/>
+        <location filename="../UI/BrowserModel.py" line="721"/>
         <source>Class Attributes</source>
         <translation>Атрибуты класса</translation>
+    </message>
+    <message>
+        <location filename="../UI/BrowserModel.py" line="649"/>
+        <source>Imports</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14498,7 +14503,7 @@ whole selection.&lt;/li&gt;
         <translation>Показывать только каталоги</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="73"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="74"/>
         <source>Test</source>
         <translation>Тест</translation>
     </message>
@@ -38363,22 +38368,22 @@ Select Update.</source>
         <translation>Диаграмма пакетов...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Code Coverage</source>
         <translation>Заключения охвата по коду</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Please select a coverage file</source>
         <translation>Пожалуйста, выберите файл для информации охвата</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Profile Data</source>
         <translation>Данные профайлера</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Please select a profile file</source>
         <translation>Пожалуйста, выберите файл профиля</translation>
     </message>
@@ -38388,12 +38393,12 @@ Select Update.</source>
         <translation>Переименовать файл</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Delete files</source>
         <translation>Удаление файлов</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Вы действительно хотите удалить эти файлы из проекта?</translation>
     </message>
@@ -38408,27 +38413,27 @@ Select Update.</source>
         <translation>Добавить каталог с исходниками...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1064"/>
         <source>Class Diagram</source>
         <translation>Диаграмма классов</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Include class attributes?</source>
         <translation>Включать атрибуты класса?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Package Diagram</source>
         <translation>Диаграмма пакетов</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Application Diagram</source>
         <translation>Диаграмма приложения</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Include module names?</source>
         <translation>Включать имена модулей?</translation>
     </message>
@@ -38443,27 +38448,27 @@ Select Update.</source>
         <translation>Новый пакет...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>Add new Python package</source>
         <translation>Добавить новый пакет Python</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="818"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="823"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать каталог &lt;b&gt;{0}&lt;/b&gt; для пакета. Отмена...&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно создать файл &lt;b&gt;{0}&lt;/b&gt; для пакета. Отмена...&lt;/p&gt;&lt;p&gt;Причина: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Imports Diagram</source>
         <translation>Диаграмма импортов</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Include imports from external modules?</source>
         <translation>Включать импорты из внешних модулей?</translation>
     </message>

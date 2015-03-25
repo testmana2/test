@@ -1838,6 +1838,15 @@
       <keyword name="BrowserFileItem.moduleName" id="BrowserFileItem.moduleName" ref="eric6.UI.BrowserModel.html#BrowserFileItem.moduleName" />
       <keyword name="BrowserFileItem.name" id="BrowserFileItem.name" ref="eric6.UI.BrowserModel.html#BrowserFileItem.name" />
       <keyword name="BrowserFileItem.setName" id="BrowserFileItem.setName" ref="eric6.UI.BrowserModel.html#BrowserFileItem.setName" />
+      <keyword name="BrowserImportItem" id="BrowserImportItem" ref="eric6.UI.BrowserModel.html#BrowserImportItem" />
+      <keyword name="BrowserImportItem (Constructor)" id="BrowserImportItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserImportItem.__init__" />
+      <keyword name="BrowserImportItem.fileName" id="BrowserImportItem.fileName" ref="eric6.UI.BrowserModel.html#BrowserImportItem.fileName" />
+      <keyword name="BrowserImportItem.lessThan" id="BrowserImportItem.lessThan" ref="eric6.UI.BrowserModel.html#BrowserImportItem.lessThan" />
+      <keyword name="BrowserImportItem.lineno" id="BrowserImportItem.lineno" ref="eric6.UI.BrowserModel.html#BrowserImportItem.lineno" />
+      <keyword name="BrowserImportItem.linenos" id="BrowserImportItem.linenos" ref="eric6.UI.BrowserModel.html#BrowserImportItem.linenos" />
+      <keyword name="BrowserImportsItem" id="BrowserImportsItem" ref="eric6.UI.BrowserModel.html#BrowserImportsItem" />
+      <keyword name="BrowserImportsItem (Constructor)" id="BrowserImportsItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserImportsItem.__init__" />
+      <keyword name="BrowserImportsItem.lessThan" id="BrowserImportsItem.lessThan" ref="eric6.UI.BrowserModel.html#BrowserImportsItem.lessThan" />
       <keyword name="BrowserItem" id="BrowserItem" ref="eric6.UI.BrowserModel.html#BrowserItem" />
       <keyword name="BrowserItem (Constructor)" id="BrowserItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserItem.__init__" />
       <keyword name="BrowserItem.appendChild" id="BrowserItem.appendChild" ref="eric6.UI.BrowserModel.html#BrowserItem.appendChild" />
@@ -6923,6 +6932,14 @@
       <keyword name="IconsPreviewDialog" id="IconsPreviewDialog" ref="eric6.Preferences.ConfigurationPages.IconsPreviewDialog.html#IconsPreviewDialog" />
       <keyword name="IconsPreviewDialog (Constructor)" id="IconsPreviewDialog (Constructor)" ref="eric6.Preferences.ConfigurationPages.IconsPreviewDialog.html#IconsPreviewDialog.__init__" />
       <keyword name="IconsPreviewDialog (Module)" id="IconsPreviewDialog (Module)" ref="eric6.Preferences.ConfigurationPages.IconsPreviewDialog.html" />
+      <keyword name="ImportedModule" id="ImportedModule" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#ImportedModule" />
+      <keyword name="ImportedModule (Constructor)" id="ImportedModule (Constructor)" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#ImportedModule.__init__" />
+      <keyword name="ImportedModule.addImport" id="ImportedModule.addImport" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#ImportedModule.addImport" />
+      <keyword name="Imports" id="Imports" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#Imports" />
+      <keyword name="Imports (Constructor)" id="Imports (Constructor)" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#Imports.__init__" />
+      <keyword name="Imports.addImport" id="Imports.addImport" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#Imports.addImport" />
+      <keyword name="Imports.getImport" id="Imports.getImport" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#Imports.getImport" />
+      <keyword name="Imports.getImports" id="Imports.getImports" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#Imports.getImports" />
       <keyword name="ImportsDiagramBuilder" id="ImportsDiagramBuilder" ref="eric6.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder" />
       <keyword name="ImportsDiagramBuilder (Constructor)" id="ImportsDiagramBuilder (Constructor)" ref="eric6.Graphics.ImportsDiagramBuilder.html#ImportsDiagramBuilder.__init__" />
       <keyword name="ImportsDiagramBuilder (Module)" id="ImportsDiagramBuilder (Module)" ref="eric6.Graphics.ImportsDiagramBuilder.html" />

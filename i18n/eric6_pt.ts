@@ -2159,7 +2159,7 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
         <translation>Encontrar&amp;&amp;Substituir neste diretório</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="538"/>
+        <location filename="../UI/Browser.py" line="545"/>
         <source>New toplevel directory</source>
         <translation>Diretório de nível superior novo</translation>
     </message>
@@ -2169,7 +2169,7 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
         <translation>Ir a</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="374"/>
+        <location filename="../UI/Browser.py" line="376"/>
         <source>Line {0}</source>
         <translation>Linha {0}</translation>
     </message>
@@ -2179,22 +2179,22 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;A Janela de Navegação&lt;/b&gt;&lt;p&gt;Permite navegar facilmente pela hierarquia dos diretório e ficheiros do sistema, identificar os programas de Python e abri-los na janela do Visor de Fontes. A janela mostra várias hierarquias separadas.&lt;/p&gt;&lt;p&gt;Apenas se mostrará a primeira hierarquia se está aberto um programa para depurar e o seu diretório raíz é o diretório que o contém. Geralmente, os distintos ficheiros que formam uma aplicação Python mantêm-se no mesmo diretório, deste modo a hierarquia dá acesso à maior parte do que se necessite.&lt;/p&gt;&lt;p&gt;A hierarquia seguinte utiliza-se para navagar facilmente nos diretórios especificados pela variável Python &lt;tt&gt;sys.path&lt;/tt&gt;.&lt;/p&gt;&lt;p&gt;As hierarquias restantes permitem navegar no seu sistema como um todo. Num sistema UNIX haverá uma hierarquia com &lt;tt&gt;/&lt;/tt&gt; como raíz e outra com o diretório do usuário. Num sistema Windows haverá uma hierarquia para cada unidade de disco no sistema.&lt;/p&gt;&lt;p&gt;Os programas Python (como aqueles que têm a extensão &lt;tt&gt;.py&lt;/tt&gt;) identificam-se nas hierarquias com um ícone Python. Um clique com o botão direito do rato frará aparecer um menú que permitirá abrir o ficheiro numa janela do Visor de Fontes, abrir para depurar ou usá-lo para executar um teste unitário.&lt;/p&gt;&lt;p&gt;O menú contextual de uma classe, função ou método permite abrir o ficheiro definindo esta classe, função ou método e assegurará que a linha de código correta esteja visível.&lt;/p&gt;&lt;p&gt;Os ficheiros de Qt-Designer (como os que têm extensão &lt;tt&gt;.ui&lt;/tt&gt;) aparecem com o ícone de Designer. O menú contextual destes ficheiros permite abrí-los com Qt-Designer.&lt;/p&gt;&lt;p&gt;Os ficheiros de Qt-Linguist (como os que têm extensão &lt;tt&gt;.ts&lt;/tt&gt;) aparecem com o ícone de Linguist. O menú contextual destes ficheiros permite abrí-los com Qt-Linguist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>Show Mime-Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="461"/>
+        <location filename="../UI/Browser.py" line="468"/>
         <source>The mime type of the file could not be determined.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="475"/>
+        <location filename="../UI/Browser.py" line="482"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2202,29 +2202,34 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="../UI/BrowserModel.py" line="65"/>
+        <location filename="../UI/BrowserModel.py" line="67"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="635"/>
+        <location filename="../UI/BrowserModel.py" line="637"/>
         <source>Coding: {0}</source>
         <translation>Codificação: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="641"/>
+        <location filename="../UI/BrowserModel.py" line="643"/>
         <source>Globals</source>
         <translation>Globais</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="686"/>
+        <location filename="../UI/BrowserModel.py" line="711"/>
         <source>Attributes</source>
         <translation>Atributos</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="696"/>
+        <location filename="../UI/BrowserModel.py" line="721"/>
         <source>Class Attributes</source>
         <translation>Atributos da Classe</translation>
+    </message>
+    <message>
+        <location filename="../UI/BrowserModel.py" line="649"/>
+        <source>Imports</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14490,7 +14495,7 @@ com o rato.&lt;/li&gt;
         <translation>Mostrar Apenas Directórios</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="73"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="74"/>
         <source>Test</source>
         <translation>Teste</translation>
     </message>
@@ -38295,82 +38300,82 @@ Select Update.</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>Add new Python package</source>
         <translation>Adicionar novo pacote de Python</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="818"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="823"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Delete files</source>
         <translation>Apagar ficheiros</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Tem a certeza de que quer apagar estes ficheiros do projeto?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Code Coverage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Please select a coverage file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Profile Data</source>
         <translation type="unfinished">Dados de Perfil</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Please select a profile file</source>
         <translation type="unfinished">Escolha um ficheiro de perfil por favor</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1064"/>
         <source>Class Diagram</source>
         <translation>Diagrama de Classes</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Include class attributes?</source>
         <translation>Incluir atributos da classe?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de Imports</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Include imports from external modules?</source>
         <translation>Incluir imports dos módulos externos?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Package Diagram</source>
         <translation>Diagrama do Pacote</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Application Diagram</source>
         <translation>Diagrama da Aplicação</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Include module names?</source>
         <translation>Incluir nome dos módulos?</translation>
     </message>

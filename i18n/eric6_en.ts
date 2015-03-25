@@ -2133,7 +2133,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="538"/>
+        <location filename="../UI/Browser.py" line="545"/>
         <source>New toplevel directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2143,7 +2143,7 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="374"/>
+        <location filename="../UI/Browser.py" line="376"/>
         <source>Line {0}</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2153,22 +2153,22 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>Show Mime-Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="461"/>
+        <location filename="../UI/Browser.py" line="468"/>
         <source>The mime type of the file could not be determined.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="475"/>
+        <location filename="../UI/Browser.py" line="482"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2176,28 +2176,33 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="../UI/BrowserModel.py" line="65"/>
+        <location filename="../UI/BrowserModel.py" line="67"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="635"/>
+        <location filename="../UI/BrowserModel.py" line="637"/>
         <source>Coding: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="641"/>
+        <location filename="../UI/BrowserModel.py" line="643"/>
         <source>Globals</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="686"/>
+        <location filename="../UI/BrowserModel.py" line="711"/>
         <source>Attributes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="696"/>
+        <location filename="../UI/BrowserModel.py" line="721"/>
         <source>Class Attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/BrowserModel.py" line="649"/>
+        <source>Imports</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -14350,7 +14355,7 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="73"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="74"/>
         <source>Test</source>
         <translation type="unfinished"></translation>
     </message>
@@ -38074,82 +38079,82 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>Add new Python package</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="818"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="823"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Delete files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Code Coverage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Please select a coverage file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Profile Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Please select a profile file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1064"/>
         <source>Class Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Include class attributes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Imports Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Include imports from external modules?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Package Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Application Diagram</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Include module names?</source>
         <translation type="unfinished"></translation>
     </message>

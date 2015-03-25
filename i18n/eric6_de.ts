@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1918,8 +1919,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -1987,8 +1988,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -2130,7 +2131,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Als übergeordneten Ordner hinzufügen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="538"/>
+        <location filename="../UI/Browser.py" line="545"/>
         <source>New toplevel directory</source>
         <translation>Neuer übergeordneter Ordner</translation>
     </message>
@@ -2170,7 +2171,7 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>Gehe zu</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="374"/>
+        <location filename="../UI/Browser.py" line="376"/>
         <source>Line {0}</source>
         <translation>Zeile {0}</translation>
     </message>
@@ -2180,22 +2181,22 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Das Browserfenster&lt;/b&gt;&lt;p&gt;Dies erlaubt es Ihnen, sich leicht in der Verzeichnishierarchie Ihres Systems zu bewegen, Python-Programme zu identifizieren und diese in einem Quelltextfenster zu öffnen. Das Fenster stellt verschiedene Hierarchien dar.&lt;/p&gt;&lt;p&gt;Die erste wird nur angezeigt, wenn ein Programm zum debuggen geöffnet ist. Gewöhnlich werden alle zum Programm zugehörigen Python-Dateien im selben Verzeichnis gespeichert, so dass Sie über diese Hierarchie Zugriff auf das am meisten Benötigte haben.&lt;/p&gt;&lt;p&gt;Die nächste Hierarchie wird verwendet, um sich in den in der Python-Variable &lt;tt&gt;sys.path&lt;/tt&gt; gespeicherten Verzeichnissen zu bewegen.&lt;/p&gt;&lt;p&gt;Die restlichen Hierachien erlauben die Navigation im gesamten System. Unter Unix wird gewöhnlich ein Verzeichnis mit &lt;tt&gt;/&lt;/tt&gt; als Wurzel und eines mit dem Home-Verzeichnis des Nutzers angezeigt. Auf einem Windows-System wird eine Hierarchie pro Laufwerk angezeigt.&lt;/p&gt;&lt;p&gt;Python-Programme (Dateien mit der Endung &lt;tt&gt;.py&lt;/tt&gt;) werden mit einem Python-Symbol dargestellt. Ein Rechtsklick bringt ein Kontextmenü, über das die Datei in einem Editor, zum Debuggen oder für einen Modultest geöffnet werden kann.&lt;/p&gt;&lt;p&gt;Das Kontextmenü einer Klasse, einer Funktion oder einer Methode öffnet die Datei, in der diese Klasse, Funktion oder Methode definiert ist, und stellt sicher, dass die richtige Codezeile sichtbar ist.&lt;/p&gt;&lt;p&gt;Qt-Designer-Dateien (Dateien mit der Endung &lt;tt&gt;.ui&lt;/tt&gt;) werden mit einem Designer-Symbol dargestellt. Das Kontextmenü dieser Dateien erlaubt es, sie im Qt Designer zu öffnen.&lt;/p&gt;&lt;p&gt;Qt-Linguist-Dateien (Dateien mit der Endung &lt;tt&gt;.ts&lt;/tt&gt;) werden mit einem Linguist-Symbol dargestellt. Das Kontextmenü dieser Dateien erlaubt es, sie im Qt Linguist zu öffnen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>Show Mime-Type</source>
         <translation>MIME-Typ anzeigen</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="461"/>
+        <location filename="../UI/Browser.py" line="468"/>
         <source>The mime type of the file could not be determined.</source>
         <translation>Der MIME-Typ der Datei konnte nicht ermittelt werden.</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="475"/>
+        <location filename="../UI/Browser.py" line="482"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Die Datei hat den MIME-Typ &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="../UI/Browser.py" line="481"/>
+        <location filename="../UI/Browser.py" line="488"/>
         <source>The file has the mime type &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt; Shall it be added to the list of text mime types?</source>
         <translation>Die Datei hat den MIME-Typ &lt;b&gt;{0}&lt;/b&gt;.&lt;br/&gt;Soll sie zur Liste der Text MIME-Typen hinzugefügt werden?</translation>
     </message>
@@ -2203,29 +2204,34 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>BrowserModel</name>
     <message>
-        <location filename="../UI/BrowserModel.py" line="65"/>
+        <location filename="../UI/BrowserModel.py" line="67"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="686"/>
+        <location filename="../UI/BrowserModel.py" line="711"/>
         <source>Attributes</source>
         <translation>Attribute</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="635"/>
+        <location filename="../UI/BrowserModel.py" line="637"/>
         <source>Coding: {0}</source>
         <translation>Kodierung: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="641"/>
+        <location filename="../UI/BrowserModel.py" line="643"/>
         <source>Globals</source>
         <translation>Globale Variablen</translation>
     </message>
     <message>
-        <location filename="../UI/BrowserModel.py" line="696"/>
+        <location filename="../UI/BrowserModel.py" line="721"/>
         <source>Class Attributes</source>
         <translation>Klassenattribute</translation>
+    </message>
+    <message>
+        <location filename="../UI/BrowserModel.py" line="649"/>
+        <source>Imports</source>
+        <translation>Importe</translation>
     </message>
 </context>
 <context>
@@ -14417,7 +14423,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>nur Verzeichnisse anzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="73"/>
+        <location filename="../Plugins/WizardPlugins/FileDialogWizard/FileDialogWizardDialog.py" line="74"/>
         <source>Test</source>
         <translation>Test</translation>
     </message>
@@ -15944,8 +15950,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1167"/>
@@ -38206,22 +38212,22 @@ Bitte „Aktualisieren“ drücken.</translation>
         <translation>Package Diagramm...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Code Coverage</source>
         <translation>Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="968"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="973"/>
         <source>Please select a coverage file</source>
         <translation>Bitte wählen Sie eine Datei mit Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Profile Data</source>
         <translation>Profildaten</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1022"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1027"/>
         <source>Please select a profile file</source>
         <translation>Bitte wählen Sie eine Datei mit Profildaten</translation>
     </message>
@@ -38231,12 +38237,12 @@ Bitte „Aktualisieren“ drücken.</translation>
         <translation>Datei umbenennen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Delete files</source>
         <translation>Dateien löschen</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="894"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="899"/>
         <source>Do you really want to delete these files from the project?</source>
         <translation>Wollen Sie wirklich diese Dateien aus dem Projekt löschen?</translation>
     </message>
@@ -38251,27 +38257,27 @@ Bitte „Aktualisieren“ drücken.</translation>
         <translation>Quelltextverzeichnis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1059"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1064"/>
         <source>Class Diagram</source>
         <translation>Klassendiagramm</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Include class attributes?</source>
         <translation>Klassenattribute anzeigen?</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1099"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1104"/>
         <source>Package Diagram</source>
         <translation>Package-Diagramm</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Application Diagram</source>
         <translation>Applikations-Diagramm</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1114"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1119"/>
         <source>Include module names?</source>
         <translation>Modulnamen anzeigen?</translation>
     </message>
@@ -38286,27 +38292,27 @@ Bitte „Aktualisieren“ drücken.</translation>
         <translation>Neues Package...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>Add new Python package</source>
         <translation>Füge neues Python-Package hinzu</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="818"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="823"/>
         <source>&lt;p&gt;The package directory &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Das Packageverzeichnis &lt;b&gt;{0}&lt;/b&gt; konnte nicht angelegt werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="833"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="838"/>
         <source>&lt;p&gt;The package file &lt;b&gt;{0}&lt;/b&gt; could not be created. Aborting...&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Packagedatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht erzeugt werden. Abbruch...&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Imports Diagram</source>
         <translation>Imports Diagramm</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectSourcesBrowser.py" line="1079"/>
+        <location filename="../Project/ProjectSourcesBrowser.py" line="1084"/>
         <source>Include imports from external modules?</source>
         <translation>Imports externer Module anzeigen?</translation>
     </message>
