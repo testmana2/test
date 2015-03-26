@@ -10,8 +10,6 @@ The Eric6 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 """
 
-from __future__ import unicode_literals
-
 import __builtin__
 import codecs
 
@@ -58,7 +56,7 @@ class File(file):   # __IGNORE_WARNING__
         @exception NotImplementedError for not implemented method parameters
         """
         self.__encoding = encoding
-        self.__newline = newline
+        self.__newline = str(newline)
         self.__closefd = closefd
         if newline is not None:
             if 'r' in mode:
