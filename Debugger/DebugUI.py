@@ -999,6 +999,9 @@ class DebugUI(QObject):
             self.__getThreadList()
             self.__getClientVariables()
 
+        self.debugActGrp.setEnabled(True)
+        self.debugActGrp2.setEnabled(True)
+        
     def __clientExit(self, status):
         """
         Private method to handle the debugged program terminating.
@@ -1239,10 +1242,6 @@ class DebugUI(QObject):
         elif scope == -1:
             vlist = [('None', '', '')]
             self.debugViewer.showVariables(vlist, False)
-        
-        if scope < 1:
-            self.debugActGrp.setEnabled(True)
-            self.debugActGrp2.setEnabled(True)
         
     def __clientVariable(self, scope, variables):
         """
