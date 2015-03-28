@@ -40,6 +40,8 @@ class Browser(QTreeView):
     
     @signal sourceFile(str, int = 0, str = "") emitted to open a Python file
         at a line
+    @signal sourceFile(str, list) emitted to open a Python file giving a list
+        of lines
     @signal designerFile(str) emitted to open a Qt-Designer file
     @signal linguistFile(str) emitted to open a Qt-Linguist (*.ts) file
     @signal trpreview(list of str, bool = False) emitted to preview a
@@ -51,7 +53,7 @@ class Browser(QTreeView):
     @signal svgFile(str) emitted to open a SVG file
     @signal unittestOpen(str) emitted to open a Python file for a unittest
     """
-    sourceFile = pyqtSignal((str, ), (str, int), (str, int, str))
+    sourceFile = pyqtSignal((str, ), (str, int), (str, list), (str, int, str))
     designerFile = pyqtSignal(str)
     linguistFile = pyqtSignal(str)
     trpreview = pyqtSignal((list, ), (list, bool))
@@ -450,8 +452,8 @@ class Browser(QTreeView):
                     self.sourceFile[str, int].emit(
                         itm.fileName(), itm.attributeObject().lineno)
                 elif isinstance(itm, BrowserImportItem):
-                    self.sourceFile[str, int].emit(
-                        itm.fileName(), itm.lineno())
+                    self.sourceFile[str, list].emit(
+                        itm.fileName(), itm.linenos())
             self._activating = False
         
     def __showMimeType(self):

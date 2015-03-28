@@ -257,6 +257,8 @@ class UserInterface(E5MainWindow):
             self.viewmanager.openSourceFile)
         self.browser.sourceFile[str, int].connect(
             self.viewmanager.openSourceFile)
+        self.browser.sourceFile[str, list].connect(
+            self.viewmanager.openSourceFile)
         self.browser.sourceFile[str, int, str].connect(
             self.viewmanager.openSourceFile)
         self.browser.designerFile.connect(self.__designer)
@@ -280,6 +282,8 @@ class UserInterface(E5MainWindow):
         self.projectBrowser.psBrowser.sourceFile[str].connect(
             self.viewmanager.openSourceFile)
         self.projectBrowser.psBrowser.sourceFile[str, int].connect(
+            self.viewmanager.openSourceFile)
+        self.projectBrowser.psBrowser.sourceFile[str, list].connect(
             self.viewmanager.openSourceFile)
         self.projectBrowser.psBrowser.sourceFile[str, int, str].connect(
             self.viewmanager.openSourceFile)

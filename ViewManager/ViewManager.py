@@ -4411,7 +4411,9 @@ class ViewManager(QObject):
         Public slot to display a file in an editor.
         
         @param fn name of file to be opened (string)
-        @param lineno line number to place the cursor at (integer)
+        @param lineno line number to place the cursor at (integer) or
+            list of line numbers (list of integers) (cursor will be
+            placed at the next line greater than the current one)
         @param filetype type of the source file (string)
         @param selStart start of an area to be selected (integer)
         @param selEnd end of an area to be selected (integer)
@@ -4426,12 +4428,28 @@ class ViewManager(QObject):
             self._modificationStatusChanged(editor.isModified(), editor)
         self._checkActions(editor)
         
-        if lineno >= 0:
-            editor.ensureVisibleTop(lineno)
-            editor.gotoLine(lineno, pos)
+        cline, cindex = editor.getCursorPosition()
+        cline += 1
+        if isinstance(lineno, list):
+            if len(lineno) > 1:
+                for line in lineno:
+                    if line > cline:
+                        break
+                else:
+                    line = lineno[0]
+            elif len(lineno) == 1:
+                line = lineno[0]
+            else:
+                line = -1
+        else:
+            line = lineno
+            
+        if line >= 0 and line != cline:
+            editor.ensureVisibleTop(line)
+            editor.gotoLine(line, pos)
             
             if selStart != selEnd:
-                editor.setSelection(lineno - 1, selStart, lineno - 1, selEnd)
+                editor.setSelection(line - 1, selStart, line - 1, selEnd)
         
         # insert filename into list of recently opened files
         self.addToRecentList(fn)

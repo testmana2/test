@@ -41,6 +41,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
         line.
     @signal sourceFile(str, int, str) emitted to open the given file as the
         given type at the given line.
+    @signal sourceFile(str, list) emitted to open a Python file giving a list
+        of lines
     """
     showMenu = pyqtSignal(str, QMenu)
     
@@ -784,8 +786,8 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                 self.sourceFile[str, int].emit(
                     itm.fileName(), itm.attributeObject().lineno)
             elif isinstance(itm, BrowserImportItem):
-                self.sourceFile[str, int].emit(
-                    itm.fileName(), itm.lineno())
+                self.sourceFile[str, list].emit(
+                    itm.fileName(), itm.linenos())
         
     def __addNewPackage(self):
         """
