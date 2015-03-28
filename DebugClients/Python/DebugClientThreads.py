@@ -103,6 +103,8 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
                     sys.setprofile(newThread.profile)
             else:
                 ident = _original_start_thread(newThread.bootstrap, ())
+                if self.mainThread is not None:
+                    self.tracePython = self.mainThread.tracePython
             newThread.set_ident(ident)
             self.threads[newThread.get_ident()] = newThread
         finally:

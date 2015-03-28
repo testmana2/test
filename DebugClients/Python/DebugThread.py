@@ -46,6 +46,7 @@ class DebugThread(DebugBase):
         
         self.__ident = None  # id of this thread.
         self.__name = ""
+        self.tracePython = False
     
     def set_ident(self, id):
         """
