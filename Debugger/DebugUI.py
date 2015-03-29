@@ -1174,6 +1174,8 @@ class DebugUI(QObject):
                 self.clientStack.emit(stack)
                 self.__getClientVariables()
                 self.ui.setDebugProfile()
+                self.debugActGrp.setEnabled(True)
+                self.debugActGrp2.setEnabled(True)
                 return
             elif res == E5MessageBox.Ignore:
                 if exceptionType not in self.excIgnoreList:
