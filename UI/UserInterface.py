@@ -5954,14 +5954,23 @@ class UserInterface(E5MainWindow):
             return
         
         reply = self.sender()
+        
+        # This is a hack because sometimes reply is not a QNetworkReply
+        if not isinstance(reply, QNetworkReply):
+            if reply in self.__replies:
+                self.__replies.remove(reply)
+            return
+        
+        reply.deleteLater()
         if reply in self.__replies:
             self.__replies.remove(reply)
         if reply.error() == QNetworkReply.NoError:
             ioEncoding = Preferences.getSystem("IOEncoding")
             versions = str(reply.readAll(), ioEncoding, 'replace').splitlines()
+        reply.close()
         if reply.error() != QNetworkReply.NoError or \
-           len(versions) == 0 or \
-           versions[0].startswith("<"):
+            len(versions) == 0 or \
+                versions[0].startswith("<"):
             # network error or an error page
             self.httpAlternative += 1
             if self.httpAlternative >= len(self.__httpAlternatives):
