@@ -5889,9 +5889,10 @@ class UserInterface(E5MainWindow):
         reply.finished.connect(self.__versionsDownloadDone)
         self.__replies.append(reply)
         
+    @pyqtSlot()
     def __versionsDownloadDone(self):
         """
-        Private method called, after the versions file has been downloaded
+        Private slot called, after the versions file has been downloaded
         from the internet.
         """
         if self.__versionCheckCanceled:
@@ -6053,9 +6054,10 @@ class UserInterface(E5MainWindow):
         if url:
             QDesktopServices.openUrl(QUrl(url))
         
+    @pyqtSlot()
     def __versionsDownloadCanceled(self):
         """
-        Private method called to cancel the version check.
+        Private slot called to cancel the version check.
         """
         if self.__replies:
             self.__versionCheckCanceled = True
