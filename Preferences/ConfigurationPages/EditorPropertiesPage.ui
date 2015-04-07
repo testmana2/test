@@ -175,6 +175,36 @@
         </property>
        </widget>
       </item>
+      <item row="6" column="0">
+       <widget class="QCheckBox" name="cppHighlightBackQuotedCheckBox">
+        <property name="toolTip">
+         <string>Select to highlight back quoted strings</string>
+        </property>
+        <property name="text">
+         <string>Highlight back quoted strings</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QCheckBox" name="cppHighlightEsacepSequencesCheckBox">
+        <property name="toolTip">
+         <string>Select to highlight escape sequences</string>
+        </property>
+        <property name="text">
+         <string>Highlight escape sequences</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QCheckBox" name="cppVerbatimStringEscapeAllowedCheckBox">
+        <property name="toolTip">
+         <string>Select to allow verbatim string escape sequences</string>
+        </property>
+        <property name="text">
+         <string>Allow verbatim string escape sequences</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -1024,6 +1054,9 @@
   <tabstop>cppStylePreprocessorCheckBox</tabstop>
   <tabstop>cppHighlightTripleQuotedCheckBox</tabstop>
   <tabstop>cppHighlightHashQuotedCheckBox</tabstop>
+  <tabstop>cppHighlightBackQuotedCheckBox</tabstop>
+  <tabstop>cppHighlightEsacepSequencesCheckBox</tabstop>
+  <tabstop>cppVerbatimStringEscapeAllowedCheckBox</tabstop>
   <tabstop>cmakeFoldAtElseCheckBox</tabstop>
   <tabstop>foldCoffeeScriptCommentCheckBox</tabstop>
   <tabstop>coffeeScriptDollarAllowedCheckBox</tabstop>

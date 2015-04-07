@@ -467,6 +467,9 @@ class Prefs(object):
         "CppStylePreprocessor": False,
         "CppHighlightTripleQuotedStrings": False,
         "CppHighlightHashQuotedStrings": False,
+        "CppHighlightBackQuotedStrings": False,
+        "CppHighlightEscapeSequences": False,
+        "CppVerbatimStringEscapeSequencesAllowed": False,
         
         # CoffeeScript specifics
         "CoffeScriptFoldComment": False,

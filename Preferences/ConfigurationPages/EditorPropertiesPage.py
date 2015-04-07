@@ -72,6 +72,18 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
                 Preferences.getEditor("CppHighlightHashQuotedStrings"))
         else:
             self.cppHighlightHashQuotedCheckBox.setEnabled(False)
+        if QSCINTILLA_VERSION() >= 0x020900:
+            self.cppHighlightBackQuotedCheckBox.setChecked(
+                Preferences.getEditor("CppHighlightBackQuotedStrings"))
+            self.cppHighlightEsacepSequencesCheckBox.setChecked(
+                Preferences.getEditor("CppHighlightEscapeSequences"))
+            self.cppVerbatimStringEscapeAllowedCheckBox.setChecked(
+                Preferences.getEditor(
+                    "CppVerbatimStringEscapeSequencesAllowed"))
+        else:
+            self.cppHighlightBackQuotedCheckBox.setEnabled(False)
+            self.cppHighlightEsacepSequencesCheckBox.setEnabled(False)
+            self.cppVerbatimStringEscapeAllowedCheckBox.setEnabled(False)
         
         # CMake
         self.cmakeFoldAtElseCheckBox.setChecked(
@@ -352,6 +364,16 @@ class EditorPropertiesPage(ConfigurationPageBase, Ui_EditorPropertiesPage):
             Preferences.setEditor(
                 "CppHighlightHashQuotedStrings",
                 self.cppHighlightHashQuotedCheckBox.isChecked())
+        if QSCINTILLA_VERSION() >= 0x020900:
+            Preferences.setEditor(
+                "CppHighlightBackQuotedStrings",
+                self.cppHighlightBackQuotedCheckBox.isChecked())
+            Preferences.setEditor(
+                "CppHighlightEscapeSequences",
+                self.cppHighlightEsacepSequencesCheckBox.isChecked())
+            Preferences.setEditor(
+                "CppVerbatimStringEscapeSequencesAllowed",
+                self.cppVerbatimStringEscapeAllowedCheckBox.isChecked())
         
         # CMake
         Preferences.setEditor(

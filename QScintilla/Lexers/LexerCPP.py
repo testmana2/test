@@ -74,6 +74,22 @@ class LexerCPP(Lexer, QsciLexerCPP):
                 Preferences.getEditor("CppHighlightHashQuotedStrings"))
         except AttributeError:
             pass
+        try:
+            self.setHighlightBackQuotedStrings(
+                Preferences.getEditor("CppHighlightBackQuotedStrings"))
+        except AttributeError:
+            pass
+        try:
+            self.setHighlightEscapeSequences(
+                Preferences.getEditor("CppHighlightEscapeSequences"))
+        except AttributeError:
+            pass
+        try:
+            self.setVerbatimStringEscapeSequencesAllowed(
+                Preferences.getEditor(
+                    "CppVerbatimStringEscapeSequencesAllowed"))
+        except AttributeError:
+            pass
     
     def autoCompletionWordSeparators(self):
         """

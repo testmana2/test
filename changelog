@@ -7,6 +7,9 @@ Version 6.1-snapshot-2015mmdd:
      be opened in an eric editor
 - Editor
   -- added capability to configure the indentation guides colors
+  -- Lexers
+     --- added support for the new C++ lexer properties (as of
+         QScintilla V. 2.9.0)
 - File Browser
   -- added capability to show imports of a Python script
 - Log Viewer
