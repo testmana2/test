@@ -4268,11 +4268,17 @@ class Editor(QsciScintillaCompat):
         """
         Private method to configure the calltips function.
         """
+        self.setCallTipsBackgroundColor(
+            Preferences.getEditorColour("CallTipsBackground"))
+        self.setCallTipsVisible(Preferences.getEditor("CallTipsVisible"))
+        calltipsStyle = Preferences.getEditor("CallTipsStyle")
+        try:
+            self.setCallTipsPosition(
+                Preferences.getEditor("CallTipsPosition"))
+        except AttributeError:
+            pass
+        
         if Preferences.getEditor("CallTipsEnabled"):
-            self.setCallTipsBackgroundColor(
-                Preferences.getEditorColour("CallTipsBackground"))
-            self.setCallTipsVisible(Preferences.getEditor("CallTipsVisible"))
-            calltipsStyle = Preferences.getEditor("CallTipsStyle")
             if calltipsStyle == QsciScintilla.CallTipsNoContext:
                 self.setCallTipsStyle(QsciScintilla.CallTipsNoContext)
             elif calltipsStyle == \
@@ -4281,11 +4287,6 @@ class Editor(QsciScintillaCompat):
                     QsciScintilla.CallTipsNoAutoCompletionContext)
             else:
                 self.setCallTipsStyle(QsciScintilla.CallTipsContext)
-            try:
-                self.setCallTipsPosition(
-                    Preferences.getEditor("CallTipsPosition"))
-            except AttributeError:
-                pass
         else:
             self.setCallTipsStyle(QsciScintilla.CallTipsNone)
 

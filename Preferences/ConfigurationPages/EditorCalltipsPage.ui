@@ -55,9 +55,6 @@
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox_4">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
      <property name="title">
       <string>Visible Calltips</string>
      </property>
@@ -96,9 +93,6 @@
    </item>
    <item>
     <widget class="QGroupBox" name="calltipsPositionBox">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
      <property name="title">
       <string>Calltips Position</string>
      </property>
@@ -115,9 +109,6 @@
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox_2">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
      <property name="title">
       <string>Colours</string>
      </property>
@@ -163,9 +154,6 @@
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
      <property name="title">
       <string>Plug-In Behavior</string>
      </property>
@@ -219,72 +207,8 @@
      <y>109</y>
     </hint>
     <hint type="destinationlabel">
-     <x>386</x>
-     <y>111</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ctEnabledCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>groupBox_4</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>45</x>
-     <y>44</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>50</x>
-     <y>71</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ctEnabledCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>calltipsPositionBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>124</x>
-     <y>44</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>134</x>
-     <y>131</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ctEnabledCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>groupBox_2</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>173</x>
-     <y>46</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>182</x>
-     <y>192</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>ctEnabledCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>groupBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>232</x>
-     <y>46</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>245</x>
-     <y>257</y>
+     <x>384</x>
+     <y>126</y>
     </hint>
    </hints>
   </connection>
