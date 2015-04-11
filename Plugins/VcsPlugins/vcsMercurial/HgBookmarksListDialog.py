@@ -38,7 +38,6 @@ class HgBookmarksListDialog(QDialog, Ui_HgBookmarksListDialog):
         super(HgBookmarksListDialog, self).__init__(parent)
         self.setupUi(self)
         
-        
         self.refreshButton = self.buttonBox.addButton(
             self.tr("Refresh"), QDialogButtonBox.ActionRole)
         self.refreshButton.setToolTip(

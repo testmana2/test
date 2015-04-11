@@ -81,6 +81,8 @@ class HgDiffGenerator(QObject):
             2 strings or None)
         @keyparam bundle name of a bundle file (string)
         @keyparam qdiff flag indicating qdiff command shall be used (boolean)
+        @return flag indicating a successful start of the diff command
+            (boolean)
         """
         if qdiff:
             args = self.vcs.initCommand("qdiff")
