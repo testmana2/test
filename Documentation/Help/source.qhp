@@ -8790,6 +8790,7 @@
       <keyword name="Project.__readSession" id="Project.__readSession" ref="eric6.Project.Project.html#Project.__readSession" />
       <keyword name="Project.__readTasks" id="Project.__readTasks" ref="eric6.Project.Project.html#Project.__readTasks" />
       <keyword name="Project.__readUserProperties" id="Project.__readUserProperties" ref="eric6.Project.Project.html#Project.__readUserProperties" />
+      <keyword name="Project.__reorganizeFiles" id="Project.__reorganizeFiles" ref="eric6.Project.Project.html#Project.__reorganizeFiles" />
       <keyword name="Project.__saveRecent" id="Project.__saveRecent" ref="eric6.Project.Project.html#Project.__saveRecent" />
       <keyword name="Project.__searchNewFiles" id="Project.__searchNewFiles" ref="eric6.Project.Project.html#Project.__searchNewFiles" />
       <keyword name="Project.__showCodeCoverage" id="Project.__showCodeCoverage" ref="eric6.Project.Project.html#Project.__showCodeCoverage" />

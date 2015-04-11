@@ -1856,6 +1856,45 @@ class Project(QObject):
                     filelist.append(os.path.join(self.ppath, entry))
         return filelist
         
+    def __reorganizeFiles(self):
+        """
+        Private method to reorganize files stored in the project.
+        """
+        reorganized = False
+        
+        # init data store for the reorganization
+        newPdata = {}
+        for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", "OTHERS",
+                    "TRANSLATIONS"]:
+            newPdata[key] = []
+        
+        # iterate over all files checking for a reassignment
+        for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES", "OTHERS",
+                    "TRANSLATIONS"]:
+            for fn in self.pdata[key][:]:
+                filetype = key
+                bfn = os.path.basename(fn)
+                for pattern in reversed(
+                        sorted(self.pdata["FILETYPES"].keys())):
+                    if fnmatch.fnmatch(bfn, pattern):
+                        filetype = self.pdata["FILETYPES"][pattern]
+                        break
+        
+                if filetype != "__IGNORE__":
+                    newPdata[filetype].append(fn)
+                    if filetype != key:
+                        reorganized = True
+        
+        if reorganized:
+            # copy the reorganized files back to the project
+            for key in ["SOURCES", "FORMS", "INTERFACES", "RESOURCES",
+                        "OTHERS", "TRANSLATIONS"]:
+                self.pdata[key] = newPdata[key][:]
+            
+            # repopulate the model
+            self.__model.projectClosed()
+            self.__model.projectOpened()
+        
     def copyDirectory(self, olddn, newdn):
         """
         Public slot to copy a directory.
@@ -2471,6 +2510,9 @@ class Project(QObject):
             
             self.__model.projectPropertiesChanged()
             self.projectPropertiesChanged.emit()
+            
+            if self.pdata["PROJECTTYPE"][0] != projectType:
+                self.__reorganizeFiles()
         
     def __showUserProperties(self):
         """
@@ -2526,6 +2568,7 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             dlg.transferData()
             self.setDirty(True)
+            self.__reorganizeFiles()
         
     def __showLexerAssociations(self):
         """

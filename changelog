@@ -16,6 +16,9 @@ Version 6.1-snapshot-2015mmdd:
   -- added a message filter including a configuration page
 - Previewers
   -- added capability to use 'Sphinx' to preview ReST files
+- Project
+  -- added functionality to reorganize the files automatically,
+     when the project type or file type associations are changed
 - Project Browser
   -- added capability to show imports of a Python script
 - Task Viewer

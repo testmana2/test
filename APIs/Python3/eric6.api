@@ -3981,6 +3981,7 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.whitespace_before_parameters?
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages?8
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages_sample_args?8
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations.getTranslatedMessage?4(message)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.VcsConflictMarkerRe?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.extractLineFlags?4(line, startComment=")
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.initService?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.normalizeCode?4(codestring)
