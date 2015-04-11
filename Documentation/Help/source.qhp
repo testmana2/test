@@ -2389,11 +2389,11 @@
       <keyword name="ConfigurationPages (Package)" id="ConfigurationPages (Package)" ref="index-eric6.Preferences.ConfigurationPages.html" />
       <keyword name="ConfigurationWidget" id="ConfigurationWidget" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget" />
       <keyword name="ConfigurationWidget (Constructor)" id="ConfigurationWidget (Constructor)" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__init__" />
-      <keyword name="ConfigurationWidget.__filterChildItems" id="ConfigurationWidget.__filterChildItems" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__filterChildItems" />
-      <keyword name="ConfigurationWidget.__filterTextChanged" id="ConfigurationWidget.__filterTextChanged" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__filterTextChanged" />
       <keyword name="ConfigurationWidget.__importConfigurationPage" id="ConfigurationWidget.__importConfigurationPage" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__importConfigurationPage" />
       <keyword name="ConfigurationWidget.__initLexers" id="ConfigurationWidget.__initLexers" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__initLexers" />
       <keyword name="ConfigurationWidget.__initPage" id="ConfigurationWidget.__initPage" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__initPage" />
+      <keyword name="ConfigurationWidget.__searchChildItems" id="ConfigurationWidget.__searchChildItems" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__searchChildItems" />
+      <keyword name="ConfigurationWidget.__searchTextChanged" id="ConfigurationWidget.__searchTextChanged" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__searchTextChanged" />
       <keyword name="ConfigurationWidget.__setupUi" id="ConfigurationWidget.__setupUi" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__setupUi" />
       <keyword name="ConfigurationWidget.__showConfigurationPage" id="ConfigurationWidget.__showConfigurationPage" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.__showConfigurationPage" />
       <keyword name="ConfigurationWidget.accept" id="ConfigurationWidget.accept" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.accept" />

@@ -425,14 +425,14 @@ class ConfigurationWidget(QWidget):
         self.leftVBoxLayout.setContentsMargins(0, 0, 0, 0)
         self.leftVBoxLayout.setSpacing(0)
         self.leftVBoxLayout.setObjectName("leftVBoxLayout")
-        self.configListFilter = E5ClearableLineEdit(
-            self, self.tr("Enter filter text..."))
-        self.configListFilter.setObjectName("configListFilter")
-        self.leftVBoxLayout.addWidget(self.configListFilter)
+        self.configListSearch = E5ClearableLineEdit(
+            self, self.tr("Enter search text..."))
+        self.configListSearch.setObjectName("configListSearch")
+        self.leftVBoxLayout.addWidget(self.configListSearch)
         self.configList = QTreeWidget()
         self.configList.setObjectName("configList")
         self.leftVBoxLayout.addWidget(self.configList)
-        self.configListFilter.textChanged.connect(self.__filterTextChanged)
+        self.configListSearch.textChanged.connect(self.__searchTextChanged)
         
         self.scrollArea = QScrollArea(self.configSplitter)
         self.scrollArea.setFrameShape(QFrame.NoFrame)
@@ -503,36 +503,36 @@ class ConfigurationWidget(QWidget):
         
         self.configList.setFocus()
     
-    def __filterTextChanged(self, filter):
+    def __searchTextChanged(self, text):
         """
-        Private slot to handle a change of the filter.
+        Private slot to handle a change of the search text.
         
-        @param filter text of the filter line edit (string)
+        @param text text to search for (string)
         """
-        self.__filterChildItems(self.configList.invisibleRootItem(), filter)
+        self.__searchChildItems(self.configList.invisibleRootItem(), text)
     
-    def __filterChildItems(self, parent, filter):
+    def __searchChildItems(self, parent, text):
         """
-        Private method to filter child items based on a filter string.
+        Private method to enable child items based on a search string.
         
         @param parent reference to the parent item (QTreeWidgetItem)
-        @param filter filter string (string)
-        @return flag indicating a visible child item (boolean)
+        @param text text to search for (string)
+        @return flag indicating an enabled child item (boolean)
         """
-        childVisible = False
-        filter = filter.lower()
+        childEnabled = False
+        text = text.lower()
         for index in range(parent.childCount()):
             itm = parent.child(index)
             if itm.childCount() > 0:
-                visible = self.__filterChildItems(itm, filter) or \
-                    filter == "" or filter in itm.text(0).lower()
+                enable = self.__searchChildItems(itm, text) or \
+                    text == "" or text in itm.text(0).lower()
             else:
-                visible = filter == "" or filter in itm.text(0).lower()
-            if visible:
-                childVisible = True
-            itm.setHidden(not visible)
+                enable = text == "" or text in itm.text(0).lower()
+            if enable:
+                childEnabled = True
+            itm.setDisabled(not enable)
         
-        return childVisible
+        return childEnabled
     
     def __initLexers(self):
         """

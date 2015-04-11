@@ -14,6 +14,9 @@ Version 6.1-snapshot-2015mmdd:
   -- added capability to show imports of a Python script
 - Log Viewer
   -- added a message filter including a configuration page
+- Preferences Dialog
+  -- changed the 'filter' function to a 'search' function disabling
+     all entries, that don't contain the entered string
 - Previewers
   -- added capability to use 'Sphinx' to preview ReST files
 - Project

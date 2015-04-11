@@ -277,12 +277,6 @@ QWidget
 <td><a href="#ConfigurationWidget.__init__">ConfigurationWidget</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#ConfigurationWidget.__filterChildItems">__filterChildItems</a></td>
-<td>Private method to filter child items based on a filter string.</td>
-</tr><tr>
-<td><a href="#ConfigurationWidget.__filterTextChanged">__filterTextChanged</a></td>
-<td>Private slot to handle a change of the filter.</td>
-</tr><tr>
 <td><a href="#ConfigurationWidget.__importConfigurationPage">__importConfigurationPage</a></td>
 <td>Private method to import a configuration page module.</td>
 </tr><tr>
@@ -291,6 +285,12 @@ QWidget
 </tr><tr>
 <td><a href="#ConfigurationWidget.__initPage">__initPage</a></td>
 <td>Private method to initialize a configuration page.</td>
+</tr><tr>
+<td><a href="#ConfigurationWidget.__searchChildItems">__searchChildItems</a></td>
+<td>Private method to enable child items based on a search string.</td>
+</tr><tr>
+<td><a href="#ConfigurationWidget.__searchTextChanged">__searchTextChanged</a></td>
+<td>Private slot to handle a change of the search text.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.__setupUi">__setupUi</a></td>
 <td>Private method to perform the general setup of the configuration widget.</td>
@@ -356,34 +356,6 @@ mode of the configuration dialog
 <dd>
 raised to indicate an invalid dialog mode
 </dd>
-</dl><a NAME="ConfigurationWidget.__filterChildItems" ID="ConfigurationWidget.__filterChildItems"></a>
-<h4>ConfigurationWidget.__filterChildItems</h4>
-<b>__filterChildItems</b>(<i>parent, filter</i>)
-<p>
-        Private method to filter child items based on a filter string.
-</p><dl>
-<dt><i>parent</i></dt>
-<dd>
-reference to the parent item (QTreeWidgetItem)
-</dd><dt><i>filter</i></dt>
-<dd>
-filter string (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-flag indicating a visible child item (boolean)
-</dd>
-</dl><a NAME="ConfigurationWidget.__filterTextChanged" ID="ConfigurationWidget.__filterTextChanged"></a>
-<h4>ConfigurationWidget.__filterTextChanged</h4>
-<b>__filterTextChanged</b>(<i>filter</i>)
-<p>
-        Private slot to handle a change of the filter.
-</p><dl>
-<dt><i>filter</i></dt>
-<dd>
-text of the filter line edit (string)
-</dd>
 </dl><a NAME="ConfigurationWidget.__importConfigurationPage" ID="ConfigurationWidget.__importConfigurationPage"></a>
 <h4>ConfigurationWidget.__importConfigurationPage</h4>
 <b>__importConfigurationPage</b>(<i>name</i>)
@@ -418,6 +390,34 @@ data structure for the page to initialize
 <dt>Returns:</dt>
 <dd>
 reference to the initialized page
+</dd>
+</dl><a NAME="ConfigurationWidget.__searchChildItems" ID="ConfigurationWidget.__searchChildItems"></a>
+<h4>ConfigurationWidget.__searchChildItems</h4>
+<b>__searchChildItems</b>(<i>parent, text</i>)
+<p>
+        Private method to enable child items based on a search string.
+</p><dl>
+<dt><i>parent</i></dt>
+<dd>
+reference to the parent item (QTreeWidgetItem)
+</dd><dt><i>text</i></dt>
+<dd>
+text to search for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating an enabled child item (boolean)
+</dd>
+</dl><a NAME="ConfigurationWidget.__searchTextChanged" ID="ConfigurationWidget.__searchTextChanged"></a>
+<h4>ConfigurationWidget.__searchTextChanged</h4>
+<b>__searchTextChanged</b>(<i>text</i>)
+<p>
+        Private slot to handle a change of the search text.
+</p><dl>
+<dt><i>text</i></dt>
+<dd>
+text to search for (string)
 </dd>
 </dl><a NAME="ConfigurationWidget.__setupUi" ID="ConfigurationWidget.__setupUi"></a>
 <h4>ConfigurationWidget.__setupUi</h4>
