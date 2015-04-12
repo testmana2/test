@@ -2368,6 +2368,7 @@
       <keyword name="ConfigurationDialog.__preferencesChanged" id="ConfigurationDialog.__preferencesChanged" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationDialog.__preferencesChanged" />
       <keyword name="ConfigurationDialog.accept" id="ConfigurationDialog.accept" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationDialog.accept" />
       <keyword name="ConfigurationDialog.getConfigurationPageName" id="ConfigurationDialog.getConfigurationPageName" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationDialog.getConfigurationPageName" />
+      <keyword name="ConfigurationDialog.getExpandedEntries" id="ConfigurationDialog.getExpandedEntries" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationDialog.getExpandedEntries" />
       <keyword name="ConfigurationDialog.setPreferences" id="ConfigurationDialog.setPreferences" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationDialog.setPreferences" />
       <keyword name="ConfigurationDialog.showConfigurationPageByName" id="ConfigurationDialog.showConfigurationPageByName" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationDialog.showConfigurationPageByName" />
       <keyword name="ConfigurationPage (Package)" id="ConfigurationPage (Package)" ref="index-eric6.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.html" />
@@ -2399,10 +2400,13 @@
       <keyword name="ConfigurationWidget.accept" id="ConfigurationWidget.accept" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.accept" />
       <keyword name="ConfigurationWidget.calledFromEric" id="ConfigurationWidget.calledFromEric" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.calledFromEric" />
       <keyword name="ConfigurationWidget.getConfigurationPageName" id="ConfigurationWidget.getConfigurationPageName" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.getConfigurationPageName" />
+      <keyword name="ConfigurationWidget.getExpandedEntries" id="ConfigurationWidget.getExpandedEntries" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.getExpandedEntries" />
       <keyword name="ConfigurationWidget.getLexers" id="ConfigurationWidget.getLexers" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.getLexers" />
       <keyword name="ConfigurationWidget.getPage" id="ConfigurationWidget.getPage" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.getPage" />
       <keyword name="ConfigurationWidget.on_applyButton_clicked" id="ConfigurationWidget.on_applyButton_clicked" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.on_applyButton_clicked" />
       <keyword name="ConfigurationWidget.on_buttonBox_clicked" id="ConfigurationWidget.on_buttonBox_clicked" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.on_buttonBox_clicked" />
+      <keyword name="ConfigurationWidget.on_configList_itemCollapsed" id="ConfigurationWidget.on_configList_itemCollapsed" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.on_configList_itemCollapsed" />
+      <keyword name="ConfigurationWidget.on_configList_itemExpanded" id="ConfigurationWidget.on_configList_itemExpanded" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.on_configList_itemExpanded" />
       <keyword name="ConfigurationWidget.on_resetButton_clicked" id="ConfigurationWidget.on_resetButton_clicked" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.on_resetButton_clicked" />
       <keyword name="ConfigurationWidget.setPreferences" id="ConfigurationWidget.setPreferences" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.setPreferences" />
       <keyword name="ConfigurationWidget.showConfigurationPageByName" id="ConfigurationWidget.showConfigurationPageByName" ref="eric6.Preferences.ConfigurationDialog.html#ConfigurationWidget.showConfigurationPageByName" />

@@ -577,8 +577,10 @@ class UserInterface(E5MainWindow):
         SpellChecker.setDefaultLanguage(
             Preferences.getEditor("SpellCheckingDefaultLanguage"))
         
-        # attribute for the last shown configuration page
+        # attributes for the last shown configuration page and the
+        # extended configuration entries
         self.__lastConfigurationPageName = ""
+        self.__expandedConfigurationEntries = []
         
     def __createLayout(self, debugServer):
         """
@@ -5204,7 +5206,10 @@ class UserInterface(E5MainWindow):
         @param pageName name of the configuration page to show (string)
         """
         from Preferences.ConfigurationDialog import ConfigurationDialog
-        dlg = ConfigurationDialog(self, 'Configuration')
+        dlg = ConfigurationDialog(
+            self, 'Configuration',
+            expandedEntries=self.__expandedConfigurationEntries,
+        )
         dlg.preferencesChanged.connect(self.__preferencesChanged)
         dlg.masterPasswordChanged.connect(self.__masterPasswordChanged)
         dlg.show()
@@ -5221,6 +5226,7 @@ class UserInterface(E5MainWindow):
             Preferences.syncPreferences()
             self.__preferencesChanged()
         self.__lastConfigurationPageName = dlg.getConfigurationPageName()
+        self.__expandedConfigurationEntries = dlg.getExpandedEntries()
         
     def __exportPreferences(self):
         """

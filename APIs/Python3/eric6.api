@@ -5947,11 +5947,12 @@ eric6.Preferences.ConfigurationDialog.ConfigurationDialog.HelpBrowserMode?7
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.TrayStarterMode?7
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.accept?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.getConfigurationPageName?4()
+eric6.Preferences.ConfigurationDialog.ConfigurationDialog.getExpandedEntries?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.masterPasswordChanged?7
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.preferencesChanged?7
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.setPreferences?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationDialog.showConfigurationPageByName?4(pageName)
-eric6.Preferences.ConfigurationDialog.ConfigurationDialog?1(parent=None, name=None, modal=False, fromEric=True, displayMode=ConfigurationWidget.DefaultMode)
+eric6.Preferences.ConfigurationDialog.ConfigurationDialog?1(parent=None, name=None, modal=False, fromEric=True, displayMode=ConfigurationWidget.DefaultMode, expandedEntries=[])
 eric6.Preferences.ConfigurationDialog.ConfigurationPageItem.getPageName?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationPageItem?1(parent, text, pageName, iconFile)
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.DefaultMode?7
@@ -5961,17 +5962,20 @@ eric6.Preferences.ConfigurationDialog.ConfigurationWidget.accept?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.accepted?7
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.calledFromEric?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.getConfigurationPageName?4()
+eric6.Preferences.ConfigurationDialog.ConfigurationWidget.getExpandedEntries?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.getLexers?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.getPage?4(pageName)
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.masterPasswordChanged?7
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.on_applyButton_clicked?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.on_buttonBox_clicked?4(button)
+eric6.Preferences.ConfigurationDialog.ConfigurationWidget.on_configList_itemCollapsed?4(item)
+eric6.Preferences.ConfigurationDialog.ConfigurationWidget.on_configList_itemExpanded?4(item)
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.on_resetButton_clicked?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.preferencesChanged?7
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.rejected?7
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.setPreferences?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWidget.showConfigurationPageByName?4(pageName, setCurrent=True)
-eric6.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent=None, fromEric=True, displayMode=DefaultMode)
+eric6.Preferences.ConfigurationDialog.ConfigurationWidget?1(parent=None, fromEric=True, displayMode=DefaultMode, expandedEntries=[])
 eric6.Preferences.ConfigurationDialog.ConfigurationWindow.accept?4()
 eric6.Preferences.ConfigurationDialog.ConfigurationWindow.showConfigurationPageByName?4(pageName)
 eric6.Preferences.ConfigurationDialog.ConfigurationWindow?1(parent=None)

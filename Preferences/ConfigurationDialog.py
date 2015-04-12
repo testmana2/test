@@ -79,7 +79,8 @@ class ConfigurationWidget(QWidget):
     HelpBrowserMode = 1
     TrayStarterMode = 2
     
-    def __init__(self, parent=None, fromEric=True, displayMode=DefaultMode):
+    def __init__(self, parent=None, fromEric=True, displayMode=DefaultMode,
+                 expandedEntries=[]):
         """
         Constructor
         
@@ -89,6 +90,8 @@ class ConfigurationWidget(QWidget):
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
         @exception RuntimeError raised to indicate an invalid dialog mode
+        @keyparam expandedEntries list of entries to be shown expanded
+            (list of strings)
         """
         assert displayMode in (
             ConfigurationWidget.DefaultMode,
@@ -117,9 +120,9 @@ class ConfigurationWidget(QWidget):
                 # key : [display string, pixmap name, dialog module name or
                 #        page creation function, parent key,
                 #        reference to configuration page (must always be last)]
-                # The dialog module must have the module function create to
+                # The dialog module must have the module function 'create' to
                 # create the configuration page. This must have the method
-                # save to save the settings.
+                # 'save' to save the settings.
                 "applicationPage":
                 [self.tr("Application"), "preferences-application.png",
                  "ApplicationPage", None, None],
@@ -317,14 +320,15 @@ class ConfigurationWidget(QWidget):
             
             self.configItems.update(
                 e5App().getObject("PluginManager").getPluginConfigData())
+        
         elif displayMode == ConfigurationWidget.HelpBrowserMode:
             self.configItems = {
                 # key : [display string, pixmap name, dialog module name or
                 #        page creation function, parent key,
                 #        reference to configuration page (must always be last)]
-                # The dialog module must have the module function create to
+                # The dialog module must have the module function 'create' to
                 # create the configuration page. This must have the method
-                # save to save the settings.
+                # 'save' to save the settings.
                 "interfacePage":
                 [self.tr("Interface"), "preferences-interface.png",
                  "HelpInterfacePage", None, None],
@@ -355,22 +359,25 @@ class ConfigurationWidget(QWidget):
                 [self.tr("eric6 Web Browser"), "ericWeb.png",
                  "HelpWebBrowserPage", "0helpPage", None],
             }
+        
         elif displayMode == ConfigurationWidget.TrayStarterMode:
             self.configItems = {
                 # key : [display string, pixmap name, dialog module name or
                 #        page creation function, parent key,
                 #        reference to configuration page (must always be last)]
-                # The dialog module must have the module function create to
+                # The dialog module must have the module function 'create' to
                 # create the configuration page. This must have the method
-                # save to save the settings.
+                # 'save' to save the settings.
                 "trayStarterPage":
                 [self.tr("Tray Starter"), "erict.png",
                  "TrayStarterPage", None, None],
             }
+        
         else:
             raise RuntimeError("Illegal mode value: {0}".format(displayMode))
         
         # generate the list entries
+        self.__expandedEntries = []
         for key in sorted(self.configItems.keys()):
             pageData = self.configItems[key]
             if pageData[3]:
@@ -380,7 +387,10 @@ class ConfigurationWidget(QWidget):
             self.itmDict[key] = ConfigurationPageItem(pitm, pageData[0], key,
                                                       pageData[1])
             self.itmDict[key].setData(0, Qt.UserRole, key)
-            self.itmDict[key].setExpanded(True)
+            if (not self.fromEric or
+                displayMode != ConfigurationWidget.DefaultMode or
+                    key in expandedEntries):
+                self.itmDict[key].setExpanded(True)
         self.configList.sortByColumn(0, Qt.AscendingOrder)
         
         # set the initial size of the splitter
@@ -747,6 +757,36 @@ class ConfigurationWidget(QWidget):
             self.showConfigurationPageByName(pageName)
             if savedState is not None:
                 self.configStack.currentWidget().setState(savedState)
+        
+    def getExpandedEntries(self):
+        """
+        Public method to get a list of expanded entries.
+        
+        @return list of expanded entries (list of string)
+        """
+        return self.__expandedEntries
+    
+    @pyqtSlot(QTreeWidgetItem)
+    def on_configList_itemCollapsed(self, item):
+        """
+        Private slot handling a list entry being collapsed.
+        
+        @param item reference to the collapsed item (QTreeWidgetItem)
+        """
+        pageName = item.data(0, Qt.UserRole)
+        if pageName in self.__expandedEntries:
+            self.__expandedEntries.remove(pageName)
+    
+    @pyqtSlot(QTreeWidgetItem)
+    def on_configList_itemExpanded(self, item):
+        """
+        Private slot handling a list entry being expanded.
+        
+        @param item reference to the expanded item (QTreeWidgetItem)
+        """
+        pageName = item.data(0, Qt.UserRole)
+        if pageName not in self.__expandedEntries:
+            self.__expandedEntries.append(pageName)
 
 
 class ConfigurationDialog(QDialog):
@@ -765,7 +805,8 @@ class ConfigurationDialog(QDialog):
     TrayStarterMode = ConfigurationWidget.TrayStarterMode
     
     def __init__(self, parent=None, name=None, modal=False,
-                 fromEric=True, displayMode=ConfigurationWidget.DefaultMode):
+                 fromEric=True, displayMode=ConfigurationWidget.DefaultMode,
+                 expandedEntries=[]):
         """
         Constructor
         
@@ -776,6 +817,8 @@ class ConfigurationDialog(QDialog):
             eric6 ide (boolean)
         @keyparam displayMode mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
+        @keyparam expandedEntries list of entries to be shown expanded
+            (list of strings)
         """
         super(ConfigurationDialog, self).__init__(parent)
         if name:
@@ -786,7 +829,8 @@ class ConfigurationDialog(QDialog):
         self.layout.setSpacing(0)
         
         self.cw = ConfigurationWidget(self, fromEric=fromEric,
-                                      displayMode=displayMode)
+                                      displayMode=displayMode,
+                                      expandedEntries=expandedEntries)
         size = self.cw.size()
         self.layout.addWidget(self.cw)
         self.resize(size)
@@ -827,6 +871,14 @@ class ConfigurationDialog(QDialog):
         @return page name of the current page (string)
         """
         return self.cw.getConfigurationPageName()
+        
+    def getExpandedEntries(self):
+        """
+        Public method to get a list of expanded entries.
+        
+        @return list of expanded entries (list of string)
+        """
+        return self.cw.getExpandedEntries()
         
     def setPreferences(self):
         """

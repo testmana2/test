@@ -91,6 +91,9 @@ QDialog
 <td><a href="#ConfigurationDialog.getConfigurationPageName">getConfigurationPageName</a></td>
 <td>Public method to get the page name of the current page.</td>
 </tr><tr>
+<td><a href="#ConfigurationDialog.getExpandedEntries">getExpandedEntries</a></td>
+<td>Public method to get a list of expanded entries.</td>
+</tr><tr>
 <td><a href="#ConfigurationDialog.setPreferences">setPreferences</a></td>
 <td>Public method called to store the selected values into the preferences storage.</td>
 </tr><tr>
@@ -104,7 +107,7 @@ QDialog
 </table>
 <a NAME="ConfigurationDialog.__init__" ID="ConfigurationDialog.__init__"></a>
 <h4>ConfigurationDialog (Constructor)</h4>
-<b>ConfigurationDialog</b>(<i>parent=None, name=None, modal=False, fromEric=True, displayMode=ConfigurationWidget.DefaultMode</i>)
+<b>ConfigurationDialog</b>(<i>parent=None, name=None, modal=False, fromEric=True, displayMode=ConfigurationWidget.DefaultMode, expandedEntries=[]</i>)
 <p>
         Constructor
 </p><dl>
@@ -125,6 +128,10 @@ flag indicating a dialog generation from within the
 <dd>
 mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
+</dd><dt><i>expandedEntries=</i></dt>
+<dd>
+list of entries to be shown expanded
+            (list of strings)
 </dd>
 </dl><a NAME="ConfigurationDialog.__masterPasswordChanged" ID="ConfigurationDialog.__masterPasswordChanged"></a>
 <h4>ConfigurationDialog.__masterPasswordChanged</h4>
@@ -158,6 +165,16 @@ new master password (string)
 <dt>Returns:</dt>
 <dd>
 page name of the current page (string)
+</dd>
+</dl><a NAME="ConfigurationDialog.getExpandedEntries" ID="ConfigurationDialog.getExpandedEntries"></a>
+<h4>ConfigurationDialog.getExpandedEntries</h4>
+<b>getExpandedEntries</b>(<i></i>)
+<p>
+        Public method to get a list of expanded entries.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of expanded entries (list of string)
 </dd>
 </dl><a NAME="ConfigurationDialog.setPreferences" ID="ConfigurationDialog.setPreferences"></a>
 <h4>ConfigurationDialog.setPreferences</h4>
@@ -307,6 +324,9 @@ QWidget
 <td><a href="#ConfigurationWidget.getConfigurationPageName">getConfigurationPageName</a></td>
 <td>Public method to get the page name of the current page.</td>
 </tr><tr>
+<td><a href="#ConfigurationWidget.getExpandedEntries">getExpandedEntries</a></td>
+<td>Public method to get a list of expanded entries.</td>
+</tr><tr>
 <td><a href="#ConfigurationWidget.getLexers">getLexers</a></td>
 <td>Public method to get a reference to the lexers dictionary.</td>
 </tr><tr>
@@ -318,6 +338,12 @@ QWidget
 </tr><tr>
 <td><a href="#ConfigurationWidget.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
+</tr><tr>
+<td><a href="#ConfigurationWidget.on_configList_itemCollapsed">on_configList_itemCollapsed</a></td>
+<td>Private slot handling a list entry being collapsed.</td>
+</tr><tr>
+<td><a href="#ConfigurationWidget.on_configList_itemExpanded">on_configList_itemExpanded</a></td>
+<td>Private slot handling a list entry being expanded.</td>
 </tr><tr>
 <td><a href="#ConfigurationWidget.on_resetButton_clicked">on_resetButton_clicked</a></td>
 <td>Private slot called to reset the settings of the current page.</td>
@@ -335,7 +361,7 @@ QWidget
 </table>
 <a NAME="ConfigurationWidget.__init__" ID="ConfigurationWidget.__init__"></a>
 <h4>ConfigurationWidget (Constructor)</h4>
-<b>ConfigurationWidget</b>(<i>parent=None, fromEric=True, displayMode=DefaultMode</i>)
+<b>ConfigurationWidget</b>(<i>parent=None, fromEric=True, displayMode=DefaultMode, expandedEntries=[]</i>)
 <p>
         Constructor
 </p><dl>
@@ -350,6 +376,10 @@ flag indicating a dialog generation from within the
 <dd>
 mode of the configuration dialog
             (DefaultMode, HelpBrowserMode, TrayStarterMode)
+</dd><dt><i>expandedEntries=</i></dt>
+<dd>
+list of entries to be shown expanded
+            (list of strings)
 </dd>
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
@@ -463,6 +493,16 @@ flag indicating invocation from within eric (boolean)
 <dd>
 page name of the current page (string)
 </dd>
+</dl><a NAME="ConfigurationWidget.getExpandedEntries" ID="ConfigurationWidget.getExpandedEntries"></a>
+<h4>ConfigurationWidget.getExpandedEntries</h4>
+<b>getExpandedEntries</b>(<i></i>)
+<p>
+        Public method to get a list of expanded entries.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of expanded entries (list of string)
+</dd>
 </dl><a NAME="ConfigurationWidget.getLexers" ID="ConfigurationWidget.getLexers"></a>
 <h4>ConfigurationWidget.getLexers</h4>
 <b>getLexers</b>(<i></i>)
@@ -503,6 +543,26 @@ reference to the page or None, indicating page was
 <dt><i>button</i></dt>
 <dd>
 button that was clicked (QAbstractButton)
+</dd>
+</dl><a NAME="ConfigurationWidget.on_configList_itemCollapsed" ID="ConfigurationWidget.on_configList_itemCollapsed"></a>
+<h4>ConfigurationWidget.on_configList_itemCollapsed</h4>
+<b>on_configList_itemCollapsed</b>(<i>item</i>)
+<p>
+        Private slot handling a list entry being collapsed.
+</p><dl>
+<dt><i>item</i></dt>
+<dd>
+reference to the collapsed item (QTreeWidgetItem)
+</dd>
+</dl><a NAME="ConfigurationWidget.on_configList_itemExpanded" ID="ConfigurationWidget.on_configList_itemExpanded"></a>
+<h4>ConfigurationWidget.on_configList_itemExpanded</h4>
+<b>on_configList_itemExpanded</b>(<i>item</i>)
+<p>
+        Private slot handling a list entry being expanded.
+</p><dl>
+<dt><i>item</i></dt>
+<dd>
+reference to the expanded item (QTreeWidgetItem)
 </dd>
 </dl><a NAME="ConfigurationWidget.on_resetButton_clicked" ID="ConfigurationWidget.on_resetButton_clicked"></a>
 <h4>ConfigurationWidget.on_resetButton_clicked</h4>

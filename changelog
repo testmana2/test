@@ -17,6 +17,9 @@ Version 6.1-snapshot-2015mmdd:
 - Preferences Dialog
   -- changed the 'filter' function to a 'search' function disabling
      all entries, that don't contain the entered string
+  -- changed the handling of the configuration page list entries
+     to be collapsed on first show and remember the expanded ones
+     while eric is running (but not between invocations)
 - Previewers
   -- added capability to use 'Sphinx' to preview ReST files
 - Project
