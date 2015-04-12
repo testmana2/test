@@ -379,6 +379,7 @@ class ConfigurationWidget(QWidget):
                 pitm = self.configList
             self.itmDict[key] = ConfigurationPageItem(pitm, pageData[0], key,
                                                       pageData[1])
+            self.itmDict[key].setData(0, Qt.UserRole, key)
             self.itmDict[key].setExpanded(True)
         self.configList.sortByColumn(0, Qt.AscendingOrder)
         
@@ -627,8 +628,9 @@ class ConfigurationWidget(QWidget):
                 items = self.configList.findItems(
                     pageData[0],
                     Qt.MatchFixedString | Qt.MatchRecursive)
-                if items:
-                    self.configList.setCurrentItem(items[0])
+                for item in items:
+                    if item.data(0, Qt.UserRole) == pageName:
+                        self.configList.setCurrentItem(item)
         self.configStack.setCurrentWidget(page)
         ssize = self.scrollArea.size()
         if self.scrollArea.horizontalScrollBar():
