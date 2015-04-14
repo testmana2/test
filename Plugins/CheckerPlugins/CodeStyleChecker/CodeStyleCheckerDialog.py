@@ -394,16 +394,13 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.__lastFileItem = None
         
         if codestring:
-            self.source = codestring
+            source = codestring
+            encoding = Utilities.get_coding(source)
         else:
             try:
-                self.source, encoding = Utilities.readEncodedFile(
+                source, encoding = Utilities.readEncodedFile(
                     self.filename)
-                if encoding.endswith(
-                        ('-selected', '-default', '-guessed', '-ignore')):
-                    encoding = encoding.rsplit('-', 1)[0]
-                
-                self.source = self.source.splitlines(True)
+                source = source.splitlines(True)
             except (UnicodeError, IOError) as msg:
                 self.noResults = False
                 self.__createResultItem(
@@ -414,6 +411,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 # Continue with next file
                 self.check()
                 return
+        if encoding.endswith(
+                ('-selected', '-default', '-guessed', '-ignore')):
+            encoding = encoding.rsplit('-', 1)[0]
         
         errors = []
         self.__itms = []
@@ -426,7 +426,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             errors, eol, encoding, Preferences.getEditor("CreateBackupFile")
         ]
         self.styleCheckService.styleCheck(
-            None, self.filename, self.source, args)
+            None, self.filename, source, args)
 
     def __processResult(self, fn, codeStyleCheckerStats, fixes, results):
         """

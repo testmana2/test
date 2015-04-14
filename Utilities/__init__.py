@@ -1427,6 +1427,8 @@ def determinePythonVersion(filename, source, editor=None):
 
     pyVer = 0
     if filename:
+        if not source:
+            source = readEncodedFile(filename)[0]
         flags = extractFlags(source)
         ext = os.path.splitext(filename)[1]
         py2Ext = Preferences.getPython("PythonExtensions")
