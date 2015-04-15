@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Python.DebugBase</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Python.DebugBase</h1>
+<p>
+Module implementing the debug base class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>gRecursionLimit</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#DebugBase">DebugBase</a></td>
+<td>Class implementing base class of the debugger.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#printerr">printerr</a></td>
+<td>Module function used for debugging the debug client.</td>
+</tr><tr>
+<td><a href="#setRecursionLimit">setRecursionLimit</a></td>
+<td>Module function to set the recursion limit.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="DebugBase" ID="DebugBase"></a>
+<h2>DebugBase</h2>
+<p>
+    Class implementing base class of the debugger.
+</p><p>
+    Provides simple wrapper methods around bdb for the 'owning' client to
+    call to step etc.
+</p>
+<h3>Derived from</h3>
+bdb.Bdb
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DebugBase.__init__">DebugBase</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#DebugBase.__do_clear">__do_clear</a></td>
+<td>Private method called to clear a temporary breakpoint.</td>
+</tr><tr>
+<td><a href="#DebugBase.__do_clearWatch">__do_clearWatch</a></td>
+<td>Private method called to clear a temporary watch expression.</td>
+</tr><tr>
+<td><a href="#DebugBase.__effective">__effective</a></td>
+<td>Private method to determine, if a watch expression is effective.</td>
+</tr><tr>
+<td><a href="#DebugBase.__extract_stack">__extract_stack</a></td>
+<td>Private member to return a list of stack frames.</td>
+</tr><tr>
+<td><a href="#DebugBase.__sendCallTrace">__sendCallTrace</a></td>
+<td>Private method to send a call/return trace.</td>
+</tr><tr>
+<td><a href="#DebugBase.__skip_it">__skip_it</a></td>
+<td>Private method to filter out debugger files.</td>
+</tr><tr>
+<td><a href="#DebugBase.break_anywhere">break_anywhere</a></td>
+<td>Public method reimplemented from bdb.py to do some special things.</td>
+</tr><tr>
+<td><a href="#DebugBase.break_here">break_here</a></td>
+<td>Public method reimplemented from bdb.py to fix the filename from the frame.</td>
+</tr><tr>
+<td><a href="#DebugBase.clear_watch">clear_watch</a></td>
+<td>Public method to clear a watch expression.</td>
+</tr><tr>
+<td><a href="#DebugBase.dispatch_exception">dispatch_exception</a></td>
+<td>Public method reimplemented from bdb.py to always call user_exception.</td>
+</tr><tr>
+<td><a href="#DebugBase.dispatch_line">dispatch_line</a></td>
+<td>Public method reimplemented from bdb.py to do some special things.</td>
+</tr><tr>
+<td><a href="#DebugBase.dispatch_return">dispatch_return</a></td>
+<td>Public method reimplemented from bdb.py to handle passive mode cleanly.</td>
+</tr><tr>
+<td><a href="#DebugBase.fix_frame_filename">fix_frame_filename</a></td>
+<td>Public method used to fixup the filename for a given frame.</td>
+</tr><tr>
+<td><a href="#DebugBase.getCurrentFrame">getCurrentFrame</a></td>
+<td>Public method to return the current frame.</td>
+</tr><tr>
+<td><a href="#DebugBase.getCurrentFrameLocals">getCurrentFrameLocals</a></td>
+<td>Public method to return the locals dictionary of the current frame.</td>
+</tr><tr>
+<td><a href="#DebugBase.getEvent">getEvent</a></td>
+<td>Protected method to return the last debugger event.</td>
+</tr><tr>
+<td><a href="#DebugBase.getStack">getStack</a></td>
+<td>Public method to get the stack.</td>
+</tr><tr>
+<td><a href="#DebugBase.get_break">get_break</a></td>
+<td>Public method reimplemented from bdb.py to get the first breakpoint of a particular line.</td>
+</tr><tr>
+<td><a href="#DebugBase.get_watch">get_watch</a></td>
+<td>Public method to get a watch expression.</td>
+</tr><tr>
+<td><a href="#DebugBase.go">go</a></td>
+<td>Public method to resume the thread.</td>
+</tr><tr>
+<td><a href="#DebugBase.isBroken">isBroken</a></td>
+<td>Public method to return the broken state of the debugger.</td>
+</tr><tr>
+<td><a href="#DebugBase.profile">profile</a></td>
+<td>Public method used to trace some stuff independent of the debugger trace function.</td>
+</tr><tr>
+<td><a href="#DebugBase.setRecursionDepth">setRecursionDepth</a></td>
+<td>Public method to determine the current recursion depth.</td>
+</tr><tr>
+<td><a href="#DebugBase.set_continue">set_continue</a></td>
+<td>Public method reimplemented from bdb.py to always get informed of exceptions.</td>
+</tr><tr>
+<td><a href="#DebugBase.set_quit">set_quit</a></td>
+<td>Public method to quit.</td>
+</tr><tr>
+<td><a href="#DebugBase.set_trace">set_trace</a></td>
+<td>Public method reimplemented from bdb.py to do some special setup.</td>
+</tr><tr>
+<td><a href="#DebugBase.set_watch">set_watch</a></td>
+<td>Public method to set a watch expression.</td>
+</tr><tr>
+<td><a href="#DebugBase.step">step</a></td>
+<td>Public method to perform a step operation in this thread.</td>
+</tr><tr>
+<td><a href="#DebugBase.stepOut">stepOut</a></td>
+<td>Public method to perform a step out of the current call.</td>
+</tr><tr>
+<td><a href="#DebugBase.stop_here">stop_here</a></td>
+<td>Public method reimplemented to filter out debugger files.</td>
+</tr><tr>
+<td><a href="#DebugBase.trace_dispatch">trace_dispatch</a></td>
+<td>Public method reimplemented from bdb.py to do some special things.</td>
+</tr><tr>
+<td><a href="#DebugBase.user_exception">user_exception</a></td>
+<td>Public method reimplemented to report an exception to the debug server.</td>
+</tr><tr>
+<td><a href="#DebugBase.user_line">user_line</a></td>
+<td>Public method reimplemented to handle the program about to execute a particular line.</td>
+</tr><tr>
+<td><a href="#DebugBase.user_return">user_return</a></td>
+<td>Public method reimplemented to report program termination to the debug server.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="DebugBase.__init__" ID="DebugBase.__init__"></a>
+<h4>DebugBase (Constructor)</h4>
+<b>DebugBase</b>(<i>dbgClient</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>dbgClient</i></dt>
+<dd>
+the owning client
+</dd>
+</dl><a NAME="DebugBase.__do_clear" ID="DebugBase.__do_clear"></a>
+<h4>DebugBase.__do_clear</h4>
+<b>__do_clear</b>(<i>filename, lineno</i>)
+<p>
+        Private method called to clear a temporary breakpoint.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+name of the file the bp belongs to
+</dd><dt><i>lineno</i></dt>
+<dd>
+linenumber of the bp
+</dd>
+</dl><a NAME="DebugBase.__do_clearWatch" ID="DebugBase.__do_clearWatch"></a>
+<h4>DebugBase.__do_clearWatch</h4>
+<b>__do_clearWatch</b>(<i>cond</i>)
+<p>
+        Private method called to clear a temporary watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression to be cleared (string)
+</dd>
+</dl><a NAME="DebugBase.__effective" ID="DebugBase.__effective"></a>
+<h4>DebugBase.__effective</h4>
+<b>__effective</b>(<i>frame</i>)
+<p>
+        Private method to determine, if a watch expression is effective.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the current execution frame
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of watch expression and a flag to indicate, that a
+            temporary watch expression may be deleted (bdb.Breakpoint, boolean)
+</dd>
+</dl><a NAME="DebugBase.__extract_stack" ID="DebugBase.__extract_stack"></a>
+<h4>DebugBase.__extract_stack</h4>
+<b>__extract_stack</b>(<i>exctb</i>)
+<p>
+        Private member to return a list of stack frames.
+</p><dl>
+<dt><i>exctb</i></dt>
+<dd>
+exception traceback
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of stack frames
+</dd>
+</dl><a NAME="DebugBase.__sendCallTrace" ID="DebugBase.__sendCallTrace"></a>
+<h4>DebugBase.__sendCallTrace</h4>
+<b>__sendCallTrace</b>(<i>event, fromFrame, toFrame</i>)
+<p>
+        Private method to send a call/return trace.
+</p><dl>
+<dt><i>event</i></dt>
+<dd>
+trace event (string)
+</dd><dt><i>fromFrame</i></dt>
+<dd>
+originating frame (frame)
+</dd><dt><i>toFrame</i></dt>
+<dd>
+destination frame (frame)
+</dd>
+</dl><a NAME="DebugBase.__skip_it" ID="DebugBase.__skip_it"></a>
+<h4>DebugBase.__skip_it</h4>
+<b>__skip_it</b>(<i>frame</i>)
+<p>
+        Private method to filter out debugger files.
+</p><p>
+        Tracing is turned off for files that are part of the
+        debugger that are called from the application being debugged.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating whether the debugger should skip this frame
+</dd>
+</dl><a NAME="DebugBase.break_anywhere" ID="DebugBase.break_anywhere"></a>
+<h4>DebugBase.break_anywhere</h4>
+<b>break_anywhere</b>(<i>frame</i>)
+<p>
+        Public method reimplemented from bdb.py to do some special things.
+</p><p>
+        These speciality is to fix the filename from the frame
+        (see fix_frame_filename for more info).
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the break status (boolean)
+</dd>
+</dl><a NAME="DebugBase.break_here" ID="DebugBase.break_here"></a>
+<h4>DebugBase.break_here</h4>
+<b>break_here</b>(<i>frame</i>)
+<p>
+        Public method reimplemented from bdb.py to fix the filename from the
+        frame.
+</p><p>
+        See fix_frame_filename for more info.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the break status (boolean)
+</dd>
+</dl><a NAME="DebugBase.clear_watch" ID="DebugBase.clear_watch"></a>
+<h4>DebugBase.clear_watch</h4>
+<b>clear_watch</b>(<i>cond</i>)
+<p>
+        Public method to clear a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression to be cleared (string)
+</dd>
+</dl><a NAME="DebugBase.dispatch_exception" ID="DebugBase.dispatch_exception"></a>
+<h4>DebugBase.dispatch_exception</h4>
+<b>dispatch_exception</b>(<i>frame, arg</i>)
+<p>
+        Public method reimplemented from bdb.py to always call user_exception.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+The current stack frame.
+</dd><dt><i>arg</i></dt>
+<dd>
+The arguments
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+local trace function
+</dd>
+</dl><dl>
+<dt>Raises <b>bdb.BdbQuit</b>:</dt>
+<dd>
+raised to indicate the end of the debug session
+</dd>
+</dl><a NAME="DebugBase.dispatch_line" ID="DebugBase.dispatch_line"></a>
+<h4>DebugBase.dispatch_line</h4>
+<b>dispatch_line</b>(<i>frame</i>)
+<p>
+        Public method reimplemented from bdb.py to do some special things.
+</p><p>
+        This speciality is to check the connection to the debug server
+        for new events (i.e. new breakpoints) while we are going through
+        the code.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+The current stack frame.
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+local trace function
+</dd>
+</dl><dl>
+<dt>Raises <b>bdb.BdbQuit</b>:</dt>
+<dd>
+raised to indicate the end of the debug session
+</dd>
+</dl><a NAME="DebugBase.dispatch_return" ID="DebugBase.dispatch_return"></a>
+<h4>DebugBase.dispatch_return</h4>
+<b>dispatch_return</b>(<i>frame, arg</i>)
+<p>
+        Public method reimplemented from bdb.py to handle passive mode cleanly.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+The current stack frame.
+</dd><dt><i>arg</i></dt>
+<dd>
+The arguments
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+local trace function
+</dd>
+</dl><dl>
+<dt>Raises <b>bdb.BdbQuit</b>:</dt>
+<dd>
+raised to indicate the end of the debug session
+</dd>
+</dl><a NAME="DebugBase.fix_frame_filename" ID="DebugBase.fix_frame_filename"></a>
+<h4>DebugBase.fix_frame_filename</h4>
+<b>fix_frame_filename</b>(<i>frame</i>)
+<p>
+        Public method used to fixup the filename for a given frame.
+</p><p>
+        The logic employed here is that if a module was loaded
+        from a .pyc file, then the correct .py to operate with
+        should be in the same path as the .pyc. The reason this
+        logic is needed is that when a .pyc file is generated, the
+        filename embedded and thus what is readable in the code object
+        of the frame object is the fully qualified filepath when the
+        pyc is generated. If files are moved from machine to machine
+        this can break debugging as the .pyc will refer to the .py
+        on the original machine. Another case might be sharing
+        code over a network... This logic deals with that.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+fixed up file name (string)
+</dd>
+</dl><a NAME="DebugBase.getCurrentFrame" ID="DebugBase.getCurrentFrame"></a>
+<h4>DebugBase.getCurrentFrame</h4>
+<b>getCurrentFrame</b>(<i></i>)
+<p>
+        Public method to return the current frame.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the current frame
+</dd>
+</dl><a NAME="DebugBase.getCurrentFrameLocals" ID="DebugBase.getCurrentFrameLocals"></a>
+<h4>DebugBase.getCurrentFrameLocals</h4>
+<b>getCurrentFrameLocals</b>(<i></i>)
+<p>
+        Public method to return the locals dictionary of the current frame.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+locals dictionary of the current frame
+</dd>
+</dl><a NAME="DebugBase.getEvent" ID="DebugBase.getEvent"></a>
+<h4>DebugBase.getEvent</h4>
+<b>getEvent</b>(<i></i>)
+<p>
+        Protected method to return the last debugger event.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+last debugger event (string)
+</dd>
+</dl><a NAME="DebugBase.getStack" ID="DebugBase.getStack"></a>
+<h4>DebugBase.getStack</h4>
+<b>getStack</b>(<i></i>)
+<p>
+        Public method to get the stack.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lists with file name (string), line number (integer)
+            and function name (string)
+</dd>
+</dl><a NAME="DebugBase.get_break" ID="DebugBase.get_break"></a>
+<h4>DebugBase.get_break</h4>
+<b>get_break</b>(<i>filename, lineno</i>)
+<p>
+        Public method reimplemented from bdb.py to get the first breakpoint of
+        a particular line.
+</p><p>
+        Because eric6 supports only one breakpoint per line, this overwritten
+        method will return this one and only breakpoint.
+</p><dl>
+<dt><i>filename</i></dt>
+<dd>
+filename of the bp to retrieve (string)
+</dd><dt><i>lineno</i></dt>
+<dd>
+linenumber of the bp to retrieve (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+breakpoint or None, if there is no bp
+</dd>
+</dl><a NAME="DebugBase.get_watch" ID="DebugBase.get_watch"></a>
+<h4>DebugBase.get_watch</h4>
+<b>get_watch</b>(<i>cond</i>)
+<p>
+        Public method to get a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression to be cleared (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the watch point
+</dd>
+</dl><a NAME="DebugBase.go" ID="DebugBase.go"></a>
+<h4>DebugBase.go</h4>
+<b>go</b>(<i>special</i>)
+<p>
+        Public method to resume the thread.
+</p><p>
+        It resumes the thread stopping only at breakpoints or exceptions.
+</p><dl>
+<dt><i>special</i></dt>
+<dd>
+flag indicating a special continue operation
+</dd>
+</dl><a NAME="DebugBase.isBroken" ID="DebugBase.isBroken"></a>
+<h4>DebugBase.isBroken</h4>
+<b>isBroken</b>(<i></i>)
+<p>
+        Public method to return the broken state of the debugger.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the broken state (boolean)
+</dd>
+</dl><a NAME="DebugBase.profile" ID="DebugBase.profile"></a>
+<h4>DebugBase.profile</h4>
+<b>profile</b>(<i>frame, event, arg</i>)
+<p>
+        Public method used to trace some stuff independent of the debugger
+        trace function.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+current stack frame.
+</dd><dt><i>event</i></dt>
+<dd>
+trace event (string)
+</dd><dt><i>arg</i></dt>
+<dd>
+arguments
+</dd>
+</dl><dl>
+<dt>Raises <b>RuntimeError</b>:</dt>
+<dd>
+raised to indicate too many recursions
+</dd>
+</dl><a NAME="DebugBase.setRecursionDepth" ID="DebugBase.setRecursionDepth"></a>
+<h4>DebugBase.setRecursionDepth</h4>
+<b>setRecursionDepth</b>(<i>frame</i>)
+<p>
+        Public method to determine the current recursion depth.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+The current stack frame.
+</dd>
+</dl><a NAME="DebugBase.set_continue" ID="DebugBase.set_continue"></a>
+<h4>DebugBase.set_continue</h4>
+<b>set_continue</b>(<i>special</i>)
+<p>
+        Public method reimplemented from bdb.py to always get informed of
+        exceptions.
+</p><dl>
+<dt><i>special</i></dt>
+<dd>
+flag indicating a special continue operation
+</dd>
+</dl><a NAME="DebugBase.set_quit" ID="DebugBase.set_quit"></a>
+<h4>DebugBase.set_quit</h4>
+<b>set_quit</b>(<i></i>)
+<p>
+        Public method to quit.
+</p><p>
+        It wraps call to bdb to clear the current frame properly.
+</p><a NAME="DebugBase.set_trace" ID="DebugBase.set_trace"></a>
+<h4>DebugBase.set_trace</h4>
+<b>set_trace</b>(<i>frame=None</i>)
+<p>
+        Public method reimplemented from bdb.py to do some special setup.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+frame to start debugging from
+</dd>
+</dl><a NAME="DebugBase.set_watch" ID="DebugBase.set_watch"></a>
+<h4>DebugBase.set_watch</h4>
+<b>set_watch</b>(<i>cond, temporary=0</i>)
+<p>
+        Public method to set a watch expression.
+</p><dl>
+<dt><i>cond</i></dt>
+<dd>
+expression of the watch expression (string)
+</dd><dt><i>temporary</i></dt>
+<dd>
+flag indicating a temporary watch expression (boolean)
+</dd>
+</dl><a NAME="DebugBase.step" ID="DebugBase.step"></a>
+<h4>DebugBase.step</h4>
+<b>step</b>(<i>traceMode</i>)
+<p>
+        Public method to perform a step operation in this thread.
+</p><dl>
+<dt><i>traceMode</i></dt>
+<dd>
+If it is non-zero, then the step is a step into,
+              otherwise it is a step over.
+</dd>
+</dl><a NAME="DebugBase.stepOut" ID="DebugBase.stepOut"></a>
+<h4>DebugBase.stepOut</h4>
+<b>stepOut</b>(<i></i>)
+<p>
+        Public method to perform a step out of the current call.
+</p><a NAME="DebugBase.stop_here" ID="DebugBase.stop_here"></a>
+<h4>DebugBase.stop_here</h4>
+<b>stop_here</b>(<i>frame</i>)
+<p>
+        Public method reimplemented to filter out debugger files.
+</p><p>
+        Tracing is turned off for files that are part of the
+        debugger that are called from the application being debugged.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating whether the debugger should stop here
+</dd>
+</dl><a NAME="DebugBase.trace_dispatch" ID="DebugBase.trace_dispatch"></a>
+<h4>DebugBase.trace_dispatch</h4>
+<b>trace_dispatch</b>(<i>frame, event, arg</i>)
+<p>
+        Public method reimplemented from bdb.py to do some special things.
+</p><p>
+        This specialty is to check the connection to the debug server
+        for new events (i.e. new breakpoints) while we are going through
+        the code.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+The current stack frame.
+</dd><dt><i>event</i></dt>
+<dd>
+The trace event (string)
+</dd><dt><i>arg</i></dt>
+<dd>
+The arguments
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+local trace function
+</dd>
+</dl><a NAME="DebugBase.user_exception" ID="DebugBase.user_exception"></a>
+<h4>DebugBase.user_exception</h4>
+<b>user_exception</b>(<i>frame, (exctype, excval, exctb), unhandled=0</i>)
+<p>
+        Public method reimplemented to report an exception to the debug server.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd><dt><i>exctype</i></dt>
+<dd>
+the type of the exception
+</dd><dt><i>excval</i></dt>
+<dd>
+data about the exception
+</dd><dt><i>exctb</i></dt>
+<dd>
+traceback for the exception
+</dd><dt><i>unhandled</i></dt>
+<dd>
+flag indicating an uncaught exception
+</dd>
+</dl><a NAME="DebugBase.user_line" ID="DebugBase.user_line"></a>
+<h4>DebugBase.user_line</h4>
+<b>user_line</b>(<i>frame</i>)
+<p>
+        Public method reimplemented to handle the program about to execute a
+        particular line.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd>
+</dl><a NAME="DebugBase.user_return" ID="DebugBase.user_return"></a>
+<h4>DebugBase.user_return</h4>
+<b>user_return</b>(<i>frame, retval</i>)
+<p>
+        Public method reimplemented to report program termination to the
+        debug server.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+the frame object
+</dd><dt><i>retval</i></dt>
+<dd>
+the return value of the program
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="printerr" ID="printerr"></a>
+<h2>printerr</h2>
+<b>printerr</b>(<i>s</i>)
+<p>
+    Module function used for debugging the debug client.
+</p><dl>
+<dt><i>s</i></dt>
+<dd>
+data to be printed
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="setRecursionLimit" ID="setRecursionLimit"></a>
+<h2>setRecursionLimit</h2>
+<b>setRecursionLimit</b>(<i>limit</i>)
+<p>
+    Module function to set the recursion limit.
+</p><dl>
+<dt><i>limit</i></dt>
+<dd>
+recursion limit (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
