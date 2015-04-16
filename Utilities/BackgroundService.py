@@ -34,6 +34,7 @@ class BackgroundService(QTcpServer):
     Class implementing the main part of the background service.
     """
     serviceNotAvailable = pyqtSignal(str, str, str, str)
+    batchJobDone = pyqtSignal(str, str)
     
     def __init__(self):
         """
@@ -140,68 +141,80 @@ class BackgroundService(QTcpServer):
         @param lang language of the incomming connection (str)
         """
         connection = self.connections[lang]
-        header = connection.read(8)
-        length, datahash = struct.unpack(b'!II', header)
-        
-        packedData = b''
-        while len(packedData) < length:
-            connection.waitForReadyRead(50)
-            packedData += connection.read(length - len(packedData))
-
-        assert adler32(packedData) & 0xffffffff == datahash, 'Hashes not equal'
-        if sys.version_info[0] == 3:
-            packedData = packedData.decode('utf-8')
-        # "check" if is's a tuple of 3 values
-        fx, fn, data = json.loads(packedData)
-        
-        if fx == 'INIT':
-            pass
-        elif fx == 'EXCEPTION':
-            # Remove connection because it'll close anyway
-            self.connections.pop(lang, None)
-            # Call sys.excepthook(type, value, traceback) to emulate the
-            # exception which was caught on the client
-            sys.excepthook(*data)
-            res = E5MessageBox.question(
-                None,
-                self.tr("Restart background client?"),
-                self.tr(
-                    "<p>The background client for <b>{0}</b> has stopped"
-                    " due to an exception. It's used by various plug-ins like"
-                    " the different checkers.</p>"
-                    "<p>Select"
-                    "<ul>"
-                    "<li><b>'Yes'</b> to restart the client, but abort the"
-                    " last job</li>"
-                    "<li><b>'Retry'</b> to restart the client and the last"
-                    " job</li>"
-                    "<li><b>'No'</b> to leave the client off.</li>"
-                    "</ul></p>"
-                    "<p>Note: The client can be restarted by opening and"
-                    " accepting the preferences dialog or reloading/changing"
-                    " the project.</p>").format(lang),
-                E5MessageBox.Yes | E5MessageBox.No | E5MessageBox.Retry,
-                E5MessageBox.Yes)
+        while connection.bytesAvailable():
+            header = connection.read(8)
+            length, datahash = struct.unpack(b'!II', header)
             
-            if res == E5MessageBox.Retry:
-                self.enqueueRequest(*self.runningJob)
+            packedData = b''
+            while len(packedData) < length:
+                connection.waitForReadyRead(50)
+                packedData += connection.read(length - len(packedData))
+
+            assert adler32(packedData) & 0xffffffff == datahash, \
+                'Hashes not equal'
+            if sys.version_info[0] == 3:
+                packedData = packedData.decode('utf-8')
+            # "check" if is's a tuple of 3 values
+            fx, fn, data = json.loads(packedData)
+            
+            if fx == 'INIT':
+                pass
+            elif fx == 'EXCEPTION':
+                # Remove connection because it'll close anyway
+                self.connections.pop(lang, None)
+                # Call sys.excepthook(type, value, traceback) to emulate the
+                # exception which was caught on the client
+                sys.excepthook(*data)
+                res = E5MessageBox.question(
+                    None,
+                    self.tr("Restart background client?"),
+                    self.tr(
+                        "<p>The background client for <b>{0}</b> has stopped"
+                        " due to an exception. It's used by various plug-ins"
+                        " like the different checkers.</p>"
+                        "<p>Select"
+                        "<ul>"
+                        "<li><b>'Yes'</b> to restart the client, but abort the"
+                        " last job</li>"
+                        "<li><b>'Retry'</b> to restart the client and the last"
+                        " job</li>"
+                        "<li><b>'No'</b> to leave the client off.</li>"
+                        "</ul></p>"
+                        "<p>Note: The client can be restarted by opening and"
+                        " accepting the preferences dialog or reloading/"
+                        "changing the project.</p>").format(lang),
+                    E5MessageBox.Yes | E5MessageBox.No | E5MessageBox.Retry,
+                    E5MessageBox.Yes)
+                
+                if res == E5MessageBox.Retry:
+                    self.enqueueRequest(*self.runningJob)
+                else:
+                    fx, lng, fn, data = self.runningJob
+                    self.services[(fx, lng)][3](fx, lng, fn, self.tr(
+                        'An error in Erics background client stopped the'
+                        ' service.')
+                    )
+                if res != E5MessageBox.No:
+                    self.isWorking = None
+                    self.restartService(lang, True)
+                    return
+            elif data == 'Unknown service.':
+                callback = self.services.get((fx, lang))
+                if callback:
+                    callback[3](fx, lang, fn, data)
+            elif fx.startswith("batch_"):
+                fx = fx.replace("batch_", "")
+                if data != "__DONE__":
+                    callback = self.services.get((fx, lang))
+                    if callback:
+                        callback[2](fn, *data)
+                    continue
+                else:
+                    self.batchJobDone.emit(fx, lang)
             else:
-                fx, lng, fn, data = self.runningJob
-                self.services[(fx, lng)][3](fx, lng, fn, self.tr(
-                    'An error in Erics background client stopped the service.')
-                )
-            if res != E5MessageBox.No:
-                self.isWorking = None
-                self.restartService(lang, True)
-                return
-        elif data == 'Unknown service.':
-            callback = self.services.get((fx, lang))
-            if callback:
-                callback[3](fx, lang, fn, data)
-        else:
-            callback = self.services.get((fx, lang))
-            if callback:
-                callback[2](fn, *data)
+                callback = self.services.get((fx, lang))
+                if callback:
+                    callback[2](fn, *data)
         
         self.isWorking = None
         self.__processQueue()
@@ -279,7 +292,7 @@ class BackgroundService(QTcpServer):
     
     def serviceConnect(
             self, fx, lang, modulepath, module, callback,
-            onErrorCallback=None):
+            onErrorCallback=None, onBatchDone=None):
         """
         Public method to announce a new service to the background
         service/client.
@@ -288,14 +301,18 @@ class BackgroundService(QTcpServer):
         @param lang language of the new service (str)
         @param modulepath full path to the module (str)
         @param module name to import (str)
-        @param callback function on service response (function)
-        @param onErrorCallback function if client isn't available (function)
+        @param callback function called on service response (function)
+        @param onErrorCallback function called, if client isn't available
+            (function)
+        @param onBatchDone function called when a batch job is done (function)
         """
         self.services[(fx, lang)] = \
             modulepath, module, callback, onErrorCallback
         self.enqueueRequest('INIT', lang, fx, [modulepath, module])
         if onErrorCallback:
             self.serviceNotAvailable.connect(onErrorCallback)
+        if onBatchDone:
+            self.batchJobDone.connect(onBatchDone)
     
     def serviceDisconnect(self, fx, lang):
         """

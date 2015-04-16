@@ -8,6 +8,7 @@ Module implementing the code style checker.
 """
 
 import sys
+import multiprocessing
 
 import pep8
 from NamingStyleChecker import NamingStyleChecker
@@ -25,6 +26,15 @@ def initService():
     @return the entry point for the background client (function)
     """
     return codeStyleCheck
+
+
+def initBatchService():
+    """
+    Initialize the batch service and return the entry point.
+    
+    @return the entry point for the background client (function)
+    """
+    return codeStyleBatchCheck
 
 
 class CodeStyleCheckerReport(pep8.BaseReport):
@@ -87,6 +97,73 @@ def extractLineFlags(line, startComment="#", endComment=""):
 def codeStyleCheck(filename, source, args):
     """
     Do the code style check and/ or fix found errors.
+    
+    @param filename source filename (string)
+    @param source string containing the code to check (string)
+    @param args arguments used by the codeStyleCheck function (list of
+        excludeMessages (str), includeMessages (str), repeatMessages
+        (bool), fixCodes (str), noFixCodes (str), fixIssues (bool),
+        maxLineLength (int), hangClosing (bool), docType (str), errors
+        (list of str), eol (str), encoding (str), backup (bool))
+    @return tuple of stats (dict) and results (tuple for each found violation
+        of style (tuple of lineno (int), position (int), text (str), ignored
+            (bool), fixed (bool), autofixing (bool), fixedMsg (str)))
+    """
+    return __checkCodeStyle(filename, source, args)
+
+
+def codeStyleBatchCheck(argumentsList, send, fx):
+    """
+    Module function to check code style for a batch of files.
+    
+    @param argumentsList list of arguments tuples as given for codeStyleCheck
+    @param send reference to send method
+    @param fx registered service name (string)
+    """
+    try:
+        NumberOfProcesses = multiprocessing.cpu_count()
+    except NotImplementedError:
+        NumberOfProcesses = 4
+
+    # Create queues
+    taskQueue = multiprocessing.Queue()
+    doneQueue = multiprocessing.Queue()
+
+    # Submit tasks
+    for task in argumentsList:
+        taskQueue.put(task)
+
+    # Start worker processes
+    for i in range(NumberOfProcesses):
+        multiprocessing.Process(target=worker, args=(taskQueue, doneQueue))\
+            .start()
+
+    # Get and send results
+    for i in range(len(argumentsList)):
+        filename, result = doneQueue.get()
+        send(fx, filename, result)
+
+    # Tell child processes to stop
+    for i in range(NumberOfProcesses):
+        taskQueue.put('STOP')
+
+
+def worker(input, output):
+    """
+    Module function acting as the parallel worker for the style check.
+    
+    @param input input queue (multiprocessing.Queue)
+    @param output output queue (multiprocessing.Queue)
+    """
+    for filename, source, args in iter(input.get, 'STOP'):
+        result = __checkCodeStyle(filename, source, args)
+        output.put((filename, result))
+
+
+def __checkCodeStyle(filename, source, args):
+    """
+    Private module function to perform the code style check and/or fix
+    found errors.
     
     @param filename source filename (string)
     @param source string containing the code to check (string)

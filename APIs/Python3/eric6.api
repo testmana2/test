@@ -3797,10 +3797,14 @@ eric6.Plugins.AboutPlugin.AboutDialog.thanksText?7
 eric6.Plugins.AboutPlugin.AboutDialog.titleText?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerReport.error_args?4(line_number, offset, code, check, *args)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.CodeStyleCheckerReport?1(options)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.codeStyleBatchCheck?4(argumentsList, send, fx)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.codeStyleCheck?4(filename, source, args)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.extractLineFlags?4(line, startComment=")
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initBatchService?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initService?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.worker?4(input, output)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='')
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.checkBatch?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.filenameRole?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.fixableRole?7
@@ -4083,9 +4087,12 @@ eric6.Plugins.PluginAbout.python2Compatible?7
 eric6.Plugins.PluginAbout.shortDescription?7
 eric6.Plugins.PluginAbout.version?7
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.activate?4()
+eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.batchFinished?7
+eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.batchJobDone?4(fx, lang)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.deactivate?4()
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.serviceErrorPy3?4(fx, lang, fn, msg)
+eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleBatchCheck?4(argumentsList)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleCheck?4(lang, filename, source, args)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleChecked?7
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin?1(ui)
@@ -8435,12 +8442,13 @@ eric6.Utilities.AutoSaver.AutoSaver?1(parent, save)
 eric6.Utilities.BackgroundClient.BackgroundClient.backgroundClient?7
 eric6.Utilities.BackgroundClient.BackgroundClient.run?4()
 eric6.Utilities.BackgroundClient.BackgroundClient?1(host, port)
+eric6.Utilities.BackgroundService.BackgroundService.batchJobDone?7
 eric6.Utilities.BackgroundService.BackgroundService.enqueueRequest?4(fx, lang, fn, data)
 eric6.Utilities.BackgroundService.BackgroundService.on_disconnectSocket?4(lang)
 eric6.Utilities.BackgroundService.BackgroundService.on_newConnection?4()
 eric6.Utilities.BackgroundService.BackgroundService.preferencesOrProjectChanged?4()
 eric6.Utilities.BackgroundService.BackgroundService.restartService?4(language, forceKill=False)
-eric6.Utilities.BackgroundService.BackgroundService.serviceConnect?4(fx, lang, modulepath, module, callback, onErrorCallback=None)
+eric6.Utilities.BackgroundService.BackgroundService.serviceConnect?4(fx, lang, modulepath, module, callback, onErrorCallback=None, onBatchDone=None)
 eric6.Utilities.BackgroundService.BackgroundService.serviceDisconnect?4(fx, lang)
 eric6.Utilities.BackgroundService.BackgroundService.serviceNotAvailable?7
 eric6.Utilities.BackgroundService.BackgroundService.shutdown?4()

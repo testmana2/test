@@ -45,10 +45,13 @@ Module implementing the code style checker plug-in.
     Class implementing the code style checker plug-in.
 </p><h3>Signals</h3>
 <dl>
-<dt>styleChecked(str, dict, int, list)</dt>
+<dt>batchFinished()</dt>
 <dd>
-emited when the style check was
-        done.
+emitted when a style check batch is done
+</dd><dt>styleChecked(str, dict, int, list)</dt>
+<dd>
+emitted when the style check was
+        done for a file.
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -103,14 +106,20 @@ QObject
 <td><a href="#CodeStyleCheckerPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
 </tr><tr>
+<td><a href="#CodeStyleCheckerPlugin.batchJobDone">batchJobDone</a></td>
+<td>Public slot handling the completion of a batch job.</td>
+</tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.deactivate">deactivate</a></td>
 <td>Public method to deactivate this plugin.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.serviceErrorPy2">serviceErrorPy2</a></td>
-<td>Public method handling service errors for Python 2.</td>
+<td>Public slot handling service errors for Python 2.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.serviceErrorPy3">serviceErrorPy3</a></td>
-<td>Public method handling service errors for Python 2.</td>
+<td>Public slot handling service errors for Python 2.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerPlugin.styleBatchCheck">styleBatchCheck</a></td>
+<td>Public method to prepare a style check on multiple Python source files.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerPlugin.styleCheck">styleCheck</a></td>
 <td>Public method to prepare a style check on one Python source file.</td>
@@ -258,6 +267,19 @@ tuple for each found violation of style (tuple of
 <dd>
 tuple of None and activation status (boolean)
 </dd>
+</dl><a NAME="CodeStyleCheckerPlugin.batchJobDone" ID="CodeStyleCheckerPlugin.batchJobDone"></a>
+<h4>CodeStyleCheckerPlugin.batchJobDone</h4>
+<b>batchJobDone</b>(<i>fx, lang</i>)
+<p>
+        Public slot handling the completion of a batch job.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd>
 </dl><a NAME="CodeStyleCheckerPlugin.deactivate" ID="CodeStyleCheckerPlugin.deactivate"></a>
 <h4>CodeStyleCheckerPlugin.deactivate</h4>
 <b>deactivate</b>(<i></i>)
@@ -267,7 +289,7 @@ tuple of None and activation status (boolean)
 <h4>CodeStyleCheckerPlugin.serviceErrorPy2</h4>
 <b>serviceErrorPy2</b>(<i>fx, lang, fn, msg</i>)
 <p>
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
 </p><dl>
 <dt><i>fx</i></dt>
 <dd>
@@ -286,7 +308,7 @@ message text (string)
 <h4>CodeStyleCheckerPlugin.serviceErrorPy3</h4>
 <b>serviceErrorPy3</b>(<i>fx, lang, fn, msg</i>)
 <p>
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
 </p><dl>
 <dt><i>fx</i></dt>
 <dd>
@@ -300,6 +322,18 @@ file name (string)
 </dd><dt><i>msg</i></dt>
 <dd>
 message text (string)
+</dd>
+</dl><a NAME="CodeStyleCheckerPlugin.styleBatchCheck" ID="CodeStyleCheckerPlugin.styleBatchCheck"></a>
+<h4>CodeStyleCheckerPlugin.styleBatchCheck</h4>
+<b>styleBatchCheck</b>(<i>argumentsList</i>)
+<p>
+        Public method to prepare a style check on multiple Python source files.
+</p><dl>
+<dt><i>argumentsList</i></dt>
+<dd>
+list of arguments tuples with each tuple
+            containing filename, source and args as given in styleCheck()
+            method
 </dd>
 </dl><a NAME="CodeStyleCheckerPlugin.styleCheck" ID="CodeStyleCheckerPlugin.styleCheck"></a>
 <h4>CodeStyleCheckerPlugin.styleCheck</h4>

@@ -217,7 +217,7 @@ flag to kill a running task (bool)
 </dd>
 </dl><a NAME="BackgroundService.serviceConnect" ID="BackgroundService.serviceConnect"></a>
 <h4>BackgroundService.serviceConnect</h4>
-<b>serviceConnect</b>(<i>fx, lang, modulepath, module, callback, onErrorCallback=None</i>)
+<b>serviceConnect</b>(<i>fx, lang, modulepath, module, callback, onErrorCallback=None, onBatchDone=None</i>)
 <p>
         Public method to announce a new service to the background
         service/client.
@@ -236,10 +236,14 @@ full path to the module (str)
 name to import (str)
 </dd><dt><i>callback</i></dt>
 <dd>
-function on service response (function)
+function called on service response (function)
 </dd><dt><i>onErrorCallback</i></dt>
 <dd>
-function if client isn't available (function)
+function called, if client isn't available
+            (function)
+</dd><dt><i>onBatchDone</i></dt>
+<dd>
+function called when a batch job is done (function)
 </dd>
 </dl><a NAME="BackgroundService.serviceDisconnect" ID="BackgroundService.serviceDisconnect"></a>
 <h4>BackgroundService.serviceDisconnect</h4>

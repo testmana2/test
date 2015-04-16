@@ -37,6 +37,7 @@ class BackgroundClient(object):
         @param port port of the background service
         """
         self.services = {}
+        self.batchServices = {}
         
         self.connection = socket.create_connection((host, port))
         ver = b'Python2' if sys.version_info[0] == 2 else b'Python3'
@@ -55,6 +56,11 @@ class BackgroundClient(object):
         try:
             importedModule = __import__(module, globals(), locals(), [], 0)
             self.services[fn] = importedModule.initService()
+            try:
+                self.batchServices["batch_" + fn] = \
+                    importedModule.initBatchService()
+            except AttributeError:
+                pass
             return 'ok'
         except ImportError:
             return 'Import Error'
@@ -112,6 +118,13 @@ class BackgroundClient(object):
                 fx, fn, data = json.loads(packedData)
                 if fx == 'INIT':
                     ret = self.__initClientService(fn, *data)
+                elif fx.startswith("batch_"):
+                    callback = self.batchServices.get(fx)
+                    if callback:
+                        callback(data, self.__send, fx)
+                        ret = "__DONE__"
+                    else:
+                        ret = 'Unknown batch service.'
                 else:
                     callback = self.services.get(fx)
                     if callback:
