@@ -101,8 +101,12 @@ class CodeStyleCheckerPlugin(QObject):
         @param fn file name (string)
         @param msg message text (string)
         """
-        if fx == 'style' and lang == 'Python2':
-            self.__serviceError(fn, msg)
+        if fx in ['style', 'batch_style'] and lang == 'Python2':
+            if fx == 'style':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 2 batch check"), msg)
+                self.batchJobDone(fx, lang)
     
     def serviceErrorPy3(self, fx, lang, fn, msg):
         """
@@ -113,8 +117,12 @@ class CodeStyleCheckerPlugin(QObject):
         @param fn file name (string)
         @param msg message text (string)
         """
-        if fx == 'style' and lang == 'Python3':
-            self.__serviceError(fn, msg)
+        if fx in ['style', 'batch_style'] and lang == 'Python3':
+            if fx == 'style':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 3 batch check"), msg)
+                self.batchJobDone(fx, lang)
     
     def batchJobDone(self, fx, lang):
         """
@@ -123,7 +131,7 @@ class CodeStyleCheckerPlugin(QObject):
         @param fx service name (string)
         @param lang language (string)
         """
-        if fx == 'style':
+        if fx in ['style', 'batch_style']:
             if lang in self.queuedBatches:
                 self.queuedBatches.remove(lang)
             # prevent sending the signal multiple times
