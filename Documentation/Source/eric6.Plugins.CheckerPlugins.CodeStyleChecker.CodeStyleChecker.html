@@ -162,7 +162,7 @@ tuple of stats (dict) and results (tuple for each found violation
 <hr /><hr />
 <a NAME="codeStyleBatchCheck" ID="codeStyleBatchCheck"></a>
 <h2>codeStyleBatchCheck</h2>
-<b>codeStyleBatchCheck</b>(<i>argumentsList, send, fx</i>)
+<b>codeStyleBatchCheck</b>(<i>argumentsList, send, fx, cancelled</i>)
 <p>
     Module function to check code style for a batch of files.
 </p><dl>
@@ -171,10 +171,14 @@ tuple of stats (dict) and results (tuple for each found violation
 list of arguments tuples as given for codeStyleCheck
 </dd><dt><i>send</i></dt>
 <dd>
-reference to send method
+reference to send function (function)
 </dd><dt><i>fx</i></dt>
 <dd>
 registered service name (string)
+</dd><dt><i>cancelled</i></dt>
+<dd>
+reference to function checking for a cancellation
+        (function)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

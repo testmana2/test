@@ -85,6 +85,9 @@ QTcpServer
 <td><a href="#BackgroundService.preferencesOrProjectChanged">preferencesOrProjectChanged</a></td>
 <td>Public slot to restart the built in languages.</td>
 </tr><tr>
+<td><a href="#BackgroundService.requestCancel">requestCancel</a></td>
+<td>Public method to ask a batch job to terminate.</td>
+</tr><tr>
 <td><a href="#BackgroundService.restartService">restartService</a></td>
 <td>Public method to restart a given lanuage.</td>
 </tr><tr>
@@ -202,7 +205,17 @@ client language which connection is lost (str)
 <b>preferencesOrProjectChanged</b>(<i></i>)
 <p>
         Public slot to restart the built in languages.
-</p><a NAME="BackgroundService.restartService" ID="BackgroundService.restartService"></a>
+</p><a NAME="BackgroundService.requestCancel" ID="BackgroundService.requestCancel"></a>
+<h4>BackgroundService.requestCancel</h4>
+<b>requestCancel</b>(<i>lang</i>)
+<p>
+        Public method to ask a batch job to terminate.
+</p><dl>
+<dt><i>lang</i></dt>
+<dd>
+language to connect to (str)
+</dd>
+</dl><a NAME="BackgroundService.restartService" ID="BackgroundService.restartService"></a>
 <h4>BackgroundService.restartService</h4>
 <b>restartService</b>(<i>language, forceKill=False</i>)
 <p>
