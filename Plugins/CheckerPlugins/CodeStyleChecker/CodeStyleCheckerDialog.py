@@ -28,7 +28,6 @@ import Utilities
 from . import pep8
 
 
-# TODO: implement CANCEL for batch jobs (if possible)
 class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     """
     Class implementing a dialog to show the results of the code style check.
@@ -445,9 +444,6 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         self.__lastFileItem = None
         
-        # Cancel doesn't work for batch jobs
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
-        
         self.checkProgressLabel.setPath(self.tr("Preparing files..."))
         progress = 0
         
@@ -587,10 +583,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         if self.noResults:
             QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
             QApplication.processEvents()
-            self.statisticsButton.setEnabled(False)
             self.showButton.setEnabled(False)
         else:
-            self.statisticsButton.setEnabled(True)
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
@@ -856,7 +850,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__batch:
+                self.styleCheckService.cancelStyleBatchCheck()
+            else:
+                self.__finish()
         elif button == self.showButton:
             self.on_showButton_clicked()
         elif button == self.statisticsButton:

@@ -203,6 +203,13 @@ class CodeStyleCheckerPlugin(QObject):
                                                       data[lang])
                 self.batchesFinished = False
     
+    def cancelStyleBatchCheck(self):
+        """
+        Public method to cancel all batch jobs.
+        """
+        for lang in ['Python2', 'Python3']:
+            self.backgroundService.requestCancel(lang)
+    
     def __translateStyleCheck(self, fn, codeStyleCheckerStats, results):
         """
         Private slot called after perfoming a style check on one file.

@@ -132,6 +132,7 @@ class BackgroundService(QTcpServer):
             header = struct.pack(
                 b'!II', len(packedData), adler32(packedData) & 0xffffffff)
             connection.write(header)
+            connection.write(b'JOB   ')    # 6 character message type
             connection.write(packedData)
 
     def __receive(self, lang):
@@ -142,7 +143,7 @@ class BackgroundService(QTcpServer):
         """
         connection = self.connections[lang]
         while connection.bytesAvailable():
-            header = connection.read(8)
+            header = connection.read(struct.calcsize(b'!II'))
             length, datahash = struct.unpack(b'!II', header)
             
             packedData = b''
@@ -289,6 +290,20 @@ class BackgroundService(QTcpServer):
             else:
                 self.__queue.append(args)
         self.__processQueue()
+    
+    def requestCancel(self, lang):
+        """
+        Public method to ask a batch job to terminate.
+        
+        @param lang language to connect to (str)
+        """
+        connection = self.connections.get(lang)
+        if connection is None:
+            return
+        else:
+            header = struct.pack(b'!II', 0, 0)
+            connection.write(header)
+            connection.write(b'CANCEL')    # 6 character message type
     
     def serviceConnect(
             self, fx, lang, modulepath, module, callback,

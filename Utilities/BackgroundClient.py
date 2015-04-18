@@ -86,7 +86,7 @@ class BackgroundClient(object):
         Private methode to receive the given length of bytes.
         
         @param length bytes to receive (int)
-        @return received bytes or None if connection closed (str)
+        @return received bytes or None if connection closed (bytes)
         """
         data = b''
         while len(data) < length:
@@ -96,19 +96,53 @@ class BackgroundClient(object):
             data += newData
         return data
     
+    def __peek(self, length):
+        """
+        Private methode to peek the given length of bytes.
+        
+        @param length bytes to receive (int)
+        @return received bytes (bytes)
+        """
+        data = b''
+        self.connection.setblocking(False)
+        try:
+            data = self.connection.recv(length, socket.MSG_PEEK)
+        except socket.error:
+            pass
+        self.connection.setblocking(True)
+        return data
+    
+    def __cancelled(self):
+        """
+        Private method to check for a job cancellation.
+        
+        @return flag indicating a cancellation (boolean)
+        """
+        msg = self.__peek(struct.calcsize(b'!II') + 6)
+        if msg[-6:] == b"CANCEL":
+            # get rid of the message data
+            self.__peek(struct.calcsize(b'!II') + 6)
+            return True
+        else:
+            return False
+    
     def run(self):
         """
         Public method implementing the main loop of the client.
         """
         try:
             while True:
-                header = self.__receive(8)
+                header = self.__receive(struct.calcsize(b'!II'))
                 # Leave main loop if connection was closed.
                 if not header:
                     break
                 
                 length, datahash = struct.unpack(b'!II', header)
+                messageType = self.__receive(6)
                 packedData = self.__receive(length)
+                
+                if messageType != b"JOB   ":
+                    continue
                 
                 assert adler32(packedData) & 0xffffffff == datahash, \
                     'Hashes not equal'
@@ -121,7 +155,7 @@ class BackgroundClient(object):
                 elif fx.startswith("batch_"):
                     callback = self.batchServices.get(fx)
                     if callback:
-                        callback(data, self.__send, fx)
+                        callback(data, self.__send, fx, self.__cancelled)
                         ret = "__DONE__"
                     else:
                         ret = 'Unknown batch service.'

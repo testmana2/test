@@ -112,25 +112,30 @@ def codeStyleCheck(filename, source, args):
     return __checkCodeStyle(filename, source, args)
 
 
-def codeStyleBatchCheck(argumentsList, send, fx):
+def codeStyleBatchCheck(argumentsList, send, fx, cancelled):
     """
     Module function to check code style for a batch of files.
     
     @param argumentsList list of arguments tuples as given for codeStyleCheck
-    @param send reference to send method
+    @param send reference to send function (function)
     @param fx registered service name (string)
+    @param cancelled reference to function checking for a cancellation
+        (function)
     """
     try:
         NumberOfProcesses = multiprocessing.cpu_count()
+        if NumberOfProcesses >= 1:
+            NumberOfProcesses -= 1
     except NotImplementedError:
-        NumberOfProcesses = 4
+        NumberOfProcesses = 1
 
     # Create queues
     taskQueue = multiprocessing.Queue()
     doneQueue = multiprocessing.Queue()
 
-    # Submit tasks
-    for task in argumentsList:
+    # Submit tasks (initially two time number of processes
+    initialTasks = 2 * NumberOfProcesses
+    for task in argumentsList[:initialTasks]:
         taskQueue.put(task)
 
     # Start worker processes
@@ -139,9 +144,15 @@ def codeStyleBatchCheck(argumentsList, send, fx):
             .start()
 
     # Get and send results
+    endIndex = len(argumentsList) - initialTasks
     for i in range(len(argumentsList)):
         filename, result = doneQueue.get()
         send(fx, filename, result)
+        if cancelled():
+            # just exit the loop ignoring the results of queued tasks
+            break
+        if i < endIndex:
+            taskQueue.put(argumentsList[i + initialTasks])
 
     # Tell child processes to stop
     for i in range(NumberOfProcesses):
