@@ -1500,12 +1500,14 @@ class Editor(QsciScintillaCompat):
             self.SCN_STYLENEEDED.disconnect(self.__styleNeeded)
         
         language = ""
-        basename = os.path.basename(filename)
         if not self.filetype:
-            if self.project.isOpen() and self.project.isProjectFile(filename):
-                language = self.project.getEditorLexerAssoc(basename)
-            if not language:
-                language = Preferences.getEditorLexerAssoc(basename)
+            if filename:
+                basename = os.path.basename(filename)
+                if self.project.isOpen() and \
+                        self.project.isProjectFile(filename):
+                    language = self.project.getEditorLexerAssoc(basename)
+                if not language:
+                    language = Preferences.getEditorLexerAssoc(basename)
             if not language:
                 bindName = self.__bindName(self.text(0))
                 if bindName:
@@ -3908,6 +3910,9 @@ class Editor(QsciScintillaCompat):
             
             self.lexer_.setDefaultColor(self.lexer_.color(0))
             self.lexer_.setDefaultPaper(self.lexer_.paper(0))
+        
+        self.__bindLexer(self.fileName)
+        self.recolor()
         
         # read the typing completer settings
         if self.completer is not None:
