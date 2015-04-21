@@ -85,11 +85,13 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         self.styleCheckService = styleCheckService
         self.styleCheckService.styleChecked.connect(self.__processResult)
+        self.styleCheckService.batchFinished.connect(self.__batchFinished)
         self.filename = None
         
         self.noResults = True
         self.cancelled = False
         self.__lastFileItem = None
+        self.__finished = True
         
         self.__fileOrFileList = ""
         self.__project = None
@@ -365,7 +367,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             # now go through all the files
             self.progress = 0
             self.files.sort()
-            self.check()
+            if len(self.files) == 1:
+                self.__batch = False
+                self.check()
+            else:
+                self.__batch = True
+                self.checkBatch()
         
     def check(self, codestring=''):
         """
@@ -425,9 +432,72 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         args = self.__options + [
             errors, eol, encoding, Preferences.getEditor("CreateBackupFile")
         ]
+        self.__finished = False
         self.styleCheckService.styleCheck(
             None, self.filename, source, args)
-
+    
+    def checkBatch(self):
+        """
+        Public method to start a style check batch job.
+        
+        The results are reported to the __processResult slot.
+        """
+        self.__lastFileItem = None
+        
+        self.checkProgressLabel.setPath(self.tr("Preparing files..."))
+        progress = 0
+        
+        argumentsList = []
+        for filename in self.files:
+            progress += 1
+            self.checkProgress.setValue(progress)
+            QApplication.processEvents()
+            
+            try:
+                source, encoding = Utilities.readEncodedFile(
+                    filename)
+                source = source.splitlines(True)
+            except (UnicodeError, IOError) as msg:
+                self.noResults = False
+                self.__createResultItem(
+                    filename, 1, 1,
+                    self.tr("Error: {0}").format(str(msg))
+                        .rstrip(), False, False, False)
+                continue
+            
+            if encoding.endswith(
+                    ('-selected', '-default', '-guessed', '-ignore')):
+                encoding = encoding.rsplit('-', 1)[0]
+            
+            errors = []
+            self.__itms = []
+            for error, itm in self.__onlyFixes.pop(filename, []):
+                errors.append(error)
+                self.__itms.append(itm)
+            
+            eol = self.__getEol(filename)
+            args = self.__options + [
+                errors, eol, encoding,
+                Preferences.getEditor("CreateBackupFile")
+            ]
+            argumentsList.append((filename, source, args))
+        
+        # reset the progress bar to the checked files
+        self.checkProgress.setValue(self.progress)
+        QApplication.processEvents()
+        
+        self.__finished = False
+        self.styleCheckService.styleBatchCheck(argumentsList)
+    
+    def __batchFinished(self):
+        """
+        Private slot handling the completion of a batch job.
+        """
+        self.checkProgressLabel.setPath("")
+        self.checkProgress.setMaximum(1)
+        self.checkProgress.setValue(1)
+        self.__finish()
+    
     def __processResult(self, fn, codeStyleCheckerStats, fixes, results):
         """
         Private slot called after perfoming a style check on one file.
@@ -439,8 +509,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             lineno (int), position (int), text (str), ignored (bool),
             fixed (bool), autofixing (bool))
         """
-        # Check if it's the requested file, otherwise ignore signal
-        if fn != self.filename:
+        if self.__finished:
+            return
+        
+        # Check if it's the requested file, otherwise ignore signal if not
+        # in batch mode
+        if not self.__batch and fn != self.filename:
             return
         
         # disable updates of the list for speed
@@ -455,6 +529,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 self.__modifyFixedResultItem(itm, text, fixed)
             self.__updateFixerStatistics(fixes)
         else:
+            self.__lastFileItem = None
+            
             for lineno, position, text, ignored, fixed, autofixing in results:
                 if ignored:
                     ignoredErrors += 1
@@ -483,15 +559,19 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.resultList.setUpdatesEnabled(True)
         
         self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(fn)
         QApplication.processEvents()
         
-        self.check()
+        if not self.__batch:
+            self.check()
     
     def __finish(self):
         """
         Private slot called when the code style check finished or the user
         pressed the cancel button.
         """
+        self.__finished = True
+        
         self.cancelled = True
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
@@ -503,10 +583,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         if self.noResults:
             QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
             QApplication.processEvents()
-            self.statisticsButton.setEnabled(False)
             self.showButton.setEnabled(False)
         else:
-            self.statisticsButton.setEnabled(True)
             self.showButton.setEnabled(True)
         self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
         self.resultList.header().setStretchLastSection(True)
@@ -772,7 +850,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__batch:
+                self.styleCheckService.cancelStyleBatchCheck()
+            else:
+                self.__finish()
         elif button == self.showButton:
             self.on_showButton_clicked()
         elif button == self.statisticsButton:

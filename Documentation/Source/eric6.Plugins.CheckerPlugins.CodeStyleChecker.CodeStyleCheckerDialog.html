@@ -60,6 +60,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td><a href="#CodeStyleCheckerDialog.__init__">CodeStyleCheckerDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__batchFinished">__batchFinished</a></td>
+<td>Private slot handling the completion of a batch job.</td>
+</tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__clearErrors">__clearErrors</a></td>
 <td>Private method to clear all warning markers of open editors to be checked.</td>
 </tr><tr>
@@ -101,6 +104,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.check">check</a></td>
 <td>Public method to start a style check for one file.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerDialog.checkBatch">checkBatch</a></td>
+<td>Public method to start a style check batch job.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
 <td>Private slot called by a button of the button box clicked.</td>
@@ -169,7 +175,12 @@ reference to the service
 <dd>
 reference to the parent widget (QWidget)
 </dd>
-</dl><a NAME="CodeStyleCheckerDialog.__clearErrors" ID="CodeStyleCheckerDialog.__clearErrors"></a>
+</dl><a NAME="CodeStyleCheckerDialog.__batchFinished" ID="CodeStyleCheckerDialog.__batchFinished"></a>
+<h4>CodeStyleCheckerDialog.__batchFinished</h4>
+<b>__batchFinished</b>(<i></i>)
+<p>
+        Private slot handling the completion of a batch job.
+</p><a NAME="CodeStyleCheckerDialog.__clearErrors" ID="CodeStyleCheckerDialog.__clearErrors"></a>
 <h4>CodeStyleCheckerDialog.__clearErrors</h4>
 <b>__clearErrors</b>(<i>files</i>)
 <p>
@@ -361,7 +372,14 @@ number of ignored errors (integer)
 <dd>
 optional sourcestring (str)
 </dd>
-</dl><a NAME="CodeStyleCheckerDialog.on_buttonBox_clicked" ID="CodeStyleCheckerDialog.on_buttonBox_clicked"></a>
+</dl><a NAME="CodeStyleCheckerDialog.checkBatch" ID="CodeStyleCheckerDialog.checkBatch"></a>
+<h4>CodeStyleCheckerDialog.checkBatch</h4>
+<b>checkBatch</b>(<i></i>)
+<p>
+        Public method to start a style check batch job.
+</p><p>
+        The results are reported to the __processResult slot.
+</p><a NAME="CodeStyleCheckerDialog.on_buttonBox_clicked" ID="CodeStyleCheckerDialog.on_buttonBox_clicked"></a>
 <h4>CodeStyleCheckerDialog.on_buttonBox_clicked</h4>
 <b>on_buttonBox_clicked</b>(<i>button</i>)
 <p>

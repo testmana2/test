@@ -1129,6 +1129,7 @@ class DebugClientBase(object):
         @param redirect flag indicating redirection of stdin, stdout and
             stderr (boolean)
         """
+        # TODO: replace this by socket.create_connection
         if remoteAddress is None:                       # default: 127.0.0.1
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.connect((DebugProtocol.DebugAddress, port))

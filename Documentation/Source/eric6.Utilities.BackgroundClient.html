@@ -61,8 +61,14 @@ object
 <td><a href="#BackgroundClient.__init__">BackgroundClient</a></td>
 <td>Constructor of the BackgroundClient class.</td>
 </tr><tr>
+<td><a href="#BackgroundClient.__cancelled">__cancelled</a></td>
+<td>Private method to check for a job cancellation.</td>
+</tr><tr>
 <td><a href="#BackgroundClient.__initClientService">__initClientService</a></td>
 <td>Private method to import the given module and register it as service.</td>
+</tr><tr>
+<td><a href="#BackgroundClient.__peek">__peek</a></td>
+<td>Private methode to peek the given length of bytes.</td>
 </tr><tr>
 <td><a href="#BackgroundClient.__receive">__receive</a></td>
 <td>Private methode to receive the given length of bytes.</td>
@@ -91,6 +97,16 @@ ip address the background service is listening
 <dd>
 port of the background service
 </dd>
+</dl><a NAME="BackgroundClient.__cancelled" ID="BackgroundClient.__cancelled"></a>
+<h4>BackgroundClient.__cancelled</h4>
+<b>__cancelled</b>(<i></i>)
+<p>
+        Private method to check for a job cancellation.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a cancellation (boolean)
+</dd>
 </dl><a NAME="BackgroundClient.__initClientService" ID="BackgroundClient.__initClientService"></a>
 <h4>BackgroundClient.__initClientService</h4>
 <b>__initClientService</b>(<i>fn, path, module</i>)
@@ -112,6 +128,21 @@ name to import (str)
 <dd>
 text result of the import action (str)
 </dd>
+</dl><a NAME="BackgroundClient.__peek" ID="BackgroundClient.__peek"></a>
+<h4>BackgroundClient.__peek</h4>
+<b>__peek</b>(<i>length</i>)
+<p>
+        Private methode to peek the given length of bytes.
+</p><dl>
+<dt><i>length</i></dt>
+<dd>
+bytes to receive (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+received bytes (bytes)
+</dd>
 </dl><a NAME="BackgroundClient.__receive" ID="BackgroundClient.__receive"></a>
 <h4>BackgroundClient.__receive</h4>
 <b>__receive</b>(<i>length</i>)
@@ -125,7 +156,7 @@ bytes to receive (int)
 </dl><dl>
 <dt>Returns:</dt>
 <dd>
-received bytes or None if connection closed (str)
+received bytes or None if connection closed (bytes)
 </dd>
 </dl><a NAME="BackgroundClient.__send" ID="BackgroundClient.__send"></a>
 <h4>BackgroundClient.__send</h4>

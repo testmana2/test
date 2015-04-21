@@ -47,10 +47,12 @@ class CodeStyleCheckerPlugin(QObject):
     """
     Class implementing the code style checker plug-in.
     
-    @signal styleChecked(str, dict, int, list) emited when the style check was
-        done.
+    @signal styleChecked(str, dict, int, list) emitted when the style check was
+        done for a file.
+    @signal batchFinished() emitted when a style check batch is done
     """
     styleChecked = pyqtSignal(str, dict, int, list)
+    batchFinished = pyqtSignal()
     
     def __init__(self, ui):
         """
@@ -69,11 +71,16 @@ class CodeStyleCheckerPlugin(QObject):
         self.backgroundService.serviceConnect(
             'style', 'Python2', path, 'CodeStyleChecker',
             self.__translateStyleCheck,
-            onErrorCallback=self.serviceErrorPy2)
+            onErrorCallback=self.serviceErrorPy2,
+            onBatchDone=self.batchJobDone)
         self.backgroundService.serviceConnect(
             'style', 'Python3', path, 'CodeStyleChecker',
             self.__translateStyleCheck,
-            onErrorCallback=self.serviceErrorPy3)
+            onErrorCallback=self.serviceErrorPy3,
+            onBatchDone=self.batchJobDone)
+        
+        self.queuedBatches = []
+        self.batchesFinished = True
     
     def __serviceError(self, fn, msg):
         """
@@ -87,28 +94,51 @@ class CodeStyleCheckerPlugin(QObject):
     
     def serviceErrorPy2(self, fx, lang, fn, msg):
         """
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
         
         @param fx service name (string)
         @param lang language (string)
         @param fn file name (string)
         @param msg message text (string)
         """
-        if fx == 'style' and lang == 'Python2':
-            self.__serviceError(fn, msg)
+        if fx in ['style', 'batch_style'] and lang == 'Python2':
+            if fx == 'style':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 2 batch check"), msg)
+                self.batchJobDone(fx, lang)
     
     def serviceErrorPy3(self, fx, lang, fn, msg):
         """
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
         
         @param fx service name (string)
         @param lang language (string)
         @param fn file name (string)
         @param msg message text (string)
         """
-        if fx == 'style' and lang == 'Python3':
-            self.__serviceError(fn, msg)
-
+        if fx in ['style', 'batch_style'] and lang == 'Python3':
+            if fx == 'style':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 3 batch check"), msg)
+                self.batchJobDone(fx, lang)
+    
+    def batchJobDone(self, fx, lang):
+        """
+        Public slot handling the completion of a batch job.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        """
+        if fx in ['style', 'batch_style']:
+            if lang in self.queuedBatches:
+                self.queuedBatches.remove(lang)
+            # prevent sending the signal multiple times
+            if len(self.queuedBatches) == 0 and not self.batchesFinished:
+                self.batchFinished.emit()
+                self.batchesFinished = True
+    
     def __initialize(self):
         """
         Private slot to (re)initialize the plugin.
@@ -146,6 +176,40 @@ class CodeStyleCheckerPlugin(QObject):
         data = [source, args]
         self.backgroundService.enqueueRequest('style', lang, filename, data)
     
+    def styleBatchCheck(self, argumentsList):
+        """
+        Public method to prepare a style check on multiple Python source files.
+        
+        @param argumentsList list of arguments tuples with each tuple
+            containing filename, source and args as given in styleCheck()
+            method
+        """
+        data = {
+            "Python2": [],
+            "Python3": [],
+        }
+        for filename, source, args in argumentsList:
+            lang = 'Python{0}'.format(determinePythonVersion(filename, source))
+            if lang not in ['Python2', 'Python3']:
+                continue
+            else:
+                data[lang].append((filename, source, args))
+        
+        self.queuedBatches = []
+        for lang in ['Python2', 'Python3']:
+            if data[lang]:
+                self.queuedBatches.append(lang)
+                self.backgroundService.enqueueRequest('batch_style', lang, "",
+                                                      data[lang])
+                self.batchesFinished = False
+    
+    def cancelStyleBatchCheck(self):
+        """
+        Public method to cancel all batch jobs.
+        """
+        for lang in ['Python2', 'Python3']:
+            self.backgroundService.requestCancel(lang)
+    
     def __translateStyleCheck(self, fn, codeStyleCheckerStats, results):
         """
         Private slot called after perfoming a style check on one file.
@@ -158,7 +222,7 @@ class CodeStyleCheckerPlugin(QObject):
         """
         from CheckerPlugins.CodeStyleChecker.translations import \
             getTranslatedMessage
-            
+        
         fixes = 0
         for result in results:
             msg = getTranslatedMessage(result[2])

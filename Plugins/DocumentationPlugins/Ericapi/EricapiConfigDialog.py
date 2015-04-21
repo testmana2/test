@@ -190,7 +190,10 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         """
         startFile = Utilities.fromNativeSeparators(self.outputFileEdit.text())
         if not startFile:
-            startFile = self.project.getProjectName() + ".api"
+            startPath = Utilities.fromNativeSeparators(
+                self.project.getProjectPath())
+            startFile = (startPath + "/" +
+                         self.project.getProjectName() + ".api")
         filename = E5FileDialog.getSaveFileName(
             self,
             self.tr("Select output file"),

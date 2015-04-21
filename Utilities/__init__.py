@@ -1682,7 +1682,7 @@ def generateVersionInfo(linesep='\n'):
     
     info = "Version Numbers:{0}  Python {1}{2}".format(
         linesep, sys.version.split()[0], linesep)
-    info += "  Qt {0}{1}  PyQt5 {2}{3}".format(
+    info += "  Qt {0}{1}  PyQt {2}{3}".format(
         qVersion(), linesep, PYQT_VERSION_STR, linesep)
     info += "  sip {0}{1}  QScintilla {2}{3}".format(
         sip_version_str, linesep, QSCINTILLA_VERSION_STR, linesep)

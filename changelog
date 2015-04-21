@@ -5,6 +5,9 @@ Version 6.1-snapshot-2015mmdd:
 - General
   -- added a configuration page to edit the list of mime types to
      be opened in an eric editor
+- Checkers
+  -- added a batch mode to the code style checker to make use of
+     multiple CPUs/CPU-Cores
 - Editor
   -- added capability to configure the indentation guides colors
   -- Lexers

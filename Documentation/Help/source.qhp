@@ -1493,7 +1493,9 @@
       <keyword name="BackgroundClient" id="BackgroundClient" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient" />
       <keyword name="BackgroundClient (Constructor)" id="BackgroundClient (Constructor)" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.__init__" />
       <keyword name="BackgroundClient (Module)" id="BackgroundClient (Module)" ref="eric6.Utilities.BackgroundClient.html" />
+      <keyword name="BackgroundClient.__cancelled" id="BackgroundClient.__cancelled" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.__cancelled" />
       <keyword name="BackgroundClient.__initClientService" id="BackgroundClient.__initClientService" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.__initClientService" />
+      <keyword name="BackgroundClient.__peek" id="BackgroundClient.__peek" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.__peek" />
       <keyword name="BackgroundClient.__receive" id="BackgroundClient.__receive" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.__receive" />
       <keyword name="BackgroundClient.__send" id="BackgroundClient.__send" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.__send" />
       <keyword name="BackgroundClient.run" id="BackgroundClient.run" ref="eric6.Utilities.BackgroundClient.html#BackgroundClient.run" />
@@ -1508,6 +1510,7 @@
       <keyword name="BackgroundService.on_disconnectSocket" id="BackgroundService.on_disconnectSocket" ref="eric6.Utilities.BackgroundService.html#BackgroundService.on_disconnectSocket" />
       <keyword name="BackgroundService.on_newConnection" id="BackgroundService.on_newConnection" ref="eric6.Utilities.BackgroundService.html#BackgroundService.on_newConnection" />
       <keyword name="BackgroundService.preferencesOrProjectChanged" id="BackgroundService.preferencesOrProjectChanged" ref="eric6.Utilities.BackgroundService.html#BackgroundService.preferencesOrProjectChanged" />
+      <keyword name="BackgroundService.requestCancel" id="BackgroundService.requestCancel" ref="eric6.Utilities.BackgroundService.html#BackgroundService.requestCancel" />
       <keyword name="BackgroundService.restartService" id="BackgroundService.restartService" ref="eric6.Utilities.BackgroundService.html#BackgroundService.restartService" />
       <keyword name="BackgroundService.serviceConnect" id="BackgroundService.serviceConnect" ref="eric6.Utilities.BackgroundService.html#BackgroundService.serviceConnect" />
       <keyword name="BackgroundService.serviceDisconnect" id="BackgroundService.serviceDisconnect" ref="eric6.Utilities.BackgroundService.html#BackgroundService.serviceDisconnect" />
@@ -2140,6 +2143,7 @@
       <keyword name="CodeStyleCheckerDialog" id="CodeStyleCheckerDialog" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog" />
       <keyword name="CodeStyleCheckerDialog (Constructor)" id="CodeStyleCheckerDialog (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__init__" />
       <keyword name="CodeStyleCheckerDialog (Module)" id="CodeStyleCheckerDialog (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html" />
+      <keyword name="CodeStyleCheckerDialog.__batchFinished" id="CodeStyleCheckerDialog.__batchFinished" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__batchFinished" />
       <keyword name="CodeStyleCheckerDialog.__clearErrors" id="CodeStyleCheckerDialog.__clearErrors" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__clearErrors" />
       <keyword name="CodeStyleCheckerDialog.__createResultItem" id="CodeStyleCheckerDialog.__createResultItem" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__createResultItem" />
       <keyword name="CodeStyleCheckerDialog.__finish" id="CodeStyleCheckerDialog.__finish" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__finish" />
@@ -2154,6 +2158,7 @@
       <keyword name="CodeStyleCheckerDialog.__updateFixerStatistics" id="CodeStyleCheckerDialog.__updateFixerStatistics" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__updateFixerStatistics" />
       <keyword name="CodeStyleCheckerDialog.__updateStatistics" id="CodeStyleCheckerDialog.__updateStatistics" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__updateStatistics" />
       <keyword name="CodeStyleCheckerDialog.check" id="CodeStyleCheckerDialog.check" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.check" />
+      <keyword name="CodeStyleCheckerDialog.checkBatch" id="CodeStyleCheckerDialog.checkBatch" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.checkBatch" />
       <keyword name="CodeStyleCheckerDialog.on_buttonBox_clicked" id="CodeStyleCheckerDialog.on_buttonBox_clicked" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.on_buttonBox_clicked" />
       <keyword name="CodeStyleCheckerDialog.on_excludeMessagesSelectButton_clicked" id="CodeStyleCheckerDialog.on_excludeMessagesSelectButton_clicked" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.on_excludeMessagesSelectButton_clicked" />
       <keyword name="CodeStyleCheckerDialog.on_fixButton_clicked" id="CodeStyleCheckerDialog.on_fixButton_clicked" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.on_fixButton_clicked" />
@@ -2184,9 +2189,12 @@
       <keyword name="CodeStyleCheckerPlugin.__serviceError" id="CodeStyleCheckerPlugin.__serviceError" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__serviceError" />
       <keyword name="CodeStyleCheckerPlugin.__translateStyleCheck" id="CodeStyleCheckerPlugin.__translateStyleCheck" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.__translateStyleCheck" />
       <keyword name="CodeStyleCheckerPlugin.activate" id="CodeStyleCheckerPlugin.activate" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.activate" />
+      <keyword name="CodeStyleCheckerPlugin.batchJobDone" id="CodeStyleCheckerPlugin.batchJobDone" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.batchJobDone" />
+      <keyword name="CodeStyleCheckerPlugin.cancelStyleBatchCheck" id="CodeStyleCheckerPlugin.cancelStyleBatchCheck" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.cancelStyleBatchCheck" />
       <keyword name="CodeStyleCheckerPlugin.deactivate" id="CodeStyleCheckerPlugin.deactivate" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.deactivate" />
       <keyword name="CodeStyleCheckerPlugin.serviceErrorPy2" id="CodeStyleCheckerPlugin.serviceErrorPy2" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.serviceErrorPy2" />
       <keyword name="CodeStyleCheckerPlugin.serviceErrorPy3" id="CodeStyleCheckerPlugin.serviceErrorPy3" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.serviceErrorPy3" />
+      <keyword name="CodeStyleCheckerPlugin.styleBatchCheck" id="CodeStyleCheckerPlugin.styleBatchCheck" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.styleBatchCheck" />
       <keyword name="CodeStyleCheckerPlugin.styleCheck" id="CodeStyleCheckerPlugin.styleCheck" ref="eric6.Plugins.PluginCodeStyleChecker.html#CodeStyleCheckerPlugin.styleCheck" />
       <keyword name="CodeStyleCheckerReport" id="CodeStyleCheckerReport" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#CodeStyleCheckerReport" />
       <keyword name="CodeStyleCheckerReport (Constructor)" id="CodeStyleCheckerReport (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#CodeStyleCheckerReport.__init__" />
@@ -13015,6 +13023,7 @@
       <keyword name="_ClbrBase.setEndLine" id="_ClbrBase.setEndLine" ref="eric6.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.setEndLine" />
       <keyword name="_StrikeThroughExtension" id="_StrikeThroughExtension" ref="eric6.UI.Previewers.PreviewerHTML.html#_StrikeThroughExtension" />
       <keyword name="_StrikeThroughExtension.extendMarkdown" id="_StrikeThroughExtension.extendMarkdown" ref="eric6.UI.Previewers.PreviewerHTML.html#_StrikeThroughExtension.extendMarkdown" />
+      <keyword name="__checkCodeStyle" id="__checkCodeStyle" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#__checkCodeStyle" />
       <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric6.Utilities.crypto.__init__.html#__getMasterPassword" />
       <keyword name="__getPygmentsLexer" id="__getPygmentsLexer" ref="eric6.QScintilla.Lexers.__init__.html#__getPygmentsLexer" />
       <keyword name="__initChannelModesDict" id="__initChannelModesDict" ref="eric6.Network.IRC.IrcUtilities.html#__initChannelModesDict" />
@@ -13055,6 +13064,7 @@
       <keyword name="cleanupSource" id="cleanupSource" ref="eric6.install.html#cleanupSource" />
       <keyword name="cleanupSource (Module)" id="cleanupSource (Module)" ref="eric6.cleanupSource.html" />
       <keyword name="close" id="close" ref="eric6.DebugClients.Ruby.AsyncFile.html#close" />
+      <keyword name="codeStyleBatchCheck" id="codeStyleBatchCheck" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#codeStyleBatchCheck" />
       <keyword name="codeStyleCheck" id="codeStyleCheck" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#codeStyleCheck" />
       <keyword name="compactPath" id="compactPath" ref="eric6.Utilities.__init__.html#compactPath" />
       <keyword name="comparison_negative" id="comparison_negative" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_negative" />
@@ -13396,6 +13406,7 @@
       <keyword name="imports_on_separate_lines" id="imports_on_separate_lines" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#imports_on_separate_lines" />
       <keyword name="indentation" id="indentation" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#indentation" />
       <keyword name="information" id="information" ref="eric6.E5Gui.E5MessageBox.html#information" />
+      <keyword name="initBatchService" id="initBatchService" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#initBatchService" />
       <keyword name="initDebugger" id="initDebugger" ref="eric6.DebugClients.Python.eric6dbgstub.html#initDebugger" />
       <keyword name="initDebugger" id="initDebugger" ref="eric6.DebugClients.Python3.eric6dbgstub.html#initDebugger" />
       <keyword name="initGlobals" id="initGlobals" ref="eric6.install.html#initGlobals" />
@@ -13682,6 +13693,7 @@
       <keyword name="win32_GetUserName" id="win32_GetUserName" ref="eric6.Utilities.__init__.html#win32_GetUserName" />
       <keyword name="win32_Kill" id="win32_Kill" ref="eric6.Utilities.__init__.html#win32_Kill" />
       <keyword name="win32_getRealName" id="win32_getRealName" ref="eric6.Utilities.__init__.html#win32_getRealName" />
+      <keyword name="worker" id="worker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#worker" />
       <keyword name="wrapperName" id="wrapperName" ref="eric6.install.html#wrapperName" />
       <keyword name="wrapperName" id="wrapperName" ref="eric6.uninstall.html#wrapperName" />
       <keyword name="write" id="write" ref="eric6.DebugClients.Ruby.AsyncFile.html#write" />

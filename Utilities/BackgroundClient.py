@@ -37,6 +37,7 @@ class BackgroundClient(object):
         @param port port of the background service
         """
         self.services = {}
+        self.batchServices = {}
         
         self.connection = socket.create_connection((host, port))
         ver = b'Python2' if sys.version_info[0] == 2 else b'Python3'
@@ -55,6 +56,11 @@ class BackgroundClient(object):
         try:
             importedModule = __import__(module, globals(), locals(), [], 0)
             self.services[fn] = importedModule.initService()
+            try:
+                self.batchServices["batch_" + fn] = \
+                    importedModule.initBatchService()
+            except AttributeError:
+                pass
             return 'ok'
         except ImportError:
             return 'Import Error'
@@ -80,7 +86,7 @@ class BackgroundClient(object):
         Private methode to receive the given length of bytes.
         
         @param length bytes to receive (int)
-        @return received bytes or None if connection closed (str)
+        @return received bytes or None if connection closed (bytes)
         """
         data = b''
         while len(data) < length:
@@ -90,19 +96,53 @@ class BackgroundClient(object):
             data += newData
         return data
     
+    def __peek(self, length):
+        """
+        Private methode to peek the given length of bytes.
+        
+        @param length bytes to receive (int)
+        @return received bytes (bytes)
+        """
+        data = b''
+        self.connection.setblocking(False)
+        try:
+            data = self.connection.recv(length, socket.MSG_PEEK)
+        except socket.error:
+            pass
+        self.connection.setblocking(True)
+        return data
+    
+    def __cancelled(self):
+        """
+        Private method to check for a job cancellation.
+        
+        @return flag indicating a cancellation (boolean)
+        """
+        msg = self.__peek(struct.calcsize(b'!II') + 6)
+        if msg[-6:] == b"CANCEL":
+            # get rid of the message data
+            self.__peek(struct.calcsize(b'!II') + 6)
+            return True
+        else:
+            return False
+    
     def run(self):
         """
         Public method implementing the main loop of the client.
         """
         try:
             while True:
-                header = self.__receive(8)
+                header = self.__receive(struct.calcsize(b'!II'))
                 # Leave main loop if connection was closed.
                 if not header:
                     break
                 
                 length, datahash = struct.unpack(b'!II', header)
+                messageType = self.__receive(6)
                 packedData = self.__receive(length)
+                
+                if messageType != b"JOB   ":
+                    continue
                 
                 assert adler32(packedData) & 0xffffffff == datahash, \
                     'Hashes not equal'
@@ -112,6 +152,13 @@ class BackgroundClient(object):
                 fx, fn, data = json.loads(packedData)
                 if fx == 'INIT':
                     ret = self.__initClientService(fn, *data)
+                elif fx.startswith("batch_"):
+                    callback = self.batchServices.get(fx)
+                    if callback:
+                        callback(data, self.__send, fx, self.__cancelled)
+                        ret = "__DONE__"
+                    else:
+                        ret = 'Unknown batch service.'
                 else:
                     callback = self.services.get(fx)
                     if callback:
