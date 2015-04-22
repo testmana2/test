@@ -53724,6 +53724,24 @@ Translate from: Irish
     </message>
 </context>
 <context>
+    <name>SyntaxCheckService</name>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="204"/>
+        <source>Python 2 batch check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="220"/>
+        <source>Python 3 batch check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="236"/>
+        <source>JavaScript batch check</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SyntaxCheckerDialog</name>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.ui" line="14"/>
@@ -53781,7 +53799,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="272"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="332"/>
         <source>No issues found.</source>
         <translation>Синтаксисические ошибки не найдены.</translation>
     </message>
@@ -53806,7 +53824,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Начать</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="209"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="254"/>
         <source>Error: {0}</source>
         <translation>Ошибка: {0}</translation>
     </message>
@@ -53815,26 +53833,31 @@ the respective line.&lt;/p&gt;</source>
         <source>%v/%m Files</source>
         <translation>%v/%m Файлы</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="240"/>
+        <source>Preparing files...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SyntaxCheckerPlugin</name>
     <message>
-        <location filename="../Plugins/PluginSyntaxChecker.py" line="289"/>
+        <location filename="../Plugins/PluginSyntaxChecker.py" line="243"/>
         <source>Check Syntax</source>
         <translation>Проверить синтаксис</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginSyntaxChecker.py" line="289"/>
+        <location filename="../Plugins/PluginSyntaxChecker.py" line="243"/>
         <source>&amp;Syntax...</source>
         <translation>&amp;Синтаксис...</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginSyntaxChecker.py" line="200"/>
+        <location filename="../Plugins/PluginSyntaxChecker.py" line="154"/>
         <source>Check syntax.</source>
         <translation>Проверить синтаксис.</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginSyntaxChecker.py" line="293"/>
+        <location filename="../Plugins/PluginSyntaxChecker.py" line="247"/>
         <source>&lt;b&gt;Check Syntax...&lt;/b&gt;&lt;p&gt;This checks Python files for syntax errors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Проверить синтаксис...&lt;/b&gt;&lt;p&gt;Проверяет файлы Python на синтаксические ошибки.&lt;/p&gt;</translation>
     </message>
