@@ -50,9 +50,13 @@ check.
     connect directly to the background service.
 </p><h3>Signals</h3>
 <dl>
-<dt>syntaxChecked(str, dict)</dt>
+<dt>batchFinished()</dt>
 <dd>
-emited when the syntax check was done.
+emitted when a syntax check batch is done
+</dd><dt>syntaxChecked(str, dict)</dt>
+<dd>
+emitted when the syntax check was done for
+        one file
 </dd>
 </dl>
 <h3>Derived from</h3>
@@ -74,8 +78,17 @@ QObject
 <td><a href="#SyntaxCheckService.__determineLanguage">__determineLanguage</a></td>
 <td>Private methode to determine the language of the file.</td>
 </tr><tr>
+<td><a href="#SyntaxCheckService.__serviceError">__serviceError</a></td>
+<td>Private slot handling service errors.</td>
+</tr><tr>
 <td><a href="#SyntaxCheckService.addLanguage">addLanguage</a></td>
 <td>Public method to register a new language to the supported languages.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckService.batchJobDone">batchJobDone</a></td>
+<td>Public slot handling the completion of a batch job.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckService.cancelSyntaxBatchCheck">cancelSyntaxBatchCheck</a></td>
+<td>Public method to cancel all batch jobs.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckService.getExtensions">getExtensions</a></td>
 <td>Public method to return all supported file extensions for the syntax checker dialog.</td>
@@ -86,8 +99,20 @@ QObject
 <td><a href="#SyntaxCheckService.removeLanguage">removeLanguage</a></td>
 <td>Public method to remove the language from syntax check.</td>
 </tr><tr>
+<td><a href="#SyntaxCheckService.serviceErrorJavaScript">serviceErrorJavaScript</a></td>
+<td>Public method handling service errors for JavaScript.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckService.serviceErrorPy2">serviceErrorPy2</a></td>
+<td>Public method handling service errors for Python 2.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckService.serviceErrorPy3">serviceErrorPy3</a></td>
+<td>Public method handling service errors for Python 2.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckService.syntaxBatchCheck">syntaxBatchCheck</a></td>
+<td>Public method to prepare a syntax check on multiple source files.</td>
+</tr><tr>
 <td><a href="#SyntaxCheckService.syntaxCheck">syntaxCheck</a></td>
-<td>Public method to prepare to compile one Python source file to Python bytecode and to perform a pyflakes check.</td>
+<td>Public method to prepare a syntax check of one source file.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -116,6 +141,19 @@ code of the file (str)
 <dt>Returns:</dt>
 <dd>
 language of the file or None if not found (str or None)
+</dd>
+</dl><a NAME="SyntaxCheckService.__serviceError" ID="SyntaxCheckService.__serviceError"></a>
+<h4>SyntaxCheckService.__serviceError</h4>
+<b>__serviceError</b>(<i>fn, msg</i>)
+<p>
+        Private slot handling service errors.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
 </dd>
 </dl><a NAME="SyntaxCheckService.addLanguage" ID="SyntaxCheckService.addLanguage"></a>
 <h4>SyntaxCheckService.addLanguage</h4>
@@ -151,7 +189,25 @@ function on service response (function)
 callback function if client or service isn't available
             (function)
 </dd>
-</dl><a NAME="SyntaxCheckService.getExtensions" ID="SyntaxCheckService.getExtensions"></a>
+</dl><a NAME="SyntaxCheckService.batchJobDone" ID="SyntaxCheckService.batchJobDone"></a>
+<h4>SyntaxCheckService.batchJobDone</h4>
+<b>batchJobDone</b>(<i>fx, lang</i>)
+<p>
+        Public slot handling the completion of a batch job.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd>
+</dl><a NAME="SyntaxCheckService.cancelSyntaxBatchCheck" ID="SyntaxCheckService.cancelSyntaxBatchCheck"></a>
+<h4>SyntaxCheckService.cancelSyntaxBatchCheck</h4>
+<b>cancelSyntaxBatchCheck</b>(<i></i>)
+<p>
+        Public method to cancel all batch jobs.
+</p><a NAME="SyntaxCheckService.getExtensions" ID="SyntaxCheckService.getExtensions"></a>
 <h4>SyntaxCheckService.getExtensions</h4>
 <b>getExtensions</b>(<i></i>)
 <p>
@@ -182,12 +238,79 @@ list of languanges supported (list of str)
 <dd>
 language to remove (str)
 </dd>
+</dl><a NAME="SyntaxCheckService.serviceErrorJavaScript" ID="SyntaxCheckService.serviceErrorJavaScript"></a>
+<h4>SyntaxCheckService.serviceErrorJavaScript</h4>
+<b>serviceErrorJavaScript</b>(<i>fx, lang, fn, msg</i>)
+<p>
+        Public method handling service errors for JavaScript.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd><dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
+</dd>
+</dl><a NAME="SyntaxCheckService.serviceErrorPy2" ID="SyntaxCheckService.serviceErrorPy2"></a>
+<h4>SyntaxCheckService.serviceErrorPy2</h4>
+<b>serviceErrorPy2</b>(<i>fx, lang, fn, msg</i>)
+<p>
+        Public method handling service errors for Python 2.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd><dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
+</dd>
+</dl><a NAME="SyntaxCheckService.serviceErrorPy3" ID="SyntaxCheckService.serviceErrorPy3"></a>
+<h4>SyntaxCheckService.serviceErrorPy3</h4>
+<b>serviceErrorPy3</b>(<i>fx, lang, fn, msg</i>)
+<p>
+        Public method handling service errors for Python 2.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd><dt><i>fn</i></dt>
+<dd>
+file name (string)
+</dd><dt><i>msg</i></dt>
+<dd>
+message text (string)
+</dd>
+</dl><a NAME="SyntaxCheckService.syntaxBatchCheck" ID="SyntaxCheckService.syntaxBatchCheck"></a>
+<h4>SyntaxCheckService.syntaxBatchCheck</h4>
+<b>syntaxBatchCheck</b>(<i>argumentsList</i>)
+<p>
+        Public method to prepare a syntax check on multiple source files.
+</p><dl>
+<dt><i>argumentsList</i></dt>
+<dd>
+list of arguments tuples with each tuple
+            containing filename and source (string, string)
+</dd>
 </dl><a NAME="SyntaxCheckService.syntaxCheck" ID="SyntaxCheckService.syntaxCheck"></a>
 <h4>SyntaxCheckService.syntaxCheck</h4>
 <b>syntaxCheck</b>(<i>lang, filename, source</i>)
 <p>
-        Public method to prepare to compile one Python source file to Python
-        bytecode and to perform a pyflakes check.
+        Public method to prepare a syntax check of one source file.
 </p><dl>
 <dt><i>lang</i></dt>
 <dd>

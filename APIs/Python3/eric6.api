@@ -3987,17 +3987,28 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations._messages_sample_args
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations.getTranslatedMessage?4(message)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.VcsConflictMarkerRe?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.extractLineFlags?4(line, startComment=")
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.initBatchService?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.initService?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.normalizeCode?4(codestring)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.syntaxAndPyflakesBatchCheck?4(argumentsList, send, fx, cancelled)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.syntaxAndPyflakesCheck?4(filename, codestring, checkFlakes=True, ignoreStarImportWarnings=False)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.worker?4(input, output)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.addLanguage?4(lang, env, path, module, getArgs, getExt, callback, onError)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.batchFinished?7
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.batchJobDone?4(fx, lang)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.cancelSyntaxBatchCheck?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.getExtensions?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.getLanguages?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.removeLanguage?4(lang)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.serviceErrorJavaScript?4(fx, lang, fn, msg)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.serviceErrorPy2?4(fx, lang, fn, msg)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.serviceErrorPy3?4(fx, lang, fn, msg)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.syntaxBatchCheck?4(argumentsList)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.syntaxCheck?4(lang, filename, source)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.syntaxChecked?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService?1()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.check?4(codestring='')
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.checkBatch?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.errorRole?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.filenameRole?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.indexRole?7
@@ -4010,9 +4021,12 @@ eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDial
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.start?4(fn, codestring="")
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog.warningRole?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.SyntaxCheckerDialog?1(parent=None)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.initBatchService?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.initService?4()
-eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.jsCheckSyntax?4(file, codestring)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.jsSyntaxBatchCheck?4(argumentsList, send, fx, cancelled)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.jsSyntaxCheck?4(file, codestring)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.normalizeCode?4(codestring)
+eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.worker?4(input, output)
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_line?4()
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_lineno?4()
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.NannyNag.get_msg?4()
@@ -4143,9 +4157,6 @@ eric6.Plugins.PluginEricdoc.shortDescription?7
 eric6.Plugins.PluginEricdoc.version?7
 eric6.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.activate?4()
 eric6.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.deactivate?4()
-eric6.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.serviceErrorJavaScript?4(fx, lang, fn, msg)
-eric6.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
-eric6.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin.serviceErrorPy3?4(fx, lang, fn, msg)
 eric6.Plugins.PluginSyntaxChecker.SyntaxCheckerPlugin?1(ui)
 eric6.Plugins.PluginSyntaxChecker.author?7
 eric6.Plugins.PluginSyntaxChecker.autoactivate?7

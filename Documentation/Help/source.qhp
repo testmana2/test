@@ -11421,21 +11421,30 @@
       <keyword name="SyntaxCheckService (Constructor)" id="SyntaxCheckService (Constructor)" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.__init__" />
       <keyword name="SyntaxCheckService (Module)" id="SyntaxCheckService (Module)" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html" />
       <keyword name="SyntaxCheckService.__determineLanguage" id="SyntaxCheckService.__determineLanguage" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.__determineLanguage" />
+      <keyword name="SyntaxCheckService.__serviceError" id="SyntaxCheckService.__serviceError" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.__serviceError" />
       <keyword name="SyntaxCheckService.addLanguage" id="SyntaxCheckService.addLanguage" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.addLanguage" />
+      <keyword name="SyntaxCheckService.batchJobDone" id="SyntaxCheckService.batchJobDone" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.batchJobDone" />
+      <keyword name="SyntaxCheckService.cancelSyntaxBatchCheck" id="SyntaxCheckService.cancelSyntaxBatchCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.cancelSyntaxBatchCheck" />
       <keyword name="SyntaxCheckService.getExtensions" id="SyntaxCheckService.getExtensions" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.getExtensions" />
       <keyword name="SyntaxCheckService.getLanguages" id="SyntaxCheckService.getLanguages" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.getLanguages" />
       <keyword name="SyntaxCheckService.removeLanguage" id="SyntaxCheckService.removeLanguage" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.removeLanguage" />
+      <keyword name="SyntaxCheckService.serviceErrorJavaScript" id="SyntaxCheckService.serviceErrorJavaScript" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.serviceErrorJavaScript" />
+      <keyword name="SyntaxCheckService.serviceErrorPy2" id="SyntaxCheckService.serviceErrorPy2" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.serviceErrorPy2" />
+      <keyword name="SyntaxCheckService.serviceErrorPy3" id="SyntaxCheckService.serviceErrorPy3" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.serviceErrorPy3" />
+      <keyword name="SyntaxCheckService.syntaxBatchCheck" id="SyntaxCheckService.syntaxBatchCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.syntaxBatchCheck" />
       <keyword name="SyntaxCheckService.syntaxCheck" id="SyntaxCheckService.syntaxCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.html#SyntaxCheckService.syntaxCheck" />
       <keyword name="SyntaxChecker (Package)" id="SyntaxChecker (Package)" ref="index-eric6.Plugins.CheckerPlugins.SyntaxChecker.html" />
       <keyword name="SyntaxCheckerDialog" id="SyntaxCheckerDialog" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog" />
       <keyword name="SyntaxCheckerDialog (Constructor)" id="SyntaxCheckerDialog (Constructor)" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__init__" />
       <keyword name="SyntaxCheckerDialog (Module)" id="SyntaxCheckerDialog (Module)" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html" />
+      <keyword name="SyntaxCheckerDialog.__batchFinished" id="SyntaxCheckerDialog.__batchFinished" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__batchFinished" />
       <keyword name="SyntaxCheckerDialog.__clearErrors" id="SyntaxCheckerDialog.__clearErrors" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__clearErrors" />
       <keyword name="SyntaxCheckerDialog.__createResultItem" id="SyntaxCheckerDialog.__createResultItem" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__createResultItem" />
       <keyword name="SyntaxCheckerDialog.__finish" id="SyntaxCheckerDialog.__finish" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__finish" />
       <keyword name="SyntaxCheckerDialog.__processResult" id="SyntaxCheckerDialog.__processResult" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__processResult" />
       <keyword name="SyntaxCheckerDialog.__resort" id="SyntaxCheckerDialog.__resort" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__resort" />
       <keyword name="SyntaxCheckerDialog.check" id="SyntaxCheckerDialog.check" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.check" />
+      <keyword name="SyntaxCheckerDialog.checkBatch" id="SyntaxCheckerDialog.checkBatch" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.checkBatch" />
       <keyword name="SyntaxCheckerDialog.on_buttonBox_clicked" id="SyntaxCheckerDialog.on_buttonBox_clicked" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_buttonBox_clicked" />
       <keyword name="SyntaxCheckerDialog.on_resultList_itemActivated" id="SyntaxCheckerDialog.on_resultList_itemActivated" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_resultList_itemActivated" />
       <keyword name="SyntaxCheckerDialog.on_showButton_clicked" id="SyntaxCheckerDialog.on_showButton_clicked" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.on_showButton_clicked" />
@@ -11454,13 +11463,9 @@
       <keyword name="SyntaxCheckerPlugin.__projectBrowserSyntaxCheck" id="SyntaxCheckerPlugin.__projectBrowserSyntaxCheck" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__projectBrowserSyntaxCheck" />
       <keyword name="SyntaxCheckerPlugin.__projectShowMenu" id="SyntaxCheckerPlugin.__projectShowMenu" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__projectShowMenu" />
       <keyword name="SyntaxCheckerPlugin.__projectSyntaxCheck" id="SyntaxCheckerPlugin.__projectSyntaxCheck" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__projectSyntaxCheck" />
-      <keyword name="SyntaxCheckerPlugin.__serviceError" id="SyntaxCheckerPlugin.__serviceError" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__serviceError" />
       <keyword name="SyntaxCheckerPlugin.__translateSyntaxCheck" id="SyntaxCheckerPlugin.__translateSyntaxCheck" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.__translateSyntaxCheck" />
       <keyword name="SyntaxCheckerPlugin.activate" id="SyntaxCheckerPlugin.activate" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.activate" />
       <keyword name="SyntaxCheckerPlugin.deactivate" id="SyntaxCheckerPlugin.deactivate" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.deactivate" />
-      <keyword name="SyntaxCheckerPlugin.serviceErrorJavaScript" id="SyntaxCheckerPlugin.serviceErrorJavaScript" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorJavaScript" />
-      <keyword name="SyntaxCheckerPlugin.serviceErrorPy2" id="SyntaxCheckerPlugin.serviceErrorPy2" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorPy2" />
-      <keyword name="SyntaxCheckerPlugin.serviceErrorPy3" id="SyntaxCheckerPlugin.serviceErrorPy3" ref="eric6.Plugins.PluginSyntaxChecker.html#SyntaxCheckerPlugin.serviceErrorPy3" />
       <keyword name="TERMINAL" id="TERMINAL" ref="eric6.E5Gui.E5GenericDiffHighlighter.html#TERMINAL" />
       <keyword name="TRPreviewer" id="TRPreviewer" ref="eric6.Tools.TRPreviewer.html#TRPreviewer" />
       <keyword name="TRPreviewer (Constructor)" id="TRPreviewer (Constructor)" ref="eric6.Tools.TRPreviewer.html#TRPreviewer.__init__" />
@@ -13027,6 +13032,7 @@
       <keyword name="__getMasterPassword" id="__getMasterPassword" ref="eric6.Utilities.crypto.__init__.html#__getMasterPassword" />
       <keyword name="__getPygmentsLexer" id="__getPygmentsLexer" ref="eric6.QScintilla.Lexers.__init__.html#__getPygmentsLexer" />
       <keyword name="__initChannelModesDict" id="__initChannelModesDict" ref="eric6.Network.IRC.IrcUtilities.html#__initChannelModesDict" />
+      <keyword name="__jsSyntaxCheck" id="__jsSyntaxCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#__jsSyntaxCheck" />
       <keyword name="__messageBox" id="__messageBox" ref="eric6.E5Gui.E5MessageBox.html#__messageBox" />
       <keyword name="__readShortcut" id="__readShortcut" ref="eric6.Preferences.Shortcuts.html#__readShortcut" />
       <keyword name="__render" id="__render" ref="eric6.Helpviewer.HelpSnap.html#__render" />
@@ -13034,6 +13040,7 @@
       <keyword name="__saveShortcut" id="__saveShortcut" ref="eric6.Preferences.Shortcuts.html#__saveShortcut" />
       <keyword name="__setAction" id="__setAction" ref="eric6.Preferences.Shortcuts.html#__setAction" />
       <keyword name="__showwarning" id="__showwarning" ref="eric6.Utilities.__init__.html#__showwarning" />
+      <keyword name="__syntaxAndPyflakesCheck" id="__syntaxAndPyflakesCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#__syntaxAndPyflakesCheck" />
       <keyword name="_add_check" id="_add_check" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_add_check" />
       <keyword name="_buildChildrenLists" id="_buildChildrenLists" ref="eric6.Graphics.GraphicsUtilities.html#_buildChildrenLists" />
       <keyword name="_debugclient_start_new_thread" id="_debugclient_start_new_thread" ref="eric6.DebugClients.Python.DebugClientThreads.html#_debugclient_start_new_thread" />
@@ -13407,6 +13414,8 @@
       <keyword name="indentation" id="indentation" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#indentation" />
       <keyword name="information" id="information" ref="eric6.E5Gui.E5MessageBox.html#information" />
       <keyword name="initBatchService" id="initBatchService" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#initBatchService" />
+      <keyword name="initBatchService" id="initBatchService" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#initBatchService" />
+      <keyword name="initBatchService" id="initBatchService" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#initBatchService" />
       <keyword name="initDebugger" id="initDebugger" ref="eric6.DebugClients.Python.eric6dbgstub.html#initDebugger" />
       <keyword name="initDebugger" id="initDebugger" ref="eric6.DebugClients.Python3.eric6dbgstub.html#initDebugger" />
       <keyword name="initGlobals" id="initGlobals" ref="eric6.install.html#initGlobals" />
@@ -13437,8 +13446,9 @@
       <keyword name="isatty" id="isatty" ref="eric6.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="isinpath" id="isinpath" ref="eric6.Utilities.__init__.html#isinpath" />
       <keyword name="joinext" id="joinext" ref="eric6.Utilities.__init__.html#joinext" />
-      <keyword name="jsCheckSyntax" id="jsCheckSyntax" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#jsCheckSyntax" />
       <keyword name="jsCheckSyntax (Module)" id="jsCheckSyntax (Module)" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html" />
+      <keyword name="jsSyntaxBatchCheck" id="jsSyntaxBatchCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#jsSyntaxBatchCheck" />
+      <keyword name="jsSyntaxCheck" id="jsSyntaxCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#jsSyntaxCheck" />
       <keyword name="jsclbr (Module)" id="jsclbr (Module)" ref="eric6.Utilities.ClassBrowsers.jsclbr.html" />
       <keyword name="largefiles (Module)" id="largefiles (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html" />
       <keyword name="linesep" id="linesep" ref="eric6.Utilities.__init__.html#linesep" />
@@ -13642,6 +13652,7 @@
       <keyword name="subversion (Module)" id="subversion (Module)" ref="eric6.Plugins.VcsPlugins.vcsSubversion.subversion.html" />
       <keyword name="summarize" id="summarize" ref="eric6.DataViews.CodeMetrics.html#summarize" />
       <keyword name="syncPreferences" id="syncPreferences" ref="eric6.Preferences.__init__.html#syncPreferences" />
+      <keyword name="syntaxAndPyflakesBatchCheck" id="syntaxAndPyflakesBatchCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#syntaxAndPyflakesBatchCheck" />
       <keyword name="syntaxAndPyflakesCheck" id="syntaxAndPyflakesCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#syntaxAndPyflakesCheck" />
       <keyword name="tabs_obsolete" id="tabs_obsolete" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#tabs_obsolete" />
       <keyword name="tabs_or_spaces" id="tabs_or_spaces" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#tabs_or_spaces" />
@@ -13694,6 +13705,8 @@
       <keyword name="win32_Kill" id="win32_Kill" ref="eric6.Utilities.__init__.html#win32_Kill" />
       <keyword name="win32_getRealName" id="win32_getRealName" ref="eric6.Utilities.__init__.html#win32_getRealName" />
       <keyword name="worker" id="worker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#worker" />
+      <keyword name="worker" id="worker" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#worker" />
+      <keyword name="worker" id="worker" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#worker" />
       <keyword name="wrapperName" id="wrapperName" ref="eric6.install.html#wrapperName" />
       <keyword name="wrapperName" id="wrapperName" ref="eric6.uninstall.html#wrapperName" />
       <keyword name="write" id="write" ref="eric6.DebugClients.Ruby.AsyncFile.html#write" />
