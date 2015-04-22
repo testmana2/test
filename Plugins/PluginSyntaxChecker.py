@@ -68,14 +68,14 @@ class SyntaxCheckerPlugin(QObject):
             self.__getPythonOptions,
             lambda: Preferences.getPython("PythonExtensions"),
             self.__translateSyntaxCheck,
-            self.serviceErrorPy2)
+            self.syntaxCheckService.serviceErrorPy2)
         
         self.syntaxCheckService.addLanguage(
             'Python3', 'Python3', path, 'SyntaxCheck',
             self.__getPythonOptions,
             lambda: Preferences.getPython("Python3Extensions"),
             self.__translateSyntaxCheck,
-            self.serviceErrorPy3)
+            self.syntaxCheckService.serviceErrorPy3)
         
         # Jasy isn't yet compatible to Python2
         self.syntaxCheckService.addLanguage(
@@ -85,53 +85,7 @@ class SyntaxCheckerPlugin(QObject):
             lambda: ['.js'],
             lambda fn, problems:
                 self.syntaxCheckService.syntaxChecked.emit(fn, problems),  # __IGNORE_WARNING__
-            self.serviceErrorJavaScript)
-    
-    def __serviceError(self, fn, msg):
-        """
-        Private slot handling service errors.
-        
-        @param fn file name (string)
-        @param msg message text (string)
-        """
-        self.syntaxCheckService.syntaxChecked.emit(
-            fn, {'warnings': [(fn, 1, 0, '', msg)]})
-    
-    def serviceErrorPy2(self, fx, lang, fn, msg):
-        """
-        Public method handling service errors for Python 2.
-        
-        @param fx service name (string)
-        @param lang language (string)
-        @param fn file name (string)
-        @param msg message text (string)
-        """
-        if fx == 'Python2Syntax':
-            self.__serviceError(fn, msg)
-    
-    def serviceErrorPy3(self, fx, lang, fn, msg):
-        """
-        Public method handling service errors for Python 2.
-        
-        @param fx service name (string)
-        @param lang language (string)
-        @param fn file name (string)
-        @param msg message text (string)
-        """
-        if fx == 'Python3Syntax':
-            self.__serviceError(fn, msg)
-    
-    def serviceErrorJavaScript(self, fx, lang, fn, msg):
-        """
-        Public method handling service errors for JavaScript.
-        
-        @param fx service name (string)
-        @param lang language (string)
-        @param fn file name (string)
-        @param msg message text (string)
-        """
-        if fx == 'JavaScriptSyntax':
-            self.__serviceError(fn, msg)
+            self.syntaxCheckService.serviceErrorJavaScript)
 
     def __initialize(self):
         """

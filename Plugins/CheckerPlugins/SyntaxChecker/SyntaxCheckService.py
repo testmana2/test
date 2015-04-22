@@ -25,9 +25,12 @@ class SyntaxCheckService(QObject):
     and support of an extra checker module on the client side which has to
     connect directly to the background service.
     
-    @signal syntaxChecked(str, dict) emited when the syntax check was done.
+    @signal syntaxChecked(str, dict) emitted when the syntax check was done for
+        one file
+    @signal batchFinished() emitted when a syntax check batch is done
     """
     syntaxChecked = pyqtSignal(str, dict)
+    batchFinished = pyqtSignal()
     
     def __init__(self):
         """
@@ -36,6 +39,9 @@ class SyntaxCheckService(QObject):
         super(SyntaxCheckService, self).__init__()
         self.backgroundService = e5App().getObject("BackgroundService")
         self.__supportedLanguages = {}
+        
+        self.queuedBatches = []
+        self.batchesFinished = True
 
     def __determineLanguage(self, filename, source):
         """
@@ -75,7 +81,8 @@ class SyntaxCheckService(QObject):
         self.__supportedLanguages[lang] = env, getArgs, getExt
         # Connect to the background service
         self.backgroundService.serviceConnect(
-            '{0}Syntax'.format(lang), env, path, module, callback, onError)
+            '{0}Syntax'.format(lang), env, path, module, callback, onError,
+            onBatchDone=self.batchJobDone)
 
     def getLanguages(self):
         """
@@ -110,8 +117,7 @@ class SyntaxCheckService(QObject):
 
     def syntaxCheck(self, lang, filename, source):
         """
-        Public method to prepare to compile one Python source file to Python
-        bytecode and to perform a pyflakes check.
+        Public method to prepare a syntax check of one source file.
         
         @param lang language of the file or None to determine by internal
             algorithm (str or None)
@@ -128,3 +134,121 @@ class SyntaxCheckService(QObject):
         data.extend(args())
         self.backgroundService.enqueueRequest(
             '{0}Syntax'.format(lang), env, filename, data)
+    
+    def syntaxBatchCheck(self, argumentsList):
+        """
+        Public method to prepare a syntax check on multiple source files.
+        
+        @param argumentsList list of arguments tuples with each tuple
+            containing filename and source (string, string)
+        """
+        data = {
+        }
+        for lang in self.getLanguages():
+            data[lang] = []
+        
+        for filename, source in argumentsList:
+            lang = self.__determineLanguage(filename, source)
+            if lang not in self.getLanguages():
+                continue
+            else:
+                jobData = [source]
+                # Call the getArgs function to get the required arguments
+                args = self.__supportedLanguages[lang][1]
+                jobData.extend(args())
+                data[lang].append((filename, jobData))
+        
+        self.queuedBatches = []
+        for lang in self.getLanguages():
+            if data[lang]:
+                self.queuedBatches.append(lang)
+                env = self.__supportedLanguages[lang][0]
+                self.backgroundService.enqueueRequest(
+                    'batch_{0}Syntax'.format(lang), env, "", data[lang])
+                self.batchesFinished = False
+    
+    def cancelSyntaxBatchCheck(self):
+        """
+        Public method to cancel all batch jobs.
+        """
+        envs = []
+        for lang in self.getLanguages():
+            env = self.__supportedLanguages[lang][0]
+            if env not in envs:
+                envs.append(env)
+        for lang in envs:
+            self.backgroundService.requestCancel(lang)
+    
+    def __serviceError(self, fn, msg):
+        """
+        Private slot handling service errors.
+        
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        self.syntaxChecked.emit(fn, {'warnings': [(fn, 1, 0, '', msg)]})
+    
+    def serviceErrorPy2(self, fx, lang, fn, msg):
+        """
+        Public method handling service errors for Python 2.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        if fx in ['Python2Syntax', 'batch_Python2Syntax']:
+            if fx == 'Python2Syntax':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 2 batch check"), msg)
+                self.batchJobDone(fx, lang)
+    
+    def serviceErrorPy3(self, fx, lang, fn, msg):
+        """
+        Public method handling service errors for Python 2.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        if fx in ['Python3Syntax', 'batch_Python3Syntax']:
+            if fx == 'Python3Syntax':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 3 batch check"), msg)
+                self.batchJobDone(fx, lang)
+    
+    def serviceErrorJavaScript(self, fx, lang, fn, msg):
+        """
+        Public method handling service errors for JavaScript.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        @param fn file name (string)
+        @param msg message text (string)
+        """
+        if fx in ['JavaScriptSyntax', 'batch_JavaScriptSyntax']:
+            if fx == 'JavaScriptSyntax':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("JavaScript batch check"), msg)
+                self.batchJobDone(fx, lang)
+    
+    def batchJobDone(self, fx, lang):
+        """
+        Public slot handling the completion of a batch job.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        """
+        if fx in ['Python2Syntax', 'batch_Python2Syntax',
+                  'Python3Syntax', 'batch_Python3Syntax',
+                  'JavaScriptSyntax', 'batch_JavaScriptSyntax']:
+            if lang in self.queuedBatches:
+                self.queuedBatches.remove(lang)
+            # prevent sending the signal multiple times
+            if len(self.queuedBatches) == 0 and not self.batchesFinished:
+                self.batchFinished.emit()
+                self.batchesFinished = True

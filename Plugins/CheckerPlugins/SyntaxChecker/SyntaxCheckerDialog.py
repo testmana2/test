@@ -56,6 +56,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.noResults = True
         self.cancelled = False
         self.__lastFileItem = None
+        self.__finished = True
         
         self.__fileList = []
         self.__project = None
@@ -68,6 +69,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         try:
             self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
             self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+            self.syntaxCheckService.batchFinished.connect(self.__batchFinished)
         except KeyError:
             self.syntaxCheckService = None
         self.filename = None
@@ -174,7 +176,13 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
 
                 # now go through all the files
                 self.progress = 0
-                self.check(codestring)
+                self.files.sort()
+                if codestring or len(self.files) == 1:
+                    self.__batch = False
+                    self.check(codestring)
+                else:
+                    self.__batch = True
+                    self.checkBatch()
     
     def check(self, codestring=''):
         """
@@ -184,6 +192,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @keyparam codestring optional sourcestring (str)
         """
         if self.syntaxCheckService is None or not self.files:
+            self.checkProgressLabel.setPath("")
+            self.checkProgress.setMaximum(1)
+            self.checkProgress.setValue(1)
             self.__finish()
             return
         
@@ -215,8 +226,55 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 self.check()
                 return
         
+        self.__finished = False
         self.syntaxCheckService.syntaxCheck(None, self.filename, self.source)
 
+    def checkBatch(self):
+        """
+        Public method to start a style check batch job.
+        
+        The results are reported to the __processResult slot.
+        """
+        self.__lastFileItem = None
+        
+        self.checkProgressLabel.setPath(self.tr("Preparing files..."))
+        progress = 0
+        
+        argumentsList = []
+        for filename in self.files:
+            progress += 1
+            self.checkProgress.setValue(progress)
+            QApplication.processEvents()
+            
+            try:
+                source = Utilities.readEncodedFile(filename)[0]
+                source = Utilities.normalizeCode(source)
+            except (UnicodeError, IOError) as msg:
+                self.noResults = False
+                self.__createResultItem(
+                    self.filename, 1, 0,
+                    self.tr("Error: {0}").format(str(msg))
+                    .rstrip(), "")
+                continue
+            
+            argumentsList.append((filename, source))
+        
+        # reset the progress bar to the checked files
+        self.checkProgress.setValue(self.progress)
+        QApplication.processEvents()
+        
+        self.__finished = False
+        self.syntaxCheckService.syntaxBatchCheck(argumentsList)
+    
+    def __batchFinished(self):
+        """
+        Private slot handling the completion of a batch job.
+        """
+        self.checkProgressLabel.setPath("")
+        self.checkProgress.setMaximum(1)
+        self.checkProgress.setValue(1)
+        self.__finish()
+    
     def __processResult(self, fn, problems):
         """
         Private slot to display the reported messages.
@@ -227,8 +285,12 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             (file name, line number, column, codestring (only at syntax
             errors), the message) (dict)
         """
-        # Check if it's the requested file, otherwise ignore signal
-        if fn != self.filename:
+        if self.__finished:
+            return
+        
+        # Check if it's the requested file, otherwise ignore signal if not
+        # in batch mode
+        if not self.__batch and fn != self.filename:
             return
 
         error = problems.get('error')
@@ -247,22 +309,20 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
 
         self.progress += 1
         self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(fn)
         QApplication.processEvents()
         self.__resort()
 
-        if self.files:
+        if not self.__batch:
             self.check()
-        else:
-            self.checkProgressLabel.setPath("")
-            self.checkProgress.setMaximum(1)
-            self.checkProgress.setValue(1)
-            self.__finish()
         
     def __finish(self):
         """
         Private slot called when the syntax check finished or the user
         pressed the button.
         """
+        self.__finished = True
+        
         self.cancelled = True
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
         self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
@@ -289,7 +349,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__batch:
+                self.syntaxCheckService.cancelSyntaxBatchCheck()
+            else:
+                self.__finish()
         elif button == self.showButton:
             self.on_showButton_clicked()
         
