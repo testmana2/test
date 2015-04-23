@@ -301,10 +301,20 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         warnings = problems.get('warnings', [])
         if warnings:
-            source = self.source.splitlines()
+            if self.__batch:
+                try:
+                    source = Utilities.readEncodedFile(fn)[0]
+                    source = Utilities.normalizeCode(source)
+                except (UnicodeError, IOError):
+                    source = ""
+            else:
+                source = self.source.splitlines()
         for _fn, lineno, col, code, msg in warnings:
             self.noResults = False
-            scr_line = source[lineno - 1].strip()
+            if source:
+                scr_line = source[lineno - 1].strip()
+            else:
+                scr_line = ""
             self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
 
         self.progress += 1
