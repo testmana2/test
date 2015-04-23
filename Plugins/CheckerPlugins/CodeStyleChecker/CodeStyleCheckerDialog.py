@@ -587,7 +587,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 self.showButton.setEnabled(False)
             else:
                 self.showButton.setEnabled(True)
-            self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
+            self.resultList.header().resizeSections(
+                QHeaderView.ResizeToContents)
             self.resultList.header().setStretchLastSection(True)
             
             self.checkProgress.setVisible(False)

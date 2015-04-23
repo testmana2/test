@@ -74,7 +74,7 @@ def jsSyntaxBatchCheck(argumentsList, send, fx, cancelled):
     """
     Module function to check syntax for a batch of files.
     
-    @param argumentsList list of arguments tuples as given for 
+    @param argumentsList list of arguments tuples as given for
         syntaxAndPyflakesCheck
     @param send reference to send function (function)
     @param fx registered service name (string)

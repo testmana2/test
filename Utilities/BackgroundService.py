@@ -300,6 +300,7 @@ class BackgroundService(QTcpServer):
         """
         Public method to ask a batch job to terminate.
         
+        @param fx function name of the service (str)
         @param lang language to connect to (str)
         """
         self.__cancelled = True
