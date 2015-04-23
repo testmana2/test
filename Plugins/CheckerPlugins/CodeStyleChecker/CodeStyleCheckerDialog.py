@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 import fnmatch
 
-from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtCore import pyqtSlot, Qt, QTimer
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QDialog, QTreeWidgetItem, QAbstractButton, \
     QDialogButtonBox, QApplication, QHeaderView
@@ -570,27 +570,28 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Private slot called when the code style check finished or the user
         pressed the cancel button.
         """
-        self.__finished = True
-        
-        self.cancelled = True
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        self.statisticsButton.setEnabled(True)
-        self.showButton.setEnabled(True)
-        self.startButton.setEnabled(True)
-        
-        if self.noResults:
-            QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
-            QApplication.processEvents()
-            self.showButton.setEnabled(False)
-        else:
+        if not self.__finished:
+            self.__finished = True
+            
+            self.cancelled = True
+            self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+            self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+            self.statisticsButton.setEnabled(True)
             self.showButton.setEnabled(True)
-        self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
-        self.resultList.header().setStretchLastSection(True)
-        
-        self.checkProgress.setVisible(False)
-        self.checkProgressLabel.setVisible(False)
+            self.startButton.setEnabled(True)
+            
+            if self.noResults:
+                QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
+                QApplication.processEvents()
+                self.showButton.setEnabled(False)
+            else:
+                self.showButton.setEnabled(True)
+            self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
+            self.resultList.header().setStretchLastSection(True)
+            
+            self.checkProgress.setVisible(False)
+            self.checkProgressLabel.setVisible(False)
     
     def __getEol(self, fn):
         """
@@ -852,6 +853,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             if self.__batch:
                 self.styleCheckService.cancelStyleBatchCheck()
+                QTimer.singleShot(1000, self.__finish)
             else:
                 self.__finish()
         elif button == self.showButton:

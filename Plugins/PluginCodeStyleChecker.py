@@ -208,7 +208,7 @@ class CodeStyleCheckerPlugin(QObject):
         Public method to cancel all batch jobs.
         """
         for lang in ['Python2', 'Python3']:
-            self.backgroundService.requestCancel(lang)
+            self.backgroundService.requestCancel('batch_style', lang)
     
     def __translateStyleCheck(self, fn, codeStyleCheckerStats, results):
         """

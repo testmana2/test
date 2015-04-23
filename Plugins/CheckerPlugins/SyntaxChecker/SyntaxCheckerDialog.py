@@ -12,7 +12,7 @@ from __future__ import unicode_literals
 import os
 import fnmatch
 
-from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtCore import pyqtSlot, Qt, QTimer
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QTreeWidgetItem, \
     QApplication, QHeaderView
 
@@ -331,24 +331,25 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         Private slot called when the syntax check finished or the user
         pressed the button.
         """
-        self.__finished = True
-        
-        self.cancelled = True
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        
-        if self.noResults:
-            QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
-            QApplication.processEvents()
-            self.showButton.setEnabled(False)
-        else:
-            self.showButton.setEnabled(True)
-        self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
-        self.resultList.header().setStretchLastSection(True)
-        
-        self.checkProgress.setVisible(False)
-        self.checkProgressLabel.setVisible(False)
+        if not self.__finished:
+            self.__finished = True
+            
+            self.cancelled = True
+            self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+            self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+            
+            if self.noResults:
+                QTreeWidgetItem(self.resultList, [self.tr('No issues found.')])
+                QApplication.processEvents()
+                self.showButton.setEnabled(False)
+            else:
+                self.showButton.setEnabled(True)
+            self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
+            self.resultList.header().setStretchLastSection(True)
+            
+            self.checkProgress.setVisible(False)
+            self.checkProgressLabel.setVisible(False)
         
     def on_buttonBox_clicked(self, button):
         """
@@ -361,6 +362,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
             if self.__batch:
                 self.syntaxCheckService.cancelSyntaxBatchCheck()
+                QTimer.singleShot(1000, self.__finish)
             else:
                 self.__finish()
         elif button == self.showButton:

@@ -171,13 +171,10 @@ class SyntaxCheckService(QObject):
         """
         Public method to cancel all batch jobs.
         """
-        envs = []
         for lang in self.getLanguages():
             env = self.__supportedLanguages[lang][0]
-            if env not in envs:
-                envs.append(env)
-        for lang in envs:
-            self.backgroundService.requestCancel(lang)
+            self.backgroundService.requestCancel(
+                'batch_{0}Syntax'.format(lang), env)
     
     def __serviceError(self, fn, msg):
         """

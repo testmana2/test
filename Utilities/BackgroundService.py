@@ -112,6 +112,7 @@ class BackgroundService(QTcpServer):
         @param fn filename for identification (str)
         @param data function argument(s) (any basic datatype)
         """
+        self.__cancelled = False
         connection = self.connections.get(lang)
         if connection is None:
             if fx != 'INIT':
@@ -143,6 +144,10 @@ class BackgroundService(QTcpServer):
         """
         connection = self.connections[lang]
         while connection.bytesAvailable():
+            if self.__cancelled:
+                connection.readAll()
+                continue
+            
             header = connection.read(struct.calcsize(b'!II'))
             length, datahash = struct.unpack(b'!II', header)
             
@@ -291,12 +296,21 @@ class BackgroundService(QTcpServer):
                 self.__queue.append(args)
         self.__processQueue()
     
-    def requestCancel(self, lang):
+    def requestCancel(self, fx, lang):
         """
         Public method to ask a batch job to terminate.
         
         @param lang language to connect to (str)
         """
+        self.__cancelled = True
+        
+        entriesToRemove = []
+        for pendingArg in self.__queue:
+            if pendingArg[:2] == [fx, lang]:
+                entriesToRemove.append(pendingArg)
+        for entryToRemove in entriesToRemove:
+            self.__queue.remove(entryToRemove)
+        
         connection = self.connections.get(lang)
         if connection is None:
             return

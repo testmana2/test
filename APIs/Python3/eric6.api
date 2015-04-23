@@ -8459,7 +8459,7 @@ eric6.Utilities.BackgroundService.BackgroundService.enqueueRequest?4(fx, lang, f
 eric6.Utilities.BackgroundService.BackgroundService.on_disconnectSocket?4(lang)
 eric6.Utilities.BackgroundService.BackgroundService.on_newConnection?4()
 eric6.Utilities.BackgroundService.BackgroundService.preferencesOrProjectChanged?4()
-eric6.Utilities.BackgroundService.BackgroundService.requestCancel?4(lang)
+eric6.Utilities.BackgroundService.BackgroundService.requestCancel?4(fx, lang)
 eric6.Utilities.BackgroundService.BackgroundService.restartService?4(language, forceKill=False)
 eric6.Utilities.BackgroundService.BackgroundService.serviceConnect?4(fx, lang, modulepath, module, callback, onErrorCallback=None, onBatchDone=None)
 eric6.Utilities.BackgroundService.BackgroundService.serviceDisconnect?4(fx, lang)
