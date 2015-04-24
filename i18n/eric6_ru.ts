@@ -1397,37 +1397,37 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="120"/>
+        <location filename="../Utilities/BackgroundService.py" line="121"/>
         <source>{0} not configured.</source>
         <translation>{0} не сконфигурирован.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="170"/>
+        <location filename="../Utilities/BackgroundService.py" line="175"/>
         <source>Restart background client?</source>
         <translation>Перезапустить клиент в фоновом режиме?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="195"/>
+        <location filename="../Utilities/BackgroundService.py" line="200"/>
         <source>An error in Erics background client stopped the service.</source>
         <translation>Ошибка в слиенте остановила сервис.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="390"/>
+        <location filename="../Utilities/BackgroundService.py" line="405"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
         <translation>Фоновый клиент прервал соединение по неизвестной причине.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="396"/>
+        <location filename="../Utilities/BackgroundService.py" line="411"/>
         <source>Background client disconnected.</source>
         <translation>Соединение фонового клиента прервано.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="396"/>
+        <location filename="../Utilities/BackgroundService.py" line="411"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
         <translation>Соединение фонового клиента&lt;b&gt;{0}&lt;/b&gt; прервано по неизвестной причине.&lt;br&gt;Перезапустить клиента?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="170"/>
+        <location filename="../Utilities/BackgroundService.py" line="175"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Фоновый клиент&lt;b&gt;{0}&lt;/b&gt; прекратил выполнение из-за ошибки. Этот клиент необходим для работы различных плагинов.&lt;/p&gt;&lt;p&gt;Выберите&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Да&apos;&lt;/b&gt; чтобы перезапустить его и отменить последнее задание&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Повторить&apos;&lt;/b&gt;чтобы перезапустить его и последнее задание&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Нет&apos;&lt;/b&gt; чтобы не перезапускать клиент.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Заметте: Клиент можно перезапустить открыв и сохранив диалог настроек или закрыв и снова открыв текущий проект.&lt;/p&gt;</translation>
     </message>
@@ -3155,7 +3155,7 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Исправлено: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="585"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="586"/>
         <source>No issues found.</source>
         <translation>Проблем со стилем не найдено.</translation>
     </message>
@@ -53726,17 +53726,17 @@ Translate from: Irish
 <context>
     <name>SyntaxCheckService</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="204"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="201"/>
         <source>Python 2 batch check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="220"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="217"/>
         <source>Python 3 batch check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="236"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="233"/>
         <source>JavaScript batch check</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53799,7 +53799,7 @@ the respective line.&lt;/p&gt;</source>
         <translation>Показать все файлы, содержащие синтаксические ошибки</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="332"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="345"/>
         <source>No issues found.</source>
         <translation>Синтаксисические ошибки не найдены.</translation>
     </message>
@@ -54206,7 +54206,7 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="223"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="285"/>
         <source>No indentation errors found.</source>
         <translation>Ошибки в отступах не найдены.</translation>
     </message>
@@ -54279,28 +54279,43 @@ the respective line.&lt;/p&gt;</source>
         <source>%v/%m Files</source>
         <translation>%v/%m Файлы</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="205"/>
+        <source>Preparing files...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TabnannyPlugin</name>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="243"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="308"/>
         <source>Check Indentations</source>
         <translation>Проверить отступы</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="243"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="308"/>
         <source>&amp;Indentations...</source>
         <translation>&amp;Отступы...</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="152"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="217"/>
         <source>Check indentations using tabnanny.</source>
         <translation>Проверить отступы с помощью tabnanny.</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="247"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="312"/>
         <source>&lt;b&gt;Check Indentations...&lt;/b&gt;&lt;p&gt;This checks Python files for bad indentations using tabnanny.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Проверить отступы...&lt;/b&gt;&lt;p&gt;Проверяет файлы Python на некорректные отступы при помощи tabnanny.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginTabnanny.py" line="104"/>
+        <source>Python 2 batch check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginTabnanny.py" line="120"/>
+        <source>Python 3 batch check</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

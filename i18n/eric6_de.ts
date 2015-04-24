@@ -1401,37 +1401,37 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="120"/>
+        <location filename="../Utilities/BackgroundService.py" line="121"/>
         <source>{0} not configured.</source>
         <translation>{0} nicht konfiguriert.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="170"/>
+        <location filename="../Utilities/BackgroundService.py" line="175"/>
         <source>Restart background client?</source>
         <translation>Hintergrund Client neu starten?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="396"/>
+        <location filename="../Utilities/BackgroundService.py" line="411"/>
         <source>Background client disconnected.</source>
         <translation>Hintergrund Client wurde getrennt.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="396"/>
+        <location filename="../Utilities/BackgroundService.py" line="411"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
         <translation>Die Verbindung zum Hintergund Client für &lt;b&gt;{0}&lt;/b&gt; wurde aus unbekanntem Grund getrennt.&lt;br&gt;Soll er neu gestartet werden?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="390"/>
+        <location filename="../Utilities/BackgroundService.py" line="405"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
         <translation>Die Verbindung zu Erics Hintergund Client wurde aus unbekanntem Grund getrennt.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="195"/>
+        <location filename="../Utilities/BackgroundService.py" line="200"/>
         <source>An error in Erics background client stopped the service.</source>
         <translation>Ein Fehler im Eric Hintergrunddienst hat den Dienst beendet.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="170"/>
+        <location filename="../Utilities/BackgroundService.py" line="175"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Hintergund Client für &lt;b&gt;{0}&lt;/b&gt; wurde durch eine Exception gestoppt. Er wird für verschiedene Plugins, wie z.B. die Checker, verwendet.&lt;/p&gt;&lt;p&gt;Wähle:&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Ja&apos;&lt;/b&gt;, um den Client aber nicht den letzten Job neu zu starten&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Wiederholen&apos;&lt;/b&gt;, um den Client und letzten Job neu zu starten&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Nein&apos;&lt;/b&gt;, um den Client nicht neu zu starten.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Hinweis: Der Client kann immer wieder gestartet werden, indem der Einstellungsdialog mit Ok geschlossen wird oder durch das Neuladen/ Wechseln des Projektes.&lt;/p&gt;</translation>
     </message>
@@ -3159,7 +3159,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Lösung: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="585"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="586"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
@@ -53628,17 +53628,17 @@ Um zum Hauptzweig zurückzuschalten, muss dieser Eintrag leer sein.&lt;/p&gt;</t
 <context>
     <name>SyntaxCheckService</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="204"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="201"/>
         <source>Python 2 batch check</source>
         <translation>Python 2 Stapelprüfung</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="220"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="217"/>
         <source>Python 3 batch check</source>
         <translation>Python 3 Stapelprüfung</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="236"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="233"/>
         <source>JavaScript batch check</source>
         <translation>JavaScript Stapelprüfung</translation>
     </message>
@@ -53702,7 +53702,7 @@ Zeile.&lt;/p&gt;</translation>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="332"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="345"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
@@ -54106,7 +54106,7 @@ Zeile.&lt;/p&gt;</translation>
 <context>
     <name>TabnannyDialog</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="223"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="285"/>
         <source>No indentation errors found.</source>
         <translation>Keine Einrückungsfehler gefunden.</translation>
     </message>
@@ -54181,28 +54181,43 @@ Zeile.&lt;/p&gt;</translation>
         <source>%v/%m Files</source>
         <translation>%v/%m Dateien</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="205"/>
+        <source>Preparing files...</source>
+        <translation>Bereite Dateien vor...</translation>
+    </message>
 </context>
 <context>
     <name>TabnannyPlugin</name>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="243"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="308"/>
         <source>Check Indentations</source>
         <translation>Einrückungen prüfen</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="243"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="308"/>
         <source>&amp;Indentations...</source>
         <translation>&amp;Einrückungen...</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="152"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="217"/>
         <source>Check indentations using tabnanny.</source>
         <translation>Einrückungen mit Tabnanny überprüfen.</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="247"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="312"/>
         <source>&lt;b&gt;Check Indentations...&lt;/b&gt;&lt;p&gt;This checks Python files for bad indentations using tabnanny.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einrückungen überprüfen...&lt;/b&gt;&lt;p&gt;Dies überprüft Python-Dateien auf fehlerhafte Einrückungen mittels Tabnanny.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginTabnanny.py" line="104"/>
+        <source>Python 2 batch check</source>
+        <translation>Python 2 Stapelprüfung</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginTabnanny.py" line="120"/>
+        <source>Python 3 batch check</source>
+        <translation>Python 3 Stapelprüfung</translation>
     </message>
 </context>
 <context>

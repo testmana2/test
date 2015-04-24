@@ -45,9 +45,12 @@ Module implementing the Tabnanny plugin.
     Class implementing the Tabnanny plugin.
 </p><h3>Signals</h3>
 <dl>
-<dt>indentChecked(str, bool, str, str)</dt>
+<dt>batchFinished()</dt>
 <dd>
-emited when the indent
+emitted when a style check batch is done
+</dd><dt>indentChecked(str, bool, str, str)</dt>
+<dd>
+emitted when the indent
         check was done.
 </dd>
 </dl>
@@ -100,17 +103,26 @@ QObject
 <td><a href="#TabnannyPlugin.activate">activate</a></td>
 <td>Public method to activate this plugin.</td>
 </tr><tr>
+<td><a href="#TabnannyPlugin.batchJobDone">batchJobDone</a></td>
+<td>Public slot handling the completion of a batch job.</td>
+</tr><tr>
+<td><a href="#TabnannyPlugin.cancelIndentBatchCheck">cancelIndentBatchCheck</a></td>
+<td>Public method to cancel all batch jobs.</td>
+</tr><tr>
 <td><a href="#TabnannyPlugin.deactivate">deactivate</a></td>
 <td>Public method to deactivate this plugin.</td>
 </tr><tr>
+<td><a href="#TabnannyPlugin.indentBatchCheck">indentBatchCheck</a></td>
+<td>Public method to prepare an indentation check on multiple Python source files.</td>
+</tr><tr>
 <td><a href="#TabnannyPlugin.indentCheck">indentCheck</a></td>
-<td>Public method to prepare a style check on one Python source file.</td>
+<td>Public method to prepare an indentation check on one Python source file.</td>
 </tr><tr>
 <td><a href="#TabnannyPlugin.serviceErrorPy2">serviceErrorPy2</a></td>
-<td>Public method handling service errors for Python 2.</td>
+<td>Public slot handling service errors for Python 2.</td>
 </tr><tr>
 <td><a href="#TabnannyPlugin.serviceErrorPy3">serviceErrorPy3</a></td>
-<td>Public method handling service errors for Python 2.</td>
+<td>Public slot handling service errors for Python 2.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -236,16 +248,47 @@ message text (string)
 <dd>
 tuple of None and activation status (boolean)
 </dd>
-</dl><a NAME="TabnannyPlugin.deactivate" ID="TabnannyPlugin.deactivate"></a>
+</dl><a NAME="TabnannyPlugin.batchJobDone" ID="TabnannyPlugin.batchJobDone"></a>
+<h4>TabnannyPlugin.batchJobDone</h4>
+<b>batchJobDone</b>(<i>fx, lang</i>)
+<p>
+        Public slot handling the completion of a batch job.
+</p><dl>
+<dt><i>fx</i></dt>
+<dd>
+service name (string)
+</dd><dt><i>lang</i></dt>
+<dd>
+language (string)
+</dd>
+</dl><a NAME="TabnannyPlugin.cancelIndentBatchCheck" ID="TabnannyPlugin.cancelIndentBatchCheck"></a>
+<h4>TabnannyPlugin.cancelIndentBatchCheck</h4>
+<b>cancelIndentBatchCheck</b>(<i></i>)
+<p>
+        Public method to cancel all batch jobs.
+</p><a NAME="TabnannyPlugin.deactivate" ID="TabnannyPlugin.deactivate"></a>
 <h4>TabnannyPlugin.deactivate</h4>
 <b>deactivate</b>(<i></i>)
 <p>
         Public method to deactivate this plugin.
-</p><a NAME="TabnannyPlugin.indentCheck" ID="TabnannyPlugin.indentCheck"></a>
+</p><a NAME="TabnannyPlugin.indentBatchCheck" ID="TabnannyPlugin.indentBatchCheck"></a>
+<h4>TabnannyPlugin.indentBatchCheck</h4>
+<b>indentBatchCheck</b>(<i>argumentsList</i>)
+<p>
+        Public method to prepare an indentation check on multiple Python
+        source files.
+</p><dl>
+<dt><i>argumentsList</i></dt>
+<dd>
+list of arguments tuples with each tuple
+            containing filename and source (string, string)
+</dd>
+</dl><a NAME="TabnannyPlugin.indentCheck" ID="TabnannyPlugin.indentCheck"></a>
 <h4>TabnannyPlugin.indentCheck</h4>
 <b>indentCheck</b>(<i>lang, filename, source</i>)
 <p>
-        Public method to prepare a style check on one Python source file.
+        Public method to prepare an indentation check on one Python source
+        file.
 </p><dl>
 <dt><i>lang</i></dt>
 <dd>
@@ -262,7 +305,7 @@ string containing the code to check (string)
 <h4>TabnannyPlugin.serviceErrorPy2</h4>
 <b>serviceErrorPy2</b>(<i>fx, lang, fn, msg</i>)
 <p>
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
 </p><dl>
 <dt><i>fx</i></dt>
 <dd>
@@ -281,7 +324,7 @@ message text (string)
 <h4>TabnannyPlugin.serviceErrorPy3</h4>
 <b>serviceErrorPy3</b>(<i>fx, lang, fn, msg</i>)
 <p>
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
 </p><dl>
 <dt><i>fx</i></dt>
 <dd>

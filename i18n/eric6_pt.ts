@@ -1398,37 +1398,37 @@ pressionando o botão à direita.&lt;/p&gt;</translation>
 <context>
     <name>BackgroundService</name>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="120"/>
+        <location filename="../Utilities/BackgroundService.py" line="121"/>
         <source>{0} not configured.</source>
         <translation>{0} sem configurar.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="170"/>
+        <location filename="../Utilities/BackgroundService.py" line="175"/>
         <source>Restart background client?</source>
         <translation>Reiniciar cliente de fundo?</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="170"/>
+        <location filename="../Utilities/BackgroundService.py" line="175"/>
         <source>&lt;p&gt;The background client for &lt;b&gt;{0}&lt;/b&gt; has stopped due to an exception. It&apos;s used by various plug-ins like the different checkers.&lt;/p&gt;&lt;p&gt;Select&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Yes&apos;&lt;/b&gt; to restart the client, but abort the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Retry&apos;&lt;/b&gt; to restart the client and the last job&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;No&apos;&lt;/b&gt; to leave the client off.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Note: The client can be restarted by opening and accepting the preferences dialog or reloading/changing the project.&lt;/p&gt;</source>
         <translation>&lt;p&gt;O cliente de fundo para &lt;b&gt;{0}&lt;/b&gt; parou devido a uma exceção. Usa-se por varios complementos tais como os diferentes verificadores.&lt;/p&gt;&lt;p&gt;Selecionar&lt;ul&gt;&lt;li&gt;&lt;b&gt;&apos;Sim&apos;&lt;/b&gt; para reiniciar o cliente mas abandona o último trabalho&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Reintentar&apos;&lt;/b&gt; para reiniciar o cliente e o último trabalho&lt;/li&gt;&lt;li&gt;&lt;b&gt;&apos;Não&apos;&lt;/b&gt; para deixar o cliente apagado.&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Nota: O cliente pode reiniciar-se abrindo e confirmando a caixa de diálogo de preferências ou recarregando/alterando o projeto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="195"/>
+        <location filename="../Utilities/BackgroundService.py" line="200"/>
         <source>An error in Erics background client stopped the service.</source>
         <translation>Um erro no cliente de fundo de Eric parou o serviço.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="390"/>
+        <location filename="../Utilities/BackgroundService.py" line="405"/>
         <source>Erics background client disconnected because of an unknown reason.</source>
         <translation>Cliente de fundo de Eric desconectou-se por motivo desconhecido.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="396"/>
+        <location filename="../Utilities/BackgroundService.py" line="411"/>
         <source>Background client disconnected.</source>
         <translation>Cliente de fundo desconectado.</translation>
     </message>
     <message>
-        <location filename="../Utilities/BackgroundService.py" line="396"/>
+        <location filename="../Utilities/BackgroundService.py" line="411"/>
         <source>The background client for &lt;b&gt;{0}&lt;/b&gt; disconnect because of an unknown reason.&lt;br&gt;Should it be restarted?</source>
         <translation>O cliente de fundo para &lt;b&gt;{0}&lt;/b&gt; desconectou-se por um motivo desconhecido.&lt;br&gt;Deverá ser reiniciado?</translation>
     </message>
@@ -3153,7 +3153,7 @@ linha e posição.&lt;/p&gt;</translation>
         <translation>Corrigir: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="585"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="586"/>
         <source>No issues found.</source>
         <translation>Não se encontraram problemas.</translation>
     </message>
@@ -53395,17 +53395,17 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
 <context>
     <name>SyntaxCheckService</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="204"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="201"/>
         <source>Python 2 batch check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="220"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="217"/>
         <source>Python 3 batch check</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="236"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="233"/>
         <source>JavaScript batch check</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53483,7 +53483,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished">Pressionar para mostrar todos os ficheiros que tenham algum problema</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="332"/>
+        <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="345"/>
         <source>No issues found.</source>
         <translation type="unfinished">Não se encontraram problemas.</translation>
     </message>
@@ -53927,7 +53927,7 @@ the respective line.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="223"/>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="285"/>
         <source>No indentation errors found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53936,28 +53936,43 @@ the respective line.&lt;/p&gt;</source>
         <source>%v/%m Files</source>
         <translation>%v/%m Ficheiros</translation>
     </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="205"/>
+        <source>Preparing files...</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>TabnannyPlugin</name>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="243"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="308"/>
         <source>Check Indentations</source>
         <translation>Verificar Indentações</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="243"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="308"/>
         <source>&amp;Indentations...</source>
         <translation>&amp;Indentações...</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="152"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="217"/>
         <source>Check indentations using tabnanny.</source>
         <translation>Verificar indentações com tabnanny.</translation>
     </message>
     <message>
-        <location filename="../Plugins/PluginTabnanny.py" line="247"/>
+        <location filename="../Plugins/PluginTabnanny.py" line="312"/>
         <source>&lt;b&gt;Check Indentations...&lt;/b&gt;&lt;p&gt;This checks Python files for bad indentations using tabnanny.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Verificar Indentações...&lt;/b&gt;&lt;p&gt;Verifica os ficheiros Python procurando más indentações usando tabnanny.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginTabnanny.py" line="104"/>
+        <source>Python 2 batch check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/PluginTabnanny.py" line="120"/>
+        <source>Python 3 batch check</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

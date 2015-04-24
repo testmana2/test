@@ -43,10 +43,12 @@ class TabnannyPlugin(QObject):
     """
     Class implementing the Tabnanny plugin.
     
-    @signal indentChecked(str, bool, str, str) emited when the indent
+    @signal indentChecked(str, bool, str, str) emitted when the indent
         check was done.
+    @signal batchFinished() emitted when a style check batch is done
     """
     indentChecked = pyqtSignal(str, bool, str, str)
+    batchFinished = pyqtSignal()
     
     def __init__(self, ui):
         """
@@ -65,11 +67,16 @@ class TabnannyPlugin(QObject):
         self.backgroundService.serviceConnect(
             'indent', 'Python2', path, 'Tabnanny',
             lambda *args: self.indentChecked.emit(*args),
-            onErrorCallback=self.serviceErrorPy2)
+            onErrorCallback=self.serviceErrorPy2,
+            onBatchDone=self.batchJobDone)
         self.backgroundService.serviceConnect(
             'indent', 'Python3', path, 'Tabnanny',
             lambda *args: self.indentChecked.emit(*args),
-            onErrorCallback=self.serviceErrorPy3)
+            onErrorCallback=self.serviceErrorPy3,
+            onBatchDone=self.batchJobDone)
+        
+        self.queuedBatches = []
+        self.batchesFinished = True
     
     def __serviceError(self, fn, msg):
         """
@@ -82,27 +89,50 @@ class TabnannyPlugin(QObject):
     
     def serviceErrorPy2(self, fx, lang, fn, msg):
         """
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
         
         @param fx service name (string)
         @param lang language (string)
         @param fn file name (string)
         @param msg message text (string)
         """
-        if fx == 'indent' and lang == 'Python2':
-            self.__serviceError(fn, msg)
+        if fx in ['indent', 'batch_indent'] and lang == 'Python2':
+            if fx == 'indent':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 2 batch check"), msg)
+                self.batchJobDone(fx, lang)
     
     def serviceErrorPy3(self, fx, lang, fn, msg):
         """
-        Public method handling service errors for Python 2.
+        Public slot handling service errors for Python 2.
         
         @param fx service name (string)
         @param lang language (string)
         @param fn file name (string)
         @param msg message text (string)
         """
-        if fx == 'indent' and lang == 'Python3':
-            self.__serviceError(fn, msg)
+        if fx in ['indent', 'batch_indent'] and lang == 'Python3':
+            if fx == 'indent':
+                self.__serviceError(fn, msg)
+            else:
+                self.__serviceError(self.tr("Python 3 batch check"), msg)
+                self.batchJobDone(fx, lang)
+    
+    def batchJobDone(self, fx, lang):
+        """
+        Public slot handling the completion of a batch job.
+        
+        @param fx service name (string)
+        @param lang language (string)
+        """
+        if fx in ['indent', 'batch_indent']:
+            if lang in self.queuedBatches:
+                self.queuedBatches.remove(lang)
+            # prevent sending the signal multiple times
+            if len(self.queuedBatches) == 0 and not self.batchesFinished:
+                self.batchFinished.emit()
+                self.batchesFinished = True
     
     def __initialize(self):
         """
@@ -121,7 +151,8 @@ class TabnannyPlugin(QObject):
 
     def indentCheck(self, lang, filename, source):
         """
-        Public method to prepare a style check on one Python source file.
+        Public method to prepare an indentation check on one Python source
+        file.
 
         @param lang language of the file or None to determine by internal
             algorithm (str or None)
@@ -136,6 +167,40 @@ class TabnannyPlugin(QObject):
         self.backgroundService.enqueueRequest(
             'indent', lang, filename, [source])
 
+    def indentBatchCheck(self, argumentsList):
+        """
+        Public method to prepare an indentation check on multiple Python
+        source files.
+        
+        @param argumentsList list of arguments tuples with each tuple
+            containing filename and source (string, string)
+        """
+        data = {
+            "Python2": [],
+            "Python3": [],
+        }
+        for filename, source in argumentsList:
+            lang = 'Python{0}'.format(determinePythonVersion(filename, source))
+            if lang not in ['Python2', 'Python3']:
+                continue
+            else:
+                data[lang].append((filename, source))
+        
+        self.queuedBatches = []
+        for lang in ['Python2', 'Python3']:
+            if data[lang]:
+                self.queuedBatches.append(lang)
+                self.backgroundService.enqueueRequest('batch_indent', lang, "",
+                                                      data[lang])
+                self.batchesFinished = False
+    
+    def cancelIndentBatchCheck(self):
+        """
+        Public method to cancel all batch jobs.
+        """
+        for lang in ['Python2', 'Python3']:
+            self.backgroundService.requestCancel('batch_style', lang)
+    
     def activate(self):
         """
         Public method to activate this plugin.

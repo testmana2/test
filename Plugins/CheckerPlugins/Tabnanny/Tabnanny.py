@@ -48,6 +48,7 @@ try:
     import StringIO as io
 except (ImportError):
     import io    # __IGNORE_WARNING__
+import multiprocessing
 
 if not hasattr(tokenize, 'NL'):
     raise ValueError("tokenize.NL doesn't exist -- tokenize module too old")
@@ -62,6 +63,15 @@ def initService():
     @return the entry point for the background client (function)
     """
     return check
+
+
+def initBatchService():
+    """
+    Initialize the batch service and return the entry point.
+    
+    @return the entry point for the background client (function)
+    """
+    return batchCheck
 
 
 class NannyNag(Exception):
@@ -118,6 +128,80 @@ def check(file, text=""):
         (boolean, string, string, string). The values are only
         valid, if the status is True.
     """
+    return __check(file, text)
+
+
+def batchCheck(argumentsList, send, fx, cancelled):
+    """
+    Module function to check a batch of files for whitespace related problems.
+    
+    @param argumentsList list of arguments tuples as given for check
+    @param send reference to send function (function)
+    @param fx registered service name (string)
+    @param cancelled reference to function checking for a cancellation
+        (function)
+    """
+    try:
+        NumberOfProcesses = multiprocessing.cpu_count()
+        if NumberOfProcesses >= 1:
+            NumberOfProcesses -= 1
+    except NotImplementedError:
+        NumberOfProcesses = 1
+
+    # Create queues
+    taskQueue = multiprocessing.Queue()
+    doneQueue = multiprocessing.Queue()
+
+    # Submit tasks (initially two time number of processes
+    initialTasks = 2 * NumberOfProcesses
+    for task in argumentsList[:initialTasks]:
+        taskQueue.put(task)
+
+    # Start worker processes
+    for i in range(NumberOfProcesses):
+        multiprocessing.Process(target=worker, args=(taskQueue, doneQueue))\
+            .start()
+
+    # Get and send results
+    endIndex = len(argumentsList) - initialTasks
+    for i in range(len(argumentsList)):
+        filename, result = doneQueue.get()
+        send(fx, filename, result)
+        if cancelled():
+            # just exit the loop ignoring the results of queued tasks
+            break
+        if i < endIndex:
+            taskQueue.put(argumentsList[i + initialTasks])
+
+    # Tell child processes to stop
+    for i in range(NumberOfProcesses):
+        taskQueue.put('STOP')
+
+
+def worker(input, output):
+    """
+    Module function acting as the parallel worker for the style check.
+    
+    @param input input queue (multiprocessing.Queue)
+    @param output output queue (multiprocessing.Queue)
+    """
+    for filename, source in iter(input.get, 'STOP'):
+        result = __check(filename, source)
+        output.put((filename, result))
+
+
+def __check(file, text=""):
+    """
+    Private function to check one Python source file for whitespace related
+    problems.
+    
+    @param file source filename (string)
+    @param text source text (string)
+    @return A tuple indicating status (True = an error was found), the
+        filename, the linenumber and the error message
+        (boolean, string, string). The values are only
+        valid, if the status is True.
+    """
     global indents, check_equal
     indents = [Whitespace("")]
     check_equal = 0
@@ -143,7 +227,7 @@ def check(file, text=""):
     except Exception as err:
         return (True, "1", "Unspecific Error: {0}".format(str(err)))
     
-    return (False, None, None)
+    return (False, "", "")
 
 
 class Whitespace(object):

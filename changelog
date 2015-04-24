@@ -10,6 +10,8 @@ Version 6.1-snapshot-2015mmdd:
      multiple CPUs/CPU-Cores
   -- added a batch mode to the syntax checker to make use of
      multiple CPUs/CPU-Cores
+  -- added a batch mode to the indentation checker to make use of
+     multiple CPUs/CPU-Cores
 - Editor
   -- added capability to configure the indentation guides colors
   -- Lexers

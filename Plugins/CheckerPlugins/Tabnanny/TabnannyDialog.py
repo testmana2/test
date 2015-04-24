@@ -17,7 +17,7 @@ except NameError:
 import os
 import fnmatch
 
-from PyQt5.QtCore import pyqtSlot, Qt
+from PyQt5.QtCore import pyqtSlot, Qt, QTimer
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QTreeWidgetItem, \
     QApplication, QHeaderView
 
@@ -51,10 +51,12 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         self.indentCheckService = indentCheckService
         self.indentCheckService.indentChecked.connect(self.__processResult)
+        self.indentCheckService.batchFinished.connect(self.__batchFinished)
         self.filename = None
         
         self.noResults = True
         self.cancelled = False
+        self.__finished = True
         
         self.__fileList = []
         self.__project = None
@@ -141,14 +143,20 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             self.checkProgress.setVisible(len(self.files) > 1)
             self.checkProgressLabel.setVisible(len(self.files) > 1)
             QApplication.processEvents()
-        
-        # now go through all the files
-        self.progress = 0
-        self.check()
+            
+            # now go through all the files
+            self.progress = 0
+            self.files.sort()
+            if len(self.files) == 1:
+                self.__batch = False
+                self.check()
+            else:
+                self.__batch = True
+                self.checkBatch()
 
     def check(self, codestring=''):
         """
-        Public method to start a style check for one file.
+        Public method to start an indentation check for one file.
         
         The results are reported to the __processResult slot.
         @keyparam codestring optional sourcestring (str)
@@ -182,9 +190,55 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
             self.check()
             return
 
+        self.__finished = False
         self.indentCheckService.indentCheck(
             None, self.filename, self.source)
 
+    def checkBatch(self):
+        """
+        Public method to start an indentation check batch job.
+        
+        The results are reported to the __processResult slot.
+        """
+        self.__lastFileItem = None
+        
+        self.checkProgressLabel.setPath(self.tr("Preparing files..."))
+        progress = 0
+        
+        argumentsList = []
+        for filename in self.files:
+            progress += 1
+            self.checkProgress.setValue(progress)
+            QApplication.processEvents()
+            
+            try:
+                source = Utilities.readEncodedFile(filename)[0]
+                source = Utilities.normalizeCode(source)
+            except (UnicodeError, IOError) as msg:
+                self.noResults = False
+                self.__createResultItem(
+                    filename, 1,
+                    "Error: {0}".format(str(msg)).rstrip())
+                continue
+            
+            argumentsList.append((filename, source))
+        
+        # reset the progress bar to the checked files
+        self.checkProgress.setValue(self.progress)
+        QApplication.processEvents()
+        
+        self.__finished = False
+        self.indentCheckService.indentBatchCheck(argumentsList)
+    
+    def __batchFinished(self):
+        """
+        Private slot handling the completion of a batch job.
+        """
+        self.checkProgressLabel.setPath("")
+        self.checkProgress.setMaximum(1)
+        self.checkProgress.setValue(1)
+        self.__finish()
+    
     def __processResult(self, fn, nok, line, error):
         """
         Private slot called after perfoming a style check on one file.
@@ -194,8 +248,12 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         @param line line number (str)
         @param error text of the problem (str)
         """
-        # Check if it's the requested file, otherwise ignore signal
-        if fn != self.filename:
+        if self.__finished:
+            return
+        
+        # Check if it's the requested file, otherwise ignore signal if not
+        # in batch mode
+        if not self.__batch and fn != self.filename:
             return
         
         if nok:
@@ -204,30 +262,35 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.progress += 1
         
         self.checkProgress.setValue(self.progress)
-        self.checkProgressLabel.setPath("")
+        self.checkProgressLabel.setPath(fn)
         QApplication.processEvents()
         self.__resort()
         
-        self.check()
+        if not self.__batch:
+            self.check()
 
     def __finish(self):
         """
         Private slot called when the action or the user pressed the button.
         """
-        self.cancelled = True
-        self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
-        self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
-        self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
-        
-        if self.noResults:
-            self.__createResultItem(
-                self.tr('No indentation errors found.'), "", "")
-            QApplication.processEvents()
-        self.resultList.header().resizeSections(QHeaderView.ResizeToContents)
-        self.resultList.header().setStretchLastSection(True)
-        
-        self.checkProgress.setVisible(False)
-        self.checkProgressLabel.setVisible(False)
+        if not self.__finished:
+            self.__finished = True
+            
+            self.cancelled = True
+            self.buttonBox.button(QDialogButtonBox.Close).setEnabled(True)
+            self.buttonBox.button(QDialogButtonBox.Cancel).setEnabled(False)
+            self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
+            
+            if self.noResults:
+                self.__createResultItem(
+                    self.tr('No indentation errors found.'), "", "")
+                QApplication.processEvents()
+            self.resultList.header().resizeSections(
+                QHeaderView.ResizeToContents)
+            self.resultList.header().setStretchLastSection(True)
+            
+            self.checkProgress.setVisible(False)
+            self.checkProgressLabel.setVisible(False)
         
     def on_buttonBox_clicked(self, button):
         """
@@ -238,7 +301,11 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         if button == self.buttonBox.button(QDialogButtonBox.Close):
             self.close()
         elif button == self.buttonBox.button(QDialogButtonBox.Cancel):
-            self.__finish()
+            if self.__batch:
+                self.indentCheckService.cancelIndentBatchCheck()
+                QTimer.singleShot(1000, self.__finish)
+            else:
+                self.__finish()
         
     @pyqtSlot()
     def on_startButton_clicked(self):

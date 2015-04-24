@@ -4038,11 +4038,15 @@ eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.longest_run_of_spaces?
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.not_equal_witness?4(other)
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace.not_less_witness?4(other)
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.Whitespace?1(ws)
+eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.batchCheck?4(argumentsList, send, fx, cancelled)
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.check?4(file, text="")
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.format_witnesses?4(w)
+eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.initBatchService?4()
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.initService?4()
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.process_tokens?4(tokens)
+eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.worker?4(input, output)
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.check?4(codestring='')
+eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.checkBatch?4()
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_buttonBox_clicked?4(button)
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_resultList_itemActivated?4(itm, col)
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_startButton_clicked?4()
@@ -4171,7 +4175,11 @@ eric6.Plugins.PluginSyntaxChecker.python2Compatible?7
 eric6.Plugins.PluginSyntaxChecker.shortDescription?7
 eric6.Plugins.PluginSyntaxChecker.version?7
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.activate?4()
+eric6.Plugins.PluginTabnanny.TabnannyPlugin.batchFinished?7
+eric6.Plugins.PluginTabnanny.TabnannyPlugin.batchJobDone?4(fx, lang)
+eric6.Plugins.PluginTabnanny.TabnannyPlugin.cancelIndentBatchCheck?4()
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.deactivate?4()
+eric6.Plugins.PluginTabnanny.TabnannyPlugin.indentBatchCheck?4(argumentsList)
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.indentCheck?4(lang, filename, source)
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.indentChecked?7
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
