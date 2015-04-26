@@ -1325,13 +1325,13 @@ def prepareInfoFile(fileName):
     
     os.rename(fileName, fileName + ".orig")
     try:
-        hgOut = subprocess.check_output(["hg", "identify"])
+        hgOut = subprocess.check_output(["hg", "identify", "-i"])
         if sys.version_info[0] == 3:
             hgOut = hgOut.decode()
     except (FileNotFoundError, subprocess.CalledProcessError):
         hgOut = ""
     if hgOut:
-        hgOut = hgOut.strip().split()[0]
+        hgOut = hgOut.strip()
         if hgOut.endswith("+"):
             hgOut = hgOut[:-1]
         if sys.version_info[0] == 2:
