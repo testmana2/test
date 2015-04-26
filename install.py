@@ -30,6 +30,7 @@ import shutil
 import fnmatch
 import distutils.sysconfig
 import codecs
+import subprocess
 
 # Define the globals.
 progName = None
@@ -1313,6 +1314,38 @@ def compileUiFiles():
     compileUiDir(sourceDir, True, pyName)
 
 
+def prepareInfoFile(fileName):
+    """
+    Function to prepare an Info.py file when installing from source.
+    
+    @param fileName name of the Python file containing the info (string)
+    """
+    if not fileName:
+        return
+    
+    os.rename(fileName, fileName + ".orig")
+    try:
+        hgOut = subprocess.check_output(["hg", "identify", "-i"])
+        if sys.version_info[0] == 3:
+            hgOut = hgOut.decode()
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        hgOut = ""
+    if hgOut:
+        hgOut = hgOut.strip()
+        if hgOut.endswith("+"):
+            hgOut = hgOut[:-1]
+        if sys.version_info[0] == 2:
+            f = codecs.open(fileName + ".orig", "r", "utf-8")
+        else:
+            f = open(fileName + ".orig", "r", encoding="utf-8")
+        text = f.read()
+        f.close()
+        text = text.replace("@@REVISION@@", hgOut)
+        copyToFile(fileName, text)
+    else:
+        shutil.copy(fileName + ".orig", fileName)
+
+
 def main(argv):
     """
     The main function of the script.
@@ -1401,10 +1434,15 @@ def main(argv):
         elif "--noapis":
             installApis = False
     
+    infoName = ""
     installFromSource = not os.path.isdir(sourceDir)
     if installFromSource:
         sourceDir = os.path.dirname(__file__) or "."
         configName = os.path.join(sourceDir, "eric6config.py")
+        if os.path.exists(os.path.join(sourceDir, ".hg")):
+            # we are installing from source with repo
+            infoName = os.path.join(sourceDir, "UI", "Info.py")
+            prepareInfoFile(infoName)
     
     if len(cfg) == 0:
         createInstallConfig()
@@ -1487,6 +1525,15 @@ def main(argv):
             if os.path.exists(configNameC):
                 os.remove(configNameC)
             os.rename(configName + ".orig", configName)
+    except EnvironmentError:
+        pass
+    try:
+        if installFromSource and infoName:
+            os.remove(infoName)
+            infoNameC = infoName + 'c'
+            if os.path.exists(infoNameC):
+                os.remove(infoNameC)
+            os.rename(infoName + ".orig", infoName)
     except EnvironmentError:
         pass
     
