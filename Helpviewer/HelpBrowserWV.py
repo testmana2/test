@@ -35,6 +35,7 @@ from E5Gui import E5MessageBox, E5FileDialog
 
 import Preferences
 import UI.PixmapCache
+import Globals
 
 try:
     from PyQt5.QtNetwork import QSslCertificate
@@ -567,7 +568,7 @@ class HelpWebPage(QWebPage):
         if not certList:
             return False
         
-        certificateDict = Preferences.toDict(
+        certificateDict = Globals.toDict(
             Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             localCAList = QSslCertificate.fromData(certificateDict[server])
