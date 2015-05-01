@@ -13348,6 +13348,7 @@
       <keyword name="pbkdf2" id="pbkdf2" ref="eric6.Utilities.crypto.py3PBKDF2.html#pbkdf2" />
       <keyword name="pendingWrite" id="pendingWrite" ref="eric6.DebugClients.Ruby.AsyncFile.html#pendingWrite" />
       <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html" />
+      <keyword name="prepareInfoFile" id="prepareInfoFile" ref="eric6.install.html#prepareInfoFile" />
       <keyword name="prepareProcess" id="prepareProcess" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html#prepareProcess" />
       <keyword name="prepareQtMacBundle" id="prepareQtMacBundle" ref="eric6.Utilities.__init__.html#prepareQtMacBundle" />
       <keyword name="prepareUninstall" id="prepareUninstall" ref="eric6.Plugins.PluginVcsMercurial.html#prepareUninstall" />
@@ -13497,10 +13498,14 @@
       <keyword name="thread_list" id="thread_list" ref="eric6.DebugClients.Ruby.Debuggee.html#thread_list" />
       <keyword name="thread_list_all" id="thread_list_all" ref="eric6.DebugClients.Ruby.Debuggee.html#thread_list_all" />
       <keyword name="timeString" id="timeString" ref="eric6.Helpviewer.Download.DownloadUtilities.html#timeString" />
+      <keyword name="toBool" id="toBool" ref="eric6.Globals.__init__.html#toBool" />
       <keyword name="toBool" id="toBool" ref="eric6.Preferences.__init__.html#toBool" />
       <keyword name="toBool" id="toBool" ref="eric6.Utilities.__init__.html#toBool" />
+      <keyword name="toByteArray" id="toByteArray" ref="eric6.Globals.__init__.html#toByteArray" />
       <keyword name="toByteArray" id="toByteArray" ref="eric6.Preferences.__init__.html#toByteArray" />
+      <keyword name="toDict" id="toDict" ref="eric6.Globals.__init__.html#toDict" />
       <keyword name="toDict" id="toDict" ref="eric6.Preferences.__init__.html#toDict" />
+      <keyword name="toList" id="toList" ref="eric6.Globals.__init__.html#toList" />
       <keyword name="toList" id="toList" ref="eric6.Preferences.__init__.html#toList" />
       <keyword name="toNativeSeparators" id="toNativeSeparators" ref="eric6.Utilities.__init__.html#toNativeSeparators" />
       <keyword name="toSecondLevelDomain" id="toSecondLevelDomain" ref="eric6.Helpviewer.AdBlock.AdBlockRule.html#toSecondLevelDomain" />

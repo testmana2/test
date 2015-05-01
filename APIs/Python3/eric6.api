@@ -1814,6 +1814,10 @@ eric6.Globals.setConfigDir?4(d)
 eric6.Globals.settingsNameGlobal?7
 eric6.Globals.settingsNameOrganization?7
 eric6.Globals.settingsNameRecent?7
+eric6.Globals.toBool?4(value)
+eric6.Globals.toByteArray?4(value)
+eric6.Globals.toDict?4(value)
+eric6.Globals.toList?4(value)
 eric6.Graphics.ApplicationDiagramBuilder.ApplicationDiagramBuilder.buildDiagram?4()
 eric6.Graphics.ApplicationDiagramBuilder.ApplicationDiagramBuilder.getPersistenceData?4()
 eric6.Graphics.ApplicationDiagramBuilder.ApplicationDiagramBuilder.parsePersistenceData?4(version, data)
@@ -9079,6 +9083,7 @@ eric6.install.macPythonExe?7
 eric6.install.main?4(argv)
 eric6.install.modDir?7
 eric6.install.platBinDir?7
+eric6.install.prepareInfoFile?4(fileName)
 eric6.install.progLanguages?7
 eric6.install.progName?7
 eric6.install.pyModDir?7
