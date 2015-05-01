@@ -17,6 +17,7 @@ from E5Gui import E5MessageBox
 
 import Preferences
 import Utilities
+import Globals
 
 
 class E5SslErrorHandler(QObject):
@@ -41,13 +42,13 @@ class E5SslErrorHandler(QObject):
         caList = self.__getSystemCaCertificates()
         if Preferences.Prefs.settings.contains("Help/CaCertificatesDict"):
             # port old entries stored under 'Help'
-            certificateDict = Preferences.toDict(
+            certificateDict = Globals.toDict(
                 Preferences.Prefs.settings.value("Help/CaCertificatesDict"))
             Preferences.Prefs.settings.setValue(
                 "Ssl/CaCertificatesDict", certificateDict)
             Preferences.Prefs.settings.remove("Help/CaCertificatesDict")
         else:
-            certificateDict = Preferences.toDict(
+            certificateDict = Globals.toDict(
                 Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
@@ -105,7 +106,7 @@ class E5SslErrorHandler(QObject):
             default SSL configuration (boolean)
         """
         caMerge = {}
-        certificateDict = Preferences.toDict(
+        certificateDict = Globals.toDict(
             Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for caServer in certificateDict:
             caMerge[caServer] = QSslCertificate.fromData(
@@ -234,7 +235,7 @@ class E5SslErrorHandler(QObject):
         
         @return list of system certificates (list of QSslCertificate)
         """
-        caList = QSslCertificate.fromData(Preferences.toByteArray(
+        caList = QSslCertificate.fromData(Globals.toByteArray(
             Preferences.Prefs.settings.value("Ssl/SystemCertificates")))
         if not caList:
             caList = QSslSocket.systemCaCertificates()

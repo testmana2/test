@@ -25,6 +25,7 @@ from .Ui_E5SslCertificatesDialog import Ui_E5SslCertificatesDialog
 import Preferences
 import Utilities
 import UI.PixmapCache
+import Globals
 
 
 class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
@@ -67,7 +68,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         """
         Private slot to populate the server certificates tree.
         """
-        certificateDict = Preferences.toDict(
+        certificateDict = Globals.toDict(
             Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
@@ -174,7 +175,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
                     self.serversCertificatesTree.indexOfTopLevelItem(parent))
             
             # delete the certificate from the user certificate store
-            certificateDict = Preferences.toDict(
+            certificateDict = Globals.toDict(
                 Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
             if server in certificateDict:
                 certs = QSslCertificate.fromData(certificateDict[server])
@@ -202,7 +203,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         certs = self.__importCertificate()
         if certs:
             server = "*"
-            certificateDict = Preferences.toDict(
+            certificateDict = Globals.toDict(
                 Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
             if server in certificateDict:
                 sCerts = QSslCertificate.fromData(certificateDict[server])
@@ -255,7 +256,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         Private method to update the default SSL configuration.
         """
         caList = self.__getSystemCaCertificates()
-        certificateDict = Preferences.toDict(
+        certificateDict = Globals.toDict(
             Preferences.Prefs.settings.value("Ssl/CaCertificatesDict"))
         for server in certificateDict:
             for cert in QSslCertificate.fromData(certificateDict[server]):
@@ -271,7 +272,7 @@ class E5SslCertificatesDialog(QDialog, Ui_E5SslCertificatesDialog):
         
         @return list of system certificates (list of QSslCertificate)
         """
-        caList = QSslCertificate.fromData(Preferences.toByteArray(
+        caList = QSslCertificate.fromData(Globals.toByteArray(
             Preferences.Prefs.settings.value("Help/SystemCertificates")))
         if not caList:
             caList = QSslSocket.systemCaCertificates()

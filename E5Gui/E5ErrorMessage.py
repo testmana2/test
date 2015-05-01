@@ -55,8 +55,8 @@ class E5ErrorMessage(QErrorMessage):
         @return flag indicating that the message should be filtered out
             (boolean)
         """
-        for filter in self.settings.value(
-                "MessageFilters", self.__defaultFilters):
+        for filter in Globals.toList(self.settings.value(
+                "MessageFilters", self.__defaultFilters)):
             if filter in message:
                 return True
         
