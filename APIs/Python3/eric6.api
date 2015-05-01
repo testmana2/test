@@ -1834,6 +1834,10 @@ eric6.Globals.setConfigDir?4(d)
 eric6.Globals.settingsNameGlobal?7
 eric6.Globals.settingsNameOrganization?7
 eric6.Globals.settingsNameRecent?7
+eric6.Globals.toBool?4(value)
+eric6.Globals.toByteArray?4(value)
+eric6.Globals.toDict?4(value)
+eric6.Globals.toList?4(value)
 eric6.Graphics.ApplicationDiagramBuilder.ApplicationDiagramBuilder.buildDiagram?4()
 eric6.Graphics.ApplicationDiagramBuilder.ApplicationDiagramBuilder.getPersistenceData?4()
 eric6.Graphics.ApplicationDiagramBuilder.ApplicationDiagramBuilder.parsePersistenceData?4(version, data)

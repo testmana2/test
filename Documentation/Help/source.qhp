@@ -13669,10 +13669,14 @@
       <keyword name="thread_list" id="thread_list" ref="eric6.DebugClients.Ruby.Debuggee.html#thread_list" />
       <keyword name="thread_list_all" id="thread_list_all" ref="eric6.DebugClients.Ruby.Debuggee.html#thread_list_all" />
       <keyword name="timeString" id="timeString" ref="eric6.Helpviewer.Download.DownloadUtilities.html#timeString" />
+      <keyword name="toBool" id="toBool" ref="eric6.Globals.__init__.html#toBool" />
       <keyword name="toBool" id="toBool" ref="eric6.Preferences.__init__.html#toBool" />
       <keyword name="toBool" id="toBool" ref="eric6.Utilities.__init__.html#toBool" />
+      <keyword name="toByteArray" id="toByteArray" ref="eric6.Globals.__init__.html#toByteArray" />
       <keyword name="toByteArray" id="toByteArray" ref="eric6.Preferences.__init__.html#toByteArray" />
+      <keyword name="toDict" id="toDict" ref="eric6.Globals.__init__.html#toDict" />
       <keyword name="toDict" id="toDict" ref="eric6.Preferences.__init__.html#toDict" />
+      <keyword name="toList" id="toList" ref="eric6.Globals.__init__.html#toList" />
       <keyword name="toList" id="toList" ref="eric6.Preferences.__init__.html#toList" />
       <keyword name="toNativeSeparators" id="toNativeSeparators" ref="eric6.Utilities.__init__.html#toNativeSeparators" />
       <keyword name="toSecondLevelDomain" id="toSecondLevelDomain" ref="eric6.Helpviewer.AdBlock.AdBlockRule.html#toSecondLevelDomain" />
