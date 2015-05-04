@@ -15,6 +15,10 @@
 # find or create the user's trash directory.
 
 from __future__ import unicode_literals
+try:
+    str = unicode
+except NameError:
+    pass
 
 import sys
 import os
