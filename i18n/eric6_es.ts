@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.0" language="es">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1905,8 +1906,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1979,8 +1980,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -2227,7 +2228,7 @@ el botón de la derecha.&lt;/p&gt;</translation>
     <message>
         <location filename="../UI/BrowserModel.py" line="649"/>
         <source>Imports</source>
-        <translation type="unfinished"></translation>
+        <translation>Imports</translation>
     </message>
 </context>
 <context>
@@ -3188,7 +3189,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="448"/>
         <source>Preparing files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Preparando archivos...</translation>
     </message>
 </context>
 <context>
@@ -3216,12 +3217,12 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="109"/>
         <source>Python 2 batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Python 2 comprobación por lotes</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginCodeStyleChecker.py" line="125"/>
         <source>Python 3 batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Python 3 comprobación por lotes</translation>
     </message>
 </context>
 <context>
@@ -4258,7 +4259,7 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="439"/>
         <source>Enter search text...</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir texto de búsqueda...</translation>
     </message>
 </context>
 <context>
@@ -11435,32 +11436,32 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="181"/>
         <source>Select to highlight back quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para resaltar cadenas dentro de comillas invertidas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="184"/>
         <source>Highlight back quoted strings</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar cadenas dentro de comillas invertidas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="191"/>
         <source>Select to highlight escape sequences</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para resaltar secuencias de escape</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="194"/>
         <source>Highlight escape sequences</source>
-        <translation type="unfinished"></translation>
+        <translation>Resaltar secuencias de escape</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="201"/>
         <source>Select to allow verbatim string escape sequences</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir secuencias de escape con cadenas literales</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorPropertiesPage.ui" line="204"/>
         <source>Allow verbatim string escape sequences</source>
-        <translation type="unfinished"></translation>
+        <translation>Permitir secuencias de escape con cadenas literales</translation>
     </message>
 </context>
 <context>
@@ -12564,37 +12565,37 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1542"/>
         <source>Indentation Guides</source>
-        <translation type="unfinished"></translation>
+        <translation>Guías de Indentación</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1548"/>
         <source>Select whether indentation guides should be shown.</source>
-        <translation type="unfinished">Seleccionar si las guias de indentación deben ser mostradas.</translation>
+        <translation>Seleccionar si las guias de indentación deben ser mostradas.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1551"/>
         <source>Show Indentation Guides</source>
-        <translation type="unfinished">Mostrar Guías de Indentación</translation>
+        <translation>Mostrar Guías de Indentación</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1560"/>
         <source>Indentation Guides foreground:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primer plano para Guías de Indentación:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1573"/>
         <source>Select the foreground colour for indentation guides</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de primer plano para guías de indentación</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1583"/>
         <source>Indentation Guides background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fondo para Guías de Indentación:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorStylesPage.ui" line="1596"/>
         <source>Select the background colour for indentation guides</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar el color de fondo para guías de indentación</translation>
     </message>
 </context>
 <context>
@@ -15729,7 +15730,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -53599,17 +53600,17 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="201"/>
         <source>Python 2 batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Python 2 comprobación por lotes</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="217"/>
         <source>Python 3 batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Python 3 comprobación por lotes</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckService.py" line="233"/>
         <source>JavaScript batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Javascript comprobación por lotes</translation>
     </message>
 </context>
 <context>
@@ -53706,7 +53707,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheckerDialog.py" line="240"/>
         <source>Preparing files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Preparando archivos...</translation>
     </message>
 </context>
 <context>
@@ -54149,7 +54150,7 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Plugins/CheckerPlugins/Tabnanny/TabnannyDialog.py" line="205"/>
         <source>Preparing files...</source>
-        <translation type="unfinished"></translation>
+        <translation>Preparando archivos...</translation>
     </message>
 </context>
 <context>
@@ -54177,12 +54178,12 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     <message>
         <location filename="../Plugins/PluginTabnanny.py" line="104"/>
         <source>Python 2 batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Python 2 comprobación por lotes</translation>
     </message>
     <message>
         <location filename="../Plugins/PluginTabnanny.py" line="120"/>
         <source>Python 3 batch check</source>
-        <translation type="unfinished"></translation>
+        <translation>Python 3 comprobación por lotes</translation>
     </message>
 </context>
 <context>
