@@ -128,6 +128,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.__filename = ""
         self.__isFile = False
         self.__currentRevision = ""
+        self.intercept = False
         
         self.__initData()
         

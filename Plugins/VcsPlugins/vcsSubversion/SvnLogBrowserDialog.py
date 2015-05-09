@@ -91,6 +91,7 @@ class SvnLogBrowserDialog(QWidget, Ui_SvnLogBrowserDialog):
             'M': self.tr('Modified'),
             'R': self.tr('Replaced'),
         }
+        self.intercept = False
     
     def __initData(self):
         """
