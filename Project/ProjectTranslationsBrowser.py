@@ -18,7 +18,7 @@ import os
 import shutil
 import fnmatch
 
-from PyQt5.QtCore import pyqtSignal, QProcess
+from PyQt5.QtCore import PYQT_VERSION, pyqtSignal, QProcess
 from PyQt5.QtWidgets import QDialog, QMenu
 
 from E5Gui import E5MessageBox
@@ -1035,8 +1035,15 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             self.pylupdate = 'pylupdate4'
             if Utilities.isWindowsPlatform():
                 self.pylupdate = self.pylupdate + '.exe'
-        elif self.project.getProjectType() in ["PyQt5", "PyQt5C", "E6Plugin"]:
+        elif self.project.getProjectType() in ["PyQt5", "PyQt5C"]:
             self.pylupdate = 'pylupdate5'
+            if Utilities.isWindowsPlatform():
+                self.pylupdate = self.pylupdate + '.exe'
+        elif self.project.getProjectType() in ["E6Plugin"]:
+            if PYQT_VERSION < 0x050000:
+                self.pylupdate = 'pylupdate4'
+            else:
+                self.pylupdate = 'pylupdate5'
             if Utilities.isWindowsPlatform():
                 self.pylupdate = self.pylupdate + '.exe'
         elif self.project.getProjectType() in ["PySide", "PySideC"]:
