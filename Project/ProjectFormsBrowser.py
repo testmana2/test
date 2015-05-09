@@ -17,7 +17,7 @@ import os
 import sys
 import shutil
 
-from PyQt5.QtCore import QThread, QFileInfo, pyqtSignal, QProcess
+from PyQt5.QtCore import PYQT_VERSION, QThread, QFileInfo, pyqtSignal, QProcess
 from PyQt5.QtWidgets import QDialog, QInputDialog, QApplication, QMenu
 
 from E5Gui.E5Application import e5App
@@ -755,8 +755,17 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                     uic = self.uicompiler + '.bat'
                 else:
                     uic = self.uicompiler
-            elif self.project.getProjectType() in ["PyQt5", "E6Plugin"]:
+            elif self.project.getProjectType() in ["PyQt5"]:
                 self.uicompiler = 'pyuic5'
+                if Utilities.isWindowsPlatform():
+                    uic = self.uicompiler + '.bat'
+                else:
+                    uic = self.uicompiler
+            elif self.project.getProjectType() in ["E6Plugin"]:
+                if PYQT_VERSION < 0x050000:
+                    self.uicompiler = 'pyuic4'
+                else:
+                    self.uicompiler = 'pyuic5'
                 if Utilities.isWindowsPlatform():
                     uic = self.uicompiler + '.bat'
                 else:

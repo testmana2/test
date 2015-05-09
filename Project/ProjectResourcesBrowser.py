@@ -642,9 +642,20 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
                         args.append("-py2")
                     else:
                         args.append("-py3")
-            elif self.project.getProjectType() in [
-                    "PyQt5", "PyQt5C", "E6Plugin"]:
+            elif self.project.getProjectType() in ["PyQt5", "PyQt5C"]:
                 self.rccCompiler = 'pyrcc5'
+                if Utilities.isWindowsPlatform():
+                    self.rccCompiler += '.exe'
+            elif self.project.getProjectType() in ["E6Plugin"]:
+                if PYQT_VERSION < 0x050000:
+                    self.rccCompiler = 'pyrcc4'
+                    if self.project.pdata["PROGLANGUAGE"][0] in \
+                            ["Python", "Python2"]:
+                        args.append("-py2")
+                    else:
+                        args.append("-py3")
+                else:
+                    self.rccCompiler = 'pyrcc5'
                 if Utilities.isWindowsPlatform():
                     self.rccCompiler += '.exe'
             elif self.project.getProjectType() in ["PySide", "PySideC"]:
