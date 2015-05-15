@@ -1728,6 +1728,10 @@ eric6.E5Network.E5UrlInfo.E5UrlInfo.setSymLink?4(isSymLink)
 eric6.E5Network.E5UrlInfo.E5UrlInfo.setWritable?4(isWritable)
 eric6.E5Network.E5UrlInfo.E5UrlInfo.size?4()
 eric6.E5Network.E5UrlInfo.E5UrlInfo?1()
+eric6.E5Network.E5XmlRpcClient.E5XmlRpcClient.abort?4()
+eric6.E5Network.E5XmlRpcClient.E5XmlRpcClient.call?4(method, args, responseCallback, errorCallback)
+eric6.E5Network.E5XmlRpcClient.E5XmlRpcClient.setUrl?4(url)
+eric6.E5Network.E5XmlRpcClient.E5XmlRpcClient?1(url, parent=None)
 eric6.E5XML.Config.debuggerPropertiesFileFormatVersion?7
 eric6.E5XML.Config.highlightingStylesFileFormatVersion?7
 eric6.E5XML.Config.multiProjectFileFormatVersion?7

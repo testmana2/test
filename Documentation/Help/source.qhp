@@ -162,6 +162,7 @@
             <section title="eric6.E5Network.E5SslErrorHandler" ref="eric6.E5Network.E5SslErrorHandler.html" />
             <section title="eric6.E5Network.E5SslInfoWidget" ref="eric6.E5Network.E5SslInfoWidget.html" />
             <section title="eric6.E5Network.E5UrlInfo" ref="eric6.E5Network.E5UrlInfo.html" />
+            <section title="eric6.E5Network.E5XmlRpcClient" ref="eric6.E5Network.E5XmlRpcClient.html" />
           </section>
           <section title="eric6.E5XML" ref="index-eric6.E5XML.html">
             <section title="eric6.E5XML.Config" ref="eric6.E5XML.Config.html" />
@@ -4131,6 +4132,14 @@
       <keyword name="E5WheelTabBar (Constructor)" id="E5WheelTabBar (Constructor)" ref="eric6.E5Gui.E5TabWidget.html#E5WheelTabBar.__init__" />
       <keyword name="E5WheelTabBar.wheelEvent" id="E5WheelTabBar.wheelEvent" ref="eric6.E5Gui.E5TabWidget.html#E5WheelTabBar.wheelEvent" />
       <keyword name="E5XML (Package)" id="E5XML (Package)" ref="index-eric6.E5XML.html" />
+      <keyword name="E5XmlRpcClient" id="E5XmlRpcClient" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient" />
+      <keyword name="E5XmlRpcClient (Constructor)" id="E5XmlRpcClient (Constructor)" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient.__init__" />
+      <keyword name="E5XmlRpcClient (Module)" id="E5XmlRpcClient (Module)" ref="eric6.E5Network.E5XmlRpcClient.html" />
+      <keyword name="E5XmlRpcClient.__replyFinished" id="E5XmlRpcClient.__replyFinished" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient.__replyFinished" />
+      <keyword name="E5XmlRpcClient.__sslErrors" id="E5XmlRpcClient.__sslErrors" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient.__sslErrors" />
+      <keyword name="E5XmlRpcClient.abort" id="E5XmlRpcClient.abort" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient.abort" />
+      <keyword name="E5XmlRpcClient.call" id="E5XmlRpcClient.call" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient.call" />
+      <keyword name="E5XmlRpcClient.setUrl" id="E5XmlRpcClient.setUrl" ref="eric6.E5Network.E5XmlRpcClient.html#E5XmlRpcClient.setUrl" />
       <keyword name="E5ZoomWidget" id="E5ZoomWidget" ref="eric6.E5Gui.E5ZoomWidget.html#E5ZoomWidget" />
       <keyword name="E5ZoomWidget (Constructor)" id="E5ZoomWidget (Constructor)" ref="eric6.E5Gui.E5ZoomWidget.html#E5ZoomWidget.__init__" />
       <keyword name="E5ZoomWidget (Module)" id="E5ZoomWidget (Module)" ref="eric6.E5Gui.E5ZoomWidget.html" />
@@ -13863,6 +13872,7 @@
       <file>eric6.E5Network.E5SslErrorHandler.html</file>
       <file>eric6.E5Network.E5SslInfoWidget.html</file>
       <file>eric6.E5Network.E5UrlInfo.html</file>
+      <file>eric6.E5Network.E5XmlRpcClient.html</file>
       <file>eric6.E5XML.Config.html</file>
       <file>eric6.E5XML.DebuggerPropertiesReader.html</file>
       <file>eric6.E5XML.DebuggerPropertiesWriter.html</file>
