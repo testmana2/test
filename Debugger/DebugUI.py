@@ -1079,10 +1079,11 @@ class DebugUI(QObject):
                 filename = os.path.join(self.project.getProjectPath(),
                                         filename)
             else:
-                d = os.path.dirname(
-                    self.project.getMainScript(normalized=True))
-                if os.path.exists(os.path.join(d, filename)):
-                    filename = os.path.join(d, filename)
+                ms = self.project.getMainScript(normalized=True)
+                if ms is not None:
+                    d = os.path.dirname(ms)
+                    if os.path.exists(os.path.join(d, filename)):
+                        filename = os.path.join(d, filename)
         self.viewmanager.setFileLine(filename, lineNo, True, True)
         E5MessageBox.critical(
             self.ui, Program,
