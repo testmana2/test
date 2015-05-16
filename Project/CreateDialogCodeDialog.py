@@ -10,6 +10,7 @@ Module implementing a dialog to generate code for a Qt4/Qt5 dialog.
 from __future__ import unicode_literals
 
 import os
+import xml.etree.ElementTree
 
 from PyQt5.QtCore import QMetaObject, QByteArray, QRegExp, Qt, pyqtSlot, \
     QMetaMethod, qVersion, QSortFilterProxyModel
@@ -145,7 +146,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             dlg = uic.loadUi(
                 self.formFile, package=self.project.getProjectPath())
             return dlg.objectName()
-        except (AttributeError, ImportError) as err:
+        except (AttributeError, ImportError,
+                xml.etree.ElementTree.ParseError) as err:
             E5MessageBox.critical(
                 self,
                 self.tr("uic error"),
@@ -164,7 +166,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             dlg = uic.loadUi(
                 self.formFile, package=self.project.getProjectPath())
             return dlg.metaObject().className()
-        except (AttributeError, ImportError) as err:
+        except (AttributeError, ImportError,
+                xml.etree.ElementTree.ParseError) as err:
             E5MessageBox.critical(
                 self,
                 self.tr("uic error"),
@@ -329,7 +332,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                         itm2.setCheckState(Qt.Unchecked)
             
             self.slotsView.sortByColumn(0, Qt.AscendingOrder)
-        except (AttributeError, ImportError) as err:
+        except (AttributeError, ImportError,
+                xml.etree.ElementTree.ParseError) as err:
             E5MessageBox.critical(
                 self,
                 self.tr("uic error"),
