@@ -217,7 +217,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         v = []
         for key in ('start', 'end', 'lines', 'nloc', 'comments', 'empty'):
             if counters.get(key, 0):
-                v.append(counters[key])
+                v.append(loc.toString(counters[key]))
             else:
                 v.append('')
         return v
