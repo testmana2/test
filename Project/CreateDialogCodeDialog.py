@@ -244,7 +244,8 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             self.slotsModel.setHorizontalHeaderLabels([""])
             for obj in objects:
                 name = obj.objectName()
-                if not name:
+                if not name or name.startswith("qt_"):
+                    # ignore un-named or internal objects
                     continue
                 
                 metaObject = obj.metaObject()
