@@ -1699,11 +1699,11 @@
     <Other>Plugins/VcsPlugins/vcsSubversion/icons/subversion.png</Other>
     <Other>Plugins/ViewManagerPlugins/Listspace/preview.png</Other>
     <Other>Plugins/ViewManagerPlugins/Tabview/preview.png</Other>
-    <Other>README</Other>
-    <Other>README-MacOSX.txt</Other>
-    <Other>README-eric6-doc.txt</Other>
-    <Other>README-i18n.txt</Other>
-    <Other>README-passive-debugging.txt</Other>
+    <Other>README-MacOSX.rst</Other>
+    <Other>README-eric6-doc.rst</Other>
+    <Other>README-i18n.rst</Other>
+    <Other>README-passive-debugging.rst</Other>
+    <Other>README.rst</Other>
     <Other>Styles</Other>
     <Other>THANKS</Other>
     <Other>ThirdParty/CharDet/LICENSE</Other>
