@@ -277,6 +277,8 @@ class ModuleDocument(object):
                        })
         except TagError as e:
             sys.stderr.write(
+                "Error processing {0}.\n".format(self.module.file))
+            sys.stderr.write(
                 "Error in tags of description of module {0}.\n".format(
                     self.module.name))
             sys.stderr.write("{0}\n".format(e))
@@ -427,6 +429,8 @@ class ModuleDocument(object):
                        })
             except TagError as e:
                 sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
+                sys.stderr.write(
                     "Error in tags of description of class {0}.\n".format(
                         className))
                 sys.stderr.write("{0}\n".format(e))
@@ -509,6 +513,8 @@ class ModuleDocument(object):
                        })
             except TagError as e:
                 sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
+                sys.stderr.write(
                     "Error in tags of description of method {0}.{1}.\n".format(
                         className, '__init__'))
                 sys.stderr.write("{0}\n".format(e))
@@ -534,6 +540,8 @@ class ModuleDocument(object):
                        'Params': ', '.join(obj.methods[method].parameters[1:]),
                        })
             except TagError as e:
+                sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
                 sys.stderr.write(
                     "Error in tags of description of method {0}.{1}.\n".format(
                         className, method))
@@ -581,6 +589,8 @@ class ModuleDocument(object):
                        })
             except TagError as e:
                 sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
+                sys.stderr.write(
                     "Error in tags of description of Ruby module {0}.\n"
                     .format(rbModuleName))
                 sys.stderr.write("{0}\n".format(e))
@@ -623,6 +633,8 @@ class ModuleDocument(object):
                        'MethodDetails': methBodies,
                        })
             except TagError as e:
+                sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
                 sys.stderr.write(
                     "Error in tags of description of class {0}.\n".format(
                         className))
@@ -684,6 +696,8 @@ class ModuleDocument(object):
                         ', '.join(self.module.functions[funcName].parameters),
                        })
             except TagError as e:
+                sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
                 sys.stderr.write(
                     "Error in tags of description of function {0}.\n".format(
                         funcName))
