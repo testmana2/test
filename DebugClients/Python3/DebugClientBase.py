@@ -1140,24 +1140,9 @@ class DebugClientBase(object):
         @param redirect flag indicating redirection of stdin, stdout and
             stderr (boolean)
         """
-        # TODO: replace this by socket.create_connection
-        if remoteAddress is None:                       # default: 127.0.0.1
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.connect((DebugProtocol.DebugAddress, port))
-        else:
-            if "@@i" in remoteAddress:
-                remoteAddress, index = remoteAddress.split("@@i")
-            else:
-                index = 0
-            if ":" in remoteAddress:                    # IPv6
-                sockaddr = socket.getaddrinfo(
-                    remoteAddress, port, 0, 0, socket.SOL_TCP)[0][-1]
-                sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
-                sockaddr = sockaddr[:-1] + (int(index),)
-                sock.connect(sockaddr)
-            else:                                       # IPv4
-                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                sock.connect((remoteAddress, port))
+        if remoteAddress is None:
+            remoteAddress = "127.0.0.1"
+        sock = socket.create_connection((remoteAddress, port))
 
         self.readstream = AsyncFile(sock, sys.stdin.mode, sys.stdin.name)
         self.writestream = AsyncFile(sock, sys.stdout.mode, sys.stdout.name)
