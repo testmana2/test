@@ -1142,6 +1142,8 @@ class DebugClientBase(object):
         """
         if remoteAddress is None:
             remoteAddress = "127.0.0.1"
+        elif "@@i" in remoteAddress:
+            remoteAddress = remoteAddress.split("@@i")[0]
         sock = socket.create_connection((remoteAddress, port))
 
         self.readstream = AsyncFile(sock, sys.stdin.mode, sys.stdin.name)
