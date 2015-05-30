@@ -104,7 +104,8 @@ The block tags recogized by eric6-doc are:
 
 @author author
 
-    This tag is used to name the author of the code. For example:
+    This tag is used to name the author of the code. For example::
+    
     @author Detlev Offenbach <detlev@die-offenbachs.de>
 
 @deprecated description
@@ -116,7 +117,7 @@ The block tags recogized by eric6-doc are:
 
     This tag is used to describe the events (PyQt) a class may emit. It is 
     always followed by the event name and one or more lines of descriptive 
-    text. For example:
+    text. For example::
     
     @event closeEvent Emitted when an editor window is closed.
 
@@ -124,15 +125,19 @@ The block tags recogized by eric6-doc are:
 
     These tags are used to describe the exceptions a function or method may 
     raise. It is always followed by the exception name and one or more lines 
-    of descriptive text. For example:
+    of descriptive text. For example::
     
     @exception ValueError The searched value is not contained in the list.
+
+@ireturn description
+
+    This tag is an alias for the @return tag.
 
 @keyparam name description
 
     This tag is like the @param tag, but should be used for parameters, that 
     should always be given as keyword parameters. It is always followed by 
-    the argument name and one or more lines of descriptive text. For example:
+    the argument name and one or more lines of descriptive text. For example::
     
     @keyparam extension Optional extension of the source file.
 
@@ -140,9 +145,17 @@ The block tags recogized by eric6-doc are:
 
     This tag is used to describe a function or method argument. It is always 
     followed by the argument name and one or more lines of descriptive text.
-    For example:
+    For example::
     
-    @param filename Name of the source file.
+    @param filename name of the source file
+
+@ptype name parameter-type
+
+    This tag is used to describe the type of  a function or method argument.
+    It is always followed by the argument name and type. The argument has
+    to be defined already with @param or @keyparam. For example::
+    
+    @ptype filename str
 
 @raise exception description
 
@@ -150,10 +163,18 @@ The block tags recogized by eric6-doc are:
 
 @return description
 
-    This tag is used to describe a functions or methods return value. It can 
-    include one or more lines of descriptive text. For example:
+    This tag is used to describe a function or method return value. It can 
+    include one or more lines of descriptive text. For example::
     
-    @return list of description strings
+    @return list of file names
+
+@rtype type
+
+    This tag is used to describe a function or method return type. It should
+    follow an @return tag. For
+    example::
+    
+    @rtype list of str
 
 @see reference
 
@@ -162,43 +183,50 @@ The block tags recogized by eric6-doc are:
 
     @see "string"
     
-        Adds a text entry of string. No link is generated. eric6-doc distinguishes
-        this form from the others by looking for a double-quote (") as the first
-        character. For example:
+        Adds a text entry of string. No link is generated. eric6-doc
+        distinguishes this form from the others by looking for a double-quote
+        (") as the first character. For example:
 
         @see "eric6-doc readme file"
 
     @see <a href="URL#value">label</a>
     
-        Adds a link as defined by URL#value. eric6-doc distinguishes this form from
-        the others by looking for a less-than symbol (<) as the first character.
-        For example:
+        Adds a link as defined by URL#value. eric6-doc distinguishes this form
+        from the others by looking for a less-than symbol (<) as the first
+        character. For example::
 
         @see <a href="eric6.eric6-doc.html>eric6-doc documentation generator</a>
 
     @see package.module#member label
     
-        Adds a link to "member" in "module" in "package". package can be a package
-        path, where the package names are separated by a dot character (.). The
-        "package.module#member" part must not be split over several lines and
-        must name a valid target within the documentation directory. For example:
+        Adds a link to "member" in "module" in "package". package can be a
+        package path, where the package names are separated by a dot character
+        (.). The "package.module#member" part must not be split over several
+        lines and must name a valid target within the documentation directory.
+        For example::
 
         @see eric6.eric6-doc#main eric6-doc main() function
-        @see eric6.DocumentationTools.ModuleDocumentor#ModuleDocument.__genModuleSection
-            ModuleDocument.__genModuleSection
+        @see eric6.DocumentationTools.ModuleDocumentor#ModuleDocument.__genModuleSection ModuleDocument.__genModuleSection
 
 @signal signalname description
 
     This tag is used to describe the signals (PyQt) a class may emit. It is 
     always followed by the signal name and one or more lines of descriptive 
-    text. For example:
+    text. For example::
     
-    @signal lastEditorClosed Emitted after the last editor window was 
-        closed.
+    @signal lastEditorClosed Emitted after the last editor window was closed.
 
 @throws exception description
 
     This tag is an alias for the @exception tag.
+
+@type parameter-type
+
+    This tag is used to give the type of the parameter just described.
+    It must be preceded by a @param or @keyparam tag. For example::
+    
+    @param filename name of the source file
+    @type str
 
 3. Inline Tags
 --------------

@@ -177,9 +177,23 @@ parametersListEntryTemplate = \
 {{Description}}
 </dd>'''
 
+parameterTypesListEntryTemplate = \
+'''<dt><i>{{Name}}</i> ({{Type}})</dt>
+<dd>
+{{Description}}
+</dd>'''
+
 returnsTemplate = \
 '''<dl>
 <dt>Returns:</dt>
+<dd>
+{{0}}
+</dd>
+</dl>'''
+
+returnTypesTemplate = \
+'''<dl>
+<dt>Return Type:</dt>
 <dd>
 {{0}}
 </dd>

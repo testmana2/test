@@ -34,6 +34,9 @@ Version 6.1-snapshot-2015mmdd:
      when the project type or file type associations are changed
 - Project Browser
   -- added capability to show imports of a Python script
+- Source Code Documentor
+  -- added tags to describe the type of parameters (@type, @ptype)
+     and return values (@rtype)
 - Task Viewer
   -- added capability to add sub-tasks (i.e. a task hierarchy) for
      manually generated tasks

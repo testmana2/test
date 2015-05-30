@@ -100,9 +100,13 @@ class ModuleDocument(object):
             self.paragraphTemplate = TemplatesListsStyleCSS.paragraphTemplate
             self.parametersListTemplate = \
                 TemplatesListsStyleCSS.parametersListTemplate
+            self.parameterTypesListEntryTemplate = \
+                TemplatesListsStyleCSS.parameterTypesListEntryTemplate
             self.parametersListEntryTemplate = \
                 TemplatesListsStyleCSS.parametersListEntryTemplate
             self.returnsTemplate = TemplatesListsStyleCSS.returnsTemplate
+            self.returnTypesTemplate = \
+                TemplatesListsStyleCSS.returnTypesTemplate
             self.exceptionsListTemplate = \
                 TemplatesListsStyleCSS.exceptionsListTemplate
             self.exceptionsListEntryTemplate = \
@@ -161,8 +165,13 @@ class ModuleDocument(object):
             self.parametersListEntryTemplate = \
                 TemplatesListsStyle.parametersListEntryTemplate.format(
                     **colors)
+            self.parameterTypesListEntryTemplate = \
+                TemplatesListsStyle.parameterTypesListEntryTemplate.format(
+                    **colors)
             self.returnsTemplate = \
                 TemplatesListsStyle.returnsTemplate.format(**colors)
+            self.returnTypesTemplate = \
+                TemplatesListsStyle.returnTypesTemplate.format(**colors)
             self.exceptionsListTemplate = \
                 TemplatesListsStyle.exceptionsListTemplate.format(**colors)
             self.exceptionsListEntryTemplate = \
@@ -276,6 +285,8 @@ class ModuleDocument(object):
                        'FunctionList': functionList,
                        })
         except TagError as e:
+            sys.stderr.write(
+                "Error processing {0}.\n".format(self.module.file))
             sys.stderr.write(
                 "Error in tags of description of module {0}.\n".format(
                     self.module.name))
@@ -427,6 +438,8 @@ class ModuleDocument(object):
                        })
             except TagError as e:
                 sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
+                sys.stderr.write(
                     "Error in tags of description of class {0}.\n".format(
                         className))
                 sys.stderr.write("{0}\n".format(e))
@@ -509,6 +522,8 @@ class ModuleDocument(object):
                        })
             except TagError as e:
                 sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
+                sys.stderr.write(
                     "Error in tags of description of method {0}.{1}.\n".format(
                         className, '__init__'))
                 sys.stderr.write("{0}\n".format(e))
@@ -534,6 +549,8 @@ class ModuleDocument(object):
                        'Params': ', '.join(obj.methods[method].parameters[1:]),
                        })
             except TagError as e:
+                sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
                 sys.stderr.write(
                     "Error in tags of description of method {0}.{1}.\n".format(
                         className, method))
@@ -581,6 +598,8 @@ class ModuleDocument(object):
                        })
             except TagError as e:
                 sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
+                sys.stderr.write(
                     "Error in tags of description of Ruby module {0}.\n"
                     .format(rbModuleName))
                 sys.stderr.write("{0}\n".format(e))
@@ -623,6 +642,8 @@ class ModuleDocument(object):
                        'MethodDetails': methBodies,
                        })
             except TagError as e:
+                sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
                 sys.stderr.write(
                     "Error in tags of description of class {0}.\n".format(
                         className))
@@ -684,6 +705,8 @@ class ModuleDocument(object):
                         ', '.join(self.module.functions[funcName].parameters),
                        })
             except TagError as e:
+                sys.stderr.write(
+                    "Error processing {0}.\n".format(self.module.file))
                 sys.stderr.write(
                     "Error in tags of description of function {0}.\n".format(
                         funcName))
@@ -796,21 +819,27 @@ class ModuleDocument(object):
                    }))
         return ''.join(lst)
         
-    def __genParamDescriptionListSection(self, _list, template):
+    def __genParamDescriptionListSection(self, _list):
         """
         Private method to generate the list section of a description.
         
-        @param _list List containing the info for the
-            list section.
-        @param template The template to be used for the list. (string)
-        @return The list section. (string)
+        @param _list list containing the info for the parameter description
+            list section (list of lists with three elements)
+        @return formatted list section (string)
         """
         lst = []
-        for name, lines in _list:
-            lst.append(template.format(
-                **{'Name': name,
-                   'Description': html_uencode('\n'.join(lines)),
-                   }))
+        for name, type_, lines in _list:
+            if type_:
+                lst.append(self.parameterTypesListEntryTemplate.format(
+                    **{'Name': name,
+                       'Type': type_,
+                       'Description': html_uencode('\n'.join(lines)),
+                       }))
+            else:
+                lst.append(self.parametersListEntryTemplate.format(
+                    **{'Name': name,
+                       'Description': html_uencode('\n'.join(lines)),
+                       }))
         return ''.join(lst)
         
     def __formatCrossReferenceEntry(self, entry):
@@ -911,6 +940,7 @@ class ModuleDocument(object):
         paragraphs = []
         paramList = []
         returns = []
+        returnTypes = []
         exceptionDict = {}
         signalDict = {}
         eventDict = {}
@@ -924,6 +954,7 @@ class ModuleDocument(object):
         dlist = descr.splitlines()
         while dlist and not dlist[0]:
             del dlist[0]
+        lastTag = ""
         for ditem in dlist:
             ditem = self.__processInlineTags(ditem)
             desc = ditem.strip()
@@ -931,6 +962,7 @@ class ModuleDocument(object):
                 if desc.startswith(("@param", "@keyparam")):
                     inTagSection = True
                     parts = desc.split(None, 2)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
@@ -938,21 +970,60 @@ class ModuleDocument(object):
                     if parts[0] == "@keyparam":
                         paramName += '='
                     try:
-                        paramList.append([paramName, [parts[2]]])
+                        paramList.append([paramName, "", [parts[2]]])
                     except IndexError:
-                        paramList.append([paramName, []])
-                    lastItem = paramList[-1][1]
+                        paramList.append([paramName, "", []])
+                    lastItem = paramList[-1][2]
+                elif desc.startswith("@type"):
+                    if lastTag not in ["@param", "@keyparam"]:
+                        raise TagError(
+                            "{0} line must be preceded by a parameter line\n"
+                            .format(parts[0]))
+                    inTagSection = True
+                    parts = desc.split(None, 1)
+                    lastTag = parts[0]
+                    if len(parts) < 2:
+                        raise TagError(
+                            "Wrong format in {0} line.\n".format(parts[0]))
+                    paramList[-1][1] = parts[1]
+                elif desc.startswith("@ptype"):
+                    inTagSection = True
+                    parts = desc.split(None, 2)
+                    lastTag = parts[0]
+                    if len(parts) < 3:
+                        raise TagError(
+                            "Wrong format in {0} line.\n".format(parts[0]))
+                    param, type_ = parts[1:]
+                    for index in range(len(paramList)):
+                        if paramList[index][0] == param:
+                            paramList[index][1] = type_
+                            break
+                    else:
+                        raise TagError(
+                            "Unknow parameter name '{0}' in {1} line.\n"
+                            .format(param, parts[0]))
                 elif desc.startswith(("@return", "@ireturn")):
                     inTagSection = True
                     parts = desc.split(None, 1)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
                     returns = [parts[1]]
                     lastItem = returns
+                elif desc.startswith("@rtype"):
+                    inTagSection = True
+                    parts = desc.split(None, 1)
+                    lastTag = parts[0]
+                    if len(parts) < 2:
+                        raise TagError(
+                            "Wrong format in {0} line.\n".format(parts[0]))
+                    returnTypes = [parts[1]]
+                    lastItem = returnTypes
                 elif desc.startswith(("@exception", "@throws", "@raise")):
                     inTagSection = True
                     parts = desc.split(None, 2)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
@@ -964,6 +1035,7 @@ class ModuleDocument(object):
                     lastItem = exceptionDict[excName]
                 elif desc.startswith("@signal"):
                     inTagSection = True
+                    lastTag = desc.split(None, 1)[0]
                     m = _signal(desc, 0)
                     if m is None:
                         raise TagError("Wrong format in @signal line.\n")
@@ -977,6 +1049,7 @@ class ModuleDocument(object):
                     lastItem = signalDict[signalName]
                 elif desc.startswith("@event"):
                     inTagSection = True
+                    lastTag = desc.split(None, 1)[0]
                     m = _event(desc, 0)
                     if m is None:
                         raise TagError(
@@ -992,6 +1065,7 @@ class ModuleDocument(object):
                 elif desc.startswith("@deprecated"):
                     inTagSection = True
                     parts = desc.split(None, 1)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
@@ -1000,6 +1074,7 @@ class ModuleDocument(object):
                 elif desc.startswith("@author"):
                     inTagSection = True
                     parts = desc.split(None, 1)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
@@ -1008,6 +1083,7 @@ class ModuleDocument(object):
                 elif desc.startswith("@since"):
                     inTagSection = True
                     parts = desc.split(None, 1)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
@@ -1016,6 +1092,7 @@ class ModuleDocument(object):
                 elif desc.startswith("@see"):
                     inTagSection = True
                     parts = desc.split(None, 1)
+                    lastTag = parts[0]
                     if len(parts) < 2:
                         raise TagError(
                             "Wrong format in {0} line.\n".format(parts[0]))
@@ -1040,7 +1117,7 @@ class ModuleDocument(object):
         if paramList:
             parameterSect = self.parametersListTemplate.format(
                 **{'Parameters': self.__genParamDescriptionListSection(
-                    paramList, self.parametersListEntryTemplate)})
+                    paramList)})
         else:
             parameterSect = ""
         
@@ -1049,6 +1126,12 @@ class ModuleDocument(object):
                 html_uencode('\n'.join(returns)))
         else:
             returnSect = ""
+        
+        if returnTypes:
+            returnTypesSect = self.returnTypesTemplate.format(
+                html_uencode('\n'.join(returnTypes)))
+        else:
+            returnTypesSect = ""
         
         if exceptionDict:
             exceptionSect = self.exceptionsListTemplate.format(
@@ -1096,10 +1179,10 @@ class ModuleDocument(object):
         else:
             seeSect = ''
         
-        return "{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}".format(
+        return "{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}".format(
             deprecatedSect, description, parameterSect, returnSect,
-            exceptionSect, signalSect, eventSect, authorInfoSect,
-            seeSect, sinceInfoSect
+            returnTypesSect, exceptionSect, signalSect, eventSect,
+            authorInfoSect, seeSect, sinceInfoSect,
         )
     
     def getQtHelpKeywords(self):
