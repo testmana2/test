@@ -4810,8 +4810,8 @@ class Editor(QsciScintillaCompat):
         @param key name of the provider
         @type str
         """
-        if key in self.__completionListHookFunctions:
-            del self.__completionListHookFunctions[key]
+        if key in self.__ctHookFunctions:
+            del self.__ctHookFunctions[key]
     
     def getCallTipHook(self, key):
         """
