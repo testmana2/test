@@ -4816,42 +4816,42 @@ da mostrare nella pagina di configurazione.</translation>
         <translation>&amp;Filtra con:</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="520"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="525"/>
         <source>Code Generation</source>
         <translation>Generazione del codice</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="335"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="340"/>
         <source>uic error</source>
         <translation>errore uic</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="119"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="120"/>
         <source>Create Dialog Code</source>
         <translation>Crea il codice del dialogo</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="119"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="120"/>
         <source>The file &lt;b&gt;{0}&lt;/b&gt; exists but does not contain any classes.</source>
         <translation>Il file &lt;b&gt;{0}&lt;/b&gt; esiste ma non contiene nessuna classe.</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="335"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="340"/>
         <source>&lt;p&gt;There was an error loading the form &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;C&apos;è un errore nel caricamento del form&lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="405"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="410"/>
         <source>&lt;p&gt;Could not open the code template file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso aprire il file del modello del codice &quot;{0}&quot;.&lt;p&gt;&lt;p&gt;Ragione: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="441"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="446"/>
         <source>&lt;p&gt;Could not open the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso aprire il file sorgente &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Ragione: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/CreateDialogCodeDialog.py" line="520"/>
+        <location filename="../Project/CreateDialogCodeDialog.py" line="525"/>
         <source>&lt;p&gt;Could not write the source file &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso scrivere il file sorgente &quot;{0}&quot;.&lt;/p&gt;&lt;p&gt;Ragione: {1}&lt;/p&gt;</translation>
     </message>
@@ -4926,7 +4926,7 @@ Not connected
 <context>
     <name>DebugUI</name>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1738"/>
+        <location filename="../Debugger/DebugUI.py" line="1739"/>
         <source>Run Script</source>
         <translation>Esegui Script</translation>
     </message>
@@ -4946,7 +4946,7 @@ Not connected
         <translation>&lt;b&gt;Esegui Script&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando ed esegue lo script al di fuori del debugger. Se il file non è stato salvato può essere salvato prima.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1753"/>
+        <location filename="../Debugger/DebugUI.py" line="1754"/>
         <source>Run Project</source>
         <translation>Esegui Progetto</translation>
     </message>
@@ -5046,7 +5046,7 @@ Not connected
         <translation>&lt;b&gt;Profila Progetto&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e profila il progetto. Se file del progetto corrente non sono stati salvati, è possibile salvarli prima.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1860"/>
+        <location filename="../Debugger/DebugUI.py" line="1861"/>
         <source>Debug Script</source>
         <translation>Debug dello script</translation>
     </message>
@@ -5066,7 +5066,7 @@ Not connected
         <translation>&lt;b&gt;Debug dello Script&lt;/b&gt;&lt;p&gt;Imposta gli argomenti della linea di comando e imposta la linea corrente per essere la prima istruzione eseguibile di Python della finestra dell&apos;editor. Se il file ha modifiche non salvate è possibile salvarle prima.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1875"/>
+        <location filename="../Debugger/DebugUI.py" line="1876"/>
         <source>Debug Project</source>
         <translation>Debug del Progetto</translation>
     </message>
@@ -5191,7 +5191,7 @@ Not connected
         <translation>&lt;b&gt;Stop&lt;/b&gt;&lt;p&gt;Ferma la sessione di debug.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2167"/>
+        <location filename="../Debugger/DebugUI.py" line="2168"/>
         <source>Evaluate</source>
         <translation>Valuta</translation>
     </message>
@@ -5206,7 +5206,7 @@ Not connected
         <translation>Valuta nel contesto corrente</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2196"/>
+        <location filename="../Debugger/DebugUI.py" line="2197"/>
         <source>Execute</source>
         <translation>Esegui</translation>
     </message>
@@ -5311,52 +5311,52 @@ Not connected
         <translation>Il programma che viene debuggato contiene un errore di sintassi non specificato.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1109"/>
+        <location filename="../Debugger/DebugUI.py" line="1110"/>
         <source>An unhandled exception occured. See the shell window for details.</source>
         <translation>Un&apos;eccezione non gestita è occorso. Guarda la finestra di shell per dettagli.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1203"/>
+        <location filename="../Debugger/DebugUI.py" line="1204"/>
         <source>The program being debugged has terminated unexpectedly.</source>
         <translation>Il programma debuggato è terminato in maniera inaspettata.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1513"/>
+        <location filename="../Debugger/DebugUI.py" line="1514"/>
         <source>Coverage of Project</source>
         <translation>Analisi del Progetto</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1500"/>
+        <location filename="../Debugger/DebugUI.py" line="1501"/>
         <source>Coverage of Script</source>
         <translation>Analisi delle Script</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1753"/>
+        <location filename="../Debugger/DebugUI.py" line="1754"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Non c&apos;è uno script principale definito per il progetto. Esco</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1632"/>
+        <location filename="../Debugger/DebugUI.py" line="1633"/>
         <source>Profile of Project</source>
         <translation>Profilazione del progetto</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1619"/>
+        <location filename="../Debugger/DebugUI.py" line="1620"/>
         <source>Profile of Script</source>
         <translation>Profilazione dello script</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1875"/>
+        <location filename="../Debugger/DebugUI.py" line="1876"/>
         <source>There is no main script defined for the current project. No debugging possible.</source>
         <translation>Non c&apos;è uno script principale per il progetto. Non è possibile il debug.</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2167"/>
+        <location filename="../Debugger/DebugUI.py" line="2168"/>
         <source>Enter the statement to evaluate</source>
         <translation>Inserisci l&apos;istruzione da valutare</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="2196"/>
+        <location filename="../Debugger/DebugUI.py" line="2197"/>
         <source>Enter the statement to execute</source>
         <translation>Inserisci l&apos;istruzione da eseguire</translation>
     </message>
@@ -5401,7 +5401,7 @@ Not connected
         <translation>&lt;b&gt;Filtro tipo variabili&lt;/b&gt;&lt;p&gt;Configura il filtro per i tipi variabile. Solo i tipi di variabile che non sono selezionati sono mostrati nella finestra delle variabili globali o locali durante una sessione di debug. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1272"/>
+        <location filename="../Debugger/DebugUI.py" line="1273"/>
         <source>Breakpoint Condition Error</source>
         <translation>Errore condizione di interruzione</translation>
     </message>
@@ -5454,12 +5454,12 @@ Not connected
         <translation>&lt;b&gt;Valuta&lt;/b&gt;&lt;p&gt;Valuta un&apos;espressione nel contesto corrente del programma debuggato. Il risultato è mostrato nella shell.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1308"/>
+        <location filename="../Debugger/DebugUI.py" line="1309"/>
         <source>Watch Expression Error</source>
         <translation>Errore espressione di watch</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1348"/>
+        <location filename="../Debugger/DebugUI.py" line="1349"/>
         <source>Watch expression already exists</source>
         <translation>L&apos;espressione di controllo esiste già</translation>
     </message>
@@ -5506,37 +5506,37 @@ Not connected
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; è terminato con lo stato di uscita {1}.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1090"/>
+        <location filename="../Debugger/DebugUI.py" line="1091"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; contains the syntax error &lt;b&gt;{1}&lt;/b&gt; at line &lt;b&gt;{2}&lt;/b&gt;, character &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; contiene l&apos;errore di sintassi &lt;b&gt;{1}&lt;/b&gt; alla linea &lt;b&gt;{2}&lt;/b&gt;, carattere &lt;b&gt;{3}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1149"/>
+        <location filename="../Debugger/DebugUI.py" line="1150"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Line: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Break here?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il programma in debug ha sollevato un&apos;eccezione &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;br&gt;File: &lt;b&gt;{2}&lt;/b&gt;, Linea: &lt;b&gt;{3}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Interrompere qui ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1164"/>
+        <location filename="../Debugger/DebugUI.py" line="1165"/>
         <source>&lt;p&gt;The debugged program raised the exception &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il programma debuggato ha sollevato un&apos;eccezione &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;&quot;&lt;b&gt;{1}&lt;/b&gt;&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1272"/>
+        <location filename="../Debugger/DebugUI.py" line="1273"/>
         <source>&lt;p&gt;The condition of the breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La condizione del breakpoint &lt;b&gt;{0}, {1}&lt;/b&gt; contiene un errore di sintassi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1308"/>
+        <location filename="../Debugger/DebugUI.py" line="1309"/>
         <source>&lt;p&gt;The watch expression &lt;b&gt;{0}&lt;/b&gt; contains a syntax error.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione  &lt;b&gt;{0}&lt;/b&gt; contiene un errore di sintassi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1338"/>
+        <location filename="../Debugger/DebugUI.py" line="1339"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; esiste già.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugUI.py" line="1342"/>
+        <location filename="../Debugger/DebugUI.py" line="1343"/>
         <source>&lt;p&gt;A watch expression &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; for the variable &lt;b&gt;{1}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;L&apos;espressione  &apos;&lt;b&gt;{0}&lt;/b&gt;&apos; per la variabile &lt;b&gt;{1}&lt;/b&gt; esiste già.&lt;/p&gt;</translation>
     </message>
@@ -7999,72 +7999,72 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>Hai salvato certificati che identificano queste autorità di certificazione:</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="310"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="311"/>
         <source>(Unknown)</source>
         <translation>(Sconosciuto)</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="312"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="313"/>
         <source>(Unknown common name)</source>
         <translation>(Nome comune sconosciuto)</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="153"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="154"/>
         <source>Delete Server Certificate</source>
         <translation>Cancella certificato del server</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="153"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="154"/>
         <source>&lt;p&gt;Shall the server certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the server certificate is deleted, the normal security checks will be reinstantiated and the server has to present a valid certificate.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Deve essere cancellato il certificato del server?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato del server viene cancellato, i controlli di sicurezza normali verranno reimpostati e il server dovrà presenteare un certificato valido.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="499"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="500"/>
         <source>Import Certificate</source>
         <translation>Importa certificato</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="411"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="412"/>
         <source>&lt;p&gt;The certificate &lt;b&gt;{0}&lt;/b&gt; already exists. Skipping.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il certificato &lt;b&gt;{0}&lt;/b&gt; esiste già.Lo salto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="362"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="363"/>
         <source>Delete CA Certificate</source>
         <translation>Cancella certificato CA</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="362"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="363"/>
         <source>&lt;p&gt;Shall the CA certificate really be deleted?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;If the CA certificate is deleted, the browser will not trust any certificate issued by this CA.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Deve essere cancellato il certificato CA?&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;&lt;p&gt;Se il certificato CA viene cancellato,il navigatore non validerà nessun certificato emesso da questa CA.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="509"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="510"/>
         <source>Export Certificate</source>
         <translation>Esporta certificato</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="450"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="451"/>
         <source>Certificate File (PEM) (*.pem);;Certificate File (DER) (*.der)</source>
         <translation>File Certificato (PEM) (*.pem);;File Certificato (DER) (*.der)</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="466"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="467"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="477"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="478"/>
         <source>&lt;p&gt;The certificate could not be written to file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il certificato non può essere scritto sul file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="499"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="500"/>
         <source>Certificate Files (*.pem *.crt *.der *.cer *.ca);;All Files (*)</source>
         <translation>Files Certificato (*.pem *.crt *.der *.cer *.ca);;Tutti i file (*)</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslCertificatesDialog.py" line="509"/>
+        <location filename="../E5Network/E5SslCertificatesDialog.py" line="510"/>
         <source>&lt;p&gt;The certificate could not be read from file &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Error: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il certificato non può essere letto dal file  &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Errore: {1}&lt;/p&gt;</translation>
     </message>
@@ -8168,42 +8168,42 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>E5SslErrorHandler</name>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="133"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="134"/>
         <source>SSL Errors</source>
         <translation>Errori SSL</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="133"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="134"/>
         <source>&lt;p&gt;SSL Errors for &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Do you want to ignore these errors?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Errori SSL per &lt;br /&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;ul&gt;&lt;li&gt;{1}&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;&lt;p&gt;Vuoi ignorarli ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="148"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="149"/>
         <source>Certificates</source>
         <translation>Certificati</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="148"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="149"/>
         <source>&lt;p&gt;Certificates:&lt;br/&gt;{0}&lt;br/&gt;Do you want to accept all these certificates?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Certificati:&lt;br/&gt;{0}&lt;br/&gt;Vuoi accettare tutti questi certificati?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="208"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="209"/>
         <source>Name: {0}</source>
         <translation>Nome: {0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="212"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="213"/>
         <source>&lt;br/&gt;Organization: {0}</source>
         <translation>&lt;br/&gt;Organizzazione: {0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="216"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="217"/>
         <source>&lt;br/&gt;Issuer: {0}</source>
         <translation>&lt;br/&gt;Emettitore: {0}</translation>
     </message>
     <message>
-        <location filename="../E5Network/E5SslErrorHandler.py" line="220"/>
+        <location filename="../E5Network/E5SslErrorHandler.py" line="221"/>
         <source>&lt;br/&gt;Not valid before: {0}&lt;br/&gt;Valid Until: {1}</source>
         <translation>&lt;br/&gt;Non valido prima: {0}&lt;br/&gt;Valido Fino: {1}</translation>
     </message>
@@ -8494,6 +8494,14 @@ gli elementi visualizzati.&lt;/p&gt;
     </message>
 </context>
 <context>
+    <name>E5XmlRpcClient</name>
+    <message>
+        <location filename="../E5Network/E5XmlRpcClient.py" line="102"/>
+        <source>SSL Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>E5ZoomWidget</name>
     <message>
         <location filename="../E5Gui/E5ZoomWidget.ui" line="75"/>
@@ -8675,92 +8683,92 @@ gli elementi visualizzati.&lt;/p&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="647"/>
+        <location filename="../QScintilla/Editor.py" line="648"/>
         <source>Undo</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="650"/>
+        <location filename="../QScintilla/Editor.py" line="651"/>
         <source>Redo</source>
         <translation>Rifai</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="653"/>
+        <location filename="../QScintilla/Editor.py" line="654"/>
         <source>Revert to last saved state</source>
         <translation>Ritorna all&apos;ultimo stato salvato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="657"/>
+        <location filename="../QScintilla/Editor.py" line="658"/>
         <source>Cut</source>
         <translation>Taglia</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="660"/>
+        <location filename="../QScintilla/Editor.py" line="661"/>
         <source>Copy</source>
         <translation>Copia</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="663"/>
+        <location filename="../QScintilla/Editor.py" line="664"/>
         <source>Paste</source>
         <translation>Incolla</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="668"/>
+        <location filename="../QScintilla/Editor.py" line="669"/>
         <source>Indent</source>
         <translation>Identa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="671"/>
+        <location filename="../QScintilla/Editor.py" line="672"/>
         <source>Unindent</source>
         <translation>Annulla identazione</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="674"/>
+        <location filename="../QScintilla/Editor.py" line="675"/>
         <source>Comment</source>
         <translation>Commenta</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="677"/>
+        <location filename="../QScintilla/Editor.py" line="678"/>
         <source>Uncomment</source>
         <translation>Annulla commenta</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="680"/>
+        <location filename="../QScintilla/Editor.py" line="681"/>
         <source>Stream Comment</source>
         <translation>Flusso commento</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="683"/>
+        <location filename="../QScintilla/Editor.py" line="684"/>
         <source>Box Comment</source>
         <translation>Commenti nel riquadro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="687"/>
+        <location filename="../QScintilla/Editor.py" line="688"/>
         <source>Select to brace</source>
         <translation>Seleziona per parentesizzare</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="689"/>
+        <location filename="../QScintilla/Editor.py" line="690"/>
         <source>Select all</source>
         <translation>Seleziona tutti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="690"/>
+        <location filename="../QScintilla/Editor.py" line="691"/>
         <source>Deselect all</source>
         <translation>Deseleziona tutti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="704"/>
+        <location filename="../QScintilla/Editor.py" line="705"/>
         <source>Shorten empty lines</source>
         <translation>Abbrevia righe vuote</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="892"/>
+        <location filename="../QScintilla/Editor.py" line="893"/>
         <source>Languages</source>
         <translation>Linguaggi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="711"/>
+        <location filename="../QScintilla/Editor.py" line="712"/>
         <source>Use Monospaced Font</source>
         <translation>Usa un font Monospaced</translation>
     </message>
@@ -8770,422 +8778,422 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">Autocompletamento abilitato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="822"/>
+        <location filename="../QScintilla/Editor.py" line="823"/>
         <source>Check</source>
         <translation>Controlla</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="842"/>
+        <location filename="../QScintilla/Editor.py" line="843"/>
         <source>Show</source>
         <translation>Mostra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="757"/>
+        <location filename="../QScintilla/Editor.py" line="758"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="763"/>
+        <location filename="../QScintilla/Editor.py" line="764"/>
         <source>Save</source>
         <translation>Salva</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="766"/>
+        <location filename="../QScintilla/Editor.py" line="767"/>
         <source>Save As...</source>
         <translation>Salva come...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="779"/>
+        <location filename="../QScintilla/Editor.py" line="780"/>
         <source>Print</source>
         <translation>Stampa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="844"/>
+        <location filename="../QScintilla/Editor.py" line="845"/>
         <source>Code metrics...</source>
         <translation>Statistiche codice...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="845"/>
+        <location filename="../QScintilla/Editor.py" line="846"/>
         <source>Code coverage...</source>
         <translation>Analisi codice...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="853"/>
+        <location filename="../QScintilla/Editor.py" line="854"/>
         <source>Profile data...</source>
         <translation>Profilazione dati...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1138"/>
+        <location filename="../QScintilla/Editor.py" line="1139"/>
         <source>Toggle bookmark</source>
         <translation>Inverti bookmark</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1140"/>
+        <location filename="../QScintilla/Editor.py" line="1141"/>
         <source>Next bookmark</source>
         <translation>Prossimo segnalibro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1142"/>
+        <location filename="../QScintilla/Editor.py" line="1143"/>
         <source>Previous bookmark</source>
         <translation>Segnalibro precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1144"/>
+        <location filename="../QScintilla/Editor.py" line="1145"/>
         <source>Clear all bookmarks</source>
         <translation>Pulisci di tutti di segnalibri</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1164"/>
+        <location filename="../QScintilla/Editor.py" line="1165"/>
         <source>Toggle breakpoint</source>
         <translation>Abilita/Disabilita breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1169"/>
+        <location filename="../QScintilla/Editor.py" line="1170"/>
         <source>Edit breakpoint...</source>
         <translation>Modifica Breakpoint...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4888"/>
+        <location filename="../QScintilla/Editor.py" line="5070"/>
         <source>Enable breakpoint</source>
         <translation>Abilita breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1174"/>
+        <location filename="../QScintilla/Editor.py" line="1175"/>
         <source>Next breakpoint</source>
         <translation>Prossimo breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1176"/>
+        <location filename="../QScintilla/Editor.py" line="1177"/>
         <source>Previous breakpoint</source>
         <translation>Breakpoint precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1178"/>
+        <location filename="../QScintilla/Editor.py" line="1179"/>
         <source>Clear all breakpoints</source>
         <translation>Elimina tutti i breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1198"/>
+        <location filename="../QScintilla/Editor.py" line="1199"/>
         <source>LMB toggles bookmarks</source>
         <translation>Inverti bookmark LMB</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1202"/>
+        <location filename="../QScintilla/Editor.py" line="1203"/>
         <source>LMB toggles breakpoints</source>
         <translation>Toggle Breakpoint LMB</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1724"/>
+        <location filename="../QScintilla/Editor.py" line="1725"/>
         <source>Modification of Read Only file</source>
         <translation>Modifica di un file di sola lettura</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1724"/>
+        <location filename="../QScintilla/Editor.py" line="1725"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Stai tentando di modificare un file in sola lettura. Per favore prima salva come un file diverso.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2416"/>
+        <location filename="../QScintilla/Editor.py" line="2417"/>
         <source>Printing...</source>
         <translation>In stampa...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2433"/>
+        <location filename="../QScintilla/Editor.py" line="2434"/>
         <source>Printing completed</source>
         <translation>Stampa completata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2435"/>
+        <location filename="../QScintilla/Editor.py" line="2436"/>
         <source>Error while printing</source>
         <translation>Errore durante la stampa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2438"/>
+        <location filename="../QScintilla/Editor.py" line="2439"/>
         <source>Printing aborted</source>
         <translation>Stampa annullata</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2851"/>
+        <location filename="../QScintilla/Editor.py" line="2852"/>
         <source>Open File</source>
         <translation>Apri File</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3021"/>
+        <location filename="../QScintilla/Editor.py" line="3022"/>
         <source>Save File</source>
         <translation>Salva file</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2796"/>
+        <location filename="../QScintilla/Editor.py" line="2797"/>
         <source>File Modified</source>
         <translation>File modificato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4344"/>
+        <location filename="../QScintilla/Editor.py" line="4346"/>
         <source>Autocompletion</source>
         <translation>Autocompletamento</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4344"/>
+        <location filename="../QScintilla/Editor.py" line="4346"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>L&apos;autocomplentamento non è disponibile perchè non ci sono fonti impostate.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4891"/>
+        <location filename="../QScintilla/Editor.py" line="5073"/>
         <source>Disable breakpoint</source>
         <translation>Disabilita breakpoint</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5236"/>
+        <location filename="../QScintilla/Editor.py" line="5418"/>
         <source>Code Coverage</source>
         <translation>Analisi codice</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5236"/>
+        <location filename="../QScintilla/Editor.py" line="5418"/>
         <source>Please select a coverage file</source>
         <translation>Per favore seleziona un file per l&apos;analisi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5415"/>
+        <location filename="../QScintilla/Editor.py" line="5597"/>
         <source>Profile Data</source>
         <translation>Profilazione dati</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5415"/>
+        <location filename="../QScintilla/Editor.py" line="5597"/>
         <source>Please select a profile file</source>
         <translation>Per favore seleziona un file per la profilazione</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5890"/>
+        <location filename="../QScintilla/Editor.py" line="6072"/>
         <source>Macro Name</source>
         <translation>Nome Macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5890"/>
+        <location filename="../QScintilla/Editor.py" line="6072"/>
         <source>Select a macro name:</source>
         <translation>Seleziona un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5961"/>
+        <location filename="../QScintilla/Editor.py" line="6143"/>
         <source>Macro files (*.macro)</source>
         <translation>File Macro (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5918"/>
+        <location filename="../QScintilla/Editor.py" line="6100"/>
         <source>Load macro file</source>
         <translation>Carica un file di macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5941"/>
+        <location filename="../QScintilla/Editor.py" line="6123"/>
         <source>Error loading macro</source>
         <translation>Errore nel caricamento della macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5961"/>
+        <location filename="../QScintilla/Editor.py" line="6143"/>
         <source>Save macro file</source>
         <translation>Salva un file di macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5978"/>
+        <location filename="../QScintilla/Editor.py" line="6160"/>
         <source>Save macro</source>
         <translation>Salva macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5994"/>
+        <location filename="../QScintilla/Editor.py" line="6176"/>
         <source>Error saving macro</source>
         <translation>Errore nel salvataggio della macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6007"/>
+        <location filename="../QScintilla/Editor.py" line="6189"/>
         <source>Start Macro Recording</source>
         <translation>Avvia registrazione della macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6033"/>
+        <location filename="../QScintilla/Editor.py" line="6215"/>
         <source>Macro Recording</source>
         <translation>Registrazione Macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6033"/>
+        <location filename="../QScintilla/Editor.py" line="6215"/>
         <source>Enter name of the macro:</source>
         <translation>Inserisci un nome per la macro:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6169"/>
+        <location filename="../QScintilla/Editor.py" line="6351"/>
         <source>File changed</source>
         <translation>File modificato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="716"/>
+        <location filename="../QScintilla/Editor.py" line="717"/>
         <source>Autosave enabled</source>
         <translation>Salvataggio automatico abilitato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1147"/>
+        <location filename="../QScintilla/Editor.py" line="1148"/>
         <source>Goto syntax error</source>
         <translation>Vai all&apos;errore di sintassi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1151"/>
+        <location filename="../QScintilla/Editor.py" line="1152"/>
         <source>Clear syntax error</source>
         <translation>Elimina errori di sintassi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6471"/>
+        <location filename="../QScintilla/Editor.py" line="6653"/>
         <source>Drop Error</source>
         <translation>Errore Drop</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1149"/>
+        <location filename="../QScintilla/Editor.py" line="1150"/>
         <source>Show syntax error message</source>
         <translation>Mostra i messaggi degli errori di sintassi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5575"/>
+        <location filename="../QScintilla/Editor.py" line="5757"/>
         <source>Syntax Error</source>
         <translation>Errore di sintassi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5575"/>
+        <location filename="../QScintilla/Editor.py" line="5757"/>
         <source>No syntax error message available.</source>
         <translation>Nessun messaggio degli errori di sintassi disponibile.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1166"/>
+        <location filename="../QScintilla/Editor.py" line="1167"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Abilita/Disabilita breakpoint temporaneo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="847"/>
+        <location filename="../QScintilla/Editor.py" line="848"/>
         <source>Show code coverage annotations</source>
         <translation>Mostra le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="850"/>
+        <location filename="../QScintilla/Editor.py" line="851"/>
         <source>Hide code coverage annotations</source>
         <translation>Nascondi le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1181"/>
+        <location filename="../QScintilla/Editor.py" line="1182"/>
         <source>Next uncovered line</source>
         <translation>Prossimo file non analizzato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1184"/>
+        <location filename="../QScintilla/Editor.py" line="1185"/>
         <source>Previous uncovered line</source>
         <translation>File non analizzato precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5300"/>
+        <location filename="../QScintilla/Editor.py" line="5482"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostra le annotazioni dell&apos;analisi del codice</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5293"/>
+        <location filename="../QScintilla/Editor.py" line="5475"/>
         <source>All lines have been covered.</source>
         <translation>Tutte le linee sono state analizzate.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5300"/>
+        <location filename="../QScintilla/Editor.py" line="5482"/>
         <source>There is no coverage file available.</source>
         <translation>Non ci sono file di analisi disponibili.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="866"/>
+        <location filename="../QScintilla/Editor.py" line="867"/>
         <source>Diagrams</source>
         <translation>Diagrammi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="868"/>
+        <location filename="../QScintilla/Editor.py" line="869"/>
         <source>Class Diagram...</source>
         <translation>Diagrammi di classe...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="870"/>
+        <location filename="../QScintilla/Editor.py" line="871"/>
         <source>Package Diagram...</source>
         <translation>Diagrammi del package...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="872"/>
+        <location filename="../QScintilla/Editor.py" line="873"/>
         <source>Imports Diagram...</source>
         <translation>Importa diagrammi...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="874"/>
+        <location filename="../QScintilla/Editor.py" line="875"/>
         <source>Application Diagram...</source>
         <translation>Diagrammi dell&apos;applicazione...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="895"/>
+        <location filename="../QScintilla/Editor.py" line="896"/>
         <source>No Language</source>
         <translation>Nessun linguaggio</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6492"/>
+        <location filename="../QScintilla/Editor.py" line="6674"/>
         <source>Resources</source>
         <translation>Risorse</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6494"/>
+        <location filename="../QScintilla/Editor.py" line="6676"/>
         <source>Add file...</source>
         <translation>Aggiungi file...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6496"/>
+        <location filename="../QScintilla/Editor.py" line="6678"/>
         <source>Add files...</source>
         <translation>Aggiungi files...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6498"/>
+        <location filename="../QScintilla/Editor.py" line="6680"/>
         <source>Add aliased file...</source>
         <translation>Aggiungi file sinonimo...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6501"/>
+        <location filename="../QScintilla/Editor.py" line="6683"/>
         <source>Add localized resource...</source>
         <translation>Aggiungi una risorsa localizzata...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6524"/>
+        <location filename="../QScintilla/Editor.py" line="6706"/>
         <source>Add file resource</source>
         <translation>Aggiungi un file risorse</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6540"/>
+        <location filename="../QScintilla/Editor.py" line="6722"/>
         <source>Add file resources</source>
         <translation>Aggiundi dei file risorse</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6568"/>
+        <location filename="../QScintilla/Editor.py" line="6750"/>
         <source>Add aliased file resource</source>
         <translation>Aggiungi file sinonimo delle risorse</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6632"/>
+        <location filename="../QScintilla/Editor.py" line="6814"/>
         <source>Package Diagram</source>
         <translation>Diagrammi del package</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6632"/>
+        <location filename="../QScintilla/Editor.py" line="6814"/>
         <source>Include class attributes?</source>
         <translation>Includi gli attributi della classe ?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6666"/>
+        <location filename="../QScintilla/Editor.py" line="6848"/>
         <source>Application Diagram</source>
         <translation>Diagrammi dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6666"/>
+        <location filename="../QScintilla/Editor.py" line="6848"/>
         <source>Include module names?</source>
         <translation>Includi i nomi dei moduli ?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6505"/>
+        <location filename="../QScintilla/Editor.py" line="6687"/>
         <source>Add resource frame</source>
         <translation>Aggiungi riquadro delle risorse</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6007"/>
+        <location filename="../QScintilla/Editor.py" line="6189"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Registrazione macro già attiva. Avvia nuovamente ?</translation>
     </message>
@@ -9195,147 +9203,147 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation type="obsolete">Autocompletamento</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="805"/>
+        <location filename="../QScintilla/Editor.py" line="806"/>
         <source>from Document</source>
         <translation>dal Documento</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="807"/>
+        <location filename="../QScintilla/Editor.py" line="808"/>
         <source>from APIs</source>
         <translation>dalle APIs</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="809"/>
+        <location filename="../QScintilla/Editor.py" line="810"/>
         <source>from Document and APIs</source>
         <translation>dal Documento e dalle APIs</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1187"/>
+        <location filename="../QScintilla/Editor.py" line="1188"/>
         <source>Next task</source>
         <translation>Prossimo task</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1189"/>
+        <location filename="../QScintilla/Editor.py" line="1190"/>
         <source>Previous task</source>
         <translation>Task precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1015"/>
+        <location filename="../QScintilla/Editor.py" line="1016"/>
         <source>Export as</source>
         <translation>Esporta come</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1238"/>
+        <location filename="../QScintilla/Editor.py" line="1239"/>
         <source>Export source</source>
         <translation>Esporta sorgenti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1238"/>
+        <location filename="../QScintilla/Editor.py" line="1239"/>
         <source>No export format given. Aborting...</source>
         <translation>Nessun formato di export impostato. Annullamento...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6652"/>
+        <location filename="../QScintilla/Editor.py" line="6834"/>
         <source>Imports Diagram</source>
         <translation>Importa diagrammi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6652"/>
+        <location filename="../QScintilla/Editor.py" line="6834"/>
         <source>Include imports from external modules?</source>
         <translation>Includi gli import dai moduli esterni ?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="802"/>
+        <location filename="../QScintilla/Editor.py" line="803"/>
         <source>dynamic</source>
         <translation>dinamico</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="735"/>
+        <location filename="../QScintilla/Editor.py" line="736"/>
         <source>Calltip</source>
         <translation>Calltip</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="776"/>
+        <location filename="../QScintilla/Editor.py" line="777"/>
         <source>Print Preview</source>
         <translation>Anteprima Stampa</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="389"/>
+        <location filename="../QScintilla/Editor.py" line="390"/>
         <source>&lt;b&gt;A Source Editor Window&lt;/b&gt;&lt;p&gt;This window is used to display and edit a source file.  You can open as many of these as you like. The name of the file is displayed in the window&apos;s titlebar.&lt;/p&gt;&lt;p&gt;In order to set breakpoints just click in the space between the line numbers and the fold markers. Via the context menu of the margins they may be edited.&lt;/p&gt;&lt;p&gt;In order to set bookmarks just Shift click in the space between the line numbers and the fold markers.&lt;/p&gt;&lt;p&gt;These actions can be reversed via the context menu.&lt;/p&gt;&lt;p&gt;Ctrl clicking on a syntax error marker shows some info about this error.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Una finesta di edit&lt;/b&gt;&lt;p&gt;Questa finestra è usata per visualizzare e modificare un file sorgente. Si possono aprire quante finestre si vogliono. Il nome del file è mostrato nella barra dei titolo della finestra.&lt;/p&gt;&lt;p&gt;Per impostare dei breakpoint basta cliccare nello spazio tra i numeri di riga e i marcatori di compressione. Con il menù contestuale del margine possono essere modificati.&lt;/p&gt;&lt;p&gt;Per impostare un segnalibro basta cliccare con lo Shift premuto nello spazio tra il numero di linea e i marcatori di compressione.&lt;/p&gt;&lt;p&gt;Queste azioni possono essere invertite con il menù contestuale.&lt;/p&gt;&lt;p&gt; Cliccare con il tasto Ctrl premuto un  marcatore di errore della sintassi mostra delle informazioni sull&apos;errore.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="720"/>
+        <location filename="../QScintilla/Editor.py" line="721"/>
         <source>Typing aids enabled</source>
         <translation>Aiuti alla digitazione abilitati</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="979"/>
+        <location filename="../QScintilla/Editor.py" line="980"/>
         <source>End-of-Line Type</source>
         <translation>Tipo di fine-linea</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="983"/>
+        <location filename="../QScintilla/Editor.py" line="984"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="990"/>
+        <location filename="../QScintilla/Editor.py" line="991"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="997"/>
+        <location filename="../QScintilla/Editor.py" line="998"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="938"/>
+        <location filename="../QScintilla/Editor.py" line="939"/>
         <source>Encodings</source>
         <translation>Codifica</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="918"/>
+        <location filename="../QScintilla/Editor.py" line="919"/>
         <source>Guessed</source>
         <translation>Indovinato</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1253"/>
+        <location filename="../QScintilla/Editor.py" line="1254"/>
         <source>Alternatives</source>
         <translation>Alternative</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1269"/>
+        <location filename="../QScintilla/Editor.py" line="1270"/>
         <source>Pygments Lexer</source>
         <translation>Analizzatore lessicale Pygments</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1269"/>
+        <location filename="../QScintilla/Editor.py" line="1270"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Selezione l&apos;analizzatore lessicale di Pygments da applicare.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6954"/>
+        <location filename="../QScintilla/Editor.py" line="7126"/>
         <source>Check spelling...</source>
         <translation>Controllo sillabazione...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="696"/>
+        <location filename="../QScintilla/Editor.py" line="697"/>
         <source>Check spelling of selection...</source>
         <translation>Controllo sillabazione della selezione...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6957"/>
+        <location filename="../QScintilla/Editor.py" line="7129"/>
         <source>Add to dictionary</source>
         <translation>Aggiungi al dizionario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6959"/>
+        <location filename="../QScintilla/Editor.py" line="7131"/>
         <source>Ignore All</source>
         <translation>Ignora tutto</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="700"/>
+        <location filename="../QScintilla/Editor.py" line="701"/>
         <source>Remove from dictionary</source>
         <translation>Rimuovi dal dizionario</translation>
     </message>
@@ -9345,203 +9353,223 @@ gli elementi visualizzati.&lt;/p&gt;
         <translation>&lt;p&gt;La dimensione del file &lt;b&gt;{0}&lt;/b&gt; è &lt;b&gt;{1} KB&lt;/b&gt;. Sei sicuro di volerlo caricare ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1230"/>
+        <location filename="../QScintilla/Editor.py" line="1231"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nessun esportatore disponibile per il formato di export&lt;b&gt;{0}&lt;/b&gt;. Termino...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1249"/>
+        <location filename="../QScintilla/Editor.py" line="1250"/>
         <source>Alternatives ({0})</source>
         <translation>Alternative ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2796"/>
+        <location filename="../QScintilla/Editor.py" line="2797"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; contiene modifiche non salvate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2851"/>
+        <location filename="../QScintilla/Editor.py" line="2852"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere aperto.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2954"/>
+        <location filename="../QScintilla/Editor.py" line="2955"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5932"/>
+        <location filename="../QScintilla/Editor.py" line="6114"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5941"/>
+        <location filename="../QScintilla/Editor.py" line="6123"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; è danneggiato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5994"/>
+        <location filename="../QScintilla/Editor.py" line="6176"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file macro &lt;b&gt;{0}&lt;/b&gt; non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6331"/>
+        <location filename="../QScintilla/Editor.py" line="6513"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6471"/>
+        <location filename="../QScintilla/Editor.py" line="6653"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; non è un file.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6568"/>
+        <location filename="../QScintilla/Editor.py" line="6750"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias per il file &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1154"/>
+        <location filename="../QScintilla/Editor.py" line="1155"/>
         <source>Next warning</source>
         <translation>Warning successivo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1157"/>
+        <location filename="../QScintilla/Editor.py" line="1158"/>
         <source>Previous warning</source>
         <translation>Warning precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1159"/>
+        <location filename="../QScintilla/Editor.py" line="1160"/>
         <source>Show warning message</source>
         <translation>Mostra Warning</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1161"/>
+        <location filename="../QScintilla/Editor.py" line="1162"/>
         <source>Clear warnings</source>
         <translation>Pulisci warning</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3021"/>
+        <location filename="../QScintilla/Editor.py" line="3022"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; esiste già. Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5978"/>
+        <location filename="../QScintilla/Editor.py" line="6160"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file  delle macro &lt;b&gt;{0}&lt;/b&gt; esiste già.Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5829"/>
+        <location filename="../QScintilla/Editor.py" line="6011"/>
         <source>Warning: {0}</source>
         <translation>Attenzione: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5836"/>
+        <location filename="../QScintilla/Editor.py" line="6018"/>
         <source>Error: {0}</source>
         <translation>Errore: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6165"/>
+        <location filename="../QScintilla/Editor.py" line="6347"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Attenzione:&lt;/b&gt; con la riapertura le modifiche andranno perse.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4445"/>
+        <location filename="../QScintilla/Editor.py" line="4451"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Fornitore Autocompletamento in attivazione</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4445"/>
+        <location filename="../QScintilla/Editor.py" line="4451"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Il fornitore di autocompletamento non può essere connesso perchè è gia attivo un altro. Per cortesia controlla la configurazione.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4635"/>
+        <location filename="../QScintilla/Editor.py" line="4771"/>
         <source>Activating Calltip Provider</source>
         <translation>Fornitore CallTip in attivazione</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4635"/>
+        <location filename="../QScintilla/Editor.py" line="4771"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Il fornitore di autocompletamento non può essere connesso perchè è gia attivo un altro. Per cortesia controlla la configurazione.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="772"/>
+        <location filename="../QScintilla/Editor.py" line="773"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Apri file &apos;rifiuto&apos;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="878"/>
+        <location filename="../QScintilla/Editor.py" line="879"/>
         <source>Load Diagram...</source>
         <translation>Carica Diagramma...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1192"/>
+        <location filename="../QScintilla/Editor.py" line="1193"/>
         <source>Next change</source>
         <translation>Modifica successiva</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1195"/>
+        <location filename="../QScintilla/Editor.py" line="1196"/>
         <source>Previous change</source>
         <translation>Modifica precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7371"/>
+        <location filename="../QScintilla/Editor.py" line="7543"/>
         <source>Sort Lines</source>
         <translation>Righe ordinate</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7371"/>
+        <location filename="../QScintilla/Editor.py" line="7543"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation>La selezione contiene dati non validi per un ordinamento numerico.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5765"/>
+        <location filename="../QScintilla/Editor.py" line="5947"/>
         <source>Warning</source>
         <translation>Attenzione</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5765"/>
+        <location filename="../QScintilla/Editor.py" line="5947"/>
         <source>No warning messages available.</source>
         <translation>Nessun messaggio di attenzione disponibile.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5826"/>
+        <location filename="../QScintilla/Editor.py" line="6008"/>
         <source>Style: {0}</source>
         <translation>Stile: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="749"/>
+        <location filename="../QScintilla/Editor.py" line="750"/>
         <source>New Document View</source>
         <translation>Nuova vista Documento</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="752"/>
+        <location filename="../QScintilla/Editor.py" line="753"/>
         <source>New Document View (with new split)</source>
         <translation>Nuova vista Documento (con nuova divisione)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="832"/>
+        <location filename="../QScintilla/Editor.py" line="833"/>
         <source>Tools</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="960"/>
+        <location filename="../QScintilla/Editor.py" line="961"/>
         <source>Re-Open With Encoding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6159"/>
+        <location filename="../QScintilla/Editor.py" line="6341"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; è stato modificato mentre era aperto in eric5. Rileggerlo ?&lt;/p&gt; {0}?} {6.?}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="727"/>
+        <location filename="../QScintilla/Editor.py" line="728"/>
         <source>Automatic Completion enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="800"/>
+        <location filename="../QScintilla/Editor.py" line="801"/>
         <source>Complete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="4500"/>
+        <source>Auto-Completion Provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="4500"/>
+        <source>The completion list provider &apos;{0}&apos; was already registered. Ignoring duplicate request.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="4814"/>
+        <source>Call-Tips Provider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="4814"/>
+        <source>The call-tips provider &apos;{0}&apos; was already registered. Ignoring duplicate request.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9745,6 +9773,26 @@ gli elementi visualizzati.&lt;/p&gt;
         <source>Automatic Completion Enabled</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="128"/>
+        <source>Plug-In Behavior</source>
+        <translation type="unfinished">Comportamento Plug-in</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="137"/>
+        <source>Qscintilla provided completions are shown, if this option is enabled and completions shall be provided by plug-ins (see completions sub-page of the plug-in) and the plugin-ins don&apos;t deliver any completions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="140"/>
+        <source>Show QScintilla completions, if plug-ins fail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorAutocompletionPage.ui" line="134"/>
+        <source>Select to show QScintilla provided completions, if the selected plug-ins fail</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EditorAutocompletionQScintillaPage</name>
@@ -9870,17 +9918,17 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="173"/>
         <source>Select to show QScintilla provided calltips, if the selected plugin fails</source>
-        <translation>Seleziona per mostrare i calltips di QScintilla, nel caso il plugin selezionato fallisca</translation>
+        <translation type="obsolete">Seleziona per mostrare i calltips di QScintilla, nel caso il plugin selezionato fallisca</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="176"/>
         <source>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by a plug-in (see calltips sub-page of the plug-in) and the plugin-in doesn&apos;t deliver any calltips.</source>
-        <translation>I calltips forniti da QScintilla sono mostrati, se questa opzione è abilitata e i calltip saranno forniti da un plug-in (vedi la pagina calltip dei plug-in) e il plug-in non fornisce nessun calltip.</translation>
+        <translation type="obsolete">I calltips forniti da QScintilla sono mostrati, se questa opzione è abilitata e i calltip saranno forniti da un plug-in (vedi la pagina calltip dei plug-in) e il plug-in non fornisce nessun calltip.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="179"/>
         <source>Show QScintilla calltips, if plug-in fails</source>
-        <translation>Mostra calltips di QScintilla, se il plug-in fallisce</translation>
+        <translation type="obsolete">Mostra calltips di QScintilla, se il plug-in fallisce</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="68"/>
@@ -9910,6 +9958,21 @@ gli elementi visualizzati.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="40"/>
         <source>Automatic Calltips Enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="176"/>
+        <source>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by plug-ins (see calltips sub-page of the plug-in) and the plugin-ins don&apos;t deliver any calltips.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="179"/>
+        <source>Show QScintilla calltips, if plug-ins fail</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/EditorCalltipsPage.ui" line="173"/>
+        <source>Select to show QScintilla provided calltips, if the selected plug-ins fail</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -15799,337 +15862,337 @@ Motivo: {0}</translation>
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1094"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1095"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Apri link in una Nuova Scheda<byte value="x9"/>Ctrl+LMB</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="666"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="667"/>
         <source>&lt;b&gt;Help Window&lt;/b&gt;&lt;p&gt;This window displays the selected help information.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Finestra di help&lt;/b&gt;&lt;p&gt;Questa finestra mostra le informazioni di aiuto selezionate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1353"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1354"/>
         <source>Web Inspector...</source>
         <translation>Web Inspector...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2000"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2001"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Controlla l&apos;indirizzo per errori tipo &lt;b&gt;ww&lt;/b&gt;.example.org invece di &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2005"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2006"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Se l&apos;indirizzo è corretto, prova  a controllare la connessione di rete.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2009"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2010"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Se il tuo computer o la rete sono protetti da un firewall o un proxy, assicurati che il browser possa accedere alla rete.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1272"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1273"/>
         <source>Bookmark this Page</source>
         <translation>Inserisci nei segnalibri questa pagina</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1099"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1100"/>
         <source>Save Lin&amp;k</source>
         <translation>Salva lin&amp;k</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1102"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1103"/>
         <source>Bookmark this Link</source>
         <translation>Insersci nei bookmark questo link</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1107"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1108"/>
         <source>Copy Link to Clipboard</source>
         <translation>Copia il link nella Clipboard</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1124"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1125"/>
         <source>Open Image in New Tab</source>
         <translation>Apri immagine in una nuova linguetta</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1129"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1130"/>
         <source>Save Image</source>
         <translation>Salva immagine</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1132"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1133"/>
         <source>Copy Image to Clipboard</source>
         <translation>Copia immagine nella Clipboard</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1134"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1135"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Copia la posizione dell&apos;immagine nella Clipboard</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1143"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1144"/>
         <source>Block Image</source>
         <translation>Blocca immagine</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1300"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1301"/>
         <source>Search with...</source>
         <translation>Cerca con...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="838"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="839"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non esiste.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="883"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="884"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare un visualizzatore per il file &lt;b&gt;{0}&lt;/b&gt;.&lt;p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="863"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="864"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso lanciare un&apos;applicazione per l&apos;URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1979"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1980"/>
         <source>Error loading page: {0}</source>
         <translation>Errore nel caricamento della pagina: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1997"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1998"/>
         <source>When connecting to: {0}.</source>
         <translation>Nella connessione a: {0}.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2048"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2049"/>
         <source>Web Database Quota</source>
         <translation>Quota Web Database</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2048"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2049"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La quota per il database &lt;strong&gt;{0}&lt;/strong&gt; è stata superata durante l&apos;accesso al database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Deve essere cambiata?&lt;/P&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2059"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2060"/>
         <source>New Web Database Quota</source>
         <translation>Nuova quota Web Database</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2059"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2060"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Inserisci la nuova quota in MB (corrente = {0}, usata = {1}; incremento = 5MB):</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2083"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2084"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2086"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2087"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2089"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2090"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1349"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1350"/>
         <source>Add to web search toolbar</source>
         <translation>Aggiungi alla toolbar delle ricerche web</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1528"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1529"/>
         <source>Method not supported</source>
         <translation>Metodo non supportato</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1528"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1529"/>
         <source>{0} method is not supported.</source>
         <translation>il metodo {0} non è supportato.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1588"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1589"/>
         <source>Search engine</source>
         <translation>Motore di ricerca</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1588"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1589"/>
         <source>Choose the desired search engine</source>
         <translation>Scegli il motore di ricerca</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1610"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1611"/>
         <source>Engine name</source>
         <translation>Nome motore</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1610"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1611"/>
         <source>Enter a name for the engine</source>
         <translation>Inserisci un nome per il motore</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2015"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2016"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Se la tua politica di chaching è impostata su navigazione offline, saranno disponibili solo le pagine nella cache locale.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1116"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1117"/>
         <source>Scan Link with VirusTotal</source>
         <translation>Scansiona il collegamento con VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1149"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1150"/>
         <source>Scan Image with VirusTotal</source>
         <translation>Scansiona l&apos;immagine con VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1110"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1111"/>
         <source>Send Link</source>
         <translation>Invia il collegamento</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1138"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1139"/>
         <source>Send Image Link</source>
         <translation>Invia il collegamento dell&apos;immagine</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1234"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1235"/>
         <source>This Frame</source>
         <translation>Questa cornice</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1237"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1238"/>
         <source>Show &amp;only this frame</source>
         <translation>Visualizza s&amp;olo questa cornice</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1240"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1241"/>
         <source>Show in new &amp;tab</source>
         <translation>Visualizza in una nuova &amp;Scheda</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1245"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1246"/>
         <source>&amp;Print</source>
         <translation>Stam&amp;pa</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1248"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1249"/>
         <source>Print Preview</source>
         <translation>Anteprima Stampa</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1251"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1252"/>
         <source>Print as PDF</source>
         <translation>Stampa come PDF</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1255"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>Zoom &amp;in</source>
         <translation>&amp;Ingrandisci</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1258"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1259"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Resetta zoom</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1261"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1262"/>
         <source>Zoom &amp;out</source>
         <translation>Rimpicci&amp;olisci</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1265"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1266"/>
         <source>Show frame so&amp;urce</source>
         <translation>Visualizza cornice sorge&amp;nte</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1275"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1276"/>
         <source>Send Page Link</source>
         <translation>Invia collegamento pagina</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1293"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1294"/>
         <source>Send Text</source>
         <translation>Invia testo</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1325"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1326"/>
         <source>Google Translate</source>
         <translation>Traduttore Google</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1332"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1333"/>
         <source>Dictionary</source>
         <translation>Dizionario</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1340"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1341"/>
         <source>Go to web address</source>
         <translation>Vai all&apos;indirizzo di rete</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1279"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1280"/>
         <source>User Agent</source>
         <translation>User Agent</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2020"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2021"/>
         <source>Try Again</source>
         <translation>Ritenta</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1167"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1168"/>
         <source>Play</source>
         <translation>Riproduci</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1171"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1172"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1175"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1176"/>
         <source>Unmute</source>
         <translation>Parlante</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1179"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1180"/>
         <source>Mute</source>
         <translation>Muto</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1183"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1184"/>
         <source>Copy Media Address to Clipboard</source>
         <translation>Copia l&apos;indirizzo del Media nella Clipboard</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1187"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1188"/>
         <source>Send Media Address</source>
         <translation>Invia indirizzo del Media</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1191"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1192"/>
         <source>Save Media</source>
         <translation>Salva Media</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2444"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2445"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">Web Browser di eric5 {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2444"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2445"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt; {5.?}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2412"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2413"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;La stampa non è disponibile a causa di un bug in PyQt4. Si consiglia di aggiornare la versione installata.&lt;/p&gt; {5.?}</translation>
     </message>
@@ -17366,72 +17429,72 @@ Hai %n schede aperta.</numerusform>
 <context>
     <name>HelpWebPage</name>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="349"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="350"/>
         <source>Error loading page: {0}</source>
         <translation>Errore nel caricamento della pagina: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="368"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="369"/>
         <source>When connecting to: {0}.</source>
         <translation>Nella connessione a: {0}.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="371"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="372"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Controlla l&apos;indirizzo per errori tipo &lt;b&gt;ww&lt;/b&gt;.example.org invece di &lt;b&gt;www&lt;/b&gt;.example.org</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="376"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="377"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Se l&apos;indirizzo è corretto, prova  a controllare la connessione di rete.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="381"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="382"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Se il tuo computer o la rete sono protetti da un firewall o un proxy, assicurati che il browser possa accedere alla rete.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="387"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="388"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Se la tua politica di chaching è impostata su navigazione offline, saranno disponibili solo le pagine nella cache locale.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="215"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="216"/>
         <source>Resending POST request</source>
         <translation>Reinvio richiesta POST</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="215"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="216"/>
         <source>In order to display the site, the request along with all the data must be sent once again, which may lead to some unexpected behaviour of the site e.g. the same action might be performed once again. Do you want to continue anyway?</source>
         <translation>Per poter visualizzare questo stio, la richiesta con tutti i dati deve essere spedita un&apos;altra volta, cosa che può portare a qualche comportamento non previsto del sito es. la stessa azione può essere eseguita nuovamente. Vuoi continuare comunque ?</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="392"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="393"/>
         <source>Try Again</source>
         <translation>Ritenta</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="324"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="325"/>
         <source>Content blocked by AdBlock Plus</source>
         <translation>Contenuto bloccato da AdBlock Plus</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="325"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="326"/>
         <source>Blocked by rule: &lt;i&gt;{0}&lt;/i&gt;</source>
         <translation>Bloccato dalla regola: &lt;i&gt;{0}&lt;/i&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="297"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="298"/>
         <source>Select files to upload...</source>
         <translation>Seleziona i file da caricare...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="557"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="558"/>
         <source>SSL Info</source>
         <translation>Informazioni SSL</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="557"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="558"/>
         <source>This site does not contain SSL information.</source>
         <translation>Questo sito non contiene informazioni SSL.</translation>
     </message>
@@ -21797,42 +21860,42 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="157"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="158"/>
         <source>Added</source>
         <translation>Aggiunto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="158"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="159"/>
         <source>Deleted</source>
         <translation>Cancellato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="159"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="160"/>
         <source>Modified</source>
         <translation>Modificato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="848"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="849"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="848"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="849"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="614"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="615"/>
         <source>The hg process did not finish within 30s.</source>
         <translation>Il processo hg non è finito entro i 30s.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="617"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="618"/>
         <source>Could not start the hg executable.</source>
         <translation>Non posso avviare l&apos;eseguibile hg.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="620"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="621"/>
         <source>Mercurial Error</source>
         <translation>Mercurial Error</translation>
     </message>
@@ -21872,7 +21935,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Seleziona il branch su cui filtrare</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="137"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="138"/>
         <source>All</source>
         <translation>Tutti</translation>
     </message>
@@ -21887,7 +21950,7 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>Mercurial Log (Outgoing)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="169"/>
         <source>Bookmarks</source>
         <translation type="unfinished">Segnalibri</translation>
     </message>
@@ -21907,28 +21970,28 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="185"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="186"/>
         <source>Change the phase of the selected revisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="187"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="188"/>
         <source>&lt;b&gt;Change Phase&lt;/b&gt;
 &lt;p&gt;This changes the phase of the selected revisions. The selected revisions have to have the same current phase.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="183"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="184"/>
         <source>Change Phase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1653"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1654"/>
         <source>Copy Changesets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1690"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1691"/>
         <source>The project should be reread. Do this now?</source>
         <translation type="unfinished">Il progetto deve essere riletto. Farlo ora ?</translation>
     </message>
@@ -21948,42 +22011,42 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="177"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="178"/>
         <source>Copy the selected changesets to the current branch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="194"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="195"/>
         <source>Tag</source>
         <translation type="unfinished">Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="196"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="197"/>
         <source>Tag the selected revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1690"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1691"/>
         <source>Switch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="200"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="201"/>
         <source>Switch the working directory to the selected revision</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="204"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="205"/>
         <source>Pull Large Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="206"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="207"/>
         <source>Pull large files for selected revisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="938"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="939"/>
         <source>{0} (large file)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22033,12 +22096,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished">&lt;tr&gt;&lt;td&gt;&lt;b&gt;Segnalibri&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1805"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1806"/>
         <source>Find Commit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1805"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1806"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished">&apos;{0}&apos; non è stato trovato.</translation>
     </message>
@@ -30519,27 +30582,27 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>JavaScriptEricObject</name>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="104"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="105"/>
         <source>Search!</source>
         <translation>Cerca!</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="143"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="144"/>
         <source>Search results provided by {0}</source>
         <translation>Risultati della ricerca forniti da {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="101"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="102"/>
         <source>Welcome to eric6 Web Browser!</source>
         <translation type="unfinished">Benvenuto nel navigatore Web di Eric! {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="103"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="104"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">Web Browser di eric5 {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="105"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="106"/>
         <source>About eric6</source>
         <translation type="unfinished">Informazioni su Eric6</translation>
     </message>
@@ -35684,27 +35747,27 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1294"/>
+        <location filename="../Preferences/__init__.py" line="1296"/>
         <source>Export Preferences</source>
         <translation>Esporta Preferenze</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1322"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Import Preferences</source>
         <translation>Importa Preferenze</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1322"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>File proprietà (*.ini);;Tutti i file(*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1424"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1424"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -37446,7 +37509,7 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>ProjectFormsBrowser</name>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="949"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="958"/>
         <source>Forms</source>
         <translation>Forms</translation>
     </message>
@@ -37546,17 +37609,17 @@ Selezionare Aggiorna.</translation>
         <translation>La compilazione della form è fallita.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="824"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="916"/>
         <source>Compiling forms...</source>
         <translation>Compilazione form in corso...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="907"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="916"/>
         <source>Abort</source>
         <translation>Termina</translation>
     </message>
@@ -37611,12 +37674,12 @@ Selezionare Aggiorna.</translation>
         <translation>Dialogo con pulsanti (centrati in basso)</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="954"/>
         <source>Determining changed forms...</source>
         <translation>Determina form modificate...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="974"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="983"/>
         <source>Compiling changed forms...</source>
         <translation>Compila le form modificate...</translation>
     </message>
@@ -37671,7 +37734,7 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;La compilazione del file form è fallita.&lt;/p&gt;&lt;p&gt;Motivo: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="815"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="824"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Non posso avviare {0}.&lt;br&gt;Assicurarsi che sia nel path.</translation>
     </message>
@@ -37726,7 +37789,7 @@ Selezionare Aggiorna.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/ProjectFormsBrowser.py" line="945"/>
+        <location filename="../Project/ProjectFormsBrowser.py" line="954"/>
         <source>%v/%m Forms</source>
         <translation type="unfinished"></translation>
     </message>
@@ -38153,7 +38216,7 @@ Selezionare Aggiorna.</translation>
 <context>
     <name>ProjectResourcesBrowser</name>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="844"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="855"/>
         <source>Resources</source>
         <translation>Risorse</translation>
     </message>
@@ -38258,27 +38321,27 @@ Selezionare Aggiorna.</translation>
         <translation>La compilazione del file risorse è fallita.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="701"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="712"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="767"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="778"/>
         <source>Compiling resources...</source>
         <translation>Compilazione risorse in corso...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="767"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="778"/>
         <source>Abort</source>
         <translation>Termina</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="840"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="851"/>
         <source>Determining changed resources...</source>
         <translation>Determinazione risorse modificate...</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="875"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="886"/>
         <source>Compiling changed resources...</source>
         <translation>Compilazione risorse modificate in corso...</translation>
     </message>
@@ -38308,12 +38371,12 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;La compilazione del file risorse è fallita.&lt;/p&gt;&lt;p&gt;Motivo: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="701"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="712"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Non posso avviare {0}.&lt;br&gt;Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectResourcesBrowser.py" line="840"/>
+        <location filename="../Project/ProjectResourcesBrowser.py" line="851"/>
         <source>%v/%m Resources</source>
         <translation>Risorse %v/%m</translation>
     </message>
@@ -38589,22 +38652,22 @@ Selezionare Aggiorna.</translation>
         <translation>La generazione dei file di traduzione (*.ts) è avvenuta con successo.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1241"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1248"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1155"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1162"/>
         <source>Translation file release</source>
         <translation>Rilascia file traduzione</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1138"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1145"/>
         <source>The release of the translation files (*.qm) was successful.</source>
         <translation>Il rilascio dei file traduzione (*.qm) è avvenuta con successo.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1155"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1162"/>
         <source>The release of the translation files (*.qm) has failed.</source>
         <translation>La generazione dei file di traduzione (*.qm) è fallita.</translation>
     </message>
@@ -38699,12 +38762,12 @@ Selezionare Aggiorna.</translation>
         <translation>&lt;p&gt;Il file temporaneo &lt;b&gt;{0}&lt;/b&gt; del progetto non può essere scritto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1070"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1077"/>
         <source>Could not start {0}.&lt;br&gt;Ensure that it is in the search path.</source>
         <translation>Non posso avviare {0}.&lt;br&gt;Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Project/ProjectTranslationsBrowser.py" line="1241"/>
+        <location filename="../Project/ProjectTranslationsBrowser.py" line="1248"/>
         <source>&lt;p&gt;Could not start lrelease.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Non posso avviare lrelease.&lt;br&gt;Assicurarsi che sia disponibile come &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
@@ -38782,7 +38845,7 @@ Selezionare Aggiorna.</translation>
  premendo il pulsante sulla destra&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../MultiProject/PropertiesDialog.ui" line="37"/>
+        <location filename="../Project/PropertiesDialog.ui" line="281"/>
         <source>Enter description</source>
         <translation>Inserisci descrizione</translation>
     </message>
@@ -38848,7 +38911,7 @@ premendo il pulsante sulla destra.&lt;/p&gt;</translation>
         <translation>Script Pri&amp;ncipale:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/PropertiesDialog.ui" line="24"/>
+        <location filename="../Project/PropertiesDialog.ui" line="268"/>
         <source>&amp;Description:</source>
         <translation>&amp;Descrizione:</translation>
     </message>
@@ -45247,7 +45310,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation>Regexp</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/SearchWidget.ui" line="80"/>
+        <location filename="../QScintilla/SearchWidget.ui" line="106"/>
         <source>Wrap around</source>
         <translation>Andare a capo automaticamente</translation>
     </message>
@@ -47913,77 +47976,77 @@ File: {2}, Line: {3}
 <context>
     <name>Subversion</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="302"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="318"/>
         <source>Importing project into Subversion repository</source>
         <translation>Importazione del progetto nel repository Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="354"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="355"/>
         <source>Subversion Checkout</source>
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="419"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="411"/>
         <source>The tag must be a normal tag (tags) or a branch tag (branches). Please select from the list.</source>
         <translation>Il tag deve essere un tag normale (tags) o un tag branch (branch). Selezionarlo dalla lista.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="375"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="381"/>
         <source>Checking project out of Subversion repository</source>
         <translation>Checking del progetto dal repository subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="419"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="411"/>
         <source>Subversion Export</source>
         <translation>Subversion Export</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="439"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="434"/>
         <source>Exporting project from Subversion repository</source>
         <translation>Esportazione del progetto dal repository Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1224"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1120"/>
         <source>Subversion Error</source>
         <translation>Subversion Error</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1054"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="971"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The tag operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto non può essere recuperato dalla copia di lavoro. L&apos;operazione di etichettatura verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1081"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="998"/>
         <source>The URL of the project repository has an invalid format. The tag operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto a un formato non valido. L&apos;operazione di etichettatura verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1197"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1093"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The switch operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto non può essere recuperato dalla copia di lavoro. L&apos;operazione di switch verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1224"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1120"/>
         <source>The URL of the project repository has an invalid format. The switch operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto ha un formato non valido. L&apos;operazione di switch verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1693"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1512"/>
         <source>Subversion command</source>
         <translation>comando Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1928"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1779"/>
         <source>Subversion Set Property</source>
         <translation>Subversion Set Property</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1962"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1801"/>
         <source>You have to supply a property name. Aborting.</source>
         <translation>Devi fornire un nome per la proprietà. Interrompo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1982"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1821"/>
         <source>Subversion Delete Property</source>
         <translation>Subversion Delete Property</translation>
     </message>
@@ -47993,77 +48056,77 @@ File: {2}, Line: {3}
         <translation>Inserisci nome proprietà</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="562"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="553"/>
         <source>Commiting changes to Subversion repository</source>
         <translation>Convalida delle modifiche nel repository Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="620"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="590"/>
         <source>Synchronizing with the Subversion repository</source>
         <translation>Sincronizzazione con il repository Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="728"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="686"/>
         <source>Adding files/directories to the Subversion repository</source>
         <translation>Aggiunta di file/directory al repository subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="836"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="776"/>
         <source>Adding directory trees to the Subversion repository</source>
         <translation>Aggiunta di alberi di directory al repository subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="873"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="811"/>
         <source>Removing files/directories from the Subversion repository</source>
         <translation>Rimozione di file/directory al repository subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1168"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1076"/>
         <source>Reverting changes</source>
         <translation>Annullamento modifiche</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1814"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1684"/>
         <source>Resolving conficts</source>
         <translation>Risoluzione conflitti</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="205"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="218"/>
         <source>Create project in repository</source>
         <translation>Crea progetto nel repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="205"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="218"/>
         <source>The project could not be created in the repository. Maybe the given repository doesn&apos;t exist or the repository server is down.</source>
         <translation>Il progetto non può essere creato nel repository. Probabilmente il repository non esiste o il server non è disponibile.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="229"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="242"/>
         <source>New project</source>
         <translation>Nuovo progetto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="229"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="242"/>
         <source>The project could not be checked out of the repository.&lt;br /&gt;Restoring the original contents.</source>
         <translation>Il progetto non può essere checked out dal repository.&lt;br /&gt;Ripristino dei contenuti originali.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="981"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="900"/>
         <source>Subversion Log</source>
         <translation>Log Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="981"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="900"/>
         <source>Select number of entries to show.</source>
         <translation>Mostra il numero di elementi da mostrare.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2288"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2100"/>
         <source>Locking in the Subversion repository</source>
         <translation>Blocco nel repository Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2328"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2128"/>
         <source>Unlocking in the Subversion repository</source>
         <translation>Sblocco del repository Subversion</translation>
     </message>
@@ -48088,7 +48151,7 @@ File: {2}, Line: {3}
         <translation>Inserico commento del lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2376"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2153"/>
         <source>Relocating</source>
         <translation>Movimentazione</translation>
     </message>
@@ -48253,27 +48316,27 @@ File: {2}, Line: {3}
         <translation>Non posso avviare l&apos;eseguibile svn.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2402"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2170"/>
         <source>Repository Browser</source>
         <translation>Visualizzatore del Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2402"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2170"/>
         <source>Enter the repository URL.</source>
         <translation>Inserisci l&apos;URL del repository.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2430"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2241"/>
         <source>Remove from changelist</source>
         <translation>Rimuovi dalla changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2467"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2220"/>
         <source>Add to changelist</source>
         <translation>Aggiungi alla changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2456"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2220"/>
         <source>Enter name of the changelist:</source>
         <translation>Inserisci il nome della changelist:</translation>
     </message>
@@ -48298,32 +48361,32 @@ File: {2}, Line: {3}
         <translation>Il processo svn è terminato con codice di uscita {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="940"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="873"/>
         <source>Moving {0}</source>
         <translation>Spostamento di {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1118"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1033"/>
         <source>Tagging {0} in the Subversion repository</source>
         <translation>Tag di{0} nel repository subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1248"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1151"/>
         <source>Switching to {0}</source>
         <translation>Switch a {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1353"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1216"/>
         <source>Merging {0}</source>
         <translation>Merge di {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1654"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1482"/>
         <source>Cleaning up {0}</source>
         <translation>Pulizia di {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1855"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1715"/>
         <source>Copying {0}</source>
         <translation>copia di {0}</translation>
     </message>
@@ -48346,27 +48409,27 @@ File: {2}, Line: {3}
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="519"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="503"/>
         <source>Commit Changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="519"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="503"/>
         <source>The commit affects files, that have unsaved changes. Shall the commit be continued?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1161"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1070"/>
         <source>Revert changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1152"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1062"/>
         <source>Do you really want to revert all changes to these files or directories?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="1161"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="1070"/>
         <source>Do you really want to revert all changes of the project?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48376,17 +48439,17 @@ File: {2}, Line: {3}
         <translation type="unfinished">Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2227"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2048"/>
         <source>Subversion Side-by-Side Difference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2227"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2048"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere letto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/subversion.py" line="2528"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/subversion.py" line="2305"/>
         <source>Upgrade</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48490,27 +48553,27 @@ File: {2}, Line: {3}
 <context>
     <name>SvnBlameDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="14"/>
         <source>Subversion Blame</source>
         <translation>Subversion Blame</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="45"/>
         <source>Revision</source>
         <translation>Revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.ui" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="50"/>
         <source>Author</source>
         <translation>Autore</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="55"/>
         <source>Line</source>
         <translation>Linea</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnBlameDialog.ui" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnBlameDialog.ui" line="69"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
@@ -48658,39 +48721,39 @@ File: {2}, Line: {3}
 <context>
     <name>SvnCommandDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.py" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.py" line="78"/>
         <source>Working directory</source>
         <translation>Directory di lavoro</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="14"/>
         <source>Subversion Command</source>
         <translation>Comando Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="25"/>
         <source>Subversion Command:</source>
         <translation>Comando Subversion:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="125"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="125"/>
         <source>Select the working directory via a directory selection dialog</source>
         <translation>Seleziona la directory di lavoro con un dialogo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="128"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Select the working directory for the Subversion command via a directory selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Directory di lavoro&lt;/b&gt;
 &lt;p&gt;Seleziona la directory di lavoro per il comando Subversion con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="67"/>
         <source>Enter the working directory for the Subversion command</source>
         <translation>Inserisci la directory di lavoro per il comando Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="70"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory for the Subversion command.
 This is an optional entry. The button to the right will open a 
@@ -48701,32 +48764,32 @@ E&apos; opzionale. Il pulsante sulla destra aprirà un dialogo
 di selezione.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="89"/>
         <source>Working Directory:&lt;br&gt;(optional)</source>
         <translation>Directory di lavoro:&lt;br&gt;(opzionale)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="102"/>
         <source>Project Directory:</source>
         <translation>Directory progetto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="115"/>
         <source>This shows the root directory of the current project.</source>
         <translation>Mostra la directory radice del progetto corrente.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="118"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="118"/>
         <source>project directory</source>
         <translation>directory progetto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="38"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="38"/>
         <source>Enter the Subversion command to be executed with all necessary parameters</source>
         <translation>Inserisci il comando Subversion da eseguire con tutti i parametri necessari</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommandDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="41"/>
         <source>&lt;b&gt;Subversion Command&lt;/b&gt;
 &lt;p&gt;Enter the Subversion command to be executed including all necessary 
 parameters. If a parameter of the commandline includes a space you have to 
@@ -48742,54 +48805,54 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 <context>
     <name>SvnCommitDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="26"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="26"/>
         <source>Enter the log message.</source>
         <translation>Inserisci messaggio di log.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="29"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="29"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message for the commit action.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Messaggio di log&lt;/b&gt;
 &lt;p&gt;Inserisci il messaggio di log per la commit.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="14"/>
         <source>Subversion</source>
         <translation>Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="43"/>
         <source>Recent commit messages</source>
         <translation>Messagi di commit recenti</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="50"/>
         <source>Select a recent commit message to use</source>
         <translation>Seleziona un messaggio di commit recete da usare</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="20"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="20"/>
         <source>Commit Message</source>
         <translation>Messaggio di commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="60"/>
         <source>Changelists</source>
         <translation>Changelists</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="73"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="73"/>
         <source>Select to keep the changelists</source>
         <translation>Seleziona per mantenere la changelists</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="76"/>
         <source>Keep changelists</source>
         <translation>Tieni changelists</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCommitDialog.ui" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommitDialog.ui" line="66"/>
         <source>Select the change lists to limit the commit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48797,22 +48860,22 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 <context>
     <name>SvnCopyDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="52"/>
         <source>Subversion Move</source>
         <translation>Subversion Move</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.py" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="91"/>
         <source>Select target</source>
         <translation>Seleziona target</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="14"/>
         <source>Subversion Copy</source>
         <translation>Subversion Copy</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
         <translation>Premi per aprire un dialogo di selezione</translation>
     </message>
@@ -48824,39 +48887,39 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 &lt;p&gt;Seleziona il nome per il target per l&apos;operazione con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="25"/>
         <source>Source:</source>
         <translation>Sorgente:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="32"/>
         <source>Shows the name of the source</source>
         <translation>Mostra il nome della sorgente</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="35"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome sorgente&lt;/b&gt;
 &lt;p&gt;Questo campo mostra il nome della sorgente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="46"/>
         <source>Enter the target name</source>
         <translation>Inserisci il nome del target</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="57"/>
         <source>Target:</source>
         <translation>Target:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="77"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="77"/>
         <source>Select to force the operation</source>
         <translation>Seleziona per forzae l&apos;operazione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="80"/>
         <source>Enforce operation</source>
         <translation>Forza operazione</translation>
     </message>
@@ -48868,7 +48931,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 &lt;p&gt;Seleziona il nome del target per l&apos;operazione con un dialogo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="49"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -48882,17 +48945,17 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDialog.ui" line="14"/>
         <source>Subversion</source>
         <translation>Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDialog.ui" line="29"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDialog.ui" line="29"/>
         <source>Output</source>
         <translation>Output</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDialog.ui" line="54"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
@@ -48997,32 +49060,32 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Subversion Diff</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="277"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="212"/>
         <source>There is no difference.</source>
         <translation>Non ci sono differenze.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="415"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="372"/>
         <source>Patch Files (*.diff)</source>
         <translation>File Patch (*.diff)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="448"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="405"/>
         <source>Save Diff</source>
         <translation>Salva Diff</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="26"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="26"/>
         <source>Difference</source>
         <translation>Difference</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="42"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="42"/>
         <source>&lt;b&gt;Subversion Diff&lt;/b&gt;&lt;p&gt;This shows the output of the svn diff command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Subversion Diff&lt;/b&gt;&lt;p&gt;Mostra l&apos;output del comando  svn diff.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.ui" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.ui" line="70"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
@@ -49082,7 +49145,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="448"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="405"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file &lt;b&gt;{0}&lt;/b&gt; non può essere salvato.&lt;br /&gt;Motivo: {1}&lt;/p&gt;</translation>
     </message>
@@ -49094,27 +49157,27 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="432"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="389"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Il file  patch &lt;b&gt;{0}&lt;/b&gt; esiste già.Sovrascriverlo ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="335"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="225"/>
         <source>&lt;Start&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="336"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="226"/>
         <source>&lt;End&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="48"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnDiffDialog.py" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnDiffDialog.py" line="50"/>
         <source>Press to refresh the display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49270,12 +49333,12 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Log Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="620"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="621"/>
         <source>Revision</source>
         <translation>Revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="617"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="618"/>
         <source>Author</source>
         <translation>Autore</translation>
     </message>
@@ -49285,7 +49348,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="140"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="141"/>
         <source>Message</source>
         <translation>Messaggio</translation>
     </message>
@@ -49415,7 +49478,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Errore Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="288"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="289"/>
         <source>Process Generation Error</source>
         <translation>Errore Generazione Processo</translation>
     </message>
@@ -49460,7 +49523,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Ferma su Copy/Move</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="288"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogBrowserDialog.py" line="289"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
@@ -49483,47 +49546,47 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 <context>
     <name>SvnLogDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="59"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="81"/>
         <source>Added</source>
         <translation>Aggiunto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="82"/>
         <source>Deleted</source>
         <translation>Cancellato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="61"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="83"/>
         <source>Modified</source>
         <translation>Modificato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="87"/>
         <source>revision</source>
         <translation>revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="14"/>
         <source>Subversion Log</source>
         <translation>Log Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="26"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="26"/>
         <source>Log</source>
         <translation>Log</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="32"/>
         <source>&lt;b&gt;Subversion Log&lt;/b&gt;&lt;p&gt;This shows the output of the svn log command. By clicking on the links you may show the difference between versions.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Log Subversion&lt;/b&gt;&lt;p&gt;Mostra l&apos;output del comando svn log.Premendo sul link puoi vedere le differenze tra le versioni.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="58"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="64"/>
         <source>&lt;b&gt;Subversion log errors&lt;/b&gt;&lt;p&gt;This shows possible error messages of the svn log command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Log errori Subversion&lt;/b&gt;&lt;p&gt;Mostra gli eventuali messaggi di errore del comando svn log.&lt;/p&gt;</translation>
     </message>
@@ -49573,7 +49636,7 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="53"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="55"/>
         <source>&lt;b&gt;Processing your request, please wait...&lt;/b&gt;</source>
         <translation>&lt;b&gt;Esecuzione in corso, attendere prego...&lt;/b&gt;</translation>
     </message>
@@ -49583,19 +49646,19 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="150"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="193"/>
         <source>diff to {0}</source>
         <translation>diff su {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="164"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="202"/>
         <source>&lt;i&gt;author: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;autore: {0}&lt;/i&gt;&lt;br /&gt;
 </translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.py" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.py" line="205"/>
         <source>&lt;i&gt;date: {0}&lt;/i&gt;&lt;br /&gt;
 </source>
         <translation>&lt;i&gt;data: {0}&lt;/i&gt;&lt;br /&gt;
@@ -49607,12 +49670,12 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
         <translation>(copiato da {0}, revisione {1})</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="42"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="42"/>
         <source>Select to show differences side-by-side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnLogDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnLogDialog.ui" line="45"/>
         <source>Show differences side-by-side</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49663,17 +49726,17 @@ il nome dell&apos;eseguibile subversion (es. svn).&lt;/p&gt;</translation>
 <context>
     <name>SvnMergeDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="13"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="13"/>
         <source>Subversion Merge</source>
         <translation>Subversion Merge</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="101"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="108"/>
         <source>Enter an URL or a revision number</source>
         <translation>Inserisci l&apos;URL o il numero di revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="111"/>
         <source>&lt;b&gt;URL/Revision&lt;/b&gt;
 &lt;p&gt;Enter an URL or a revision number to be merged into
 the working copy.&lt;/p&gt;</source>
@@ -49682,17 +49745,17 @@ the working copy.&lt;/p&gt;</source>
 nella copia di lavoro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="126"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="71"/>
         <source>1. URL/Revision:</source>
         <translation>1. URL/Revisione:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="49"/>
         <source>Enter the target</source>
         <translation>Inserisci il target</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="52"/>
         <source>&lt;b&gt;Target&lt;/b&gt;
 &lt;p&gt;Enter the target for the merge operation into this field. Leave it empty to
 get the target URL from the working copy.&lt;/p&gt;
@@ -49703,22 +49766,22 @@ per prendere l&apos;URL target dalla copia di lavoro.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Nota:&lt;/b&gt;Questo è richiesto solo se inserisic il numero di revisione sopra.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="119"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="126"/>
         <source>2. URL/Revision:</source>
         <translation>2. URL/Revisione:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="42"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="42"/>
         <source>Target:</source>
         <translation>Target:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="22"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="22"/>
         <source>Select to force the merge operation</source>
         <translation>Seleziona per forzare un&apos;operazione di merge</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnMergeDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnMergeDialog.ui" line="25"/>
         <source>Enforce merge</source>
         <translation>Forza il merge</translation>
     </message>
@@ -49726,22 +49789,22 @@ per prendere l&apos;URL target dalla copia di lavoro.&lt;/p&gt;
 <context>
     <name>SvnNewProjectOptionsDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="95"/>
         <source>Select Repository-Directory</source>
         <translation>Seleziona la cartella del Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="123"/>
         <source>Select Project Directory</source>
         <translation>Seleziona la directory del progetto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="14"/>
         <source>New Project from Repository</source>
         <translation>Nuovo progetto dal repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="17"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="17"/>
         <source>&lt;b&gt;New Project from Repository Dialog&lt;/b&gt;
 &lt;p&gt;Enter the various repository infos into the entry fields. These values are used, when the new project is retrieved from the repository. If the checkbox is selected, the URL must end in the project name. A repository layout with project/tags, project/branches and project/trunk will be assumed. In this case, you may enter a tag or branch, which must look like tags/tagname or branches/branchname. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
 &lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
@@ -49750,39 +49813,39 @@ per prendere l&apos;URL target dalla copia di lavoro.&lt;/p&gt;
 &lt;p&gt;Per repository remoti l&apos;URL deve contenere il nome dell&apos;host&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="30"/>
         <source>Enter the tag the new project should be generated from</source>
         <translation>Inserisci il tag dal quale deve essere generato il nuovo progetto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="33"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="33"/>
         <source>&lt;b&gt;Tag in VCS&lt;/b&gt;
 &lt;p&gt;Enter the tag name the new project shall be generated from. Leave empty to retrieve the latest data from the repository.&lt;/p&gt;</source>
         <translation>&lt;v&gt;Tag in VCS&lt;/b&gt;
 &lt;p&gt;Inserisci il nome del tag dal quale generare il nuovo progetto. Lascia vuoto per recuperare i dati più nuovi dal repository.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="41"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleziona il protocollo di accesso al repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="48"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protocollo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="160"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="160"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="78"/>
         <source>Enter the directory of the new project.</source>
         <translation>Inserisci la directory per il nuovo progetto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="81"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="81"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -49791,37 +49854,37 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 a messo in questa directory.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="90"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="90"/>
         <source>Select to indicate, that the repository has a standard layout (projectdir/trunk, projectdir/tags, projectdir/branches)</source>
         <translation>Seleziona per indicare che il repository ha un layout standard (projectdir/trunk, projectdir/tags, projectdir/branches)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="93"/>
         <source>Repository has standard &amp;layout</source>
         <translation>Il repository ha un &amp;layout standard</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="96"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="106"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="106"/>
         <source>Project &amp;Directory:</source>
         <translation>&amp;Directory progetto:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="116"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="116"/>
         <source>&amp;Tag:</source>
         <translation>&amp;Tag:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="61"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="61"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Inserisci l&apos;URL per il modulo. Per un repository con un layout standard, non deve contenere la parte del trunk, tags o branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="126"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="126"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleziona l&apos;url con un dialogo o il browser dei repository</translation>
     </message>
@@ -49831,12 +49894,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Seleziona la directory del progetto con un dialogo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.py" line="154"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="154"/>
         <source>Pat&amp;h:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="58"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation>Digita ilpercorso dell&apos;URL del modulo nel repository (senza la parte del protocollo)</translation>
     </message>
@@ -49844,17 +49907,17 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>SvnOptionsDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="71"/>
         <source>Select Repository-Directory</source>
         <translation>Seleziona la cartella del Repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="14"/>
         <source>Repository Infos</source>
         <translation>Informazioni sul repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="17"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="17"/>
         <source>&lt;b&gt;Repository Infos Dialog&lt;/b&gt;
 &lt;p&gt;Enter the various infos into the entry fields. These values are used to generate a new project in the repository. If the checkbox is selected, the URL must end in the project name. A directory tree with project/tags, project/branches and project/trunk will be generated in the repository. If the checkbox is not selected, the URL must contain the complete path in the repository.&lt;/p&gt;
 &lt;p&gt;For remote repositories the URL must contain the hostname.&lt;/p&gt;</source>
@@ -49863,74 +49926,74 @@ a messo in questa directory.&lt;/p&gt;</translation>
 &lt;p&gt;Per repository remoti, l&apos;URL deve contenere l&apos;hostname.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="30"/>
         <source>Log &amp;Message:</source>
         <translation>Log &amp;Messaggi:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="40"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="40"/>
         <source>Select, if the standard repository layout (projectdir/trunk, projectdir/tags, projectdir/branches) should be generated</source>
         <translation>Seleziona se il layout standard per il repository (projectdir/trunk, projectdir/tags, projectdir/branches) deve essere generato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="43"/>
         <source>Create standard repository &amp;layout</source>
         <translation>Crea un &amp;layout standard per il repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="46"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="56"/>
         <source>Select the protocol to access the repository</source>
         <translation>Seleziona il protocollo per accedere al repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="110"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="73"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="73"/>
         <source>Enter the log message for the new project.</source>
         <translation>Inserisci il messaggio di log per il nuovo progetto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="76"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Messaggi di Log&lt;/b&gt;
 &lt;p&gt;Inserisci il messaggio di log da usare per il nuovo progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="80"/>
         <source>new project started</source>
         <translation>nuovo progetto avviato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="87"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="87"/>
         <source>&amp;Protocol:</source>
         <translation>&amp;Protocollo:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="107"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
         <translation>Seleziona l&apos;url del repository con un dialogo o con il browser dei repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="100"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Inserisci l&apos;URL per il modulo. Per un repository con un layout standard, non deve contenere la parte del trunk, tags o branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.py" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="104"/>
         <source>Pat&amp;h:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnOptionsDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="97"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation>Digita il percorso dell&apos;URL del modulo nel repository (senza la parte del protocollo)</translation>
     </message>
@@ -49938,112 +50001,112 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>SvnProjectBrowserHelper</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="658"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="654"/>
         <source>Update from repository</source>
         <translation>Aggiorna da repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="662"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="658"/>
         <source>Commit changes to repository...</source>
         <translation>Consolida le modifica nel repository...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="668"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="664"/>
         <source>Add to repository</source>
         <translation>Aggiungi al repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="389"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="385"/>
         <source>Add tree to repository</source>
         <translation>Aggiungi albero al repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="672"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="668"/>
         <source>Remove from repository (and disk)</source>
         <translation>Rimuovi dal repository (e dal disco)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="567"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="566"/>
         <source>Show log</source>
         <translation>Mostra log</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="688"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="684"/>
         <source>Show status</source>
         <translation>Mostra stato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="708"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="704"/>
         <source>Revert changes</source>
         <translation>Annulla modifiche</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="712"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="708"/>
         <source>Merge changes</source>
         <translation>Fondi modifiche</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="720"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="716"/>
         <source>Set Property</source>
         <translation>Imposta proprietà</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="722"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="718"/>
         <source>List Properties</source>
         <translation>Elenca proprietà</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="725"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="721"/>
         <source>Delete Property</source>
         <translation>Cancella proprietà</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="728"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="724"/>
         <source>Select all local file entries</source>
         <translation>Seleziona tutt i file locali</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="730"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="726"/>
         <source>Select all versioned file entries</source>
         <translation>Seleziona tutti i file controllati</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="732"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="728"/>
         <source>Select all local directory entries</source>
         <translation>Seleziona tutte le directory locali</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="734"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="730"/>
         <source>Select all versioned directory entries</source>
         <translation>Seleziona tutte le directory controllate</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="437"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="434"/>
         <source>Lock</source>
         <translation>Lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="441"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="438"/>
         <source>Unlock</source>
         <translation>Unlock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="445"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="442"/>
         <source>Break Lock</source>
         <translation>Spezza lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="449"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="446"/>
         <source>Steal Lock</source>
         <translation>Ruba lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="647"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="642"/>
         <source>Version Control</source>
         <translation>Controllo di Versione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="296"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="290"/>
         <source>Show annotated file</source>
         <translation>Mostra file appuntati</translation>
     </message>
@@ -50053,62 +50116,62 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Mostra informazioni del repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="571"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="570"/>
         <source>Show log browser</source>
         <translation>Mostra il browser dei log</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="737"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="733"/>
         <source>Configure...</source>
         <translation>Configura...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="679"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="675"/>
         <source>Add to Changelist</source>
         <translation>Aggiungi alla Changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="683"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="679"/>
         <source>Remove from Changelist</source>
         <translation>Rimuovi dalla Changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="552"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="551"/>
         <source>Copy</source>
         <translation type="unfinished">Copia</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="554"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="553"/>
         <source>Move</source>
         <translation type="unfinished">Sposta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="693"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="689"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="277"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="271"/>
         <source>Show differences side-by-side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="697"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="693"/>
         <source>Show differences (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="286"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="280"/>
         <source>Show differences side-by-side (extended)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="702"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="698"/>
         <source>Show differences (URLs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/ProjectBrowserHelper.py" line="716"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/ProjectBrowserHelper.py" line="712"/>
         <source>Conflicts resolved</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50727,41 +50790,41 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>SvnPropListDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="13"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="13"/>
         <source>Subversion List Properties</source>
         <translation>Lista proprietà subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="16"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="16"/>
         <source>&lt;b&gt;Subversion List Prperties&lt;/b&gt;
 &lt;p&gt;This dialog shows the properties of the selected file or project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lista proprietà subversion&lt;/b&gt;
 &lt;p&gt;Questo dialogo mostra le proprietà del file o oggetto selezionato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="29"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="29"/>
         <source>&lt;b&gt;Properties List&lt;/b&gt;
 &lt;p&gt;This shows the properties of the selected file or project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lista proprietà&lt;/b&gt;
 &lt;p&gt;Questo dialogo mostra le proprietà del file o progetto  selezionato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="46"/>
         <source>Path</source>
         <translation>Percorso</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="51"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="56"/>
         <source>Value</source>
         <translation>Valore</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="76"/>
         <source>&lt;b&gt;Subversion proplist errors&lt;/b&gt;
 &lt;p&gt;This shows possible error messages of the subversion proplist command.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Errori proplist Subversion&lt;/b&gt;
@@ -50778,7 +50841,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Nessuno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.ui" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.ui" line="70"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
@@ -50788,12 +50851,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.py" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="45"/>
         <source>Refresh</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropListDialog.py" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropListDialog.py" line="47"/>
         <source>Press to refresh the properties display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50806,7 +50869,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Seleziona file per proprietà</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropSetDialog.ui" line="13"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="14"/>
         <source>Set Subversion Property</source>
         <translation>Imposta proprietà Subversion</translation>
     </message>
@@ -50816,7 +50879,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Nome Proprietà:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropSetDialog.ui" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="32"/>
         <source>Enter the name of the property to be set</source>
         <translation>Inserisci il nome della proprietà da impostare</translation>
     </message>
@@ -50836,7 +50899,7 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Testo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnPropSetDialog.ui" line="24"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="67"/>
         <source>Enter text of the property</source>
         <translation>Inserisci il testo della proprietà</translation>
     </message>
@@ -51020,107 +51083,107 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>SvnRevisionSelectionDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="14"/>
         <source>Subversion Diff</source>
         <translation>Subversion Diff</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="243"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="243"/>
         <source>Enter a revision number</source>
         <translation>Inserisci un numero di revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="23"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="23"/>
         <source>Revision &amp;1</source>
         <translation>Revisione &amp;1</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="178"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="178"/>
         <source>Select revision before last commit</source>
         <translation>Seleziona la revisione prima dell&apos;ultima commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="181"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="181"/>
         <source>PREV</source>
         <translation>PREV</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="188"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="188"/>
         <source>Select last committed revision</source>
         <translation>Seleziona la revisione dell&apos;ultima commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="191"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="191"/>
         <source>COMMITTED</source>
         <translation>COMMITTED</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="198"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="198"/>
         <source>Select base revision</source>
         <translation>Seleziona la revisione di base</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="201"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="201"/>
         <source>BASE</source>
         <translation>BASE</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="208"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="208"/>
         <source>Select head revision of repository</source>
         <translation>Seleziona la revisione head del reporitory</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="211"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="211"/>
         <source>HEAD</source>
         <translation>HEAD</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="221"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="221"/>
         <source>Select working revision</source>
         <translation>Seleziona la revisione di lavoro</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="224"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="224"/>
         <source>WORKING</source>
         <translation>WORKING</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="262"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="262"/>
         <source>Enter time of revision</source>
         <translation>Inserisci l&apos;ora della revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="272"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="272"/>
         <source>Enter date of revision</source>
         <translation>Inserisci la data della revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="275"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="275"/>
         <source>yyyy-MM-dd</source>
         <translation>yyyy-MM-dd</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="298"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="298"/>
         <source>Select to specify a revision by number</source>
         <translation>Seleziona per specificare una revisione con un numero</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="301"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="301"/>
         <source>Number</source>
         <translation>Numero</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="308"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="308"/>
         <source>Select to specify a revision by date and time</source>
         <translation>Seleziona per specificare una revisione con data e ora</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="311"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="311"/>
         <source>Date</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnRevisionSelectionDialog.ui" line="172"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnRevisionSelectionDialog.ui" line="172"/>
         <source>Revision &amp;2</source>
         <translation>Revisione &amp;2</translation>
     </message>
@@ -51168,12 +51231,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>errore tipo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="167"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="198"/>
         <source>no</source>
         <translation>no</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="168"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="197"/>
         <source>yes</source>
         <translation>si</translation>
     </message>
@@ -51188,67 +51251,67 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>ignorato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="293"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="394"/>
         <source>Subversion Status</source>
         <translation>Stato Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="84"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="84"/>
         <source>Commit changes to repository...</source>
         <translation>Committa modifiche nel repository...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="607"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="711"/>
         <source>Commit</source>
         <translation>Commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="732"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="836"/>
         <source>There are no uncommitted changes available/selected.</source>
         <translation>Non ci sono modifiche disponibili/selezionate da committare.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="859"/>
         <source>Lock</source>
         <translation>Lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="772"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="876"/>
         <source>Unlock</source>
         <translation>Unlock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="114"/>
         <source>Break lock</source>
         <translation>Spezza lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="117"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="117"/>
         <source>Steal lock</source>
         <translation>Ruba lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="161"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="191"/>
         <source>locked</source>
         <translation>bloccato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="162"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="192"/>
         <source>other lock</source>
         <translation>altro lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="163"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="193"/>
         <source>stolen lock</source>
         <translation>lock rubato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="164"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="194"/>
         <source>broken lock</source>
         <translation>lock rotto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="160"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="190"/>
         <source>not locked</source>
         <translation>non bloccato</translation>
     </message>
@@ -51258,89 +51321,89 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>sostituito</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="755"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="859"/>
         <source>There are no unlocked files available/selected.</source>
         <translation>Non ci sono file sbloccati disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="808"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="912"/>
         <source>There are no locked files available/selected.</source>
         <translation>Non ci sono file bloccati disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="790"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="894"/>
         <source>Break Lock</source>
         <translation>Spezza lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="808"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="912"/>
         <source>Steal Lock</source>
         <translation>Ruba lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="17"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="17"/>
         <source>&lt;b&gt;Subversion Status&lt;/b&gt;
 &lt;p&gt;This dialog shows the status of the selected file or project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stato Subversion&lt;/b&gt;
 &lt;p&gt;Questo dialogo mostra lo stato del file selezionato o del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="90"/>
         <source>Status</source>
         <translation>Stato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="98"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="95"/>
         <source>Prop. Status</source>
         <translation>Stato Prop</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="100"/>
         <source>Locked</source>
         <translation>Bloccato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="108"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="105"/>
         <source>History</source>
         <translation>Cronologia</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="113"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="110"/>
         <source>Switched</source>
         <translation>Scambiato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="118"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="115"/>
         <source>Lock Info</source>
         <translation>Info Lock</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="120"/>
         <source>Up to date</source>
         <translation>Aggiornato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="128"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="125"/>
         <source>Revision</source>
         <translation>Revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="133"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="130"/>
         <source>Last Change</source>
         <translation>Ultimo cambiamento</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="138"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="135"/>
         <source>Author</source>
         <translation>Autore</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="143"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="140"/>
         <source>Path</source>
         <translation>Percorso</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="241"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="238"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
@@ -51385,12 +51448,12 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="61"/>
         <source>Press to refresh the status display</source>
         <translation>Premi per aggiornare lo stato</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="121"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="121"/>
         <source>Adjust column sizes</source>
         <translation>Adatta dimensione colonne</translation>
     </message>
@@ -51400,57 +51463,57 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Errore Generazione Processo</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="59"/>
         <source>Refresh</source>
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="91"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="91"/>
         <source>Add to repository</source>
         <translation>Aggiungi al repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="97"/>
         <source>Revert changes</source>
         <translation>Inverti modifiche</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="647"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="751"/>
         <source>Add</source>
         <translation>Aggiungi</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="647"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="751"/>
         <source>There are no unversioned entries available/selected.</source>
         <translation>Non ci sono elementi non sotto controllo disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="693"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="797"/>
         <source>Revert</source>
         <translation>Inverti</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="85"/>
         <source>Changelist</source>
         <translation>Changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="103"/>
         <source>Add to Changelist</source>
         <translation>Aggiungi alla Changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="844"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="948"/>
         <source>Remove from Changelist</source>
         <translation>Rimuovi dalla Changelist</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="825"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="929"/>
         <source>There are no files available/selected not belonging to a changelist.</source>
         <translation>Non ci sono file disponibili/selezionati che non appartengono ad una changelist.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="844"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="948"/>
         <source>There are no files available/selected belonging to a changelist.</source>
         <translation>Non ci sono file disponibili/selezionati che appartengono ad una changelist.</translation>
     </message>
@@ -51460,127 +51523,127 @@ a messo in questa directory.&lt;/p&gt;</translation>
         <translation>Il processo {0}  non può essere avviato. Assicurarsi che sia nel path.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="39"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="39"/>
         <source>&amp;Filter on Status:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="49"/>
         <source>Select the status of entries to be shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="153"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="150"/>
         <source>Commit the selected changes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="156"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="153"/>
         <source>&amp;Commit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="170"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="167"/>
         <source>Add the selected entries to the repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="173"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="170"/>
         <source>&amp;Add</source>
         <translation type="unfinished">&amp;Aggiungi</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="180"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="177"/>
         <source>Show differences of the selected entries to the repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="183"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="180"/>
         <source>&amp;Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="200"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="197"/>
         <source>Revert the selected entries to the last revision in the repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="203"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="200"/>
         <source>Re&amp;vert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="210"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="207"/>
         <source>Restore the selected missing entries from the repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="213"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="210"/>
         <source>&amp;Restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="93"/>
         <source>Show differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="99"/>
         <source>Restore missing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="519"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="623"/>
         <source>all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="607"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="711"/>
         <source>There are no entries selected to be committed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="693"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="797"/>
         <source>There are no missing entries available/selected.</source>
         <translation type="unfinished">Non ci sono elementi mancati disponibili/selezionati.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="711"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="815"/>
         <source>Differences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="86"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="86"/>
         <source>Select all for commit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="88"/>
         <source>Deselect all from commit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="190"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="187"/>
         <source>Show differences of the selected entry to the repository in a side-by-side manner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.ui" line="193"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.ui" line="190"/>
         <source>Side-b&amp;y-Side Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="95"/>
         <source>Show differences side-by-side</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="739"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="843"/>
         <source>Side-by-Side Diff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnStatusDialog.py" line="739"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnStatusDialog.py" line="843"/>
         <source>Only one file with uncommitted changes must be selected.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -51606,56 +51669,56 @@ a messo in questa directory.&lt;/p&gt;</translation>
 <context>
     <name>SvnSwitchDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="13"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="13"/>
         <source>Subversion Switch</source>
         <translation>Switch Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="63"/>
         <source>Tag Type</source>
         <translation>Tipo Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="69"/>
         <source>Select for a regular tag</source>
         <translation>Seleziona per un tag regolare</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="72"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="72"/>
         <source>&lt;b&gt;Regular Tag&lt;/b&gt;
 &lt;p&gt;Select this entry for a regular tag.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tag Regolare&lt;/b&gt;
 &lt;b&gt;Seleziona questo elemento per un tag normale.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="76"/>
         <source>Regular Tag</source>
         <translation>Tag normale</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="86"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="86"/>
         <source>Select for a branch tag</source>
         <translation>Seleziona per un branch tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="89"/>
         <source>&lt;b&gt;Branch Tag&lt;/b&gt;
 &lt;p&gt;Select this entry for a branch tag.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Branch Tag&lt;/b&gt;
 &lt;p&gt;Seleziona questo elemento per un branch tag.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="93"/>
         <source>Branch Tag</source>
         <translation>Branch Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="45"/>
         <source>Enter the name of the tag</source>
         <translation>Inserisci il nome del tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="48"/>
         <source>&lt;b&gt;Tag Name&lt;/b&gt;
 &lt;p&gt;Enter the name of the tag to be switched to.
 In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
@@ -51664,7 +51727,7 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
 Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnSwitchDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnSwitchDialog.ui" line="32"/>
         <source>Tag Name:</source>
         <translation>Nome Tag:</translation>
     </message>
@@ -51672,81 +51735,81 @@ Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
 <context>
     <name>SvnTagBranchListDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="74"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="93"/>
         <source>Subversion Branches List</source>
         <translation>Elenco branch Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="123"/>
         <source>Subversion Error</source>
         <translation>Subversion Error</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="82"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="104"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The list operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto non può essere recuperato dalla copia di lavoro. L&apos;operazione verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="123"/>
         <source>The URL of the project repository has an invalid format. The list operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto ha un formato non valido. L&apos;operazione verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="151"/>
         <source>Subversion List</source>
         <translation>Subversion List</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="112"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="140"/>
         <source>Enter the repository URL containing the tags or branches</source>
         <translation>Inserisci l&apos;URL del repository che contiene i tag o i branch</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.py" line="123"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.py" line="151"/>
         <source>The repository URL is empty. Aborting...</source>
         <translation>L&apos;URL del repository è vuoto. Esco...</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="14"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="14"/>
         <source>Subversion Tag List</source>
         <translation>Subversion Tag List</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="17"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="17"/>
         <source>&lt;b&gt;Subversion Tag/Branch List&lt;/b&gt;
 &lt;p&gt;This dialog shows a list of the projects tags or branches.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Subversion Tag/Branch List&lt;/b&gt;
 &lt;p&gt;Mostra una lista dei tag e branch del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="33"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="33"/>
         <source>&lt;b&gt;Tag/Branches List&lt;/b&gt;
 &lt;p&gt;This shows a list of the projects tags or branches.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tag/Branches List&lt;/b&gt;
 &lt;p&gt;Mostra una lista dei tag o branch del progetto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="50"/>
         <source>Revision</source>
         <translation>Revisione</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="55"/>
         <source>Author</source>
         <translation>Autore</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="60"/>
         <source>Date</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="65"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagBranchListDialog.ui" line="79"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagBranchListDialog.ui" line="79"/>
         <source>Errors</source>
         <translation>Errori</translation>
     </message>
@@ -51809,95 +51872,95 @@ Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
 <context>
     <name>SvnTagDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="13"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="13"/>
         <source>Subversion Tag</source>
         <translation>Subversion Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="62"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="62"/>
         <source>Tag Action</source>
         <translation>Azione Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="68"/>
         <source>Select to create a regular tag</source>
         <translation>Seleziona per creare un tag normale</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="71"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="71"/>
         <source>&lt;b&gt;Create Regular Tag&lt;/b&gt;
 &lt;p&gt;Select this entry in order to create a regular tag in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crea un tag normale&lt;/b&gt;
 &lt;p&gt;Seleziona per creare un tag normale nel repository.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="75"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="75"/>
         <source>Create Regular Tag</source>
         <translation>Crea un tag normale</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="85"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="85"/>
         <source>Select to create a branch tag</source>
         <translation>Seleziona per creare un branch tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="88"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="88"/>
         <source>&lt;b&gt;Create Branch Tag&lt;/b&gt;
 &lt;p&gt;Select this entry in order to create a branch in the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crea Branch Tag&lt;/b&gt;
 &lt;p&gt;Seleziona per creare un branch nel repository.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="92"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="92"/>
         <source>Create Branch Tag</source>
         <translation>Crea un Branch Tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="99"/>
         <source>Select to delete a regular tag</source>
         <translation>Seleziona per cancellare un tag normale</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="102"/>
         <source>&lt;b&gt;Delete Regular Tag&lt;/b&gt;
 &lt;p&gt;Select this entry in order to delete the selected regular tag.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella tag normale&lt;/b&gt;
 &lt;p&gt;Selezione per cancellare il tag normale selezionato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="106"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="106"/>
         <source>Delete Regular Tag</source>
         <translation>Cancella tag normale</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="113"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="113"/>
         <source>Select to delete a branch tag</source>
         <translation>Seleziona per cancellate un branch tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="116"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="116"/>
         <source>&lt;b&gt;Delete Branch Tag&lt;/b&gt;
 &lt;p&gt;Select this entry in order to delete the selected branch tag.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cancella Branch Tag&lt;/b&gt;
 &lt;p&gt;Seleziona epr cancellare il branch tag selezionato.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="120"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="120"/>
         <source>Delete Branch Tag</source>
         <translation>Cancella Branch tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="55"/>
         <source>Name:</source>
         <translation>Nome:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="38"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="38"/>
         <source>Enter the name of the tag</source>
         <translation>Inserisci il nome di un tag</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnTagDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnTagDialog.ui" line="41"/>
         <source>&lt;b&gt;Tag Name&lt;/b&gt;
 &lt;p&gt;Enter the name of the tag to be created, moved or deleted.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nome tag&lt;/b&gt;
@@ -51907,42 +51970,42 @@ Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
 <context>
     <name>SvnUrlSelectionDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="22"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="22"/>
         <source>Repository URL 1</source>
         <translation>URL 1 del repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="66"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="66"/>
         <source>Select the URL type</source>
         <translation>Seleziona il tipo di URL</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="79"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="79"/>
         <source>Enter the label name or path</source>
         <translation>Inserisci il nome etichetta o il percorso</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="57"/>
         <source>Repository URL 2</source>
         <translation>URL 2 del repository</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="92"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="92"/>
         <source>Select to just show a summary of differences</source>
         <translation>Seleziona per mostrare solo un riassunto delle differenze</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="95"/>
         <source>Summary only</source>
         <translation>Solo riassunto</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.py" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.py" line="67"/>
         <source>Subversion Error</source>
         <translation>Errore Subversion</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.py" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.py" line="53"/>
         <source>The URL of the project repository could not be retrieved from the working copy. The operation will be aborted</source>
         <translation>L&apos;URL del repository del progetto non può essere recuperato dalla copia di lavoro. L&apos;operazione verrà interrotta</translation>
     </message>
@@ -51952,7 +52015,7 @@ Per andare a trunk lascia vuoti.&lt;/p&gt;</translation>
         <translation>L&apos;URL del repository del progetto ha un formato non valido. L&apos;operazione verrà interrotta</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnUrlSelectionDialog.ui" line="13"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnUrlSelectionDialog.ui" line="13"/>
         <source>Subversion Diff</source>
         <translation>Subversion Diff</translation>
     </message>
@@ -60703,592 +60766,592 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="obsolete">&lt;b&gt;Autocompletamenteo&lt;/b&gt;&lt;p&gt;Effettual il completamento automatio della parola che contiene il cursore.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="584"/>
+        <location filename="../ViewManager/ViewManager.py" line="1384"/>
         <source>Move left one character</source>
         <translation>Muovi a sinistra di 1 carattere</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="584"/>
+        <location filename="../ViewManager/ViewManager.py" line="1384"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="598"/>
+        <location filename="../ViewManager/ViewManager.py" line="1398"/>
         <source>Move right one character</source>
         <translation>Muovi a destra di 1 carattere</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="598"/>
+        <location filename="../ViewManager/ViewManager.py" line="1398"/>
         <source>Right</source>
         <translation>Destra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="612"/>
+        <location filename="../ViewManager/ViewManager.py" line="1412"/>
         <source>Move up one line</source>
         <translation>Muovi in alto di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="612"/>
+        <location filename="../ViewManager/ViewManager.py" line="1412"/>
         <source>Up</source>
         <translation>Su</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="624"/>
+        <location filename="../ViewManager/ViewManager.py" line="1424"/>
         <source>Move down one line</source>
         <translation>Muovi in basso di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="624"/>
+        <location filename="../ViewManager/ViewManager.py" line="1424"/>
         <source>Down</source>
         <translation>Giù</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="636"/>
+        <location filename="../ViewManager/ViewManager.py" line="1436"/>
         <source>Move left one word part</source>
         <translation>Muovi a sinistra di una parte di parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="670"/>
+        <location filename="../ViewManager/ViewManager.py" line="1470"/>
         <source>Alt+Left</source>
         <translation>Alt+Sinistra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="650"/>
+        <location filename="../ViewManager/ViewManager.py" line="1450"/>
         <source>Move right one word part</source>
         <translation>Muovi a destra di una parte di parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1575"/>
+        <location filename="../ViewManager/ViewManager.py" line="2338"/>
         <source>Alt+Right</source>
         <translation>Alt+Destra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="664"/>
+        <location filename="../ViewManager/ViewManager.py" line="1464"/>
         <source>Move left one word</source>
         <translation>Muovi a sinistra una parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="720"/>
+        <location filename="../ViewManager/ViewManager.py" line="1515"/>
         <source>Ctrl+Left</source>
         <translation>Ctrl+Left</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="679"/>
+        <location filename="../ViewManager/ViewManager.py" line="1479"/>
         <source>Move right one word</source>
         <translation>Muovi a destra una parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1327"/>
+        <location filename="../ViewManager/ViewManager.py" line="2092"/>
         <source>Ctrl+Right</source>
         <translation>Ctrl+Right</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1530"/>
+        <location filename="../ViewManager/ViewManager.py" line="2293"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="723"/>
+        <location filename="../ViewManager/ViewManager.py" line="1518"/>
         <source>Alt+Home</source>
         <translation>Alt+Home</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1545"/>
+        <location filename="../ViewManager/ViewManager.py" line="2308"/>
         <source>End</source>
         <translation>Fine</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="748"/>
+        <location filename="../ViewManager/ViewManager.py" line="1541"/>
         <source>Scroll view down one line</source>
         <translation>Scrolla la vista in basso di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="838"/>
+        <location filename="../ViewManager/ViewManager.py" line="1631"/>
         <source>Ctrl+Down</source>
         <translation>Ctrl+Down</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="760"/>
+        <location filename="../ViewManager/ViewManager.py" line="1553"/>
         <source>Scroll view up one line</source>
         <translation>Scrolla la vista in alto di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="821"/>
+        <location filename="../ViewManager/ViewManager.py" line="1614"/>
         <source>Ctrl+Up</source>
         <translation>Ctrl+Up</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="771"/>
+        <location filename="../ViewManager/ViewManager.py" line="1564"/>
         <source>Move up one paragraph</source>
         <translation>Muovi in alto di un paragrafo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="771"/>
+        <location filename="../ViewManager/ViewManager.py" line="1564"/>
         <source>Alt+Up</source>
         <translation>Alt+Up</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="780"/>
+        <location filename="../ViewManager/ViewManager.py" line="1573"/>
         <source>Move down one paragraph</source>
         <translation>Muovi in basso di un paragrafo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="780"/>
+        <location filename="../ViewManager/ViewManager.py" line="1573"/>
         <source>Alt+Down</source>
         <translation>Alt+Down</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="792"/>
+        <location filename="../ViewManager/ViewManager.py" line="1585"/>
         <source>Move up one page</source>
         <translation>Muovi in alto di una pagina</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="792"/>
+        <location filename="../ViewManager/ViewManager.py" line="1585"/>
         <source>PgUp</source>
         <translation>PgUp</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="801"/>
+        <location filename="../ViewManager/ViewManager.py" line="1594"/>
         <source>Move down one page</source>
         <translation>Muovi in basso di una pagina</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="801"/>
+        <location filename="../ViewManager/ViewManager.py" line="1594"/>
         <source>PgDown</source>
         <translation>PgDown</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="824"/>
+        <location filename="../ViewManager/ViewManager.py" line="1617"/>
         <source>Ctrl+Home</source>
         <translation>Ctrl+Home</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="841"/>
+        <location filename="../ViewManager/ViewManager.py" line="1634"/>
         <source>Ctrl+End</source>
         <translation>Ctrl+End</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="847"/>
+        <location filename="../ViewManager/ViewManager.py" line="1640"/>
         <source>Indent one level</source>
         <translation>Indenta un livello</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="847"/>
+        <location filename="../ViewManager/ViewManager.py" line="1640"/>
         <source>Tab</source>
         <translation>Tab</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="856"/>
+        <location filename="../ViewManager/ViewManager.py" line="1649"/>
         <source>Unindent one level</source>
         <translation>Deindenta di un livello</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="856"/>
+        <location filename="../ViewManager/ViewManager.py" line="1649"/>
         <source>Shift+Tab</source>
         <translation>Shift+Tab</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="866"/>
+        <location filename="../ViewManager/ViewManager.py" line="1659"/>
         <source>Extend selection left one character</source>
         <translation>Estendi la selezione a sinistra di un carattere</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="866"/>
+        <location filename="../ViewManager/ViewManager.py" line="1659"/>
         <source>Shift+Left</source>
         <translation>Shift+Left</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="882"/>
+        <location filename="../ViewManager/ViewManager.py" line="1674"/>
         <source>Extend selection right one character</source>
         <translation>Estendi la selezione a destra di un carattere</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="882"/>
+        <location filename="../ViewManager/ViewManager.py" line="1674"/>
         <source>Shift+Right</source>
         <translation>Shift+Right</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="899"/>
+        <location filename="../ViewManager/ViewManager.py" line="1689"/>
         <source>Extend selection up one line</source>
         <translation>Estendi selezione in alto di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="899"/>
+        <location filename="../ViewManager/ViewManager.py" line="1689"/>
         <source>Shift+Up</source>
         <translation>Shift+Up</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="916"/>
+        <location filename="../ViewManager/ViewManager.py" line="1704"/>
         <source>Extend selection down one line</source>
         <translation>Estendi selezione in basso di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="916"/>
+        <location filename="../ViewManager/ViewManager.py" line="1704"/>
         <source>Shift+Down</source>
         <translation>Shift+Down</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="933"/>
+        <location filename="../ViewManager/ViewManager.py" line="1719"/>
         <source>Extend selection left one word part</source>
         <translation>Estendi la selezione a sinistra di una parte di parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="973"/>
+        <location filename="../ViewManager/ViewManager.py" line="1755"/>
         <source>Alt+Shift+Left</source>
         <translation>Alt+Shift+Left</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="949"/>
+        <location filename="../ViewManager/ViewManager.py" line="1733"/>
         <source>Extend selection right one word part</source>
         <translation>Estendi la selezione a destra di una parte di parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1590"/>
+        <location filename="../ViewManager/ViewManager.py" line="2353"/>
         <source>Alt+Shift+Right</source>
         <translation>Alt+Shift+Right</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="965"/>
+        <location filename="../ViewManager/ViewManager.py" line="1747"/>
         <source>Extend selection left one word</source>
         <translation>Estendi la selezione a sinistra di una parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1684"/>
+        <location filename="../ViewManager/ViewManager.py" line="2447"/>
         <source>Ctrl+Shift+Left</source>
         <translation>Ctrl+Shift+Left</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="982"/>
+        <location filename="../ViewManager/ViewManager.py" line="1764"/>
         <source>Extend selection right one word</source>
         <translation>Estendi la selezione a destra di una parola</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1346"/>
+        <location filename="../ViewManager/ViewManager.py" line="2109"/>
         <source>Ctrl+Shift+Right</source>
         <translation>Ctrl+Shift+Right</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1011"/>
+        <location filename="../ViewManager/ViewManager.py" line="1793"/>
         <source>Shift+Home</source>
         <translation>Shift+Home</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1451"/>
+        <location filename="../ViewManager/ViewManager.py" line="2213"/>
         <source>Alt+Shift+Home</source>
         <translation>Alt+Shift+Home</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1028"/>
+        <location filename="../ViewManager/ViewManager.py" line="1810"/>
         <source>Shift+End</source>
         <translation>Shift+End</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1034"/>
+        <location filename="../ViewManager/ViewManager.py" line="1816"/>
         <source>Extend selection up one paragraph</source>
         <translation>Estendi selezione in alto di un paragrafo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1034"/>
+        <location filename="../ViewManager/ViewManager.py" line="1816"/>
         <source>Alt+Shift+Up</source>
         <translation>Alt+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1048"/>
+        <location filename="../ViewManager/ViewManager.py" line="1829"/>
         <source>Extend selection down one paragraph</source>
         <translation>Estendi selezione in basso di un paragrafo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1048"/>
+        <location filename="../ViewManager/ViewManager.py" line="1829"/>
         <source>Alt+Shift+Down</source>
         <translation>Alt+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1061"/>
+        <location filename="../ViewManager/ViewManager.py" line="1842"/>
         <source>Extend selection up one page</source>
         <translation>Estendi selezione in alto di una pagina</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1061"/>
+        <location filename="../ViewManager/ViewManager.py" line="1842"/>
         <source>Shift+PgUp</source>
         <translation>Shift+PgUp</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1075"/>
+        <location filename="../ViewManager/ViewManager.py" line="1854"/>
         <source>Extend selection down one page</source>
         <translation>Estendi selezione in basso di una pagina</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1075"/>
+        <location filename="../ViewManager/ViewManager.py" line="1854"/>
         <source>Shift+PgDown</source>
         <translation>Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1103"/>
+        <location filename="../ViewManager/ViewManager.py" line="1881"/>
         <source>Ctrl+Shift+Home</source>
         <translation>Ctrl+Shift+Home</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1120"/>
+        <location filename="../ViewManager/ViewManager.py" line="1898"/>
         <source>Ctrl+Shift+End</source>
         <translation>Ctrl+Shift+End</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1126"/>
+        <location filename="../ViewManager/ViewManager.py" line="1904"/>
         <source>Delete previous character</source>
         <translation>Cancella caratteri precedenti</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1126"/>
+        <location filename="../ViewManager/ViewManager.py" line="1904"/>
         <source>Backspace</source>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1157"/>
+        <location filename="../ViewManager/ViewManager.py" line="1935"/>
         <source>Delete current character</source>
         <translation>Cancella il carattere corrente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1157"/>
+        <location filename="../ViewManager/ViewManager.py" line="1935"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1171"/>
+        <location filename="../ViewManager/ViewManager.py" line="1949"/>
         <source>Delete word to left</source>
         <translation>Cancella parola a sinistra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1171"/>
+        <location filename="../ViewManager/ViewManager.py" line="1949"/>
         <source>Ctrl+Backspace</source>
         <translation>Ctrl+Backspace</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1181"/>
+        <location filename="../ViewManager/ViewManager.py" line="1960"/>
         <source>Delete word to right</source>
         <translation>Cancella parola a destra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1181"/>
+        <location filename="../ViewManager/ViewManager.py" line="1960"/>
         <source>Ctrl+Del</source>
         <translation>Ctrl+Del</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1191"/>
+        <location filename="../ViewManager/ViewManager.py" line="1970"/>
         <source>Delete line to left</source>
         <translation>Cancella riga a sinistra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1191"/>
+        <location filename="../ViewManager/ViewManager.py" line="1970"/>
         <source>Ctrl+Shift+Backspace</source>
         <translation>Ctrl+Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1201"/>
+        <location filename="../ViewManager/ViewManager.py" line="1981"/>
         <source>Delete line to right</source>
         <translation>Cancella riga a destra</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1210"/>
+        <location filename="../ViewManager/ViewManager.py" line="1990"/>
         <source>Ctrl+Shift+Del</source>
         <translation>Ctrl+Shift+Del</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1216"/>
+        <location filename="../ViewManager/ViewManager.py" line="1996"/>
         <source>Insert new line</source>
         <translation>Inserisci riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1216"/>
+        <location filename="../ViewManager/ViewManager.py" line="1996"/>
         <source>Return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1226"/>
+        <location filename="../ViewManager/ViewManager.py" line="2019"/>
         <source>Delete current line</source>
         <translation>Cancella riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1226"/>
+        <location filename="../ViewManager/ViewManager.py" line="2019"/>
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1236"/>
+        <location filename="../ViewManager/ViewManager.py" line="2030"/>
         <source>Duplicate current line</source>
         <translation>Duplica riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1236"/>
+        <location filename="../ViewManager/ViewManager.py" line="2030"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1247"/>
+        <location filename="../ViewManager/ViewManager.py" line="2041"/>
         <source>Swap current and previous lines</source>
         <translation>Scambia la riga con quella precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1247"/>
+        <location filename="../ViewManager/ViewManager.py" line="2041"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1260"/>
+        <location filename="../ViewManager/ViewManager.py" line="2052"/>
         <source>Cut current line</source>
         <translation>Taglia riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1260"/>
+        <location filename="../ViewManager/ViewManager.py" line="2052"/>
         <source>Alt+Shift+L</source>
         <translation>Alt+Shift+L</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1270"/>
+        <location filename="../ViewManager/ViewManager.py" line="2062"/>
         <source>Copy current line</source>
         <translation>Copia riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1270"/>
+        <location filename="../ViewManager/ViewManager.py" line="2062"/>
         <source>Ctrl+Shift+T</source>
         <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1280"/>
+        <location filename="../ViewManager/ViewManager.py" line="2073"/>
         <source>Toggle insert/overtype</source>
         <translation>Scambia inserisci/sovrascrivi</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1280"/>
+        <location filename="../ViewManager/ViewManager.py" line="2073"/>
         <source>Ins</source>
         <translation>Ins</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1291"/>
+        <location filename="../ViewManager/ViewManager.py" line="2637"/>
         <source>Convert selection to lower case</source>
         <translation>Converti selezione in minuscolo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1291"/>
+        <location filename="../ViewManager/ViewManager.py" line="2637"/>
         <source>Alt+Shift+U</source>
         <translation>Alt+Shift+U</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1305"/>
+        <location filename="../ViewManager/ViewManager.py" line="2649"/>
         <source>Convert selection to upper case</source>
         <translation>Converti selezione in maiuscolo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1305"/>
+        <location filename="../ViewManager/ViewManager.py" line="2649"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1330"/>
+        <location filename="../ViewManager/ViewManager.py" line="2095"/>
         <source>Alt+End</source>
         <translation>Alt+End</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1352"/>
+        <location filename="../ViewManager/ViewManager.py" line="2115"/>
         <source>Formfeed</source>
         <translation>Formfeed</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1361"/>
+        <location filename="../ViewManager/ViewManager.py" line="2124"/>
         <source>Escape</source>
         <translation>Escape</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1361"/>
+        <location filename="../ViewManager/ViewManager.py" line="2124"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1370"/>
+        <location filename="../ViewManager/ViewManager.py" line="2133"/>
         <source>Extend rectangular selection down one line</source>
         <translation>Estendi selezione rettagolare in basso di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1370"/>
+        <location filename="../ViewManager/ViewManager.py" line="2133"/>
         <source>Alt+Ctrl+Down</source>
         <translation>Alt+Ctrl+Down</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1387"/>
+        <location filename="../ViewManager/ViewManager.py" line="2149"/>
         <source>Extend rectangular selection up one line</source>
         <translation>Estendi selezione rettagolare in alto di una riga</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1387"/>
+        <location filename="../ViewManager/ViewManager.py" line="2149"/>
         <source>Alt+Ctrl+Up</source>
         <translation>Alt+Ctrl+Up</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1404"/>
+        <location filename="../ViewManager/ViewManager.py" line="2164"/>
         <source>Extend rectangular selection left one character</source>
         <translation>Estendi selezione rettagolare a sinistra di un carattere</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1404"/>
+        <location filename="../ViewManager/ViewManager.py" line="2164"/>
         <source>Alt+Ctrl+Left</source>
         <translation>Alt+Ctrl+Left</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1421"/>
+        <location filename="../ViewManager/ViewManager.py" line="2182"/>
         <source>Extend rectangular selection right one character</source>
         <translation>Estendi selezione rettagolare a destra di un carattere</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1421"/>
+        <location filename="../ViewManager/ViewManager.py" line="2182"/>
         <source>Alt+Ctrl+Right</source>
         <translation>Alt+Ctrl+Right</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1476"/>
+        <location filename="../ViewManager/ViewManager.py" line="2238"/>
         <source>Extend rectangular selection up one page</source>
         <translation>Estendi selezione rettagolare in alto di una pagina</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1490"/>
+        <location filename="../ViewManager/ViewManager.py" line="2253"/>
         <source>Extend rectangular selection down one page</source>
         <translation>Estendi selezione rettagolare in basso di una pagina</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1903"/>
+        <location filename="../ViewManager/ViewManager.py" line="3266"/>
         <source>Search</source>
         <translation>Ricerca</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1903"/>
+        <location filename="../ViewManager/ViewManager.py" line="2788"/>
         <source>&amp;Search...</source>
         <translation>&amp;Ricerca...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1911"/>
+        <location filename="../ViewManager/ViewManager.py" line="2796"/>
         <source>Search for a text</source>
         <translation>Cerca per un testo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1913"/>
+        <location filename="../ViewManager/ViewManager.py" line="2798"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Search for some text in the current editor. A dialog is shown to enter the searchtext and options for the search.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerca&lt;/b&gt;&lt;p&gt;Cerca per del testo nell&apos;editor corrente. Viene mostrato in dialogo per inserire il testo cercato e le opzioni per la ricerca.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1983"/>
+        <location filename="../ViewManager/ViewManager.py" line="2914"/>
         <source>Replace</source>
         <translation>Rimpiazza</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1983"/>
+        <location filename="../ViewManager/ViewManager.py" line="2914"/>
         <source>&amp;Replace...</source>
         <translation>&amp;Rimpiazza...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1990"/>
+        <location filename="../ViewManager/ViewManager.py" line="2921"/>
         <source>Replace some text</source>
         <translation>Sostituisci del testo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1992"/>
+        <location filename="../ViewManager/ViewManager.py" line="2923"/>
         <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Search for some text in the current editor and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and replace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sostituisci&lt;/b&gt;&lt;p&gt;Cerca per del testo nell&apos;editor corrente e lo sostituisce. Viene mostrato in dialogo per inserire il testo cercato, il testo sostituto e le opzioni per la ricerca e la sostituzione.&lt;/p&gt;</translation>
     </message>
@@ -61776,7 +61839,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Shift+Ins</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1138"/>
+        <location filename="../ViewManager/ViewManager.py" line="1916"/>
         <source>Shift+Backspace</source>
         <translation>Shift+Backspace</translation>
     </message>
@@ -61944,7 +62007,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Divisione precedente&lt;/b&gt;&lt;p&gt;Vai alla divisione precedente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1216"/>
+        <location filename="../ViewManager/ViewManager.py" line="1996"/>
         <source>Enter</source>
         <translation>Enter</translation>
     </message>
@@ -61985,12 +62048,12 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Abilita/Disabilita tutti i raggruppamenti (inclusi i figli)&lt;/b&gt;&lt;p&gt;Abilita/Disabilita tutti i raggruppamenti dell&apos;edito inclusi i figli.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1882"/>
+        <location filename="../ViewManager/ViewManager.py" line="2271"/>
         <source>Duplicate current selection</source>
         <translation>Duplica la selezione corrente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1882"/>
+        <location filename="../ViewManager/ViewManager.py" line="2271"/>
         <source>Ctrl+Shift+D</source>
         <translation>Ctrl+Shift+D</translation>
     </message>
@@ -62171,13 +62234,13 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>Modifica</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1903"/>
+        <location filename="../ViewManager/ViewManager.py" line="2788"/>
         <source>Ctrl+F</source>
         <comment>Search|Search</comment>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1983"/>
+        <location filename="../ViewManager/ViewManager.py" line="2914"/>
         <source>Ctrl+R</source>
         <comment>Search|Replace</comment>
         <translation>Ctrl+R</translation>
@@ -62315,33 +62378,33 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&amp;Ricerca</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1923"/>
+        <location filename="../ViewManager/ViewManager.py" line="2808"/>
         <source>Search next</source>
         <translation>Cerca seguente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1923"/>
+        <location filename="../ViewManager/ViewManager.py" line="2808"/>
         <source>Search &amp;next</source>
         <translation>Cerca segue&amp;nte</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1923"/>
+        <location filename="../ViewManager/ViewManager.py" line="2808"/>
         <source>F3</source>
         <comment>Search|Search next</comment>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1943"/>
+        <location filename="../ViewManager/ViewManager.py" line="2829"/>
         <source>Search previous</source>
         <translation>Cerca precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1943"/>
+        <location filename="../ViewManager/ViewManager.py" line="2829"/>
         <source>Search &amp;previous</source>
         <translation>Cerca &amp;precedente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1943"/>
+        <location filename="../ViewManager/ViewManager.py" line="2829"/>
         <source>Shift+F3</source>
         <comment>Search|Search previous</comment>
         <translation>Shift+F3</translation>
@@ -62398,43 +62461,43 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;b&gt;Calltip&lt;/b&gt;&lt;p&gt;Mostra calltip basati sul carattere immediatamente a sinistra del cursore.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1931"/>
+        <location filename="../ViewManager/ViewManager.py" line="2817"/>
         <source>Search next occurrence of text</source>
         <translation>Cerca prossima ricorrenza del testo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1933"/>
+        <location filename="../ViewManager/ViewManager.py" line="2819"/>
         <source>&lt;b&gt;Search next&lt;/b&gt;&lt;p&gt;Search the next occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Trova successivo&lt;/b&gt;&lt;p&gt;Trova la prossima occorrenza di testo nell&apos;editor corrente. Il testo inserito precedentemente e opzioni verranno riutilizzate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1951"/>
+        <location filename="../ViewManager/ViewManager.py" line="2837"/>
         <source>Search previous occurrence of text</source>
         <translation>Cerca la precedente  ricorrenza del testo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1953"/>
+        <location filename="../ViewManager/ViewManager.py" line="2839"/>
         <source>&lt;b&gt;Search previous&lt;/b&gt;&lt;p&gt;Search the previous occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Trova precedente&lt;/b&gt;&lt;p&gt;Trova la precedente occorrenza di testo nell&apos;editor corrente. Il testo inserito precedentemente e opzioni verranno riutilizzate.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1963"/>
+        <location filename="../ViewManager/ViewManager.py" line="2849"/>
         <source>Clear search markers</source>
         <translation>Pulisci marcatori di ricerca</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1963"/>
+        <location filename="../ViewManager/ViewManager.py" line="2849"/>
         <source>Ctrl+3</source>
         <comment>Search|Clear search markers</comment>
         <translation>Ctrl+3</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1972"/>
+        <location filename="../ViewManager/ViewManager.py" line="2857"/>
         <source>Clear all displayed search markers</source>
         <translation>Pulisci tutti i marcatori di ricerca mostrati</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1974"/>
+        <location filename="../ViewManager/ViewManager.py" line="2859"/>
         <source>&lt;b&gt;Clear search markers&lt;/b&gt;&lt;p&gt;Clear all displayed search markers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pulisci marcatori di ricerca&lt;/b&gt;&lt;p&gt;Pulisci tutti i marcatori di ricerca mostrati.&lt;/p&gt;</translation>
     </message>
@@ -62454,7 +62517,7 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation>&lt;p&gt;Inserisci il testo da cercare direttamente in questo campo. La ricerca verrà effettuata ignorando le maiuscole/minuscole. La funzione quicksearch è attivata dall&apos;azione di ricerca della successiva (tasto default Ctrl+Shift+K), se questo campo non ha il focus. Altrimenti cerca per la successiva occorrenza del testo inserito. La quicksearch all&apos;indietro (tasto default Ctrl+Shift+J) cerca la precedente occorrenza. Attivando la &apos;quicksearch estesa&apos; (tasto default Ctrl+Shift+H) estende la ricerca alla fine della parola trovata. La ricerca veloce può essere conclusa premento Return mentre il campo di input ha il focus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="459"/>
+        <location filename="../ViewManager/ViewManager.py" line="720"/>
         <source>Print Preview</source>
         <translation>Anteprima Stampa</translation>
     </message>
@@ -62685,347 +62748,347 @@ Facendo doppio click su un elemento verrà aperto il rispettivo traceback.&lt;/p
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="593"/>
+        <location filename="../ViewManager/ViewManager.py" line="1393"/>
         <source>Meta+B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="606"/>
+        <location filename="../ViewManager/ViewManager.py" line="1406"/>
         <source>Meta+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="618"/>
+        <location filename="../ViewManager/ViewManager.py" line="1418"/>
         <source>Meta+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="630"/>
+        <location filename="../ViewManager/ViewManager.py" line="1430"/>
         <source>Meta+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="694"/>
+        <location filename="../ViewManager/ViewManager.py" line="1491"/>
         <source>Move to first visible character in document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="710"/>
+        <location filename="../ViewManager/ViewManager.py" line="1507"/>
         <source>Move to start of display line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="729"/>
+        <location filename="../ViewManager/ViewManager.py" line="1524"/>
         <source>Move to end of document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="739"/>
+        <location filename="../ViewManager/ViewManager.py" line="1532"/>
         <source>Meta+E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="807"/>
+        <location filename="../ViewManager/ViewManager.py" line="1600"/>
         <source>Meta+V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="813"/>
+        <location filename="../ViewManager/ViewManager.py" line="1606"/>
         <source>Move to start of document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="830"/>
+        <location filename="../ViewManager/ViewManager.py" line="1623"/>
         <source>Move to end of document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="876"/>
+        <location filename="../ViewManager/ViewManager.py" line="1668"/>
         <source>Meta+Shift+B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="893"/>
+        <location filename="../ViewManager/ViewManager.py" line="1683"/>
         <source>Meta+Shift+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="910"/>
+        <location filename="../ViewManager/ViewManager.py" line="1698"/>
         <source>Meta+Shift+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="927"/>
+        <location filename="../ViewManager/ViewManager.py" line="1713"/>
         <source>Meta+Shift+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="999"/>
+        <location filename="../ViewManager/ViewManager.py" line="1781"/>
         <source>Extend selection to first visible character in document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1017"/>
+        <location filename="../ViewManager/ViewManager.py" line="1799"/>
         <source>Extend selection to end of document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1025"/>
+        <location filename="../ViewManager/ViewManager.py" line="1807"/>
         <source>Meta+Shift+E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1086"/>
+        <location filename="../ViewManager/ViewManager.py" line="1864"/>
         <source>Meta+Shift+V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1092"/>
+        <location filename="../ViewManager/ViewManager.py" line="1870"/>
         <source>Extend selection to start of document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1100"/>
+        <location filename="../ViewManager/ViewManager.py" line="1878"/>
         <source>Ctrl+Shift+Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1109"/>
+        <location filename="../ViewManager/ViewManager.py" line="1887"/>
         <source>Extend selection to end of document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1117"/>
+        <location filename="../ViewManager/ViewManager.py" line="1895"/>
         <source>Ctrl+Shift+Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1135"/>
+        <location filename="../ViewManager/ViewManager.py" line="1913"/>
         <source>Meta+H</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1144"/>
+        <location filename="../ViewManager/ViewManager.py" line="1922"/>
         <source>Delete previous character if not at start of line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1165"/>
+        <location filename="../ViewManager/ViewManager.py" line="1943"/>
         <source>Meta+D</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1207"/>
+        <location filename="../ViewManager/ViewManager.py" line="1987"/>
         <source>Meta+K</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1319"/>
+        <location filename="../ViewManager/ViewManager.py" line="2084"/>
         <source>Move to end of display line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1336"/>
+        <location filename="../ViewManager/ViewManager.py" line="2101"/>
         <source>Extend selection to end of display line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1381"/>
+        <location filename="../ViewManager/ViewManager.py" line="2143"/>
         <source>Meta+Alt+Shift+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1398"/>
+        <location filename="../ViewManager/ViewManager.py" line="2158"/>
         <source>Meta+Alt+Shift+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1415"/>
+        <location filename="../ViewManager/ViewManager.py" line="2176"/>
         <source>Meta+Alt+Shift+B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1432"/>
+        <location filename="../ViewManager/ViewManager.py" line="2194"/>
         <source>Meta+Alt+Shift+F</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1438"/>
+        <location filename="../ViewManager/ViewManager.py" line="2200"/>
         <source>Extend rectangular selection to first visible character in document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1457"/>
+        <location filename="../ViewManager/ViewManager.py" line="2219"/>
         <source>Extend rectangular selection to end of document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1467"/>
+        <location filename="../ViewManager/ViewManager.py" line="2229"/>
         <source>Meta+Alt+Shift+E</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1470"/>
+        <location filename="../ViewManager/ViewManager.py" line="2232"/>
         <source>Alt+Shift+End</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1490"/>
+        <location filename="../ViewManager/ViewManager.py" line="2253"/>
         <source>Alt+Shift+PgDown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1501"/>
+        <location filename="../ViewManager/ViewManager.py" line="2265"/>
         <source>Meta+Alt+Shift+V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1522"/>
+        <location filename="../ViewManager/ViewManager.py" line="2285"/>
         <source>Scroll to start of document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1537"/>
+        <location filename="../ViewManager/ViewManager.py" line="2300"/>
         <source>Scroll to end of document</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1552"/>
+        <location filename="../ViewManager/ViewManager.py" line="2315"/>
         <source>Scroll vertically to center current line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1560"/>
+        <location filename="../ViewManager/ViewManager.py" line="2323"/>
         <source>Meta+L</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1567"/>
+        <location filename="../ViewManager/ViewManager.py" line="2330"/>
         <source>Move to end of next word</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1582"/>
+        <location filename="../ViewManager/ViewManager.py" line="2345"/>
         <source>Extend selection to end of next word</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1598"/>
+        <location filename="../ViewManager/ViewManager.py" line="2361"/>
         <source>Move to end of previous word</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1610"/>
+        <location filename="../ViewManager/ViewManager.py" line="2373"/>
         <source>Extend selection to end of previous word</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1622"/>
+        <location filename="../ViewManager/ViewManager.py" line="2385"/>
         <source>Move to start of document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1630"/>
+        <location filename="../ViewManager/ViewManager.py" line="2393"/>
         <source>Meta+A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1637"/>
+        <location filename="../ViewManager/ViewManager.py" line="2400"/>
         <source>Extend selection to start of document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1648"/>
+        <location filename="../ViewManager/ViewManager.py" line="2411"/>
         <source>Meta+Shift+A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1655"/>
+        <location filename="../ViewManager/ViewManager.py" line="2418"/>
         <source>Extend rectangular selection to start of document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1665"/>
+        <location filename="../ViewManager/ViewManager.py" line="2428"/>
         <source>Meta+Alt+Shift+A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1673"/>
+        <location filename="../ViewManager/ViewManager.py" line="2436"/>
         <source>Extend selection to start of display line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1692"/>
+        <location filename="../ViewManager/ViewManager.py" line="2455"/>
         <source>Move to start of display or document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1706"/>
+        <location filename="../ViewManager/ViewManager.py" line="2469"/>
         <source>Extend selection to start of display or document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1721"/>
+        <location filename="../ViewManager/ViewManager.py" line="2484"/>
         <source>Move to first visible character in display or document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1738"/>
+        <location filename="../ViewManager/ViewManager.py" line="2501"/>
         <source>Extend selection to first visible character in display or document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1755"/>
+        <location filename="../ViewManager/ViewManager.py" line="2518"/>
         <source>Move to end of display or document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1769"/>
+        <location filename="../ViewManager/ViewManager.py" line="2532"/>
         <source>Extend selection to end of display or document line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1784"/>
+        <location filename="../ViewManager/ViewManager.py" line="2547"/>
         <source>Stuttered move up one page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1796"/>
+        <location filename="../ViewManager/ViewManager.py" line="2559"/>
         <source>Stuttered extend selection up one page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1811"/>
+        <location filename="../ViewManager/ViewManager.py" line="2572"/>
         <source>Stuttered move down one page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1823"/>
+        <location filename="../ViewManager/ViewManager.py" line="2584"/>
         <source>Stuttered extend selection down one page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1838"/>
+        <location filename="../ViewManager/ViewManager.py" line="2597"/>
         <source>Delete right to end of next word</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1848"/>
+        <location filename="../ViewManager/ViewManager.py" line="2605"/>
         <source>Alt+Del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1855"/>
+        <location filename="../ViewManager/ViewManager.py" line="2612"/>
         <source>Move selected lines up one line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1869"/>
+        <location filename="../ViewManager/ViewManager.py" line="2624"/>
         <source>Move selected lines down one line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="1476"/>
+        <location filename="../ViewManager/ViewManager.py" line="2238"/>
         <source>Alt+Shift+PgUp</source>
         <translation type="unfinished"></translation>
     </message>

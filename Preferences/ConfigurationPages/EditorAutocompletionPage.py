@@ -37,6 +37,8 @@ class EditorAutocompletionPage(ConfigurationPageBase,
             Preferences.getEditor("AutoCompletionReplaceWord"))
         self.acThresholdSlider.setValue(
             Preferences.getEditor("AutoCompletionThreshold"))
+        self.acScintillaCheckBox.setChecked(
+            Preferences.getEditor("AutoCompletionScintillaOnFail"))
         
     def save(self):
         """
@@ -54,6 +56,9 @@ class EditorAutocompletionPage(ConfigurationPageBase,
         Preferences.setEditor(
             "AutoCompletionThreshold",
             self.acThresholdSlider.value())
+        Preferences.setEditor(
+            "AutoCompletionScintillaOnFail",
+            self.acScintillaCheckBox.isChecked())
     
 
 def create(dlg):

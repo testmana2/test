@@ -366,10 +366,11 @@ class Editor(QsciScintillaCompat):
         self.__setTextDisplay()
         
         # set the autocompletion and calltips function
-        # TODO: make this work with multiple providers
         self.__acHookFunction = None
+        self.__completionListHookFunctions = {}
         self.__setAutoCompletion()
         self.__ctHookFunction = None
+        self.__ctHookFunctions = {}
         self.__setCallTips()
         
         sh = self.sizeHint()
@@ -4264,7 +4265,8 @@ class Editor(QsciScintillaCompat):
         else:
             self.setAutoCompletionSource(QsciScintilla.AcsAll)
         if Preferences.getEditor("AutoCompletionEnabled"):
-            if self.__acHookFunction is None:
+            if self.__acHookFunction is None or \
+                    not self.__completionListHookFunctions:
                 self.setAutoCompletionThreshold(
                     Preferences.getEditor("AutoCompletionThreshold"))
             else:
@@ -4414,6 +4416,10 @@ class Editor(QsciScintillaCompat):
         
         return False
     
+    #####################################################
+    ## old auto-completion hook interfaces (before 6.1.0)
+    #####################################################
+    
     def setAutoCompletionHook(self, func):
         """
         Public method to set an autocompletion hook.
@@ -4455,6 +4461,69 @@ class Editor(QsciScintillaCompat):
         """
         return self.__acHookFunction
     
+    ########################################################
+    ## new auto-completion hook interfaces (6.1.0 and later)
+    ########################################################
+    
+    def addCompletionListHook(self, key, func):
+        """
+        Public method to set an auto-completion list provider.
+        
+        @param key name of the provider
+        @type str
+        @param func function providing completion list. func
+            should be a function taking a reference to the editor and
+            a boolean indicating to complete a context. It should return
+            the possible completions as a list of strings.
+        @type function(editor, bool) -> list of str
+        """
+        if key in self.__completionListHookFunctions:
+            # it was already registered
+            E5MessageBox.warning(
+                self,
+                self.tr("Auto-Completion Provider"),
+                self.tr("""The completion list provider '{0}' was already"""
+                        """ registered. Ignoring duplicate request.""")
+                .format(key))
+            return
+        
+        if not self.__completionListHookFunctions:
+            if self.autoCompletionThreshold() > 0:
+                self.setAutoCompletionThreshold(0)
+            self.SCN_CHARADDED.connect(self.__charAdded)
+        self.__completionListHookFunctions[key] = func
+    
+    def removeCompletionListHook(self, key):
+        """
+        Public method to remove a previously registered completion list
+        provider.
+        
+        @param key name of the provider
+        @type str
+        """
+        if key in self.__completionListHookFunctions:
+            del self.__completionListHookFunctions[key]
+        
+        if not self.__completionListHookFunctions:
+            self.SCN_CHARADDED.disconnect(self.__charAdded)
+            if self.autoCompletionThreshold() == 0:
+                self.setAutoCompletionThreshold(
+                    Preferences.getEditor("AutoCompletionThreshold"))
+    
+    def getCompletionListHook(self, key):
+        """
+        Public method to get the registered completion list provider.
+        
+        @param key name of the provider
+        @type str
+        @return function providing completion list
+        @rtype function or None
+        """
+        if key in self.__completionListHookFunctions:
+            return self.__completionListHookFunctions[key]
+        else:
+            return None
+    
     def autoComplete(self, auto=False, context=True):
         """
         Public method to start autocompletion.
@@ -4467,18 +4536,77 @@ class Editor(QsciScintillaCompat):
             # autocompletion is disabled
             return
         
-        if self.__acHookFunction is not None:
+        if self.__completionListHookFunctions:
+            if self.isListActive():
+                self.cancelList()
+            completionsList = []
+            for key in self.__completionListHookFunctions:
+                completionsList.extend(
+                    self.__completionListHookFunctions[key](self, context))
+            completionsList = list(set(completionsList))
+            if len(completionsList) == 0 and \
+                Preferences.getEditor("AutoCompletionScintillaOnFail") and \
+                (self.autoCompletionSource() != QsciScintilla.AcsNone or
+                 not auto):
+                self.autoCompleteQScintilla()
+            else:
+                completionsList.sort()
+                self.showUserList(EditorAutoCompletionListID,
+                                  completionsList)
+        elif self.__acHookFunction is not None:
+            # for backward compatibility
             self.__acHookFunction(self, context)
         elif not auto:
             self.autoCompleteQScintilla()
         elif self.autoCompletionSource() != QsciScintilla.AcsNone:
             self.autoCompleteQScintilla()
     
+    def __completionListSelected(self, id, txt):
+        """
+        Private slot to handle the selection from the completion list.
+        
+        @param id the ID of the user list (should be 1) (integer)
+        @param txt the selected text (string)
+        """
+        if id == EditorAutoCompletionListID:
+            lst = txt.split()
+            if len(lst) > 1:
+                txt = lst[0]
+            
+            if Preferences.getEditor("AutoCompletionReplaceWord"):
+                self.selectCurrentWord()
+                self.removeSelectedText()
+                line, col = self.getCursorPosition()
+            else:
+                line, col = self.getCursorPosition()
+                wLeft = self.getWordLeft(line, col)
+                if not txt.startswith(wLeft):
+                    self.selectCurrentWord()
+                    self.removeSelectedText()
+                    line, col = self.getCursorPosition()
+                elif wLeft:
+                    txt = txt[len(wLeft):]
+            self.insert(txt)
+            self.setCursorPosition(line, col + len(txt))
+        elif id == TemplateCompletionListID:
+            self.__applyTemplate(txt, self.getLanguage())
+    
+    def canProvideDynamicAutoCompletion(self):
+        """
+        Public method to test the dynamic auto-completion availability.
+        
+        @return flag indicating the availability of dynamic auto-completion
+            (boolean)
+        """
+        return (self.acAPI or
+                self.__acHookFunction is not None or
+                bool(self.__completionListHookFunctions))
+    
     def callTip(self):
         """
         Public method to show calltips.
         """
-        if self.__ctHookFunction is not None:
+        if bool(self.__ctHookFunctions) or self.__ctHookFunction is not None:
             self.__callTip()
         else:
             super(Editor, self).callTip()
@@ -4522,11 +4650,15 @@ class Editor(QsciScintillaCompat):
         if not found:
             return
         
-        try:
-            callTips = self.__ctHookFunction(self, pos, commas)
-        except TypeError:
+        if self.__ctHookFunctions:
+            callTips = []
+            for key in self.__ctHookFunctions:
+                callTips.extend(self.__ctHookFunctions[key](self, pos, commas))
+            callTips = list(set(callTips))
+            callTips.sort()
+        else:
             # for backward compatibility
-            callTips = self.__ctHookFunction(self, pos)
+            callTips = self.__ctHookFunction(self, pos, commas)
         if len(callTips) == 0:
             if Preferences.getEditor("CallTipsScintillaOnFail"):
                 # try QScintilla calltips
@@ -4602,6 +4734,10 @@ class Editor(QsciScintillaCompat):
                 ct = ct - ctshift
         return ct
     
+    ##############################################
+    ## old calltips hook interfaces (before 6.1.0)
+    ##############################################
+    
     def setCallTipHook(self, func):
         """
         Public method to set a calltip hook.
@@ -4638,22 +4774,68 @@ class Editor(QsciScintillaCompat):
         """
         return self.__ctHookFunction
     
+    ########################################################
+    ## new auto-completion hook interfaces (6.1.0 and later)
+    ########################################################
+    
+    def addCallTipHook(self, key, func):
+        """
+        Public method to set a calltip provider.
+        
+        @param key name of the provider
+        @type str
+        @param func function providing calltips. func
+            should be a function taking a reference to the editor,
+            a position into the text and the amount of commas to the
+            left of the cursor. It should return the possible
+            calltips as a list of strings.
+        @type function(editor, int, int) -> list of str
+        """
+        if key in self.__ctHookFunctions:
+            # it was already registered
+            E5MessageBox.warning(
+                self,
+                self.tr("Call-Tips Provider"),
+                self.tr("""The call-tips provider '{0}' was already"""
+                        """ registered. Ignoring duplicate request.""")
+                .format(key))
+            return
+        
+        self.__ctHookFunctions[key] = func
+    
+    def removeCallTipHook(self, key):
+        """
+        Public method to remove a previously registered calltip provider.
+        
+        @param key name of the provider
+        @type str
+        """
+        if key in self.__completionListHookFunctions:
+            del self.__completionListHookFunctions[key]
+    
+    def getCallTipHook(self, key):
+        """
+        Public method to get the registered calltip provider.
+        
+        @param key name of the provider
+        @type str
+        @return function providing calltips
+        @rtype function or None
+        """
+        if key in self.__ctHookFunctions:
+            return self.__ctHookFunctions[key]
+        else:
+            return None
+    
     def canProvideCallTipps(self):
         """
         Public method to test the calltips availability.
         
         @return flag indicating the availability of calltips (boolean)
         """
-        return self.acAPI or self.__ctHookFunction is not None
-    
-    def canProvideDynamicAutoCompletion(self):
-        """
-        Public method to test the dynamic auto-completion availability.
-        
-        @return flag indicating the availability of dynamic auto-completion
-            (boolean)
-        """
-        return self.acAPI or self.__acHookFunction is not None
+        return (self.acAPI or
+                self.__ctHookFunction is not None or
+                bool(self.__ctHookFunctions))
     
     #################################################################
     ## Methods needed by the context menu
@@ -6713,16 +6895,6 @@ class Editor(QsciScintillaCompat):
                         return
         
         super(Editor, self).editorCommand(cmd)
-    
-    def __completionListSelected(self, id, txt):
-        """
-        Private slot to handle the selection from the completion list.
-        
-        @param id the ID of the user list (should be 1) (integer)
-        @param txt the selected text (string)
-        """
-        if id == TemplateCompletionListID:
-            self.__applyTemplate(txt, self.getLanguage())
     
     def __applyTemplate(self, templateName, language):
         """

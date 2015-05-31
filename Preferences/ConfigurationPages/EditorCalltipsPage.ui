@@ -170,13 +170,13 @@
       <item>
        <widget class="QCheckBox" name="ctScintillaCheckBox">
         <property name="toolTip">
-         <string>Select to show QScintilla provided calltips, if the selected plugin fails</string>
+         <string>Select to show QScintilla provided calltips, if the selected plug-ins fail</string>
         </property>
         <property name="whatsThis">
-         <string>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by a plug-in (see calltips sub-page of the plug-in) and the plugin-in doesn't deliver any calltips.</string>
+         <string>Qscintilla provided calltips are shown, if this option is enabled and calltips shall be provided by plug-ins (see calltips sub-page of the plug-in) and the plugin-ins don't deliver any calltips.</string>
         </property>
         <property name="text">
-         <string>Show QScintilla calltips, if plug-in fails</string>
+         <string>Show QScintilla calltips, if plug-ins fail</string>
         </property>
        </widget>
       </item>

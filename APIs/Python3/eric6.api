@@ -6989,7 +6989,9 @@ eric6.QScintilla.Editor.Editor.SyncToken?7
 eric6.QScintilla.Editor.Editor.TemplateImageID?7
 eric6.QScintilla.Editor.Editor.WarningCode?7
 eric6.QScintilla.Editor.Editor.WarningStyle?7
+eric6.QScintilla.Editor.Editor.addCallTipHook?4(key, func)
 eric6.QScintilla.Editor.Editor.addClone?4(editor)
+eric6.QScintilla.Editor.Editor.addCompletionListHook?4(key, func)
 eric6.QScintilla.Editor.Editor.addedToProject?4()
 eric6.QScintilla.Editor.Editor.autoComplete?4(auto=False, context=True)
 eric6.QScintilla.Editor.Editor.autoCompleteQScintilla?4()
@@ -7054,8 +7056,10 @@ eric6.QScintilla.Editor.Editor.gestureEvent?4(evt)
 eric6.QScintilla.Editor.Editor.getBookmarkLines?4()
 eric6.QScintilla.Editor.Editor.getBookmarks?4()
 eric6.QScintilla.Editor.Editor.getBreakpointLines?4()
+eric6.QScintilla.Editor.Editor.getCallTipHook?4(key)
 eric6.QScintilla.Editor.Editor.getChangeLines?4()
 eric6.QScintilla.Editor.Editor.getCompleter?4()
+eric6.QScintilla.Editor.Editor.getCompletionListHook?4(key)
 eric6.QScintilla.Editor.Editor.getCoverageLines?4()
 eric6.QScintilla.Editor.Editor.getCurrentWord?4()
 eric6.QScintilla.Editor.Editor.getCurrentWordBoundaries?4()
@@ -7144,7 +7148,9 @@ eric6.QScintilla.Editor.Editor.redoAvailable?7
 eric6.QScintilla.Editor.Editor.refresh?4()
 eric6.QScintilla.Editor.Editor.refreshCoverageAnnotations?4()
 eric6.QScintilla.Editor.Editor.refreshed?7
+eric6.QScintilla.Editor.Editor.removeCallTipHook?4(key)
 eric6.QScintilla.Editor.Editor.removeClone?4(editor)
+eric6.QScintilla.Editor.Editor.removeCompletionListHook?4(key)
 eric6.QScintilla.Editor.Editor.resizeEvent?4(evt)
 eric6.QScintilla.Editor.Editor.revertToUnmodified?4()
 eric6.QScintilla.Editor.Editor.saveFile?4(saveas=False, path=None)

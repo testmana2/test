@@ -602,8 +602,14 @@ QsciScintillaCompat
 <td><a href="#Editor.__updateReadOnly">__updateReadOnly</a></td>
 <td>Private method to update the readOnly information for this editor.</td>
 </tr><tr>
+<td><a href="#Editor.addCallTipHook">addCallTipHook</a></td>
+<td>Public method to set a calltip provider.</td>
+</tr><tr>
 <td><a href="#Editor.addClone">addClone</a></td>
 <td>Public method to add a clone to our list.</td>
+</tr><tr>
+<td><a href="#Editor.addCompletionListHook">addCompletionListHook</a></td>
+<td>Public method to set an auto-completion list provider.</td>
 </tr><tr>
 <td><a href="#Editor.addedToProject">addedToProject</a></td>
 <td>Public method to signal, that this editor has been added to a project.</td>
@@ -758,11 +764,17 @@ QsciScintillaCompat
 <td><a href="#Editor.getBreakpointLines">getBreakpointLines</a></td>
 <td>Public method to get the lines containing a breakpoint.</td>
 </tr><tr>
+<td><a href="#Editor.getCallTipHook">getCallTipHook</a></td>
+<td>Public method to get the registered calltip provider.</td>
+</tr><tr>
 <td><a href="#Editor.getChangeLines">getChangeLines</a></td>
 <td>Public method to get the lines containing a change.</td>
 </tr><tr>
 <td><a href="#Editor.getCompleter">getCompleter</a></td>
 <td>Public method to retrieve a reference to the completer object.</td>
+</tr><tr>
+<td><a href="#Editor.getCompletionListHook">getCompletionListHook</a></td>
+<td>Public method to get the registered completion list provider.</td>
 </tr><tr>
 <td><a href="#Editor.getCoverageLines">getCoverageLines</a></td>
 <td>Public method to get the lines containing a coverage marker.</td>
@@ -1013,8 +1025,14 @@ QsciScintillaCompat
 <td><a href="#Editor.refreshCoverageAnnotations">refreshCoverageAnnotations</a></td>
 <td>Public method to refresh the code coverage annotations.</td>
 </tr><tr>
+<td><a href="#Editor.removeCallTipHook">removeCallTipHook</a></td>
+<td>Public method to remove a previously registered calltip provider.</td>
+</tr><tr>
 <td><a href="#Editor.removeClone">removeClone</a></td>
 <td>Public method to remove a clone from our list.</td>
+</tr><tr>
+<td><a href="#Editor.removeCompletionListHook">removeCompletionListHook</a></td>
+<td>Public method to remove a previously registered completion list provider.</td>
 </tr><tr>
 <td><a href="#Editor.resizeEvent">resizeEvent</a></td>
 <td>Protected method handling resize events.</td>
@@ -2496,6 +2514,23 @@ line number of the breakpoint (integer)
 True to force change, False to only update and emit
                 signal if there was an attribute change.
 </dd>
+</dl><a NAME="Editor.addCallTipHook" ID="Editor.addCallTipHook"></a>
+<h4>Editor.addCallTipHook</h4>
+<b>addCallTipHook</b>(<i>key, func</i>)
+<p>
+        Public method to set a calltip provider.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+name of the provider
+</dd><dt><i>func</i> (function(editor, int, int) -> list of str)</dt>
+<dd>
+function providing calltips. func
+            should be a function taking a reference to the editor,
+            a position into the text and the amount of commas to the
+            left of the cursor. It should return the possible
+            calltips as a list of strings.
+</dd>
 </dl><a NAME="Editor.addClone" ID="Editor.addClone"></a>
 <h4>Editor.addClone</h4>
 <b>addClone</b>(<i>editor</i>)
@@ -2505,6 +2540,22 @@ True to force change, False to only update and emit
 <dt><i>editor</i></dt>
 <dd>
 reference to the cloned editor (Editor)
+</dd>
+</dl><a NAME="Editor.addCompletionListHook" ID="Editor.addCompletionListHook"></a>
+<h4>Editor.addCompletionListHook</h4>
+<b>addCompletionListHook</b>(<i>key, func</i>)
+<p>
+        Public method to set an auto-completion list provider.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+name of the provider
+</dd><dt><i>func</i> (function(editor, bool) -> list of str)</dt>
+<dd>
+function providing completion list. func
+            should be a function taking a reference to the editor and
+            a boolean indicating to complete a context. It should return
+            the possible completions as a list of strings.
 </dd>
 </dl><a NAME="Editor.addedToProject" ID="Editor.addedToProject"></a>
 <h4>Editor.addedToProject</h4>
@@ -2954,6 +3005,26 @@ sorted list of all lines containing a bookmark
 <dd>
 list of lines containing a breakpoint (list of integer)
 </dd>
+</dl><a NAME="Editor.getCallTipHook" ID="Editor.getCallTipHook"></a>
+<h4>Editor.getCallTipHook</h4>
+<b>getCallTipHook</b>(<i>key</i>)
+<p>
+        Public method to get the registered calltip provider.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+name of the provider
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+function providing calltips
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+function or None
+</dd>
 </dl><a NAME="Editor.getChangeLines" ID="Editor.getChangeLines"></a>
 <h4>Editor.getChangeLines</h4>
 <b>getChangeLines</b>(<i></i>)
@@ -2973,6 +3044,26 @@ list of lines containing a change (list of integer)
 <dt>Returns:</dt>
 <dd>
 the completer object (CompleterBase)
+</dd>
+</dl><a NAME="Editor.getCompletionListHook" ID="Editor.getCompletionListHook"></a>
+<h4>Editor.getCompletionListHook</h4>
+<b>getCompletionListHook</b>(<i>key</i>)
+<p>
+        Public method to get the registered completion list provider.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+name of the provider
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+function providing completion list
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+function or None
 </dd>
 </dl><a NAME="Editor.getCoverageLines" ID="Editor.getCoverageLines"></a>
 <h4>Editor.getCoverageLines</h4>
@@ -3736,7 +3827,17 @@ command string (string)
 <b>refreshCoverageAnnotations</b>(<i></i>)
 <p>
         Public method to refresh the code coverage annotations.
-</p><a NAME="Editor.removeClone" ID="Editor.removeClone"></a>
+</p><a NAME="Editor.removeCallTipHook" ID="Editor.removeCallTipHook"></a>
+<h4>Editor.removeCallTipHook</h4>
+<b>removeCallTipHook</b>(<i>key</i>)
+<p>
+        Public method to remove a previously registered calltip provider.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+name of the provider
+</dd>
+</dl><a NAME="Editor.removeClone" ID="Editor.removeClone"></a>
 <h4>Editor.removeClone</h4>
 <b>removeClone</b>(<i>editor</i>)
 <p>
@@ -3745,6 +3846,17 @@ command string (string)
 <dt><i>editor</i></dt>
 <dd>
 reference to the cloned editor (Editor)
+</dd>
+</dl><a NAME="Editor.removeCompletionListHook" ID="Editor.removeCompletionListHook"></a>
+<h4>Editor.removeCompletionListHook</h4>
+<b>removeCompletionListHook</b>(<i>key</i>)
+<p>
+        Public method to remove a previously registered completion list
+        provider.
+</p><dl>
+<dt><i>key</i> (str)</dt>
+<dd>
+name of the provider
 </dd>
 </dl><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
 <h4>Editor.resizeEvent</h4>

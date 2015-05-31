@@ -394,12 +394,14 @@ class Prefs(object):
         "AutoCompletionSource": QsciScintilla.AcsDocument,
         "AutoCompletionThreshold": 2,
         "AutoCompletionFillups": False,
+        "AutoCompletionScintillaOnFail": False,
+        # show QScintilla completions, if plug-in fails
         
         "CallTipsEnabled": False,
         "CallTipsVisible": 0,
         "CallTipsStyle": QsciScintilla.CallTipsNoContext,
         "CallTipsScintillaOnFail": False,
-        # show QScintilla calltips, if plugin fails
+        # show QScintilla calltips, if plug-in fails
         
         "AutoCheckSyntax": True,
         "OnlineSyntaxCheck": True,

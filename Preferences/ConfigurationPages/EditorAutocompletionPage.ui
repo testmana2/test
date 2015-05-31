@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>506</width>
-    <height>294</height>
+    <height>398</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -123,6 +123,28 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Plug-In Behavior</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="acScintillaCheckBox">
+        <property name="toolTip">
+         <string>Select to show QScintilla provided completions, if the selected plug-ins fail</string>
+        </property>
+        <property name="whatsThis">
+         <string>Qscintilla provided completions are shown, if this option is enabled and completions shall be provided by plug-ins (see completions sub-page of the plug-in) and the plugin-ins don't deliver any completions.</string>
+        </property>
+        <property name="text">
+         <string>Show QScintilla completions, if plug-ins fail</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <spacer>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -139,6 +161,10 @@
  </widget>
  <tabstops>
   <tabstop>acEnabledCheckBox</tabstop>
+  <tabstop>acCaseSensitivityCheckBox</tabstop>
+  <tabstop>acReplaceWordCheckBox</tabstop>
+  <tabstop>acThresholdSlider</tabstop>
+  <tabstop>acScintillaCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

@@ -14,6 +14,8 @@ Version 6.1-snapshot-2015mmdd:
      multiple CPUs/CPU-Cores
 - Editor
   -- added capability to configure the indentation guides colors
+  -- added capability to ask multiple completion list and call-tip
+     providers
   -- Lexers
      --- added support for the new C++ lexer properties (as of
          QScintilla V. 2.9.0)

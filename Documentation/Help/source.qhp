@@ -4334,7 +4334,9 @@
       <keyword name="Editor.__toggleBreakpointEnabled" id="Editor.__toggleBreakpointEnabled" ref="eric6.QScintilla.Editor.html#Editor.__toggleBreakpointEnabled" />
       <keyword name="Editor.__toggleTypingAids" id="Editor.__toggleTypingAids" ref="eric6.QScintilla.Editor.html#Editor.__toggleTypingAids" />
       <keyword name="Editor.__updateReadOnly" id="Editor.__updateReadOnly" ref="eric6.QScintilla.Editor.html#Editor.__updateReadOnly" />
+      <keyword name="Editor.addCallTipHook" id="Editor.addCallTipHook" ref="eric6.QScintilla.Editor.html#Editor.addCallTipHook" />
       <keyword name="Editor.addClone" id="Editor.addClone" ref="eric6.QScintilla.Editor.html#Editor.addClone" />
+      <keyword name="Editor.addCompletionListHook" id="Editor.addCompletionListHook" ref="eric6.QScintilla.Editor.html#Editor.addCompletionListHook" />
       <keyword name="Editor.addedToProject" id="Editor.addedToProject" ref="eric6.QScintilla.Editor.html#Editor.addedToProject" />
       <keyword name="Editor.autoComplete" id="Editor.autoComplete" ref="eric6.QScintilla.Editor.html#Editor.autoComplete" />
       <keyword name="Editor.autoCompleteQScintilla" id="Editor.autoCompleteQScintilla" ref="eric6.QScintilla.Editor.html#Editor.autoCompleteQScintilla" />
@@ -4386,8 +4388,10 @@
       <keyword name="Editor.getBookmarkLines" id="Editor.getBookmarkLines" ref="eric6.QScintilla.Editor.html#Editor.getBookmarkLines" />
       <keyword name="Editor.getBookmarks" id="Editor.getBookmarks" ref="eric6.QScintilla.Editor.html#Editor.getBookmarks" />
       <keyword name="Editor.getBreakpointLines" id="Editor.getBreakpointLines" ref="eric6.QScintilla.Editor.html#Editor.getBreakpointLines" />
+      <keyword name="Editor.getCallTipHook" id="Editor.getCallTipHook" ref="eric6.QScintilla.Editor.html#Editor.getCallTipHook" />
       <keyword name="Editor.getChangeLines" id="Editor.getChangeLines" ref="eric6.QScintilla.Editor.html#Editor.getChangeLines" />
       <keyword name="Editor.getCompleter" id="Editor.getCompleter" ref="eric6.QScintilla.Editor.html#Editor.getCompleter" />
+      <keyword name="Editor.getCompletionListHook" id="Editor.getCompletionListHook" ref="eric6.QScintilla.Editor.html#Editor.getCompletionListHook" />
       <keyword name="Editor.getCoverageLines" id="Editor.getCoverageLines" ref="eric6.QScintilla.Editor.html#Editor.getCoverageLines" />
       <keyword name="Editor.getCurrentWord" id="Editor.getCurrentWord" ref="eric6.QScintilla.Editor.html#Editor.getCurrentWord" />
       <keyword name="Editor.getCurrentWordBoundaries" id="Editor.getCurrentWordBoundaries" ref="eric6.QScintilla.Editor.html#Editor.getCurrentWordBoundaries" />
@@ -4471,7 +4475,9 @@
       <keyword name="Editor.redo" id="Editor.redo" ref="eric6.QScintilla.Editor.html#Editor.redo" />
       <keyword name="Editor.refresh" id="Editor.refresh" ref="eric6.QScintilla.Editor.html#Editor.refresh" />
       <keyword name="Editor.refreshCoverageAnnotations" id="Editor.refreshCoverageAnnotations" ref="eric6.QScintilla.Editor.html#Editor.refreshCoverageAnnotations" />
+      <keyword name="Editor.removeCallTipHook" id="Editor.removeCallTipHook" ref="eric6.QScintilla.Editor.html#Editor.removeCallTipHook" />
       <keyword name="Editor.removeClone" id="Editor.removeClone" ref="eric6.QScintilla.Editor.html#Editor.removeClone" />
+      <keyword name="Editor.removeCompletionListHook" id="Editor.removeCompletionListHook" ref="eric6.QScintilla.Editor.html#Editor.removeCompletionListHook" />
       <keyword name="Editor.resizeEvent" id="Editor.resizeEvent" ref="eric6.QScintilla.Editor.html#Editor.resizeEvent" />
       <keyword name="Editor.revertToUnmodified" id="Editor.revertToUnmodified" ref="eric6.QScintilla.Editor.html#Editor.revertToUnmodified" />
       <keyword name="Editor.saveFile" id="Editor.saveFile" ref="eric6.QScintilla.Editor.html#Editor.saveFile" />
