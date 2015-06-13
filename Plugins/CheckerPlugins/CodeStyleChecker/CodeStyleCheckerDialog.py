@@ -50,6 +50,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         super(CodeStyleCheckerDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.excludeMessagesSelectButton.setIcon(
             UI.PixmapCache.getIcon("select.png"))

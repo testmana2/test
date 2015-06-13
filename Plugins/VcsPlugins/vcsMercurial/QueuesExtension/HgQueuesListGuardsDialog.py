@@ -15,7 +15,7 @@ except NameError:
 
 import os
 
-from PyQt5.QtCore import pyqtSlot, QProcess, QTimer, QCoreApplication
+from PyQt5.QtCore import pyqtSlot, Qt, QProcess, QTimer, QCoreApplication
 from PyQt5.QtWidgets import QDialog, QListWidgetItem
 
 from .Ui_HgQueuesListGuardsDialog import Ui_HgQueuesListGuardsDialog
@@ -37,6 +37,7 @@ class HgQueuesListGuardsDialog(QDialog, Ui_HgQueuesListGuardsDialog):
         """
         super(HgQueuesListGuardsDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.process = QProcess()
         self.vcs = vcs

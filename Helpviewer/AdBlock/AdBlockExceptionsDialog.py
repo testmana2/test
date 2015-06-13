@@ -9,7 +9,7 @@ Module implementing a dialog to configure the AdBlock exceptions.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog
 
 from .Ui_AdBlockExceptionsDialog import Ui_AdBlockExceptionsDialog
@@ -29,6 +29,7 @@ class AdBlockExceptionsDialog(QDialog, Ui_AdBlockExceptionsDialog):
         """
         super(AdBlockExceptionsDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.iconLabel.setPixmap(
             UI.PixmapCache.getPixmap("adBlockPlusGreen48.png"))

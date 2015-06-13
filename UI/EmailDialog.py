@@ -73,6 +73,7 @@ class EmailDialog(QDialog, Ui_EmailDialog):
         """
         super(EmailDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__mode = mode
         if self.__mode == "feature":

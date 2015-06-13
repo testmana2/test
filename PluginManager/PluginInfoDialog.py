@@ -30,6 +30,7 @@ class PluginInfoDialog(QDialog, Ui_PluginInfoDialog):
         """
         super(PluginInfoDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.pm = pluginManager
         

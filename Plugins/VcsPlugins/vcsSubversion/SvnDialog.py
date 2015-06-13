@@ -42,6 +42,7 @@ class SvnDialog(QDialog, Ui_SvnDialog):
         """
         super(SvnDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

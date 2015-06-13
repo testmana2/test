@@ -39,6 +39,7 @@ class GreaseMonkeyConfigurationDialog(
         """
         super(GreaseMonkeyConfigurationDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.iconLabel.setPixmap(
             UI.PixmapCache.getPixmap("greaseMonkey48.png"))

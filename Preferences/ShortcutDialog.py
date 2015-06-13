@@ -38,6 +38,7 @@ class ShortcutDialog(QDialog, Ui_ShortcutDialog):
             self.setObjectName(name)
         self.setModal(modal)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.keyIndex = 0
         self.keys = [0, 0, 0, 0]

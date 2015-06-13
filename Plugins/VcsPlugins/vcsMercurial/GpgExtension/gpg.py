@@ -48,7 +48,6 @@ class Gpg(HgExtension):
         from .HgGpgSignaturesDialog import HgGpgSignaturesDialog
         self.gpgSignaturesDialog = HgGpgSignaturesDialog(self.vcs)
         self.gpgSignaturesDialog.show()
-        self.gpgSignaturesDialog.show()
         self.gpgSignaturesDialog.start(path)
     
     def hgGpgVerifySignatures(self, path, rev=None):

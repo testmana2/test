@@ -41,6 +41,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         """
         super(HgQueuesDefineGuardsDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.process = None
         self.vcs = vcs

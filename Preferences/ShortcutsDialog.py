@@ -50,6 +50,7 @@ class ShortcutsDialog(QDialog, Ui_ShortcutsDialog):
             self.setObjectName(name)
         self.setModal(modal)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.shortcutsList.headerItem().setText(
             self.shortcutsList.columnCount(), "")

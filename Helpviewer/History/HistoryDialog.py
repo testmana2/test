@@ -39,6 +39,7 @@ class HistoryDialog(QDialog, Ui_HistoryDialog):
         """
         super(HistoryDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__historyManager = manager
         if self.__historyManager is None:

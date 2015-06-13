@@ -9,6 +9,7 @@ Module implementing a dialog showing the cookie data.
 
 from __future__ import unicode_literals
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog
 
 from .Ui_CookieDetailsDialog import Ui_CookieDetailsDialog
@@ -26,6 +27,7 @@ class CookieDetailsDialog(QDialog, Ui_CookieDetailsDialog):
         """
         super(CookieDetailsDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
     
     def setData(self, domain, name, path, secure, expires, value):
         """

@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QStyle
 
 from .Ui_ErrorLogDialog import Ui_ErrorLogDialog
@@ -32,6 +32,7 @@ class ErrorLogDialog(QDialog, Ui_ErrorLogDialog):
         """
         super(ErrorLogDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         pixmap = self.style().standardIcon(QStyle.SP_MessageBoxQuestion)\
             .pixmap(32, 32)

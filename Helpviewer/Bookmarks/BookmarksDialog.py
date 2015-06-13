@@ -38,6 +38,7 @@ class BookmarksDialog(QDialog, Ui_BookmarksDialog):
         """
         super(BookmarksDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__bookmarksManager = manager
         if self.__bookmarksManager is None:

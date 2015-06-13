@@ -15,7 +15,7 @@ import sys
 
 import pysvn
 
-from PyQt5.QtCore import QMutexLocker
+from PyQt5.QtCore import Qt, QMutexLocker
 from PyQt5.QtWidgets import QDialog, QApplication
 
 from .SvnUtilities import formatTime
@@ -38,6 +38,7 @@ class SvnInfoDialog(QDialog, SvnDialogMixin, Ui_VcsRepositoryInfoDialog):
         super(SvnInfoDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
+        self.setWindowFlags(Qt.Window)
         
         self.vcs = vcs
         

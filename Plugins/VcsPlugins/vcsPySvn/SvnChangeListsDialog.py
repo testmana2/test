@@ -38,6 +38,7 @@ class SvnChangeListsDialog(QDialog, SvnDialogMixin, Ui_SvnChangeListsDialog):
         super(SvnChangeListsDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self)
+        self.setWindowFlags(Qt.Window)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

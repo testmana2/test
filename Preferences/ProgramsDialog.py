@@ -42,6 +42,7 @@ class ProgramsDialog(QDialog, Ui_ProgramsDialog):
         super(ProgramsDialog, self).__init__(parent)
         self.setupUi(self)
         self.setObjectName("ProgramsDialog")
+        self.setWindowFlags(Qt.Window)
         
         self.__hasSearched = False
         

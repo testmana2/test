@@ -48,6 +48,7 @@ class FeedsManager(QDialog, Ui_FeedsManager):
         """
         super(FeedsManager, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__wasShown = False
         self.__loaded = False

@@ -58,7 +58,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         super(FindFileDialog, self).__init__(parent)
         self.setupUi(self)
-        self.setWindowFlags(Qt.WindowFlags(Qt.Window))
+        self.setWindowFlags(Qt.Window)
         
         self.dirSelectButton.setIcon(UI.PixmapCache.getIcon("open.png"))
         

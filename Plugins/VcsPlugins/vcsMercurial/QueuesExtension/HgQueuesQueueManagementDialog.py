@@ -13,7 +13,7 @@ try:
 except NameError:
     pass
 
-from PyQt5.QtCore import pyqtSlot, QProcess, QCoreApplication
+from PyQt5.QtCore import pyqtSlot, Qt, QProcess, QCoreApplication
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QAbstractItemView, \
     QListWidgetItem, QAbstractButton
 
@@ -45,6 +45,7 @@ class HgQueuesQueueManagementDialog(QDialog, Ui_HgQueuesQueueManagementDialog):
         """
         super(HgQueuesQueueManagementDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         if mode not in (HgQueuesQueueManagementDialog.NO_INPUT,
                         HgQueuesQueueManagementDialog.NAME_INPUT,

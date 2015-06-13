@@ -42,6 +42,7 @@ class DownloadManager(QDialog, Ui_DownloadManager):
         """
         super(DownloadManager, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__saveTimer = AutoSaver(self, self.save)
         

@@ -47,6 +47,7 @@ class SiteInfoDialog(QDialog, Ui_SiteInfoDialog):
         """
         super(SiteInfoDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         # put icons
         self.tabWidget.setTabIcon(

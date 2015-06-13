@@ -38,6 +38,7 @@ class HgGpgSignaturesDialog(QDialog, Ui_HgGpgSignaturesDialog):
         """
         super(HgGpgSignaturesDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

@@ -9,7 +9,7 @@ Module implementing the AdBlock configuration dialog.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot, QTimer, QCoreApplication
+from PyQt5.QtCore import pyqtSlot, Qt, QTimer, QCoreApplication
 from PyQt5.QtWidgets import QDialog, QMenu, QToolButton
 
 from E5Gui import E5MessageBox
@@ -32,6 +32,7 @@ class AdBlockDialog(QDialog, Ui_AdBlockDialog):
         """
         super(AdBlockDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.iconLabel.setPixmap(UI.PixmapCache.getPixmap("adBlockPlus48.png"))
         

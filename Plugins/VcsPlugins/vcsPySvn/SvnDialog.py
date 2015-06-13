@@ -11,6 +11,7 @@ from __future__ import unicode_literals
 
 import pysvn
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog, QApplication, QDialogButtonBox
 
 from .SvnConst import svnNotifyActionMap
@@ -39,6 +40,7 @@ class SvnDialog(QDialog, SvnDialogMixin, Ui_SvnDialog):
         super(SvnDialog, self).__init__(parent)
         self.setupUi(self)
         SvnDialogMixin.__init__(self, log)
+        self.setWindowFlags(Qt.Window)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

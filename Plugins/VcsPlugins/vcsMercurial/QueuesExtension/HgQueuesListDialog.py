@@ -38,6 +38,7 @@ class HgQueuesListDialog(QDialog, Ui_HgQueuesListDialog):
         """
         super(HgQueuesListDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)

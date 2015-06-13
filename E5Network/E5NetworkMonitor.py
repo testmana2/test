@@ -75,6 +75,7 @@ class E5NetworkMonitor(QDialog, Ui_E5NetworkMonitor):
         """
         super(E5NetworkMonitor, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__requestHeaders = QStandardItemModel(self)
         self.__requestHeaders.setHorizontalHeaderLabels(

@@ -43,6 +43,7 @@ class SvnRepoBrowserDialog(QDialog, Ui_SvnRepoBrowserDialog):
         """
         super(SvnRepoBrowserDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.repoTree.headerItem().setText(self.repoTree.columnCount(), "")
         self.repoTree.header().setSortIndicator(0, Qt.AscendingOrder)

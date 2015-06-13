@@ -42,6 +42,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         """
         super(SyntaxCheckerDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.showButton = self.buttonBox.addButton(
             self.tr("Show"), QDialogButtonBox.ActionRole)

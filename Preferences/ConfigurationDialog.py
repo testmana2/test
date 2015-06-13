@@ -775,6 +775,8 @@ class ConfigurationDialog(QDialog):
         if name:
             self.setObjectName(name)
         self.setModal(modal)
+        self.setWindowFlags(Qt.Window)
+        
         self.layout = QVBoxLayout(self)
         self.layout.setContentsMargins(0, 0, 0, 0)
         self.layout.setSpacing(0)

@@ -10,8 +10,8 @@ Module implementing the Plugin Details Dialog.
 
 from __future__ import unicode_literals
 
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog
-from PyQt5.QtCore import pyqtSlot
 
 from .Ui_PluginDetailsDialog import Ui_PluginDetailsDialog
 
@@ -29,6 +29,7 @@ class PluginDetailsDialog(QDialog, Ui_PluginDetailsDialog):
         """
         super(PluginDetailsDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.__autoactivate = details["autoactivate"]
         self.__active = details["active"]

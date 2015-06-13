@@ -44,6 +44,7 @@ class HgBookmarksInOutDialog(QDialog, Ui_HgBookmarksInOutDialog):
         """
         super(HgBookmarksInOutDialog, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowFlags(Qt.Window)
         
         self.buttonBox.button(QDialogButtonBox.Close).setEnabled(False)
         self.buttonBox.button(QDialogButtonBox.Cancel).setDefault(True)
