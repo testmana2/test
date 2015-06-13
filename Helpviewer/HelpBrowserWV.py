@@ -1024,7 +1024,8 @@ class HelpBrowser(QWebView):
         """
         Public method to reset the zoom factor.
         """
-        self.__currentZoom = self.__zoomLevels[HelpBrowser.ZoomLevelDefault]
+        index = self.__levelForZoom(HelpBrowser.ZoomLevelDefault)
+        self.__currentZoom = self.__zoomLevels[index]
         self.__applyZoom()
     
     def hasSelection(self):
