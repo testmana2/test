@@ -20,7 +20,7 @@ restartArgsList = ["--nosplash", "--plugin", "--debug", "--config", "--pyqt4"]
 restartArgs = [arg for arg in sys.argv[1:]
                if arg.split("=", 1)[0] in restartArgsList]
 
-import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__ 
+import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__
 
 try:  # Only for Py2
     import StringIO as io   # __IGNORE_EXCEPTION__
