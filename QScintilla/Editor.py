@@ -40,6 +40,8 @@ EditorAutoCompletionListID = 1
 TemplateCompletionListID = 2
 
 
+# TODO: implement a mouse click handler usable by plug-ins
+# e.g. for 'got to function definition'
 class Editor(QsciScintillaCompat):
     """
     Class implementing the editor component of the eric6 IDE.
