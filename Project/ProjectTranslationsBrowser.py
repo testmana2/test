@@ -810,6 +810,9 @@ class ProjectTranslationsBrowser(ProjectBaseBrowser):
             
             dir, name = os.path.split(pfile)
             outFile = os.path.join(dir, os.path.dirname(langs[0]), name)
+            outDir = os.path.dirname(outFile)
+            if not os.path.exists(outDir):
+                os.makedirs(outDir)
             try:
                 pf = open(outFile, "w", encoding="utf-8")
                 for key, list in sections:
