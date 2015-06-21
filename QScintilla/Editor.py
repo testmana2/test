@@ -4544,11 +4544,11 @@ class Editor(QsciScintillaCompat):
                 completionsList.extend(
                     self.__completionListHookFunctions[key](self, context))
             completionsList = list(set(completionsList))
-            if len(completionsList) == 0 and \
-                Preferences.getEditor("AutoCompletionScintillaOnFail") and \
-                (self.autoCompletionSource() != QsciScintilla.AcsNone or
-                 not auto):
-                self.autoCompleteQScintilla()
+            if len(completionsList) == 0:
+                if Preferences.getEditor("AutoCompletionScintillaOnFail") and \
+                    (self.autoCompletionSource() != QsciScintilla.AcsNone or
+                     not auto):
+                    self.autoCompleteQScintilla()
             else:
                 completionsList.sort()
                 self.showUserList(EditorAutoCompletionListID,
