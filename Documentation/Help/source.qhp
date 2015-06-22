@@ -4266,6 +4266,7 @@
       <keyword name="Editor.__modificationChanged" id="Editor.__modificationChanged" ref="eric6.QScintilla.Editor.html#Editor.__modificationChanged" />
       <keyword name="Editor.__modificationReadOnly" id="Editor.__modificationReadOnly" ref="eric6.QScintilla.Editor.html#Editor.__modificationReadOnly" />
       <keyword name="Editor.__modified" id="Editor.__modified" ref="eric6.QScintilla.Editor.html#Editor.__modified" />
+      <keyword name="Editor.__mouseClickToString" id="Editor.__mouseClickToString" ref="eric6.QScintilla.Editor.html#Editor.__mouseClickToString" />
       <keyword name="Editor.__newView" id="Editor.__newView" ref="eric6.QScintilla.Editor.html#Editor.__newView" />
       <keyword name="Editor.__newViewNewSplit" id="Editor.__newViewNewSplit" ref="eric6.QScintilla.Editor.html#Editor.__newViewNewSplit" />
       <keyword name="Editor.__normalizedEncoding" id="Editor.__normalizedEncoding" ref="eric6.QScintilla.Editor.html#Editor.__normalizedEncoding" />
@@ -4403,6 +4404,8 @@
       <keyword name="Editor.getLanguage" id="Editor.getLanguage" ref="eric6.QScintilla.Editor.html#Editor.getLanguage" />
       <keyword name="Editor.getLexer" id="Editor.getLexer" ref="eric6.QScintilla.Editor.html#Editor.getLexer" />
       <keyword name="Editor.getMenu" id="Editor.getMenu" ref="eric6.QScintilla.Editor.html#Editor.getMenu" />
+      <keyword name="Editor.getMouseClickHandler" id="Editor.getMouseClickHandler" ref="eric6.QScintilla.Editor.html#Editor.getMouseClickHandler" />
+      <keyword name="Editor.getMouseClickHandlers" id="Editor.getMouseClickHandlers" ref="eric6.QScintilla.Editor.html#Editor.getMouseClickHandlers" />
       <keyword name="Editor.getNoName" id="Editor.getNoName" ref="eric6.QScintilla.Editor.html#Editor.getNoName" />
       <keyword name="Editor.getSearchText" id="Editor.getSearchText" ref="eric6.QScintilla.Editor.html#Editor.getSearchText" />
       <keyword name="Editor.getSharingStatus" id="Editor.getSharingStatus" ref="eric6.QScintilla.Editor.html#Editor.getSharingStatus" />
@@ -4453,6 +4456,7 @@
       <keyword name="Editor.menuToggleBookmark" id="Editor.menuToggleBookmark" ref="eric6.QScintilla.Editor.html#Editor.menuToggleBookmark" />
       <keyword name="Editor.menuToggleBreakpoint" id="Editor.menuToggleBreakpoint" ref="eric6.QScintilla.Editor.html#Editor.menuToggleBreakpoint" />
       <keyword name="Editor.mousePressEvent" id="Editor.mousePressEvent" ref="eric6.QScintilla.Editor.html#Editor.mousePressEvent" />
+      <keyword name="Editor.mouseReleaseEvent" id="Editor.mouseReleaseEvent" ref="eric6.QScintilla.Editor.html#Editor.mouseReleaseEvent" />
       <keyword name="Editor.newBreakpointWithProperties" id="Editor.newBreakpointWithProperties" ref="eric6.QScintilla.Editor.html#Editor.newBreakpointWithProperties" />
       <keyword name="Editor.nextBookmark" id="Editor.nextBookmark" ref="eric6.QScintilla.Editor.html#Editor.nextBookmark" />
       <keyword name="Editor.nextChange" id="Editor.nextChange" ref="eric6.QScintilla.Editor.html#Editor.nextChange" />
@@ -4478,6 +4482,8 @@
       <keyword name="Editor.removeCallTipHook" id="Editor.removeCallTipHook" ref="eric6.QScintilla.Editor.html#Editor.removeCallTipHook" />
       <keyword name="Editor.removeClone" id="Editor.removeClone" ref="eric6.QScintilla.Editor.html#Editor.removeClone" />
       <keyword name="Editor.removeCompletionListHook" id="Editor.removeCompletionListHook" ref="eric6.QScintilla.Editor.html#Editor.removeCompletionListHook" />
+      <keyword name="Editor.removeMouseClickHandler" id="Editor.removeMouseClickHandler" ref="eric6.QScintilla.Editor.html#Editor.removeMouseClickHandler" />
+      <keyword name="Editor.removeMouseClickHandlers" id="Editor.removeMouseClickHandlers" ref="eric6.QScintilla.Editor.html#Editor.removeMouseClickHandlers" />
       <keyword name="Editor.resizeEvent" id="Editor.resizeEvent" ref="eric6.QScintilla.Editor.html#Editor.resizeEvent" />
       <keyword name="Editor.revertToUnmodified" id="Editor.revertToUnmodified" ref="eric6.QScintilla.Editor.html#Editor.revertToUnmodified" />
       <keyword name="Editor.saveFile" id="Editor.saveFile" ref="eric6.QScintilla.Editor.html#Editor.saveFile" />
@@ -4493,6 +4499,7 @@
       <keyword name="Editor.setCallTipHook" id="Editor.setCallTipHook" ref="eric6.QScintilla.Editor.html#Editor.setCallTipHook" />
       <keyword name="Editor.setLanguage" id="Editor.setLanguage" ref="eric6.QScintilla.Editor.html#Editor.setLanguage" />
       <keyword name="Editor.setMonospaced" id="Editor.setMonospaced" ref="eric6.QScintilla.Editor.html#Editor.setMonospaced" />
+      <keyword name="Editor.setMouseClickHandler" id="Editor.setMouseClickHandler" ref="eric6.QScintilla.Editor.html#Editor.setMouseClickHandler" />
       <keyword name="Editor.setNoName" id="Editor.setNoName" ref="eric6.QScintilla.Editor.html#Editor.setNoName" />
       <keyword name="Editor.setSearchIndicator" id="Editor.setSearchIndicator" ref="eric6.QScintilla.Editor.html#Editor.setSearchIndicator" />
       <keyword name="Editor.setSpellingForProject" id="Editor.setSpellingForProject" ref="eric6.QScintilla.Editor.html#Editor.setSpellingForProject" />

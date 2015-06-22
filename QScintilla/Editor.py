@@ -375,6 +375,24 @@ class Editor(QsciScintillaCompat):
         self.__ctHookFunctions = {}
         self.__setCallTips()
         
+        # set the mouse click handlers (fired on mouse release)
+        self.__mouseClickHandlers = {}
+        # dictionary with tuple of keyboard modifier and mouse button as key
+        # and tuple of plug-in name and function as value
+        self.__modifier2String = {
+            Qt.ShiftModifier: self.tr("Shift"),
+            Qt.ControlModifier: self.tr("Ctrl"),
+            Qt.AltModifier: self.tr("Alt"),
+            Qt.MetaModifier: self.tr("Meta"),
+        }
+        self.__button2String = {
+            Qt.LeftButton: self.tr("Left Button"),
+            Qt.RightButton: self.tr("Right Button"),
+            Qt.MidButton: self.tr("Middle Button"),
+            Qt.XButton1: self.tr("X Button 1"),
+            Qt.XButton2: self.tr("X Button 2"),
+        }
+        
         sh = self.sizeHint()
         if sh.height() < 300:
             sh.setHeight(300)
@@ -7564,3 +7582,119 @@ class Editor(QsciScintillaCompat):
             self.setRectangularSelection(origStartLine, origStartIndex,
                                          origEndLine, origEndIndex)
             self.selectionChanged.emit()
+    
+    #######################################################################
+    ## Mouse click handler related methods
+    #######################################################################
+    
+    def __mouseClickToString(self, modifiers, button):
+        """
+        Private method to generate a display string for the given modifiers
+        and button combination.
+        
+        @param modifiers keyboard modifiers of the handler
+        @type Qt.KeyboardModifiers
+        @param button mouse button of the handler
+        @type Qt.MouseButton
+        @return display string
+        @rtype str
+        """
+        parts = []
+        for mod in sorted(self.__modifier2String.keys()):
+            if modifiers & mod:
+                parts.append(self.__modifier2String[mod])
+        parts.append(self.__button2String[button])
+        return "+".join(parts)
+    
+    def mouseReleaseEvent(self, evt):
+        """
+        Protected method calling a registered mouse click handler function.
+        
+        @param evt event object
+        @type QMouseEvent
+        """
+        modifiers = evt.modifiers()
+        button = evt.button()
+        key = (modifiers, button)
+        
+        if button != Qt.NoButton and key in self.__mouseClickHandlers:
+            self.__mouseClickHandlers[key][1]()
+            evt.accept()
+        else:
+            self.vm.eventFilter(self, evt)
+            super(Editor, self).mouseReleaseEvent(evt)
+    
+    def setMouseClickHandler(self, name, modifiers, button, function):
+        """
+        Public method to set a mouse click handler.
+        
+        @param name name of the plug-in (or 'internal') setting this handler
+        @type str
+        @param modifiers keyboard modifiers of the handler
+        @type Qt.KeyboardModifiers
+        @param button mouse button of the handler
+        @type Qt.MouseButton
+        @param function handler function
+        @type func
+        @return flag indicating success
+        @rtype bool
+        """
+        key = (modifiers, button)
+        if key in self.__mouseClickHandlers:
+            E5MessageBox.warning(
+                self,
+                self.tr("Register Mouse Click Handler"),
+                self.tr("""A mouse click handler for "{0}" was already"""
+                        """ registered by {1}". Aborting request by"""
+                        """ "{2}"...""").format(
+                    self.__mouseClickToString(modifiers, button),
+                    self.__mouseClickHandlers[key][0],
+                    name))
+            return False
+        
+        self.__mouseClickHandlers[key] = (name, function)
+        return True
+    
+    def getMouseClickHandler(self, modifiers, button):
+        """
+        Public method to get a registered mouse click handler.
+        
+        @param modifiers keyboard modifiers of the handler
+        @type Qt.KeyboardModifiers
+        @param button mouse button of the handler
+        @type Qt.MouseButton
+        @return plug-in name and registered function
+        @rtype tuple of str and func
+        """
+        key = (modifiers, button)
+        if key in self.__mouseClickHandlers:
+            return self.__mouseClickHandlers[key]
+        else:
+            return ("", None)
+    
+    def getMouseClickHandlers(self, name):
+        """
+        Public method to get all registered mouse click handlers of
+        a plug-in.
+        
+        @param name name of the plug-in
+        @type str
+        @return registered mouse click handlers as list of modifiers,
+            mouse button and function
+        @rtype list of tuple of (Qt.KeyboardModifiers, Qt.MouseButton,func)
+        """
+        lst = []
+        for key, value in self.__mouseClickHandlers.items():
+            if value[0] == name:
+                lst.append((key[0], key[1], value[1]))
+        return lst
+    
+    def removeMouseClickHandler(self, modifiers, button):
+        """
+        
+        """
+    
+    def removeMouseClickHandlers(self, name):
+        """
+        
+        """

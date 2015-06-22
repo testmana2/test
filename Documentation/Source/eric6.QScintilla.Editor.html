@@ -398,6 +398,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__modified">__modified</a></td>
 <td>Private method to handle changes of the number of lines.</td>
 </tr><tr>
+<td><a href="#Editor.__mouseClickToString">__mouseClickToString</a></td>
+<td>Private method to generate a display string for the given modifiers and button combination.</td>
+</tr><tr>
 <td><a href="#Editor.__newView">__newView</a></td>
 <td>Private slot to create a new view to an open document.</td>
 </tr><tr>
@@ -809,6 +812,12 @@ QsciScintillaCompat
 <td><a href="#Editor.getMenu">getMenu</a></td>
 <td>Public method to get a reference to the main context menu or a submenu.</td>
 </tr><tr>
+<td><a href="#Editor.getMouseClickHandler">getMouseClickHandler</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Editor.getMouseClickHandlers">getMouseClickHandlers</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Editor.getNoName">getNoName</a></td>
 <td>Public method to get the display string for an unnamed editor.</td>
 </tr><tr>
@@ -959,6 +968,9 @@ QsciScintillaCompat
 <td><a href="#Editor.mousePressEvent">mousePressEvent</a></td>
 <td>Protected method to handle the mouse press event.</td>
 </tr><tr>
+<td><a href="#Editor.mouseReleaseEvent">mouseReleaseEvent</a></td>
+<td>Protected method calling a registered mouse click handler function.</td>
+</tr><tr>
 <td><a href="#Editor.newBreakpointWithProperties">newBreakpointWithProperties</a></td>
 <td>Public method to set a new breakpoint and its properties.</td>
 </tr><tr>
@@ -1034,6 +1046,12 @@ QsciScintillaCompat
 <td><a href="#Editor.removeCompletionListHook">removeCompletionListHook</a></td>
 <td>Public method to remove a previously registered completion list provider.</td>
 </tr><tr>
+<td><a href="#Editor.removeMouseClickHandler">removeMouseClickHandler</a></td>
+<td></td>
+</tr><tr>
+<td><a href="#Editor.removeMouseClickHandlers">removeMouseClickHandlers</a></td>
+<td></td>
+</tr><tr>
 <td><a href="#Editor.resizeEvent">resizeEvent</a></td>
 <td>Protected method handling resize events.</td>
 </tr><tr>
@@ -1078,6 +1096,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.setMonospaced">setMonospaced</a></td>
 <td>Public method to set/reset a monospaced font.</td>
+</tr><tr>
+<td><a href="#Editor.setMouseClickHandler">setMouseClickHandler</a></td>
+<td>Public method to set a mouse click handler.</td>
 </tr><tr>
 <td><a href="#Editor.setNoName">setNoName</a></td>
 <td>Public method to set the display string for an unnamed editor.</td>
@@ -2019,6 +2040,30 @@ previous fold level (integer)
 <dd>
 number of added/deleted annotation lines
             (integer)
+</dd>
+</dl><a NAME="Editor.__mouseClickToString" ID="Editor.__mouseClickToString"></a>
+<h4>Editor.__mouseClickToString</h4>
+<b>__mouseClickToString</b>(<i>modifiers, button</i>)
+<p>
+        Private method to generate a display string for the given modifiers
+        and button combination.
+</p><dl>
+<dt><i>modifiers</i> (Qt.KeyboardModifiers)</dt>
+<dd>
+keyboard modifiers of the handler
+</dd><dt><i>button</i> (Qt.MouseButton)</dt>
+<dd>
+mouse button of the handler
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+display string
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
 </dd>
 </dl><a NAME="Editor.__newView" ID="Editor.__newView"></a>
 <h4>Editor.__newView</h4>
@@ -3193,7 +3238,21 @@ name of the menu (string)
 <dd>
 reference to the requested menu (QMenu) or None
 </dd>
-</dl><a NAME="Editor.getNoName" ID="Editor.getNoName"></a>
+</dl><a NAME="Editor.getMouseClickHandler" ID="Editor.getMouseClickHandler"></a>
+<h4>Editor.getMouseClickHandler</h4>
+<b>getMouseClickHandler</b>(<i>modifiers, button</i>)
+<p>
+
+</p><p>
+
+</p><a NAME="Editor.getMouseClickHandlers" ID="Editor.getMouseClickHandlers"></a>
+<h4>Editor.getMouseClickHandlers</h4>
+<b>getMouseClickHandlers</b>(<i>name</i>)
+<p>
+
+</p><p>
+
+</p><a NAME="Editor.getNoName" ID="Editor.getNoName"></a>
 <h4>Editor.getNoName</h4>
 <b>getNoName</b>(<i></i>)
 <p>
@@ -3690,6 +3749,16 @@ linenumber of the breakpoint to edit
 <dd>
 the mouse press event (QMouseEvent)
 </dd>
+</dl><a NAME="Editor.mouseReleaseEvent" ID="Editor.mouseReleaseEvent"></a>
+<h4>Editor.mouseReleaseEvent</h4>
+<b>mouseReleaseEvent</b>(<i>evt</i>)
+<p>
+        Protected method calling a registered mouse click handler function.
+</p><dl>
+<dt><i>evt</i></dt>
+<dd>
+event object (QMouseEvent)
+</dd>
 </dl><a NAME="Editor.newBreakpointWithProperties" ID="Editor.newBreakpointWithProperties"></a>
 <h4>Editor.newBreakpointWithProperties</h4>
 <b>newBreakpointWithProperties</b>(<i>line, properties</i>)
@@ -3858,7 +3927,21 @@ reference to the cloned editor (Editor)
 <dd>
 name of the provider
 </dd>
-</dl><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
+</dl><a NAME="Editor.removeMouseClickHandler" ID="Editor.removeMouseClickHandler"></a>
+<h4>Editor.removeMouseClickHandler</h4>
+<b>removeMouseClickHandler</b>(<i>modifiers, button</i>)
+<p>
+
+</p><p>
+
+</p><a NAME="Editor.removeMouseClickHandlers" ID="Editor.removeMouseClickHandlers"></a>
+<h4>Editor.removeMouseClickHandlers</h4>
+<b>removeMouseClickHandlers</b>(<i>name</i>)
+<p>
+
+</p><p>
+
+</p><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
 <h4>Editor.resizeEvent</h4>
 <b>resizeEvent</b>(<i>evt</i>)
 <p>
@@ -4017,6 +4100,35 @@ name of the pygments lexer to use (string)
 <dt><i>on</i></dt>
 <dd>
 flag to indicate usage of a monospace font (boolean)
+</dd>
+</dl><a NAME="Editor.setMouseClickHandler" ID="Editor.setMouseClickHandler"></a>
+<h4>Editor.setMouseClickHandler</h4>
+<b>setMouseClickHandler</b>(<i>name, modifiers, button, function</i>)
+<p>
+        Public method to set a mouse click handler.
+</p><dl>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the plug-in (or 'internal') setting this handler
+</dd><dt><i>modifiers</i> (Qt.KeyboardModifiers)</dt>
+<dd>
+keyboard modifiers of the handler
+</dd><dt><i>button</i> (Qt.MouseButton)</dt>
+<dd>
+mouse button of the handler
+</dd><dt><i>function</i> (func)</dt>
+<dd>
+handler function
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
 </dd>
 </dl><a NAME="Editor.setNoName" ID="Editor.setNoName"></a>
 <h4>Editor.setNoName</h4>
