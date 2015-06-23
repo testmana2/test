@@ -7615,7 +7615,9 @@ class Editor(QsciScintillaCompat):
         button = evt.button()
         key = (modifiers, button)
         
-        if button != Qt.NoButton and key in self.__mouseClickHandlers:
+        if button != Qt.NoButton and \
+            Preferences.getEditor("MouseClickHandlersEnabled") and \
+                key in self.__mouseClickHandlers:
             self.__mouseClickHandlers[key][1]()
             evt.accept()
         else:
@@ -7643,7 +7645,7 @@ class Editor(QsciScintillaCompat):
                 self,
                 self.tr("Register Mouse Click Handler"),
                 self.tr("""A mouse click handler for "{0}" was already"""
-                        """ registered by {1}". Aborting request by"""
+                        """ registered by "{1}". Aborting request by"""
                         """ "{2}"...""").format(
                     self.__mouseClickToString(modifiers, button),
                     self.__mouseClickHandlers[key][0],

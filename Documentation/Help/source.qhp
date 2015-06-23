@@ -762,6 +762,7 @@
               <section title="eric6.Preferences.ConfigurationPages.EditorHighlightersPage" ref="eric6.Preferences.ConfigurationPages.EditorHighlightersPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorHighlightingStylesPage" ref="eric6.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorKeywordsPage" ref="eric6.Preferences.ConfigurationPages.EditorKeywordsPage.html" />
+              <section title="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage" ref="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorPropertiesPage" ref="eric6.Preferences.ConfigurationPages.EditorPropertiesPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorSearchPage" ref="eric6.Preferences.ConfigurationPages.EditorSearchPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html" />
@@ -4644,6 +4645,10 @@
       <keyword name="EditorMarkerMap.__drawIndicator" id="EditorMarkerMap.__drawIndicator" ref="eric6.QScintilla.EditorMarkerMap.html#EditorMarkerMap.__drawIndicator" />
       <keyword name="EditorMarkerMap._paintIt" id="EditorMarkerMap._paintIt" ref="eric6.QScintilla.EditorMarkerMap.html#EditorMarkerMap._paintIt" />
       <keyword name="EditorMarkerMap.initColors" id="EditorMarkerMap.initColors" ref="eric6.QScintilla.EditorMarkerMap.html#EditorMarkerMap.initColors" />
+      <keyword name="EditorMouseClickHandlerPage" id="EditorMouseClickHandlerPage" ref="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html#EditorMouseClickHandlerPage" />
+      <keyword name="EditorMouseClickHandlerPage (Constructor)" id="EditorMouseClickHandlerPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html#EditorMouseClickHandlerPage.__init__" />
+      <keyword name="EditorMouseClickHandlerPage (Module)" id="EditorMouseClickHandlerPage (Module)" ref="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html" />
+      <keyword name="EditorMouseClickHandlerPage.save" id="EditorMouseClickHandlerPage.save" ref="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html#EditorMouseClickHandlerPage.save" />
       <keyword name="EditorPropertiesPage" id="EditorPropertiesPage" ref="eric6.Preferences.ConfigurationPages.EditorPropertiesPage.html#EditorPropertiesPage" />
       <keyword name="EditorPropertiesPage (Constructor)" id="EditorPropertiesPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.EditorPropertiesPage.html#EditorPropertiesPage.__init__" />
       <keyword name="EditorPropertiesPage (Module)" id="EditorPropertiesPage (Module)" ref="eric6.Preferences.ConfigurationPages.EditorPropertiesPage.html" />
@@ -13149,6 +13154,7 @@
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorHighlightersPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorKeywordsPage.html#create" />
+      <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorPropertiesPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorSearchPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#create" />
@@ -14343,6 +14349,7 @@
       <file>eric6.Preferences.ConfigurationPages.EditorHighlightersPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorHighlightingStylesPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorKeywordsPage.html</file>
+      <file>eric6.Preferences.ConfigurationPages.EditorMouseClickHandlerPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorPropertiesPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorSearchPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html</file>

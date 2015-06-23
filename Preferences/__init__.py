@@ -449,6 +449,8 @@ class Prefs(object):
         
         "VirtualSpaceOptions": QsciScintilla.SCVS_NONE,
         
+        "MouseClickHandlersEnabled": True,
+        
         # All (most) lexers
         "AllFoldCompact": True,
         

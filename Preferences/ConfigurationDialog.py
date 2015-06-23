@@ -272,6 +272,11 @@ class ConfigurationWidget(QWidget):
                 [self.tr("Properties"), "preferences-properties.png",
                  "EditorPropertiesPage", "1editorLexerPage", None],
                 
+                "1editorMouseClickHandlers":
+                [self.tr("Mouse Click Handlers"),
+                 "preferences-mouse-click-handler.png",
+                 "EditorMouseClickHandlerPage", "0editorPage", None],
+                
                 "0helpPage":
                 [self.tr("Help"), "preferences-help.png",
                  None, None, None],

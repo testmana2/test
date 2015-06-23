@@ -742,6 +742,7 @@
     <Source>Preferences/ConfigurationPages/EditorHighlightersPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorHighlightingStylesPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorKeywordsPage.py</Source>
+    <Source>Preferences/ConfigurationPages/EditorMouseClickHandlerPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorPropertiesPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorSearchPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorSpellCheckingPage.py</Source>
@@ -1484,6 +1485,7 @@
     <Form>Preferences/ConfigurationPages/EditorHighlightersPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorHighlightingStylesPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorKeywordsPage.ui</Form>
+    <Form>Preferences/ConfigurationPages/EditorMouseClickHandlerPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorPropertiesPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSearchPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorSpellCheckingPage.ui</Form>
