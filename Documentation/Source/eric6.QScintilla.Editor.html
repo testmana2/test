@@ -813,10 +813,10 @@ QsciScintillaCompat
 <td>Public method to get a reference to the main context menu or a submenu.</td>
 </tr><tr>
 <td><a href="#Editor.getMouseClickHandler">getMouseClickHandler</a></td>
-<td></td>
+<td>Public method to get a registered mouse click handler.</td>
 </tr><tr>
 <td><a href="#Editor.getMouseClickHandlers">getMouseClickHandlers</a></td>
-<td></td>
+<td>Public method to get all registered mouse click handlers of a plug-in.</td>
 </tr><tr>
 <td><a href="#Editor.getNoName">getNoName</a></td>
 <td>Public method to get the display string for an unnamed editor.</td>
@@ -1047,10 +1047,10 @@ QsciScintillaCompat
 <td>Public method to remove a previously registered completion list provider.</td>
 </tr><tr>
 <td><a href="#Editor.removeMouseClickHandler">removeMouseClickHandler</a></td>
-<td></td>
+<td>Public method to un-registered a mouse click handler.</td>
 </tr><tr>
 <td><a href="#Editor.removeMouseClickHandlers">removeMouseClickHandlers</a></td>
-<td></td>
+<td>Public method to un-registered all mouse click handlers of a plug-in.</td>
 </tr><tr>
 <td><a href="#Editor.resizeEvent">resizeEvent</a></td>
 <td>Protected method handling resize events.</td>
@@ -3242,17 +3242,48 @@ reference to the requested menu (QMenu) or None
 <h4>Editor.getMouseClickHandler</h4>
 <b>getMouseClickHandler</b>(<i>modifiers, button</i>)
 <p>
-
-</p><p>
-
-</p><a NAME="Editor.getMouseClickHandlers" ID="Editor.getMouseClickHandlers"></a>
+        Public method to get a registered mouse click handler.
+</p><dl>
+<dt><i>modifiers</i> (Qt.KeyboardModifiers)</dt>
+<dd>
+keyboard modifiers of the handler
+</dd><dt><i>button</i> (Qt.MouseButton)</dt>
+<dd>
+mouse button of the handler
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+plug-in name and registered function
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of str and func
+</dd>
+</dl><a NAME="Editor.getMouseClickHandlers" ID="Editor.getMouseClickHandlers"></a>
 <h4>Editor.getMouseClickHandlers</h4>
 <b>getMouseClickHandlers</b>(<i>name</i>)
 <p>
-
-</p><p>
-
-</p><a NAME="Editor.getNoName" ID="Editor.getNoName"></a>
+        Public method to get all registered mouse click handlers of
+        a plug-in.
+</p><dl>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the plug-in
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+registered mouse click handlers as list of modifiers,
+            mouse button and function
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+list of tuple of (Qt.KeyboardModifiers, Qt.MouseButton,func)
+</dd>
+</dl><a NAME="Editor.getNoName" ID="Editor.getNoName"></a>
 <h4>Editor.getNoName</h4>
 <b>getNoName</b>(<i></i>)
 <p>
@@ -3755,9 +3786,9 @@ the mouse press event (QMouseEvent)
 <p>
         Protected method calling a registered mouse click handler function.
 </p><dl>
-<dt><i>evt</i></dt>
+<dt><i>evt</i> (QMouseEvent)</dt>
 <dd>
-event object (QMouseEvent)
+event object
 </dd>
 </dl><a NAME="Editor.newBreakpointWithProperties" ID="Editor.newBreakpointWithProperties"></a>
 <h4>Editor.newBreakpointWithProperties</h4>
@@ -3931,17 +3962,27 @@ name of the provider
 <h4>Editor.removeMouseClickHandler</h4>
 <b>removeMouseClickHandler</b>(<i>modifiers, button</i>)
 <p>
-
-</p><p>
-
-</p><a NAME="Editor.removeMouseClickHandlers" ID="Editor.removeMouseClickHandlers"></a>
+        Public method to un-registered a mouse click handler.
+</p><dl>
+<dt><i>modifiers</i> (Qt.KeyboardModifiers)</dt>
+<dd>
+keyboard modifiers of the handler
+</dd><dt><i>button</i> (Qt.MouseButton)</dt>
+<dd>
+mouse button of the handler
+</dd>
+</dl><a NAME="Editor.removeMouseClickHandlers" ID="Editor.removeMouseClickHandlers"></a>
 <h4>Editor.removeMouseClickHandlers</h4>
 <b>removeMouseClickHandlers</b>(<i>name</i>)
 <p>
-
-</p><p>
-
-</p><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
+        Public method to un-registered all mouse click handlers of
+        a plug-in.
+</p><dl>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the plug-in
+</dd>
+</dl><a NAME="Editor.resizeEvent" ID="Editor.resizeEvent"></a>
 <h4>Editor.resizeEvent</h4>
 <b>resizeEvent</b>(<i>evt</i>)
 <p>

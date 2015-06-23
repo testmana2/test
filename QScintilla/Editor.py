@@ -40,8 +40,6 @@ EditorAutoCompletionListID = 1
 TemplateCompletionListID = 2
 
 
-# TODO: implement a mouse click handler usable by plug-ins
-# e.g. for 'got to function definition'
 class Editor(QsciScintillaCompat):
     """
     Class implementing the editor component of the eric6 IDE.
@@ -7691,10 +7689,28 @@ class Editor(QsciScintillaCompat):
     
     def removeMouseClickHandler(self, modifiers, button):
         """
+        Public method to un-registered a mouse click handler.
         
+        @param modifiers keyboard modifiers of the handler
+        @type Qt.KeyboardModifiers
+        @param button mouse button of the handler
+        @type Qt.MouseButton
         """
+        key = (modifiers, button)
+        if key in self.__mouseClickHandlers:
+            del self.__mouseClickHandlers[key]
     
     def removeMouseClickHandlers(self, name):
         """
+        Public method to un-registered all mouse click handlers of
+        a plug-in.
         
+        @param name name of the plug-in
+        @type str
         """
+        keys = []
+        for key in self.__mouseClickHandlers:
+            if self.__mouseClickHandlers[key][0] == name:
+                keys.append(key)
+        for key in keys:
+            del self.__mouseClickHandlers[key]
