@@ -33,6 +33,7 @@ from .EditorMarkerMap import EditorMarkerMap
 
 import Preferences
 import Utilities
+from Utilities import MouseUtilities
 
 import UI.PixmapCache
 
@@ -377,19 +378,6 @@ class Editor(QsciScintillaCompat):
         self.__mouseClickHandlers = {}
         # dictionary with tuple of keyboard modifier and mouse button as key
         # and tuple of plug-in name and function as value
-        self.__modifier2String = {
-            Qt.ShiftModifier: self.tr("Shift"),
-            Qt.ControlModifier: self.tr("Ctrl"),
-            Qt.AltModifier: self.tr("Alt"),
-            Qt.MetaModifier: self.tr("Meta"),
-        }
-        self.__button2String = {
-            Qt.LeftButton: self.tr("Left Button"),
-            Qt.RightButton: self.tr("Right Button"),
-            Qt.MidButton: self.tr("Middle Button"),
-            Qt.XButton1: self.tr("X Button 1"),
-            Qt.XButton2: self.tr("X Button 2"),
-        }
         
         sh = self.sizeHint()
         if sh.height() < 300:
@@ -7585,25 +7573,6 @@ class Editor(QsciScintillaCompat):
     ## Mouse click handler related methods
     #######################################################################
     
-    def __mouseClickToString(self, modifiers, button):
-        """
-        Private method to generate a display string for the given modifiers
-        and button combination.
-        
-        @param modifiers keyboard modifiers of the handler
-        @type Qt.KeyboardModifiers
-        @param button mouse button of the handler
-        @type Qt.MouseButton
-        @return display string
-        @rtype str
-        """
-        parts = []
-        for mod in sorted(self.__modifier2String.keys()):
-            if modifiers & mod:
-                parts.append(self.__modifier2String[mod])
-        parts.append(self.__button2String[button])
-        return "+".join(parts)
-    
     def mouseReleaseEvent(self, evt):
         """
         Protected method calling a registered mouse click handler function.
@@ -7647,7 +7616,8 @@ class Editor(QsciScintillaCompat):
                 self.tr("""A mouse click handler for "{0}" was already"""
                         """ registered by "{1}". Aborting request by"""
                         """ "{2}"...""").format(
-                    self.__mouseClickToString(modifiers, button),
+                    MouseUtilities.MouseButtonModifier2String(
+                        modifiers, button),
                     self.__mouseClickHandlers[key][0],
                     name))
             return False

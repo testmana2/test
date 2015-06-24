@@ -8653,6 +8653,7 @@ eric6.Utilities.ModuleParser.getTypeFromTypeName?4(name)
 eric6.Utilities.ModuleParser.readModule?4(module, path=[], inpackage=False, basename="", extensions=None, caching=True)
 eric6.Utilities.ModuleParser.resetParsedModule?4(module, basename="")
 eric6.Utilities.ModuleParser.resetParsedModules?4()
+eric6.Utilities.MouseUtilities.MouseButtonModifier2String?4(modifiers, button)
 eric6.Utilities.PasswordChecker.PasswordChecker.Complexity_Good?7
 eric6.Utilities.PasswordChecker.PasswordChecker.Complexity_Strong?7
 eric6.Utilities.PasswordChecker.PasswordChecker.Complexity_VeryStrong?7

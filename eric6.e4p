@@ -2163,7 +2163,7 @@
               <string>ShowIgnored</string>
             </key>
             <value>
-              <bool>False</bool>
+              <bool>True</bool>
             </value>
           </dict>
         </value>

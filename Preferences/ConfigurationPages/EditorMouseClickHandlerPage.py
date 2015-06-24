@@ -16,7 +16,7 @@ import Preferences
 
 
 class EditorMouseClickHandlerPage(ConfigurationPageBase,
-                               Ui_EditorMouseClickHandlerPage):
+                                  Ui_EditorMouseClickHandlerPage):
     """
     Class implementing the Editor Mouse Click Handlers configuration page.
     """

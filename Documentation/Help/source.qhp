@@ -1002,6 +1002,7 @@
             <section title="eric6.Utilities.FtpUtilities" ref="eric6.Utilities.FtpUtilities.html" />
             <section title="eric6.Utilities.MimeTypes" ref="eric6.Utilities.MimeTypes.html" />
             <section title="eric6.Utilities.ModuleParser" ref="eric6.Utilities.ModuleParser.html" />
+            <section title="eric6.Utilities.MouseUtilities" ref="eric6.Utilities.MouseUtilities.html" />
             <section title="eric6.Utilities.PasswordChecker" ref="eric6.Utilities.PasswordChecker.html" />
             <section title="eric6.Utilities.PySideImporter" ref="eric6.Utilities.PySideImporter.html" />
             <section title="eric6.Utilities.__init__" ref="eric6.Utilities.__init__.html" />
@@ -4267,7 +4268,6 @@
       <keyword name="Editor.__modificationChanged" id="Editor.__modificationChanged" ref="eric6.QScintilla.Editor.html#Editor.__modificationChanged" />
       <keyword name="Editor.__modificationReadOnly" id="Editor.__modificationReadOnly" ref="eric6.QScintilla.Editor.html#Editor.__modificationReadOnly" />
       <keyword name="Editor.__modified" id="Editor.__modified" ref="eric6.QScintilla.Editor.html#Editor.__modified" />
-      <keyword name="Editor.__mouseClickToString" id="Editor.__mouseClickToString" ref="eric6.QScintilla.Editor.html#Editor.__mouseClickToString" />
       <keyword name="Editor.__newView" id="Editor.__newView" ref="eric6.QScintilla.Editor.html#Editor.__newView" />
       <keyword name="Editor.__newViewNewSplit" id="Editor.__newViewNewSplit" ref="eric6.QScintilla.Editor.html#Editor.__newViewNewSplit" />
       <keyword name="Editor.__normalizedEncoding" id="Editor.__normalizedEncoding" ref="eric6.QScintilla.Editor.html#Editor.__normalizedEncoding" />
@@ -7977,6 +7977,8 @@
       <keyword name="ModuleModel.addClass" id="ModuleModel.addClass" ref="eric6.Graphics.ModuleItem.html#ModuleModel.addClass" />
       <keyword name="ModuleModel.getClasses" id="ModuleModel.getClasses" ref="eric6.Graphics.ModuleItem.html#ModuleModel.getClasses" />
       <keyword name="ModuleParser (Module)" id="ModuleParser (Module)" ref="eric6.Utilities.ModuleParser.html" />
+      <keyword name="MouseButtonModifier2String" id="MouseButtonModifier2String" ref="eric6.Utilities.MouseUtilities.html#MouseButtonModifier2String" />
+      <keyword name="MouseUtilities (Module)" id="MouseUtilities (Module)" ref="eric6.Utilities.MouseUtilities.html" />
       <keyword name="MultiProject" id="MultiProject" ref="eric6.MultiProject.MultiProject.html#MultiProject" />
       <keyword name="MultiProject (Constructor)" id="MultiProject (Constructor)" ref="eric6.MultiProject.MultiProject.html#MultiProject.__init__" />
       <keyword name="MultiProject (Module)" id="MultiProject (Module)" ref="eric6.MultiProject.MultiProject.html" />
@@ -14550,6 +14552,7 @@
       <file>eric6.Utilities.FtpUtilities.html</file>
       <file>eric6.Utilities.MimeTypes.html</file>
       <file>eric6.Utilities.ModuleParser.html</file>
+      <file>eric6.Utilities.MouseUtilities.html</file>
       <file>eric6.Utilities.PasswordChecker.html</file>
       <file>eric6.Utilities.PySideImporter.html</file>
       <file>eric6.Utilities.__init__.html</file>
