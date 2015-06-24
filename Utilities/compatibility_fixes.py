@@ -74,7 +74,7 @@ class File(file):   # __IGNORE_WARNING__
         else:
             self.__errors = errors
 
-        file.__init__(self, filein,  mode,  buffering)    # __IGNORE_WARNING__
+        file.__init__(self, filein, mode, buffering)    # __IGNORE_WARNING__
 
     def read(self, n=-1):
         """

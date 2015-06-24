@@ -13,7 +13,7 @@ try:
         sys.argv.remove("--pyqt4")
         # fake a failed PyQt5 import
         raise ImportError
-    import PyQt5    # __IGNORE_WARNING__ 
+    import PyQt5    # __IGNORE_WARNING__
 except ImportError:
     import importlib
 

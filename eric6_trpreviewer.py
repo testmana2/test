@@ -14,7 +14,7 @@ of the integrated tr previewer.
 
 from __future__ import unicode_literals
 
-import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__ 
+import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__
 
 try:  # Only for Py2
     import Utilities.compatibility_fixes     # __IGNORE_WARNING__

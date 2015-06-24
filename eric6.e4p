@@ -1176,6 +1176,7 @@
     <Source>Utilities/FtpUtilities.py</Source>
     <Source>Utilities/MimeTypes.py</Source>
     <Source>Utilities/ModuleParser.py</Source>
+    <Source>Utilities/MouseUtilities.py</Source>
     <Source>Utilities/PasswordChecker.py</Source>
     <Source>Utilities/PySideImporter.py</Source>
     <Source>Utilities/__init__.py</Source>
