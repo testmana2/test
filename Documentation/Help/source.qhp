@@ -802,6 +802,7 @@
               <section title="eric6.Preferences.ConfigurationPages.ViewmanagerPage" ref="eric6.Preferences.ConfigurationPages.ViewmanagerPage.html" />
             </section>
             <section title="eric6.Preferences.ConfigurationDialog" ref="eric6.Preferences.ConfigurationDialog.html" />
+            <section title="eric6.Preferences.MouseClickDialog" ref="eric6.Preferences.MouseClickDialog.html" />
             <section title="eric6.Preferences.PreferencesLexer" ref="eric6.Preferences.PreferencesLexer.html" />
             <section title="eric6.Preferences.ProgramsDialog" ref="eric6.Preferences.ProgramsDialog.html" />
             <section title="eric6.Preferences.ShortcutDialog" ref="eric6.Preferences.ShortcutDialog.html" />
@@ -7978,6 +7979,13 @@
       <keyword name="ModuleModel.getClasses" id="ModuleModel.getClasses" ref="eric6.Graphics.ModuleItem.html#ModuleModel.getClasses" />
       <keyword name="ModuleParser (Module)" id="ModuleParser (Module)" ref="eric6.Utilities.ModuleParser.html" />
       <keyword name="MouseButtonModifier2String" id="MouseButtonModifier2String" ref="eric6.Utilities.MouseUtilities.html#MouseButtonModifier2String" />
+      <keyword name="MouseClickDialog" id="MouseClickDialog" ref="eric6.Preferences.MouseClickDialog.html#MouseClickDialog" />
+      <keyword name="MouseClickDialog (Constructor)" id="MouseClickDialog (Constructor)" ref="eric6.Preferences.MouseClickDialog.html#MouseClickDialog.__init__" />
+      <keyword name="MouseClickDialog (Module)" id="MouseClickDialog (Module)" ref="eric6.Preferences.MouseClickDialog.html" />
+      <keyword name="MouseClickDialog.__showClickText" id="MouseClickDialog.__showClickText" ref="eric6.Preferences.MouseClickDialog.html#MouseClickDialog.__showClickText" />
+      <keyword name="MouseClickDialog.eventFilter" id="MouseClickDialog.eventFilter" ref="eric6.Preferences.MouseClickDialog.html#MouseClickDialog.eventFilter" />
+      <keyword name="MouseClickDialog.getClick" id="MouseClickDialog.getClick" ref="eric6.Preferences.MouseClickDialog.html#MouseClickDialog.getClick" />
+      <keyword name="MouseClickDialog.on_clearButton_clicked" id="MouseClickDialog.on_clearButton_clicked" ref="eric6.Preferences.MouseClickDialog.html#MouseClickDialog.on_clearButton_clicked" />
       <keyword name="MouseUtilities (Module)" id="MouseUtilities (Module)" ref="eric6.Utilities.MouseUtilities.html" />
       <keyword name="MultiProject" id="MultiProject" ref="eric6.MultiProject.MultiProject.html#MultiProject" />
       <keyword name="MultiProject (Constructor)" id="MultiProject (Constructor)" ref="eric6.MultiProject.MultiProject.html#MultiProject.__init__" />
@@ -14389,6 +14397,7 @@
       <file>eric6.Preferences.ConfigurationPages.TrayStarterPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.VcsPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.ViewmanagerPage.html</file>
+      <file>eric6.Preferences.MouseClickDialog.html</file>
       <file>eric6.Preferences.PreferencesLexer.html</file>
       <file>eric6.Preferences.ProgramsDialog.html</file>
       <file>eric6.Preferences.ShortcutDialog.html</file>

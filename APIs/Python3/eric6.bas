@@ -458,6 +458,7 @@ MiniScintilla QsciScintillaCompat
 Module ClbrBaseClasses.Module VisibilityMixin
 ModuleItem UMLItem
 ModuleModel UMLModel
+MouseClickDialog QDialog Ui_MouseClickDialog
 MultiProject QObject
 MultiProjectBrowser QTreeWidget
 MultiProjectPage ConfigurationPageBase Ui_MultiProjectPage

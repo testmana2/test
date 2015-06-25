@@ -7,6 +7,8 @@
 Module implementing utility functions related to Mouse stuff.
 """
 
+from __future__ import unicode_literals
+
 from PyQt5.QtCore import Qt, QCoreApplication
 
 import Globals

@@ -781,6 +781,7 @@
     <Source>Preferences/ConfigurationPages/VcsPage.py</Source>
     <Source>Preferences/ConfigurationPages/ViewmanagerPage.py</Source>
     <Source>Preferences/ConfigurationPages/__init__.py</Source>
+    <Source>Preferences/MouseClickDialog.py</Source>
     <Source>Preferences/PreferencesLexer.py</Source>
     <Source>Preferences/ProgramsDialog.py</Source>
     <Source>Preferences/ShortcutDialog.py</Source>
@@ -1524,6 +1525,7 @@
     <Form>Preferences/ConfigurationPages/TrayStarterPage.ui</Form>
     <Form>Preferences/ConfigurationPages/VcsPage.ui</Form>
     <Form>Preferences/ConfigurationPages/ViewmanagerPage.ui</Form>
+    <Form>Preferences/MouseClickDialog.ui</Form>
     <Form>Preferences/ProgramsDialog.ui</Form>
     <Form>Preferences/ShortcutDialog.ui</Form>
     <Form>Preferences/ShortcutsDialog.ui</Form>
@@ -2163,7 +2165,7 @@
               <string>ShowIgnored</string>
             </key>
             <value>
-              <bool>True</bool>
+              <bool>False</bool>
             </value>
           </dict>
         </value>
