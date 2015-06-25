@@ -85,7 +85,7 @@ class SpellChecker(QObject):
         if Preferences.getEditor("SpellCheckingEnabled"):
             try:
                 return len(enchant.list_languages()) > 0
-            except NameError:
+            except (NameError, AttributeError):
                 pass
         return False
     
