@@ -7582,7 +7582,7 @@ class Editor(QsciScintillaCompat):
         """
         modifiers = evt.modifiers()
         button = evt.button()
-        key = (modifiers, button)
+        key = (int(modifiers), int(button))
         
         if button != Qt.NoButton and \
             Preferences.getEditor("MouseClickHandlersEnabled") and \
@@ -7608,7 +7608,7 @@ class Editor(QsciScintillaCompat):
         @return flag indicating success
         @rtype bool
         """
-        key = (modifiers, button)
+        key = (int(modifiers), int(button))
         if key in self.__mouseClickHandlers:
             E5MessageBox.warning(
                 self,
@@ -7636,7 +7636,7 @@ class Editor(QsciScintillaCompat):
         @return plug-in name and registered function
         @rtype tuple of str and func
         """
-        key = (modifiers, button)
+        key = (int(modifiers), int(button))
         if key in self.__mouseClickHandlers:
             return self.__mouseClickHandlers[key]
         else:
@@ -7668,7 +7668,7 @@ class Editor(QsciScintillaCompat):
         @param button mouse button of the handler
         @type Qt.MouseButton
         """
-        key = (modifiers, button)
+        key = (int(modifiers), int(button))
         if key in self.__mouseClickHandlers:
             del self.__mouseClickHandlers[key]
     
