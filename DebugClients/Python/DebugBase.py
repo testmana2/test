@@ -551,8 +551,11 @@ class DebugBase(bdb.Bdb):
             
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
-                                                    argInfo[2], argInfo[3])
+                    try:
+                        fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
+                                                        argInfo[2], argInfo[3])
+                    except Exception:
+                        fargs = ""
                 else:
                     fargs = ""
                 
@@ -609,8 +612,11 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
-                                                    argInfo[2], argInfo[3])
+                    try:
+                        fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
+                                                        argInfo[2], argInfo[3])
+                    except Exception:
+                        fargs = ""
                 else:
                     fargs = ""
                 
@@ -709,8 +715,11 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
-                                                    argInfo[2], argInfo[3])
+                    try:
+                        fargs = inspect.formatargvalues(argInfo[0], argInfo[1],
+                                                        argInfo[2], argInfo[3])
+                    except Exception:
+                        fargs = ""
                 else:
                     fargs = ""
                 
