@@ -560,9 +560,12 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(
-                        argInfo.args, argInfo.varargs,
-                        argInfo.keywords, argInfo.locals)
+                    try:
+                        fargs = inspect.formatargvalues(
+                            argInfo.args, argInfo.varargs,
+                            argInfo.keywords, argInfo.locals)
+                    except Exception:
+                        fargs = ""
                 else:
                     fargs = ""
                 
@@ -619,9 +622,12 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(
-                        argInfo.args, argInfo.varargs,
-                        argInfo.keywords, argInfo.locals)
+                    try:
+                        fargs = inspect.formatargvalues(
+                            argInfo.args, argInfo.varargs,
+                            argInfo.keywords, argInfo.locals)
+                    except Exception:
+                        fargs = ""
                 else:
                     fargs = ""
                 
@@ -723,9 +729,12 @@ class DebugBase(bdb.Bdb):
                 
                 if ffunc and not ffunc.startswith("<"):
                     argInfo = inspect.getargvalues(fr)
-                    fargs = inspect.formatargvalues(
-                        argInfo.args, argInfo.varargs,
-                        argInfo.keywords, argInfo.locals)
+                    try:
+                        fargs = inspect.formatargvalues(
+                            argInfo.args, argInfo.varargs,
+                            argInfo.keywords, argInfo.locals)
+                    except Exception:
+                        fargs = ""
                 else:
                     fargs = ""
                 
