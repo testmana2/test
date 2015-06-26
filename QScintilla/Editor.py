@@ -7584,14 +7584,14 @@ class Editor(QsciScintillaCompat):
         button = evt.button()
         key = (int(modifiers), int(button))
         
+        self.vm.eventFilter(self, evt)
+        super(Editor, self).mouseReleaseEvent(evt)
+        
         if button != Qt.NoButton and \
             Preferences.getEditor("MouseClickHandlersEnabled") and \
                 key in self.__mouseClickHandlers:
-            self.__mouseClickHandlers[key][1]()
             evt.accept()
-        else:
-            self.vm.eventFilter(self, evt)
-            super(Editor, self).mouseReleaseEvent(evt)
+            self.__mouseClickHandlers[key][1]()
     
     def setMouseClickHandler(self, name, modifiers, button, function):
         """
