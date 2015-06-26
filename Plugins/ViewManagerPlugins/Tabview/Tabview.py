@@ -856,20 +856,26 @@ class Tabview(QSplitter, ViewManager):
             self.changeCaption.emit("")
         self.editorChangedEd.emit(aw)
         
-    def _addView(self, win, fn=None, noName=""):
+    def _addView(self, win, fn=None, noName="", next=False):
         """
         Protected method to add a view (i.e. window).
         
         @param win editor assembly to be added
         @param fn filename of this editor (string)
         @param noName name to be used for an unnamed editor (string)
+        @param next flag indicating to add the view next to the current
+            view (bool)
         """
         editor = win.getEditor()
         if fn is None:
             if not noName:
                 self.untitledCount += 1
                 noName = self.tr("Untitled {0}").format(self.untitledCount)
-            self.currentTabWidget.addTab(win, noName)
+            if next:
+                index = self.currentTabWidget.currentIndex() + 1
+                self.currentTabWidget.insertWidget(index, win, noName)
+            else:
+                self.currentTabWidget.addTab(win, noName)
             editor.setNoName(noName)
         else:
             if self.filenameOnly:
@@ -880,7 +886,11 @@ class Tabview(QSplitter, ViewManager):
                 txt = "...{0}".format(txt[-self.maxFileNameChars:])
             if not QFileInfo(fn).isWritable():
                 txt = self.tr("{0} (ro)").format(txt)
-            self.currentTabWidget.addTab(win, txt)
+            if next:
+                index = self.currentTabWidget.currentIndex() + 1
+                self.currentTabWidget.insertWidget(index, win, txt)
+            else:
+                self.currentTabWidget.addTab(win, txt)
             index = self.currentTabWidget.indexOf(win)
             self.currentTabWidget.setTabToolTip(index, fn)
         self.currentTabWidget.setCurrentWidget(win)

@@ -384,13 +384,15 @@ class ViewManager(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def _addView(self, win, fn=None, noName=""):
+    def _addView(self, win, fn=None, noName="", next=False):
         """
         Protected method to add a view (i.e. window).
         
         @param win editor assembly to be added
         @param fn filename of this editor
         @param noName name to be used for an unnamed editor (string)
+        @param next flag indicating to add the view next to the current
+            view (bool)
         @exception RuntimeError Not implemented
         """
         raise RuntimeError('Not implemented')
@@ -4406,7 +4408,7 @@ class ViewManager(QObject):
         self.__setSbFile()
         
     def openSourceFile(self, fn, lineno=-1, filetype="",
-                       selStart=0, selEnd=0, pos=0):
+                       selStart=0, selEnd=0, pos=0, next=False):
         """
         Public slot to display a file in an editor.
         
@@ -4418,9 +4420,11 @@ class ViewManager(QObject):
         @param selStart start of an area to be selected (integer)
         @param selEnd end of an area to be selected (integer)
         @param pos position within the line to place the cursor at (integer)
+        @param next flag indicating to add the file next to the current
+            editor (bool)
         """
         try:
-            newWin, editor = self.getEditor(fn, filetype=filetype)
+            newWin, editor = self.getEditor(fn, filetype=filetype, next=next)
         except (IOError, UnicodeDecodeError):
             return
         
@@ -4704,7 +4708,7 @@ class ViewManager(QObject):
         
         return filenames
         
-    def getEditor(self, fn, filetype=""):
+    def getEditor(self, fn, filetype="", next=False):
         """
         Public method to return the editor displaying the given file.
         
@@ -4713,6 +4717,8 @@ class ViewManager(QObject):
         
         @param fn filename to look for
         @param filetype type of the source file (string)
+        @param next flag indicating that if a new editor needs to be created,
+            it should be added next to the current editor (bool)
         @return tuple of two values giving a flag indicating a new window
             creation and a reference to the editor displaying this file
         """
@@ -4736,7 +4742,7 @@ class ViewManager(QObject):
                 newWin = True
         
         if newWin:
-            self._addView(assembly, fn)
+            self._addView(assembly, fn, next=next)
         else:
             self._showView(editor.parent(), fn)
         

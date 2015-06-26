@@ -379,13 +379,15 @@ class Listspace(QSplitter, ViewManager):
             self.changeCaption.emit("")
         self.editorChangedEd.emit(aw)
         
-    def _addView(self, win, fn=None, noName=""):
+    def _addView(self, win, fn=None, noName="", next=False):
         """
         Protected method to add a view (i.e. window).
         
         @param win editor assembly to be added
         @param fn filename of this editor (string)
         @param noName name to be used for an unnamed editor (string)
+        @param next flag indicating to add the view next to the current
+            view (bool)
         """
         editor = win.getEditor()
         if fn is None:

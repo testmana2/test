@@ -1870,7 +1870,7 @@ zoom value to be set (integer)
 </dd>
 </dl><a NAME="ViewManager._addView" ID="ViewManager._addView"></a>
 <h4>ViewManager._addView</h4>
-<b>_addView</b>(<i>win, fn=None, noName=""</i>)
+<b>_addView</b>(<i>win, fn=None, noName="", next=False</i>)
 <p>
         Protected method to add a view (i.e. window).
 </p><dl>
@@ -1883,6 +1883,10 @@ filename of this editor
 </dd><dt><i>noName</i></dt>
 <dd>
 name to be used for an unnamed editor (string)
+</dd><dt><i>next</i></dt>
+<dd>
+flag indicating to add the view next to the current
+            view (bool)
 </dd>
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>
@@ -2331,7 +2335,7 @@ filename of active window (string)
 </dd>
 </dl><a NAME="ViewManager.getEditor" ID="ViewManager.getEditor"></a>
 <h4>ViewManager.getEditor</h4>
-<b>getEditor</b>(<i>fn, filetype=""</i>)
+<b>getEditor</b>(<i>fn, filetype="", next=False</i>)
 <p>
         Public method to return the editor displaying the given file.
 </p><p>
@@ -2344,6 +2348,10 @@ filename to look for
 </dd><dt><i>filetype</i></dt>
 <dd>
 type of the source file (string)
+</dd><dt><i>next</i></dt>
+<dd>
+flag indicating that if a new editor needs to be created,
+            it should be added next to the current editor (bool)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>
@@ -2682,7 +2690,7 @@ name of file to be opened (string)
 </dd>
 </dl><a NAME="ViewManager.openSourceFile" ID="ViewManager.openSourceFile"></a>
 <h4>ViewManager.openSourceFile</h4>
-<b>openSourceFile</b>(<i>fn, lineno=-1, filetype="", selStart=0, selEnd=0, pos=0</i>)
+<b>openSourceFile</b>(<i>fn, lineno=-1, filetype="", selStart=0, selEnd=0, pos=0, next=False</i>)
 <p>
         Public slot to display a file in an editor.
 </p><dl>
@@ -2706,6 +2714,10 @@ end of an area to be selected (integer)
 </dd><dt><i>pos</i></dt>
 <dd>
 position within the line to place the cursor at (integer)
+</dd><dt><i>next</i></dt>
+<dd>
+flag indicating to add the file next to the current
+            editor (bool)
 </dd>
 </dl><a NAME="ViewManager.preferencesChanged" ID="ViewManager.preferencesChanged"></a>
 <h4>ViewManager.preferencesChanged</h4>
