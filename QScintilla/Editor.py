@@ -7600,30 +7600,33 @@ class Editor(QsciScintillaCompat):
         @param name name of the plug-in (or 'internal') setting this handler
         @type str
         @param modifiers keyboard modifiers of the handler
-        @type Qt.KeyboardModifiers
+        @type Qt.KeyboardModifiers or int
         @param button mouse button of the handler
-        @type Qt.MouseButton
+        @type Qt.MouseButton or int
         @param function handler function
         @type func
         @return flag indicating success
         @rtype bool
         """
-        key = (int(modifiers), int(button))
-        if key in self.__mouseClickHandlers:
-            E5MessageBox.warning(
-                self,
-                self.tr("Register Mouse Click Handler"),
-                self.tr("""A mouse click handler for "{0}" was already"""
-                        """ registered by "{1}". Aborting request by"""
-                        """ "{2}"...""").format(
-                    MouseUtilities.MouseButtonModifier2String(
-                        modifiers, button),
-                    self.__mouseClickHandlers[key][0],
-                    name))
-            return False
+        if int(button):
+            key = (int(modifiers), int(button))
+            if key in self.__mouseClickHandlers:
+                E5MessageBox.warning(
+                    self,
+                    self.tr("Register Mouse Click Handler"),
+                    self.tr("""A mouse click handler for "{0}" was already"""
+                            """ registered by "{1}". Aborting request by"""
+                            """ "{2}"...""").format(
+                        MouseUtilities.MouseButtonModifier2String(
+                            modifiers, button),
+                        self.__mouseClickHandlers[key][0],
+                        name))
+                return False
+            
+            self.__mouseClickHandlers[key] = (name, function)
+            return True
         
-        self.__mouseClickHandlers[key] = (name, function)
-        return True
+        return False
     
     def getMouseClickHandler(self, modifiers, button):
         """
