@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="de" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="de">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1918,8 +1919,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -1987,8 +1988,8 @@ auswählen, indem Sie den Knopf zur Rechten drücken.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>In neuem &amp;Register öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open in New &amp;Tab	Ctrl+LMB</source>
+        <translation>In neuem &amp;Register öffnen	Strg+LMK</translation>
     </message>
 </context>
 <context>
@@ -4260,7 +4261,7 @@ um die Konfigurationsseite anzuzeigen.</translation>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="276"/>
         <source>Mouse Click Handlers</source>
-        <translation>Mouse Click Handlers</translation>
+        <translation>Maus Click Handlers</translation>
     </message>
 </context>
 <context>
@@ -9535,12 +9536,12 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="7635"/>
         <source>Register Mouse Click Handler</source>
-        <translation>Mouse Click Handler registrieren</translation>
+        <translation>Maus Click Handler registrieren</translation>
     </message>
     <message>
         <location filename="../QScintilla/Editor.py" line="7635"/>
         <source>A mouse click handler for &quot;{0}&quot; was already registered by &quot;{1}&quot;. Aborting request by &quot;{2}&quot;...</source>
-        <translation>Ein Mouse Click Handler für &quot;{0}&quot; wurde bereits durch &quot;{1}&quot; registriert. Die Anfrage durch &quot;{2}&quot; wird abgebrochen...</translation>
+        <translation>Ein Maus Click Handler für &quot;{0}&quot; wurde bereits durch &quot;{1}&quot; registriert. Die Anfrage durch &quot;{2}&quot; wird abgebrochen...</translation>
     </message>
 </context>
 <context>
@@ -10896,22 +10897,22 @@ gesamte Auswahl.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorMouseClickHandlerPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Mouse Click Handler Support&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Mouse Click Handler Einstellungen&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Maus Click Handler Einstellungen&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorMouseClickHandlerPage.ui" line="37"/>
         <source>Select this to enable support for mouse click handlers</source>
-        <translation>Anwählen, um die Unterstützung von Mouse Click Handlern zu aktivieren</translation>
+        <translation>Anwählen, um die Unterstützung von Maus Click Handlern zu aktivieren</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorMouseClickHandlerPage.ui" line="40"/>
         <source>&lt;b&gt;Mouse Click Handlers Enabled&lt;/b&gt;&lt;p&gt;Select to enable support for mouse click handlers. Individual mouse click handlers may be configured on subordinate pages, if such have been installed and registered. This is usually done by plug-ins.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Mouse Click Handler aktiv&lt;b&gt;&lt;p&gt;Auswählen, um die Unterstützung von Mouse Click Handlern zu aktivieren. Individuelle Mouse Click Handler können auf untergeordneten Seiten konfiguriert werden, sofern solche installiert und registriert sind. Dies erfolgt normalerweise durch Plug-ins.&lt;/p&gt;</translation>
+        <translation>&lt;b&gt;Maus Click Handler aktiv&lt;b&gt;&lt;p&gt;Auswählen, um die Unterstützung von Maus Click Handlern zu aktivieren. Individuelle Maus Click Handler können auf untergeordneten Seiten konfiguriert werden, sofern solche installiert und registriert sind. Dies erfolgt normalerweise durch Plug-ins.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorMouseClickHandlerPage.ui" line="43"/>
         <source>Mouse Click Handlers Enabled</source>
-        <translation>Mouse Click Handler aktiv</translation>
+        <translation>Maus Click Handler aktiv</translation>
     </message>
 </context>
 <context>
@@ -16080,8 +16081,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1096"/>
-        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
-        <translation>Link in neuem Fenster öffnen<byte value="x9"/>Strg+LMK</translation>
+        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <translation>Link in neuem Fenster öffnen	Strg+LMK</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1169"/>
