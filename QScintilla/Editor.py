@@ -7591,7 +7591,7 @@ class Editor(QsciScintillaCompat):
             Preferences.getEditor("MouseClickHandlersEnabled") and \
                 key in self.__mouseClickHandlers:
             evt.accept()
-            self.__mouseClickHandlers[key][1]()
+            self.__mouseClickHandlers[key][1](self)
     
     def setMouseClickHandler(self, name, modifiers, button, function):
         """
