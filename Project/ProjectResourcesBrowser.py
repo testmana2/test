@@ -86,7 +86,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.menu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                  "PySide", "PySideC"]:
             self.menu.addAction(
                 self.tr('Compile resource'),
@@ -122,7 +122,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         self.menuActions.append(act)
         self.menu.addSeparator()
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                  "PySide", "PySideC"]:
             self.menu.addAction(
                 self.tr('New resource...'), self.__newResource)
@@ -150,7 +150,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         self.backMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                  "PySide", "PySideC"]:
             self.backMenu.addAction(
                 self.tr('Compile all resources'),
@@ -188,7 +188,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         # create the menu for multiple selected files
         self.multiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                  "PySide", "PySideC"]:
             act = self.multiMenu.addAction(
                 self.tr('Compile resources'),
@@ -220,7 +220,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
 
         self.dirMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                  "PySide", "PySideC"]:
             self.dirMenu.addAction(
                 self.tr('Compile all resources'),
@@ -261,7 +261,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         self.dirMultiMenu = QMenu(self)
         if self.project.getProjectType() in \
-                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                  "PySide", "PySideC"]:
             self.dirMultiMenu.addAction(
                 self.tr('Compile all resources'),
@@ -632,7 +632,7 @@ class ProjectResourcesBrowser(ProjectBaseBrowser):
         
         if self.project.pdata["PROGLANGUAGE"][0] in \
                 ["Python", "Python2", "Python3"]:
-            if self.project.getProjectType() in ["Qt4", "Qt4C", "E4Plugin"]:
+            if self.project.getProjectType() in ["Qt4", "Qt4C"]:
                 self.rccCompiler = 'pyrcc4'
                 if Utilities.isWindowsPlatform():
                     self.rccCompiler += '.exe'

@@ -268,15 +268,14 @@ class Project(QObject):
         self.__projectTypes["Qt4C"] = self.tr("PyQt4 Console")
         self.__projectTypes["PyQt5"] = self.tr("PyQt5 GUI")
         self.__projectTypes["PyQt5C"] = self.tr("PyQt5 Console")
-        self.__projectTypes["E4Plugin"] = self.tr("Eric4/5 Plugin")
         self.__projectTypes["E6Plugin"] = self.tr("Eric6 Plugin")
         self.__projectTypes["Console"] = self.tr("Console")
         self.__projectTypes["Other"] = self.tr("Other")
         
         self.__projectProgLanguages = {
-            "Python2": ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+            "Python2": ["Qt4", "Qt4C", "PyQt5", "PyQt5C",
                         "E6Plugin", "Console", "Other"],
-            "Python3": ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin",
+            "Python3": ["Qt4", "Qt4C", "PyQt5", "PyQt5C",
                         "E6Plugin", "Console", "Other"],
             "Ruby": ["Qt4", "Qt4C", "Console", "Other"],
             "JavaScript": ["Other"],
@@ -528,16 +527,16 @@ class Project(QObject):
         for ext in self.__sourceExtensions(sourceKey):
             self.pdata["FILETYPES"]["*{0}".format(ext)] = "SOURCES"
         self.pdata["FILETYPES"]["*.idl"] = "INTERFACES"
-        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "PyQt5", "E4Plugin",
+        if self.pdata["PROJECTTYPE"][0] in ["Qt4", "PyQt5",
                                             "E6Plugin", "PySide"]:
             self.pdata["FILETYPES"]["*.ui"] = "FORMS"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C",
-                                            "E4Plugin", "E6Plugin",
+                                            "E6Plugin",
                                             "PyQt5", "PyQt5C",
                                             "PySide", "PySideC"]:
             self.pdata["FILETYPES"]["*.qrc"] = "RESOURCES"
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C",
-                                            "E4Plugin", "E6Plugin",
+                                            "E6Plugin",
                                             "PyQt5", "PyQt5C",
                                             "PySide", "PySideC"]:
             self.pdata["FILETYPES"]["*.ts"] = "TRANSLATIONS"
@@ -558,7 +557,7 @@ class Project(QObject):
         values.
         """
         if self.pdata["PROJECTTYPE"][0] in ["Qt4", "Qt4C",
-                                            "E4Plugin", "E6Plugin",
+                                            "E6Plugin",
                                             "PyQt5", "PyQt5C",
                                             "PySide", "PySideC"]:
             if "*.ts" not in self.pdata["FILETYPES"]:
@@ -1266,7 +1265,7 @@ class Project(QObject):
         if dlg.exec_() == QDialog.Accepted:
             lang = dlg.getSelectedLanguage()
             if self.pdata["PROJECTTYPE"][0] in \
-                    ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E4Plugin", "E6Plugin",
+                    ["Qt4", "Qt4C", "PyQt5", "PyQt5C", "E6Plugin",
                      "PySide", "PySideC"]:
                 langFile = self.pdata["TRANSLATIONPATTERN"][0]\
                     .replace("%language%", lang)
@@ -2132,7 +2131,7 @@ class Project(QObject):
             self.menuApidocAct.setEnabled(True)
             self.menuPackagersAct.setEnabled(True)
             self.pluginGrp.setEnabled(
-                self.pdata["PROJECTTYPE"][0] in ["E4Plugin", "E6Plugin"])
+                self.pdata["PROJECTTYPE"][0] in ["E6Plugin"])
             self.addLanguageAct.setEnabled(
                 len(self.pdata["TRANSLATIONPATTERN"]) > 0 and
                 self.pdata["TRANSLATIONPATTERN"][0] != '')
@@ -2506,7 +2505,7 @@ class Project(QObject):
                     self.subdirs.append(tp)
             
             self.pluginGrp.setEnabled(
-                self.pdata["PROJECTTYPE"][0] in ["E4Plugin", "E6Plugin"])
+                self.pdata["PROJECTTYPE"][0] in ["E6Plugin"])
             
             self.__model.projectPropertiesChanged()
             self.projectPropertiesChanged.emit()
@@ -2725,7 +2724,7 @@ class Project(QObject):
                     self.menuPackagersAct.setEnabled(True)
                     self.pluginGrp.setEnabled(
                         self.pdata["PROJECTTYPE"][0] in [
-                            "E4Plugin", "E6Plugin"])
+                            "E6Plugin"])
                     self.addLanguageAct.setEnabled(
                         len(self.pdata["TRANSLATIONPATTERN"]) > 0 and
                         self.pdata["TRANSLATIONPATTERN"][0] != '')
