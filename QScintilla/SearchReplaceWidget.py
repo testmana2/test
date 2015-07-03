@@ -350,6 +350,7 @@ and so on.</td></tr>
             if indicate:
                 aw.setSearchIndicator(tgtPos, tgtLen)
             ok = aw.findNextTarget()
+        aw.updateMarkerMap()
     
     def __findNextPrev(self, txt, backwards):
         """

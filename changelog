@@ -17,6 +17,7 @@ Version 6.1-snapshot-2015mmdd:
   -- added capability to ask multiple completion list and call-tip
      providers
   -- added support for mouse click handlers to be provided by plug-ins
+  -- added the search markers to the marker map
   -- Lexers
      --- added support for the new C++ lexer properties (as of
          QScintilla V. 2.9.0)

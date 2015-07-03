@@ -53,6 +53,8 @@ class EditorMarkerMap(E5MapWidget):
         self.__coverageColor = Preferences.getEditorColour("CoverageMap")
         self.__changeColor = Preferences.getEditorColour("ChangesMap")
         self.__currentLineMarker = Preferences.getEditorColour("CurrentMap")
+        self.__searchMarkerColor = Preferences.getEditorColour(
+            "SearchMarkersMap")
         self.update()
     
     def __drawIndicator(self, line, painter, color):
@@ -96,14 +98,18 @@ class EditorMarkerMap(E5MapWidget):
         for line in self._master.getBookmarkLines():
             self.__drawIndicator(line, painter, self.__bookmarkColor)
         
-        # 6. warnings
+        # 6. search markers
+        for line in self._master.getSearchIndicatorLines():
+            self.__drawIndicator(line, painter, self.__searchMarkerColor)
+        
+        # 7. warnings
         for line in self._master.getWarningLines():
             self.__drawIndicator(line, painter, self.__warningColor)
         
-        # 7. errors
+        # 8. errors
         for line in self._master.getSyntaxErrorLines():
             self.__drawIndicator(line, painter, self.__errorColor)
         
-        # 8. current line
+        # 9. current line
         self.__drawIndicator(self._master.getCursorPosition()[0], painter,
                              self.__currentLineMarker)

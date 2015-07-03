@@ -818,6 +818,9 @@ QsciScintillaCompat
 <td><a href="#Editor.getNoName">getNoName</a></td>
 <td>Public method to get the display string for an unnamed editor.</td>
 </tr><tr>
+<td><a href="#Editor.getSearchIndicatorLines">getSearchIndicatorLines</a></td>
+<td>Public method to get the lines containing a search indicator.</td>
+</tr><tr>
 <td><a href="#Editor.getSearchText">getSearchText</a></td>
 <td>Public method to determine the selection or the current word for the next search operation.</td>
 </tr><tr>
@@ -1168,6 +1171,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.unsetCallTipHook">unsetCallTipHook</a></td>
 <td>Public method to unset a calltip hook.</td>
+</tr><tr>
+<td><a href="#Editor.updateMarkerMap">updateMarkerMap</a></td>
+<td>Public method to initiate an update of the marker map.</td>
 </tr><tr>
 <td><a href="#Editor.viewportEvent">viewportEvent</a></td>
 <td>Protected method handling event of the viewport.</td>
@@ -3266,6 +3272,16 @@ list of tuple of (Qt.KeyboardModifiers, Qt.MouseButton,func)
 <dd>
 display string for this unnamed editor (string)
 </dd>
+</dl><a NAME="Editor.getSearchIndicatorLines" ID="Editor.getSearchIndicatorLines"></a>
+<h4>Editor.getSearchIndicatorLines</h4>
+<b>getSearchIndicatorLines</b>(<i></i>)
+<p>
+        Public method to get the lines containing a search indicator.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+list of lines containing a search indicator (list of integer)
+</dd>
 </dl><a NAME="Editor.getSearchText" ID="Editor.getSearchText"></a>
 <h4>Editor.getSearchText</h4>
 <b>getSearchText</b>(<i>selectionOnly=False</i>)
@@ -4342,6 +4358,11 @@ type of warning message (integer)
 <b>unsetCallTipHook</b>(<i></i>)
 <p>
         Public method to unset a calltip hook.
+</p><a NAME="Editor.updateMarkerMap" ID="Editor.updateMarkerMap"></a>
+<h4>Editor.updateMarkerMap</h4>
+<b>updateMarkerMap</b>(<i></i>)
+<p>
+        Public method to initiate an update of the marker map.
 </p><a NAME="Editor.viewportEvent" ID="Editor.viewportEvent"></a>
 <h4>Editor.viewportEvent</h4>
 <b>viewportEvent</b>(<i>evt</i>)

@@ -239,6 +239,9 @@ class EditorStylesPage(ConfigurationPageBase, Ui_EditorStylesPage):
         self.initColour("CurrentMap",
                         self.currentMapButton,
                         Preferences.getEditorColour)
+        self.initColour("SearchMarkersMap",
+                        self.searchMarkerMapButton,
+                        Preferences.getEditorColour)
         self.initColour("MarkerMapBackground",
                         self.markerMapBackgroundButton,
                         Preferences.getEditorColour)

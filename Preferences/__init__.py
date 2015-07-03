@@ -623,6 +623,7 @@ class Prefs(object):
         "CoverageMap": QColor("#ad3636"),
         "ChangesMap": QColor("#00b000"),
         "CurrentMap": QColor("#000000"),
+        "SearchMarkersMap": QColor(Qt.blue),
         "MarkerMapBackground": QColor("#e7e7e7"),
     }
     

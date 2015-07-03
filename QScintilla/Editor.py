@@ -234,6 +234,7 @@ class Editor(QsciScintillaCompat):
             Preferences.getEditor("MarkOccurrencesTimeout"))
         self.__markOccurrencesTimer.timeout.connect(self.__markOccurrences)
         self.__markedText = ""
+        self.__searchIndicatorLines = []
         
         # initialize some spellchecking stuff
         self.spell = None
@@ -3351,6 +3352,9 @@ class Editor(QsciScintillaCompat):
         @param indicLength length of the indicator (integer)
         """
         self.setIndicatorRange(self.searchIndicator, startPos, indicLength)
+        line = self.lineIndexFromPosition(startPos)[0]
+        if line not in self.__searchIndicatorLines:
+            self.__searchIndicatorLines.append(line)
         
     def clearSearchIndicators(self):
         """
@@ -3358,6 +3362,8 @@ class Editor(QsciScintillaCompat):
         """
         self.clearAllIndicators(self.searchIndicator)
         self.__markedText = ""
+        self.__searchIndicatorLines = []
+        self.__markerMap.update()
         
     def __markOccurrences(self):
         """
@@ -3379,6 +3385,21 @@ class Editor(QsciScintillaCompat):
             self.setSearchIndicator(tgtPos, tgtLen)
             ok = self.findNextTarget()
         self.__markedText = word
+        self.__markerMap.update()
+    
+    def getSearchIndicatorLines(self):
+        """
+        Public method to get the lines containing a search indicator.
+        
+        @return list of lines containing a search indicator (list of integer)
+        """
+        return self.__searchIndicatorLines[:]
+    
+    def updateMarkerMap(self):
+        """
+        Public method to initiate an update of the marker map.
+        """
+        self.__markerMap.update()
     
     ###########################################################################
     ## Comment handling methods below

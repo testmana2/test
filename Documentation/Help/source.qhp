@@ -4409,6 +4409,7 @@
       <keyword name="Editor.getMouseClickHandler" id="Editor.getMouseClickHandler" ref="eric6.QScintilla.Editor.html#Editor.getMouseClickHandler" />
       <keyword name="Editor.getMouseClickHandlers" id="Editor.getMouseClickHandlers" ref="eric6.QScintilla.Editor.html#Editor.getMouseClickHandlers" />
       <keyword name="Editor.getNoName" id="Editor.getNoName" ref="eric6.QScintilla.Editor.html#Editor.getNoName" />
+      <keyword name="Editor.getSearchIndicatorLines" id="Editor.getSearchIndicatorLines" ref="eric6.QScintilla.Editor.html#Editor.getSearchIndicatorLines" />
       <keyword name="Editor.getSearchText" id="Editor.getSearchText" ref="eric6.QScintilla.Editor.html#Editor.getSearchText" />
       <keyword name="Editor.getSharingStatus" id="Editor.getSharingStatus" ref="eric6.QScintilla.Editor.html#Editor.getSharingStatus" />
       <keyword name="Editor.getSyntaxErrorLines" id="Editor.getSyntaxErrorLines" ref="eric6.QScintilla.Editor.html#Editor.getSyntaxErrorLines" />
@@ -4526,6 +4527,7 @@
       <keyword name="Editor.unindentLineOrSelection" id="Editor.unindentLineOrSelection" ref="eric6.QScintilla.Editor.html#Editor.unindentLineOrSelection" />
       <keyword name="Editor.unsetAutoCompletionHook" id="Editor.unsetAutoCompletionHook" ref="eric6.QScintilla.Editor.html#Editor.unsetAutoCompletionHook" />
       <keyword name="Editor.unsetCallTipHook" id="Editor.unsetCallTipHook" ref="eric6.QScintilla.Editor.html#Editor.unsetCallTipHook" />
+      <keyword name="Editor.updateMarkerMap" id="Editor.updateMarkerMap" ref="eric6.QScintilla.Editor.html#Editor.updateMarkerMap" />
       <keyword name="Editor.viewportEvent" id="Editor.viewportEvent" ref="eric6.QScintilla.Editor.html#Editor.viewportEvent" />
       <keyword name="Editor.wheelEvent" id="Editor.wheelEvent" ref="eric6.QScintilla.Editor.html#Editor.wheelEvent" />
       <keyword name="Editor.writeFile" id="Editor.writeFile" ref="eric6.QScintilla.Editor.html#Editor.writeFile" />

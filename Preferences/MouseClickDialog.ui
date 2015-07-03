@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>111</height>
+    <height>137</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -43,7 +43,7 @@
       <item row="0" column="0" colspan="2">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Press the desired modifier keys and the click the desired mouse button.</string>
+         <string>Press the desired modifier keys and then click the desired mouse button.</string>
         </property>
         <property name="wordWrap">
          <bool>false</bool>
