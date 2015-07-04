@@ -1323,7 +1323,10 @@ def prepareInfoFile(fileName):
     if not fileName:
         return
     
-    os.rename(fileName, fileName + ".orig")
+    try:
+        os.rename(fileName, fileName + ".orig")
+    except EnvironmentError:
+        pass
     try:
         hgOut = subprocess.check_output(["hg", "identify", "-i"])
         if sys.version_info[0] == 3:
@@ -1340,7 +1343,8 @@ def prepareInfoFile(fileName):
             f = open(fileName + ".orig", "r", encoding="utf-8")
         text = f.read()
         f.close()
-        text = text.replace("@@REVISION@@", hgOut)
+        text = text.replace("@@REVISION@@", hgOut)\
+            .replace("@@VERSION@@", "rev_" + hgOut)
         copyToFile(fileName, text)
     else:
         shutil.copy(fileName + ".orig", fileName)
