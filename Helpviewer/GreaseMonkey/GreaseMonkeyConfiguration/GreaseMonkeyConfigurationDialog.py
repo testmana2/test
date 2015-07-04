@@ -62,13 +62,16 @@ class GreaseMonkeyConfigurationDialog(
     @pyqtSlot(str)
     def on_downloadLabel_linkActivated(self, link):
         """
-        Private slot to open the userscript.org web site.
+        Private slot to open the greasyfork.org web site.
         
         @param link URL (string)
         """
         import Helpviewer.HelpWindow
+        if not link or "userscript.org" in link:
+            # userscript.org is down, default to Greasy Fork.
+            link = "https://greasyfork.org/"
         Helpviewer.HelpWindow.HelpWindow.mainWindow().newTab(
-            QUrl("http://www.userscript.org"))
+            QUrl(link))
         self.close()
     
     @pyqtSlot(QListWidgetItem)

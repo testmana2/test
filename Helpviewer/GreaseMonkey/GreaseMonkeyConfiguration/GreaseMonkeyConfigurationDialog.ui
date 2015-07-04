@@ -96,7 +96,7 @@
    <item>
     <widget class="QLabel" name="downloadLabel">
      <property name="text">
-      <string>&lt;p&gt;Get more scripts from &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</string>
+      <string>&lt;p&gt;Get more scripts from &lt;a href=&quot;https://greasyfork.org/&quot;&gt;greasyfork.org&lt;/a&gt; or via &lt;a href=&quot;http://wiki.greasespot.net/User_Script_Hosting&quot;&gt;Greasespot Wiki.&lt;/a&gt;&lt;/p&gt;</string>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
