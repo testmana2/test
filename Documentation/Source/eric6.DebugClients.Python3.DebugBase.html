@@ -114,11 +114,11 @@ bdb.Bdb
 <td><a href="#DebugBase.getCurrentFrame">getCurrentFrame</a></td>
 <td>Public method to return the current frame.</td>
 </tr><tr>
-<td><a href="#DebugBase.getCurrentFrameLocals">getCurrentFrameLocals</a></td>
-<td>Public method to return the locals dictionary of the current frame.</td>
-</tr><tr>
 <td><a href="#DebugBase.getEvent">getEvent</a></td>
 <td>Protected method to return the last debugger event.</td>
+</tr><tr>
+<td><a href="#DebugBase.getFrameLocals">getFrameLocals</a></td>
+<td>Public method to return the locals dictionary of the current frame or a frame below.</td>
 </tr><tr>
 <td><a href="#DebugBase.getStack">getStack</a></td>
 <td>Public method to get the stack.</td>
@@ -445,16 +445,6 @@ fixed up file name (string)
 <dd>
 the current frame
 </dd>
-</dl><a NAME="DebugBase.getCurrentFrameLocals" ID="DebugBase.getCurrentFrameLocals"></a>
-<h4>DebugBase.getCurrentFrameLocals</h4>
-<b>getCurrentFrameLocals</b>(<i></i>)
-<p>
-        Public method to return the locals dictionary of the current frame.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-locals dictionary of the current frame
-</dd>
 </dl><a NAME="DebugBase.getEvent" ID="DebugBase.getEvent"></a>
 <h4>DebugBase.getEvent</h4>
 <b>getEvent</b>(<i></i>)
@@ -464,6 +454,23 @@ locals dictionary of the current frame
 <dt>Returns:</dt>
 <dd>
 last debugger event (string)
+</dd>
+</dl><a NAME="DebugBase.getFrameLocals" ID="DebugBase.getFrameLocals"></a>
+<h4>DebugBase.getFrameLocals</h4>
+<b>getFrameLocals</b>(<i>frmnr=0</i>)
+<p>
+        Public method to return the locals dictionary of the current frame
+        or a frame below.
+</p><dl>
+<dt><i>frmnr=</i></dt>
+<dd>
+distance of frame to get locals dictionary of. 0 is
+            the current frame (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+locals dictionary of the frame
 </dd>
 </dl><a NAME="DebugBase.getStack" ID="DebugBase.getStack"></a>
 <h4>DebugBase.getStack</h4>

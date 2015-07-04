@@ -770,7 +770,7 @@ class DebugClientBase(object):
                     value = eval(
                         arg,
                         self.currentThread.getCurrentFrame().f_globals,
-                        self.currentThread.getCurrentFrameLocals())
+                        self.currentThread.getFrameLocals(0))
                 except:
                     # Report the exception and the traceback
                     try:
@@ -801,7 +801,7 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestExec:
                 _globals = self.currentThread.getCurrentFrame().f_globals
-                _locals = self.currentThread.getCurrentFrameLocals()
+                _locals = self.currentThread.getFrameLocals(0)
                 try:
                     code = compile(arg + '\n', '<stdin>', 'single')
                     exec(code, _globals, _locals)
@@ -976,7 +976,8 @@ class DebugClientBase(object):
                                     frmnr -= 1
                                 _globals = cf.f_globals
                                 _locals = \
-                                    self.currentThread.getCurrentFrameLocals()
+                                    self.currentThread.getFrameLocals(
+                                        self.framenr)
                         # reset sys.stdout to our redirector (unconditionally)
                         if "sys" in _globals:
                             __stdout = _globals["sys"].stdout

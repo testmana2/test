@@ -2690,10 +2690,10 @@
       <keyword name="DebugBase.fix_frame_filename" id="DebugBase.fix_frame_filename" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.fix_frame_filename" />
       <keyword name="DebugBase.getCurrentFrame" id="DebugBase.getCurrentFrame" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase.getCurrentFrame" />
       <keyword name="DebugBase.getCurrentFrame" id="DebugBase.getCurrentFrame" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.getCurrentFrame" />
-      <keyword name="DebugBase.getCurrentFrameLocals" id="DebugBase.getCurrentFrameLocals" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase.getCurrentFrameLocals" />
-      <keyword name="DebugBase.getCurrentFrameLocals" id="DebugBase.getCurrentFrameLocals" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.getCurrentFrameLocals" />
       <keyword name="DebugBase.getEvent" id="DebugBase.getEvent" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase.getEvent" />
       <keyword name="DebugBase.getEvent" id="DebugBase.getEvent" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.getEvent" />
+      <keyword name="DebugBase.getFrameLocals" id="DebugBase.getFrameLocals" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase.getFrameLocals" />
+      <keyword name="DebugBase.getFrameLocals" id="DebugBase.getFrameLocals" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.getFrameLocals" />
       <keyword name="DebugBase.getStack" id="DebugBase.getStack" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase.getStack" />
       <keyword name="DebugBase.getStack" id="DebugBase.getStack" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.getStack" />
       <keyword name="DebugBase.get_break" id="DebugBase.get_break" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase.get_break" />

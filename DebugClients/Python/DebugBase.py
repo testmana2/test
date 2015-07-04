@@ -90,13 +90,23 @@ class DebugBase(bdb.Bdb):
         """
         return self.currentFrame
     
-    def getCurrentFrameLocals(self):
+    def getFrameLocals(self, frmnr=0):
         """
-        Public method to return the locals dictionary of the current frame.
+        Public method to return the locals dictionary of the current frame
+        or a frame below.
         
-        @return locals dictionary of the current frame
+        @keyparam frmnr distance of frame to get locals dictionary of. 0 is
+            the current frame (int)
+        @return locals dictionary of the frame
         """
-        return self.currentFrameLocals
+        if frmnr:
+            f = self.currentFrame
+            while f is not None and frmnr > 0:
+                f = f.f_back
+                frmnr -= 1
+            return f.f_locals
+        else:
+            return self.currentFrameLocals
     
     def step(self, traceMode):
         """
@@ -797,7 +807,7 @@ class DebugBase(bdb.Bdb):
         if fn[0] == '<':
             return 1
 
-        #XXX - think of a better way to do this.  It's only a convience for
+        #XXX - think of a better way to do this.  It's only a convenience for
         #debugging the debugger - when the debugger code is in the current
         #directory.
         if os.path.basename(fn) in [

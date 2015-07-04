@@ -37,7 +37,7 @@ from E5Gui.E5TabWidget import E5TabWidget
 
 class DebugViewer(QWidget):
     """
-    Class implementing a widget conatining various debug related views.
+    Class implementing a widget containing various debug related views.
     
     The individual tabs contain the interpreter shell (optional),
     the filesystem browser (optional), the two variables viewers
