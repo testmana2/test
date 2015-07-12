@@ -38,6 +38,13 @@ README for the eric6 IDE
         if the PyQt5 package gets updated. If this step is omitted, a bunch of
         strange errors will occur.
     
+    Installation on Windows®
+    
+        Installing eric6 on Windows® is even easier. Just download the PyQt5
+        installer from Riverbank Computing and use it to install PyQt5. This
+        includes all the required Qt5 libraries and tools as well as
+        QScintilla. Once this installation is completed install eric6.
+
     Installation of translations
     
         Translations of the eric6 IDE are available as separate downloads.
@@ -58,10 +65,10 @@ README for the eric6 IDE
         Just call up eric6, which will start the IDE. Use the "what is"-help
         (arrow with ?) to get some help. The eric web site provides some
         documents describing certain aspects of eric. To start the unit test
-        module in a standalone variant simply call up eric6-unittest. This
+        module in a standalone variant simply call up eric6_unittest. This
         will show the same dialog (though with a little bit less functionality)
         as if started from within eric6. The web browser can be started as a
-        standalone program by executing the eric6-webbrowser script.
+        standalone program by executing the eric6_webbrowser script.
         
         Please note, the first time you start eric6 it will recognize, that it
         hasn't been configured yet and will show the configuration dialog.
@@ -77,7 +84,7 @@ README for the eric6 IDE
     
     Tray starter
     
-        eric6 comes with a little utility called "eric6-tray". This embeds an
+        eric6 comes with a little utility called "eric6_tray". This embeds an
         icon in the system tray, which contains a context menu to start eric6
         and all it's utilities. Double clicking this icon starts the eric6 IDE.
     
