@@ -15615,12 +15615,12 @@ Razão: {0}</translation>
         <translation>Abrir Diretorio de Scripts</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="150"/>
+        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="153"/>
         <source>Remove Script</source>
         <translation>Retirar script</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="150"/>
+        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="153"/>
         <source>&lt;p&gt;Are you sure you want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tem a certeza de que quer apagar &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
@@ -15631,8 +15631,8 @@ Razão: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="99"/>
-        <source>&lt;p&gt;Get more scripts from &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Obtenha mais scripts em &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;Get more scripts from &lt;a href=&quot;https://greasyfork.org/&quot;&gt;greasyfork.org&lt;/a&gt; or via &lt;a href=&quot;http://wiki.greasespot.net/User_Script_Hosting&quot;&gt;Greasespot Wiki.&lt;/a&gt;&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Obtenha mais scripts em &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16681,27 +16681,27 @@ Razão: {0}</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="746"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="758"/>
         <source>Loading...</source>
         <translation>Carregando...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="767"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="779"/>
         <source>Finished loading</source>
         <translation>Acabou de carregar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="769"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="781"/>
         <source>Failed to load</source>
         <translation>Falhou ao carregar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="809"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="821"/>
         <source>Are you sure you want to close the window?</source>
         <translation>Tem a certeza de que quer fechar a janela?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Helpviewer/HelpTabWidget.py" line="809"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="821"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation>
@@ -16712,17 +16712,17 @@ Tem %n separadores abertos.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="817"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="829"/>
         <source>&amp;Close</source>
         <translation>Fe&amp;char</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="821"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="833"/>
         <source>&amp;Quit</source>
         <translation>Sai&amp;r</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="824"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="836"/>
         <source>C&amp;lose Current Tab</source>
         <translation>F&amp;echar o Separador Atual</translation>
     </message>
@@ -16742,29 +16742,40 @@ Tem %n separadores abertos.</numerusform>
         <translation>Restaurar o Separador Fechado</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="981"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="993"/>
         <source>Restore All Closed Tabs</source>
         <translation>Restaurar Todos os Separadores Fechados</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="983"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="995"/>
         <source>Clear List</source>
         <translation>Limpar Lista</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="657"/>
         <source>eric6 Web Browser</source>
         <translation>Navegador Web de eric6</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="591"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="603"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt5. Por favor atualize.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="657"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Imprimir não está disponível devido a um falho em PyQt5.Por favor atualize.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="459"/>
+        <source>Do you really want to close this page?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="459"/>
+        <source>You have modified this page and when closing it you would lose the modification.
+Do you really want to close this page?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -450,19 +450,31 @@ class HelpTabWidget(E5TabWidget):
         
         @param index index of browser to close (integer)
         """
-        urlbar = self.__stackedUrlBar.widget(index)
-        self.__stackedUrlBar.removeWidget(urlbar)
-        del urlbar
-        
         browser = self.widget(index)
         if browser is None:
             return
+        
+        if browser.isModified():
+            ok = E5MessageBox.yesNo(
+                self,
+                self.tr("Do you really want to close this page?"),
+                self.tr("""You have modified this page and when closing it"""
+                        """ you would lose the modification.\nDo you really"""
+                        """ want to close this page?"""))
+            if not ok:
+                return
+        
+        urlbar = self.__stackedUrlBar.widget(index)
+        self.__stackedUrlBar.removeWidget(urlbar)
+        urlbar.deleteLater()
+        del urlbar
         
         self.__closedTabsManager.recordBrowser(browser, index)
         
         browser.home()
         self.removeTab(index)
         self.browserClosed.emit(browser)
+        browser.deleteLater()
         del browser
         
         if self.count() == 0:

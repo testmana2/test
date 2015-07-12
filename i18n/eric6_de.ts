@@ -15592,12 +15592,12 @@ Ursache: {0}</translation>
         <translation>Skripteverzeichnis öffnen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="150"/>
+        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="153"/>
         <source>Remove Script</source>
         <translation>Skript entfernen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="150"/>
+        <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py" line="153"/>
         <source>&lt;p&gt;Are you sure you want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sind Sie sicher, dass das Skript &lt;b&gt;{0}&lt;/b&gt; entfernt werden soll?&lt;/p&gt;</translation>
     </message>
@@ -15608,8 +15608,8 @@ Ursache: {0}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui" line="99"/>
-        <source>&lt;p&gt;Get more scripts from &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Weitere Skripte von &lt;a href=&quot;www.userscript.org&quot;&gt;userscript.org&lt;/a&gt; herunterladen.&lt;/p&gt;</translation>
+        <source>&lt;p&gt;Get more scripts from &lt;a href=&quot;https://greasyfork.org/&quot;&gt;greasyfork.org&lt;/a&gt; or via &lt;a href=&quot;http://wiki.greasespot.net/User_Script_Hosting&quot;&gt;Greasespot Wiki.&lt;/a&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;Weitere Skripte von &lt;a href=&quot;https://greasyfork.org/&quot;&gt;greasyfork.org&lt;/a&gt; oder über &lt;a href=&quot;http://wiki.greasespot.net/User_Script_Hosting&quot;&gt;Greasespot Wiki.&lt;/a&gt; herunterladen.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -16658,27 +16658,27 @@ Ursache: {0}</translation>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="746"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="758"/>
         <source>Loading...</source>
         <translation>Lade...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="767"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="779"/>
         <source>Finished loading</source>
         <translation>Seite geladen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="769"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="781"/>
         <source>Failed to load</source>
         <translation>Fehler beim Laden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="809"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="821"/>
         <source>Are you sure you want to close the window?</source>
         <translation>Möchten Sie das Fenster wirklich schließen?</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Helpviewer/HelpTabWidget.py" line="809"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="821"/>
         <source>Are you sure you want to close the window?
 You have %n tab(s) open.</source>
         <translation>
@@ -16689,17 +16689,17 @@ Es sind %n Unterfenster offen.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="817"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="829"/>
         <source>&amp;Close</source>
         <translation>Schl&amp;ießen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="821"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="833"/>
         <source>&amp;Quit</source>
         <translation>B&amp;eenden</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="824"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="836"/>
         <source>C&amp;lose Current Tab</source>
         <translation>A&amp;ktuelles Unterfenster schließen</translation>
     </message>
@@ -16719,29 +16719,41 @@ Es sind %n Unterfenster offen.</numerusform>
         <translation>Geschlossenen Tabs wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="981"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="993"/>
         <source>Restore All Closed Tabs</source>
         <translation>Alle geschlossenen Tabs wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="983"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="995"/>
         <source>Clear List</source>
         <translation>Liste löschen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="657"/>
         <source>eric6 Web Browser</source>
         <translation>eric6-Webbrowser</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="591"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="603"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Drucken ist wegen eine Fehlers in PyQt5 nicht verfügbar. Bitte aktualisieren.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpTabWidget.py" line="645"/>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="657"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Drucken ist wegen eine Fehlers in PyQt5 nicht verfügbar. Bitte aktualisieren.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="459"/>
+        <source>Do you really want to close this page?</source>
+        <translation>Soll diese Seite wirklich geschlossen werden?</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/HelpTabWidget.py" line="459"/>
+        <source>You have modified this page and when closing it you would lose the modification.
+Do you really want to close this page?</source>
+        <translation>Diese Seite wurde geändert und beim Schließen würde diese Änderung verloren gehen.
+Soll diese Seite wirklich geschlossen werden?</translation>
     </message>
 </context>
 <context>
