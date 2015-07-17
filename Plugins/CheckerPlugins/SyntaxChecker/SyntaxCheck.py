@@ -16,7 +16,7 @@ try:
     from pyflakes.checker import Checker
     from pyflakes.messages import ImportStarUsed
 except ImportError:
-    pass
+    Checker = None
 
 VcsConflictMarkerRe = re.compile(
     r"""^<<<<<<< .*?=======.*?>>>>>>> .*?$""",
@@ -173,7 +173,7 @@ def syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
             pass
     
     # pyflakes
-    if not checkFlakes:
+    if not checkFlakes or Checker is None:
         return [{}]
     
     results = []
