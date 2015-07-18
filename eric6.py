@@ -294,6 +294,10 @@ def main():
     # Load translation files and install them
     loc = Startup.loadTranslators(qt4TransDir, app, ("qscintilla",))
     
+    # Initialize SSL stuff
+    from E5Network.E5SslUtilities import initSSL
+    initSSL()
+    
     splash.showMessage(QCoreApplication.translate("eric6", "Starting..."))
     # We can only import these after creating the E5Application because they
     # make Qt calls that need the E5Application to exist.

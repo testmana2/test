@@ -200,6 +200,7 @@
     <Source>E5Network/E5SslCertificatesInfoWidget.py</Source>
     <Source>E5Network/E5SslErrorHandler.py</Source>
     <Source>E5Network/E5SslInfoWidget.py</Source>
+    <Source>E5Network/E5SslUtilities.py</Source>
     <Source>E5Network/E5UrlInfo.py</Source>
     <Source>E5Network/E5XmlRpcClient.py</Source>
     <Source>E5Network/__init__.py</Source>

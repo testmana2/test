@@ -185,6 +185,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         # Do Not Track feature
         if self.__doNotTrack:
             req.setRawHeader("DNT", "1")
+            req.setRawHeader("X-Do-Not-Track", "1")
         
         # Send referer header?
         if not self.__sendReferer and \

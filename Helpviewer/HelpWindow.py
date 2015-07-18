@@ -135,6 +135,10 @@ class HelpWindow(E5MainWindow):
             if not self.fromEric:
                 self.setStyle(Preferences.getUI("Style"),
                               Preferences.getUI("StyleSheet"))
+                
+                # initialize some SSL stuff
+                from E5Network.E5SslUtilities import initSSL
+                initSSL()
             
             if self.useQtHelp:
                 self.__helpEngine = \

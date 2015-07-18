@@ -1696,6 +1696,7 @@ eric6.E5Network.E5SslErrorHandler.E5SslErrorHandler?1(parent=None)
 eric6.E5Network.E5SslInfoWidget.E5SslInfoWidget.accept?4()
 eric6.E5Network.E5SslInfoWidget.E5SslInfoWidget.showAt?4(pos)
 eric6.E5Network.E5SslInfoWidget.E5SslInfoWidget?1(url, configuration, parent=None)
+eric6.E5Network.E5SslUtilities.initSSL?4()
 eric6.E5Network.E5UrlInfo.E5UrlInfo.ExeGroup?7
 eric6.E5Network.E5UrlInfo.E5UrlInfo.ExeOther?7
 eric6.E5Network.E5UrlInfo.E5UrlInfo.ExeOwner?7
