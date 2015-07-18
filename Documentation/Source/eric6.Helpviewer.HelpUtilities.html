@@ -42,6 +42,9 @@ Module implementing some global helper functions.
 </tr><tr>
 <td><a href="#getFileNameFromUrl">getFileNameFromUrl</a></td>
 <td>Module function to generate a file name based on the given URL.</td>
+</tr><tr>
+<td><a href="#parseContentDisposition">parseContentDisposition</a></td>
+<td>Function to parse a content disposition header.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -99,6 +102,19 @@ URL (QUrl)
 <dt>Returns:</dt>
 <dd>
 file name (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="parseContentDisposition" ID="parseContentDisposition"></a>
+<h2>parseContentDisposition</h2>
+<b>parseContentDisposition</b>(<i>reply</i>)
+<p>
+    Function to parse a content disposition header.
+</p><dl>
+<dt><i>reply</i> (QNetworkReply)</dt>
+<dd>
+network reply to be parsed
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

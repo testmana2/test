@@ -156,6 +156,7 @@
             <section title="eric6.E5Network.E5NetworkHeaderDetailsDialog" ref="eric6.E5Network.E5NetworkHeaderDetailsDialog.html" />
             <section title="eric6.E5Network.E5NetworkMonitor" ref="eric6.E5Network.E5NetworkMonitor.html" />
             <section title="eric6.E5Network.E5NetworkProxyFactory" ref="eric6.E5Network.E5NetworkProxyFactory.html" />
+            <section title="eric6.E5Network.E5RFC6266" ref="eric6.E5Network.E5RFC6266.html" />
             <section title="eric6.E5Network.E5SslCertificatesDialog" ref="eric6.E5Network.E5SslCertificatesDialog.html" />
             <section title="eric6.E5Network.E5SslCertificatesInfoDialog" ref="eric6.E5Network.E5SslCertificatesInfoDialog.html" />
             <section title="eric6.E5Network.E5SslCertificatesInfoWidget" ref="eric6.E5Network.E5SslCertificatesInfoWidget.html" />
@@ -1955,6 +1956,7 @@
       <keyword name="ChangeBookmarkCommand (Constructor)" id="ChangeBookmarkCommand (Constructor)" ref="eric6.Helpviewer.Bookmarks.BookmarksManager.html#ChangeBookmarkCommand.__init__" />
       <keyword name="ChangeBookmarkCommand.redo" id="ChangeBookmarkCommand.redo" ref="eric6.Helpviewer.Bookmarks.BookmarksManager.html#ChangeBookmarkCommand.redo" />
       <keyword name="ChangeBookmarkCommand.undo" id="ChangeBookmarkCommand.undo" ref="eric6.Helpviewer.Bookmarks.BookmarksManager.html#ChangeBookmarkCommand.undo" />
+      <keyword name="Charset" id="Charset" ref="eric6.E5Network.E5RFC6266.html#Charset" />
       <keyword name="ChatWidget" id="ChatWidget" ref="eric6.Cooperation.ChatWidget.html#ChatWidget" />
       <keyword name="ChatWidget (Constructor)" id="ChatWidget (Constructor)" ref="eric6.Cooperation.ChatWidget.html#ChatWidget.__init__" />
       <keyword name="ChatWidget (Module)" id="ChatWidget (Module)" ref="eric6.Cooperation.ChatWidget.html" />
@@ -2449,6 +2451,14 @@
       <keyword name="Connection.setClient" id="Connection.setClient" ref="eric6.Cooperation.Connection.html#Connection.setClient" />
       <keyword name="Connection.setGreetingMessage" id="Connection.setGreetingMessage" ref="eric6.Cooperation.Connection.html#Connection.setGreetingMessage" />
       <keyword name="Connection.timerEvent" id="Connection.timerEvent" ref="eric6.Cooperation.Connection.html#Connection.timerEvent" />
+      <keyword name="ContentDisposition" id="ContentDisposition" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition" />
+      <keyword name="ContentDisposition (Constructor)" id="ContentDisposition (Constructor)" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition.__init__" />
+      <keyword name="ContentDisposition.filename" id="ContentDisposition.filename" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition.filename" />
+      <keyword name="ContentDisposition.is_inline" id="ContentDisposition.is_inline" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition.is_inline" />
+      <keyword name="ContentDispositionValue" id="ContentDispositionValue" ref="eric6.E5Network.E5RFC6266.html#ContentDispositionValue" />
+      <keyword name="ContentDisposition_1" id="ContentDisposition_1" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition_1" />
+      <keyword name="ContentDisposition_1 (Constructor)" id="ContentDisposition_1 (Constructor)" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition_1.__init__" />
+      <keyword name="ContentDisposition_1.filename" id="ContentDisposition_1.filename" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition_1.filename" />
       <keyword name="Context" id="Context" ref="eric6.DebugClients.Ruby.Debuggee.html#Context" />
       <keyword name="Context.clear_suspend" id="Context.clear_suspend" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.clear_suspend" />
       <keyword name="Context.current_binding" id="Context.current_binding" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.current_binding" />
@@ -3373,6 +3383,9 @@
       <keyword name="DirectorySyncHandler.syncPasswords" id="DirectorySyncHandler.syncPasswords" ref="eric6.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncPasswords" />
       <keyword name="DirectorySyncHandler.syncSpeedDial" id="DirectorySyncHandler.syncSpeedDial" ref="eric6.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncSpeedDial" />
       <keyword name="DirectorySyncHandler.syncUserAgents" id="DirectorySyncHandler.syncUserAgents" ref="eric6.Helpviewer.Sync.DirectorySyncHandler.html#DirectorySyncHandler.syncUserAgents" />
+      <keyword name="DispositionParm" id="DispositionParm" ref="eric6.E5Network.E5RFC6266.html#DispositionParm" />
+      <keyword name="DispositionParmList" id="DispositionParmList" ref="eric6.E5Network.E5RFC6266.html#DispositionParmList" />
+      <keyword name="DispositionType" id="DispositionType" ref="eric6.E5Network.E5RFC6266.html#DispositionType" />
       <keyword name="DocStyleChecker" id="DocStyleChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker" />
       <keyword name="DocStyleChecker (Constructor)" id="DocStyleChecker (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html#DocStyleChecker.__init__" />
       <keyword name="DocStyleChecker (Module)" id="DocStyleChecker (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html" />
@@ -3514,6 +3527,7 @@
       <keyword name="DownloadModel.removeRows" id="DownloadModel.removeRows" ref="eric6.Helpviewer.Download.DownloadModel.html#DownloadModel.removeRows" />
       <keyword name="DownloadModel.rowCount" id="DownloadModel.rowCount" ref="eric6.Helpviewer.Download.DownloadModel.html#DownloadModel.rowCount" />
       <keyword name="DownloadUtilities (Module)" id="DownloadUtilities (Module)" ref="eric6.Helpviewer.Download.DownloadUtilities.html" />
+      <keyword name="DuplicateParamError" id="DuplicateParamError" ref="eric6.E5Network.E5RFC6266.html#DuplicateParamError" />
       <keyword name="E5Action" id="E5Action" ref="eric6.E5Gui.E5Action.html#E5Action" />
       <keyword name="E5Action (Constructor)" id="E5Action (Constructor)" ref="eric6.E5Gui.E5Action.html#E5Action.__init__" />
       <keyword name="E5Action (Module)" id="E5Action (Module)" ref="eric6.E5Gui.E5Action.html" />
@@ -3835,6 +3849,7 @@
       <keyword name="E5ProgressDialog (Module)" id="E5ProgressDialog (Module)" ref="eric6.E5Gui.E5ProgressDialog.html" />
       <keyword name="E5ProgressDialog.format" id="E5ProgressDialog.format" ref="eric6.E5Gui.E5ProgressDialog.html#E5ProgressDialog.format" />
       <keyword name="E5ProgressDialog.setFormat" id="E5ProgressDialog.setFormat" ref="eric6.E5Gui.E5ProgressDialog.html#E5ProgressDialog.setFormat" />
+      <keyword name="E5RFC6266 (Module)" id="E5RFC6266 (Module)" ref="eric6.E5Network.E5RFC6266.html" />
       <keyword name="E5RequestModel" id="E5RequestModel" ref="eric6.E5Network.E5NetworkMonitor.html#E5RequestModel" />
       <keyword name="E5RequestModel (Constructor)" id="E5RequestModel (Constructor)" ref="eric6.E5Network.E5NetworkMonitor.html#E5RequestModel.__init__" />
       <keyword name="E5RequestModel.__addReply" id="E5RequestModel.__addReply" ref="eric6.E5Network.E5NetworkMonitor.html#E5RequestModel.__addReply" />
@@ -4854,6 +4869,11 @@
       <keyword name="ExporterTEX.__texStyle" id="ExporterTEX.__texStyle" ref="eric6.QScintilla.Exporters.ExporterTEX.html#ExporterTEX.__texStyle" />
       <keyword name="ExporterTEX.exportSource" id="ExporterTEX.exportSource" ref="eric6.QScintilla.Exporters.ExporterTEX.html#ExporterTEX.exportSource" />
       <keyword name="Exporters (Package)" id="Exporters (Package)" ref="index-eric6.QScintilla.Exporters.html" />
+      <keyword name="ExtDispositionParm" id="ExtDispositionParm" ref="eric6.E5Network.E5RFC6266.html#ExtDispositionParm" />
+      <keyword name="ExtDispositionParm (Constructor)" id="ExtDispositionParm (Constructor)" ref="eric6.E5Network.E5RFC6266.html#ExtDispositionParm.__init__" />
+      <keyword name="ExtToken" id="ExtToken" ref="eric6.E5Network.E5RFC6266.html#ExtToken" />
+      <keyword name="ExtToken.__str__" id="ExtToken.__str__" ref="eric6.E5Network.E5RFC6266.html#ExtToken.__str__" />
+      <keyword name="ExtValue" id="ExtValue" ref="eric6.E5Network.E5RFC6266.html#ExtValue" />
       <keyword name="FavIconLabel" id="FavIconLabel" ref="eric6.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel" />
       <keyword name="FavIconLabel (Constructor)" id="FavIconLabel (Constructor)" ref="eric6.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.__init__" />
       <keyword name="FavIconLabel (Module)" id="FavIconLabel (Module)" ref="eric6.Helpviewer.UrlBar.FavIconLabel.html" />
@@ -7046,6 +7066,7 @@
       <keyword name="InterfacePage.on_resetLayoutButton_clicked" id="InterfacePage.on_resetLayoutButton_clicked" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_resetLayoutButton_clicked" />
       <keyword name="InterfacePage.on_styleSheetButton_clicked" id="InterfacePage.on_styleSheetButton_clicked" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_styleSheetButton_clicked" />
       <keyword name="InterfacePage.save" id="InterfacePage.save" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.save" />
+      <keyword name="InvalidISO8859Error" id="InvalidISO8859Error" ref="eric6.E5Network.E5RFC6266.html#InvalidISO8859Error" />
       <keyword name="InvalidPlistException" id="InvalidPlistException" ref="eric6.Utilities.binplistlib.html#InvalidPlistException" />
       <keyword name="IrcChannel" id="IrcChannel" ref="eric6.Network.IRC.IrcNetworkManager.html#IrcChannel" />
       <keyword name="IrcChannel (Constructor)" id="IrcChannel (Constructor)" ref="eric6.Network.IRC.IrcNetworkManager.html#IrcChannel.__init__" />
@@ -7377,6 +7398,7 @@
       <keyword name="JavaScriptExternalObject (Constructor)" id="JavaScriptExternalObject (Constructor)" ref="eric6.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.__init__" />
       <keyword name="JavaScriptExternalObject.AddSearchProvider" id="JavaScriptExternalObject.AddSearchProvider" ref="eric6.Helpviewer.HelpBrowserWV.html#JavaScriptExternalObject.AddSearchProvider" />
       <keyword name="JavaScriptResources (Module)" id="JavaScriptResources (Module)" ref="eric6.Helpviewer.JavaScriptResources.html" />
+      <keyword name="Language" id="Language" ref="eric6.E5Network.E5RFC6266.html#Language" />
       <keyword name="Largefiles" id="Largefiles" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles" />
       <keyword name="Largefiles (Constructor)" id="Largefiles (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.__init__" />
       <keyword name="Largefiles.hgAdd" id="Largefiles.hgAdd" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.largefiles.html#Largefiles.hgAdd" />
@@ -8167,6 +8189,8 @@
       <keyword name="NoCacheHostsDialog (Module)" id="NoCacheHostsDialog (Module)" ref="eric6.Helpviewer.Network.NoCacheHostsDialog.html" />
       <keyword name="NoCacheHostsDialog.accept" id="NoCacheHostsDialog.accept" ref="eric6.Helpviewer.Network.NoCacheHostsDialog.html#NoCacheHostsDialog.accept" />
       <keyword name="NoCacheHostsDialog.on_addButton_clicked" id="NoCacheHostsDialog.on_addButton_clicked" ref="eric6.Helpviewer.Network.NoCacheHostsDialog.html#NoCacheHostsDialog.on_addButton_clicked" />
+      <keyword name="NoExtToken" id="NoExtToken" ref="eric6.E5Network.E5RFC6266.html#NoExtToken" />
+      <keyword name="NoExtToken.__str__" id="NoExtToken.__str__" ref="eric6.E5Network.E5RFC6266.html#NoExtToken.__str__" />
       <keyword name="NoneSplashScreen" id="NoneSplashScreen" ref="eric6.UI.SplashScreen.html#NoneSplashScreen" />
       <keyword name="NoneSplashScreen (Constructor)" id="NoneSplashScreen (Constructor)" ref="eric6.UI.SplashScreen.html#NoneSplashScreen.__init__" />
       <keyword name="NoneSplashScreen.clearMessage" id="NoneSplashScreen.clearMessage" ref="eric6.UI.SplashScreen.html#NoneSplashScreen.clearMessage" />
@@ -9881,6 +9905,8 @@
       <keyword name="QuickSearchLineEdit.editorCommand" id="QuickSearchLineEdit.editorCommand" ref="eric6.ViewManager.ViewManager.html#QuickSearchLineEdit.editorCommand" />
       <keyword name="QuickSearchLineEdit.focusInEvent" id="QuickSearchLineEdit.focusInEvent" ref="eric6.ViewManager.ViewManager.html#QuickSearchLineEdit.focusInEvent" />
       <keyword name="QuickSearchLineEdit.keyPressEvent" id="QuickSearchLineEdit.keyPressEvent" ref="eric6.ViewManager.ViewManager.html#QuickSearchLineEdit.keyPressEvent" />
+      <keyword name="QuotedString" id="QuotedString" ref="eric6.E5Network.E5RFC6266.html#QuotedString" />
+      <keyword name="QuotedString.__str__" id="QuotedString.__str__" ref="eric6.E5Network.E5RFC6266.html#QuotedString.__str__" />
       <keyword name="RbModule" id="RbModule" ref="eric6.Utilities.ModuleParser.html#RbModule" />
       <keyword name="RbModule (Constructor)" id="RbModule (Constructor)" ref="eric6.Utilities.ModuleParser.html#RbModule.__init__" />
       <keyword name="RbModule.addClass" id="RbModule.addClass" ref="eric6.Utilities.ModuleParser.html#RbModule.addClass" />
@@ -11842,6 +11868,7 @@
       <keyword name="TemplatesWriter (Module)" id="TemplatesWriter (Module)" ref="eric6.E5XML.TemplatesWriter.html" />
       <keyword name="TemplatesWriter.writeXML" id="TemplatesWriter.writeXML" ref="eric6.E5XML.TemplatesWriter.html#TemplatesWriter.writeXML" />
       <keyword name="Token" id="Token" ref="eric6.DataViews.CodeMetrics.html#Token" />
+      <keyword name="Token" id="Token" ref="eric6.E5Network.E5RFC6266.html#Token" />
       <keyword name="Token (Constructor)" id="Token (Constructor)" ref="eric6.DataViews.CodeMetrics.html#Token.__init__" />
       <keyword name="ToolConfigurationDialog" id="ToolConfigurationDialog" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog" />
       <keyword name="ToolConfigurationDialog (Constructor)" id="ToolConfigurationDialog (Constructor)" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.__init__" />
@@ -12085,6 +12112,8 @@
       <keyword name="UMLSceneSizeDialog.getData" id="UMLSceneSizeDialog.getData" ref="eric6.Graphics.UMLSceneSizeDialog.html#UMLSceneSizeDialog.getData" />
       <keyword name="Uid" id="Uid" ref="eric6.Utilities.binplistlib.html#Uid" />
       <keyword name="Uid.__repr__" id="Uid.__repr__" ref="eric6.Utilities.binplistlib.html#Uid.__repr__" />
+      <keyword name="UniqueNamespace" id="UniqueNamespace" ref="eric6.E5Network.E5RFC6266.html#UniqueNamespace" />
+      <keyword name="UniqueNamespace.__setitem__" id="UniqueNamespace.__setitem__" ref="eric6.E5Network.E5RFC6266.html#UniqueNamespace.__setitem__" />
       <keyword name="UnittestDialog" id="UnittestDialog" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog" />
       <keyword name="UnittestDialog (Constructor)" id="UnittestDialog (Constructor)" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.__init__" />
       <keyword name="UnittestDialog (Module)" id="UnittestDialog (Module)" ref="eric6.PyUnit.UnittestDialog.html" />
@@ -12401,6 +12430,8 @@
       <keyword name="UserPropertiesDialog.storeData" id="UserPropertiesDialog.storeData" ref="eric6.Project.UserPropertiesDialog.html#UserPropertiesDialog.storeData" />
       <keyword name="Utilities (Package)" id="Utilities (Package)" ref="index-eric6.Utilities.html" />
       <keyword name="VCS (Package)" id="VCS (Package)" ref="index-eric6.VCS.html" />
+      <keyword name="Value" id="Value" ref="eric6.E5Network.E5RFC6266.html#Value" />
+      <keyword name="ValueChars" id="ValueChars" ref="eric6.E5Network.E5RFC6266.html#ValueChars" />
       <keyword name="VariableDetailDialog" id="VariableDetailDialog" ref="eric6.Debugger.VariableDetailDialog.html#VariableDetailDialog" />
       <keyword name="VariableDetailDialog (Constructor)" id="VariableDetailDialog (Constructor)" ref="eric6.Debugger.VariableDetailDialog.html#VariableDetailDialog.__init__" />
       <keyword name="VariableDetailDialog (Module)" id="VariableDetailDialog (Module)" ref="eric6.Debugger.VariableDetailDialog.html" />
@@ -13563,14 +13594,19 @@
       <keyword name="normalizeCode" id="normalizeCode" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#normalizeCode" />
       <keyword name="normalizeCode" id="normalizeCode" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#normalizeCode" />
       <keyword name="normalize_paths" id="normalize_paths" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#normalize_paths" />
+      <keyword name="normalize_ws" id="normalize_ws" ref="eric6.E5Network.E5RFC6266.html#normalize_ws" />
       <keyword name="normcaseabspath" id="normcaseabspath" ref="eric6.Utilities.__init__.html#normcaseabspath" />
       <keyword name="normcasepath" id="normcasepath" ref="eric6.Utilities.__init__.html#normcasepath" />
       <keyword name="normjoinpath" id="normjoinpath" ref="eric6.Utilities.__init__.html#normjoinpath" />
       <keyword name="okToClearData" id="okToClearData" ref="eric6.E5Gui.E5MessageBox.html#okToClearData" />
       <keyword name="open" id="open" ref="eric6.Utilities.compatibility_fixes.html#open" />
+      <keyword name="parseContentDisposition" id="parseContentDisposition" ref="eric6.Helpviewer.HelpUtilities.html#parseContentDisposition" />
       <keyword name="parseEnvironmentString" id="parseEnvironmentString" ref="eric6.Utilities.__init__.html#parseEnvironmentString" />
       <keyword name="parseOptionString" id="parseOptionString" ref="eric6.Utilities.__init__.html#parseOptionString" />
       <keyword name="parseString" id="parseString" ref="eric6.Utilities.__init__.html#parseString" />
+      <keyword name="parse_ext_value" id="parse_ext_value" ref="eric6.E5Network.E5RFC6266.html#parse_ext_value" />
+      <keyword name="parse_headers" id="parse_headers" ref="eric6.E5Network.E5RFC6266.html#parse_headers" />
+      <keyword name="parse_headers_1" id="parse_headers_1" ref="eric6.E5Network.E5RFC6266.html#parse_headers_1" />
       <keyword name="parse_udiff" id="parse_udiff" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#parse_udiff" />
       <keyword name="patch_modpython (Module)" id="patch_modpython (Module)" ref="eric6.patch_modpython.html" />
       <keyword name="pbkdf2" id="pbkdf2" ref="eric6.Utilities.crypto.py3PBKDF2.html#pbkdf2" />
@@ -13911,6 +13947,7 @@
       <file>eric6.E5Network.E5NetworkHeaderDetailsDialog.html</file>
       <file>eric6.E5Network.E5NetworkMonitor.html</file>
       <file>eric6.E5Network.E5NetworkProxyFactory.html</file>
+      <file>eric6.E5Network.E5RFC6266.html</file>
       <file>eric6.E5Network.E5SslCertificatesDialog.html</file>
       <file>eric6.E5Network.E5SslCertificatesInfoDialog.html</file>
       <file>eric6.E5Network.E5SslCertificatesInfoWidget.html</file>

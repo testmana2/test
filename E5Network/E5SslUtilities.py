@@ -7,6 +7,8 @@
 Module implementing SSL utility functions.
 """
 
+from __future__ import unicode_literals
+
 from PyQt5.QtCore import qVersion
 
 def initSSL():

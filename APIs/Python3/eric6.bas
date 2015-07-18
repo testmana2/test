@@ -60,6 +60,7 @@ BrowserSysPathItem BrowserItem
 CallStackViewer QTreeWidget
 CallTraceViewer QWidget Ui_CallTraceViewer
 ChangeBookmarkCommand QUndoCommand
+Charset str
 ChatWidget QWidget Ui_ChatWidget
 ChromeImporter BookmarksImporter
 Class ClbrBaseClasses.Class VisibilityMixin
@@ -129,10 +130,14 @@ DiffHighlighter E5GenericDiffHighlighter
 DiffReport StandardReport
 DiffWindow E5MainWindow
 DirectorySyncHandler SyncHandler
+DispositionParm str
+DispositionParmList UniqueNamespace
+DispositionType peg.List
 DownloadAskActionDialog QDialog Ui_DownloadAskActionDialog
 DownloadItem QWidget Ui_DownloadItem
 DownloadManager QDialog Ui_DownloadManager
 DownloadModel QAbstractListModel
+DuplicateParamError Exception
 E5Action QAction
 E5Application QApplication
 E5ArrowItem QAbstractGraphicsShapeItem
@@ -237,6 +242,8 @@ ExporterODT ExporterBase
 ExporterPDF ExporterBase
 ExporterRTF ExporterBase
 ExporterTEX ExporterBase
+ExtToken peg.Symbol
+ExtValue peg.List
 FavIconLabel QLabel
 FeaturePermissionBar QWidget
 FeedEditDialog QDialog Ui_FeedEditDialog
@@ -388,6 +395,7 @@ InputDialogWizardDialog QDialog Ui_InputDialogWizardDialog
 InsertBookmarksCommand RemoveBookmarksCommand
 Interface ClbrBaseClasses.Class VisibilityMixin
 InterfacePage ConfigurationPageBase Ui_InterfacePage
+InvalidISO8859Error Exception
 InvalidPlistException Exception
 IrcChannelEditDialog QDialog Ui_IrcChannelEditDialog
 IrcChannelWidget QWidget Ui_IrcChannelWidget
@@ -403,6 +411,7 @@ IrcUserItem QListWidgetItem
 IrcWidget QWidget Ui_IrcWidget
 JavaScriptEricObject QObject
 JavaScriptExternalObject QObject
+Language str
 Largefiles HgExtension
 LargefilesProjectBrowserHelper HgExtensionProjectBrowserHelper
 LargefilesProjectHelper HgExtensionProjectHelper
@@ -475,6 +484,7 @@ NetworkReply QNetworkReply
 NewDialogClassDialog QDialog Ui_NewDialogClassDialog
 NewPythonPackageDialog QDialog Ui_NewPythonPackageDialog
 NoCacheHostsDialog QDialog Ui_NoCacheHostsDialog
+NoExtToken peg.Symbol
 NotBinaryPlistException Exception
 NotificationWidget QWidget Ui_NotificationWidget
 NotificationsPage ConfigurationPageBase Ui_NotificationsPage
@@ -590,6 +600,7 @@ QtTestResult unittest.TestResult
 Queues HgExtension
 QueuesProjectHelper HgExtensionProjectHelper
 QuickSearchLineEdit QLineEdit
+QuotedString str
 RbModule Class
 Rebase HgExtension
 RebaseProjectHelper HgExtensionProjectHelper
@@ -716,6 +727,7 @@ TemplateViewer QTreeWidget
 TemplatesPage ConfigurationPageBase Ui_TemplatesPage
 TemplatesReader XMLStreamReaderBase
 TemplatesWriter XMLStreamWriterBase
+Token str
 ToolConfigurationDialog QDialog Ui_ToolConfigurationDialog
 ToolGroupConfigurationDialog QDialog Ui_ToolGroupConfigurationDialog
 TranslationPropertiesDialog QDialog Ui_TranslationPropertiesDialog
@@ -733,6 +745,7 @@ UMLGraphicsView E5GraphicsView
 UMLItem QGraphicsRectItem
 UMLSceneSizeDialog QDialog Ui_UMLSceneSizeDialog
 Uid int
+UniqueNamespace peg.Namespace
 UnittestDialog QWidget Ui_UnittestDialog
 UnittestWindow E5MainWindow
 UrlBar E5LineEdit
@@ -746,6 +759,8 @@ UserInterface E5MainWindow
 UserProjectReader XMLStreamReaderBase
 UserProjectWriter XMLStreamWriterBase
 UserPropertiesDialog QDialog Ui_UserPropertiesDialog
+Value str
+ValueChars str
 VariableDetailDialog QDialog Ui_VariableDetailDialog
 VariableItem QTreeWidgetItem
 VariablesFilterDialog QDialog Ui_VariablesFilterDialog

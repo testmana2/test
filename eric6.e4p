@@ -195,6 +195,7 @@
     <Source>E5Network/E5NetworkHeaderDetailsDialog.py</Source>
     <Source>E5Network/E5NetworkMonitor.py</Source>
     <Source>E5Network/E5NetworkProxyFactory.py</Source>
+    <Source>E5Network/E5RFC6266.py</Source>
     <Source>E5Network/E5SslCertificatesDialog.py</Source>
     <Source>E5Network/E5SslCertificatesInfoDialog.py</Source>
     <Source>E5Network/E5SslCertificatesInfoWidget.py</Source>

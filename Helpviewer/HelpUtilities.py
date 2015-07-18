@@ -82,3 +82,27 @@ def ensureUniqueFilename(name, appendFormat="({0})"):
         i += 1
     
     return tmpFileName
+
+
+def parseContentDisposition(reply):
+    """
+    Function to parse a content disposition header.
+    
+    @param reply network reply to be parsed
+    @type QNetworkReply
+    """
+    path = ""
+    # step 1: check the content disposition header for a file name
+    if reply.hasRawHeader("Content-Disposition"):
+        from E5Network.E5RFC6266 import parse_headers
+        contentDisposition = parse_headers(
+            bytes(reply.rawHeader("Content-Disposition")))
+        path = contentDisposition.filename()
+    # step 2: get file name from URL
+    if not path:
+        path = reply.url().path()
+    # step 3: give a generic file name
+    if not path:
+        path = "unnamed_download"
+    
+    return os.path.basename(path)

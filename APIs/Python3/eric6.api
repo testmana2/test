@@ -1669,6 +1669,29 @@ eric6.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory.queryProxy?4(query)
 eric6.E5Network.E5NetworkProxyFactory.E5NetworkProxyFactory?1()
 eric6.E5Network.E5NetworkProxyFactory.proxyAuthenticationRequired?4(proxy, auth)
 eric6.E5Network.E5NetworkProxyFactory.schemeFromProxyType?4(proxyType)
+eric6.E5Network.E5RFC6266.Charset.grammar?7
+eric6.E5Network.E5RFC6266.ContentDisposition.filename?4()
+eric6.E5Network.E5RFC6266.ContentDisposition.is_inline?4()
+eric6.E5Network.E5RFC6266.ContentDisposition?1(disposition='inline', assocs=None)
+eric6.E5Network.E5RFC6266.ContentDisposition?1(filename)
+eric6.E5Network.E5RFC6266.ContentDispositionValue.grammar?7
+eric6.E5Network.E5RFC6266.ContentDisposition_1.filename?4()
+eric6.E5Network.E5RFC6266.DispositionParm.grammar?7
+eric6.E5Network.E5RFC6266.DispositionParmList.grammar?7
+eric6.E5Network.E5RFC6266.DispositionType.grammar?7
+eric6.E5Network.E5RFC6266.ExtDispositionParm.grammar?7
+eric6.E5Network.E5RFC6266.ExtDispositionParm?1(value, name=None)
+eric6.E5Network.E5RFC6266.ExtToken.regex?7
+eric6.E5Network.E5RFC6266.ExtValue.grammar?7
+eric6.E5Network.E5RFC6266.Language.grammar?7
+eric6.E5Network.E5RFC6266.NoExtToken.regex?7
+eric6.E5Network.E5RFC6266.QuotedString.grammar?7
+eric6.E5Network.E5RFC6266.Token.grammar?7
+eric6.E5Network.E5RFC6266.Value.grammar?7
+eric6.E5Network.E5RFC6266.ValueChars.grammar?7
+eric6.E5Network.E5RFC6266.normalize_ws?4(text)
+eric6.E5Network.E5RFC6266.parse_ext_value?4(val)
+eric6.E5Network.E5RFC6266.parse_headers?4(content_disposition)
 eric6.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog.CertRole?7
 eric6.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog.on_caCertificatesTree_currentItemChanged?4(current, previous)
 eric6.E5Network.E5SslCertificatesDialog.E5SslCertificatesDialog.on_caDeleteButton_clicked?4()
@@ -2667,6 +2690,7 @@ eric6.Helpviewer.HelpTopicDialog.HelpTopicDialog?1(parent, keyword, links)
 eric6.Helpviewer.HelpUtilities.ensureUniqueFilename?4(name, appendFormat="({0})")
 eric6.Helpviewer.HelpUtilities.filterCharsFromFilename?4(name)
 eric6.Helpviewer.HelpUtilities.getFileNameFromUrl?4(url)
+eric6.Helpviewer.HelpUtilities.parseContentDisposition?4(reply)
 eric6.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.clear?4()
 eric6.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.mousePressEvent?4(evt)
 eric6.Helpviewer.HelpWebSearchWidget.HelpWebSearchWidget.openSearchManager?4()

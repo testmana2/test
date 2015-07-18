@@ -55,6 +55,8 @@ Version 6.1-snapshot-2015mmdd:
      --- enhanced the status dialog functionality by a diff view
 - Web Browser
   -- added support for feature permissions
+  -- improved parsing of the content disposition header analog to
+     the way it is done in qutebrowser
 - Third Party packages
   -- updated Pygments to 2.0.2
 
