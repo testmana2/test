@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog</h1>
+<p>
+Module implementing a dialog to enter the data for a transplant session.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#RevisionsValidator">RevisionsValidator</a></td>
+<td>Class implementing a validator for the revisions line edit.</td>
+</tr><tr>
+<td><a href="#TransplantDialog">TransplantDialog</a></td>
+<td>Class implementing a dialog to enter the data for a transplant session.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="RevisionsValidator" ID="RevisionsValidator"></a>
+<h2>RevisionsValidator</h2>
+<p>
+    Class implementing a validator for the revisions line edit.
+</p>
+<h3>Derived from</h3>
+QValidator
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#RevisionsValidator.__init__">RevisionsValidator</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#RevisionsValidator.validate">validate</a></td>
+<td>Public method to validate the given input.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="RevisionsValidator.__init__" ID="RevisionsValidator.__init__"></a>
+<h4>RevisionsValidator (Constructor)</h4>
+<b>RevisionsValidator</b>(<i>multiRevsAllowed, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>multiRevsAllowed</i></dt>
+<dd>
+flag indicating, if multi revs are allowed
+            (boolean)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent object (QObject)
+</dd>
+</dl><a NAME="RevisionsValidator.validate" ID="RevisionsValidator.validate"></a>
+<h4>RevisionsValidator.validate</h4>
+<b>validate</b>(<i>input, pos</i>)
+<p>
+        Public method to validate the given input.
+</p><dl>
+<dt><i>input</i></dt>
+<dd>
+input to be validated (string)
+</dd><dt><i>pos</i></dt>
+<dd>
+position of the cursor (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with validation result, input and position
+            (QValidator.State, string, integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="TransplantDialog" ID="TransplantDialog"></a>
+<h2>TransplantDialog</h2>
+<p>
+    Class implementing a dialog to enter the data for a transplant session.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_TransplantDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#TransplantDialog.__init__">TransplantDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#TransplantDialog.__updateOk">__updateOk</a></td>
+<td>Private slot to update the state of the OK button.</td>
+</tr><tr>
+<td><a href="#TransplantDialog.getData">getData</a></td>
+<td>Public method to retrieve the entered data.</td>
+</tr><tr>
+<td><a href="#TransplantDialog.on_allCheckBox_clicked">on_allCheckBox_clicked</a></td>
+<td>Private slot to react upon selection of the all check box.</td>
+</tr><tr>
+<td><a href="#TransplantDialog.on_branchesCombo_editTextChanged">on_branchesCombo_editTextChanged</a></td>
+<td>Private slot to react upon changes of the branch name.</td>
+</tr><tr>
+<td><a href="#TransplantDialog.on_revisionsEdit_textChanged">on_revisionsEdit_textChanged</a></td>
+<td>Private slot to react upon changes of revisions.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="TransplantDialog.__init__" ID="TransplantDialog.__init__"></a>
+<h4>TransplantDialog (Constructor)</h4>
+<b>TransplantDialog</b>(<i>branchesList, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>branchesList</i></dt>
+<dd>
+list of available branch names (list of strings)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="TransplantDialog.__updateOk" ID="TransplantDialog.__updateOk"></a>
+<h4>TransplantDialog.__updateOk</h4>
+<b>__updateOk</b>(<i></i>)
+<p>
+        Private slot to update the state of the OK button.
+</p><a NAME="TransplantDialog.getData" ID="TransplantDialog.getData"></a>
+<h4>TransplantDialog.getData</h4>
+<b>getData</b>(<i></i>)
+<p>
+        Public method to retrieve the entered data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with list of revisions, source repo, branch name, a flag
+            indicating to transplant all, list of revisions to skip, list of
+            revisions to merge and a flag indicating to append  transplant info
+            (list of strings, string, string, boolean, list of strings,
+            list of strings, boolean)
+</dd>
+</dl><a NAME="TransplantDialog.on_allCheckBox_clicked" ID="TransplantDialog.on_allCheckBox_clicked"></a>
+<h4>TransplantDialog.on_allCheckBox_clicked</h4>
+<b>on_allCheckBox_clicked</b>(<i>checked</i>)
+<p>
+        Private slot to react upon selection of the all check box.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the check box (boolean)
+</dd>
+</dl><a NAME="TransplantDialog.on_branchesCombo_editTextChanged" ID="TransplantDialog.on_branchesCombo_editTextChanged"></a>
+<h4>TransplantDialog.on_branchesCombo_editTextChanged</h4>
+<b>on_branchesCombo_editTextChanged</b>(<i>txt</i>)
+<p>
+        Private slot to react upon changes of the branch name.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+contents of the branches combo (string)
+</dd>
+</dl><a NAME="TransplantDialog.on_revisionsEdit_textChanged" ID="TransplantDialog.on_revisionsEdit_textChanged"></a>
+<h4>TransplantDialog.on_revisionsEdit_textChanged</h4>
+<b>on_revisionsEdit_textChanged</b>(<i></i>)
+<p>
+        Private slot to react upon changes of revisions.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

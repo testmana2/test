@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsPySvn.SvnLogDialog</h1>
+<p>
+Module implementing a dialog to show the output of the svn log command process.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#SvnLogDialog">SvnLogDialog</a></td>
+<td>Class implementing a dialog to show the output of the svn log command.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="SvnLogDialog" ID="SvnLogDialog"></a>
+<h2>SvnLogDialog</h2>
+<p>
+    Class implementing a dialog to show the output of the svn log command.
+</p><p>
+    The dialog is nonmodal. Clicking a link in the upper text pane shows
+    a diff of the versions.
+</p>
+<h3>Derived from</h3>
+QWidget, SvnDialogMixin, Ui_SvnLogDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#SvnLogDialog.__init__">SvnLogDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__finish">__finish</a></td>
+<td>Private slot called when the user pressed the button.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__showError">__showError</a></td>
+<td>Private slot to show an error message.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.__sourceChanged">__sourceChanged</a></td>
+<td>Private slot to handle the sourceChanged signal of the contents pane.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.on_buttonBox_clicked">on_buttonBox_clicked</a></td>
+<td>Private slot called by a button of the button box clicked.</td>
+</tr><tr>
+<td><a href="#SvnLogDialog.start">start</a></td>
+<td>Public slot to start the svn log command.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="SvnLogDialog.__init__" ID="SvnLogDialog.__init__"></a>
+<h4>SvnLogDialog (Constructor)</h4>
+<b>SvnLogDialog</b>(<i>vcs, isFile=False, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vcs</i></dt>
+<dd>
+reference to the vcs object
+</dd><dt><i>isFile</i></dt>
+<dd>
+flag indicating log for a file is to be shown (boolean)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="SvnLogDialog.__finish" ID="SvnLogDialog.__finish"></a>
+<h4>SvnLogDialog.__finish</h4>
+<b>__finish</b>(<i></i>)
+<p>
+        Private slot called when the user pressed the button.
+</p><a NAME="SvnLogDialog.__showError" ID="SvnLogDialog.__showError"></a>
+<h4>SvnLogDialog.__showError</h4>
+<b>__showError</b>(<i>msg</i>)
+<p>
+        Private slot to show an error message.
+</p><dl>
+<dt><i>msg</i></dt>
+<dd>
+error message to show (string)
+</dd>
+</dl><a NAME="SvnLogDialog.__sourceChanged" ID="SvnLogDialog.__sourceChanged"></a>
+<h4>SvnLogDialog.__sourceChanged</h4>
+<b>__sourceChanged</b>(<i>url</i>)
+<p>
+        Private slot to handle the sourceChanged signal of the contents pane.
+</p><dl>
+<dt><i>url</i></dt>
+<dd>
+the url that was clicked (QUrl)
+</dd>
+</dl><a NAME="SvnLogDialog.on_buttonBox_clicked" ID="SvnLogDialog.on_buttonBox_clicked"></a>
+<h4>SvnLogDialog.on_buttonBox_clicked</h4>
+<b>on_buttonBox_clicked</b>(<i>button</i>)
+<p>
+        Private slot called by a button of the button box clicked.
+</p><dl>
+<dt><i>button</i></dt>
+<dd>
+button that was clicked (QAbstractButton)
+</dd>
+</dl><a NAME="SvnLogDialog.start" ID="SvnLogDialog.start"></a>
+<h4>SvnLogDialog.start</h4>
+<b>start</b>(<i>fn, noEntries=0</i>)
+<p>
+        Public slot to start the svn log command.
+</p><dl>
+<dt><i>fn</i></dt>
+<dd>
+filename to show the log for (string)
+</dd><dt><i>noEntries</i></dt>
+<dd>
+number of entries to show (integer)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.transplant</h1>
+<p>
+Module implementing the transplant extension interface.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Transplant">Transplant</a></td>
+<td>Class implementing the transplant extension interface.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="Transplant" ID="Transplant"></a>
+<h2>Transplant</h2>
+<p>
+    Class implementing the transplant extension interface.
+</p>
+<h3>Derived from</h3>
+HgExtension
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Transplant.__init__">Transplant</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#Transplant.hgTransplant">hgTransplant</a></td>
+<td>Public method to transplant changesets from another branch.</td>
+</tr><tr>
+<td><a href="#Transplant.hgTransplantContinue">hgTransplantContinue</a></td>
+<td>Public method to continue transplanting changesets from another branch.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Transplant.__init__" ID="Transplant.__init__"></a>
+<h4>Transplant (Constructor)</h4>
+<b>Transplant</b>(<i>vcs</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>vcs</i></dt>
+<dd>
+reference to the Mercurial vcs object
+</dd>
+</dl><a NAME="Transplant.hgTransplant" ID="Transplant.hgTransplant"></a>
+<h4>Transplant.hgTransplant</h4>
+<b>hgTransplant</b>(<i>path</i>)
+<p>
+        Public method to transplant changesets from another branch.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name of the project (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the project should be reread (boolean)
+</dd>
+</dl><a NAME="Transplant.hgTransplantContinue" ID="Transplant.hgTransplantContinue"></a>
+<h4>Transplant.hgTransplantContinue</h4>
+<b>hgTransplantContinue</b>(<i>path</i>)
+<p>
+        Public method to continue transplanting changesets from another branch.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory name of the project (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating that the project should be reread (boolean)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
