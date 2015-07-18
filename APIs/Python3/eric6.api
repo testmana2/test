@@ -2422,6 +2422,10 @@ eric6.Helpviewer.Download.DownloadModel.DownloadModel.rowCount?4(parent=QModelIn
 eric6.Helpviewer.Download.DownloadModel.DownloadModel?1(manager, parent=None)
 eric6.Helpviewer.Download.DownloadUtilities.dataString?4(size)
 eric6.Helpviewer.Download.DownloadUtilities.timeString?4(timeRemaining)
+eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.DefaultHeight?7
+eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.featurePermissionProvided?7
+eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.requestPermission?4(frame, feature)
+eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar?1(view)
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.getData?4()
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_titleEdit_textChanged?4(txt)
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_urlEdit_textChanged?4(txt)

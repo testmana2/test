@@ -300,6 +300,7 @@
     <Source>Helpviewer/Download/DownloadModel.py</Source>
     <Source>Helpviewer/Download/DownloadUtilities.py</Source>
     <Source>Helpviewer/Download/__init__.py</Source>
+    <Source>Helpviewer/FeaturePermissionBar.py</Source>
     <Source>Helpviewer/Feeds/FeedEditDialog.py</Source>
     <Source>Helpviewer/Feeds/FeedsDialog.py</Source>
     <Source>Helpviewer/Feeds/FeedsManager.py</Source>

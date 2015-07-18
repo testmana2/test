@@ -14203,6 +14203,34 @@ selección completa.&lt;/li&gt;
     </message>
 </context>
 <context>
+    <name>FeaturePermissionBar</name>
+    <message>
+        <location filename="../Helpviewer/FeaturePermissionBar.py" line="44"/>
+        <source>{0} wants to use desktop notifications.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/FeaturePermissionBar.py" line="46"/>
+        <source>{0} wants to use your position.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/FeaturePermissionBar.py" line="55"/>
+        <source>Allow</source>
+        <translation type="unfinished">Permitir</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/FeaturePermissionBar.py" line="56"/>
+        <source>Deny</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/FeaturePermissionBar.py" line="85"/>
+        <source>{0} wants to use an unknown feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FeedEditDialog</name>
     <message>
         <location filename="../Helpviewer/Feeds/FeedEditDialog.ui" line="14"/>
@@ -15814,7 +15842,7 @@ Razón: {0}</translation>
 <context>
     <name>HelpBrowser</name>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1096"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1102"/>
         <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
@@ -15824,327 +15852,327 @@ Razón: {0}</translation>
         <translation>&lt;b&gt;Ventana de Ayuda&lt;/b&gt;&lt;p&gt;Esta ventana muestra la información de ayuda seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1355"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1361"/>
         <source>Web Inspector...</source>
         <translation>Inspector Web...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2002"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2008"/>
         <source>Check the address for errors such as &lt;b&gt;ww&lt;/b&gt;.example.org instead of &lt;b&gt;www&lt;/b&gt;.example.org</source>
         <translation>Compruebe que la dirección no tenga errores como &lt;b&gt;ww&lt;/b&gt;.ejemplo.org en lugar de &lt;b&gt;www&lt;/b&gt;.ejemplo.org</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2007"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2013"/>
         <source>If the address is correct, try checking the network connection.</source>
         <translation>Si la dirección es correcta, intente comprobar la conexión de red.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2011"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2017"/>
         <source>If your computer or network is protected by a firewall or proxy, make sure that the browser is permitted to access the network.</source>
         <translation>Si el ordenador o la red están protegidos por un firewall o un proxy, asegúrese de que al navegador se le permite acceder a la red.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1274"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1280"/>
         <source>Bookmark this Page</source>
         <translation>Marcador a esta Página</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1101"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1107"/>
         <source>Save Lin&amp;k</source>
         <translation>Guardar &amp;Enlace</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1104"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1110"/>
         <source>Bookmark this Link</source>
         <translation>Marcador a este Enlace</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1109"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1115"/>
         <source>Copy Link to Clipboard</source>
         <translation>Copiar Enlace al Portapapeles</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1126"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1132"/>
         <source>Open Image in New Tab</source>
         <translation>Abrir Imagen en Nueva Pestaña</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1131"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1137"/>
         <source>Save Image</source>
         <translation>Guardar imagen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1134"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1140"/>
         <source>Copy Image to Clipboard</source>
         <translation>Copiar Imagen al Portapapeles</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1136"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1142"/>
         <source>Copy Image Location to Clipboard</source>
         <translation>Copiar Ubicación de la Imagen al Portapapeles</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1145"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1151"/>
         <source>Block Image</source>
         <translation>Bloquear Imagen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1302"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1308"/>
         <source>Search with...</source>
         <translation>Buscar con...</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="839"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="845"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="884"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="890"/>
         <source>&lt;p&gt;Could not start a viewer for file &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se ha podido ejecutar un visor para el archivo &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="864"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="870"/>
         <source>&lt;p&gt;Could not start an application for URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;No se pudo ejecutar una aplicación para la URL &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1981"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1987"/>
         <source>Error loading page: {0}</source>
         <translation>Error al cargar la página: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1999"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2005"/>
         <source>When connecting to: {0}.</source>
         <translation>Al conectar con: {0}.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2050"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2094"/>
         <source>Web Database Quota</source>
         <translation>Cuota de base de datos web</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2050"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2094"/>
         <source>&lt;p&gt;The database quota of &lt;strong&gt;{0}&lt;/strong&gt; has been exceeded while accessing database &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;Shall it be changed?&lt;/p&gt;</source>
         <translation>&lt;p&gt;La cuota de base de datos de &lt;strong&gt;{0}&lt;/strong&gt; se ha superado mientras se accedía a la base de datos &lt;strong&gt;{1}&lt;/strong&gt;.&lt;/p&gt;&lt;p&gt;¿Debe ser cambiada?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2061"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2105"/>
         <source>New Web Database Quota</source>
         <translation>Nueva cuota de base de datos web</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2085"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2129"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2088"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2132"/>
         <source>kB</source>
         <translation>kB</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2091"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2135"/>
         <source>MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2061"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2105"/>
         <source>Enter the new quota in MB (current = {0}, used = {1}; step size = 5 MB):</source>
         <translation>Introducir la nueva cuota en MB (actual = {0}, usados = {1}; tamaño de paso = 5MB):</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1351"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1357"/>
         <source>Add to web search toolbar</source>
         <translation>Añadir a la barra de búsqueda web</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1530"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1536"/>
         <source>Method not supported</source>
         <translation>Método no soportado</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1530"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1536"/>
         <source>{0} method is not supported.</source>
         <translation>El método {0} no está soportado.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1590"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1596"/>
         <source>Search engine</source>
         <translation>Motor de búsqueda</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1590"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1596"/>
         <source>Choose the desired search engine</source>
         <translation>Elegir el motor de búsqueda deseado</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1612"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1618"/>
         <source>Engine name</source>
         <translation>Nombre de motor</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1612"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1618"/>
         <source>Enter a name for the engine</source>
         <translation>Introducir el nombre para el motor</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2017"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2023"/>
         <source>If your cache policy is set to offline browsing,only pages in the local cache are available.</source>
         <translation>Si la política de caché está establecida a navegación offline, solamente estarán disponibles las páginas en caché local.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1118"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1124"/>
         <source>Scan Link with VirusTotal</source>
         <translation>Analizar enlace con VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1151"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1157"/>
         <source>Scan Image with VirusTotal</source>
         <translation>Analizar Imagen con VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1112"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1118"/>
         <source>Send Link</source>
         <translation>Enviar Enlace</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1140"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1146"/>
         <source>Send Image Link</source>
         <translation>Enviar Enlace de Imagen</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1236"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1242"/>
         <source>This Frame</source>
         <translation>Este Marco</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1239"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1245"/>
         <source>Show &amp;only this frame</source>
         <translation>Mostrar s&amp;olo este marco</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1242"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1248"/>
         <source>Show in new &amp;tab</source>
         <translation>Mostrar en nueva pes&amp;taña</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1247"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1253"/>
         <source>&amp;Print</source>
         <translation>Im&amp;primir</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1250"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1256"/>
         <source>Print Preview</source>
         <translation>Presentación preliminar</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1253"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1259"/>
         <source>Print as PDF</source>
         <translation>Imprimir como PDF</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1257"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1263"/>
         <source>Zoom &amp;in</source>
         <translation>A&amp;umentar Zoom</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1260"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1266"/>
         <source>Zoom &amp;reset</source>
         <translation>&amp;Restablecer zoom</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1263"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1269"/>
         <source>Zoom &amp;out</source>
         <translation>Dismi&amp;nuir Zoom</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1267"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1273"/>
         <source>Show frame so&amp;urce</source>
         <translation>Mostrar f&amp;uentes del marco</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1277"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1283"/>
         <source>Send Page Link</source>
         <translation>Enviar Enlace de Página</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1295"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1301"/>
         <source>Send Text</source>
         <translation>Enviar Texto</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1327"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1333"/>
         <source>Google Translate</source>
         <translation>Google Translate</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1334"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1340"/>
         <source>Dictionary</source>
         <translation>Diccionario</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1342"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1348"/>
         <source>Go to web address</source>
         <translation>Ir a la dirección web</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1281"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1287"/>
         <source>User Agent</source>
         <translation>Agente de Usuario</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2022"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2028"/>
         <source>Try Again</source>
         <translation>Intentar de nuevo</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1169"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1175"/>
         <source>Play</source>
         <translation>Reproducir</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1173"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1179"/>
         <source>Pause</source>
         <translation>Pausa</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1177"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1183"/>
         <source>Unmute</source>
         <translation>Con sonido</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1181"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1187"/>
         <source>Mute</source>
         <translation>Sin sonido</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1185"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1191"/>
         <source>Copy Media Address to Clipboard</source>
         <translation>Copiar Dirección del Medio al Portapapeles</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1189"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1195"/>
         <source>Send Media Address</source>
         <translation>Enviar Dirección del Medio</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="1193"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="1199"/>
         <source>Save Media</source>
         <translation>Guardar Medio</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2446"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2490"/>
         <source>eric6 Web Browser</source>
         <translation>Navegador Web de eric6</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2446"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2490"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5. Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt5. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpBrowserWV.py" line="2414"/>
+        <location filename="../Helpviewer/HelpBrowserWV.py" line="2458"/>
         <source>&lt;p&gt;Printing is not available due to a bug in PyQt5.Please upgrade.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Imprimir no esta disponible debido a un bug en PyQt5. Por favor, actualice su versión.&lt;/p&gt;</translation>
     </message>

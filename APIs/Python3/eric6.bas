@@ -238,6 +238,7 @@ ExporterPDF ExporterBase
 ExporterRTF ExporterBase
 ExporterTEX ExporterBase
 FavIconLabel QLabel
+FeaturePermissionBar QWidget
 FeedEditDialog QDialog Ui_FeedEditDialog
 FeedsDialog QDialog Ui_FeedsDialog
 FeedsManager QDialog Ui_FeedsManager

@@ -394,6 +394,7 @@
             <section title="eric6.Helpviewer.data" ref="index-eric6.Helpviewer.data.html">
             </section>
             <section title="eric6.Helpviewer.ClosedTabsManager" ref="eric6.Helpviewer.ClosedTabsManager.html" />
+            <section title="eric6.Helpviewer.FeaturePermissionBar" ref="eric6.Helpviewer.FeaturePermissionBar.html" />
             <section title="eric6.Helpviewer.HelpBrowserWV" ref="eric6.Helpviewer.HelpBrowserWV.html" />
             <section title="eric6.Helpviewer.HelpClearPrivateDataDialog" ref="eric6.Helpviewer.HelpClearPrivateDataDialog.html" />
             <section title="eric6.Helpviewer.HelpDocsInstaller" ref="eric6.Helpviewer.HelpDocsInstaller.html" />
@@ -4859,6 +4860,13 @@
       <keyword name="FavIconLabel.mouseMoveEvent" id="FavIconLabel.mouseMoveEvent" ref="eric6.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.mouseMoveEvent" />
       <keyword name="FavIconLabel.mousePressEvent" id="FavIconLabel.mousePressEvent" ref="eric6.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.mousePressEvent" />
       <keyword name="FavIconLabel.setBrowser" id="FavIconLabel.setBrowser" ref="eric6.Helpviewer.UrlBar.FavIconLabel.html#FavIconLabel.setBrowser" />
+      <keyword name="FeaturePermissionBar" id="FeaturePermissionBar" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar" />
+      <keyword name="FeaturePermissionBar (Constructor)" id="FeaturePermissionBar (Constructor)" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__init__" />
+      <keyword name="FeaturePermissionBar (Module)" id="FeaturePermissionBar (Module)" ref="eric6.Helpviewer.FeaturePermissionBar.html" />
+      <keyword name="FeaturePermissionBar.__permissionDenied" id="FeaturePermissionBar.__permissionDenied" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__permissionDenied" />
+      <keyword name="FeaturePermissionBar.__permissionGranted" id="FeaturePermissionBar.__permissionGranted" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__permissionGranted" />
+      <keyword name="FeaturePermissionBar.__permissionUnknown" id="FeaturePermissionBar.__permissionUnknown" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__permissionUnknown" />
+      <keyword name="FeaturePermissionBar.requestPermission" id="FeaturePermissionBar.requestPermission" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.requestPermission" />
       <keyword name="FeedEditDialog" id="FeedEditDialog" ref="eric6.Helpviewer.Feeds.FeedEditDialog.html#FeedEditDialog" />
       <keyword name="FeedEditDialog (Constructor)" id="FeedEditDialog (Constructor)" ref="eric6.Helpviewer.Feeds.FeedEditDialog.html#FeedEditDialog.__init__" />
       <keyword name="FeedEditDialog (Module)" id="FeedEditDialog (Module)" ref="eric6.Helpviewer.Feeds.FeedEditDialog.html" />
@@ -5252,6 +5260,8 @@
       <keyword name="HelpBrowser.__downloadLink" id="HelpBrowser.__downloadLink" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadLink" />
       <keyword name="HelpBrowser.__downloadMedia" id="HelpBrowser.__downloadMedia" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadMedia" />
       <keyword name="HelpBrowser.__downloadRequested" id="HelpBrowser.__downloadRequested" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__downloadRequested" />
+      <keyword name="HelpBrowser.__featurePermissionBarDelete" id="HelpBrowser.__featurePermissionBarDelete" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__featurePermissionBarDelete" />
+      <keyword name="HelpBrowser.__featurePermissionRequested" id="HelpBrowser.__featurePermissionRequested" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__featurePermissionRequested" />
       <keyword name="HelpBrowser.__generatePrintPreviewClickedFrame" id="HelpBrowser.__generatePrintPreviewClickedFrame" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__generatePrintPreviewClickedFrame" />
       <keyword name="HelpBrowser.__hideAccessKeys" id="HelpBrowser.__hideAccessKeys" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__hideAccessKeys" />
       <keyword name="HelpBrowser.__isMediaElement" id="HelpBrowser.__isMediaElement" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__isMediaElement" />
@@ -5271,6 +5281,7 @@
       <keyword name="HelpBrowser.__printPreviewClickedFrame" id="HelpBrowser.__printPreviewClickedFrame" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__printPreviewClickedFrame" />
       <keyword name="HelpBrowser.__searchRequested" id="HelpBrowser.__searchRequested" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__searchRequested" />
       <keyword name="HelpBrowser.__sendLink" id="HelpBrowser.__sendLink" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__sendLink" />
+      <keyword name="HelpBrowser.__setFeaturePermission" id="HelpBrowser.__setFeaturePermission" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__setFeaturePermission" />
       <keyword name="HelpBrowser.__showAccessKeys" id="HelpBrowser.__showAccessKeys" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__showAccessKeys" />
       <keyword name="HelpBrowser.__showClickedFrameSource" id="HelpBrowser.__showClickedFrameSource" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__showClickedFrameSource" />
       <keyword name="HelpBrowser.__statusBarMessage" id="HelpBrowser.__statusBarMessage" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__statusBarMessage" />
@@ -13990,6 +14001,7 @@
       <file>eric6.Helpviewer.Download.DownloadManager.html</file>
       <file>eric6.Helpviewer.Download.DownloadModel.html</file>
       <file>eric6.Helpviewer.Download.DownloadUtilities.html</file>
+      <file>eric6.Helpviewer.FeaturePermissionBar.html</file>
       <file>eric6.Helpviewer.Feeds.FeedEditDialog.html</file>
       <file>eric6.Helpviewer.Feeds.FeedsDialog.html</file>
       <file>eric6.Helpviewer.Feeds.FeedsManager.html</file>

@@ -150,6 +150,12 @@ QWebView
 <td><a href="#HelpBrowser.__downloadRequested">__downloadRequested</a></td>
 <td>Private slot to handle a download request.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.__featurePermissionBarDelete">__featurePermissionBarDelete</a></td>
+<td>Private slot to delete the feature permission bar.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__featurePermissionRequested">__featurePermissionRequested</a></td>
+<td>Private slot handling a feature permission request.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.__generatePrintPreviewClickedFrame">__generatePrintPreviewClickedFrame</a></td>
 <td>Private slot to generate a print preview of the clicked frame.</td>
 </tr><tr>
@@ -206,6 +212,9 @@ QWebView
 </tr><tr>
 <td><a href="#HelpBrowser.__sendLink">__sendLink</a></td>
 <td>Private slot to send a link via email.</td>
+</tr><tr>
+<td><a href="#HelpBrowser.__setFeaturePermission">__setFeaturePermission</a></td>
+<td>Private slot to set the feature permissions.</td>
 </tr><tr>
 <td><a href="#HelpBrowser.__showAccessKeys">__showAccessKeys</a></td>
 <td>Private method to show the access key labels.</td>
@@ -502,6 +511,24 @@ name of the web database (string)
 <dd>
 reference to the request object (QNetworkRequest)
 </dd>
+</dl><a NAME="HelpBrowser.__featurePermissionBarDelete" ID="HelpBrowser.__featurePermissionBarDelete"></a>
+<h4>HelpBrowser.__featurePermissionBarDelete</h4>
+<b>__featurePermissionBarDelete</b>(<i></i>)
+<p>
+        Private slot to delete the feature permission bar.
+</p><a NAME="HelpBrowser.__featurePermissionRequested" ID="HelpBrowser.__featurePermissionRequested"></a>
+<h4>HelpBrowser.__featurePermissionRequested</h4>
+<b>__featurePermissionRequested</b>(<i>frame, feature</i>)
+<p>
+        Private slot handling a feature permission request.
+</p><dl>
+<dt><i>frame</i> (QWebFrame)</dt>
+<dd>
+frame sending the request
+</dd><dt><i>feature</i> (QWebPage.Feature)</dt>
+<dd>
+requested feature
+</dd>
 </dl><a NAME="HelpBrowser.__generatePrintPreviewClickedFrame" ID="HelpBrowser.__generatePrintPreviewClickedFrame"></a>
 <h4>HelpBrowser.__generatePrintPreviewClickedFrame</h4>
 <b>__generatePrintPreviewClickedFrame</b>(<i>printer</i>)
@@ -668,7 +695,23 @@ reference to the action that triggered this slot (QAction)
 <b>__sendLink</b>(<i></i>)
 <p>
         Private slot to send a link via email.
-</p><a NAME="HelpBrowser.__showAccessKeys" ID="HelpBrowser.__showAccessKeys"></a>
+</p><a NAME="HelpBrowser.__setFeaturePermission" ID="HelpBrowser.__setFeaturePermission"></a>
+<h4>HelpBrowser.__setFeaturePermission</h4>
+<b>__setFeaturePermission</b>(<i>frame, feature, policy</i>)
+<p>
+        Private slot to set the feature permissions.
+</p><dl>
+<dt><i>frame</i> (QWebFrame)</dt>
+<dd>
+frame to set the permission for
+</dd><dt><i>feature</i> (QWebPage.Feature)</dt>
+<dd>
+feature to set permission for
+</dd><dt><i>policy</i> (QWebPage.PermissionPolicy)</dt>
+<dd>
+permission policy to be set
+</dd>
+</dl><a NAME="HelpBrowser.__showAccessKeys" ID="HelpBrowser.__showAccessKeys"></a>
 <h4>HelpBrowser.__showAccessKeys</h4>
 <b>__showAccessKeys</b>(<i></i>)
 <p>

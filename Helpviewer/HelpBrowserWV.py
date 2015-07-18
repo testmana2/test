@@ -697,6 +697,12 @@ class HelpBrowser(QWebView):
         self.page().setForwardUnsupportedContent(True)
         self.page().unsupportedContent.connect(self.__unsupportedContent)
         
+        self.__featurePermissionBar = None
+        self.page().featurePermissionRequested.connect(
+            self.__featurePermissionRequested)
+        # discard the feature bar on new loads (if we navigate away or reload)
+        self.page().loadStarted.connect(self.__featurePermissionBarDelete)
+        
         self.page().downloadRequested.connect(self.__downloadRequested)
         self.page().frameCreated.connect(self.__addExternalBinding)
         self.__addExternalBinding(self.page().mainFrame())
@@ -2017,6 +2023,44 @@ class HelpBrowser(QWebView):
         notFoundFrame.setHtml(bytes(html).decode("utf8"), replyUrl)
         self.mw.historyManager().removeHistoryEntry(replyUrl, self.title())
         self.loadFinished.emit(False)
+    
+    def __featurePermissionRequested(self, frame, feature):
+        """
+        Private slot handling a feature permission request.
+        
+        @param frame frame sending the request
+        @type QWebFrame
+        @param feature requested feature
+        @type QWebPage.Feature
+        """
+        from .FeaturePermissionBar import FeaturePermissionBar
+        self.__featurePermissionBar = FeaturePermissionBar(self)
+        self.__featurePermissionBar.featurePermissionProvided.connect(
+            self.__setFeaturePermission)
+        
+        self.__featurePermissionBar.requestPermission(frame, feature)
+    
+    def __setFeaturePermission(self, frame, feature, policy):
+        """
+        Private slot to set the feature permissions.
+        
+        @param frame frame to set the permission for
+        @type QWebFrame
+        @param feature feature to set permission for
+        @type QWebPage.Feature
+        @param policy permission policy to be set
+        @type QWebPage.PermissionPolicy
+        """
+        self.page().setFeaturePermission(frame, feature, policy)
+        self.__featurePermissionBarDelete()
+    
+    def __featurePermissionBarDelete(self):
+        """
+        Private slot to delete the feature permission bar.
+        """
+        if self.__featurePermissionBar is not None:
+            self.__featurePermissionBar.deleteLater()
+            self.__featurePermissionBar = None
     
     def __downloadRequested(self, request):
         """
