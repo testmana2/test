@@ -2983,12 +2983,13 @@ class HelpWindow(E5MainWindow):
         dlg = HelpClearPrivateDataDialog(self)
         if dlg.exec_() == QDialog.Accepted:
             # browsing history, search history, favicons, disk cache, cookies,
-            # passwords, web databases, downloads
+            # passwords, web databases, downloads, Flash cookies
             (history, searches, favicons, cache, cookies,
              passwords, databases, downloads, flashCookies, historyPeriod) = \
                 dlg.getData()
             if history:
                 self.historyManager().clear(historyPeriod)
+                self.tabWidget.clearClosedTabsList()
             if searches:
                 self.searchEdit.clear()
             if downloads:
