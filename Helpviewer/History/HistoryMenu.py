@@ -381,6 +381,7 @@ class HistoryMenu(E5ModelMenu):
                 self.tr("Clear History"),
                 self.tr("""Do you want to clear the history?""")):
             self.__historyManager.clear()
+            self.__tabWidget.clearClosedTabsList()
     
     def __aboutToShowClosedTabsMenu(self):
         """
