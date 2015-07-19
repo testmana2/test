@@ -680,7 +680,7 @@ class HelpTabWidget(E5TabWidget):
         """
         browser = self.sender()
         
-        if browser is not None:
+        if browser is not None and isinstance(browser, QWidget):
             index = self.indexOf(browser)
             if title == "":
                 title = browser.url().toString()
@@ -787,7 +787,7 @@ class HelpTabWidget(E5TabWidget):
         """
         browser = self.sender()
         
-        if browser is not None:
+        if browser is not None and isinstance(browser, QWidget):
             import Helpviewer.HelpWindow
             self.setTabIcon(
                 self.indexOf(browser),
