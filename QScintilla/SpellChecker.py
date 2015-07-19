@@ -343,7 +343,10 @@ class SpellChecker(QObject):
                     line, index = self.editor.lineIndexFromPosition(pos)
                     word = self.editor.getWord(line, index, useWordChars=False)
                     if len(word) >= self.minimumWordSize:
-                        ok = spell.check(word)
+                        try:
+                            ok = spell.check(word)
+                        except enchant.errors.Error:
+                            ok = True
                     else:
                         ok = True
                     start, end = self.editor.getWordBoundaries(
