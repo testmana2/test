@@ -30,7 +30,7 @@ class AdBlockNetwork(QObject):
         urlString = bytes(url.toEncoded()).decode()
         urlDomain = url.host()
         urlScheme = url.scheme()
-        refererHost = QUrl.fromEncoded(request.rawHeader("Referer")).host()
+        refererHost = QUrl.fromEncoded(request.rawHeader(b"Referer")).host()
         
         import Helpviewer.HelpWindow
         manager = Helpviewer.HelpWindow.HelpWindow.adBlockManager()

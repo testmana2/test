@@ -343,7 +343,7 @@ class PasswordManager(QObject):
             self.__load()
         
         # determine the url
-        refererHeader = request.rawHeader("Referer")
+        refererHeader = request.rawHeader(b"Referer")
         if refererHeader.isEmpty():
             return
         url = QUrl.fromEncoded(refererHeader)
@@ -366,7 +366,7 @@ class PasswordManager(QObject):
             return
         
         # determine the requests content type
-        contentTypeHeader = request.rawHeader("Content-Type")
+        contentTypeHeader = request.rawHeader(b"Content-Type")
         if contentTypeHeader.isEmpty():
             return
         multipart = contentTypeHeader.startsWith("multipart/form-data")

@@ -173,7 +173,7 @@ class E5SslCertificatesInfoWidget(QWidget, Ui_E5SslCertificatesInfoWidget):
         if serial == "":
             return self.tr("<not part of the certificate>")
         
-        if ':' in serial:
+        if b':' in serial:
             return str(serial, encoding="ascii").upper()
         else:
             hexString = hex(int(serial))[2:]

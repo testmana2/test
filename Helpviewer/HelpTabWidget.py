@@ -249,7 +249,7 @@ class HelpTabWidget(E5TabWidget):
             return
         
         req = QNetworkRequest(self.widget(idx).url())
-        req.setRawHeader("X-Eric6-UserLoadAction", b"1")
+        req.setRawHeader(b"X-Eric6-UserLoadAction", b"1")
         self.newBrowser(None, (req, QNetworkAccessManager.GetOperation, b""))
     
     def __tabContextMenuClose(self):
@@ -869,7 +869,7 @@ class HelpTabWidget(E5TabWidget):
         edit = self.sender()
         url = self.__guessUrlFromPath(edit.text())
         request = QNetworkRequest(url)
-        request.setRawHeader("X-Eric6-UserLoadAction", b"1")
+        request.setRawHeader(b"X-Eric6-UserLoadAction", b"1")
         if e5App().keyboardModifiers() == Qt.AltModifier:
             self.newBrowser(
                 None, (request, QNetworkAccessManager.GetOperation, b""))

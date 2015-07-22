@@ -270,27 +270,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         @param directory name of the directory to store the file into (string)
         @return proposed filename and original filename (string, string)
         """
-##        path = ""
-##        if self.__reply.hasRawHeader("Content-Disposition"):
-##            header = bytes(self.__reply.rawHeader("Content-Disposition"))\
-##                .decode()
-##            if header:
-##                pos = header.find("filename=")
-##                if pos != -1:
-##                    path = header[pos + 9:]
-##                    if path.startswith('"') and path.endswith('"'):
-##                        path = path[1:-1]
-##        if not path:
-##            path = self.__url.path()
-##        
         path = parseContentDisposition(self.__reply)
         info = QFileInfo(path)
         baseName = info.completeBaseName()
         endName = info.suffix()
         
-##        if not baseName:
-##            baseName = "unnamed_download"
-##        
         origName = baseName
         if endName:
             origName += '.' + endName

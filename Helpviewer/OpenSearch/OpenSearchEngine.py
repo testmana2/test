@@ -151,7 +151,7 @@ class OpenSearchEngine(QObject):
             return QUrl()
         
         ret = QUrl.fromEncoded(
-            self.parseTemplate(searchTerm, self._searchUrlTemplate))
+            self.parseTemplate(searchTerm, self._searchUrlTemplate).encode())
         
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":
@@ -337,7 +337,7 @@ class OpenSearchEngine(QObject):
             return
         
         reply = self.__networkAccessManager.get(
-            QNetworkRequest(QUrl.fromEncoded(self._imageUrl)))
+            QNetworkRequest(QUrl.fromEncoded(self._imageUrl.encode())))
         reply.finished.connect(self.__imageObtained)
         self.__replies.append(reply)
     
@@ -359,7 +359,7 @@ class OpenSearchEngine(QObject):
         if response.isEmpty():
             return
         
-        if response.startsWith("<html>") or response.startsWith("HTML"):
+        if response.startsWith(b"<html>") or response.startsWith(b"HTML"):
             self.__iconMoved = True
             self.__image = QImage()
         else:

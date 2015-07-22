@@ -141,18 +141,18 @@ class NetworkAccessManager(QNetworkAccessManager):
             return reply
         
         req = QNetworkRequest(request)
-        if req.rawHeader("X-Eric6-UserLoadAction") == QByteArray("1"):
-            req.setRawHeader("X-Eric6-UserLoadAction", QByteArray())
+        if req.rawHeader(b"X-Eric6-UserLoadAction") == QByteArray(b"1"):
+            req.setRawHeader(b"X-Eric6-UserLoadAction", QByteArray())
             req.setAttribute(QNetworkRequest.User + 200, "")
         else:
             req.setAttribute(
-                QNetworkRequest.User + 200, req.rawHeader("Referer"))
+                QNetworkRequest.User + 200, req.rawHeader(b"Referer"))
         
         if hasattr(QNetworkRequest, 'HttpPipeliningAllowedAttribute'):
             req.setAttribute(
                 QNetworkRequest.HttpPipeliningAllowedAttribute, True)
         if not self.__acceptLanguage.isEmpty():
-            req.setRawHeader("Accept-Language", self.__acceptLanguage)
+            req.setRawHeader(b"Accept-Language", self.__acceptLanguage)
         
         # AdBlock code
         if op == QNetworkAccessManager.GetOperation:
@@ -184,13 +184,13 @@ class NetworkAccessManager(QNetworkAccessManager):
         
         # Do Not Track feature
         if self.__doNotTrack:
-            req.setRawHeader("DNT", "1")
-            req.setRawHeader("X-Do-Not-Track", "1")
+            req.setRawHeader(b"DNT", b"1")
+            req.setRawHeader(b"X-Do-Not-Track", b"1")
         
         # Send referer header?
         if not self.__sendReferer and \
            req.url().host() not in Preferences.getHelp("SendRefererWhitelist"):
-            req.setRawHeader("Referer", "")
+            req.setRawHeader(b"Referer", "")
         
         reply = QNetworkAccessManager.createRequest(
             self, op, req, outgoingData)

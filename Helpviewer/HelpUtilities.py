@@ -93,10 +93,10 @@ def parseContentDisposition(reply):
     """
     path = ""
     # step 1: check the content disposition header for a file name
-    if reply.hasRawHeader("Content-Disposition"):
+    if reply.hasRawHeader(b"Content-Disposition"):
         from E5Network.E5RFC6266 import parse_headers
         contentDisposition = parse_headers(
-            bytes(reply.rawHeader("Content-Disposition")))
+            bytes(reply.rawHeader(b"Content-Disposition")))
         path = contentDisposition.filename()
     # step 2: get file name from URL
     if not path:

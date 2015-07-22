@@ -2634,7 +2634,7 @@ class HelpWindow(E5MainWindow):
         if not self.__activating:
             self.__activating = True
             req = QNetworkRequest(url)
-            req.setRawHeader("X-Eric6-UserLoadAction", b"1")
+            req.setRawHeader(b"X-Eric6-UserLoadAction", b"1")
             self.currentBrowser().setSource(
                 None, (req, QNetworkAccessManager.GetOperation, b""))
             self.__activating = False
@@ -3209,7 +3209,7 @@ class HelpWindow(E5MainWindow):
         @param title title of the bookmark (string)
         """
         req = QNetworkRequest(url)
-        req.setRawHeader("X-Eric6-UserLoadAction", b"1")
+        req.setRawHeader(b"X-Eric6-UserLoadAction", b"1")
         self.newTab(None, (req, QNetworkAccessManager.GetOperation, b""))
         
     @classmethod
@@ -3684,7 +3684,7 @@ class HelpWindow(E5MainWindow):
             except IOError:
                 pass
         
-        encodedStyle = bytes(QByteArray(userStyle).toBase64()).decode()
+        encodedStyle = bytes(QByteArray(userStyle.encode()).toBase64()).decode()
         dataString = "data:text/css;charset=utf-8;base64,{0}".format(
             encodedStyle)
         

@@ -50,7 +50,7 @@ class E5XmlRpcClient(QObject):
         self.__callmap = {}
         
         self.__request = QNetworkRequest(QUrl(url))
-        self.__request.setRawHeader("User-Agent", "E5XmlRpcClient/1.0")
+        self.__request.setRawHeader(b"User-Agent", b"E5XmlRpcClient/1.0")
         self.__request.setHeader(QNetworkRequest.ContentTypeHeader, "text/xml")
     
     def setUrl(self, url):

@@ -238,8 +238,8 @@ class HelpWebPage(QWebPage):
                                      self.__lastRequestType)
                 if self.__lastRequestType == \
                         QWebPage.NavigationTypeLinkClicked:
-                    request.setRawHeader("X-Eric6-UserLoadAction",
-                                         QByteArray("1"))
+                    request.setRawHeader(b"X-Eric6-UserLoadAction",
+                                         QByteArray(b"1"))
         except TypeError:
             pass
     

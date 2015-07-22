@@ -423,7 +423,7 @@ class AdBlockRule(object):
         @param req request object to check (QNetworkRequest)
         @return flag indicating a match (boolean)
         """
-        match = req.rawHeader("X-Request-With") == "XMLHttpRequest"
+        match = req.rawHeader(b"X-Request-With") == "XMLHttpRequest"
         
         if self.__xmlhttprequestException:
             return not match
