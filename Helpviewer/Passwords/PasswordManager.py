@@ -469,12 +469,13 @@ class PasswordManager(QObject):
             if qVersion() >= "5.0.0":
                 from PyQt5.QtCore import QUrlQuery
                 argsUrl = QUrl.fromEncoded(
-                    QByteArray("foo://bar.com/?" + QUrl.fromPercentEncoding(
-                        data.replace(b"+", b"%20"))))
+                    QByteArray(b"foo://bar.com/?" + QUrl.fromPercentEncoding(
+                        data.replace(b"+", b"%20")).encode()))
                 encodedArgs = QUrlQuery(argsUrl).queryItems()
             else:
                 argsUrl = QUrl.fromEncoded(
-                    QByteArray("foo://bar.com/?" + data.replace(b"+", b"%20")))
+                    QByteArray(b"foo://bar.com/?" + data.replace(b"+", b"%20"))
+                )
                 encodedArgs = argsUrl.queryItems()
             args = set()
             for arg in encodedArgs:

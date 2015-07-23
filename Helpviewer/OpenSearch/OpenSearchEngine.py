@@ -206,7 +206,7 @@ class OpenSearchEngine(QObject):
             return QUrl()
         
         ret = QUrl.fromEncoded(QByteArray(self.parseTemplate(
-            searchTerm, self._suggestionsUrlTemplate)))
+            searchTerm, self._suggestionsUrlTemplate).encode()))
         
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":
