@@ -1107,12 +1107,12 @@ class HelpBrowser(QWebView):
                 UI.PixmapCache.getIcon("mailSend.png"),
                 self.tr("Send Link"),
                 self.__sendLink).setData(hit.linkUrl())
-            if Preferences.getHelp("VirusTotalEnabled") and \
-               Preferences.getHelp("VirusTotalServiceKey") != "":
-                menu.addAction(
-                    UI.PixmapCache.getIcon("virustotal.png"),
-                    self.tr("Scan Link with VirusTotal"),
-                    self.__virusTotal).setData(hit.linkUrl())
+##            if Preferences.getHelp("VirusTotalEnabled") and \
+##               Preferences.getHelp("VirusTotalServiceKey") != "":
+##                menu.addAction(
+##                    UI.PixmapCache.getIcon("virustotal.png"),
+##                    self.tr("Scan Link with VirusTotal"),
+##                    self.__virusTotal).setData(hit.linkUrl())
         
         if not hit.imageUrl().isEmpty():
             if not menu.isEmpty():
@@ -1140,12 +1140,12 @@ class HelpBrowser(QWebView):
                 UI.PixmapCache.getIcon("adBlockPlus.png"),
                 self.tr("Block Image"), self.__blockImage)\
                 .setData(hit.imageUrl().toString())
-            if Preferences.getHelp("VirusTotalEnabled") and \
-               Preferences.getHelp("VirusTotalServiceKey") != "":
-                menu.addAction(
-                    UI.PixmapCache.getIcon("virustotal.png"),
-                    self.tr("Scan Image with VirusTotal"),
-                    self.__virusTotal).setData(hit.imageUrl())
+##            if Preferences.getHelp("VirusTotalEnabled") and \
+##               Preferences.getHelp("VirusTotalServiceKey") != "":
+##                menu.addAction(
+##                    UI.PixmapCache.getIcon("virustotal.png"),
+##                    self.tr("Scan Image with VirusTotal"),
+##                    self.__virusTotal).setData(hit.imageUrl())
         
         element = hit.element()
         if not element.isNull():
@@ -1477,14 +1477,14 @@ class HelpBrowser(QWebView):
         else:
             self.__clickedMediaElement.evaluateJavaScript("this.muted = true")
     
-    def __virusTotal(self):
-        """
-        Private slot to scan the selected URL with VirusTotal.
-        """
-        act = self.sender()
-        url = act.data()
-        self.mw.requestVirusTotalScan(url)
-    
+##    def __virusTotal(self):
+##        """
+##        Private slot to scan the selected URL with VirusTotal.
+##        """
+##        act = self.sender()
+##        url = act.data()
+##        self.mw.requestVirusTotalScan(url)
+##    
     def __searchRequested(self, act):
         """
         Private slot to search for some text with a selected search engine.

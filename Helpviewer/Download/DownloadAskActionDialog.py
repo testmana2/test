@@ -13,8 +13,6 @@ from PyQt5.QtWidgets import QDialog
 
 from .Ui_DownloadAskActionDialog import Ui_DownloadAskActionDialog
 
-import Preferences
-
 
 class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
     """
@@ -36,9 +34,7 @@ class DownloadAskActionDialog(QDialog, Ui_DownloadAskActionDialog):
         self.typeLabel.setText(mimeType)
         self.siteLabel.setText(baseUrl)
         
-        if not Preferences.getHelp("VirusTotalEnabled") or \
-           Preferences.getHelp("VirusTotalServiceKey") == "":
-            self.scanButton.setHidden(True)
+        self.scanButton.setHidden(True)
         
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())

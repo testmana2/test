@@ -197,18 +197,18 @@ class DownloadItem(QWidget, Ui_DownloadItem):
                 self.__canceledFileSelect = True
                 return
             
-            if dlg.getAction() == "scan":
-                self.__mainWindow.requestVirusTotalScan(url)
-                
-                self.progressBar.setVisible(False)
-                self.__reply.close()
-                self.on_stopButton_clicked()
-                self.filenameLabel.setText(
-                    self.tr("VirusTotal scan scheduled: {0}").format(
-                        QFileInfo(defaultFileName).fileName()))
-                self.__canceledFileSelect = True
-                return
-            
+##            if dlg.getAction() == "scan":
+##                self.__mainWindow.requestVirusTotalScan(url)
+##                
+##                self.progressBar.setVisible(False)
+##                self.__reply.close()
+##                self.on_stopButton_clicked()
+##                self.filenameLabel.setText(
+##                    self.tr("VirusTotal scan scheduled: {0}").format(
+##                        QFileInfo(defaultFileName).fileName()))
+##                self.__canceledFileSelect = True
+##                return
+##            
             self.__autoOpen = dlg.getAction() == "open"
             if PYQT_VERSION_STR >= "5.0.0":
                 from PyQt5.QtCore import QStandardPaths
