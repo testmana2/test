@@ -184,7 +184,8 @@ class VirusTotalAPI(QObject):
         request.setHeader(QNetworkRequest.ContentTypeHeader,
                           "application/x-www-form-urlencoded")
         params = QByteArray("key={0}&resource={1}".format(
-            Preferences.getHelp("VirusTotalServiceKey"), scanId).encode("utf-8"))
+            Preferences.getHelp("VirusTotalServiceKey"), scanId)
+            .encode("utf-8"))
         
         import Helpviewer.HelpWindow
         nam = Helpviewer.HelpWindow.HelpWindow.networkAccessManager()
