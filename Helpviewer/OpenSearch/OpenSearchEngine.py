@@ -151,7 +151,7 @@ class OpenSearchEngine(QObject):
             return QUrl()
         
         ret = QUrl.fromEncoded(
-            self.parseTemplate(searchTerm, self._searchUrlTemplate).encode())
+            self.parseTemplate(searchTerm, self._searchUrlTemplate).encode("utf-8"))
         
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":
@@ -206,7 +206,7 @@ class OpenSearchEngine(QObject):
             return QUrl()
         
         ret = QUrl.fromEncoded(QByteArray(self.parseTemplate(
-            searchTerm, self._suggestionsUrlTemplate).encode()))
+            searchTerm, self._suggestionsUrlTemplate).encode("utf-8")))
         
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":
@@ -337,7 +337,7 @@ class OpenSearchEngine(QObject):
             return
         
         reply = self.__networkAccessManager.get(
-            QNetworkRequest(QUrl.fromEncoded(self._imageUrl.encode())))
+            QNetworkRequest(QUrl.fromEncoded(self._imageUrl.encode("utf-8"))))
         reply.finished.connect(self.__imageObtained)
         self.__replies.append(reply)
     

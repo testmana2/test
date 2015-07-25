@@ -113,11 +113,11 @@ class EricAccessHandler(SchemeAccessHandler):
             self._speedDialPage = Utilities.html_uencode(html)
         
         import Helpviewer.HelpWindow
-        html = QByteArray(self._speedDialPage.encode())
+        html = QByteArray(self._speedDialPage.encode("utf-8"))
         dial = Helpviewer.HelpWindow.HelpWindow.speedDial()
         
-        html.replace("@INITIAL-SCRIPT@", dial.initialScript().encode())
-        html.replace("@ROW-PAGES@", str(dial.pagesInRow()).encode())
-        html.replace("@SD-SIZE@", str(dial.sdSize()).encode())
+        html.replace("@INITIAL-SCRIPT@", dial.initialScript().encode("utf-8"))
+        html.replace("@ROW-PAGES@", str(dial.pagesInRow()).encode("utf-8"))
+        html.replace("@SD-SIZE@", str(dial.sdSize()).encode("utf-8"))
         
         return html

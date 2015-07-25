@@ -369,7 +369,7 @@ class PasswordManager(QObject):
         contentTypeHeader = request.rawHeader(b"Content-Type")
         if contentTypeHeader.isEmpty():
             return
-        multipart = contentTypeHeader.startsWith("multipart/form-data")
+        multipart = contentTypeHeader.startsWith(b"multipart/form-data")
         if multipart:
             boundary = contentTypeHeader.split(" ")[1].split("=")[1]
         else:
@@ -470,7 +470,7 @@ class PasswordManager(QObject):
                 from PyQt5.QtCore import QUrlQuery
                 argsUrl = QUrl.fromEncoded(
                     QByteArray(b"foo://bar.com/?" + QUrl.fromPercentEncoding(
-                        data.replace(b"+", b"%20")).encode()))
+                        data.replace(b"+", b"%20")).encode("utf-8")))
                 encodedArgs = QUrlQuery(argsUrl).queryItems()
             else:
                 argsUrl = QUrl.fromEncoded(

@@ -1046,7 +1046,7 @@ def python_3000_backticks(logical_line):
 ##############################################################################
 
 
-if '' == ''.encode():
+if '' == ''.encode("utf-8"):
     # Python 2: implicit encoding.
     def readlines(filename):
         """Read the source code."""

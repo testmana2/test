@@ -280,9 +280,9 @@ def dataEncrypt(data, password, keyLength=32, hashIterations=10000):
         cipher = encryptData(key, data)
     except ValueError:
         return b"", False
-    return CryptoMarker.encode() + Delimiter.encode().join([
-        digestname.encode(),
-        str(iterations).encode(),
+    return CryptoMarker.encode("utf-8") + Delimiter.encode("utf-8").join([
+        digestname.encode("utf-8"),
+        str(iterations).encode("utf-8"),
         base64.b64encode(salt),
         base64.b64encode(cipher)
     ]), True
@@ -299,13 +299,13 @@ def dataDecrypt(edata, password, keyLength=32):
     @return decrypted data (bytes) and flag indicating
         success (boolean)
     """
-    if not edata.startswith(CryptoMarker.encode()):
+    if not edata.startswith(CryptoMarker.encode("utf-8")):
         return edata, False  # it was not encoded using dataEncrypt
     
     from .py3AES import decryptData
     from .py3PBKDF2 import rehashPassword
     
-    hashParametersBytes, edata = edata[3:].rsplit(Delimiter.encode(), 1)
+    hashParametersBytes, edata = edata[3:].rsplit(Delimiter.encode("utf-8"), 1)
     hashParameters = hashParametersBytes.decode()
     try:
         # recreate the key used to encrypt

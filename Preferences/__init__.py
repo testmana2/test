@@ -1613,13 +1613,13 @@ def getUI(key, prefClass=Prefs):
             profiles = json.loads(profiles)
             for name in ["edit", "debug"]:
                 viewProfiles[name] = [
-                    QByteArray.fromBase64(profiles[name][0].encode()),
+                    QByteArray.fromBase64(profiles[name][0].encode("utf-8")),
                     profiles[name][1][:],
                     []
                 ]
                 for bs in profiles[name][2]:
                     viewProfiles[name][2].append(
-                        QByteArray.fromBase64(bs.encode()))
+                        QByteArray.fromBase64(bs.encode("utf-8")))
         else:
             # migrate from the old ViewProfiles settings
             try:

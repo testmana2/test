@@ -143,7 +143,7 @@ class HelpLanguagesDialog(QDialog, Ui_HelpLanguagesDialog):
             if qvalue > 0.1:
                 qvalue -= 0.1
         
-        return QByteArray(", ".join(processed).encode())
+        return QByteArray(", ".join(processed).encode("utf-8"))
     
     @classmethod
     def defaultAcceptLanguages(cls):

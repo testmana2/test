@@ -190,7 +190,7 @@ class NetworkAccessManager(QNetworkAccessManager):
         # Send referer header?
         if not self.__sendReferer and \
            req.url().host() not in Preferences.getHelp("SendRefererWhitelist"):
-            req.setRawHeader(b"Referer", "")
+            req.setRawHeader(b"Referer", b"")
         
         reply = QNetworkAccessManager.createRequest(
             self, op, req, outgoingData)

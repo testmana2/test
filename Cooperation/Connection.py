@@ -141,7 +141,7 @@ class Connection(QTcpSocket):
         msg = QByteArray(message.encode("utf-8"))
         data = QByteArray("{0}{1}{2}{1}".format(
             Connection.ProtocolMessage, SeparatorToken, msg.size())
-            .encode()) + msg
+            .encode("utf-8")) + msg
         return self.write(data) == data.size()
     
     def timerEvent(self, evt):
@@ -268,7 +268,7 @@ class Connection(QTcpSocket):
         greeting = QByteArray(self.__greetingMessage.encode("utf-8"))
         data = QByteArray("{0}{1}{2}{1}".format(
             Connection.ProtocolGreeting, SeparatorToken, greeting.size())
-            .encode()) + greeting
+            .encode("utf-8")) + greeting
         if self.write(data) == data.size():
             self.__isGreetingMessageSent = True
     
@@ -429,7 +429,7 @@ class Connection(QTcpSocket):
         msg = QByteArray(message.encode("utf-8"))
         data = QByteArray("{0}{1}{2}{1}".format(
             Connection.ProtocolParticipants, SeparatorToken, msg.size())
-            .encode()) + msg
+            .encode("utf-8")) + msg
         self.write(data)
     
     def sendEditorCommand(self, projectHash, filename, message):
@@ -445,7 +445,7 @@ class Connection(QTcpSocket):
             projectHash, SeparatorToken, filename, message).encode("utf-8"))
         data = QByteArray("{0}{1}{2}{1}".format(
             Connection.ProtocolEditor, SeparatorToken, msg.size())
-            .encode()) + msg
+            .encode("utf-8")) + msg
         self.write(data)
     
     def __disconnected(self):

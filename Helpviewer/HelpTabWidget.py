@@ -917,7 +917,7 @@ class HelpTabWidget(E5TabWidget):
             return url
         
         urlString = Preferences.getHelp("DefaultScheme") + path.strip()
-        url = QUrl.fromEncoded(urlString.encode(), QUrl.TolerantMode)
+        url = QUrl.fromEncoded(urlString.encode("utf-8"), QUrl.TolerantMode)
         
         return url
     
