@@ -172,7 +172,7 @@ class E5SslErrorHandler(QObject):
                     for server in caMerge:
                         pems = QByteArray()
                         for cert in caMerge[server]:
-                            pems.append(cert.toPem() + '\n')
+                            pems.append(cert.toPem() + b'\n')
                         certificateDict[server] = pems
                     Preferences.Prefs.settings.setValue(
                         "Ssl/CaCertificatesDict",
