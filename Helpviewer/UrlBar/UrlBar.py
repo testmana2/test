@@ -434,7 +434,8 @@ class UrlBar(E5LineEdit):
         if mimeData.hasUrls():
             url = mimeData.urls()[0]
         elif mimeData.hasText():
-            url = QUrl.fromEncoded(mimeData.text().encode("utf-8"), QUrl.TolerantMode)
+            url = QUrl.fromEncoded(mimeData.text().encode("utf-8"),
+                                   QUrl.TolerantMode)
         
         if url.isEmpty() or not url.isValid():
             E5LineEdit.dropEvent(self, evt)

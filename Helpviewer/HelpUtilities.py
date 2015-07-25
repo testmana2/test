@@ -90,6 +90,8 @@ def parseContentDisposition(reply):
     
     @param reply network reply to be parsed
     @type QNetworkReply
+    @return file name parsed from a content disposition header
+    @rtype str
     """
     path = ""
     # step 1: check the content disposition header for a file name

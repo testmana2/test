@@ -119,7 +119,7 @@ class AdBlockSubscription(QObject):
             self.__title = urlQuery.queryItemValue("title")
             self.__enabled = urlQuery.queryItemValue("enabled") != "false"
             self.__location = QByteArray(urlQuery.queryItemValue("location")
-                .encode("utf-8"))
+                                         .encode("utf-8"))
             
             # Check for required subscription
             self.__requiresLocation = urlQuery.queryItemValue(

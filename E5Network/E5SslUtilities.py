@@ -11,6 +11,7 @@ from __future__ import unicode_literals
 
 from PyQt5.QtCore import qVersion
 
+
 def initSSL():
     """
     Function to initialize some global SSL stuff.

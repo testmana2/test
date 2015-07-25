@@ -294,7 +294,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 if not parameterNames[index]:
                                     parameterNames[index] = \
                                         QByteArray("p{0:d}".format(index)
-                                            .encode("utf-8"))
+                                                   .encode("utf-8"))
                         methNamesSig = \
                             ", ".join(
                                 [bytes(n).decode() for n in parameterNames])

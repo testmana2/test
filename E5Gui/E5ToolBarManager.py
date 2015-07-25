@@ -504,7 +504,8 @@ class E5ToolBarManager(QObject):
                 for action in self.__toolBars[tbID]:
                     if action is not None:
                         if action.objectName():
-                            stream.writeString(action.objectName().encode("utf-8"))
+                            stream.writeString(action.objectName()
+                                               .encode("utf-8"))
                         else:
                             stream.writeString(action.text().encode("utf-8"))
                     else:

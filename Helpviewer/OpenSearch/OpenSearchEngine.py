@@ -151,7 +151,8 @@ class OpenSearchEngine(QObject):
             return QUrl()
         
         ret = QUrl.fromEncoded(
-            self.parseTemplate(searchTerm, self._searchUrlTemplate).encode("utf-8"))
+            self.parseTemplate(searchTerm, self._searchUrlTemplate)
+            .encode("utf-8"))
         
         if self.__searchMethod != "post":
             if qVersion() >= "5.0.0":

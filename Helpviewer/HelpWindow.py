@@ -3684,7 +3684,8 @@ class HelpWindow(E5MainWindow):
             except IOError:
                 pass
         
-        encodedStyle = bytes(QByteArray(userStyle.encode("utf-8")).toBase64()).decode()
+        encodedStyle = bytes(QByteArray(userStyle.encode("utf-8")).toBase64())\
+            .decode()
         dataString = "data:text/css;charset=utf-8;base64,{0}".format(
             encodedStyle)
         

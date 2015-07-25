@@ -11,10 +11,11 @@ from __future__ import unicode_literals
 
 from PyQt5.QtCore import pyqtSignal, QPropertyAnimation, QByteArray, \
     QEasingCurve, QPoint
-from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, QPushButton    
+from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, QPushButton
 from PyQt5.QtWebKitWidgets import QWebFrame, QWebPage
 
 import UI.PixmapCache
+
 
 class FeaturePermissionBar(QWidget):
     """
@@ -40,7 +41,7 @@ class FeaturePermissionBar(QWidget):
         self.__feature = None
         
         self.__permissionFeatureTexts = {
-            QWebPage.Notifications: 
+            QWebPage.Notifications:
                 self.tr("{0} wants to use desktop notifications."),
             QWebPage.Geolocation:
                 self.tr("{0} wants to use your position.")
