@@ -303,7 +303,7 @@ class GreaseMonkeyManager(QObject):
         @return reference to the created reply object (QNetworkReply)
         """
         if op == QNetworkAccessManager.GetOperation and \
-           request.rawHeader("X-Eric6-UserLoadAction") == QByteArray("1"):
+           request.rawHeader(b"X-Eric6-UserLoadAction") == QByteArray(b"1"):
             urlString = request.url().toString(
                 QUrl.RemoveFragment | QUrl.RemoveQuery)
             if urlString.endswith(".user.js"):

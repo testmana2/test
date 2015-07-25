@@ -481,7 +481,7 @@ class HistoryManager(QWebHistoryInterface):
             stream.setVersion(QDataStream.Qt_4_6)
             itm = self.__history[index]
             stream.writeUInt32(HISTORY_VERSION)
-            stream.writeString(itm.url.encode())
+            stream.writeString(itm.url.encode("utf-8"))
             stream << itm.dateTime
             stream.writeString(itm.title.encode('utf-8'))
             f.write(data)

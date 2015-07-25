@@ -343,7 +343,7 @@ class PasswordManager(QObject):
             self.__load()
         
         # determine the url
-        refererHeader = request.rawHeader("Referer")
+        refererHeader = request.rawHeader(b"Referer")
         if refererHeader.isEmpty():
             return
         url = QUrl.fromEncoded(refererHeader)
@@ -366,10 +366,10 @@ class PasswordManager(QObject):
             return
         
         # determine the requests content type
-        contentTypeHeader = request.rawHeader("Content-Type")
+        contentTypeHeader = request.rawHeader(b"Content-Type")
         if contentTypeHeader.isEmpty():
             return
-        multipart = contentTypeHeader.startsWith("multipart/form-data")
+        multipart = contentTypeHeader.startsWith(b"multipart/form-data")
         if multipart:
             boundary = contentTypeHeader.split(" ")[1].split("=")[1]
         else:
@@ -469,12 +469,13 @@ class PasswordManager(QObject):
             if qVersion() >= "5.0.0":
                 from PyQt5.QtCore import QUrlQuery
                 argsUrl = QUrl.fromEncoded(
-                    QByteArray("foo://bar.com/?" + QUrl.fromPercentEncoding(
-                        data.replace(b"+", b"%20"))))
+                    QByteArray(b"foo://bar.com/?" + QUrl.fromPercentEncoding(
+                        data.replace(b"+", b"%20")).encode("utf-8")))
                 encodedArgs = QUrlQuery(argsUrl).queryItems()
             else:
                 argsUrl = QUrl.fromEncoded(
-                    QByteArray("foo://bar.com/?" + data.replace(b"+", b"%20")))
+                    QByteArray(b"foo://bar.com/?" + data.replace(b"+", b"%20"))
+                )
                 encodedArgs = argsUrl.queryItems()
             args = set()
             for arg in encodedArgs:

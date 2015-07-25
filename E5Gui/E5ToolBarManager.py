@@ -470,18 +470,18 @@ class E5ToolBarManager(QObject):
         for tbID in self.__defaultToolBars:
             tb = self.__allToolBars[tbID]
             if tb.objectName():
-                stream.writeString(tb.objectName().encode())
+                stream.writeString(tb.objectName().encode("utf-8"))
             else:
-                stream.writeString(tb.windowTitle().encode())
+                stream.writeString(tb.windowTitle().encode("utf-8"))
             stream.writeUInt16(len(self.__toolBars[tbID]))
             for action in self.__toolBars[tbID]:
                 if action is not None:
                     if action.objectName():
-                        stream.writeString(action.objectName().encode())
+                        stream.writeString(action.objectName().encode("utf-8"))
                     else:
-                        stream.writeString(action.text().encode())
+                        stream.writeString(action.text().encode("utf-8"))
                 else:
-                    stream.writeString("".encode())
+                    stream.writeString("".encode("utf-8"))
         
         # save the custom toolbars
         stream.writeUInt16(E5ToolBarManager.CustomToolBarMarker)
@@ -489,17 +489,17 @@ class E5ToolBarManager(QObject):
         for tbID in self.__toolBars:
             if tbID not in self.__defaultToolBars:
                 tb = self.__allToolBars[tbID]
-                stream.writeString(tb.objectName().encode())
-                stream.writeString(tb.windowTitle().encode())
+                stream.writeString(tb.objectName().encode("utf-8"))
+                stream.writeString(tb.windowTitle().encode("utf-8"))
                 stream.writeUInt16(len(self.__toolBars[tbID]))
                 for action in self.__toolBars[tbID]:
                     if action is not None:
                         if action.objectName():
-                            stream.writeString(action.objectName().encode())
+                            stream.writeString(action.objectName().encode("utf-8"))
                         else:
-                            stream.writeString(action.text().encode())
+                            stream.writeString(action.text().encode("utf-8"))
                     else:
-                        stream.writeString("".encode())
+                        stream.writeString("".encode("utf-8"))
         
         return data
     

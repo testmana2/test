@@ -142,7 +142,7 @@ class QsciScintillaCompat(QsciScintilla):
         except AttributeError:
             rangeHigh = list(range(40, 128))
         
-        f = font.family().encode()
+        f = font.family().encode("utf-8")
         ps = font.pointSize()
         weight = -font.weight()
         italic = font.italic()

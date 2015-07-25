@@ -261,7 +261,7 @@ class CookieJar(QNetworkCookieJar):
             for cookie in cookieList:
                 lst = []
                 if not (self.__filterTrackingCookies and
-                        cookie.name().startsWith("__utm")):
+                        cookie.name().startsWith(b"__utm")):
                     if eAllowSession:
                         cookie.setExpirationDate(QDateTime())
                     if self.__keepCookies == self.KeepUntilTimeLimit and \

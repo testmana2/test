@@ -58,8 +58,8 @@ class EricAccessHandler(SchemeAccessHandler):
             htmlFile.open(QFile.ReadOnly)
             html = htmlFile.readAll()
             
-            html.replace("@IMAGE@", "qrc:icons/ericWeb32.png")
-            html.replace("@FAVICON@", "qrc:icons/ericWeb16.png")
+            html.replace("@IMAGE@", b"qrc:icons/ericWeb32.png")
+            html.replace("@FAVICON@", b"qrc:icons/ericWeb16.png")
             
             self._homePage = html
         
@@ -113,11 +113,11 @@ class EricAccessHandler(SchemeAccessHandler):
             self._speedDialPage = Utilities.html_uencode(html)
         
         import Helpviewer.HelpWindow
-        html = QByteArray(self._speedDialPage)
+        html = QByteArray(self._speedDialPage.encode("utf-8"))
         dial = Helpviewer.HelpWindow.HelpWindow.speedDial()
         
-        html.replace("@INITIAL-SCRIPT@", dial.initialScript())
-        html.replace("@ROW-PAGES@", str(dial.pagesInRow()))
-        html.replace("@SD-SIZE@", str(dial.sdSize()))
+        html.replace("@INITIAL-SCRIPT@", dial.initialScript().encode("utf-8"))
+        html.replace("@ROW-PAGES@", str(dial.pagesInRow()).encode("utf-8"))
+        html.replace("@SD-SIZE@", str(dial.sdSize()).encode("utf-8"))
         
         return html
