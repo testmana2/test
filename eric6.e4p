@@ -426,6 +426,8 @@
     <Source>Helpviewer/UserAgent/UserAgentsDialog.py</Source>
     <Source>Helpviewer/UserAgent/__init__.py</Source>
     <Source>Helpviewer/VirusTotalApi.py</Source>
+    <Source>Helpviewer/VirusTotalDomainReportDialog.py</Source>
+    <Source>Helpviewer/VirusTotalIpReportDialog.py</Source>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.py</Source>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashPlugin.py</Source>
     <Source>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.py</Source>
@@ -1322,6 +1324,8 @@
     <Form>Helpviewer/UrlBar/BookmarkActionSelectionDialog.ui</Form>
     <Form>Helpviewer/UrlBar/BookmarkInfoDialog.ui</Form>
     <Form>Helpviewer/UserAgent/UserAgentsDialog.ui</Form>
+    <Form>Helpviewer/VirusTotalDomainReportDialog.ui</Form>
+    <Form>Helpviewer/VirusTotalIpReportDialog.ui</Form>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlash.ui</Form>
     <Form>Helpviewer/WebPlugins/ClickToFlash/ClickToFlashWhitelistDialog.ui</Form>
     <Form>IconEditor/IconSizeDialog.ui</Form>

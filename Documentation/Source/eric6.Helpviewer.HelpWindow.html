@@ -385,17 +385,17 @@ E5MainWindow
 <td><a href="#HelpWindow.__viewFullScreen">__viewFullScreen</a></td>
 <td>Private slot called to toggle fullscreen mode.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__virusTotalDomainReport">__virusTotalDomainReport</a></td>
+<td>Private slot to retrieve a domain report.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__virusTotalFileScanReport">__virusTotalFileScanReport</a></td>
 <td>Private slot to initiate the display of the file scan report page.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__virusTotalIpAddressReport">__virusTotalIpAddressReport</a></td>
+<td>Private slot to retrieve an IP address report.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__virusTotalScanCurrentSite">__virusTotalScanCurrentSite</a></td>
 <td>Private slot to ask VirusTotal for a scan of the URL of the current browser.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalSearch">__virusTotalSearch</a></td>
-<td>Private slot to search VirusTotal for a given entry.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalSearchChanged">__virusTotalSearchChanged</a></td>
-<td>Private slot to react upon changes of the VirusTotal search text.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__virusTotalSubmitUrlError">__virusTotalSubmitUrlError</a></td>
 <td>Private slot to handle an URL scan submission error.</td>
@@ -1293,6 +1293,11 @@ style sheet (QUrl)
 <b>__viewFullScreen</b>(<i></i>)
 <p>
         Private slot called to toggle fullscreen mode.
+</p><a NAME="HelpWindow.__virusTotalDomainReport" ID="HelpWindow.__virusTotalDomainReport"></a>
+<h4>HelpWindow.__virusTotalDomainReport</h4>
+<b>__virusTotalDomainReport</b>(<i></i>)
+<p>
+        Private slot to retrieve a domain report.
 </p><a NAME="HelpWindow.__virusTotalFileScanReport" ID="HelpWindow.__virusTotalFileScanReport"></a>
 <h4>HelpWindow.__virusTotalFileScanReport</h4>
 <b>__virusTotalFileScanReport</b>(<i>url</i>)
@@ -1303,28 +1308,18 @@ style sheet (QUrl)
 <dd>
 URL of the file scan report page (string)
 </dd>
-</dl><a NAME="HelpWindow.__virusTotalScanCurrentSite" ID="HelpWindow.__virusTotalScanCurrentSite"></a>
+</dl><a NAME="HelpWindow.__virusTotalIpAddressReport" ID="HelpWindow.__virusTotalIpAddressReport"></a>
+<h4>HelpWindow.__virusTotalIpAddressReport</h4>
+<b>__virusTotalIpAddressReport</b>(<i></i>)
+<p>
+        Private slot to retrieve an IP address report.
+</p><a NAME="HelpWindow.__virusTotalScanCurrentSite" ID="HelpWindow.__virusTotalScanCurrentSite"></a>
 <h4>HelpWindow.__virusTotalScanCurrentSite</h4>
 <b>__virusTotalScanCurrentSite</b>(<i></i>)
 <p>
         Private slot to ask VirusTotal for a scan of the URL of the current
         browser.
-</p><a NAME="HelpWindow.__virusTotalSearch" ID="HelpWindow.__virusTotalSearch"></a>
-<h4>HelpWindow.__virusTotalSearch</h4>
-<b>__virusTotalSearch</b>(<i></i>)
-<p>
-        Private slot to search VirusTotal for a given entry.
-</p><a NAME="HelpWindow.__virusTotalSearchChanged" ID="HelpWindow.__virusTotalSearchChanged"></a>
-<h4>HelpWindow.__virusTotalSearchChanged</h4>
-<b>__virusTotalSearchChanged</b>(<i>txt</i>)
-<p>
-        Private slot to react upon changes of the VirusTotal search text.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-contents of the search (string)
-</dd>
-</dl><a NAME="HelpWindow.__virusTotalSubmitUrlError" ID="HelpWindow.__virusTotalSubmitUrlError"></a>
+</p><a NAME="HelpWindow.__virusTotalSubmitUrlError" ID="HelpWindow.__virusTotalSubmitUrlError"></a>
 <h4>HelpWindow.__virusTotalSubmitUrlError</h4>
 <b>__virusTotalSubmitUrlError</b>(<i>msg</i>)
 <p>

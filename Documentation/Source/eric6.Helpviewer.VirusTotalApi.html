@@ -69,14 +69,11 @@ emitted with the URL of the URL scan report page
 QObject
 <h3>Class Attributes</h3>
 <table>
-<tr><td>GetFileReportPattern</td></tr><tr><td>GetUrlReportPattern</td></tr><tr><td>ReportFileScanPagePattern</td></tr><tr><td>ReportUrlScanPagePattern</td></tr><tr><td>ScanUrlPattern</td></tr><tr><td>SearchUrl</td></tr><tr><td>ServiceResult_InvalidServiceKey</td></tr><tr><td>ServiceResult_ItemNotPresent</td></tr><tr><td>ServiceResult_ItemPresent</td></tr><tr><td>ServiceResult_RequestLimitReached</td></tr><tr><td>TestServiceKeyScanID</td></tr>
+<tr><td>GetDomainReportPattern</td></tr><tr><td>GetFileReportPattern</td></tr><tr><td>GetIpAddressReportPattern</td></tr><tr><td>GetUrlReportPattern</td></tr><tr><td>ScanUrlPattern</td></tr><tr><td>ServiceCode_InvalidKey</td></tr><tr><td>ServiceCode_InvalidPrivilege</td></tr><tr><td>ServiceCode_RateLimitExceeded</td></tr><tr><td>ServiceResult_ItemNotPresent</td></tr><tr><td>ServiceResult_ItemPresent</td></tr><tr><td>ServiceResult_ItemQueued</td></tr><tr><td>TestServiceKeyScanID</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
-<tr>
-<td><a href="#VirusTotalAPI.getSearchRequestData">getSearchRequestData</a></td>
-<td>Class method to assemble the search request data structure.</td>
-</tr>
+<tr><td>None</td></tr>
 </table>
 <h3>Methods</h3>
 <table>
@@ -87,11 +84,23 @@ QObject
 <td><a href="#VirusTotalAPI.__checkServiceKeyValidityFinished">__checkServiceKeyValidityFinished</a></td>
 <td>Private slot to determine the result of the service key validity check.</td>
 </tr><tr>
+<td><a href="#VirusTotalAPI.__getDomainReportFinished">__getDomainReportFinished</a></td>
+<td>Private slot to process the IP address report data.</td>
+</tr><tr>
 <td><a href="#VirusTotalAPI.__getFileScanReportUrl">__getFileScanReportUrl</a></td>
 <td>Private method to get the report URL for a file scan.</td>
 </tr><tr>
 <td><a href="#VirusTotalAPI.__getFileScanReportUrlFinished">__getFileScanReportUrlFinished</a></td>
 <td>Private slot to determine the result of the file scan report URL request.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.__getIpAddressReportFinished">__getIpAddressReportFinished</a></td>
+<td>Private slot to process the IP address report data.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.__getUrlScanReportUrl">__getUrlScanReportUrl</a></td>
+<td>Private method to get the report URL for a URL scan.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.__getUrlScanReportUrlFinished">__getUrlScanReportUrlFinished</a></td>
+<td>Private slot to determine the result of the URL scan report URL request.</td>
 </tr><tr>
 <td><a href="#VirusTotalAPI.__loadSettings">__loadSettings</a></td>
 <td>Private method to load the settings.</td>
@@ -101,6 +110,15 @@ QObject
 </tr><tr>
 <td><a href="#VirusTotalAPI.checkServiceKeyValidity">checkServiceKeyValidity</a></td>
 <td>Public method to check the validity of the given service key.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.close">close</a></td>
+<td>Public slot to close the API.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.getDomainReport">getDomainReport</a></td>
+<td>Public method to retrieve a report for a domain.</td>
+</tr><tr>
+<td><a href="#VirusTotalAPI.getIpAddressReport">getIpAddressReport</a></td>
+<td>Public method to retrieve a report for an IP address.</td>
 </tr><tr>
 <td><a href="#VirusTotalAPI.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle a change of preferences.</td>
@@ -113,23 +131,7 @@ QObject
 <table>
 <tr><td>None</td></tr>
 </table>
-<a NAME="VirusTotalAPI.getSearchRequestData" ID="VirusTotalAPI.getSearchRequestData"></a>
-<h4>VirusTotalAPI.getSearchRequestData (class method)</h4>
-<b>getSearchRequestData</b>(<i>term</i>)
-<p>
-        Class method to assemble the search request data structure.
-</p><dl>
-<dt><i>term</i></dt>
-<dd>
-search term (string)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-tuple of network request object, operation and parameters
-            (QNetworkRequest, QNetworkAccessManager.Operation, QByteArray)
-</dd>
-</dl><a NAME="VirusTotalAPI.__init__" ID="VirusTotalAPI.__init__"></a>
+<a NAME="VirusTotalAPI.__init__" ID="VirusTotalAPI.__init__"></a>
 <h4>VirusTotalAPI (Constructor)</h4>
 <b>VirusTotalAPI</b>(<i>parent=None</i>)
 <p>
@@ -144,6 +146,11 @@ reference to the parent object (QObject)
 <b>__checkServiceKeyValidityFinished</b>(<i></i>)
 <p>
         Private slot to determine the result of the service key validity check.
+</p><a NAME="VirusTotalAPI.__getDomainReportFinished" ID="VirusTotalAPI.__getDomainReportFinished"></a>
+<h4>VirusTotalAPI.__getDomainReportFinished</h4>
+<b>__getDomainReportFinished</b>(<i></i>)
+<p>
+        Private slot to process the IP address report data.
 </p><a NAME="VirusTotalAPI.__getFileScanReportUrl" ID="VirusTotalAPI.__getFileScanReportUrl"></a>
 <h4>VirusTotalAPI.__getFileScanReportUrl</h4>
 <b>__getFileScanReportUrl</b>(<i>scanId</i>)
@@ -159,6 +166,27 @@ ID of the scan to get the report URL for (string)
 <b>__getFileScanReportUrlFinished</b>(<i></i>)
 <p>
         Private slot to determine the result of the file scan report URL
+        request.
+</p><a NAME="VirusTotalAPI.__getIpAddressReportFinished" ID="VirusTotalAPI.__getIpAddressReportFinished"></a>
+<h4>VirusTotalAPI.__getIpAddressReportFinished</h4>
+<b>__getIpAddressReportFinished</b>(<i></i>)
+<p>
+        Private slot to process the IP address report data.
+</p><a NAME="VirusTotalAPI.__getUrlScanReportUrl" ID="VirusTotalAPI.__getUrlScanReportUrl"></a>
+<h4>VirusTotalAPI.__getUrlScanReportUrl</h4>
+<b>__getUrlScanReportUrl</b>(<i>scanId</i>)
+<p>
+        Private method to get the report URL for a URL scan.
+</p><dl>
+<dt><i>scanId</i></dt>
+<dd>
+ID of the scan to get the report URL for (string)
+</dd>
+</dl><a NAME="VirusTotalAPI.__getUrlScanReportUrlFinished" ID="VirusTotalAPI.__getUrlScanReportUrlFinished"></a>
+<h4>VirusTotalAPI.__getUrlScanReportUrlFinished</h4>
+<b>__getUrlScanReportUrlFinished</b>(<i></i>)
+<p>
+        Private slot to determine the result of the URL scan report URL
         request.
 </p><a NAME="VirusTotalAPI.__loadSettings" ID="VirusTotalAPI.__loadSettings"></a>
 <h4>VirusTotalAPI.__loadSettings</h4>
@@ -182,6 +210,31 @@ service key (string)
 </dd><dt><i>protocol</i></dt>
 <dd>
 protocol used to access VirusTotal (string)
+</dd>
+</dl><a NAME="VirusTotalAPI.close" ID="VirusTotalAPI.close"></a>
+<h4>VirusTotalAPI.close</h4>
+<b>close</b>(<i></i>)
+<p>
+        Public slot to close the API.
+</p><a NAME="VirusTotalAPI.getDomainReport" ID="VirusTotalAPI.getDomainReport"></a>
+<h4>VirusTotalAPI.getDomainReport</h4>
+<b>getDomainReport</b>(<i>domain</i>)
+<p>
+        Public method to retrieve a report for a domain.
+</p><dl>
+<dt><i>domain</i> (str)</dt>
+<dd>
+domain name
+</dd>
+</dl><a NAME="VirusTotalAPI.getIpAddressReport" ID="VirusTotalAPI.getIpAddressReport"></a>
+<h4>VirusTotalAPI.getIpAddressReport</h4>
+<b>getIpAddressReport</b>(<i>ipAddress</i>)
+<p>
+        Public method to retrieve a report for an IP address.
+</p><dl>
+<dt><i>ipAddress</i> (str)</dt>
+<dd>
+valid IPv4 address in dotted quad notation
 </dd>
 </dl><a NAME="VirusTotalAPI.preferencesChanged" ID="VirusTotalAPI.preferencesChanged"></a>
 <h4>VirusTotalAPI.preferencesChanged</h4>

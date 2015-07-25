@@ -843,7 +843,7 @@ class Prefs(object):
         "AccessKeysEnabled": True,
         "VirusTotalEnabled": False,
         "VirusTotalServiceKey": "",
-        "VirusTotalSecure": False,
+        "VirusTotalSecure": True,
         "SearchLanguage": QLocale().language(),
         "DoNotTrack": False,
         "SendReferer": True,

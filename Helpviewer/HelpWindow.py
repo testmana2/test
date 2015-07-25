@@ -21,7 +21,8 @@ from PyQt5.QtGui import QDesktopServices, QKeySequence, QFont, QFontMetrics, \
     QIcon
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QSizePolicy, QDockWidget, \
     QComboBox, QLabel, QSplitter, QMenu, QToolButton, QLineEdit, \
-    QApplication, QWhatsThis, QDialog, QHBoxLayout, QProgressBar, QAction
+    QApplication, QWhatsThis, QDialog, QHBoxLayout, QProgressBar, QAction, \
+    QInputDialog
 from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest
 from PyQt5.QtWebKit import QWebSettings, QWebDatabase, QWebSecurityOrigin
 from PyQt5.QtWebKitWidgets import QWebPage
@@ -1833,70 +1834,23 @@ class HelpWindow(E5MainWindow):
         vttb.setObjectName("VirusTotalToolBar")
         vttb.setIconSize(UI.Config.ToolBarIconSize)
         vttb.setToolButtonStyle(Qt.ToolButtonTextBesideIcon)
-        self.virustotalSearchEdit = QLineEdit()
-        self.virustotalSearchEdit.setMaximumWidth(250)
-        self.virustotalSearchEdit.setWhatsThis(self.tr(
-            """<h2>File search</h2>"""
-            """<p>In order to search for the last VirusTotal report on a"""
-            """ given file just enter its hash. Currently the allowed"""
-            """ hashes are MD5, SHA1 and SHA256. You can also search for"""
-            """ a particular file report by typing in its permalink id.</p>"""
-            """<h2>URL search</h2>"""
-            """<p>URL searches are simple, just type in the given URL, the"""
-            """ application will normalize it and compare it with the"""
-            """ entries in VirusTotal's database. Alternatively you may"""
-            """ enter the MD5 hash of an URL preceded by "url:", e.g."""
-            """ url:7f911bbcf618f052ac6b9928600d2820.</p>"""
-            """<h2>User search</h2>"""
-            """<p>Do you want to know whether a friend has a VT Community"""
-            """ account? Simply type in his nick preceded by the symbol"""
-            """ "@", e.g. @EmilianoMartinez.</p>"""
-            """<h2>Search through comments</h2>"""
-            """<p>The comments in VT Community may often help in"""
-            """ disinfecting your PC or may proof themselves useful when"""
-            """ analysing a particular malware sample, comment tags enable"""
-            """ users to search through the VT Community reviews. The"""
-            """ standard file tags are: {0} The standard URL tags are: {1}"""
-            """User generated tags are preceded by the symbol "#", e.g."""
-            """ #disinfect.</p>"""
-        ).format(
-            """<ul>"""
-            """<li>goodware</li>"""
-            """<li>malware</li>"""
-            """<li>spamattachmentorlink</li>"""
-            """<li>p2pdownload</li>"""
-            """<li>impropagating</li>"""
-            """<li>networkworm</li>"""
-            """<li>drivebydownload</li>"""
-            """</ul>""",
-            """<ul>"""
-            """<li>malicious</li>"""
-            """<li>benign</li>"""
-            """<li>malewaredownload</li>"""
-            """<li>phishingsite</li>"""
-            """<li>browserexploit</li>"""
-            """<li>spamlink</li>"""
-            """</ul>""",
-        ))
-        self.virustotalSearchEdit.textChanged.connect(
-            self.__virusTotalSearchChanged)
-        self.virustotalSearchEdit.returnPressed.connect(
-            self.__virusTotalSearch)
-        vttb.addWidget(self.virustotalSearchEdit)
-        self.virustotalSearchAct = vttb.addAction(
-            UI.PixmapCache.getIcon("virustotal.png"),
-            self.tr("Search VirusTotal"),
-            self.__virusTotalSearch)
-        self.virustotalSearchAct.setEnabled(False)
-        vttb.addSeparator()
         self.virustotalScanCurrentAct = vttb.addAction(
             UI.PixmapCache.getIcon("virustotal.png"),
             self.tr("Scan current site"),
             self.__virusTotalScanCurrentSite)
+        self.virustotalIpReportAct = vttb.addAction(
+            UI.PixmapCache.getIcon("virustotal.png"),
+            self.tr("IP Address Report"),
+            self.__virusTotalIpAddressReport)
+        self.virustotalDomainReportAct = vttb.addAction(
+            UI.PixmapCache.getIcon("virustotal.png"),
+            self.tr("Domain Report"),
+            self.__virusTotalDomainReport)
         if not Preferences.getHelp("VirusTotalEnabled") or \
            Preferences.getHelp("VirusTotalServiceKey") == "":
-            self.virustotalSearchEdit.setEnabled(False)
             self.virustotalScanCurrentAct.setEnabled(False)
+            self.virustotalIpReportAct.setEnabled(False)
+            self.virustotalDomainReportAct.setEnabled(False)
         
     def __nextTab(self):
         """
@@ -2254,6 +2208,8 @@ class HelpWindow(E5MainWindow):
         
         self.syncManager().close()
         
+        self.__virusTotal.close()
+        
         self.searchEdit.openSearchManager().close()
         
         if self.useQtHelp:
@@ -2514,12 +2470,13 @@ class HelpWindow(E5MainWindow):
         self.__virusTotal.preferencesChanged()
         if not Preferences.getHelp("VirusTotalEnabled") or \
            Preferences.getHelp("VirusTotalServiceKey") == "":
-            self.virustotalSearchEdit.setEnabled(False)
             self.virustotalScanCurrentAct.setEnabled(False)
+            self.virustotalIpReportAct.setEnabled(False)
+            self.virustotalDomainReportAct.setEnabled(False)
         else:
-            self.virustotalSearchEdit.setEnabled(True)
             self.virustotalScanCurrentAct.setEnabled(True)
-        self.__virusTotalSearchChanged(self.virustotalSearchEdit.text())
+            self.virustotalIpReportAct.setEnabled(True)
+            self.virustotalDomainReportAct.setEnabled(True)
     
     def masterPasswordChanged(self, oldPassword, newPassword):
         """
@@ -3588,27 +3545,27 @@ class HelpWindow(E5MainWindow):
     ## Interface to VirusTotal below                                         ##
     ###########################################################################
     
-    def __virusTotalSearchChanged(self, txt):
-        """
-        Private slot to react upon changes of the VirusTotal search text.
-        
-        @param txt contents of the search (string)
-        """
-        self.virustotalSearchAct.setEnabled(
-            txt != "" and
-            Preferences.getHelp("VirusTotalEnabled") and
-            Preferences.getHelp("VirusTotalServiceKey") != "")
-    
-    def __virusTotalSearch(self):
-        """
-        Private slot to search VirusTotal for a given entry.
-        """
-        search = self.virustotalSearchEdit.text()
-        if search:
-            from .VirusTotalApi import VirusTotalAPI
-            requestData = VirusTotalAPI.getSearchRequestData(search)
-            self.newTab(requestData=requestData)
-    
+##    def __virusTotalSearchChanged(self, txt):
+##        """
+##        Private slot to react upon changes of the VirusTotal search text.
+##        
+##        @param txt contents of the search (string)
+##        """
+##        self.virustotalSearchAct.setEnabled(
+##            txt != "" and
+##            Preferences.getHelp("VirusTotalEnabled") and
+##            Preferences.getHelp("VirusTotalServiceKey") != "")
+##    
+##    def __virusTotalSearch(self):
+##        """
+##        Private slot to search VirusTotal for a given entry.
+##        """
+##        search = self.virustotalSearchEdit.text()
+##        if search:
+##            from .VirusTotalApi import VirusTotalAPI
+##            requestData = VirusTotalAPI.getSearchRequestData(search)
+##            self.newTab(requestData=requestData)
+##    
     def __virusTotalScanCurrentSite(self):
         """
         Private slot to ask VirusTotal for a scan of the URL of the current
@@ -3655,6 +3612,41 @@ class HelpWindow(E5MainWindow):
         @param url URL of the file scan report page (string)
         """
         self.newTab(url)
+    
+    def __virusTotalIpAddressReport(self):
+        """
+        Private slot to retrieve an IP address report.
+        """
+        ip, ok = QInputDialog.getText(
+            self,
+            self.tr("IP Address Report"),
+            self.tr("Enter a valid IPv4 address in dotted quad notation:"),
+            QLineEdit.Normal)
+        if ok and ip:
+            if ip.count(".") == 3:
+               self.__virusTotal.getIpAddressReport(ip)
+            else:
+                E5MessageBox.information(
+                    self,
+                    self.tr("IP Address Report"),
+                    self.tr("""The given IP address is not in dotted quad"""
+                            """ notation."""))
+    
+    def __virusTotalDomainReport(self):
+        """
+        Private slot to retrieve a domain report.
+        """
+        domain, ok = QInputDialog.getText(
+            self,
+            self.tr("Domain Report"),
+            self.tr("Enter a valid domain name:"),
+            QLineEdit.Normal)
+        if ok and domain:
+            self.__virusTotal.getDomainReport(domain)
+    
+    ###########################################################################
+    ## Style sheet handling below                                            ##
+    ###########################################################################
     
     def reloadUserStyleSheet(self):
         """
