@@ -9,7 +9,7 @@ Module implementing a scheme access handler for AdBlock URLs.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import qVersion
+from PyQt5.QtCore import qVersion, QByteArray
 from PyQt5.QtNetwork import QNetworkAccessManager
 
 from E5Gui import E5MessageBox
@@ -41,12 +41,13 @@ class AdBlockAccessHandler(SchemeAccessHandler):
             return None
         
         if qVersion() >= "5.0.0":
-            from PyQt5.QtCore import QUrlQuery
-            title = QUrlQuery(url).queryItemValue("title")
+            from PyQt5.QtCore import QUrlQuery, QUrl
+            title = QUrl.fromPercentEncoding(
+                QByteArray(QUrlQuery(url).queryItemValue("title").encode()))
         else:
             from PyQt5.QtCore import QUrl
             title = QUrl.fromPercentEncoding(
-                url.encodedQueryItemValue("title"))
+                url.encodedQueryItemValue(b"title"))
         if not title:
             return None
         res = E5MessageBox.yesNo(
