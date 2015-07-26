@@ -116,15 +116,19 @@ class AdBlockSubscription(QObject):
         if qVersion() >= "5.0.0":
             from PyQt5.QtCore import QUrlQuery
             urlQuery = QUrlQuery(url)
-            self.__title = urlQuery.queryItemValue("title")
+            self.__title = QUrl.fromPercentEncoding(
+                QByteArray(urlQuery.queryItemValue("title").encode()))
             self.__enabled = urlQuery.queryItemValue("enabled") != "false"
-            self.__location = QByteArray(urlQuery.queryItemValue("location")
-                                         .encode("utf-8"))
+            self.__location = QByteArray(QUrl.fromPercentEncoding(
+                QByteArray(urlQuery.queryItemValue("location").encode()))
+                .encode("utf-8"))
             
             # Check for required subscription
-            self.__requiresLocation = urlQuery.queryItemValue(
-                "requiresLocation")
-            self.__requiresTitle = urlQuery.queryItemValue("requiresTitle")
+            self.__requiresLocation = QUrl.fromPercentEncoding(
+                QByteArray(urlQuery.queryItemValue(
+                "requiresLocation").encode()))
+            self.__requiresTitle = QUrl.fromPercentEncoding(
+                QByteArray(urlQuery.queryItemValue("requiresTitle").encode()))
             if self.__requiresLocation and self.__requiresTitle:
                 import Helpviewer.HelpWindow
                 Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
@@ -136,24 +140,24 @@ class AdBlockSubscription(QObject):
                                                      Qt.ISODate)
         else:
             self.__title = \
-                QUrl.fromPercentEncoding(url.encodedQueryItemValue("title"))
+                QUrl.fromPercentEncoding(url.encodedQueryItemValue(b"title"))
             self.__enabled = QUrl.fromPercentEncoding(
-                url.encodedQueryItemValue("enabled")) != "false"
+                url.encodedQueryItemValue(b"enabled")) != "false"
             self.__location = QByteArray(QUrl.fromPercentEncoding(
-                url.encodedQueryItemValue("location")).encode("utf-8"))
+                url.encodedQueryItemValue(b"location")).encode("utf-8"))
             
             # Check for required subscription
             self.__requiresLocation = QUrl.fromPercentEncoding(
-                url.encodedQueryItemValue("requiresLocation"))
+                url.encodedQueryItemValue(b"requiresLocation"))
             self.__requiresTitle = QUrl.fromPercentEncoding(
-                url.encodedQueryItemValue("requiresTitle"))
+                url.encodedQueryItemValue(b"requiresTitle"))
             if self.__requiresLocation and self.__requiresTitle:
                 import Helpviewer.HelpWindow
                 Helpviewer.HelpWindow.HelpWindow.adBlockManager()\
                     .loadRequiredSubscription(self.__requiresLocation,
                                               self.__requiresTitle)
             
-            lastUpdateByteArray = url.encodedQueryItemValue("lastUpdate")
+            lastUpdateByteArray = url.encodedQueryItemValue(b"lastUpdate")
             lastUpdateString = QUrl.fromPercentEncoding(lastUpdateByteArray)
             self.__lastUpdate = QDateTime.fromString(lastUpdateString,
                                                      Qt.ISODate)
@@ -443,6 +447,7 @@ class AdBlockSubscription(QObject):
         else:
             QFile.remove(fileName)
         self.__downloading = None
+        reply.deleteLater()
     
     def __validateCheckSum(self, fileName):
         """
