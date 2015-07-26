@@ -3545,27 +3545,6 @@ class HelpWindow(E5MainWindow):
     ## Interface to VirusTotal below                                         ##
     ###########################################################################
     
-##    def __virusTotalSearchChanged(self, txt):
-##        """
-##        Private slot to react upon changes of the VirusTotal search text.
-##        
-##        @param txt contents of the search (string)
-##        """
-##        self.virustotalSearchAct.setEnabled(
-##            txt != "" and
-##            Preferences.getHelp("VirusTotalEnabled") and
-##            Preferences.getHelp("VirusTotalServiceKey") != "")
-##    
-##    def __virusTotalSearch(self):
-##        """
-##        Private slot to search VirusTotal for a given entry.
-##        """
-##        search = self.virustotalSearchEdit.text()
-##        if search:
-##            from .VirusTotalApi import VirusTotalAPI
-##            requestData = VirusTotalAPI.getSearchRequestData(search)
-##            self.newTab(requestData=requestData)
-##    
     def __virusTotalScanCurrentSite(self):
         """
         Private slot to ask VirusTotal for a scan of the URL of the current
@@ -3624,7 +3603,7 @@ class HelpWindow(E5MainWindow):
             QLineEdit.Normal)
         if ok and ip:
             if ip.count(".") == 3:
-               self.__virusTotal.getIpAddressReport(ip)
+                self.__virusTotal.getIpAddressReport(ip)
             else:
                 E5MessageBox.information(
                     self,
