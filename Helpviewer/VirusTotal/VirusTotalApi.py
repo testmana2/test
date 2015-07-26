@@ -386,15 +386,15 @@ class VirusTotalAPI(QObject):
                 except KeyError:
                     wtsCategory = self.tr("not available")
                 try:
-                    categories = result["categories"]
+                    whois = result["whois"]
                 except KeyError:
-                    categories = []
+                    whois = ""
                 
                 from .VirusTotalDomainReportDialog import \
                     VirusTotalDomainReportDialog
                 self.__domainReportDlg = VirusTotalDomainReportDialog(
                     self.__lastDomain, resolutions, urls, subdomains,
-                    bdCategory, tmCategory, wtsCategory, categories)
+                    bdCategory, tmCategory, wtsCategory, whois)
                 self.__domainReportDlg.show()
         self.__replies.remove(reply)
         reply.deleteLater()

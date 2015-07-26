@@ -7,10 +7,14 @@
 Module implementing a dialog to show the VirusTotal domain report.
 """
 
-from PyQt5.QtCore import Qt
+from __future__ import unicode_literals
+
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QTreeWidgetItem
 
 from .Ui_VirusTotalDomainReportDialog import Ui_VirusTotalDomainReportDialog
+
+import UI.PixmapCache
 
 
 class VirusTotalDomainReportDialog(QDialog, Ui_VirusTotalDomainReportDialog):
@@ -18,7 +22,7 @@ class VirusTotalDomainReportDialog(QDialog, Ui_VirusTotalDomainReportDialog):
     Class implementing a dialog to show the VirusTotal domain report.
     """
     def __init__(self, domain, resolutions, urls, subdomains,
-                 bdCategory, tmCategory, wtsCategory, categories, parent=None):
+                 bdCategory, tmCategory, wtsCategory, whois, parent=None):
         """
         Constructor
         
@@ -36,8 +40,8 @@ class VirusTotalDomainReportDialog(QDialog, Ui_VirusTotalDomainReportDialog):
         @type str
         @param wtsCategory Websense ThreatSeeker categorization
         @type str
-        @param categories list of categorizations
-        @type list of str
+        @param whois whois information
+        @type str
         @param parent reference to the parent widget
         @type QWidget
         """
@@ -47,6 +51,8 @@ class VirusTotalDomainReportDialog(QDialog, Ui_VirusTotalDomainReportDialog):
         
         self.headerLabel.setText(
             self.tr("<b>Report for domain {0}</b>").format(domain))
+        self.headerPixmap.setPixmap(
+            UI.PixmapCache.getPixmap("virustotal.png"))
         
         for resolution in resolutions:
             QTreeWidgetItem(
@@ -82,9 +88,16 @@ class VirusTotalDomainReportDialog(QDialog, Ui_VirusTotalDomainReportDialog):
         self.bdLabel.setText(bdCategory)
         self.tmLabel.setText(tmCategory)
         self.wtsLabel.setText(wtsCategory)
-##        
-##        if not categories:
-##            self.categoriesList.setVisible(False)
-##        else:
-##            self.categoriesList.addItems(categories)
-##            self.categoriesList.sortItems()
+        
+        self.__whois = whois
+        self.__whoisDomain = domain
+        self.whoisButton.setEnabled(bool(whois))
+    
+    @pyqtSlot()
+    def on_whoisButton_clicked(self):
+        """
+        Private slot to show the whois information.
+        """
+        from .VirusTotalWhoisDialog import VirusTotalWhoisDialog
+        dlg = VirusTotalWhoisDialog(self.__whoisDomain, self.__whois)
+        dlg.exec_()

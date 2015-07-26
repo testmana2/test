@@ -384,6 +384,12 @@
               <section title="eric6.Helpviewer.UserAgent.UserAgentWriter" ref="eric6.Helpviewer.UserAgent.UserAgentWriter.html" />
               <section title="eric6.Helpviewer.UserAgent.UserAgentsDialog" ref="eric6.Helpviewer.UserAgent.UserAgentsDialog.html" />
             </section>
+            <section title="eric6.Helpviewer.VirusTotal" ref="index-eric6.Helpviewer.VirusTotal.html">
+              <section title="eric6.Helpviewer.VirusTotal.VirusTotalApi" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html" />
+              <section title="eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog" ref="eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.html" />
+              <section title="eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog" ref="eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog.html" />
+              <section title="eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog" ref="eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog.html" />
+            </section>
             <section title="eric6.Helpviewer.WebPlugins" ref="index-eric6.Helpviewer.WebPlugins.html">
               <section title="eric6.Helpviewer.WebPlugins.ClickToFlash" ref="index-eric6.Helpviewer.WebPlugins.ClickToFlash.html">
                 <section title="eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash" ref="eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html" />
@@ -416,9 +422,6 @@
             <section title="eric6.Helpviewer.QtHelpDocumentationDialog" ref="eric6.Helpviewer.QtHelpDocumentationDialog.html" />
             <section title="eric6.Helpviewer.QtHelpFiltersDialog" ref="eric6.Helpviewer.QtHelpFiltersDialog.html" />
             <section title="eric6.Helpviewer.SearchWidget" ref="eric6.Helpviewer.SearchWidget.html" />
-            <section title="eric6.Helpviewer.VirusTotalApi" ref="eric6.Helpviewer.VirusTotalApi.html" />
-            <section title="eric6.Helpviewer.VirusTotalDomainReportDialog" ref="eric6.Helpviewer.VirusTotalDomainReportDialog.html" />
-            <section title="eric6.Helpviewer.VirusTotalIpReportDialog" ref="eric6.Helpviewer.VirusTotalIpReportDialog.html" />
           </section>
           <section title="eric6.IconEditor" ref="index-eric6.IconEditor.html">
             <section title="eric6.IconEditor.cursors" ref="index-eric6.IconEditor.cursors.html">
@@ -12900,30 +12903,35 @@
       <keyword name="ViewmanagerPage (Module)" id="ViewmanagerPage (Module)" ref="eric6.Preferences.ConfigurationPages.ViewmanagerPage.html" />
       <keyword name="ViewmanagerPage.on_windowComboBox_activated" id="ViewmanagerPage.on_windowComboBox_activated" ref="eric6.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage.on_windowComboBox_activated" />
       <keyword name="ViewmanagerPage.save" id="ViewmanagerPage.save" ref="eric6.Preferences.ConfigurationPages.ViewmanagerPage.html#ViewmanagerPage.save" />
-      <keyword name="VirusTotalAPI" id="VirusTotalAPI" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI" />
-      <keyword name="VirusTotalAPI (Constructor)" id="VirusTotalAPI (Constructor)" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__init__" />
-      <keyword name="VirusTotalAPI.__checkServiceKeyValidityFinished" id="VirusTotalAPI.__checkServiceKeyValidityFinished" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__checkServiceKeyValidityFinished" />
-      <keyword name="VirusTotalAPI.__getDomainReportFinished" id="VirusTotalAPI.__getDomainReportFinished" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getDomainReportFinished" />
-      <keyword name="VirusTotalAPI.__getFileScanReportUrl" id="VirusTotalAPI.__getFileScanReportUrl" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getFileScanReportUrl" />
-      <keyword name="VirusTotalAPI.__getFileScanReportUrlFinished" id="VirusTotalAPI.__getFileScanReportUrlFinished" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getFileScanReportUrlFinished" />
-      <keyword name="VirusTotalAPI.__getIpAddressReportFinished" id="VirusTotalAPI.__getIpAddressReportFinished" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getIpAddressReportFinished" />
-      <keyword name="VirusTotalAPI.__getUrlScanReportUrl" id="VirusTotalAPI.__getUrlScanReportUrl" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getUrlScanReportUrl" />
-      <keyword name="VirusTotalAPI.__getUrlScanReportUrlFinished" id="VirusTotalAPI.__getUrlScanReportUrlFinished" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__getUrlScanReportUrlFinished" />
-      <keyword name="VirusTotalAPI.__loadSettings" id="VirusTotalAPI.__loadSettings" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__loadSettings" />
-      <keyword name="VirusTotalAPI.__submitUrlFinished" id="VirusTotalAPI.__submitUrlFinished" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.__submitUrlFinished" />
-      <keyword name="VirusTotalAPI.checkServiceKeyValidity" id="VirusTotalAPI.checkServiceKeyValidity" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.checkServiceKeyValidity" />
-      <keyword name="VirusTotalAPI.close" id="VirusTotalAPI.close" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.close" />
-      <keyword name="VirusTotalAPI.getDomainReport" id="VirusTotalAPI.getDomainReport" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getDomainReport" />
-      <keyword name="VirusTotalAPI.getIpAddressReport" id="VirusTotalAPI.getIpAddressReport" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.getIpAddressReport" />
-      <keyword name="VirusTotalAPI.preferencesChanged" id="VirusTotalAPI.preferencesChanged" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.preferencesChanged" />
-      <keyword name="VirusTotalAPI.submitUrl" id="VirusTotalAPI.submitUrl" ref="eric6.Helpviewer.VirusTotalApi.html#VirusTotalAPI.submitUrl" />
-      <keyword name="VirusTotalApi (Module)" id="VirusTotalApi (Module)" ref="eric6.Helpviewer.VirusTotalApi.html" />
-      <keyword name="VirusTotalDomainReportDialog" id="VirusTotalDomainReportDialog" ref="eric6.Helpviewer.VirusTotalDomainReportDialog.html#VirusTotalDomainReportDialog" />
-      <keyword name="VirusTotalDomainReportDialog (Constructor)" id="VirusTotalDomainReportDialog (Constructor)" ref="eric6.Helpviewer.VirusTotalDomainReportDialog.html#VirusTotalDomainReportDialog.__init__" />
-      <keyword name="VirusTotalDomainReportDialog (Module)" id="VirusTotalDomainReportDialog (Module)" ref="eric6.Helpviewer.VirusTotalDomainReportDialog.html" />
-      <keyword name="VirusTotalIpReportDialog" id="VirusTotalIpReportDialog" ref="eric6.Helpviewer.VirusTotalIpReportDialog.html#VirusTotalIpReportDialog" />
-      <keyword name="VirusTotalIpReportDialog (Constructor)" id="VirusTotalIpReportDialog (Constructor)" ref="eric6.Helpviewer.VirusTotalIpReportDialog.html#VirusTotalIpReportDialog.__init__" />
-      <keyword name="VirusTotalIpReportDialog (Module)" id="VirusTotalIpReportDialog (Module)" ref="eric6.Helpviewer.VirusTotalIpReportDialog.html" />
+      <keyword name="VirusTotal (Package)" id="VirusTotal (Package)" ref="index-eric6.Helpviewer.VirusTotal.html" />
+      <keyword name="VirusTotalAPI" id="VirusTotalAPI" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI" />
+      <keyword name="VirusTotalAPI (Constructor)" id="VirusTotalAPI (Constructor)" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__init__" />
+      <keyword name="VirusTotalAPI.__checkServiceKeyValidityFinished" id="VirusTotalAPI.__checkServiceKeyValidityFinished" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__checkServiceKeyValidityFinished" />
+      <keyword name="VirusTotalAPI.__getDomainReportFinished" id="VirusTotalAPI.__getDomainReportFinished" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__getDomainReportFinished" />
+      <keyword name="VirusTotalAPI.__getFileScanReportUrl" id="VirusTotalAPI.__getFileScanReportUrl" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__getFileScanReportUrl" />
+      <keyword name="VirusTotalAPI.__getFileScanReportUrlFinished" id="VirusTotalAPI.__getFileScanReportUrlFinished" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__getFileScanReportUrlFinished" />
+      <keyword name="VirusTotalAPI.__getIpAddressReportFinished" id="VirusTotalAPI.__getIpAddressReportFinished" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__getIpAddressReportFinished" />
+      <keyword name="VirusTotalAPI.__getUrlScanReportUrl" id="VirusTotalAPI.__getUrlScanReportUrl" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__getUrlScanReportUrl" />
+      <keyword name="VirusTotalAPI.__getUrlScanReportUrlFinished" id="VirusTotalAPI.__getUrlScanReportUrlFinished" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__getUrlScanReportUrlFinished" />
+      <keyword name="VirusTotalAPI.__loadSettings" id="VirusTotalAPI.__loadSettings" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__loadSettings" />
+      <keyword name="VirusTotalAPI.__submitUrlFinished" id="VirusTotalAPI.__submitUrlFinished" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.__submitUrlFinished" />
+      <keyword name="VirusTotalAPI.checkServiceKeyValidity" id="VirusTotalAPI.checkServiceKeyValidity" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.checkServiceKeyValidity" />
+      <keyword name="VirusTotalAPI.close" id="VirusTotalAPI.close" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.close" />
+      <keyword name="VirusTotalAPI.getDomainReport" id="VirusTotalAPI.getDomainReport" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.getDomainReport" />
+      <keyword name="VirusTotalAPI.getIpAddressReport" id="VirusTotalAPI.getIpAddressReport" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.getIpAddressReport" />
+      <keyword name="VirusTotalAPI.preferencesChanged" id="VirusTotalAPI.preferencesChanged" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.preferencesChanged" />
+      <keyword name="VirusTotalAPI.submitUrl" id="VirusTotalAPI.submitUrl" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html#VirusTotalAPI.submitUrl" />
+      <keyword name="VirusTotalApi (Module)" id="VirusTotalApi (Module)" ref="eric6.Helpviewer.VirusTotal.VirusTotalApi.html" />
+      <keyword name="VirusTotalDomainReportDialog" id="VirusTotalDomainReportDialog" ref="eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.html#VirusTotalDomainReportDialog" />
+      <keyword name="VirusTotalDomainReportDialog (Constructor)" id="VirusTotalDomainReportDialog (Constructor)" ref="eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.html#VirusTotalDomainReportDialog.__init__" />
+      <keyword name="VirusTotalDomainReportDialog (Module)" id="VirusTotalDomainReportDialog (Module)" ref="eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.html" />
+      <keyword name="VirusTotalDomainReportDialog.on_whoisButton_clicked" id="VirusTotalDomainReportDialog.on_whoisButton_clicked" ref="eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.html#VirusTotalDomainReportDialog.on_whoisButton_clicked" />
+      <keyword name="VirusTotalIpReportDialog" id="VirusTotalIpReportDialog" ref="eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog.html#VirusTotalIpReportDialog" />
+      <keyword name="VirusTotalIpReportDialog (Constructor)" id="VirusTotalIpReportDialog (Constructor)" ref="eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog.html#VirusTotalIpReportDialog.__init__" />
+      <keyword name="VirusTotalIpReportDialog (Module)" id="VirusTotalIpReportDialog (Module)" ref="eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog.html" />
+      <keyword name="VirusTotalWhoisDialog" id="VirusTotalWhoisDialog" ref="eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog.html#VirusTotalWhoisDialog" />
+      <keyword name="VirusTotalWhoisDialog (Constructor)" id="VirusTotalWhoisDialog (Constructor)" ref="eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog.html#VirusTotalWhoisDialog.__init__" />
+      <keyword name="VirusTotalWhoisDialog (Module)" id="VirusTotalWhoisDialog (Module)" ref="eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog.html" />
       <keyword name="VisibilityBase" id="VisibilityBase" ref="eric6.Utilities.ModuleParser.html#VisibilityBase" />
       <keyword name="VisibilityBase.isPrivate" id="VisibilityBase.isPrivate" ref="eric6.Utilities.ModuleParser.html#VisibilityBase.isPrivate" />
       <keyword name="VisibilityBase.isProtected" id="VisibilityBase.isProtected" ref="eric6.Utilities.ModuleParser.html#VisibilityBase.isProtected" />
@@ -14162,9 +14170,10 @@
       <file>eric6.Helpviewer.UserAgent.UserAgentReader.html</file>
       <file>eric6.Helpviewer.UserAgent.UserAgentWriter.html</file>
       <file>eric6.Helpviewer.UserAgent.UserAgentsDialog.html</file>
-      <file>eric6.Helpviewer.VirusTotalApi.html</file>
-      <file>eric6.Helpviewer.VirusTotalDomainReportDialog.html</file>
-      <file>eric6.Helpviewer.VirusTotalIpReportDialog.html</file>
+      <file>eric6.Helpviewer.VirusTotal.VirusTotalApi.html</file>
+      <file>eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.html</file>
+      <file>eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog.html</file>
+      <file>eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog.html</file>
       <file>eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.html</file>
       <file>eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashPlugin.html</file>
       <file>eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html</file>
@@ -14715,6 +14724,7 @@
       <file>index-eric6.Helpviewer.Sync.html</file>
       <file>index-eric6.Helpviewer.UrlBar.html</file>
       <file>index-eric6.Helpviewer.UserAgent.html</file>
+      <file>index-eric6.Helpviewer.VirusTotal.html</file>
       <file>index-eric6.Helpviewer.WebPlugins.ClickToFlash.html</file>
       <file>index-eric6.Helpviewer.WebPlugins.html</file>
       <file>index-eric6.Helpviewer.data.html</file>

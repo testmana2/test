@@ -781,6 +781,7 @@ ViewmanagerPage ConfigurationPageBase Ui_ViewmanagerPage
 VirusTotalAPI QObject
 VirusTotalDomainReportDialog QDialog Ui_VirusTotalDomainReportDialog
 VirusTotalIpReportDialog QDialog Ui_VirusTotalIpReportDialog
+VirusTotalWhoisDialog QDialog Ui_VirusTotalWhoisDialog
 VisibilityMixin ClbrBaseClasses.ClbrVisibilityMixinBase
 VmListspacePlugin QObject
 VmTabviewPlugin QObject

@@ -3332,31 +3332,33 @@ eric6.Helpviewer.UserAgent.UserAgentReader.UserAgentReader?1()
 eric6.Helpviewer.UserAgent.UserAgentWriter.UserAgentWriter.write?4(fileNameOrDevice, agents)
 eric6.Helpviewer.UserAgent.UserAgentWriter.UserAgentWriter?1()
 eric6.Helpviewer.UserAgent.UserAgentsDialog.UserAgentsDialog?1(parent=None)
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.GetDomainReportPattern?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.GetFileReportPattern?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.GetIpAddressReportPattern?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.GetUrlReportPattern?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ScanUrlPattern?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceCode_InvalidKey?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceCode_InvalidPrivilege?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceCode_RateLimitExceeded?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemNotPresent?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemPresent?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemQueued?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.TestServiceKeyScanID?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.checkServiceKeyFinished?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.checkServiceKeyValidity?4(key, protocol="")
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.close?4()
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.fileScanReport?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.getDomainReport?4(domain)
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.getIpAddressReport?4(ipAddress)
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.preferencesChanged?4()
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.submitUrl?4(url)
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.submitUrlError?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI.urlScanReport?7
-eric6.Helpviewer.VirusTotalApi.VirusTotalAPI?1(parent=None)
-eric6.Helpviewer.VirusTotalDomainReportDialog.VirusTotalDomainReportDialog?1(domain, resolutions, urls, subdomains, bdCategory, tmCategory, wtsCategory, categories, parent=None)
-eric6.Helpviewer.VirusTotalIpReportDialog.VirusTotalIpReportDialog?1(ip, owner, resolutions, urls, parent=None)
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.GetDomainReportPattern?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.GetFileReportPattern?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.GetIpAddressReportPattern?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.GetUrlReportPattern?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ScanUrlPattern?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ServiceCode_InvalidKey?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ServiceCode_InvalidPrivilege?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ServiceCode_RateLimitExceeded?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemNotPresent?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemPresent?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.ServiceResult_ItemQueued?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.TestServiceKeyScanID?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.checkServiceKeyFinished?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.checkServiceKeyValidity?4(key, protocol="")
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.close?4()
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.fileScanReport?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.getDomainReport?4(domain)
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.getIpAddressReport?4(ipAddress)
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.preferencesChanged?4()
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.submitUrl?4(url)
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.submitUrlError?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI.urlScanReport?7
+eric6.Helpviewer.VirusTotal.VirusTotalApi.VirusTotalAPI?1(parent=None)
+eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.VirusTotalDomainReportDialog.on_whoisButton_clicked?4()
+eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog.VirusTotalDomainReportDialog?1(domain, resolutions, urls, subdomains, bdCategory, tmCategory, wtsCategory, whois, parent=None)
+eric6.Helpviewer.VirusTotal.VirusTotalIpReportDialog.VirusTotalIpReportDialog?1(ip, owner, resolutions, urls, parent=None)
+eric6.Helpviewer.VirusTotal.VirusTotalWhoisDialog.VirusTotalWhoisDialog?1(domain, whois, parent=None)
 eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.ClickToFlash._acceptedArgNames?8
 eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.ClickToFlash._acceptedArgValues?8
 eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlash.ClickToFlash._acceptedUrl?8

@@ -33,7 +33,7 @@ class HelpVirusTotalPage(ConfigurationPageBase, Ui_HelpVirusTotalPage):
         
         self.testResultLabel.setHidden(True)
         
-        from Helpviewer.VirusTotalApi import VirusTotalAPI
+        from Helpviewer.VirusTotal.VirusTotalApi import VirusTotalAPI
         self.__vt = VirusTotalAPI(self)
         self.__vt.checkServiceKeyFinished.connect(
             self.__checkServiceKeyFinished)

@@ -57,6 +57,7 @@ Version 6.1-snapshot-2015mmdd:
   -- added support for feature permissions
   -- improved parsing of the content disposition header analog to
      the way it is done in qutebrowser
+  -- modified and extended the VirusTotal interface for the v2 API
 - Third Party packages
   -- updated Pygments to 2.0.2
 

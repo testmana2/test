@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>eric6.Helpviewer.VirusTotalDomainReportDialog</title>
+<title>eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -19,7 +19,7 @@ a { color: #BA6D36; }
 </style>
 </head>
 <body><a NAME="top" ID="top"></a>
-<h1>eric6.Helpviewer.VirusTotalDomainReportDialog</h1>
+<h1>eric6.Helpviewer.VirusTotal.VirusTotalDomainReportDialog</h1>
 <p>
 Module implementing a dialog to show the VirusTotal domain report.
 </p>
@@ -59,6 +59,9 @@ QDialog, Ui_VirusTotalDomainReportDialog
 <tr>
 <td><a href="#VirusTotalDomainReportDialog.__init__">VirusTotalDomainReportDialog</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#VirusTotalDomainReportDialog.on_whoisButton_clicked">on_whoisButton_clicked</a></td>
+<td>Private slot to show the whois information.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -67,7 +70,7 @@ QDialog, Ui_VirusTotalDomainReportDialog
 </table>
 <a NAME="VirusTotalDomainReportDialog.__init__" ID="VirusTotalDomainReportDialog.__init__"></a>
 <h4>VirusTotalDomainReportDialog (Constructor)</h4>
-<b>VirusTotalDomainReportDialog</b>(<i>domain, resolutions, urls, subdomains, bdCategory, tmCategory, wtsCategory, categories, parent=None</i>)
+<b>VirusTotalDomainReportDialog</b>(<i>domain, resolutions, urls, subdomains, bdCategory, tmCategory, wtsCategory, whois, parent=None</i>)
 <p>
         Constructor
 </p><dl>
@@ -92,14 +95,19 @@ TrendMicro categorization
 </dd><dt><i>wtsCategory</i> (str)</dt>
 <dd>
 Websense ThreatSeeker categorization
-</dd><dt><i>categories</i> (list of str)</dt>
+</dd><dt><i>whois</i> (str)</dt>
 <dd>
-list of categorizations
+whois information
 </dd><dt><i>parent</i> (QWidget)</dt>
 <dd>
 reference to the parent widget
 </dd>
-</dl>
+</dl><a NAME="VirusTotalDomainReportDialog.on_whoisButton_clicked" ID="VirusTotalDomainReportDialog.on_whoisButton_clicked"></a>
+<h4>VirusTotalDomainReportDialog.on_whoisButton_clicked</h4>
+<b>on_whoisButton_clicked</b>(<i></i>)
+<p>
+        Private slot to show the whois information.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

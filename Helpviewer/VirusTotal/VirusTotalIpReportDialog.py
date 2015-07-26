@@ -7,10 +7,14 @@
 Module implementing a dialog to show the VirusTotal IP address report.
 """
 
+from __future__ import unicode_literals
+
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog, QTreeWidgetItem
 
 from .Ui_VirusTotalIpReportDialog import Ui_VirusTotalIpReportDialog
+
+import UI.PixmapCache
 
 
 class VirusTotalIpReportDialog(QDialog, Ui_VirusTotalIpReportDialog):
@@ -38,6 +42,8 @@ class VirusTotalIpReportDialog(QDialog, Ui_VirusTotalIpReportDialog):
         
         self.headerLabel.setText(
             self.tr("<b>Report for IP {0}</b>").format(ip))
+        self.headerPixmap.setPixmap(
+            UI.PixmapCache.getPixmap("virustotal.png"))
         self.ownerLabel.setText(owner)
         
         for resolution in resolutions:

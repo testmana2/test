@@ -129,7 +129,7 @@ class HelpWindow(E5MainWindow):
             from .HelpBrowserWV import HelpBrowser
             from .HelpTabWidget import HelpTabWidget
             from .AdBlock.AdBlockIcon import AdBlockIcon
-            from .VirusTotalApi import VirusTotalAPI
+            from .VirusTotal.VirusTotalApi import VirusTotalAPI
             
             HelpWindow.setUseQtHelp(self.fromEric)
             
