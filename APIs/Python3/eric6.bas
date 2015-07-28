@@ -287,6 +287,7 @@ HelpClearPrivateDataDialog QDialog Ui_HelpClearPrivateDataDialog
 HelpDocsInstaller QThread
 HelpDocumentationPage ConfigurationPageBase Ui_HelpDocumentationPage
 HelpIndexWidget QWidget
+HelpInspector QWebInspector
 HelpInterfacePage ConfigurationPageBase Ui_HelpInterfacePage
 HelpLanguagesDialog QDialog Ui_HelpLanguagesDialog
 HelpSearchWidget QWidget

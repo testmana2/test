@@ -258,6 +258,9 @@ QWebView
 <td><a href="#HelpBrowser.clearHistory">clearHistory</a></td>
 <td>Public slot to clear the history.</td>
 </tr><tr>
+<td><a href="#HelpBrowser.closeWebInspector">closeWebInspector</a></td>
+<td>Public slot to close the web inspector.</td>
+</tr><tr>
 <td><a href="#HelpBrowser.contextMenuEvent">contextMenuEvent</a></td>
 <td>Protected method called to create a context menu.</td>
 </tr><tr>
@@ -809,6 +812,11 @@ flag indicating the existence of feed links (boolean)
 <b>clearHistory</b>(<i></i>)
 <p>
         Public slot to clear the history.
+</p><a NAME="HelpBrowser.closeWebInspector" ID="HelpBrowser.closeWebInspector"></a>
+<h4>HelpBrowser.closeWebInspector</h4>
+<b>closeWebInspector</b>(<i></i>)
+<p>
+        Public slot to close the web inspector.
 </p><a NAME="HelpBrowser.contextMenuEvent" ID="HelpBrowser.contextMenuEvent"></a>
 <h4>HelpBrowser.contextMenuEvent</h4>
 <b>contextMenuEvent</b>(<i>evt</i>)
@@ -1197,6 +1205,12 @@ QWebPage
 <td><a href="#HelpWebPage.__managerFinished">__managerFinished</a></td>
 <td>Private slot to handle a finished reply.</td>
 </tr><tr>
+<td><a href="#HelpWebPage.__restoreFrameStateRequested">__restoreFrameStateRequested</a></td>
+<td>Private slot to restore scroll position and zoom level from history.</td>
+</tr><tr>
+<td><a href="#HelpWebPage.__saveFrameStateRequested">__saveFrameStateRequested</a></td>
+<td>Private slot to save the page state (i.e.</td>
+</tr><tr>
 <td><a href="#HelpWebPage.acceptNavigationRequest">acceptNavigationRequest</a></td>
 <td>Public method to determine, if a request may be accepted.</td>
 </tr><tr>
@@ -1290,6 +1304,35 @@ parent widget of this window (QWidget)
 <dt><i>reply</i></dt>
 <dd>
 reference to the finished reply (QNetworkReply)
+</dd>
+</dl><a NAME="HelpWebPage.__restoreFrameStateRequested" ID="HelpWebPage.__restoreFrameStateRequested"></a>
+<h4>HelpWebPage.__restoreFrameStateRequested</h4>
+<b>__restoreFrameStateRequested</b>(<i>frame</i>)
+<p>
+        Private slot to restore scroll position and zoom level from
+        history.
+</p><p>
+        Note: Code is based on qutebrowser.
+</p><dl>
+<dt><i>frame</i> (QWebFrame)</dt>
+<dd>
+frame to be restored
+</dd>
+</dl><a NAME="HelpWebPage.__saveFrameStateRequested" ID="HelpWebPage.__saveFrameStateRequested"></a>
+<h4>HelpWebPage.__saveFrameStateRequested</h4>
+<b>__saveFrameStateRequested</b>(<i>frame, itm</i>)
+<p>
+        Private slot to save the page state (i.e. zoom level and scroll
+        position).
+</p><p>
+        Note: Code is based on qutebrowser.
+</p><dl>
+<dt><i>frame</i> (QWebFrame)</dt>
+<dd>
+frame to be saved
+</dd><dt><i>itm</i> (QWebHistoryItem)</dt>
+<dd>
+web history item to be saved
 </dd>
 </dl><a NAME="HelpWebPage.acceptNavigationRequest" ID="HelpWebPage.acceptNavigationRequest"></a>
 <h4>HelpWebPage.acceptNavigationRequest</h4>

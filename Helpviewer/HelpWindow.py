@@ -2221,6 +2221,8 @@ class HelpWindow(E5MainWindow):
         
         self.searchEdit.saveSearches()
         
+        self.tabWidget.closeAllBrowsers()
+        
         state = self.saveState()
         Preferences.setHelp("HelpViewerState", state)
 

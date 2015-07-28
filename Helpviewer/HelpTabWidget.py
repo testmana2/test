@@ -471,6 +471,7 @@ class HelpTabWidget(E5TabWidget):
         
         self.__closedTabsManager.recordBrowser(browser, index)
         
+        browser.closeWebInspector()
         browser.home()
         self.removeTab(index)
         self.browserClosed.emit(browser)

@@ -188,6 +188,11 @@ class HelpWebPage(QWebPage):
         
         self.__adBlockedEntries = []
         self.loadStarted.connect(self.__loadStarted)
+        
+        self.saveFrameStateRequested.connect(
+            self.__saveFrameStateRequested)
+        self.restoreFrameStateRequested.connect(
+            self.__restoreFrameStateRequested)
     
     def acceptNavigationRequest(self, frame, request, type_):
         """
@@ -303,6 +308,21 @@ class HelpWebPage(QWebPage):
             urlString = bytes(info.url.toEncoded()).decode()
             errorPage.baseUrl = info.url
             if info.domain == QWebPage.QtNetwork and \
+               info.error == QNetworkReply.ProtocolUnknownError:
+                url = QUrl(info.url)
+                res = E5MessageBox.yesNo(
+                    None,
+                    self.tr("Protocol Error"),
+                    self.tr("""Open external application for {0}-link?\n"""
+                            """URL: {1}""").format(
+                        url.scheme(), url.toString(
+                            QUrl.PrettyDecoded | QUrl.RemovePassword)),
+                    yesDefault=True)
+                
+                if res:
+                    QDesktopServices.openUrl(url)
+                return True
+            elif info.domain == QWebPage.QtNetwork and \
                info.error == QNetworkReply.ContentAccessDenied and \
                info.errorString.startswith("AdBlockRule:"):
                 if info.frame != info.frame.page().mainFrame():
@@ -617,6 +637,57 @@ class HelpWebPage(QWebPage):
             return super(HelpWebPage, self).event(fakeEvent)
         
         return super(HelpWebPage, self).event(evt)
+    
+    def __saveFrameStateRequested(self, frame, itm):
+        """
+        Private slot to save the page state (i.e. zoom level and scroll
+        position).
+        
+        Note: Code is based on qutebrowser.
+        
+        @param frame frame to be saved
+        @type QWebFrame
+        @param itm web history item to be saved
+        @type QWebHistoryItem
+        """
+        try:
+            if frame != self.mainFrame():
+                return
+        except RuntimeError:
+            # With Qt 5.2.1 (Ubuntu Trusty) we get this when closing a tab:
+            #     RuntimeError: wrapped C/C++ object of type BrowserPage has
+            #     been deleted
+            # Since the information here isn't that important for closing web
+            # views anyways, we ignore this error.
+            return
+        data = {
+            'zoom': frame.zoomFactor(),
+            'scrollPos': frame.scrollPosition(),
+        }
+        itm.setUserData(data)
+    
+    def __restoreFrameStateRequested(self, frame):
+        """
+        Private slot to restore scroll position and zoom level from
+        history.
+        
+        Note: Code is based on qutebrowser.
+        
+        @param frame frame to be restored
+        @type QWebFrame
+        """
+        if frame != self.mainFrame():
+            return
+        
+        data = self.history().currentItem().userData()
+        if data is None:
+            return
+        
+        if 'zoom' in data:
+            frame.page().view().setZoomValue(int(data['zoom'] * 100))
+        
+        if 'scrollPos' in data and frame.scrollPosition() == QPoint(0, 0):
+            frame.setScrollPosition(data['scrollPos'])
 
 ###############################################################################
 
@@ -728,6 +799,8 @@ class HelpBrowser(QWebView):
         
         self.mw.personalInformationManager().connectPage(self.page())
         self.mw.greaseMonkeyManager().connectPage(self.page())
+        
+        self.__inspector = None
         
         self.grabGesture(Qt.PinchGesture)
     
@@ -1633,7 +1706,25 @@ class HelpBrowser(QWebView):
         """
         Private slot to show the web inspector window.
         """
-        self.triggerPageAction(QWebPage.InspectElement)
+        if self.__inspector is None:
+            from .HelpInspector import HelpInspector
+            self.__inspector = HelpInspector()
+            self.__inspector.setPage(self.page())
+            self.__inspector.show()
+        elif self.__inspector.isVisible():
+            self.__inspector.hide()
+        else:
+            self.__inspector.show()
+    
+    def closeWebInspector(self):
+        """
+        Public slot to close the web inspector.
+        """
+        if self.__inspector is not None:
+            if self.__inspector.isVisible():
+                self.__inspector.hide()
+            self.__inspector.deleteLater()
+            self.__inspector = None
     
     def addBookmark(self):
         """

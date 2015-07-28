@@ -2541,6 +2541,7 @@ eric6.Helpviewer.HelpBrowserWV.HelpBrowser.backward?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.backwardAvailable?7
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.checkRSS?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.clearHistory?4()
+eric6.Helpviewer.HelpBrowserWV.HelpBrowser.closeWebInspector?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.contextMenuEvent?4(evt)
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.copy?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.createWindow?4(windowType)
@@ -2626,6 +2627,8 @@ eric6.Helpviewer.HelpIndexWidget.HelpIndexWidget.focusInEvent?4(evt)
 eric6.Helpviewer.HelpIndexWidget.HelpIndexWidget.linkActivated?7
 eric6.Helpviewer.HelpIndexWidget.HelpIndexWidget.linksActivated?7
 eric6.Helpviewer.HelpIndexWidget.HelpIndexWidget?1(engine, mainWindow, parent=None)
+eric6.Helpviewer.HelpInspector.HelpInspector.closeEvent?4(evt)
+eric6.Helpviewer.HelpInspector.HelpInspector?1(parent=None)
 eric6.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.accept?4()
 eric6.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.defaultAcceptLanguages?4()
 eric6.Helpviewer.HelpLanguagesDialog.HelpLanguagesDialog.expand?4(language)

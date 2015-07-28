@@ -1095,6 +1095,7 @@ class Prefs(object):
     # defaults for geometry
     geometryDefaults = {
         "HelpViewerGeometry": QByteArray(),
+        "HelpInspectorGeometry": QByteArray(),
         "IconEditorGeometry": QByteArray(),
         "MainGeometry": QByteArray(),
         "MainMaximized": False,

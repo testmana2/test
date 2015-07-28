@@ -407,6 +407,7 @@
             <section title="eric6.Helpviewer.HelpClearPrivateDataDialog" ref="eric6.Helpviewer.HelpClearPrivateDataDialog.html" />
             <section title="eric6.Helpviewer.HelpDocsInstaller" ref="eric6.Helpviewer.HelpDocsInstaller.html" />
             <section title="eric6.Helpviewer.HelpIndexWidget" ref="eric6.Helpviewer.HelpIndexWidget.html" />
+            <section title="eric6.Helpviewer.HelpInspector" ref="eric6.Helpviewer.HelpInspector.html" />
             <section title="eric6.Helpviewer.HelpLanguagesDialog" ref="eric6.Helpviewer.HelpLanguagesDialog.html" />
             <section title="eric6.Helpviewer.HelpSearchWidget" ref="eric6.Helpviewer.HelpSearchWidget.html" />
             <section title="eric6.Helpviewer.HelpSnap" ref="eric6.Helpviewer.HelpSnap.html" />
@@ -5323,6 +5324,7 @@
       <keyword name="HelpBrowser.backward" id="HelpBrowser.backward" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.backward" />
       <keyword name="HelpBrowser.checkRSS" id="HelpBrowser.checkRSS" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.checkRSS" />
       <keyword name="HelpBrowser.clearHistory" id="HelpBrowser.clearHistory" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.clearHistory" />
+      <keyword name="HelpBrowser.closeWebInspector" id="HelpBrowser.closeWebInspector" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.closeWebInspector" />
       <keyword name="HelpBrowser.contextMenuEvent" id="HelpBrowser.contextMenuEvent" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.contextMenuEvent" />
       <keyword name="HelpBrowser.copy" id="HelpBrowser.copy" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.copy" />
       <keyword name="HelpBrowser.createWindow" id="HelpBrowser.createWindow" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.createWindow" />
@@ -5392,6 +5394,11 @@
       <keyword name="HelpIndexWidget.__filterIndices" id="HelpIndexWidget.__filterIndices" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__filterIndices" />
       <keyword name="HelpIndexWidget.eventFilter" id="HelpIndexWidget.eventFilter" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.eventFilter" />
       <keyword name="HelpIndexWidget.focusInEvent" id="HelpIndexWidget.focusInEvent" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.focusInEvent" />
+      <keyword name="HelpInspector" id="HelpInspector" ref="eric6.Helpviewer.HelpInspector.html#HelpInspector" />
+      <keyword name="HelpInspector (Constructor)" id="HelpInspector (Constructor)" ref="eric6.Helpviewer.HelpInspector.html#HelpInspector.__init__" />
+      <keyword name="HelpInspector (Module)" id="HelpInspector (Module)" ref="eric6.Helpviewer.HelpInspector.html" />
+      <keyword name="HelpInspector.__reloadGeometry" id="HelpInspector.__reloadGeometry" ref="eric6.Helpviewer.HelpInspector.html#HelpInspector.__reloadGeometry" />
+      <keyword name="HelpInspector.closeEvent" id="HelpInspector.closeEvent" ref="eric6.Helpviewer.HelpInspector.html#HelpInspector.closeEvent" />
       <keyword name="HelpInterfacePage" id="HelpInterfacePage" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage" />
       <keyword name="HelpInterfacePage (Constructor)" id="HelpInterfacePage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.__init__" />
       <keyword name="HelpInterfacePage (Module)" id="HelpInterfacePage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html" />
@@ -5526,6 +5533,8 @@
       <keyword name="HelpWebPage (Constructor)" id="HelpWebPage (Constructor)" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.__init__" />
       <keyword name="HelpWebPage.__loadStarted" id="HelpWebPage.__loadStarted" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.__loadStarted" />
       <keyword name="HelpWebPage.__managerFinished" id="HelpWebPage.__managerFinished" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.__managerFinished" />
+      <keyword name="HelpWebPage.__restoreFrameStateRequested" id="HelpWebPage.__restoreFrameStateRequested" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.__restoreFrameStateRequested" />
+      <keyword name="HelpWebPage.__saveFrameStateRequested" id="HelpWebPage.__saveFrameStateRequested" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.__saveFrameStateRequested" />
       <keyword name="HelpWebPage.acceptNavigationRequest" id="HelpWebPage.acceptNavigationRequest" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.acceptNavigationRequest" />
       <keyword name="HelpWebPage.addAdBlockRule" id="HelpWebPage.addAdBlockRule" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.addAdBlockRule" />
       <keyword name="HelpWebPage.event" id="HelpWebPage.event" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpWebPage.event" />
@@ -14082,6 +14091,7 @@
       <file>eric6.Helpviewer.HelpClearPrivateDataDialog.html</file>
       <file>eric6.Helpviewer.HelpDocsInstaller.html</file>
       <file>eric6.Helpviewer.HelpIndexWidget.html</file>
+      <file>eric6.Helpviewer.HelpInspector.html</file>
       <file>eric6.Helpviewer.HelpLanguagesDialog.html</file>
       <file>eric6.Helpviewer.HelpSearchWidget.html</file>
       <file>eric6.Helpviewer.HelpSnap.html</file>

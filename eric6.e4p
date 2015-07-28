@@ -323,6 +323,7 @@
     <Source>Helpviewer/HelpClearPrivateDataDialog.py</Source>
     <Source>Helpviewer/HelpDocsInstaller.py</Source>
     <Source>Helpviewer/HelpIndexWidget.py</Source>
+    <Source>Helpviewer/HelpInspector.py</Source>
     <Source>Helpviewer/HelpLanguagesDialog.py</Source>
     <Source>Helpviewer/HelpSearchWidget.py</Source>
     <Source>Helpviewer/HelpSnap.py</Source>
