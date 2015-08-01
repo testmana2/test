@@ -88,12 +88,14 @@ class TabBar(E5WheelTabBar):
             mimeData = QMimeData()
             index = self.tabAt(event.pos())
             mimeData.setText(self.tabText(index))
-            mimeData.setData("action", "tab-reordering")
-            mimeData.setData("tabbar-id", str(id(self)))
+            mimeData.setData("action", b"tab-reordering")
+            mimeData.setData("tabbar-id", str(id(self)).encode("utf-8"))
             mimeData.setData(
                 "source-index",
                 QByteArray.number(self.tabAt(self.__dragStartPos)))
-            mimeData.setData("tabwidget-id", str(id(self.parentWidget())))
+            mimeData.setData(
+                "tabwidget-id",
+                str(id(self.parentWidget())).encode("utf-8"))
             drag.setMimeData(mimeData)
             if event.modifiers() == Qt.KeyboardModifiers(Qt.ShiftModifier):
                 drag.exec_(Qt.DropActions(Qt.CopyAction))
@@ -110,7 +112,7 @@ class TabBar(E5WheelTabBar):
         mimeData = event.mimeData()
         formats = mimeData.formats()
         if "action" in formats and \
-           mimeData.data("action") == "tab-reordering" and \
+           mimeData.data("action") == b"tab-reordering" and \
            "tabbar-id" in formats and \
            "source-index" in formats and \
            "tabwidget-id" in formats:
@@ -125,7 +127,7 @@ class TabBar(E5WheelTabBar):
         """
         mimeData = event.mimeData()
         oldID = int(mimeData.data("tabbar-id"))
-        fromIndex = mimeData.data("source-index").toInt()[0]
+        fromIndex = int(mimeData.data("source-index"))
         toIndex = self.tabAt(event.pos())
         if oldID != id(self):
             parentID = int(mimeData.data("tabwidget-id"))
