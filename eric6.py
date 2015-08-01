@@ -16,7 +16,8 @@ from __future__ import unicode_literals
 import sys
 
 # generate list of arguments to be remembered for a restart
-restartArgsList = ["--nosplash", "--plugin", "--debug", "--config", "--pyqt4"]
+restartArgsList = ["--nosplash", "--plugin", "--debug", "--config", "--pyqt4"
+                   "--settings"]
 restartArgs = [arg for arg in sys.argv[1:]
                if arg.split("=", 1)[0] in restartArgsList]
 
@@ -24,7 +25,7 @@ import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__
 
 try:  # Only for Py2
     import StringIO as io   # __IGNORE_EXCEPTION__
-    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+    import Globals.compatibility_fixes     # __IGNORE_WARNING__
 except ImportError:
     import io       # __IGNORE_WARNING__
     basestring = str
@@ -66,13 +67,20 @@ if "--debug" in sys.argv:
     del sys.argv[sys.argv.index("--debug")]
     logging.basicConfig(level=logging.DEBUG)
 
-for arg in sys.argv:
+for arg in sys.argv[:]:
     if arg.startswith("--config="):
         import Globals
         configDir = arg.replace("--config=", "")
         Globals.setConfigDir(configDir)
         sys.argv.remove(arg)
-        break
+    elif arg.startswith("--settings="):
+        from PyQt5.QtCore import QSettings
+        settingsDir = os.path.expanduser(arg.replace("--settings=", ""))
+        if not os.path.isdir(settingsDir):
+            os.makedirs(settingsDir)
+        QSettings.setPath(QSettings.IniFormat, QSettings.UserScope,
+                          settingsDir)
+        sys.argv.remove(arg)
 
 # make Third-Party package available as a packages repository
 sys.path.insert(2, os.path.join(os.path.dirname(__file__),
@@ -211,6 +219,8 @@ def main():
          "don't open anything at startup except that given in command"),
         ("--plugin=plugin-file",
          "load the given plugin file (plugin development)"),
+        ("--settings=settingsDir",
+         "use the given directory to store the settings files"),
         ("--start-file", "load the most recently opened file"),
         ("--start-multi", "load the most recently opened multi-project"),
         ("--start-project", "load the most recently opened project"),

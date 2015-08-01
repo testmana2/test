@@ -1849,6 +1849,14 @@ eric6.E5XML.XMLStreamWriterBase.XMLStreamWriterBase.writeXML?4()
 eric6.E5XML.XMLStreamWriterBase.XMLStreamWriterBase?1(device)
 eric6.Globals.AppInfo.makeAppInfo?4(argv, name, arg, description, options=[])
 eric6.Globals.checkBlacklistedVersions?4()
+eric6.Globals.compatibility_fixes.File.fp?7
+eric6.Globals.compatibility_fixes.File.next?4()
+eric6.Globals.compatibility_fixes.File.read?4(n=-1)
+eric6.Globals.compatibility_fixes.File.readline?4(limit=-1)
+eric6.Globals.compatibility_fixes.File.readlines?4(hint=-1)
+eric6.Globals.compatibility_fixes.File.write?4(txt)
+eric6.Globals.compatibility_fixes.File?1(filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
+eric6.Globals.compatibility_fixes.open?4(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
 eric6.Globals.configDir?7
 eric6.Globals.findPythonInterpreters?4(pyVersion)
 eric6.Globals.getConfigDir?4()
@@ -8096,7 +8104,7 @@ eric6.Tools.TRSingleApplication.TRSingleApplicationServer.loadForm?7
 eric6.Tools.TRSingleApplication.TRSingleApplicationServer.loadTranslation?7
 eric6.Tools.TRSingleApplication.TRSingleApplicationServer?1(parent)
 eric6.Tools.TrayStarter.TrayStarter.preferencesChanged?4()
-eric6.Tools.TrayStarter.TrayStarter?1(usePyQt4)
+eric6.Tools.TrayStarter.TrayStarter?1(usePyQt4, settingsDir)
 eric6.Tools.UIPreviewer.UIPreviewer.eventFilter?4(obj, ev)
 eric6.Tools.UIPreviewer.UIPreviewer.show?4()
 eric6.Tools.UIPreviewer.UIPreviewer?1(filename=None, parent=None, name=None)
@@ -8779,14 +8787,6 @@ eric6.Utilities.checkPyside?4()
 eric6.Utilities.codingBytes_regexps?7
 eric6.Utilities.coding_regexps?7
 eric6.Utilities.compactPath?4(path, width, measure=len)
-eric6.Utilities.compatibility_fixes.File.fp?7
-eric6.Utilities.compatibility_fixes.File.next?4()
-eric6.Utilities.compatibility_fixes.File.read?4(n=-1)
-eric6.Utilities.compatibility_fixes.File.readline?4(limit=-1)
-eric6.Utilities.compatibility_fixes.File.readlines?4(hint=-1)
-eric6.Utilities.compatibility_fixes.File.write?4(txt)
-eric6.Utilities.compatibility_fixes.File?1(filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
-eric6.Utilities.compatibility_fixes.open?4(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
 eric6.Utilities.configDir?7
 eric6.Utilities.convertLineEnds?4(text, eol)
 eric6.Utilities.crypto.CryptoMarker?7
@@ -9217,6 +9217,7 @@ eric6.eric6_snap.main?4()
 eric6.eric6_sqlbrowser.createMainWidget?4(argv)
 eric6.eric6_sqlbrowser.main?4()
 eric6.eric6_tray.PyQt4Option?7
+eric6.eric6_tray.SettingsDir?7
 eric6.eric6_tray.createMainWidget?4(argv)
 eric6.eric6_tray.main?4()
 eric6.eric6_trpreviewer.createMainWidget?4(argv)

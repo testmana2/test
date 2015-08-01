@@ -16,19 +16,27 @@ from __future__ import unicode_literals
 import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__
 
 try:  # Only for Py2
-    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+    import Globals.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass
 
 import sys
+import os
 
-for arg in sys.argv:
+for arg in sys.argv[:]:
     if arg.startswith("--config="):
         import Globals
         configDir = arg.replace("--config=", "")
         Globals.setConfigDir(configDir)
         sys.argv.remove(arg)
-        break
+    elif arg.startswith("--settings="):
+        from PyQt5.QtCore import QSettings
+        settingsDir = os.path.expanduser(arg.replace("--settings=", ""))
+        if not os.path.isdir(settingsDir):
+            os.makedirs(settingsDir)
+        QSettings.setPath(QSettings.IniFormat, QSettings.UserScope,
+                          settingsDir)
+        sys.argv.remove(arg)
 
 from Globals import AppInfo
 
@@ -53,6 +61,8 @@ def main():
     options = [
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
+        ("--settings=settingsDir",
+         "use the given directory to store the settings files"),
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
                                   "Eric6 Plugin Uninstaller",

@@ -31,17 +31,21 @@ class TrayStarter(QSystemTrayIcon):
     """
     Class implementing a starter for the system tray.
     """
-    def __init__(self, usePyQt4):
+    def __init__(self, usePyQt4, settingsDir):
         """
         Constructor
         
-        @param usePyQt4 flag indicating to use PyQt4 (boolean)
+        @param usePyQt4 flag indicating to use PyQt4
+        @type bool
+        @param settingsDir directory to be used for the settings files
+        @type str
         """
         super(TrayStarter, self).__init__(
             UI.PixmapCache.getIcon(
                 Preferences.getTrayStarter("TrayStarterIcon")))
         
         self.usePyQt4 = usePyQt4
+        self.settingsDir = settingsDir
         
         self.maxMenuFilePathLen = 75
         
@@ -240,6 +244,9 @@ class TrayStarter(QSystemTrayIcon):
         args.append(applPath)
         if self.usePyQt4:
             args.append("--pyqt4")
+        args.append("--config={0}".format(Utilities.getConfigDir()))
+        if self.settingsDir:
+            args.append("--settings={0}".format(self.settingsDir))
         for arg in applArgs:
             args.append(arg)
         
@@ -258,120 +265,103 @@ class TrayStarter(QSystemTrayIcon):
         """
         Private slot to start the eric6 Mini Editor.
         """
-        self.__startProc("eric6_editor.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_editor.py")
     
     def __startEric(self):
         """
         Private slot to start the eric6 IDE.
         """
-        self.__startProc("eric6.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6.py")
 
     def __startPreferences(self):
         """
         Private slot to start the eric6 configuration dialog.
         """
-        self.__startProc("eric6_configure.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_configure.py")
 
     def __startPluginInstall(self):
         """
         Private slot to start the eric6 plugin installation dialog.
         """
-        self.__startProc("eric6_plugininstall.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_plugininstall.py")
 
     def __startPluginUninstall(self):
         """
         Private slot to start the eric6 plugin uninstallation dialog.
         """
-        self.__startProc("eric6_pluginuninstall.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_pluginuninstall.py")
 
     def __startPluginRepository(self):
         """
         Private slot to start the eric6 plugin repository dialog.
         """
-        self.__startProc("eric6_pluginrepository.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_pluginrepository.py")
 
     def __startHelpViewer(self):
         """
         Private slot to start the eric6 web browser.
         """
-        self.__startProc("eric6_webbrowser.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_webbrowser.py")
 
     def __startUIPreviewer(self):
         """
         Private slot to start the eric6 UI previewer.
         """
-        self.__startProc("eric6_uipreviewer.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_uipreviewer.py")
 
     def __startTRPreviewer(self):
         """
         Private slot to start the eric6 translations previewer.
         """
-        self.__startProc("eric6_trpreviewer.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_trpreviewer.py")
 
     def __startUnittest(self):
         """
         Private slot to start the eric6 unittest dialog.
         """
-        self.__startProc("eric6_unittest.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_unittest.py")
 
     def __startDiff(self):
         """
         Private slot to start the eric6 diff dialog.
         """
-        self.__startProc("eric6_diff.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_diff.py")
 
     def __startCompare(self):
         """
         Private slot to start the eric6 compare dialog.
         """
-        self.__startProc("eric6_compare.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_compare.py")
     
     def __startSqlBrowser(self):
         """
         Private slot to start the eric6 sql browser dialog.
         """
-        self.__startProc("eric6_sqlbrowser.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_sqlbrowser.py")
 
     def __startIconEditor(self):
         """
         Private slot to start the eric6 icon editor dialog.
         """
-        self.__startProc("eric6_iconeditor.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_iconeditor.py")
 
     def __startSnapshot(self):
         """
         Private slot to start the eric6 snapshot dialog.
         """
-        self.__startProc("eric6_snap.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_snap.py")
 
     def __startQRegExp(self):
         """
         Private slot to start the eric6 QRegExp editor dialog.
         """
-        self.__startProc("eric6_qregexp.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_qregexp.py")
 
     def __startPyRe(self):
         """
         Private slot to start the eric6 Python re editor dialog.
         """
-        self.__startProc("eric6_re.py", "--config={0}".format(
-            Utilities.getConfigDir()))
+        self.__startProc("eric6_re.py")
 
     def __showRecentProjectsMenu(self):
         """
@@ -450,7 +440,6 @@ class TrayStarter(QSystemTrayIcon):
         if filename:
             self.__startProc(
                 "eric6.py",
-                "--config={0}".format(Utilities.getConfigDir()),
                 filename)
     
     def __showPreferences(self):

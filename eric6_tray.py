@@ -15,23 +15,32 @@ context menu to start the eric6 IDE and the eric6 tools.
 from __future__ import unicode_literals
 
 import sys
+import os
 
 PyQt4Option = "--pyqt4" in sys.argv
+SettingsDir = None
 
 import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__
 
 try:  # Only for Py2
-    import Utilities.compatibility_fixes     # __IGNORE_WARNING__
+    import Globals.compatibility_fixes     # __IGNORE_WARNING__
 except (ImportError):
     pass
 
-for arg in sys.argv:
+for arg in sys.argv[:]:
     if arg.startswith("--config="):
         import Globals
         configDir = arg.replace("--config=", "")
         Globals.setConfigDir(configDir)
         sys.argv.remove(arg)
-        break
+    elif arg.startswith("--settings="):
+        from PyQt5.QtCore import QSettings
+        SettingsDir = os.path.expanduser(arg.replace("--settings=", ""))
+        if not os.path.isdir(SettingsDir):
+            os.makedirs(SettingsDir)
+        QSettings.setPath(QSettings.IniFormat, QSettings.UserScope,
+                          SettingsDir)
+        sys.argv.remove(arg)
 
 from Globals import AppInfo
 
@@ -48,7 +57,7 @@ def createMainWidget(argv):
     global PyQt4Option
     
     from Tools.TrayStarter import TrayStarter
-    return TrayStarter(PyQt4Option)
+    return TrayStarter(PyQt4Option, SettingsDir)
 
 
 def main():
@@ -58,6 +67,8 @@ def main():
     options = [
         ("--config=configDir",
          "use the given directory as the one containing the config files"),
+        ("--settings=settingsDir",
+         "use the given directory to store the settings files"),
     ]
     appinfo = AppInfo.makeAppInfo(sys.argv,
                                   "Eric6 Tray",

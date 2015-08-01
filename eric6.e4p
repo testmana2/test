@@ -234,6 +234,7 @@
     <Source>Examples/rhallo.py</Source>
     <Source>Globals/AppInfo.py</Source>
     <Source>Globals/__init__.py</Source>
+    <Source>Globals/compatibility_fixes.py</Source>
     <Source>Graphics/ApplicationDiagramBuilder.py</Source>
     <Source>Graphics/AssociationItem.py</Source>
     <Source>Graphics/ClassItem.py</Source>
@@ -1190,7 +1191,6 @@
     <Source>Utilities/PySideImporter.py</Source>
     <Source>Utilities/__init__.py</Source>
     <Source>Utilities/binplistlib.py</Source>
-    <Source>Utilities/compatibility_fixes.py</Source>
     <Source>Utilities/crypto/__init__.py</Source>
     <Source>Utilities/crypto/py3AES.py</Source>
     <Source>Utilities/crypto/py3PBKDF2.py</Source>

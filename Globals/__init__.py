@@ -7,6 +7,10 @@
 Module defining common data to be used by all modules.
 """
 
+#
+# Note: Do not import any eric stuff in here!!!!!!!
+#
+
 from __future__ import unicode_literals
 
 import sys

@@ -193,6 +193,7 @@
           <section title="eric6.Globals" ref="index-eric6.Globals.html">
             <section title="eric6.Globals.AppInfo" ref="eric6.Globals.AppInfo.html" />
             <section title="eric6.Globals.__init__" ref="eric6.Globals.__init__.html" />
+            <section title="eric6.Globals.compatibility_fixes" ref="eric6.Globals.compatibility_fixes.html" />
           </section>
           <section title="eric6.Graphics" ref="index-eric6.Graphics.html">
             <section title="eric6.Graphics.ApplicationDiagramBuilder" ref="eric6.Graphics.ApplicationDiagramBuilder.html" />
@@ -1017,7 +1018,6 @@
             <section title="eric6.Utilities.PySideImporter" ref="eric6.Utilities.PySideImporter.html" />
             <section title="eric6.Utilities.__init__" ref="eric6.Utilities.__init__.html" />
             <section title="eric6.Utilities.binplistlib" ref="eric6.Utilities.binplistlib.html" />
-            <section title="eric6.Utilities.compatibility_fixes" ref="eric6.Utilities.compatibility_fixes.html" />
             <section title="eric6.Utilities.uic" ref="eric6.Utilities.uic.html" />
           </section>
           <section title="eric6.VCS" ref="index-eric6.VCS.html">
@@ -4941,13 +4941,13 @@
       <keyword name="FetchProjectHelper.initActions" id="FetchProjectHelper.initActions" ref="eric6.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initActions" />
       <keyword name="FetchProjectHelper.initMenu" id="FetchProjectHelper.initMenu" ref="eric6.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.initMenu" />
       <keyword name="FetchProjectHelper.menuTitle" id="FetchProjectHelper.menuTitle" ref="eric6.Plugins.VcsPlugins.vcsMercurial.FetchExtension.ProjectHelper.html#FetchProjectHelper.menuTitle" />
-      <keyword name="File" id="File" ref="eric6.Utilities.compatibility_fixes.html#File" />
-      <keyword name="File (Constructor)" id="File (Constructor)" ref="eric6.Utilities.compatibility_fixes.html#File.__init__" />
-      <keyword name="File.next" id="File.next" ref="eric6.Utilities.compatibility_fixes.html#File.next" />
-      <keyword name="File.read" id="File.read" ref="eric6.Utilities.compatibility_fixes.html#File.read" />
-      <keyword name="File.readline" id="File.readline" ref="eric6.Utilities.compatibility_fixes.html#File.readline" />
-      <keyword name="File.readlines" id="File.readlines" ref="eric6.Utilities.compatibility_fixes.html#File.readlines" />
-      <keyword name="File.write" id="File.write" ref="eric6.Utilities.compatibility_fixes.html#File.write" />
+      <keyword name="File" id="File" ref="eric6.Globals.compatibility_fixes.html#File" />
+      <keyword name="File (Constructor)" id="File (Constructor)" ref="eric6.Globals.compatibility_fixes.html#File.__init__" />
+      <keyword name="File.next" id="File.next" ref="eric6.Globals.compatibility_fixes.html#File.next" />
+      <keyword name="File.read" id="File.read" ref="eric6.Globals.compatibility_fixes.html#File.read" />
+      <keyword name="File.readline" id="File.readline" ref="eric6.Globals.compatibility_fixes.html#File.readline" />
+      <keyword name="File.readlines" id="File.readlines" ref="eric6.Globals.compatibility_fixes.html#File.readlines" />
+      <keyword name="File.write" id="File.write" ref="eric6.Globals.compatibility_fixes.html#File.write" />
       <keyword name="FileAccessHandler" id="FileAccessHandler" ref="eric6.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler" />
       <keyword name="FileAccessHandler (Constructor)" id="FileAccessHandler (Constructor)" ref="eric6.Helpviewer.Network.FileAccessHandler.html#FileAccessHandler.__init__" />
       <keyword name="FileAccessHandler (Module)" id="FileAccessHandler (Module)" ref="eric6.Helpviewer.Network.FileAccessHandler.html" />
@@ -13202,7 +13202,7 @@
       <keyword name="comparison_negative" id="comparison_negative" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_negative" />
       <keyword name="comparison_to_singleton" id="comparison_to_singleton" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_to_singleton" />
       <keyword name="comparison_type" id="comparison_type" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_type" />
-      <keyword name="compatibility_fixes (Module)" id="compatibility_fixes (Module)" ref="eric6.Utilities.compatibility_fixes.html" />
+      <keyword name="compatibility_fixes (Module)" id="compatibility_fixes (Module)" ref="eric6.Globals.compatibility_fixes.html" />
       <keyword name="compileUiDir" id="compileUiDir" ref="eric6.Utilities.uic.html#compileUiDir" />
       <keyword name="compileUiDir" id="compileUiDir" ref="eric6.compileUiFiles.html#compileUiDir" />
       <keyword name="compileUiDir" id="compileUiDir" ref="eric6.install.html#compileUiDir" />
@@ -13630,7 +13630,7 @@
       <keyword name="normcasepath" id="normcasepath" ref="eric6.Utilities.__init__.html#normcasepath" />
       <keyword name="normjoinpath" id="normjoinpath" ref="eric6.Utilities.__init__.html#normjoinpath" />
       <keyword name="okToClearData" id="okToClearData" ref="eric6.E5Gui.E5MessageBox.html#okToClearData" />
-      <keyword name="open" id="open" ref="eric6.Utilities.compatibility_fixes.html#open" />
+      <keyword name="open" id="open" ref="eric6.Globals.compatibility_fixes.html#open" />
       <keyword name="parseContentDisposition" id="parseContentDisposition" ref="eric6.Helpviewer.HelpUtilities.html#parseContentDisposition" />
       <keyword name="parseEnvironmentString" id="parseEnvironmentString" ref="eric6.Utilities.__init__.html#parseEnvironmentString" />
       <keyword name="parseOptionString" id="parseOptionString" ref="eric6.Utilities.__init__.html#parseOptionString" />
@@ -14011,6 +14011,7 @@
       <file>eric6.E5XML.XMLStreamWriterBase.html</file>
       <file>eric6.Globals.AppInfo.html</file>
       <file>eric6.Globals.__init__.html</file>
+      <file>eric6.Globals.compatibility_fixes.html</file>
       <file>eric6.Graphics.ApplicationDiagramBuilder.html</file>
       <file>eric6.Graphics.AssociationItem.html</file>
       <file>eric6.Graphics.ClassItem.html</file>
@@ -14656,7 +14657,6 @@
       <file>eric6.Utilities.PySideImporter.html</file>
       <file>eric6.Utilities.__init__.html</file>
       <file>eric6.Utilities.binplistlib.html</file>
-      <file>eric6.Utilities.compatibility_fixes.html</file>
       <file>eric6.Utilities.crypto.__init__.html</file>
       <file>eric6.Utilities.crypto.py3AES.html</file>
       <file>eric6.Utilities.crypto.py3PBKDF2.html</file>

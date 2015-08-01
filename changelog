@@ -5,6 +5,8 @@ Version 6.1-snapshot-2015mmdd:
 - General
   -- added a configuration page to edit the list of mime types to
      be opened in an eric editor
+  -- added the '--settings=' command line switch to store the
+     settings files in a non-standard directory
 - Checkers
   -- added a batch mode to the code style checker to make use of
      multiple CPUs/CPU-Cores
