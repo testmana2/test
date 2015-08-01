@@ -138,11 +138,11 @@ class E5SslInfoWidget(QMenu):
             if proto == QSsl.SslV3:
                 sslVersion = "SSL 3.0"
                 imageLabel.setPixmap(
-                    UI.PixmapCache.getPixmap("securityHigh32.png"))
+                    UI.PixmapCache.getPixmap("securityLow32.png"))
             elif proto == QSsl.TlsV1SslV3:
                 sslVersion = "TLS 1.0/SSL 3.0"
                 imageLabel.setPixmap(
-                    UI.PixmapCache.getPixmap("securityHigh32.png"))
+                    UI.PixmapCache.getPixmap("securityLow32.png"))
             elif proto == QSsl.SslV2:
                 sslVersion = "SSL 2.0"
                 imageLabel.setPixmap(
