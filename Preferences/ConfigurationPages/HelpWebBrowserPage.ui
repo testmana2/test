@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>616</width>
-    <height>1224</height>
+    <height>1329</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -210,8 +210,8 @@
      <property name="title">
       <string>Privacy</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
        <widget class="QCheckBox" name="javaCheckBox">
         <property name="toolTip">
          <string>Select to enable Java</string>
@@ -221,106 +221,99 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QCheckBox" name="javaScriptCheckBox">
+      <item>
+       <widget class="QGroupBox" name="javaScriptGroup">
         <property name="toolTip">
          <string>Select to enable JavaScript</string>
         </property>
-        <property name="text">
+        <property name="title">
          <string>Enable JavaScript</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="jsOpenWindowsCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to open windows</string>
+           </property>
+           <property name="text">
+            <string>JavaScript can open windows</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="jsCloseWindowsCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to close windows</string>
+           </property>
+           <property name="text">
+            <string>JavaScript can close windows</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="jsClipboardCheckBox">
+           <property name="toolTip">
+            <string>Select to allow JavaScript to access the clipboard</string>
+           </property>
+           <property name="text">
+            <string>JavaScript can access clipboard</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
-      <item row="2" column="0">
-       <widget class="QCheckBox" name="jsOpenWindowsCheckBox">
-        <property name="toolTip">
-         <string>Select to allow JavaScript to open windows</string>
-        </property>
-        <property name="text">
-         <string>JavaScript can open windows</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QCheckBox" name="jsClipboardCheckBox">
-        <property name="toolTip">
-         <string>Select to allow JavaScript to access the clipboard</string>
-        </property>
-        <property name="text">
-         <string>JavaScript can access clipboard</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="pluginsCheckBox">
+      <item>
+       <widget class="QGroupBox" name="pluginsGroup">
         <property name="toolTip">
          <string>Select to enable plugins in web pages</string>
         </property>
-        <property name="text">
-         <string>Enable Plugins</string>
+        <property name="title">
+         <string>Enable Plug-ins</string>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="clickToFlashCheckBox">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>8</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>Select to activate the Flash blocker</string>
+           </property>
+           <property name="text">
+            <string>Use ClickToFlash on Flash plugins</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
-      <item row="4" column="0" colspan="2">
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>19</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QCheckBox" name="clickToFlashCheckBox">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>8</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="toolTip">
-           <string>Select to activate the Flash blocker</string>
-          </property>
-          <property name="text">
-           <string>Use ClickToFlash on Flash plugins</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>308</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
-      </item>
-      <item row="5" column="0" colspan="2">
+      <item>
        <widget class="Line" name="line">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
-      <item row="6" column="0">
+      <item>
        <widget class="QCheckBox" name="doNotTrackCheckBox">
         <property name="toolTip">
          <string>Select to enabled the &quot;Do Not Track&quot; feature</string>
@@ -330,7 +323,7 @@
         </property>
        </widget>
       </item>
-      <item row="7" column="0" colspan="2">
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
          <widget class="QCheckBox" name="sendRefererCheckBox">
@@ -710,10 +703,11 @@
   <tabstop>defaultHomeButton</tabstop>
   <tabstop>defaultSchemeCombo</tabstop>
   <tabstop>javaCheckBox</tabstop>
-  <tabstop>javaScriptCheckBox</tabstop>
+  <tabstop>javaScriptGroup</tabstop>
   <tabstop>jsOpenWindowsCheckBox</tabstop>
+  <tabstop>jsCloseWindowsCheckBox</tabstop>
   <tabstop>jsClipboardCheckBox</tabstop>
-  <tabstop>pluginsCheckBox</tabstop>
+  <tabstop>pluginsGroup</tabstop>
   <tabstop>clickToFlashCheckBox</tabstop>
   <tabstop>doNotTrackCheckBox</tabstop>
   <tabstop>sendRefererCheckBox</tabstop>
@@ -733,22 +727,5 @@
   <tabstop>accessKeysCheckBox</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>pluginsCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>clickToFlashCheckBox</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>89</x>
-     <y>422</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>145</x>
-     <y>465</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

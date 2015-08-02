@@ -915,6 +915,9 @@ class Prefs(object):
             "JavaScriptCanOpenWindows":
             websettings.testAttribute(
                 QWebSettings.JavascriptCanOpenWindows),
+            "JavaScriptCanCloseWindows":
+            websettings.testAttribute(
+                QWebSettings.JavascriptCanCloseWindows),
             "JavaScriptCanAccessClipboard":
             websettings.testAttribute(
                 QWebSettings.JavascriptCanAccessClipboard),

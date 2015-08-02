@@ -17069,72 +17069,72 @@ Do you really want to close this page?</source>
         <translation>Разрешить JavaScript</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="237"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="242"/>
         <source>Select to allow JavaScript to open windows</source>
         <translation>Разрешить JavaScript открывать новые окна</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="240"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="245"/>
         <source>JavaScript can open windows</source>
         <translation>Разрешить JavaScript открывать новые окна</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="262"/>
         <source>Select to allow JavaScript to access the clipboard</source>
         <translation>Разрешить JavaScript использовать буфер обмена</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="250"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="265"/>
         <source>JavaScript can access clipboard</source>
         <translation>Разрешить JavaScript использовать буфер обмена</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="257"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="275"/>
         <source>Select to enable plugins in web pages</source>
         <translation>Разрешить плагины на WEB страницах</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="260"/>
         <source>Enable Plugins</source>
-        <translation>Разрешить плагины</translation>
+        <translation type="obsolete">Разрешить плагины</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="463"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="456"/>
         <source>Browser Cache</source>
         <translation>Кэш просмотрщика</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="464"/>
         <source>Enable disk cache</source>
         <translation>Запретить кэш на диске</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="535"/>
         <source>Cache size:</source>
         <translation>Размер кэша:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="549"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation>Максимальный размер кэша на диске</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="555"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="548"/>
         <source> MB</source>
         <translation>MB</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="623"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="616"/>
         <source>Printing</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="629"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="622"/>
         <source>Select to print background colours and images</source>
         <translation>Печатать фон и изображения</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="632"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="625"/>
         <source>Print background colours and images</source>
         <translation>Печатать фон и изображения</translation>
     </message>
@@ -17184,52 +17184,52 @@ Do you really want to close this page?</source>
         <translation>По умолчанию</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="399"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="392"/>
         <source>History</source>
         <translation>История</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="405"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="398"/>
         <source>Remove history items:</source>
         <translation>Удалить историю:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="418"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="411"/>
         <source>Select the period for expiration of history entries</source>
         <translation>Задайте срок хранения для истории</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="422"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="415"/>
         <source>After one day</source>
         <translation>Через день</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="427"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="420"/>
         <source>After one week</source>
         <translation>Через неделю</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="432"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="425"/>
         <source>After two weeks</source>
         <translation>Через две недели</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="437"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="430"/>
         <source>After one month</source>
         <translation>Через месяц</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="442"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="435"/>
         <source>After one year</source>
         <translation>Через год</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="447"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="440"/>
         <source>Manually</source>
         <translation>Вручную</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="445"/>
         <source>On application exit</source>
         <translation>При выходе из приложения</translation>
     </message>
@@ -17254,42 +17254,42 @@ Do you really want to close this page?</source>
         <translation>&lt;b&gt;Схема по умолчанию&lt;/b&gt;&lt;p&gt;Задайте схему по умолчанию. Эта схема будет допавляться к страницам у которых нет своей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="376"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="369"/>
         <source>Security</source>
         <translation>Безопасность</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="503"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="496"/>
         <source>Policy</source>
         <translation>Правила</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="509"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="502"/>
         <source>Select to prefer the network</source>
         <translation>Предпочитать сеть</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="505"/>
         <source>Keep cache in sync</source>
         <translation>Держать кэш синхронизированным</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
         <source>Select to prefer cached data</source>
         <translation>Предпочитать данные из кэша</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="515"/>
         <source>Use cache whenever possible</source>
         <translation>По возможности использовать данные из кэша</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="529"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
         <source>Select to use cached data only</source>
         <translation>Использовать данные только из кэша</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="532"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="525"/>
         <source>Offline browsing mode</source>
         <translation>Offline режим</translation>
     </message>
@@ -17304,37 +17304,37 @@ Do you really want to close this page?</source>
         <translation>Показывать содержимое страницы когда мышь находиться на закладке</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
         <source>Select to enable support for access keys</source>
         <translation>Разрешить поддержку ключей доступа</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="679"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="672"/>
         <source>Enable access keys</source>
         <translation>Разрешить ключи доступа</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="584"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="577"/>
         <source>Web Search</source>
         <translation>Веб поиск</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="583"/>
         <source>Language:</source>
         <translation>Язык:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
         <source>Select the language to be used for web searches</source>
         <translation>Выбор языка для веб поиска</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="326"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="319"/>
         <source>Select to enabled the &quot;Do Not Track&quot; feature</source>
         <translation>Разрешить фичу &quot;Не отслеживать&quot;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="329"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="322"/>
         <source>Tell web sites I do not want to be tracked</source>
         <translation>Сообщить веб сайту -я не хочу отслеживаться</translation>
     </message>
@@ -17349,78 +17349,78 @@ Do you really want to close this page?</source>
         <translation>Включить обходной путь для битых сайтов</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="375"/>
         <source>Select to enable XSS auditing</source>
         <translation>Разрешить XSS проверку</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
         <source>Enable XSS Auditing</source>
         <translation>Разрешить XSS проверку</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="635"/>
         <source>Navigation</source>
         <translation>Навигация</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="641"/>
         <source>Select to enable the spatial navigation feature</source>
         <translation>Разрешить пространственную навигацию</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="651"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="644"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Разрешить пространственную навигацию&lt;/b&gt;
 &lt;p&gt;Это включает или выключает функцию пространственной навигации, которая состоит в способности перемещаться между фокусом элементов на веб-странице, например, гиперссылки и формы управления, с помощью влево, вправо, вверх и вниз стрелками. Например, если пользователь нажимает правую клавишу, эвристически определяется, есть ли элемент, и он, возможно, пытается достичь вправо, и какой элемент возможно хочет.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
         <source>Enable Spatial Navigation</source>
         <translation>Разрешить пространственную навигацию</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
         <source>Select to include links in focus chain</source>
         <translation>Выбор включения ссылок в фокусной цепочке</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="665"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="658"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Включать ссылки в фокусную цепочку&lt;/b&gt;
 &lt;p&gt;Выбирать, будут ли гиперссылки включены в цепь фокуса клавиатуры.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
         <source>Include Links in Focus Chain</source>
         <translation>Включить ссылки в фокусную цепочку</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="378"/>
         <source>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
 &lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector&apos;s JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Разрешить XSS проверку&lt;/b
 &lt;p&gt;Выбирать, будут ли проверены на  кросс-сайте запросы загрузок. Подозрительные сценарии будут заблокированы. Они будут представлены в JavaScript консоли Web инспектора. Включение этой функции может иметь влияние на производительность.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="294"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="299"/>
         <source>Select to activate the Flash blocker</source>
         <translation>Активировать Флеш блокировщик</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="297"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="302"/>
         <source>Use ClickToFlash on Flash plugins</source>
         <translation>Использовать ClickToFlash на флэш плагинах</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="331"/>
         <source>Select to send referer headers to the server</source>
         <translation>Послать заголовок запроса на сервер</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="334"/>
         <source>Send Referer header to servers</source>
         <translation>Послать заголовок запроса на сервер</translation>
     </message>
@@ -17440,24 +17440,39 @@ Do you really want to close this page?</source>
         <translation>Показать пустую страницу</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="354"/>
         <source>Press to edit the list of whitelisted hosts</source>
         <translation>Редактировать Белый список хостов</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="357"/>
         <source>Edit Referer Whitelist ...</source>
         <translation>Редактировать Белый список запросов...</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="484"/>
         <source>Press to edit the list of hosts exempted from caching</source>
         <translation>Редактировать список хостов исключённых из кэширования</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="487"/>
         <source>Edit Exempted Hosts ...</source>
         <translation>Редактировать исключённые хосты ...</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="252"/>
+        <source>Select to allow JavaScript to close windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="255"/>
+        <source>JavaScript can close windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="278"/>
+        <source>Enable Plug-ins</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -35886,27 +35901,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1293"/>
+        <location filename="../Preferences/__init__.py" line="1296"/>
         <source>Export Preferences</source>
         <translation>Экспорт предпочтений</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1321"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Import Preferences</source>
         <translation>Импорт предпочтений</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1321"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation>Файлы свойств (*.ini);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1423"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select Python{0} Interpreter</source>
         <translation>Задайте интерпретатор Python{0}</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1423"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation>Задайте интерпретатор Python{0}:</translation>
     </message>
@@ -54365,82 +54380,82 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabWidget</name>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="252"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="254"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="258"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="260"/>
         <source>Close All</source>
         <translation>Закрыть всё</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="261"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="263"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="264"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="266"/>
         <source>Save As...</source>
         <translation>Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="267"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="269"/>
         <source>Save All</source>
         <translation>Сохранить всё</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="275"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="277"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="424"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="426"/>
         <source>{0} (ro)</source>
         <translation>{0} (только чтение)</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
         <source>Move Left</source>
         <translation>Сдвинуть влево</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="244"/>
         <source>Move Right</source>
         <translation>Сдвинуть вправо</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="207"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="209"/>
         <source>Close the current editor</source>
         <translation>Закрыть текущий редактор</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="247"/>
         <source>Move First</source>
         <translation>Сделать первым</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="248"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="250"/>
         <source>Move Last</source>
         <translation>Сделать последним</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="197"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="199"/>
         <source>Show a navigation menu</source>
         <translation>Показать меню</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="257"/>
         <source>Close Others</source>
         <translation>Закрыть остальные</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="279"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="281"/>
         <source>Copy Path to Clipboard</source>
         <translation>Сопировать путь в буфер обмена</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="271"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="273"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Открыть &apos;отбракованный&apos; файл</translation>
     </message>
@@ -54563,12 +54578,12 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="922"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="924"/>
         <source>Untitled {0}</source>
         <translation>Без имени - {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1265"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1267"/>
         <source>{0} (ro)</source>
         <translation>{0} (только чтение)</translation>
     </message>
@@ -56299,132 +56314,132 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TrayStarter</name>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="65"/>
+        <location filename="../Tools/TrayStarter.py" line="69"/>
         <source>Recent Projects</source>
         <translation>Недавние проекты</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="77"/>
+        <location filename="../Tools/TrayStarter.py" line="81"/>
         <source>Recent Files</source>
         <translation>Недавние файлы</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="88"/>
+        <location filename="../Tools/TrayStarter.py" line="92"/>
         <source>QRegExp editor</source>
         <translation>Редактор QRegExp</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="90"/>
+        <location filename="../Tools/TrayStarter.py" line="94"/>
         <source>Python re editor</source>
         <translation>Редактор рекулярных выражений Python re</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="94"/>
+        <location filename="../Tools/TrayStarter.py" line="98"/>
         <source>UI Previewer</source>
         <translation>Педпросмотр UI</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="97"/>
+        <location filename="../Tools/TrayStarter.py" line="101"/>
         <source>Translations Previewer</source>
         <translation>Предпросмотр переводов</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="100"/>
+        <location filename="../Tools/TrayStarter.py" line="104"/>
         <source>Unittest</source>
         <translation>Unittest</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="108"/>
+        <location filename="../Tools/TrayStarter.py" line="112"/>
         <source>Compare Files</source>
         <translation>Сравнить файлы</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="111"/>
+        <location filename="../Tools/TrayStarter.py" line="115"/>
         <source>Compare Files side by side</source>
         <translation>Сравнить файлы с параллальным отображением (side by side)</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="140"/>
+        <location filename="../Tools/TrayStarter.py" line="144"/>
         <source>Preferences</source>
         <translation>Предпочтения</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="166"/>
+        <location filename="../Tools/TrayStarter.py" line="170"/>
         <source>Quit</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>Process Generation Error</source>
         <translation>Ошибка при запуске процесса</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно запустить процесс.&lt;br&gt;Убедитесь, что он доступен как &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="129"/>
+        <location filename="../Tools/TrayStarter.py" line="133"/>
         <source>Install Plugin</source>
         <translation>Установить подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="132"/>
+        <location filename="../Tools/TrayStarter.py" line="136"/>
         <source>Uninstall Plugin</source>
         <translation>Убрать подключаемый модуль</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="135"/>
+        <location filename="../Tools/TrayStarter.py" line="139"/>
         <source>Plugin Repository</source>
         <translation>Репозиторий плагинов</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="72"/>
+        <location filename="../Tools/TrayStarter.py" line="76"/>
         <source>Recent Multiprojects</source>
         <translation>Недавние мултипроекты</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="116"/>
+        <location filename="../Tools/TrayStarter.py" line="120"/>
         <source>SQL Browser</source>
         <translation>Просмотрщик SQL</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="124"/>
+        <location filename="../Tools/TrayStarter.py" line="128"/>
         <source>Icon Editor</source>
         <translation>Редактор иконок</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="121"/>
+        <location filename="../Tools/TrayStarter.py" line="125"/>
         <source>Snapshot</source>
         <translation>Снимок</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="151"/>
+        <location filename="../Tools/TrayStarter.py" line="155"/>
         <source>Configure Tray Starter</source>
         <translation>Настроить запуск в системном лотке</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="81"/>
+        <location filename="../Tools/TrayStarter.py" line="85"/>
         <source>Eric6 tray starter</source>
         <translation>Запуск Eric в системном лотке</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="103"/>
+        <location filename="../Tools/TrayStarter.py" line="107"/>
         <source>eric6 Web Browser</source>
         <translation>WEB просмотрщик встроенный в Eric</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="143"/>
+        <location filename="../Tools/TrayStarter.py" line="147"/>
         <source>eric6 IDE</source>
         <translation>eric IDE</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="146"/>
+        <location filename="../Tools/TrayStarter.py" line="150"/>
         <source>eric6 Mini Editor</source>
         <translation>Мини-редактор eric</translation>
     </message>
@@ -64429,12 +64444,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="301"/>
+        <location filename="../eric6.py" line="311"/>
         <source>Starting...</source>
         <translation>Запуск...</translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="306"/>
+        <location filename="../eric6.py" line="316"/>
         <source>Generating Main Window...</source>
         <translation>Создание главного окна...</translation>
     </message>

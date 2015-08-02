@@ -17005,72 +17005,72 @@ Do you really want to close this page?</source>
         <translation>Zapnout JavaScript</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="237"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="242"/>
         <source>Select to allow JavaScript to open windows</source>
         <translation>Vybrat pro povolení JavaScriptu otevírat okna</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="240"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="245"/>
         <source>JavaScript can open windows</source>
         <translation>JavaScript může otevírat okna</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="262"/>
         <source>Select to allow JavaScript to access the clipboard</source>
         <translation>Vybrat pro povolení přístupu JavaScriptu do schránky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="250"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="265"/>
         <source>JavaScript can access clipboard</source>
         <translation>JavaScript může přistupovat do schránky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="257"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="275"/>
         <source>Select to enable plugins in web pages</source>
         <translation>Vybrat pro povolení zásuvných modulů na web stranách</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="260"/>
         <source>Enable Plugins</source>
-        <translation>Povolit zásuvné moduly</translation>
+        <translation type="obsolete">Povolit zásuvné moduly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="463"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="456"/>
         <source>Browser Cache</source>
         <translation>Procházet cache</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="464"/>
         <source>Enable disk cache</source>
         <translation>Zapnout disk cache</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="535"/>
         <source>Cache size:</source>
         <translation>Velikost cache:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="549"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation>Zadejte maximální velikost diskové cache</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="555"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="548"/>
         <source> MB</source>
         <translation> MB</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="623"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="616"/>
         <source>Printing</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="629"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="622"/>
         <source>Select to print background colours and images</source>
         <translation>Vybrat pro tisk barev pozadí a obrázků</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="632"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="625"/>
         <source>Print background colours and images</source>
         <translation>Tisknout barvy pozadí a obrázky</translation>
     </message>
@@ -17120,52 +17120,52 @@ Do you really want to close this page?</source>
         <translation>Nastavit výchozí domovskou stranu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="399"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="392"/>
         <source>History</source>
         <translation>Historie</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="405"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="398"/>
         <source>Remove history items:</source>
         <translation>Odebrat položky historie:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="418"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="411"/>
         <source>Select the period for expiration of history entries</source>
         <translation>Vybrat interval pro vypršení platnosti položek historie</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="422"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="415"/>
         <source>After one day</source>
         <translation>Po jednom dni</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="427"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="420"/>
         <source>After one week</source>
         <translation>Po týdnu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="432"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="425"/>
         <source>After two weeks</source>
         <translation>Po dvou týdnech</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="437"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="430"/>
         <source>After one month</source>
         <translation>Po měsíci</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="442"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="435"/>
         <source>After one year</source>
         <translation>Po roce</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="447"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="440"/>
         <source>Manually</source>
         <translation>Ručně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="445"/>
         <source>On application exit</source>
         <translation>Při ukončení aplikace</translation>
     </message>
@@ -17190,42 +17190,42 @@ Do you really want to close this page?</source>
         <translation>&lt;b&gt;Výchozí schéma&lt;/b&gt;&lt;p&gt;Výběr výchozího schématu. Toto schéma je predřazeno před URL, které jej neobsahují.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="376"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="369"/>
         <source>Security</source>
         <translation type="unfinished">Bezpečnost</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="503"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="496"/>
         <source>Policy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="509"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="502"/>
         <source>Select to prefer the network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="505"/>
         <source>Keep cache in sync</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
         <source>Select to prefer cached data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="515"/>
         <source>Use cache whenever possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="529"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
         <source>Select to use cached data only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="532"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="525"/>
         <source>Offline browsing mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17240,37 +17240,37 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
         <source>Select to enable support for access keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="679"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="672"/>
         <source>Enable access keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="584"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="577"/>
         <source>Web Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="583"/>
         <source>Language:</source>
         <translation type="unfinished">Jazyk:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
         <source>Select the language to be used for web searches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="326"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="319"/>
         <source>Select to enabled the &quot;Do Not Track&quot; feature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="329"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="322"/>
         <source>Tell web sites I do not want to be tracked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17285,75 +17285,75 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="375"/>
         <source>Select to enable XSS auditing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
         <source>Enable XSS Auditing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="635"/>
         <source>Navigation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="641"/>
         <source>Select to enable the spatial navigation feature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="651"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="644"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
         <source>Enable Spatial Navigation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
         <source>Select to include links in focus chain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="665"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="658"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
         <source>Include Links in Focus Chain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="378"/>
         <source>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
 &lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector&apos;s JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="294"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="299"/>
         <source>Select to activate the Flash blocker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="297"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="302"/>
         <source>Use ClickToFlash on Flash plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="331"/>
         <source>Select to send referer headers to the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="334"/>
         <source>Send Referer header to servers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17373,23 +17373,38 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="354"/>
         <source>Press to edit the list of whitelisted hosts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="357"/>
         <source>Edit Referer Whitelist ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="484"/>
         <source>Press to edit the list of hosts exempted from caching</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="487"/>
         <source>Edit Exempted Hosts ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="252"/>
+        <source>Select to allow JavaScript to close windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="255"/>
+        <source>JavaScript can close windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="278"/>
+        <source>Enable Plug-ins</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -35788,27 +35803,27 @@ Vyberte Obnovit.</translation>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1293"/>
+        <location filename="../Preferences/__init__.py" line="1296"/>
         <source>Export Preferences</source>
         <translation>Předvolby exportu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1321"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Import Preferences</source>
         <translation>Předvolby importu</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1321"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1423"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1423"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54121,82 +54136,82 @@ na položku otevře okno editoru a kurzor nastaví na příslušnou řádku.&lt;
 <context>
     <name>TabWidget</name>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="207"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="209"/>
         <source>Close the current editor</source>
         <translation>Zavřít aktuální editor</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
         <source>Move Left</source>
         <translation>Posun doleva</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="244"/>
         <source>Move Right</source>
         <translation>Posun doprava</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="252"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="254"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="258"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="260"/>
         <source>Close All</source>
         <translation>Zavřít vše</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="261"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="263"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="264"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="266"/>
         <source>Save As...</source>
         <translation>Uložit jako...</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="267"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="269"/>
         <source>Save All</source>
         <translation>Uložit vše</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="275"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="277"/>
         <source>Print</source>
         <translation>Tisk</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="247"/>
         <source>Move First</source>
         <translation>Jít na první</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="248"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="250"/>
         <source>Move Last</source>
         <translation>Jít na poslední</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="197"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="199"/>
         <source>Show a navigation menu</source>
         <translation>Zobrazit menu navigace</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="257"/>
         <source>Close Others</source>
         <translation>Zavřít ostatní</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="424"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="426"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="279"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="281"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished">Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="271"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="273"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54317,12 +54332,12 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="922"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="924"/>
         <source>Untitled {0}</source>
         <translation>Beze jména {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1265"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1267"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
@@ -56038,132 +56053,132 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TrayStarter</name>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="65"/>
+        <location filename="../Tools/TrayStarter.py" line="69"/>
         <source>Recent Projects</source>
         <translation>Poslední projekty</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="77"/>
+        <location filename="../Tools/TrayStarter.py" line="81"/>
         <source>Recent Files</source>
         <translation>Poslední soubory</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="88"/>
+        <location filename="../Tools/TrayStarter.py" line="92"/>
         <source>QRegExp editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="90"/>
+        <location filename="../Tools/TrayStarter.py" line="94"/>
         <source>Python re editor</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="94"/>
+        <location filename="../Tools/TrayStarter.py" line="98"/>
         <source>UI Previewer</source>
         <translation>UI náhled</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="97"/>
+        <location filename="../Tools/TrayStarter.py" line="101"/>
         <source>Translations Previewer</source>
         <translation>Náhled překladů</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="100"/>
+        <location filename="../Tools/TrayStarter.py" line="104"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="108"/>
+        <location filename="../Tools/TrayStarter.py" line="112"/>
         <source>Compare Files</source>
         <translation>Porovnání souborů</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="111"/>
+        <location filename="../Tools/TrayStarter.py" line="115"/>
         <source>Compare Files side by side</source>
         <translation>Porovnat soubory stranu proti straně</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="140"/>
+        <location filename="../Tools/TrayStarter.py" line="144"/>
         <source>Preferences</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="166"/>
+        <location filename="../Tools/TrayStarter.py" line="170"/>
         <source>Quit</source>
         <translation>Konec</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>OK</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="129"/>
+        <location filename="../Tools/TrayStarter.py" line="133"/>
         <source>Install Plugin</source>
         <translation>Instalovat plugin</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="132"/>
+        <location filename="../Tools/TrayStarter.py" line="136"/>
         <source>Uninstall Plugin</source>
         <translation>Odinstalovat plugin</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="135"/>
+        <location filename="../Tools/TrayStarter.py" line="139"/>
         <source>Plugin Repository</source>
         <translation>Plugin repozitář</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="72"/>
+        <location filename="../Tools/TrayStarter.py" line="76"/>
         <source>Recent Multiprojects</source>
         <translation>Poslední multiprojekty</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="116"/>
+        <location filename="../Tools/TrayStarter.py" line="120"/>
         <source>SQL Browser</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit proces.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="124"/>
+        <location filename="../Tools/TrayStarter.py" line="128"/>
         <source>Icon Editor</source>
         <translation type="unfinished">Editor ikon</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="121"/>
+        <location filename="../Tools/TrayStarter.py" line="125"/>
         <source>Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="151"/>
+        <location filename="../Tools/TrayStarter.py" line="155"/>
         <source>Configure Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="81"/>
+        <location filename="../Tools/TrayStarter.py" line="85"/>
         <source>Eric6 tray starter</source>
         <translation type="unfinished">Eric5 tray startér {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="103"/>
+        <location filename="../Tools/TrayStarter.py" line="107"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished">eric5 web prohlížeč {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="143"/>
+        <location filename="../Tools/TrayStarter.py" line="147"/>
         <source>eric6 IDE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="146"/>
+        <location filename="../Tools/TrayStarter.py" line="150"/>
         <source>eric6 Mini Editor</source>
         <translation type="unfinished">eric5 Mini Editor {6 ?}</translation>
     </message>
@@ -64113,12 +64128,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="301"/>
+        <location filename="../eric6.py" line="311"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="306"/>
+        <location filename="../eric6.py" line="316"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Generování hlavního okna...</translation>
     </message>

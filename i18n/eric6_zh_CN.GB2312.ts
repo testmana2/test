@@ -16983,72 +16983,67 @@ Do you really want to close this page?</source>
         <translation type="unfinished">允许 JavaScript</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="237"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="242"/>
         <source>Select to allow JavaScript to open windows</source>
         <translation type="unfinished">选择允许 JavaScript 打开窗口</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="240"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="245"/>
         <source>JavaScript can open windows</source>
         <translation type="unfinished">JavaScript 可以打开窗口</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="247"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="262"/>
         <source>Select to allow JavaScript to access the clipboard</source>
         <translation type="unfinished">选择允许 JavaScript 访问剪贴板</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="250"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="265"/>
         <source>JavaScript can access clipboard</source>
         <translation type="unfinished">JavaScript 可以访问剪贴板</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="257"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="275"/>
         <source>Select to enable plugins in web pages</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="260"/>
-        <source>Enable Plugins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="463"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="456"/>
         <source>Browser Cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="471"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="464"/>
         <source>Enable disk cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="535"/>
         <source>Cache size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="549"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="542"/>
         <source>Enter the maximum size of the disk cache</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="555"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="548"/>
         <source> MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="623"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="616"/>
         <source>Printing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="629"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="622"/>
         <source>Select to print background colours and images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="632"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="625"/>
         <source>Print background colours and images</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17098,52 +17093,52 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="399"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="392"/>
         <source>History</source>
         <translation type="unfinished">历史</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="405"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="398"/>
         <source>Remove history items:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="418"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="411"/>
         <source>Select the period for expiration of history entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="422"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="415"/>
         <source>After one day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="427"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="420"/>
         <source>After one week</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="432"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="425"/>
         <source>After two weeks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="437"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="430"/>
         <source>After one month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="442"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="435"/>
         <source>After one year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="447"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="440"/>
         <source>Manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="452"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="445"/>
         <source>On application exit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17168,37 +17163,37 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="503"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="496"/>
         <source>Policy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="509"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="502"/>
         <source>Select to prefer the network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="505"/>
         <source>Keep cache in sync</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="512"/>
         <source>Select to prefer cached data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="515"/>
         <source>Use cache whenever possible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="529"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="522"/>
         <source>Select to use cached data only</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="532"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="525"/>
         <source>Offline browsing mode</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17213,37 +17208,37 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="676"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
         <source>Select to enable support for access keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="679"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="672"/>
         <source>Enable access keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="584"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="577"/>
         <source>Web Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="583"/>
         <source>Language:</source>
         <translation type="unfinished">语言：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="597"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="590"/>
         <source>Select the language to be used for web searches</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="326"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="319"/>
         <source>Select to enabled the &quot;Do Not Track&quot; feature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="329"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="322"/>
         <source>Tell web sites I do not want to be tracked</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17258,80 +17253,80 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="376"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="369"/>
         <source>Security</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="375"/>
         <source>Select to enable XSS auditing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="382"/>
         <source>Enable XSS Auditing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="642"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="635"/>
         <source>Navigation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="641"/>
         <source>Select to enable the spatial navigation feature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="651"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="644"/>
         <source>&lt;b&gt;Enable Spatial Navigation&lt;/b&gt;
 &lt;p&gt;This enables or disables the Spatial Navigation feature, which consists in the ability to navigate between focusable elements in a Web page, such as hyperlinks and form controls, by using Left, Right, Up and Down arrow keys. For example, if a user presses the Right key, heuristics determine whether there is an element he might be trying to reach towards the right and which element he probably wants.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="648"/>
         <source>Enable Spatial Navigation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="655"/>
         <source>Select to include links in focus chain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="665"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="658"/>
         <source>&lt;b&gt;Include Links in Focus Chain&lt;/b&gt;
 &lt;p&gt;This selects whether hyperlinks should be included in the keyboard focus chain.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="669"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="662"/>
         <source>Include Links in Focus Chain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="385"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="378"/>
         <source>&lt;b&gt;Enable XSS Auditing&lt;/b&gt;
 &lt;p&gt;This selects whether load requests should be monitored for cross-site scripting attempts. Suspicious scripts will be blocked. These will be reported in theWeb Inspector&apos;s JavaScript console. Enabling this feature might have an impact on performance.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="294"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="299"/>
         <source>Select to activate the Flash blocker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="297"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="302"/>
         <source>Use ClickToFlash on Flash plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="338"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="331"/>
         <source>Select to send referer headers to the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="334"/>
         <source>Send Referer header to servers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17351,23 +17346,38 @@ Do you really want to close this page?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="361"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="354"/>
         <source>Press to edit the list of whitelisted hosts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="364"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="357"/>
         <source>Edit Referer Whitelist ...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="491"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="484"/>
         <source>Press to edit the list of hosts exempted from caching</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="494"/>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="487"/>
         <source>Edit Exempted Hosts ...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="252"/>
+        <source>Select to allow JavaScript to close windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="255"/>
+        <source>JavaScript can close windows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="278"/>
+        <source>Enable Plug-ins</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -35728,27 +35738,27 @@ Select Update.</source>
 <context>
     <name>Preferences</name>
     <message>
-        <location filename="../Preferences/__init__.py" line="1293"/>
+        <location filename="../Preferences/__init__.py" line="1296"/>
         <source>Export Preferences</source>
         <translation>导出首选项</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1321"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Import Preferences</source>
         <translation>导入首选项</translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1321"/>
+        <location filename="../Preferences/__init__.py" line="1324"/>
         <source>Properties File (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1423"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select Python{0} Interpreter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/__init__.py" line="1423"/>
+        <location filename="../Preferences/__init__.py" line="1426"/>
         <source>Select the Python{0} interpreter to be used:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54110,82 +54120,82 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>TabWidget</name>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="207"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="209"/>
         <source>Close the current editor</source>
         <translation>关闭当前编辑器</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="239"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="241"/>
         <source>Move Left</source>
         <translation>左移</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="242"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="244"/>
         <source>Move Right</source>
         <translation>右移</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="245"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="247"/>
         <source>Move First</source>
         <translation>移至最前</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="248"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="250"/>
         <source>Move Last</source>
         <translation>移至最后</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="252"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="254"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="258"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="260"/>
         <source>Close All</source>
         <translation>全部关闭</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="261"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="263"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="264"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="266"/>
         <source>Save As...</source>
         <translation>另存为……</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="267"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="269"/>
         <source>Save All</source>
         <translation>全部保存</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="275"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="277"/>
         <source>Print</source>
         <translation>打印</translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="197"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="199"/>
         <source>Show a navigation menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="255"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="257"/>
         <source>Close Others</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="424"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="426"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="279"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="281"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="271"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="273"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -54308,12 +54318,12 @@ the respective line.&lt;/p&gt;</source>
 <context>
     <name>Tabview</name>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="922"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="924"/>
         <source>Untitled {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1265"/>
+        <location filename="../Plugins/ViewManagerPlugins/Tabview/Tabview.py" line="1267"/>
         <source>{0} (ro)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56040,132 +56050,132 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TrayStarter</name>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="65"/>
+        <location filename="../Tools/TrayStarter.py" line="69"/>
         <source>Recent Projects</source>
         <translation>最近的项目</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="72"/>
+        <location filename="../Tools/TrayStarter.py" line="76"/>
         <source>Recent Multiprojects</source>
         <translation>最近的多重项目</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="77"/>
+        <location filename="../Tools/TrayStarter.py" line="81"/>
         <source>Recent Files</source>
         <translation>最近的文件</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="88"/>
+        <location filename="../Tools/TrayStarter.py" line="92"/>
         <source>QRegExp editor</source>
         <translation>QRegExp 编辑器</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="90"/>
+        <location filename="../Tools/TrayStarter.py" line="94"/>
         <source>Python re editor</source>
         <translation>Python 正则编辑器</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="94"/>
+        <location filename="../Tools/TrayStarter.py" line="98"/>
         <source>UI Previewer</source>
         <translation>用户界面预览器</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="97"/>
+        <location filename="../Tools/TrayStarter.py" line="101"/>
         <source>Translations Previewer</source>
         <translation>翻译预览器</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="100"/>
+        <location filename="../Tools/TrayStarter.py" line="104"/>
         <source>Unittest</source>
         <translation>单元测试</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="108"/>
+        <location filename="../Tools/TrayStarter.py" line="112"/>
         <source>Compare Files</source>
         <translation>比较文件</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="111"/>
+        <location filename="../Tools/TrayStarter.py" line="115"/>
         <source>Compare Files side by side</source>
         <translation>并排比较文件</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="129"/>
+        <location filename="../Tools/TrayStarter.py" line="133"/>
         <source>Install Plugin</source>
         <translation>安装插件</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="132"/>
+        <location filename="../Tools/TrayStarter.py" line="136"/>
         <source>Uninstall Plugin</source>
         <translation>卸载插件</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="135"/>
+        <location filename="../Tools/TrayStarter.py" line="139"/>
         <source>Plugin Repository</source>
         <translation>插件储存库</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="140"/>
+        <location filename="../Tools/TrayStarter.py" line="144"/>
         <source>Preferences</source>
         <translation>参数选择</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="166"/>
+        <location filename="../Tools/TrayStarter.py" line="170"/>
         <source>Quit</source>
         <translation>退出</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>Process Generation Error</source>
         <translation>进程生成错误</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>OK</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="116"/>
+        <location filename="../Tools/TrayStarter.py" line="120"/>
         <source>SQL Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="248"/>
+        <location filename="../Tools/TrayStarter.py" line="255"/>
         <source>&lt;p&gt;Could not start the process.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="124"/>
+        <location filename="../Tools/TrayStarter.py" line="128"/>
         <source>Icon Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="121"/>
+        <location filename="../Tools/TrayStarter.py" line="125"/>
         <source>Snapshot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="151"/>
+        <location filename="../Tools/TrayStarter.py" line="155"/>
         <source>Configure Tray Starter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="81"/>
+        <location filename="../Tools/TrayStarter.py" line="85"/>
         <source>Eric6 tray starter</source>
         <translation type="unfinished">Eric4 系统托盘图标 {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="103"/>
+        <location filename="../Tools/TrayStarter.py" line="107"/>
         <source>eric6 Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="143"/>
+        <location filename="../Tools/TrayStarter.py" line="147"/>
         <source>eric6 IDE</source>
         <translation type="unfinished">Eric4 IDE {5 ?} {6 ?}</translation>
     </message>
     <message>
-        <location filename="../Tools/TrayStarter.py" line="146"/>
+        <location filename="../Tools/TrayStarter.py" line="150"/>
         <source>eric6 Mini Editor</source>
         <translation type="unfinished">Eric4 小型编辑器 {5 ?} {6 ?}</translation>
     </message>
@@ -64118,12 +64128,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="301"/>
+        <location filename="../eric6.py" line="311"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="306"/>
+        <location filename="../eric6.py" line="316"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">正在产生主窗口……</translation>
     </message>

@@ -65,13 +65,15 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
         
         self.javaCheckBox.setChecked(
             Preferences.getHelp("JavaEnabled"))
-        self.javaScriptCheckBox.setChecked(
+        self.javaScriptGroup.setChecked(
             Preferences.getHelp("JavaScriptEnabled"))
         self.jsOpenWindowsCheckBox.setChecked(
             Preferences.getHelp("JavaScriptCanOpenWindows"))
+        self.jsCloseWindowsCheckBox.setChecked(
+            Preferences.getHelp("JavaScriptCanCloseWindows"))
         self.jsClipboardCheckBox.setChecked(
             Preferences.getHelp("JavaScriptCanAccessClipboard"))
-        self.pluginsCheckBox.setChecked(
+        self.pluginsGroup.setChecked(
             Preferences.getHelp("PluginsEnabled"))
         self.clickToFlashCheckBox.setChecked(
             Preferences.getHelp("ClickToFlashEnabled"))
@@ -184,16 +186,19 @@ class HelpWebBrowserPage(ConfigurationPageBase, Ui_HelpWebBrowserPage):
             self.javaCheckBox.isChecked())
         Preferences.setHelp(
             "JavaScriptEnabled",
-            self.javaScriptCheckBox.isChecked())
+            self.javaScriptGroup.isChecked())
         Preferences.setHelp(
             "JavaScriptCanOpenWindows",
             self.jsOpenWindowsCheckBox.isChecked())
+        Preferences.setHelp(
+            "JavaScriptCanCloseWindows",
+            self.jsCloseWindowsCheckBox.isChecked())
         Preferences.setHelp(
             "JavaScriptCanAccessClipboard",
             self.jsClipboardCheckBox.isChecked())
         Preferences.setHelp(
             "PluginsEnabled",
-            self.pluginsCheckBox.isChecked())
+            self.pluginsGroup.isChecked())
         Preferences.setHelp(
             "ClickToFlashEnabled",
             self.clickToFlashCheckBox.isChecked())
