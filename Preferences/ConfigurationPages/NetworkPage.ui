@@ -7,10 +7,10 @@
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>769</height>
+    <height>1013</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_4">
+  <layout class="QVBoxLayout" name="verticalLayout_5">
    <item>
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -120,15 +120,28 @@
       <string>Select to use a web proxy</string>
      </property>
      <property name="title">
-      <string>Use network proxy</string>
+      <string>Network Proxy</string>
      </property>
      <property name="checkable">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="checked">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QRadioButton" name="noProxyButton">
+        <property name="toolTip">
+         <string>Select to not use a network proxy</string>
+        </property>
+        <property name="text">
+         <string>Do not use proxy</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QRadioButton" name="systemProxyButton">
         <property name="toolTip">
@@ -137,10 +150,63 @@
         <property name="text">
          <string>Use system proxy configuration</string>
         </property>
-        <property name="checked">
-         <bool>true</bool>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="pacButton">
+        <property name="toolTip">
+         <string>Select to use a proxy auto configuration script</string>
+        </property>
+        <property name="text">
+         <string>Use script for automatic proxy configuration:</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="pacUrlEdit">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>Enter the URL of the Proxy Auto-Config (.pac) file</string>
+          </property>
+          <property name="placeholderText">
+           <string>Proxy Auto-Config (.pac) file</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pacReloadButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="toolTip">
+           <string>Press to reload the Proxy Auto-Config (.pac) file</string>
+          </property>
+          <property name="text">
+           <string>Reload</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
        <widget class="QRadioButton" name="manualProxyButton">
@@ -166,125 +232,157 @@
         <property name="flat">
          <bool>false</bool>
         </property>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>HTTP-Proxy:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="httpProxyHostEdit">
-           <property name="toolTip">
-            <string>Enter the name of the HTTP proxy host</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QSpinBox" name="httpProxyPortSpin">
-           <property name="toolTip">
-            <string>Enter the HTTP proxy port</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight</set>
-           </property>
-           <property name="minimum">
-            <number>1</number>
-           </property>
-           <property name="maximum">
-            <number>65535</number>
-           </property>
-           <property name="value">
-            <number>80</number>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1" colspan="3">
-          <widget class="QCheckBox" name="httpProxyForAllCheckBox">
-           <property name="toolTip">
-            <string>Select to use the HTTP proxy for all</string>
-           </property>
-           <property name="text">
-            <string>Use this proxy for all protocols</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>HTTPS-Proxy:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="httpsProxyHostEdit">
-           <property name="toolTip">
-            <string>Enter the name of the HTTPS proxy host</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>Port:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QSpinBox" name="httpsProxyPortSpin">
-           <property name="toolTip">
-            <string>Enter the HTTPS proxy port</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight</set>
-           </property>
-           <property name="minimum">
-            <number>1</number>
-           </property>
-           <property name="maximum">
-            <number>65535</number>
-           </property>
-           <property name="value">
-            <number>443</number>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0" colspan="4">
-          <widget class="QGroupBox" name="groupBox_4">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QGroupBox" name="groupBox_6">
            <property name="title">
-            <string>FTP-Proxy</string>
+            <string>HTTP-Proxy</string>
            </property>
-           <layout class="QGridLayout" name="gridLayout">
+           <layout class="QGridLayout" name="gridLayout_2">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="label_13">
               <property name="text">
                <string>Hostname:</string>
               </property>
              </widget>
             </item>
             <item row="0" column="1">
-             <widget class="QLineEdit" name="ftpProxyHostEdit">
+             <widget class="QLineEdit" name="httpProxyHostEdit">
               <property name="toolTip">
-               <string>Enter the name of the FTP proxy host</string>
+               <string>Enter the name of the HTTP proxy host</string>
               </property>
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_7">
+             <widget class="QLabel" name="label_2">
               <property name="text">
                <string>Port:</string>
               </property>
              </widget>
             </item>
             <item row="0" column="3">
+             <widget class="QSpinBox" name="httpProxyPortSpin">
+              <property name="toolTip">
+               <string>Enter the HTTP proxy port</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight</set>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+              <property name="value">
+               <number>80</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="4">
+             <widget class="QCheckBox" name="httpProxyForAllCheckBox">
+              <property name="toolTip">
+               <string>Select to use the HTTP proxy for all</string>
+              </property>
+              <property name="text">
+               <string>Use this proxy for all protocols</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>HTTPS-Proxy</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Hostname:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="httpsProxyHostEdit">
+              <property name="toolTip">
+               <string>Enter the name of the HTTPS proxy host</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Port:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="httpsProxyPortSpin">
+              <property name="toolTip">
+               <string>Enter the HTTPS proxy port</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight</set>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+              <property name="value">
+               <number>443</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>FTP-Proxy</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Proxy Type:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1" colspan="3">
+             <widget class="QComboBox" name="ftpProxyTypeCombo">
+              <property name="toolTip">
+               <string>Select the type of the FTP proxy</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Hostname:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="ftpProxyHostEdit">
+              <property name="toolTip">
+               <string>Enter the name of the FTP proxy host</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Port:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
              <widget class="QSpinBox" name="ftpProxyPortSpin">
               <property name="toolTip">
                <string>Enter the FTP proxy port</string>
@@ -300,20 +398,6 @@
               </property>
               <property name="value">
                <number>21</number>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_8">
-              <property name="text">
-               <string>Proxy Type:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1" colspan="3">
-             <widget class="QComboBox" name="ftpProxyTypeCombo">
-              <property name="toolTip">
-               <string>Select the type of the FTP proxy</string>
               </property>
              </widget>
             </item>
@@ -369,6 +453,24 @@
        </widget>
       </item>
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Exceptions:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="exceptionsEdit">
+          <property name="toolTip">
+           <string>Enter host names or IP-addresses for which the proxy is to be circumvented separated by ',' (wildcards * or ? may be used)</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QPushButton" name="clearProxyPasswordsButton">
         <property name="toolTip">
          <string>Press to clear the saved passwords for the Http(s) proxy</string>
@@ -403,20 +505,24 @@
   <tabstop>cleanupNeverButton</tabstop>
   <tabstop>cleanupExitButton</tabstop>
   <tabstop>cleanupSuccessfulButton</tabstop>
-  <tabstop>proxyGroup</tabstop>
+  <tabstop>noProxyButton</tabstop>
   <tabstop>systemProxyButton</tabstop>
+  <tabstop>pacButton</tabstop>
+  <tabstop>pacUrlEdit</tabstop>
+  <tabstop>pacReloadButton</tabstop>
   <tabstop>manualProxyButton</tabstop>
   <tabstop>httpProxyHostEdit</tabstop>
   <tabstop>httpProxyPortSpin</tabstop>
   <tabstop>httpProxyForAllCheckBox</tabstop>
   <tabstop>httpsProxyHostEdit</tabstop>
   <tabstop>httpsProxyPortSpin</tabstop>
+  <tabstop>ftpProxyTypeCombo</tabstop>
   <tabstop>ftpProxyHostEdit</tabstop>
   <tabstop>ftpProxyPortSpin</tabstop>
-  <tabstop>ftpProxyTypeCombo</tabstop>
   <tabstop>ftpProxyUserEdit</tabstop>
   <tabstop>ftpProxyPasswordEdit</tabstop>
   <tabstop>ftpProxyAccountEdit</tabstop>
+  <tabstop>exceptionsEdit</tabstop>
   <tabstop>clearProxyPasswordsButton</tabstop>
  </tabstops>
  <resources/>
@@ -428,8 +534,8 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>77</x>
-     <y>310</y>
+     <x>100</x>
+     <y>405</y>
     </hint>
     <hint type="destinationlabel">
      <x>83</x>
@@ -440,128 +546,64 @@
   <connection>
    <sender>httpProxyForAllCheckBox</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_4</receiver>
+   <receiver>groupBox_5</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>229</x>
-     <y>386</y>
+     <x>152</x>
+     <y>515</y>
     </hint>
     <hint type="destinationlabel">
-     <x>109</x>
-     <y>412</y>
+     <x>76</x>
+     <y>561</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>httpProxyForAllCheckBox</sender>
    <signal>toggled(bool)</signal>
-   <receiver>label_3</receiver>
+   <receiver>groupBox_4</receiver>
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>245</x>
-     <y>386</y>
+     <x>170</x>
+     <y>517</y>
     </hint>
     <hint type="destinationlabel">
-     <x>106</x>
-     <y>463</y>
+     <x>116</x>
+     <y>631</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>httpProxyForAllCheckBox</sender>
+   <sender>pacButton</sender>
    <signal>toggled(bool)</signal>
-   <receiver>httpsProxyHostEdit</receiver>
-   <slot>setDisabled(bool)</slot>
+   <receiver>pacUrlEdit</receiver>
+   <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>311</x>
-     <y>386</y>
+     <x>141</x>
+     <y>339</y>
     </hint>
     <hint type="destinationlabel">
-     <x>269</x>
-     <y>412</y>
+     <x>138</x>
+     <y>366</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>httpProxyForAllCheckBox</sender>
+   <sender>pacButton</sender>
    <signal>toggled(bool)</signal>
-   <receiver>ftpProxyHostEdit</receiver>
-   <slot>setDisabled(bool)</slot>
+   <receiver>pacReloadButton</receiver>
+   <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>307</x>
-     <y>386</y>
+     <x>550</x>
+     <y>340</y>
     </hint>
     <hint type="destinationlabel">
-     <x>304</x>
-     <y>463</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>httpProxyForAllCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_5</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>517</x>
-     <y>386</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>485</x>
-     <y>412</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>httpProxyForAllCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>label_7</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>482</x>
-     <y>386</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>474</x>
-     <y>463</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>httpProxyForAllCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>httpsProxyPortSpin</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>557</x>
-     <y>386</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>557</x>
-     <y>412</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>httpProxyForAllCheckBox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>ftpProxyPortSpin</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>554</x>
-     <y>386</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>546</x>
-     <y>463</y>
+     <x>549</x>
+     <y>365</y>
     </hint>
    </hints>
   </connection>

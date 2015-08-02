@@ -104,12 +104,18 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         self.httpProxyForAllCheckBox.setChecked(
             Preferences.getUI("UseHttpProxyForAll"))
-        if Preferences.getUI("UseSystemProxy"):
+        if not Preferences.getUI("UseProxy"):
+            self.noProxyButton.setChecked(True)
+        elif Preferences.getUI("UseSystemProxy"):
             self.systemProxyButton.setChecked(True)
+        elif Preferences.getUI("UseProxyAutoConfiguration"):
+            self.pacButton.setChecked(True)
         else:
             self.manualProxyButton.setChecked(True)
-        self.proxyGroup.setChecked(
-            Preferences.getUI("UseProxy"))
+        
+        self.pacUrlEdit.setText(Preferences.getUI("ProxyPacUrl"))
+        self.exceptionsEdit.setText(
+            ", ".join(Preferences.getUI("ProxyExceptions").split(",")))
     
     def save(self):
         """
@@ -132,13 +138,24 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         
         Preferences.setUI(
             "UseProxy",
-            self.proxyGroup.isChecked())
+            not self.noProxyButton.isChecked())
         Preferences.setUI(
             "UseSystemProxy",
             self.systemProxyButton.isChecked())
         Preferences.setUI(
+            "UseProxyAutoConfiguration",
+            self.systemProxyButton.isChecked())
+        Preferences.setUI(
             "UseHttpProxyForAll",
             self.httpProxyForAllCheckBox.isChecked())
+        
+        Preferences.setUI(
+            "ProxyPacUrl",
+            self.pacUrlEdit.text())
+        Preferences.setUI(
+            "ProxyExceptions",
+            ",".join(
+                [h.strip() for h in self.exceptionsEdit.text().split(",")]))
         
         # HTTP proxy
         Preferences.setUI(
@@ -221,6 +238,16 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.ftpProxyAccountEdit.setEnabled(
             proxyType not in [E5FtpProxyType.NoProxy,
                               E5FtpProxyType.NonAuthorizing])
+    
+    @pyqtSlot()
+    def on_pacReloadButton_clicked(self):
+        """
+        Private slot to reload the proxy auto-configuration file.
+        """
+        from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory
+        # TODO: switch lines once PacManager is implemented
+        E5NetworkProxyFactory.pacManager()
+#        E5NetworkProxyFactory.pacManager().downloadPacFile()
     
 
 def create(dlg):
