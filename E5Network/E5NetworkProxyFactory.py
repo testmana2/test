@@ -74,8 +74,6 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
     """
     Class implementing a network proxy factory.
     """
-    _pacManager = None
-    
     def __init__(self):
         """
         Constructor
@@ -168,18 +166,3 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
                     return [proxy, QNetworkProxy(QNetworkProxy.DefaultProxy)]
         else:
             return [QNetworkProxy(QNetworkProxy.NoProxy)]
-    
-    @classmethod
-    def pacManager(cls):
-        """
-        Class method to get a reference to the proxy auto-config manager.
-        
-        @return reference to the proxy auto-config manager (PacManager)
-        """
-        print("pacManager()")
-        # TODO: enable this once PacManager is implemented
-##        if cls._pacManager is None:
-##            from .Pac.PacManager import PacManager
-##            cls._pacManager = PacManager()
-##        
-##        return cls._pacManager

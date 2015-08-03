@@ -108,12 +108,9 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.noProxyButton.setChecked(True)
         elif Preferences.getUI("UseSystemProxy"):
             self.systemProxyButton.setChecked(True)
-        elif Preferences.getUI("UseProxyAutoConfiguration"):
-            self.pacButton.setChecked(True)
         else:
             self.manualProxyButton.setChecked(True)
         
-        self.pacUrlEdit.setText(Preferences.getUI("ProxyPacUrl"))
         self.exceptionsEdit.setText(
             ", ".join(Preferences.getUI("ProxyExceptions").split(",")))
     
@@ -143,15 +140,9 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             "UseSystemProxy",
             self.systemProxyButton.isChecked())
         Preferences.setUI(
-            "UseProxyAutoConfiguration",
-            self.systemProxyButton.isChecked())
-        Preferences.setUI(
             "UseHttpProxyForAll",
             self.httpProxyForAllCheckBox.isChecked())
         
-        Preferences.setUI(
-            "ProxyPacUrl",
-            self.pacUrlEdit.text())
         Preferences.setUI(
             "ProxyExceptions",
             ",".join(
@@ -238,16 +229,6 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.ftpProxyAccountEdit.setEnabled(
             proxyType not in [E5FtpProxyType.NoProxy,
                               E5FtpProxyType.NonAuthorizing])
-    
-    @pyqtSlot()
-    def on_pacReloadButton_clicked(self):
-        """
-        Private slot to reload the proxy auto-configuration file.
-        """
-        from E5Network.E5NetworkProxyFactory import E5NetworkProxyFactory
-        # TODO: switch lines once PacManager is implemented
-        E5NetworkProxyFactory.pacManager()
-#        E5NetworkProxyFactory.pacManager().downloadPacFile()
     
 
 def create(dlg):

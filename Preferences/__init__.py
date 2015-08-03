@@ -187,7 +187,6 @@ class Prefs(object):
         # 4 = monthly
         "UseProxy": False,
         "UseSystemProxy": True,
-        "UseProxyAutoConfiguration": False,
         "UseHttpProxyForAll": False,
         "ProxyHost/Http": "",
         "ProxyHost/Https": "",
@@ -204,7 +203,6 @@ class Prefs(object):
         "ProxyType/Ftp": E5FtpProxyType.NoProxy,
         "ProxyAccount/Ftp": "",
         "ProxyExceptions": "localhost,127.0.0.,::1",
-        "ProxyPacUrl": "",
         
         "PluginRepositoryUrl6":
         "http://eric-ide.python-projects.org/plugins6/repository.xml",
@@ -1587,7 +1585,6 @@ def getUI(key, prefClass=Prefs):
                "CaptionShowsFilename", "ShowSplash",
                "SingleCloseButton", "SplitOrientationVertical",
                "UseProxy", "UseSystemProxy", "UseHttpProxyForAll",
-               "UseProxyAutoConfiguration",
                "TopLeftByLeft", "BottomLeftByLeft",
                "TopRightByRight", "BottomRightByRight",
                "RequestDownloadFilename",

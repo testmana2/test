@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>591</width>
-    <height>1013</height>
+    <height>789</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -151,62 +151,6 @@
          <string>Use system proxy configuration</string>
         </property>
        </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="pacButton">
-        <property name="toolTip">
-         <string>Select to use a proxy auto configuration script</string>
-        </property>
-        <property name="text">
-         <string>Use script for automatic proxy configuration:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="pacUrlEdit">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="toolTip">
-           <string>Enter the URL of the Proxy Auto-Config (.pac) file</string>
-          </property>
-          <property name="placeholderText">
-           <string>Proxy Auto-Config (.pac) file</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pacReloadButton">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="toolTip">
-           <string>Press to reload the Proxy Auto-Config (.pac) file</string>
-          </property>
-          <property name="text">
-           <string>Reload</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
       </item>
       <item>
        <widget class="QRadioButton" name="manualProxyButton">
@@ -507,9 +451,6 @@
   <tabstop>cleanupSuccessfulButton</tabstop>
   <tabstop>noProxyButton</tabstop>
   <tabstop>systemProxyButton</tabstop>
-  <tabstop>pacButton</tabstop>
-  <tabstop>pacUrlEdit</tabstop>
-  <tabstop>pacReloadButton</tabstop>
   <tabstop>manualProxyButton</tabstop>
   <tabstop>httpProxyHostEdit</tabstop>
   <tabstop>httpProxyPortSpin</tabstop>
@@ -572,38 +513,6 @@
     <hint type="destinationlabel">
      <x>116</x>
      <y>631</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pacButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>pacUrlEdit</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>141</x>
-     <y>339</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>138</x>
-     <y>366</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pacButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>pacReloadButton</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>550</x>
-     <y>340</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>549</x>
-     <y>365</y>
     </hint>
    </hints>
   </connection>
