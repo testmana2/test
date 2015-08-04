@@ -14,6 +14,7 @@ from PyQt5.QtWebKitWidgets import QWebInspector
 
 import Preferences
 
+
 class HelpInspector(QWebInspector):
     """
     Class implementing a QWebInspector wrapper to save and restore the
@@ -36,7 +37,6 @@ class HelpInspector(QWebInspector):
         @param evt event object
         @type QCloseEvent
         """
-        
         Preferences.setGeometry("HelpInspectorGeometry", self.saveGeometry())
         super().closeEvent(evt)
 

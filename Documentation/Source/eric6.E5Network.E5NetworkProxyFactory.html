@@ -32,6 +32,9 @@ Module implementing a network proxy factory.
 <tr>
 <td><a href="#E5NetworkProxyFactory">E5NetworkProxyFactory</a></td>
 <td>Class implementing a network proxy factory.</td>
+</tr><tr>
+<td><a href="#HostnameMatcher">HostnameMatcher</a></td>
+<td>Class implementing a matcher for host names.</td>
 </tr>
 </table>
 <h3>Functions</h3>
@@ -66,6 +69,9 @@ QNetworkProxyFactory
 <td><a href="#E5NetworkProxyFactory.__init__">E5NetworkProxyFactory</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#E5NetworkProxyFactory.__setExceptions">__setExceptions</a></td>
+<td>Private method to set the host name exceptions.</td>
+</tr><tr>
 <td><a href="#E5NetworkProxyFactory.queryProxy">queryProxy</a></td>
 <td>Public method to determine a proxy for a given query.</td>
 </tr>
@@ -79,7 +85,17 @@ QNetworkProxyFactory
 <b>E5NetworkProxyFactory</b>(<i></i>)
 <p>
         Constructor
-</p><a NAME="E5NetworkProxyFactory.queryProxy" ID="E5NetworkProxyFactory.queryProxy"></a>
+</p><a NAME="E5NetworkProxyFactory.__setExceptions" ID="E5NetworkProxyFactory.__setExceptions"></a>
+<h4>E5NetworkProxyFactory.__setExceptions</h4>
+<b>__setExceptions</b>(<i>exceptions</i>)
+<p>
+        Private method to set the host name exceptions.
+</p><dl>
+<dt><i>exceptions</i> (str)</dt>
+<dd>
+list of exceptions separated by ','
+</dd>
+</dl><a NAME="E5NetworkProxyFactory.queryProxy" ID="E5NetworkProxyFactory.queryProxy"></a>
 <h4>E5NetworkProxyFactory.queryProxy</h4>
 <b>queryProxy</b>(<i>query</i>)
 <p>
@@ -93,6 +109,99 @@ reference to the query object (QNetworkProxyQuery)
 <dt>Returns:</dt>
 <dd>
 list of proxies in order of preference (list of QNetworkProxy)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="HostnameMatcher" ID="HostnameMatcher"></a>
+<h2>HostnameMatcher</h2>
+<p>
+    Class implementing a matcher for host names.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HostnameMatcher.__init__">HostnameMatcher</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HostnameMatcher.match">match</a></td>
+<td>Public method to test the given string.</td>
+</tr><tr>
+<td><a href="#HostnameMatcher.pattern">pattern</a></td>
+<td>Public method to get the match pattern.</td>
+</tr><tr>
+<td><a href="#HostnameMatcher.setPattern">setPattern</a></td>
+<td>Public method to set the match pattern.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HostnameMatcher.__init__" ID="HostnameMatcher.__init__"></a>
+<h4>HostnameMatcher (Constructor)</h4>
+<b>HostnameMatcher</b>(<i>pattern</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>pattern</i> (str)</dt>
+<dd>
+pattern to be matched against
+</dd>
+</dl><a NAME="HostnameMatcher.match" ID="HostnameMatcher.match"></a>
+<h4>HostnameMatcher.match</h4>
+<b>match</b>(<i>host</i>)
+<p>
+        Public method to test the given string.
+</p><dl>
+<dt><i>host</i> (str)</dt>
+<dd>
+host name to be matched
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a successful match
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl><a NAME="HostnameMatcher.pattern" ID="HostnameMatcher.pattern"></a>
+<h4>HostnameMatcher.pattern</h4>
+<b>pattern</b>(<i></i>)
+<p>
+        Public method to get the match pattern.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+match pattern
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="HostnameMatcher.setPattern" ID="HostnameMatcher.setPattern"></a>
+<h4>HostnameMatcher.setPattern</h4>
+<b>setPattern</b>(<i>pattern</i>)
+<p>
+        Public method to set the match pattern.
+</p><dl>
+<dt><i>pattern</i></dt>
+<dd>
+pattern to be matched against
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

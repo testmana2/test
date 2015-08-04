@@ -323,8 +323,8 @@ class HelpWebPage(QWebPage):
                     QDesktopServices.openUrl(url)
                 return True
             elif info.domain == QWebPage.QtNetwork and \
-               info.error == QNetworkReply.ContentAccessDenied and \
-               info.errorString.startswith("AdBlockRule:"):
+                info.error == QNetworkReply.ContentAccessDenied and \
+                    info.errorString.startswith("AdBlockRule:"):
                 if info.frame != info.frame.page().mainFrame():
                     # content in <iframe>
                     docElement = info.frame.page().mainFrame()\

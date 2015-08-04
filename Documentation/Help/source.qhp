@@ -3825,6 +3825,7 @@
       <keyword name="E5NetworkProxyFactory" id="E5NetworkProxyFactory" ref="eric6.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory" />
       <keyword name="E5NetworkProxyFactory (Constructor)" id="E5NetworkProxyFactory (Constructor)" ref="eric6.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.__init__" />
       <keyword name="E5NetworkProxyFactory (Module)" id="E5NetworkProxyFactory (Module)" ref="eric6.E5Network.E5NetworkProxyFactory.html" />
+      <keyword name="E5NetworkProxyFactory.__setExceptions" id="E5NetworkProxyFactory.__setExceptions" ref="eric6.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.__setExceptions" />
       <keyword name="E5NetworkProxyFactory.queryProxy" id="E5NetworkProxyFactory.queryProxy" ref="eric6.E5Network.E5NetworkProxyFactory.html#E5NetworkProxyFactory.queryProxy" />
       <keyword name="E5NetworkRequest" id="E5NetworkRequest" ref="eric6.E5Network.E5NetworkMonitor.html#E5NetworkRequest" />
       <keyword name="E5NetworkRequest (Constructor)" id="E5NetworkRequest (Constructor)" ref="eric6.E5Network.E5NetworkMonitor.html#E5NetworkRequest.__init__" />
@@ -6876,6 +6877,11 @@
       <keyword name="HistoryTreeModel.removeRows" id="HistoryTreeModel.removeRows" ref="eric6.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.removeRows" />
       <keyword name="HistoryTreeModel.rowCount" id="HistoryTreeModel.rowCount" ref="eric6.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.rowCount" />
       <keyword name="HistoryTreeModel.setSourceModel" id="HistoryTreeModel.setSourceModel" ref="eric6.Helpviewer.History.HistoryTreeModel.html#HistoryTreeModel.setSourceModel" />
+      <keyword name="HostnameMatcher" id="HostnameMatcher" ref="eric6.E5Network.E5NetworkProxyFactory.html#HostnameMatcher" />
+      <keyword name="HostnameMatcher (Constructor)" id="HostnameMatcher (Constructor)" ref="eric6.E5Network.E5NetworkProxyFactory.html#HostnameMatcher.__init__" />
+      <keyword name="HostnameMatcher.match" id="HostnameMatcher.match" ref="eric6.E5Network.E5NetworkProxyFactory.html#HostnameMatcher.match" />
+      <keyword name="HostnameMatcher.pattern" id="HostnameMatcher.pattern" ref="eric6.E5Network.E5NetworkProxyFactory.html#HostnameMatcher.pattern" />
+      <keyword name="HostnameMatcher.setPattern" id="HostnameMatcher.setPattern" ref="eric6.E5Network.E5NetworkProxyFactory.html#HostnameMatcher.setPattern" />
       <keyword name="HtmlImporter" id="HtmlImporter" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter" />
       <keyword name="HtmlImporter (Constructor)" id="HtmlImporter (Constructor)" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html#HtmlImporter.__init__" />
       <keyword name="HtmlImporter (Module)" id="HtmlImporter (Module)" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.HtmlImporter.html" />
