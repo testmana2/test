@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt5.QtCore import QUrl, QCoreApplication
+from PyQt5.QtCore import Qt, QUrl, QCoreApplication, QRegExp
 from PyQt5.QtWidgets import QDialog
 from PyQt5.QtNetwork import QNetworkProxyFactory, QNetworkProxy, \
     QNetworkProxyQuery
@@ -70,6 +70,61 @@ def proxyAuthenticationRequired(proxy, auth):
             proxy.setPassword(password)
 
 
+class HostnameMatcher(object):
+    """
+    Class implementing a matcher for host names.
+    """
+    def __init__(self, pattern):
+        """
+        Constructor
+        
+        @param pattern pattern to be matched against
+        @type str
+        """
+        self.__regExp = None
+        self.setPattern(pattern)
+    
+    def setPattern(self, pattern):
+        """
+        Public method to set the match pattern.
+        
+        @param pattern pattern to be matched against
+        """
+        self.__pattern = pattern
+        
+        if "?" in pattern or "*" in pattern:
+            regexp = "^.*{0}.*$".format(
+                pattern
+                .replace(".", "\\.")
+                .replace("*", ".*")
+                .replace("?", ".")
+            )
+            self.__regExp = QRegExp(regexp, Qt.CaseInsensitive)
+    
+    def pattern(self):
+        """
+        Public method to get the match pattern.
+        
+        @return match pattern
+        @rtype str
+        """
+        return self.__pattern
+    
+    def match(self, host):
+        """
+        Public method to test the given string.
+        
+        @param host host name to be matched
+        @type str
+        @return flag indicating a successful match
+        @rtype bool
+        """
+        if self.__regExp is None:
+            return self.__pattern in host
+        
+        return self.__regExp.indexIn(host) > -1
+
+
 class E5NetworkProxyFactory(QNetworkProxyFactory):
     """
     Class implementing a network proxy factory.
@@ -79,6 +134,21 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
         Constructor
         """
         super(E5NetworkProxyFactory, self).__init__()
+        
+        self.__hostnameMatchers = []
+        self.__exceptions = ""
+    
+    def __setExceptions(self, exceptions):
+        """
+        Private method to set the host name exceptions.
+        
+        @param exceptions list of exceptions separated by ','
+        @type str
+        """
+        self.__hostnameMatchers = []
+        self.__exceptions = exceptions
+        for exception in self.__exceptions.split(","):
+            self.__hostnameMatchers.append(HostnameMatcher(exception.strip()))
     
     def queryProxy(self, query):
         """
@@ -87,10 +157,22 @@ class E5NetworkProxyFactory(QNetworkProxyFactory):
         @param query reference to the query object (QNetworkProxyQuery)
         @return list of proxies in order of preference (list of QNetworkProxy)
         """
-        # TODO: implement proxy exceptions
         if query.queryType() == QNetworkProxyQuery.UrlRequest and \
-           query.protocolTag() in ["http", "https", "ftp"] and \
-           Preferences.getUI("UseProxy"):
+           query.protocolTag() in ["http", "https", "ftp"]:
+            # use proxy at all ?
+            if not Preferences.getUI("UseProxy"):
+                return [QNetworkProxy(QNetworkProxy.NoProxy)]
+            
+            # test for exceptions
+            exceptions = Preferences.getUI("ProxyExceptions")
+            if exceptions != self.__exceptions:
+                self.__setExceptions(exceptions)
+            urlHost = query.url().host()
+            for matcher in self.__hostnameMatchers:
+                if matcher.match(urlHost):
+                    return [QNetworkProxy(QNetworkProxy.NoProxy)]
+            
+            # determine proxy
             if Preferences.getUI("UseSystemProxy"):
                 proxyList = QNetworkProxyFactory.systemProxyForQuery(query)
                 if not Globals.isWindowsPlatform() and \
