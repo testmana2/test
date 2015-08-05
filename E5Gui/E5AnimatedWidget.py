@@ -102,9 +102,9 @@ class E5AnimatedWidget(QWidget):
             return
         
         self.__timeline.setDirection(QTimeLine.Backward)
+        self.__timeline.finished.connect(self.close)
         self.__timeline.start()
         
-        self.__timeline.finished.connect(self.close)
         
         p = self.parentWidget()
         if p is not None:
