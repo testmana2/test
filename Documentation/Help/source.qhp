@@ -115,6 +115,7 @@
           </section>
           <section title="eric6.E5Gui" ref="index-eric6.E5Gui.html">
             <section title="eric6.E5Gui.E5Action" ref="eric6.E5Gui.E5Action.html" />
+            <section title="eric6.E5Gui.E5AnimatedWidget" ref="eric6.E5Gui.E5AnimatedWidget.html" />
             <section title="eric6.E5Gui.E5Application" ref="eric6.E5Gui.E5Application.html" />
             <section title="eric6.E5Gui.E5ClickableLabel" ref="eric6.E5Gui.E5ClickableLabel.html" />
             <section title="eric6.E5Gui.E5ComboBox" ref="eric6.E5Gui.E5ComboBox.html" />
@@ -3543,6 +3544,14 @@
       <keyword name="E5Action.setIconText" id="E5Action.setIconText" ref="eric6.E5Gui.E5Action.html#E5Action.setIconText" />
       <keyword name="E5Action.setShortcut" id="E5Action.setShortcut" ref="eric6.E5Gui.E5Action.html#E5Action.setShortcut" />
       <keyword name="E5Action.setShortcuts" id="E5Action.setShortcuts" ref="eric6.E5Gui.E5Action.html#E5Action.setShortcuts" />
+      <keyword name="E5AnimatedWidget" id="E5AnimatedWidget" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget" />
+      <keyword name="E5AnimatedWidget (Constructor)" id="E5AnimatedWidget (Constructor)" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget.__init__" />
+      <keyword name="E5AnimatedWidget (Module)" id="E5AnimatedWidget (Module)" ref="eric6.E5Gui.E5AnimatedWidget.html" />
+      <keyword name="E5AnimatedWidget.__animateFrame" id="E5AnimatedWidget.__animateFrame" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget.__animateFrame" />
+      <keyword name="E5AnimatedWidget.hide" id="E5AnimatedWidget.hide" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget.hide" />
+      <keyword name="E5AnimatedWidget.resizeEvent" id="E5AnimatedWidget.resizeEvent" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget.resizeEvent" />
+      <keyword name="E5AnimatedWidget.startAnimation" id="E5AnimatedWidget.startAnimation" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget.startAnimation" />
+      <keyword name="E5AnimatedWidget.widget" id="E5AnimatedWidget.widget" ref="eric6.E5Gui.E5AnimatedWidget.html#E5AnimatedWidget.widget" />
       <keyword name="E5Application" id="E5Application" ref="eric6.E5Gui.E5Application.html#E5Application" />
       <keyword name="E5Application (Constructor)" id="E5Application (Constructor)" ref="eric6.E5Gui.E5Application.html#E5Application.__init__" />
       <keyword name="E5Application (Module)" id="E5Application (Module)" ref="eric6.E5Gui.E5Application.html" />
@@ -4895,7 +4904,6 @@
       <keyword name="FeaturePermissionBar.__permissionDenied" id="FeaturePermissionBar.__permissionDenied" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__permissionDenied" />
       <keyword name="FeaturePermissionBar.__permissionGranted" id="FeaturePermissionBar.__permissionGranted" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__permissionGranted" />
       <keyword name="FeaturePermissionBar.__permissionUnknown" id="FeaturePermissionBar.__permissionUnknown" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.__permissionUnknown" />
-      <keyword name="FeaturePermissionBar.requestPermission" id="FeaturePermissionBar.requestPermission" ref="eric6.Helpviewer.FeaturePermissionBar.html#FeaturePermissionBar.requestPermission" />
       <keyword name="FeedEditDialog" id="FeedEditDialog" ref="eric6.Helpviewer.Feeds.FeedEditDialog.html#FeedEditDialog" />
       <keyword name="FeedEditDialog (Constructor)" id="FeedEditDialog (Constructor)" ref="eric6.Helpviewer.Feeds.FeedEditDialog.html#FeedEditDialog.__init__" />
       <keyword name="FeedEditDialog (Module)" id="FeedEditDialog (Module)" ref="eric6.Helpviewer.Feeds.FeedEditDialog.html" />
@@ -13945,6 +13953,7 @@
       <file>eric6.E5Graphics.E5ArrowItem.html</file>
       <file>eric6.E5Graphics.E5GraphicsView.html</file>
       <file>eric6.E5Gui.E5Action.html</file>
+      <file>eric6.E5Gui.E5AnimatedWidget.html</file>
       <file>eric6.E5Gui.E5Application.html</file>
       <file>eric6.E5Gui.E5ClickableLabel.html</file>
       <file>eric6.E5Gui.E5ComboBox.html</file>

@@ -2125,11 +2125,11 @@ class HelpBrowser(QWebView):
         @type QWebPage.Feature
         """
         from .FeaturePermissionBar import FeaturePermissionBar
-        self.__featurePermissionBar = FeaturePermissionBar(self)
+        self.__featurePermissionBar = FeaturePermissionBar(self, frame,
+                                                           feature)
         self.__featurePermissionBar.featurePermissionProvided.connect(
             self.__setFeaturePermission)
-        
-        self.__featurePermissionBar.requestPermission(frame, feature)
+        self.__featurePermissionBar.show()
     
     def __setFeaturePermission(self, frame, feature, policy):
         """
@@ -2151,6 +2151,7 @@ class HelpBrowser(QWebView):
         """
         if self.__featurePermissionBar is not None:
             self.__featurePermissionBar.deleteLater()
+            self.__featurePermissionBar.hide()
             self.__featurePermissionBar = None
     
     def __downloadRequested(self, request):

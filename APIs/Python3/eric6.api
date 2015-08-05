@@ -1195,6 +1195,13 @@ eric6.E5Gui.E5Action.E5Action.setShortcuts?4(shortcuts)
 eric6.E5Gui.E5Action.E5Action?1(*args)
 eric6.E5Gui.E5Action.addActions?4(target, actions)
 eric6.E5Gui.E5Action.createActionGroup?4(parent, name=None, exclusive=False)
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget.DirectionDown?7
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget.DirectionUp?7
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget.hide?4()
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget.resizeEvent?4(evt)
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget.startAnimation?4()
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget.widget?4()
+eric6.E5Gui.E5AnimatedWidget.E5AnimatedWidget?1(direction=DirectionDown, duration=300, parent=None)
 eric6.E5Gui.E5Application.E5Application.getObject?4(name)
 eric6.E5Gui.E5Application.E5Application.getPluginObject?4(name)
 eric6.E5Gui.E5Application.E5Application.getPluginObjectType?4(name)
@@ -2460,8 +2467,7 @@ eric6.Helpviewer.Download.DownloadUtilities.dataString?4(size)
 eric6.Helpviewer.Download.DownloadUtilities.timeString?4(timeRemaining)
 eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.DefaultHeight?7
 eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.featurePermissionProvided?7
-eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.requestPermission?4(frame, feature)
-eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar?1(view)
+eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar?1(view, frame, feature)
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.getData?4()
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_titleEdit_textChanged?4(txt)
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_urlEdit_textChanged?4(txt)

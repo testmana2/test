@@ -9,15 +9,16 @@ Module implementing the feature permission bar widget.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSignal, QPropertyAnimation, QByteArray, \
-    QEasingCurve, QPoint
-from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, QPushButton
+from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtWidgets import QLabel, QHBoxLayout, QPushButton
 from PyQt5.QtWebKitWidgets import QWebFrame, QWebPage
+
+from E5Gui.E5AnimatedWidget import E5AnimatedWidget
 
 import UI.PixmapCache
 
 
-class FeaturePermissionBar(QWidget):
+class FeaturePermissionBar(E5AnimatedWidget):
     """
     Class implementing the feature permission bar widget.
     """
@@ -26,19 +27,23 @@ class FeaturePermissionBar(QWidget):
     
     DefaultHeight = 30
     
-    def __init__(self, view):
+    def __init__(self, view, frame, feature):
         """
         Constructor
         
         @param view reference to the web view
         @type QWebView
+        @param frame frame sending the request
+        @type QWebFrame
+        @param feature requested feature
+        @type QWebPage.Feature
         """
-        super(FeaturePermissionBar, self).__init__(view)
+        super(FeaturePermissionBar, self).__init__(parent=view)
         
         self.__messageLabel = QLabel(self)
         
-        self.__frame = None
-        self.__feature = None
+        self.__frame = frame
+        self.__feature = feature
         
         self.__permissionFeatureTexts = {
             QWebPage.Notifications:
@@ -63,20 +68,6 @@ class FeaturePermissionBar(QWidget):
         self.__layout.addWidget(self.__allowButton)
         self.__layout.addWidget(self.__denyButton)
         self.__layout.addWidget(self.__discardButton)
-        self.setGeometry(0, -self.DefaultHeight, view.width(),
-                         self.DefaultHeight)
-    
-    def requestPermission(self, frame, feature):
-        """
-        Public method to ask the user for a permission.
-        
-        @param frame frame sending the request
-        @type QWebFrame
-        @param feature requested feature
-        @type QWebPage.Feature
-        """
-        self.__frame = frame
-        self.__feature = feature
         
         try:
             self.__messageLabel.setText(
@@ -86,16 +77,9 @@ class FeaturePermissionBar(QWidget):
             self.__messageLabel.setText(
                 self.tr("{0} wants to use an unknown feature.").format(
                     self.__frame.securityOrigin().host()))
-        self.show()
         
-        self.__animation = QPropertyAnimation(self)
-        self.__animation.setTargetObject(self)
-        self.__animation.setPropertyName(QByteArray(b"pos"))
-        self.__animation.setDuration(300)
-        self.__animation.setStartValue(self.pos())
-        self.__animation.setEndValue(QPoint(0, 0))
-        self.__animation.setEasingCurve(QEasingCurve.InOutQuad)
-        self.__animation.start(QPropertyAnimation.DeleteWhenStopped)
+        self.resize(view.width(), self.height())
+        self.startAnimation()
     
     def __permissionDenied(self):
         """
@@ -103,6 +87,7 @@ class FeaturePermissionBar(QWidget):
         """
         self.featurePermissionProvided.emit(self.__frame, self.__feature,
                                             QWebPage.PermissionDeniedByUser)
+        self.hide()
     
     def __permissionGranted(self):
         """
@@ -110,6 +95,7 @@ class FeaturePermissionBar(QWidget):
         """
         self.featurePermissionProvided.emit(self.__frame, self.__feature,
                                             QWebPage.PermissionGrantedByUser)
+        self.hide()
     
     def __permissionUnknown(self):
         """
@@ -117,3 +103,4 @@ class FeaturePermissionBar(QWidget):
         """
         self.featurePermissionProvided.emit(self.__frame, self.__feature,
                                             QWebPage.PermissionUnknown)
+        self.hide()

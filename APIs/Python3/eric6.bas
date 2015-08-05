@@ -139,6 +139,7 @@ DownloadManager QDialog Ui_DownloadManager
 DownloadModel QAbstractListModel
 DuplicateParamError Exception
 E5Action QAction
+E5AnimatedWidget QWidget
 E5Application QApplication
 E5ArrowItem QAbstractGraphicsShapeItem
 E5ClearableComboBox E5ComboBox
@@ -245,7 +246,7 @@ ExporterTEX ExporterBase
 ExtToken peg.Symbol
 ExtValue peg.List
 FavIconLabel QLabel
-FeaturePermissionBar QWidget
+FeaturePermissionBar E5AnimatedWidget
 FeedEditDialog QDialog Ui_FeedEditDialog
 FeedsDialog QDialog Ui_FeedsDialog
 FeedsManager QDialog Ui_FeedsManager
