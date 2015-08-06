@@ -88,6 +88,7 @@ class HelpWindow(E5MainWindow):
     _personalInformationManager = None
     _greaseMonkeyManager = None
     _notification = None
+    _featurePermissionManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -1195,6 +1196,23 @@ class HelpWindow(E5MainWindow):
                 E5ErrorMessage.editMessageFilters)
         self.__actions.append(self.editMessageFilterAct)
 
+        self.featurePermissionAct = E5Action(
+            self.tr('Edit HTML5 Feature Permissions'),
+            UI.PixmapCache.getIcon("featurePermission.png"),
+            self.tr('Edit HTML5 Feature Permissions...'), 0, 0, self,
+            'help_edit_feature_permissions')
+        self.featurePermissionAct.setStatusTip(self.tr(
+            'Edit the remembered HTML5 feature permissions'))
+        self.featurePermissionAct.setWhatsThis(self.tr(
+            """<b>Edit HTML5 Feature Permissions</b>"""
+            """<p>Opens a dialog to edit the remembered HTML5"""
+            """ feature permissions.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.featurePermissionAct.triggered.connect(
+                self.__showFeaturePermissionDialog)
+        self.__actions.append(self.featurePermissionAct)
+
         if self.useQtHelp or self.initShortcutsOnly:
             self.syncTocAct = E5Action(
                 self.tr('Sync with Table of Contents'),
@@ -1632,6 +1650,7 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.offlineStorageAct)
         menu.addAction(self.personalDataAct)
         menu.addAction(self.greaseMonkeyAct)
+        menu.addAction(self.featurePermissionAct)
         menu.addSeparator()
         menu.addAction(self.editMessageFilterAct)
         menu.addSeparator()
@@ -1761,6 +1780,7 @@ class HelpWindow(E5MainWindow):
         settingstb.addAction(self.offlineStorageAct)
         settingstb.addAction(self.personalDataAct)
         settingstb.addAction(self.greaseMonkeyAct)
+        settingstb.addAction(self.featurePermissionAct)
         
         toolstb = self.addToolBar(self.tr("Tools"))
         toolstb.setObjectName("ToolsToolBar")
@@ -3051,6 +3071,12 @@ class HelpWindow(E5MainWindow):
         """
         self.greaseMonkeyManager().showConfigurationDialog()
         
+    def __showFeaturePermissionDialog(self):
+        """
+        Private slot to show the feature permission dialog.
+        """
+        self.featurePermissionManager().showFeaturePermissionsDialog()
+        
     def __showNetworkMonitor(self):
         """
         Private slot to show the network monitor dialog.
@@ -3258,6 +3284,21 @@ class HelpWindow(E5MainWindow):
             cls._greaseMonkeyManager = GreaseMonkeyManager()
         
         return cls._greaseMonkeyManager
+        
+    @classmethod
+    def featurePermissionManager(cls):
+        """
+        Class method to get a reference to the feature permission manager.
+        
+        @return reference to the feature permission manager
+        @rtype FeaturePermissionManager
+        """
+        if cls._featurePermissionManager is None:
+            from .FeaturePermissions.FeaturePermissionManager import \
+                FeaturePermissionManager
+            cls._featurePermissionManager = FeaturePermissionManager()
+        
+        return cls._featurePermissionManager
         
     @classmethod
     def mainWindow(cls):

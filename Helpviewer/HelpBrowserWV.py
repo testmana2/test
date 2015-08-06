@@ -33,6 +33,8 @@ import sip
 
 from E5Gui import E5MessageBox, E5FileDialog
 
+import Helpviewer
+
 import Preferences
 import UI.PixmapCache
 import Globals
@@ -768,11 +770,8 @@ class HelpBrowser(QWebView):
         self.page().setForwardUnsupportedContent(True)
         self.page().unsupportedContent.connect(self.__unsupportedContent)
         
-        self.__featurePermissionBar = None
         self.page().featurePermissionRequested.connect(
             self.__featurePermissionRequested)
-        # discard the feature bar on new loads (if we navigate away or reload)
-        self.page().loadStarted.connect(self.__featurePermissionBarDelete)
         
         self.page().downloadRequested.connect(self.__downloadRequested)
         self.page().frameCreated.connect(self.__addExternalBinding)
@@ -2124,35 +2123,8 @@ class HelpBrowser(QWebView):
         @param feature requested feature
         @type QWebPage.Feature
         """
-        from .FeaturePermissionBar import FeaturePermissionBar
-        self.__featurePermissionBar = FeaturePermissionBar(self, frame,
-                                                           feature)
-        self.__featurePermissionBar.featurePermissionProvided.connect(
-            self.__setFeaturePermission)
-        self.__featurePermissionBar.show()
-    
-    def __setFeaturePermission(self, frame, feature, policy):
-        """
-        Private slot to set the feature permissions.
-        
-        @param frame frame to set the permission for
-        @type QWebFrame
-        @param feature feature to set permission for
-        @type QWebPage.Feature
-        @param policy permission policy to be set
-        @type QWebPage.PermissionPolicy
-        """
-        self.page().setFeaturePermission(frame, feature, policy)
-        self.__featurePermissionBarDelete()
-    
-    def __featurePermissionBarDelete(self):
-        """
-        Private slot to delete the feature permission bar.
-        """
-        if self.__featurePermissionBar is not None:
-            self.__featurePermissionBar.deleteLater()
-            self.__featurePermissionBar.hide()
-            self.__featurePermissionBar = None
+        manager = Helpviewer.HelpWindow.HelpWindow.featurePermissionManager()
+        manager.requestFeaturePermission(self.page(), frame, feature)
     
     def __downloadRequested(self, request):
         """

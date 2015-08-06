@@ -9,11 +9,13 @@ Module implementing the feature permission bar widget.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtWidgets import QLabel, QHBoxLayout, QPushButton
-from PyQt5.QtWebKitWidgets import QWebFrame, QWebPage
+from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtWidgets import QLabel, QHBoxLayout, QPushButton, QCheckBox
+from PyQt5.QtWebKitWidgets import QWebPage
 
 from E5Gui.E5AnimatedWidget import E5AnimatedWidget
+
+import Helpviewer
 
 import UI.PixmapCache
 
@@ -22,9 +24,6 @@ class FeaturePermissionBar(E5AnimatedWidget):
     """
     Class implementing the feature permission bar widget.
     """
-    featurePermissionProvided = pyqtSignal(QWebFrame, QWebPage.Feature,
-                                           QWebPage.PermissionPolicy)
-    
     DefaultHeight = 30
     
     def __init__(self, view, frame, feature):
@@ -44,6 +43,7 @@ class FeaturePermissionBar(E5AnimatedWidget):
         
         self.__frame = frame
         self.__feature = feature
+        self.__view = view
         
         self.__permissionFeatureTexts = {
             QWebPage.Notifications:
@@ -58,6 +58,8 @@ class FeaturePermissionBar(E5AnimatedWidget):
         self.__layout.setContentsMargins(self.DefaultHeight, 0, 0, 0)
         self.__layout.addWidget(self.__messageLabel)
         self.__layout.addStretch()
+        self.__rememberCheckBox = QCheckBox(self.tr("Remember"), self)
+        self.__layout.addWidget(self.__rememberCheckBox)
         self.__allowButton = QPushButton(self.tr("Allow"), self)
         self.__denyButton = QPushButton(self.tr("Deny"), self)
         self.__discardButton = QPushButton(UI.PixmapCache.getIcon("close.png"),
@@ -78,29 +80,63 @@ class FeaturePermissionBar(E5AnimatedWidget):
                 self.tr("{0} wants to use an unknown feature.").format(
                     self.__frame.securityOrigin().host()))
         
+        self.__view.page().loadStarted.connect(self.hide)
+        
         self.resize(view.width(), self.height())
         self.startAnimation()
+    
+    @pyqtSlot()
+    def hide(self):
+        """
+        Public slot to hide the animated widget.
+        """
+        self.__view.page().loadStarted.disconnect(self.hide)
+        super(FeaturePermissionBar, self).hide()
     
     def __permissionDenied(self):
         """
         Private slot handling the user pressing the deny button.
         """
-        self.featurePermissionProvided.emit(self.__frame, self.__feature,
-                                            QWebPage.PermissionDeniedByUser)
+        if self.__frame is None or self.__frame.page() is None:
+            return
+        
+        page = self.__frame.page()
+        page.setFeaturePermission(self.__frame, self.__feature,
+                                  QWebPage.PermissionDeniedByUser)
+        
+        if self.__rememberCheckBox.isChecked():
+            Helpviewer.HelpWindow.HelpWindow.featurePermissionManager()\
+                .rememberFeaturePermission(page.url().host(), self.__feature,
+                                           QWebPage.PermissionDeniedByUser)
+        
         self.hide()
     
     def __permissionGranted(self):
         """
         Private slot handling the user pressing the allow button.
         """
-        self.featurePermissionProvided.emit(self.__frame, self.__feature,
-                                            QWebPage.PermissionGrantedByUser)
+        if self.__frame is None or self.__frame.page() is None:
+            return
+        
+        page = self.__frame.page()
+        page.setFeaturePermission(self.__frame, self.__feature,
+                                  QWebPage.PermissionGrantedByUser)
+        
+        if self.__rememberCheckBox.isChecked():
+            Helpviewer.HelpWindow.HelpWindow.featurePermissionManager()\
+                .rememberFeaturePermission(page.url().host(), self.__feature,
+                                           QWebPage.PermissionGrantedByUser)
+        
         self.hide()
     
     def __permissionUnknown(self):
         """
         Private slot handling the user closing the dialog without.
         """
-        self.featurePermissionProvided.emit(self.__frame, self.__feature,
-                                            QWebPage.PermissionUnknown)
+        if self.__frame is None or self.__frame.page() is None:
+            return
+        
+        page = self.__frame.page()
+        page.setFeaturePermission(self.__frame, self.__feature,
+                                  QWebPage.PermissionUnknown)
         self.hide()
