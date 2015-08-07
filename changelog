@@ -56,7 +56,7 @@ Version 6.1-snapshot-2015mmdd:
      --- enhanced the log browser functionality by a search mode
      --- enhanced the status dialog functionality by a diff view
 - Web Browser
-  -- added support for feature permissions
+  -- added support for HTML5 feature permissions
   -- improved parsing of the content disposition header analog to
      the way it is done in qutebrowser
   -- modified and extended the VirusTotal interface for the v2 API

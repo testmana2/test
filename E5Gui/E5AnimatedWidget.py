@@ -56,6 +56,7 @@ class E5AnimatedWidget(QWidget):
         @return reference to the animated widget
         @rtype QWidget
         """
+        return self.__widget
     
     @pyqtSlot()
     def startAnimation(self):
@@ -104,7 +105,6 @@ class E5AnimatedWidget(QWidget):
         self.__timeline.setDirection(QTimeLine.Backward)
         self.__timeline.finished.connect(self.close)
         self.__timeline.start()
-        
         
         p = self.parentWidget()
         if p is not None:

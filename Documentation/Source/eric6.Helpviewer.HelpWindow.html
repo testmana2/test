@@ -58,7 +58,7 @@ emitted after the zoom text only setting
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>useQtHelp</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_featurePermissionManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>useQtHelp</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -74,6 +74,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.downloadManager">downloadManager</a></td>
 <td>Class method to get a reference to the download manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.featurePermissionManager">featurePermissionManager</a></td>
+<td>Class method to get a reference to the feature permission manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.feedsManager">feedsManager</a></td>
 <td>Class method to get a reference to the RSS feeds manager.</td>
@@ -318,6 +321,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__showEnginesConfigurationDialog">__showEnginesConfigurationDialog</a></td>
 <td>Private slot to show the search engines configuration dialog.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__showFeaturePermissionDialog">__showFeaturePermissionDialog</a></td>
+<td>Private slot to show the feature permission dialog.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__showFeedsManager">__showFeedsManager</a></td>
 <td>Private slot to show the feeds manager dialog.</td>
@@ -564,6 +570,21 @@ reference to the cookie jar (CookieJar)
 <dt>Returns:</dt>
 <dd>
 reference to the password manager (DownloadManager)
+</dd>
+</dl><a NAME="HelpWindow.featurePermissionManager" ID="HelpWindow.featurePermissionManager"></a>
+<h4>HelpWindow.featurePermissionManager (class method)</h4>
+<b>featurePermissionManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the feature permission manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the feature permission manager
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+FeaturePermissionManager
 </dd>
 </dl><a NAME="HelpWindow.feedsManager" ID="HelpWindow.feedsManager"></a>
 <h4>HelpWindow.feedsManager (class method)</h4>
@@ -1159,6 +1180,11 @@ reference to the selected action (QAction)
 <b>__showEnginesConfigurationDialog</b>(<i></i>)
 <p>
         Private slot to show the search engines configuration dialog.
+</p><a NAME="HelpWindow.__showFeaturePermissionDialog" ID="HelpWindow.__showFeaturePermissionDialog"></a>
+<h4>HelpWindow.__showFeaturePermissionDialog</h4>
+<b>__showFeaturePermissionDialog</b>(<i></i>)
+<p>
+        Private slot to show the feature permission dialog.
 </p><a NAME="HelpWindow.__showFeedsManager" ID="HelpWindow.__showFeedsManager"></a>
 <h4>HelpWindow.__showFeedsManager</h4>
 <b>__showFeedsManager</b>(<i></i>)

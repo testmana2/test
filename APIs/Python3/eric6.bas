@@ -247,6 +247,8 @@ ExtToken peg.Symbol
 ExtValue peg.List
 FavIconLabel QLabel
 FeaturePermissionBar E5AnimatedWidget
+FeaturePermissionManager QObject
+FeaturePermissionsDialog QDialog Ui_FeaturePermissionsDialog
 FeedEditDialog QDialog Ui_FeedEditDialog
 FeedsDialog QDialog Ui_FeedsDialog
 FeedsManager QDialog Ui_FeedsManager

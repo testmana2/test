@@ -306,6 +306,7 @@
     <Source>Helpviewer/Download/__init__.py</Source>
     <Source>Helpviewer/FeaturePermissions/FeaturePermissionBar.py</Source>
     <Source>Helpviewer/FeaturePermissions/FeaturePermissionManager.py</Source>
+    <Source>Helpviewer/FeaturePermissions/FeaturePermissionsDialog.py</Source>
     <Source>Helpviewer/FeaturePermissions/__init__.py</Source>
     <Source>Helpviewer/Feeds/FeedEditDialog.py</Source>
     <Source>Helpviewer/Feeds/FeedsDialog.py</Source>
@@ -1284,6 +1285,7 @@
     <Form>E5Network/E5SslCertificatesInfoDialog.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
     <Form>Graphics/UMLSceneSizeDialog.ui</Form>
+    <Form>Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockExceptionsDialog.ui</Form>
     <Form>Helpviewer/Bookmarks/AddBookmarkDialog.ui</Form>

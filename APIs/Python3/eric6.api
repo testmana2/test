@@ -2465,9 +2465,22 @@ eric6.Helpviewer.Download.DownloadModel.DownloadModel.rowCount?4(parent=QModelIn
 eric6.Helpviewer.Download.DownloadModel.DownloadModel?1(manager, parent=None)
 eric6.Helpviewer.Download.DownloadUtilities.dataString?4(size)
 eric6.Helpviewer.Download.DownloadUtilities.timeString?4(timeRemaining)
-eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.DefaultHeight?7
-eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar.featurePermissionProvided?7
-eric6.Helpviewer.FeaturePermissionBar.FeaturePermissionBar?1(view, frame, feature)
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionBar.FeaturePermissionBar.DefaultHeight?7
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionBar.FeaturePermissionBar.hide?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionBar.FeaturePermissionBar?1(view, frame, feature)
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionManager.FeaturePermissionManager.SettingsKeyFormat?7
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionManager.FeaturePermissionManager.rememberFeaturePermission?4(host, feature, permission)
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionManager.FeaturePermissionManager.requestFeaturePermission?4(page, frame, feature)
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionManager.FeaturePermissionManager.showFeaturePermissionsDialog?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionManager.FeaturePermissionManager?1(parent=None)
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.getData?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.on_geoList_itemSelectionChanged?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.on_geoRemoveAllButton_clicked?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.on_geoRemoveButton_clicked?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.on_notifList_itemSelectionChanged?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.on_notifRemoveAllButton_clicked?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog.on_notifRemoveButton_clicked?4()
+eric6.Helpviewer.FeaturePermissions.FeaturePermissionsDialog.FeaturePermissionsDialog?1(featurePermissions, parent=None)
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.getData?4()
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_titleEdit_textChanged?4(txt)
 eric6.Helpviewer.Feeds.FeedEditDialog.FeedEditDialog.on_urlEdit_textChanged?4(txt)
@@ -2723,6 +2736,7 @@ eric6.Helpviewer.HelpWindow.HelpWindow._adblockManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._bookmarksManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._cookieJar?8
 eric6.Helpviewer.HelpWindow.HelpWindow._downloadManager?8
+eric6.Helpviewer.HelpWindow.HelpWindow._featurePermissionManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._feedsManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._fromEric?8
 eric6.Helpviewer.HelpWindow.HelpWindow._greaseMonkeyManager?8
@@ -2747,6 +2761,7 @@ eric6.Helpviewer.HelpWindow.HelpWindow.currentBrowser?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.downloadManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.eventKeyboardModifiers?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.eventMouseButtons?4()
+eric6.Helpviewer.HelpWindow.HelpWindow.featurePermissionManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.feedsManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.getActions?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.getSourceFileList?4()

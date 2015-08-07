@@ -10,6 +10,7 @@ Module implementing the feature permission manager object.
 from __future__ import unicode_literals
 
 from PyQt5.QtCore import QObject
+from PyQt5.QtWidgets import QDialog
 from PyQt5.QtWebKitWidgets import QWebPage
 
 import Globals
@@ -33,30 +34,30 @@ class FeaturePermissionManager(QObject):
         
         self.__featurePermissions = {
             QWebPage.Notifications: {
-                QWebPage.PermissionGrantedByUser: [], 
+                QWebPage.PermissionGrantedByUser: [],
                 QWebPage.PermissionDeniedByUser: [],
             },
             QWebPage.Geolocation: {
-                QWebPage.PermissionGrantedByUser: [], 
+                QWebPage.PermissionGrantedByUser: [],
                 QWebPage.PermissionDeniedByUser: [],
             },
         }
         self.__featurePermissionsKeys = {
-            (QWebPage.Notifications, QWebPage.PermissionGrantedByUser): 
-                    "NotificationsGranted",
-            (QWebPage.Notifications, QWebPage.PermissionDeniedByUser): 
-                    "NotificationsDenied",
-            (QWebPage.Geolocation, QWebPage.PermissionGrantedByUser): 
-                    "GeolocationGranted",
-            (QWebPage.Geolocation, QWebPage.PermissionDeniedByUser): 
-                    "GeolocationDenied",
+            (QWebPage.Notifications, QWebPage.PermissionGrantedByUser):
+                "NotificationsGranted",
+            (QWebPage.Notifications, QWebPage.PermissionDeniedByUser):
+                "NotificationsDenied",
+            (QWebPage.Geolocation, QWebPage.PermissionGrantedByUser):
+                "GeolocationGranted",
+            (QWebPage.Geolocation, QWebPage.PermissionDeniedByUser):
+                "GeolocationDenied",
         }
         
         self.__loaded = False
 
     def requestFeaturePermission(self, page, frame, feature):
         """
-        Private method to request a feature permission.
+        Public method to request a feature permission.
         
         @param page reference to the requesting web page
         @type QWebPage
@@ -137,5 +138,12 @@ class FeaturePermissionManager(QObject):
         Public method to show a dialog to manage the remembered feature
         permissions.
         """
-        # TODO: implement this
-        pass
+        if not self.__loaded:
+            self.__loadSettings()
+        
+        from .FeaturePermissionsDialog import FeaturePermissionsDialog
+        dlg = FeaturePermissionsDialog(self.__featurePermissions)
+        if dlg.exec_() == QDialog.Accepted:
+            newFeaturePermissions = dlg.getData()
+            self.__featurePermissions = newFeaturePermissions
+            self.__saveSettings()
