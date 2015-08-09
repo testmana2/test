@@ -864,7 +864,8 @@ class HelpBrowser(QWebView):
             resource = LinkedResource()
             resource.rel = rel
             resource.type_ = type_
-            resource.href = baseUrl.resolved(QUrl.fromEncoded(href))
+            resource.href = baseUrl.resolved(
+                QUrl.fromEncoded(href.encode("utf-8")))
             resource.title = title
             
             resources.append(resource)
