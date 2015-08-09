@@ -10,7 +10,7 @@ The Eric6 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 """
 
-import __builtin__
+import __builtin__      # __IGNORE_EXCEPTION__
 import codecs
 
 

@@ -48,6 +48,9 @@ from Project.ProjectBrowserFlags import SourcesBrowserFlag, FormsBrowserFlag, \
     ResourcesBrowserFlag, TranslationsBrowserFlag, InterfacesBrowserFlag, \
     OthersBrowserFlag, AllBrowsersFlag
 
+from Helpviewer.FlashCookieManager.FlashCookieUtilities import \
+    flashDataPathForOS
+
 
 class Prefs(object):
     """
@@ -889,6 +892,13 @@ class Prefs(object):
         "PimSpecial3": "",
         "PimSpecial4": "",
         "GreaseMonkeyDisabledScripts": [],
+        # Flash Cookie Manager
+        "FlashCookiesDeleteOnStartExit": False,
+        "FlashCookieAutoRefresh": False,
+        "FlashCookieNotify": False,
+        "FlashCookiesWhitelist": [],
+        "FlashCookiesBlacklist": [],
+        "FlashCookiesDataPath": flashDataPathForOS(),
     }
     
     @classmethod
@@ -2411,13 +2421,17 @@ def getHelp(key, prefClass=Prefs):
                  "SyncHistory", "SyncPasswords", "SyncUserAgents",
                  "SyncSpeedDial", "SyncEncryptData",
                  "SyncEncryptPasswordsOnly",
-                 "WarnOnMultipleClose", "ClickToFlashEnabled"
+                 "WarnOnMultipleClose", "ClickToFlashEnabled",
+                 "FlashCookiesDeleteOnStartExit", "FlashCookieAutoRefresh",
+                 "FlashCookieNotify",
                  ]:
         return toBool(prefClass.settings.value(
             "Help/" + key, prefClass.helpDefaults[key]))
     elif key in ["AdBlockSubscriptions", "AdBlockExceptions",
                  "ClickToFlashWhitelist", "SendRefererWhitelist",
-                 "GreaseMonkeyDisabledScripts", "NoCacheHosts"]:
+                 "GreaseMonkeyDisabledScripts", "NoCacheHosts",
+                 "FlashCookiesWhitelist", "FlashCookiesBlacklist",
+                 ]:
         return toList(prefClass.settings.value(
             "Help/" + key, prefClass.helpDefaults[key]))
     else:

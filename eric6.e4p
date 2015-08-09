@@ -26,46 +26,6 @@
     <Source>DataViews/PyCoverageDialog.py</Source>
     <Source>DataViews/PyProfileDialog.py</Source>
     <Source>DataViews/__init__.py</Source>
-    <Source>DebugClients/Python3/AsyncFile.py</Source>
-    <Source>DebugClients/Python3/AsyncIO.py</Source>
-    <Source>DebugClients/Python3/DCTestResult.py</Source>
-    <Source>DebugClients/Python3/DebugBase.py</Source>
-    <Source>DebugClients/Python3/DebugClient.py</Source>
-    <Source>DebugClients/Python3/DebugClientBase.py</Source>
-    <Source>DebugClients/Python3/DebugClientCapabilities.py</Source>
-    <Source>DebugClients/Python3/DebugClientThreads.py</Source>
-    <Source>DebugClients/Python3/DebugConfig.py</Source>
-    <Source>DebugClients/Python3/DebugProtocol.py</Source>
-    <Source>DebugClients/Python3/DebugThread.py</Source>
-    <Source>DebugClients/Python3/FlexCompleter.py</Source>
-    <Source>DebugClients/Python3/PyProfile.py</Source>
-    <Source>DebugClients/Python3/__init__.py</Source>
-    <Source>DebugClients/Python3/coverage/__init__.py</Source>
-    <Source>DebugClients/Python3/coverage/__main__.py</Source>
-    <Source>DebugClients/Python3/coverage/annotate.py</Source>
-    <Source>DebugClients/Python3/coverage/backward.py</Source>
-    <Source>DebugClients/Python3/coverage/bytecode.py</Source>
-    <Source>DebugClients/Python3/coverage/cmdline.py</Source>
-    <Source>DebugClients/Python3/coverage/codeunit.py</Source>
-    <Source>DebugClients/Python3/coverage/collector.py</Source>
-    <Source>DebugClients/Python3/coverage/config.py</Source>
-    <Source>DebugClients/Python3/coverage/control.py</Source>
-    <Source>DebugClients/Python3/coverage/data.py</Source>
-    <Source>DebugClients/Python3/coverage/debug.py</Source>
-    <Source>DebugClients/Python3/coverage/execfile.py</Source>
-    <Source>DebugClients/Python3/coverage/files.py</Source>
-    <Source>DebugClients/Python3/coverage/html.py</Source>
-    <Source>DebugClients/Python3/coverage/misc.py</Source>
-    <Source>DebugClients/Python3/coverage/parser.py</Source>
-    <Source>DebugClients/Python3/coverage/phystokens.py</Source>
-    <Source>DebugClients/Python3/coverage/report.py</Source>
-    <Source>DebugClients/Python3/coverage/results.py</Source>
-    <Source>DebugClients/Python3/coverage/summary.py</Source>
-    <Source>DebugClients/Python3/coverage/templite.py</Source>
-    <Source>DebugClients/Python3/coverage/version.py</Source>
-    <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
-    <Source>DebugClients/Python3/eric6dbgstub.py</Source>
-    <Source>DebugClients/Python3/getpass.py</Source>
     <Source>DebugClients/Python/AsyncFile.py</Source>
     <Source>DebugClients/Python/AsyncIO.py</Source>
     <Source>DebugClients/Python/DCTestResult.py</Source>
@@ -106,6 +66,46 @@
     <Source>DebugClients/Python/coverage/xmlreport.py</Source>
     <Source>DebugClients/Python/eric6dbgstub.py</Source>
     <Source>DebugClients/Python/getpass.py</Source>
+    <Source>DebugClients/Python3/AsyncFile.py</Source>
+    <Source>DebugClients/Python3/AsyncIO.py</Source>
+    <Source>DebugClients/Python3/DCTestResult.py</Source>
+    <Source>DebugClients/Python3/DebugBase.py</Source>
+    <Source>DebugClients/Python3/DebugClient.py</Source>
+    <Source>DebugClients/Python3/DebugClientBase.py</Source>
+    <Source>DebugClients/Python3/DebugClientCapabilities.py</Source>
+    <Source>DebugClients/Python3/DebugClientThreads.py</Source>
+    <Source>DebugClients/Python3/DebugConfig.py</Source>
+    <Source>DebugClients/Python3/DebugProtocol.py</Source>
+    <Source>DebugClients/Python3/DebugThread.py</Source>
+    <Source>DebugClients/Python3/FlexCompleter.py</Source>
+    <Source>DebugClients/Python3/PyProfile.py</Source>
+    <Source>DebugClients/Python3/__init__.py</Source>
+    <Source>DebugClients/Python3/coverage/__init__.py</Source>
+    <Source>DebugClients/Python3/coverage/__main__.py</Source>
+    <Source>DebugClients/Python3/coverage/annotate.py</Source>
+    <Source>DebugClients/Python3/coverage/backward.py</Source>
+    <Source>DebugClients/Python3/coverage/bytecode.py</Source>
+    <Source>DebugClients/Python3/coverage/cmdline.py</Source>
+    <Source>DebugClients/Python3/coverage/codeunit.py</Source>
+    <Source>DebugClients/Python3/coverage/collector.py</Source>
+    <Source>DebugClients/Python3/coverage/config.py</Source>
+    <Source>DebugClients/Python3/coverage/control.py</Source>
+    <Source>DebugClients/Python3/coverage/data.py</Source>
+    <Source>DebugClients/Python3/coverage/debug.py</Source>
+    <Source>DebugClients/Python3/coverage/execfile.py</Source>
+    <Source>DebugClients/Python3/coverage/files.py</Source>
+    <Source>DebugClients/Python3/coverage/html.py</Source>
+    <Source>DebugClients/Python3/coverage/misc.py</Source>
+    <Source>DebugClients/Python3/coverage/parser.py</Source>
+    <Source>DebugClients/Python3/coverage/phystokens.py</Source>
+    <Source>DebugClients/Python3/coverage/report.py</Source>
+    <Source>DebugClients/Python3/coverage/results.py</Source>
+    <Source>DebugClients/Python3/coverage/summary.py</Source>
+    <Source>DebugClients/Python3/coverage/templite.py</Source>
+    <Source>DebugClients/Python3/coverage/version.py</Source>
+    <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
+    <Source>DebugClients/Python3/eric6dbgstub.py</Source>
+    <Source>DebugClients/Python3/getpass.py</Source>
     <Source>DebugClients/Ruby/AsyncFile.rb</Source>
     <Source>DebugClients/Ruby/AsyncIO.rb</Source>
     <Source>DebugClients/Ruby/Completer.rb</Source>
@@ -312,6 +312,11 @@
     <Source>Helpviewer/Feeds/FeedsDialog.py</Source>
     <Source>Helpviewer/Feeds/FeedsManager.py</Source>
     <Source>Helpviewer/Feeds/__init__.py</Source>
+    <Source>Helpviewer/FlashCookieManager/FlashCookie.py</Source>
+    <Source>Helpviewer/FlashCookieManager/FlashCookieManager.py</Source>
+    <Source>Helpviewer/FlashCookieManager/FlashCookieNotification.py</Source>
+    <Source>Helpviewer/FlashCookieManager/FlashCookieUtilities.py</Source>
+    <Source>Helpviewer/FlashCookieManager/__init__.py</Source>
     <Source>Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py</Source>
     <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.py</Source>
     <Source>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationListDelegate.py</Source>
@@ -766,6 +771,7 @@
     <Source>Preferences/ConfigurationPages/GraphicsPage.py</Source>
     <Source>Preferences/ConfigurationPages/HelpAppearancePage.py</Source>
     <Source>Preferences/ConfigurationPages/HelpDocumentationPage.py</Source>
+    <Source>Preferences/ConfigurationPages/HelpFlashCookieManagerPage.py</Source>
     <Source>Preferences/ConfigurationPages/HelpInterfacePage.py</Source>
     <Source>Preferences/ConfigurationPages/HelpViewersPage.py</Source>
     <Source>Preferences/ConfigurationPages/HelpVirusTotalPage.py</Source>
@@ -1285,7 +1291,6 @@
     <Form>E5Network/E5SslCertificatesInfoDialog.ui</Form>
     <Form>E5Network/E5SslCertificatesInfoWidget.ui</Form>
     <Form>Graphics/UMLSceneSizeDialog.ui</Form>
-    <Form>Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockDialog.ui</Form>
     <Form>Helpviewer/AdBlock/AdBlockExceptionsDialog.ui</Form>
     <Form>Helpviewer/Bookmarks/AddBookmarkDialog.ui</Form>
@@ -1299,6 +1304,7 @@
     <Form>Helpviewer/Download/DownloadAskActionDialog.ui</Form>
     <Form>Helpviewer/Download/DownloadItem.ui</Form>
     <Form>Helpviewer/Download/DownloadManager.ui</Form>
+    <Form>Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui</Form>
     <Form>Helpviewer/Feeds/FeedEditDialog.ui</Form>
     <Form>Helpviewer/Feeds/FeedsDialog.ui</Form>
     <Form>Helpviewer/Feeds/FeedsManager.ui</Form>
@@ -1514,6 +1520,7 @@
     <Form>Preferences/ConfigurationPages/GraphicsPage.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpAppearancePage.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpDocumentationPage.ui</Form>
+    <Form>Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpInterfacePage.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpViewersPage.ui</Form>
     <Form>Preferences/ConfigurationPages/HelpVirusTotalPage.ui</Form>
@@ -1632,14 +1639,14 @@
   <Interfaces/>
   <Others>
     <Other>.hgignore</Other>
+    <Other>APIs/Python/zope-2.10.7.api</Other>
+    <Other>APIs/Python/zope-2.11.2.api</Other>
+    <Other>APIs/Python/zope-3.3.1.api</Other>
     <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>APIs/Python3/PyQt5.bas</Other>
     <Other>APIs/Python3/QScintilla2.bas</Other>
     <Other>APIs/Python3/eric6.api</Other>
     <Other>APIs/Python3/eric6.bas</Other>
-    <Other>APIs/Python/zope-2.10.7.api</Other>
-    <Other>APIs/Python/zope-2.11.2.api</Other>
-    <Other>APIs/Python/zope-3.3.1.api</Other>
     <Other>APIs/QSS/qss.api</Other>
     <Other>APIs/Ruby/Ruby-1.8.7.api</Other>
     <Other>APIs/Ruby/Ruby-1.8.7.bas</Other>
@@ -1650,10 +1657,10 @@
     <Other>CSSs</Other>
     <Other>CodeTemplates</Other>
     <Other>DTDs</Other>
-    <Other>DebugClients/Python3/coverage/doc</Other>
-    <Other>DebugClients/Python3/coverage/htmlfiles</Other>
     <Other>DebugClients/Python/coverage/doc</Other>
     <Other>DebugClients/Python/coverage/htmlfiles</Other>
+    <Other>DebugClients/Python3/coverage/doc</Other>
+    <Other>DebugClients/Python3/coverage/htmlfiles</Other>
     <Other>DesignerTemplates</Other>
     <Other>Dictionaries</Other>
     <Other>Documentation/Help</Other>

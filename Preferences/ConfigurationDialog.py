@@ -59,7 +59,7 @@ class ConfigurationPageItem(QTreeWidgetItem):
         """
         return self.__pageName
 
-
+# TODO: add page for Flash Cookie Manager
 class ConfigurationWidget(QWidget):
     """
     Class implementing a dialog for the configuration of eric6.
@@ -287,6 +287,10 @@ class ConfigurationWidget(QWidget):
                 [self.tr("Help Documentation"),
                  "preferences-helpdocumentation.png",
                  "HelpDocumentationPage", "0helpPage", None],
+                "helpFlashCookieManagerPage":
+                [self.tr("Flash Cookie Manager"),
+                 "flashCookie16.png",
+                 "HelpFlashCookieManagerPage", "0helpPage", None],
                 "helpViewersPage":
                 [self.tr("Help Viewers"),
                  "preferences-helpviewers.png",
@@ -357,6 +361,10 @@ class ConfigurationWidget(QWidget):
                 [self.tr("Help Documentation"),
                  "preferences-helpdocumentation.png",
                  "HelpDocumentationPage", "0helpPage", None],
+                "helpFlashCookieManagerPage":
+                [self.tr("Flash Cookie Manager"),
+                 "flashCookie16.png",
+                 "HelpFlashCookieManagerPage", "0helpPage", None],
                 "helpVirusTotalPage":
                 [self.tr("VirusTotal Interface"), "virustotal.png",
                  "HelpVirusTotalPage", "0helpPage", None],

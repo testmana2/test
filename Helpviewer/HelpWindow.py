@@ -89,6 +89,7 @@ class HelpWindow(E5MainWindow):
     _greaseMonkeyManager = None
     _notification = None
     _featurePermissionManager = None
+    _flashCookieManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -287,10 +288,16 @@ class HelpWindow(E5MainWindow):
             self.__previewer = None
             self.__shutdownCalled = False
             
+            self.flashCookieManager()
+            
             if self.useQtHelp:
                 QTimer.singleShot(0, self.__lookForNewDocumentation)
                 if self.__searchWord is not None:
                     QTimer.singleShot(0, self.__searchForWord)
+            
+            self.__lastActiveWindow = None
+            e5App().focusChanged[QWidget, QWidget].connect(
+                self.__appFocusChanged)
             
             QTimer.singleShot(0, syncMgr.loadSettings)
     
@@ -2230,6 +2237,8 @@ class HelpWindow(E5MainWindow):
         
         self.__virusTotal.close()
         
+        self.flashCookieManager().shutdown()
+        
         self.searchEdit.openSearchManager().close()
         
         if self.useQtHelp:
@@ -3301,6 +3310,21 @@ class HelpWindow(E5MainWindow):
         return cls._featurePermissionManager
         
     @classmethod
+    def flashCookieManager(cls):
+        """
+        Class method to get a reference to the flash cookies manager.
+        
+        @return reference to the feature permission manager
+        @rtype FlashCookieManager
+        """
+        if cls._flashCookieManager is None:
+            from .FlashCookieManager.FlashCookieManager import \
+                FlashCookieManager
+            cls._flashCookieManager = FlashCookieManager()
+        
+        return cls._flashCookieManager
+        
+    @classmethod
     def mainWindow(cls):
         """
         Class method to get a reference to the main window.
@@ -3320,6 +3344,28 @@ class HelpWindow(E5MainWindow):
         @return references to all main window (list of HelpWindow)
         """
         return cls.helpwindows
+        
+    def __appFocusChanged(self, old, now):
+        """
+        Private slot to handle a change of the focus.
+        
+        @param old reference to the widget, that lost focus (QWidget or None)
+        @param now reference to the widget having the focus (QWidget or None)
+        """
+        if isinstance(now, HelpWindow):
+            self.__lastActiveWindow = now
+        
+    def getWindow(self):
+        """
+        Public method to get a reference to the most recent active help window.
+        
+        @return reference to most recent help window
+        @rtype HelpWindow
+        """
+        if self.__lastActiveWindow:
+            return self.__lastActiveWindow
+        
+        return self.mainWindow()
         
     def openSearchManager(self):
         """
