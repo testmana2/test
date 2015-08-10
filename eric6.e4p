@@ -315,6 +315,7 @@
     <Source>Helpviewer/FlashCookieManager/FlashCookie.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieManager.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieNotification.py</Source>
+    <Source>Helpviewer/FlashCookieManager/FlashCookieReader.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieUtilities.py</Source>
     <Source>Helpviewer/FlashCookieManager/__init__.py</Source>
     <Source>Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.py</Source>
