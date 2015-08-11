@@ -314,6 +314,7 @@
     <Source>Helpviewer/Feeds/__init__.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookie.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieManager.py</Source>
+    <Source>Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieNotification.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieReader.py</Source>
     <Source>Helpviewer/FlashCookieManager/FlashCookieUtilities.py</Source>
@@ -1309,6 +1310,7 @@
     <Form>Helpviewer/Feeds/FeedEditDialog.ui</Form>
     <Form>Helpviewer/Feeds/FeedsDialog.ui</Form>
     <Form>Helpviewer/Feeds/FeedsManager.ui</Form>
+    <Form>Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui</Form>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyAddScriptDialog.ui</Form>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationDialog.ui</Form>
     <Form>Helpviewer/GreaseMonkey/GreaseMonkeyConfiguration/GreaseMonkeyConfigurationScriptInfoDialog.ui</Form>

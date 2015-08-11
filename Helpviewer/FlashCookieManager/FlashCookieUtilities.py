@@ -25,7 +25,7 @@ def flashDataPathForOS():
     @rtype str
     """
     # On Microsoft Windows NT 5.x and 6.x, they are stored in:
-    #  %APPDATA%\Macromedia\Flash Player\#SharedObjects\
+    # %APPDATA%\Macromedia\Flash Player\#SharedObjects\
     # %APPDATA%\Macromedia\Flash Player\macromedia.com\support\flashplayer\sys\
     # On Mac OS X, they are stored in:
     # ~/Library/Preferences/Macromedia/Flash Player/#SharedObjects/

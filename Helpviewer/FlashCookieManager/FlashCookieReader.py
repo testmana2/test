@@ -106,7 +106,11 @@ class FlashCookieReader(object):
         sLenData = self.__data.read(4)
         lenData, = struct.unpack(">L", sLenData)    # unsigned long, big-endian
         if lenSolData != lenData + 6:
-            print("Warning: data length doesn't match.")
+            raise FlashCookieReaderError(
+                "Flash cookie data lengths don't match\n"
+                "  file length: {0}\n"
+                "  data length: {1}"
+                .format(lenSolData - 6,  lenData))
         sDataType = self.__data.read(4).decode("utf-8")             # 'TCSO'
         if sDataType != "TCSO":
             raise FlashCookieReaderError(
@@ -168,7 +172,7 @@ class FlashCookieReader(object):
             value = "Infinity"
         elif b == b"\xFF\xF0\x00\x00\x00\x00\x00\x00":
             value = "-Infinity"
-        elif value == b"\x7F\xF8\x00\x00\x00\x00\x00\x00":
+        elif b == b"\x7F\xF8\x00\x00\x00\x00\x00\x00":
             value = "NaN"
         else:
             value,  = struct.unpack(">d", b)    # double, big-endian
@@ -425,3 +429,39 @@ class FlashCookieReader(object):
                     "Unexpected Data Type: " + hex(ord(variableType)))
             lenVariableName, = struct.unpack(">H", self.__data.read(2))
         self.__data.read(1)       # '\x09'
+    
+    def toString(self, indent=0, parent=None):
+        """
+        Public method to convert the parsed cookie to a string representation.
+        
+        @param indent indentation level
+        @type int
+        @param parent reference to the dictionary to be converted
+        @type dict
+        @return string representation of the cookie
+        @rtype str
+        """
+        indentStr = "  " * indent
+        strArr = []
+        
+        if parent is None:
+            parent = self.__result
+        
+        if not parent:
+            return ""
+        
+        for variableName in sorted(parent.keys()):
+            variableType, value = parent[variableName]
+            if isinstance(value, dict):
+                resultStr = self.toString(indent + 1, value)
+                if resultStr:
+                    strArr.append("{0}{1}:\n{2}"
+                        .format(indentStr, variableName, resultStr))
+                else:
+                    strArr.append("{0}{1}:"
+                        .format(indentStr, variableName))
+            else:
+                strArr.append("{0}{1}: {2}"
+                    .format(indentStr, variableName, value))
+        
+        return "\n".join(strArr)

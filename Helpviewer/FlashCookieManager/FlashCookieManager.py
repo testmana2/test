@@ -19,6 +19,7 @@ import shutil
 from PyQt5.QtCore import QObject, QTimer, QDir, QFileInfo, QFile
 
 from .FlashCookie import FlashCookie
+from .FlashCookieReader import FlashCookieReader, FlashCookieReaderError
 
 import Helpviewer.HelpWindow
 
@@ -259,7 +260,7 @@ class FlashCookieManager(QObject):
         @param path Flash cookies path
         @type str
         """
-        if path.endswith(("#SharedObjects", "#AppContainer")):
+        if path.endswith("#AppContainer"):
             # specific to IE and Windows
             return
         
@@ -286,15 +287,16 @@ class FlashCookieManager(QObject):
         if not solFile.open(QFile.ReadOnly):
             return
         
-        # TODO: dissect the flash cookie (see gnash s2x.py for example)
-        data = bytearray(solFile.readAll())
-        for i in range(len(data)):
-            if not ((data[i] >= ord("a") and data[i] <= ord("z")) or
-                    (data[i] >= ord("A") and data[i] <= ord("Z")) or
-                    (data[i] >= ord("0") and data[i] <= ord("9"))):
-                data[i] = 32
-        dataStr = str(data, "utf-8", "replace")
-        dataStr = "\n".join([s for s in dataStr.split(".") if s])
+        dataStr = ""
+        data = bytes(solFile.readAll())
+        if data:
+            try:
+                reader = FlashCookieReader()
+                reader.setBytes(data)
+                reader.parse()
+                dataStr = reader.toString()
+            except FlashCookieReaderError as err:
+                dataStr = err.msg
         
         solFileInfo = QFileInfo(solFile)
         
