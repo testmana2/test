@@ -1133,6 +1133,21 @@ class HelpWindow(E5MainWindow):
                 self.__showCookiesConfiguration)
         self.__actions.append(self.cookiesAct)
         
+        self.flashCookiesAct = E5Action(
+            self.tr('Flash Cookies'),
+            UI.PixmapCache.getIcon("flashCookie.png"),
+            self.tr('&Flash Cookies...'), 0, 0, self, 'help_flash_cookies')
+        self.flashCookiesAct.setStatusTip(self.tr(
+            'Manage flash cookies'))
+        self.flashCookiesAct.setWhatsThis(self.tr(
+            """<b>Flash Cookies</b>"""
+            """<p>Show a dialog to manage the flash cookies.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.flashCookiesAct.triggered.connect(
+                self.__showFlashCookiesManagement)
+        self.__actions.append(self.flashCookiesAct)
+        
         self.offlineStorageAct = E5Action(
             self.tr('Offline Storage'),
             UI.PixmapCache.getIcon("preferences-html5.png"),
@@ -1654,6 +1669,7 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.prefAct)
         menu.addAction(self.acceptedLanguagesAct)
         menu.addAction(self.cookiesAct)
+        menu.addAction(self.flashCookiesAct)
         menu.addAction(self.offlineStorageAct)
         menu.addAction(self.personalDataAct)
         menu.addAction(self.greaseMonkeyAct)
@@ -1784,6 +1800,7 @@ class HelpWindow(E5MainWindow):
         settingstb.addAction(self.prefAct)
         settingstb.addAction(self.acceptedLanguagesAct)
         settingstb.addAction(self.cookiesAct)
+        settingstb.addAction(self.flashCookiesAct)
         settingstb.addAction(self.offlineStorageAct)
         settingstb.addAction(self.personalDataAct)
         settingstb.addAction(self.greaseMonkeyAct)
@@ -2540,6 +2557,12 @@ class HelpWindow(E5MainWindow):
             CookiesConfigurationDialog
         dlg = CookiesConfigurationDialog(self)
         dlg.exec_()
+    
+    def __showFlashCookiesManagement(self):
+        """
+        Private slot to show the flash cookies management dialog.
+        """
+        self.flashCookieManager().showFlashCookieManagerDialog()
     
     def __showOfflineStorageConfiguration(self):
         """

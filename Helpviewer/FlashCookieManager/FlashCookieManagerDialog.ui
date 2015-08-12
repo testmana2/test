@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>450</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -222,7 +222,7 @@
             <string>Press to remove selected flash cookies</string>
            </property>
            <property name="text">
-            <string>Remove Cookies</string>
+            <string>Remove Cookie</string>
            </property>
           </widget>
          </item>
