@@ -8,7 +8,8 @@ Module implementing a dialog to manage the flash cookies.
 """
 
 from PyQt5.QtCore import pyqtSlot, Qt, QPoint, QTimer
-from PyQt5.QtWidgets import QDialog, QTreeWidgetItem, QApplication, QMenu
+from PyQt5.QtWidgets import QDialog, QTreeWidgetItem, QApplication, QMenu, \
+    QInputDialog, QLineEdit
 
 from E5Gui import E5MessageBox
 
@@ -60,43 +61,107 @@ class FlashCookieManagerDialog(QDialog, Ui_FlashCookieManagerDialog):
     @pyqtSlot()
     def on_removeWhiteButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to remove a server from the whitelist.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        for itm in self.whiteList.selectedItems():
+            row = self.whiteList.row(itm)
+            self.whiteList.takeItem(row)
+            del itm
     
     @pyqtSlot()
     def on_addWhiteButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to add a server to the whitelist.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        origin, ok = QInputDialog.getText(
+            self,
+            self.tr("Add to whitelist"),
+            self.tr("Origin:"),
+            QLineEdit.Normal)
+        if ok and bool(origin):
+            self.__addWhitelist(origin)
+    
+    def __addWhitelist(self, origin):
+        """
+        Private method to add a cookie origin to the whitelist.
+        """
+        if not origin:
+            return
+        
+        if len(self.blackList.findItems(origin, Qt.MatchFixedString)) > 0:
+            E5MessageBox.information(
+                self,
+                self.tr("Add to whitelist"),
+                self.tr("""The server '{0}' is already in the blacklist."""
+                        """ Please remove it first.""").format(origin))
+            return
+        
+        if len(self.whiteList.findItems(origin, Qt.MatchFixedString)) == 0:
+            self.whiteList.addItem(origin)
     
     @pyqtSlot()
     def on_removeBlackButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to remove a server from the blacklist.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        for itm in self.blackList.selectedItems():
+            row = self.blackList.row(itm)
+            self.blackList.takeItem(row)
+            del itm
     
     @pyqtSlot()
     def on_addBlackButton_clicked(self):
         """
-        Slot documentation goes here.
+        Private slot to add a server to the blacklist.
         """
-        # TODO: not implemented yet
-        raise NotImplementedError
+        origin, ok = QInputDialog.getText(
+            self,
+            self.tr("Add to blacklist"),
+            self.tr("Origin:"),
+            QLineEdit.Normal)
+        if ok and bool(origin):
+            self.__addBlacklist(origin)
+    
+    def __addBlacklist(self, origin):
+        """
+        Private method to add a cookie origin to the blacklist.
+        """
+        if not origin:
+            return
+        
+        if len(self.whiteList.findItems(origin, Qt.MatchFixedString)) > 0:
+            E5MessageBox.information(
+                self,
+                self.tr("Add to blacklist"),
+                self.tr("""The server '{0}' is already in the whitelist."""
+                        """ Please remove it first.""").format(origin))
+            return
+        
+        if len(self.blackList.findItems(origin, Qt.MatchFixedString)) == 0:
+            self.blackList.addItem(origin)
     
     @pyqtSlot(str)
-    def on_filterEdit_textChanged(self, p0):
+    def on_filterEdit_textChanged(self, filter):
         """
-        Slot documentation goes here.
+        Private slot to filter the cookies list.
+        
+        @param filter filter text
+        @type str
         """
-        return
-        # TODO: not implemented yet
-        raise NotImplementedError
+        if not filter:
+            # show all in collapsed state
+            for index in range(self.cookiesList.topLevelItemCount()):
+                self.cookiesList.topLevelItem(index).setHidden(False)
+                self.cookiesList.topLevelItem(index).setExpanded(False)
+        else:
+            # show matching in expanded state
+            filter = filter.lower()
+            for index in range(self.cookiesList.topLevelItemCount()):
+                txt = "." + self.cookiesList.topLevelItem(index)\
+                    .text(0).lower()
+                self.cookiesList.topLevelItem(index).setHidden(
+                    filter not in txt)
+                self.cookiesList.topLevelItem(index).setExpanded(True)
     
     @pyqtSlot(QTreeWidgetItem, QTreeWidgetItem)
     def on_cookiesList_currentItemChanged(self, current, previous):
