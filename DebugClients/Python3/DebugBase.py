@@ -12,6 +12,7 @@ import bdb
 import os
 import atexit
 import inspect
+from inspect import CO_GENERATOR
 
 from DebugProtocol import ResponseClearWatch, ResponseClearBreak, \
     ResponseLine, ResponseSyntax, ResponseException, CallTrace
@@ -265,6 +266,9 @@ class DebugBase(bdb.Bdb):
         @exception bdb.BdbQuit raised to indicate the end of the debug session
         """
         if self.stop_here(frame) or frame == self.returnframe:
+            # Ignore return events in generator except when stepping.
+            if self.stopframe and frame.f_code.co_flags & CO_GENERATOR:
+                return self.trace_dispatch
             self.user_return(frame, arg)
             if self.quitting and not self._dbgClient.passive:
                 raise bdb.BdbQuit
@@ -280,9 +284,26 @@ class DebugBase(bdb.Bdb):
         @exception bdb.BdbQuit raised to indicate the end of the debug session
         """
         if not self.__skip_it(frame):
+            # When stepping with next/until/return in a generator frame,
+            # skip the internal StopIteration exception (with no traceback)
+            # triggered by a subiterator run with the 'yield from'
+            # statement.
+            if not (frame.f_code.co_flags & CO_GENERATOR
+                    and arg[0] is StopIteration and arg[2] is None):
+                self.user_exception(frame, arg)
+                if self.quitting:
+                    raise bdb.BdbQuit
+        # Stop at the StopIteration or GeneratorExit exception when the user
+        # has set stopframe in a generator by issuing a return command, or a
+        # next/until command at the last statement in the generator before the
+        # exception.
+        elif (self.stopframe and frame is not self.stopframe
+                and self.stopframe.f_code.co_flags & CO_GENERATOR
+                and arg[0] in (StopIteration, GeneratorExit)):
             self.user_exception(frame, arg)
             if self.quitting:
                 raise bdb.BdbQuit
+        
         return self.trace_dispatch
 
     def set_trace(self, frame=None):
