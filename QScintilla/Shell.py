@@ -160,6 +160,7 @@ class Shell(QsciScintillaCompat):
         dbs.clientCapabilities.connect(self.__clientCapabilities)
         dbs.clientException.connect(self.__clientException)
         dbs.clientSyntaxError.connect(self.__clientSyntaxError)
+        dbs.clientSignal.connect(self.__clientSignal)
         self.dbs = dbs
         
         # Initialize instance variables.
@@ -709,6 +710,29 @@ class Shell(QsciScintillaCompat):
                             ' character {3}.\n')
                         .format(filename, message, lineNo, characterNo)
                 )
+        
+    def __clientSignal(self, message, filename, lineNo, funcName, funcArgs):
+        """
+        Private method to handle a signal generated on the client side.
+        
+        @param message message of the syntax error
+        @type str
+        @param filename translated filename of the syntax error position
+        @type str
+        @param lineNo line number of the syntax error position
+        @type int
+        @param funcName name of the function causing the signal
+        @type str
+        @param funcArgs function arguments
+        @type str
+        """
+        self.__clientError()
+        
+        self.__write(
+            self.tr("""Signal "{0}" generated in file {1} at line {2}.\n"""
+                    """Function: {3}({4})""")
+                .format(message, filename, lineNo, funcName, funcArgs)
+        )
         
     def __clientError(self):
         """

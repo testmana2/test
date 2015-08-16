@@ -17,6 +17,8 @@ import time
 import imp
 import re
 import atexit
+import signal
+import inspect
 
 
 import DebugProtocol
@@ -512,6 +514,7 @@ class DebugClientBase(object):
                 # set the system exception handling function to ensure, that
                 # we report on all unhandled exceptions
                 sys.excepthook = self.__unhandled_exception
+                self.__interceptSignals()
                 
                 # clear all old breakpoints, they'll get set after we have
                 # started
@@ -557,6 +560,7 @@ class DebugClientBase(object):
                 # set the system exception handling function to ensure, that
                 # we report on all unhandled exceptions
                 sys.excepthook = self.__unhandled_exception
+                self.__interceptSignals()
                 
                 self.mainThread.tracePython = False
                 
@@ -571,7 +575,7 @@ class DebugClientBase(object):
                         res = exc.code
                         atexit._run_exitfuncs()
                     self.writestream.flush()
-                    self.progTerminated(res)
+                    self.progTerminated(res, exit=True)
                 return
 
             if cmd == DebugProtocol.RequestProfile:
@@ -591,6 +595,7 @@ class DebugClientBase(object):
                 # set the system exception handling function to ensure, that
                 # we report on all unhandled exceptions
                 sys.excepthook = self.__unhandled_exception
+                self.__interceptSignals()
                 
                 # generate a profile object
                 self.prof = PyProfile.PyProfile(sys.argv[0])
@@ -616,7 +621,7 @@ class DebugClientBase(object):
                         atexit._run_exitfuncs()
                     self.prof.save()
                     self.writestream.flush()
-                    self.progTerminated(res)
+                    self.progTerminated(res, exit=True)
                 return
 
             if cmd == DebugProtocol.RequestCoverage:
@@ -635,6 +640,7 @@ class DebugClientBase(object):
                 # set the system exception handling function to ensure, that
                 # we report on all unhandled exceptions
                 sys.excepthook = self.__unhandled_exception
+                self.__interceptSignals()
                 
                 # generate a coverage object
                 self.cover = coverage(
@@ -667,7 +673,7 @@ class DebugClientBase(object):
                     self.cover.stop()
                     self.cover.save()
                     self.writestream.flush()
-                    self.progTerminated(res)
+                    self.progTerminated(res, exit=True)
                 return
 
             if cmd == DebugProtocol.RequestShutdown:
@@ -859,6 +865,7 @@ class DebugClientBase(object):
                 # set the system exception handling function to ensure, that
                 # we report on all unhandled exceptions
                 sys.excepthook = self.__unhandled_exception
+                self.__interceptSignals()
                 
                 try:
                     import unittest
@@ -1170,6 +1177,61 @@ class DebugClientBase(object):
         """
         self.mainThread.user_exception(None, (exctype, excval, exctb), True)
     
+    def __interceptSignals(self):
+        """
+        Private method to intercept common signals.
+        """
+        for signum in [
+            signal.SIGABRT,                 # abnormal termination
+            signal.SIGFPE,                  # floating point exception
+            signal.SIGILL,                  # illegal instruction
+            signal.SIGSEGV,                 # segmentation violation
+        ]:
+            signal.signal(signum, self.__signalHandler)
+    
+    def __signalHandler(self, signalNumber, stackFrame):
+        """
+        Private method to handle signals.
+        
+        @param signalNumber number of the signal to be handled
+        @type int
+        @param stack frame current stack frame
+        @type frame object
+        """
+        if signalNumber == signal.SIGABRT:
+            message = "Abnormal Termination"
+        elif signalNumber == signal.SIGFPE:
+            message = "Floating Point Exception"
+        elif signalNumber == signal.SIGILL:
+            message = "Illegal Instruction"
+        elif signalNumber == signal.SIGSEGV:
+            message = "Segmentation Violation"
+        else:
+            message = "Unknown Signal '{0}'".format(signalNumber)
+        
+        filename = self.absPath(stackFrame)
+        
+        linenr = stackFrame.f_lineno
+        ffunc = stackFrame.f_code.co_name
+        
+        if ffunc == '?':
+            ffunc = ''
+        
+        if ffunc and not ffunc.startswith("<"):
+            argInfo = inspect.getargvalues(stackFrame)
+            try:
+                fargs = inspect.formatargvalues(
+                    argInfo.args, argInfo.varargs,
+                    argInfo.keywords, argInfo.locals)
+            except Exception:
+                fargs = ""
+        else:
+            fargs = ""
+        
+        siglist = [message, [filename, linenr, ffunc, fargs]]
+        
+        self.write("{0}{1}".format(DebugProtocol.ResponseSignal, str(siglist)))
+    
     def absPath(self, fn):
         """
         Public method to convert a filename to an absolute name.
@@ -1243,11 +1305,13 @@ class DebugClientBase(object):
         """
         return self.running
 
-    def progTerminated(self, status):
+    def progTerminated(self, status, exit=False):
         """
         Public method to tell the debugger that the program has terminated.
         
-        @param status the return status
+        @param status return status
+        @param exit flag indicating to perform a sys.exit()
+        @type bool
         """
         if status is None:
             status = 0
@@ -1261,6 +1325,8 @@ class DebugClientBase(object):
             self.set_quit()
             self.running = None
             self.write('{0}{1:d}\n'.format(DebugProtocol.ResponseExit, status))
+            if exit:
+                sys.exit(status)
         
         # reset coding
         self.__coding = self.defaultCoding
@@ -1950,6 +2016,7 @@ class DebugClientBase(object):
         # set the system exception handling function to ensure, that
         # we report on all unhandled exceptions
         sys.excepthook = self.__unhandled_exception
+        self.__interceptSignals()
         
         # now start debugging
         if enableTrace:
@@ -2007,6 +2074,7 @@ class DebugClientBase(object):
         # set the system exception handling function to ensure, that
         # we report on all unhandled exceptions
         sys.excepthook = self.__unhandled_exception
+        self.__interceptSignals()
         
         # This will eventually enter a local event loop.
         # Note the use of backquotes to cause a repr of self.running. The

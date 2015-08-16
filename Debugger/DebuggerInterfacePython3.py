@@ -955,6 +955,14 @@ class DebuggerInterfacePython3(QObject):
                         message, fn, ln, cn)
                     continue
                 
+                if resp == DebugProtocol.ResponseSignal:
+                    sig = line[eoc:-1]
+                    sig = self.translate(sig, True)
+                    message, (fn, ln, func, args) = eval(sig)
+                    self.debugServer.signalClientSignal(
+                        message, fn, ln, func, args)
+                    continue
+                
                 if resp == DebugProtocol.ResponseExit:
                     self.__scriptName = ""
                     self.debugServer.signalClientExit(line[eoc:-1])

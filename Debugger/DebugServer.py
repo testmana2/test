@@ -68,6 +68,8 @@ class DebugServer(QTcpServer):
         the client side
     @signal clientSyntaxError(exception) emitted after a syntax error has been
         detected on the client side
+    @signal clientSignal(signal) emitted after a signal has been generated on
+        the client side
     @signal clientExit(int) emitted with the exit status after the client has
         exited
     @signal clientClearBreak(filename, lineno) emitted after the debug client
@@ -131,6 +133,7 @@ class DebugServer(QTcpServer):
     clientStatement = pyqtSignal(bool)
     clientException = pyqtSignal(str, str, list)
     clientSyntaxError = pyqtSignal(str, str, int, int)
+    clientSignal = pyqtSignal(str, str, int, str, str)
     clientExit = pyqtSignal(int)
     clientBreakConditionError = pyqtSignal(str, int)
     clientWatchConditionError = pyqtSignal(str)
@@ -1262,6 +1265,26 @@ class DebugServer(QTcpServer):
         """
         if self.running:
             self.clientSyntaxError.emit(message, filename, lineNo, characterNo)
+        
+    def signalClientSignal(self, message, filename, lineNo,
+                           funcName, funcArgs):
+        """
+        Public method to process a signal generated on the client side.
+        
+        @param message message of the syntax error
+        @type str
+        @param filename translated filename of the syntax error position
+        @type str
+        @param lineNo line number of the syntax error position
+        @type int
+        @param funcName name of the function causing the signal
+        @type str
+        @param funcArgs function arguments
+        @type str
+        """
+        if self.running:
+            self.clientSignal.emit(message, filename, lineNo,
+                                   funcName, funcArgs)
         
     def signalClientExit(self, status):
         """

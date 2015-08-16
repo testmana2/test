@@ -125,6 +125,7 @@ class DebugUI(QObject):
         debugServer.clientExit.connect(self.__clientExit)
         debugServer.clientSyntaxError.connect(self.__clientSyntaxError)
         debugServer.clientException.connect(self.__clientException)
+        debugServer.clientSignal.connect(self.__clientSignal)
         debugServer.clientVariables.connect(self.__clientVariables)
         debugServer.clientVariable.connect(self.__clientVariable)
         debugServer.clientBreakConditionError.connect(
@@ -1189,6 +1190,31 @@ class DebugUI(QObject):
                 self.debugActions[self.lastAction]()
         else:
             self.__continue()
+        
+    def __clientSignal(self, message, filename, lineNo, funcName, funcArgs):
+        """
+        Private method to handle a signal generated on the client side.
+        
+        @param message message of the syntax error
+        @type str
+        @param filename translated filename of the syntax error position
+        @type str
+        @param lineNo line number of the syntax error position
+        @type int
+        @param funcName name of the function causing the signal
+        @type str
+        @param funcArgs function arguments
+        @type str
+        """
+        self.ui.raise_()
+        self.ui.activateWindow()
+        QApplication.processEvents()
+        self.viewmanager.setFileLine(filename, lineNo, True)
+        E5MessageBox.critical(
+            self.ui, Program, 
+            self.tr("""<p>The program generate the signal "{0}".<br/>"""
+                    """File: <b>{2}</b>, Line: <b>{3}</b></p>""").format(
+                    message, filename, lineNo))
         
     def __clientGone(self, unplanned):
         """

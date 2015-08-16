@@ -49,6 +49,7 @@ ResponseCapabilities = RequestCapabilities
 ResponseContinue = '>Continue<'
 ResponseException = '>Exception<'
 ResponseSyntax = '>SyntaxError<'
+ResponseSignal = '>Signal<'
 ResponseExit = '>Exit<'
 ResponseLine = '>Line<'
 ResponseRaw = '>Raw<'
