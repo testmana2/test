@@ -54,7 +54,7 @@ except ImportError:
             sys.exit(100)
     messagebox.showerror(
         "eric6 Error",
-        "PyQt5 could not be imported. Please make sure"
+        "PyQt could not be imported. Please make sure"
         " it is installed and accessible.")
     sys.exit(100)
 
