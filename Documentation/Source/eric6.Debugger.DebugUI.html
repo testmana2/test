@@ -112,6 +112,9 @@ QObject
 <td><a href="#DebugUI.__clientLine">__clientLine</a></td>
 <td>Private method to handle a change to the current line.</td>
 </tr><tr>
+<td><a href="#DebugUI.__clientSignal">__clientSignal</a></td>
+<td>Private method to handle a signal generated on the client side.</td>
+</tr><tr>
 <td><a href="#DebugUI.__clientSyntaxError">__clientSyntaxError</a></td>
 <td>Private method to handle a syntax error in the debugged program.</td>
 </tr><tr>
@@ -420,6 +423,28 @@ linenumber (int)
 </dd><dt><i>forStack</i></dt>
 <dd>
 flag indicating this is for a stack dump (boolean)
+</dd>
+</dl><a NAME="DebugUI.__clientSignal" ID="DebugUI.__clientSignal"></a>
+<h4>DebugUI.__clientSignal</h4>
+<b>__clientSignal</b>(<i>message, filename, lineNo, funcName, funcArgs</i>)
+<p>
+        Private method to handle a signal generated on the client side.
+</p><dl>
+<dt><i>message</i> (str)</dt>
+<dd>
+message of the syntax error
+</dd><dt><i>filename</i> (str)</dt>
+<dd>
+translated filename of the syntax error position
+</dd><dt><i>lineNo</i> (int)</dt>
+<dd>
+line number of the syntax error position
+</dd><dt><i>funcName</i> (str)</dt>
+<dd>
+name of the function causing the signal
+</dd><dt><i>funcArgs</i> (str)</dt>
+<dd>
+function arguments
 </dd>
 </dl><a NAME="DebugUI.__clientSyntaxError" ID="DebugUI.__clientSyntaxError"></a>
 <h4>DebugUI.__clientSyntaxError</h4>

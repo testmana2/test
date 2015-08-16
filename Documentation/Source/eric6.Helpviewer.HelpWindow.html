@@ -58,7 +58,7 @@ emitted after the zoom text only setting
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_featurePermissionManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>useQtHelp</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_featurePermissionManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_flashCookieManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>useQtHelp</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -80,6 +80,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.feedsManager">feedsManager</a></td>
 <td>Class method to get a reference to the RSS feeds manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.flashCookieManager">flashCookieManager</a></td>
+<td>Class method to get a reference to the flash cookies manager.</td>
 </tr><tr>
 <td><a href="#HelpWindow.greaseMonkeyManager">greaseMonkeyManager</a></td>
 <td>Class method to get a reference to the GreaseMonkey manager.</td>
@@ -156,6 +159,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.__addBookmarkFolder">__addBookmarkFolder</a></td>
 <td>Private slot to add a new bookmarks folder.</td>
+</tr><tr>
+<td><a href="#HelpWindow.__appFocusChanged">__appFocusChanged</a></td>
+<td>Private slot to handle a change of the focus.</td>
 </tr><tr>
 <td><a href="#HelpWindow.__backward">__backward</a></td>
 <td>Private slot called to handle the backward action.</td>
@@ -328,6 +334,9 @@ E5MainWindow
 <td><a href="#HelpWindow.__showFeedsManager">__showFeedsManager</a></td>
 <td>Private slot to show the feeds manager dialog.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__showFlashCookiesManagement">__showFlashCookiesManagement</a></td>
+<td>Private slot to show the flash cookies management dialog.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__showForwardMenu">__showForwardMenu</a></td>
 <td>Private slot showing the forwards navigation menu.</td>
 </tr><tr>
@@ -459,6 +468,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.getSourceFileList">getSourceFileList</a></td>
 <td>Public method to get a list of all opened source files.</td>
+</tr><tr>
+<td><a href="#HelpWindow.getWindow">getWindow</a></td>
+<td>Public method to get a reference to the most recent active help window.</td>
 </tr><tr>
 <td><a href="#HelpWindow.keyPressEvent">keyPressEvent</a></td>
 <td>Protected method to handle key presses.</td>
@@ -595,6 +607,21 @@ FeaturePermissionManager
 <dt>Returns:</dt>
 <dd>
 reference to the RSS feeds manager (FeedsManager)
+</dd>
+</dl><a NAME="HelpWindow.flashCookieManager" ID="HelpWindow.flashCookieManager"></a>
+<h4>HelpWindow.flashCookieManager (class method)</h4>
+<b>flashCookieManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the flash cookies manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the feature permission manager
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+FlashCookieManager
 </dd>
 </dl><a NAME="HelpWindow.greaseMonkeyManager" ID="HelpWindow.greaseMonkeyManager"></a>
 <h4>HelpWindow.greaseMonkeyManager (class method)</h4>
@@ -833,7 +860,20 @@ reference to the widget to be activated (QWidget)
 <b>__addBookmarkFolder</b>(<i></i>)
 <p>
         Private slot to add a new bookmarks folder.
-</p><a NAME="HelpWindow.__backward" ID="HelpWindow.__backward"></a>
+</p><a NAME="HelpWindow.__appFocusChanged" ID="HelpWindow.__appFocusChanged"></a>
+<h4>HelpWindow.__appFocusChanged</h4>
+<b>__appFocusChanged</b>(<i>old, now</i>)
+<p>
+        Private slot to handle a change of the focus.
+</p><dl>
+<dt><i>old</i></dt>
+<dd>
+reference to the widget, that lost focus (QWidget or None)
+</dd><dt><i>now</i></dt>
+<dd>
+reference to the widget having the focus (QWidget or None)
+</dd>
+</dl><a NAME="HelpWindow.__backward" ID="HelpWindow.__backward"></a>
 <h4>HelpWindow.__backward</h4>
 <b>__backward</b>(<i></i>)
 <p>
@@ -1190,6 +1230,11 @@ reference to the selected action (QAction)
 <b>__showFeedsManager</b>(<i></i>)
 <p>
         Private slot to show the feeds manager dialog.
+</p><a NAME="HelpWindow.__showFlashCookiesManagement" ID="HelpWindow.__showFlashCookiesManagement"></a>
+<h4>HelpWindow.__showFlashCookiesManagement</h4>
+<b>__showFlashCookiesManagement</b>(<i></i>)
+<p>
+        Private slot to show the flash cookies management dialog.
 </p><a NAME="HelpWindow.__showForwardMenu" ID="HelpWindow.__showForwardMenu"></a>
 <h4>HelpWindow.__showForwardMenu</h4>
 <b>__showForwardMenu</b>(<i></i>)
@@ -1517,6 +1562,21 @@ list of all actions (list of E5Action)
 <dt>Returns:</dt>
 <dd>
 dictionary with tab id as key and host/namespace as value
+</dd>
+</dl><a NAME="HelpWindow.getWindow" ID="HelpWindow.getWindow"></a>
+<h4>HelpWindow.getWindow</h4>
+<b>getWindow</b>(<i></i>)
+<p>
+        Public method to get a reference to the most recent active help window.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to most recent help window
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+HelpWindow
 </dd>
 </dl><a NAME="HelpWindow.keyPressEvent" ID="HelpWindow.keyPressEvent"></a>
 <h4>HelpWindow.keyPressEvent</h4>

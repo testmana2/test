@@ -138,11 +138,17 @@ object
 <td><a href="#DebugClientBase.__interact">__interact</a></td>
 <td>Private method to Interact with  the debugger.</td>
 </tr><tr>
+<td><a href="#DebugClientBase.__interceptSignals">__interceptSignals</a></td>
+<td>Private method to intercept common signals.</td>
+</tr><tr>
 <td><a href="#DebugClientBase.__resolveHost">__resolveHost</a></td>
 <td>Private method to resolve a hostname to an IP address.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.__setCoding">__setCoding</a></td>
 <td>Private method to set the coding used by a python file.</td>
+</tr><tr>
+<td><a href="#DebugClientBase.__signalHandler">__signalHandler</a></td>
+<td>Private method to handle signals.</td>
 </tr><tr>
 <td><a href="#DebugClientBase.__unhandled_exception">__unhandled_exception</a></td>
 <td>Private method called to report an uncaught exception.</td>
@@ -401,6 +407,11 @@ path list for use as sys.path (list of strings)
 <b>__interact</b>(<i></i>)
 <p>
         Private method to Interact with  the debugger.
+</p><a NAME="DebugClientBase.__interceptSignals" ID="DebugClientBase.__interceptSignals"></a>
+<h4>DebugClientBase.__interceptSignals</h4>
+<b>__interceptSignals</b>(<i></i>)
+<p>
+        Private method to intercept common signals.
 </p><a NAME="DebugClientBase.__resolveHost" ID="DebugClientBase.__resolveHost"></a>
 <h4>DebugClientBase.__resolveHost</h4>
 <b>__resolveHost</b>(<i>host</i>)
@@ -425,6 +436,19 @@ IP address (string)
 <dt><i>filename</i></dt>
 <dd>
 name of the file to inspect (string)
+</dd>
+</dl><a NAME="DebugClientBase.__signalHandler" ID="DebugClientBase.__signalHandler"></a>
+<h4>DebugClientBase.__signalHandler</h4>
+<b>__signalHandler</b>(<i>signalNumber, stackFrame</i>)
+<p>
+        Private method to handle signals.
+</p><dl>
+<dt><i>signalNumber</i> (int)</dt>
+<dd>
+number of the signal to be handled
+</dd><dt><i>stack</i> (frame object)</dt>
+<dd>
+frame current stack frame
 </dd>
 </dl><a NAME="DebugClientBase.__unhandled_exception" ID="DebugClientBase.__unhandled_exception"></a>
 <h4>DebugClientBase.__unhandled_exception</h4>
@@ -604,13 +628,16 @@ the entered string
         Public method implementing the main method.
 </p><a NAME="DebugClientBase.progTerminated" ID="DebugClientBase.progTerminated"></a>
 <h4>DebugClientBase.progTerminated</h4>
-<b>progTerminated</b>(<i>status</i>)
+<b>progTerminated</b>(<i>status, exit=False</i>)
 <p>
         Public method to tell the debugger that the program has terminated.
 </p><dl>
 <dt><i>status</i></dt>
 <dd>
-the return status
+return status
+</dd><dt><i>exit</i> (bool)</dt>
+<dd>
+flag indicating to perform a sys.exit()
 </dd>
 </dl><a NAME="DebugClientBase.run_call" ID="DebugClientBase.run_call"></a>
 <h4>DebugClientBase.run_call</h4>

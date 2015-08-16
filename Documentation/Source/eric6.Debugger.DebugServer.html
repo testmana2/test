@@ -117,6 +117,10 @@ emitted after a raw input request was
 <dd>
 emitted after the data was sent to the
         debug client
+</dd><dt>clientSignal(signal)</dt>
+<dd>
+emitted after a signal has been generated on
+        the client side
 </dd><dt>clientStack(stack)</dt>
 <dd>
 emitted after the debug client has executed a
@@ -464,6 +468,9 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.signalClientRawInput">signalClientRawInput</a></td>
 <td>Public method to process the client raw input command.</td>
+</tr><tr>
+<td><a href="#DebugServer.signalClientSignal">signalClientSignal</a></td>
+<td>Public method to process a signal generated on the client side.</td>
 </tr><tr>
 <td><a href="#DebugServer.signalClientStack">signalClientStack</a></td>
 <td>Public method to process a client's stack information.</td>
@@ -1655,6 +1662,28 @@ the input prompt (string)
 </dd><dt><i>echo</i></dt>
 <dd>
 flag indicating an echoing of the input (boolean)
+</dd>
+</dl><a NAME="DebugServer.signalClientSignal" ID="DebugServer.signalClientSignal"></a>
+<h4>DebugServer.signalClientSignal</h4>
+<b>signalClientSignal</b>(<i>message, filename, lineNo, funcName, funcArgs</i>)
+<p>
+        Public method to process a signal generated on the client side.
+</p><dl>
+<dt><i>message</i> (str)</dt>
+<dd>
+message of the syntax error
+</dd><dt><i>filename</i> (str)</dt>
+<dd>
+translated filename of the syntax error position
+</dd><dt><i>lineNo</i> (int)</dt>
+<dd>
+line number of the syntax error position
+</dd><dt><i>funcName</i> (str)</dt>
+<dd>
+name of the function causing the signal
+</dd><dt><i>funcArgs</i> (str)</dt>
+<dd>
+function arguments
 </dd>
 </dl><a NAME="DebugServer.signalClientStack" ID="DebugServer.signalClientStack"></a>
 <h4>DebugServer.signalClientStack</h4>

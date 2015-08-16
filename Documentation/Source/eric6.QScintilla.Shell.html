@@ -160,6 +160,9 @@ QsciScintillaCompat
 <td><a href="#Shell.__clientException">__clientException</a></td>
 <td>Private method to handle an exception of the client.</td>
 </tr><tr>
+<td><a href="#Shell.__clientSignal">__clientSignal</a></td>
+<td>Private method to handle a signal generated on the client side.</td>
+</tr><tr>
 <td><a href="#Shell.__clientStatement">__clientStatement</a></td>
 <td>Private method to handle the response from the debugger client.</td>
 </tr><tr>
@@ -602,6 +605,28 @@ message given by the exception (string)
 </dd><dt><i>stackTrace</i></dt>
 <dd>
 list of stack entries (list of string)
+</dd>
+</dl><a NAME="Shell.__clientSignal" ID="Shell.__clientSignal"></a>
+<h4>Shell.__clientSignal</h4>
+<b>__clientSignal</b>(<i>message, filename, lineNo, funcName, funcArgs</i>)
+<p>
+        Private method to handle a signal generated on the client side.
+</p><dl>
+<dt><i>message</i> (str)</dt>
+<dd>
+message of the syntax error
+</dd><dt><i>filename</i> (str)</dt>
+<dd>
+translated filename of the syntax error position
+</dd><dt><i>lineNo</i> (int)</dt>
+<dd>
+line number of the syntax error position
+</dd><dt><i>funcName</i> (str)</dt>
+<dd>
+name of the function causing the signal
+</dd><dt><i>funcArgs</i> (str)</dt>
+<dd>
+function arguments
 </dd>
 </dl><a NAME="Shell.__clientStatement" ID="Shell.__clientStatement"></a>
 <h4>Shell.__clientStatement</h4>

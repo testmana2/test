@@ -200,7 +200,7 @@ eric6.DebugClients.Python.DebugClientBase.DebugClientBase.getRunning?4()
 eric6.DebugClients.Python.DebugClientBase.DebugClientBase.handleLine?4(line)
 eric6.DebugClients.Python.DebugClientBase.DebugClientBase.input?4(prompt)
 eric6.DebugClients.Python.DebugClientBase.DebugClientBase.main?4()
-eric6.DebugClients.Python.DebugClientBase.DebugClientBase.progTerminated?4(status)
+eric6.DebugClients.Python.DebugClientBase.DebugClientBase.progTerminated?4(status, exit=False)
 eric6.DebugClients.Python.DebugClientBase.DebugClientBase.raw_input?4(prompt, echo)
 eric6.DebugClients.Python.DebugClientBase.DebugClientBase.run_call?4(scriptname, func, *args)
 eric6.DebugClients.Python.DebugClientBase.DebugClientBase.sessionClose?4(exit=1)
@@ -286,6 +286,7 @@ eric6.DebugClients.Python.DebugProtocol.ResponseForkTo?7
 eric6.DebugClients.Python.DebugProtocol.ResponseLine?7
 eric6.DebugClients.Python.DebugProtocol.ResponseOK?7
 eric6.DebugClients.Python.DebugProtocol.ResponseRaw?7
+eric6.DebugClients.Python.DebugProtocol.ResponseSignal?7
 eric6.DebugClients.Python.DebugProtocol.ResponseStack?7
 eric6.DebugClients.Python.DebugProtocol.ResponseSyntax?7
 eric6.DebugClients.Python.DebugProtocol.ResponseThreadList?7
@@ -416,7 +417,7 @@ eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.getRunning?4()
 eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.handleLine?4(line)
 eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.input?4(prompt, echo=True)
 eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.main?4()
-eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.progTerminated?4(status)
+eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.progTerminated?4(status, exit=False)
 eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.run_call?4(scriptname, func, *args)
 eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.sessionClose?4(exit=True)
 eric6.DebugClients.Python3.DebugClientBase.DebugClientBase.shouldSkip?4(fn)
@@ -500,6 +501,7 @@ eric6.DebugClients.Python3.DebugProtocol.ResponseForkTo?7
 eric6.DebugClients.Python3.DebugProtocol.ResponseLine?7
 eric6.DebugClients.Python3.DebugProtocol.ResponseOK?7
 eric6.DebugClients.Python3.DebugProtocol.ResponseRaw?7
+eric6.DebugClients.Python3.DebugProtocol.ResponseSignal?7
 eric6.DebugClients.Python3.DebugProtocol.ResponseStack?7
 eric6.DebugClients.Python3.DebugProtocol.ResponseSyntax?7
 eric6.DebugClients.Python3.DebugProtocol.ResponseThreadList?7
@@ -649,6 +651,7 @@ eric6.Debugger.DebugProtocol.ResponseForkTo?7
 eric6.Debugger.DebugProtocol.ResponseLine?7
 eric6.Debugger.DebugProtocol.ResponseOK?7
 eric6.Debugger.DebugProtocol.ResponseRaw?7
+eric6.Debugger.DebugProtocol.ResponseSignal?7
 eric6.Debugger.DebugProtocol.ResponseStack?7
 eric6.Debugger.DebugProtocol.ResponseSyntax?7
 eric6.Debugger.DebugProtocol.ResponseThreadList?7
@@ -683,6 +686,7 @@ eric6.Debugger.DebugServer.DebugServer.clientProcessStderr?7
 eric6.Debugger.DebugServer.DebugServer.clientProcessStdout?7
 eric6.Debugger.DebugServer.DebugServer.clientRawInput?7
 eric6.Debugger.DebugServer.DebugServer.clientRawInputSent?7
+eric6.Debugger.DebugServer.DebugServer.clientSignal?7
 eric6.Debugger.DebugServer.DebugServer.clientStack?7
 eric6.Debugger.DebugServer.DebugServer.clientStatement?7
 eric6.Debugger.DebugServer.DebugServer.clientSyntaxError?7
@@ -751,6 +755,7 @@ eric6.Debugger.DebugServer.DebugServer.signalClientExit?4(status)
 eric6.Debugger.DebugServer.DebugServer.signalClientLine?4(filename, lineno, forStack=False)
 eric6.Debugger.DebugServer.DebugServer.signalClientOutput?4(line)
 eric6.Debugger.DebugServer.DebugServer.signalClientRawInput?4(prompt, echo)
+eric6.Debugger.DebugServer.DebugServer.signalClientSignal?4(message, filename, lineNo, funcName, funcArgs)
 eric6.Debugger.DebugServer.DebugServer.signalClientStack?4(stack)
 eric6.Debugger.DebugServer.DebugServer.signalClientStatement?4(more)
 eric6.Debugger.DebugServer.DebugServer.signalClientSyntaxError?4(message, filename, lineNo, characterNo)
@@ -2498,6 +2503,55 @@ eric6.Helpviewer.Feeds.FeedsManager.FeedsManager.on_reloadButton_clicked?4()
 eric6.Helpviewer.Feeds.FeedsManager.FeedsManager.openUrl?7
 eric6.Helpviewer.Feeds.FeedsManager.FeedsManager.show?4()
 eric6.Helpviewer.Feeds.FeedsManager.FeedsManager?1(parent=None)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.RefreshInterval?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.clearCache?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.clearNewOrigins?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.flashCookies?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.flashPlayerDataPath?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.newCookiesList?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.preferencesChanged?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.removeCookie?4(cookie)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.setFlashCookies?4(cookies)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.showFlashCookieManagerDialog?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.shutdown?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager?1(parent=None)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.closeEvent?4(evt)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_addBlackButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_addWhiteButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_blackList_itemSelectionChanged?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_cookiesList_currentItemChanged?4(current, previous)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_filterEdit_textChanged?4(filter)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_reloadButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_removeAllButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_removeBlackButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_removeButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_removeWhiteButton_clicked?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.on_whiteList_itemSelectionChanged?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.refreshView?4(forceReload=False)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog.showPage?4(index)
+eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.FlashCookieManagerDialog?1(manager, parent=None)
+eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.FlashCookieNotification.DefaultHeight?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.FlashCookieNotification?1(view, manager, noCookies)
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.Boolean?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.EpochCorrectionMsecs?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.Null?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.Number?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.ObjArr?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.ObjCc?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.ObjDate?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.ObjM?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.ObjObj?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.ObjXml?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.String?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.Undef?7
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.parse?4()
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.setBytes?4(solData)
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.setFile?4(solFile)
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.setFileName?4(solFilename)
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader.toString?4(indent=0, parent=None)
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReader?1()
+eric6.Helpviewer.FlashCookieManager.FlashCookieReader.FlashCookieReaderError?1(msg)
+eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities.flashDataPathForOS?4()
 eric6.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.GreaseMonkeyAddScriptDialog.on_showScriptSourceButton_clicked?4()
 eric6.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.GreaseMonkeyAddScriptDialog?1(manager, script, parent=None)
 eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.GreaseMonkeyConfigurationDialog.ScriptDescriptionRole?7
@@ -2738,6 +2792,7 @@ eric6.Helpviewer.HelpWindow.HelpWindow._cookieJar?8
 eric6.Helpviewer.HelpWindow.HelpWindow._downloadManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._featurePermissionManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._feedsManager?8
+eric6.Helpviewer.HelpWindow.HelpWindow._flashCookieManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._fromEric?8
 eric6.Helpviewer.HelpWindow.HelpWindow._greaseMonkeyManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._helpEngine?8
@@ -2763,8 +2818,10 @@ eric6.Helpviewer.HelpWindow.HelpWindow.eventKeyboardModifiers?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.eventMouseButtons?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.featurePermissionManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.feedsManager?4()
+eric6.Helpviewer.HelpWindow.HelpWindow.flashCookieManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.getActions?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.getSourceFileList?4()
+eric6.Helpviewer.HelpWindow.HelpWindow.getWindow?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.greaseMonkeyManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.helpClosed?7
 eric6.Helpviewer.HelpWindow.HelpWindow.helpEngine?4()
@@ -6275,6 +6332,10 @@ eric6.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage
 eric6.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage.save?4()
 eric6.Preferences.ConfigurationPages.HelpDocumentationPage.HelpDocumentationPage?1()
 eric6.Preferences.ConfigurationPages.HelpDocumentationPage.create?4(dlg)
+eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.HelpFlashCookieManagerPage.on_flashDataPathButton_clicked?4()
+eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.HelpFlashCookieManagerPage.save?4()
+eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.HelpFlashCookieManagerPage?1()
+eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.create?4(dlg)
 eric6.Preferences.ConfigurationPages.HelpInterfacePage.HelpInterfacePage.on_styleSheetButton_clicked?4()
 eric6.Preferences.ConfigurationPages.HelpInterfacePage.HelpInterfacePage.save?4()
 eric6.Preferences.ConfigurationPages.HelpInterfacePage.HelpInterfacePage?1()

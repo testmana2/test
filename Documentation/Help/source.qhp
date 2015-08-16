@@ -280,6 +280,14 @@
               <section title="eric6.Helpviewer.Feeds.FeedsDialog" ref="eric6.Helpviewer.Feeds.FeedsDialog.html" />
               <section title="eric6.Helpviewer.Feeds.FeedsManager" ref="eric6.Helpviewer.Feeds.FeedsManager.html" />
             </section>
+            <section title="eric6.Helpviewer.FlashCookieManager" ref="index-eric6.Helpviewer.FlashCookieManager.html">
+              <section title="eric6.Helpviewer.FlashCookieManager.FlashCookie" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html" />
+              <section title="eric6.Helpviewer.FlashCookieManager.FlashCookieManager" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html" />
+              <section title="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html" />
+              <section title="eric6.Helpviewer.FlashCookieManager.FlashCookieNotification" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.html" />
+              <section title="eric6.Helpviewer.FlashCookieManager.FlashCookieReader" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html" />
+              <section title="eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities.html" />
+            </section>
             <section title="eric6.Helpviewer.GreaseMonkey" ref="index-eric6.Helpviewer.GreaseMonkey.html">
               <section title="eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration" ref="index-eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.html">
                 <section title="eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog" ref="eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html" />
@@ -788,6 +796,7 @@
               <section title="eric6.Preferences.ConfigurationPages.GraphicsPage" ref="eric6.Preferences.ConfigurationPages.GraphicsPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.HelpAppearancePage" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html" />
               <section title="eric6.Preferences.ConfigurationPages.HelpDocumentationPage" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html" />
+              <section title="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.HelpInterfacePage" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html" />
               <section title="eric6.Preferences.ConfigurationPages.HelpViewersPage" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.HelpVirusTotalPage" ref="eric6.Preferences.ConfigurationPages.HelpVirusTotalPage.html" />
@@ -2792,10 +2801,14 @@
       <keyword name="DebugClientBase.__getSysPath" id="DebugClientBase.__getSysPath" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__getSysPath" />
       <keyword name="DebugClientBase.__interact" id="DebugClientBase.__interact" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__interact" />
       <keyword name="DebugClientBase.__interact" id="DebugClientBase.__interact" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__interact" />
+      <keyword name="DebugClientBase.__interceptSignals" id="DebugClientBase.__interceptSignals" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__interceptSignals" />
+      <keyword name="DebugClientBase.__interceptSignals" id="DebugClientBase.__interceptSignals" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__interceptSignals" />
       <keyword name="DebugClientBase.__resolveHost" id="DebugClientBase.__resolveHost" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__resolveHost" />
       <keyword name="DebugClientBase.__resolveHost" id="DebugClientBase.__resolveHost" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__resolveHost" />
       <keyword name="DebugClientBase.__setCoding" id="DebugClientBase.__setCoding" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__setCoding" />
       <keyword name="DebugClientBase.__setCoding" id="DebugClientBase.__setCoding" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__setCoding" />
+      <keyword name="DebugClientBase.__signalHandler" id="DebugClientBase.__signalHandler" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__signalHandler" />
+      <keyword name="DebugClientBase.__signalHandler" id="DebugClientBase.__signalHandler" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__signalHandler" />
       <keyword name="DebugClientBase.__unhandled_exception" id="DebugClientBase.__unhandled_exception" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__unhandled_exception" />
       <keyword name="DebugClientBase.__unhandled_exception" id="DebugClientBase.__unhandled_exception" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__unhandled_exception" />
       <keyword name="DebugClientBase.absPath" id="DebugClientBase.absPath" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.absPath" />
@@ -2992,6 +3005,7 @@
       <keyword name="DebugServer.signalClientLine" id="DebugServer.signalClientLine" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientLine" />
       <keyword name="DebugServer.signalClientOutput" id="DebugServer.signalClientOutput" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientOutput" />
       <keyword name="DebugServer.signalClientRawInput" id="DebugServer.signalClientRawInput" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientRawInput" />
+      <keyword name="DebugServer.signalClientSignal" id="DebugServer.signalClientSignal" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientSignal" />
       <keyword name="DebugServer.signalClientStack" id="DebugServer.signalClientStack" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientStack" />
       <keyword name="DebugServer.signalClientStatement" id="DebugServer.signalClientStatement" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientStatement" />
       <keyword name="DebugServer.signalClientSyntaxError" id="DebugServer.signalClientSyntaxError" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientSyntaxError" />
@@ -3030,6 +3044,7 @@
       <keyword name="DebugUI.__clientExit" id="DebugUI.__clientExit" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientExit" />
       <keyword name="DebugUI.__clientGone" id="DebugUI.__clientGone" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientGone" />
       <keyword name="DebugUI.__clientLine" id="DebugUI.__clientLine" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientLine" />
+      <keyword name="DebugUI.__clientSignal" id="DebugUI.__clientSignal" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientSignal" />
       <keyword name="DebugUI.__clientSyntaxError" id="DebugUI.__clientSyntaxError" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientSyntaxError" />
       <keyword name="DebugUI.__clientThreadSet" id="DebugUI.__clientThreadSet" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientThreadSet" />
       <keyword name="DebugUI.__clientVariable" id="DebugUI.__clientVariable" ref="eric6.Debugger.DebugUI.html#DebugUI.__clientVariable" />
@@ -5077,6 +5092,81 @@
       <keyword name="FirefoxImporter.importedBookmarks" id="FirefoxImporter.importedBookmarks" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.importedBookmarks" />
       <keyword name="FirefoxImporter.open" id="FirefoxImporter.open" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.open" />
       <keyword name="FirefoxImporter.setPath" id="FirefoxImporter.setPath" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.setPath" />
+      <keyword name="FlashCookie" id="FlashCookie" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie" />
+      <keyword name="FlashCookie (Module)" id="FlashCookie (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html" />
+      <keyword name="FlashCookie.__eq__" id="FlashCookie.__eq__" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie.__eq__" />
+      <keyword name="FlashCookie.__init" id="FlashCookie.__init" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie.__init" />
+      <keyword name="FlashCookieManager" id="FlashCookieManager" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager" />
+      <keyword name="FlashCookieManager (Constructor)" id="FlashCookieManager (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__init__" />
+      <keyword name="FlashCookieManager (Module)" id="FlashCookieManager (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html" />
+      <keyword name="FlashCookieManager (Package)" id="FlashCookieManager (Package)" ref="index-eric6.Helpviewer.FlashCookieManager.html" />
+      <keyword name="FlashCookieManager.__autoRefresh" id="FlashCookieManager.__autoRefresh" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__autoRefresh" />
+      <keyword name="FlashCookieManager.__extractOriginFrom" id="FlashCookieManager.__extractOriginFrom" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__extractOriginFrom" />
+      <keyword name="FlashCookieManager.__insertFlashCookie" id="FlashCookieManager.__insertFlashCookie" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__insertFlashCookie" />
+      <keyword name="FlashCookieManager.__isBlacklisted" id="FlashCookieManager.__isBlacklisted" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__isBlacklisted" />
+      <keyword name="FlashCookieManager.__isWhitelisted" id="FlashCookieManager.__isWhitelisted" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__isWhitelisted" />
+      <keyword name="FlashCookieManager.__loadFlashCookies" id="FlashCookieManager.__loadFlashCookies" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__loadFlashCookies" />
+      <keyword name="FlashCookieManager.__loadFlashCookiesFromPath" id="FlashCookieManager.__loadFlashCookiesFromPath" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__loadFlashCookiesFromPath" />
+      <keyword name="FlashCookieManager.__removeAllButWhitelisted" id="FlashCookieManager.__removeAllButWhitelisted" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__removeAllButWhitelisted" />
+      <keyword name="FlashCookieManager.__sharedObjectDirName" id="FlashCookieManager.__sharedObjectDirName" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__sharedObjectDirName" />
+      <keyword name="FlashCookieManager.__startStopTimer" id="FlashCookieManager.__startStopTimer" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__startStopTimer" />
+      <keyword name="FlashCookieManager.clearCache" id="FlashCookieManager.clearCache" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.clearCache" />
+      <keyword name="FlashCookieManager.clearNewOrigins" id="FlashCookieManager.clearNewOrigins" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.clearNewOrigins" />
+      <keyword name="FlashCookieManager.flashCookies" id="FlashCookieManager.flashCookies" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.flashCookies" />
+      <keyword name="FlashCookieManager.flashPlayerDataPath" id="FlashCookieManager.flashPlayerDataPath" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.flashPlayerDataPath" />
+      <keyword name="FlashCookieManager.newCookiesList" id="FlashCookieManager.newCookiesList" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.newCookiesList" />
+      <keyword name="FlashCookieManager.preferencesChanged" id="FlashCookieManager.preferencesChanged" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.preferencesChanged" />
+      <keyword name="FlashCookieManager.removeCookie" id="FlashCookieManager.removeCookie" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.removeCookie" />
+      <keyword name="FlashCookieManager.setFlashCookies" id="FlashCookieManager.setFlashCookies" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.setFlashCookies" />
+      <keyword name="FlashCookieManager.showFlashCookieManagerDialog" id="FlashCookieManager.showFlashCookieManagerDialog" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.showFlashCookieManagerDialog" />
+      <keyword name="FlashCookieManager.shutdown" id="FlashCookieManager.shutdown" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.shutdown" />
+      <keyword name="FlashCookieManagerDialog" id="FlashCookieManagerDialog" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog" />
+      <keyword name="FlashCookieManagerDialog (Constructor)" id="FlashCookieManagerDialog (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.__init__" />
+      <keyword name="FlashCookieManagerDialog (Module)" id="FlashCookieManagerDialog (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html" />
+      <keyword name="FlashCookieManagerDialog.__addBlacklist" id="FlashCookieManagerDialog.__addBlacklist" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.__addBlacklist" />
+      <keyword name="FlashCookieManagerDialog.__addWhitelist" id="FlashCookieManagerDialog.__addWhitelist" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.__addWhitelist" />
+      <keyword name="FlashCookieManagerDialog.__cookiesListContextMenuRequested" id="FlashCookieManagerDialog.__cookiesListContextMenuRequested" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.__cookiesListContextMenuRequested" />
+      <keyword name="FlashCookieManagerDialog.__refreshCookiesList" id="FlashCookieManagerDialog.__refreshCookiesList" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.__refreshCookiesList" />
+      <keyword name="FlashCookieManagerDialog.__refreshFilterLists" id="FlashCookieManagerDialog.__refreshFilterLists" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.__refreshFilterLists" />
+      <keyword name="FlashCookieManagerDialog.closeEvent" id="FlashCookieManagerDialog.closeEvent" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.closeEvent" />
+      <keyword name="FlashCookieManagerDialog.on_addBlackButton_clicked" id="FlashCookieManagerDialog.on_addBlackButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_addBlackButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_addWhiteButton_clicked" id="FlashCookieManagerDialog.on_addWhiteButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_addWhiteButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_blackList_itemSelectionChanged" id="FlashCookieManagerDialog.on_blackList_itemSelectionChanged" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_blackList_itemSelectionChanged" />
+      <keyword name="FlashCookieManagerDialog.on_cookiesList_currentItemChanged" id="FlashCookieManagerDialog.on_cookiesList_currentItemChanged" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_cookiesList_currentItemChanged" />
+      <keyword name="FlashCookieManagerDialog.on_filterEdit_textChanged" id="FlashCookieManagerDialog.on_filterEdit_textChanged" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_filterEdit_textChanged" />
+      <keyword name="FlashCookieManagerDialog.on_reloadButton_clicked" id="FlashCookieManagerDialog.on_reloadButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_reloadButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_removeAllButton_clicked" id="FlashCookieManagerDialog.on_removeAllButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_removeAllButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_removeBlackButton_clicked" id="FlashCookieManagerDialog.on_removeBlackButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_removeBlackButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_removeButton_clicked" id="FlashCookieManagerDialog.on_removeButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_removeButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_removeWhiteButton_clicked" id="FlashCookieManagerDialog.on_removeWhiteButton_clicked" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_removeWhiteButton_clicked" />
+      <keyword name="FlashCookieManagerDialog.on_whiteList_itemSelectionChanged" id="FlashCookieManagerDialog.on_whiteList_itemSelectionChanged" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.on_whiteList_itemSelectionChanged" />
+      <keyword name="FlashCookieManagerDialog.refreshView" id="FlashCookieManagerDialog.refreshView" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.refreshView" />
+      <keyword name="FlashCookieManagerDialog.showPage" id="FlashCookieManagerDialog.showPage" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html#FlashCookieManagerDialog.showPage" />
+      <keyword name="FlashCookieNotification" id="FlashCookieNotification" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.html#FlashCookieNotification" />
+      <keyword name="FlashCookieNotification (Constructor)" id="FlashCookieNotification (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.html#FlashCookieNotification.__init__" />
+      <keyword name="FlashCookieNotification (Module)" id="FlashCookieNotification (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.html" />
+      <keyword name="FlashCookieReader" id="FlashCookieReader" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader" />
+      <keyword name="FlashCookieReader (Constructor)" id="FlashCookieReader (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__init__" />
+      <keyword name="FlashCookieReader (Module)" id="FlashCookieReader (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html" />
+      <keyword name="FlashCookieReader.__parseArray" id="FlashCookieReader.__parseArray" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseArray" />
+      <keyword name="FlashCookieReader.__parseBoolean" id="FlashCookieReader.__parseBoolean" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseBoolean" />
+      <keyword name="FlashCookieReader.__parseDate" id="FlashCookieReader.__parseDate" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseDate" />
+      <keyword name="FlashCookieReader.__parseNull" id="FlashCookieReader.__parseNull" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseNull" />
+      <keyword name="FlashCookieReader.__parseNumber" id="FlashCookieReader.__parseNumber" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseNumber" />
+      <keyword name="FlashCookieReader.__parseObject" id="FlashCookieReader.__parseObject" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseObject" />
+      <keyword name="FlashCookieReader.__parseOcc" id="FlashCookieReader.__parseOcc" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseOcc" />
+      <keyword name="FlashCookieReader.__parseOjm" id="FlashCookieReader.__parseOjm" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseOjm" />
+      <keyword name="FlashCookieReader.__parseString" id="FlashCookieReader.__parseString" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseString" />
+      <keyword name="FlashCookieReader.__parseUndefined" id="FlashCookieReader.__parseUndefined" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseUndefined" />
+      <keyword name="FlashCookieReader.__parseXml" id="FlashCookieReader.__parseXml" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.__parseXml" />
+      <keyword name="FlashCookieReader.parse" id="FlashCookieReader.parse" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.parse" />
+      <keyword name="FlashCookieReader.setBytes" id="FlashCookieReader.setBytes" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.setBytes" />
+      <keyword name="FlashCookieReader.setFile" id="FlashCookieReader.setFile" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.setFile" />
+      <keyword name="FlashCookieReader.setFileName" id="FlashCookieReader.setFileName" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.setFileName" />
+      <keyword name="FlashCookieReader.toString" id="FlashCookieReader.toString" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReader.toString" />
+      <keyword name="FlashCookieReaderError" id="FlashCookieReaderError" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReaderError" />
+      <keyword name="FlashCookieReaderError (Constructor)" id="FlashCookieReaderError (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html#FlashCookieReaderError.__init__" />
+      <keyword name="FlashCookieUtilities (Module)" id="FlashCookieUtilities (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities.html" />
       <keyword name="FlexCompleter (Module)" id="FlexCompleter (Module)" ref="eric6.DebugClients.Python.FlexCompleter.html" />
       <keyword name="FlexCompleter (Module)" id="FlexCompleter (Module)" ref="eric6.DebugClients.Python3.FlexCompleter.html" />
       <keyword name="FollowRedirectReply" id="FollowRedirectReply" ref="eric6.Helpviewer.Network.FollowRedirectReply.html#FollowRedirectReply" />
@@ -5418,6 +5508,11 @@
       <keyword name="HelpDocumentationPage.on_qt4DocDirButton_clicked" id="HelpDocumentationPage.on_qt4DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_qt4DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.on_qt5DocDirButton_clicked" id="HelpDocumentationPage.on_qt5DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_qt5DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.save" id="HelpDocumentationPage.save" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.save" />
+      <keyword name="HelpFlashCookieManagerPage" id="HelpFlashCookieManagerPage" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage" />
+      <keyword name="HelpFlashCookieManagerPage (Constructor)" id="HelpFlashCookieManagerPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage.__init__" />
+      <keyword name="HelpFlashCookieManagerPage (Module)" id="HelpFlashCookieManagerPage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html" />
+      <keyword name="HelpFlashCookieManagerPage.on_flashDataPathButton_clicked" id="HelpFlashCookieManagerPage.on_flashDataPathButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage.on_flashDataPathButton_clicked" />
+      <keyword name="HelpFlashCookieManagerPage.save" id="HelpFlashCookieManagerPage.save" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage.save" />
       <keyword name="HelpIndexWidget" id="HelpIndexWidget" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget" />
       <keyword name="HelpIndexWidget (Constructor)" id="HelpIndexWidget (Constructor)" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__init__" />
       <keyword name="HelpIndexWidget (Module)" id="HelpIndexWidget (Module)" ref="eric6.Helpviewer.HelpIndexWidget.html" />
@@ -5619,6 +5714,7 @@
       <keyword name="HelpWindow.__activateDock" id="HelpWindow.__activateDock" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__activateDock" />
       <keyword name="HelpWindow.__addBookmark" id="HelpWindow.__addBookmark" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__addBookmark" />
       <keyword name="HelpWindow.__addBookmarkFolder" id="HelpWindow.__addBookmarkFolder" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__addBookmarkFolder" />
+      <keyword name="HelpWindow.__appFocusChanged" id="HelpWindow.__appFocusChanged" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__appFocusChanged" />
       <keyword name="HelpWindow.__backward" id="HelpWindow.__backward" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__backward" />
       <keyword name="HelpWindow.__browserClosed" id="HelpWindow.__browserClosed" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__browserClosed" />
       <keyword name="HelpWindow.__clearIconsDatabase" id="HelpWindow.__clearIconsDatabase" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__clearIconsDatabase" />
@@ -5677,6 +5773,7 @@
       <keyword name="HelpWindow.__showEnginesConfigurationDialog" id="HelpWindow.__showEnginesConfigurationDialog" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showEnginesConfigurationDialog" />
       <keyword name="HelpWindow.__showFeaturePermissionDialog" id="HelpWindow.__showFeaturePermissionDialog" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showFeaturePermissionDialog" />
       <keyword name="HelpWindow.__showFeedsManager" id="HelpWindow.__showFeedsManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showFeedsManager" />
+      <keyword name="HelpWindow.__showFlashCookiesManagement" id="HelpWindow.__showFlashCookiesManagement" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showFlashCookiesManagement" />
       <keyword name="HelpWindow.__showForwardMenu" id="HelpWindow.__showForwardMenu" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showForwardMenu" />
       <keyword name="HelpWindow.__showGreaseMonkeyConfigDialog" id="HelpWindow.__showGreaseMonkeyConfigDialog" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showGreaseMonkeyConfigDialog" />
       <keyword name="HelpWindow.__showIndexWindow" id="HelpWindow.__showIndexWindow" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showIndexWindow" />
@@ -5725,8 +5822,10 @@
       <keyword name="HelpWindow.eventMouseButtons" id="HelpWindow.eventMouseButtons" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.eventMouseButtons" />
       <keyword name="HelpWindow.featurePermissionManager" id="HelpWindow.featurePermissionManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.featurePermissionManager" />
       <keyword name="HelpWindow.feedsManager" id="HelpWindow.feedsManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.feedsManager" />
+      <keyword name="HelpWindow.flashCookieManager" id="HelpWindow.flashCookieManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.flashCookieManager" />
       <keyword name="HelpWindow.getActions" id="HelpWindow.getActions" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.getActions" />
       <keyword name="HelpWindow.getSourceFileList" id="HelpWindow.getSourceFileList" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.getSourceFileList" />
+      <keyword name="HelpWindow.getWindow" id="HelpWindow.getWindow" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.getWindow" />
       <keyword name="HelpWindow.greaseMonkeyManager" id="HelpWindow.greaseMonkeyManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.greaseMonkeyManager" />
       <keyword name="HelpWindow.helpEngine" id="HelpWindow.helpEngine" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.helpEngine" />
       <keyword name="HelpWindow.historyManager" id="HelpWindow.historyManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.historyManager" />
@@ -10138,6 +10237,7 @@
       <keyword name="Shell.__clientCapabilities" id="Shell.__clientCapabilities" ref="eric6.QScintilla.Shell.html#Shell.__clientCapabilities" />
       <keyword name="Shell.__clientError" id="Shell.__clientError" ref="eric6.QScintilla.Shell.html#Shell.__clientError" />
       <keyword name="Shell.__clientException" id="Shell.__clientException" ref="eric6.QScintilla.Shell.html#Shell.__clientException" />
+      <keyword name="Shell.__clientSignal" id="Shell.__clientSignal" ref="eric6.QScintilla.Shell.html#Shell.__clientSignal" />
       <keyword name="Shell.__clientStatement" id="Shell.__clientStatement" ref="eric6.QScintilla.Shell.html#Shell.__clientStatement" />
       <keyword name="Shell.__clientSyntaxError" id="Shell.__clientSyntaxError" ref="eric6.QScintilla.Shell.html#Shell.__clientSyntaxError" />
       <keyword name="Shell.__completionListSelected" id="Shell.__completionListSelected" ref="eric6.QScintilla.Shell.html#Shell.__completionListSelected" />
@@ -13292,6 +13392,7 @@
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.GraphicsPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#create" />
+      <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.HelpVirusTotalPage.html#create" />
@@ -13428,6 +13529,7 @@
       <keyword name="findPythonInterpreters" id="findPythonInterpreters" ref="eric6.Globals.__init__.html#findPythonInterpreters" />
       <keyword name="find_module" id="find_module" ref="eric6.Utilities.ClassBrowsers.__init__.html#find_module" />
       <keyword name="find_module" id="find_module" ref="eric6.Utilities.ModuleParser.html#find_module" />
+      <keyword name="flashDataPathForOS" id="flashDataPathForOS" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities.html#flashDataPathForOS" />
       <keyword name="flush" id="flush" ref="eric6.DebugClients.Ruby.AsyncFile.html#flush" />
       <keyword name="formatTime" id="formatTime" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#formatTime" />
       <keyword name="format_witnesses" id="format_witnesses" ref="eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#format_witnesses" />
@@ -14121,6 +14223,12 @@
       <file>eric6.Helpviewer.Feeds.FeedEditDialog.html</file>
       <file>eric6.Helpviewer.Feeds.FeedsDialog.html</file>
       <file>eric6.Helpviewer.Feeds.FeedsManager.html</file>
+      <file>eric6.Helpviewer.FlashCookieManager.FlashCookie.html</file>
+      <file>eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html</file>
+      <file>eric6.Helpviewer.FlashCookieManager.FlashCookieManagerDialog.html</file>
+      <file>eric6.Helpviewer.FlashCookieManager.FlashCookieNotification.html</file>
+      <file>eric6.Helpviewer.FlashCookieManager.FlashCookieReader.html</file>
+      <file>eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities.html</file>
       <file>eric6.Helpviewer.GreaseMonkey.GreaseMonkeyAddScriptDialog.html</file>
       <file>eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationDialog.html</file>
       <file>eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.GreaseMonkeyConfigurationListDelegate.html</file>
@@ -14504,6 +14612,7 @@
       <file>eric6.Preferences.ConfigurationPages.GraphicsPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.HelpAppearancePage.html</file>
       <file>eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html</file>
+      <file>eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.HelpInterfacePage.html</file>
       <file>eric6.Preferences.ConfigurationPages.HelpViewersPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.HelpVirusTotalPage.html</file>
@@ -14764,6 +14873,7 @@
       <file>index-eric6.Helpviewer.Download.html</file>
       <file>index-eric6.Helpviewer.FeaturePermissions.html</file>
       <file>index-eric6.Helpviewer.Feeds.html</file>
+      <file>index-eric6.Helpviewer.FlashCookieManager.html</file>
       <file>index-eric6.Helpviewer.GreaseMonkey.GreaseMonkeyConfiguration.html</file>
       <file>index-eric6.Helpviewer.GreaseMonkey.html</file>
       <file>index-eric6.Helpviewer.History.html</file>
