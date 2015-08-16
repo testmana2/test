@@ -1213,7 +1213,7 @@ class DebugUI(QObject):
         E5MessageBox.critical(
             self.ui, Program, 
             self.tr("""<p>The program generate the signal "{0}".<br/>"""
-                    """File: <b>{2}</b>, Line: <b>{3}</b></p>""").format(
+                    """File: <b>{1}</b>, Line: <b>{2}</b></p>""").format(
                     message, filename, lineNo))
         
     def __clientGone(self, unplanned):

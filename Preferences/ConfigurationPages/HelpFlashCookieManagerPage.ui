@@ -90,7 +90,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>The flash data directory will be checked regularly. and flash cookies in blacklist will be deleted automatically.</string>
+         <string>The flash data directory will be checked regularly and flash cookies in the blacklist will be deleted automatically.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
