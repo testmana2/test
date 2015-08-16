@@ -5093,9 +5093,9 @@
       <keyword name="FirefoxImporter.open" id="FirefoxImporter.open" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.open" />
       <keyword name="FirefoxImporter.setPath" id="FirefoxImporter.setPath" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter.setPath" />
       <keyword name="FlashCookie" id="FlashCookie" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie" />
+      <keyword name="FlashCookie (Constructor)" id="FlashCookie (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie.__init__" />
       <keyword name="FlashCookie (Module)" id="FlashCookie (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html" />
       <keyword name="FlashCookie.__eq__" id="FlashCookie.__eq__" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie.__eq__" />
-      <keyword name="FlashCookie.__init" id="FlashCookie.__init" ref="eric6.Helpviewer.FlashCookieManager.FlashCookie.html#FlashCookie.__init" />
       <keyword name="FlashCookieManager" id="FlashCookieManager" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager" />
       <keyword name="FlashCookieManager (Constructor)" id="FlashCookieManager (Constructor)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html#FlashCookieManager.__init__" />
       <keyword name="FlashCookieManager (Module)" id="FlashCookieManager (Module)" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieManager.html" />

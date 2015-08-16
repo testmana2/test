@@ -16,7 +16,7 @@ class FlashCookie(object):
     """
     Class implementing the Flash cookie.
     """
-    def __init(self):
+    def __init__(self):
         """
         Constructor
         """

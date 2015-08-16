@@ -28,7 +28,7 @@ class FlashCookieNotification(E5AnimatedWidget):
         
         @param view reference to the web view
         @type QWebView
-        @param reference to the Flash cookie manager object
+        @param manager reference to the Flash cookie manager object
         @type FlashCookieManager
         @param noCookies number of newly detected Flash cookies
         @type int

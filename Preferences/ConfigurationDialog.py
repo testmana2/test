@@ -59,7 +59,7 @@ class ConfigurationPageItem(QTreeWidgetItem):
         """
         return self.__pageName
 
-# TODO: add page for Flash Cookie Manager
+
 class ConfigurationWidget(QWidget):
     """
     Class implementing a dialog for the configuration of eric6.

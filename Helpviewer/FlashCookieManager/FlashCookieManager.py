@@ -116,6 +116,8 @@ class FlashCookieManager(QObject):
         
         @param cookie Flash cookie to be tested
         @type FlashCookie
+        @return flag indicating a blacklisted cookie
+        @rtype bool
         """
         return cookie.origin in Preferences.getHelp("FlashCookiesBlacklist")
     
@@ -125,6 +127,8 @@ class FlashCookieManager(QObject):
         
         @param cookie Flash cookie to be tested
         @type FlashCookie
+        @return flag indicating a whitelisted cookie
+        @rtype bool
         """
         return cookie.origin in Preferences.getHelp("FlashCookiesWhitelist")
     
@@ -198,7 +202,7 @@ class FlashCookieManager(QObject):
             newCookie = True
             for oldCookie in oldFlashCookies:
                 if (oldCookie.path + oldCookie.name ==
-                    cookie.path + cookie.name):
+                        cookie.path + cookie.name):
                     newCookie = False
                     break
             
@@ -327,10 +331,10 @@ class FlashCookieManager(QObject):
             if "/" in origin:
                 origin = origin.split("/", 1)[1]
         elif path.startswith(
-            self.flashPlayerDataPath() + 
+            self.flashPlayerDataPath() +
                 "/macromedia.com/support/flashplayer/sys/"):
             origin = origin.replace(
-                self.flashPlayerDataPath() + 
+                self.flashPlayerDataPath() +
                 "/macromedia.com/support/flashplayer/sys/", "")
             if origin == "settings.sol":
                 return self.tr("!default")

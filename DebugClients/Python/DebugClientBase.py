@@ -1184,7 +1184,7 @@ class DebugClientBase(object):
         
         @param signalNumber number of the signal to be handled
         @type int
-        @param stack frame current stack frame
+        @param stackFrame current stack frame
         @type frame object
         """
         if signalNumber == signal.SIGABRT:

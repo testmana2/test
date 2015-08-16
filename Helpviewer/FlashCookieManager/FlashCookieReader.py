@@ -110,7 +110,7 @@ class FlashCookieReader(object):
                 "Flash cookie data lengths don't match\n"
                 "  file length: {0}\n"
                 "  data length: {1}"
-                .format(lenSolData - 6,  lenData))
+                .format(lenSolData - 6, lenData))
         sDataType = self.__data.read(4).decode("utf-8")             # 'TCSO'
         if sDataType != "TCSO":
             raise FlashCookieReaderError(
@@ -175,7 +175,7 @@ class FlashCookieReader(object):
         elif b == b"\x7F\xF8\x00\x00\x00\x00\x00\x00":
             value = "NaN"
         else:
-            value,  = struct.unpack(">d", b)    # double, big-endian
+            value, = struct.unpack(">d", b)    # double, big-endian
             value = str(value)
         parent[variableName] = ("number", value)
     
@@ -245,7 +245,7 @@ class FlashCookieReader(object):
         @param parent reference to the dictionary to insert the result into
         @type dict
         """
-        lenCData,  = struct.unpack(">L", self.__data.read(4))
+        lenCData, = struct.unpack(">L", self.__data.read(4))
         # unsigned long, big-endian
         cData = self.__data.read(lenCData)
         value = cData.decode("utf-8")
@@ -292,6 +292,8 @@ class FlashCookieReader(object):
         @type str
         @param parent reference to the dictionary to insert the result into
         @type dict
+        @exception FlashCookieReaderError raised when an issue with the cookie
+            file is found
         """
         value = {}
         parent[variableName] = ("object", value)
@@ -338,6 +340,8 @@ class FlashCookieReader(object):
         @type str
         @param parent reference to the dictionary to insert the result into
         @type dict
+        @exception FlashCookieReaderError raised when an issue with the cookie
+            file is found
         """
         arrayLength, = struct.unpack(">L", self.__data.read(4))
         # unsigned long, big-endian
@@ -387,6 +391,8 @@ class FlashCookieReader(object):
         @type str
         @param parent reference to the dictionary to insert the result into
         @type dict
+        @exception FlashCookieReaderError raised when an issue with the cookie
+            file is found
         """
         lenCname = struct.unpack(">H", self.__data.read(2))
         # unsigned short,  big-endian
@@ -456,12 +462,12 @@ class FlashCookieReader(object):
                 resultStr = self.toString(indent + 1, value)
                 if resultStr:
                     strArr.append("{0}{1}:\n{2}"
-                        .format(indentStr, variableName, resultStr))
+                                  .format(indentStr, variableName, resultStr))
                 else:
                     strArr.append("{0}{1}:"
-                        .format(indentStr, variableName))
+                                  .format(indentStr, variableName))
             else:
                 strArr.append("{0}{1}: {2}"
-                    .format(indentStr, variableName, value))
+                              .format(indentStr, variableName, value))
         
         return "\n".join(strArr)

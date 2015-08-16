@@ -1211,10 +1211,10 @@ class DebugUI(QObject):
         QApplication.processEvents()
         self.viewmanager.setFileLine(filename, lineNo, True)
         E5MessageBox.critical(
-            self.ui, Program, 
+            self.ui, Program,
             self.tr("""<p>The program generate the signal "{0}".<br/>"""
                     """File: <b>{1}</b>, Line: <b>{2}</b></p>""").format(
-                    message, filename, lineNo))
+                message, filename, lineNo))
         
     def __clientGone(self, unplanned):
         """

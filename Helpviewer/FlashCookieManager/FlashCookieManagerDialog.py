@@ -84,6 +84,9 @@ class FlashCookieManagerDialog(QDialog, Ui_FlashCookieManagerDialog):
     def __addWhitelist(self, origin):
         """
         Private method to add a cookie origin to the whitelist.
+        
+        @param origin origin to be added to the list
+        @type str
         """
         if not origin:
             return
@@ -125,6 +128,9 @@ class FlashCookieManagerDialog(QDialog, Ui_FlashCookieManagerDialog):
     def __addBlacklist(self, origin):
         """
         Private method to add a cookie origin to the blacklist.
+        
+        @param origin origin to be added to the list
+        @type str
         """
         if not origin:
             return
@@ -351,7 +357,7 @@ class FlashCookieManagerDialog(QDialog, Ui_FlashCookieManagerDialog):
             
             suffix = ""
             if cookie.path.startswith(
-                self.__manager.flashPlayerDataPath() + 
+                self.__manager.flashPlayerDataPath() +
                     "/macromedia.com/support/flashplayer/sys"):
                 suffix = self.tr(" (settings)")
             
