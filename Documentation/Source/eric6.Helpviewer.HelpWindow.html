@@ -385,24 +385,6 @@ E5MainWindow
 <td><a href="#HelpWindow.__viewFullScreen">__viewFullScreen</a></td>
 <td>Private slot called to toggle fullscreen mode.</td>
 </tr><tr>
-<td><a href="#HelpWindow.__virusTotalFileScanReport">__virusTotalFileScanReport</a></td>
-<td>Private slot to initiate the display of the file scan report page.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalScanCurrentSite">__virusTotalScanCurrentSite</a></td>
-<td>Private slot to ask VirusTotal for a scan of the URL of the current browser.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalSearch">__virusTotalSearch</a></td>
-<td>Private slot to search VirusTotal for a given entry.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalSearchChanged">__virusTotalSearchChanged</a></td>
-<td>Private slot to react upon changes of the VirusTotal search text.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalSubmitUrlError">__virusTotalSubmitUrlError</a></td>
-<td>Private slot to handle an URL scan submission error.</td>
-</tr><tr>
-<td><a href="#HelpWindow.__virusTotalUrlScanReport">__virusTotalUrlScanReport</a></td>
-<td>Private slot to initiate the display of the URL scan report page.</td>
-</tr><tr>
 <td><a href="#HelpWindow.__warning">__warning</a></td>
 <td>Private slot handling warnings from the help engine.</td>
 </tr><tr>
@@ -486,9 +468,6 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.reloadUserStyleSheet">reloadUserStyleSheet</a></td>
 <td>Public method to reload the user style sheet.</td>
-</tr><tr>
-<td><a href="#HelpWindow.requestVirusTotalScan">requestVirusTotalScan</a></td>
-<td>Public method to submit a request to scan an URL by VirusTotal.</td>
 </tr><tr>
 <td><a href="#HelpWindow.search">search</a></td>
 <td>Public method to search for a word.</td>
@@ -1293,58 +1272,7 @@ style sheet (QUrl)
 <b>__viewFullScreen</b>(<i></i>)
 <p>
         Private slot called to toggle fullscreen mode.
-</p><a NAME="HelpWindow.__virusTotalFileScanReport" ID="HelpWindow.__virusTotalFileScanReport"></a>
-<h4>HelpWindow.__virusTotalFileScanReport</h4>
-<b>__virusTotalFileScanReport</b>(<i>url</i>)
-<p>
-        Private slot to initiate the display of the file scan report page.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-URL of the file scan report page (string)
-</dd>
-</dl><a NAME="HelpWindow.__virusTotalScanCurrentSite" ID="HelpWindow.__virusTotalScanCurrentSite"></a>
-<h4>HelpWindow.__virusTotalScanCurrentSite</h4>
-<b>__virusTotalScanCurrentSite</b>(<i></i>)
-<p>
-        Private slot to ask VirusTotal for a scan of the URL of the current
-        browser.
-</p><a NAME="HelpWindow.__virusTotalSearch" ID="HelpWindow.__virusTotalSearch"></a>
-<h4>HelpWindow.__virusTotalSearch</h4>
-<b>__virusTotalSearch</b>(<i></i>)
-<p>
-        Private slot to search VirusTotal for a given entry.
-</p><a NAME="HelpWindow.__virusTotalSearchChanged" ID="HelpWindow.__virusTotalSearchChanged"></a>
-<h4>HelpWindow.__virusTotalSearchChanged</h4>
-<b>__virusTotalSearchChanged</b>(<i>txt</i>)
-<p>
-        Private slot to react upon changes of the VirusTotal search text.
-</p><dl>
-<dt><i>txt</i></dt>
-<dd>
-contents of the search (string)
-</dd>
-</dl><a NAME="HelpWindow.__virusTotalSubmitUrlError" ID="HelpWindow.__virusTotalSubmitUrlError"></a>
-<h4>HelpWindow.__virusTotalSubmitUrlError</h4>
-<b>__virusTotalSubmitUrlError</b>(<i>msg</i>)
-<p>
-        Private slot to handle an URL scan submission error.
-</p><dl>
-<dt><i>msg</i></dt>
-<dd>
-error message (str)
-</dd>
-</dl><a NAME="HelpWindow.__virusTotalUrlScanReport" ID="HelpWindow.__virusTotalUrlScanReport"></a>
-<h4>HelpWindow.__virusTotalUrlScanReport</h4>
-<b>__virusTotalUrlScanReport</b>(<i>url</i>)
-<p>
-        Private slot to initiate the display of the URL scan report page.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-URL of the URL scan report page (string)
-</dd>
-</dl><a NAME="HelpWindow.__warning" ID="HelpWindow.__warning"></a>
+</p><a NAME="HelpWindow.__warning" ID="HelpWindow.__warning"></a>
 <h4>HelpWindow.__warning</h4>
 <b>__warning</b>(<i>msg</i>)
 <p>
@@ -1616,17 +1544,7 @@ reference to the previewer tab (HelpBrowserWV)
 <b>reloadUserStyleSheet</b>(<i></i>)
 <p>
         Public method to reload the user style sheet.
-</p><a NAME="HelpWindow.requestVirusTotalScan" ID="HelpWindow.requestVirusTotalScan"></a>
-<h4>HelpWindow.requestVirusTotalScan</h4>
-<b>requestVirusTotalScan</b>(<i>url</i>)
-<p>
-        Public method to submit a request to scan an URL by VirusTotal.
-</p><dl>
-<dt><i>url</i></dt>
-<dd>
-URL to be scanned (QUrl)
-</dd>
-</dl><a NAME="HelpWindow.search" ID="HelpWindow.search"></a>
+</p><a NAME="HelpWindow.search" ID="HelpWindow.search"></a>
 <h4>HelpWindow.search</h4>
 <b>search</b>(<i>word</i>)
 <p>

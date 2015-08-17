@@ -589,13 +589,16 @@ the entered string evaluated as a Python expresion
         Public method implementing the main method.
 </p><a NAME="DebugClientBase.progTerminated" ID="DebugClientBase.progTerminated"></a>
 <h4>DebugClientBase.progTerminated</h4>
-<b>progTerminated</b>(<i>status</i>)
+<b>progTerminated</b>(<i>status, exit=False</i>)
 <p>
         Public method to tell the debugger that the program has terminated.
 </p><dl>
 <dt><i>status</i></dt>
 <dd>
-the return status
+return status
+</dd><dt><i>exit</i> (bool)</dt>
+<dd>
+flag indicating to perform a sys.exit()
 </dd>
 </dl><a NAME="DebugClientBase.raw_input" ID="DebugClientBase.raw_input"></a>
 <h4>DebugClientBase.raw_input</h4>

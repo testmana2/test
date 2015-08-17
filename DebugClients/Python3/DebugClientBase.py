@@ -571,7 +571,7 @@ class DebugClientBase(object):
                         res = exc.code
                         atexit._run_exitfuncs()
                     self.writestream.flush()
-                    self.progTerminated(res)
+                    self.progTerminated(res, exit=True)
                 return
 
             if cmd == DebugProtocol.RequestProfile:
@@ -616,7 +616,7 @@ class DebugClientBase(object):
                         atexit._run_exitfuncs()
                     self.prof.save()
                     self.writestream.flush()
-                    self.progTerminated(res)
+                    self.progTerminated(res, exit=True)
                 return
 
             if cmd == DebugProtocol.RequestCoverage:
@@ -667,7 +667,7 @@ class DebugClientBase(object):
                     self.cover.stop()
                     self.cover.save()
                     self.writestream.flush()
-                    self.progTerminated(res)
+                    self.progTerminated(res, exit=True)
                 return
 
             if cmd == DebugProtocol.RequestShutdown:
@@ -1254,11 +1254,13 @@ class DebugClientBase(object):
         """
         return self.running
 
-    def progTerminated(self, status):
+    def progTerminated(self, status, exit=False):
         """
         Public method to tell the debugger that the program has terminated.
         
-        @param status the return status
+        @param status return status
+        @param exit flag indicating to perform a sys.exit()
+        @type bool
         """
         if status is None:
             status = 0
@@ -1272,6 +1274,8 @@ class DebugClientBase(object):
             self.set_quit()
             self.running = None
             self.write('{0}{1:d}\n'.format(DebugProtocol.ResponseExit, status))
+            if exit:
+                sys.exit(status)
         
         # reset coding
         self.__coding = self.defaultCoding

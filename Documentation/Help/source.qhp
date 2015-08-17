@@ -5182,7 +5182,6 @@
       <keyword name="HelpBrowser.__statusBarMessage" id="HelpBrowser.__statusBarMessage" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__statusBarMessage" />
       <keyword name="HelpBrowser.__unsupportedContent" id="HelpBrowser.__unsupportedContent" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__unsupportedContent" />
       <keyword name="HelpBrowser.__urlChanged" id="HelpBrowser.__urlChanged" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__urlChanged" />
-      <keyword name="HelpBrowser.__virusTotal" id="HelpBrowser.__virusTotal" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__virusTotal" />
       <keyword name="HelpBrowser.__webInspector" id="HelpBrowser.__webInspector" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__webInspector" />
       <keyword name="HelpBrowser.__zoomInClickedFrame" id="HelpBrowser.__zoomInClickedFrame" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__zoomInClickedFrame" />
       <keyword name="HelpBrowser.__zoomOutClickedFrame" id="HelpBrowser.__zoomOutClickedFrame" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser.__zoomOutClickedFrame" />
@@ -5523,12 +5522,6 @@
       <keyword name="HelpWindow.__titleChanged" id="HelpWindow.__titleChanged" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__titleChanged" />
       <keyword name="HelpWindow.__userStyleSheet" id="HelpWindow.__userStyleSheet" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__userStyleSheet" />
       <keyword name="HelpWindow.__viewFullScreen" id="HelpWindow.__viewFullScreen" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__viewFullScreen" />
-      <keyword name="HelpWindow.__virusTotalFileScanReport" id="HelpWindow.__virusTotalFileScanReport" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalFileScanReport" />
-      <keyword name="HelpWindow.__virusTotalScanCurrentSite" id="HelpWindow.__virusTotalScanCurrentSite" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalScanCurrentSite" />
-      <keyword name="HelpWindow.__virusTotalSearch" id="HelpWindow.__virusTotalSearch" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSearch" />
-      <keyword name="HelpWindow.__virusTotalSearchChanged" id="HelpWindow.__virusTotalSearchChanged" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSearchChanged" />
-      <keyword name="HelpWindow.__virusTotalSubmitUrlError" id="HelpWindow.__virusTotalSubmitUrlError" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalSubmitUrlError" />
-      <keyword name="HelpWindow.__virusTotalUrlScanReport" id="HelpWindow.__virusTotalUrlScanReport" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__virusTotalUrlScanReport" />
       <keyword name="HelpWindow.__warning" id="HelpWindow.__warning" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__warning" />
       <keyword name="HelpWindow.__whatsThis" id="HelpWindow.__whatsThis" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__whatsThis" />
       <keyword name="HelpWindow.__zoomIn" id="HelpWindow.__zoomIn" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__zoomIn" />
@@ -5572,7 +5565,6 @@
       <keyword name="HelpWindow.preferencesChanged" id="HelpWindow.preferencesChanged" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.preferencesChanged" />
       <keyword name="HelpWindow.previewer" id="HelpWindow.previewer" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.previewer" />
       <keyword name="HelpWindow.reloadUserStyleSheet" id="HelpWindow.reloadUserStyleSheet" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.reloadUserStyleSheet" />
-      <keyword name="HelpWindow.requestVirusTotalScan" id="HelpWindow.requestVirusTotalScan" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.requestVirusTotalScan" />
       <keyword name="HelpWindow.search" id="HelpWindow.search" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.search" />
       <keyword name="HelpWindow.searchEnginesAction" id="HelpWindow.searchEnginesAction" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.searchEnginesAction" />
       <keyword name="HelpWindow.setBackwardAvailable" id="HelpWindow.setBackwardAvailable" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.setBackwardAvailable" />
