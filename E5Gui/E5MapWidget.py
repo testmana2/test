@@ -244,6 +244,7 @@ class E5MapWidget(QWidget):
                 vsbw = 0
             self.setGeometry(QRect(cr.right() - self.__width - vsbw, cr.top(),
                                    self.__width, cr.height()))
+            self.update()
     
     def scaleFactor(self, slider=False):
         """
