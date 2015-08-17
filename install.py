@@ -847,7 +847,8 @@ def createMacAppBundle(pydir):
     @param pydir the name of the directory where the Python script will
         eventually be installed (string)
     """
-    global cfg, sourceDir, macAppBundleName, macPythonExe, macAppBundlePath
+    global cfg, sourceDir, macAppBundleName, macPythonExe, macAppBundlePath, \
+        pyqtVariant
     
     dirs = {
         "contents": "{0}/{1}/Contents/".format(
@@ -868,23 +869,36 @@ def createMacAppBundle(pydir):
         starter = "python{0}".format(sys.version_info.major)
     
     wname = os.path.join(dirs["exe"], "eric6")
+    
+    # determine entry for DYLD_FRAMEWORK_PATH
+    dyldLine = ""
+    try:
+        if pyqtVariant == "PyQt4":
+            from PyQt4.QtCore import QLibraryInfo
+        else:
+            from PyQt5.QtCore import QLibraryInfo
+        qtLibraryDir = QLibraryInfo.location(QLibraryInfo.LibrariesPath)
+    except ImportError:
+        qtLibraryDir = ""
+    if qtLibraryDir:
+        dyldLine = "DYLD_FRAMEWORK_PATH={0}\n".format(qtLibraryDir)
+    
+    # determine entry for PATH
+    pathLine = ""
     path = os.getenv("PATH", "")
     if path:
         pybin = os.path.join(sys.exec_prefix, "bin")
         pathlist = path.split(os.pathsep)
         if pybin not in pathlist:
-            pathlist.insert(0, pybin)
-        path = os.pathsep.join(pathlist)
-        wrapper = ('''#!/bin/sh\n'''
-                   '''\n'''
-                   '''PATH={0}\n'''
-                   '''exec "{1}" "{2}/{3}.py" "$@"\n'''
-                   .format(path, starter, pydir, "eric6"))
-    else:
-        wrapper = ('''#!/bin/sh\n'''
-                   '''\n'''
-                   '''exec "{0}" "{1}/{2}.py" "$@"\n'''
-                   .format(starter, pydir, "eric6"))
+            pathLine = "PATH={0}{1}{2}\n".format(pybin, os.pathsep, path)
+        else:
+            pathLine = "PATH={0}\n".format(path)
+    wrapper = ('''#!/bin/sh\n'''
+               '''\n'''
+               '''{0}'''
+               '''{1}'''
+               '''exec "{2}" "{3}/{4}.py" "$@"\n'''
+               .format(pathLine, dyldLine, starter, pydir, "eric6"))
     copyToFile(wname, wrapper)
     os.chmod(wname, 0o755)
     
