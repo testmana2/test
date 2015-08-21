@@ -190,33 +190,29 @@ class PluginManager(QObject):
                         self.tr("Could not create a package for {0}.")
                             .format(self.__develPluginFile))
         
-        if Preferences.getPluginManager("ActivateExternal"):
-            fname = os.path.join(self.pluginDirs["user"], "__init__.py")
-            if not os.path.exists(fname):
-                if not os.path.exists(self.pluginDirs["user"]):
-                    os.mkdir(self.pluginDirs["user"], 0o755)
-                try:
-                    f = open(fname, "w")
-                    f.close()
-                except IOError:
-                    del self.pluginDirs["user"]
-            
-            if not os.path.exists(self.pluginDirs["global"]) and \
-               os.access(Utilities.getPythonModulesDirectory(), os.W_OK):
-                # create the global plugins directory
-                os.mkdir(self.pluginDirs["global"], 0o755)
-                fname = os.path.join(self.pluginDirs["global"], "__init__.py")
-                f = open(fname, "w", encoding="utf-8")
-                f.write('# -*- coding: utf-8 -*-' + "\n")
-                f.write("\n")
-                f.write('"""' + "\n")
-                f.write('Package containing the global plugins.' + "\n")
-                f.write('"""' + "\n")
+        fname = os.path.join(self.pluginDirs["user"], "__init__.py")
+        if not os.path.exists(fname):
+            if not os.path.exists(self.pluginDirs["user"]):
+                os.mkdir(self.pluginDirs["user"], 0o755)
+            try:
+                f = open(fname, "w")
                 f.close()
-            if not os.path.exists(self.pluginDirs["global"]):
-                del self.pluginDirs["global"]
-        else:
-            del self.pluginDirs["user"]
+            except IOError:
+                del self.pluginDirs["user"]
+        
+        if not os.path.exists(self.pluginDirs["global"]) and \
+           os.access(Utilities.getPythonModulesDirectory(), os.W_OK):
+            # create the global plugins directory
+            os.mkdir(self.pluginDirs["global"], 0o755)
+            fname = os.path.join(self.pluginDirs["global"], "__init__.py")
+            f = open(fname, "w", encoding="utf-8")
+            f.write('# -*- coding: utf-8 -*-' + "\n")
+            f.write("\n")
+            f.write('"""' + "\n")
+            f.write('Package containing the global plugins.' + "\n")
+            f.write('"""' + "\n")
+            f.close()
+        if not os.path.exists(self.pluginDirs["global"]):
             del self.pluginDirs["global"]
         
         if not os.path.exists(self.pluginDirs["eric6"]):
@@ -240,12 +236,13 @@ class PluginManager(QObject):
         
         self.__foundCoreModules = self.getPluginModules(
             self.pluginDirs["eric6"])
-        if "global" in self.pluginDirs:
-            self.__foundGlobalModules = \
-                self.getPluginModules(self.pluginDirs["global"])
-        if "user" in self.pluginDirs:
-            self.__foundUserModules = \
-                self.getPluginModules(self.pluginDirs["user"])
+        if Preferences.getPluginManager("ActivateExternal"):
+            if "global" in self.pluginDirs:
+                self.__foundGlobalModules = \
+                    self.getPluginModules(self.pluginDirs["global"])
+            if "user" in self.pluginDirs:
+                self.__foundUserModules = \
+                    self.getPluginModules(self.pluginDirs["user"])
         
         return len(self.__foundCoreModules + self.__foundGlobalModules +
                    self.__foundUserModules) > 0
