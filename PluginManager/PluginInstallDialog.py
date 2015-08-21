@@ -211,6 +211,9 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         elif button == self.__finishButton:
             self.__finishButton.setEnabled(False)
             self.__installPlugins()
+            if not Preferences.getPluginManager("ActivateExternal"):
+                Preferences.setPluginManager("ActivateExternal", True)
+                self.__restartNeeded = True
             self.__closeButton.show()
             self.__cancelButton.hide()
     
