@@ -174,7 +174,10 @@ def usage(rcode=2):
     print("    -y         add the Python variant to the executable names")
     print("    -z         don't compile the installed python files")
     print("    --pyqt=version version of PyQt to be used (one of 4 or 5)")
-    print("                   (default: {0})".format(pyqtVariant[-1]))
+    if pyqtVariant:
+        print("                   (default: {0})".format(pyqtVariant[-1]))
+    else:
+        print("                   (no PyQt variant found)")
     print()
     print("The file given to the -f option must be valid Python code"
           " defining a")
