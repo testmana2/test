@@ -469,10 +469,15 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
         
         # now compile the plugins
         if doCompile:
-            compileall.compile_dir(
-                os.path.join(destination, packageName), quiet=True)
-            compileall.compile_file(
-                os.path.join(destination, pluginFileName), quiet=True)
+            dir = os.path.join(destination, packageName)
+            files = os.path.join(destination, pluginFileName)
+            if sys.version_info[0] == 2:
+                dir = dir.encode(sys.getfilesystemencoding())
+                files = files.encode(sys.getfilesystemencoding())
+            os.path.join_unicode = False
+            compileall.compile_dir(dir, quiet=True)
+            compileall.compile_file(files, quiet=True)
+            os.path.join_unicode = True
         
         if not self.__external:
             # now load and activate the plugin
