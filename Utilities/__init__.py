@@ -10,6 +10,7 @@ Package implementing various functions/classes needed everywhere within eric6.
 from __future__ import unicode_literals
 try:
     str = unicode
+    import locale
     import urllib
 
     def quote(url):
@@ -1341,8 +1342,12 @@ def getUserName():
     """
     user = getpass.getuser()
     
-    if not user and isWindowsPlatform():
-        return win32_GetUserName()
+    if isWindowsPlatform():
+        if not user:
+            return win32_GetUserName()
+        else:
+            if sys.version_info[0] == 2:
+                user = user.decode(locale.getpreferredencoding())
     
     return user
 
@@ -1600,19 +1605,18 @@ def generatePySideToolPath(toolname):
     @return the PySide tool path with extension (string)
     """
     if isWindowsPlatform():
-        try:
-            # step 1: try internal Python variant of PySide
-            import PySide       # __IGNORE_EXCEPTION__
-            del PySide
-            prefix = sys.prefix
-        except ImportError:
-            # step 2: check for a external Python variant
-            if sys.version_info[0] == 2:
-                prefix = os.path.dirname(
-                    Preferences.getDebugger("Python3Interpreter"))
-            else:
-                prefix = os.path.dirname(
-                    Preferences.getDebugger("PythonInterpreter"))
+        pysideInterpreter = checkPyside()
+        interpreter = sys.version_info[0] - 2
+        hasPyside = pysideInterpreter[interpreter]
+        # if it isn't the internal interpreter, it has to be the external one
+        if not hasPyside:
+            interpreter = not interpreter
+        if interpreter:
+            prefix = os.path.dirname(
+                Preferences.getDebugger("Python3Interpreter"))
+        else:
+            prefix = os.path.dirname(
+                Preferences.getDebugger("PythonInterpreter"))
         if toolname == "pyside-uic":
             return os.path.join(prefix, "Scripts", toolname + '.exe')
         else:
@@ -1626,41 +1630,29 @@ def checkPyside():
     """
     Module function to check the presence of PySide.
     
-    @return tuple of two flags indicating the presence of PySide for Python2
+    @return list of two flags indicating the presence of PySide for Python2
         and PySide for Python3 (boolean, boolean)
     """
-    try:
-        # step 1: try internal Python variant of PySide
-        import PySide       # __IGNORE_EXCEPTION__
-        del PySide
-        int_py = True
-    except ImportError:
-        int_py = False
+    pysideInformation = []
+    for interpreterName in ["PythonInterpreter", "Python3Interpreter"]:
+        interpreter = Preferences.getDebugger(interpreterName)
+        if interpreter == "" or not isinpath(interpreter):
+            hasPyside = False
+        else:
+            hasPyside = False
+            checker = os.path.join(getConfig('ericDir'),
+                                   "Utilities", "PySideImporter.py")
+            args = [checker]
+            proc = QProcess()
+            proc.setProcessChannelMode(QProcess.MergedChannels)
+            proc.start(interpreter, args)
+            finished = proc.waitForFinished(30000)
+            if finished:
+                if proc.exitCode() == 0:
+                    hasPyside = True
+        pysideInformation.append(hasPyside)
     
-    # step 2: check for a external Python variant
-    if sys.version_info[0] == 2:
-        interpreter = Preferences.getDebugger("Python3Interpreter")
-    else:
-        interpreter = Preferences.getDebugger("PythonInterpreter")
-    if interpreter == "" or not isinpath(interpreter):
-        ext_py = False
-    else:
-        ext_py = False
-        checker = os.path.join(getConfig('ericDir'),
-                               "Utilities", "PySideImporter.py")
-        args = [checker]
-        proc = QProcess()
-        proc.setProcessChannelMode(QProcess.MergedChannels)
-        proc.start(interpreter, args)
-        finished = proc.waitForFinished(30000)
-        if finished:
-            if proc.exitCode() == 0:
-                ext_py = True
-    
-    if sys.version_info[0] == 2:
-        return int_py, ext_py
-    else:
-        return ext_py, int_py
+    return pysideInformation
 
 ###############################################################################
 # Other utility functions below

@@ -1,17 +1,155 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2013 - 2013 Tobias Rzepka <tobias.rzepka@gmail.com>
+# Copyright (c) 2013 - 2015 Tobias Rzepka <tobias.rzepka@gmail.com>
 #
 
 """
-Module implementing the open behavior of Python3 for use with Eric6.
+Module implementing some workarounds to let eric6 run under Python 2.
+"""
+
+
+import __builtin__
+import codecs
+import imp
+import locale
+import os
+import sys
+
+# convert all command line arguments to unicode
+sys.argv = [arg.decode(locale.getpreferredencoding()) for arg in sys.argv]
+
+"""
+Improvement for the os.path.join function because the original join doesn't
+use the correct encoding.
+"""
+# Save original function for use in joinAsUnicode
+__join = os.path.join
+# Flag to disable unicode conversion of join function
+os.path.join_unicode = True
+
+
+def joinAsUnicode(*args):
+    """
+    Convert none unicode parameter of the os.path.join into unicode.
+    
+    @param args paths which should be joined (str, unicode)
+    @return unicode str of the path (unicode)
+    """
+    if os.path.join_unicode:
+        convArgs = []
+        for arg in args:
+            if isinstance(arg, str):
+                arg = arg.decode(locale.getpreferredencoding(), 'replace')
+            convArgs.append(arg)
+        return __join(*convArgs)
+    else:
+        return __join(*args)
+
+# Replace os.path.join with unicode aware version
+os.path.join = joinAsUnicode
+
+"""
+Improvement for the imp.load_source and imp.find_module functions because the
+originals doesn't use the correct encoding.
+"""
+# Save original function for use in load_sourceAsStr and find_moduleAsStr
+__load_source = imp.load_source
+__find_module = imp.find_module
+
+
+def load_sourceAsStr(*args):
+    """
+    Convert none str parameter of the imp.load_source into str.
+    
+    @param args  (str, unicode)
+    @return list of args converted to str (list)
+    """
+    convArgs = []
+    for arg in args:
+        if isinstance(arg, unicode):
+            arg = arg.encode(sys.getfilesystemencoding(), 'strict')
+        convArgs.append(arg)
+    return __load_source(*convArgs)
+
+
+def find_moduleAsStr(*args):
+    """
+    Convert none str parameter of the imp.find_module into str.
+    
+    @param args  (str, unicode)
+    @return list of args converted to str (list)
+    """
+    convArgs = []
+    for arg in args:
+        if isinstance(arg, unicode):
+            arg = arg.encode(sys.getfilesystemencoding(), 'strict')
+        convArgs.append(arg)
+    return __find_module(*convArgs)
+    
+# Replace imp.load_source and imp.find_module with unicode aware version
+imp.load_source = load_sourceAsStr
+imp.find_module = find_moduleAsStr
+
+"""
+Improvement for the sys.path list because some other functions doesn't expect
+unicode in the sys.path list.
+"""
+
+
+class PlainStrList(list):
+    """
+    Keep track that all added paths to sys.path are str.
+    """
+    def __init__(self, *args):
+        """
+        Constructor
+        
+        @param args list of paths to start with (list)
+        """
+        super(PlainStrList, self).__init__()
+        self.extend(list(args))
+
+    def __convert(self, element):
+        """
+        Private method to convert unicode to file system encoding.
+        
+        @param element to convert from unicode to file system encoding (any)
+        @return converted element
+        """
+        if isinstance(element, unicode):
+            # Throw exception if it can't be converted, otherwise exception
+            # could occur somewhere else
+            element = element.encode(sys.getfilesystemencoding(), 'strict')
+        return element
+
+    def __setitem__(self, idx, value):
+        """
+        Special method to overwrite a specific list item.
+        
+        @param idx index of the item (int)
+        @param value the new value (any)
+        """
+        super(PlainStrList, self).__setitem__(idx, self.__convert(value))
+
+    def insert(self, idx, value):
+        """
+        Public method to insert a specific list item.
+        
+        @param idx index of the item (int)
+        @param value the new value (any)
+        """
+        super(PlainStrList, self).insert(idx, self.__convert(value))
+
+
+# insert a conversion function from unicode to str at sys.path access
+sys.path = PlainStrList(*sys.path)
+
+"""
+The open function and File class simulates the open behaviour of Python3.
 
 The Eric6 used features are emulated only. The not emulated features
 should throw a NotImplementedError exception.
 """
-
-import __builtin__      # __IGNORE_EXCEPTION__
-import codecs
 
 
 def open(file, mode='r', buffering=-1, encoding=None,
@@ -123,6 +261,8 @@ class File(file):   # __IGNORE_WARNING__
         """
         if self.__encoding is not None:
             txt = codecs.encode(txt, self.__encoding, self.__errors)
+        elif isinstance(txt, unicode):
+            txt = codecs.encode(txt, 'utf-8', self.__errors)
 
         if self.__newline in ['\r\n', '\r']:
             txt = txt.replace('\n', self.__newline)
@@ -152,3 +292,6 @@ if __name__ == '__main__':
     with open('compatibility_fixes.py', encoding='UTF-8') as fp:
         rlines = fp.readlines()
         print(rlines[-1])
+
+#
+# eflag: FileType = Python2
