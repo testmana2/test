@@ -228,7 +228,7 @@ def __syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
         if sys.version_info[0] == 2:
             lines = [x.decode(sys.getfilesystemencoding()) for x in lines]
         match = re.match('\s*File "(.+)", line (\d+)',
-                         lines[0].replace('<string>', '{0}'.format(filename)))
+                         lines[0].replace('<string>', filename))
         if match is not None:
             fn, line = match.group(1, 2)
             if lines[1].startswith('SyntaxError:'):

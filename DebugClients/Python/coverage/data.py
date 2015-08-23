@@ -1,6 +1,7 @@
 """Coverage data for Coverage."""
 
 import os
+import sys
 
 from .backward import iitems, pickle, sorted    # pylint: disable=W0622
 from .files import PathAliases
@@ -101,13 +102,15 @@ class CoverageData(object):
     def line_data(self):
         """Return the map from filenames to lists of line numbers executed."""
         return dict(
-            [(f, sorted(lmap.keys())) for f, lmap in iitems(self.lines)]
+            [(f.decode(sys.getfilesystemencoding()), sorted(lmap.keys()))
+                for f, lmap in iitems(self.lines)]
             )
 
     def arc_data(self):
         """Return the map from filenames to lists of line number pairs."""
         return dict(
-            [(f, sorted(amap.keys())) for f, amap in iitems(self.arcs)]
+            [(f.decode(sys.getfilesystemencoding()), sorted(amap.keys()))
+                for f, amap in iitems(self.arcs)]
             )
 
     def write_file(self, filename):
@@ -163,12 +166,14 @@ class CoverageData(object):
             if isinstance(data, dict):
                 # Unpack the 'lines' item.
                 lines = dict([
-                    (f, dict.fromkeys(linenos, None))
+                    (f.encode(sys.getfilesystemencoding()),
+                        dict.fromkeys(linenos, None))
                         for f, linenos in iitems(data.get('lines', {}))
                     ])
                 # Unpack the 'arcs' item.
                 arcs = dict([
-                    (f, dict.fromkeys(arcpairs, None))
+                    (f.encode(sys.getfilesystemencoding()),
+                        dict.fromkeys(arcpairs, None))
                         for f, arcpairs in iitems(data.get('arcs', {}))
                     ])
         except Exception:

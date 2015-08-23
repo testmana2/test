@@ -503,6 +503,7 @@ class DebugClientBase(object):
                 self.dircache = []
                 sys.argv = []
                 wd, fn, args, tracePython = arg.split('|')
+                fn = fn.encode(sys.getfilesystemencoding())
                 self.__setCoding(fn)
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
@@ -549,6 +550,7 @@ class DebugClientBase(object):
             if cmd == DebugProtocol.RequestRun:
                 sys.argv = []
                 wd, fn, args = arg.split('|')
+                fn = fn.encode(sys.getfilesystemencoding())
                 self.__setCoding(fn)
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
@@ -589,6 +591,7 @@ class DebugClientBase(object):
                 from coverage import coverage
                 sys.argv = []
                 wd, fn, args, erase = arg.split('@@')
+                fn = fn.encode(sys.getfilesystemencoding())
                 self.__setCoding(fn)
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
@@ -632,6 +635,7 @@ class DebugClientBase(object):
                 import PyProfile
                 sys.argv = []
                 wd, fn, args, erase = arg.split('|')
+                fn = fn.encode(sys.getfilesystemencoding())
                 self.__setCoding(fn)
                 sys.argv.append(fn)
                 sys.argv.extend(eval(args))
@@ -671,6 +675,7 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestBreak:
                 fn, line, temporary, set, cond = arg.split('@@')
+                fn = fn.encode(sys.getfilesystemencoding())
                 line = int(line)
                 set = int(set)
                 temporary = int(temporary)
@@ -695,6 +700,7 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestBreakEnable:
                 fn, line, enable = arg.split(',')
+                fn = fn.encode(sys.getfilesystemencoding())
                 line = int(line)
                 enable = int(enable)
                 
@@ -709,6 +715,7 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestBreakIgnore:
                 fn, line, count = arg.split(',')
+                fn = fn.encode(sys.getfilesystemencoding())
                 line = int(line)
                 count = int(count)
                 
@@ -848,6 +855,7 @@ class DebugClientBase(object):
             
             if cmd == DebugProtocol.RequestUTPrepare:
                 fn, tn, tfn, failed, cov, covname, erase = arg.split('|')
+                fn = fn.encode(sys.getfilesystemencoding())
                 sys.path.insert(0, os.path.dirname(os.path.abspath(fn)))
                 os.chdir(sys.path[0])
                 failed = eval(failed)

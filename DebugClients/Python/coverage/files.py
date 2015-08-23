@@ -11,6 +11,8 @@ class FileLocator(object):
     def __init__(self):
         # The absolute path to our current directory.
         self.relative_dir = os.path.normcase(abs_file(os.curdir) + os.sep)
+        if isinstance(self.relative_dir, str):
+            self.relative_dir = self.relative_dir.decode(sys.getfilesystemencoding())
 
         # Cache of results of calling the canonical_filename() method, to
         # avoid duplicating work.
@@ -23,6 +25,8 @@ class FileLocator(object):
         `FileLocator` was constructed.
 
         """
+        if isinstance(filename, str):
+            filename = filename.decode(sys.getfilesystemencoding())
         fnorm = os.path.normcase(filename)
         if fnorm.startswith(self.relative_dir):
             filename = filename[len(self.relative_dir):]

@@ -10,6 +10,7 @@ Module implementing a Python code coverage dialog.
 from __future__ import unicode_literals
 
 import os
+import sys
 
 from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
@@ -22,8 +23,12 @@ from E5Gui.E5ProgressDialog import E5ProgressDialog
 from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 
 import Utilities
-from DebugClients.Python3.coverage import coverage
-from DebugClients.Python3.coverage.misc import CoverageException
+if sys.version_info[0] == 2:
+    from DebugClients.Python.coverage import coverage
+    from DebugClients.Python.coverage.misc import CoverageException
+else:
+    from DebugClients.Python3.coverage import coverage
+    from DebugClients.Python3.coverage.misc import CoverageException
 
 
 class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):

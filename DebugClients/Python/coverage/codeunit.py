@@ -1,6 +1,6 @@
 """Code unit (module) handling for Coverage."""
 
-import glob, os
+import glob, os, sys
 
 from .backward import open_source, string_class, StringIO
 from .misc import CoverageException
@@ -57,6 +57,8 @@ class CodeUnit(object):
         elif f.endswith('$py.class'): # Jython
             f = f[:-9] + ".py"
         self.filename = self.file_locator.canonical_filename(f)
+        if isinstance(self.filename, unicode):
+            self.filename = self.filename.encode(sys.getfilesystemencoding())
 
         if hasattr(morf, '__name__'):
             n = modname = morf.__name__
@@ -64,6 +66,8 @@ class CodeUnit(object):
         else:
             n = os.path.splitext(morf)[0]
             rel = self.file_locator.relative_filename(n)
+            if isinstance(rel, unicode):
+                rel = rel.encode(sys.getfilesystemencoding())
             if os.path.isabs(n):
                 self.relative = (rel != n)
             else:

@@ -346,7 +346,11 @@ class ByteParser(object):
             try:
                 # Python 2.3 and 2.4 don't like partial last lines, so be sure
                 # the text ends nicely for them.
-                self.code = compile(text + '\n', filename, "exec")
+                if sys.version_info[0] == 2 and isinstance(filename, unicode):
+                    filenameEnc = filename.encode('utf-8')
+                else:
+                    filenameEnc = filename
+                self.code = compile(text + '\n', filenameEnc, "exec")
             except SyntaxError:
                 _, synerr, _ = sys.exc_info()
                 raise NotPython(

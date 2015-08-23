@@ -15,6 +15,7 @@ except NameError:
 
 import os
 import re
+import sys
 import difflib
 
 from PyQt5.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
@@ -5468,7 +5469,10 @@ class Editor(QsciScintillaCompat):
         
         fn = self.__getCodeCoverageFile()
         if fn:
-            from DebugClients.Python3.coverage import coverage
+            if sys.version_info[0] == 2:
+                from DebugClients.Python.coverage import coverage
+            else:
+                from DebugClients.Python3.coverage import coverage
             cover = coverage(data_file=fn)
             cover.use_cache(True)
             cover.load()
