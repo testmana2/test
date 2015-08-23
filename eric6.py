@@ -26,6 +26,7 @@ import Toolbox.PyQt4ImportHook  # __IGNORE_WARNING__
 try:  # Only for Py2
     import StringIO as io   # __IGNORE_EXCEPTION__
     import Globals.compatibility_fixes     # __IGNORE_WARNING__
+    import locale
 except ImportError:
     import io       # __IGNORE_WARNING__
     basestring = str
@@ -62,6 +63,7 @@ except ImportError:
 args = None
 mainWindow = None
 splash = None
+inMainLoop = None
 
 if "--debug" in sys.argv:
     del sys.argv[sys.argv.index("--debug")]
@@ -158,6 +160,8 @@ def excepthook(excType, excValue, tracebackobj):
         traceback.print_tb(tracebackobj, None, tbinfofile)
         tbinfofile.seek(0)
         tbinfo = tbinfofile.read()
+        if sys.version_info[0] == 2:
+            tbinfo = tbinfo.decode(locale.getpreferredencoding())
     errmsg = '{0}: \n{1}'.format(str(excType), str(excValue))
     sections = [separator, timeString, separator, errmsg, separator, tbinfo]
     msg = '\n'.join(sections)
@@ -169,10 +173,20 @@ def excepthook(excType, excValue, tracebackobj):
     except IOError:
         pass
     
-    warning = str(notice) + str(msg) + str(versionInfo)
-    # Escape &<> otherwise it's not visible in the error dialog
-    warning = xml.sax.saxutils.escape(warning)
-    qWarning(warning)
+    if inMainLoop is None:
+        if sys.version_info[0] == 2:
+            notice = notice.encode(sys.stdout.encoding, 'replace')
+            msg = msg.encode(sys.stdout.encoding, 'replace')
+            versionInfo = versionInfo.encode(sys.stdout.encoding, 'replace')
+        warning = notice + msg + versionInfo
+        print(warning)
+    else:
+        warning = notice + msg + versionInfo
+        # Escape &<> otherwise it's not visible in the error dialog
+        warning = xml.sax.saxutils.escape(warning)
+        if sys.version_info[0] == 2:
+            warning = warning.encode('utf-8', 'replace')
+        qWarning(warning)
 
 
 def uiStartUp():
@@ -206,7 +220,7 @@ def main():
     from Globals import AppInfo
     import Globals
     
-    global args, mainWindow, splash, restartArgs
+    global args, mainWindow, splash, restartArgs, inMainLoop
     
     sys.excepthook = excepthook
     
@@ -270,11 +284,12 @@ def main():
     if Globals.isWindowsPlatform():
         pyqtDataDir = Globals.getPyQt5ModulesDirectory()
         if os.path.exists(os.path.join(pyqtDataDir, "bin")):
-            path = os.path.join(pyqtDataDir, "bin") + \
-                os.pathsep + os.environ["PATH"]
+            path = os.path.join(pyqtDataDir, "bin")
         else:
-            path = pyqtDataDir + os.pathsep + os.environ["PATH"]
-        os.environ["PATH"] = path
+            path = pyqtDataDir
+        if sys.version_info[0] == 2:
+            path = path.encode(sys.getfilesystemencoding())
+        os.environ["PATH"] = path + os.pathsep + os.environ["PATH"]
     
     pluginFile = None
     noopen = False
@@ -329,12 +344,13 @@ def main():
         eMsg.setMinimumSize(600, 400)
         
         # start the event loop
+        inMainLoop = True
         res = app.exec_()
         logging.debug("Shutting down, result {0:d}".format(res))
         logging.shutdown()
         sys.exit(res)
-    except Exception as err:
-        raise err
+    except:
+        raise
 
 if __name__ == '__main__':
     main()
