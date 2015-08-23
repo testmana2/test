@@ -1671,8 +1671,6 @@ class Editor(QsciScintillaCompat):
         """
         if not m and self.fileName is not None:
             self.lastModified = QFileInfo(self.fileName).lastModified()
-        if Preferences.getEditor("AutoCheckSyntax"):
-            self.clearSyntaxError()
         self.modificationStatusChanged.emit(m, self)
         self.undoAvailable.emit(self.isUndoAvailable())
         self.redoAvailable.emit(self.isRedoAvailable())
