@@ -10,7 +10,6 @@ the pysvn client.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import QApplication, QDialog, QWidget
 
 
@@ -64,7 +63,7 @@ class SvnDialogMixin(object):
             password should be saved.
         """
         from .SvnLoginDialog import SvnLoginDialog
-        cursor = QCursor(QApplication.overrideCursor())
+        cursor = QApplication.overrideCursor()
         if cursor is not None:
             QApplication.restoreOverrideCursor()
         parent = isinstance(self, QWidget) and self or None
@@ -91,7 +90,7 @@ class SvnDialogMixin(object):
         """
         from E5Gui import E5MessageBox
 
-        cursor = QCursor(QApplication.overrideCursor())
+        cursor = QApplication.overrideCursor()
         if cursor is not None:
             QApplication.restoreOverrideCursor()
         parent = isinstance(self, QWidget) and self or None
