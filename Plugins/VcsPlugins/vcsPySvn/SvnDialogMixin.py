@@ -10,6 +10,7 @@ the pysvn client.
 
 from __future__ import unicode_literals
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QDialog, QWidget
 
 
@@ -70,7 +71,7 @@ class SvnDialogMixin(object):
         dlg = SvnLoginDialog(realm, username, may_save, parent)
         res = dlg.exec_()
         if cursor is not None:
-            QApplication.setOverrideCursor(cursor)
+            QApplication.setOverrideCursor(Qt.WaitCursor)
         if res == QDialog.Accepted:
             loginData = dlg.getData()
             return (True, loginData[0], loginData[1], loginData[2])
@@ -120,7 +121,7 @@ class SvnDialogMixin(object):
         msgBox.addButton(self.tr("&Reject"), E5MessageBox.RejectRole)
         msgBox.exec_()
         if cursor is not None:
-            QApplication.setOverrideCursor(cursor)
+            QApplication.setOverrideCursor(Qt.WaitCursor)
         if msgBox.clickedButton() == permButton:
             return (True, trust_dict["failures"], True)
         elif msgBox.clickedButton() == tempButton:
