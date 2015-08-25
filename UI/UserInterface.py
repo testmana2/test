@@ -2435,13 +2435,11 @@ class UserInterface(E5MainWindow):
         self.wizardsMenuAct.setEnabled(False)
         self.__menus["macros"] = self.viewmanager.initMacroMenu()
         self.__menus["extras"].addMenu(self.__menus["macros"])
-        self.__menus["tools"] = QMenu(self.tr('&Tools'), self)
-        self.__menus["tools"].aboutToShow.connect(self.__showToolsMenu)
-        self.__menus["tools"].triggered.connect(self.__toolExecute)
         self.toolGroupsMenu = QMenu(self.tr("Select Tool Group"), self)
         self.toolGroupsMenu.aboutToShow.connect(self.__showToolGroupsMenu)
         self.toolGroupsMenu.triggered.connect(self.__toolGroupSelected)
         self.toolGroupsMenuTriggered = False
+        self.__menus["tools"] = self.__initToolsMenu()
         self.__menus["extras"].addMenu(self.__menus["tools"])
         
         self.__menus["settings"] = QMenu(self.tr('Se&ttings'), self)
@@ -3303,59 +3301,92 @@ class UserInterface(E5MainWindow):
             args = [eric6]
             QProcess.startDetached(program, args)
         
-    def __showToolsMenu(self):
+    def __initToolsMenu(self):
         """
-        Private slot to display the Tools menu.
-        """
-        self.__menus["tools"].clear()
+        Private slot to initialize the Tools menu.
         
-        self.__menus["tools"].addMenu(self.toolGroupsMenu)
-        act = self.__menus["tools"].addAction(
+        @return populated Tools menu
+        @rtype QMenu
+        """
+        menu = QMenu(self.tr('&Tools'), self)
+        
+        btMenu = QMenu(self.tr("&Builtin Tools"), self)
+        if self.designer4Act is not None:
+            btMenu.addAction(self.designer4Act)
+        if self.linguist4Act is not None:
+            btMenu.addAction(self.linguist4Act)
+        btMenu.addAction(self.uipreviewerAct)
+        btMenu.addAction(self.trpreviewerAct)
+        btMenu.addAction(self.diffAct)
+        btMenu.addAction(self.compareAct)
+        btMenu.addAction(self.sqlBrowserAct)
+        btMenu.addAction(self.miniEditorAct)
+        btMenu.addAction(self.iconEditorAct)
+        btMenu.addAction(self.snapshotAct)
+        btMenu.addAction(self.webBrowserAct)
+        
+        ptMenu = QMenu(self.tr("&Plugin Tools"), self)
+        ptMenu.aboutToShow.connect(self.__showPluginToolsMenu)
+        
+        utMenu = QMenu(self.tr("&User Tools"), self)
+        utMenu.triggered.connect(self.__toolExecute)
+        utMenu.aboutToShow.connect(self.__showUserToolsMenu)
+        
+        menu.addMenu(btMenu)
+        menu.addMenu(ptMenu)
+        menu.addMenu(utMenu)
+        
+        self.__menus["builtin_tools"] = btMenu
+        self.__menus["plugin_tools"] = ptMenu
+        self.__menus["user_tools"] = utMenu
+        
+        return menu
+        
+    def __showPluginToolsMenu(self):
+        """
+        Private slot to show the Plugin Tools menu.
+        """
+        # TODO: This doesn't work on Mac OS X with Qt compiled against
+        # Cocoa anymore
+        # TODO: Change tools plug-ins to populate the menu statically
+        # and just enabled the actions/menus accordingly
+        self.showMenu.emit("Tools", self.__menus["plugin_tools"])
+        
+    def __showUserToolsMenu(self):
+        """
+        Private slot to display the User Tools menu.
+        """
+        self.__menus["user_tools"].clear()
+        
+        self.__menus["user_tools"].addMenu(self.toolGroupsMenu)
+        act = self.__menus["user_tools"].addAction(
             self.tr("Configure Tool Groups ..."),
             self.__toolGroupsConfiguration)
         act.setData(-1)
-        act = self.__menus["tools"].addAction(
+        act = self.__menus["user_tools"].addAction(
             self.tr("Configure current Tool Group ..."),
             self.__toolsConfiguration)
         act.setData(-2)
-        self.__menus["tools"].addSeparator()
+        act.setEnabled(self.currentToolGroup >= 0)
+        self.__menus["user_tools"].addSeparator()
         
-        if self.currentToolGroup == -1:
-            act.setEnabled(False)
-            # add the default entries
-            if self.designer4Act is not None:
-                self.__menus["tools"].addAction(self.designer4Act)
-            if self.linguist4Act is not None:
-                self.__menus["tools"].addAction(self.linguist4Act)
-            self.__menus["tools"].addAction(self.uipreviewerAct)
-            self.__menus["tools"].addAction(self.trpreviewerAct)
-            self.__menus["tools"].addAction(self.diffAct)
-            self.__menus["tools"].addAction(self.compareAct)
-            self.__menus["tools"].addAction(self.sqlBrowserAct)
-            self.__menus["tools"].addAction(self.miniEditorAct)
-            self.__menus["tools"].addAction(self.iconEditorAct)
-            self.__menus["tools"].addAction(self.snapshotAct)
-            self.__menus["tools"].addAction(self.webBrowserAct)
-        elif self.currentToolGroup == -2:
-            act.setEnabled(False)
-            # add the plugin entries
-            self.showMenu.emit("Tools", self.__menus["tools"])
-        else:
-            # add the configurable entries
-            idx = 0
-            try:
-                for tool in self.toolGroups[self.currentToolGroup][1]:
-                    if tool['menutext'] == '--':
-                        self.__menus["tools"].addSeparator()
-                    else:
-                        act = self.__menus["tools"].addAction(
-                            UI.PixmapCache.getIcon(tool['icon']),
-                            tool['menutext'])
-                        act.setData(idx)
-                    idx += 1
-            except IndexError:
-                # the current tool group might have been deleted
-                pass
+        # add the configurable entries
+        idx = 0
+        try:
+            for tool in self.toolGroups[self.currentToolGroup][1]:
+                if tool['menutext'] == '--':
+                    self.__menus["user_tools"].addSeparator()
+                else:
+                    act = self.__menus["user_tools"].addAction(
+                        UI.PixmapCache.getIcon(tool['icon']),
+                        tool['menutext'])
+                    act.setData(idx)
+                idx += 1
+        except IndexError:
+            # the current tool group might have been deleted
+            act = self.__menus["user_tools"].addAction(
+                self.tr("No User Tools Configured"))
+            act.setData(-3)
         
     def __showToolGroupsMenu(self):
         """
@@ -3363,32 +3394,21 @@ class UserInterface(E5MainWindow):
         """
         self.toolGroupsMenu.clear()
         
-        # add the default entry
-        act = self.toolGroupsMenu.addAction(self.tr("&Builtin Tools"))
-        act.setData(-1)
-        if self.currentToolGroup == -1:
-            font = act.font()
-            font.setBold(True)
-            act.setFont(font)
-        
-        # add the plugins entry
-        act = self.toolGroupsMenu.addAction(self.tr("&Plugin Tools"))
-        act.setData(-2)
-        if self.currentToolGroup == -2:
-            font = act.font()
-            font.setBold(True)
-            act.setFont(font)
-        
         # add the configurable tool groups
-        idx = 0
-        for toolGroup in self.toolGroups:
-            act = self.toolGroupsMenu.addAction(toolGroup[0])
-            act.setData(idx)
-            if self.currentToolGroup == idx:
-                font = act.font()
-                font.setBold(True)
-                act.setFont(font)
-            idx += 1
+        if self.toolGroups:
+            idx = 0
+            for toolGroup in self.toolGroups:
+                act = self.toolGroupsMenu.addAction(toolGroup[0])
+                act.setData(idx)
+                if self.currentToolGroup == idx:
+                    font = act.font()
+                    font.setBold(True)
+                    act.setFont(font)
+                idx += 1
+        else:
+            act = self.toolGroupsMenu.addAction(
+                self.tr("No User Tools Configured"))
+            act.setData(-3)
         
     def __toolGroupSelected(self, act):
         """
@@ -4610,7 +4630,7 @@ class UserInterface(E5MainWindow):
             return
         
         if self.currentToolGroup < 0:
-            # it was a built in or plugin tool, don't handle it here
+            # it was an action not to be handled here
             return
         
         idx = act.data()
