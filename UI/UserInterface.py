@@ -3342,7 +3342,7 @@ class UserInterface(E5MainWindow):
         # Cocoa anymore
         # TODO: Change tools plug-ins to populate the menu statically
         # and just enabled the actions/menus accordingly
-        self.showMenu.emit("Tools", self.__menus["plugin_tools"])
+        self.showMenu.emit("PluginTools", self.__menus["plugin_tools"])
         
     def __showUserToolsMenu(self):
         """
