@@ -200,6 +200,7 @@ class Listspace(QSplitter, ViewManager):
         
         QSplitter.__init__(self, parent)
         ViewManager.__init__(self)
+        self.setChildrenCollapsible(False)
         
         self.viewlist = QListWidget(self)
         policy = self.viewlist.sizePolicy()
@@ -211,6 +212,7 @@ class Listspace(QSplitter, ViewManager):
         self.viewlist.customContextMenuRequested.connect(self.__showMenu)
         
         self.stackArea = QSplitter(self)
+        self.stackArea.setChildrenCollapsible(False)
         self.addWidget(self.stackArea)
         self.stackArea.setOrientation(Qt.Vertical)
         stack = StackedWidget(self.stackArea)

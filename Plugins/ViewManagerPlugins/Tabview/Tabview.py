@@ -764,6 +764,8 @@ class Tabview(QSplitter, ViewManager):
         
         QSplitter.__init__(self, parent)
         ViewManager.__init__(self)
+        self.setChildrenCollapsible(False)
+        
         tw = TabWidget(self)
         self.addWidget(tw)
         self.tabWidgets.append(tw)
