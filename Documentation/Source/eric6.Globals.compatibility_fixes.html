@@ -21,25 +21,34 @@ a { color: #BA6D36; }
 <body><a NAME="top" ID="top"></a>
 <h1>eric6.Globals.compatibility_fixes</h1>
 <p>
-Module implementing the open behavior of Python3 for use with Eric6.
-</p><p>
-The Eric6 used features are emulated only. The not emulated features
-should throw a NotImplementedError exception.
+Module implementing some workarounds to let eric6 run under Python 2.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>__find_module</td></tr><tr><td>__join</td></tr><tr><td>__load_source</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
 <tr>
 <td><a href="#File">File</a></td>
 <td></td>
+</tr><tr>
+<td><a href="#PlainStrList">PlainStrList</a></td>
+<td>Keep track that all added paths to sys.path are str.</td>
 </tr>
 </table>
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#find_moduleAsStr">find_moduleAsStr</a></td>
+<td>Convert none str parameter of the imp.find_module into str.</td>
+</tr><tr>
+<td><a href="#joinAsUnicode">joinAsUnicode</a></td>
+<td>Convert none unicode parameter of the os.path.join into unicode.</td>
+</tr><tr>
+<td><a href="#load_sourceAsStr">load_sourceAsStr</a></td>
+<td>Convert none str parameter of the imp.load_source into str.</td>
+</tr><tr>
 <td><a href="#open">open</a></td>
 <td>Replacement for the build in open function.</td>
 </tr>
@@ -185,6 +194,149 @@ decoded lines read
 <dt><i>txt</i></dt>
 <dd>
 data to write. (str, bytes)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="PlainStrList" ID="PlainStrList"></a>
+<h2>PlainStrList</h2>
+<p>
+    Keep track that all added paths to sys.path are str.
+</p>
+<h3>Derived from</h3>
+list
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#PlainStrList.__init__">PlainStrList</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#PlainStrList.__convert">__convert</a></td>
+<td>Private method to convert unicode to file system encoding.</td>
+</tr><tr>
+<td><a href="#PlainStrList.__setitem__">__setitem__</a></td>
+<td>Special method to overwrite a specific list item.</td>
+</tr><tr>
+<td><a href="#PlainStrList.insert">insert</a></td>
+<td>Public method to insert a specific list item.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="PlainStrList.__init__" ID="PlainStrList.__init__"></a>
+<h4>PlainStrList (Constructor)</h4>
+<b>PlainStrList</b>(<i>*args</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>args</i></dt>
+<dd>
+list of paths to start with (list)
+</dd>
+</dl><a NAME="PlainStrList.__convert" ID="PlainStrList.__convert"></a>
+<h4>PlainStrList.__convert</h4>
+<b>__convert</b>(<i>element</i>)
+<p>
+        Private method to convert unicode to file system encoding.
+</p><dl>
+<dt><i>element</i></dt>
+<dd>
+to convert from unicode to file system encoding (any)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+converted element
+</dd>
+</dl><a NAME="PlainStrList.__setitem__" ID="PlainStrList.__setitem__"></a>
+<h4>PlainStrList.__setitem__</h4>
+<b>__setitem__</b>(<i>idx, value</i>)
+<p>
+        Special method to overwrite a specific list item.
+</p><dl>
+<dt><i>idx</i></dt>
+<dd>
+index of the item (int)
+</dd><dt><i>value</i></dt>
+<dd>
+the new value (any)
+</dd>
+</dl><a NAME="PlainStrList.insert" ID="PlainStrList.insert"></a>
+<h4>PlainStrList.insert</h4>
+<b>insert</b>(<i>idx, value</i>)
+<p>
+        Public method to insert a specific list item.
+</p><dl>
+<dt><i>idx</i></dt>
+<dd>
+index of the item (int)
+</dd><dt><i>value</i></dt>
+<dd>
+the new value (any)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="find_moduleAsStr" ID="find_moduleAsStr"></a>
+<h2>find_moduleAsStr</h2>
+<b>find_moduleAsStr</b>(<i>*args</i>)
+<p>
+    Convert none str parameter of the imp.find_module into str.
+</p><dl>
+<dt><i>args</i></dt>
+<dd>
+(str, unicode)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of args converted to str (list)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="joinAsUnicode" ID="joinAsUnicode"></a>
+<h2>joinAsUnicode</h2>
+<b>joinAsUnicode</b>(<i>*args</i>)
+<p>
+    Convert none unicode parameter of the os.path.join into unicode.
+</p><dl>
+<dt><i>args</i></dt>
+<dd>
+paths which should be joined (str, unicode)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+unicode str of the path (unicode)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="load_sourceAsStr" ID="load_sourceAsStr"></a>
+<h2>load_sourceAsStr</h2>
+<b>load_sourceAsStr</b>(<i>*args</i>)
+<p>
+    Convert none str parameter of the imp.load_source into str.
+</p><dl>
+<dt><i>args</i></dt>
+<dd>
+(str, unicode)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of args converted to str (list)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

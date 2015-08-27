@@ -1872,6 +1872,11 @@ eric6.Globals.compatibility_fixes.File.readline?4(limit=-1)
 eric6.Globals.compatibility_fixes.File.readlines?4(hint=-1)
 eric6.Globals.compatibility_fixes.File.write?4(txt)
 eric6.Globals.compatibility_fixes.File?1(filein, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
+eric6.Globals.compatibility_fixes.PlainStrList.insert?4(idx, value)
+eric6.Globals.compatibility_fixes.PlainStrList?1(*args)
+eric6.Globals.compatibility_fixes.find_moduleAsStr?4(*args)
+eric6.Globals.compatibility_fixes.joinAsUnicode?4(*args)
+eric6.Globals.compatibility_fixes.load_sourceAsStr?4(*args)
 eric6.Globals.compatibility_fixes.open?4(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True)
 eric6.Globals.configDir?7
 eric6.Globals.findPythonInterpreters?4(pyVersion)
@@ -2503,6 +2508,7 @@ eric6.Helpviewer.Feeds.FeedsManager.FeedsManager.on_reloadButton_clicked?4()
 eric6.Helpviewer.Feeds.FeedsManager.FeedsManager.openUrl?7
 eric6.Helpviewer.Feeds.FeedsManager.FeedsManager.show?4()
 eric6.Helpviewer.Feeds.FeedsManager.FeedsManager?1(parent=None)
+eric6.Helpviewer.FlashCookieManager.FlashCookie.FlashCookie?1()
 eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.RefreshInterval?7
 eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.clearCache?4()
 eric6.Helpviewer.FlashCookieManager.FlashCookieManager.FlashCookieManager.clearNewOrigins?4()
@@ -9263,6 +9269,7 @@ eric6.compileUiFiles.pyName?4(py_dir, py_file)
 eric6.eric6.args?7
 eric6.eric6.excepthook?4(excType, excValue, tracebackobj)
 eric6.eric6.handleSingleApplication?4(ddindex)
+eric6.eric6.inMainLoop?7
 eric6.eric6.main?4()
 eric6.eric6.mainWindow?7
 eric6.eric6.restartArgs?7

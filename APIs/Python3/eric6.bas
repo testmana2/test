@@ -523,6 +523,7 @@ PasswordsDialog QDialog Ui_PasswordsDialog
 PersonalDataDialog QDialog Ui_PersonalDataDialog
 PersonalInformationManager QObject
 PixmapDiagram E5MainWindow
+PlainStrList list
 PluginActivationError PluginError
 PluginClassFormatError PluginError
 PluginDetailsDialog QDialog Ui_PluginDetailsDialog

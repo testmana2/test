@@ -356,6 +356,9 @@ E5MainWindow
 <td><a href="#UserInterface.__initToolbars">__initToolbars</a></td>
 <td>Private slot to create the toolbars.</td>
 </tr><tr>
+<td><a href="#UserInterface.__initToolsMenu">__initToolsMenu</a></td>
+<td>Private slot to initialize the Tools menu.</td>
+</tr><tr>
 <td><a href="#UserInterface.__installPlugins">__installPlugins</a></td>
 <td>Private slot to show a dialog to install a new plugin.</td>
 </tr><tr>
@@ -476,6 +479,9 @@ E5MainWindow
 <td><a href="#UserInterface.__showPluginInfo">__showPluginInfo</a></td>
 <td>Private slot to show the plugin info dialog.</td>
 </tr><tr>
+<td><a href="#UserInterface.__showPluginToolsMenu">__showPluginToolsMenu</a></td>
+<td>Private slot to show the Plugin Tools menu.</td>
+</tr><tr>
 <td><a href="#UserInterface.__showPrevious">__showPrevious</a></td>
 <td>Private slot used to show the previous tab or file.</td>
 </tr><tr>
@@ -521,8 +527,8 @@ E5MainWindow
 <td><a href="#UserInterface.__showToolbarsMenu">__showToolbarsMenu</a></td>
 <td>Private slot to display the Toolbars menu.</td>
 </tr><tr>
-<td><a href="#UserInterface.__showToolsMenu">__showToolsMenu</a></td>
-<td>Private slot to display the Tools menu.</td>
+<td><a href="#UserInterface.__showUserToolsMenu">__showUserToolsMenu</a></td>
+<td>Private slot to display the User Tools menu.</td>
 </tr><tr>
 <td><a href="#UserInterface.__showVersions">__showVersions</a></td>
 <td>Private slot to handle the Versions dialog.</td>
@@ -1223,7 +1229,22 @@ flag indicating the existence of an error log file (boolean)
 <b>__initToolbars</b>(<i></i>)
 <p>
         Private slot to create the toolbars.
-</p><a NAME="UserInterface.__installPlugins" ID="UserInterface.__installPlugins"></a>
+</p><a NAME="UserInterface.__initToolsMenu" ID="UserInterface.__initToolsMenu"></a>
+<h4>UserInterface.__initToolsMenu</h4>
+<b>__initToolsMenu</b>(<i></i>)
+<p>
+        Private slot to initialize the Tools menu.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+populated Tools menu
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+QMenu
+</dd>
+</dl><a NAME="UserInterface.__installPlugins" ID="UserInterface.__installPlugins"></a>
 <h4>UserInterface.__installPlugins</h4>
 <b>__installPlugins</b>(<i>pluginFileNames=[]</i>)
 <p>
@@ -1515,6 +1536,11 @@ filename of the file to show (string)
 <b>__showPluginInfo</b>(<i></i>)
 <p>
         Private slot to show the plugin info dialog.
+</p><a NAME="UserInterface.__showPluginToolsMenu" ID="UserInterface.__showPluginToolsMenu"></a>
+<h4>UserInterface.__showPluginToolsMenu</h4>
+<b>__showPluginToolsMenu</b>(<i></i>)
+<p>
+        Private slot to show the Plugin Tools menu.
 </p><a NAME="UserInterface.__showPrevious" ID="UserInterface.__showPrevious"></a>
 <h4>UserInterface.__showPrevious</h4>
 <b>__showPrevious</b>(<i></i>)
@@ -1613,11 +1639,11 @@ flag indicating to delete the file after
 <b>__showToolbarsMenu</b>(<i></i>)
 <p>
         Private slot to display the Toolbars menu.
-</p><a NAME="UserInterface.__showToolsMenu" ID="UserInterface.__showToolsMenu"></a>
-<h4>UserInterface.__showToolsMenu</h4>
-<b>__showToolsMenu</b>(<i></i>)
+</p><a NAME="UserInterface.__showUserToolsMenu" ID="UserInterface.__showUserToolsMenu"></a>
+<h4>UserInterface.__showUserToolsMenu</h4>
+<b>__showUserToolsMenu</b>(<i></i>)
 <p>
-        Private slot to display the Tools menu.
+        Private slot to display the User Tools menu.
 </p><a NAME="UserInterface.__showVersions" ID="UserInterface.__showVersions"></a>
 <h4>UserInterface.__showVersions</h4>
 <b>__showVersions</b>(<i></i>)
