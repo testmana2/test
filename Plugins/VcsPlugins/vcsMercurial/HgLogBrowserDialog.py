@@ -35,6 +35,7 @@ COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
 COLORS = [str(QColor(x).name()) for x in COLORNAMES]
 
 
+# TODO: add push and pull actions
 class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
