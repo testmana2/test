@@ -12038,6 +12038,7 @@
       <keyword name="UserInterface.__initQtDocActions" id="UserInterface.__initQtDocActions" ref="eric6.UI.UserInterface.html#UserInterface.__initQtDocActions" />
       <keyword name="UserInterface.__initStatusbar" id="UserInterface.__initStatusbar" ref="eric6.UI.UserInterface.html#UserInterface.__initStatusbar" />
       <keyword name="UserInterface.__initToolbars" id="UserInterface.__initToolbars" ref="eric6.UI.UserInterface.html#UserInterface.__initToolbars" />
+      <keyword name="UserInterface.__initToolsMenu" id="UserInterface.__initToolsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__initToolsMenu" />
       <keyword name="UserInterface.__installPlugins" id="UserInterface.__installPlugins" ref="eric6.UI.UserInterface.html#UserInterface.__installPlugins" />
       <keyword name="UserInterface.__ircAutoConnected" id="UserInterface.__ircAutoConnected" ref="eric6.UI.UserInterface.html#UserInterface.__ircAutoConnected" />
       <keyword name="UserInterface.__lastEditorClosed" id="UserInterface.__lastEditorClosed" ref="eric6.UI.UserInterface.html#UserInterface.__lastEditorClosed" />
@@ -12077,6 +12078,7 @@
       <keyword name="UserInterface.__showNext" id="UserInterface.__showNext" ref="eric6.UI.UserInterface.html#UserInterface.__showNext" />
       <keyword name="UserInterface.__showPixmap" id="UserInterface.__showPixmap" ref="eric6.UI.UserInterface.html#UserInterface.__showPixmap" />
       <keyword name="UserInterface.__showPluginInfo" id="UserInterface.__showPluginInfo" ref="eric6.UI.UserInterface.html#UserInterface.__showPluginInfo" />
+      <keyword name="UserInterface.__showPluginToolsMenu" id="UserInterface.__showPluginToolsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showPluginToolsMenu" />
       <keyword name="UserInterface.__showPrevious" id="UserInterface.__showPrevious" ref="eric6.UI.UserInterface.html#UserInterface.__showPrevious" />
       <keyword name="UserInterface.__showPyQt4Doc" id="UserInterface.__showPyQt4Doc" ref="eric6.UI.UserInterface.html#UserInterface.__showPyQt4Doc" />
       <keyword name="UserInterface.__showPyQt5Doc" id="UserInterface.__showPyQt5Doc" ref="eric6.UI.UserInterface.html#UserInterface.__showPyQt5Doc" />
@@ -12092,7 +12094,7 @@
       <keyword name="UserInterface.__showSystemEmailClient" id="UserInterface.__showSystemEmailClient" ref="eric6.UI.UserInterface.html#UserInterface.__showSystemEmailClient" />
       <keyword name="UserInterface.__showToolGroupsMenu" id="UserInterface.__showToolGroupsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showToolGroupsMenu" />
       <keyword name="UserInterface.__showToolbarsMenu" id="UserInterface.__showToolbarsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showToolbarsMenu" />
-      <keyword name="UserInterface.__showToolsMenu" id="UserInterface.__showToolsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showToolsMenu" />
+      <keyword name="UserInterface.__showUserToolsMenu" id="UserInterface.__showUserToolsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showUserToolsMenu" />
       <keyword name="UserInterface.__showVersions" id="UserInterface.__showVersions" ref="eric6.UI.UserInterface.html#UserInterface.__showVersions" />
       <keyword name="UserInterface.__showWindowMenu" id="UserInterface.__showWindowMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showWindowMenu" />
       <keyword name="UserInterface.__showWizardsMenu" id="UserInterface.__showWizardsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__showWizardsMenu" />
