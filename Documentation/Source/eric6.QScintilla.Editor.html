@@ -245,6 +245,9 @@ QsciScintillaCompat
 <td><a href="#Editor.__contextSaveAs">__contextSaveAs</a></td>
 <td>Private slot handling the save as context menu entry.</td>
 </tr><tr>
+<td><a href="#Editor.__contextSaveCopy">__contextSaveCopy</a></td>
+<td>Private slot handling the save copy context menu entry.</td>
+</tr><tr>
 <td><a href="#Editor.__createChangeMarkerPixmap">__createChangeMarkerPixmap</a></td>
 <td>Private method to create a pixmap for the change markers.</td>
 </tr><tr>
@@ -289,6 +292,9 @@ QsciScintillaCompat
 </tr><tr>
 <td><a href="#Editor.__getPyVersion">__getPyVersion</a></td>
 <td>Private method to return the Python main version (2 or 3) or 0 if it's not a Python file at all.</td>
+</tr><tr>
+<td><a href="#Editor.__getSaveFileName">__getSaveFileName</a></td>
+<td>Private method to get the name of the file to be saved.</td>
 </tr><tr>
 <td><a href="#Editor.__ignoreSpellingAlways">__ignoreSpellingAlways</a></td>
 <td>Private to always ignore the word below the spelling context menu.</td>
@@ -1059,10 +1065,13 @@ QsciScintillaCompat
 <td>Public method to revert back to the last saved state.</td>
 </tr><tr>
 <td><a href="#Editor.saveFile">saveFile</a></td>
-<td>Public slot to save the text to a file.</td>
+<td>Public method to save the text to a file.</td>
 </tr><tr>
 <td><a href="#Editor.saveFileAs">saveFileAs</a></td>
 <td>Public slot to save a file with a new name.</td>
+</tr><tr>
+<td><a href="#Editor.saveFileCopy">saveFileCopy</a></td>
+<td>Public method to save a copy of the file.</td>
 </tr><tr>
 <td><a href="#Editor.searchCurrentWordBackward">searchCurrentWordBackward</a></td>
 <td>Public slot to search the current word backward.</td>
@@ -1519,6 +1528,11 @@ reference to the action that was selected (QAction)
 <b>__contextSaveAs</b>(<i></i>)
 <p>
         Private slot handling the save as context menu entry.
+</p><a NAME="Editor.__contextSaveCopy" ID="Editor.__contextSaveCopy"></a>
+<h4>Editor.__contextSaveCopy</h4>
+<b>__contextSaveCopy</b>(<i></i>)
+<p>
+        Private slot handling the save copy context menu entry.
 </p><a NAME="Editor.__createChangeMarkerPixmap" ID="Editor.__createChangeMarkerPixmap"></a>
 <h4>Editor.__createChangeMarkerPixmap</h4>
 <b>__createChangeMarkerPixmap</b>(<i>key, size=16, width=4</i>)
@@ -1689,6 +1703,21 @@ Tuple of macro name and a flag, indicating, if the user
 <dt>Returns:</dt>
 <dd>
 Python version (2 or 3) or 0 if it's not a Python file (int)
+</dd>
+</dl><a NAME="Editor.__getSaveFileName" ID="Editor.__getSaveFileName"></a>
+<h4>Editor.__getSaveFileName</h4>
+<b>__getSaveFileName</b>(<i>path=None</i>)
+<p>
+        Private method to get the name of the file to be saved.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory to save the file in (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+file name (string)
 </dd>
 </dl><a NAME="Editor.__ignoreSpellingAlways" ID="Editor.__ignoreSpellingAlways"></a>
 <h4>Editor.__ignoreSpellingAlways</h4>
@@ -3990,7 +4019,7 @@ reference to the resize event (QResizeEvent)
 <h4>Editor.saveFile</h4>
 <b>saveFile</b>(<i>saveas=False, path=None</i>)
 <p>
-        Public slot to save the text to a file.
+        Public method to save the text to a file.
 </p><dl>
 <dt><i>saveas</i></dt>
 <dd>
@@ -4023,6 +4052,21 @@ flag indicating a save to project operation
 <dd>
 tuple of two values (boolean, string) giving a success
             indicator and the name of the saved file
+</dd>
+</dl><a NAME="Editor.saveFileCopy" ID="Editor.saveFileCopy"></a>
+<h4>Editor.saveFileCopy</h4>
+<b>saveFileCopy</b>(<i>path=None</i>)
+<p>
+        Public method to save a copy of the file.
+</p><dl>
+<dt><i>path</i></dt>
+<dd>
+directory to save the file in (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating success (boolean)
 </dd>
 </dl><a NAME="Editor.searchCurrentWordBackward" ID="Editor.searchCurrentWordBackward"></a>
 <h4>Editor.searchCurrentWordBackward</h4>
@@ -4390,13 +4434,16 @@ reference to the wheel event (QWheelEvent)
 </dd>
 </dl><a NAME="Editor.writeFile" ID="Editor.writeFile"></a>
 <h4>Editor.writeFile</h4>
-<b>writeFile</b>(<i>fn</i>)
+<b>writeFile</b>(<i>fn, backup=True</i>)
 <p>
         Public slot to write the text to a file.
 </p><dl>
 <dt><i>fn</i></dt>
 <dd>
 filename to write to (string)
+</dd><dt><i>backup</i></dt>
+<dd>
+flag indicating to save a backup (boolean)
 </dd>
 </dl><dl>
 <dt>Returns:</dt>

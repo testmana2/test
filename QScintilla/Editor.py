@@ -770,6 +770,9 @@ class Editor(QsciScintillaCompat):
         self.menu.addAction(
             UI.PixmapCache.getIcon("fileSaveAs.png"),
             self.tr('Save As...'), self.__contextSaveAs)
+        self.menu.addAction(
+            UI.PixmapCache.getIcon("fileSaveCopy.png"),
+            self.tr('Save Copy...'), self.__contextSaveCopy)
         if not self.miniMenu:
             self.menu.addMenu(self.exportersMenu)
             self.menu.addSeparator()
@@ -2893,11 +2896,12 @@ class Editor(QsciScintillaCompat):
             ok = self.findNextTarget()
         self.endUndoAction()
         
-    def writeFile(self, fn):
+    def writeFile(self, fn, backup=True):
         """
         Public slot to write the text to a file.
         
         @param fn filename to write to (string)
+        @param backup flag indicating to save a backup (boolean)
         @return flag indicating success (boolean)
         """
         if Preferences.getEditor("StripTrailingWhitespace"):
@@ -2915,7 +2919,7 @@ class Editor(QsciScintillaCompat):
                 txt += eol
         
         # create a backup file, if the option is set
-        createBackup = Preferences.getEditor("CreateBackupFile")
+        createBackup = backup and Preferences.getEditor("CreateBackupFile")
         if createBackup:
             if os.path.islink(fn):
                 fn = os.path.realpath(fn)
@@ -2952,9 +2956,92 @@ class Editor(QsciScintillaCompat):
                 .format(fn, str(why)))
             return False
         
+    def __getSaveFileName(self, path=None):
+        """
+        Private method to get the name of the file to be saved.
+        
+        @param path directory to save the file in (string)
+        @return file name (string)
+        """
+        # save to project, if a project is loaded
+        if self.project.isOpen():
+            if self.fileName is not None and \
+               self.project.startswithProjectPath(self.fileName):
+                path = os.path.dirname(self.fileName)
+            else:
+                path = self.project.getProjectPath()
+        
+        if not path and self.fileName is not None:
+            path = os.path.dirname(self.fileName)
+        if not path:
+            path = Preferences.getMultiProject("Workspace") or \
+                Utilities.getHomeDir()
+        
+        from . import Lexers
+        if self.fileName:
+            filterPattern = "(*{0})".format(
+                os.path.splitext(self.fileName)[1])
+            for filter in Lexers.getSaveFileFiltersList(True):
+                if filterPattern in filter:
+                    defaultFilter = filter
+                    break
+            else:
+                defaultFilter = Preferences.getEditor("DefaultSaveFilter")
+        else:
+            defaultFilter = Preferences.getEditor("DefaultSaveFilter")
+        fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+            self,
+            self.tr("Save File"),
+            path,
+            Lexers.getSaveFileFiltersList(True, True),
+            defaultFilter,
+            E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+        
+        if fn:
+            if fn.endswith("."):
+                fn = fn[:-1]
+            
+            ext = QFileInfo(fn).suffix()
+            if not ext:
+                ex = selectedFilter.split("(*")[1].split(")")[0]
+                if ex:
+                    fn += ex
+            if QFileInfo(fn).exists():
+                res = E5MessageBox.yesNo(
+                    self,
+                    self.tr("Save File"),
+                    self.tr("<p>The file <b>{0}</b> already exists."
+                            " Overwrite it?</p>").format(fn),
+                    icon=E5MessageBox.Warning)
+                if not res:
+                    return ""
+            fn = Utilities.toNativeSeparators(fn)
+        
+        return fn
+        
+    def saveFileCopy(self, path=None):
+        """
+        Public method to save a copy of the file.
+        
+        @param path directory to save the file in (string)
+        @return flag indicating success (boolean)
+        """
+        fn = self.__getSaveFileName(path)
+        if  not fn:
+            return False
+        
+        res = self.writeFile(fn)
+        if res:
+            # save to project, if a project is loaded
+            if self.project.isOpen() and \
+                    self.project.startswithProjectPath(fn):
+                self.project.appendFile(fn)
+        
+        return res
+        
     def saveFile(self, saveas=False, path=None):
         """
-        Public slot to save the text to a file.
+        Public method to save the text to a file.
         
         @param saveas flag indicating a 'save as' action (boolean)
         @param path directory to save the file in (string)
@@ -2967,62 +3054,11 @@ class Editor(QsciScintillaCompat):
         if saveas or self.fileName is None:
             saveas = True
             
-            # save to project, if a project is loaded
-            if self.project.isOpen():
-                if self.fileName is not None and \
-                   self.project.startswithProjectPath(self.fileName):
-                    path = os.path.dirname(self.fileName)
-                else:
-                    path = self.project.getProjectPath()
-            
-            if not path and self.fileName is not None:
-                path = os.path.dirname(self.fileName)
-            if not path:
-                path = Preferences.getMultiProject("Workspace") or \
-                    Utilities.getHomeDir()
-            
-            from . import Lexers
-            if self.fileName:
-                filterPattern = "(*{0})".format(
-                    os.path.splitext(self.fileName)[1])
-                for filter in Lexers.getSaveFileFiltersList(True):
-                    if filterPattern in filter:
-                        defaultFilter = filter
-                        break
-                else:
-                    defaultFilter = Preferences.getEditor("DefaultSaveFilter")
-            else:
-                defaultFilter = Preferences.getEditor("DefaultSaveFilter")
-            fn, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
-                self,
-                self.tr("Save File"),
-                path,
-                Lexers.getSaveFileFiltersList(True, True),
-                defaultFilter,
-                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
-            
-            if fn:
-                if fn.endswith("."):
-                    fn = fn[:-1]
-                
-                ext = QFileInfo(fn).suffix()
-                if not ext:
-                    ex = selectedFilter.split("(*")[1].split(")")[0]
-                    if ex:
-                        fn += ex
-                if QFileInfo(fn).exists():
-                    res = E5MessageBox.yesNo(
-                        self,
-                        self.tr("Save File"),
-                        self.tr("<p>The file <b>{0}</b> already exists."
-                                " Overwrite it?</p>").format(fn),
-                        icon=E5MessageBox.Warning)
-                    if not res:
-                        return False
-                fn = Utilities.toNativeSeparators(fn)
-                newName = fn
-            else:
+            fn = self.__getSaveFileName(path)
+            if  not fn:
                 return False
+            
+            newName = fn
             
             # save to project, if a project is loaded
             if self.project.isOpen() and \
@@ -3053,7 +3089,7 @@ class Editor(QsciScintillaCompat):
                 # save to project, if a project is loaded
                 if self.project.isOpen() and \
                         self.project.startswithProjectPath(fn):
-                    self.project.appendFile(self.fileName)
+                    self.project.appendFile(fn)
                     self.addedToProject()
                 
                 self.setLanguage(self.fileName)
@@ -5196,6 +5232,12 @@ class Editor(QsciScintillaCompat):
         ok = self.saveFileAs()
         if ok:
             self.vm.setEditorName(self, self.fileName)
+        
+    def __contextSaveCopy(self):
+        """
+        Private slot handling the save copy context menu entry.
+        """
+        self.saveFileCopy()
         
     def __contextClose(self):
         """

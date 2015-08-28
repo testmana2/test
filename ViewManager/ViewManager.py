@@ -684,6 +684,22 @@ class ViewManager(QObject):
         self.saveAsAct.triggered.connect(self.saveAsCurrentEditor)
         self.fileActions.append(self.saveAsAct)
         
+        self.saveCopyAct = E5Action(
+            QCoreApplication.translate('ViewManager', 'Save Copy'),
+            UI.PixmapCache.getIcon("fileSaveCopy.png"),
+            QCoreApplication.translate('ViewManager', 'Save &Copy...'),
+            0, 0, self.saveActGrp, 'vm_file_save_copy')
+        self.saveCopyAct.setStatusTip(QCoreApplication.translate(
+            'ViewManager', 'Save a copy of the current file'))
+        self.saveCopyAct.setWhatsThis(QCoreApplication.translate(
+            'ViewManager',
+            """<b>Save Copy</b>"""
+            """<p>Save a copy of the contents of current editor window."""
+            """ The file can be entered in a file selection dialog.</p>"""
+        ))
+        self.saveCopyAct.triggered.connect(self.saveCopyCurrentEditor)
+        self.fileActions.append(self.saveCopyAct)
+        
         self.saveAllAct = E5Action(
             QCoreApplication.translate('ViewManager', 'Save all'),
             UI.PixmapCache.getIcon("fileSaveAll.png"),
@@ -782,6 +798,7 @@ class ViewManager(QObject):
         menu.addSeparator()
         menu.addAction(self.saveAct)
         menu.addAction(self.saveAsAct)
+        menu.addAction(self.saveCopyAct)
         menu.addAction(self.saveAllAct)
         self.exportersMenuAct = menu.addMenu(self.exportersMenu)
         menu.addSeparator()
@@ -818,6 +835,7 @@ class ViewManager(QObject):
         tb.addSeparator()
         tb.addAction(self.saveAct)
         tb.addAction(self.saveAsAct)
+        tb.addAction(self.saveCopyAct)
         tb.addAction(self.saveAllAct)
         
         toolbarManager.addToolBar(tb, tb.windowTitle())
@@ -4858,8 +4876,6 @@ class ViewManager(QObject):
             ok = ed.saveFileAs()
             if ok:
                 self.setEditorName(ed, ed.getFileName())
-        else:
-            return
         
     def saveAsCurrentEditor(self):
         """
@@ -4867,6 +4883,24 @@ class ViewManager(QObject):
         """
         aw = self.activeWindow()
         self.saveAsEditorEd(aw)
+
+    def saveCopyEditorEd(self, ed):
+        """
+        Public slot to save the contents of an editor to a new copy of
+        the file.
+        
+        @param ed editor to be saved
+        """
+        if ed:
+            ed.saveFileCopy()
+        
+    def saveCopyCurrentEditor(self):
+        """
+        Public slot to save the contents of the current editor to a new copy
+        of the file.
+        """
+        aw = self.activeWindow()
+        self.saveCopyEditorEd(aw)
         
     def saveEditorsList(self, editors):
         """

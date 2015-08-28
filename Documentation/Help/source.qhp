@@ -4271,6 +4271,7 @@
       <keyword name="Editor.__contextOpenRejections" id="Editor.__contextOpenRejections" ref="eric6.QScintilla.Editor.html#Editor.__contextOpenRejections" />
       <keyword name="Editor.__contextSave" id="Editor.__contextSave" ref="eric6.QScintilla.Editor.html#Editor.__contextSave" />
       <keyword name="Editor.__contextSaveAs" id="Editor.__contextSaveAs" ref="eric6.QScintilla.Editor.html#Editor.__contextSaveAs" />
+      <keyword name="Editor.__contextSaveCopy" id="Editor.__contextSaveCopy" ref="eric6.QScintilla.Editor.html#Editor.__contextSaveCopy" />
       <keyword name="Editor.__createChangeMarkerPixmap" id="Editor.__createChangeMarkerPixmap" ref="eric6.QScintilla.Editor.html#Editor.__createChangeMarkerPixmap" />
       <keyword name="Editor.__cursorPositionChanged" id="Editor.__cursorPositionChanged" ref="eric6.QScintilla.Editor.html#Editor.__cursorPositionChanged" />
       <keyword name="Editor.__deleteAllChangeMarkers" id="Editor.__deleteAllChangeMarkers" ref="eric6.QScintilla.Editor.html#Editor.__deleteAllChangeMarkers" />
@@ -4286,6 +4287,7 @@
       <keyword name="Editor.__getCodeCoverageFile" id="Editor.__getCodeCoverageFile" ref="eric6.QScintilla.Editor.html#Editor.__getCodeCoverageFile" />
       <keyword name="Editor.__getMacroName" id="Editor.__getMacroName" ref="eric6.QScintilla.Editor.html#Editor.__getMacroName" />
       <keyword name="Editor.__getPyVersion" id="Editor.__getPyVersion" ref="eric6.QScintilla.Editor.html#Editor.__getPyVersion" />
+      <keyword name="Editor.__getSaveFileName" id="Editor.__getSaveFileName" ref="eric6.QScintilla.Editor.html#Editor.__getSaveFileName" />
       <keyword name="Editor.__ignoreSpellingAlways" id="Editor.__ignoreSpellingAlways" ref="eric6.QScintilla.Editor.html#Editor.__ignoreSpellingAlways" />
       <keyword name="Editor.__indentLine" id="Editor.__indentLine" ref="eric6.QScintilla.Editor.html#Editor.__indentLine" />
       <keyword name="Editor.__indentSelection" id="Editor.__indentSelection" ref="eric6.QScintilla.Editor.html#Editor.__indentSelection" />
@@ -4544,6 +4546,7 @@
       <keyword name="Editor.revertToUnmodified" id="Editor.revertToUnmodified" ref="eric6.QScintilla.Editor.html#Editor.revertToUnmodified" />
       <keyword name="Editor.saveFile" id="Editor.saveFile" ref="eric6.QScintilla.Editor.html#Editor.saveFile" />
       <keyword name="Editor.saveFileAs" id="Editor.saveFileAs" ref="eric6.QScintilla.Editor.html#Editor.saveFileAs" />
+      <keyword name="Editor.saveFileCopy" id="Editor.saveFileCopy" ref="eric6.QScintilla.Editor.html#Editor.saveFileCopy" />
       <keyword name="Editor.searchCurrentWordBackward" id="Editor.searchCurrentWordBackward" ref="eric6.QScintilla.Editor.html#Editor.searchCurrentWordBackward" />
       <keyword name="Editor.searchCurrentWordForward" id="Editor.searchCurrentWordForward" ref="eric6.QScintilla.Editor.html#Editor.searchCurrentWordForward" />
       <keyword name="Editor.selectCurrentWord" id="Editor.selectCurrentWord" ref="eric6.QScintilla.Editor.html#Editor.selectCurrentWord" />
@@ -8068,6 +8071,7 @@
       <keyword name="MiniEditor.__resizeLinenoMargin" id="MiniEditor.__resizeLinenoMargin" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__resizeLinenoMargin" />
       <keyword name="MiniEditor.__save" id="MiniEditor.__save" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__save" />
       <keyword name="MiniEditor.__saveAs" id="MiniEditor.__saveAs" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__saveAs" />
+      <keyword name="MiniEditor.__saveCopy" id="MiniEditor.__saveCopy" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__saveCopy" />
       <keyword name="MiniEditor.__saveFile" id="MiniEditor.__saveFile" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__saveFile" />
       <keyword name="MiniEditor.__search" id="MiniEditor.__search" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__search" />
       <keyword name="MiniEditor.__searchClearMarkers" id="MiniEditor.__searchClearMarkers" ref="eric6.QScintilla.MiniEditor.html#MiniEditor.__searchClearMarkers" />
@@ -13027,6 +13031,8 @@
       <keyword name="ViewManager.saveAllEditors" id="ViewManager.saveAllEditors" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveAllEditors" />
       <keyword name="ViewManager.saveAsCurrentEditor" id="ViewManager.saveAsCurrentEditor" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveAsCurrentEditor" />
       <keyword name="ViewManager.saveAsEditorEd" id="ViewManager.saveAsEditorEd" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveAsEditorEd" />
+      <keyword name="ViewManager.saveCopyCurrentEditor" id="ViewManager.saveCopyCurrentEditor" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveCopyCurrentEditor" />
+      <keyword name="ViewManager.saveCopyEditorEd" id="ViewManager.saveCopyEditorEd" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveCopyEditorEd" />
       <keyword name="ViewManager.saveCurrentEditor" id="ViewManager.saveCurrentEditor" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveCurrentEditor" />
       <keyword name="ViewManager.saveEditor" id="ViewManager.saveEditor" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveEditor" />
       <keyword name="ViewManager.saveEditorEd" id="ViewManager.saveEditorEd" ref="eric6.ViewManager.ViewManager.html#ViewManager.saveEditorEd" />

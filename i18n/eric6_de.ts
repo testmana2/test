@@ -8663,12 +8663,12 @@ gesamte Auswahl.&lt;/li&gt;
 <context>
     <name>Editor</name>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2858"/>
+        <location filename="../QScintilla/Editor.py" line="2861"/>
         <source>Open File</source>
         <translation>Datei öffnen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3028"/>
+        <location filename="../QScintilla/Editor.py" line="3024"/>
         <source>Save File</source>
         <translation>Datei sichern</translation>
     </message>
@@ -8748,62 +8748,62 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zur Klammer auswählen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="788"/>
+        <location filename="../QScintilla/Editor.py" line="791"/>
         <source>Print</source>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2423"/>
+        <location filename="../QScintilla/Editor.py" line="2426"/>
         <source>Printing...</source>
         <translation>Drucke...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2440"/>
+        <location filename="../QScintilla/Editor.py" line="2443"/>
         <source>Printing completed</source>
         <translation>Drucken beendet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2442"/>
+        <location filename="../QScintilla/Editor.py" line="2445"/>
         <source>Error while printing</source>
         <translation>Fehler beim Drucken</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2445"/>
+        <location filename="../QScintilla/Editor.py" line="2448"/>
         <source>Printing aborted</source>
         <translation>Drucken abgebrochen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6382"/>
+        <location filename="../QScintilla/Editor.py" line="6425"/>
         <source>File changed</source>
         <translation>Datei geändert</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="831"/>
+        <location filename="../QScintilla/Editor.py" line="834"/>
         <source>Check</source>
         <translation>Prüfen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2803"/>
+        <location filename="../QScintilla/Editor.py" line="2806"/>
         <source>File Modified</source>
         <translation>Datei geändert</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="853"/>
+        <location filename="../QScintilla/Editor.py" line="856"/>
         <source>Code metrics...</source>
         <translation>Quelltextmetriken...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="854"/>
+        <location filename="../QScintilla/Editor.py" line="857"/>
         <source>Code coverage...</source>
         <translation>Quelltext Abdeckung...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="862"/>
+        <location filename="../QScintilla/Editor.py" line="865"/>
         <source>Profile data...</source>
         <translation>Profildaten...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="851"/>
+        <location filename="../QScintilla/Editor.py" line="854"/>
         <source>Show</source>
         <translation>Zeige</translation>
     </message>
@@ -8818,17 +8818,17 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Box Kommentar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1731"/>
+        <location filename="../QScintilla/Editor.py" line="1734"/>
         <source>Modification of Read Only file</source>
         <translation>Änderungsversuch für eine schreibgeschützte Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1731"/>
+        <location filename="../QScintilla/Editor.py" line="1734"/>
         <source>You are attempting to change a read only file. Please save to a different file first.</source>
         <translation>Sie versuchen, eine schreibgeschützte Datei zu ändern. Bitte speichern Sie sie zuerst in eine andere Datei.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="901"/>
+        <location filename="../QScintilla/Editor.py" line="904"/>
         <source>Languages</source>
         <translation>Sprachen</translation>
     </message>
@@ -8838,152 +8838,152 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Zurück zum letzten gesichert Zustand</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6103"/>
+        <location filename="../QScintilla/Editor.py" line="6146"/>
         <source>Macro Name</source>
         <translation>Makro Name</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6103"/>
+        <location filename="../QScintilla/Editor.py" line="6146"/>
         <source>Select a macro name:</source>
         <translation>Wähle einen Makro Namen:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6174"/>
+        <location filename="../QScintilla/Editor.py" line="6217"/>
         <source>Macro files (*.macro)</source>
         <translation>Makrodateien (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6131"/>
+        <location filename="../QScintilla/Editor.py" line="6174"/>
         <source>Load macro file</source>
         <translation>Lade Makrodatei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6154"/>
+        <location filename="../QScintilla/Editor.py" line="6197"/>
         <source>Error loading macro</source>
         <translation>Fehler beim Makro Laden</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6174"/>
+        <location filename="../QScintilla/Editor.py" line="6217"/>
         <source>Save macro file</source>
         <translation>Makrodatei schreiben</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6191"/>
+        <location filename="../QScintilla/Editor.py" line="6234"/>
         <source>Save macro</source>
         <translation>Makro speichern</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6207"/>
+        <location filename="../QScintilla/Editor.py" line="6250"/>
         <source>Error saving macro</source>
         <translation>Fehler beim Makro speichern</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6220"/>
+        <location filename="../QScintilla/Editor.py" line="6263"/>
         <source>Start Macro Recording</source>
         <translation>Makroaufzeichnung starten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6246"/>
+        <location filename="../QScintilla/Editor.py" line="6289"/>
         <source>Macro Recording</source>
         <translation>Makroaufzeichnung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6246"/>
+        <location filename="../QScintilla/Editor.py" line="6289"/>
         <source>Enter name of the macro:</source>
         <translation>Gib einen Namen für das Makro ein:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1147"/>
+        <location filename="../QScintilla/Editor.py" line="1150"/>
         <source>Toggle bookmark</source>
         <translation>Lesezeichen setzen/löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1149"/>
+        <location filename="../QScintilla/Editor.py" line="1152"/>
         <source>Next bookmark</source>
         <translation>Nächstes Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1151"/>
+        <location filename="../QScintilla/Editor.py" line="1154"/>
         <source>Previous bookmark</source>
         <translation>Vorheriges Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1153"/>
+        <location filename="../QScintilla/Editor.py" line="1156"/>
         <source>Clear all bookmarks</source>
         <translation>Alle Lesezeichen löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1173"/>
+        <location filename="../QScintilla/Editor.py" line="1176"/>
         <source>Toggle breakpoint</source>
         <translation>Haltepunkt setzen/löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1207"/>
+        <location filename="../QScintilla/Editor.py" line="1210"/>
         <source>LMB toggles bookmarks</source>
         <translation>LMK schaltet Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1211"/>
+        <location filename="../QScintilla/Editor.py" line="1214"/>
         <source>LMB toggles breakpoints</source>
         <translation>LMK schaltet Haltepunkte</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1183"/>
+        <location filename="../QScintilla/Editor.py" line="1186"/>
         <source>Next breakpoint</source>
         <translation>Nächster Haltepunkt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1185"/>
+        <location filename="../QScintilla/Editor.py" line="1188"/>
         <source>Previous breakpoint</source>
         <translation>Vorheriger Haltepunkt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1187"/>
+        <location filename="../QScintilla/Editor.py" line="1190"/>
         <source>Clear all breakpoints</source>
         <translation>Alle Haltepunkte löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1178"/>
+        <location filename="../QScintilla/Editor.py" line="1181"/>
         <source>Edit breakpoint...</source>
         <translation>Haltepunkt bearbeiten...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5098"/>
+        <location filename="../QScintilla/Editor.py" line="5135"/>
         <source>Enable breakpoint</source>
         <translation>Haltepunkt aktivieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5101"/>
+        <location filename="../QScintilla/Editor.py" line="5138"/>
         <source>Disable breakpoint</source>
         <translation>Haltepunkt deaktivieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5446"/>
+        <location filename="../QScintilla/Editor.py" line="5489"/>
         <source>Code Coverage</source>
         <translation>Quelltext Abdeckung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5446"/>
+        <location filename="../QScintilla/Editor.py" line="5489"/>
         <source>Please select a coverage file</source>
         <translation>Bitte wählen Sie eine Datei mit Abdeckungsdaten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5628"/>
+        <location filename="../QScintilla/Editor.py" line="5671"/>
         <source>Profile Data</source>
         <translation>Profildaten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5628"/>
+        <location filename="../QScintilla/Editor.py" line="5671"/>
         <source>Please select a profile file</source>
         <translation>Bitte wählen Sie eine Datei mit Profildaten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4372"/>
+        <location filename="../QScintilla/Editor.py" line="4409"/>
         <source>Autocompletion</source>
         <translation>Automatische Vervollständigung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4372"/>
+        <location filename="../QScintilla/Editor.py" line="4409"/>
         <source>Autocompletion is not available because there is no autocompletion source set.</source>
         <translation>Die automatische Vervollständigung ist nicht verfügbar, da keine Quelle gesetzt ist.</translation>
     </message>
@@ -8998,12 +8998,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Leere Zeilen verkürzen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1156"/>
+        <location filename="../QScintilla/Editor.py" line="1159"/>
         <source>Goto syntax error</source>
         <translation>Zu Syntaxfehler gehen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1160"/>
+        <location filename="../QScintilla/Editor.py" line="1163"/>
         <source>Clear syntax error</source>
         <translation>Syntaxfehler löschen</translation>
     </message>
@@ -9013,87 +9013,87 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Autom. Speicherung aktiv</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6684"/>
+        <location filename="../QScintilla/Editor.py" line="6727"/>
         <source>Drop Error</source>
         <translation>Drop Fehler</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1158"/>
+        <location filename="../QScintilla/Editor.py" line="1161"/>
         <source>Show syntax error message</source>
         <translation>Zeige Syntaxfehlermeldung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5788"/>
+        <location filename="../QScintilla/Editor.py" line="5831"/>
         <source>Syntax Error</source>
         <translation>Syntaxfehler</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5788"/>
+        <location filename="../QScintilla/Editor.py" line="5831"/>
         <source>No syntax error message available.</source>
         <translation>Keine Syntaxfehlermeldung verfügbar.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1175"/>
+        <location filename="../QScintilla/Editor.py" line="1178"/>
         <source>Toggle temporary breakpoint</source>
         <translation>Temporären Haltepunkt setzen/löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="856"/>
+        <location filename="../QScintilla/Editor.py" line="859"/>
         <source>Show code coverage annotations</source>
         <translation>Markiere Zeilen ohne Abdeckung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="859"/>
+        <location filename="../QScintilla/Editor.py" line="862"/>
         <source>Hide code coverage annotations</source>
         <translation>Lösche Abdeckungsmarkierungen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1190"/>
+        <location filename="../QScintilla/Editor.py" line="1193"/>
         <source>Next uncovered line</source>
         <translation>Nächste nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1193"/>
+        <location filename="../QScintilla/Editor.py" line="1196"/>
         <source>Previous uncovered line</source>
         <translation>Vorige nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5513"/>
+        <location filename="../QScintilla/Editor.py" line="5556"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Zeilen ohne Abdeckung Markieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5506"/>
+        <location filename="../QScintilla/Editor.py" line="5549"/>
         <source>All lines have been covered.</source>
         <translation>Alle Zeilen sind abgedeckt.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5513"/>
+        <location filename="../QScintilla/Editor.py" line="5556"/>
         <source>There is no coverage file available.</source>
         <translation>Es gibt keine Datei mit Abdeckungsinformationen.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2803"/>
+        <location filename="../QScintilla/Editor.py" line="2806"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält ungesicherte Änderungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6145"/>
+        <location filename="../QScintilla/Editor.py" line="6188"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makrodatei &lt;b&gt;{0}&lt;/b&gt; kann nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6154"/>
+        <location filename="../QScintilla/Editor.py" line="6197"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makrodatei &lt;b&gt;{0}&lt;/b&gt; ist zerstört.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6207"/>
+        <location filename="../QScintilla/Editor.py" line="6250"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makrodatei &lt;b&gt;{0}&lt;/b&gt; kann nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6684"/>
+        <location filename="../QScintilla/Editor.py" line="6727"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; ist keine Datei.&lt;/p&gt;</translation>
     </message>
@@ -9103,172 +9103,172 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>&lt;p&gt;Die Größe der Datei &lt;b&gt;{0}&lt;/b&gt; ist &lt;b&gt;{1} KB&lt;7B&gt;. Soll sie wirklich geladen werden?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="875"/>
+        <location filename="../QScintilla/Editor.py" line="878"/>
         <source>Diagrams</source>
         <translation>Diagramme</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="877"/>
+        <location filename="../QScintilla/Editor.py" line="880"/>
         <source>Class Diagram...</source>
         <translation>Klassendiagramm...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="879"/>
+        <location filename="../QScintilla/Editor.py" line="882"/>
         <source>Package Diagram...</source>
         <translation>Package Diagramm...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="881"/>
+        <location filename="../QScintilla/Editor.py" line="884"/>
         <source>Imports Diagram...</source>
         <translation>Imports-Diagramm...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="883"/>
+        <location filename="../QScintilla/Editor.py" line="886"/>
         <source>Application Diagram...</source>
         <translation>Applikations-Diagramm...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="904"/>
+        <location filename="../QScintilla/Editor.py" line="907"/>
         <source>No Language</source>
         <translation>Keine Sprache</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6544"/>
+        <location filename="../QScintilla/Editor.py" line="6587"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6705"/>
+        <location filename="../QScintilla/Editor.py" line="6748"/>
         <source>Resources</source>
         <translation>Ressourcen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6707"/>
+        <location filename="../QScintilla/Editor.py" line="6750"/>
         <source>Add file...</source>
         <translation>Datei hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6709"/>
+        <location filename="../QScintilla/Editor.py" line="6752"/>
         <source>Add files...</source>
         <translation>Dateien hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6711"/>
+        <location filename="../QScintilla/Editor.py" line="6754"/>
         <source>Add aliased file...</source>
         <translation>Aliased-Datei hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6714"/>
+        <location filename="../QScintilla/Editor.py" line="6757"/>
         <source>Add localized resource...</source>
         <translation>Lokalisierte Ressource hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6737"/>
+        <location filename="../QScintilla/Editor.py" line="6780"/>
         <source>Add file resource</source>
         <translation>Dateiressource hinzufügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6753"/>
+        <location filename="../QScintilla/Editor.py" line="6796"/>
         <source>Add file resources</source>
         <translation>Dateiressourcen hinzufügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6781"/>
+        <location filename="../QScintilla/Editor.py" line="6824"/>
         <source>Add aliased file resource</source>
         <translation>Aliased-Dateiressourcen hinzufügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6781"/>
+        <location filename="../QScintilla/Editor.py" line="6824"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias für Datei &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6845"/>
+        <location filename="../QScintilla/Editor.py" line="6888"/>
         <source>Package Diagram</source>
         <translation>Package-Diagramm</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6845"/>
+        <location filename="../QScintilla/Editor.py" line="6888"/>
         <source>Include class attributes?</source>
         <translation>Klassenattribute anzeigen?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6879"/>
+        <location filename="../QScintilla/Editor.py" line="6922"/>
         <source>Application Diagram</source>
         <translation>Applikations-Diagramm</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6879"/>
+        <location filename="../QScintilla/Editor.py" line="6922"/>
         <source>Include module names?</source>
         <translation>Modulnamen anzeigen?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6718"/>
+        <location filename="../QScintilla/Editor.py" line="6761"/>
         <source>Add resource frame</source>
         <translation>Ressourcenrahmen hinzufügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6220"/>
+        <location filename="../QScintilla/Editor.py" line="6263"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Eine Makroaufzeichnung ist bereits aktiv. Neu starten?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1196"/>
+        <location filename="../QScintilla/Editor.py" line="1199"/>
         <source>Next task</source>
         <translation>Nächste Aufgabe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1198"/>
+        <location filename="../QScintilla/Editor.py" line="1201"/>
         <source>Previous task</source>
         <translation>Vorherige Aufgabe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="814"/>
+        <location filename="../QScintilla/Editor.py" line="817"/>
         <source>from Document</source>
         <translation>vom Dokument</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="816"/>
+        <location filename="../QScintilla/Editor.py" line="819"/>
         <source>from APIs</source>
         <translation>von APIs</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="818"/>
+        <location filename="../QScintilla/Editor.py" line="821"/>
         <source>from Document and APIs</source>
         <translation>vom Dokument und von APIs</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1024"/>
+        <location filename="../QScintilla/Editor.py" line="1027"/>
         <source>Export as</source>
         <translation>Exportieren als</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1247"/>
+        <location filename="../QScintilla/Editor.py" line="1250"/>
         <source>Export source</source>
         <translation>Quelltext exportieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1239"/>
+        <location filename="../QScintilla/Editor.py" line="1242"/>
         <source>&lt;p&gt;No exporter available for the export format &lt;b&gt;{0}&lt;/b&gt;. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;Für das Exportformat &lt;b&gt;{0}&lt;/b&gt; steht kein Exporter zur Verfügung. Abbruch...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1247"/>
+        <location filename="../QScintilla/Editor.py" line="1250"/>
         <source>No export format given. Aborting...</source>
         <translation>Kein Exportformat angegeben. Abbruch...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6865"/>
+        <location filename="../QScintilla/Editor.py" line="6908"/>
         <source>Imports Diagram</source>
         <translation>Imports Diagramm</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6865"/>
+        <location filename="../QScintilla/Editor.py" line="6908"/>
         <source>Include imports from external modules?</source>
         <translation>Imports externer Module anzeigen?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="811"/>
+        <location filename="../QScintilla/Editor.py" line="814"/>
         <source>dynamic</source>
         <translation>dynamisch</translation>
     </message>
@@ -9278,7 +9278,7 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Calltip</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="785"/>
+        <location filename="../QScintilla/Editor.py" line="788"/>
         <source>Print Preview</source>
         <translation>Druckvorschau</translation>
     </message>
@@ -9293,57 +9293,57 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Eingabehilfen aktiv</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="988"/>
+        <location filename="../QScintilla/Editor.py" line="991"/>
         <source>End-of-Line Type</source>
         <translation>Zeilenendemarkierung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="992"/>
+        <location filename="../QScintilla/Editor.py" line="995"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="999"/>
+        <location filename="../QScintilla/Editor.py" line="1002"/>
         <source>Windows</source>
         <translation>Windows</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1006"/>
+        <location filename="../QScintilla/Editor.py" line="1009"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="947"/>
+        <location filename="../QScintilla/Editor.py" line="950"/>
         <source>Encodings</source>
         <translation>Kodierungen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="927"/>
+        <location filename="../QScintilla/Editor.py" line="930"/>
         <source>Guessed</source>
         <translation>Ermittelt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1262"/>
+        <location filename="../QScintilla/Editor.py" line="1265"/>
         <source>Alternatives</source>
         <translation>Alternativen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1258"/>
+        <location filename="../QScintilla/Editor.py" line="1261"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativen ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1278"/>
+        <location filename="../QScintilla/Editor.py" line="1281"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1278"/>
+        <location filename="../QScintilla/Editor.py" line="1281"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Wähle den anzuwendenden Pygments Lexer.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7157"/>
+        <location filename="../QScintilla/Editor.py" line="7200"/>
         <source>Check spelling...</source>
         <translation>Rechtschreibprüfung...</translation>
     </message>
@@ -9353,12 +9353,12 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Rechtschreibprüfung für Auswahl...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7160"/>
+        <location filename="../QScintilla/Editor.py" line="7203"/>
         <source>Add to dictionary</source>
         <translation>Zum Wörterbuch hinzufügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7162"/>
+        <location filename="../QScintilla/Editor.py" line="7205"/>
         <source>Ignore All</source>
         <translation>Alle ignorieren</translation>
     </message>
@@ -9368,122 +9368,122 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Aus dem Wörterbuch entfernen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2858"/>
+        <location filename="../QScintilla/Editor.py" line="2861"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geöffnet werden.&lt;br /&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="2961"/>
+        <location filename="../QScintilla/Editor.py" line="2965"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gesichert werden.&lt;br/&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1163"/>
+        <location filename="../QScintilla/Editor.py" line="1166"/>
         <source>Next warning</source>
         <translation>Nächste Warnung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1166"/>
+        <location filename="../QScintilla/Editor.py" line="1169"/>
         <source>Previous warning</source>
         <translation>Vorherige Warnung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1168"/>
+        <location filename="../QScintilla/Editor.py" line="1171"/>
         <source>Show warning message</source>
         <translation>Zeige Warnung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1170"/>
+        <location filename="../QScintilla/Editor.py" line="1173"/>
         <source>Clear warnings</source>
         <translation>Warnungen löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="3028"/>
+        <location filename="../QScintilla/Editor.py" line="3024"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6191"/>
+        <location filename="../QScintilla/Editor.py" line="6234"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Makrodatei &lt;b&gt;{0}&lt;/b&gt; existiert bereits. Überschreiben?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6042"/>
+        <location filename="../QScintilla/Editor.py" line="6085"/>
         <source>Warning: {0}</source>
         <translation>Warnung: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6049"/>
+        <location filename="../QScintilla/Editor.py" line="6092"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6378"/>
+        <location filename="../QScintilla/Editor.py" line="6421"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Warnung:&lt;/b&gt; Vorgenommenen Änderungen gehen beim neu einlesen verloren.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4477"/>
+        <location filename="../QScintilla/Editor.py" line="4514"/>
         <source>Activating Auto-Completion Provider</source>
         <translation>Aktivierung eines Providers für automatische Vervollständigungen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4477"/>
+        <location filename="../QScintilla/Editor.py" line="4514"/>
         <source>Auto-completion provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Ein Provider für automatische Vervollständigungen kann nicht angebunden werden, da bereits ein anderer aktiv ist. Bitte überprüfen Sie Ihre Konfiguration.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4797"/>
+        <location filename="../QScintilla/Editor.py" line="4834"/>
         <source>Activating Calltip Provider</source>
         <translation>Aktivierung eines Providers für Calltips</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4797"/>
+        <location filename="../QScintilla/Editor.py" line="4834"/>
         <source>Calltip provider cannot be connected because there is already another one active. Please check your configuration.</source>
         <translation>Ein Provider für Calltips kann nicht angebunden werden, da bereits ein anderer aktiv ist. Bitte überprüfen Sie Ihre Konfiguration.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="781"/>
+        <location filename="../QScintilla/Editor.py" line="784"/>
         <source>Open &apos;rejection&apos; file</source>
         <translation>Öffne „Ablehnungs“-Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="887"/>
+        <location filename="../QScintilla/Editor.py" line="890"/>
         <source>Load Diagram...</source>
         <translation>Diagramm laden...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1201"/>
+        <location filename="../QScintilla/Editor.py" line="1204"/>
         <source>Next change</source>
         <translation>Nächste Änderung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="1204"/>
+        <location filename="../QScintilla/Editor.py" line="1207"/>
         <source>Previous change</source>
         <translation>Vorherige Änderung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7574"/>
+        <location filename="../QScintilla/Editor.py" line="7617"/>
         <source>Sort Lines</source>
         <translation>Zeilen sortieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7574"/>
+        <location filename="../QScintilla/Editor.py" line="7617"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation>Die Auswahl enthält für eine numerische Sortierung ungültige Daten.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5978"/>
+        <location filename="../QScintilla/Editor.py" line="6021"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5978"/>
+        <location filename="../QScintilla/Editor.py" line="6021"/>
         <source>No warning messages available.</source>
         <translation>Keine Warnmeldungen verfügbar.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6039"/>
+        <location filename="../QScintilla/Editor.py" line="6082"/>
         <source>Style: {0}</source>
         <translation>Stil: {0}</translation>
     </message>
@@ -9498,17 +9498,17 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Neue Dokumentenansicht (in neuem Abschnitt)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="841"/>
+        <location filename="../QScintilla/Editor.py" line="844"/>
         <source>Tools</source>
         <translation>Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="969"/>
+        <location filename="../QScintilla/Editor.py" line="972"/>
         <source>Re-Open With Encoding</source>
         <translation>Öffnen mit Kodierung</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6372"/>
+        <location filename="../QScintilla/Editor.py" line="6415"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; wurde geändert, während sie in eric6 geöffnet war. Neu einlesen?&lt;/p&gt;</translation>
     </message>
@@ -9518,39 +9518,44 @@ gesamte Auswahl.&lt;/li&gt;
         <translation>Automatische Vervollständigung aktiv</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="809"/>
+        <location filename="../QScintilla/Editor.py" line="812"/>
         <source>Complete</source>
         <translation>Vervollständigen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4526"/>
+        <location filename="../QScintilla/Editor.py" line="4563"/>
         <source>Auto-Completion Provider</source>
         <translation>Provider für automatische Vervollständigungen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4526"/>
+        <location filename="../QScintilla/Editor.py" line="4563"/>
         <source>The completion list provider &apos;{0}&apos; was already registered. Ignoring duplicate request.</source>
         <translation>Der Provider für automatische Vervollständigungen namens &apos;{0}&apos; ist bereits registriert. Die Wiederholung wird ignoriert.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4840"/>
+        <location filename="../QScintilla/Editor.py" line="4877"/>
         <source>Call-Tips Provider</source>
         <translation>Calltipps-Provider</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="4840"/>
+        <location filename="../QScintilla/Editor.py" line="4877"/>
         <source>The call-tips provider &apos;{0}&apos; was already registered. Ignoring duplicate request.</source>
         <translation>Der Calltipps-Provider namens &apos;{0}&apos; ist bereits registriert. Die Wiederholung wird ignoriert.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7661"/>
+        <location filename="../QScintilla/Editor.py" line="7704"/>
         <source>Register Mouse Click Handler</source>
         <translation>Maus Klick Handler registrieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7661"/>
+        <location filename="../QScintilla/Editor.py" line="7704"/>
         <source>A mouse click handler for &quot;{0}&quot; was already registered by &quot;{1}&quot;. Aborting request by &quot;{2}&quot;...</source>
         <translation>Ein Maus Klick Handler für &quot;{0}&quot; wurde bereits durch &quot;{1}&quot; registriert. Die Anfrage durch &quot;{2}&quot; wird abgebrochen...</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/Editor.py" line="778"/>
+        <source>Save Copy...</source>
+        <translation>Kopie speichern...</translation>
     </message>
 </context>
 <context>
@@ -32850,616 +32855,636 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
 <context>
     <name>MiniEditor</name>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="373"/>
+        <location filename="../QScintilla/MiniEditor.py" line="400"/>
         <source>New</source>
         <translation>Neu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="373"/>
+        <location filename="../QScintilla/MiniEditor.py" line="400"/>
         <source>&amp;New</source>
         <translation>&amp;Neu</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="373"/>
+        <location filename="../QScintilla/MiniEditor.py" line="400"/>
         <source>Ctrl+N</source>
         <comment>File|New</comment>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="379"/>
+        <location filename="../QScintilla/MiniEditor.py" line="406"/>
         <source>Open an empty editor window</source>
         <translation>Öffnet ein leeres Editorfenster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="380"/>
+        <location filename="../QScintilla/MiniEditor.py" line="407"/>
         <source>&lt;b&gt;New&lt;/b&gt;&lt;p&gt;An empty editor window will be created.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neu&lt;/b&gt;&lt;p&gt;Ein neues Editorfenster wird geöffnet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="387"/>
+        <location filename="../QScintilla/MiniEditor.py" line="414"/>
         <source>Open</source>
         <translation>Öffnen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="387"/>
+        <location filename="../QScintilla/MiniEditor.py" line="414"/>
         <source>&amp;Open...</source>
         <translation>&amp;Öffnen...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="387"/>
+        <location filename="../QScintilla/MiniEditor.py" line="414"/>
         <source>Ctrl+O</source>
         <comment>File|Open</comment>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="393"/>
+        <location filename="../QScintilla/MiniEditor.py" line="420"/>
         <source>Open a file</source>
         <translation>Datei öffnen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="394"/>
+        <location filename="../QScintilla/MiniEditor.py" line="421"/>
         <source>&lt;b&gt;Open a file&lt;/b&gt;&lt;p&gt;You will be asked for the name of a file to be opened.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei öffnen&lt;/b&gt;&lt;p&gt;Sie werden nach dem Namen einer Datei gefragt, die geöffnet werden soll.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="401"/>
+        <location filename="../QScintilla/MiniEditor.py" line="428"/>
         <source>Save</source>
         <translation>Speichern</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="401"/>
+        <location filename="../QScintilla/MiniEditor.py" line="428"/>
         <source>&amp;Save</source>
         <translation>&amp;Speichern</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="401"/>
+        <location filename="../QScintilla/MiniEditor.py" line="428"/>
         <source>Ctrl+S</source>
         <comment>File|Save</comment>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="407"/>
+        <location filename="../QScintilla/MiniEditor.py" line="434"/>
         <source>Save the current file</source>
         <translation>Speichert die aktuelle Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="408"/>
+        <location filename="../QScintilla/MiniEditor.py" line="435"/>
         <source>&lt;b&gt;Save File&lt;/b&gt;&lt;p&gt;Save the contents of current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei speichern&lt;/b&gt;&lt;p&gt;Dies speichert den Inhalt des aktuellen Editorfensters.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="415"/>
+        <location filename="../QScintilla/MiniEditor.py" line="442"/>
         <source>Save as</source>
         <translation>Speichern unter</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="415"/>
+        <location filename="../QScintilla/MiniEditor.py" line="442"/>
         <source>Save &amp;as...</source>
         <translation>Speichern &amp;unter...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="415"/>
+        <location filename="../QScintilla/MiniEditor.py" line="442"/>
         <source>Shift+Ctrl+S</source>
         <comment>File|Save As</comment>
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="421"/>
+        <location filename="../QScintilla/MiniEditor.py" line="448"/>
         <source>Save the current file to a new one</source>
         <translation>Speichere die aktuelle Datei unter neuem Namen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="423"/>
+        <location filename="../QScintilla/MiniEditor.py" line="450"/>
         <source>&lt;b&gt;Save File as&lt;/b&gt;&lt;p&gt;Save the contents of current editor window to a new file. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Speichen unter&lt;/b&gt;&lt;p&gt;Dies speichert den Inhalt des aktuellen Editors in eine neue Datei. Die Datei kann mit einem Dateiauswahldialog eingegeben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="431"/>
+        <location filename="../QScintilla/MiniEditor.py" line="473"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="431"/>
+        <location filename="../QScintilla/MiniEditor.py" line="473"/>
         <source>&amp;Close</source>
         <translation>Schl&amp;ießen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="431"/>
+        <location filename="../QScintilla/MiniEditor.py" line="473"/>
         <source>Ctrl+W</source>
         <comment>File|Close</comment>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="437"/>
+        <location filename="../QScintilla/MiniEditor.py" line="479"/>
         <source>Close the editor window</source>
         <translation>Schließt das Editorfenster</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="438"/>
+        <location filename="../QScintilla/MiniEditor.py" line="480"/>
         <source>&lt;b&gt;Close Window&lt;/b&gt;&lt;p&gt;Close the current window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fenster schließen&lt;/b&gt;&lt;p&gt;Dies schließt das aktuelle Editorfenster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="477"/>
+        <location filename="../QScintilla/MiniEditor.py" line="519"/>
         <source>Undo</source>
         <translation>Rückgängig</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="477"/>
+        <location filename="../QScintilla/MiniEditor.py" line="519"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="477"/>
+        <location filename="../QScintilla/MiniEditor.py" line="519"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="477"/>
+        <location filename="../QScintilla/MiniEditor.py" line="519"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation>Alt+Backspace</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="484"/>
+        <location filename="../QScintilla/MiniEditor.py" line="526"/>
         <source>Undo the last change</source>
         <translation>Die letzte Änderung rückgängig machen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="485"/>
+        <location filename="../QScintilla/MiniEditor.py" line="527"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rückgängig&lt;/b&gt;&lt;p&gt;Dies macht die letzte Änderung des aktuellen Editors rückgängig.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="492"/>
+        <location filename="../QScintilla/MiniEditor.py" line="534"/>
         <source>Redo</source>
         <translation>Wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="492"/>
+        <location filename="../QScintilla/MiniEditor.py" line="534"/>
         <source>&amp;Redo</source>
         <translation>Wieder&amp;herstellen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="492"/>
+        <location filename="../QScintilla/MiniEditor.py" line="534"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="498"/>
+        <location filename="../QScintilla/MiniEditor.py" line="540"/>
         <source>Redo the last change</source>
         <translation>Die letzte Änderung wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="499"/>
+        <location filename="../QScintilla/MiniEditor.py" line="541"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Wiederherstellen&lt;/b&gt;&lt;p&gt;Dies stellt die letzte Änderung des aktuellen Editors wieder her.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="506"/>
+        <location filename="../QScintilla/MiniEditor.py" line="548"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="506"/>
+        <location filename="../QScintilla/MiniEditor.py" line="548"/>
         <source>Cu&amp;t</source>
         <translation>&amp;Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="506"/>
+        <location filename="../QScintilla/MiniEditor.py" line="548"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="506"/>
+        <location filename="../QScintilla/MiniEditor.py" line="548"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation>Shift+Del</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="513"/>
+        <location filename="../QScintilla/MiniEditor.py" line="555"/>
         <source>Cut the selection</source>
         <translation>Schneidet die Auswahl aus</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="514"/>
+        <location filename="../QScintilla/MiniEditor.py" line="556"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ausschneiden&lt;/b&gt;&lt;p&gt;Dies schneidet den ausgewählten Text des aktuellen Editors aus und legt ihn in der Zwischenablage ab.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="522"/>
+        <location filename="../QScintilla/MiniEditor.py" line="564"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="522"/>
+        <location filename="../QScintilla/MiniEditor.py" line="564"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="522"/>
+        <location filename="../QScintilla/MiniEditor.py" line="564"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="522"/>
+        <location filename="../QScintilla/MiniEditor.py" line="564"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+Einfg</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="529"/>
+        <location filename="../QScintilla/MiniEditor.py" line="571"/>
         <source>Copy the selection</source>
         <translation>Kopiert die Auswahl</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="530"/>
+        <location filename="../QScintilla/MiniEditor.py" line="572"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopieren&lt;/b&gt;&lt;p&gt;Dies kopiert den ausgewählten Text des aktuellen Editors in die Zwischenablage.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="538"/>
+        <location filename="../QScintilla/MiniEditor.py" line="580"/>
         <source>Paste</source>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="538"/>
+        <location filename="../QScintilla/MiniEditor.py" line="580"/>
         <source>&amp;Paste</source>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="538"/>
+        <location filename="../QScintilla/MiniEditor.py" line="580"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="538"/>
+        <location filename="../QScintilla/MiniEditor.py" line="580"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation>Shift+Ins</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="545"/>
+        <location filename="../QScintilla/MiniEditor.py" line="587"/>
         <source>Paste the last cut/copied text</source>
         <translation>Fügt den Inhalt der Zwischenablage ein</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="547"/>
+        <location filename="../QScintilla/MiniEditor.py" line="589"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the last cut/copied text from the clipboard to the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einfügen&lt;/b&gt;&lt;p&gt;Dies fügt den zuletzt ausgeschnittenen/kopierten Text aus der Zwischenablage in den aktuellen Editor ein.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="555"/>
+        <location filename="../QScintilla/MiniEditor.py" line="597"/>
         <source>Clear</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="555"/>
+        <location filename="../QScintilla/MiniEditor.py" line="597"/>
         <source>Cl&amp;ear</source>
         <translation>All&amp;es löschen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="555"/>
+        <location filename="../QScintilla/MiniEditor.py" line="597"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation>Alt+Shift+C</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="562"/>
+        <location filename="../QScintilla/MiniEditor.py" line="604"/>
         <source>Clear all text</source>
         <translation>Löscht den gesamten Text</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="563"/>
+        <location filename="../QScintilla/MiniEditor.py" line="605"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Delete all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alles Löschen&lt;/b&gt;&lt;p&gt;Dies löscht den gesamten Text des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2006"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2048"/>
         <source>About</source>
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2006"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2048"/>
         <source>&amp;About</source>
         <translation>&amp;Über</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2010"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2052"/>
         <source>Display information about this software</source>
         <translation>Zeigt Informationen zu diesem Programm an</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2012"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2054"/>
         <source>&lt;b&gt;About&lt;/b&gt;&lt;p&gt;Display some information about this software.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Über&lt;/b&gt;&lt;p&gt;Zeigt einige Informationen über dieses Programm an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2018"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2060"/>
         <source>About Qt</source>
         <translation>Über Qt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2018"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2060"/>
         <source>About &amp;Qt</source>
         <translation>Über &amp;Qt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2022"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2064"/>
         <source>Display information about the Qt toolkit</source>
         <translation>Zeige Informationen über das Qt-Toolkit an</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2024"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2066"/>
         <source>&lt;b&gt;About Qt&lt;/b&gt;&lt;p&gt;Display some information about the Qt toolkit.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Über Qt&lt;/b&gt;&lt;p&gt;Zeige Informationen über das Qt-Toolkit an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2054"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2096"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2065"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2108"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2082"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2125"/>
         <source>&amp;Help</source>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2143"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2187"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Zeilennummer des Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2150"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2194"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt die Cursorposition des Editors an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2155"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2199"/>
         <source>Ready</source>
         <translation>Bereit</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2224"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2268"/>
         <source>File loaded</source>
         <translation>Datei geladen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2574"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2618"/>
         <source>Untitled</source>
         <translation>Unbenannt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2273"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2317"/>
         <source>{0}[*] - {1}</source>
         <translation>{0} [*] – {1}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2273"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2317"/>
         <source>Mini Editor</source>
         <translation>Mini Editor</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2615"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2659"/>
         <source>Select all</source>
         <translation>Alles auswählen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2616"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2660"/>
         <source>Deselect all</source>
         <translation>Auswahl aufheben</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2630"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2674"/>
         <source>Languages</source>
         <translation>Sprachen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2633"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2677"/>
         <source>No Language</source>
         <translation>Keine Sprache</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2203"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2247"/>
         <source>Open File</source>
         <translation>Datei öffnen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2254"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2298"/>
         <source>File saved</source>
         <translation>Datei gespeichert</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2136"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2180"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Dieser Teil der Statusleiste zeigt an, ob die Datei geschrieben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2031"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2073"/>
         <source>What&apos;s This?</source>
         <translation>Was ist das?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2031"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2073"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Was ist das?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2031"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2073"/>
         <source>Shift+F1</source>
         <comment>Help|What&apos;s This?&apos;</comment>
         <translation>Shift+F1</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2037"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2079"/>
         <source>Context sensitive help</source>
         <translation>Kontextsensitive Hilfe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2038"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2080"/>
         <source>&lt;b&gt;Display context sensitive help&lt;/b&gt;&lt;p&gt;In What&apos;s This? mode, the mouse cursor shows an arrow with a question mark, and you can click on the interface elements to get a short description of what they do and how to use them. In dialogs, this feature can be accessed using the context help button in the titlebar.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeige kontextsensitive Hilfe an&lt;b&gt;&lt;/p&gt;Im „Was ist das?“-Modus (der Mauszeiger stellt einen Pfeil mit Fragezeichen dar) wird auf einen Mausklick eine kurze Hilfebeschreibung zu dem ausgewählten MMI-Element angezeigt. In Dialogen kann diese Funktionalität durch den entsprechenden Knopf im Fensterkopf erreicht werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2094"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2137"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2106"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2150"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2116"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2160"/>
         <source>Find</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2123"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2167"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="445"/>
+        <location filename="../QScintilla/MiniEditor.py" line="487"/>
         <source>Print</source>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="445"/>
+        <location filename="../QScintilla/MiniEditor.py" line="487"/>
         <source>&amp;Print</source>
         <translation>&amp;Drucken</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="445"/>
+        <location filename="../QScintilla/MiniEditor.py" line="487"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="451"/>
+        <location filename="../QScintilla/MiniEditor.py" line="493"/>
         <source>Print the current file</source>
         <translation>Druckt die aktuelle Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2538"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2582"/>
         <source>Printing...</source>
         <translation>Drucke...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2555"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2599"/>
         <source>Printing completed</source>
         <translation>Drucken beendet</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2557"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2601"/>
         <source>Error while printing</source>
         <translation>Fehler beim Drucken</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2560"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2604"/>
         <source>Printing aborted</source>
         <translation>Drucken abgebrochen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="452"/>
+        <location filename="../QScintilla/MiniEditor.py" line="494"/>
         <source>&lt;b&gt;Print File&lt;/b&gt;&lt;p&gt;Print the contents of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei drucken&lt;/b&gt;&lt;p&gt;Dies druckt den Inhalt der aktuellen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="459"/>
+        <location filename="../QScintilla/MiniEditor.py" line="501"/>
         <source>Print Preview</source>
         <translation>Druckvorschau</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="464"/>
+        <location filename="../QScintilla/MiniEditor.py" line="506"/>
         <source>Print preview of the current file</source>
         <translation>Druckvorschau der aktuellen Datei</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="466"/>
+        <location filename="../QScintilla/MiniEditor.py" line="508"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Druckvorschau&lt;/b&gt;&lt;p&gt;Zeift eine Druckvorschau der aktuellen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2656"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2700"/>
         <source>Guessed</source>
         <translation>Ermittelt</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2677"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2721"/>
         <source>Alternatives</source>
         <translation>Alternativen</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2674"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2718"/>
         <source>Alternatives ({0})</source>
         <translation>Alternativen ({0})</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2691"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2735"/>
         <source>Pygments Lexer</source>
         <translation>Pygments Lexer</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2691"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2735"/>
         <source>Select the Pygments lexer to apply.</source>
         <translation>Wähle den anzuwendenden Pygments Lexer.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="319"/>
+        <location filename="../QScintilla/MiniEditor.py" line="346"/>
         <source>Line: {0:5}</source>
         <translation>Zeile: {0:5}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="324"/>
+        <location filename="../QScintilla/MiniEditor.py" line="351"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2203"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2247"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be opened.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geöffnet werden.&lt;p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2239"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2283"/>
         <source>Save File</source>
         <translation>Datei speichern</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2239"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2283"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br/&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gesichert werden.&lt;br/&gt;Grund: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2182"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2226"/>
         <source>The document has unsaved changes.</source>
         <translation>Das Dokument hat ungesicherte Änderungen.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="255"/>
+        <location filename="../QScintilla/MiniEditor.py" line="282"/>
         <source>About eric6 Mini Editor</source>
         <translation>Über den eric6 Mini Editor</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="255"/>
+        <location filename="../QScintilla/MiniEditor.py" line="282"/>
         <source>The eric6 Mini Editor is an editor component based on QScintilla. It may be used for simple editing tasks, that don&apos;t need the power of a full blown editor.</source>
         <translation>Der eric6-Mini-Editor ist eine Editorkomponente, die auf QScintilla basiert. Sie kann für einfachere Editieraufgaben, die keinen ausgewachsenen Editor benötigen, verwendet werden.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/MiniEditor.py" line="2182"/>
+        <location filename="../QScintilla/MiniEditor.py" line="2226"/>
         <source>eric6 Mini Editor</source>
         <translation>eric6 Mini Editor</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="458"/>
+        <source>Save Copy</source>
+        <translation>Kopie speichern</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="458"/>
+        <source>Save &amp;Copy...</source>
+        <translation>&amp;Kopie speichern...</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="463"/>
+        <source>Save a copy of the current file</source>
+        <translation>Speichert eine Kopie der aktuellen Datei</translation>
+    </message>
+    <message>
+        <location filename="../QScintilla/MiniEditor.py" line="465"/>
+        <source>&lt;b&gt;Save Copy&lt;/b&gt;&lt;p&gt;Save a copy of the contents of current editor window. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
+        <translation>&lt;b&gt;Kopie speichern&lt;/b&gt;&lt;p&gt;Speichern einer Kopie des Inhalts des aktuellen Editorfensters. Die Datei kann mit einem Dateiauswahldialog eingegeben werden.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -57896,7 +57921,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4374"/>
+        <location filename="../UI/UserInterface.py" line="4370"/>
         <source>Help</source>
         <translation>Hilfe</translation>
     </message>
@@ -57906,7 +57931,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Werkzeugleisten</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4500"/>
+        <location filename="../UI/UserInterface.py" line="4496"/>
         <source>Problem</source>
         <translation>Problem</translation>
     </message>
@@ -57926,7 +57951,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Was ist das?</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4675"/>
+        <location filename="../UI/UserInterface.py" line="4671"/>
         <source>Process Generation Error</source>
         <translation>Fehler beim Prozessstart</translation>
     </message>
@@ -58016,7 +58041,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Fehler berichten...&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum Senden eines Fehlerberichtes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5391"/>
+        <location filename="../UI/UserInterface.py" line="5387"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Tastaturkurzbefehle exportieren</translation>
     </message>
@@ -58036,7 +58061,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Tastaturkurzbefehle exportieren&lt;/b&gt;&lt;p&gt;Exportiert die Tastaturkurzbefehle der Applikation.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5415"/>
+        <location filename="../UI/UserInterface.py" line="5411"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Tastaturkurzbefehle importieren</translation>
     </message>
@@ -58126,7 +58151,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Modultest (Skript)&lt;/b&gt;&lt;p&gt;Modultest für aktuelles Skript ausführen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4122"/>
+        <location filename="../UI/UserInterface.py" line="4118"/>
         <source>Unittest Project</source>
         <translation>Modultest (Projekt)</translation>
     </message>
@@ -58146,7 +58171,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Modultests</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4122"/>
+        <location filename="../UI/UserInterface.py" line="4118"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>Für das aktuelle Projekt ist kein Hauptskript festgelegt. Abbruch</translation>
     </message>
@@ -58196,7 +58221,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Dateien Seite an Seite vergleichen&lt;/b&gt;&lt;p&gt;Öffnet einen Dialog zum Vergleich zweier Dateien und zur Anzeige des Ergebnisse Seite an Seite.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5815"/>
+        <location filename="../UI/UserInterface.py" line="5811"/>
         <source>Drop Error</source>
         <translation>Drop-Fehler</translation>
     </message>
@@ -58266,32 +58291,32 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Ansichtenprofile&lt;/b&gt;&lt;p&gt;Ansichtenprofile konfigurieren. Mit diesem Dialog kann die Sichtbarkeit der verschiedenen Fenster für die vorbestimmten Ansichtenprofile eingestellt werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4500"/>
+        <location filename="../UI/UserInterface.py" line="4496"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; existiert nicht oder hat die Größe Null.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4228"/>
+        <location filename="../UI/UserInterface.py" line="4224"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Qt-Designer konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4295"/>
+        <location filename="../UI/UserInterface.py" line="4291"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Qt-Linguist konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4346"/>
+        <location filename="../UI/UserInterface.py" line="4342"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Qt-Assistant konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass es als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4675"/>
+        <location filename="../UI/UserInterface.py" line="4671"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Werkzeugeeintrag &lt;b&gt;{0}&lt;/b&gt; konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{1}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5815"/>
+        <location filename="../UI/UserInterface.py" line="5811"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; ist keine Datei.&lt;/p&gt;</translation>
     </message>
@@ -58316,7 +58341,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;UI-Vorschau&lt;/b&gt;&lt;p&gt;Starte die UI-Vorschau.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4456"/>
+        <location filename="../UI/UserInterface.py" line="4452"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die UI-Vorschau konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
@@ -58341,7 +58366,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Übersetzungsvorschau&lt;/b&gt;&lt;p&gt;Dies startet das Programm zur Vorschau von Übersetzungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4511"/>
+        <location filename="../UI/UserInterface.py" line="4507"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Übersetzungsvorschau konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
@@ -58381,42 +58406,42 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Aufgabenanzeige</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5549"/>
+        <location filename="../UI/UserInterface.py" line="5545"/>
         <source>Save tasks</source>
         <translation>Aufgaben speichern</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5549"/>
+        <location filename="../UI/UserInterface.py" line="5545"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Aufgabendatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5578"/>
+        <location filename="../UI/UserInterface.py" line="5574"/>
         <source>Read tasks</source>
         <translation>Aufgaben lesen</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5578"/>
+        <location filename="../UI/UserInterface.py" line="5574"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Aufgabendatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4374"/>
+        <location filename="../UI/UserInterface.py" line="4370"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Momentan ist kein Betrachter angegeben. Bitte benutzen Sie den Einstellungsdialog, um einen festzulegen.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4388"/>
+        <location filename="../UI/UserInterface.py" line="4384"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Betrachter konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5118"/>
+        <location filename="../UI/UserInterface.py" line="5114"/>
         <source>Documentation Missing</source>
         <translation>Dokumentation fehlt</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5118"/>
+        <location filename="../UI/UserInterface.py" line="5114"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der Dokumentationsstartpunkt „&lt;b&gt;{0}&lt;/b&gt;“ konnte nicht gefunden werden.&lt;/p&gt;</translation>
     </message>
@@ -58516,7 +58541,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Öffne die Eric-API-Dokumentation</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4408"/>
+        <location filename="../UI/UserInterface.py" line="4404"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Hilfeanzeige konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;hh&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
@@ -58597,36 +58622,36 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Eingebaute Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4659"/>
+        <location filename="../UI/UserInterface.py" line="4655"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Starte Prozess „{0} {1}“.
 </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4751"/>
+        <location filename="../UI/UserInterface.py" line="4747"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Prozess „{0}“ ist beendet.
 </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5102"/>
+        <location filename="../UI/UserInterface.py" line="5098"/>
         <source>Documentation</source>
         <translation>Dokumentation</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4944"/>
+        <location filename="../UI/UserInterface.py" line="4940"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der PyQt4-Dokumentations-Startpunkt ist nicht konfiguriert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6140"/>
+        <location filename="../UI/UserInterface.py" line="6136"/>
         <source>Error during updates check</source>
         <translation>Fehler während der Aktualisierungsprüfung</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6120"/>
+        <location filename="../UI/UserInterface.py" line="6116"/>
         <source>Update available</source>
         <translation>Aktualisierung verfügbar</translation>
     </message>
@@ -58636,17 +58661,17 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;h3&gt;Versionsnummern&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6178"/>
+        <location filename="../UI/UserInterface.py" line="6174"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3368"/>
+        <location filename="../UI/UserInterface.py" line="3364"/>
         <source>Configure Tool Groups ...</source>
         <translation>Konfiguriere Werkzeuggruppen...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3372"/>
+        <location filename="../UI/UserInterface.py" line="3368"/>
         <source>Configure current Tool Group ...</source>
         <translation>Konfiguriere aktuelle Werkzeuggruppe...</translation>
     </message>
@@ -58661,22 +58686,22 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Zeige externe &amp;Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6140"/>
+        <location filename="../UI/UserInterface.py" line="6136"/>
         <source>Could not perform updates check.</source>
         <translation>Konnte keine Aktualisierungsprüfung durchführen.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5960"/>
+        <location filename="../UI/UserInterface.py" line="5956"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Abbrechen</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5969"/>
+        <location filename="../UI/UserInterface.py" line="5965"/>
         <source>Trying host {0}</source>
         <translation>Prüfe Host {0}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6205"/>
+        <location filename="../UI/UserInterface.py" line="6201"/>
         <source>First time usage</source>
         <translation>Erstmalige Nutzung</translation>
     </message>
@@ -58736,12 +58761,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Plugin deinstallieren...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog zur Deinstallation eines Plugins.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3491"/>
+        <location filename="../UI/UserInterface.py" line="3487"/>
         <source>&amp;Show all</source>
         <translation>Alle an&amp;zeigen</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3493"/>
+        <location filename="../UI/UserInterface.py" line="3489"/>
         <source>&amp;Hide all</source>
         <translation>Alle &amp;ausblenden</translation>
     </message>
@@ -58771,7 +58796,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Zeige die verfügbaren eric-Versionen</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6164"/>
+        <location filename="../UI/UserInterface.py" line="6160"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Verfügbare Versionen&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -58856,17 +58881,17 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Externe Werkzeuge/{0}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4620"/>
+        <location filename="../UI/UserInterface.py" line="4616"/>
         <source>External Tools</source>
         <translation>Externe Werkzeuge</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4611"/>
+        <location filename="../UI/UserInterface.py" line="4607"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>Kein Eintrag für das externe Werkzeug „{0}“ in der Gruppe „{1}“ gefunden.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4620"/>
+        <location filename="../UI/UserInterface.py" line="4616"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Kein Werkzeuggruppeneintrag „{0}“ gefunden.</translation>
     </message>
@@ -58881,22 +58906,22 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Mehrfachprojektanzeige</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5596"/>
+        <location filename="../UI/UserInterface.py" line="5592"/>
         <source>Save session</source>
         <translation>Session speichern</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5596"/>
+        <location filename="../UI/UserInterface.py" line="5592"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Sessiondatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5627"/>
+        <location filename="../UI/UserInterface.py" line="5623"/>
         <source>Read session</source>
         <translation>Session lesen</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5627"/>
+        <location filename="../UI/UserInterface.py" line="5623"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Sessiondatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;</translation>
     </message>
@@ -59116,7 +59141,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;SQL-Browser&lt;/b&gt;&lt;p&gt;Erforsche eine SQL-Datenbank.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4532"/>
+        <location filename="../UI/UserInterface.py" line="4528"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der SQL-Browser konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass er als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
@@ -59131,12 +59156,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Icon-Editor...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4321"/>
+        <location filename="../UI/UserInterface.py" line="4317"/>
         <source>Qt 3 support</source>
         <translation>Qt3-Unterstützung</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5102"/>
+        <location filename="../UI/UserInterface.py" line="5098"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der PySide-Dokumentations-Startpunkt ist nicht konfiguriert.&lt;/p&gt;</translation>
     </message>
@@ -59186,7 +59211,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5415"/>
+        <location filename="../UI/UserInterface.py" line="5411"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation>Tastaturkurzbefehlsdatei (*.e4k)</translation>
     </message>
@@ -59226,27 +59251,27 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Python 2-Dokumentation&lt;/b&gt;&lt;p&gt;Zeigt die Python 2-Dokumentation an. Ist kein Dokumentationsverzeichnis konfiguriert, so ist der Ort, an dem die Python 2-Dokumentation gesucht wird, unter Windows das Verzeichnis &lt;i&gt;doc&lt;/i&gt; unter dem Verzeichnis, in dem der konfigurierte Python 2-Interpreter installiert ist, und unter Unix das Verzeichnis &lt;i&gt;/usr/share/doc/packages/python/html/python-docs-html&lt;/i&gt;. Um dies zu überschreiben, können Sie die Umgebungsvariable PYTHON2DOCDIR setzen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6030"/>
+        <location filename="../UI/UserInterface.py" line="6026"/>
         <source>Error getting versions information</source>
         <translation>Fehler beim Herunterladen der Versionsinformationen</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6023"/>
+        <location filename="../UI/UserInterface.py" line="6019"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation>Die Versionsinformationen konnten nicht heruntergeladen werden. Bitte gehen Sie online und versuchen Sie es erneut.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5211"/>
+        <location filename="../UI/UserInterface.py" line="5207"/>
         <source>Open Browser</source>
         <translation>Browser starten</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5211"/>
+        <location filename="../UI/UserInterface.py" line="5207"/>
         <source>Could not start a web browser</source>
         <translation>Der Systemwebbrowser konnte nicht gestartet werden</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6030"/>
+        <location filename="../UI/UserInterface.py" line="6026"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation>Die Versionsinformationen konnten seit 7 Tagen nicht heruntergeladen werden. Bitte gehen Sie online und versuchen Sie es erneut.</translation>
     </message>
@@ -59332,12 +59357,12 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Bildschirmfoto&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog, um ein Bildschirmfoto aufzunehmen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4590"/>
+        <location filename="../UI/UserInterface.py" line="4586"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Bildschirmfotoanwendung konnte nicht gestartet werden.&lt;br&gt;Stellen Sie sicher, dass sie als &lt;b&gt;{0}&lt;/b&gt; verfügbar ist.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6224"/>
+        <location filename="../UI/UserInterface.py" line="6220"/>
         <source>Select Workspace Directory</source>
         <translation>Wähle Arbeitsverzeichnis</translation>
     </message>
@@ -59712,7 +59737,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Öffne die PyQt5-Dokumentation</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5005"/>
+        <location filename="../UI/UserInterface.py" line="5001"/>
         <source>&lt;p&gt;The PyQt5 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Der PyQt5-Dokumentations-Startpunkt ist nicht konfiguriert.&lt;/p&gt;</translation>
     </message>
@@ -59747,7 +59772,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;PySide-Dokumentation&lt;/b&gt;&lt;p&gt;Zeige die PySide-Dokumentation an. Abhängig von den Einstellungen wird Erics interner Hilfeanzeiger, ein Webbrowser oder Qt Assistant verwendet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5960"/>
+        <location filename="../UI/UserInterface.py" line="5956"/>
         <source>%v/%m</source>
         <translation>%v/%m</translation>
     </message>
@@ -59767,7 +59792,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Zeige Fehlerbericht...&lt;/b&gt;&lt;p&gt;Dies öffnet einen Dialog zur Anzeige des aktuellsten Fehlerberichtes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5964"/>
+        <location filename="../UI/UserInterface.py" line="5960"/>
         <source>Version Check</source>
         <translation>Versionsprüfung</translation>
     </message>
@@ -59838,27 +59863,27 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Eric-API-Dokumentation&lt;/b&gt;&lt;p&gt;Zeige die Eric-API-Dokumentation an. Der Pfad für die Dokumentation ist das Unterverzeichnis Documentation/Source im eric6-Installationverzeichnis.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4321"/>
+        <location filename="../UI/UserInterface.py" line="4317"/>
         <source>Qt v.3 is not supported by eric6.</source>
         <translation>Qt v.3 wird von eric6 nicht unterstützt.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6120"/>
+        <location filename="../UI/UserInterface.py" line="6116"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric6 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation>Eine Aktualisierung auf &lt;b&gt;{0}&lt;/b&gt; von Eric6 ist unter &lt;b&gt;{1}&lt;/b&gt; verfügbar. Wollen Sie sie laden?</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6133"/>
+        <location filename="../UI/UserInterface.py" line="6129"/>
         <source>Eric6 is up to date</source>
         <translation>Eric6 ist aktuell</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6133"/>
+        <location filename="../UI/UserInterface.py" line="6129"/>
         <source>You are using the latest version of eric6</source>
         <translation>Sie verwenden die aktuellste Version von eric6</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6205"/>
+        <location filename="../UI/UserInterface.py" line="6201"/>
         <source>eric6 has not been configured yet. The configuration dialog will be started.</source>
         <translation>eric6 wurde noch nicht konfiguriert. Der Konfigurationsdialog wird nun gestartet.</translation>
     </message>
@@ -59873,7 +59898,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&amp;Benutzerwerkzeuge</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3415"/>
+        <location filename="../UI/UserInterface.py" line="3411"/>
         <source>No User Tools Configured</source>
         <translation>Keine Benutzerwerkzeuge konfiguriert</translation>
     </message>
@@ -60961,377 +60986,377 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Speichen unter&lt;/b&gt;&lt;p&gt;Dies speichert den Inhalt des aktuellen Editors in eine neue Datei. Die Datei kann mit einem Dateiauswahldialog eingegeben werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="692"/>
+        <location filename="../ViewManager/ViewManager.py" line="708"/>
         <source>Save all files</source>
         <translation>Alle Dateien speichern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="694"/>
+        <location filename="../ViewManager/ViewManager.py" line="710"/>
         <source>&lt;b&gt;Save All Files&lt;/b&gt;&lt;p&gt;Save the contents of all editor windows.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alle Dateien speichern&lt;/b&gt;&lt;p&gt;Speichert den Inhalt aller Editorfenster.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="704"/>
+        <location filename="../ViewManager/ViewManager.py" line="720"/>
         <source>Print</source>
         <translation>Drucken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="704"/>
+        <location filename="../ViewManager/ViewManager.py" line="720"/>
         <source>&amp;Print</source>
         <translation>&amp;Drucken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="711"/>
+        <location filename="../ViewManager/ViewManager.py" line="727"/>
         <source>Print the current file</source>
         <translation>Druckt die aktuelle Datei</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="713"/>
+        <location filename="../ViewManager/ViewManager.py" line="729"/>
         <source>&lt;b&gt;Print File&lt;/b&gt;&lt;p&gt;Print the contents of current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei drucken&lt;/b&gt;&lt;p&gt;Dies druckt den Inhalt des aktuellen Editorfensters.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="763"/>
+        <location filename="../ViewManager/ViewManager.py" line="779"/>
         <source>Open &amp;Recent Files</source>
         <translation>Zu&amp;letzt geöffnete Dateien</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="859"/>
+        <location filename="../ViewManager/ViewManager.py" line="877"/>
         <source>Undo</source>
         <translation>Rückgängig</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="859"/>
+        <location filename="../ViewManager/ViewManager.py" line="877"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="868"/>
+        <location filename="../ViewManager/ViewManager.py" line="886"/>
         <source>Undo the last change</source>
         <translation>Die letzte Änderung rückgängig machen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="870"/>
+        <location filename="../ViewManager/ViewManager.py" line="888"/>
         <source>&lt;b&gt;Undo&lt;/b&gt;&lt;p&gt;Undo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rückgängig&lt;/b&gt;&lt;p&gt;Dies macht die letzte Änderung des aktuellen Editors rückgängig.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="878"/>
+        <location filename="../ViewManager/ViewManager.py" line="896"/>
         <source>Redo</source>
         <translation>Wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="878"/>
+        <location filename="../ViewManager/ViewManager.py" line="896"/>
         <source>&amp;Redo</source>
         <translation>Wieder&amp;herstellen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="886"/>
+        <location filename="../ViewManager/ViewManager.py" line="904"/>
         <source>Redo the last change</source>
         <translation>Die letzte Änderung wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="888"/>
+        <location filename="../ViewManager/ViewManager.py" line="906"/>
         <source>&lt;b&gt;Redo&lt;/b&gt;&lt;p&gt;Redo the last change done in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Wiederherstellen&lt;/b&gt;&lt;p&gt;Dies stellt die letzte Änderung des aktuellen Editors wieder her.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="918"/>
+        <location filename="../ViewManager/ViewManager.py" line="936"/>
         <source>Cut</source>
         <translation>Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="918"/>
+        <location filename="../ViewManager/ViewManager.py" line="936"/>
         <source>Cu&amp;t</source>
         <translation>&amp;Ausschneiden</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="927"/>
+        <location filename="../ViewManager/ViewManager.py" line="945"/>
         <source>Cut the selection</source>
         <translation>Schneidet die Auswahl aus</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="929"/>
+        <location filename="../ViewManager/ViewManager.py" line="947"/>
         <source>&lt;b&gt;Cut&lt;/b&gt;&lt;p&gt;Cut the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ausschneiden&lt;/b&gt;&lt;p&gt;Dies schneidet den ausgewählten Text des aktuellen Editors aus und legt ihn in der Zwischenablage ab.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="938"/>
+        <location filename="../ViewManager/ViewManager.py" line="956"/>
         <source>Copy</source>
         <translation>Kopieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="938"/>
+        <location filename="../ViewManager/ViewManager.py" line="956"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="947"/>
+        <location filename="../ViewManager/ViewManager.py" line="965"/>
         <source>Copy the selection</source>
         <translation>Kopiert die Auswahl</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="949"/>
+        <location filename="../ViewManager/ViewManager.py" line="967"/>
         <source>&lt;b&gt;Copy&lt;/b&gt;&lt;p&gt;Copy the selected text of the current editor to the clipboard.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kopieren&lt;/b&gt;&lt;p&gt;Dies kopiert den ausgewählten Text des aktuellen Editors in die Zwischenablage.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="958"/>
+        <location filename="../ViewManager/ViewManager.py" line="976"/>
         <source>Paste</source>
         <translation>Einfügen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="958"/>
+        <location filename="../ViewManager/ViewManager.py" line="976"/>
         <source>&amp;Paste</source>
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="967"/>
+        <location filename="../ViewManager/ViewManager.py" line="985"/>
         <source>Paste the last cut/copied text</source>
         <translation>Fügt den Inhalt der Zwischenablage ein</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="969"/>
+        <location filename="../ViewManager/ViewManager.py" line="987"/>
         <source>&lt;b&gt;Paste&lt;/b&gt;&lt;p&gt;Paste the last cut/copied text from the clipboard to the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einfügen&lt;/b&gt;&lt;p&gt;Dies fügt den zuletzt ausgeschnittenen/kopierten Text aus der Zwischenablage in den aktuellen Editor ein.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="978"/>
+        <location filename="../ViewManager/ViewManager.py" line="996"/>
         <source>Clear</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="986"/>
+        <location filename="../ViewManager/ViewManager.py" line="1004"/>
         <source>Clear all text</source>
         <translation>Löscht den gesamten Text</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="988"/>
+        <location filename="../ViewManager/ViewManager.py" line="1006"/>
         <source>&lt;b&gt;Clear&lt;/b&gt;&lt;p&gt;Delete all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alles Löschen&lt;/b&gt;&lt;p&gt;Dies löscht den gesamten Text des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1013"/>
+        <location filename="../ViewManager/ViewManager.py" line="1031"/>
         <source>Indent</source>
         <translation>Einrücken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1013"/>
+        <location filename="../ViewManager/ViewManager.py" line="1031"/>
         <source>&amp;Indent</source>
         <translation>Ei&amp;nrücken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1021"/>
+        <location filename="../ViewManager/ViewManager.py" line="1039"/>
         <source>Indent line</source>
         <translation>Zeile einrücken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1023"/>
+        <location filename="../ViewManager/ViewManager.py" line="1041"/>
         <source>&lt;b&gt;Indent&lt;/b&gt;&lt;p&gt;Indents the current line or the lines of the selection by one level.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einrücken&lt;/b&gt;&lt;p&gt;Dies erhöht die Einrückung der aktuellen Zeile oder Auswahl um eine Ebene.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1032"/>
+        <location filename="../ViewManager/ViewManager.py" line="1050"/>
         <source>Unindent</source>
         <translation>Einrücken rückgängig</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1032"/>
+        <location filename="../ViewManager/ViewManager.py" line="1050"/>
         <source>U&amp;nindent</source>
         <translation>Einrücken rück&amp;gängig</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1040"/>
+        <location filename="../ViewManager/ViewManager.py" line="1058"/>
         <source>Unindent line</source>
         <translation>Einrücken der Zeile rückgängig machen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1042"/>
+        <location filename="../ViewManager/ViewManager.py" line="1060"/>
         <source>&lt;b&gt;Unindent&lt;/b&gt;&lt;p&gt;Unindents the current line or the lines of the selection by one level.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Einrücken rückgängig&lt;/b&gt;&lt;p&gt;Dies vermindert die Einrückung der aktuellen Zeile oder Auswahl um eine Ebene.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1070"/>
+        <location filename="../ViewManager/ViewManager.py" line="1088"/>
         <source>Comment</source>
         <translation>Kommentar</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1070"/>
+        <location filename="../ViewManager/ViewManager.py" line="1088"/>
         <source>C&amp;omment</source>
         <translation>K&amp;ommentar</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1078"/>
+        <location filename="../ViewManager/ViewManager.py" line="1096"/>
         <source>Comment Line or Selection</source>
         <translation>Kommentiert eine Zeile oder die Auswahl</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1080"/>
+        <location filename="../ViewManager/ViewManager.py" line="1098"/>
         <source>&lt;b&gt;Comment&lt;/b&gt;&lt;p&gt;Comments the current line or the lines of the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kommentar&lt;/b&gt;&lt;p&gt;Dies kommentiert die aktuelle Zeile oder die aktuelle Auswahl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1089"/>
+        <location filename="../ViewManager/ViewManager.py" line="1107"/>
         <source>Uncomment</source>
         <translation>Kommentar entfernen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1089"/>
+        <location filename="../ViewManager/ViewManager.py" line="1107"/>
         <source>Unco&amp;mment</source>
         <translation>Ko&amp;mmentar entfernen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1097"/>
+        <location filename="../ViewManager/ViewManager.py" line="1115"/>
         <source>Uncomment Line or Selection</source>
         <translation>Kommentar einer Zeile oder der Auswahl entfernen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1099"/>
+        <location filename="../ViewManager/ViewManager.py" line="1117"/>
         <source>&lt;b&gt;Uncomment&lt;/b&gt;&lt;p&gt;Uncomments the current line or the lines of the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Kommentar entfernen&lt;/b&gt;&lt;p&gt;Dies entfernt den Kommentar der aktuellen Zeile oder der aktuelle Auswahl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1189"/>
+        <location filename="../ViewManager/ViewManager.py" line="1207"/>
         <source>Select all text</source>
         <translation>Gesamten text auswählen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1206"/>
+        <location filename="../ViewManager/ViewManager.py" line="1224"/>
         <source>Deselect all text</source>
         <translation>Hebt die Auswahl auf</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3268"/>
+        <location filename="../ViewManager/ViewManager.py" line="3286"/>
         <source>Search</source>
         <translation>Suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2790"/>
+        <location filename="../ViewManager/ViewManager.py" line="2808"/>
         <source>&amp;Search...</source>
         <translation>&amp;Suchen...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2798"/>
+        <location filename="../ViewManager/ViewManager.py" line="2816"/>
         <source>Search for a text</source>
         <translation>Sucht nach Text</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2800"/>
+        <location filename="../ViewManager/ViewManager.py" line="2818"/>
         <source>&lt;b&gt;Search&lt;/b&gt;&lt;p&gt;Search for some text in the current editor. A dialog is shown to enter the searchtext and options for the search.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suchen&lt;/b&gt;&lt;p&gt;Sucht einen Text im aktuellen Editor. Es wird ein Dialog eingeblendet, in dem der Suchtext und verschieden Suchoptionen eingegeben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2916"/>
+        <location filename="../ViewManager/ViewManager.py" line="2934"/>
         <source>Replace</source>
         <translation>Ersetzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2916"/>
+        <location filename="../ViewManager/ViewManager.py" line="2934"/>
         <source>&amp;Replace...</source>
         <translation>&amp;Ersetzen...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2923"/>
+        <location filename="../ViewManager/ViewManager.py" line="2941"/>
         <source>Replace some text</source>
         <translation>Ersetzt Text</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2925"/>
+        <location filename="../ViewManager/ViewManager.py" line="2943"/>
         <source>&lt;b&gt;Replace&lt;/b&gt;&lt;p&gt;Search for some text in the current editor and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and replace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ersetzen&lt;/b&gt;&lt;p&gt;Dies sucht nach Text im aktuellen Editor und ersetzt ihn. Es wird ein Dialog eingeblendet, in dem der Suchtext, der Ersetzungstext und verschieden Such- und Ersetzungsoptionen eingegeben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3007"/>
+        <location filename="../ViewManager/ViewManager.py" line="3025"/>
         <source>Goto Line</source>
         <translation>Gehe zu Zeile</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2999"/>
+        <location filename="../ViewManager/ViewManager.py" line="3017"/>
         <source>&amp;Goto Line...</source>
         <translation>Gehe zu &amp;Zeile...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3009"/>
+        <location filename="../ViewManager/ViewManager.py" line="3027"/>
         <source>&lt;b&gt;Goto Line&lt;/b&gt;&lt;p&gt;Go to a specific line of text in the current editor. A dialog is shown to enter the linenumber.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gehe zu Zeile&lt;/b&gt;&lt;p&gt;Dies springt zur angegebenen Zeile im aktuellen Editor. Es wird ein Dialog eingeblendet, in dem die Zeilennummer eingegeben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3314"/>
+        <location filename="../ViewManager/ViewManager.py" line="3332"/>
         <source>Zoom in on the text</source>
         <translation>Text vergrößern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3333"/>
+        <location filename="../ViewManager/ViewManager.py" line="3351"/>
         <source>Zoom out on the text</source>
         <translation>Text verkleinern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3362"/>
+        <location filename="../ViewManager/ViewManager.py" line="3380"/>
         <source>Zoom</source>
         <translation>Maßstab</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3362"/>
+        <location filename="../ViewManager/ViewManager.py" line="3380"/>
         <source>&amp;Zoom</source>
         <translation>&amp;Maßstab</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3370"/>
+        <location filename="../ViewManager/ViewManager.py" line="3388"/>
         <source>Zoom the text</source>
         <translation>Den Maßstab des Textes ändern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3372"/>
+        <location filename="../ViewManager/ViewManager.py" line="3390"/>
         <source>&lt;b&gt;Zoom&lt;/b&gt;&lt;p&gt;Zoom the text. This opens a dialog where the desired size can be entered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Maßstab&lt;/b&gt;&lt;p&gt;dies ändert den Textmaßstab. Es wird ein dialog eingeblendet, in dem der Maßstab eingegeben werden kann.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3385"/>
+        <location filename="../ViewManager/ViewManager.py" line="3403"/>
         <source>Toggle all folds</source>
         <translation>Alle Faltungen umschalten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3381"/>
+        <location filename="../ViewManager/ViewManager.py" line="3399"/>
         <source>Toggle &amp;all folds</source>
         <translation>&amp;Alle Faltungen umschalten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3387"/>
+        <location filename="../ViewManager/ViewManager.py" line="3405"/>
         <source>&lt;b&gt;Toggle all folds&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alle Faltungen umschalten&lt;/b&gt;&lt;p&gt;Dies schaltet alle Faltungen des aktuellen Editors um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4283"/>
+        <location filename="../ViewManager/ViewManager.py" line="4301"/>
         <source>File Modified</source>
         <translation>Datei geändert</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1223"/>
+        <location filename="../ViewManager/ViewManager.py" line="1241"/>
         <source>Convert Line End Characters</source>
         <translation>Zeilenende Marke umwandeln</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1216"/>
+        <location filename="../ViewManager/ViewManager.py" line="1234"/>
         <source>Convert &amp;Line End Characters</source>
         <translation>&amp;Zeilenende Marke umwandeln</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1225"/>
+        <location filename="../ViewManager/ViewManager.py" line="1243"/>
         <source>&lt;b&gt;Convert Line End Characters&lt;/b&gt;&lt;p&gt;Convert the line end characters to the currently set type.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeilenende Marke umwandeln&lt;/b&gt;&lt;p&gt;Dies wandelt die Zeilenende Marke in den aktuell eingestellten Typ um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3417"/>
+        <location filename="../ViewManager/ViewManager.py" line="3435"/>
         <source>Toggle current fold</source>
         <translation>Aktuelle Faltung umschalten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3413"/>
+        <location filename="../ViewManager/ViewManager.py" line="3431"/>
         <source>Toggle &amp;current fold</source>
         <translation>Aktuelle &amp;Faltung umschalten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3419"/>
+        <location filename="../ViewManager/ViewManager.py" line="3437"/>
         <source>&lt;b&gt;Toggle current fold&lt;/b&gt;&lt;p&gt;Toggle the folds of the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aktuelle Faltung umschalten&lt;/b&gt;&lt;p&gt;Dies schaltet die Faltung der aktuellen Zeile des aktuellen Editors um.&lt;/p&gt;</translation>
     </message>
@@ -61351,1065 +61376,1065 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Speichern &amp;unter...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="687"/>
+        <location filename="../ViewManager/ViewManager.py" line="703"/>
         <source>Save all</source>
         <translation>Alles speichern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1181"/>
+        <location filename="../ViewManager/ViewManager.py" line="1199"/>
         <source>Select all</source>
         <translation>Alles auswählen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1181"/>
+        <location filename="../ViewManager/ViewManager.py" line="1199"/>
         <source>&amp;Select all</source>
         <translation>A&amp;lles auswählen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1199"/>
+        <location filename="../ViewManager/ViewManager.py" line="1217"/>
         <source>Deselect all</source>
         <translation>Auswahl aufheben</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1199"/>
+        <location filename="../ViewManager/ViewManager.py" line="1217"/>
         <source>&amp;Deselect all</source>
         <translation>Aus&amp;wahl aufheben</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3305"/>
+        <location filename="../ViewManager/ViewManager.py" line="3323"/>
         <source>Zoom in</source>
         <translation>Vergrößern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3305"/>
+        <location filename="../ViewManager/ViewManager.py" line="3323"/>
         <source>Zoom &amp;in</source>
         <translation>Ver&amp;größern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3324"/>
+        <location filename="../ViewManager/ViewManager.py" line="3342"/>
         <source>Zoom out</source>
         <translation>Verkleinern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3324"/>
+        <location filename="../ViewManager/ViewManager.py" line="3342"/>
         <source>Zoom &amp;out</source>
         <translation>Ver&amp;kleinern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3316"/>
+        <location filename="../ViewManager/ViewManager.py" line="3334"/>
         <source>&lt;b&gt;Zoom in&lt;/b&gt;&lt;p&gt;Zoom in on the text. This makes the text bigger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vergrößern&lt;/b&gt;&lt;p&gt;Den angezeigten Text vergrößern.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3335"/>
+        <location filename="../ViewManager/ViewManager.py" line="3353"/>
         <source>&lt;b&gt;Zoom out&lt;/b&gt;&lt;p&gt;Zoom out on the text. This makes the text smaller.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Verkleinern&lt;/b&gt;&lt;p&gt;Den angezeigten Text verkleinern.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1163"/>
+        <location filename="../ViewManager/ViewManager.py" line="1181"/>
         <source>Select to brace</source>
         <translation>Zur Klammer auswählen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1163"/>
+        <location filename="../ViewManager/ViewManager.py" line="1181"/>
         <source>Select to &amp;brace</source>
         <translation>Zur Klammer ausw&amp;ählen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1170"/>
+        <location filename="../ViewManager/ViewManager.py" line="1188"/>
         <source>Select text to the matching brace</source>
         <translation>Text bis zur passenden Klammer auswählen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3026"/>
+        <location filename="../ViewManager/ViewManager.py" line="3044"/>
         <source>Goto Brace</source>
         <translation>Gehe zu Klammer</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3018"/>
+        <location filename="../ViewManager/ViewManager.py" line="3036"/>
         <source>Goto &amp;Brace</source>
         <translation>Gehe zu &amp;Klammer</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3028"/>
+        <location filename="../ViewManager/ViewManager.py" line="3046"/>
         <source>&lt;b&gt;Goto Brace&lt;/b&gt;&lt;p&gt;Go to the matching brace in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gehe zu Klammer&lt;/b&gt;&lt;p&gt;Gehe zur passenden Klammer im aktuellen Editor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3106"/>
+        <location filename="../ViewManager/ViewManager.py" line="3124"/>
         <source>Search in Files</source>
         <translation>Suchen in Dateien</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3106"/>
+        <location filename="../ViewManager/ViewManager.py" line="3124"/>
         <source>Search in &amp;Files...</source>
         <translation>Suchen in &amp;Dateien...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3114"/>
+        <location filename="../ViewManager/ViewManager.py" line="3132"/>
         <source>Search for a text in files</source>
         <translation>Nach Text in Dateien suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3116"/>
+        <location filename="../ViewManager/ViewManager.py" line="3134"/>
         <source>&lt;b&gt;Search in Files&lt;/b&gt;&lt;p&gt;Search for some text in the files of a directory tree or the project. A dialog is shown to enter the searchtext and options for the search and to display the result.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suchen in Dateien&lt;/b&gt;&lt;p&gt;Sucht nach Text in den Dateien eines Verzeichnisbaumes oder des Projektes. Es wird ein Dialog angezeigt, in dem der Suchtext und die Suchoptionen eingegeben werden können und in dem das Suchresultat angezeigt wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1130"/>
+        <location filename="../ViewManager/ViewManager.py" line="1148"/>
         <source>Stream Comment</source>
         <translation>Stream Kommentar</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1135"/>
+        <location filename="../ViewManager/ViewManager.py" line="1153"/>
         <source>Stream Comment Line or Selection</source>
         <translation>Stream kommentiert eine Zeile oder die Auswahl</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1147"/>
+        <location filename="../ViewManager/ViewManager.py" line="1165"/>
         <source>Box Comment</source>
         <translation>Box Kommentar</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1152"/>
+        <location filename="../ViewManager/ViewManager.py" line="1170"/>
         <source>Box Comment Line or Selection</source>
         <translation>Box kommentiert eine Zeile oder die Auswahl</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1154"/>
+        <location filename="../ViewManager/ViewManager.py" line="1172"/>
         <source>&lt;b&gt;Box Comment&lt;/b&gt;&lt;p&gt;Box comments the current line or the lines of the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Box Kommentar&lt;/b&gt;&lt;p&gt;Dies kommentiert die aktuelle Zeile oder die Zeilen der aktuelle Auswahl mit einem Box Kommentar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1138"/>
+        <location filename="../ViewManager/ViewManager.py" line="1156"/>
         <source>&lt;b&gt;Stream Comment&lt;/b&gt;&lt;p&gt;Stream comments the current line or the current selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Stream Kommentar&lt;/b&gt;&lt;p&gt;Dies kommentiert die aktuelle Zeile oder die aktuelle Auswahl mit einem Stream Kommentar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="905"/>
+        <location filename="../ViewManager/ViewManager.py" line="923"/>
         <source>Revert to last saved state</source>
         <translation>Zurück zum letzten gesichert Zustand</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="896"/>
+        <location filename="../ViewManager/ViewManager.py" line="914"/>
         <source>Re&amp;vert to last saved state</source>
         <translation>&amp;Zurück zum letzten gesichert Zustand</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="907"/>
+        <location filename="../ViewManager/ViewManager.py" line="925"/>
         <source>&lt;b&gt;Revert to last saved state&lt;/b&gt;&lt;p&gt;Undo all changes up to the last saved state of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zurück zum letzten gesichert Zustand&lt;/b&gt;&lt;p&gt;Dies nimmt alle Änderungen des aktuellen Editors bis zum letzten gesicherten Zustand zurück.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3482"/>
+        <location filename="../ViewManager/ViewManager.py" line="3500"/>
         <source>Split view</source>
         <translation>Ansicht aufteilen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3482"/>
+        <location filename="../ViewManager/ViewManager.py" line="3500"/>
         <source>&amp;Split view</source>
         <translation>An&amp;sicht aufteilen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3487"/>
+        <location filename="../ViewManager/ViewManager.py" line="3505"/>
         <source>Add a split to the view</source>
         <translation>Fügt eine weiter Ansicht hinzu</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3489"/>
+        <location filename="../ViewManager/ViewManager.py" line="3507"/>
         <source>&lt;b&gt;Split view&lt;/b&gt;&lt;p&gt;Add a split to the view.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ansicht aufteilen&lt;/b&gt;&lt;p&gt;Fügt eine weitere Ansicht hinzu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3497"/>
+        <location filename="../ViewManager/ViewManager.py" line="3515"/>
         <source>Arrange horizontally</source>
         <translation>Horizontal anordnen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3497"/>
+        <location filename="../ViewManager/ViewManager.py" line="3515"/>
         <source>Arrange &amp;horizontally</source>
         <translation>&amp;Horizontal anordnen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3501"/>
+        <location filename="../ViewManager/ViewManager.py" line="3519"/>
         <source>Arrange the splitted views horizontally</source>
         <translation>Ordnet die geteilten Ansichten horizontal an</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3503"/>
+        <location filename="../ViewManager/ViewManager.py" line="3521"/>
         <source>&lt;b&gt;Arrange horizontally&lt;/b&gt;&lt;p&gt;Arrange the splitted views horizontally.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Horizontal anordnen&lt;/b&gt;&lt;p&gt;Ordnet die geteilten Ansichten horizontal an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3512"/>
+        <location filename="../ViewManager/ViewManager.py" line="3530"/>
         <source>Remove split</source>
         <translation>Geteilte Ansicht löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3512"/>
+        <location filename="../ViewManager/ViewManager.py" line="3530"/>
         <source>&amp;Remove split</source>
         <translation>Geteilte Ansicht &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3517"/>
+        <location filename="../ViewManager/ViewManager.py" line="3535"/>
         <source>Remove the current split</source>
         <translation>Löscht die aktuelle Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3519"/>
+        <location filename="../ViewManager/ViewManager.py" line="3537"/>
         <source>&lt;b&gt;Remove split&lt;/b&gt;&lt;p&gt;Remove the current split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Geteilte Ansicht löschen&lt;/b&gt;&lt;p&gt;Löscht die aktuelle Ansicht&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1386"/>
+        <location filename="../ViewManager/ViewManager.py" line="1404"/>
         <source>Move left one character</source>
         <translation>Ein Zeichen nach links</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1386"/>
+        <location filename="../ViewManager/ViewManager.py" line="1404"/>
         <source>Left</source>
         <translation>Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1400"/>
+        <location filename="../ViewManager/ViewManager.py" line="1418"/>
         <source>Move right one character</source>
         <translation>Ein Zeichen nach rechts</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1400"/>
+        <location filename="../ViewManager/ViewManager.py" line="1418"/>
         <source>Right</source>
         <translation>Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1414"/>
+        <location filename="../ViewManager/ViewManager.py" line="1432"/>
         <source>Move up one line</source>
         <translation>Eine Zeile nach oben</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1414"/>
+        <location filename="../ViewManager/ViewManager.py" line="1432"/>
         <source>Up</source>
         <translation>Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1426"/>
+        <location filename="../ViewManager/ViewManager.py" line="1444"/>
         <source>Move down one line</source>
         <translation>Eine Zeile nach unten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1426"/>
+        <location filename="../ViewManager/ViewManager.py" line="1444"/>
         <source>Down</source>
         <translation>Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1438"/>
+        <location filename="../ViewManager/ViewManager.py" line="1456"/>
         <source>Move left one word part</source>
         <translation>Ein Wortteil nach links</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1472"/>
+        <location filename="../ViewManager/ViewManager.py" line="1490"/>
         <source>Alt+Left</source>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1452"/>
+        <location filename="../ViewManager/ViewManager.py" line="1470"/>
         <source>Move right one word part</source>
         <translation>Ein Wortteil nach rechts</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2340"/>
+        <location filename="../ViewManager/ViewManager.py" line="2358"/>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1466"/>
+        <location filename="../ViewManager/ViewManager.py" line="1484"/>
         <source>Move left one word</source>
         <translation>Ein Wort nach links</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1517"/>
+        <location filename="../ViewManager/ViewManager.py" line="1535"/>
         <source>Ctrl+Left</source>
         <translation>Ctrl+Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1481"/>
+        <location filename="../ViewManager/ViewManager.py" line="1499"/>
         <source>Move right one word</source>
         <translation>Ein Wort nach rechts</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2094"/>
+        <location filename="../ViewManager/ViewManager.py" line="2112"/>
         <source>Ctrl+Right</source>
         <translation>Ctrl+Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2295"/>
+        <location filename="../ViewManager/ViewManager.py" line="2313"/>
         <source>Home</source>
         <translation>Home</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1520"/>
+        <location filename="../ViewManager/ViewManager.py" line="1538"/>
         <source>Alt+Home</source>
         <translation>Alt+Home</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2310"/>
+        <location filename="../ViewManager/ViewManager.py" line="2328"/>
         <source>End</source>
         <translation>End</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1543"/>
+        <location filename="../ViewManager/ViewManager.py" line="1561"/>
         <source>Scroll view down one line</source>
         <translation>Eine Zeile nach unten rollen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1633"/>
+        <location filename="../ViewManager/ViewManager.py" line="1651"/>
         <source>Ctrl+Down</source>
         <translation>Ctrl+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1555"/>
+        <location filename="../ViewManager/ViewManager.py" line="1573"/>
         <source>Scroll view up one line</source>
         <translation>Eine Zeile nach oben rollen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1616"/>
+        <location filename="../ViewManager/ViewManager.py" line="1634"/>
         <source>Ctrl+Up</source>
         <translation>Ctrl+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1566"/>
+        <location filename="../ViewManager/ViewManager.py" line="1584"/>
         <source>Move up one paragraph</source>
         <translation>Einen Absatz nach oben</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1566"/>
+        <location filename="../ViewManager/ViewManager.py" line="1584"/>
         <source>Alt+Up</source>
         <translation>Alt+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1575"/>
+        <location filename="../ViewManager/ViewManager.py" line="1593"/>
         <source>Move down one paragraph</source>
         <translation>Einen Absatz nach unten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1575"/>
+        <location filename="../ViewManager/ViewManager.py" line="1593"/>
         <source>Alt+Down</source>
         <translation>Alt+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1587"/>
+        <location filename="../ViewManager/ViewManager.py" line="1605"/>
         <source>Move up one page</source>
         <translation>Eine Seite hoch</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1587"/>
+        <location filename="../ViewManager/ViewManager.py" line="1605"/>
         <source>PgUp</source>
         <translation>PgUp</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1596"/>
+        <location filename="../ViewManager/ViewManager.py" line="1614"/>
         <source>Move down one page</source>
         <translation>Eine Seite nach unten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1596"/>
+        <location filename="../ViewManager/ViewManager.py" line="1614"/>
         <source>PgDown</source>
         <translation>PgDown</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1619"/>
+        <location filename="../ViewManager/ViewManager.py" line="1637"/>
         <source>Ctrl+Home</source>
         <translation>Ctrl+Home</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1636"/>
+        <location filename="../ViewManager/ViewManager.py" line="1654"/>
         <source>Ctrl+End</source>
         <translation>Ctrl+End</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1642"/>
+        <location filename="../ViewManager/ViewManager.py" line="1660"/>
         <source>Indent one level</source>
         <translation>Eine Ebene einrücken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1642"/>
+        <location filename="../ViewManager/ViewManager.py" line="1660"/>
         <source>Tab</source>
         <translation>Tab</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1651"/>
+        <location filename="../ViewManager/ViewManager.py" line="1669"/>
         <source>Unindent one level</source>
         <translation>Eine Ebene ausrücken</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1651"/>
+        <location filename="../ViewManager/ViewManager.py" line="1669"/>
         <source>Shift+Tab</source>
         <translation>Shift+Tab</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1661"/>
+        <location filename="../ViewManager/ViewManager.py" line="1679"/>
         <source>Extend selection left one character</source>
         <translation>Auswahl um ein Zeichen nach links erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1661"/>
+        <location filename="../ViewManager/ViewManager.py" line="1679"/>
         <source>Shift+Left</source>
         <translation>Shift+Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1676"/>
+        <location filename="../ViewManager/ViewManager.py" line="1694"/>
         <source>Extend selection right one character</source>
         <translation>Auswahl um ein Zeichen nach rechts erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1676"/>
+        <location filename="../ViewManager/ViewManager.py" line="1694"/>
         <source>Shift+Right</source>
         <translation>Shift+Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1691"/>
+        <location filename="../ViewManager/ViewManager.py" line="1709"/>
         <source>Extend selection up one line</source>
         <translation>Auswahl um eine Zeile nach oben erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1691"/>
+        <location filename="../ViewManager/ViewManager.py" line="1709"/>
         <source>Shift+Up</source>
         <translation>Shift+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1706"/>
+        <location filename="../ViewManager/ViewManager.py" line="1724"/>
         <source>Extend selection down one line</source>
         <translation>Auswahl um eine Zeile nach unten erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1706"/>
+        <location filename="../ViewManager/ViewManager.py" line="1724"/>
         <source>Shift+Down</source>
         <translation>Shift+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1721"/>
+        <location filename="../ViewManager/ViewManager.py" line="1739"/>
         <source>Extend selection left one word part</source>
         <translation>Auswahl um einen Wortteil nach links erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1757"/>
+        <location filename="../ViewManager/ViewManager.py" line="1775"/>
         <source>Alt+Shift+Left</source>
         <translation>Alt+Shift+Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1735"/>
+        <location filename="../ViewManager/ViewManager.py" line="1753"/>
         <source>Extend selection right one word part</source>
         <translation>Auswahl um einen Wortteil nach rechts erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2355"/>
+        <location filename="../ViewManager/ViewManager.py" line="2373"/>
         <source>Alt+Shift+Right</source>
         <translation>Alt+Shift+Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1749"/>
+        <location filename="../ViewManager/ViewManager.py" line="1767"/>
         <source>Extend selection left one word</source>
         <translation>Auswahl um ein Wort nach links erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2449"/>
+        <location filename="../ViewManager/ViewManager.py" line="2467"/>
         <source>Ctrl+Shift+Left</source>
         <translation>Ctrl+Shift+Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1766"/>
+        <location filename="../ViewManager/ViewManager.py" line="1784"/>
         <source>Extend selection right one word</source>
         <translation>Auswahl um ein Wort nach rechts erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2111"/>
+        <location filename="../ViewManager/ViewManager.py" line="2129"/>
         <source>Ctrl+Shift+Right</source>
         <translation>Ctrl+Shift+Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1795"/>
+        <location filename="../ViewManager/ViewManager.py" line="1813"/>
         <source>Shift+Home</source>
         <translation>Shift+Home</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2215"/>
+        <location filename="../ViewManager/ViewManager.py" line="2233"/>
         <source>Alt+Shift+Home</source>
         <translation>Alt+Shift+Home</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1812"/>
+        <location filename="../ViewManager/ViewManager.py" line="1830"/>
         <source>Shift+End</source>
         <translation>Shift+End</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1818"/>
+        <location filename="../ViewManager/ViewManager.py" line="1836"/>
         <source>Extend selection up one paragraph</source>
         <translation>Auswahl um einen Absatz nach oben erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1818"/>
+        <location filename="../ViewManager/ViewManager.py" line="1836"/>
         <source>Alt+Shift+Up</source>
         <translation>Alt+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1831"/>
+        <location filename="../ViewManager/ViewManager.py" line="1849"/>
         <source>Extend selection down one paragraph</source>
         <translation>Auswahl um einen Absatz nach unten erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1831"/>
+        <location filename="../ViewManager/ViewManager.py" line="1849"/>
         <source>Alt+Shift+Down</source>
         <translation>Alt+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1844"/>
+        <location filename="../ViewManager/ViewManager.py" line="1862"/>
         <source>Extend selection up one page</source>
         <translation>Auswahl um eine Seite nach oben erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1844"/>
+        <location filename="../ViewManager/ViewManager.py" line="1862"/>
         <source>Shift+PgUp</source>
         <translation>Shift+PgUp</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1856"/>
+        <location filename="../ViewManager/ViewManager.py" line="1874"/>
         <source>Extend selection down one page</source>
         <translation>Auswahl um eine Seite nach unten erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1856"/>
+        <location filename="../ViewManager/ViewManager.py" line="1874"/>
         <source>Shift+PgDown</source>
         <translation>Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1883"/>
+        <location filename="../ViewManager/ViewManager.py" line="1901"/>
         <source>Ctrl+Shift+Home</source>
         <translation>Ctrl+Shift+Home</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1900"/>
+        <location filename="../ViewManager/ViewManager.py" line="1918"/>
         <source>Ctrl+Shift+End</source>
         <translation>Ctrl+Shift+End</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1906"/>
+        <location filename="../ViewManager/ViewManager.py" line="1924"/>
         <source>Delete previous character</source>
         <translation>Zeichen links löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1906"/>
+        <location filename="../ViewManager/ViewManager.py" line="1924"/>
         <source>Backspace</source>
         <translation>Backspace</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1937"/>
+        <location filename="../ViewManager/ViewManager.py" line="1955"/>
         <source>Delete current character</source>
         <translation>Aktuelles Zeichen löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1937"/>
+        <location filename="../ViewManager/ViewManager.py" line="1955"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1951"/>
+        <location filename="../ViewManager/ViewManager.py" line="1969"/>
         <source>Delete word to left</source>
         <translation>Wort links löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1951"/>
+        <location filename="../ViewManager/ViewManager.py" line="1969"/>
         <source>Ctrl+Backspace</source>
         <translation>Ctrl+Backspace</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1962"/>
+        <location filename="../ViewManager/ViewManager.py" line="1980"/>
         <source>Delete word to right</source>
         <translation>Wort rechts löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1962"/>
+        <location filename="../ViewManager/ViewManager.py" line="1980"/>
         <source>Ctrl+Del</source>
         <translation>Ctrl+Del</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1972"/>
+        <location filename="../ViewManager/ViewManager.py" line="1990"/>
         <source>Delete line to left</source>
         <translation>Zeile links löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1972"/>
+        <location filename="../ViewManager/ViewManager.py" line="1990"/>
         <source>Ctrl+Shift+Backspace</source>
         <translation>Ctrl+Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1983"/>
+        <location filename="../ViewManager/ViewManager.py" line="2001"/>
         <source>Delete line to right</source>
         <translation>Zeile rechts löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1992"/>
+        <location filename="../ViewManager/ViewManager.py" line="2010"/>
         <source>Ctrl+Shift+Del</source>
         <translation>Ctrl+Shift+Del</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1998"/>
+        <location filename="../ViewManager/ViewManager.py" line="2016"/>
         <source>Insert new line</source>
         <translation>Neue Zeile einfügen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1998"/>
+        <location filename="../ViewManager/ViewManager.py" line="2016"/>
         <source>Return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2021"/>
+        <location filename="../ViewManager/ViewManager.py" line="2039"/>
         <source>Delete current line</source>
         <translation>Aktuelle Zeile löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2021"/>
+        <location filename="../ViewManager/ViewManager.py" line="2039"/>
         <source>Ctrl+Shift+L</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2032"/>
+        <location filename="../ViewManager/ViewManager.py" line="2050"/>
         <source>Duplicate current line</source>
         <translation>Aktuelle Zeile duplizieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2032"/>
+        <location filename="../ViewManager/ViewManager.py" line="2050"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2043"/>
+        <location filename="../ViewManager/ViewManager.py" line="2061"/>
         <source>Swap current and previous lines</source>
         <translation>Aktuelle Zeile mit vorhergehender tauschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2043"/>
+        <location filename="../ViewManager/ViewManager.py" line="2061"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2054"/>
+        <location filename="../ViewManager/ViewManager.py" line="2072"/>
         <source>Cut current line</source>
         <translation>Aktuelle Zeile ausschneiden</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2054"/>
+        <location filename="../ViewManager/ViewManager.py" line="2072"/>
         <source>Alt+Shift+L</source>
         <translation>Alt+Shift+L</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2064"/>
+        <location filename="../ViewManager/ViewManager.py" line="2082"/>
         <source>Copy current line</source>
         <translation>Aktuelle Zeile kopieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2064"/>
+        <location filename="../ViewManager/ViewManager.py" line="2082"/>
         <source>Ctrl+Shift+T</source>
         <translation>Ctrl+Shift+L</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2075"/>
+        <location filename="../ViewManager/ViewManager.py" line="2093"/>
         <source>Toggle insert/overtype</source>
         <translation>Einfügen/Überschreiben umschalten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2075"/>
+        <location filename="../ViewManager/ViewManager.py" line="2093"/>
         <source>Ins</source>
         <translation>Ins</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2639"/>
+        <location filename="../ViewManager/ViewManager.py" line="2657"/>
         <source>Convert selection to lower case</source>
         <translation>Auswahl in Kleinbuchstaben umwandeln</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2639"/>
+        <location filename="../ViewManager/ViewManager.py" line="2657"/>
         <source>Alt+Shift+U</source>
         <translation>Alt+Shift+U</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2651"/>
+        <location filename="../ViewManager/ViewManager.py" line="2669"/>
         <source>Convert selection to upper case</source>
         <translation>Auswahl in Großbuchstaben umwandeln</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2651"/>
+        <location filename="../ViewManager/ViewManager.py" line="2669"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3665"/>
+        <location filename="../ViewManager/ViewManager.py" line="3683"/>
         <source>Start Macro Recording</source>
         <translation>Makroaufzeichnung starten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3659"/>
+        <location filename="../ViewManager/ViewManager.py" line="3677"/>
         <source>S&amp;tart Macro Recording</source>
         <translation>Makroaufzeichnung s&amp;tarten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3667"/>
+        <location filename="../ViewManager/ViewManager.py" line="3685"/>
         <source>&lt;b&gt;Start Macro Recording&lt;/b&gt;&lt;p&gt;Start recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Makroaufzeichnung starten&lt;/b&gt;&lt;p&gt;Startet die Aufzeichnung von Editorbefehlen in ein neues Makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3679"/>
+        <location filename="../ViewManager/ViewManager.py" line="3697"/>
         <source>Stop Macro Recording</source>
         <translation>Makroaufzeichnung stoppen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3675"/>
+        <location filename="../ViewManager/ViewManager.py" line="3693"/>
         <source>Sto&amp;p Macro Recording</source>
         <translation>Makroaufzeichnung sto&amp;ppen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3681"/>
+        <location filename="../ViewManager/ViewManager.py" line="3699"/>
         <source>&lt;b&gt;Stop Macro Recording&lt;/b&gt;&lt;p&gt;Stop recording editor commands into a new macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Makroaufzeichnung stoppen&lt;/b&gt;&lt;p&gt;Stopt die Aufzeichnung von Editorbefehlen in ein neues Makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3693"/>
+        <location filename="../ViewManager/ViewManager.py" line="3711"/>
         <source>Run Macro</source>
         <translation>Makro ausführen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3689"/>
+        <location filename="../ViewManager/ViewManager.py" line="3707"/>
         <source>&amp;Run Macro</source>
         <translation>Makro &amp;ausführen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3695"/>
+        <location filename="../ViewManager/ViewManager.py" line="3713"/>
         <source>&lt;b&gt;Run Macro&lt;/b&gt;&lt;p&gt;Run a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Makro ausführen&lt;/b&gt;&lt;p&gt;Führt ein vorher aufgezeichnetes Makro aus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3707"/>
+        <location filename="../ViewManager/ViewManager.py" line="3725"/>
         <source>Delete Macro</source>
         <translation>Makro löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3703"/>
+        <location filename="../ViewManager/ViewManager.py" line="3721"/>
         <source>&amp;Delete Macro</source>
         <translation>Makro &amp;löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3709"/>
+        <location filename="../ViewManager/ViewManager.py" line="3727"/>
         <source>&lt;b&gt;Delete Macro&lt;/b&gt;&lt;p&gt;Delete a previously recorded editor macro.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Makro löschen&lt;/b&gt;&lt;p&gt;Löscht ein vorher aufgezeichnetes Makro.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3721"/>
+        <location filename="../ViewManager/ViewManager.py" line="3739"/>
         <source>Load Macro</source>
         <translation>Makro laden</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3717"/>
+        <location filename="../ViewManager/ViewManager.py" line="3735"/>
         <source>&amp;Load Macro</source>
         <translation>Makro la&amp;den</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3735"/>
+        <location filename="../ViewManager/ViewManager.py" line="3753"/>
         <source>Save Macro</source>
         <translation>Makro speichern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3731"/>
+        <location filename="../ViewManager/ViewManager.py" line="3749"/>
         <source>&amp;Save Macro</source>
         <translation>Makro &amp;speichern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3723"/>
+        <location filename="../ViewManager/ViewManager.py" line="3741"/>
         <source>&lt;b&gt;Load Macro&lt;/b&gt;&lt;p&gt;Load an editor macro from a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Makro laden&lt;/b&gt;&lt;p&gt;Lädt ein Makro aus einer Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3737"/>
+        <location filename="../ViewManager/ViewManager.py" line="3755"/>
         <source>&lt;b&gt;Save Macro&lt;/b&gt;&lt;p&gt;Save a previously recorded editor macro to a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Makro speichern&lt;/b&gt;&lt;p&gt;Speichert ein vorher aufgezeichnetes Makro in eine Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3779"/>
+        <location filename="../ViewManager/ViewManager.py" line="3797"/>
         <source>Toggle Bookmark</source>
         <translation>Lesezeichen setzen/löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3771"/>
+        <location filename="../ViewManager/ViewManager.py" line="3789"/>
         <source>&amp;Toggle Bookmark</source>
         <translation>&amp;Lesezeichen setzen/löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3781"/>
+        <location filename="../ViewManager/ViewManager.py" line="3799"/>
         <source>&lt;b&gt;Toggle Bookmark&lt;/b&gt;&lt;p&gt;Toggle a bookmark at the current line of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lesezeichen setzen/löschen&lt;/b&gt;&lt;p&gt;Setzt/löscht ein Lesezeichen in der aktuellen Zeile des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3798"/>
+        <location filename="../ViewManager/ViewManager.py" line="3816"/>
         <source>Next Bookmark</source>
         <translation>Nächstes Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3790"/>
+        <location filename="../ViewManager/ViewManager.py" line="3808"/>
         <source>&amp;Next Bookmark</source>
         <translation>&amp;Nächstes Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3800"/>
+        <location filename="../ViewManager/ViewManager.py" line="3818"/>
         <source>&lt;b&gt;Next Bookmark&lt;/b&gt;&lt;p&gt;Go to next bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nächstes Lesezeichen&lt;/b&gt;&lt;p&gt;Gehe zum nächsten Lesezeichen des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3816"/>
+        <location filename="../ViewManager/ViewManager.py" line="3834"/>
         <source>Previous Bookmark</source>
         <translation>Vorheriges Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3808"/>
+        <location filename="../ViewManager/ViewManager.py" line="3826"/>
         <source>&amp;Previous Bookmark</source>
         <translation>&amp;Vorheriges Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3818"/>
+        <location filename="../ViewManager/ViewManager.py" line="3836"/>
         <source>&lt;b&gt;Previous Bookmark&lt;/b&gt;&lt;p&gt;Go to previous bookmark of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorheriges Lesezeichen&lt;/b&gt;&lt;p&gt;Gehe zum vorherigen Lesezeichen des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3833"/>
+        <location filename="../ViewManager/ViewManager.py" line="3851"/>
         <source>Clear Bookmarks</source>
         <translation>Lesezeichen löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3826"/>
+        <location filename="../ViewManager/ViewManager.py" line="3844"/>
         <source>&amp;Clear Bookmarks</source>
         <translation>Lesezeichen l&amp;öschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3835"/>
+        <location filename="../ViewManager/ViewManager.py" line="3853"/>
         <source>&lt;b&gt;Clear Bookmarks&lt;/b&gt;&lt;p&gt;Clear bookmarks of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Lesezeichen löschen&lt;/b&gt;&lt;p&gt;Lesezeichen aller Editoren löschen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4044"/>
+        <location filename="../ViewManager/ViewManager.py" line="4062"/>
         <source>&amp;Bookmarks</source>
         <translation>&amp;Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3434"/>
+        <location filename="../ViewManager/ViewManager.py" line="3452"/>
         <source>Remove all highlights</source>
         <translation>Hervorhebungen löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3436"/>
+        <location filename="../ViewManager/ViewManager.py" line="3454"/>
         <source>&lt;b&gt;Remove all highlights&lt;/b&gt;&lt;p&gt;Remove the highlights of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Hervorhebungen löschen&lt;/b&gt;&lt;p&gt;Hervorhebungen aller Editoren löschen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="766"/>
+        <location filename="../ViewManager/ViewManager.py" line="782"/>
         <source>Open &amp;Bookmarked Files</source>
         <translation>Ge&amp;merkte Dateien</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5024"/>
+        <location filename="../ViewManager/ViewManager.py" line="5058"/>
         <source>&amp;Clear</source>
         <translation>&amp;Löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5018"/>
+        <location filename="../ViewManager/ViewManager.py" line="5052"/>
         <source>&amp;Add</source>
         <translation>&amp;Hinzufügen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="5021"/>
+        <location filename="../ViewManager/ViewManager.py" line="5055"/>
         <source>&amp;Edit...</source>
         <translation>&amp;Bearbeiten...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2135"/>
+        <location filename="../ViewManager/ViewManager.py" line="2153"/>
         <source>Extend rectangular selection down one line</source>
         <translation>Rechteckige Auswahl um eine Zeile nach unten erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2135"/>
+        <location filename="../ViewManager/ViewManager.py" line="2153"/>
         <source>Alt+Ctrl+Down</source>
         <translation>Alt+Ctrl+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2151"/>
+        <location filename="../ViewManager/ViewManager.py" line="2169"/>
         <source>Extend rectangular selection up one line</source>
         <translation>Rechteckige Auswahl um eine Zeile nach oben erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2151"/>
+        <location filename="../ViewManager/ViewManager.py" line="2169"/>
         <source>Alt+Ctrl+Up</source>
         <translation>Alt+Ctrl+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2166"/>
+        <location filename="../ViewManager/ViewManager.py" line="2184"/>
         <source>Extend rectangular selection left one character</source>
         <translation>Rechteckige Auswahl um ein Zeichen nach links erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2166"/>
+        <location filename="../ViewManager/ViewManager.py" line="2184"/>
         <source>Alt+Ctrl+Left</source>
         <translation>Alt+Ctrl+Left</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2184"/>
+        <location filename="../ViewManager/ViewManager.py" line="2202"/>
         <source>Extend rectangular selection right one character</source>
         <translation>Rechteckige Auswahl um ein Zeichen nach rechts erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2184"/>
+        <location filename="../ViewManager/ViewManager.py" line="2202"/>
         <source>Alt+Ctrl+Right</source>
         <translation>Alt+Ctrl+Right</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2240"/>
+        <location filename="../ViewManager/ViewManager.py" line="2258"/>
         <source>Extend rectangular selection up one page</source>
         <translation>Rechteckige Auswahl um eine Seite nach oben erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2255"/>
+        <location filename="../ViewManager/ViewManager.py" line="2273"/>
         <source>Extend rectangular selection down one page</source>
         <translation>Rechteckige Auswahl um eine Seite nach unten erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2097"/>
+        <location filename="../ViewManager/ViewManager.py" line="2115"/>
         <source>Alt+End</source>
         <translation>Alt+End</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2117"/>
+        <location filename="../ViewManager/ViewManager.py" line="2135"/>
         <source>Formfeed</source>
         <translation>Seitenumbruch</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1239"/>
+        <location filename="../ViewManager/ViewManager.py" line="1257"/>
         <source>Shorten empty lines</source>
         <translation>Leere Zeilen verkürzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1241"/>
+        <location filename="../ViewManager/ViewManager.py" line="1259"/>
         <source>&lt;b&gt;Shorten empty lines&lt;/b&gt;&lt;p&gt;Shorten lines consisting solely of whitespace characters.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Leere Zeilen verkürzen&lt;/b&gt;&lt;p&gt;Zeilen, die nur aus Leerzeichen und Tabulatoren bestehen, werden verkürzt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2126"/>
+        <location filename="../ViewManager/ViewManager.py" line="2144"/>
         <source>Escape</source>
         <translation>Abbruch</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2126"/>
+        <location filename="../ViewManager/ViewManager.py" line="2144"/>
         <source>Esc</source>
         <translation>Esc</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3849"/>
+        <location filename="../ViewManager/ViewManager.py" line="3867"/>
         <source>Goto Syntax Error</source>
         <translation>Zu Syntaxfehler gehen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3843"/>
+        <location filename="../ViewManager/ViewManager.py" line="3861"/>
         <source>&amp;Goto Syntax Error</source>
         <translation>Zu Syntaxfehler &amp;gehen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3851"/>
+        <location filename="../ViewManager/ViewManager.py" line="3869"/>
         <source>&lt;b&gt;Goto Syntax Error&lt;/b&gt;&lt;p&gt;Go to next syntax error of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zu Syntaxfehler gehen&lt;/b&gt;&lt;p&gt;Gehe zum nächsten Syntaxfehler des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3864"/>
+        <location filename="../ViewManager/ViewManager.py" line="3882"/>
         <source>Clear Syntax Errors</source>
         <translation>Syntaxfehler löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3859"/>
+        <location filename="../ViewManager/ViewManager.py" line="3877"/>
         <source>Clear &amp;Syntax Errors</source>
         <translation>Synta&amp;xfehler löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3866"/>
+        <location filename="../ViewManager/ViewManager.py" line="3884"/>
         <source>&lt;b&gt;Clear Syntax Errors&lt;/b&gt;&lt;p&gt;Clear syntax errors of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Syntaxfehler löschen&lt;/b&gt;&lt;p&gt;Syntaxfehler aller Editoren löschen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="739"/>
+        <location filename="../ViewManager/ViewManager.py" line="755"/>
         <source>Search File</source>
         <translation>Datei suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="739"/>
+        <location filename="../ViewManager/ViewManager.py" line="755"/>
         <source>Search &amp;File...</source>
         <translation>Da&amp;tei suchen...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="745"/>
+        <location filename="../ViewManager/ViewManager.py" line="761"/>
         <source>Search for a file</source>
         <translation>Nach einer Datei suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="747"/>
+        <location filename="../ViewManager/ViewManager.py" line="763"/>
         <source>&lt;b&gt;Search File&lt;/b&gt;&lt;p&gt;Search for a file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datei suchen&lt;/b&gt;&lt;p&gt;Nach einer Datei suchen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3934"/>
+        <location filename="../ViewManager/ViewManager.py" line="3952"/>
         <source>Next uncovered line</source>
         <translation>Nächste nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3928"/>
+        <location filename="../ViewManager/ViewManager.py" line="3946"/>
         <source>&amp;Next uncovered line</source>
         <translation>&amp;Nächste nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3936"/>
+        <location filename="../ViewManager/ViewManager.py" line="3954"/>
         <source>&lt;b&gt;Next uncovered line&lt;/b&gt;&lt;p&gt;Go to next line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nächste nichtabgedeckte Zeile&lt;/b&gt;&lt;p&gt;Gehe zur nächsten als nicht abgedeckt markierten Zeile des aktiven Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3953"/>
+        <location filename="../ViewManager/ViewManager.py" line="3971"/>
         <source>Previous uncovered line</source>
         <translation>Vorige nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3945"/>
+        <location filename="../ViewManager/ViewManager.py" line="3963"/>
         <source>&amp;Previous uncovered line</source>
         <translation>&amp;Vorige nichtabgedeckte Zeile</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3955"/>
+        <location filename="../ViewManager/ViewManager.py" line="3973"/>
         <source>&lt;b&gt;Previous uncovered line&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor marked as not covered.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorige nichtabgedeckte Zeile&lt;/b&gt;&lt;p&gt;Gehe zur vorigen als nicht abgedeckt markierten Zeile des aktiven Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="859"/>
+        <location filename="../ViewManager/ViewManager.py" line="877"/>
         <source>Alt+Backspace</source>
         <comment>Edit|Undo</comment>
         <translation>Alt+Backspace</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="918"/>
+        <location filename="../ViewManager/ViewManager.py" line="936"/>
         <source>Shift+Del</source>
         <comment>Edit|Cut</comment>
         <translation>Shift+Del</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="958"/>
+        <location filename="../ViewManager/ViewManager.py" line="976"/>
         <source>Shift+Ins</source>
         <comment>Edit|Paste</comment>
         <translation>Shift+Ins</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1918"/>
+        <location filename="../ViewManager/ViewManager.py" line="1936"/>
         <source>Shift+Backspace</source>
         <translation>Shift+Backspace</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4283"/>
+        <location filename="../ViewManager/ViewManager.py" line="4301"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has unsaved changes.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Datei &lt;b&gt;{0}&lt;/b&gt; enthält ungesicherte Änderungen.&lt;/p&gt;</translation>
     </message>
@@ -62424,155 +62449,155 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>&lt;b&gt;Datei öffnen&lt;/b&gt;&lt;p&gt;Sie werden nach dem Namen einer Datei gefragt, die in einem Editor geöffnet werden soll.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3204"/>
+        <location filename="../ViewManager/ViewManager.py" line="3222"/>
         <source>Quicksearch</source>
         <translation>Schnellsuche</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2935"/>
+        <location filename="../ViewManager/ViewManager.py" line="2953"/>
         <source>Ctrl+Shift+K</source>
         <comment>Search|Quicksearch</comment>
         <translation>Ctrl+Shift+K</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2943"/>
+        <location filename="../ViewManager/ViewManager.py" line="2961"/>
         <source>Perform a quicksearch</source>
         <translation>Führe eine Schnellsuche durch</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2956"/>
+        <location filename="../ViewManager/ViewManager.py" line="2974"/>
         <source>Quicksearch backwards</source>
         <translation>Schnellsuche rückwärts</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2956"/>
+        <location filename="../ViewManager/ViewManager.py" line="2974"/>
         <source>Ctrl+Shift+J</source>
         <comment>Search|Quicksearch backwards</comment>
         <translation>Ctrl+Shift+J</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2966"/>
+        <location filename="../ViewManager/ViewManager.py" line="2984"/>
         <source>Perform a quicksearch backwards</source>
         <translation>Führe eine Schnellsuche rückwärts durch</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2935"/>
+        <location filename="../ViewManager/ViewManager.py" line="2953"/>
         <source>&amp;Quicksearch</source>
         <translation>Schne&amp;llsuche</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2956"/>
+        <location filename="../ViewManager/ViewManager.py" line="2974"/>
         <source>Quicksearch &amp;backwards</source>
         <translation>Schnellsuche &amp;rückwärts</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2978"/>
+        <location filename="../ViewManager/ViewManager.py" line="2996"/>
         <source>Quicksearch extend</source>
         <translation>Schnellsuche erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2978"/>
+        <location filename="../ViewManager/ViewManager.py" line="2996"/>
         <source>Quicksearch e&amp;xtend</source>
         <translation>Schnellsuche er&amp;weitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2978"/>
+        <location filename="../ViewManager/ViewManager.py" line="2996"/>
         <source>Ctrl+Shift+H</source>
         <comment>Search|Quicksearch extend</comment>
         <translation>Ctrl+Shift+H</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2986"/>
+        <location filename="../ViewManager/ViewManager.py" line="3004"/>
         <source>Extend the quicksearch to the end of the current word</source>
         <translation>Erweitere die Schnellsuche bis zum Ende des aktuellen Wortes</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2989"/>
+        <location filename="../ViewManager/ViewManager.py" line="3007"/>
         <source>&lt;b&gt;Quicksearch extend&lt;/b&gt;&lt;p&gt;This extends the quicksearch text to the end of the word currently found.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schnellsuche erweitern&lt;/b&gt;&lt;p&gt;Dies erweitert den Schnellsuchetext bis zum Ende des aktuell gefundenen Wortes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1051"/>
+        <location filename="../ViewManager/ViewManager.py" line="1069"/>
         <source>Smart indent</source>
         <translation>Überwachte Einrückung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1059"/>
+        <location filename="../ViewManager/ViewManager.py" line="1077"/>
         <source>Smart indent Line or Selection</source>
         <translation>Rückt eine Zeile oder Auswahl mit Überwachung ein</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1061"/>
+        <location filename="../ViewManager/ViewManager.py" line="1079"/>
         <source>&lt;b&gt;Smart indent&lt;/b&gt;&lt;p&gt;Indents the current line or the lines of the current selection smartly.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Überwachte Einrückung&lt;/b&gt;&lt;p&gt;Dies rückt die aktuelle Zeile oder die Zeilen der aktuellen Auswahl ein, wobei nur sinnvolle Einrückungstiefen erlaubt sind.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3527"/>
+        <location filename="../ViewManager/ViewManager.py" line="3545"/>
         <source>Next split</source>
         <translation>Nächste Ansichte</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3527"/>
+        <location filename="../ViewManager/ViewManager.py" line="3545"/>
         <source>&amp;Next split</source>
         <translation>&amp;Nächste Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3534"/>
+        <location filename="../ViewManager/ViewManager.py" line="3552"/>
         <source>Move to the next split</source>
         <translation>Gehe zur nächsten Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3536"/>
+        <location filename="../ViewManager/ViewManager.py" line="3554"/>
         <source>&lt;b&gt;Next split&lt;/b&gt;&lt;p&gt;Move to the next split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nächste Ansicht&lt;/b&gt;&lt;p&gt;Gehe zur nächsten Ansicht.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3544"/>
+        <location filename="../ViewManager/ViewManager.py" line="3562"/>
         <source>Previous split</source>
         <translation>Vorherige Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3544"/>
+        <location filename="../ViewManager/ViewManager.py" line="3562"/>
         <source>&amp;Previous split</source>
         <translation>&amp;Vorherige Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3550"/>
+        <location filename="../ViewManager/ViewManager.py" line="3568"/>
         <source>Move to the previous split</source>
         <translation>Gehe zur vorherigen Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3552"/>
+        <location filename="../ViewManager/ViewManager.py" line="3570"/>
         <source>&lt;b&gt;Previous split&lt;/b&gt;&lt;p&gt;Move to the previous split.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorherige Ansicht&lt;/b&gt;&lt;p&gt;Gehe zur vorherigen Ansicht.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1998"/>
+        <location filename="../ViewManager/ViewManager.py" line="2016"/>
         <source>Enter</source>
         <translation>Enter</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3401"/>
+        <location filename="../ViewManager/ViewManager.py" line="3419"/>
         <source>Toggle all folds (including children)</source>
         <translation>Alle Faltungen umschalten (inkl. Unterfaltungen)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3395"/>
+        <location filename="../ViewManager/ViewManager.py" line="3413"/>
         <source>Toggle all &amp;folds (including children)</source>
         <translation>Alle Faltungen &amp;umschalten (inkl. Unterfaltungen)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3403"/>
+        <location filename="../ViewManager/ViewManager.py" line="3421"/>
         <source>&lt;b&gt;Toggle all folds (including children)&lt;/b&gt;&lt;p&gt;Toggle all folds of the current editor including all children.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alle Faltungen umschalten (inkl. Unterfaltungen)&lt;/b&gt;&lt;p&gt;Dies schaltet alle Faltungen des aktuellen Editors inklusive Unterfaltungen um.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2273"/>
+        <location filename="../ViewManager/ViewManager.py" line="2291"/>
         <source>Duplicate current selection</source>
         <translation>Aktuelle Auswahl duplizieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2273"/>
+        <location filename="../ViewManager/ViewManager.py" line="2291"/>
         <source>Ctrl+Shift+D</source>
         <translation>Ctrl+Shift+D</translation>
     </message>
@@ -62607,1409 +62632,1429 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
         <translation>Shift+Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="704"/>
+        <location filename="../ViewManager/ViewManager.py" line="720"/>
         <source>Ctrl+P</source>
         <comment>File|Print</comment>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="739"/>
+        <location filename="../ViewManager/ViewManager.py" line="755"/>
         <source>Alt+Ctrl+F</source>
         <comment>File|Search File</comment>
         <translation>Alt+Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="761"/>
+        <location filename="../ViewManager/ViewManager.py" line="777"/>
         <source>&amp;File</source>
         <translation>&amp;Datei</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="813"/>
+        <location filename="../ViewManager/ViewManager.py" line="830"/>
         <source>File</source>
         <translation>Datei</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="859"/>
+        <location filename="../ViewManager/ViewManager.py" line="877"/>
         <source>Ctrl+Z</source>
         <comment>Edit|Undo</comment>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="878"/>
+        <location filename="../ViewManager/ViewManager.py" line="896"/>
         <source>Ctrl+Shift+Z</source>
         <comment>Edit|Redo</comment>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="896"/>
+        <location filename="../ViewManager/ViewManager.py" line="914"/>
         <source>Ctrl+Y</source>
         <comment>Edit|Revert</comment>
         <translation>Ctrl+Y</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="918"/>
+        <location filename="../ViewManager/ViewManager.py" line="936"/>
         <source>Ctrl+X</source>
         <comment>Edit|Cut</comment>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="938"/>
+        <location filename="../ViewManager/ViewManager.py" line="956"/>
         <source>Ctrl+C</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="938"/>
+        <location filename="../ViewManager/ViewManager.py" line="956"/>
         <source>Ctrl+Ins</source>
         <comment>Edit|Copy</comment>
         <translation>Ctrl+Einfg</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="958"/>
+        <location filename="../ViewManager/ViewManager.py" line="976"/>
         <source>Ctrl+V</source>
         <comment>Edit|Paste</comment>
         <translation>Ctrl+V</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="978"/>
+        <location filename="../ViewManager/ViewManager.py" line="996"/>
         <source>Alt+Shift+C</source>
         <comment>Edit|Clear</comment>
         <translation>Alt+Shift+C</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1013"/>
+        <location filename="../ViewManager/ViewManager.py" line="1031"/>
         <source>Ctrl+I</source>
         <comment>Edit|Indent</comment>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1032"/>
+        <location filename="../ViewManager/ViewManager.py" line="1050"/>
         <source>Ctrl+Shift+I</source>
         <comment>Edit|Unindent</comment>
         <translation>Ctrl+Shift+I</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1051"/>
+        <location filename="../ViewManager/ViewManager.py" line="1069"/>
         <source>Ctrl+Alt+I</source>
         <comment>Edit|Smart indent</comment>
         <translation>Ctrl+Alt+I</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1070"/>
+        <location filename="../ViewManager/ViewManager.py" line="1088"/>
         <source>Ctrl+M</source>
         <comment>Edit|Comment</comment>
         <translation>Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1089"/>
+        <location filename="../ViewManager/ViewManager.py" line="1107"/>
         <source>Alt+Ctrl+M</source>
         <comment>Edit|Uncomment</comment>
         <translation>Alt+Ctrl+M</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1163"/>
+        <location filename="../ViewManager/ViewManager.py" line="1181"/>
         <source>Ctrl+E</source>
         <comment>Edit|Select to brace</comment>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1181"/>
+        <location filename="../ViewManager/ViewManager.py" line="1199"/>
         <source>Ctrl+A</source>
         <comment>Edit|Select all</comment>
         <translation>Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1199"/>
+        <location filename="../ViewManager/ViewManager.py" line="1217"/>
         <source>Alt+Ctrl+A</source>
         <comment>Edit|Deselect all</comment>
         <translation>Alt+Ctrl+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2700"/>
+        <location filename="../ViewManager/ViewManager.py" line="2718"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2758"/>
+        <location filename="../ViewManager/ViewManager.py" line="2776"/>
         <source>Edit</source>
         <translation>Bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2790"/>
+        <location filename="../ViewManager/ViewManager.py" line="2808"/>
         <source>Ctrl+F</source>
         <comment>Search|Search</comment>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2916"/>
+        <location filename="../ViewManager/ViewManager.py" line="2934"/>
         <source>Ctrl+R</source>
         <comment>Search|Replace</comment>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2999"/>
+        <location filename="../ViewManager/ViewManager.py" line="3017"/>
         <source>Ctrl+G</source>
         <comment>Search|Goto Line</comment>
         <translation>Ctrl+G</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3018"/>
+        <location filename="../ViewManager/ViewManager.py" line="3036"/>
         <source>Ctrl+L</source>
         <comment>Search|Goto Brace</comment>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3106"/>
+        <location filename="../ViewManager/ViewManager.py" line="3124"/>
         <source>Shift+Ctrl+F</source>
         <comment>Search|Search Files</comment>
         <translation>Shift+Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3305"/>
+        <location filename="../ViewManager/ViewManager.py" line="3323"/>
         <source>Ctrl++</source>
         <comment>View|Zoom in</comment>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3324"/>
+        <location filename="../ViewManager/ViewManager.py" line="3342"/>
         <source>Ctrl+-</source>
         <comment>View|Zoom out</comment>
         <translation>Ctrl+-</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3362"/>
+        <location filename="../ViewManager/ViewManager.py" line="3380"/>
         <source>Ctrl+#</source>
         <comment>View|Zoom</comment>
         <translation>Ctrl+#</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3527"/>
+        <location filename="../ViewManager/ViewManager.py" line="3545"/>
         <source>Ctrl+Alt+N</source>
         <comment>View|Next split</comment>
         <translation>Ctrl+Alt+N</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3544"/>
+        <location filename="../ViewManager/ViewManager.py" line="3562"/>
         <source>Ctrl+Alt+P</source>
         <comment>View|Previous split</comment>
         <translation>Ctrl+Alt+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3596"/>
+        <location filename="../ViewManager/ViewManager.py" line="3614"/>
         <source>&amp;View</source>
         <translation>&amp;Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3631"/>
+        <location filename="../ViewManager/ViewManager.py" line="3649"/>
         <source>View</source>
         <translation>Ansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3753"/>
+        <location filename="../ViewManager/ViewManager.py" line="3771"/>
         <source>&amp;Macros</source>
         <translation>&amp;Makros</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3771"/>
+        <location filename="../ViewManager/ViewManager.py" line="3789"/>
         <source>Alt+Ctrl+T</source>
         <comment>Bookmark|Toggle</comment>
         <translation>Alt+Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3790"/>
+        <location filename="../ViewManager/ViewManager.py" line="3808"/>
         <source>Ctrl+PgDown</source>
         <comment>Bookmark|Next</comment>
         <translation>Ctrl+PgDown</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3808"/>
+        <location filename="../ViewManager/ViewManager.py" line="3826"/>
         <source>Ctrl+PgUp</source>
         <comment>Bookmark|Previous</comment>
         <translation>Ctrl+PgUp</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3826"/>
+        <location filename="../ViewManager/ViewManager.py" line="3844"/>
         <source>Alt+Ctrl+C</source>
         <comment>Bookmark|Clear</comment>
         <translation>Alt+Ctrl+C</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4090"/>
+        <location filename="../ViewManager/ViewManager.py" line="4108"/>
         <source>Bookmarks</source>
         <translation>Lesezeichen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4242"/>
+        <location filename="../ViewManager/ViewManager.py" line="4260"/>
         <source>Open files</source>
         <translation>Dateien öffnen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3971"/>
+        <location filename="../ViewManager/ViewManager.py" line="3989"/>
         <source>Next Task</source>
         <translation>Nächste Aufgabe</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3965"/>
+        <location filename="../ViewManager/ViewManager.py" line="3983"/>
         <source>&amp;Next Task</source>
         <translation>&amp;Nächste Aufgabe</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3973"/>
+        <location filename="../ViewManager/ViewManager.py" line="3991"/>
         <source>&lt;b&gt;Next Task&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nächste Aufgabe&lt;/b&gt;&lt;p&gt;Gehe zur nächsten Zeile des aktuellen Editors, die eine Aufgabe enthält.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3988"/>
+        <location filename="../ViewManager/ViewManager.py" line="4006"/>
         <source>Previous Task</source>
         <translation>Vorherige Aufgabe</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3981"/>
+        <location filename="../ViewManager/ViewManager.py" line="3999"/>
         <source>&amp;Previous Task</source>
         <translation>&amp;Vorherige Aufgabe</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3990"/>
+        <location filename="../ViewManager/ViewManager.py" line="4008"/>
         <source>&lt;b&gt;Previous Task&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a task.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorherige Aufgabe&lt;/b&gt;&lt;p&gt;Gehe zur vorherigen Zeile des aktuellen Editors, die eine Aufgabe enthält.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2679"/>
+        <location filename="../ViewManager/ViewManager.py" line="2697"/>
         <source>&amp;Search</source>
         <translation>&amp;Suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2810"/>
+        <location filename="../ViewManager/ViewManager.py" line="2828"/>
         <source>Search next</source>
         <translation>Weitersuchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2810"/>
+        <location filename="../ViewManager/ViewManager.py" line="2828"/>
         <source>Search &amp;next</source>
         <translation>&amp;Weitersuchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2810"/>
+        <location filename="../ViewManager/ViewManager.py" line="2828"/>
         <source>F3</source>
         <comment>Search|Search next</comment>
         <translation>F3</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2831"/>
+        <location filename="../ViewManager/ViewManager.py" line="2849"/>
         <source>Search previous</source>
         <translation>Rückwärtssuchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2831"/>
+        <location filename="../ViewManager/ViewManager.py" line="2849"/>
         <source>Search &amp;previous</source>
         <translation>&amp;Rückwärtssuchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2831"/>
+        <location filename="../ViewManager/ViewManager.py" line="2849"/>
         <source>Shift+F3</source>
         <comment>Search|Search previous</comment>
         <translation>Shift+F3</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1172"/>
+        <location filename="../ViewManager/ViewManager.py" line="1190"/>
         <source>&lt;b&gt;Select to brace&lt;/b&gt;&lt;p&gt;Select text of the current editor to the matching brace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zur Klammer auswählen&lt;/b&gt;&lt;p&gt;Im aktuellen Editor Text bis zur passenden Klammer auswählen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1191"/>
+        <location filename="../ViewManager/ViewManager.py" line="1209"/>
         <source>&lt;b&gt;Select All&lt;/b&gt;&lt;p&gt;Select all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Alles auswählen&lt;/b&gt;&lt;p&gt;Dies wählt den gesamten Text des aktuellen Editors aus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1208"/>
+        <location filename="../ViewManager/ViewManager.py" line="1226"/>
         <source>&lt;b&gt;Deselect All&lt;/b&gt;&lt;p&gt;Deselect all text of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Auswahl aufheben&lt;/b&gt;&lt;p&gt;Dies hebt die Auswahl des aktuellen Editors auf.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="835"/>
+        <location filename="../ViewManager/ViewManager.py" line="853"/>
         <source>Export as</source>
         <translation>Exportieren als</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3255"/>
+        <location filename="../ViewManager/ViewManager.py" line="3273"/>
         <source>Quicksearch Textedit</source>
         <translation>Texteingabe für Schnellsuche</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2851"/>
+        <location filename="../ViewManager/ViewManager.py" line="2869"/>
         <source>Clear search markers</source>
         <translation>Suchmarkierungen löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2851"/>
+        <location filename="../ViewManager/ViewManager.py" line="2869"/>
         <source>Ctrl+3</source>
         <comment>Search|Clear search markers</comment>
         <translation>Ctrl+3</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2859"/>
+        <location filename="../ViewManager/ViewManager.py" line="2877"/>
         <source>Clear all displayed search markers</source>
         <translation>Löscht alle angezeigten Suchmarkierungen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2861"/>
+        <location filename="../ViewManager/ViewManager.py" line="2879"/>
         <source>&lt;b&gt;Clear search markers&lt;/b&gt;&lt;p&gt;Clear all displayed search markers.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suchmarkierungen löschen&lt;/b&gt;&lt;p&gt;Löscht alle angezeigten Suchmarkierungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2819"/>
+        <location filename="../ViewManager/ViewManager.py" line="2837"/>
         <source>Search next occurrence of text</source>
         <translation>Das nächste Vorkommen des Textes in der Seite suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2821"/>
+        <location filename="../ViewManager/ViewManager.py" line="2839"/>
         <source>&lt;b&gt;Search next&lt;/b&gt;&lt;p&gt;Search the next occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Weitersuchen&lt;/b&gt;&lt;p&gt;Nach der nächsten Textstelle im aktuellen Editor suchen. Der zuvor eingegebene Suchtext und die Suchoptionen werden weiterverwendet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2839"/>
+        <location filename="../ViewManager/ViewManager.py" line="2857"/>
         <source>Search previous occurrence of text</source>
         <translation>Das vorherige Vorkommen des Textes in der Seite suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2841"/>
+        <location filename="../ViewManager/ViewManager.py" line="2859"/>
         <source>&lt;b&gt;Search previous&lt;/b&gt;&lt;p&gt;Search the previous occurrence of some text in the current editor. The previously entered searchtext and options are reused.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rückwärtssuchen&lt;/b&gt;&lt;p&gt;Nach der vorherigen Textstelle im aktuellen Editor suchen. Der zuvor eingegebene Suchtext und die Suchoptionen werden weiterverwendet.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2945"/>
+        <location filename="../ViewManager/ViewManager.py" line="2963"/>
         <source>&lt;b&gt;Quicksearch&lt;/b&gt;&lt;p&gt;This activates the quicksearch function of the IDE by giving focus to the quicksearch entry field. If this field is already active and contains text, it searches for the next occurrence of this text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schnellsuche&lt;/b&gt;&lt;p&gt;Dies aktiviert die Schnellsuchfunktion der IDE, indem das Schnellsucheingabefeld aktiviert wird. Ist dieses Feld bereits aktiv und enthält Text, so wird das nächste Vorkommen dieses Textes gesucht.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2969"/>
+        <location filename="../ViewManager/ViewManager.py" line="2987"/>
         <source>&lt;b&gt;Quicksearch backwards&lt;/b&gt;&lt;p&gt;This searches the previous occurrence of the quicksearch text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Schnellsuche rückwärts&lt;/b&gt;&lt;p&gt;Dies sucht das letzte Vorkommen des Schnellsuchtextes.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3228"/>
+        <location filename="../ViewManager/ViewManager.py" line="3246"/>
         <source>&lt;p&gt;Enter the searchtext directly into this field. The search will be performed case insensitive. The quicksearch function is activated upon activation of the quicksearch next action (default key Ctrl+Shift+K), if this entry field does not have the input focus. Otherwise it searches for the next occurrence of the text entered. The quicksearch backwards action (default key Ctrl+Shift+J) searches backward. Activating the &apos;quicksearch extend&apos; action (default key Ctrl+Shift+H) extends the current searchtext to the end of the currently found word. The quicksearch can be ended by pressing the Return key while the quicksearch entry has the the input focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Gib den Suchtext direkt in dieses Feld ein. Die Suche wird unabhängig von der Schreibweise durchgeführt. Die Schnellsuchefunktion wird durch Auslösen der Schnellsucheaktion (Standard Strg+Umschalt+K) aktiviert, falls dieses Eingabefeld nicht den Fokus besitzt. Sonst wird das nächste Vorkommen des eingegebenen Textes gesucht. Die „Schnellsuche rückwärts“-Aktion (Standard Strg+Umschalt+J) sucht rückwärts. Aktivierung der „Schnellsuche erweitern“-Aktion (Standard Strg+Umschalt+H) erweitert den aktuellen Suchtext bis zum Ende des aktuell gefundenen Wortes. Während das Schnellsucheeingabefeld den Fokus besitzt, kann die Schnellsuche durch Betätigung der Return-Taste beendet werden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1337"/>
+        <location filename="../ViewManager/ViewManager.py" line="1355"/>
         <source>Calltip</source>
         <translation>Calltip</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1337"/>
+        <location filename="../ViewManager/ViewManager.py" line="1355"/>
         <source>&amp;Calltip</source>
         <translation>&amp;Calltip</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1344"/>
+        <location filename="../ViewManager/ViewManager.py" line="1362"/>
         <source>Show Calltips</source>
         <translation>Calltips anzeigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1346"/>
+        <location filename="../ViewManager/ViewManager.py" line="1364"/>
         <source>&lt;b&gt;Calltip&lt;/b&gt;&lt;p&gt;Show calltips based on the characters immediately to the left of the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Calltip&lt;/b&gt;&lt;p&gt;Zeige Calltips basierend auf den links vom Cursor befindlichen Zeichen an.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="722"/>
+        <location filename="../ViewManager/ViewManager.py" line="738"/>
         <source>Print Preview</source>
         <translation>Druckvorschau</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="727"/>
+        <location filename="../ViewManager/ViewManager.py" line="743"/>
         <source>Print preview of the current file</source>
         <translation>Druckvorschau der aktuellen Datei</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="729"/>
+        <location filename="../ViewManager/ViewManager.py" line="745"/>
         <source>&lt;b&gt;Print Preview&lt;/b&gt;&lt;p&gt;Print preview of the current editor window.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Druckvorschau&lt;/b&gt;&lt;p&gt;Zeift eine Druckvorschau des aktuellen Editorfensters.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2008"/>
+        <location filename="../ViewManager/ViewManager.py" line="2026"/>
         <source>Insert new line below current line</source>
         <translation>Neue Zeile unterhalb der aktuellen einfügen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2008"/>
+        <location filename="../ViewManager/ViewManager.py" line="2026"/>
         <source>Shift+Return</source>
         <translation>Shift+Return</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2008"/>
+        <location filename="../ViewManager/ViewManager.py" line="2026"/>
         <source>Shift+Enter</source>
         <translation>Shift+Enter</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3126"/>
+        <location filename="../ViewManager/ViewManager.py" line="3144"/>
         <source>Replace in Files</source>
         <translation>Ersetzen in Dateien</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3126"/>
+        <location filename="../ViewManager/ViewManager.py" line="3144"/>
         <source>Replace in F&amp;iles...</source>
         <translation>Ersetzen in Da&amp;teien...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3126"/>
+        <location filename="../ViewManager/ViewManager.py" line="3144"/>
         <source>Shift+Ctrl+R</source>
         <comment>Search|Replace in Files</comment>
         <translation>Shift+Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3133"/>
+        <location filename="../ViewManager/ViewManager.py" line="3151"/>
         <source>Search for a text in files and replace it</source>
         <translation>Nach Text in Dateien suchen und ihn ersetzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3135"/>
+        <location filename="../ViewManager/ViewManager.py" line="3153"/>
         <source>&lt;b&gt;Replace in Files&lt;/b&gt;&lt;p&gt;Search for some text in the files of a directory tree or the project and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and to display the result.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ersetzen in Dateien&lt;/b&gt;&lt;p&gt;Sucht nach Text in den Dateien eines Verzeichnisbaumes oder des Projektes und ersetzt ihn. Es wird ein Dialog angezeigt, in dem der Suchtext, der Ersetzungstext und die Suchoptionen eingegeben werden können und in dem das Suchresultat angezeigt wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4123"/>
+        <location filename="../ViewManager/ViewManager.py" line="4141"/>
         <source>Shift+F7</source>
         <comment>Spelling|Spell Check</comment>
         <translation>Shift+F7</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4132"/>
+        <location filename="../ViewManager/ViewManager.py" line="4150"/>
         <source>Perform spell check of current editor</source>
         <translation>Führe eine Rechtschreibprüfung des aktuellen Editors durch</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4142"/>
+        <location filename="../ViewManager/ViewManager.py" line="4160"/>
         <source>Automatic spell checking</source>
         <translation>Automatische Rechtschreibprüfung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4142"/>
+        <location filename="../ViewManager/ViewManager.py" line="4160"/>
         <source>&amp;Automatic spell checking</source>
         <translation>&amp;Automatische Rechtschreibprüfung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4150"/>
+        <location filename="../ViewManager/ViewManager.py" line="4168"/>
         <source>(De-)Activate automatic spell checking</source>
         <translation>(De-)Aktiviert die automatische Rechtschreibprüfung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4152"/>
+        <location filename="../ViewManager/ViewManager.py" line="4170"/>
         <source>&lt;b&gt;Automatic spell checking&lt;/b&gt;&lt;p&gt;Activate or deactivate the automatic spell checking function of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Automatische Rechtschreibprüfung&lt;/b&gt;&lt;p&gt;Aktiviert bzw. deaktiviert die automatische Rechtschreibprüfung aller Editoren.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4219"/>
+        <location filename="../ViewManager/ViewManager.py" line="4237"/>
         <source>Spelling</source>
         <translation>Rechtschreibung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4616"/>
+        <location filename="../ViewManager/ViewManager.py" line="4634"/>
         <source>Line: {0:5}</source>
         <translation>Zeile: {0:5}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4623"/>
+        <location filename="../ViewManager/ViewManager.py" line="4641"/>
         <source>Pos: {0:5}</source>
         <translation>Pos: {0:5}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3881"/>
+        <location filename="../ViewManager/ViewManager.py" line="3899"/>
         <source>Next warning message</source>
         <translation>Nächste Warnung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3875"/>
+        <location filename="../ViewManager/ViewManager.py" line="3893"/>
         <source>&amp;Next warning message</source>
         <translation>&amp;Nächste Warnung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3900"/>
+        <location filename="../ViewManager/ViewManager.py" line="3918"/>
         <source>Previous warning message</source>
         <translation>Vorherige Warnung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3892"/>
+        <location filename="../ViewManager/ViewManager.py" line="3910"/>
         <source>&amp;Previous warning message</source>
         <translation>&amp;Vorherige Warnung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3918"/>
+        <location filename="../ViewManager/ViewManager.py" line="3936"/>
         <source>Clear Warning Messages</source>
         <translation>Warnungen löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3911"/>
+        <location filename="../ViewManager/ViewManager.py" line="3929"/>
         <source>Clear &amp;Warning Messages</source>
         <translation>&amp;Warnungen löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1003"/>
+        <location filename="../ViewManager/ViewManager.py" line="1021"/>
         <source>Join Lines</source>
         <translation>Zeilen verbinden</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="996"/>
+        <location filename="../ViewManager/ViewManager.py" line="1014"/>
         <source>Ctrl+J</source>
         <comment>Edit|Join Lines</comment>
         <translation>Ctrl+J</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1005"/>
+        <location filename="../ViewManager/ViewManager.py" line="1023"/>
         <source>&lt;b&gt;Join Lines&lt;/b&gt;&lt;p&gt;Join the current and the next lines.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zeilen verbinden&lt;/b&gt;&lt;p&gt;Verbindet die aktuelle mit der nächsten Zeile.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3047"/>
+        <location filename="../ViewManager/ViewManager.py" line="3065"/>
         <source>Goto Last Edit Location</source>
         <translation>Gehe zur letzten Editierposition</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3036"/>
+        <location filename="../ViewManager/ViewManager.py" line="3054"/>
         <source>Goto Last &amp;Edit Location</source>
         <translation>Gehe zur letzten &amp;Editierposition</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3036"/>
+        <location filename="../ViewManager/ViewManager.py" line="3054"/>
         <source>Ctrl+Shift+G</source>
         <comment>Search|Goto Last Edit Location</comment>
         <translation>Ctrl+Shift+G</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3050"/>
+        <location filename="../ViewManager/ViewManager.py" line="3068"/>
         <source>&lt;b&gt;Goto Last Edit Location&lt;/b&gt;&lt;p&gt;Go to the location of the last edit in the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gehe zur letzten Editierposition&lt;/b&gt;&lt;p&gt;Gehe zu der Textposition, an der die letzte Editieraktion stattgefunden hat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3059"/>
+        <location filename="../ViewManager/ViewManager.py" line="3077"/>
         <source>Goto Previous Method or Class</source>
         <translation>Gehe zur vorherigen Methode oder Klasse</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3059"/>
+        <location filename="../ViewManager/ViewManager.py" line="3077"/>
         <source>Ctrl+Shift+Up</source>
         <comment>Search|Goto Previous Method or Class</comment>
         <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3069"/>
+        <location filename="../ViewManager/ViewManager.py" line="3087"/>
         <source>Go to the previous method or class definition</source>
         <translation>Gehe zur vorherigen Methoden- oder Klassendefinition</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3073"/>
+        <location filename="../ViewManager/ViewManager.py" line="3091"/>
         <source>&lt;b&gt;Goto Previous Method or Class&lt;/b&gt;&lt;p&gt;Goes to the line of the previous method or class definition and highlights the name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gehe zur vorherigen Methode oder Klasse&lt;/b&gt;&lt;p&gt;Dies springt zur Zeile der vorherigen Methoden- oder Klassendefinition und selektiert den Namen.&lt;/p&lt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3083"/>
+        <location filename="../ViewManager/ViewManager.py" line="3101"/>
         <source>Goto Next Method or Class</source>
         <translation>Gehe zur nächsten Methode oder Klasse</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3083"/>
+        <location filename="../ViewManager/ViewManager.py" line="3101"/>
         <source>Ctrl+Shift+Down</source>
         <comment>Search|Goto Next Method or Class</comment>
         <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3093"/>
+        <location filename="../ViewManager/ViewManager.py" line="3111"/>
         <source>Go to the next method or class definition</source>
         <translation>Gehe zur nächsten Methoden- oder Klassendefinition</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3095"/>
+        <location filename="../ViewManager/ViewManager.py" line="3113"/>
         <source>&lt;b&gt;Goto Next Method or Class&lt;/b&gt;&lt;p&gt;Goes to the line of the next method or class definition and highlights the name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Gehe zur nächsten Methode oder Klasse&lt;/b&gt;&lt;p&gt;Dies springt zur Zeile der nächsten Methoden- oder Klassendefinition und selektiert den Namen.&lt;/p&lt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3560"/>
+        <location filename="../ViewManager/ViewManager.py" line="3578"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3565"/>
+        <location filename="../ViewManager/ViewManager.py" line="3583"/>
         <source>Preview the current file in the web browser</source>
         <translation>Zeige eine Vorschau der aktuellen Datei im Webbrowser</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3567"/>
+        <location filename="../ViewManager/ViewManager.py" line="3585"/>
         <source>&lt;b&gt;Preview&lt;/b&gt;&lt;p&gt;This opens the web browser with a preview of the current file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorschau&lt;/b&gt;&lt;p&gt;Dies öffnet einen Webbrowser mit einer Vorschau der aktuellen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1395"/>
+        <location filename="../ViewManager/ViewManager.py" line="1413"/>
         <source>Meta+B</source>
         <translation>Meta+B</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1408"/>
+        <location filename="../ViewManager/ViewManager.py" line="1426"/>
         <source>Meta+F</source>
         <translation>Meta+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1420"/>
+        <location filename="../ViewManager/ViewManager.py" line="1438"/>
         <source>Meta+P</source>
         <translation>Meta+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1432"/>
+        <location filename="../ViewManager/ViewManager.py" line="1450"/>
         <source>Meta+N</source>
         <translation>Meta+N</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1493"/>
+        <location filename="../ViewManager/ViewManager.py" line="1511"/>
         <source>Move to first visible character in document line</source>
         <translation>Zum ersten sichtbaren Zeichen der Dokumentzeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1509"/>
+        <location filename="../ViewManager/ViewManager.py" line="1527"/>
         <source>Move to start of display line</source>
         <translation>Zum Beginn der Anzeigezeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1526"/>
+        <location filename="../ViewManager/ViewManager.py" line="1544"/>
         <source>Move to end of document line</source>
         <translation>Zum Ende der Dokumentenzeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1534"/>
+        <location filename="../ViewManager/ViewManager.py" line="1552"/>
         <source>Meta+E</source>
         <translation>Meta+E</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1602"/>
+        <location filename="../ViewManager/ViewManager.py" line="1620"/>
         <source>Meta+V</source>
         <translation>Meta+V</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1608"/>
+        <location filename="../ViewManager/ViewManager.py" line="1626"/>
         <source>Move to start of document</source>
         <translation>Zum Dokumentenanfang springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1625"/>
+        <location filename="../ViewManager/ViewManager.py" line="1643"/>
         <source>Move to end of document</source>
         <translation>Zum Dokumentenende springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1670"/>
+        <location filename="../ViewManager/ViewManager.py" line="1688"/>
         <source>Meta+Shift+B</source>
         <translation>Meta+Shift+B</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1685"/>
+        <location filename="../ViewManager/ViewManager.py" line="1703"/>
         <source>Meta+Shift+F</source>
         <translation>Meta+Shift+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1700"/>
+        <location filename="../ViewManager/ViewManager.py" line="1718"/>
         <source>Meta+Shift+P</source>
         <translation>Meta+Shift+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1715"/>
+        <location filename="../ViewManager/ViewManager.py" line="1733"/>
         <source>Meta+Shift+N</source>
         <translation>Meta+Shift+N</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1783"/>
+        <location filename="../ViewManager/ViewManager.py" line="1801"/>
         <source>Extend selection to first visible character in document line</source>
         <translation>Auswahl zum ersten sichtbaren Zeichen der Dokumentzeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1801"/>
+        <location filename="../ViewManager/ViewManager.py" line="1819"/>
         <source>Extend selection to end of document line</source>
         <translation>Auswahl zum Ende der Dokumentenzeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1809"/>
+        <location filename="../ViewManager/ViewManager.py" line="1827"/>
         <source>Meta+Shift+E</source>
         <translation>Meta+Shift+E</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1866"/>
+        <location filename="../ViewManager/ViewManager.py" line="1884"/>
         <source>Meta+Shift+V</source>
         <translation>Meta+Shift+V</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1872"/>
+        <location filename="../ViewManager/ViewManager.py" line="1890"/>
         <source>Extend selection to start of document</source>
         <translation>Auswahl zum Dokumentenanfang erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1880"/>
+        <location filename="../ViewManager/ViewManager.py" line="1898"/>
         <source>Ctrl+Shift+Up</source>
         <translation>Ctrl+Shift+Up</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1889"/>
+        <location filename="../ViewManager/ViewManager.py" line="1907"/>
         <source>Extend selection to end of document</source>
         <translation>Auswahl zum Dokumentenende erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1897"/>
+        <location filename="../ViewManager/ViewManager.py" line="1915"/>
         <source>Ctrl+Shift+Down</source>
         <translation>Ctrl+Shift+Down</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1915"/>
+        <location filename="../ViewManager/ViewManager.py" line="1933"/>
         <source>Meta+H</source>
         <translation>Meta+H</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1924"/>
+        <location filename="../ViewManager/ViewManager.py" line="1942"/>
         <source>Delete previous character if not at start of line</source>
         <translation>Zeichen links löschen, wenn nicht am Zeilenanfang</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1945"/>
+        <location filename="../ViewManager/ViewManager.py" line="1963"/>
         <source>Meta+D</source>
         <translation>Meta+D</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1989"/>
+        <location filename="../ViewManager/ViewManager.py" line="2007"/>
         <source>Meta+K</source>
         <translation>Meta+K</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2086"/>
+        <location filename="../ViewManager/ViewManager.py" line="2104"/>
         <source>Move to end of display line</source>
         <translation>Zum Ende der Anzeigezeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2103"/>
+        <location filename="../ViewManager/ViewManager.py" line="2121"/>
         <source>Extend selection to end of display line</source>
         <translation>Auswahl zum Ende der Anzeigezeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2145"/>
+        <location filename="../ViewManager/ViewManager.py" line="2163"/>
         <source>Meta+Alt+Shift+N</source>
         <translation>Meta+Alt+Shift+N</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2160"/>
+        <location filename="../ViewManager/ViewManager.py" line="2178"/>
         <source>Meta+Alt+Shift+P</source>
         <translation>Meta+Alt+Shift+P</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2178"/>
+        <location filename="../ViewManager/ViewManager.py" line="2196"/>
         <source>Meta+Alt+Shift+B</source>
         <translation>Meta+Alt+Shift+B</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2196"/>
+        <location filename="../ViewManager/ViewManager.py" line="2214"/>
         <source>Meta+Alt+Shift+F</source>
         <translation>Meta+Alt+Shift+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2202"/>
+        <location filename="../ViewManager/ViewManager.py" line="2220"/>
         <source>Extend rectangular selection to first visible character in document line</source>
         <translation>Rechteckige Auswahl zum ersten sichtbaren Zeichen der Dokumentzeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2221"/>
+        <location filename="../ViewManager/ViewManager.py" line="2239"/>
         <source>Extend rectangular selection to end of document line</source>
         <translation>Rechteckige Auswahl zum Ende der Dokumentenzeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2231"/>
+        <location filename="../ViewManager/ViewManager.py" line="2249"/>
         <source>Meta+Alt+Shift+E</source>
         <translation>Meta+Alt+Shift+E</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2234"/>
+        <location filename="../ViewManager/ViewManager.py" line="2252"/>
         <source>Alt+Shift+End</source>
         <translation>Alt+Shift+End</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2255"/>
+        <location filename="../ViewManager/ViewManager.py" line="2273"/>
         <source>Alt+Shift+PgDown</source>
         <translation>Alt+Shift+PgDown</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2267"/>
+        <location filename="../ViewManager/ViewManager.py" line="2285"/>
         <source>Meta+Alt+Shift+V</source>
         <translation>Meta+Alt+Shift+V</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2287"/>
+        <location filename="../ViewManager/ViewManager.py" line="2305"/>
         <source>Scroll to start of document</source>
         <translation>Zum Dokumentenanfang rollen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2302"/>
+        <location filename="../ViewManager/ViewManager.py" line="2320"/>
         <source>Scroll to end of document</source>
         <translation>Zum Dokumentenende rollen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2317"/>
+        <location filename="../ViewManager/ViewManager.py" line="2335"/>
         <source>Scroll vertically to center current line</source>
         <translation>Vertical rollen, um aktuelle Zeile zu zentrieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2325"/>
+        <location filename="../ViewManager/ViewManager.py" line="2343"/>
         <source>Meta+L</source>
         <translation>Meta+L</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2332"/>
+        <location filename="../ViewManager/ViewManager.py" line="2350"/>
         <source>Move to end of next word</source>
         <translation>Zum Ende des nächsten Wortes springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2347"/>
+        <location filename="../ViewManager/ViewManager.py" line="2365"/>
         <source>Extend selection to end of next word</source>
         <translation>Auswahl bis zum Ende des nächsten Wortes erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2363"/>
+        <location filename="../ViewManager/ViewManager.py" line="2381"/>
         <source>Move to end of previous word</source>
         <translation>Zum Ende des vorigen Wortes springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2375"/>
+        <location filename="../ViewManager/ViewManager.py" line="2393"/>
         <source>Extend selection to end of previous word</source>
         <translation>Auswahl bis zum Ende des vorigen Wortes erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2387"/>
+        <location filename="../ViewManager/ViewManager.py" line="2405"/>
         <source>Move to start of document line</source>
         <translation>Zum Beginn der Dokumentenzeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2395"/>
+        <location filename="../ViewManager/ViewManager.py" line="2413"/>
         <source>Meta+A</source>
         <translation>Meta+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2402"/>
+        <location filename="../ViewManager/ViewManager.py" line="2420"/>
         <source>Extend selection to start of document line</source>
         <translation>Auswahl zum Beginn der Dokumentenzeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2413"/>
+        <location filename="../ViewManager/ViewManager.py" line="2431"/>
         <source>Meta+Shift+A</source>
         <translation>Meta+Shift+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2420"/>
+        <location filename="../ViewManager/ViewManager.py" line="2438"/>
         <source>Extend rectangular selection to start of document line</source>
         <translation>Rechteckige Auswahl zum Beginn der Dokumentenzeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2430"/>
+        <location filename="../ViewManager/ViewManager.py" line="2448"/>
         <source>Meta+Alt+Shift+A</source>
         <translation>Meta+Alt+Shift+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2438"/>
+        <location filename="../ViewManager/ViewManager.py" line="2456"/>
         <source>Extend selection to start of display line</source>
         <translation>Auswahl zum Beginn der Anzeigezeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2457"/>
+        <location filename="../ViewManager/ViewManager.py" line="2475"/>
         <source>Move to start of display or document line</source>
         <translation>Zum Beginn der Dokumenten- oder Anzeigezeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2471"/>
+        <location filename="../ViewManager/ViewManager.py" line="2489"/>
         <source>Extend selection to start of display or document line</source>
         <translation>Auswahl zum Beginn der Dokumenten- oder Anzeigezeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2486"/>
+        <location filename="../ViewManager/ViewManager.py" line="2504"/>
         <source>Move to first visible character in display or document line</source>
         <translation>Zum ersten sichtbaren Zeichen der Dokument- oder Anzeigezeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2503"/>
+        <location filename="../ViewManager/ViewManager.py" line="2521"/>
         <source>Extend selection to first visible character in display or document line</source>
         <translation>Auswahl zum ersten sichtbaren Zeichen der Dokument- oder Anzeigezeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2520"/>
+        <location filename="../ViewManager/ViewManager.py" line="2538"/>
         <source>Move to end of display or document line</source>
         <translation>Zum Ende der Dokumenten- oder Anzeigezeile springen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2534"/>
+        <location filename="../ViewManager/ViewManager.py" line="2552"/>
         <source>Extend selection to end of display or document line</source>
         <translation>Auswahl zum Ende der Dokumenten- oder Anzeigezeile erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2549"/>
+        <location filename="../ViewManager/ViewManager.py" line="2567"/>
         <source>Stuttered move up one page</source>
         <translation>„Stotternd“ um eine Seite nach oben</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2561"/>
+        <location filename="../ViewManager/ViewManager.py" line="2579"/>
         <source>Stuttered extend selection up one page</source>
         <translation>Auswahl „stotternd“ um eine Seite nach oben erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2574"/>
+        <location filename="../ViewManager/ViewManager.py" line="2592"/>
         <source>Stuttered move down one page</source>
         <translation>„Stotternd“ um eine Seite nach unten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2586"/>
+        <location filename="../ViewManager/ViewManager.py" line="2604"/>
         <source>Stuttered extend selection down one page</source>
         <translation>Auswahl „stotternd“ um eine Seite nach unten erweitern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2599"/>
+        <location filename="../ViewManager/ViewManager.py" line="2617"/>
         <source>Delete right to end of next word</source>
         <translation>Rechts bis zum Ende des nächsten Wortes löschen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2607"/>
+        <location filename="../ViewManager/ViewManager.py" line="2625"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2614"/>
+        <location filename="../ViewManager/ViewManager.py" line="2632"/>
         <source>Move selected lines up one line</source>
         <translation>Ausgewählte Zeilen um eine Zeile nach oben</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2626"/>
+        <location filename="../ViewManager/ViewManager.py" line="2644"/>
         <source>Move selected lines down one line</source>
         <translation>Ausgewählte Zeilen um eine Zeile nach unten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2240"/>
+        <location filename="../ViewManager/ViewManager.py" line="2258"/>
         <source>Alt+Shift+PgUp</source>
         <translation>Alt+Shift+PgUp</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1108"/>
+        <location filename="../ViewManager/ViewManager.py" line="1126"/>
         <source>Toggle Comment</source>
         <translation>Kommentar umschalten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1108"/>
+        <location filename="../ViewManager/ViewManager.py" line="1126"/>
         <source>Ctrl+Shift+M</source>
         <comment>Edit|Toggle Comment</comment>
         <translation>Ctrl+Shift+M</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1116"/>
+        <location filename="../ViewManager/ViewManager.py" line="1134"/>
         <source>Toggle the comment of the current line, selection or comment block</source>
         <translation>Schalte den Kommentar der aktuellen Zeile, Auswahl oder Kommentarblocks um</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1120"/>
+        <location filename="../ViewManager/ViewManager.py" line="1138"/>
         <source>&lt;b&gt;Toggle Comment&lt;/b&gt;&lt;p&gt;If the current line does not start with a block comment, the current line or selection is commented. If it is already commented, this comment block is uncommented. &lt;/p&gt;</source>
         <translation>&lt;b&gt;Kommentar umschalten&lt;/b&gt;&lt;p&gt;Falls die aktuelle Zeile nicht mit einem Blockkommentar beginnt, so wird die aktuelle Zeile oder Auswahl kommentiert. Ist sie kommentiert, so wird dieser Blockkommentar entkommentiert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3343"/>
+        <location filename="../ViewManager/ViewManager.py" line="3361"/>
         <source>Zoom reset</source>
         <translation>Vergrößerung zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3343"/>
+        <location filename="../ViewManager/ViewManager.py" line="3361"/>
         <source>Zoom &amp;reset</source>
         <translation>Vergrößerung &amp;zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3343"/>
+        <location filename="../ViewManager/ViewManager.py" line="3361"/>
         <source>Ctrl+0</source>
         <comment>View|Zoom reset</comment>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3351"/>
+        <location filename="../ViewManager/ViewManager.py" line="3369"/>
         <source>Reset the zoom of the text</source>
         <translation>Die Textgröße zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3353"/>
+        <location filename="../ViewManager/ViewManager.py" line="3371"/>
         <source>&lt;b&gt;Zoom reset&lt;/b&gt;&lt;p&gt;Reset the zoom of the text. This sets the zoom factor to 100%.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vergrößerung zurücksetzen&lt;/b&gt;&lt;p&gt;Setzt die Vergrößerung auf den Wert 100% zurück.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3305"/>
+        <location filename="../ViewManager/ViewManager.py" line="3323"/>
         <source>Zoom In</source>
         <comment>View|Zoom in</comment>
         <translation>Vergrößern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3324"/>
+        <location filename="../ViewManager/ViewManager.py" line="3342"/>
         <source>Zoom Out</source>
         <comment>View|Zoom out</comment>
         <translation>Verkleinern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="687"/>
+        <location filename="../ViewManager/ViewManager.py" line="703"/>
         <source>Save a&amp;ll</source>
         <translation>&amp;Alle speichern</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4005"/>
+        <location filename="../ViewManager/ViewManager.py" line="4023"/>
         <source>Next Change</source>
         <translation>Nächste Änderung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3999"/>
+        <location filename="../ViewManager/ViewManager.py" line="4017"/>
         <source>&amp;Next Change</source>
         <translation>&amp;Nächste Änderung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4007"/>
+        <location filename="../ViewManager/ViewManager.py" line="4025"/>
         <source>&lt;b&gt;Next Change&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a change marker.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nächste Änderung&lt;/b&gt;&lt;p&gt;Gehe zur nächsten Zeile des aktuellen Editors, die eine Änderung enthält.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4023"/>
+        <location filename="../ViewManager/ViewManager.py" line="4041"/>
         <source>Previous Change</source>
         <translation>Vorherige Änderung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4016"/>
+        <location filename="../ViewManager/ViewManager.py" line="4034"/>
         <source>&amp;Previous Change</source>
         <translation>&amp;Vorherige Änderung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4025"/>
+        <location filename="../ViewManager/ViewManager.py" line="4043"/>
         <source>&lt;b&gt;Previous Change&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a change marker.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorherige Änderung&lt;/b&gt;&lt;p&gt;Gehe zur vorherigen Zeile des aktuellen Editors, die eine Änderung enthält.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4123"/>
+        <location filename="../ViewManager/ViewManager.py" line="4141"/>
         <source>Check spelling</source>
         <translation>Rechtschreibprüfung</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4123"/>
+        <location filename="../ViewManager/ViewManager.py" line="4141"/>
         <source>Check &amp;spelling...</source>
         <translation>&amp;Rechtschreibprüfung...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4134"/>
+        <location filename="../ViewManager/ViewManager.py" line="4152"/>
         <source>&lt;b&gt;Check spelling&lt;/b&gt;&lt;p&gt;Perform a spell check of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Rechtschreibprüfung&lt;b&gt;&lt;p&gt;Führe eine Rechtschreibprüfung des aktuellen Editors durch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4183"/>
+        <location filename="../ViewManager/ViewManager.py" line="4201"/>
         <source>Edit Dictionary</source>
         <translation>Wörterbuch bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4185"/>
+        <location filename="../ViewManager/ViewManager.py" line="4203"/>
         <source>Project Word List</source>
         <translation>Projekt-Wörterliste</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4188"/>
+        <location filename="../ViewManager/ViewManager.py" line="4206"/>
         <source>Project Exception List</source>
         <translation>Projekt-Ausnahmenliste</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4193"/>
+        <location filename="../ViewManager/ViewManager.py" line="4211"/>
         <source>User Word List</source>
         <translation>Nutzer-Wörterliste</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4196"/>
+        <location filename="../ViewManager/ViewManager.py" line="4214"/>
         <source>User Exception List</source>
         <translation>Nutzer-Ausnahmenliste</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6226"/>
+        <location filename="../ViewManager/ViewManager.py" line="6260"/>
         <source>Edit Spelling Dictionary</source>
         <translation>Wörterbuch bearbeiten</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6201"/>
+        <location filename="../ViewManager/ViewManager.py" line="6235"/>
         <source>Editing {0}</source>
         <translation>Bearbeite {0}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6186"/>
+        <location filename="../ViewManager/ViewManager.py" line="6220"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Wörterbuchdatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht gelesen werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6213"/>
+        <location filename="../ViewManager/ViewManager.py" line="6247"/>
         <source>&lt;p&gt;The spelling dictionary file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Die Wörterbuchdatei &lt;b&gt;{0}&lt;/b&gt; konnte nicht geschrieben werden.&lt;/p&gt;&lt;p&gt;Ursache: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="6226"/>
+        <location filename="../ViewManager/ViewManager.py" line="6260"/>
         <source>The spelling dictionary was saved successfully.</source>
         <translation>Das Wörterbuch wurde erfolgreich gespeichert.</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2870"/>
+        <location filename="../ViewManager/ViewManager.py" line="2888"/>
         <source>Search current word forward</source>
         <translation>Aktuelles Wort vorwärts suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2870"/>
+        <location filename="../ViewManager/ViewManager.py" line="2888"/>
         <source>Ctrl+.</source>
         <comment>Search|Search current word forward</comment>
         <translation>Ctrl+.</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2881"/>
+        <location filename="../ViewManager/ViewManager.py" line="2899"/>
         <source>Search next occurrence of the current word</source>
         <translation>Das nächste Vorkommen des aktuellen Wortes suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2884"/>
+        <location filename="../ViewManager/ViewManager.py" line="2902"/>
         <source>&lt;b&gt;Search current word forward&lt;/b&gt;&lt;p&gt;Search the next occurrence of the current word of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aktuelles Wort vorwärts suchen&lt;/b&gt;&lt;p&gt;Sucht das nächste Vorkommen des aktuellen Wortes des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2893"/>
+        <location filename="../ViewManager/ViewManager.py" line="2911"/>
         <source>Search current word backward</source>
         <translation>Aktuelles Wort rückwärts suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2893"/>
+        <location filename="../ViewManager/ViewManager.py" line="2911"/>
         <source>Ctrl+,</source>
         <comment>Search|Search current word backward</comment>
         <translation>Ctrl+,</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2904"/>
+        <location filename="../ViewManager/ViewManager.py" line="2922"/>
         <source>Search previous occurrence of the current word</source>
         <translation>Das vorherige Vorkommen des aktuellen Wortes suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2907"/>
+        <location filename="../ViewManager/ViewManager.py" line="2925"/>
         <source>&lt;b&gt;Search current word backward&lt;/b&gt;&lt;p&gt;Search the previous occurrence of the current word of the current editor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Aktuelles Wort rückwärts suchen&lt;/b&gt;&lt;p&gt;Sucht das vorherige Vorkommen des aktuellen Wortes des aktuellen Editors.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3146"/>
+        <location filename="../ViewManager/ViewManager.py" line="3164"/>
         <source>Search in Open Files</source>
         <translation>Suchen in geöffneten Dateien</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3146"/>
+        <location filename="../ViewManager/ViewManager.py" line="3164"/>
         <source>Search in Open Files...</source>
         <translation>Suchen in geöffneten Dateien...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3146"/>
+        <location filename="../ViewManager/ViewManager.py" line="3164"/>
         <source>Meta+Ctrl+Alt+F</source>
         <comment>Search|Search Open Files</comment>
         <translation>Meta+Ctrl+Alt+F</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3157"/>
+        <location filename="../ViewManager/ViewManager.py" line="3175"/>
         <source>Search for a text in open files</source>
         <translation>Nach Text in geöffneten Dateien suchen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3159"/>
+        <location filename="../ViewManager/ViewManager.py" line="3177"/>
         <source>&lt;b&gt;Search in Open Files&lt;/b&gt;&lt;p&gt;Search for some text in the currently opened files. A dialog is shown to enter the searchtext and options for the search and to display the result.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Suchen in geöffneten Dateien&lt;/b&gt;&lt;p&gt;Sucht nach Text in den aktuell geöffneten Dateien. Es wird ein Dialog angezeigt, in dem der Suchtext und die Suchoptionen eingegeben werden können und in dem das Suchresultat angezeigt wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3169"/>
+        <location filename="../ViewManager/ViewManager.py" line="3187"/>
         <source>Replace in Open Files</source>
         <translation>Ersetzen in geöffneten Dateien</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3169"/>
+        <location filename="../ViewManager/ViewManager.py" line="3187"/>
         <source>Meta+Ctrl+Alt+R</source>
         <comment>Search|Replace in Open Files</comment>
         <translation>Meta+Ctrl+Alt+R</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3179"/>
+        <location filename="../ViewManager/ViewManager.py" line="3197"/>
         <source>Search for a text in open files and replace it</source>
         <translation>Nach Text in geöffneten Dateien suchen und ihn ersetzen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3181"/>
+        <location filename="../ViewManager/ViewManager.py" line="3199"/>
         <source>&lt;b&gt;Replace in Open Files&lt;/b&gt;&lt;p&gt;Search for some text in the currently opened files and replace it. A dialog is shown to enter the searchtext, the replacement text and options for the search and to display the result.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ersetzen in geöffneten Dateien&lt;/b&gt;&lt;p&gt;Sucht nach Text in den aktuell geöffneten Dateien und ersetzt ihn. Es wird ein Dialog angezeigt, in dem der Suchtext, der Ersetzungstext und die Suchoptionen eingegeben werden können und in dem das Suchresultat angezeigt wird.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3169"/>
+        <location filename="../ViewManager/ViewManager.py" line="3187"/>
         <source>Replace in Open Files...</source>
         <translation>Ersetzen in geöffneten Dateien...</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1355"/>
+        <location filename="../ViewManager/ViewManager.py" line="1373"/>
         <source>Sort</source>
         <translation>Sortieren</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1355"/>
+        <location filename="../ViewManager/ViewManager.py" line="1373"/>
         <source>Ctrl+Alt+S</source>
         <comment>Edit|Sort</comment>
         <translation>Ctrl+Alt+S</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1362"/>
+        <location filename="../ViewManager/ViewManager.py" line="1380"/>
         <source>Sort the lines containing the rectangular selection</source>
         <translation>Sortiere die Zeilen, die von der rechteckigen Auswahl überspannt werden</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1365"/>
+        <location filename="../ViewManager/ViewManager.py" line="1383"/>
         <source>&lt;b&gt;Sort&lt;/b&gt;&lt;p&gt;Sort the lines spanned by a rectangular selection based on the selection ignoring leading and trailing whitespace.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Sortieren&lt;/b&gt;&lt;p&gt;Dies sortiert die von der Rechteckauswahl überspannten Zeilen basierend auf der Auswahl. Führende und folgende Leerzeichen werden ignoriert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4643"/>
+        <location filename="../ViewManager/ViewManager.py" line="4661"/>
         <source>Language: {0}</source>
         <translation>Sprache: {0}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="4651"/>
+        <location filename="../ViewManager/ViewManager.py" line="4669"/>
         <source>EOL Mode: {0}</source>
         <translation>EOL-Modus: {0}</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3444"/>
+        <location filename="../ViewManager/ViewManager.py" line="3462"/>
         <source>New Document View</source>
         <translation>Neue Dokumentenansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3444"/>
+        <location filename="../ViewManager/ViewManager.py" line="3462"/>
         <source>New &amp;Document View</source>
         <translation>Neue &amp;Dokumentenansicht</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3449"/>
+        <location filename="../ViewManager/ViewManager.py" line="3467"/>
         <source>Open a new view of the current document</source>
         <translation>Offnet eine neue Ansicht des aktuellen Dokumentes</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3451"/>
+        <location filename="../ViewManager/ViewManager.py" line="3469"/>
         <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neue Dokumentenansicht&lt;/b&gt;&lt;p&gt;Offnet eine neue Ansicht des aktuellen Dokumentes. Beide Ansichten zeigen das selbe Dokument. Die Cursor lassen sich jedoch unabhängig positionieren.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3461"/>
+        <location filename="../ViewManager/ViewManager.py" line="3479"/>
         <source>New Document View (with new split)</source>
         <translation>Neue Dokumentenansicht (in neuem Abschnitt)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3468"/>
+        <location filename="../ViewManager/ViewManager.py" line="3486"/>
         <source>Open a new view of the current document in a new split</source>
         <translation>Offnet eine neue Ansicht des aktuellen Dokumentes in einem neuen Abschnitt</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3471"/>
+        <location filename="../ViewManager/ViewManager.py" line="3489"/>
         <source>&lt;b&gt;New Document View&lt;/b&gt;&lt;p&gt;Opens a new view of the current document in a new split. Both views show the same document. However, the cursors may be positioned independently.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Neue Dokumentenansicht&lt;/b&gt;&lt;p&gt;Offnet eine neue Ansicht des aktuellen Dokumentes in einem neuen Abschnitt. Beide Ansichten zeigen das selbe Dokument. Die Cursor lassen sich jedoch unabhängig positionieren.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3883"/>
+        <location filename="../ViewManager/ViewManager.py" line="3901"/>
         <source>&lt;b&gt;Next warning message&lt;/b&gt;&lt;p&gt;Go to next line of the current editor having a pyflakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nächste Warnung&lt;/b&gt;&lt;p&gt;Gehe zur nächsten Zeile des aktuellen Editors, die eine pyflakes Warnung besitzt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3902"/>
+        <location filename="../ViewManager/ViewManager.py" line="3920"/>
         <source>&lt;b&gt;Previous warning message&lt;/b&gt;&lt;p&gt;Go to previous line of the current editor having a pyflakes warning.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vorherige Warnung&lt;/b&gt;&lt;p&gt;Gehe zur vorherigen Zeile des aktuellen Editors, die eine pyflakes Warnung besitzt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="3920"/>
+        <location filename="../ViewManager/ViewManager.py" line="3938"/>
         <source>&lt;b&gt;Clear Warning Messages&lt;/b&gt;&lt;p&gt;Clear pyflakes warning messages of all editors.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Warnungen löschen&lt;/b&gt;&lt;p&gt;Löscht die pyflakes Warnungen aller Editoren.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="2670"/>
+        <location filename="../ViewManager/ViewManager.py" line="2688"/>
         <source>Complete</source>
         <translation>Vervollständigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1250"/>
+        <location filename="../ViewManager/ViewManager.py" line="1268"/>
         <source>&amp;Complete</source>
         <translation>&amp;Vervollständigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1250"/>
+        <location filename="../ViewManager/ViewManager.py" line="1268"/>
         <source>Ctrl+Space</source>
         <comment>Edit|Complete</comment>
         <translation>Ctrl+Space</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1257"/>
+        <location filename="../ViewManager/ViewManager.py" line="1275"/>
         <source>Complete current word</source>
         <translation>Aktuelles Wort vervollständigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1259"/>
+        <location filename="../ViewManager/ViewManager.py" line="1277"/>
         <source>&lt;b&gt;Complete&lt;/b&gt;&lt;p&gt;Performs a completion of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vervollständigen&lt;/b&gt;&lt;p&gt;Führt eine Vervollständigung des Wortes, das den Cursor enthält, durch.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1268"/>
+        <location filename="../ViewManager/ViewManager.py" line="1286"/>
         <source>Complete from Document</source>
         <translation>Vervollständigung vom Dokument</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1268"/>
+        <location filename="../ViewManager/ViewManager.py" line="1286"/>
         <source>Ctrl+Shift+Space</source>
         <comment>Edit|Complete from Document</comment>
         <translation>Ctrl+Shift+Space</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1278"/>
+        <location filename="../ViewManager/ViewManager.py" line="1296"/>
         <source>Complete current word from Document</source>
         <translation>Aktuelles Wort vom Dokument vervollständigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1281"/>
+        <location filename="../ViewManager/ViewManager.py" line="1299"/>
         <source>&lt;b&gt;Complete from Document&lt;/b&gt;&lt;p&gt;Performs a completion from document of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vervollständigung vom Dokument&lt;/b&gt;&lt;p&gt;Vervollständigt das Wort, das den Cursor enthält, vom Dokument.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1291"/>
+        <location filename="../ViewManager/ViewManager.py" line="1309"/>
         <source>Complete from APIs</source>
         <translation>Vervollständigung von APIs</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1291"/>
+        <location filename="../ViewManager/ViewManager.py" line="1309"/>
         <source>Ctrl+Alt+Space</source>
         <comment>Edit|Complete from APIs</comment>
         <translation>Ctrl+Alt+Space</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1301"/>
+        <location filename="../ViewManager/ViewManager.py" line="1319"/>
         <source>Complete current word from APIs</source>
         <translation>Aktuelles Wort von APIs vervollständigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1304"/>
+        <location filename="../ViewManager/ViewManager.py" line="1322"/>
         <source>&lt;b&gt;Complete from APIs&lt;/b&gt;&lt;p&gt;Performs a completion from APIs of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vervollständigung von APIs&lt;/b&gt;&lt;p&gt;Vervollständigt das Wort, das den Cursor enthält, von APIs.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1314"/>
+        <location filename="../ViewManager/ViewManager.py" line="1332"/>
         <source>Complete from Document and APIs</source>
         <translation>Vervollständigung vom Dokument und von APIs</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1314"/>
+        <location filename="../ViewManager/ViewManager.py" line="1332"/>
         <source>Alt+Shift+Space</source>
         <comment>Edit|Complete from Document and APIs</comment>
         <translation>Alt+Shift+Space</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1324"/>
+        <location filename="../ViewManager/ViewManager.py" line="1342"/>
         <source>Complete current word from Document and APIs</source>
         <translation>Aktuelles Wort vom Dokument und von APIs vervollständigen</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1327"/>
+        <location filename="../ViewManager/ViewManager.py" line="1345"/>
         <source>&lt;b&gt;Complete from Document and APIs&lt;/b&gt;&lt;p&gt;Performs a completion from document and APIs of the word containing the cursor.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vervollständigung vom Dokument und von APIs&lt;/b&gt;&lt;p&gt;Vervollständigt das Wort, das den Cursor enthält, vom Dokument und von APIs.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/ViewManager.py" line="1337"/>
+        <location filename="../ViewManager/ViewManager.py" line="1355"/>
         <source>Meta+Alt+Space</source>
         <comment>Edit|Calltip</comment>
         <translation>Meta+Alt+Space</translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="687"/>
+        <source>Save Copy</source>
+        <translation type="unfinished">Kopie speichern</translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="687"/>
+        <source>Save &amp;Copy...</source>
+        <translation type="unfinished">&amp;Kopie speichern...</translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="692"/>
+        <source>Save a copy of the current file</source>
+        <translation type="unfinished">Speichert eine Kopie der aktuellen Datei</translation>
+    </message>
+    <message>
+        <location filename="../ViewManager/ViewManager.py" line="694"/>
+        <source>&lt;b&gt;Save Copy&lt;/b&gt;&lt;p&gt;Save a copy of the contents of current editor window. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Kopie speichern&lt;/b&gt;&lt;p&gt;Speichern einer Kopie des Inhalts des aktuellen Editorfensters. Die Datei kann mit einem Dateiauswahldialog eingegeben werden.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

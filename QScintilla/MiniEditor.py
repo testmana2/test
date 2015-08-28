@@ -245,6 +245,33 @@ class MiniEditor(E5MainWindow):
         
         return self.__saveFile(fileName)
     
+    def __saveCopy(self):
+        """
+        Private slot to save a copy of the file with a new name.
+        """
+        fileName = E5FileDialog.getSaveFileName(self)
+        if not fileName:
+            return
+    
+        QApplication.setOverrideCursor(Qt.WaitCursor)
+        txt = self.__textEdit.text()
+        try:
+            self.encoding = Utilities.writeEncodedFile(
+                fileName, txt, self.encoding)
+        except (IOError, Utilities.CodingError, UnicodeError) as why:
+            E5MessageBox.critical(
+                self, self.tr('Save File'),
+                self.tr('<p>The file <b>{0}</b> could not be saved.<br/>'
+                        'Reason: {1}</p>')
+                .format(fileName, str(why)))
+            QApplication.restoreOverrideCursor()
+            return
+        
+        QApplication.restoreOverrideCursor()
+        self.__statusBar.showMessage(self.tr("File saved"), 2000)
+        
+        return
+    
     def __about(self):
         """
         Private slot to show a little About message.
@@ -422,6 +449,21 @@ class MiniEditor(E5MainWindow):
         ))
         self.saveAsAct.triggered.connect(self.__saveAs)
         self.fileActions.append(self.saveAsAct)
+        
+        self.saveCopyAct = E5Action(
+            self.tr('Save Copy'),
+            UI.PixmapCache.getIcon("fileSaveCopy.png"),
+            self.tr('Save &Copy...'),
+            0, 0, self, 'vm_file_save_copy')
+        self.saveCopyAct.setStatusTip(self.tr(
+            'Save a copy of the current file'))
+        self.saveCopyAct.setWhatsThis(self.tr(
+            """<b>Save Copy</b>"""
+            """<p>Save a copy of the contents of current editor window."""
+            """ The file can be entered in a file selection dialog.</p>"""
+        ))
+        self.saveCopyAct.triggered.connect(self.__saveCopy)
+        self.fileActions.append(self.saveCopyAct)
         
         self.closeAct = E5Action(
             self.tr('Close'),
@@ -2051,6 +2093,7 @@ class MiniEditor(E5MainWindow):
         self.fileMenu.addAction(self.openAct)
         self.fileMenu.addAction(self.saveAct)
         self.fileMenu.addAction(self.saveAsAct)
+        self.fileMenu.addAction(self.saveCopyAct)
         self.fileMenu.addSeparator()
         self.fileMenu.addAction(self.printPreviewAct)
         self.fileMenu.addAction(self.printAct)
@@ -2092,6 +2135,7 @@ class MiniEditor(E5MainWindow):
         filetb.addAction(self.openAct)
         filetb.addAction(self.saveAct)
         filetb.addAction(self.saveAsAct)
+        filetb.addAction(self.saveCopyAct)
         filetb.addSeparator()
         filetb.addAction(self.printPreviewAct)
         filetb.addAction(self.printAct)
