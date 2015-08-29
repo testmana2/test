@@ -1097,7 +1097,14 @@ class Tabview(QSplitter, ViewManager):
                 self.tabWidgets.remove(tw)
                 tw.close()
                 self.currentTabWidget = self.tabWidgets[i]
-                self.currentTabWidget.showIndicator(True)
+                for tw in self.tabWidgets:
+                    tw.showIndicator(tw == self.currentTabWidget)
+                if self.currentTabWidget is not None:
+                    assembly = self.currentTabWidget.currentWidget()
+                    if assembly is not None:
+                        editor = assembly.getEditor()
+                        if editor is not None:
+                            editor.setFocus(Qt.OtherFocusReason)
                 if len(self.tabWidgets) == 1:
                     self.splitRemoveAct.setEnabled(False)
                     self.nextSplitAct.setEnabled(False)
