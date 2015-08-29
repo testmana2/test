@@ -77,11 +77,12 @@ class StackedWidget(QStackedWidget):
         
         @param widget widget to be made current (QWidget)
         """
-        if isinstance(widget, QScintilla.Editor.Editor):
-            self.editors.remove(widget)
-            self.editors.insert(0, widget)
-            widget = widget.parent()
-        super(StackedWidget, self).setCurrentWidget(widget)
+        if widget is not None:
+            if isinstance(widget, QScintilla.Editor.Editor):
+                self.editors.remove(widget)
+                self.editors.insert(0, widget)
+                widget = widget.parent()
+            super(StackedWidget, self).setCurrentWidget(widget)
         
     def setCurrentIndex(self, index):
         """
