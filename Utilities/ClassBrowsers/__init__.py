@@ -143,3 +143,6 @@ def find_module(name, path, isPyFile=False):
                 if os.path.exists(pathname):
                     return (open(pathname), pathname, (ext, 'r', PY_SOURCE))
         raise ImportError
+    except SyntaxError:
+        # re-raise as an import error
+        raise ImportError
