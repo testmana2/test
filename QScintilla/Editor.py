@@ -3056,6 +3056,7 @@ class Editor(QsciScintillaCompat):
             self.checkSyntax()
             self.extractTasks()
             self.__resetOnlineChangeTraceInfo()
+            self.__checkEncoding()
             return True
         else:
             self.lastModified = QFileInfo(fn).lastModified()
