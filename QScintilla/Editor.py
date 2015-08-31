@@ -3027,7 +3027,7 @@ class Editor(QsciScintillaCompat):
         @return flag indicating success (boolean)
         """
         fn = self.__getSaveFileName(path)
-        if  not fn:
+        if not fn:
             return False
         
         res = self.writeFile(fn)
@@ -3055,7 +3055,7 @@ class Editor(QsciScintillaCompat):
             saveas = True
             
             fn = self.__getSaveFileName(path)
-            if  not fn:
+            if not fn:
                 return False
             
             newName = fn
