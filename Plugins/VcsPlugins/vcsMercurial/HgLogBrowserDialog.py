@@ -1756,6 +1756,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
         if rev:
             self.vcs.hgPush(self.repodir, rev=rev)
+            self.on_refreshButton_clicked()
     
     @pyqtSlot()
     def __pushAllActTriggered(self):
@@ -1763,6 +1764,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         Private slot to push all changes to a remote repository.
         """
         self.vcs.hgPush(self.repodir)
+        self.on_refreshButton_clicked()
     
     def __actionMode(self):
         """
