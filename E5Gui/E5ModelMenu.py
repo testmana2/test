@@ -48,6 +48,9 @@ class E5ModelMenu(QMenu):
         self.__dropRow = -1
         self.__dropIndex = None
         
+        # This is to ensure it will be shown on Mac OS X
+        self.addAction("--not populated--")
+        
         self.aboutToShow.connect(self.__aboutToShow)
         self.triggered.connect(self.__actionTriggered)
     
