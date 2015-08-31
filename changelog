@@ -59,6 +59,7 @@ Version 6.1-snapshot-2015mmdd:
      --- added capability to search in the output of Diff dialogs
   -- Mercurial
      --- enhanced the log browser functionality by a search mode
+     --- enhanced the log browser functionality by pull and push actions
      --- enhanced the status dialog functionality by a diff view
 - Web Browser
   -- added support for HTML5 feature permissions

@@ -1133,7 +1133,7 @@ flag indicating, that the update contained an add
 </dd>
 </dl><a NAME="Hg.hgPush" ID="Hg.hgPush"></a>
 <h4>Hg.hgPush</h4>
-<b>hgPush</b>(<i>name, force=False, newBranch=False</i>)
+<b>hgPush</b>(<i>name, force=False, newBranch=False, rev=None</i>)
 <p>
         Public method used to push changes to a remote Mercurial repository.
 </p><dl>
@@ -1146,6 +1146,9 @@ flag indicating a forced push (boolean)
 </dd><dt><i>newBranch=</i></dt>
 <dd>
 flag indicating to push a new branch (boolean)
+</dd><dt><i>rev=</i></dt>
+<dd>
+revision to be pushed (including all ancestors) (string)
 </dd>
 </dl><a NAME="Hg.hgReMerge" ID="Hg.hgReMerge"></a>
 <h4>Hg.hgReMerge</h4>

@@ -35,7 +35,6 @@ COLORNAMES = ["blue", "darkgreen", "red", "green", "darkblue", "purple",
 COLORS = [str(QColor(x).name()) for x in COLORNAMES]
 
 
-# TODO: add push and pull actions
 class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
     """
     Class implementing a dialog to browse the log history.
@@ -158,6 +157,12 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             'M': self.tr('Modified'),
         }
         
+        self.phases = {
+            'draft': self.tr("Draft"),
+            'public': self.tr("Public"),
+            'secret': self.tr("Secret"),
+        }
+        
         self.__dotRadius = 8
         self.__rowHeight = 20
         
@@ -169,6 +174,12 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         if self.vcs.version < (2, 1):
             self.logTree.setColumnHidden(self.PhaseColumn, True)
         
+        self.__initActionsMenu()
+    
+    def __initActionsMenu(self):
+        """
+        Private method to initialize the actions menu.
+        """
         self.__actionsMenu = QMenu()
         if self.vcs.version >= (2, 0):
             self.__graftAct = self.__actionsMenu.addAction(
@@ -199,6 +210,12 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         self.__switchAct.setToolTip(self.tr(
             "Switch the working directory to the selected revision"))
         
+        self.__actionsMenu.addSeparator()
+        
+        self.__pullAct = self.__actionsMenu.addAction(
+            self.tr("Pull Changes"), self.__pullActTriggered)
+        self.__pullAct.setToolTip(self.tr(
+            "Pull changes from a remote repository"))
         if self.vcs.version >= (2, 0):
             self.__lfPullAct = self.__actionsMenu.addAction(
                 self.tr("Pull Large Files"), self.__lfPullActTriggered)
@@ -206,6 +223,18 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 "Pull large files for selected revisions"))
         else:
             self.__lfPullAct = None
+        
+        self.__actionsMenu.addSeparator()
+        
+        self.__pushAct = self.__actionsMenu.addAction(
+            self.tr("Push Selected Changes"), self.__pushActTriggered)
+        self.__pushAct.setToolTip(self.tr(
+            "Push changes of the selected changeset and its ancestors"
+            " to a remote repository"))
+        self.__pushAllAct = self.__actionsMenu.addAction(
+            self.tr("Push All Changes"), self.__pushAllActTriggered)
+        self.__pushAllAct.setToolTip(self.tr(
+            "Push all changes to a remote repository"))
         
         self.actionsButton.setIcon(
             UI.PixmapCache.getIcon("actionsToolButton.png"))
@@ -651,11 +680,15 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         msgtxt = msg[0]
         if len(msgtxt) > 30:
             msgtxt = "{0}...".format(msgtxt[:30])
+        if phase in self.phases:
+            phaseStr = self.phases[phase]
+        else:
+            phaseStr = phase
         columnLabels = [
             "",
             branches[0] + closedStr,
             "{0:>7}:{1}".format(rev, node),
-            phase,
+            phaseStr,
             author,
             date,
             msgtxt,
@@ -1192,9 +1225,9 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 public = 0
                 for itm in self.logTree.selectedItems():
                     phase = itm.text(self.PhaseColumn)
-                    if phase == "draft":
+                    if phase == self.phases["draft"]:
                         draft += 1
-                    elif phase == "secret":
+                    elif phase == self.phases["secret"]:
                         secret += 1
                     else:
                         public += 1
@@ -1228,6 +1261,11 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                         self.logTree.selectedItems()))
                 else:
                     self.__lfPullAct.setEnabled(False)
+            
+            self.__pushAct.setEnabled(
+                len(self.logTree.selectedItems()) == 1 and
+                self.logTree.selectedItems()[0].text(self.PhaseColumn) ==
+                self.phases["draft"])
             
             self.actionsButton.setEnabled(True)
         else:
@@ -1608,11 +1646,11 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
             self.__phaseAct.setEnabled(False)
             return
         
-        if currentPhase == "draft":
-            newPhase = "secret"
+        if currentPhase == self.phases["draft"]:
+            newPhase = self.phases["secret"]
             data = (revs, "s", True)
         else:
-            newPhase = "draft"
+            newPhase = self.phases["draft"]
             data = (revs, "d", False)
         res = self.vcs.hgPhase(self.repodir, data)
         if res:
@@ -1684,6 +1722,7 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
                 
                 self.on_refreshButton_clicked()
     
+    @pyqtSlot()
     def __lfPullActTriggered(self):
         """
         Private slot to pull large files of selected revisions.
@@ -1697,6 +1736,33 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         if revs:
             self.vcs.getExtensionObject("largefiles").hgLfPull(
                 self.repodir, revisions=revs)
+    
+    @pyqtSlot()
+    def __pullActTriggered(self):
+        """
+        Private slot to pull changes from a remote repository.
+        """
+        res = self.vcs.hgPull(self.repodir)
+        if res:
+            self.on_refreshButton_clicked()
+    
+    @pyqtSlot()
+    def __pushActTriggered(self):
+        """
+        Private slot to push changes to a remote repository up to a selected
+        changeset.
+        """
+        itm = self.logTree.selectedItems()[0]
+        rev = itm.text(self.RevisionColumn).strip().split(":", 1)[0]
+        if rev:
+            self.vcs.hgPush(self.repodir, rev=rev)
+    
+    @pyqtSlot()
+    def __pushAllActTriggered(self):
+        """
+        Private slot to push all changes to a remote repository.
+        """
+        self.vcs.hgPush(self.repodir)
     
     def __actionMode(self):
         """

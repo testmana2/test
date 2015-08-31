@@ -2001,13 +2001,14 @@ class Hg(VersionControl):
         self.checkVCSStatus()
         return res
     
-    def hgPush(self, name, force=False, newBranch=False):
+    def hgPush(self, name, force=False, newBranch=False, rev=None):
         """
         Public method used to push changes to a remote Mercurial repository.
         
         @param name directory name of the project to be pushed from (string)
         @keyparam force flag indicating a forced push (boolean)
         @keyparam newBranch flag indicating to push a new branch (boolean)
+        @keyparam rev revision to be pushed (including all ancestors) (string)
         """
         args = self.initCommand("push")
         args.append('-v')
@@ -2015,6 +2016,9 @@ class Hg(VersionControl):
             args.append('-f')
         if newBranch:
             args.append('--new-branch')
+        if rev:
+            args.append('--rev')
+            args.append(rev)
         
         # find the root of the repo
         repodir = self.splitPath(name)[0]

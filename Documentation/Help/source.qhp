@@ -6327,6 +6327,7 @@
       <keyword name="HgLogBrowserDialog.__getParents" id="HgLogBrowserDialog.__getParents" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__getParents" />
       <keyword name="HgLogBrowserDialog.__graftActTriggered" id="HgLogBrowserDialog.__graftActTriggered" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__graftActTriggered" />
       <keyword name="HgLogBrowserDialog.__identifyProject" id="HgLogBrowserDialog.__identifyProject" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__identifyProject" />
+      <keyword name="HgLogBrowserDialog.__initActionsMenu" id="HgLogBrowserDialog.__initActionsMenu" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__initActionsMenu" />
       <keyword name="HgLogBrowserDialog.__initData" id="HgLogBrowserDialog.__initData" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__initData" />
       <keyword name="HgLogBrowserDialog.__lfPullActTriggered" id="HgLogBrowserDialog.__lfPullActTriggered" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__lfPullActTriggered" />
       <keyword name="HgLogBrowserDialog.__modifyForLargeFiles" id="HgLogBrowserDialog.__modifyForLargeFiles" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__modifyForLargeFiles" />
@@ -6334,6 +6335,9 @@
       <keyword name="HgLogBrowserDialog.__prepareFieldSearch" id="HgLogBrowserDialog.__prepareFieldSearch" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__prepareFieldSearch" />
       <keyword name="HgLogBrowserDialog.__procFinished" id="HgLogBrowserDialog.__procFinished" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__procFinished" />
       <keyword name="HgLogBrowserDialog.__processBuffer" id="HgLogBrowserDialog.__processBuffer" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__processBuffer" />
+      <keyword name="HgLogBrowserDialog.__pullActTriggered" id="HgLogBrowserDialog.__pullActTriggered" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__pullActTriggered" />
+      <keyword name="HgLogBrowserDialog.__pushActTriggered" id="HgLogBrowserDialog.__pushActTriggered" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__pushActTriggered" />
+      <keyword name="HgLogBrowserDialog.__pushAllActTriggered" id="HgLogBrowserDialog.__pushAllActTriggered" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__pushAllActTriggered" />
       <keyword name="HgLogBrowserDialog.__readStderr" id="HgLogBrowserDialog.__readStderr" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__readStderr" />
       <keyword name="HgLogBrowserDialog.__readStdout" id="HgLogBrowserDialog.__readStdout" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__readStdout" />
       <keyword name="HgLogBrowserDialog.__resetUI" id="HgLogBrowserDialog.__resetUI" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__resetUI" />

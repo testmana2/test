@@ -108,6 +108,9 @@ QWidget, Ui_HgLogBrowserDialog
 <td><a href="#HgLogBrowserDialog.__identifyProject">__identifyProject</a></td>
 <td>Private method to determine the revision of the project directory.</td>
 </tr><tr>
+<td><a href="#HgLogBrowserDialog.__initActionsMenu">__initActionsMenu</a></td>
+<td>Private method to initialize the actions menu.</td>
+</tr><tr>
 <td><a href="#HgLogBrowserDialog.__initData">__initData</a></td>
 <td>Private method to (re-)initialize some data.</td>
 </tr><tr>
@@ -128,6 +131,15 @@ QWidget, Ui_HgLogBrowserDialog
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__processBuffer">__processBuffer</a></td>
 <td>Private method to process the buffered output of the hg log command.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__pullActTriggered">__pullActTriggered</a></td>
+<td>Private slot to pull changes from a remote repository.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__pushActTriggered">__pushActTriggered</a></td>
+<td>Private slot to push changes to a remote repository up to a selected changeset.</td>
+</tr><tr>
+<td><a href="#HgLogBrowserDialog.__pushAllActTriggered">__pushAllActTriggered</a></td>
+<td>Private slot to push all changes to a remote repository.</td>
 </tr><tr>
 <td><a href="#HgLogBrowserDialog.__readStderr">__readStderr</a></td>
 <td>Private slot to handle the readyReadStandardError signal.</td>
@@ -505,6 +517,11 @@ list of parent revisions (list of integers)
 <b>__identifyProject</b>(<i></i>)
 <p>
         Private method to determine the revision of the project directory.
+</p><a NAME="HgLogBrowserDialog.__initActionsMenu" ID="HgLogBrowserDialog.__initActionsMenu"></a>
+<h4>HgLogBrowserDialog.__initActionsMenu</h4>
+<b>__initActionsMenu</b>(<i></i>)
+<p>
+        Private method to initialize the actions menu.
 </p><a NAME="HgLogBrowserDialog.__initData" ID="HgLogBrowserDialog.__initData"></a>
 <h4>HgLogBrowserDialog.__initData</h4>
 <b>__initData</b>(<i></i>)
@@ -564,6 +581,22 @@ exit status of the process (QProcess.ExitStatus)
 <b>__processBuffer</b>(<i></i>)
 <p>
         Private method to process the buffered output of the hg log command.
+</p><a NAME="HgLogBrowserDialog.__pullActTriggered" ID="HgLogBrowserDialog.__pullActTriggered"></a>
+<h4>HgLogBrowserDialog.__pullActTriggered</h4>
+<b>__pullActTriggered</b>(<i></i>)
+<p>
+        Private slot to pull changes from a remote repository.
+</p><a NAME="HgLogBrowserDialog.__pushActTriggered" ID="HgLogBrowserDialog.__pushActTriggered"></a>
+<h4>HgLogBrowserDialog.__pushActTriggered</h4>
+<b>__pushActTriggered</b>(<i></i>)
+<p>
+        Private slot to push changes to a remote repository up to a selected
+        changeset.
+</p><a NAME="HgLogBrowserDialog.__pushAllActTriggered" ID="HgLogBrowserDialog.__pushAllActTriggered"></a>
+<h4>HgLogBrowserDialog.__pushAllActTriggered</h4>
+<b>__pushAllActTriggered</b>(<i></i>)
+<p>
+        Private slot to push all changes to a remote repository.
 </p><a NAME="HgLogBrowserDialog.__readStderr" ID="HgLogBrowserDialog.__readStderr"></a>
 <h4>HgLogBrowserDialog.__readStderr</h4>
 <b>__readStderr</b>(<i></i>)
