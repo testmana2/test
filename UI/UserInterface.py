@@ -2433,8 +2433,9 @@ class UserInterface(E5MainWindow):
         self.toolGroupsMenu.aboutToShow.connect(self.__showToolGroupsMenu)
         self.toolGroupsMenu.triggered.connect(self.__toolGroupSelected)
         self.toolGroupsMenuTriggered = False
-        self.__menus["tools"] = self.__initToolsMenu()
-        self.__menus["extras"].addMenu(self.__menus["tools"])
+        self.__menus["extras"].addSeparator()
+        self.__initToolsMenus(self.__menus["extras"])
+        self.__menus["extras"].addSeparator()
         
         self.__menus["settings"] = QMenu(self.tr('Se&ttings'), self)
         mb.addMenu(self.__menus["settings"])
@@ -3293,15 +3294,13 @@ class UserInterface(E5MainWindow):
             args = [eric6]
             QProcess.startDetached(program, args)
         
-    def __initToolsMenu(self):
+    def __initToolsMenus(self, menu):
         """
-        Private slot to initialize the Tools menu.
+        Private slot to initialize the various tool menus.
         
-        @return populated Tools menu
-        @rtype QMenu
+        @param menu reference to the parent menu
+        @type QMenu
         """
-        menu = QMenu(self.tr('&Tools'), self)
-        
         btMenu = QMenu(self.tr("&Builtin Tools"), self)
         if self.designer4Act is not None:
             btMenu.addAction(self.designer4Act)
@@ -3331,8 +3330,6 @@ class UserInterface(E5MainWindow):
         self.__menus["builtin_tools"] = btMenu
         self.__menus["plugin_tools"] = ptMenu
         self.__menus["user_tools"] = utMenu
-        
-        return menu
         
     def __showPluginToolsMenu(self):
         """
