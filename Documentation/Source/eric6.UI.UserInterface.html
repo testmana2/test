@@ -353,8 +353,8 @@ E5MainWindow
 <td><a href="#UserInterface.__initToolbars">__initToolbars</a></td>
 <td>Private slot to create the toolbars.</td>
 </tr><tr>
-<td><a href="#UserInterface.__initToolsMenu">__initToolsMenu</a></td>
-<td>Private slot to initialize the Tools menu.</td>
+<td><a href="#UserInterface.__initToolsMenus">__initToolsMenus</a></td>
+<td>Private slot to initialize the various tool menus.</td>
 </tr><tr>
 <td><a href="#UserInterface.__installPlugins">__installPlugins</a></td>
 <td>Private slot to show a dialog to install a new plugin.</td>
@@ -1208,20 +1208,15 @@ flag indicating the existence of an error log file (boolean)
 <b>__initToolbars</b>(<i></i>)
 <p>
         Private slot to create the toolbars.
-</p><a NAME="UserInterface.__initToolsMenu" ID="UserInterface.__initToolsMenu"></a>
-<h4>UserInterface.__initToolsMenu</h4>
-<b>__initToolsMenu</b>(<i></i>)
+</p><a NAME="UserInterface.__initToolsMenus" ID="UserInterface.__initToolsMenus"></a>
+<h4>UserInterface.__initToolsMenus</h4>
+<b>__initToolsMenus</b>(<i>menu</i>)
 <p>
-        Private slot to initialize the Tools menu.
+        Private slot to initialize the various tool menus.
 </p><dl>
-<dt>Returns:</dt>
+<dt><i>menu</i> (QMenu)</dt>
 <dd>
-populated Tools menu
-</dd>
-</dl><dl>
-<dt>Return Type:</dt>
-<dd>
-QMenu
+reference to the parent menu
 </dd>
 </dl><a NAME="UserInterface.__installPlugins" ID="UserInterface.__installPlugins"></a>
 <h4>UserInterface.__installPlugins</h4>

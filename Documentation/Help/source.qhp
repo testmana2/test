@@ -12038,7 +12038,7 @@
       <keyword name="UserInterface.__initQtDocActions" id="UserInterface.__initQtDocActions" ref="eric6.UI.UserInterface.html#UserInterface.__initQtDocActions" />
       <keyword name="UserInterface.__initStatusbar" id="UserInterface.__initStatusbar" ref="eric6.UI.UserInterface.html#UserInterface.__initStatusbar" />
       <keyword name="UserInterface.__initToolbars" id="UserInterface.__initToolbars" ref="eric6.UI.UserInterface.html#UserInterface.__initToolbars" />
-      <keyword name="UserInterface.__initToolsMenu" id="UserInterface.__initToolsMenu" ref="eric6.UI.UserInterface.html#UserInterface.__initToolsMenu" />
+      <keyword name="UserInterface.__initToolsMenus" id="UserInterface.__initToolsMenus" ref="eric6.UI.UserInterface.html#UserInterface.__initToolsMenus" />
       <keyword name="UserInterface.__installPlugins" id="UserInterface.__installPlugins" ref="eric6.UI.UserInterface.html#UserInterface.__installPlugins" />
       <keyword name="UserInterface.__ircAutoConnected" id="UserInterface.__ircAutoConnected" ref="eric6.UI.UserInterface.html#UserInterface.__ircAutoConnected" />
       <keyword name="UserInterface.__lastEditorClosed" id="UserInterface.__lastEditorClosed" ref="eric6.UI.UserInterface.html#UserInterface.__lastEditorClosed" />
