@@ -22510,12 +22510,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1873"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1875"/>
         <source>Find Commit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1873"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1875"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished">&apos;{0}&apos; nebyl nalezen.</translation>
     </message>
@@ -57974,7 +57974,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Zjistit akt&amp;ualizace...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3003"/>
+        <location filename="../UI/UserInterface.py" line="3004"/>
         <source>Report Bug</source>
         <translation>Reportovat Bugy</translation>
     </message>
@@ -57994,7 +57994,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Reportovat bug...&lt;/b&gt;&lt;p&gt;Otevře se dialog pro reportování bugu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2597"/>
+        <location filename="../UI/UserInterface.py" line="2598"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
@@ -58054,7 +58054,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Unittest Script&lt;/b&gt;&lt;p&gt;Spustit unittest s aktuálním skriptem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4118"/>
+        <location filename="../UI/UserInterface.py" line="4115"/>
         <source>Unittest Project</source>
         <translation>Unittest Projekt</translation>
     </message>
@@ -58224,7 +58224,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Klávesové zkratky&lt;/b&gt;&lt;p&gt;Nastavení klávesových zkratek aplikace podle zvyklostí uživatele.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5387"/>
+        <location filename="../UI/UserInterface.py" line="5384"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportovat klávesové zkratky</translation>
     </message>
@@ -58244,7 +58244,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Export klávesových zkratek&lt;/b&gt;&lt;p&gt;Exportují se klávesové zkratky z aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5411"/>
+        <location filename="../UI/UserInterface.py" line="5408"/>
         <source>Import Keyboard Shortcuts</source>
         <translation>Import klávesových zkratek</translation>
     </message>
@@ -58336,7 +58336,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     <message>
         <location filename="../UI/UserInterface.py" line="3317"/>
         <source>&amp;Tools</source>
-        <translation>&amp;Nástroje</translation>
+        <translation type="obsolete">&amp;Nástroje</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="2444"/>
@@ -58344,137 +58344,137 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Vybrat skupinu nástrojů</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2451"/>
+        <location filename="../UI/UserInterface.py" line="2452"/>
         <source>Se&amp;ttings</source>
         <translation>Nas&amp;tavení</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2474"/>
+        <location filename="../UI/UserInterface.py" line="2475"/>
         <source>&amp;Window</source>
         <translation>O&amp;kno</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2499"/>
+        <location filename="../UI/UserInterface.py" line="2500"/>
         <source>&amp;Toolbars</source>
         <translation>&amp;Toolbary</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2524"/>
+        <location filename="../UI/UserInterface.py" line="2525"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2596"/>
+        <location filename="../UI/UserInterface.py" line="2597"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2598"/>
+        <location filename="../UI/UserInterface.py" line="2599"/>
         <source>Settings</source>
         <translation>Nastavení</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4370"/>
+        <location filename="../UI/UserInterface.py" line="4367"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2600"/>
+        <location filename="../UI/UserInterface.py" line="2601"/>
         <source>Profiles</source>
         <translation>Profily</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2952"/>
+        <location filename="../UI/UserInterface.py" line="2953"/>
         <source>&lt;h3&gt;Version Numbers&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Čísla verzí&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6174"/>
+        <location filename="../UI/UserInterface.py" line="6171"/>
         <source>&lt;/table&gt;</source>
         <translation>&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3003"/>
+        <location filename="../UI/UserInterface.py" line="3004"/>
         <source>Email address or mail server address is empty. Please configure your Email settings in the Preferences Dialog.</source>
         <translation>Emailová adresa nebo mail server adresa jsou prázdné. Prosím, nastavte váš email v dialogovém okně Nastavení.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3364"/>
+        <location filename="../UI/UserInterface.py" line="3361"/>
         <source>Configure Tool Groups ...</source>
         <translation>Konfigurace Skupin nástrojů...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3368"/>
+        <location filename="../UI/UserInterface.py" line="3365"/>
         <source>Configure current Tool Group ...</source>
         <translation>Konfigurace aktuální skupiny nástrojů...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3319"/>
+        <location filename="../UI/UserInterface.py" line="3318"/>
         <source>&amp;Builtin Tools</source>
         <translation>&amp;Vestavěné nástroje</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4118"/>
+        <location filename="../UI/UserInterface.py" line="4115"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>V aktuálním projektu není definován hlavní skript. Zrušeno</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4496"/>
+        <location filename="../UI/UserInterface.py" line="4493"/>
         <source>Problem</source>
         <translation>Problém</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4671"/>
+        <location filename="../UI/UserInterface.py" line="4668"/>
         <source>Process Generation Error</source>
         <translation>Chyba v procesu generování</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4370"/>
+        <location filename="../UI/UserInterface.py" line="4367"/>
         <source>Currently no custom viewer is selected. Please use the preferences dialog to specify one.</source>
         <translation>Aktuálně není vybrán žádný prohlížeč. Prosím otevřete Nastavení a nějaký vyberte.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4404"/>
+        <location filename="../UI/UserInterface.py" line="4401"/>
         <source>&lt;p&gt;Could not start the help viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit prohlížeč nápovědy.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;hh&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5114"/>
+        <location filename="../UI/UserInterface.py" line="5111"/>
         <source>Documentation Missing</source>
         <translation>Dokumentace chybí</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5098"/>
+        <location filename="../UI/UserInterface.py" line="5095"/>
         <source>Documentation</source>
         <translation>Dokumentace</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4940"/>
+        <location filename="../UI/UserInterface.py" line="4937"/>
         <source>&lt;p&gt;The PyQt4 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář PyQt4 dokumentace není nakonfigurován.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5545"/>
+        <location filename="../UI/UserInterface.py" line="5542"/>
         <source>Save tasks</source>
         <translation>Uložit úlohy</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5574"/>
+        <location filename="../UI/UserInterface.py" line="5571"/>
         <source>Read tasks</source>
         <translation>Načíst úlohy</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5811"/>
+        <location filename="../UI/UserInterface.py" line="5808"/>
         <source>Drop Error</source>
         <translation>Zahodit chybu</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6136"/>
+        <location filename="../UI/UserInterface.py" line="6133"/>
         <source>Error during updates check</source>
         <translation>Chyba během zjišťování aktualizací</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6116"/>
+        <location filename="../UI/UserInterface.py" line="6113"/>
         <source>Update available</source>
         <translation>Byla nalezena aktualizace</translation>
     </message>
@@ -58489,17 +58489,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Zobrazit externí nás&amp;troje</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6136"/>
+        <location filename="../UI/UserInterface.py" line="6133"/>
         <source>Could not perform updates check.</source>
         <translation>Kontrolu updatů nelze provést.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5956"/>
+        <location filename="../UI/UserInterface.py" line="5953"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6201"/>
+        <location filename="../UI/UserInterface.py" line="6198"/>
         <source>First time usage</source>
         <translation>Spuštěno poprvé</translation>
     </message>
@@ -58509,12 +58509,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Inicializace Plugin manažera...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2510"/>
+        <location filename="../UI/UserInterface.py" line="2511"/>
         <source>P&amp;lugins</source>
         <translation>P&amp;luginy</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2601"/>
+        <location filename="../UI/UserInterface.py" line="2602"/>
         <source>Plugins</source>
         <translation>Pluginy</translation>
     </message>
@@ -58539,7 +58539,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&amp;Plugin Infa...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3334"/>
+        <location filename="../UI/UserInterface.py" line="3333"/>
         <source>&amp;Plugin Tools</source>
         <translation>&amp;Plugin nástroje</translation>
     </message>
@@ -58559,12 +58559,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Odinstalovat plugin...&lt;/b&gt;&lt;p&gt;Otevře dialog pro odinstalaci pluginu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3487"/>
+        <location filename="../UI/UserInterface.py" line="3484"/>
         <source>&amp;Show all</source>
         <translation>&amp;Zobrazit vše</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3489"/>
+        <location filename="../UI/UserInterface.py" line="3486"/>
         <source>&amp;Hide all</source>
         <translation>&amp;Skrýt vše</translation>
     </message>
@@ -58594,7 +58594,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Zobrazit dostupné verze ke stažení</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6160"/>
+        <location filename="../UI/UserInterface.py" line="6157"/>
         <source>&lt;h3&gt;Available versions&lt;/h3&gt;&lt;table&gt;</source>
         <translation>&lt;h3&gt;Dostupné verze&lt;/h3&gt;&lt;table&gt;</translation>
     </message>
@@ -58674,7 +58674,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Obnovit manažer nástrojových lišt...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4616"/>
+        <location filename="../UI/UserInterface.py" line="4613"/>
         <source>External Tools</source>
         <translation>Externí nástroje</translation>
     </message>
@@ -58689,22 +58689,22 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Prohlížeč &amp;multiprojektu</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5592"/>
+        <location filename="../UI/UserInterface.py" line="5589"/>
         <source>Save session</source>
         <translation>Uložit relaci</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5623"/>
+        <location filename="../UI/UserInterface.py" line="5620"/>
         <source>Read session</source>
         <translation>Načíst relaci</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2757"/>
+        <location filename="../UI/UserInterface.py" line="2758"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors encoding.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální kódování editorů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2771"/>
+        <location filename="../UI/UserInterface.py" line="2772"/>
         <source>&lt;p&gt;This part of the status bar displays an indication of the current editors files writability.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje indikátor práva zápisu editoru do souboru.&lt;/p&gt;</translation>
     </message>
@@ -58729,17 +58729,17 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Požadavek na vlastnost...&lt;/b&gt;&lt;p&gt;Otevře dialog pro odeslání požadavku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2750"/>
+        <location filename="../UI/UserInterface.py" line="2751"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors language.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje aktuální jazyk editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2778"/>
+        <location filename="../UI/UserInterface.py" line="2779"/>
         <source>&lt;p&gt;This part of the status bar displays the line number of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje číslo řádku v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2785"/>
+        <location filename="../UI/UserInterface.py" line="2786"/>
         <source>&lt;p&gt;This part of the status bar displays the cursor position of the current editor.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje pozici kurzoru v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
@@ -58764,12 +58764,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>&lt;b&gt;Přepnout vodorovnou nástrojovou lištu&lt;/b&gt;&lt;p&gt;Pokud je vodorovná nástrojová lišta skryta, tak se zobrazí. Je-li zobrazena, skryje se.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3283"/>
+        <location filename="../UI/UserInterface.py" line="3284"/>
         <source>Restart application</source>
         <translation>Restartovat aplikaci</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3283"/>
+        <location filename="../UI/UserInterface.py" line="3284"/>
         <source>The application needs to be restarted. Do it now?</source>
         <translation>Aplikace potřebuje restartovat. Má se provést nyní?</translation>
     </message>
@@ -58779,12 +58779,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2519"/>
+        <location filename="../UI/UserInterface.py" line="2520"/>
         <source>Configure...</source>
         <translation>Konfigurovat...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2764"/>
+        <location filename="../UI/UserInterface.py" line="2765"/>
         <source>&lt;p&gt;This part of the status bar displays the current editors eol setting.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tato část status baru zobrazuje eol nastavení v aktuálním editoru.&lt;/p&gt;</translation>
     </message>
@@ -58924,7 +58924,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Editor &amp;ikon...</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4317"/>
+        <location filename="../UI/UserInterface.py" line="4314"/>
         <source>Qt 3 support</source>
         <translation>Qt 3 podpora</translation>
     </message>
@@ -58944,7 +58944,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>Otevřít PySide dokumentaci</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5098"/>
+        <location filename="../UI/UserInterface.py" line="5095"/>
         <source>&lt;p&gt;The PySide documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Počátek dokumentace PySide nebyl nastaven.&lt;/p&gt;</translation>
     </message>
@@ -58964,111 +58964,111 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation>{0} - {1} - {2} - pasivní mód</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2855"/>
+        <location filename="../UI/UserInterface.py" line="2856"/>
         <source>External Tools/{0}</source>
         <translation>Externí nástroje/{0}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4496"/>
+        <location filename="../UI/UserInterface.py" line="4493"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; does not exist or is zero length.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; neexistuje nebo má nulovou délku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4224"/>
+        <location filename="../UI/UserInterface.py" line="4221"/>
         <source>&lt;p&gt;Could not start Qt-Designer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Designer.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4291"/>
+        <location filename="../UI/UserInterface.py" line="4288"/>
         <source>&lt;p&gt;Could not start Qt-Linguist.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Linguist.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4342"/>
+        <location filename="../UI/UserInterface.py" line="4339"/>
         <source>&lt;p&gt;Could not start Qt-Assistant.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Qt-Assistant.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4384"/>
+        <location filename="../UI/UserInterface.py" line="4381"/>
         <source>&lt;p&gt;Could not start custom viewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit aktuální prohlížeč.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4452"/>
+        <location filename="../UI/UserInterface.py" line="4449"/>
         <source>&lt;p&gt;Could not start UI Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit UI Previewer.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4507"/>
+        <location filename="../UI/UserInterface.py" line="4504"/>
         <source>&lt;p&gt;Could not start Translation Previewer.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit Previewer překladů.&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4528"/>
+        <location filename="../UI/UserInterface.py" line="4525"/>
         <source>&lt;p&gt;Could not start SQL Browser.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit SQL Browser.&lt;br&gt;Ujistěte se, že je dostupný jako &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4607"/>
+        <location filename="../UI/UserInterface.py" line="4604"/>
         <source>No tool entry found for external tool &apos;{0}&apos; in tool group &apos;{1}&apos;.</source>
         <translation>V externím nástroji  &apos;{0}&apos; ve skupině &apos;{1}&apos; nebyl záznam nástroje nalezen.</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4616"/>
+        <location filename="../UI/UserInterface.py" line="4613"/>
         <source>No toolgroup entry &apos;{0}&apos; found.</source>
         <translation>Skupina nástrojů &apos;{0}&apos; nenalezena. </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4655"/>
+        <location filename="../UI/UserInterface.py" line="4652"/>
         <source>Starting process &apos;{0} {1}&apos;.
 </source>
         <translation>Spouštím proces &apos;{0} {1}&apos;.
 </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4671"/>
+        <location filename="../UI/UserInterface.py" line="4668"/>
         <source>&lt;p&gt;Could not start the tool entry &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;Ensure that it is available as &lt;b&gt;{1}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nemohu spustit příkaz &lt;b&gt;{0}&lt;/b&gt;&lt;br&gt;Ověřte jestli je dostupný jako &lt;b&gt;{1}&lt;/b&gt;. &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4747"/>
+        <location filename="../UI/UserInterface.py" line="4744"/>
         <source>Process &apos;{0}&apos; has exited.
 </source>
         <translation>Proces &apos;{0}&apos; byl ukončen.
 </translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5114"/>
+        <location filename="../UI/UserInterface.py" line="5111"/>
         <source>&lt;p&gt;The documentation starting point &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; could not be found.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Adresář dokumentace &quot;&lt;b&gt;{0}&lt;/b&gt;&quot; nebyl nalezen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5545"/>
+        <location filename="../UI/UserInterface.py" line="5542"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Do souboru s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze zapisovat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5574"/>
+        <location filename="../UI/UserInterface.py" line="5571"/>
         <source>&lt;p&gt;The tasks file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor s úlohami &lt;b&gt;{0}&lt;/b&gt; nelze načíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5592"/>
+        <location filename="../UI/UserInterface.py" line="5589"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Zápis do souboru relace session &lt;b&gt;{0}&lt;/b&gt; se nezdařil.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5623"/>
+        <location filename="../UI/UserInterface.py" line="5620"/>
         <source>&lt;p&gt;The session file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor relace session &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5811"/>
+        <location filename="../UI/UserInterface.py" line="5808"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; není soubor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5965"/>
+        <location filename="../UI/UserInterface.py" line="5962"/>
         <source>Trying host {0}</source>
         <translation>Zkouším host {0}</translation>
     </message>
@@ -59103,7 +59103,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5411"/>
+        <location filename="../UI/UserInterface.py" line="5408"/>
         <source>Keyboard shortcut file (*.e4k)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59143,27 +59143,27 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6026"/>
+        <location filename="../UI/UserInterface.py" line="6023"/>
         <source>Error getting versions information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6019"/>
+        <location filename="../UI/UserInterface.py" line="6016"/>
         <source>The versions information could not be downloaded. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5207"/>
+        <location filename="../UI/UserInterface.py" line="5204"/>
         <source>Open Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5207"/>
+        <location filename="../UI/UserInterface.py" line="5204"/>
         <source>Could not start a web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6026"/>
+        <location filename="../UI/UserInterface.py" line="6023"/>
         <source>The versions information could not be downloaded for the last 7 days. Please go online and try again.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59249,12 +59249,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4586"/>
+        <location filename="../UI/UserInterface.py" line="4583"/>
         <source>&lt;p&gt;Could not start Snapshot tool.&lt;br&gt;Ensure that it is available as &lt;b&gt;{0}&lt;/b&gt;.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6220"/>
+        <location filename="../UI/UserInterface.py" line="6217"/>
         <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59474,7 +59474,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2479"/>
+        <location filename="../UI/UserInterface.py" line="2480"/>
         <source>&amp;Windows</source>
         <translation type="unfinished">&amp;Windows</translation>
     </message>
@@ -59564,7 +59564,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished">Otevřít Qt4 dokumentaci {5 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="2796"/>
+        <location filename="../UI/UserInterface.py" line="2797"/>
         <source>&lt;p&gt;This part of the status bar allows zooming the current editor, shell or terminal.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59629,7 +59629,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished">Otevřít PyQt4 dokumentaci {5 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5001"/>
+        <location filename="../UI/UserInterface.py" line="4998"/>
         <source>&lt;p&gt;The PyQt5 documentation starting point has not been configured.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;Adresář PyQt4 dokumentace není nakonfigurován.&lt;/p&gt; {5 ?}</translation>
     </message>
@@ -59664,7 +59664,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5956"/>
+        <location filename="../UI/UserInterface.py" line="5953"/>
         <source>%v/%m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59684,7 +59684,7 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="5960"/>
+        <location filename="../UI/UserInterface.py" line="5957"/>
         <source>Version Check</source>
         <translation type="unfinished"></translation>
     </message>
@@ -59754,27 +59754,27 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished">&lt;b&gt;Eric API dokumentace&lt;/b&gt;&lt;p&gt;Zobrazit Eric API dokumentaci. Umístění dokumentace je v podadresáři Documentation/Source v instalačním adresáři eric5.&lt;/p&gt; {6 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="4317"/>
+        <location filename="../UI/UserInterface.py" line="4314"/>
         <source>Qt v.3 is not supported by eric6.</source>
         <translation type="unfinished">Qt v.3 není podporováno v eric5. {3 ?} {6.?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6116"/>
+        <location filename="../UI/UserInterface.py" line="6113"/>
         <source>The update to &lt;b&gt;{0}&lt;/b&gt; of eric6 is available at &lt;b&gt;{1}&lt;/b&gt;. Would you like to get it?</source>
         <translation type="unfinished">Aktualizace &lt;b&gt;{0}&lt;/b&gt; eric5 je připravena na &lt;b&gt;{1}&lt;/b&gt;. Chcete ji stáhnout a nainstalovat? {0}?} {6 ?} {1}?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6129"/>
+        <location filename="../UI/UserInterface.py" line="6126"/>
         <source>Eric6 is up to date</source>
         <translation type="unfinished">Eric5 je aktuální {6 ?}</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6129"/>
+        <location filename="../UI/UserInterface.py" line="6126"/>
         <source>You are using the latest version of eric6</source>
         <translation type="unfinished">Používáte poslední verzi eric6</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="6201"/>
+        <location filename="../UI/UserInterface.py" line="6198"/>
         <source>eric6 has not been configured yet. The configuration dialog will be started.</source>
         <translation type="unfinished">eric5 nebyl ještě nakonfigurován. Bude spuštěn konfigurační dialog. {6 ?}</translation>
     </message>
@@ -59784,12 +59784,12 @@ Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3337"/>
+        <location filename="../UI/UserInterface.py" line="3336"/>
         <source>&amp;User Tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3411"/>
+        <location filename="../UI/UserInterface.py" line="3408"/>
         <source>No User Tools Configured</source>
         <translation type="unfinished"></translation>
     </message>
@@ -64670,12 +64670,12 @@ added to the size of the fonts used in the editor windows.&lt;/p&gt;</source>
 <context>
     <name>eric6</name>
     <message>
-        <location filename="../eric6.py" line="326"/>
+        <location filename="../eric6.py" line="323"/>
         <source>Starting...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../eric6.py" line="331"/>
+        <location filename="../eric6.py" line="328"/>
         <source>Generating Main Window...</source>
         <translation type="unfinished">Generování hlavního okna...</translation>
     </message>
