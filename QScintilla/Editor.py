@@ -5217,6 +5217,7 @@ class Editor(QsciScintillaCompat):
         """
         encoding = act.data()
         self.readFile(self.fileName, encoding=encoding)
+        self.__checkEncoding()
         
     def __contextSave(self):
         """
