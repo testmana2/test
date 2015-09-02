@@ -301,26 +301,23 @@ def main():
 
     splash.showMessage(
         QCoreApplication.translate("eric6", "Generating Main Window..."))
-    try:
-        mainWindow = UserInterface(app, loc, splash, pluginFile, noopen,
-                                   restartArgs)
-        app.lastWindowClosed.connect(app.quit)
-        mainWindow.show()
-        
-        QTimer.singleShot(0, uiStartUp)
-        
-        # generate a graphical error handler
-        from E5Gui import E5ErrorMessage
-        eMsg = E5ErrorMessage.qtHandler()
-        eMsg.setMinimumSize(600, 400)
-        
-        # start the event loop
-        res = app.exec_()
-        logging.debug("Shutting down, result {0:d}".format(res))
-        logging.shutdown()
-        sys.exit(res)
-    except Exception as err:
-        raise err
+    mainWindow = UserInterface(app, loc, splash, pluginFile, noopen,
+                               restartArgs)
+    app.lastWindowClosed.connect(app.quit)
+    mainWindow.show()
+    
+    QTimer.singleShot(0, uiStartUp)
+    
+    # generate a graphical error handler
+    from E5Gui import E5ErrorMessage
+    eMsg = E5ErrorMessage.qtHandler()
+    eMsg.setMinimumSize(600, 400)
+    
+    # start the event loop
+    res = app.exec_()
+    logging.debug("Shutting down, result {0:d}".format(res))
+    logging.shutdown()
+    sys.exit(res)
 
 if __name__ == '__main__':
     main()
