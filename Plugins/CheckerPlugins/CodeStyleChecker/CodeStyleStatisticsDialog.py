@@ -84,7 +84,7 @@ class CodeStyleStatisticsDialog(QDialog, Ui_CodeStyleStatisticsDialog):
         itm.setData(0, Qt.DisplayRole, count)
         itm.setData(1, Qt.DisplayRole, code)
         itm.setData(2, Qt.DisplayRole, message)
-        if code.startswith("W"):
+        if code.startswith(("W", "C")):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("E"):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))

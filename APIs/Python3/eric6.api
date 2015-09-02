@@ -4005,6 +4005,9 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.so
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.ssource?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext.start?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext?1(source, startLine, contextType)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.McCabeChecker.Codes?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.McCabeChecker.run?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.McCabeChecker?1(source, filename, select, ignore, maxComplexity=10)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.CamelcaseRegexp?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Codes?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.LowercaseRegex?7
@@ -4013,6 +4016,33 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChec
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.run?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.unpackArgs?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker?1(tree, filename, options)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.ASTVisitor.default?4(node, *args)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.ASTVisitor.dispatch?4(node, *args)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.ASTVisitor.preorder?4(tree, visitor, *args)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.ASTVisitor?1()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraph.complexity?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraph.connect?4(n1, n2)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraph.to_dot?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraph?1(name, entity, lineno)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor._subgraph?5(node, name, extra_blocks=())
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor._subgraph_parse?5(node, pathnode, extra_blocks)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.appendPathNode?4(name)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.dispatch_list?4(node_list)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.reset?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitAssert?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitClassDef?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitFor?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitFunctionDef?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitIf?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitLoop?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitSimpleStatement?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitTry?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitTryExcept?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitWith?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor?1()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathNode.dot_id?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathNode.to_dot?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathNode?1(name, look="circle")
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.ARITHMETIC_OP?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BENCHMARK_KEYS?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.BaseReport.error?4(line_number, offset, text, check)

@@ -371,6 +371,12 @@ _messages = {
         "NamingStyleChecker",
         "names 'l', 'O' and 'I' should be avoided"),
 
+    # McCabe messages
+    "C101": QCoreApplication.translate(
+        "McCabeChecker", "'{0}' is too complex ({1})"),
+    "C901": QCoreApplication.translate(
+        "McCabeChecker", "{0}: {1}"),
+    
     # CodeStyleFixer messages
     "FD111": QCoreApplication.translate(
         'CodeStyleFixer',

@@ -496,8 +496,10 @@
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleFixer.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleStatisticsDialog.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/DocStyleChecker.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/McCabeChecker.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/NamingStyleChecker.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/__init__.py</Source>
+    <Source>Plugins/CheckerPlugins/CodeStyleChecker/mccabe.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/pep8.py</Source>
     <Source>Plugins/CheckerPlugins/CodeStyleChecker/translations.py</Source>
     <Source>Plugins/CheckerPlugins/SyntaxChecker/SyntaxCheck.py</Source>
@@ -2137,7 +2139,7 @@
               <string>ExcludeFiles</string>
             </key>
             <value>
-              <string>*/ThirdParty/*, */coverage/*, */Ui_*.py, */Examples/*, */*_rc.py,*/pep8.py,*/pyflakes/checker.py</string>
+              <string>*/ThirdParty/*, */coverage/*, */Ui_*.py, */Examples/*, */*_rc.py,*/pep8.py,*/pyflakes/checker.py,*/mccabe.py</string>
             </value>
             <key>
               <string>ExcludeMessages</string>

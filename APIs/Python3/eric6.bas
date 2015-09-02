@@ -520,6 +520,7 @@ PasswordModel QAbstractTableModel
 PasswordReader QXmlStreamReader
 PasswordWriter QXmlStreamWriter
 PasswordsDialog QDialog Ui_PasswordsDialog
+PathGraphingAstVisitor ASTVisitor
 PersonalDataDialog QDialog Ui_PersonalDataDialog
 PersonalInformationManager QObject
 PixmapDiagram E5MainWindow

@@ -14,6 +14,8 @@ Version 6.1-snapshot-2015mmdd:
      multiple CPUs/CPU-Cores
   -- added a batch mode to the indentation checker to make use of
      multiple CPUs/CPU-Cores
+  -- added a code complexity checker iaw. McCabe to the code style
+     checker
 - Debugger
   -- added signal handlers for the Python debug clients
 - Editor

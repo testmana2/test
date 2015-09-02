@@ -12,6 +12,7 @@ import multiprocessing
 
 import pep8
 from NamingStyleChecker import NamingStyleChecker
+from McCabeChecker import McCabeChecker
 
 # register the name checker
 pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
@@ -187,9 +188,9 @@ def __checkCodeStyle(filename, source, args):
         of style (tuple of lineno (int), position (int), text (str), ignored
             (bool), fixed (bool), autofixing (bool), fixedMsg (str)))
     """
-    excludeMessages, includeMessages, \
-        repeatMessages, fixCodes, noFixCodes, fixIssues, maxLineLength, \
-        hangClosing, docType, errors, eol, encoding, backup = args
+    (excludeMessages, includeMessages, repeatMessages, fixCodes, noFixCodes,
+     fixIssues, maxLineLength, hangClosing, docType, maxComplexity, errors,
+     eol, encoding, backup) = args
     
     stats = {}
 
@@ -232,6 +233,7 @@ def __checkCodeStyle(filename, source, args):
         )
         report = styleGuide.check_files([filename])
         stats.update(report.counters)
+        errors = report.errors
 
         # check documentation style
         docStyleChecker = DocStyleChecker(
@@ -239,8 +241,14 @@ def __checkCodeStyle(filename, source, args):
             maxLineLength=maxLineLength, docType=docType)
         docStyleChecker.run()
         stats.update(docStyleChecker.counters)
+        errors += docStyleChecker.errors
         
-        errors = report.errors + docStyleChecker.errors
+        # check code complexity iaw. McCabe
+        mccabeChecker = McCabeChecker(
+            source, filename, select, ignore, maxComplexity)
+        mccabeChecker.run()
+        stats.update(mccabeChecker.counters)
+        errors += mccabeChecker.errors
     
     deferredFixes = {}
     results = []

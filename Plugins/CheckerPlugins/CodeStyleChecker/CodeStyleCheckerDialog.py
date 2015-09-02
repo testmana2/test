@@ -140,7 +140,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         itm = QTreeWidgetItem(
             self.__lastFileItem,
             ["{0:6}".format(line), code, message])
-        if code.startswith(("W", "-")):
+        if code.startswith(("W", "-", "C")):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("N"):
             itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
@@ -272,6 +272,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.__data["DocstringType"] = "pep257"
         if "ShowIgnored" not in self.__data:
             self.__data["ShowIgnored"] = False
+        if "MaxCodeComplexity" not in self.__data:
+            self.__data["MaxCodeComplexity"] = 10
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -285,6 +287,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.hangClosingCheckBox.setChecked(self.__data["HangClosing"])
         self.docTypeComboBox.setCurrentIndex(
             self.docTypeComboBox.findData(self.__data["DocstringType"]))
+        self.complexitySpinBox.setValue(self.__data["MaxCodeComplexity"])
     
     def start(self, fn, save=False, repeat=None):
         """
@@ -360,10 +363,11 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             hangClosing = self.hangClosingCheckBox.isChecked()
             docType = self.docTypeComboBox.itemData(
                 self.docTypeComboBox.currentIndex())
+            maxCodeComplexity = self.complexitySpinBox.value()
             
             self.__options = [excludeMessages, includeMessages, repeatMessages,
                               fixCodes, noFixCodes, fixIssues, maxLineLength,
-                              hangClosing, docType]
+                              hangClosing, docType, maxCodeComplexity]
             
             # now go through all the files
             self.progress = 0
@@ -627,6 +631,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 "HangClosing": self.hangClosingCheckBox.isChecked(),
                 "DocstringType": self.docTypeComboBox.itemData(
                     self.docTypeComboBox.currentIndex()),
+                "MaxCodeComplexity": self.complexitySpinBox.value(),
             }
             if data != self.__data:
                 self.__data = data
@@ -793,6 +798,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             Preferences.Prefs.settings.value("PEP8/HangClosing")))
         self.docTypeComboBox.setCurrentIndex(self.docTypeComboBox.findData(
             Preferences.Prefs.settings.value("PEP8/DocstringType", "pep257")))
+        self.complexitySpinBox.setValue(int(Preferences.Prefs.settings.value(
+            "PEP8/MaxCodeComplexity", 10)))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -823,6 +830,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Preferences.Prefs.settings.setValue(
             "PEP8/DocstringType", self.docTypeComboBox.itemData(
                 self.docTypeComboBox.currentIndex()))
+        Preferences.Prefs.settings.setValue(
+            "PEP8/MaxCodeComplexity", self.complexitySpinBox.value())
     
     @pyqtSlot()
     def on_resetDefaultButton_clicked(self):
@@ -842,6 +851,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)
         Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
         Preferences.Prefs.settings.setValue("PEP8/DocstringType", "pep257")
+        Preferences.Prefs.settings.setValue("PEP8/MaxCodeComplexity", 10)
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):

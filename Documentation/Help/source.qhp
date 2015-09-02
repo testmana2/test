@@ -488,7 +488,9 @@
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html" />
+                <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.html" />
+                <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations.html" />
               </section>
@@ -1136,6 +1138,11 @@
       <keyword name="APIsManager (Module)" id="APIsManager (Module)" ref="eric6.QScintilla.APIsManager.html" />
       <keyword name="APIsManager.getAPIs" id="APIsManager.getAPIs" ref="eric6.QScintilla.APIsManager.html#APIsManager.getAPIs" />
       <keyword name="APIsManager.reloadAPIs" id="APIsManager.reloadAPIs" ref="eric6.QScintilla.APIsManager.html#APIsManager.reloadAPIs" />
+      <keyword name="ASTVisitor" id="ASTVisitor" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#ASTVisitor" />
+      <keyword name="ASTVisitor (Constructor)" id="ASTVisitor (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#ASTVisitor.__init__" />
+      <keyword name="ASTVisitor.default" id="ASTVisitor.default" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#ASTVisitor.default" />
+      <keyword name="ASTVisitor.dispatch" id="ASTVisitor.dispatch" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#ASTVisitor.dispatch" />
+      <keyword name="ASTVisitor.preorder" id="ASTVisitor.preorder" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#ASTVisitor.preorder" />
       <keyword name="AboutAccessHandler" id="AboutAccessHandler" ref="eric6.Helpviewer.Network.AboutAccessHandler.html#AboutAccessHandler" />
       <keyword name="AboutAccessHandler (Module)" id="AboutAccessHandler (Module)" ref="eric6.Helpviewer.Network.AboutAccessHandler.html" />
       <keyword name="AboutAccessHandler.createRequest" id="AboutAccessHandler.createRequest" ref="eric6.Helpviewer.Network.AboutAccessHandler.html#AboutAccessHandler.createRequest" />
@@ -8000,6 +8007,13 @@
       <keyword name="MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged" id="MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.on_currentPasswordEdit_textChanged" />
       <keyword name="MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged" id="MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.on_newPasswordAgainEdit_textChanged" />
       <keyword name="MasterPasswordEntryDialog.on_newPasswordEdit_textChanged" id="MasterPasswordEntryDialog.on_newPasswordEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.MasterPasswordEntryDialog.html#MasterPasswordEntryDialog.on_newPasswordEdit_textChanged" />
+      <keyword name="McCabeChecker" id="McCabeChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html#McCabeChecker" />
+      <keyword name="McCabeChecker (Constructor)" id="McCabeChecker (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html#McCabeChecker.__init__" />
+      <keyword name="McCabeChecker (Module)" id="McCabeChecker (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html" />
+      <keyword name="McCabeChecker.__error" id="McCabeChecker.__error" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html#McCabeChecker.__error" />
+      <keyword name="McCabeChecker.__ignoreCode" id="McCabeChecker.__ignoreCode" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html#McCabeChecker.__ignoreCode" />
+      <keyword name="McCabeChecker.__reportInvalidSyntax" id="McCabeChecker.__reportInvalidSyntax" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html#McCabeChecker.__reportInvalidSyntax" />
+      <keyword name="McCabeChecker.run" id="McCabeChecker.run" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html#McCabeChecker.run" />
       <keyword name="MercurialPage" id="MercurialPage" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage" />
       <keyword name="MercurialPage (Constructor)" id="MercurialPage (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html#MercurialPage.__init__" />
       <keyword name="MercurialPage (Module)" id="MercurialPage (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.ConfigurationPage.MercurialPage.html" />
@@ -8659,6 +8673,29 @@
       <keyword name="PasswordsDialog (Module)" id="PasswordsDialog (Module)" ref="eric6.Helpviewer.Passwords.PasswordsDialog.html" />
       <keyword name="PasswordsDialog.__calculateHeaderSizes" id="PasswordsDialog.__calculateHeaderSizes" ref="eric6.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.__calculateHeaderSizes" />
       <keyword name="PasswordsDialog.on_passwordsButton_clicked" id="PasswordsDialog.on_passwordsButton_clicked" ref="eric6.Helpviewer.Passwords.PasswordsDialog.html#PasswordsDialog.on_passwordsButton_clicked" />
+      <keyword name="PathGraph" id="PathGraph" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraph" />
+      <keyword name="PathGraph (Constructor)" id="PathGraph (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraph.__init__" />
+      <keyword name="PathGraph.complexity" id="PathGraph.complexity" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraph.complexity" />
+      <keyword name="PathGraph.connect" id="PathGraph.connect" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraph.connect" />
+      <keyword name="PathGraph.to_dot" id="PathGraph.to_dot" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraph.to_dot" />
+      <keyword name="PathGraphingAstVisitor" id="PathGraphingAstVisitor" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor" />
+      <keyword name="PathGraphingAstVisitor (Constructor)" id="PathGraphingAstVisitor (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.__init__" />
+      <keyword name="PathGraphingAstVisitor._subgraph" id="PathGraphingAstVisitor._subgraph" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor._subgraph" />
+      <keyword name="PathGraphingAstVisitor._subgraph_parse" id="PathGraphingAstVisitor._subgraph_parse" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor._subgraph_parse" />
+      <keyword name="PathGraphingAstVisitor.appendPathNode" id="PathGraphingAstVisitor.appendPathNode" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.appendPathNode" />
+      <keyword name="PathGraphingAstVisitor.dispatch_list" id="PathGraphingAstVisitor.dispatch_list" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.dispatch_list" />
+      <keyword name="PathGraphingAstVisitor.reset" id="PathGraphingAstVisitor.reset" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.reset" />
+      <keyword name="PathGraphingAstVisitor.visitClassDef" id="PathGraphingAstVisitor.visitClassDef" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitClassDef" />
+      <keyword name="PathGraphingAstVisitor.visitFunctionDef" id="PathGraphingAstVisitor.visitFunctionDef" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitFunctionDef" />
+      <keyword name="PathGraphingAstVisitor.visitIf" id="PathGraphingAstVisitor.visitIf" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitIf" />
+      <keyword name="PathGraphingAstVisitor.visitLoop" id="PathGraphingAstVisitor.visitLoop" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitLoop" />
+      <keyword name="PathGraphingAstVisitor.visitSimpleStatement" id="PathGraphingAstVisitor.visitSimpleStatement" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitSimpleStatement" />
+      <keyword name="PathGraphingAstVisitor.visitTryExcept" id="PathGraphingAstVisitor.visitTryExcept" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitTryExcept" />
+      <keyword name="PathGraphingAstVisitor.visitWith" id="PathGraphingAstVisitor.visitWith" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathGraphingAstVisitor.visitWith" />
+      <keyword name="PathNode" id="PathNode" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathNode" />
+      <keyword name="PathNode (Constructor)" id="PathNode (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathNode.__init__" />
+      <keyword name="PathNode.dot_id" id="PathNode.dot_id" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathNode.dot_id" />
+      <keyword name="PathNode.to_dot" id="PathNode.to_dot" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html#PathNode.to_dot" />
       <keyword name="PersonalDataDialog" id="PersonalDataDialog" ref="eric6.Helpviewer.PersonalInformationManager.PersonalDataDialog.html#PersonalDataDialog" />
       <keyword name="PersonalDataDialog (Constructor)" id="PersonalDataDialog (Constructor)" ref="eric6.Helpviewer.PersonalInformationManager.PersonalDataDialog.html#PersonalDataDialog.__init__" />
       <keyword name="PersonalDataDialog (Module)" id="PersonalDataDialog (Module)" ref="eric6.Helpviewer.PersonalInformationManager.PersonalDataDialog.html" />
@@ -13776,6 +13813,7 @@
       <keyword name="makeAppInfo" id="makeAppInfo" ref="eric6.Globals.AppInfo.html#makeAppInfo" />
       <keyword name="make_thread_list" id="make_thread_list" ref="eric6.DebugClients.Ruby.Debuggee.html#make_thread_list" />
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#maximum_line_length" />
+      <keyword name="mccabe (Module)" id="mccabe (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html" />
       <keyword name="messageHandler" id="messageHandler" ref="eric6.E5Gui.E5ErrorMessage.html#messageHandler" />
       <keyword name="messageHandlerInstalled" id="messageHandlerInstalled" ref="eric6.E5Gui.E5ErrorMessage.html#messageHandlerInstalled" />
       <keyword name="mimeType" id="mimeType" ref="eric6.Utilities.MimeTypes.html#mimeType" />
@@ -14394,7 +14432,9 @@
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html</file>
+      <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.html</file>
+      <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations.html</file>
       <file>eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html</file>
