@@ -199,7 +199,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
             
 ##            if dlg.getAction() == "scan":
 ##                self.__mainWindow.requestVirusTotalScan(url)
-##                
+##
 ##                self.progressBar.setVisible(False)
 ##                self.__reply.close()
 ##                self.on_stopButton_clicked()
@@ -208,7 +208,7 @@ class DownloadItem(QWidget, Ui_DownloadItem):
 ##                        QFileInfo(defaultFileName).fileName()))
 ##                self.__canceledFileSelect = True
 ##                return
-##            
+##
             self.__autoOpen = dlg.getAction() == "open"
             if PYQT_VERSION_STR >= "5.0.0":
                 from PyQt5.QtCore import QStandardPaths

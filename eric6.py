@@ -191,9 +191,6 @@ def uiStartUp():
 def main():
     """
     Main entry point into the application.
-    
-    @exception Exception re-raised for any exception occurring in the main
-        program logic
     """
     from Globals import AppInfo
     import Globals

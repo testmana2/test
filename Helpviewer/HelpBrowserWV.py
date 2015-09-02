@@ -1485,7 +1485,7 @@ class HelpBrowser(QWebView):
 ##        act = self.sender()
 ##        url = act.data()
 ##        self.mw.requestVirusTotalScan(url)
-##    
+##
     def __searchRequested(self, act):
         """
         Private slot to search for some text with a selected search engine.

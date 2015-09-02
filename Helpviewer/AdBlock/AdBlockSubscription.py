@@ -126,7 +126,7 @@ class AdBlockSubscription(QObject):
             # Check for required subscription
             self.__requiresLocation = QUrl.fromPercentEncoding(
                 QByteArray(urlQuery.queryItemValue(
-                "requiresLocation").encode()))
+                    "requiresLocation").encode()))
             self.__requiresTitle = QUrl.fromPercentEncoding(
                 QByteArray(urlQuery.queryItemValue("requiresTitle").encode()))
             if self.__requiresLocation and self.__requiresTitle:
