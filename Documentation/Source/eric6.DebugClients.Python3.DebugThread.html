@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Python3.DebugThread</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Python3.DebugThread</h1>
+<p>
+Module implementing the debug thread.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#DebugThread">DebugThread</a></td>
+<td>Class implementing a debug thread.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="DebugThread" ID="DebugThread"></a>
+<h2>DebugThread</h2>
+<p>
+    Class implementing a debug thread.
+</p><p>
+    It represents a thread in the python interpreter that we are tracing.
+</p><p>
+    Provides simple wrapper methods around bdb for the 'owning' client to
+    call to step etc.
+</p>
+<h3>Derived from</h3>
+DebugBase
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#DebugThread.__init__">DebugThread</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#DebugThread.bootstrap">bootstrap</a></td>
+<td>Public method to bootstrap the thread.</td>
+</tr><tr>
+<td><a href="#DebugThread.get_ident">get_ident</a></td>
+<td>Public method to return the id of this thread.</td>
+</tr><tr>
+<td><a href="#DebugThread.get_name">get_name</a></td>
+<td>Public method to return the name of this thread.</td>
+</tr><tr>
+<td><a href="#DebugThread.set_ident">set_ident</a></td>
+<td>Public method to set the id for this thread.</td>
+</tr><tr>
+<td><a href="#DebugThread.traceThread">traceThread</a></td>
+<td>Public method to setup tracing for this thread.</td>
+</tr><tr>
+<td><a href="#DebugThread.trace_dispatch">trace_dispatch</a></td>
+<td>Public method wrapping the trace_dispatch of bdb.py.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="DebugThread.__init__" ID="DebugThread.__init__"></a>
+<h4>DebugThread (Constructor)</h4>
+<b>DebugThread</b>(<i>dbgClient, targ=None, args=None, kwargs=None, mainThread=False</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>dbgClient</i></dt>
+<dd>
+the owning client
+</dd><dt><i>targ</i></dt>
+<dd>
+the target method in the run thread
+</dd><dt><i>args</i></dt>
+<dd>
+arguments to be passed to the thread
+</dd><dt><i>kwargs</i></dt>
+<dd>
+arguments to be passed to the thread
+</dd><dt><i>mainThread</i></dt>
+<dd>
+0 if this thread is not the mainscripts thread
+</dd>
+</dl><a NAME="DebugThread.bootstrap" ID="DebugThread.bootstrap"></a>
+<h4>DebugThread.bootstrap</h4>
+<b>bootstrap</b>(<i></i>)
+<p>
+        Public method to bootstrap the thread.
+</p><p>
+        It wraps the call to the user function to enable tracing
+        before hand.
+</p><a NAME="DebugThread.get_ident" ID="DebugThread.get_ident"></a>
+<h4>DebugThread.get_ident</h4>
+<b>get_ident</b>(<i></i>)
+<p>
+        Public method to return the id of this thread.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+the id of this thread (int)
+</dd>
+</dl><a NAME="DebugThread.get_name" ID="DebugThread.get_name"></a>
+<h4>DebugThread.get_name</h4>
+<b>get_name</b>(<i></i>)
+<p>
+        Public method to return the name of this thread.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+name of this thread (string)
+</dd>
+</dl><a NAME="DebugThread.set_ident" ID="DebugThread.set_ident"></a>
+<h4>DebugThread.set_ident</h4>
+<b>set_ident</b>(<i>id</i>)
+<p>
+        Public method to set the id for this thread.
+</p><dl>
+<dt><i>id</i></dt>
+<dd>
+id for this thread (int)
+</dd>
+</dl><a NAME="DebugThread.traceThread" ID="DebugThread.traceThread"></a>
+<h4>DebugThread.traceThread</h4>
+<b>traceThread</b>(<i></i>)
+<p>
+        Public method to setup tracing for this thread.
+</p><a NAME="DebugThread.trace_dispatch" ID="DebugThread.trace_dispatch"></a>
+<h4>DebugThread.trace_dispatch</h4>
+<b>trace_dispatch</b>(<i>frame, event, arg</i>)
+<p>
+        Public method wrapping the trace_dispatch of bdb.py.
+</p><p>
+        It wraps the call to dispatch tracing into
+        bdb to make sure we have locked the client to prevent multiple
+        threads from entering the client event loop.
+</p><dl>
+<dt><i>frame</i></dt>
+<dd>
+The current stack frame.
+</dd><dt><i>event</i></dt>
+<dd>
+The trace event (string)
+</dd><dt><i>arg</i></dt>
+<dd>
+The arguments
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+local trace function
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

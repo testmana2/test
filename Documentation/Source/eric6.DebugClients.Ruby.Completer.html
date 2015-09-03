@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.DebugClients.Ruby.Completer</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.DebugClients.Ruby.Completer</h1>
+<p>
+File implementing a command line completer class.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#Completer">Completer</a></td>
+<td>Class implementing a command completer.</td>
+</tr>
+</table>
+<h3>Modules</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="Completer" ID="Completer"></a>
+<h2>Completer</h2>
+<p>
+Class implementing a command completer.
+</p>
+<h3>Derived from</h3>
+None
+<h3>Class Attributes</h3>
+<table>
+<tr><td>Operators</td></tr><tr><td>ReservedWords</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#Completer.complete">complete</a></td>
+<td>Public method to select the possible completions</td>
+</tr><tr>
+<td><a href="#Completer.initialize">initialize</a></td>
+<td>constructor</td>
+</tr><tr>
+<td><a href="#Completer.select_message">select_message</a></td>
+<td>Method used to pick completion candidates.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="Completer.complete" ID="Completer.complete"></a>
+<h4>Completer.complete</h4>
+<b>complete</b>(<i></i>)
+<p>
+Public method to select the possible completions
+</p><dl>
+<dt><i>input</i></dt>
+<dd>
+text to be completed (String)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of possible completions (Array)
+</dd>
+</dl><a NAME="Completer.initialize" ID="Completer.initialize"></a>
+<h4>Completer.initialize</h4>
+<b>initialize</b>(<i></i>)
+<p>
+constructor
+</p><dl>
+<dt><i>binding</i></dt>
+<dd>
+binding object used to determine the possible completions
+</dd>
+</dl><a NAME="Completer.select_message" ID="Completer.select_message"></a>
+<h4>Completer.select_message</h4>
+<b>select_message</b>(<i>message, candidates, sep = "."</i>)
+<p>
+Method used to pick completion candidates.
+</p><dl>
+<dt><i>receiver</i></dt>
+<dd>
+object receiving the message
+</dd><dt><i>message</i></dt>
+<dd>
+message to be sent to object
+</dd><dt><i>candidates</i></dt>
+<dd>
+possible completion candidates
+</dd><dt><i>sep</i></dt>
+<dd>
+separater string
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+filtered list of candidates
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
