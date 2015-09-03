@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker</h1>
+<p>
+Module implementing a checker for code complexity.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#McCabeChecker">McCabeChecker</a></td>
+<td>Class implementing a checker for code complexity iaw.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="McCabeChecker" ID="McCabeChecker"></a>
+<h2>McCabeChecker</h2>
+<p>
+    Class implementing a checker for code complexity iaw. McCabe.
+</p>
+<h3>Derived from</h3>
+object
+<h3>Class Attributes</h3>
+<table>
+<tr><td>Codes</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#McCabeChecker.__init__">McCabeChecker</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#McCabeChecker.__error">__error</a></td>
+<td>Private method to record an issue.</td>
+</tr><tr>
+<td><a href="#McCabeChecker.__ignoreCode">__ignoreCode</a></td>
+<td>Private method to check if the error code should be ignored.</td>
+</tr><tr>
+<td><a href="#McCabeChecker.__reportInvalidSyntax">__reportInvalidSyntax</a></td>
+<td>Private method to report a syntax error.</td>
+</tr><tr>
+<td><a href="#McCabeChecker.run">run</a></td>
+<td>Public method to check the given source for code complexity.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="McCabeChecker.__init__" ID="McCabeChecker.__init__"></a>
+<h4>McCabeChecker (Constructor)</h4>
+<b>McCabeChecker</b>(<i>source, filename, select, ignore, maxComplexity=10</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>source</i> (list of str)</dt>
+<dd>
+source code to be checked
+</dd><dt><i>filename</i> (str)</dt>
+<dd>
+name of the source file
+</dd><dt><i>select</i> (list of str)</dt>
+<dd>
+list of selected codes
+</dd><dt><i>ignore</i> (list of str)</dt>
+<dd>
+list of codes to be ignored
+</dd><dt><i>maxComplexity</i> (int)</dt>
+<dd>
+maximum allowed complexity value
+</dd>
+</dl><a NAME="McCabeChecker.__error" ID="McCabeChecker.__error"></a>
+<h4>McCabeChecker.__error</h4>
+<b>__error</b>(<i>lineNumber, offset, code, *args</i>)
+<p>
+        Private method to record an issue.
+</p><dl>
+<dt><i>lineNumber</i> (int)</dt>
+<dd>
+line number of the issue
+</dd><dt><i>offset</i> (int)</dt>
+<dd>
+position within line of the issue
+</dd><dt><i>code</i> (str)</dt>
+<dd>
+message code
+</dd><dt><i>args</i> (list)</dt>
+<dd>
+arguments for the message
+</dd>
+</dl><a NAME="McCabeChecker.__ignoreCode" ID="McCabeChecker.__ignoreCode"></a>
+<h4>McCabeChecker.__ignoreCode</h4>
+<b>__ignoreCode</b>(<i>code</i>)
+<p>
+        Private method to check if the error code should be ignored.
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+message code to check for (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating to ignore the given code (boolean)
+</dd>
+</dl><a NAME="McCabeChecker.__reportInvalidSyntax" ID="McCabeChecker.__reportInvalidSyntax"></a>
+<h4>McCabeChecker.__reportInvalidSyntax</h4>
+<b>__reportInvalidSyntax</b>(<i></i>)
+<p>
+        Private method to report a syntax error.
+</p><a NAME="McCabeChecker.run" ID="McCabeChecker.run"></a>
+<h4>McCabeChecker.run</h4>
+<b>run</b>(<i></i>)
+<p>
+        Public method to check the given source for code complexity.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
