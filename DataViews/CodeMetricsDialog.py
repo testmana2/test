@@ -75,9 +75,13 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         @param values values to be displayed (list)
         @return the generated item
         """
-        itm = QTreeWidgetItem(parent)
-        for col in range(len(values)):
-            itm.setData(col, Qt.DisplayRole, values[col])
+        data = [values[0]]
+        for value in values[1:]:
+            try:
+                data.append("{0:5}".format(int(value)))
+            except ValueError:
+                data.append(value)
+        itm = QTreeWidgetItem(parent, data)
         for col in range(1, 7):
             itm.setTextAlignment(col, Qt.Alignment(Qt.AlignRight))
         return itm
@@ -186,8 +190,6 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         self.__resizeResultColumns()
         
         # now do the summary stuff
-        docstrings = total['lines'] - total['comments'] - \
-            total['empty lines'] - total['non-commentary lines']
         self.__createSummaryItem(self.tr("files"),
                                  loc.toString(total['files']))
         self.__createSummaryItem(self.tr("lines"),
@@ -196,12 +198,12 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
                                  loc.toString(total['bytes']))
         self.__createSummaryItem(self.tr("comments"),
                                  loc.toString(total['comments']))
+        self.__createSummaryItem(self.tr("comment lines"),
+                                 loc.toString(total['commentlines']))
         self.__createSummaryItem(self.tr("empty lines"),
                                  loc.toString(total['empty lines']))
         self.__createSummaryItem(self.tr("non-commentary lines"),
                                  loc.toString(total['non-commentary lines']))
-        self.__createSummaryItem(self.tr("documentation lines"),
-                                 loc.toString(docstrings))
         self.__resizeSummaryColumns()
         self.__finish()
         
@@ -216,7 +218,7 @@ class CodeMetricsDialog(QDialog, Ui_CodeMetricsDialog):
         """
         counters = stats.counters.get(identifier, {})
         v = []
-        for key in ('start', 'end', 'lines', 'nloc', 'comments', 'empty'):
+        for key in ('start', 'end', 'lines', 'nloc', 'commentlines', 'empty'):
             if counters.get(key, 0):
                 v.append(loc.toString(counters[key]))
             else:
