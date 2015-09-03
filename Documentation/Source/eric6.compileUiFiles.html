@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.compileUiFiles</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.compileUiFiles</h1>
+<p>
+Script for eric6 to compile all .ui files to Python source.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr>
+<td><a href="#compileUiDir">compileUiDir</a></td>
+<td>Creates Python modules from Qt Designer .ui files in a directory or directory tree.</td>
+</tr><tr>
+<td><a href="#compileUiFiles">compileUiFiles</a></td>
+<td>Compile the .ui files to Python sources.</td>
+</tr><tr>
+<td><a href="#compile_ui">compile_ui</a></td>
+<td>Local function to compile a single .ui file.</td>
+</tr><tr>
+<td><a href="#main">main</a></td>
+<td>The main function of the script.</td>
+</tr><tr>
+<td><a href="#pyName">pyName</a></td>
+<td>Local function to create the Python source file name for the compiled .ui file.</td>
+</tr>
+</table>
+<hr /><hr />
+<a NAME="compileUiDir" ID="compileUiDir"></a>
+<h2>compileUiDir</h2>
+<b>compileUiDir</b>(<i>dir, recurse=False, map=None, **compileUi_args</i>)
+<p>
+            Creates Python modules from Qt Designer .ui files in a directory or
+            directory tree.
+</p><p>
+            Note: This function is a modified version of the one found in
+            PyQt5.
+</p><dl>
+<dt><i>dir</i></dt>
+<dd>
+Name of the directory to scan for files whose name ends
+                with '.ui'. By default the generated Python module is created
+                in the same directory ending with '.py'.
+</dd><dt><i>recurse</i></dt>
+<dd>
+flag indicating that any sub-directories should be
+                scanned.
+</dd><dt><i>map</i></dt>
+<dd>
+an optional callable that is passed the name of the
+                directory containing the '.ui' file and the name of the Python
+                module that will be created. The callable should return a tuple
+                of the name of the directory in which the Python module will be
+                created and the (possibly modified) name of the module.
+</dd><dt><i>compileUi_args</i></dt>
+<dd>
+any additional keyword arguments that are
+                passed to the compileUi() function that is called to create
+                each Python module.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="compileUiFiles" ID="compileUiFiles"></a>
+<h2>compileUiFiles</h2>
+<b>compileUiFiles</b>(<i></i>)
+<p>
+    Compile the .ui files to Python sources.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="compile_ui" ID="compile_ui"></a>
+<h2>compile_ui</h2>
+<b>compile_ui</b>(<i>ui_dir, ui_file</i>)
+<p>
+                Local function to compile a single .ui file.
+</p><dl>
+<dt><i>ui_dir</i></dt>
+<dd>
+directory containing the .ui file (string)
+</dd><dt><i>ui_file</i></dt>
+<dd>
+file name of the .ui file (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="main" ID="main"></a>
+<h2>main</h2>
+<b>main</b>(<i>argv</i>)
+<p>
+    The main function of the script.
+</p><dl>
+<dt><i>argv</i></dt>
+<dd>
+the list of command line arguments.
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="pyName" ID="pyName"></a>
+<h2>pyName</h2>
+<b>pyName</b>(<i>py_dir, py_file</i>)
+<p>
+        Local function to create the Python source file name for the compiled
+        .ui file.
+</p><dl>
+<dt><i>py_dir</i></dt>
+<dd>
+suggested name of the directory (string)
+</dd><dt><i>py_file</i></dt>
+<dd>
+suggested name for the compile source file (string)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of directory name (string) and source file name (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
