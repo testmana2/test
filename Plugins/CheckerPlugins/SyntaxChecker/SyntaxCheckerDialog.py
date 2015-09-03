@@ -329,13 +329,14 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if self.noResults:
             return
         
+        vm = e5App().getObject("ViewManager")
+        
         if itm.parent():
             fn = Utilities.normabspath(itm.data(0, self.filenameRole))
             lineno = itm.data(0, self.lineRole)
             index = itm.data(0, self.indexRole)
             error = itm.data(0, self.errorRole)
             
-            vm = e5App().getObject("ViewManager")
             vm.openSourceFile(fn, lineno)
             editor = vm.getOpenEditor(fn)
             
@@ -345,7 +346,6 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 editor.toggleSyntaxError(lineno, index, True, error, show=True)
         else:
             fn = Utilities.normabspath(itm.data(0, self.filenameRole))
-            vm = e5App().getObject("ViewManager")
             vm.openSourceFile(fn)
             editor = vm.getOpenEditor(fn)
             for index in range(itm.childCount()):
@@ -358,6 +358,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 else:
                     editor.toggleSyntaxError(
                         lineno, index, True, error, show=True)
+        
+        editor = vm.activeWindow()
+        editor.updateVerticalScrollBar()
         
     @pyqtSlot()
     def on_showButton_clicked(self):
@@ -403,6 +406,9 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 editor = vm.getOpenEditor(file)
                 editor.clearSyntaxError()
                 editor.clearFlakesWarnings()
+        
+        editor = vm.activeWindow()
+        editor.updateVerticalScrollBar()
         
     def __clearErrors(self, files):
         """

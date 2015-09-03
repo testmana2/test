@@ -5137,6 +5137,8 @@ class Editor(QsciScintillaCompat):
         warnings = problems.get('warnings', [])
         for _fn, lineno, col, code, msg in warnings:
             self.toggleWarning(lineno, col, True, msg)
+        
+        self.updateVerticalScrollBar()
  
     def __initOnlineSyntaxCheck(self):
         """

@@ -630,6 +630,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             else:
                 editor.toggleWarning(
                     lineno, 0, True, message, warningType=editor.WarningStyle)
+            
+            editor = vm.activeWindow()
+            editor.updateVerticalScrollBar()
     
     @pyqtSlot()
     def on_resultList_itemSelectionChanged(self):
@@ -676,6 +679,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             if file not in errorFiles:
                 editor = vm.getOpenEditor(file)
                 editor.clearStyleWarnings()
+        
+        editor = vm.activeWindow()
+        editor.updateVerticalScrollBar()
     
     @pyqtSlot()
     def on_statisticsButton_clicked(self):

@@ -1338,6 +1338,15 @@ class QsciScintillaCompat(QsciScintilla):
         """
         self.activateWindow()
     
+    def updateVerticalScrollBar(self):
+        """
+        Public method to update the vertical scroll bar to reflect the
+        additional lines added by annotations.
+        """
+        # Workaround because Scintilla.Redraw isn't implemented
+        self.SendScintilla(QsciScintilla.SCI_SETVSCROLLBAR, 0)
+        self.SendScintilla(QsciScintilla.SCI_SETVSCROLLBAR, 1)
+    
     ###########################################################################
     ## utility methods
     ###########################################################################
