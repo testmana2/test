@@ -84,7 +84,7 @@ class SyntaxCheckerPlugin(QObject):
             lambda: [],  # No options
             lambda: ['.js'],
             lambda fn, problems:
-                self.syntaxCheckService.syntaxChecked.emit(fn, problems),  # __IGNORE_WARNING__
+                self.syntaxCheckService.syntaxChecked.emit(fn, problems),
             self.syntaxCheckService.serviceErrorJavaScript)
 
     def __initialize(self):
