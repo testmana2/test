@@ -716,7 +716,6 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 editor.toggleWarning(
                     lineno, 0, True, message, warningType=editor.WarningStyle)
             
-            editor = vm.activeWindow()
             editor.updateVerticalScrollBar()
     
     @pyqtSlot()

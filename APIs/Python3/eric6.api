@@ -7866,6 +7866,7 @@ eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.showFindIndicator?4(sli
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.showUserList?4(id, lst)
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.startStyling?4(pos, mask)
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.styleAt?4(pos)
+eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.updateVerticalScrollBar?4()
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomIn?4(zoom=1)
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomOut?4(zoom=1)
 eric6.QScintilla.QsciScintillaCompat.QsciScintillaCompat.zoomTo?4(zoom)

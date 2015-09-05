@@ -2854,39 +2854,34 @@ Razón: {1}</translation>
         <translation>Muestra el progreso del cálculo de métricas</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="191"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="193"/>
         <source>files</source>
         <translation>archivos</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="193"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="195"/>
         <source>lines</source>
         <translation>líneas</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="195"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="197"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="197"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="199"/>
         <source>comments</source>
         <translation>comentarios</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="199"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="203"/>
         <source>empty lines</source>
-        <translation>líneas vacias</translation>
+        <translation>lineas vacías</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="201"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="205"/>
         <source>non-commentary lines</source>
         <translation>líneas no comentadas</translation>
-    </message>
-    <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="203"/>
-        <source>documentation lines</source>
-        <translation>líneas de documentación</translation>
     </message>
     <message>
         <location filename="../DataViews/CodeMetricsDialog.py" line="52"/>
@@ -2917,6 +2912,11 @@ Razón: {1}</translation>
         <location filename="../DataViews/CodeMetricsDialog.ui" line="158"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Archivos</translation>
+    </message>
+    <message>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="201"/>
+        <source>comment lines</source>
+        <translation>líneas de documentación</translation>
     </message>
 </context>
 <context>
@@ -3193,12 +3193,12 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="310"/>
         <source>Max. Complexity:</source>
-        <translation type="unfinished"></translation>
+        <translation>Máx. Complejidad:</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="319"/>
         <source>Enter the maximum allowed code complexity (McCabe: 10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir la máxima complejidad de código permitida (McCabe: 10)</translation>
     </message>
 </context>
 <context>
@@ -4273,7 +4273,7 @@ para visualizar la página de configuración.</translation>
     <message>
         <location filename="../Preferences/ConfigurationDialog.py" line="365"/>
         <source>Flash Cookie Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestor de Cookies de Flash</translation>
     </message>
 </context>
 <context>
@@ -5604,7 +5604,7 @@ Not connected
     <message>
         <location filename="../Debugger/DebugUI.py" line="1216"/>
         <source>&lt;p&gt;The program generate the signal &quot;{0}&quot;.&lt;br/&gt;File: &lt;b&gt;{1}&lt;/b&gt;, Line: &lt;b&gt;{2}&lt;/b&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;El programa ha generado la señal &quot;{0}&quot;.&lt;br/&gt;Archivo: &lt;b&gt;{1}&lt;/b&gt;, Línea: &lt;b&gt;{2}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -9562,7 +9562,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../QScintilla/Editor.py" line="778"/>
         <source>Save Copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Copia...</translation>
     </message>
 </context>
 <context>
@@ -14252,7 +14252,7 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionBar.py" line="66"/>
         <source>Remember</source>
-        <translation type="unfinished"></translation>
+        <translation>Recordar</translation>
     </message>
 </context>
 <context>
@@ -14260,47 +14260,47 @@ selección completa.&lt;/li&gt;
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="14"/>
         <source>HTML5 Feature Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Permisos de Características HTML5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="27"/>
         <source>Notifications</source>
-        <translation type="unfinished">Notificaciones</translation>
+        <translation>Notificaciones</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="122"/>
         <source>Host</source>
-        <translation type="unfinished">Host</translation>
+        <translation>Host</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="127"/>
         <source>Permission</source>
-        <translation type="unfinished"></translation>
+        <translation>Permiso</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="150"/>
         <source>Remove</source>
-        <translation type="unfinished">Eliminar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="157"/>
         <source>Remove All</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Todo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.ui" line="97"/>
         <source>Geolocation</source>
-        <translation type="unfinished"></translation>
+        <translation>Geolocalización</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.py" line="37"/>
         <source>Allow</source>
-        <translation type="unfinished">Permitir</translation>
+        <translation>Permitir</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FeaturePermissions/FeaturePermissionsDialog.py" line="38"/>
         <source>Deny</source>
-        <translation type="unfinished">Denegar</translation>
+        <translation>Denegar</translation>
     </message>
 </context>
 <context>
@@ -15331,12 +15331,12 @@ Razón: {0}</translation>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManager.py" line="341"/>
         <source>!default</source>
-        <translation type="unfinished"></translation>
+        <translation>!default</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManager.py" line="350"/>
         <source>!other</source>
-        <translation type="unfinished"></translation>
+        <translation>!other</translation>
     </message>
 </context>
 <context>
@@ -15344,208 +15344,208 @@ Razón: {0}</translation>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="14"/>
         <source>Flash Cookie Management</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestión de Cookies de Flash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="27"/>
         <source>Stored Flash Cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookies de Flash Almacenadas</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="35"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="42"/>
         <source>Enter cookie filter string</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir cadena de filtrado de cookies</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="49"/>
         <source>Stored Flash Cookies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookies de Flash Almacenadas:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="63"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Origen</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="88"/>
         <source>Press to reload Flash cookies from disk</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para recargar las cookies de Flash desde disco</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="91"/>
         <source>Reload</source>
-        <translation type="unfinished">Recargar</translation>
+        <translation>Recargar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="106"/>
         <source>Name:</source>
-        <translation type="unfinished">Nombre:</translation>
+        <translation>Nombre:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="191"/>
         <source>&lt;no flash cookie selected&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;no hay cookie de flash seleccionada&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="123"/>
         <source>Size:</source>
-        <translation type="unfinished">Tamaño:</translation>
+        <translation>Tamaño:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="120"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Origen:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="151"/>
         <source>Last Modified:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modificado por Última Vez:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="167"/>
         <source>Contents:</source>
-        <translation type="unfinished">Contenido:</translation>
+        <translation>Contenido:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="194"/>
         <source>Path:</source>
-        <translation type="unfinished">Ruta:</translation>
+        <translation>Ruta:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="212"/>
         <source>Press to remove all flash cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para eliminar todas las cookies de flash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="215"/>
         <source>Remove All Cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Todas las Cookies</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="222"/>
         <source>Press to remove selected flash cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para eliminar las cookies de flash seleccionadas</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="211"/>
         <source>Remove Cookie</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Cookie</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="248"/>
         <source>Flash Cookies Lists</source>
-        <translation type="unfinished"></translation>
+        <translation>Listas de Cookies de Flash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="254"/>
         <source>&lt;b&gt;Flash cookie whitelist&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista blanca de cookies de flash&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="261"/>
         <source>&lt;b&gt;Flash cookie blacklist&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Lista negra de cookies de flash&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="268"/>
         <source>Flash cookies from these origins will not be deleted automatically. (Also detection of them will not be notified to user.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Las cookies de flash de estos orígines no se borrarán automáticamente. (Además, su detección no se notificará al usuario.)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="278"/>
         <source>Flash cookies from these origins will be deleted without any notification.</source>
-        <translation type="unfinished"></translation>
+        <translation>Las cookies de estos orígenes se borrarán sin ninguna notificación.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="329"/>
         <source>Press to remove selected origins from the whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para eliminar los orígenes seleccionados de la lista blanca</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="382"/>
         <source>Remove</source>
-        <translation type="unfinished">Eliminar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="339"/>
         <source>Press to add an origin to the whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para añadir un origen a la lista blanca</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="392"/>
         <source>Add...</source>
-        <translation type="unfinished">Añadir...</translation>
+        <translation>Añadir...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="379"/>
         <source>Press to remove selected origins from the blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para eliminar los orígenes seleccionados de la lista negra</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.ui" line="389"/>
         <source>Press to add an origin to the blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsar para añadir un origen a la lista negra</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="228"/>
         <source>Add to whitelist</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir a la lista blanca</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="95"/>
         <source>The server &apos;{0}&apos; is already in the blacklist. Please remove it first.</source>
-        <translation type="unfinished"></translation>
+        <translation>El servidor &apos;{0}&apos; ya está en la lista negra. Por favor, elimínelo primero.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="227"/>
         <source>Add to blacklist</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir a la lista negra</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="139"/>
         <source>The server &apos;{0}&apos; is already in the whitelist. Please remove it first.</source>
-        <translation type="unfinished"></translation>
+        <translation>El servidor &apos;{0}&apos; ya está en la lista blanca. Por favor, elimínelo primero.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="194"/>
         <source>Remove Cookie Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar Grupo de Cookies</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="364"/>
         <source> (settings)</source>
-        <translation type="unfinished"></translation>
+        <translation> (ajustes)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="374"/>
         <source>{0}{1}</source>
         <comment>name and suffix</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0}{1}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="205"/>
         <source>{0} Byte</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} Byte</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="256"/>
         <source>Remove All</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar todo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="256"/>
         <source>Do you really want to delete all flash cookies on your computer?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Realmente quiere borrar todas las cookies de flash de su ordenador?</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieManagerDialog.py" line="368"/>
         <source> [new]</source>
-        <translation type="unfinished"></translation>
+        <translation> [nuevo]</translation>
     </message>
 </context>
 <context>
@@ -15553,17 +15553,17 @@ Razón: {0}</translation>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieNotification.py" line="41"/>
         <source>A new flash cookie was detected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se ha detectado una nueva cookie de flash.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieNotification.py" line="43"/>
         <source>{0} new flash cookies were detected.</source>
-        <translation type="unfinished"></translation>
+        <translation>{0} cookies de flash nuevas se han detectado.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/FlashCookieManager/FlashCookieNotification.py" line="54"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver</translation>
     </message>
 </context>
 <context>
@@ -16819,72 +16819,72 @@ Razón: {0}</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Flash Cookies Manager&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Configurar el Gestor de Cookies de Flash&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="37"/>
         <source>Flash Data Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta de Datos de Flash</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="59"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: You should select the directory that contains #SharedObject as a subfolder.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Nota&lt;/b&gt;: Se debe seleccionar el directorio que contiene #SharedObject como una subcarpeta.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="72"/>
         <source>Select to activate auto mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para activar el modo auto</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="75"/>
         <source>Auto Mode Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Auto Habilitado</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="93"/>
         <source>The flash data directory will be checked regularly and flash cookies in the blacklist will be deleted automatically.</source>
-        <translation type="unfinished"></translation>
+        <translation>El directorio de datos de flash se revisará con regularidad y las cookies de flash en la lista negra se borrarán automáticamente.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="106"/>
         <source>Select to show a notification upon detection of new flash cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para mostrar una notificación al detectar nuevas cookies de flash</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="109"/>
         <source>Notifications enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Notificaciones habilitadas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="130"/>
         <source>User will be notified for every new flash cookie that is not in blacklist and whitelist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Se notificará al usuario cada cookie de flash nueva que no esté ni en la lista negra ni en la lista blanca.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="143"/>
         <source>Select to delete all flash cookies on startup and shutdown</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para borrar todas las cookies de flash al inicio y al cierre</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="146"/>
         <source>Delete</source>
-        <translation type="unfinished">Borrar</translation>
+        <translation>Borrar</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="158"/>
         <source>Delete all flash cookies on exit/start (except those are in whitelist)</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar todas las cookies de flash al salir/iniciar (excepto aquellas en la lista blanca)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="171"/>
         <source>&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are just applied to flash cookies.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;&lt;b&gt;Nota:&lt;/b&gt; Estos ajustes se aplican solamente a las cookies de flash.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.py" line="68"/>
         <source>Select Flash Cookies Data Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar Ruta de Datos de Cookies de Flash</translation>
     </message>
 </context>
 <context>
@@ -17440,11 +17440,6 @@ Do you really want to close this page?</source>
         <translation>Seleccionar para habilitar plugins en páginas web</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="260"/>
-        <source>Enable Plugins</source>
-        <translation type="obsolete">Habilitar Plugins</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="456"/>
         <source>Browser Cache</source>
         <translation>Caché del navegador</translation>
@@ -17808,17 +17803,17 @@ Do you really want to close this page?</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="252"/>
         <source>Select to allow JavaScript to close windows</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para permitir que JavaScript cierre ventanas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="255"/>
         <source>JavaScript can close windows</source>
-        <translation type="unfinished"></translation>
+        <translation>JavaScript puede cerrar ventanas</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="278"/>
         <source>Enable Plug-ins</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar Plug-ins</translation>
     </message>
 </context>
 <context>
@@ -17896,13 +17891,14 @@ Do you really want to close this page?</source>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="320"/>
         <source>Protocol Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error de Protocolo</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="320"/>
         <source>Open external application for {0}-link?
 URL: {1}</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Abrir aplicación externa para{0}-enlace?
+URL: {1}</translation>
     </message>
 </context>
 <context>
@@ -19313,16 +19309,6 @@ URL: {1}</source>
         <translation>VirusTotal</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="1839"/>
-        <source>&lt;h2&gt;File search&lt;/h2&gt;&lt;p&gt;In order to search for the last VirusTotal report on a given file just enter its hash. Currently the allowed hashes are MD5, SHA1 and SHA256. You can also search for a particular file report by typing in its permalink id.&lt;/p&gt;&lt;h2&gt;URL search&lt;/h2&gt;&lt;p&gt;URL searches are simple, just type in the given URL, the application will normalize it and compare it with the entries in VirusTotal&apos;s database. Alternatively you may enter the MD5 hash of an URL preceded by &quot;url:&quot;, e.g. url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;User search&lt;/h2&gt;&lt;p&gt;Do you want to know whether a friend has a VT Community account? Simply type in his nick preceded by the symbol &quot;@&quot;, e.g. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Search through comments&lt;/h2&gt;&lt;p&gt;The comments in VT Community may often help in disinfecting your PC or may proof themselves useful when analysing a particular malware sample, comment tags enable users to search through the VT Community reviews. The standard file tags are: {0} The standard URL tags are: {1}User generated tags are preceded by the symbol &quot;#&quot;, e.g. #disinfect.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;h2&gt;Búsqueda de archivo&lt;/h2&gt;&lt;p&gt;Para buscar el último informe de VirusTotal en un archivo dado, solamente introduzca su hash. Los hashes permitidos actualmente son MD5, SHA1 y SHA256. Tambien puede buscar un informe para un archivo concreto introduciendo su permalink id.&lt;/p&gt;&lt;h2&gt;Búsqueda de URL&lt;/h2&gt;&lt;p&gt;Las búsquedas de URL son sencillas, simplemente introduzca la URL concreta, la aplicación la normalizará y comparará contra las entradas en la base de datos de VirusTotal. Alternativamente se puede introducir el hash MD5 de una URL precedido por &quot;url:&quot;, por ejemplo url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;Búsqueda de Usuario&lt;/h2&gt;&lt;p&gt;¿Desea saber si un amigo tiene cuenta Community de VT? Simplemente teclee su nick precedido por el símbolo &quot;@&quot;,por ejemplo. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Búsqueda a través de comentarios&lt;/h2&gt;&lt;p&gt;Los comentarios en la Comunidad de VT pueden a menudo ser útiles en la desinfección de su PC, o bien pueden demostrar su utilidad al analizar una muestra en particular de malware, las etiquetas de comentario habilitan a los usuarios a través de las revisiones de la Comunidad de VT. Las etiquetas estándar de archivo son: {0} Las etiquetas estándar de URL son: {1} Las etiquetas generadas por los usuarios se preceden del símbolo &quot;#&quot;, por ejemplo. #disinfect.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="1887"/>
-        <source>Search VirusTotal</source>
-        <translation type="obsolete">Buscar VirusTotal</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1882"/>
         <source>Scan current site</source>
         <translation>Analizar sitio actual</translation>
@@ -19641,67 +19627,67 @@ URL: {1}</source>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3724"/>
         <source>IP Address Report</source>
-        <translation type="unfinished"></translation>
+        <translation>Reportar Dirección IP</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3734"/>
         <source>Domain Report</source>
-        <translation type="unfinished"></translation>
+        <translation>Reportar Dominio</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3715"/>
         <source>Enter a valid IPv4 address in dotted quad notation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir una dirección IPv4 válida en notación decimal punteada:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3724"/>
         <source>The given IP address is not in dotted quad notation.</source>
-        <translation type="unfinished"></translation>
+        <translation>La dirección IP no se ha proporcionado en notación decimal punteada.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="3734"/>
         <source>Enter a valid domain name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir un nombre de dominio válido:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1222"/>
         <source>Edit HTML5 Feature Permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Permisos de Características HTML5</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1222"/>
         <source>Edit HTML5 Feature Permissions...</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar Permisos de Características HTML5...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1137"/>
         <source>Flash Cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookies de Flash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1137"/>
         <source>&amp;Flash Cookies...</source>
-        <translation type="unfinished"></translation>
+        <translation>Cookies de &amp;Flash...</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1141"/>
         <source>Manage flash cookies</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar cookies de flash</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1143"/>
         <source>&lt;b&gt;Flash Cookies&lt;/b&gt;&lt;p&gt;Show a dialog to manage the flash cookies.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Cookies de Flash&lt;/b&gt;&lt;p&gt;Mostrar un diálogo para gestionar las cookies de flash.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1227"/>
         <source>Edit the remembered HTML5 feature permissions</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar los permisos de características HTML5 recordados</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1229"/>
         <source>&lt;b&gt;Edit HTML5 Feature Permissions&lt;/b&gt;&lt;p&gt;Opens a dialog to edit the remembered HTML5 feature permissions.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Editar Permisos de Características HTML5&lt;/b&gt;&lt;p&gt;Abre un diálogo para editar los permisos de características HTML5 recordados.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22559,47 +22545,47 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="164"/>
         <source>Draft</source>
-        <translation type="unfinished">Borrador</translation>
+        <translation>Borrador</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="165"/>
         <source>Public</source>
-        <translation type="unfinished">Público</translation>
+        <translation>Público</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="166"/>
         <source>Secret</source>
-        <translation type="unfinished">Secreto</translation>
+        <translation>Secreto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="218"/>
         <source>Pull Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Pull de Cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="220"/>
         <source>Pull changes from a remote repository</source>
-        <translation type="unfinished">Hacer pull de cambios desde un repositorio remoto</translation>
+        <translation>Hacer pull de cambios desde un repositorio remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="232"/>
         <source>Push Selected Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Pull de Cambios Seleccionados</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="234"/>
         <source>Push changes of the selected changeset and its ancestors to a remote repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer push de cambios del changeset seleccionado y sus ancestores a un repositorio remoto</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="237"/>
         <source>Push All Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer Push de Todos los Cambios</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="239"/>
         <source>Push all changes to a remote repository</source>
-        <translation type="unfinished"></translation>
+        <translation>Hacer push de todos los cambios a un repositorio remoto</translation>
     </message>
 </context>
 <context>
@@ -32432,12 +32418,12 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="375"/>
         <source>&apos;{0}&apos; is too complex ({1})</source>
-        <translation type="unfinished"></translation>
+        <translation>&apos;{0}&apos; es demasiado complejo ({1})</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="377"/>
         <source>{0}: {1}</source>
-        <translation type="unfinished">{0}: {1}</translation>
+        <translation>{0}: {1}</translation>
     </message>
 </context>
 <context>
@@ -33553,22 +33539,22 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="458"/>
         <source>Save Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Copia</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="458"/>
         <source>Save &amp;Copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar &amp;Copia...</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="463"/>
         <source>Save a copy of the current file</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar una copia del archivo actual</translation>
     </message>
     <message>
         <location filename="../QScintilla/MiniEditor.py" line="465"/>
         <source>&lt;b&gt;Save Copy&lt;/b&gt;&lt;p&gt;Save a copy of the contents of current editor window. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Guardar Copia&lt;/b&gt;&lt;p&gt;Guardar una copia del contenido de la ventana de editor actual. El archivo puede ser introducido usando un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -34089,7 +34075,7 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
         <source>Network Proxy</source>
-        <translation type="unfinished">Utilizar proxy de red</translation>
+        <translation>Proxy de Red</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="193"/>
@@ -34217,16 +34203,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <translation>Al terminar una descarga con éxito</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="173"/>
-        <source>HTTP-Proxy:</source>
-        <translation type="obsolete">HTTP-Proxy:</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="223"/>
-        <source>HTTPS-Proxy:</source>
-        <translation type="obsolete">HTTPS-Proxy:</translation>
-    </message>
-    <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="291"/>
         <source>FTP-Proxy</source>
         <translation>FTP-Proxy</translation>
@@ -34334,32 +34310,32 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
         <source>HTTP-Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>Proxy HTTP</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="242"/>
         <source>HTTPS-Proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>Proxy HTTPS</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="404"/>
         <source>Exceptions:</source>
-        <translation type="unfinished"></translation>
+        <translation>Excepciones:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="411"/>
         <source>Enter host names or IP-addresses for which the proxy is to be circumvented separated by &apos;,&apos; (wildcards * or ? may be used)</source>
-        <translation type="unfinished"></translation>
+        <translation>Introducir nombres de host o direcciones IP para los que el proxy no se utilizará, separados por &apos;,&apos; (se pueden utilizar comodines o ?)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="135"/>
         <source>Select to not use a network proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar para no usar una red proxy</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
         <source>Do not use proxy</source>
-        <translation type="unfinished"></translation>
+        <translation>No usar proxy</translation>
     </message>
 </context>
 <context>
@@ -46269,7 +46245,8 @@ Archivo: {2}, Línea: {3}
         <location filename="../QScintilla/Shell.py" line="735"/>
         <source>Signal &quot;{0}&quot; generated in file {1} at line {2}.
 Function: {3}({4})</source>
-        <translation type="unfinished"></translation>
+        <translation>Señal &quot;{0}&quot; generada en el archivo {1} y línea {2}.
+Función: {3}({4})</translation>
     </message>
 </context>
 <context>
@@ -58578,11 +58555,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Asis&amp;tentes</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3317"/>
-        <source>&amp;Tools</source>
-        <translation type="obsolete">&amp;Herramientas</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="2444"/>
         <source>Select Tool Group</source>
         <translation>Seleccionar Grupo de Herramientas</translation>
@@ -59934,12 +59906,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../UI/UserInterface.py" line="3336"/>
         <source>&amp;User Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Herramientas de &amp;Usuario</translation>
     </message>
     <message>
         <location filename="../UI/UserInterface.py" line="3408"/>
         <source>No User Tools Configured</source>
-        <translation type="unfinished"></translation>
+        <translation>No se han Configurado Herramientas de Usuario</translation>
     </message>
 </context>
 <context>
@@ -64078,22 +64050,22 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../ViewManager/ViewManager.py" line="687"/>
         <source>Save Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Copia</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="687"/>
         <source>Save &amp;Copy...</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar &amp;Copia...</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="692"/>
         <source>Save a copy of the current file</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar una copia del archivo actual</translation>
     </message>
     <message>
         <location filename="../ViewManager/ViewManager.py" line="694"/>
         <source>&lt;b&gt;Save Copy&lt;/b&gt;&lt;p&gt;Save a copy of the contents of current editor window. The file can be entered in a file selection dialog.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Guardar Copia&lt;/b&gt;&lt;p&gt;Guardar una copia del contenido de la ventana de editor actual. El archivo puede ser introducido usando un diálogo de selección de archivo.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -64258,11 +64230,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Se ha alcanzado el límite de solicitudes.</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/VirusTotalApi.py" line="90"/>
-        <source>Invalid key given.</source>
-        <translation type="obsolete">Se ha proporcionado una clave no válida.</translation>
-    </message>
-    <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="101"/>
         <source>Requested item is not present.</source>
         <translation>El elemento solicitado no está presente.</translation>
@@ -64270,42 +64237,42 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="102"/>
         <source>Requested item is still queued.</source>
-        <translation type="unfinished"></translation>
+        <translation>El elemento solicitado está todavía en la cola.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="303"/>
         <source>VirusTotal IP Address Report</source>
-        <translation type="unfinished"></translation>
+        <translation>Informe de Dirección IP de VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="297"/>
         <source>VirusTotal does not have any information for the given IP address.</source>
-        <translation type="unfinished"></translation>
+        <translation>VirusTotal no tiene información para la dirección IP proporcionada.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="303"/>
         <source>The submitted IP address is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>La dirección IP enviada no es válida.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="365"/>
         <source>VirusTotal Domain Report</source>
-        <translation type="unfinished"></translation>
+        <translation>Informe de Dominio de VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="359"/>
         <source>VirusTotal does not have any information for the given domain.</source>
-        <translation type="unfinished"></translation>
+        <translation>VirusTotal no tiene información para el dominio proporcionado.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="365"/>
         <source>The submitted domain address is invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>El dominio enviado no es válido.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="390"/>
         <source>not available</source>
-        <translation type="unfinished"></translation>
+        <translation>no disponible</translation>
     </message>
 </context>
 <context>
@@ -64313,68 +64280,68 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="14"/>
         <source>Domain Report</source>
-        <translation type="unfinished"></translation>
+        <translation>Informe de Dominio</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="61"/>
         <source>Categorizations</source>
-        <translation type="unfinished"></translation>
+        <translation>Categorías</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="146"/>
         <source>Resolutions</source>
-        <translation type="unfinished"></translation>
+        <translation>Resoluciones</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="165"/>
         <source>IP-Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección IP</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="170"/>
         <source>Resolved Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha de Resolución</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="187"/>
         <source>Subdomains</source>
-        <translation type="unfinished"></translation>
+        <translation>Subdominios</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="214"/>
         <source>Detected URLs</source>
-        <translation type="unfinished"></translation>
+        <translation>URLs Detectadas</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="233"/>
         <source>URL</source>
-        <translation type="unfinished">URL</translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="238"/>
         <source>Scan Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado del Scan</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="243"/>
         <source>Scan Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha del Scan</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.py" line="52"/>
         <source>&lt;b&gt;Report for domain {0}&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Informe para el dominio {0}&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.py" line="70"/>
         <source>{0}/{1}</source>
         <comment>positives / total</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0}/{1}</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalDomainReportDialog.ui" line="129"/>
         <source>Whois</source>
-        <translation type="unfinished">Whois</translation>
+        <translation>Whois</translation>
     </message>
 </context>
 <context>
@@ -64382,58 +64349,58 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="14"/>
         <source>IP Address Report</source>
-        <translation type="unfinished"></translation>
+        <translation>Informe de Dirección IP</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="55"/>
         <source>Owner:</source>
-        <translation type="unfinished"></translation>
+        <translation>Propietario:</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="83"/>
         <source>Resolutions</source>
-        <translation type="unfinished"></translation>
+        <translation>Resoluciones</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="102"/>
         <source>Hostname</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de Host</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="107"/>
         <source>Resolved Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha de Resolución</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="124"/>
         <source>Detected URLs</source>
-        <translation type="unfinished"></translation>
+        <translation>URLs Detectadas</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="143"/>
         <source>URL</source>
-        <translation type="unfinished">URL</translation>
+        <translation>URL</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="148"/>
         <source>Scan Result</source>
-        <translation type="unfinished"></translation>
+        <translation>Resultado del Scan</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.ui" line="153"/>
         <source>Scan Date</source>
-        <translation type="unfinished"></translation>
+        <translation>Fecha del Scan</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.py" line="43"/>
         <source>&lt;b&gt;Report for IP {0}&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Informe para la IP {0}&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalIpReportDialog.py" line="62"/>
         <source>{0}/{1}</source>
         <comment>positives / total</comment>
-        <translation type="unfinished"></translation>
+        <translation>{0}/{1}</translation>
     </message>
 </context>
 <context>
@@ -64441,12 +64408,12 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalWhoisDialog.ui" line="14"/>
         <source>Whois Information</source>
-        <translation type="unfinished"></translation>
+        <translation>Información de whois</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalWhoisDialog.py" line="35"/>
         <source>&lt;b&gt;Whois information for domain {0}&lt;/b&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;Información de whois para el dominio {0}&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
