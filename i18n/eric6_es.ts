@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1906,8 +1905,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1980,8 +1979,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -2855,39 +2854,34 @@ Razón: {1}</translation>
         <translation>Muestra el progreso del cálculo de métricas</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="191"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="193"/>
         <source>files</source>
         <translation>archivos</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="193"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="195"/>
         <source>lines</source>
         <translation>líneas</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="195"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="197"/>
         <source>bytes</source>
         <translation>bytes</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="197"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="199"/>
         <source>comments</source>
         <translation>comentarios</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="199"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="203"/>
         <source>empty lines</source>
-        <translation>líneas vacias</translation>
+        <translation>lineas vacías</translation>
     </message>
     <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="201"/>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="205"/>
         <source>non-commentary lines</source>
         <translation>líneas no comentadas</translation>
-    </message>
-    <message>
-        <location filename="../DataViews/CodeMetricsDialog.py" line="203"/>
-        <source>documentation lines</source>
-        <translation>líneas de documentación</translation>
     </message>
     <message>
         <location filename="../DataViews/CodeMetricsDialog.py" line="52"/>
@@ -2918,6 +2912,11 @@ Razón: {1}</translation>
         <location filename="../DataViews/CodeMetricsDialog.ui" line="158"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Archivos</translation>
+    </message>
+    <message>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="201"/>
+        <source>comment lines</source>
+        <translation>líneas de documentación</translation>
     </message>
 </context>
 <context>
@@ -16157,7 +16156,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1175"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -17439,11 +17438,6 @@ Do you really want to close this page?</source>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="275"/>
         <source>Select to enable plugins in web pages</source>
         <translation>Seleccionar para habilitar plugins en páginas web</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="260"/>
-        <source>Enable Plugins</source>
-        <translation type="obsolete">Habilitar Plugins</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpWebBrowserPage.ui" line="456"/>
@@ -19313,16 +19307,6 @@ URL: {1}</translation>
         <location filename="../Helpviewer/HelpWindow.py" line="1878"/>
         <source>VirusTotal</source>
         <translation>VirusTotal</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="1839"/>
-        <source>&lt;h2&gt;File search&lt;/h2&gt;&lt;p&gt;In order to search for the last VirusTotal report on a given file just enter its hash. Currently the allowed hashes are MD5, SHA1 and SHA256. You can also search for a particular file report by typing in its permalink id.&lt;/p&gt;&lt;h2&gt;URL search&lt;/h2&gt;&lt;p&gt;URL searches are simple, just type in the given URL, the application will normalize it and compare it with the entries in VirusTotal&apos;s database. Alternatively you may enter the MD5 hash of an URL preceded by &quot;url:&quot;, e.g. url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;User search&lt;/h2&gt;&lt;p&gt;Do you want to know whether a friend has a VT Community account? Simply type in his nick preceded by the symbol &quot;@&quot;, e.g. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Search through comments&lt;/h2&gt;&lt;p&gt;The comments in VT Community may often help in disinfecting your PC or may proof themselves useful when analysing a particular malware sample, comment tags enable users to search through the VT Community reviews. The standard file tags are: {0} The standard URL tags are: {1}User generated tags are preceded by the symbol &quot;#&quot;, e.g. #disinfect.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;h2&gt;Búsqueda de archivo&lt;/h2&gt;&lt;p&gt;Para buscar el último informe de VirusTotal en un archivo dado, solamente introduzca su hash. Los hashes permitidos actualmente son MD5, SHA1 y SHA256. Tambien puede buscar un informe para un archivo concreto introduciendo su permalink id.&lt;/p&gt;&lt;h2&gt;Búsqueda de URL&lt;/h2&gt;&lt;p&gt;Las búsquedas de URL son sencillas, simplemente introduzca la URL concreta, la aplicación la normalizará y comparará contra las entradas en la base de datos de VirusTotal. Alternativamente se puede introducir el hash MD5 de una URL precedido por &quot;url:&quot;, por ejemplo url:7f911bbcf618f052ac6b9928600d2820.&lt;/p&gt;&lt;h2&gt;Búsqueda de Usuario&lt;/h2&gt;&lt;p&gt;¿Desea saber si un amigo tiene cuenta Community de VT? Simplemente teclee su nick precedido por el símbolo &quot;@&quot;,por ejemplo. @EmilianoMartinez.&lt;/p&gt;&lt;h2&gt;Búsqueda a través de comentarios&lt;/h2&gt;&lt;p&gt;Los comentarios en la Comunidad de VT pueden a menudo ser útiles en la desinfección de su PC, o bien pueden demostrar su utilidad al analizar una muestra en particular de malware, las etiquetas de comentario habilitan a los usuarios a través de las revisiones de la Comunidad de VT. Las etiquetas estándar de archivo son: {0} Las etiquetas estándar de URL son: {1} Las etiquetas generadas por los usuarios se preceden del símbolo &quot;#&quot;, por ejemplo. #disinfect.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/HelpWindow.py" line="1887"/>
-        <source>Search VirusTotal</source>
-        <translation type="obsolete">Buscar VirusTotal</translation>
     </message>
     <message>
         <location filename="../Helpviewer/HelpWindow.py" line="1882"/>
@@ -34217,16 +34201,6 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
         <source>When download finished successfully</source>
         <translation>Al terminar una descarga con éxito</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="173"/>
-        <source>HTTP-Proxy:</source>
-        <translation type="obsolete">HTTP-Proxy:</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="223"/>
-        <source>HTTPS-Proxy:</source>
-        <translation type="obsolete">HTTPS-Proxy:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="291"/>
@@ -58581,11 +58555,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <translation>Asis&amp;tentes</translation>
     </message>
     <message>
-        <location filename="../UI/UserInterface.py" line="3317"/>
-        <source>&amp;Tools</source>
-        <translation type="obsolete">&amp;Herramientas</translation>
-    </message>
-    <message>
         <location filename="../UI/UserInterface.py" line="2444"/>
         <source>Select Tool Group</source>
         <translation>Seleccionar Grupo de Herramientas</translation>
@@ -64259,11 +64228,6 @@ Un doble click en una entrada mostrará el trazado correspondiente.&lt;/p&gt;</t
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="100"/>
         <source>Request limit has been reached.</source>
         <translation>Se ha alcanzado el límite de solicitudes.</translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/VirusTotalApi.py" line="90"/>
-        <source>Invalid key given.</source>
-        <translation type="obsolete">Se ha proporcionado una clave no válida.</translation>
     </message>
     <message>
         <location filename="../Helpviewer/VirusTotal/VirusTotalApi.py" line="101"/>

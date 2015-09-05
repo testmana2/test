@@ -244,9 +244,13 @@ def analyze(filename, total):
             stats.inc('nloc')
         elif tok.type == COMMENT:
             stats.inc('comments')
+            if tok.line.strip() == tok.text:
+                stats.inc('commentlines')
         elif tok.type == EMPTY:
             if parser.tokenlist[idx - 1].type == token.OP:
                 stats.inc('nloc')
+            elif parser.tokenlist[idx - 1].type == COMMENT:
+                continue
             else:
                 stats.inc('empty')
         elif tok.type == INDENT:
@@ -261,6 +265,8 @@ def analyze(filename, total):
     summarize(total, 'lines', parser.lines)
     summarize(total, 'bytes', len(text))
     summarize(total, 'comments', stats.getCounter('TOTAL ', 'comments'))
+    summarize(total, 'commentlines',
+              stats.getCounter('TOTAL ', 'commentlines'))
     summarize(total, 'empty lines', stats.getCounter('TOTAL ', 'empty'))
     summarize(total, 'non-commentary lines',
               stats.getCounter('TOTAL ', 'nloc'))
