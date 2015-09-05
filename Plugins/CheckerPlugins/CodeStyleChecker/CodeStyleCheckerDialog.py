@@ -100,6 +100,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.__data = {}
         self.__statistics = {}
         self.__onlyFixes = {}
+        self.__noFixCodesList = []
         
         self.on_loadDefaultButton_clicked()
     
@@ -150,7 +151,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             itm.setIcon(1, UI.PixmapCache.getIcon("syntaxError.png"))
         if fixed:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixed.png"))
-        elif code in FixableCodeStyleIssues and not autofixing:
+        elif code in FixableCodeStyleIssues and not autofixing and \
+                code not in self.__noFixCodesList:
             itm.setIcon(0, UI.PixmapCache.getIcon("issueFixable.png"))
             fixable = True
         
@@ -356,6 +358,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             repeatMessages = self.repeatCheckBox.isChecked()
             fixCodes = self.fixIssuesEdit.text()
             noFixCodes = self.noFixIssuesEdit.text()
+            self.__noFixCodesList = \
+                [c.strip() for c in noFixCodes.split(",") if c.strip()]
             fixIssues = self.fixIssuesCheckBox.isChecked() and repeatMessages
             self.showIgnored = self.ignoredCheckBox.isChecked() and \
                 repeatMessages
