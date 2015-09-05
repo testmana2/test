@@ -84,8 +84,8 @@ r"""
 
 |   (?P<End>
         [ \t]* } [ \t]* ;
-    )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
+    )""",
+    re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
 # function to replace comments
 _commentsub = re.compile(r"""//[^\n]*\n|//[^\n]*$""").sub

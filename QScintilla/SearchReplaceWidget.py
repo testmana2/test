@@ -118,7 +118,8 @@ and so on.</td></tr>
 <td>This matches 1 or more times. For example, <code>Sa+m</code> matches
 <code>Sam</code>, <code>Saam</code>, <code>Saaam</code> and so on.</td></tr>
 </table>
-""")                                                # __IGNORE_WARNING__
+"""
+        )
         self.setWhatsThis(whatsThis)
         
         self.ui.closeButton.setIcon(UI.PixmapCache.getIcon("close.png"))

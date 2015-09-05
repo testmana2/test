@@ -157,8 +157,8 @@ r"""
         |
             end \b [^_]
         )
-    )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
+    )""",
+    re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
 _commentsub = re.compile(r"""#[^\n]*\n|#[^\n]*$""").sub
 

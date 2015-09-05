@@ -128,8 +128,8 @@ r"""
 
 |   (?P<CodingLine>
         ^ \# \s* [*_-]* \s* coding[:=] \s* (?P<Coding> [-\w_.]+ ) \s* [*_-]* $
-    )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
+    )""",
+    re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
 _commentsub = re.compile(r"""#[^\n]*\n|#[^\n]*$""").sub
 

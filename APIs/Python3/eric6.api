@@ -9012,10 +9012,7 @@ eric6.Utilities.startswithPath?4(path, start)
 eric6.Utilities.supportedCodecs?7
 eric6.Utilities.toBool?4(dataStr)
 eric6.Utilities.toNativeSeparators?4(path)
-eric6.Utilities.uic.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric6.Utilities.uic.compileUiFiles?4(dir, recurse=False)
-eric6.Utilities.uic.compile_ui?4(ui_dir, ui_file)
-eric6.Utilities.uic.pyName?4(py_dir, py_file)
 eric6.Utilities.unescape_uentities?4(m)
 eric6.Utilities.win32_GetUserName?4()
 eric6.Utilities.win32_Kill?4(pid)
@@ -9295,11 +9292,8 @@ eric6.ViewManager.ViewManager.ViewManager?1()
 eric6.ViewManager.factory?4(parent, ui, dbs, pluginManager)
 eric6.cleanupSource.cleanupSource?4(dirName)
 eric6.cleanupSource.main?4(argv)
-eric6.compileUiFiles.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric6.compileUiFiles.compileUiFiles?4()
-eric6.compileUiFiles.compile_ui?4(ui_dir, ui_file)
 eric6.compileUiFiles.main?4(argv)
-eric6.compileUiFiles.pyName?4(py_dir, py_file)
 eric6.eric6.args?7
 eric6.eric6.excepthook?4(excType, excValue, tracebackobj)
 eric6.eric6.handleSingleApplication?4(ddindex)
@@ -9372,9 +9366,7 @@ eric6.install.apisDir?7
 eric6.install.cfg?7
 eric6.install.cleanUp?4()
 eric6.install.cleanupSource?4(dirName)
-eric6.install.compileUiDir?4(dir, recurse=False, map=None, **compileUi_args)
 eric6.install.compileUiFiles?4()
-eric6.install.compile_ui?4(ui_dir, ui_file)
 eric6.install.configLength?7
 eric6.install.configName?7
 eric6.install.copyDesktopFile?4(src, dst, marker)
@@ -9409,7 +9401,6 @@ eric6.install.prepareInfoFile?4(fileName)
 eric6.install.progLanguages?7
 eric6.install.progName?7
 eric6.install.pyModDir?7
-eric6.install.pyName?4(py_dir, py_file)
 eric6.install.pyqtOverride?7
 eric6.install.pyqtVariant?7
 eric6.install.shutilCopy?4(src, dst, perm=0o644)

@@ -2145,7 +2145,7 @@
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>N802, N803, N807, N808, N821, W293, E265</string>
+              <string>E265, N802, N803, N807, N808, N821, W293, C101</string>
             </value>
             <key>
               <string>FixCodes</string>
@@ -2172,6 +2172,12 @@
               <string></string>
             </value>
             <key>
+              <string>MaxCodeComplexity</string>
+            </key>
+            <value>
+              <int>10</int>
+            </value>
+            <key>
               <string>MaxLineLength</string>
             </key>
             <value>
@@ -2193,7 +2199,7 @@
               <string>ShowIgnored</string>
             </key>
             <value>
-              <bool>False</bool>
+              <bool>True</bool>
             </value>
           </dict>
         </value>

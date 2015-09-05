@@ -98,7 +98,7 @@ for providing patches to improve eric3, eric4, eric5 and eric6.
 
 And all the people who reported bugs and made suggestions."""
 
-licenseText = \
+licenseText = (
 """Eric is {0}
 
 You may use, distribute and copy Eric under the terms of the GNU
@@ -728,8 +728,8 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
-                     END OF TERMS AND CONDITIONS""" \
-.format(UI.Info.Copyright)                  # __IGNORE_WARNING__
+                     END OF TERMS AND CONDITIONS
+""").format(UI.Info.Copyright)
 
 
 class AboutDialog(QDialog, Ui_AboutDialog):

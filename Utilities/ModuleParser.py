@@ -194,8 +194,8 @@ r"""
         ^
         (?P<ConditionalDefineIndent> [ \t]* )
         (?: (?: if | elif ) [ \t]+ [^:]* | else [ \t]* ) : (?= \s* def)
-    )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
+    )""",
+    re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
 _rb_getnext = re.compile(
 r"""
@@ -331,8 +331,8 @@ r"""
         |
             end \b [^_]
         )
-    )
-""", re.VERBOSE | re.DOTALL | re.MULTILINE).search      # __IGNORE_WARNING__
+    )""",
+    re.VERBOSE | re.DOTALL | re.MULTILINE).search
 
 _hashsub = re.compile(r"""^([ \t]*)#[ \t]?""", re.MULTILINE).sub
 

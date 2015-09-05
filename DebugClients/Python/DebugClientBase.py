@@ -1502,7 +1502,7 @@ class DebugClientBase(object):
                         try:
                             exec 'mcdict = dict%s.__class__.__dict__' % access
                             ndict.update(mcdict)     # __IGNORE_WARNING__
-                            if mdict and not "sipThis" in mdict.keys():  # __IGNORE_WARNING__
+                            if mdict and "sipThis" not in mdict.keys():  # __IGNORE_WARNING__
                                 del rvar[0:2]
                                 access = ""
                         except:

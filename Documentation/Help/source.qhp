@@ -13353,6 +13353,9 @@
       <keyword name="__initChannelModesDict" id="__initChannelModesDict" ref="eric6.Network.IRC.IrcUtilities.html#__initChannelModesDict" />
       <keyword name="__jsSyntaxCheck" id="__jsSyntaxCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.jsCheckSyntax.html#__jsSyntaxCheck" />
       <keyword name="__messageBox" id="__messageBox" ref="eric6.E5Gui.E5MessageBox.html#__messageBox" />
+      <keyword name="__pyName" id="__pyName" ref="eric6.Utilities.uic.html#__pyName" />
+      <keyword name="__pyName" id="__pyName" ref="eric6.compileUiFiles.html#__pyName" />
+      <keyword name="__pyName" id="__pyName" ref="eric6.install.html#__pyName" />
       <keyword name="__readShortcut" id="__readShortcut" ref="eric6.Preferences.Shortcuts.html#__readShortcut" />
       <keyword name="__render" id="__render" ref="eric6.Helpviewer.HelpSnap.html#__render" />
       <keyword name="__reorderFilter" id="__reorderFilter" ref="eric6.E5Gui.E5FileDialog.html#__reorderFilter" />
@@ -13398,16 +13401,10 @@
       <keyword name="comparison_to_singleton" id="comparison_to_singleton" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_to_singleton" />
       <keyword name="comparison_type" id="comparison_type" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#comparison_type" />
       <keyword name="compatibility_fixes (Module)" id="compatibility_fixes (Module)" ref="eric6.Globals.compatibility_fixes.html" />
-      <keyword name="compileUiDir" id="compileUiDir" ref="eric6.Utilities.uic.html#compileUiDir" />
-      <keyword name="compileUiDir" id="compileUiDir" ref="eric6.compileUiFiles.html#compileUiDir" />
-      <keyword name="compileUiDir" id="compileUiDir" ref="eric6.install.html#compileUiDir" />
       <keyword name="compileUiFiles" id="compileUiFiles" ref="eric6.Utilities.uic.html#compileUiFiles" />
       <keyword name="compileUiFiles" id="compileUiFiles" ref="eric6.compileUiFiles.html#compileUiFiles" />
       <keyword name="compileUiFiles" id="compileUiFiles" ref="eric6.install.html#compileUiFiles" />
       <keyword name="compileUiFiles (Module)" id="compileUiFiles (Module)" ref="eric6.compileUiFiles.html" />
-      <keyword name="compile_ui" id="compile_ui" ref="eric6.Utilities.uic.html#compile_ui" />
-      <keyword name="compile_ui" id="compile_ui" ref="eric6.compileUiFiles.html#compile_ui" />
-      <keyword name="compile_ui" id="compile_ui" ref="eric6.install.html#compile_ui" />
       <keyword name="compound_statements" id="compound_statements" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#compound_statements" />
       <keyword name="contentSniff" id="contentSniff" ref="eric6.Helpviewer.HelpBrowserWV.html#contentSniff" />
       <keyword name="context" id="context" ref="eric6.DebugClients.Ruby.Debuggee.html#context" />
@@ -13867,9 +13864,6 @@
       <keyword name="pwReencrypt" id="pwReencrypt" ref="eric6.Utilities.crypto.__init__.html#pwReencrypt" />
       <keyword name="py3AES (Module)" id="py3AES (Module)" ref="eric6.Utilities.crypto.py3AES.html" />
       <keyword name="py3PBKDF2 (Module)" id="py3PBKDF2 (Module)" ref="eric6.Utilities.crypto.py3PBKDF2.html" />
-      <keyword name="pyName" id="pyName" ref="eric6.Utilities.uic.html#pyName" />
-      <keyword name="pyName" id="pyName" ref="eric6.compileUiFiles.html#pyName" />
-      <keyword name="pyName" id="pyName" ref="eric6.install.html#pyName" />
       <keyword name="pyclbr (Module)" id="pyclbr (Module)" ref="eric6.Utilities.ClassBrowsers.pyclbr.html" />
       <keyword name="python_3000_backticks" id="python_3000_backticks" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#python_3000_backticks" />
       <keyword name="python_3000_has_key" id="python_3000_has_key" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#python_3000_has_key" />
