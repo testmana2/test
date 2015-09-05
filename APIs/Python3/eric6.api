@@ -8878,7 +8878,6 @@ eric6.Utilities.binplistlib.PlistTrailer?7
 eric6.Utilities.binplistlib.PlistWriter.binaryInt?4(obj, bytes=None)
 eric6.Utilities.binplistlib.PlistWriter.binaryReal?4(obj)
 eric6.Utilities.binplistlib.PlistWriter.byteCounts?7
-eric6.Utilities.binplistlib.PlistWriter.check_key?4()
 eric6.Utilities.binplistlib.PlistWriter.computeOffsets?4(obj, asReference=False, isRoot=False)
 eric6.Utilities.binplistlib.PlistWriter.computedUniques?7
 eric6.Utilities.binplistlib.PlistWriter.file?7
@@ -8886,7 +8885,6 @@ eric6.Utilities.binplistlib.PlistWriter.header?7
 eric6.Utilities.binplistlib.PlistWriter.incrementByteCount?4(field, incr=1)
 eric6.Utilities.binplistlib.PlistWriter.intSize?4(obj)
 eric6.Utilities.binplistlib.PlistWriter.positionOfObjectReference?4(obj)
-eric6.Utilities.binplistlib.PlistWriter.proc_size?4()
 eric6.Utilities.binplistlib.PlistWriter.proc_variable_length?4(length)
 eric6.Utilities.binplistlib.PlistWriter.realSize?4(obj)
 eric6.Utilities.binplistlib.PlistWriter.referencePositions?7

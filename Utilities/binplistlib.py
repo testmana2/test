@@ -778,6 +778,34 @@ class PlistWriter(object):
         self.byteCounts = self.byteCounts._replace(
             **{field: self.byteCounts.__getattribute__(field) + incr})
 
+    def __checkKey(self, key):
+        """
+        Private method to check the validity of a key.
+        
+        @param key key to be checked
+        @exception InvalidPlistException raised to indicate an invalid
+            plist file
+        """
+        if key is None:
+            raise InvalidPlistException(
+                'Dictionary keys cannot be null in plists.')
+        elif isinstance(key, Data):
+            raise InvalidPlistException(
+                'Data cannot be dictionary keys in plists.')
+        elif not isinstance(key, str):
+            raise InvalidPlistException('Keys must be strings.')
+    
+    def __processSize(self, size):
+        """
+        Private method to process a size.
+        
+        @param size size value to be processed (int)
+        @return processed size (int)
+        """
+        if size > 0b1110:
+            size += self.intSize(size)
+        return size
+    
     def computeOffsets(self, obj, asReference=False, isRoot=False):
         """
         Public method to compute offsets of an object.
@@ -787,22 +815,7 @@ class PlistWriter(object):
         @param isRoot flag indicating a root object (boolean)
         @exception InvalidPlistException raised to indicate an invalid
             plist file
-        """                                             # __IGNORE_WARNING__
-        def check_key(key):
-            if key is None:
-                raise InvalidPlistException(
-                    'Dictionary keys cannot be null in plists.')
-            elif isinstance(key, Data):
-                raise InvalidPlistException(
-                    'Data cannot be dictionary keys in plists.')
-            elif not isinstance(key, str):
-                raise InvalidPlistException('Keys must be strings.')
-        
-        def proc_size(size):
-            if size > 0b1110:
-                size += self.intSize(size)
-            return size
-        
+        """
         # If this should be a reference, then we keep a record of it in the
         # uniques table.
         if asReference:
@@ -827,28 +840,28 @@ class PlistWriter(object):
         elif isinstance(obj, datetime.datetime):
             self.incrementByteCount('dateBytes', incr=2)
         elif isinstance(obj, Data):
-            size = proc_size(len(obj))
+            size = self.__processSize(len(obj))
             self.incrementByteCount('dataBytes', incr=1 + size)
         elif isinstance(obj, str):
-            size = proc_size(len(obj))
+            size = self.__processSize(len(obj))
             self.incrementByteCount('stringBytes', incr=1 + size)
         elif isinstance(obj, HashableWrapper):
             obj = obj.value
             if isinstance(obj, set):
-                size = proc_size(len(obj))
+                size = self.__processSize(len(obj))
                 self.incrementByteCount('setBytes', incr=1 + size)
                 for value in obj:
                     self.computeOffsets(value, asReference=True)
             elif isinstance(obj, (list, tuple)):
-                size = proc_size(len(obj))
+                size = self.__processSize(len(obj))
                 self.incrementByteCount('arrayBytes', incr=1 + size)
                 for value in obj:
                     self.computeOffsets(value, asReference=True)
             elif isinstance(obj, dict):
-                size = proc_size(len(obj))
+                size = self.__processSize(len(obj))
                 self.incrementByteCount('dictBytes', incr=1 + size)
                 for key, value in obj.items():
-                    check_key(key)
+                    self.__checkKey(key)
                     self.computeOffsets(key, asReference=True)
                     self.computeOffsets(value, asReference=True)
         else:

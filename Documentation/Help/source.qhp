@@ -8766,14 +8766,14 @@
       <keyword name="PlistReader.setCurrentOffsetToObjectNumber" id="PlistReader.setCurrentOffsetToObjectNumber" ref="eric6.Utilities.binplistlib.html#PlistReader.setCurrentOffsetToObjectNumber" />
       <keyword name="PlistWriter" id="PlistWriter" ref="eric6.Utilities.binplistlib.html#PlistWriter" />
       <keyword name="PlistWriter (Constructor)" id="PlistWriter (Constructor)" ref="eric6.Utilities.binplistlib.html#PlistWriter.__init__" />
+      <keyword name="PlistWriter.__checkKey" id="PlistWriter.__checkKey" ref="eric6.Utilities.binplistlib.html#PlistWriter.__checkKey" />
+      <keyword name="PlistWriter.__processSize" id="PlistWriter.__processSize" ref="eric6.Utilities.binplistlib.html#PlistWriter.__processSize" />
       <keyword name="PlistWriter.binaryInt" id="PlistWriter.binaryInt" ref="eric6.Utilities.binplistlib.html#PlistWriter.binaryInt" />
       <keyword name="PlistWriter.binaryReal" id="PlistWriter.binaryReal" ref="eric6.Utilities.binplistlib.html#PlistWriter.binaryReal" />
-      <keyword name="PlistWriter.check_key" id="PlistWriter.check_key" ref="eric6.Utilities.binplistlib.html#PlistWriter.check_key" />
       <keyword name="PlistWriter.computeOffsets" id="PlistWriter.computeOffsets" ref="eric6.Utilities.binplistlib.html#PlistWriter.computeOffsets" />
       <keyword name="PlistWriter.incrementByteCount" id="PlistWriter.incrementByteCount" ref="eric6.Utilities.binplistlib.html#PlistWriter.incrementByteCount" />
       <keyword name="PlistWriter.intSize" id="PlistWriter.intSize" ref="eric6.Utilities.binplistlib.html#PlistWriter.intSize" />
       <keyword name="PlistWriter.positionOfObjectReference" id="PlistWriter.positionOfObjectReference" ref="eric6.Utilities.binplistlib.html#PlistWriter.positionOfObjectReference" />
-      <keyword name="PlistWriter.proc_size" id="PlistWriter.proc_size" ref="eric6.Utilities.binplistlib.html#PlistWriter.proc_size" />
       <keyword name="PlistWriter.proc_variable_length" id="PlistWriter.proc_variable_length" ref="eric6.Utilities.binplistlib.html#PlistWriter.proc_variable_length" />
       <keyword name="PlistWriter.realSize" id="PlistWriter.realSize" ref="eric6.Utilities.binplistlib.html#PlistWriter.realSize" />
       <keyword name="PlistWriter.reset" id="PlistWriter.reset" ref="eric6.Utilities.binplistlib.html#PlistWriter.reset" />

@@ -649,14 +649,17 @@ object
 <td><a href="#PlistWriter.__init__">PlistWriter</a></td>
 <td>Constructor</td>
 </tr><tr>
+<td><a href="#PlistWriter.__checkKey">__checkKey</a></td>
+<td>Private method to check the validity of a key.</td>
+</tr><tr>
+<td><a href="#PlistWriter.__processSize">__processSize</a></td>
+<td>Private method to process a size.</td>
+</tr><tr>
 <td><a href="#PlistWriter.binaryInt">binaryInt</a></td>
 <td>Public method to pack an integer object.</td>
 </tr><tr>
 <td><a href="#PlistWriter.binaryReal">binaryReal</a></td>
 <td>Public method to pack a real object.</td>
-</tr><tr>
-<td><a href="#PlistWriter.check_key">check_key</a></td>
-<td></td>
 </tr><tr>
 <td><a href="#PlistWriter.computeOffsets">computeOffsets</a></td>
 <td>Public method to compute offsets of an object.</td>
@@ -669,9 +672,6 @@ object
 </tr><tr>
 <td><a href="#PlistWriter.positionOfObjectReference">positionOfObjectReference</a></td>
 <td>Public method to get the position of an object.</td>
-</tr><tr>
-<td><a href="#PlistWriter.proc_size">proc_size</a></td>
-<td></td>
 </tr><tr>
 <td><a href="#PlistWriter.proc_variable_length">proc_variable_length</a></td>
 <td></td>
@@ -712,6 +712,37 @@ object
 <dd>
 file to write the plist data to (file object)
 </dd>
+</dl><a NAME="PlistWriter.__checkKey" ID="PlistWriter.__checkKey"></a>
+<h4>PlistWriter.__checkKey</h4>
+<b>__checkKey</b>(<i>key</i>)
+<p>
+        Private method to check the validity of a key.
+</p><dl>
+<dt><i>key</i></dt>
+<dd>
+key to be checked
+</dd>
+</dl><dl>
+<dt>Raises <b>InvalidPlistException</b>:</dt>
+<dd>
+raised to indicate an invalid
+            plist file
+</dd>
+</dl><a NAME="PlistWriter.__processSize" ID="PlistWriter.__processSize"></a>
+<h4>PlistWriter.__processSize</h4>
+<b>__processSize</b>(<i>size</i>)
+<p>
+        Private method to process a size.
+</p><dl>
+<dt><i>size</i></dt>
+<dd>
+size value to be processed (int)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+processed size (int)
+</dd>
 </dl><a NAME="PlistWriter.binaryInt" ID="PlistWriter.binaryInt"></a>
 <h4>PlistWriter.binaryInt</h4>
 <b>binaryInt</b>(<i>obj, bytes=None</i>)
@@ -751,10 +782,7 @@ real to be packed
 <dd>
 serialized object (bytes)
 </dd>
-</dl><a NAME="PlistWriter.check_key" ID="PlistWriter.check_key"></a>
-<h4>PlistWriter.check_key</h4>
-<b>check_key</b>(<i></i>)
-<a NAME="PlistWriter.computeOffsets" ID="PlistWriter.computeOffsets"></a>
+</dl><a NAME="PlistWriter.computeOffsets" ID="PlistWriter.computeOffsets"></a>
 <h4>PlistWriter.computeOffsets</h4>
 <b>computeOffsets</b>(<i>obj, asReference=False, isRoot=False</i>)
 <p>
@@ -829,10 +857,7 @@ object
 <dd>
 position of the object (integer)
 </dd>
-</dl><a NAME="PlistWriter.proc_size" ID="PlistWriter.proc_size"></a>
-<h4>PlistWriter.proc_size</h4>
-<b>proc_size</b>(<i></i>)
-<a NAME="PlistWriter.proc_variable_length" ID="PlistWriter.proc_variable_length"></a>
+</dl><a NAME="PlistWriter.proc_variable_length" ID="PlistWriter.proc_variable_length"></a>
 <h4>PlistWriter.proc_variable_length</h4>
 <b>proc_variable_length</b>(<i>length</i>)
 <a NAME="PlistWriter.realSize" ID="PlistWriter.realSize"></a>
