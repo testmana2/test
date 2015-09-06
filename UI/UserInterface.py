@@ -506,7 +506,6 @@ class UserInterface(E5MainWindow):
         self.inCloseEevent = False
 
         # now redirect stdout and stderr
-        # TODO: release - reenable redirection
         sys.stdout = self.stdout
         sys.stderr = self.stderr
 
@@ -3335,10 +3334,6 @@ class UserInterface(E5MainWindow):
         """
         Private slot to show the Plugin Tools menu.
         """
-        # TODO: This doesn't work on Mac OS X with Qt compiled against
-        # Cocoa anymore
-        # TODO: Change tools plug-ins to populate the menu statically
-        # and just enabled the actions/menus accordingly
         self.showMenu.emit("PluginTools", self.__menus["plugin_tools"])
         
     def __showUserToolsMenu(self):

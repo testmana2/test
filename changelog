@@ -1,5 +1,8 @@
 Change Log
 ----------
+Version 6.0.9:
+- bug fixes
+
 Version 6.0.8:
 - bug fixes
 - compatibility to PyQt 5.5
