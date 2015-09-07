@@ -128,10 +128,10 @@ class CodeStyleFixer(object):
             "E222": self.__fixE221,
             "E223": self.__fixE221,
             "E224": self.__fixE221,
-            "E225": self.__fixE221,
-            "E226": self.__fixE221,
-            "E227": self.__fixE221,
-            "E228": self.__fixE221,
+            "E225": self.__fixE225,
+            "E226": self.__fixE225,
+            "E227": self.__fixE225,
+            "E228": self.__fixE225,
             "E231": self.__fixE231,
             "E241": self.__fixE221,
             "E242": self.__fixE221,
@@ -1192,8 +1192,7 @@ class CodeStyleFixer(object):
         Private method to fix extraneous whitespace around operator or
         keyword.
        
-        Codes: E221, E222, E223, E224, E225, E226, E227, E228, E241,
-               E242, E271, E272, E273, E274).
+        Codes: E221, E222, E223, E224, E241, E242, E271, E272, E273, E274
         
         @param code code of the issue (string)
         @param line line number of the issue (integer)
@@ -1213,12 +1212,48 @@ class CodeStyleFixer(object):
             return (0, "", 0)
         
         self.__source[line] = newText
-        if code in ["E225", "E226", "E227", "E228"]:
-            # Missing whitespace added.
-            return (1, "", 0)
-        else:
-            # Extraneous whitespace removed.
-            return (1, "", 0)
+        return (1, "FE221", 0)
+    
+    def __fixE225(self, code, line, pos):
+        """
+        Private method to fix extraneous whitespaces around operator.
+       
+        Codes: E225, E226, E227, E228
+        
+        @param code code of the issue (string)
+        @param line line number of the issue (integer)
+        @param pos position inside line (integer)
+        @return value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+        """
+        line = line - 1
+        text = self.__source[line]
+        
+        if '"""' in text or "'''" in text or text.rstrip().endswith('\\'):
+            return (0, "", 0)
+        
+        newText = text
+        # determine length of operator
+        tokens = '<>*/=^&|%!+-'
+        pos2 = pos
+        token_delimiter = len(tokens)
+        for i in range(3):
+            if pos2 < len(text) and text[pos2] in tokens[:token_delimiter]:
+                pos2 += 1
+                # only the first five could be repeated
+                token_delimiter = 5
+            else:
+                break
+        if pos2 < len(text) and text[pos2] not in ' \t':
+            newText = self.__fixWhitespace(newText, pos2, ' ')
+        newText = self.__fixWhitespace(newText, pos, ' ')
+        if newText == text:
+            return (0, "", 0)
+        
+        self.__source[line] = newText
+        # Missing whitespaces added.
+        return (1, "FE225", 0)
     
     def __fixE231(self, code, line, pos):
         """
