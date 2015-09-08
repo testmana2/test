@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsMercurial.HgMultiRevisionSelectionDialog</h1>
+<p>
+Module implementing a dialog to select revisions.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgMultiRevisionSelectionDialog">HgMultiRevisionSelectionDialog</a></td>
+<td>Class implementing a dialog to select revisions.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgMultiRevisionSelectionDialog" ID="HgMultiRevisionSelectionDialog"></a>
+<h2>HgMultiRevisionSelectionDialog</h2>
+<p>
+    Class implementing a dialog to select revisions.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgMultiRevisionSelectionDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgMultiRevisionSelectionDialog.__init__">HgMultiRevisionSelectionDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.__updateOK">__updateOK</a></td>
+<td>Private slot to update the OK button.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.getRevisions">getRevisions</a></td>
+<td>Public method to retrieve the selected revisions.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled">on_bookmarkButton_toggled</a></td>
+<td>Private slot to handle changes of the Bookmark select button.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged">on_bookmarkCombo_editTextChanged</a></td>
+<td>Private slot to handle changes of the Bookmark combo.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_branchButton_toggled">on_branchButton_toggled</a></td>
+<td>Private slot to handle changes of the Branch select button.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged">on_branchCombo_editTextChanged</a></td>
+<td>Private slot to handle changes of the Branch combo.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_changesetsButton_toggled">on_changesetsButton_toggled</a></td>
+<td>Private slot to handle changes of the Changesets select button.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged">on_changesetsEdit_textChanged</a></td>
+<td>Private slot to handle changes of the Changesets edit.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_limitGroup_toggled">on_limitGroup_toggled</a></td>
+<td>Private slot to handle changes of the Limit Results group status.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_tagButton_toggled">on_tagButton_toggled</a></td>
+<td>Private slot to handle changes of the Tag select button.</td>
+</tr><tr>
+<td><a href="#HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged">on_tagCombo_editTextChanged</a></td>
+<td>Private slot to handle changes of the Tag combo.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HgMultiRevisionSelectionDialog.__init__" ID="HgMultiRevisionSelectionDialog.__init__"></a>
+<h4>HgMultiRevisionSelectionDialog (Constructor)</h4>
+<b>HgMultiRevisionSelectionDialog</b>(<i>tagsList, branchesList, bookmarksList=None, emptyRevsOk=False, showLimit=False, limitDefault=100, parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>tagsList</i></dt>
+<dd>
+list of tags (list of strings)
+</dd><dt><i>branchesList</i></dt>
+<dd>
+list of branches (list of strings)
+</dd><dt><i>bookmarksList</i></dt>
+<dd>
+list of bookmarks (list of strings)
+</dd><dt><i>emptyRevsOk</i></dt>
+<dd>
+flag indicating that it is ok to not enter
+            revisions (boolean)
+</dd><dt><i>showLimit</i></dt>
+<dd>
+flag indicating to show the limit entry (boolean)
+</dd><dt><i>limitDefault</i></dt>
+<dd>
+default value for the limit (integer)
+</dd><dt><i>parent</i></dt>
+<dd>
+parent widget (QWidget)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.__updateOK" ID="HgMultiRevisionSelectionDialog.__updateOK"></a>
+<h4>HgMultiRevisionSelectionDialog.__updateOK</h4>
+<b>__updateOK</b>(<i></i>)
+<p>
+        Private slot to update the OK button.
+</p><a NAME="HgMultiRevisionSelectionDialog.getRevisions" ID="HgMultiRevisionSelectionDialog.getRevisions"></a>
+<h4>HgMultiRevisionSelectionDialog.getRevisions</h4>
+<b>getRevisions</b>(<i></i>)
+<p>
+        Public method to retrieve the selected revisions.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple of selected revisions (list of strings) and number
+            of entries to be shown (integer)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled" ID="HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled"></a>
+<h4>HgMultiRevisionSelectionDialog.on_bookmarkButton_toggled</h4>
+<b>on_bookmarkButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle changes of the Bookmark select button.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged" ID="HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged"></a>
+<h4>HgMultiRevisionSelectionDialog.on_bookmarkCombo_editTextChanged</h4>
+<b>on_bookmarkCombo_editTextChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle changes of the Bookmark combo.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the combo (string)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_branchButton_toggled" ID="HgMultiRevisionSelectionDialog.on_branchButton_toggled"></a>
+<h4>HgMultiRevisionSelectionDialog.on_branchButton_toggled</h4>
+<b>on_branchButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle changes of the Branch select button.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged" ID="HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged"></a>
+<h4>HgMultiRevisionSelectionDialog.on_branchCombo_editTextChanged</h4>
+<b>on_branchCombo_editTextChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle changes of the Branch combo.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the combo (string)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_changesetsButton_toggled" ID="HgMultiRevisionSelectionDialog.on_changesetsButton_toggled"></a>
+<h4>HgMultiRevisionSelectionDialog.on_changesetsButton_toggled</h4>
+<b>on_changesetsButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle changes of the Changesets select button.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged" ID="HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged"></a>
+<h4>HgMultiRevisionSelectionDialog.on_changesetsEdit_textChanged</h4>
+<b>on_changesetsEdit_textChanged</b>(<i></i>)
+<p>
+        Private slot to handle changes of the Changesets edit.
+</p><a NAME="HgMultiRevisionSelectionDialog.on_limitGroup_toggled" ID="HgMultiRevisionSelectionDialog.on_limitGroup_toggled"></a>
+<h4>HgMultiRevisionSelectionDialog.on_limitGroup_toggled</h4>
+<b>on_limitGroup_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle changes of the Limit Results group status.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the group (boolean)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_tagButton_toggled" ID="HgMultiRevisionSelectionDialog.on_tagButton_toggled"></a>
+<h4>HgMultiRevisionSelectionDialog.on_tagButton_toggled</h4>
+<b>on_tagButton_toggled</b>(<i>checked</i>)
+<p>
+        Private slot to handle changes of the Tag select button.
+</p><dl>
+<dt><i>checked</i></dt>
+<dd>
+state of the button (boolean)
+</dd>
+</dl><a NAME="HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged" ID="HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged"></a>
+<h4>HgMultiRevisionSelectionDialog.on_tagCombo_editTextChanged</h4>
+<b>on_tagCombo_editTextChanged</b>(<i>txt</i>)
+<p>
+        Private slot to handle changes of the Tag combo.
+</p><dl>
+<dt><i>txt</i></dt>
+<dd>
+text of the combo (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
