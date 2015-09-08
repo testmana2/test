@@ -2264,6 +2264,7 @@
       <keyword name="CodeStyleFixer.__fixE127" id="CodeStyleFixer.__fixE127" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE127" />
       <keyword name="CodeStyleFixer.__fixE201" id="CodeStyleFixer.__fixE201" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE201" />
       <keyword name="CodeStyleFixer.__fixE221" id="CodeStyleFixer.__fixE221" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE221" />
+      <keyword name="CodeStyleFixer.__fixE225" id="CodeStyleFixer.__fixE225" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE225" />
       <keyword name="CodeStyleFixer.__fixE231" id="CodeStyleFixer.__fixE231" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE231" />
       <keyword name="CodeStyleFixer.__fixE251" id="CodeStyleFixer.__fixE251" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE251" />
       <keyword name="CodeStyleFixer.__fixE261" id="CodeStyleFixer.__fixE261" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleFixer.html#CodeStyleFixer.__fixE261" />

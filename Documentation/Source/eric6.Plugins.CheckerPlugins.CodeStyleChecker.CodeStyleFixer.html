@@ -138,6 +138,9 @@ object
 <td><a href="#CodeStyleFixer.__fixE221">__fixE221</a></td>
 <td>Private method to fix extraneous whitespace around operator or keyword.</td>
 </tr><tr>
+<td><a href="#CodeStyleFixer.__fixE225">__fixE225</a></td>
+<td>Private method to fix extraneous whitespaces around operator.</td>
+</tr><tr>
 <td><a href="#CodeStyleFixer.__fixE231">__fixE231</a></td>
 <td>Private method to fix missing whitespace after ',;:'.</td>
 </tr><tr>
@@ -875,8 +878,32 @@ value indicating an applied/deferred fix (-1, 0, 1),
         Private method to fix extraneous whitespace around operator or
         keyword.
 </p><p>
-        Codes: E221, E222, E223, E224, E225, E226, E227, E228, E241,
-               E242, E271, E272, E273, E274).
+        Codes: E221, E222, E223, E224, E241, E242, E271, E272, E273, E274
+</p><dl>
+<dt><i>code</i></dt>
+<dd>
+code of the issue (string)
+</dd><dt><i>line</i></dt>
+<dd>
+line number of the issue (integer)
+</dd><dt><i>pos</i></dt>
+<dd>
+position inside line (integer)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+value indicating an applied/deferred fix (-1, 0, 1),
+            a message for the fix (string) and an ID for a deferred
+            fix (integer)
+</dd>
+</dl><a NAME="CodeStyleFixer.__fixE225" ID="CodeStyleFixer.__fixE225"></a>
+<h4>CodeStyleFixer.__fixE225</h4>
+<b>__fixE225</b>(<i>code, line, pos</i>)
+<p>
+        Private method to fix extraneous whitespaces around operator.
+</p><p>
+        Codes: E225, E226, E227, E228
 </p><dl>
 <dt><i>code</i></dt>
 <dd>
