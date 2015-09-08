@@ -528,8 +528,11 @@ class DownloadItem(QWidget, Ui_DownloadItem):
         if self.bytesTotal() == -1:
             return -1.0
         
-        timeRemaining = (self.bytesTotal() -
-                         self.bytesReceived()) / self.currentSpeed()
+        cSpeed = self.currentSpeed()
+        if cSpeed != 0:
+            timeRemaining = (self.bytesTotal() - self.bytesReceived()) / cSpeed
+        else:
+            timeRemaining = 1
         
         # ETA should never be 0
         if timeRemaining == 0:
