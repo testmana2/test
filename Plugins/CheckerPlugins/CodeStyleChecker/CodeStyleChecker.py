@@ -250,32 +250,39 @@ def __checkCodeStyle(filename, source, args):
         stats.update(mccabeChecker.counters)
         errors += mccabeChecker.errors
     
-    deferredFixes = {}
-    results = []
+    errorsDict = {}
     for fname, lineno, position, text in errors:
         if lineno > len(source):
             lineno = len(source)
-        if source:
-            if "__IGNORE_WARNING__" not in \
-                    extractLineFlags(source[lineno - 1].strip()):
-                if fixer:
-                    res, msg, id_ = fixer.fixIssue(lineno, position, text)
-                    if res == -1:
-                        itm = [lineno, position, text]
-                        deferredFixes[id_] = itm
+        # inverse processing of messages and fixes
+        errorLine = errorsDict.setdefault(lineno, [])
+        errorLine.append([position, text])
+    deferredFixes = {}
+    results = []
+    for lineno, errors in errorsDict.items():
+        errors.sort(key=lambda x: x[0], reverse=True)
+        for position, text in errors:
+            if source:
+                if "__IGNORE_WARNING__" not in \
+                        extractLineFlags(source[lineno - 1].strip()):
+                    if fixer:
+                        res, msg, id_ = fixer.fixIssue(lineno, position, text)
+                        if res == -1:
+                            itm = [lineno, position, text]
+                            deferredFixes[id_] = itm
+                        else:
+                            itm = [lineno, position, text, False,
+                                   res == 1, True, msg]
                     else:
                         itm = [lineno, position, text, False,
-                               res == 1, True, msg]
+                               False, False, '']
+                    results.append(itm)
                 else:
-                    itm = [lineno, position, text, False,
-                           False, False, '']
-                results.append(itm)
+                    results.append([lineno, position, text, True,
+                                    False, False, ''])
             else:
-                results.append([lineno, position, text, True,
+                results.append([lineno, position, text, False,
                                 False, False, ''])
-        else:
-            results.append([lineno, position, text, False,
-                            False, False, ''])
     
     if fixer:
         deferredResults = fixer.finalize()
