@@ -9551,6 +9551,7 @@
       <keyword name="QsciScintillaCompat.showUserList" id="QsciScintillaCompat.showUserList" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.showUserList" />
       <keyword name="QsciScintillaCompat.startStyling" id="QsciScintillaCompat.startStyling" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.startStyling" />
       <keyword name="QsciScintillaCompat.styleAt" id="QsciScintillaCompat.styleAt" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.styleAt" />
+      <keyword name="QsciScintillaCompat.updateVerticalScrollBar" id="QsciScintillaCompat.updateVerticalScrollBar" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.updateVerticalScrollBar" />
       <keyword name="QsciScintillaCompat.zoomIn" id="QsciScintillaCompat.zoomIn" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.zoomIn" />
       <keyword name="QsciScintillaCompat.zoomOut" id="QsciScintillaCompat.zoomOut" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.zoomOut" />
       <keyword name="QsciScintillaCompat.zoomTo" id="QsciScintillaCompat.zoomTo" ref="eric6.QScintilla.QsciScintillaCompat.html#QsciScintillaCompat.zoomTo" />
