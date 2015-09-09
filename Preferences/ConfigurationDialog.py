@@ -362,7 +362,10 @@ class ConfigurationWidget(QWidget):
         for key in sorted(self.configItems.keys()):
             pageData = self.configItems[key]
             if pageData[3]:
-                pitm = self.itmDict[pageData[3]]  # get the parent item
+                if pageData[3] in self.itmDict:
+                    pitm = self.itmDict[pageData[3]]  # get the parent item
+                else:
+                    continue
             else:
                 pitm = self.configList
             self.itmDict[key] = ConfigurationPageItem(pitm, pageData[0], key,
