@@ -60,6 +60,7 @@ class TaskPropertiesDialog(QDialog, Ui_TaskPropertiesDialog):
         self.completedCheckBox.setEnabled(False)
         self.priorityCombo.setEnabled(False)
         self.projectCheckBox.setEnabled(False)
+        self.descriptionEdit.setEnabled(False)
         
     def getData(self):
         """
