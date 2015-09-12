@@ -226,12 +226,16 @@ def initGlobals():
     Module function to set the values of globals that need more than a
     simple assignment.
     """
-    global platBinDir, modDir, pyModDir, apisDir, pyqtVariant
+    global platBinDir, modDir, pyModDir, apisDir, pyqtVariant, platBinDirOld
 
     if sys.platform.startswith("win"):
         platBinDir = sys.exec_prefix
         if platBinDir.endswith("\\"):
             platBinDir = platBinDir[:-1]
+        platBinDirOld = platBinDir
+        platBinDir = os.path.join(platBinDir, "Scripts")
+        if not os.path.exists(platBinDir):
+            platBinDir = platBinDirOld
     else:
         platBinDir = "/usr/local/bin"
 
@@ -484,7 +488,7 @@ def cleanUp():
     """
     Uninstall the old eric files.
     """
-    global platBinDir, includePythonVariant
+    global platBinDir, platBinDirOld, includePythonVariant
     
     try:
         from eric6config import getConfig
@@ -530,8 +534,11 @@ def cleanUp():
         rem_wnames = [n + marker for n in rem_wnames]
     
     try:
+        dirs = [platBinDir, getConfig('bindir')]
+        if platBinDirOld:
+            dirs.append(platBinDirOld)
         for rem_wname in rem_wnames:
-            for d in [platBinDir, getConfig('bindir')]:
+            for d in dirs:
                 rwname = wrapperName(d, rem_wname)
                 if os.path.exists(rwname):
                     os.remove(rwname)
