@@ -56,6 +56,7 @@
               <section title="eric6.DebugClients.Python3.DebugConfig" ref="eric6.DebugClients.Python3.DebugConfig.html" />
               <section title="eric6.DebugClients.Python3.DebugProtocol" ref="eric6.DebugClients.Python3.DebugProtocol.html" />
               <section title="eric6.DebugClients.Python3.DebugThread" ref="eric6.DebugClients.Python3.DebugThread.html" />
+              <section title="eric6.DebugClients.Python3.DebugUtilities" ref="eric6.DebugClients.Python3.DebugUtilities.html" />
               <section title="eric6.DebugClients.Python3.FlexCompleter" ref="eric6.DebugClients.Python3.FlexCompleter.html" />
               <section title="eric6.DebugClients.Python3.PyProfile" ref="eric6.DebugClients.Python3.PyProfile.html" />
               <section title="eric6.DebugClients.Python3.eric6dbgstub" ref="eric6.DebugClients.Python3.eric6dbgstub.html" />
@@ -3117,6 +3118,7 @@
       <keyword name="DebugUI.shutdown" id="DebugUI.shutdown" ref="eric6.Debugger.DebugUI.html#DebugUI.shutdown" />
       <keyword name="DebugUI.shutdownServer" id="DebugUI.shutdownServer" ref="eric6.Debugger.DebugUI.html#DebugUI.shutdownServer" />
       <keyword name="DebugUI.variablesFilter" id="DebugUI.variablesFilter" ref="eric6.Debugger.DebugUI.html#DebugUI.variablesFilter" />
+      <keyword name="DebugUtilities (Module)" id="DebugUtilities (Module)" ref="eric6.DebugClients.Python3.DebugUtilities.html" />
       <keyword name="DebugViewer" id="DebugViewer" ref="eric6.Debugger.DebugViewer.html#DebugViewer" />
       <keyword name="DebugViewer (Constructor)" id="DebugViewer (Constructor)" ref="eric6.Debugger.DebugViewer.html#DebugViewer.__init__" />
       <keyword name="DebugViewer (Module)" id="DebugViewer (Module)" ref="eric6.Debugger.DebugViewer.html" />
@@ -13369,6 +13371,7 @@
       <keyword name="_debugclient_start_new_thread" id="_debugclient_start_new_thread" ref="eric6.DebugClients.Python.DebugClientThreads.html#_debugclient_start_new_thread" />
       <keyword name="_debugclient_start_new_thread" id="_debugclient_start_new_thread" ref="eric6.DebugClients.Python3.DebugClientThreads.html#_debugclient_start_new_thread" />
       <keyword name="_encode_base64" id="_encode_base64" ref="eric6.UI.EmailDialog.html#_encode_base64" />
+      <keyword name="_getfullargs" id="_getfullargs" ref="eric6.DebugClients.Python3.DebugUtilities.html#_getfullargs" />
       <keyword name="_indent" id="_indent" ref="eric6.Utilities.ClassBrowsers.pyclbr.html#_indent" />
       <keyword name="_indent" id="_indent" ref="eric6.Utilities.ModuleParser.html#_indent" />
       <keyword name="_is_eol_token" id="_is_eol_token" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#_is_eol_token" />
@@ -13587,6 +13590,7 @@
       <keyword name="flush" id="flush" ref="eric6.DebugClients.Ruby.AsyncFile.html#flush" />
       <keyword name="formatTime" id="formatTime" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#formatTime" />
       <keyword name="format_witnesses" id="format_witnesses" ref="eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#format_witnesses" />
+      <keyword name="formatargvalues" id="formatargvalues" ref="eric6.DebugClients.Python3.DebugUtilities.html#formatargvalues" />
       <keyword name="fromNativeSeparators" id="fromNativeSeparators" ref="eric6.Utilities.__init__.html#fromNativeSeparators" />
       <keyword name="generateDistroInfo" id="generateDistroInfo" ref="eric6.Utilities.__init__.html#generateDistroInfo" />
       <keyword name="generatePluginsVersionInfo" id="generatePluginsVersionInfo" ref="eric6.Utilities.__init__.html#generatePluginsVersionInfo" />
@@ -13712,6 +13716,7 @@
       <keyword name="get_codingBytes" id="get_codingBytes" ref="eric6.Utilities.__init__.html#get_codingBytes" />
       <keyword name="get_parser" id="get_parser" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#get_parser" />
       <keyword name="get_thread" id="get_thread" ref="eric6.DebugClients.Ruby.Debuggee.html#get_thread" />
+      <keyword name="getargvalues" id="getargvalues" ref="eric6.DebugClients.Python3.DebugUtilities.html#getargvalues" />
       <keyword name="getpass" id="getpass" ref="eric6.DebugClients.Python.getpass.html#getpass" />
       <keyword name="getpass" id="getpass" ref="eric6.DebugClients.Python3.getpass.html#getpass" />
       <keyword name="getpass (Module)" id="getpass (Module)" ref="eric6.DebugClients.Python.getpass.html" />
@@ -14086,6 +14091,7 @@
       <file>eric6.DebugClients.Python3.DebugConfig.html</file>
       <file>eric6.DebugClients.Python3.DebugProtocol.html</file>
       <file>eric6.DebugClients.Python3.DebugThread.html</file>
+      <file>eric6.DebugClients.Python3.DebugUtilities.html</file>
       <file>eric6.DebugClients.Python3.FlexCompleter.html</file>
       <file>eric6.DebugClients.Python3.PyProfile.html</file>
       <file>eric6.DebugClients.Python3.eric6dbgstub.html</file>

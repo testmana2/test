@@ -525,6 +525,10 @@ eric6.DebugClients.Python3.DebugThread.DebugThread.set_ident?4(id)
 eric6.DebugClients.Python3.DebugThread.DebugThread.traceThread?4()
 eric6.DebugClients.Python3.DebugThread.DebugThread.trace_dispatch?4(frame, event, arg)
 eric6.DebugClients.Python3.DebugThread.DebugThread?1(dbgClient, targ=None, args=None, kwargs=None, mainThread=False)
+eric6.DebugClients.Python3.DebugUtilities.ArgInfo?7
+eric6.DebugClients.Python3.DebugUtilities._getfullargs?5(co)
+eric6.DebugClients.Python3.DebugUtilities.formatargvalues?4(args, varargs, varkw, locals, formatarg=str, formatvarargs=lambda name: '*' + name, formatvarkw=lambda name: '**' + name, formatvalue=lambda value: '=' + repr(value))
+eric6.DebugClients.Python3.DebugUtilities.getargvalues?4(frame)
 eric6.DebugClients.Python3.FlexCompleter.Completer._callable_postfix?5(val, word)
 eric6.DebugClients.Python3.FlexCompleter.Completer.attr_matches?4(text)
 eric6.DebugClients.Python3.FlexCompleter.Completer.complete?4(text, state)
@@ -9395,6 +9399,7 @@ eric6.install.macPythonExe?7
 eric6.install.main?4(argv)
 eric6.install.modDir?7
 eric6.install.platBinDir?7
+eric6.install.platBinDirOld?7
 eric6.install.prepareInfoFile?4(fileName)
 eric6.install.progLanguages?7
 eric6.install.progName?7

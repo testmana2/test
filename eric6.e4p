@@ -77,6 +77,7 @@
     <Source>DebugClients/Python3/DebugConfig.py</Source>
     <Source>DebugClients/Python3/DebugProtocol.py</Source>
     <Source>DebugClients/Python3/DebugThread.py</Source>
+    <Source>DebugClients/Python3/DebugUtilities.py</Source>
     <Source>DebugClients/Python3/FlexCompleter.py</Source>
     <Source>DebugClients/Python3/PyProfile.py</Source>
     <Source>DebugClients/Python3/__init__.py</Source>

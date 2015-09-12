@@ -16,6 +16,7 @@ from inspect import CO_GENERATOR
 
 from DebugProtocol import ResponseClearWatch, ResponseClearBreak, \
     ResponseLine, ResponseSyntax, ResponseException, CallTrace
+from DebugUtilities import getargvalues, formatargvalues
 
 gRecursionLimit = 64
 
@@ -590,9 +591,9 @@ class DebugBase(bdb.Bdb):
                     ffunc = ''
                 
                 if ffunc and not ffunc.startswith("<"):
-                    argInfo = inspect.getargvalues(fr)
+                    argInfo = getargvalues(fr)
                     try:
-                        fargs = inspect.formatargvalues(
+                        fargs = formatargvalues(
                             argInfo.args, argInfo.varargs,
                             argInfo.keywords, argInfo.locals)
                     except Exception:
@@ -652,9 +653,9 @@ class DebugBase(bdb.Bdb):
                     ffunc = ''
                 
                 if ffunc and not ffunc.startswith("<"):
-                    argInfo = inspect.getargvalues(fr)
+                    argInfo = getargvalues(fr)
                     try:
-                        fargs = inspect.formatargvalues(
+                        fargs = formatargvalues(
                             argInfo.args, argInfo.varargs,
                             argInfo.keywords, argInfo.locals)
                     except Exception:
@@ -759,9 +760,9 @@ class DebugBase(bdb.Bdb):
                     ffunc = ''
                 
                 if ffunc and not ffunc.startswith("<"):
-                    argInfo = inspect.getargvalues(fr)
+                    argInfo = getargvalues(fr)
                     try:
-                        fargs = inspect.formatargvalues(
+                        fargs = formatargvalues(
                             argInfo.args, argInfo.varargs,
                             argInfo.keywords, argInfo.locals)
                     except Exception:

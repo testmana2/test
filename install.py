@@ -38,6 +38,9 @@ currDir = os.getcwd()
 modDir = None
 pyModDir = None
 platBinDir = None
+# TODO: change the installation location on Win to the Scripts directory
+# following entry is needed to uninstall the scripts from the former location
+platBinDirOld = None
 distDir = None
 apisDir = None
 installApis = True

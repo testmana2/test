@@ -18,7 +18,6 @@ import imp
 import re
 import atexit
 import signal
-import inspect
 
 
 import DebugProtocol
@@ -27,6 +26,7 @@ from DebugBase import setRecursionLimit, printerr   # __IGNORE_WARNING__
 from AsyncFile import AsyncFile, AsyncPendingWrite
 from DebugConfig import ConfigVarTypeStrings
 from FlexCompleter import Completer
+from DebugUtilities import getargvalues, formatargvalues
 
 
 DebugClientInstance = None
@@ -1218,9 +1218,9 @@ class DebugClientBase(object):
             ffunc = ''
         
         if ffunc and not ffunc.startswith("<"):
-            argInfo = inspect.getargvalues(stackFrame)
+            argInfo = getargvalues(stackFrame)
             try:
-                fargs = inspect.formatargvalues(
+                fargs = formatargvalues(
                     argInfo.args, argInfo.varargs,
                     argInfo.keywords, argInfo.locals)
             except Exception:
