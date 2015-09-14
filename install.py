@@ -38,6 +38,7 @@ currDir = os.getcwd()
 modDir = None
 pyModDir = None
 platBinDir = None
+platBinDirOld = None
 distDir = None
 apisDir = None
 installApis = True
