@@ -111,6 +111,8 @@ class Task(QTreeWidgetItem):
         """
         boldFont = self.font(0)
         boldFont.setBold(True)
+        nonBoldFont = self.font(0)
+        nonBoldFont.setBold(False)
         for col in range(5):
             if self.taskType == Task.TypeFixme:
                 self.setBackground(
@@ -126,6 +128,8 @@ class Task(QTreeWidgetItem):
                     col, Preferences.getTasks("TasksNoteColor"))
             if self._isProjectTask:
                 self.setFont(col, boldFont)
+            else:
+                self.setFont(col, nonBoldFont)
     
     def setSummary(self, summary):
         """
