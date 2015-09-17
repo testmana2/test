@@ -2249,6 +2249,19 @@
             </value>
           </dict>
         </value>
+        <key>
+          <string>RadonCodeMetrics</string>
+        </key>
+        <value>
+          <dict>
+            <key>
+              <string>ExcludeFiles</string>
+            </key>
+            <value>
+              <string>*/ThirdParty/*, */coverage/*, Ui_*.py</string>
+            </value>
+          </dict>
+        </value>
       </dict>
     </OtherToolsParams>
   </OtherTools>

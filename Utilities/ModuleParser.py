@@ -58,6 +58,7 @@ def getTypeFromTypeName(name):
         return -1
 
 
+# TODO: Add support for the new Python 3.5 async def
 _py_getnext = re.compile(
 r"""
     (?P<String>

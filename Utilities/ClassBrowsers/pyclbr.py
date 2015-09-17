@@ -27,7 +27,8 @@ from functools import reduce
 TABWIDTH = 4
 
 SUPPORTED_TYPES = [ClassBrowsers.PY_SOURCE, ClassBrowsers.PTL_SOURCE]
-    
+
+# TODO: Add support for the new Python 3.5 async def
 _getnext = re.compile(
 r"""
     (?P<String>
