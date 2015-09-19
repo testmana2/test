@@ -212,7 +212,7 @@ class SessionReader(XMLStreamReaderBase):
             self.readNext()
             if self.isEndElement() and self.name() == "Watchexpression":
                 self.dbs.getWatchPointModel().addWatchPoint(
-                    weCond, (weTemp, weEnabled, weCount, weSpecialCond))
+                    weCond, weSpecialCond, (weTemp, weEnabled, weCount))
                 break
             
             if self.isStartElement():

@@ -140,7 +140,7 @@ class SessionWriter(XMLStreamWriterBase):
         wpModel = self.dbs.getWatchPointModel()
         for row in range(wpModel.rowCount()):
             index = wpModel.index(row, 0)
-            cond, temp, enabled, count, special = \
+            cond, special, temp, enabled, count = \
                 wpModel.getWatchPointByIndex(index)[:5]
             self.writeStartElement("Watchexpression")
             self.writeTextElement("Condition", str(cond))
