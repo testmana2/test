@@ -127,6 +127,8 @@ class PathGraphingAstVisitor(ASTVisitor):
             self.graphs["%s%s" % (self.classname, node.name)] = self.graph
             self.reset()
 
+    visitAsyncFunctionDef = visitFunctionDef
+
     def visitClassDef(self, node):
         old_classname = self.classname
         self.classname += node.name + "."
@@ -158,7 +160,7 @@ class PathGraphingAstVisitor(ASTVisitor):
         name = "Loop %d" % node.lineno
         self._subgraph(node, name)
 
-    visitFor = visitWhile = visitLoop
+    visitFor = visitAsyncFor = visitWhile = visitLoop
 
     def visitIf(self, node):
         name = "If %d" % node.lineno
@@ -209,3 +211,5 @@ class PathGraphingAstVisitor(ASTVisitor):
         name = "With %d" % node.lineno
         self.appendPathNode(name)
         self.dispatch_list(node.body)
+    
+    visitAsyncWith = visitWith

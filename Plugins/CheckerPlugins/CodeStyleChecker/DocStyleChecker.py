@@ -22,6 +22,11 @@ import tokenize
 import ast
 import sys
 
+try:
+    ast.AsyncFunctionDef    # __IGNORE_EXCEPTION__
+except AttributeError:
+    ast.AsyncFunctionDef = ast.FunctionDef
+
 
 class DocStyleContext(object):
     """
@@ -1071,7 +1076,8 @@ class DocStyleChecker(object):
         except (SyntaxError, TypeError):
             return
         if (isinstance(tree, ast.Module) and len(tree.body) == 1 and
-                isinstance(tree.body[0], ast.FunctionDef)):
+                isinstance(tree.body[0],
+                           (ast.FunctionDef, ast.AsyncFunctionDef))):
             functionDef = tree.body[0]
             argNames, kwNames = self.__getArgNames(functionDef)
             if "self" in argNames:

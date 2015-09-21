@@ -58,7 +58,6 @@ def getTypeFromTypeName(name):
         return -1
 
 
-# TODO: Add support for the new Python 3.5 async def
 _py_getnext = re.compile(
 r"""
     (?P<String>
@@ -135,7 +134,7 @@ r"""
         )?
         ^
         (?P<MethodIndent> [ \t]* )
-        def [ \t]+
+        (?: async [ \t]+ )? def [ \t]+
         (?P<MethodName> \w+ )
         (?: [ \t]* \[ (?: plain | html ) \] )?
         [ \t]* \(
@@ -194,7 +193,8 @@ r"""
 |   (?P<ConditionalDefine>
         ^
         (?P<ConditionalDefineIndent> [ \t]* )
-        (?: (?: if | elif ) [ \t]+ [^:]* | else [ \t]* ) : (?= \s* def)
+        (?: (?: if | elif ) [ \t]+ [^:]* | else [ \t]* ) :
+        (?= \s* (?: async [ \t]+ )? def)
     )""",
     re.VERBOSE | re.DOTALL | re.MULTILINE).search
 

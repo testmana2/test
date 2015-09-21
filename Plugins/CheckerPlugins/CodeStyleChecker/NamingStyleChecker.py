@@ -13,6 +13,11 @@ import re
 import os
 import sys
 
+try:
+    ast.AsyncFunctionDef    # __IGNORE_EXCEPTION__
+except AttributeError:
+    ast.AsyncFunctionDef = ast.FunctionDef
+
 
 class NamingStyleChecker(object):
     """
@@ -110,7 +115,7 @@ class NamingStyleChecker(object):
         """
         if isinstance(node, ast.ClassDef):
             self.__tagClassFunctions(node)
-        elif isinstance(node, ast.FunctionDef):
+        elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
             self.__findGlobalDefs(node)
         
         checkerName = node.__class__.__name__.lower()
@@ -142,7 +147,7 @@ class NamingStyleChecker(object):
 
         # iterate over all functions and tag them
         for node in ast.iter_child_nodes(classNode):
-            if not isinstance(node, ast.FunctionDef):
+            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 continue
             
             node.function_type = 'method'
@@ -171,7 +176,8 @@ class NamingStyleChecker(object):
             if isinstance(node, ast.Global):
                 globalNames.update(node.names)
 
-            if not isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef,
+                                     ast.ClassDef)):
                 nodesToCheck.extend(ast.iter_child_nodes(node))
         functionNode.global_names = globalNames
     
@@ -222,7 +228,7 @@ class NamingStyleChecker(object):
             if isinstance(node, ast.ClassDef):
                 lineno += len(node.decorator_list)
                 offset += 6
-            elif isinstance(node, ast.FunctionDef):
+            elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 lineno += len(node.decorator_list)
                 offset += 4
         return (lineno, offset, code)
@@ -245,13 +251,14 @@ class NamingStyleChecker(object):
         @return tuple giving line number, offset within line and error code
             (integer, integer, string)
         """
-        if isinstance(node, (ast.ClassDef, ast.FunctionDef)):
+        if isinstance(node, (ast.ClassDef, ast.FunctionDef,
+                             ast.AsyncFunctionDef)):
             name = node.name
             if self.__isNameToBeAvoided(name):
                 yield self.__error(node, "N831")
                 return
         
-        if isinstance(node, ast.FunctionDef):
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
             argNames = self.__getArgNames(node)
             for arg in argNames:
                 if self.__isNameToBeAvoided(arg):
@@ -376,7 +383,7 @@ class NamingStyleChecker(object):
         for parentFunc in reversed(parents):
             if isinstance(parentFunc, ast.ClassDef):
                 return
-            if isinstance(parentFunc, ast.FunctionDef):
+            if isinstance(parentFunc, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 break
         else:
             return

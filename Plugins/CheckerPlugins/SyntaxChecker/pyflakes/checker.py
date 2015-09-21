@@ -637,8 +637,9 @@ class Checker(object):
         pass
 
     # "stmt" type nodes
-    DELETE = PRINT = FOR = WHILE = IF = WITH = WITHITEM = RAISE = \
-        TRYFINALLY = ASSERT = EXEC = EXPR = ASSIGN = handleChildren
+    DELETE = PRINT = FOR = ASYNCFOR = WHILE = IF = WITH = WITHITEM = \
+        ASYNCWITH = RAISE = TRYFINALLY = ASSERT = EXEC = EXPR = \
+        ASSIGN = handleChildren
 
     CONTINUE = BREAK = PASS = ignore
 
@@ -721,6 +722,8 @@ class Checker(object):
         self.addBinding(node, FunctionDefinition(node.name, node))
         if self.withDoctest:
             self.deferFunction(lambda: self.handleDoctests(node))
+
+    ASYNCFUNCTIONDEF = FUNCTIONDEF
 
     def LAMBDA(self, node):
         args = []
