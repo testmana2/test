@@ -129,31 +129,32 @@ class FlashCookieReader(object):
             variableName = self.__data.read(lenVariableName)
             variableName = variableName.decode("utf-8")
             variableType = self.__data.read(1)
-            if variableType == self.Number:
-                self.__parseNumber(variableName, self.__result)
-            elif variableType == self.Boolean:
-                self.__parseBoolean(variableName, self.__result)
-            elif variableType == self.String:
-                self.__parseString(variableName, self.__result)
-            elif variableType == self.ObjObj:
-                self.__parseObject(variableName, self.__result)
-            elif variableType == self.ObjArr:
-                self.__parseArray(variableName, self.__result)
-            elif variableType == self.ObjDate:
-                self.__parseDate(variableName, self.__result)
-            elif variableType == self.ObjXml:
-                self.__parseXml(variableName, self.__result)
-            elif variableType == self.ObjCc:
-                self.__parseOcc(variableName, self.__result)
-            elif variableType == self.ObjM:
-                self.__parseOjm(variableName, self.__result)
-            elif variableType == self.Null:
-                self.__parseNull(variableName, self.__result)
-            elif variableType == self.Undef:
-                self.__parseUndefined(variableName, self.__result)
-            else:
-                raise FlashCookieReaderError(
-                    "Unexpected Data Type: " + hex(ord(variableType)))
+            if len(variableType):
+                if variableType == self.Number:
+                    self.__parseNumber(variableName, self.__result)
+                elif variableType == self.Boolean:
+                    self.__parseBoolean(variableName, self.__result)
+                elif variableType == self.String:
+                    self.__parseString(variableName, self.__result)
+                elif variableType == self.ObjObj:
+                    self.__parseObject(variableName, self.__result)
+                elif variableType == self.ObjArr:
+                    self.__parseArray(variableName, self.__result)
+                elif variableType == self.ObjDate:
+                    self.__parseDate(variableName, self.__result)
+                elif variableType == self.ObjXml:
+                    self.__parseXml(variableName, self.__result)
+                elif variableType == self.ObjCc:
+                    self.__parseOcc(variableName, self.__result)
+                elif variableType == self.ObjM:
+                    self.__parseOjm(variableName, self.__result)
+                elif variableType == self.Null:
+                    self.__parseNull(variableName, self.__result)
+                elif variableType == self.Undef:
+                    self.__parseUndefined(variableName, self.__result)
+                else:
+                    raise FlashCookieReaderError(
+                        "Unexpected Data Type: " + hex(ord(variableType)))
             self.__data.read(1)       # '\x00'
         self.__data.close()
         self.__parsed = True
