@@ -43,7 +43,7 @@ class HgTagDialog(QDialog, Ui_HgTagDialog):
         
         self.tagCombo.clear()
         self.tagCombo.addItem("", False)
-        for tag, isLocal in sorted(taglist):
+        for tag, isLocal in sorted(taglist, reverse=True):
             if isLocal:
                 icon = UI.PixmapCache.getIcon("vcsTagLocal.png")
             else:
