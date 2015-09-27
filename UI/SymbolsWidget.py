@@ -11,14 +11,17 @@ from __future__ import unicode_literals
 
 import sys
 import unicodedata
-try:  # Py3
+try:
+    # Py3
     import html.entities as html_entities
 except (ImportError):
-    chr = unichr    # __IGNORE_WARNING__
-    import htmlentitydefs as html_entities    # __IGNORE_WARNING__
+    # Py2
+    str = unicode                               # __IGNORE_WARNING__
+    chr = unichr                                # __IGNORE_WARNING__
+    import htmlentitydefs as html_entities      # __IGNORE_WARNING__
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, \
-    QModelIndex, Qt, qVersion, QItemSelectionModel
+    QModelIndex, Qt, qVersion, QItemSelectionModel, QLocale
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QWidget, QHeaderView, QAbstractItemView
 
@@ -39,6 +42,8 @@ class SymbolsModel(QAbstractTableModel):
         @param parent reference to the parent object (QObject)
         """
         super(SymbolsModel, self).__init__(parent)
+        
+        self.__locale = QLocale()
         
         self.__headerData = [
             self.tr("Code"),
@@ -359,7 +364,7 @@ class SymbolsModel(QAbstractTableModel):
         if role == Qt.DisplayRole:
             col = index.column()
             if col == 0:
-                return str(id)
+                return self.__locale.toString(id)
             elif col == 1:
                 return chr(id)
             elif col == 2:
@@ -427,7 +432,7 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a digit (boolean)
         """
-        return unicodedata.category(char) == "Nd"
+        return unicodedata.category(str(char)) == "Nd"
     
     def __isLetter(self, char):
         """
@@ -436,7 +441,8 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a letter (boolean)
         """
-        return unicodedata.category(char) in ["Lu", "Ll", "Lt", "Lm", "Lo"]
+        return unicodedata.category(str(char)) in ["Lu", "Ll", "Lt", "Lm",
+                                                   "Lo"]
     
     def __isMark(self, char):
         """
@@ -445,7 +451,7 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a mark character (boolean)
         """
-        return unicodedata.category(char) in ["Mn", "Mc", "Me"]
+        return unicodedata.category(str(char)) in ["Mn", "Mc", "Me"]
     
     def __isSymbol(self, char):
         """
@@ -454,7 +460,7 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a symbol (boolean)
         """
-        return unicodedata.category(char) in ["Sm", "Sc", "Sk", "So"]
+        return unicodedata.category(str(char)) in ["Sm", "Sc", "Sk", "So"]
     
     def __isPunct(self, char):
         """
@@ -463,8 +469,17 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a punctuation character (boolean)
         """
-        return unicodedata.category(char) in ["Pc", "Pd", "Ps", "Pe", "Pi",
-                                              "Pf", "Po"]
+        return unicodedata.category(str(char)) in ["Pc", "Pd", "Ps", "Pe",
+                                                   "Pi", "Pf", "Po"]
+    
+    def getLocale(self):
+        """
+        Public method to get the used locale.
+        
+        @return used locale
+        @rtype QLocale
+        """
+        return self.__locale
 
 
 class SymbolsWidget(QWidget, Ui_SymbolsWidget):
@@ -554,6 +569,7 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         self.symbolsTable.setUpdatesEnabled(False)
         self.__model.selectTable(index)
         self.symbolsTable.setUpdatesEnabled(True)
+        self.symbolsTable.resizeColumnsToContents()
         
         first, last = self.__model.getTableBoundaries(index)
         self.symbolSpinBox.setMinimum(first)
@@ -569,5 +585,5 @@ class SymbolsWidget(QWidget, Ui_SymbolsWidget):
         @param previous previous current index (QModelIndex)
         """
         Preferences.Prefs.settings.setValue("Symbols/Top", current.row())
-        self.symbolSpinBox.setValue(int(
-            self.__model.data(self.__model.index(current.row(), 0))))
+        self.symbolSpinBox.setValue(self.__model.getLocale().toInt(
+            self.__model.data(self.__model.index(current.row(), 0)))[0])

@@ -88,8 +88,14 @@
        <property name="toolTip">
         <string>Enter the symbol code</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
        <property name="maximum">
-        <number>65535</number>
+        <number>2000000</number>
        </property>
        <property name="singleStep">
         <number>32</number>
