@@ -11,11 +11,14 @@ from __future__ import unicode_literals
 
 import sys
 import unicodedata
-try:  # Py3
+try:
+    # Py3
     import html.entities as html_entities
 except (ImportError):
-    chr = unichr    # __IGNORE_WARNING__
-    import htmlentitydefs as html_entities    # __IGNORE_WARNING__
+    # Py2
+    str = unicode                               # __IGNORE_WARNING__
+    chr = unichr                                # __IGNORE_WARNING__
+    import htmlentitydefs as html_entities      # __IGNORE_WARNING__
 
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QAbstractTableModel, \
     QModelIndex, Qt, qVersion, QItemSelectionModel
@@ -427,7 +430,7 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a digit (boolean)
         """
-        return unicodedata.category(char) == "Nd"
+        return unicodedata.category(str(char)) == "Nd"
     
     def __isLetter(self, char):
         """
@@ -436,7 +439,8 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a letter (boolean)
         """
-        return unicodedata.category(char) in ["Lu", "Ll", "Lt", "Lm", "Lo"]
+        return unicodedata.category(str(char)) in ["Lu", "Ll", "Lt", "Lm",
+                                                   "Lo"]
     
     def __isMark(self, char):
         """
@@ -445,7 +449,7 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a mark character (boolean)
         """
-        return unicodedata.category(char) in ["Mn", "Mc", "Me"]
+        return unicodedata.category(str(char)) in ["Mn", "Mc", "Me"]
     
     def __isSymbol(self, char):
         """
@@ -454,7 +458,7 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a symbol (boolean)
         """
-        return unicodedata.category(char) in ["Sm", "Sc", "Sk", "So"]
+        return unicodedata.category(str(char)) in ["Sm", "Sc", "Sk", "So"]
     
     def __isPunct(self, char):
         """
@@ -463,8 +467,8 @@ class SymbolsModel(QAbstractTableModel):
         @param char character to test (one character string)
         @return flag indicating a punctuation character (boolean)
         """
-        return unicodedata.category(char) in ["Pc", "Pd", "Ps", "Pe", "Pi",
-                                              "Pf", "Po"]
+        return unicodedata.category(str(char)) in ["Pc", "Pd", "Ps", "Pe",
+                                                   "Pi", "Pf", "Po"]
 
 
 class SymbolsWidget(QWidget, Ui_SymbolsWidget):
