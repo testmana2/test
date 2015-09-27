@@ -11623,6 +11623,7 @@
       <keyword name="SymbolsModel.__isSymbol" id="SymbolsModel.__isSymbol" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.__isSymbol" />
       <keyword name="SymbolsModel.columnCount" id="SymbolsModel.columnCount" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.columnCount" />
       <keyword name="SymbolsModel.data" id="SymbolsModel.data" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.data" />
+      <keyword name="SymbolsModel.getLocale" id="SymbolsModel.getLocale" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.getLocale" />
       <keyword name="SymbolsModel.getTableBoundaries" id="SymbolsModel.getTableBoundaries" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.getTableBoundaries" />
       <keyword name="SymbolsModel.getTableIndex" id="SymbolsModel.getTableIndex" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.getTableIndex" />
       <keyword name="SymbolsModel.getTableNames" id="SymbolsModel.getTableNames" ref="eric6.UI.SymbolsWidget.html#SymbolsModel.getTableNames" />

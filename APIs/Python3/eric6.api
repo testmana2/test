@@ -4034,6 +4034,8 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.appe
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.dispatch_list?4(node_list)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.reset?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitAssert?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitAsyncFunctionDef?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitAsyncWith?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitClassDef?4(node)
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitFor?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.PathGraphingAstVisitor.visitFunctionDef?4(node)
@@ -8589,6 +8591,7 @@ eric6.UI.SplashScreen.SplashScreen.showMessage?4(msg)
 eric6.UI.SplashScreen.SplashScreen?1()
 eric6.UI.SymbolsWidget.SymbolsModel.columnCount?4(parent)
 eric6.UI.SymbolsWidget.SymbolsModel.data?4(index, role=Qt.DisplayRole)
+eric6.UI.SymbolsWidget.SymbolsModel.getLocale?4()
 eric6.UI.SymbolsWidget.SymbolsModel.getTableBoundaries?4(index)
 eric6.UI.SymbolsWidget.SymbolsModel.getTableIndex?4()
 eric6.UI.SymbolsWidget.SymbolsModel.getTableNames?4()
