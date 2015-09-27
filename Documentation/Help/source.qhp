@@ -6135,7 +6135,9 @@
       <keyword name="HgClientPromptDialog (Constructor)" id="HgClientPromptDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.__init__" />
       <keyword name="HgClientPromptDialog (Module)" id="HgClientPromptDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html" />
       <keyword name="HgClientPromptDialog.getInput" id="HgClientPromptDialog.getInput" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.getInput" />
+      <keyword name="HgClientPromptDialog.isPassword" id="HgClientPromptDialog.isPassword" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.isPassword" />
       <keyword name="HgClientPromptDialog.on_inputEdit_textChanged" id="HgClientPromptDialog.on_inputEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.on_inputEdit_textChanged" />
+      <keyword name="HgClientPromptDialog.on_passwordCheckBox_toggled" id="HgClientPromptDialog.on_passwordCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgClientPromptDialog.html#HgClientPromptDialog.on_passwordCheckBox_toggled" />
       <keyword name="HgCommandDialog" id="HgCommandDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html#HgCommandDialog" />
       <keyword name="HgCommandDialog (Constructor)" id="HgCommandDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html#HgCommandDialog.__init__" />
       <keyword name="HgCommandDialog (Module)" id="HgCommandDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCommandDialog.html" />

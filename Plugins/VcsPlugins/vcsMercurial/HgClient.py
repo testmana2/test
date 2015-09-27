@@ -256,10 +256,13 @@ class HgClient(QObject):
             
             # input channels
             if channel in inputChannels:
-                input = inputChannels[channel](data)
                 if channel == "L":
+                    input, isPassword = inputChannels[channel](data)
                     # echo the input to the output if it was a prompt
-                    outputChannels["o"](input)
+                    if not isPassword:
+                        outputChannels["o"](input)
+                else:
+                    input = inputChannels[channel](data)
                 self.__writeDataBlock(input)
             
             # output channels
@@ -289,10 +292,12 @@ class HgClient(QObject):
         """
         from .HgClientPromptDialog import HgClientPromptDialog
         input = ""
+        isPassword = False
         dlg = HgClientPromptDialog(size, message)
         if dlg.exec_() == QDialog.Accepted:
             input = dlg.getInput() + '\n'
-        return input
+            isPassword = dlg.isPassword()
+        return input, isPassword
     
     def runcommand(self, args, prompt=None, input=None, output=None,
                    error=None):
@@ -333,7 +338,7 @@ class HgClient(QObject):
         if prompt is not None:
             def func(size):
                 reply = prompt(size, outputBuffer.getvalue())
-                return reply
+                return reply, False
             inputChannels["L"] = func
         else:
             def myprompt(size):
@@ -341,8 +346,8 @@ class HgClient(QObject):
                     msg = self.tr("For message see output dialog.")
                 else:
                     msg = outputBuffer.getvalue()
-                reply = self.__prompt(size, msg)
-                return reply
+                reply, isPassword = self.__prompt(size, msg)
+                return reply, isPassword
             inputChannels["L"] = myprompt
         if input is not None:
             inputChannels["I"] = input

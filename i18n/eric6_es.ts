@@ -3061,37 +3061,37 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Seleccionar conjunto de reglas para docstrings</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="285"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="283"/>
         <source>Select to allow hanging closing brackets</source>
         <translation>Seleccionar para permitir hanging closing brackets </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="288"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="286"/>
         <source>Allow hanging closing brackets</source>
         <translation>Permitir hanging closing brackets</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="355"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="338"/>
         <source>Select to repeat each message type</source>
         <translation>Seleccionar para repetir cada tipo de mensaje</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="358"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="341"/>
         <source>Repeat messages</source>
         <translation>Repetir mensajes</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="368"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="351"/>
         <source>Select to fix some issues</source>
         <translation>Seleccionar para arreglar problemas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="371"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="354"/>
         <source>Fix issues automatically</source>
         <translation>Arreglar problemas automaticamente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="409"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="392"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -3101,17 +3101,17 @@ the respective line and position.&lt;/p&gt;</source>
 sobre una entrada, la abrirá en una ventana de edición posicionando el cursor en la línea y posición correspondiente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="425"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="408"/>
         <source>File/Line</source>
         <translation>Archivo/Línea</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="430"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="413"/>
         <source>Code</source>
         <translation>Código</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="435"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="418"/>
         <source>Message</source>
         <translation>Mensaje</translation>
     </message>
@@ -3146,7 +3146,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Pulsar para mostrar todos los archivos con algún problema</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="468"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="472"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
@@ -3156,47 +3156,47 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Arreglar: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="591"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="595"/>
         <source>No issues found.</source>
         <translation>No se han encontrado problemas.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="456"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="439"/>
         <source>Shows the progress of the code style check</source>
         <translation>Muestra el progreso de la revisión de estilo de código </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="465"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="448"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Archivos</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="381"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="364"/>
         <source>Select to show ignored issues</source>
         <translation>Seleccionar para mostrar problemas ignorados</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="384"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="367"/>
         <source>Show ignored</source>
         <translation>Mostrar ignorados</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="544"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="548"/>
         <source>{0} (ignored)</source>
         <translation>{0} (ignorado)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="453"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="457"/>
         <source>Preparing files...</source>
         <translation>Preparando archivos...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="310"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="293"/>
         <source>Max. Complexity:</source>
         <translation>Máx. Complejidad:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="319"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="302"/>
         <source>Enter the maximum allowed code complexity (McCabe: 10)</source>
         <translation>Introducir la máxima complejidad de código permitida (McCabe: 10)</translation>
     </message>
@@ -4139,7 +4139,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Gestor de vistas</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="592"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="595"/>
         <source>Configuration Page Error</source>
         <translation> Error de Configuración de Página</translation>
     </message>
@@ -4174,12 +4174,12 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Propiedades</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="514"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="517"/>
         <source>Preferences</source>
         <translation>Preferencias</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="519"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="522"/>
         <source>Please select an entry of the list 
 to display the configuration page.</source>
         <translation>Por favor, seleccione una entrada de la lista
@@ -4201,7 +4201,7 @@ para visualizar la página de configuración.</translation>
         <translation>Python3</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="592"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="595"/>
         <source>&lt;p&gt;The configuration page &lt;b&gt;{0}&lt;/b&gt; could not be loaded.&lt;/p&gt;</source>
         <translation>&lt;p&gt;La página de configuración  &lt;b&gt;{0}&lt;/b&gt; no puede ser cargada.&lt;/p&gt;</translation>
     </message>
@@ -4261,7 +4261,7 @@ para visualizar la página de configuración.</translation>
         <translation>Mimetypes</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationDialog.py" line="452"/>
+        <location filename="../Preferences/ConfigurationDialog.py" line="455"/>
         <source>Enter search text...</source>
         <translation>Introducir texto de búsqueda...</translation>
     </message>
@@ -7098,12 +7098,12 @@ Not connected
         <translation>Error de Red: {0}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="562"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="565"/>
         <source>?</source>
         <translation>?</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="578"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="581"/>
         <source>{0} of {1} - Stopped</source>
         <translation>{0} de {1} - Parado</translation>
     </message>
@@ -7118,14 +7118,14 @@ Not connected
         <translation>Pulse para pausar la descarga</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="561"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="564"/>
         <source>{0} of {1} ({2}/sec)
 {3}</source>
         <translation>{0} de {1} ({2}/sec)
 {3}</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Download/DownloadItem.py" line="570"/>
+        <location filename="../Helpviewer/Download/DownloadItem.py" line="573"/>
         <source>{0} downloaded
 SHA1: {1}
 MD5: {2}</source>
@@ -9040,192 +9040,192 @@ selección completa.&lt;/li&gt;
         <translation>Deshabilitar punto de interrupción</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5491"/>
+        <location filename="../QScintilla/Editor.py" line="5493"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5491"/>
+        <location filename="../QScintilla/Editor.py" line="5493"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5558"/>
+        <location filename="../QScintilla/Editor.py" line="5560"/>
         <source>Show Code Coverage Annotations</source>
         <translation>Mostrar Anotaciones de Cobertura de Código</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5551"/>
+        <location filename="../QScintilla/Editor.py" line="5553"/>
         <source>All lines have been covered.</source>
         <translation>Todas las líneas han sido cubiertas.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5558"/>
+        <location filename="../QScintilla/Editor.py" line="5560"/>
         <source>There is no coverage file available.</source>
         <translation>No hay archivo de cobertura disponible.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5673"/>
+        <location filename="../QScintilla/Editor.py" line="5675"/>
         <source>Profile Data</source>
         <translation>Datos de profiling</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5673"/>
+        <location filename="../QScintilla/Editor.py" line="5675"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5833"/>
+        <location filename="../QScintilla/Editor.py" line="5835"/>
         <source>Syntax Error</source>
         <translation>Error de sintaxis</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="5833"/>
+        <location filename="../QScintilla/Editor.py" line="5835"/>
         <source>No syntax error message available.</source>
         <translation>No hay mensajes de error de sintaxis disponibles.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6148"/>
+        <location filename="../QScintilla/Editor.py" line="6150"/>
         <source>Macro Name</source>
         <translation>Nombre de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6148"/>
+        <location filename="../QScintilla/Editor.py" line="6150"/>
         <source>Select a macro name:</source>
         <translation>Seleccione un nombre de macro:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6176"/>
+        <location filename="../QScintilla/Editor.py" line="6178"/>
         <source>Load macro file</source>
         <translation>Cargar archivo de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6219"/>
+        <location filename="../QScintilla/Editor.py" line="6221"/>
         <source>Macro files (*.macro)</source>
         <translation>Archivos de Macro  (*.macro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6199"/>
+        <location filename="../QScintilla/Editor.py" line="6201"/>
         <source>Error loading macro</source>
         <translation>Error al cargar macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6219"/>
+        <location filename="../QScintilla/Editor.py" line="6221"/>
         <source>Save macro file</source>
         <translation>Guardar archivo de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6236"/>
+        <location filename="../QScintilla/Editor.py" line="6238"/>
         <source>Save macro</source>
         <translation>Guardar macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6252"/>
+        <location filename="../QScintilla/Editor.py" line="6254"/>
         <source>Error saving macro</source>
         <translation>Error al guardar macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6265"/>
+        <location filename="../QScintilla/Editor.py" line="6267"/>
         <source>Start Macro Recording</source>
         <translation>Comenzar grabación de macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6265"/>
+        <location filename="../QScintilla/Editor.py" line="6267"/>
         <source>Macro recording is already active. Start new?</source>
         <translation>Grabación de macro ya está activada. ¿Comenzar una nueva?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6291"/>
+        <location filename="../QScintilla/Editor.py" line="6293"/>
         <source>Macro Recording</source>
         <translation>Grabando macro</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6291"/>
+        <location filename="../QScintilla/Editor.py" line="6293"/>
         <source>Enter name of the macro:</source>
         <translation>Introduzca el nombre de la macro:</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6427"/>
+        <location filename="../QScintilla/Editor.py" line="6429"/>
         <source>File changed</source>
         <translation>Archivo modificado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6729"/>
+        <location filename="../QScintilla/Editor.py" line="6731"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6750"/>
+        <location filename="../QScintilla/Editor.py" line="6752"/>
         <source>Resources</source>
         <translation>Recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6752"/>
+        <location filename="../QScintilla/Editor.py" line="6754"/>
         <source>Add file...</source>
         <translation>Añadir archivo...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6754"/>
+        <location filename="../QScintilla/Editor.py" line="6756"/>
         <source>Add files...</source>
         <translation>Añadir archivos...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6756"/>
+        <location filename="../QScintilla/Editor.py" line="6758"/>
         <source>Add aliased file...</source>
         <translation>Añadir archivo con un alias...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6759"/>
+        <location filename="../QScintilla/Editor.py" line="6761"/>
         <source>Add localized resource...</source>
         <translation>Añadir recursos localizados...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6763"/>
+        <location filename="../QScintilla/Editor.py" line="6765"/>
         <source>Add resource frame</source>
         <translation>Añadir ventana de recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6782"/>
+        <location filename="../QScintilla/Editor.py" line="6784"/>
         <source>Add file resource</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6798"/>
+        <location filename="../QScintilla/Editor.py" line="6800"/>
         <source>Add file resources</source>
         <translation>Añadir archivo de recursos</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6826"/>
+        <location filename="../QScintilla/Editor.py" line="6828"/>
         <source>Add aliased file resource</source>
         <translation>Añadir archivo de recursos con un alias</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6890"/>
+        <location filename="../QScintilla/Editor.py" line="6892"/>
         <source>Package Diagram</source>
         <translation>Digrama de paquetes</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6890"/>
+        <location filename="../QScintilla/Editor.py" line="6892"/>
         <source>Include class attributes?</source>
         <translation>¿Incluir atributos de clase?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6910"/>
+        <location filename="../QScintilla/Editor.py" line="6912"/>
         <source>Imports Diagram</source>
         <translation>Diagrama de imports</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6910"/>
+        <location filename="../QScintilla/Editor.py" line="6912"/>
         <source>Include imports from external modules?</source>
         <translation>¿Incluir los imports de módulos externos?</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6924"/>
+        <location filename="../QScintilla/Editor.py" line="6926"/>
         <source>Application Diagram</source>
         <translation>Diagrama de aplicación</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6924"/>
+        <location filename="../QScintilla/Editor.py" line="6926"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
@@ -9300,7 +9300,7 @@ selección completa.&lt;/li&gt;
         <translation>Seleccionar el Analizador Léxico de Pygments.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7202"/>
+        <location filename="../QScintilla/Editor.py" line="7204"/>
         <source>Check spelling...</source>
         <translation>Corrección ortográfica...</translation>
     </message>
@@ -9310,12 +9310,12 @@ selección completa.&lt;/li&gt;
         <translation>Corrección ortográfica de la selección...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7205"/>
+        <location filename="../QScintilla/Editor.py" line="7207"/>
         <source>Add to dictionary</source>
         <translation>Añadir al diccionario</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7207"/>
+        <location filename="../QScintilla/Editor.py" line="7209"/>
         <source>Ignore All</source>
         <translation>Ignorar Todo</translation>
     </message>
@@ -9355,32 +9355,32 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; no puede ser guardado.&lt;br&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6190"/>
+        <location filename="../QScintilla/Editor.py" line="6192"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; no se puede leer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6199"/>
+        <location filename="../QScintilla/Editor.py" line="6201"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; is corrupt.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; está dañado&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6252"/>
+        <location filename="../QScintilla/Editor.py" line="6254"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro  &lt;b&gt;{0}&lt;/b&gt; no se puede escribir.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6589"/>
+        <location filename="../QScintilla/Editor.py" line="6591"/>
         <source>{0} (ro)</source>
         <translation>{0} (ro)</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6729"/>
+        <location filename="../QScintilla/Editor.py" line="6731"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6826"/>
+        <location filename="../QScintilla/Editor.py" line="6828"/>
         <source>Alias for file &lt;b&gt;{0}&lt;/b&gt;:</source>
         <translation>Alias para el archivo &lt;b&gt;{0}&lt;/b&gt;:</translation>
     </message>
@@ -9410,22 +9410,22 @@ selección completa.&lt;/li&gt;
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6236"/>
+        <location filename="../QScintilla/Editor.py" line="6238"/>
         <source>&lt;p&gt;The macro file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de macro &lt;b&gt;{0}&lt;/b&gt; ya existe. ¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6087"/>
+        <location filename="../QScintilla/Editor.py" line="6089"/>
         <source>Warning: {0}</source>
         <translation>Advertencia: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6094"/>
+        <location filename="../QScintilla/Editor.py" line="6096"/>
         <source>Error: {0}</source>
         <translation>Error: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6423"/>
+        <location filename="../QScintilla/Editor.py" line="6425"/>
         <source>&lt;br&gt;&lt;b&gt;Warning:&lt;/b&gt; You will lose your changes upon reopening it.</source>
         <translation>&lt;br&gt;&lt;b&gt;Advertencia:&lt;/b&gt; Perderá los cambios si lo reabre.</translation>
     </message>
@@ -9470,27 +9470,27 @@ selección completa.&lt;/li&gt;
         <translation>Cambio anterior</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7619"/>
+        <location filename="../QScintilla/Editor.py" line="7621"/>
         <source>Sort Lines</source>
         <translation>Ordenar Líneas</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7619"/>
+        <location filename="../QScintilla/Editor.py" line="7621"/>
         <source>The selection contains illegal data for a numerical sort.</source>
         <translation>La selección contiene datos ilegales para una ordenación numérica.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6023"/>
+        <location filename="../QScintilla/Editor.py" line="6025"/>
         <source>Warning</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6023"/>
+        <location filename="../QScintilla/Editor.py" line="6025"/>
         <source>No warning messages available.</source>
         <translation>No hay mensajes de advertencia disponibles.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6084"/>
+        <location filename="../QScintilla/Editor.py" line="6086"/>
         <source>Style: {0}</source>
         <translation>Estilo: {0}</translation>
     </message>
@@ -9515,7 +9515,7 @@ selección completa.&lt;/li&gt;
         <translation>Reabrir Con Codificación</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="6417"/>
+        <location filename="../QScintilla/Editor.py" line="6419"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; has been changed while it was opened in eric6. Reread it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;{0}&lt;/b&gt; ha cambiado mientras estaba abierto en eric6. ¿Desea volver a cargarlo?&lt;/p&gt;</translation>
     </message>
@@ -9550,12 +9550,12 @@ selección completa.&lt;/li&gt;
         <translation>El proveedor de call-tips&apos;{0}&apos; ya está registrado. Se ignora la solicitud duplicada.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7706"/>
+        <location filename="../QScintilla/Editor.py" line="7708"/>
         <source>Register Mouse Click Handler</source>
         <translation>Registrar Manejador de Clicks de Ratón</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Editor.py" line="7706"/>
+        <location filename="../QScintilla/Editor.py" line="7708"/>
         <source>A mouse click handler for &quot;{0}&quot; was already registered by &quot;{1}&quot;. Aborting request by &quot;{2}&quot;...</source>
         <translation>Un manejador de clicks de ratón para &quot;{0}&quot; ya está registrado por &quot;{1}&quot;. Abortando solicitud por &quot;{2}&quot;...</translation>
     </message>
@@ -21067,7 +21067,7 @@ URL: {1}</translation>
         <translation>El mensaje &apos;encoding&apos; no contiene ninguna codificación.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="346"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="351"/>
         <source>For message see output dialog.</source>
         <translation>Para mensaje ver el diálogo de output.</translation>
     </message>
@@ -21090,14 +21090,29 @@ URL: {1}</translation>
         <translation>Muestra el mensaje enviado por el servidor Mercurial</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="56"/>
         <source>Input:</source>
         <translation>Input:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="63"/>
         <source>Enter the response to be sent to the Mercurial server</source>
         <translation>Introducir la respuesta a enviar al servidor Mercurial</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="43"/>
+        <source>Select to switch the input field to password mode</source>
+        <translation type="unfinished">Seleccionar para cambiar el campo de input a modo contraseña</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="46"/>
+        <source>&amp;Password Mode</source>
+        <translation type="unfinished">&amp;Modo de contraseña</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClientPromptDialog.ui" line="49"/>
+        <source>Alt+P</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -45763,27 +45778,27 @@ Razón: {1}</translation>
 <context>
     <name>SearchReplaceWidget</name>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="659"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="660"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; no se ha encontrado.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="781"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="782"/>
         <source>Replaced {0} occurrences.</source>
         <translation>Se han reemplazado {0} ocurrencias.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="786"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="787"/>
         <source>Nothing replaced because &apos;{0}&apos; was not found.</source>
         <translation>No se ha reemplazado nada porque &apos;{0}&apos; no se ha encontrado.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="146"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="147"/>
         <source>Find Next</source>
         <translation>Buscar Siguiente</translation>
     </message>
     <message>
-        <location filename="../QScintilla/SearchReplaceWidget.py" line="154"/>
+        <location filename="../QScintilla/SearchReplaceWidget.py" line="155"/>
         <source>Find Prev</source>
         <translation>Buscar Anterior</translation>
     </message>
@@ -52645,1117 +52660,1117 @@ Para cambiar a la versión trunk, déjelo en blanco.&lt;/p&gt;</translation>
 <context>
     <name>SymbolsModel</name>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="44"/>
+        <location filename="../UI/SymbolsWidget.py" line="49"/>
         <source>Code</source>
         <translation>Código</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="45"/>
+        <location filename="../UI/SymbolsWidget.py" line="50"/>
         <source>Char</source>
         <translation>Char</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="46"/>
+        <location filename="../UI/SymbolsWidget.py" line="51"/>
         <source>Hex</source>
         <translation>Hex</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="47"/>
+        <location filename="../UI/SymbolsWidget.py" line="52"/>
         <source>HTML</source>
         <translation>HTML</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="48"/>
+        <location filename="../UI/SymbolsWidget.py" line="53"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="53"/>
+        <location filename="../UI/SymbolsWidget.py" line="58"/>
         <source>Control Characters</source>
         <translation>Caracteres de Control</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="54"/>
+        <location filename="../UI/SymbolsWidget.py" line="59"/>
         <source>Basic Latin</source>
         <translation>Latín Básico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="55"/>
+        <location filename="../UI/SymbolsWidget.py" line="60"/>
         <source>Latin-1 Supplement</source>
         <translation>Latin-1 Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="58"/>
+        <location filename="../UI/SymbolsWidget.py" line="63"/>
         <source>IPA Extensions</source>
         <translation>Extensiones IPA</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="59"/>
+        <location filename="../UI/SymbolsWidget.py" line="64"/>
         <source>Spacing Modifier Letters</source>
         <translation>Letras modificadoras de espacios</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="125"/>
+        <location filename="../UI/SymbolsWidget.py" line="130"/>
         <source>Combining Diacritical Marks</source>
         <translation>Marcas diacríticas de combinación</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="61"/>
+        <location filename="../UI/SymbolsWidget.py" line="66"/>
         <source>Greek and Coptic</source>
         <translation>Griego y Copto</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="62"/>
+        <location filename="../UI/SymbolsWidget.py" line="67"/>
         <source>Cyrillic</source>
         <translation>Cirílico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="63"/>
+        <location filename="../UI/SymbolsWidget.py" line="68"/>
         <source>Cyrillic Supplement</source>
         <translation>Cirílico Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="64"/>
+        <location filename="../UI/SymbolsWidget.py" line="69"/>
         <source>Armenian</source>
         <translation>Armenio</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="65"/>
+        <location filename="../UI/SymbolsWidget.py" line="70"/>
         <source>Hebrew</source>
         <translation>Hebreo</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="66"/>
+        <location filename="../UI/SymbolsWidget.py" line="71"/>
         <source>Arabic</source>
         <translation>Arábico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="67"/>
+        <location filename="../UI/SymbolsWidget.py" line="72"/>
         <source>Syriac</source>
         <translation>Sirio</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="68"/>
+        <location filename="../UI/SymbolsWidget.py" line="73"/>
         <source>Thaana</source>
         <translation>Thaana</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="73"/>
+        <location filename="../UI/SymbolsWidget.py" line="78"/>
         <source>Devanagari</source>
         <translation>Devanagari</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="74"/>
+        <location filename="../UI/SymbolsWidget.py" line="79"/>
         <source>Bengali</source>
         <translation>Bengalí</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="75"/>
+        <location filename="../UI/SymbolsWidget.py" line="80"/>
         <source>Gurmukhi</source>
         <translation>Gurmukhi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="76"/>
+        <location filename="../UI/SymbolsWidget.py" line="81"/>
         <source>Gujarati</source>
         <translation>Gujarati</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="77"/>
+        <location filename="../UI/SymbolsWidget.py" line="82"/>
         <source>Oriya</source>
         <translation>Oriya</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="78"/>
+        <location filename="../UI/SymbolsWidget.py" line="83"/>
         <source>Tamil</source>
         <translation>Tamil</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="79"/>
+        <location filename="../UI/SymbolsWidget.py" line="84"/>
         <source>Telugu</source>
         <translation>Telugu</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="80"/>
+        <location filename="../UI/SymbolsWidget.py" line="85"/>
         <source>Kannada</source>
         <translation>Kannada</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="81"/>
+        <location filename="../UI/SymbolsWidget.py" line="86"/>
         <source>Malayalam</source>
         <translation>Malayalam</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="82"/>
+        <location filename="../UI/SymbolsWidget.py" line="87"/>
         <source>Sinhala</source>
         <translation>Sinhala</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="83"/>
+        <location filename="../UI/SymbolsWidget.py" line="88"/>
         <source>Thai</source>
         <translation>Thailandés</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="84"/>
+        <location filename="../UI/SymbolsWidget.py" line="89"/>
         <source>Lao</source>
         <translation>Lao</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="85"/>
+        <location filename="../UI/SymbolsWidget.py" line="90"/>
         <source>Tibetan</source>
         <translation>Tibetano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="86"/>
+        <location filename="../UI/SymbolsWidget.py" line="91"/>
         <source>Myanmar</source>
         <translation>Myanmar</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="87"/>
+        <location filename="../UI/SymbolsWidget.py" line="92"/>
         <source>Georgian</source>
         <translation>Georgiano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="88"/>
+        <location filename="../UI/SymbolsWidget.py" line="93"/>
         <source>Hangul Jamo</source>
         <translation>Hangul Jamo</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="89"/>
+        <location filename="../UI/SymbolsWidget.py" line="94"/>
         <source>Ethiopic</source>
         <translation>Etíope</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="91"/>
+        <location filename="../UI/SymbolsWidget.py" line="96"/>
         <source>Cherokee</source>
         <translation>Cherokee</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="94"/>
+        <location filename="../UI/SymbolsWidget.py" line="99"/>
         <source>Ogham</source>
         <translation>Ogham</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="95"/>
+        <location filename="../UI/SymbolsWidget.py" line="100"/>
         <source>Runic</source>
         <translation>Runic</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="96"/>
+        <location filename="../UI/SymbolsWidget.py" line="101"/>
         <source>Tagalog</source>
         <translation>Tagalog</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="97"/>
+        <location filename="../UI/SymbolsWidget.py" line="102"/>
         <source>Hanunoo</source>
         <translation>Hanunoo</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="98"/>
+        <location filename="../UI/SymbolsWidget.py" line="103"/>
         <source>Buhid</source>
         <translation>Buhid</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="99"/>
+        <location filename="../UI/SymbolsWidget.py" line="104"/>
         <source>Tagbanwa</source>
         <translation>Tagbanwa</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="100"/>
+        <location filename="../UI/SymbolsWidget.py" line="105"/>
         <source>Khmer</source>
         <translation>Khmer</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="101"/>
+        <location filename="../UI/SymbolsWidget.py" line="106"/>
         <source>Mongolian</source>
         <translation>Mongol</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="104"/>
+        <location filename="../UI/SymbolsWidget.py" line="109"/>
         <source>Limbu</source>
         <translation>Limbu</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="105"/>
+        <location filename="../UI/SymbolsWidget.py" line="110"/>
         <source>Tai Le</source>
         <translation>Tai Le</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="106"/>
+        <location filename="../UI/SymbolsWidget.py" line="111"/>
         <source>Khmer Symbols</source>
         <translation>Símbolos Khmer</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="116"/>
+        <location filename="../UI/SymbolsWidget.py" line="121"/>
         <source>Phonetic Extensions</source>
         <translation>Extensiones Fonéticas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="120"/>
+        <location filename="../UI/SymbolsWidget.py" line="125"/>
         <source>Latin Extended Additional</source>
         <translation>Latín Extendido Adicional</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="121"/>
+        <location filename="../UI/SymbolsWidget.py" line="126"/>
         <source>Greek Extended</source>
         <translation>Griego Extendido</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="122"/>
+        <location filename="../UI/SymbolsWidget.py" line="127"/>
         <source>General Punctuation</source>
         <translation>Puntuación General</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="123"/>
+        <location filename="../UI/SymbolsWidget.py" line="128"/>
         <source>Superscripts and Subscripts</source>
         <translation>Superscripts y Subscripts</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="124"/>
+        <location filename="../UI/SymbolsWidget.py" line="129"/>
         <source>Currency Symbols</source>
         <translation>Símbolos de Moneda</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="126"/>
+        <location filename="../UI/SymbolsWidget.py" line="131"/>
         <source>Letterlike Symbols</source>
         <translation>Símbolos de tipo Letra</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="127"/>
+        <location filename="../UI/SymbolsWidget.py" line="132"/>
         <source>Number Forms</source>
         <translation>Formas de números</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="128"/>
+        <location filename="../UI/SymbolsWidget.py" line="133"/>
         <source>Arcolumns</source>
         <translation>Arcolumns</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="129"/>
+        <location filename="../UI/SymbolsWidget.py" line="134"/>
         <source>Mathematical Operators</source>
         <translation>Operadores Matemáticos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="131"/>
+        <location filename="../UI/SymbolsWidget.py" line="136"/>
         <source>Control Pictures</source>
         <translation>Dibujos de Control</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="132"/>
+        <location filename="../UI/SymbolsWidget.py" line="137"/>
         <source>Optical Character Recognition</source>
         <translation>Reconocimiento Óptico de Caracteres</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="133"/>
+        <location filename="../UI/SymbolsWidget.py" line="138"/>
         <source>Enclosed Alphanumerics</source>
         <translation>Alfanuméricos delimitados</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="134"/>
+        <location filename="../UI/SymbolsWidget.py" line="139"/>
         <source>Box Drawing</source>
         <translation>Dibujos de Cajas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="135"/>
+        <location filename="../UI/SymbolsWidget.py" line="140"/>
         <source>Block Elements</source>
         <translation>Elementos de Bloques</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="138"/>
+        <location filename="../UI/SymbolsWidget.py" line="143"/>
         <source>Dingbats</source>
         <translation>Habilitar </translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="141"/>
+        <location filename="../UI/SymbolsWidget.py" line="146"/>
         <source>Supplement Arcolumns-A</source>
         <translation>Arcolumns-A Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="142"/>
+        <location filename="../UI/SymbolsWidget.py" line="147"/>
         <source>Braille Patterns</source>
         <translation>Patrones Braiile</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="143"/>
+        <location filename="../UI/SymbolsWidget.py" line="148"/>
         <source>Supplement Arcolumns-B</source>
         <translation>Arcolumns-B Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="146"/>
+        <location filename="../UI/SymbolsWidget.py" line="151"/>
         <source>Supplemental Mathematical Operators</source>
         <translation>Operadores Matemáticos Suplementarios</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="158"/>
+        <location filename="../UI/SymbolsWidget.py" line="163"/>
         <source>CJK Radicals Supplement</source>
         <translation>Radicales CJK Suplementarios</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="159"/>
+        <location filename="../UI/SymbolsWidget.py" line="164"/>
         <source>KangXi Radicals</source>
         <translation>Radicales KangXi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="160"/>
+        <location filename="../UI/SymbolsWidget.py" line="165"/>
         <source>Ideographic Description Chars</source>
         <translation>Caracteres de Descripción Ideográfica</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="161"/>
+        <location filename="../UI/SymbolsWidget.py" line="166"/>
         <source>CJK Symbols and Punctuation</source>
         <translation>Símbolos CJK y Puntuación</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="162"/>
+        <location filename="../UI/SymbolsWidget.py" line="167"/>
         <source>Hiragana</source>
         <translation>Hiragana</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="163"/>
+        <location filename="../UI/SymbolsWidget.py" line="168"/>
         <source>Katakana</source>
         <translation>Katakana</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="164"/>
+        <location filename="../UI/SymbolsWidget.py" line="169"/>
         <source>Bopomofo</source>
         <translation>Bopomofo</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="165"/>
+        <location filename="../UI/SymbolsWidget.py" line="170"/>
         <source>Hangul Compatibility Jamo</source>
         <translation>Compatibilidad Hangul Jamo</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="166"/>
+        <location filename="../UI/SymbolsWidget.py" line="171"/>
         <source>Kanbun</source>
         <translation>Kanbun</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="167"/>
+        <location filename="../UI/SymbolsWidget.py" line="172"/>
         <source>Bopomofo Extended</source>
         <translation>Bopomofo Extendido</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="169"/>
+        <location filename="../UI/SymbolsWidget.py" line="174"/>
         <source>Katakana Phonetic Extensions</source>
         <translation>Extensiones Fonéticas Katakana</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="170"/>
+        <location filename="../UI/SymbolsWidget.py" line="175"/>
         <source>Enclosed CJK Letters and Months</source>
         <translation>Meses y Letras CJK Delimitados</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="171"/>
+        <location filename="../UI/SymbolsWidget.py" line="176"/>
         <source>CJK Compatibility</source>
         <translation>Compatibilidad CJK</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="172"/>
+        <location filename="../UI/SymbolsWidget.py" line="177"/>
         <source>CJK Unified Ideogr. Ext. A</source>
         <translation>Ideogr. Unificados CJK Ext. A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="173"/>
+        <location filename="../UI/SymbolsWidget.py" line="178"/>
         <source>Yijing Hexagram Symbols</source>
         <translation>Símbolos de Hexagramas Yijing</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="174"/>
+        <location filename="../UI/SymbolsWidget.py" line="179"/>
         <source>CJK Unified Ideographs</source>
         <translation>Ideografos Unificados CJK</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="175"/>
+        <location filename="../UI/SymbolsWidget.py" line="180"/>
         <source>Yi Syllables</source>
         <translation>Sílabas Yi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="176"/>
+        <location filename="../UI/SymbolsWidget.py" line="181"/>
         <source>Yi Radicals</source>
         <translation>Radicales Yi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="198"/>
+        <location filename="../UI/SymbolsWidget.py" line="203"/>
         <source>Hangul Syllables</source>
         <translation>Sílabas Hangui</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="204"/>
+        <location filename="../UI/SymbolsWidget.py" line="209"/>
         <source>CJK Compatibility Ideographs</source>
         <translation>Ideografos de Compatibilidad CJK</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="205"/>
+        <location filename="../UI/SymbolsWidget.py" line="210"/>
         <source>Alphabetic Presentation Forms</source>
         <translation>Formas de Presentación Alfabética</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="206"/>
+        <location filename="../UI/SymbolsWidget.py" line="211"/>
         <source>Arabic Presentation Forms-A</source>
         <translation>Formas de Presentación Arábica-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="207"/>
+        <location filename="../UI/SymbolsWidget.py" line="212"/>
         <source>Variation Selectors</source>
         <translation>Selectores de Variación</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="209"/>
+        <location filename="../UI/SymbolsWidget.py" line="214"/>
         <source>Combining Half Marks</source>
         <translation>Semimarcas de Combinación</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="210"/>
+        <location filename="../UI/SymbolsWidget.py" line="215"/>
         <source>CJK Compatibility Forms</source>
         <translation>Formas de Compatibilidad CJK</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="211"/>
+        <location filename="../UI/SymbolsWidget.py" line="216"/>
         <source>Small Form Variants</source>
         <translation>Variantes de formas pequeñas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="212"/>
+        <location filename="../UI/SymbolsWidget.py" line="217"/>
         <source>Arabic Presentation Forms-B</source>
         <translation>Formas de Presentación Arábica-B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="213"/>
+        <location filename="../UI/SymbolsWidget.py" line="218"/>
         <source>Half- and Fullwidth Forms</source>
         <translation>Formas de anchura media y completa</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="214"/>
+        <location filename="../UI/SymbolsWidget.py" line="219"/>
         <source>Specials</source>
         <translation>Especiales</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="130"/>
+        <location filename="../UI/SymbolsWidget.py" line="135"/>
         <source>Miscellaneous Technical</source>
         <translation>Miscelánea Técnica</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="136"/>
+        <location filename="../UI/SymbolsWidget.py" line="141"/>
         <source>Geometric Shapes</source>
         <translation>Formas Geométricas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="137"/>
+        <location filename="../UI/SymbolsWidget.py" line="142"/>
         <source>Miscellaneous Symbols</source>
         <translation>Miscelánea de Símbolos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="139"/>
+        <location filename="../UI/SymbolsWidget.py" line="144"/>
         <source>Miscellaneous Mathematical Symbols-A</source>
         <translation>Miscelánea de Símbolos Matemáticos-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="144"/>
+        <location filename="../UI/SymbolsWidget.py" line="149"/>
         <source>Miscellaneous Mathematical Symbols-B</source>
         <translation>Miscelánea de Símbolos Matemáticos-B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="148"/>
+        <location filename="../UI/SymbolsWidget.py" line="153"/>
         <source>Miscellaneous Symbols and Arcolumns</source>
         <translation>Miscelánea de Símbolos y Arcolumns</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="200"/>
+        <location filename="../UI/SymbolsWidget.py" line="205"/>
         <source>High Surrogates</source>
         <translation>Subrogados Altos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="201"/>
+        <location filename="../UI/SymbolsWidget.py" line="206"/>
         <source>High Private Use Surrogates</source>
         <translation>Subrogados Altos de Uso Privado</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="202"/>
+        <location filename="../UI/SymbolsWidget.py" line="207"/>
         <source>Low Surrogates</source>
         <translation>Subrogados Bajos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="203"/>
+        <location filename="../UI/SymbolsWidget.py" line="208"/>
         <source>Private Use</source>
         <translation>Uso Privado</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Old Italic</source>
         <translation>Cursiva Antigua</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Gothic</source>
         <translation>Gótico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Deseret</source>
         <translation>Deseret</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Byzantine Musical Symbols</source>
         <translation>Símbolos Musicales Bizantinos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Musical Symbols</source>
         <translation>Símbolos Musicales</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Mathematical Alphanumeric Symbols</source>
         <translation>Símbolos Matemáticos Alfanuméricos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>CJK Unified Ideogr. Ext. B</source>
         <translation>Ideogr. Unificados CJK Ext. B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>CJK Compatapility Ideogr. Suppl.</source>
         <translation>Compatibilidad Ideogr. CJK Supl.</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Tags</source>
         <translation>Etiquetas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="56"/>
+        <location filename="../UI/SymbolsWidget.py" line="61"/>
         <source>Latin Extended-A</source>
         <translation>Latín Extendido A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="57"/>
+        <location filename="../UI/SymbolsWidget.py" line="62"/>
         <source>Latin Extended-B</source>
         <translation>Latín Extendido B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="70"/>
+        <location filename="../UI/SymbolsWidget.py" line="75"/>
         <source>Samaritan</source>
         <translation>Samaritano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="71"/>
+        <location filename="../UI/SymbolsWidget.py" line="76"/>
         <source>Mandaic</source>
         <translation>Mandaico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="72"/>
+        <location filename="../UI/SymbolsWidget.py" line="77"/>
         <source>Arabic Extended-A</source>
         <translation>Arábico Extendido-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="90"/>
+        <location filename="../UI/SymbolsWidget.py" line="95"/>
         <source>Ethiopic Supplement</source>
         <translation>Etíope Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="92"/>
+        <location filename="../UI/SymbolsWidget.py" line="97"/>
         <source>Unified Canadian Aboriginal Syllabics</source>
         <translation>Silábicos Unificados Aborigen Canadiense</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="102"/>
+        <location filename="../UI/SymbolsWidget.py" line="107"/>
         <source>Unified Canadian Aboriginal Syllabics Extended</source>
         <translation>Silábicos Unificados Aborigen Canadiense Extendido</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="107"/>
+        <location filename="../UI/SymbolsWidget.py" line="112"/>
         <source>Buginese</source>
         <translation>Buginés</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="108"/>
+        <location filename="../UI/SymbolsWidget.py" line="113"/>
         <source>Tai Tham</source>
         <translation>Tai Tham</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="109"/>
+        <location filename="../UI/SymbolsWidget.py" line="114"/>
         <source>Balinese</source>
         <translation>Balinés</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="110"/>
+        <location filename="../UI/SymbolsWidget.py" line="115"/>
         <source>Sundanese</source>
         <translation>Sondanés</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="111"/>
+        <location filename="../UI/SymbolsWidget.py" line="116"/>
         <source>Batak</source>
         <translation>Batak</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="112"/>
+        <location filename="../UI/SymbolsWidget.py" line="117"/>
         <source>Lepcha</source>
         <translation>Lepcha</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="113"/>
+        <location filename="../UI/SymbolsWidget.py" line="118"/>
         <source>Ol Chiki</source>
         <translation>Ol Chiki</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="114"/>
+        <location filename="../UI/SymbolsWidget.py" line="119"/>
         <source>Sundanese Supplement</source>
         <translation>Sondanés Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="115"/>
+        <location filename="../UI/SymbolsWidget.py" line="120"/>
         <source>Vedic Extensions</source>
         <translation>Extensiones Védicas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="117"/>
+        <location filename="../UI/SymbolsWidget.py" line="122"/>
         <source>Phonetic Extensions Supplement</source>
         <translation>Extensiones Fonéticas Suplementarias</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="118"/>
+        <location filename="../UI/SymbolsWidget.py" line="123"/>
         <source>Combining Diacritical Marks Supplement</source>
         <translation>Marcas Diacríticas de Combinación Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="150"/>
+        <location filename="../UI/SymbolsWidget.py" line="155"/>
         <source>Glagolitic</source>
         <translation>Glagolético</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="151"/>
+        <location filename="../UI/SymbolsWidget.py" line="156"/>
         <source>Latin Extended-C</source>
         <translation>Latín Extendido C</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="152"/>
+        <location filename="../UI/SymbolsWidget.py" line="157"/>
         <source>Coptic</source>
         <translation>Copto</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="153"/>
+        <location filename="../UI/SymbolsWidget.py" line="158"/>
         <source>Georgian Supplement</source>
         <translation>Georgiano Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="154"/>
+        <location filename="../UI/SymbolsWidget.py" line="159"/>
         <source>Tifinagh</source>
         <translation>Tifinagh</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="155"/>
+        <location filename="../UI/SymbolsWidget.py" line="160"/>
         <source>Ethiopic Extended</source>
         <translation>Etíope Extendido</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="156"/>
+        <location filename="../UI/SymbolsWidget.py" line="161"/>
         <source>Cyrillic Extended-A</source>
         <translation>Cirílico Extendido-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="157"/>
+        <location filename="../UI/SymbolsWidget.py" line="162"/>
         <source>Supplemental Punctuation</source>
         <translation>Puntuación Suplementaria</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="168"/>
+        <location filename="../UI/SymbolsWidget.py" line="173"/>
         <source>CJK Strokes</source>
         <translation>Trazos CJK</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="177"/>
+        <location filename="../UI/SymbolsWidget.py" line="182"/>
         <source>Lisu</source>
         <translation>Lisu</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="178"/>
+        <location filename="../UI/SymbolsWidget.py" line="183"/>
         <source>Vai</source>
         <translation>Vai</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="179"/>
+        <location filename="../UI/SymbolsWidget.py" line="184"/>
         <source>Cyrillic Extended-B</source>
         <translation>Cirílico Extendido-B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="180"/>
+        <location filename="../UI/SymbolsWidget.py" line="185"/>
         <source>Bamum</source>
         <translation>Bamum</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="181"/>
+        <location filename="../UI/SymbolsWidget.py" line="186"/>
         <source>Modifier Tone Letters</source>
         <translation>Letras Modificadoras de Tono</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="182"/>
+        <location filename="../UI/SymbolsWidget.py" line="187"/>
         <source>Latin Extended-D</source>
         <translation>Latín Extendido D</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="183"/>
+        <location filename="../UI/SymbolsWidget.py" line="188"/>
         <source>Syloti Nagri</source>
         <translation>Syloti Nagri</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="184"/>
+        <location filename="../UI/SymbolsWidget.py" line="189"/>
         <source>Common Indic Number Forms</source>
         <translation>Formas Numéricas Comunes Índicas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="185"/>
+        <location filename="../UI/SymbolsWidget.py" line="190"/>
         <source>Phags-pa</source>
         <translation>Phags-pa</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="186"/>
+        <location filename="../UI/SymbolsWidget.py" line="191"/>
         <source>Saurashtra</source>
         <translation>Saurashtra</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="187"/>
+        <location filename="../UI/SymbolsWidget.py" line="192"/>
         <source>Devanagari Extended</source>
         <translation>Devanagari Extendido</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="188"/>
+        <location filename="../UI/SymbolsWidget.py" line="193"/>
         <source>Kayah Li</source>
         <translation>Kayah Li</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="189"/>
+        <location filename="../UI/SymbolsWidget.py" line="194"/>
         <source>Rejang</source>
         <translation>Rejang</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="190"/>
+        <location filename="../UI/SymbolsWidget.py" line="195"/>
         <source>Hangul Jamo Extended-A</source>
         <translation>Hangul Jamo Extendido-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="191"/>
+        <location filename="../UI/SymbolsWidget.py" line="196"/>
         <source>Javanese</source>
         <translation>Javanés</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="192"/>
+        <location filename="../UI/SymbolsWidget.py" line="197"/>
         <source>Cham</source>
         <translation>Cham</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="193"/>
+        <location filename="../UI/SymbolsWidget.py" line="198"/>
         <source>Myanmar Extended-A</source>
         <translation>Birmano Extendido-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="194"/>
+        <location filename="../UI/SymbolsWidget.py" line="199"/>
         <source>Tai Viet</source>
         <translation>Tai Viet</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="195"/>
+        <location filename="../UI/SymbolsWidget.py" line="200"/>
         <source>Meetei Mayek Extensions</source>
         <translation>Extensiones Meetei Mayek</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="196"/>
+        <location filename="../UI/SymbolsWidget.py" line="201"/>
         <source>Ethiopic Extended-A</source>
         <translation>Etíope Extendido-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="197"/>
+        <location filename="../UI/SymbolsWidget.py" line="202"/>
         <source>Meetei Mayek</source>
         <translation>Meetei Mayek</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="199"/>
+        <location filename="../UI/SymbolsWidget.py" line="204"/>
         <source>Hangul Jamo Extended-B</source>
         <translation>Hangul Jamo Extendido-B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="208"/>
+        <location filename="../UI/SymbolsWidget.py" line="213"/>
         <source>Vertical Forms</source>
         <translation>Formas Verticales</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Linear B Syllabary</source>
         <translation>Linear B Sílabas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Linear B Ideograms</source>
         <translation>Linear B Ideogramas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Aegean Numbers</source>
         <translation>Números Egeos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Ancient Greek Numbers</source>
         <translation>Antiguos Números Griegos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Ancient Symbols</source>
         <translation>Símbolos Antiguos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Phaistos Disc</source>
         <translation>Disco de Phaistos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Lycian</source>
         <translation>Liciano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Carian</source>
         <translation>Cariano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Ugaritic</source>
         <translation>Ugarítico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Old Persian</source>
         <translation>Viejo Persa</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Shavian</source>
         <translation>Shaviano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Osmanya</source>
         <translation>Osmanya</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Cypriot Syllabary</source>
         <translation>Sílabas Chipriotas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Imperial Aramaic</source>
         <translation>Arameo Imperial</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Phoenician</source>
         <translation>Fenicio</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Lydian</source>
         <translation>Lidiano</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Meroitic Hieroglyphs</source>
         <translation>Jeroglifos Meroíticos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Meroitic Cursive</source>
         <translation>Cursiva Meroítica</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Kharoshthi</source>
         <translation>Kharoshthi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Old South Arabian</source>
         <translation>Viejo Árabe del Sur</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Avestan</source>
         <translation>Avéstico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Inscriptional Parthian</source>
         <translation>Inscripciones Partas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Inscriptional Pahlavi</source>
         <translation>Inscripciones Pahlavi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Old Turkic</source>
         <translation>Viejo Túrquico</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Rumi Numeral Symbols</source>
         <translation>Símbolos Numéricos Rumi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Brahmi</source>
         <translation>Brahmi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Kaithi</source>
         <translation>Kaithi</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Sora Sompeng</source>
         <translation>Sora Sompeng</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Chakma</source>
         <translation>Chakma</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Sharada</source>
         <translation>Sharada</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Takri</source>
         <translation>Takri</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Cuneiform</source>
         <translation>Cuneiforme</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Cuneiform Numbers and Punctuation</source>
         <translation>Números y Puntuación Cuneiformes</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Egyptian Hieroglyphs</source>
         <translation>Jeroglifos Egipcios</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Bamum Supplement</source>
         <translation>Bamum Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Miao</source>
         <translation>Miao</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Kana Supplement</source>
         <translation>Kana Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Ancient Greek Musical Notation</source>
         <translation>Antigua Notación Musical Griega</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Tai Xuan Jing Symbols</source>
         <translation>Símbolos Tai Xuan Jing</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Counting Rod Numerals</source>
         <translation>Números de Conteo Rod</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Arabic Mathematical Alphabetic Symbols</source>
         <translation>Símbolos Alfabéticos Matemáticos Arábicos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Mahjong Tiles</source>
         <translation>Fichas Mahjong</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Domino Tiles</source>
         <translation>Fichas Dominó</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Playing Cards</source>
         <translation>Cartas</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Enclosed Alphanumeric Supplement</source>
         <translation>Alfanuméricos Delimitados Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Enclosed Ideographic Supplement</source>
         <translation>Ideográficos Delimitados Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Miscellaneous Symbols And Pictographs</source>
         <translation>Pictografos y Símbolos Misceláneos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Emoticons</source>
         <translation>Emoticonos</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Transport And Map Symbols</source>
         <translation>Símbolos de Mapas y Transportes</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Alchemical Symbols</source>
         <translation>Símbolos de Alquimia</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>CJK Unified Ideographs Extension C</source>
         <translation>Ideografos Unificados CJK Extensión C</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>CJK Unified Ideographs Extension D</source>
         <translation>Ideografos Unificados CJK Extensión D</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Variation Selectors Supplement</source>
         <translation>Selectores de Variación Suplementario</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Supplementary Private Use Area-A</source>
         <translation>Uso Privado Suplementario Área-A</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="217"/>
+        <location filename="../UI/SymbolsWidget.py" line="222"/>
         <source>Supplementary Private Use Area-B</source>
         <translation>Uso Privado Suplementario Área-B</translation>
     </message>
     <message>
-        <location filename="../UI/SymbolsWidget.py" line="69"/>
+        <location filename="../UI/SymbolsWidget.py" line="74"/>
         <source>N&apos;Ko</source>
         <translation>N&apos;Ko</translation>
     </message>

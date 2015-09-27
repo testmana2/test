@@ -63,8 +63,14 @@ QDialog, Ui_HgClientPromptDialog
 <td><a href="#HgClientPromptDialog.getInput">getInput</a></td>
 <td>Public method to get the user input.</td>
 </tr><tr>
+<td><a href="#HgClientPromptDialog.isPassword">isPassword</a></td>
+<td>Public method to check, if the input was a password.</td>
+</tr><tr>
 <td><a href="#HgClientPromptDialog.on_inputEdit_textChanged">on_inputEdit_textChanged</a></td>
 <td>Private slot to handle changes of the user input.</td>
+</tr><tr>
+<td><a href="#HgClientPromptDialog.on_passwordCheckBox_toggled">on_passwordCheckBox_toggled</a></td>
+<td>Private slot to handle the password checkbox toggled.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -97,6 +103,21 @@ reference to the parent widget (QWidget)
 <dd>
 user input (string)
 </dd>
+</dl><a NAME="HgClientPromptDialog.isPassword" ID="HgClientPromptDialog.isPassword"></a>
+<h4>HgClientPromptDialog.isPassword</h4>
+<b>isPassword</b>(<i></i>)
+<p>
+        Public method to check, if the input was a password.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating a password
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
 </dl><a NAME="HgClientPromptDialog.on_inputEdit_textChanged" ID="HgClientPromptDialog.on_inputEdit_textChanged"></a>
 <h4>HgClientPromptDialog.on_inputEdit_textChanged</h4>
 <b>on_inputEdit_textChanged</b>(<i>txt</i>)
@@ -106,6 +127,16 @@ user input (string)
 <dt><i>txt</i></dt>
 <dd>
 text entered by the user (string)
+</dd>
+</dl><a NAME="HgClientPromptDialog.on_passwordCheckBox_toggled" ID="HgClientPromptDialog.on_passwordCheckBox_toggled"></a>
+<h4>HgClientPromptDialog.on_passwordCheckBox_toggled</h4>
+<b>on_passwordCheckBox_toggled</b>(<i>isOn</i>)
+<p>
+        Private slot to handle the password checkbox toggled.
+</p><dl>
+<dt><i>isOn</i></dt>
+<dd>
+flag indicating the status of the check box (boolean)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

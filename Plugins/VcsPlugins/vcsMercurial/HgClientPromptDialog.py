@@ -11,7 +11,7 @@ from __future__ import unicode_literals
 
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtGui import QTextCursor
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QLineEdit
 
 from .Ui_HgClientPromptDialog import Ui_HgClientPromptDialog
 
@@ -50,6 +50,18 @@ class HgClientPromptDialog(QDialog, Ui_HgClientPromptDialog):
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(bool(txt))
     
+    @pyqtSlot(bool)
+    def on_passwordCheckBox_toggled(self, isOn):
+        """
+        Private slot to handle the password checkbox toggled.
+        
+        @param isOn flag indicating the status of the check box (boolean)
+        """
+        if isOn:
+            self.inputEdit.setEchoMode(QLineEdit.Password)
+        else:
+            self.inputEdit.setEchoMode(QLineEdit.Normal)
+    
     def getInput(self):
         """
         Public method to get the user input.
@@ -57,3 +69,12 @@ class HgClientPromptDialog(QDialog, Ui_HgClientPromptDialog):
         @return user input (string)
         """
         return self.inputEdit.text()
+    
+    def isPassword(self):
+        """
+        Public method to check, if the input was a password.
+        
+        @return flag indicating a password
+        @rtype bool
+        """
+        return self.passwordCheckBox.isChecked()
