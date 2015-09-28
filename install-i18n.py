@@ -16,8 +16,6 @@ import os
 import shutil
 import glob
 
-from PyQt5.QtCore import QDir
-
 try:
     from eric6config import getConfig
 except ImportError:
@@ -36,14 +34,11 @@ def getConfigDir():
     else:
         cdn = ".eric6"
         
-    hp = QDir.homePath()
-    dn = QDir(hp)
-    dn.mkdir(cdn)
-    hp += "/" + cdn
-    try:
-        return QDir.toNativeSeparators(hp)
-    except AttributeError:
-        return QDir.toNativeSeparators(hp)
+    hp = os.path.expanduser("~")
+    hp = os.path.join(hp, cdn)
+    if not os.path.exists(hp):
+        os.mkdir(hp)
+    return hp
     
 # Define the globals.
 progName = None
