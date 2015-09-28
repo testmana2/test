@@ -9,7 +9,7 @@ Module implementing a prompt dialog for the Mercurial command server.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QLineEdit
 
@@ -40,6 +40,8 @@ class HgClientPromptDialog(QDialog, Ui_HgClientPromptDialog):
         tc.movePosition(QTextCursor.End)
         self.messageEdit.setTextCursor(tc)
         self.messageEdit.ensureCursorVisible()
+        
+        self.inputEdit.setFocus(Qt.OtherFocusReason)
     
     @pyqtSlot(str)
     def on_inputEdit_textChanged(self, txt):
