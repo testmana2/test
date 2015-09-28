@@ -1742,9 +1742,8 @@ class HgLogBrowserDialog(QWidget, Ui_HgLogBrowserDialog):
         """
         Private slot to pull changes from a remote repository.
         """
-        res = self.vcs.hgPull(self.repodir)
-        if res:
-            self.on_refreshButton_clicked()
+        self.vcs.hgPull(self.repodir)
+        self.on_refreshButton_clicked()
     
     @pyqtSlot()
     def __pushActTriggered(self):
