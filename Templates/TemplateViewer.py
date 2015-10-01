@@ -401,7 +401,7 @@ class TemplateViewer(QTreeWidget):
         self.__menu.addAction(self.tr("Edit..."), self.__edit)
         self.__menu.addAction(self.tr("Remove"), self.__remove)
         self.__menu.addSeparator()
-        self.__menu.addAction(self.tr("Save"), self.save)
+        self.saveAct = self.__menu.addAction(self.tr("Save"), self.save)
         self.__menu.addAction(self.tr("Import..."), self.__import)
         self.__menu.addAction(self.tr("Export..."), self.__export)
         self.__menu.addAction(self.tr("Reload"), self.__reload)
@@ -414,9 +414,10 @@ class TemplateViewer(QTreeWidget):
         self.__backMenu = QMenu(self)
         self.__backMenu.addAction(self.tr("Add group..."), self.__addGroup)
         self.__backMenu.addSeparator()
-        self.__backMenu.addAction(self.tr("Save"), self.save)
+        self.bmSaveAct = self.__backMenu.addAction(self.tr("Save"), self.save)
         self.__backMenu.addAction(self.tr("Import..."), self.__import)
-        self.__backMenu.addAction(self.tr("Export..."), self.__export)
+        self.bmExportAct = self.__backMenu.addAction(
+            self.tr("Export..."), self.__export)
         self.__backMenu.addAction(self.tr("Reload"), self.__reload)
         self.__backMenu.addSeparator()
         self.__backMenu.addAction(
@@ -463,10 +464,14 @@ class TemplateViewer(QTreeWidget):
         itm = self.itemAt(coord)
         coord = self.mapToGlobal(coord)
         if itm is None:
+            self.bmSaveAct.setEnabled(self.__dirty)
+            self.bmExportAct.setEnabled(self.topLevelItemCount() != 0)
             self.__backMenu.popup(coord)
         else:
             self.applyAct.setEnabled(
-                self.viewmanager.activeWindow() is not None)
+                self.viewmanager.activeWindow() is not None and
+                isinstance(itm, TemplateEntry))
+            self.saveAct.setEnabled(self.__dirty)
             self.__menu.popup(coord)
     
     def __addEntry(self):
