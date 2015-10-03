@@ -203,11 +203,7 @@ class Shell(QsciScintillaCompat):
         
         # Create a little language context menu
         self.lmenu = QMenu(self.tr('Start'))
-        self.clientLanguages = self.dbs.getSupportedLanguages(shellOnly=True)
-        self.clientLanguages.sort()
-        for language in self.clientLanguages:
-            act = self.lmenu.addAction(language)
-            act.setData(language)
+        self.lmenu.aboutToShow.connect(self.__showLanguageMenu)
         self.lmenu.triggered.connect(self.__startDebugClient)
         
         # Create the history context menu
@@ -281,6 +277,16 @@ class Shell(QsciScintillaCompat):
         }
         
         self.grabGesture(Qt.PinchGesture)
+        
+    def __showLanguageMenu(self):
+        """
+        Private slot to prepare the language submenu.
+        """
+        self.lmenu.clear()
+        clientLanguages = self.dbs.getSupportedLanguages(shellOnly=True)
+        for language in sorted(clientLanguages):
+            act = self.lmenu.addAction(language)
+            act.setData(language)
         
     def __resizeLinenoMargin(self):
         """
@@ -1371,10 +1377,12 @@ class Shell(QsciScintillaCompat):
                     if len(cmdList) < 2:
                         self.dbs.startClient(False)  # same as reset
                     else:
+                        clientLanguages = self.dbs.getSupportedLanguages(
+                            shellOnly=True)
                         language = cmdList[1]
-                        if language not in self.clientLanguages:
+                        if language not in clientLanguages:
                             language = cmdList[1].capitalize()
-                            if language not in self.clientLanguages:
+                            if language not in clientLanguages:
                                 language = ""
                         if language:
                             self.dbs.startClient(False, language)
@@ -1388,7 +1396,8 @@ class Shell(QsciScintillaCompat):
                         return
                     cmd = ''
             elif cmd == 'languages':
-                s = '{0}\n'.format(', '.join(self.clientLanguages))
+                s = '{0}\n'.format(', '.join(sorted(
+                    self.dbs.getSupportedLanguages(shellOnly=True))))
                 self.__write(s)
                 self.__clientStatement(False)
                 return
@@ -1568,14 +1577,6 @@ class Shell(QsciScintillaCompat):
                 self.dbs.clientProcessStdout.disconnect(self.__writeStdOut)
                 self.dbs.clientProcessStderr.disconnect(self.__writeStdErr)
             self.__showStdOutErr = showStdOutErr
-        
-        # recreate the languages menu
-        self.lmenu.clear()
-        self.clientLanguages = self.dbs.getSupportedLanguages(shellOnly=True)
-        self.clientLanguages.sort()
-        for language in self.clientLanguages:
-            act = self.lmenu.addAction(language)
-            act.setData(language)
         
     def __showCompletions(self, completions, text):
         """
