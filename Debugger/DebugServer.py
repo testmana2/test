@@ -33,7 +33,7 @@ import Utilities
 DebuggerInterfaces = [
     "DebuggerInterfacePython",
     "DebuggerInterfacePython3",
-    "DebuggerInterfaceRuby",
+##    "DebuggerInterfaceRuby",
     "DebuggerInterfaceNone",
 ]
 
@@ -331,7 +331,7 @@ class DebugServer(QTcpServer):
         """
         languages = list(self.__clientCapabilities.keys())
         try:
-            del languages[languages.index("None")]
+            languages.remove("None")
         except ValueError:
             pass    # it is not in the list
         
