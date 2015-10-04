@@ -58,7 +58,7 @@ def canonical_filename(filename):
             for path in [os.curdir] + sys.path:
                 if path is None:
                     continue
-                f = os.path.join(path, filename)
+                f = path + os.sep + filename
                 if os.path.exists(f):
                     filename = f
                     break
@@ -114,7 +114,7 @@ if env.WINDOWS:
                 if os.path.normcase(f) == normtail:
                     tail = f
                     break
-            actpath = os.path.join(head, tail)
+            actpath = head.strip(os.sep) + os.sep + tail
         _ACTUAL_PATH_CACHE[path] = actpath
         return actpath
 
@@ -349,4 +349,7 @@ def find_python_files(dirname):
             # files: Must end with .py or .pyw, and must not have certain funny
             # characters that probably mean they are editor junk.
             if re.match(r"^[^.#~!$@%^&*()+=,]+\.pyw?$", filename):
-                yield os.path.join(dirpath, filename)
+                yield dirpath + os.sep + filename
+
+#
+# eflag: FileType = Python2

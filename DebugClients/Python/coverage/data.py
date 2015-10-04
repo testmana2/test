@@ -11,6 +11,7 @@ import os.path
 import random
 import re
 import socket
+import sys
 
 from coverage import env
 from coverage.backward import iitems, string_class
@@ -269,10 +270,15 @@ class CoverageData(object):
         self._lines = self._arcs = None
 
         if 'lines' in data:
-            self._lines = data['lines']
+            self._lines = dict(
+                (fname.encode(sys.getfilesystemencoding()), linenos)
+                for fname, linenos in iitems(data['lines'])
+            )
+
         if 'arcs' in data:
             self._arcs = dict(
-                (fname, [tuple(pair) for pair in arcs])
+                (fname.encode(sys.getfilesystemencoding()),
+                    [tuple(pair) for pair in arcs])
                 for fname, arcs in iitems(data['arcs'])
             )
         self._file_tracers = data.get('file_tracers', {})
@@ -284,15 +290,8 @@ class CoverageData(object):
         """Read the coverage data from `filename` into this object."""
         if self._debug and self._debug.should('dataio'):
             self._debug.write("Reading data from %r" % (filename,))
-        try:
-            with self._open_for_reading(filename) as f:
-                self.read_fileobj(f)
-        except Exception as exc:
-            raise CoverageException(
-                "Couldn't read data from '%s': %s: %s" % (
-                    filename, exc.__class__.__name__, exc,
-                )
-            )
+        with self._open_for_reading(filename) as f:
+            self.read_fileobj(f)
 
     _GO_AWAY = "!coverage.py: This is a private format, don't read it directly!"
 
@@ -434,10 +433,17 @@ class CoverageData(object):
         file_data = {}
 
         if self._has_arcs():
-            file_data['arcs'] = self._arcs
+            file_data['arcs'] = dict(
+                (fname.decode(sys.getfilesystemencoding()),
+                    [tuple(pair) for pair in self._arcs])
+                for fname, arcs in iitems(data['arcs'])
+            )
 
         if self._has_lines():
-            file_data['lines'] = self._lines
+            file_data['lines'] = dict(
+                (fname.decode(sys.getfilesystemencoding()), linenos)
+                for fname, linenos in iitems(self._lines)
+            )
 
         if self._file_tracers:
             file_data['file_tracers'] = self._file_tracers
@@ -750,3 +756,6 @@ def debug_main(args):
 if __name__ == '__main__':
     import sys
     debug_main(sys.argv[1:])
+
+#
+# eflag: FileType = Python2
