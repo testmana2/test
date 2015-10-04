@@ -647,7 +647,6 @@ class DebugClientBase(object):
                     auto_data=True,
                     data_file="{0}.coverage".format(
                         os.path.splitext(sys.argv[0])[0]))
-                self.cover.use_cache(True)
                 
                 if int(erase):
                     self.cover.erase()
@@ -895,7 +894,6 @@ class DebugClientBase(object):
                         auto_data=True,
                         data_file="{0}.coverage".format(
                             os.path.splitext(covname)[0]))
-                    self.cover.use_cache(True)
                     if int(erase):
                         self.cover.erase()
                 else:

@@ -5515,12 +5515,8 @@ class Editor(QsciScintillaCompat):
         
         fn = self.__getCodeCoverageFile()
         if fn:
-            if sys.version_info[0] == 2:
-                from DebugClients.Python.coverage import coverage
-            else:
-                from DebugClients.Python3.coverage import coverage
+            from coverage import coverage
             cover = coverage(data_file=fn)
-            cover.use_cache(True)
             cover.load()
             missing = cover.analysis2(self.fileName)[3]
             if missing:

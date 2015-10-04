@@ -362,7 +362,6 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 cover = coverage(
                     data_file="{0}.coverage".format(
                         os.path.splitext(mainScript)[0]))
-                cover.use_cache(True)
                 if self.coverageEraseCheckBox.isChecked():
                     cover.erase()
             else:

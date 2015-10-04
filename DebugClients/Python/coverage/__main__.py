@@ -1,7 +1,8 @@
-"""Coverage.py's main entry point."""
-import sys
-from .cmdline import main
-sys.exit(main())
+# Licensed under the Apache License: http://www.apache.org/licenses/LICENSE-2.0
+# For details: https://bitbucket.org/ned/coveragepy/src/default/NOTICE.txt
 
-#
-# eflag: FileType = Python2
+"""Coverage.py's main entry point."""
+
+import sys
+from coverage.cmdline import main
+sys.exit(main())

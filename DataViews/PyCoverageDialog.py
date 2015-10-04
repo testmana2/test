@@ -10,7 +10,6 @@ Module implementing a Python code coverage dialog.
 from __future__ import unicode_literals
 
 import os
-import sys
 
 from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMenu, QHeaderView, \
@@ -23,12 +22,8 @@ from E5Gui.E5ProgressDialog import E5ProgressDialog
 from .Ui_PyCoverageDialog import Ui_PyCoverageDialog
 
 import Utilities
-if sys.version_info[0] == 2:
-    from DebugClients.Python.coverage import coverage
-    from DebugClients.Python.coverage.misc import CoverageException
-else:
-    from DebugClients.Python3.coverage import coverage
-    from DebugClients.Python3.coverage.misc import CoverageException
+from coverage import coverage
+from coverage.misc import CoverageException
 
 
 class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
@@ -174,7 +169,6 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         files.sort()
         
         cover = coverage(data_file=self.cfn)
-        cover.use_cache(True)
         cover.load()
         
         # set the exclude pattern
@@ -322,7 +316,6 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         fn = itm.text(0)
         
         cover = coverage(data_file=self.cfn)
-        cover.use_cache(True)
         cover.exclude(self.excludeList[0])
         cover.load()
         cover.annotate([fn], None, True)
@@ -345,7 +338,6 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
             files.append(itm.text(0))
         
         cover = coverage(data_file=self.cfn)
-        cover.use_cache(True)
         cover.exclude(self.excludeList[0])
         cover.load()
         
@@ -374,7 +366,6 @@ class PyCoverageDialog(QDialog, Ui_PyCoverageDialog):
         stored in the .coverage file.
         """
         cover = coverage(data_file=self.cfn)
-        cover.use_cache(True)
         cover.load()
         cover.erase()
         
