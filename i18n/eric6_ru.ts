@@ -2913,6 +2913,11 @@ Reason: {1}</source>
         <source>%v/%m Files</source>
         <translation>%v/%m Файлы</translation>
     </message>
+    <message>
+        <location filename="../DataViews/CodeMetricsDialog.py" line="201"/>
+        <source>comment lines</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CodeStyleCheckerDialog</name>
@@ -4910,31 +4915,31 @@ to display the configuration page.</source>
         <translation>изменено</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="684"/>
+        <location filename="../Debugger/DebugServer.py" line="701"/>
         <source>Connection from illegal host</source>
         <translation>соединение с запрещённого хоста</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1306"/>
+        <location filename="../Debugger/DebugServer.py" line="1323"/>
         <source>
 Not connected
 </source>
         <translation>Нет соединения</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="684"/>
+        <location filename="../Debugger/DebugServer.py" line="701"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Попытка соединения с недопустимого компьютора &lt;b&gt;{0}&lt;/b&gt;. Разрешить соединение?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1486"/>
+        <location filename="../Debugger/DebugServer.py" line="1503"/>
         <source>Passive debug connection received
 </source>
         <translation>Получен запрос на соединение для пассивной отладки
 </translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1500"/>
+        <location filename="../Debugger/DebugServer.py" line="1517"/>
         <source>Passive debug connection closed
 </source>
         <translation>Соединение для пассивной отладки закрыто
@@ -22611,12 +22616,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Закладки&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1875"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1874"/>
         <source>Find Commit</source>
         <translation>Найти фиксацию</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1875"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1874"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; не найдено.</translation>
     </message>
@@ -46227,42 +46232,42 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation>Пассивная &gt;&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="224"/>
+        <location filename="../QScintilla/Shell.py" line="220"/>
         <source>Copy</source>
         <translation>Копировать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="225"/>
+        <location filename="../QScintilla/Shell.py" line="221"/>
         <source>Paste</source>
         <translation>Вставить</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="230"/>
+        <location filename="../QScintilla/Shell.py" line="226"/>
         <source>Clear</source>
         <translation>Очистить</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="231"/>
+        <location filename="../QScintilla/Shell.py" line="227"/>
         <source>Reset</source>
         <translation>Перезапустить</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="232"/>
+        <location filename="../QScintilla/Shell.py" line="228"/>
         <source>Reset and Clear</source>
         <translation>Переинициализировать и очистить</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1683"/>
+        <location filename="../QScintilla/Shell.py" line="1684"/>
         <source>Drop Error</source>
         <translation>Ошибка Drag&amp;&amp;Drop</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="637"/>
+        <location filename="../QScintilla/Shell.py" line="643"/>
         <source>No.</source>
         <translation>Нет.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1683"/>
+        <location filename="../QScintilla/Shell.py" line="1684"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; не является файлом&lt;/p&gt;</translation>
     </message>
@@ -46272,7 +46277,7 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
         <translation>Начало</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="639"/>
+        <location filename="../QScintilla/Shell.py" line="645"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} в {1}, {2}</translation>
     </message>
@@ -46286,75 +46291,75 @@ and so on.&lt;/td&gt;&lt;/tr&gt;
 &lt;p&gt;В режиме пассивной отладки оболочка доступна только после того, как отлаживаемая программа подключится к IDE и до её завершения. Это отображается иным приглашением и другим заголовком окна.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1391"/>
+        <location filename="../QScintilla/Shell.py" line="1399"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Язык оболочки &quot;{0}&quot; не поддерживается.
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="634"/>
+        <location filename="../QScintilla/Shell.py" line="640"/>
         <source>Passive Debug Mode</source>
         <translation>Режим пассивной отладки</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="777"/>
+        <location filename="../QScintilla/Shell.py" line="783"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="785"/>
+        <location filename="../QScintilla/Shell.py" line="791"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="216"/>
+        <location filename="../QScintilla/Shell.py" line="212"/>
         <source>History</source>
         <translation>История</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="217"/>
+        <location filename="../QScintilla/Shell.py" line="213"/>
         <source>Select entry</source>
         <translation>Выбрать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="218"/>
+        <location filename="../QScintilla/Shell.py" line="214"/>
         <source>Show</source>
         <translation>Показать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="583"/>
+        <location filename="../QScintilla/Shell.py" line="589"/>
         <source>Select History</source>
         <translation>Выберите историю</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="583"/>
+        <location filename="../QScintilla/Shell.py" line="589"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Выберите одну из предыдущих команд для выполнения.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="635"/>
+        <location filename="../QScintilla/Shell.py" line="641"/>
         <source>
 Not connected</source>
         <translation>Нет соединения</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="237"/>
+        <location filename="../QScintilla/Shell.py" line="233"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="223"/>
+        <location filename="../QScintilla/Shell.py" line="219"/>
         <source>Cut</source>
         <translation>Вырезать</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="228"/>
+        <location filename="../QScintilla/Shell.py" line="224"/>
         <source>Find</source>
         <translation>Найти</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="678"/>
+        <location filename="../QScintilla/Shell.py" line="684"/>
         <source>Exception &quot;{0}&quot;
 {1}
 File: {2}, Line: {3}
@@ -46365,13 +46370,13 @@ File: {2}, Line: {3}
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="710"/>
+        <location filename="../QScintilla/Shell.py" line="716"/>
         <source>Unspecified syntax error.
 </source>
         <translation>Неустановленная ситаксическая ошибка.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="688"/>
+        <location filename="../QScintilla/Shell.py" line="694"/>
         <source>Exception &quot;{0}&quot;
 {1}
 </source>
@@ -46380,14 +46385,14 @@ File: {2}, Line: {3}
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="712"/>
+        <location filename="../QScintilla/Shell.py" line="718"/>
         <source>Syntax error &quot;{1}&quot; in file {0} at line {2}, character {3}.
 </source>
         <translation>Синтаксическая ошибка &quot;{1}&quot; в файле {0} в строке {2}, позиция {3}.
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="735"/>
+        <location filename="../QScintilla/Shell.py" line="741"/>
         <source>Signal &quot;{0}&quot; generated in file {1} at line {2}.
 Function: {3}({4})</source>
         <translation type="unfinished"></translation>
@@ -55646,6 +55651,24 @@ the respective line.&lt;/p&gt;</source>
     </message>
 </context>
 <context>
+    <name>TemplateHelpDialog</name>
+    <message>
+        <location filename="../Templates/TemplateHelpDialog.ui" line="14"/>
+        <source>Template Help</source>
+        <translation type="unfinished">Помощь по шаблону</translation>
+    </message>
+    <message>
+        <location filename="../Templates/TemplateHelpDialog.ui" line="23"/>
+        <source>&lt;b&gt;Template Help&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Templates/TemplateHelpDialog.py" line="31"/>
+        <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Чтобы использовать переменные в шаблоне, вы просто должны заключить имя переменной в $-символы. При использовании шаблона вам будет предложено задать значение этой переменной.&lt;/p&gt;&lt;p&gt;Пример шаблона: Это $VAR$&lt;/p&gt;&lt;p&gt;При использовании этого шаблона вам будет предложено задать значение переменной $VAR$. Любые появления $VAR$ затем будут заменены на то что вы ввели.&lt;/p&gt;&lt;p&gt;Если вам в шаблоне нужен одиночный $-символ, который не используется для выделения переменной, используйте $$ (два $-символа). Они будут автоматически заменены одним $-символов при использовании шаблона.&lt;/p&gt;&lt;p&gt;Если вы хотите чтобы содержание переменной рассматривалось специальным образом, то укажите спецификатор форматирования отделив его двоеточиемот имени переменной (например, $VAR:ml$). Поддерживаемые спецификаторы:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Указывает многострочное форматирование. Содержимое переменных этого типа форматируется как параграф с отступом вправо. Величина отступа определяется текстом который предшествует данной переменной.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;То же самое как ml, но вместо пробелов отступ заполняется текстом который предшествует данной переменной.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt; В шаблонах можно использовать следующие предопределённые переменные:&lt;table&gt;&lt;tr&gt;&lt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;Текущая дата в ИСО формате (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td &gt;&lt;td&gt;Текущий год&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;название проекта (если таковой имеются)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;путь проекта&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;полный путь текущего файла&lt;/td &gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;полный путь к родительскому каталогу&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;имя текущего файла (без каталогов)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;как&lt;i&gt;file_name&lt;/i&gt; но без расширения&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;расширение текущего файла&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;выбранный текст&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Устанавливает курсор в данной позиции после того как шаблон будет реализован.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Устанавливает начало выделенного текста в шаблоне после того как шаблон будет вставлен (используется вместе с &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Устанавливает конец выделенного текста в шаблон после того как шаблон будет вставлен (используется вместе с &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;текст в буфере обмена&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Символ разделителя можно изменить в диалоге настроек.&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>TemplateMultipleVariablesDialog</name>
     <message>
         <location filename="../Templates/TemplateMultipleVariablesDialog.py" line="106"/>
@@ -55683,7 +55706,7 @@ the respective line.&lt;/p&gt;</source>
     <message>
         <location filename="../Templates/TemplatePropertiesDialog.py" line="114"/>
         <source>Template Help</source>
-        <translation>Помощь по шаблону</translation>
+        <translation type="obsolete">Помощь по шаблону</translation>
     </message>
     <message>
         <location filename="../Templates/TemplatePropertiesDialog.ui" line="14"/>
@@ -55721,12 +55744,12 @@ the respective line.&lt;/p&gt;</source>
         <translation>Группа:</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="102"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="104"/>
         <source>Close dialog</source>
         <translation>Закрыть диалог</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="102"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="104"/>
         <source>Do you really want to close the dialog?</source>
         <translation>Вы действительно хотите закрыть диалог?</translation>
     </message>
@@ -55764,7 +55787,7 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Templates/TemplatePropertiesDialog.py" line="114"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Чтобы использовать переменные в шаблоне, вы просто должны заключить имя переменной в $-символы. При использовании шаблона вам будет предложено задать значение этой переменной.&lt;/p&gt;&lt;p&gt;Пример шаблона: Это $VAR$&lt;/p&gt;&lt;p&gt;При использовании этого шаблона вам будет предложено задать значение переменной $VAR$. Любые появления $VAR$ затем будут заменены на то что вы ввели.&lt;/p&gt;&lt;p&gt;Если вам в шаблоне нужен одиночный $-символ, который не используется для выделения переменной, используйте $$ (два $-символа). Они будут автоматически заменены одним $-символов при использовании шаблона.&lt;/p&gt;&lt;p&gt;Если вы хотите чтобы содержание переменной рассматривалось специальным образом, то укажите спецификатор форматирования отделив его двоеточиемот имени переменной (например, $VAR:ml$). Поддерживаемые спецификаторы:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Указывает многострочное форматирование. Содержимое переменных этого типа форматируется как параграф с отступом вправо. Величина отступа определяется текстом который предшествует данной переменной.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;То же самое как ml, но вместо пробелов отступ заполняется текстом который предшествует данной переменной.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt; В шаблонах можно использовать следующие предопределённые переменные:&lt;table&gt;&lt;tr&gt;&lt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;Текущая дата в ИСО формате (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td &gt;&lt;td&gt;Текущий год&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;название проекта (если таковой имеются)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;путь проекта&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;полный путь текущего файла&lt;/td &gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;полный путь к родительскому каталогу&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;имя текущего файла (без каталогов)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;как&lt;i&gt;file_name&lt;/i&gt; но без расширения&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;расширение текущего файла&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;выбранный текст&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Устанавливает курсор в данной позиции после того как шаблон будет реализован.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Устанавливает начало выделенного текста в шаблоне после того как шаблон будет вставлен (используется вместе с &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Устанавливает конец выделенного текста в шаблон после того как шаблон будет вставлен (используется вместе с &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;текст в буфере обмена&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Символ разделителя можно изменить в диалоге настроек.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Чтобы использовать переменные в шаблоне, вы просто должны заключить имя переменной в $-символы. При использовании шаблона вам будет предложено задать значение этой переменной.&lt;/p&gt;&lt;p&gt;Пример шаблона: Это $VAR$&lt;/p&gt;&lt;p&gt;При использовании этого шаблона вам будет предложено задать значение переменной $VAR$. Любые появления $VAR$ затем будут заменены на то что вы ввели.&lt;/p&gt;&lt;p&gt;Если вам в шаблоне нужен одиночный $-символ, который не используется для выделения переменной, используйте $$ (два $-символа). Они будут автоматически заменены одним $-символов при использовании шаблона.&lt;/p&gt;&lt;p&gt;Если вы хотите чтобы содержание переменной рассматривалось специальным образом, то укажите спецификатор форматирования отделив его двоеточиемот имени переменной (например, $VAR:ml$). Поддерживаемые спецификаторы:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Указывает многострочное форматирование. Содержимое переменных этого типа форматируется как параграф с отступом вправо. Величина отступа определяется текстом который предшествует данной переменной.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;То же самое как ml, но вместо пробелов отступ заполняется текстом который предшествует данной переменной.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt; В шаблонах можно использовать следующие предопределённые переменные:&lt;table&gt;&lt;tr&gt;&lt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;Текущая дата в ИСО формате (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td &gt;&lt;td&gt;Текущий год&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;название проекта (если таковой имеются)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;путь проекта&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;полный путь текущего файла&lt;/td &gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;полный путь к родительскому каталогу&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;имя текущего файла (без каталогов)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;как&lt;i&gt;file_name&lt;/i&gt; но без расширения&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;расширение текущего файла&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;выбранный текст&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Устанавливает курсор в данной позиции после того как шаблон будет реализован.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Устанавливает начало выделенного текста в шаблоне после того как шаблон будет вставлен (используется вместе с &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Устанавливает конец выделенного текста в шаблон после того как шаблон будет вставлен (используется вместе с &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;текст в буфере обмена&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Символ разделителя можно изменить в диалоге настроек.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -55788,32 +55811,32 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>TemplateViewer</name>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="854"/>
+        <location filename="../Templates/TemplateViewer.py" line="859"/>
         <source>Edit Template Group</source>
         <translation>Редактировать группу шаблонов</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="528"/>
+        <location filename="../Templates/TemplateViewer.py" line="533"/>
         <source>Remove Template</source>
         <translation>Удалить шаблон</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="555"/>
+        <location filename="../Templates/TemplateViewer.py" line="560"/>
         <source>Import Templates</source>
         <translation>Импорт шаблонов</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="569"/>
+        <location filename="../Templates/TemplateViewer.py" line="574"/>
         <source>Export Templates</source>
         <translation>Экспорт шаблонов</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="854"/>
+        <location filename="../Templates/TemplateViewer.py" line="859"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Группа шаблонов с именем &lt;b&gt;{0}&lt;/b&gt; уже существует.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="528"/>
+        <location filename="../Templates/TemplateViewer.py" line="533"/>
         <source>&lt;p&gt;Do you really want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Вы действительно хотите удалить&lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</translation>
     </message>
@@ -55858,62 +55881,62 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Экспорт...</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="423"/>
+        <location filename="../Templates/TemplateViewer.py" line="424"/>
         <source>Help about Templates...</source>
         <translation>Помощь по шаблонам...</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="609"/>
+        <location filename="../Templates/TemplateViewer.py" line="614"/>
         <source>Template Help</source>
         <translation>Помощь по шаблону</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="569"/>
+        <location filename="../Templates/TemplateViewer.py" line="574"/>
         <source>Templates Files (*.e4c);; All Files (*)</source>
         <translation>Файлы шаблонов (*.e4c);; Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="948"/>
+        <location filename="../Templates/TemplateViewer.py" line="953"/>
         <source>Save templates</source>
         <translation>Сохранить шаблоны</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="948"/>
+        <location filename="../Templates/TemplateViewer.py" line="953"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно сохранить файл шаблонов: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="982"/>
+        <location filename="../Templates/TemplateViewer.py" line="987"/>
         <source>Read templates</source>
         <translation>Прочитать шаблоны</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="982"/>
+        <location filename="../Templates/TemplateViewer.py" line="987"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Невозможно прочитать файл шаблонов: &lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="426"/>
+        <location filename="../Templates/TemplateViewer.py" line="427"/>
         <source>Configure...</source>
         <translation>Настроить...</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="609"/>
+        <location filename="../Templates/TemplateViewer.py" line="614"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Группы шаблонов&lt;/b&gt; - группировка отдельных шаблонов. У групп имеются атрибуты, которые определяют, к какому языку программирования относятся шаблоны в данной группе. Для того, чтобы добавлять шаблоны, должна быть определена хотя бы одна группа.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Шаблоны&lt;/b&gt; - собственно шаблоны. Помошь по определению шаблонов находится в диалоге редактирования шаблона.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="421"/>
+        <location filename="../Templates/TemplateViewer.py" line="422"/>
         <source>Reload</source>
         <translation>Переоткрыть</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="590"/>
+        <location filename="../Templates/TemplateViewer.py" line="595"/>
         <source>Reload Templates</source>
         <translation>Прочитать шаблоны</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="590"/>
+        <location filename="../Templates/TemplateViewer.py" line="595"/>
         <source>The templates contain unsaved changes. Shall these changes be discarded?</source>
         <translation>Шаблоны содержат несохраненные изменения. Отбросить их?</translation>
     </message>

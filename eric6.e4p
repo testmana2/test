@@ -927,6 +927,7 @@
     <Source>Tasks/TaskPropertiesDialog.py</Source>
     <Source>Tasks/TaskViewer.py</Source>
     <Source>Tasks/__init__.py</Source>
+    <Source>Templates/TemplateHelpDialog.py</Source>
     <Source>Templates/TemplateMultipleVariablesDialog.py</Source>
     <Source>Templates/TemplatePropertiesDialog.py</Source>
     <Source>Templates/TemplateSingleVariableDialog.py</Source>
@@ -1591,6 +1592,7 @@
     <Form>SqlBrowser/SqlConnectionDialog.ui</Form>
     <Form>Tasks/TaskFilterConfigDialog.ui</Form>
     <Form>Tasks/TaskPropertiesDialog.ui</Form>
+    <Form>Templates/TemplateHelpDialog.ui</Form>
     <Form>Templates/TemplatePropertiesDialog.ui</Form>
     <Form>Templates/TemplateSingleVariableDialog.ui</Form>
     <Form>UI/AuthenticationDialog.ui</Form>

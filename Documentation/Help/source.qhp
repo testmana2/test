@@ -965,6 +965,7 @@
             <section title="eric6.Tasks.TaskViewer" ref="eric6.Tasks.TaskViewer.html" />
           </section>
           <section title="eric6.Templates" ref="index-eric6.Templates.html">
+            <section title="eric6.Templates.TemplateHelpDialog" ref="eric6.Templates.TemplateHelpDialog.html" />
             <section title="eric6.Templates.TemplateMultipleVariablesDialog" ref="eric6.Templates.TemplateMultipleVariablesDialog.html" />
             <section title="eric6.Templates.TemplatePropertiesDialog" ref="eric6.Templates.TemplatePropertiesDialog.html" />
             <section title="eric6.Templates.TemplateSingleVariableDialog" ref="eric6.Templates.TemplateSingleVariableDialog.html" />
@@ -10325,6 +10326,7 @@
       <keyword name="Shell.__setTextDisplay" id="Shell.__setTextDisplay" ref="eric6.QScintilla.Shell.html#Shell.__setTextDisplay" />
       <keyword name="Shell.__showCompletions" id="Shell.__showCompletions" ref="eric6.QScintilla.Shell.html#Shell.__showCompletions" />
       <keyword name="Shell.__showHistory" id="Shell.__showHistory" ref="eric6.QScintilla.Shell.html#Shell.__showHistory" />
+      <keyword name="Shell.__showLanguageMenu" id="Shell.__showLanguageMenu" ref="eric6.QScintilla.Shell.html#Shell.__showLanguageMenu" />
       <keyword name="Shell.__startDebugClient" id="Shell.__startDebugClient" ref="eric6.QScintilla.Shell.html#Shell.__startDebugClient" />
       <keyword name="Shell.__useHistory" id="Shell.__useHistory" ref="eric6.QScintilla.Shell.html#Shell.__useHistory" />
       <keyword name="Shell.__write" id="Shell.__write" ref="eric6.QScintilla.Shell.html#Shell.__write" />
@@ -12013,6 +12015,9 @@
       <keyword name="TemplateGroup.removeEntry" id="TemplateGroup.removeEntry" ref="eric6.Templates.TemplateViewer.html#TemplateGroup.removeEntry" />
       <keyword name="TemplateGroup.setLanguage" id="TemplateGroup.setLanguage" ref="eric6.Templates.TemplateViewer.html#TemplateGroup.setLanguage" />
       <keyword name="TemplateGroup.setName" id="TemplateGroup.setName" ref="eric6.Templates.TemplateViewer.html#TemplateGroup.setName" />
+      <keyword name="TemplateHelpDialog" id="TemplateHelpDialog" ref="eric6.Templates.TemplateHelpDialog.html#TemplateHelpDialog" />
+      <keyword name="TemplateHelpDialog (Constructor)" id="TemplateHelpDialog (Constructor)" ref="eric6.Templates.TemplateHelpDialog.html#TemplateHelpDialog.__init__" />
+      <keyword name="TemplateHelpDialog (Module)" id="TemplateHelpDialog (Module)" ref="eric6.Templates.TemplateHelpDialog.html" />
       <keyword name="TemplateMultipleVariablesDialog" id="TemplateMultipleVariablesDialog" ref="eric6.Templates.TemplateMultipleVariablesDialog.html#TemplateMultipleVariablesDialog" />
       <keyword name="TemplateMultipleVariablesDialog (Constructor)" id="TemplateMultipleVariablesDialog (Constructor)" ref="eric6.Templates.TemplateMultipleVariablesDialog.html#TemplateMultipleVariablesDialog.__init__" />
       <keyword name="TemplateMultipleVariablesDialog (Module)" id="TemplateMultipleVariablesDialog (Module)" ref="eric6.Templates.TemplateMultipleVariablesDialog.html" />
@@ -14821,6 +14826,7 @@
       <file>eric6.Tasks.TaskFilterConfigDialog.html</file>
       <file>eric6.Tasks.TaskPropertiesDialog.html</file>
       <file>eric6.Tasks.TaskViewer.html</file>
+      <file>eric6.Templates.TemplateHelpDialog.html</file>
       <file>eric6.Templates.TemplateMultipleVariablesDialog.html</file>
       <file>eric6.Templates.TemplatePropertiesDialog.html</file>
       <file>eric6.Templates.TemplateSingleVariableDialog.html</file>

@@ -731,6 +731,7 @@ TasksReader XMLStreamReaderBase
 TasksWriter XMLStreamWriterBase
 TemplateEntry QTreeWidgetItem
 TemplateGroup QTreeWidgetItem
+TemplateHelpDialog QDialog Ui_TemplateHelpDialog
 TemplateMultipleVariablesDialog QDialog
 TemplatePropertiesDialog QDialog Ui_TemplatePropertiesDialog
 TemplateSingleVariableDialog QDialog Ui_TemplateSingleVariableDialog

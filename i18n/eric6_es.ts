@@ -4909,31 +4909,31 @@ para visualizar la página de configuración.</translation>
         <translation>cambiado</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="684"/>
+        <location filename="../Debugger/DebugServer.py" line="701"/>
         <source>Connection from illegal host</source>
         <translation>Conexión desde un host ilegal</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1306"/>
+        <location filename="../Debugger/DebugServer.py" line="1323"/>
         <source>
 Not connected
 </source>
         <translation>No conectado</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="684"/>
+        <location filename="../Debugger/DebugServer.py" line="701"/>
         <source>&lt;p&gt;A connection was attempted by the illegal host &lt;b&gt;{0}&lt;/b&gt;. Accept this connection?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Se ha intentado una conexión desde el host ilegal &lt;b&gt;{0}&lt;/b&gt;. ¿Aceptar esta conexión?.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1486"/>
+        <location filename="../Debugger/DebugServer.py" line="1503"/>
         <source>Passive debug connection received
 </source>
         <translation>Recibida conexión pasiva de depuración
 </translation>
     </message>
     <message>
-        <location filename="../Debugger/DebugServer.py" line="1500"/>
+        <location filename="../Debugger/DebugServer.py" line="1517"/>
         <source>Passive debug connection closed
 </source>
         <translation>Cerrada conexión pasiva de depuración
@@ -22543,12 +22543,12 @@ here. Los patrones válidos que se reconocen son:&lt;/p&gt;
         <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Marcadores&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{0}&lt;/td&gt;&lt;/tr&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1875"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1874"/>
         <source>Find Commit</source>
         <translation>Buscar Commit</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1875"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgLogBrowserDialog.py" line="1874"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation>&apos;{0}&apos; no se ha encontrado.</translation>
     </message>
@@ -46111,120 +46111,120 @@ carácter excepto un carácter alfabético.&lt;/td&gt;&lt;/tr&gt;
         <translation>Comienzo</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="224"/>
+        <location filename="../QScintilla/Shell.py" line="220"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="225"/>
+        <location filename="../QScintilla/Shell.py" line="221"/>
         <source>Paste</source>
         <translation>Pegar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="230"/>
+        <location filename="../QScintilla/Shell.py" line="226"/>
         <source>Clear</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="231"/>
+        <location filename="../QScintilla/Shell.py" line="227"/>
         <source>Reset</source>
         <translation>Restaurar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="232"/>
+        <location filename="../QScintilla/Shell.py" line="228"/>
         <source>Reset and Clear</source>
         <translation>Restaurar y borrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="634"/>
+        <location filename="../QScintilla/Shell.py" line="640"/>
         <source>Passive Debug Mode</source>
         <translation>Modo de depuración pasiva</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="637"/>
+        <location filename="../QScintilla/Shell.py" line="643"/>
         <source>No.</source>
         <translation>No.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1683"/>
+        <location filename="../QScintilla/Shell.py" line="1684"/>
         <source>Drop Error</source>
         <translation>Error al soltar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="216"/>
+        <location filename="../QScintilla/Shell.py" line="212"/>
         <source>History</source>
         <translation>Historial</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="217"/>
+        <location filename="../QScintilla/Shell.py" line="213"/>
         <source>Select entry</source>
         <translation>Seleccionar entrada</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="218"/>
+        <location filename="../QScintilla/Shell.py" line="214"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="583"/>
+        <location filename="../QScintilla/Shell.py" line="589"/>
         <source>Select History</source>
         <translation>Seleccionar historial</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="583"/>
+        <location filename="../QScintilla/Shell.py" line="589"/>
         <source>Select the history entry to execute (most recent shown last).</source>
         <translation>Seleccionar la entrada del historial a ejecutar (las más recientes mostradas en último lugar).</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="635"/>
+        <location filename="../QScintilla/Shell.py" line="641"/>
         <source>
 Not connected</source>
         <translation>No conectado</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="237"/>
+        <location filename="../QScintilla/Shell.py" line="233"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="223"/>
+        <location filename="../QScintilla/Shell.py" line="219"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="639"/>
+        <location filename="../QScintilla/Shell.py" line="645"/>
         <source>{0} on {1}, {2}</source>
         <translation>{0} en {1}, {2}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="777"/>
+        <location filename="../QScintilla/Shell.py" line="783"/>
         <source>StdOut: {0}</source>
         <translation>StdOut: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="785"/>
+        <location filename="../QScintilla/Shell.py" line="791"/>
         <source>StdErr: {0}</source>
         <translation>StdErr: {0}</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1391"/>
+        <location filename="../QScintilla/Shell.py" line="1399"/>
         <source>Shell language &quot;{0}&quot; not supported.
 </source>
         <translation>Lenguaje de Shell  &quot;{0}&quot; no soportado.
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="1683"/>
+        <location filename="../QScintilla/Shell.py" line="1684"/>
         <source>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; is not a file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;{0}&lt;/b&gt; no es un archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="228"/>
+        <location filename="../QScintilla/Shell.py" line="224"/>
         <source>Find</source>
         <translation>Buscar</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="678"/>
+        <location filename="../QScintilla/Shell.py" line="684"/>
         <source>Exception &quot;{0}&quot;
 {1}
 File: {2}, Line: {3}
@@ -46235,13 +46235,13 @@ Archivo: {2}, Línea: {3}
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="710"/>
+        <location filename="../QScintilla/Shell.py" line="716"/>
         <source>Unspecified syntax error.
 </source>
         <translation>Error de sintaxis sin especificar.</translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="688"/>
+        <location filename="../QScintilla/Shell.py" line="694"/>
         <source>Exception &quot;{0}&quot;
 {1}
 </source>
@@ -46250,14 +46250,14 @@ Archivo: {2}, Línea: {3}
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="712"/>
+        <location filename="../QScintilla/Shell.py" line="718"/>
         <source>Syntax error &quot;{1}&quot; in file {0} at line {2}, character {3}.
 </source>
         <translation>Error de sintaxis &quot;{1}&quot; en archivo {0} en la línea {2}, carácter {3}.
 </translation>
     </message>
     <message>
-        <location filename="../QScintilla/Shell.py" line="735"/>
+        <location filename="../QScintilla/Shell.py" line="741"/>
         <source>Signal &quot;{0}&quot; generated in file {1} at line {2}.
 Function: {3}({4})</source>
         <translation>Señal &quot;{0}&quot; generada en el archivo {1} y línea {2}.
@@ -55481,6 +55481,24 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
     </message>
 </context>
 <context>
+    <name>TemplateHelpDialog</name>
+    <message>
+        <location filename="../Templates/TemplateHelpDialog.ui" line="14"/>
+        <source>Template Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Templates/TemplateHelpDialog.ui" line="23"/>
+        <source>&lt;b&gt;Template Help&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Templates/TemplateHelpDialog.py" line="31"/>
+        <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;Para utilizar variables en una plantilla, solamente tiene que delimitar el nombre de variable con carácteres $. Al utilizar la plantilla, se le solicitará un valor para esta variable.&lt;/p&gt;&lt;p&gt;Ejemplo de plantilla: esto es una $VAR$&lt;/p&gt;&lt;p&gt;Al utilizar esta plantilla se le solicitará un valor para la variable $VAR$. Todas las ocurrencias de $VAR$ serán entonces reemplazadas con el valor introducido.&lt;/p&gt;&lt;p&gt;Si necesita utilizar el caracter $ en una plantilla que no vaya a ser utilizado para delimitar una variable, teclee $$ (dos carácteres dólar). Se reemplazarán automáticamente con un carácter $ único al utilizar la plantilla.&lt;/p&gt;&lt;p&gt;Si desea tratar específicamente los contenidos de alguna variable, el nombre de variable debe ser seguido por un &apos;:&apos; y un especificador de formato.(por ejemplo $VAR:ml$). Los especificadores soportados son:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;A la primera línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla. Al resto de las líneas se les antepone la misma cantidad de espacios en blanco que la línea que contiene la variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Especifica un formato de repetición de líneas. A cada línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Las siguientes variables predefinidas se pueden utilizar en una plantilla:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;fecha actual formato ISO (AAAA-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;el año actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;el nombre del proyecto (si existe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;ruta completa del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;ruta completa del directorio padre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nombre del archivo actual (sin directorio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;como &lt;i&gt;file_name&lt;/i&gt;, pero sin extensión&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;la extensión del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;el texto seleccionado actualmente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Establece punto de inserción para el cursor despues de insertar la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;el texto del portapapeles&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Si desea cambiar el delimitador a otro distinto, por favor utilice el diálogo de configuración para hacerlo.&lt;/p&gt;</translation>
+    </message>
+</context>
+<context>
     <name>TemplateMultipleVariablesDialog</name>
     <message>
         <location filename="../Templates/TemplateMultipleVariablesDialog.py" line="106"/>
@@ -55551,19 +55569,19 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <translation>GROUP</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="102"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="104"/>
         <source>Close dialog</source>
         <translation>Cerrar diálogo</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="102"/>
+        <location filename="../Templates/TemplatePropertiesDialog.py" line="104"/>
         <source>Do you really want to close the dialog?</source>
         <translation>¿Realmente desea cerrar el diálogo?</translation>
     </message>
     <message>
         <location filename="../Templates/TemplatePropertiesDialog.py" line="114"/>
         <source>Template Help</source>
-        <translation>Ayuda de la Plantilla</translation>
+        <translation type="obsolete">Ayuda de la Plantilla</translation>
     </message>
     <message>
         <location filename="../Templates/TemplatePropertiesDialog.ui" line="86"/>
@@ -55600,7 +55618,7 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
     <message>
         <location filename="../Templates/TemplatePropertiesDialog.py" line="114"/>
         <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Para utilizar variables en una plantilla, solamente tiene que delimitar el nombre de variable con carácteres $. Al utilizar la plantilla, se le solicitará un valor para esta variable.&lt;/p&gt;&lt;p&gt;Ejemplo de plantilla: esto es una $VAR$&lt;/p&gt;&lt;p&gt;Al utilizar esta plantilla se le solicitará un valor para la variable $VAR$. Todas las ocurrencias de $VAR$ serán entonces reemplazadas con el valor introducido.&lt;/p&gt;&lt;p&gt;Si necesita utilizar el caracter $ en una plantilla que no vaya a ser utilizado para delimitar una variable, teclee $$ (dos carácteres dólar). Se reemplazarán automáticamente con un carácter $ único al utilizar la plantilla.&lt;/p&gt;&lt;p&gt;Si desea tratar específicamente los contenidos de alguna variable, el nombre de variable debe ser seguido por un &apos;:&apos; y un especificador de formato.(por ejemplo $VAR:ml$). Los especificadores soportados son:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;A la primera línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla. Al resto de las líneas se les antepone la misma cantidad de espacios en blanco que la línea que contiene la variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Especifica un formato de repetición de líneas. A cada línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Las siguientes variables predefinidas se pueden utilizar en una plantilla:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;fecha actual formato ISO (AAAA-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;el año actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;el nombre del proyecto (si existe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;ruta completa del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;ruta completa del directorio padre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nombre del archivo actual (sin directorio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;como &lt;i&gt;file_name&lt;/i&gt;, pero sin extensión&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;la extensión del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;el texto seleccionado actualmente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Establece punto de inserción para el cursor despues de insertar la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;el texto del portapapeles&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Si desea cambiar el delimitador a otro distinto, por favor utilice el diálogo de configuración para hacerlo.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;Para utilizar variables en una plantilla, solamente tiene que delimitar el nombre de variable con carácteres $. Al utilizar la plantilla, se le solicitará un valor para esta variable.&lt;/p&gt;&lt;p&gt;Ejemplo de plantilla: esto es una $VAR$&lt;/p&gt;&lt;p&gt;Al utilizar esta plantilla se le solicitará un valor para la variable $VAR$. Todas las ocurrencias de $VAR$ serán entonces reemplazadas con el valor introducido.&lt;/p&gt;&lt;p&gt;Si necesita utilizar el caracter $ en una plantilla que no vaya a ser utilizado para delimitar una variable, teclee $$ (dos carácteres dólar). Se reemplazarán automáticamente con un carácter $ único al utilizar la plantilla.&lt;/p&gt;&lt;p&gt;Si desea tratar específicamente los contenidos de alguna variable, el nombre de variable debe ser seguido por un &apos;:&apos; y un especificador de formato.(por ejemplo $VAR:ml$). Los especificadores soportados son:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;A la primera línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla. Al resto de las líneas se les antepone la misma cantidad de espacios en blanco que la línea que contiene la variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Especifica un formato de repetición de líneas. A cada línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Las siguientes variables predefinidas se pueden utilizar en una plantilla:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;fecha actual formato ISO (AAAA-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;el año actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;el nombre del proyecto (si existe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;ruta completa del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;ruta completa del directorio padre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nombre del archivo actual (sin directorio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;como &lt;i&gt;file_name&lt;/i&gt;, pero sin extensión&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;la extensión del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;el texto seleccionado actualmente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Establece punto de inserción para el cursor despues de insertar la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;el texto del portapapeles&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Si desea cambiar el delimitador a otro distinto, por favor utilice el diálogo de configuración para hacerlo.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -55664,92 +55682,92 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <translation>Exportar...</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="423"/>
+        <location filename="../Templates/TemplateViewer.py" line="424"/>
         <source>Help about Templates...</source>
         <translation>Ayuda de las Plantillas...</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="528"/>
+        <location filename="../Templates/TemplateViewer.py" line="533"/>
         <source>Remove Template</source>
         <translation>Eliminar Plantilla</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="555"/>
+        <location filename="../Templates/TemplateViewer.py" line="560"/>
         <source>Import Templates</source>
         <translation>Importar Plantillas</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="569"/>
+        <location filename="../Templates/TemplateViewer.py" line="574"/>
         <source>Export Templates</source>
         <translation>Exportar Plantillas</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="569"/>
+        <location filename="../Templates/TemplateViewer.py" line="574"/>
         <source>Templates Files (*.e4c);; All Files (*)</source>
         <translation>Archivos de Plantillas (*.e4c *);; Todos los Archivos (*)</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="609"/>
+        <location filename="../Templates/TemplateViewer.py" line="614"/>
         <source>Template Help</source>
         <translation>Ayuda para la plantilla</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="854"/>
+        <location filename="../Templates/TemplateViewer.py" line="859"/>
         <source>Edit Template Group</source>
         <translation>Editar Grupo de Plantillas</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="948"/>
+        <location filename="../Templates/TemplateViewer.py" line="953"/>
         <source>Save templates</source>
         <translation>Guardar plantillas</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="982"/>
+        <location filename="../Templates/TemplateViewer.py" line="987"/>
         <source>Read templates</source>
         <translation>Leer plantillas</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="426"/>
+        <location filename="../Templates/TemplateViewer.py" line="427"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="528"/>
+        <location filename="../Templates/TemplateViewer.py" line="533"/>
         <source>&lt;p&gt;Do you really want to remove &lt;b&gt;{0}&lt;/b&gt;?&lt;/p&gt;</source>
         <translation>&lt;p&gt;¿Desea realmente eliminar &lt;b&gt;{0}&lt;/b&gt; ?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="854"/>
+        <location filename="../Templates/TemplateViewer.py" line="859"/>
         <source>&lt;p&gt;A template group with the name &lt;b&gt;{0}&lt;/b&gt; already exists.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Un grupo de plantillas con el nombre &lt;b&gt;{0}&lt;/b&gt; ya existe.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="948"/>
+        <location filename="../Templates/TemplateViewer.py" line="953"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be written.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plantillas &lt;b&gt;{0}&lt;/b&gt; no pudo ser guardado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="982"/>
+        <location filename="../Templates/TemplateViewer.py" line="987"/>
         <source>&lt;p&gt;The templates file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plantillas &lt;b&gt;{0}&lt;/b&gt; no pudo ser leído.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="609"/>
+        <location filename="../Templates/TemplateViewer.py" line="614"/>
         <source>&lt;p&gt;&lt;b&gt;Template groups&lt;/b&gt; are a means of grouping individual templates. Groups have an attribute that specifies, which programming language they apply for. In order to add template entries, at least one group has to be defined.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Template entries&lt;/b&gt; are the actual templates. They are grouped by the template groups. Help about how to define them is available in the template edit dialog.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Los grupos de plantillas&lt;/b&gt; son una manera de agrupar plantillas individuales. Los grupos tienen un atributo que especifica a qué lenguaje de programación se aplican. Para añadir entradas de plantillas. al menos un grupo tiene que haber sido definido.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Las entradas de plantilla&lt;/b&gt; son las plantillas reales. Se agrupan en grupos de plantillas. Se puede encontrar ayuda sobre como definirlas en el diálogo de edición de plantilla.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="421"/>
+        <location filename="../Templates/TemplateViewer.py" line="422"/>
         <source>Reload</source>
         <translation>Recargar</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="590"/>
+        <location filename="../Templates/TemplateViewer.py" line="595"/>
         <source>Reload Templates</source>
         <translation>Recargar Plantillas</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplateViewer.py" line="590"/>
+        <location filename="../Templates/TemplateViewer.py" line="595"/>
         <source>The templates contain unsaved changes. Shall these changes be discarded?</source>
         <translation>Las plantillas contienen cambios sin guardar. ¿Deben descartarse dichos cambios?</translation>
     </message>
