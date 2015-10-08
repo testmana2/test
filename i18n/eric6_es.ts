@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1906,8 +1905,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1980,8 +1979,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -16157,7 +16156,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1175"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -55580,11 +55579,6 @@ entrada se abre una ventana de editor y se posiciona el cursor en la línea adec
         <translation>¿Realmente desea cerrar el diálogo?</translation>
     </message>
     <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="114"/>
-        <source>Template Help</source>
-        <translation type="obsolete">Ayuda de la Plantilla</translation>
-    </message>
-    <message>
         <location filename="../Templates/TemplatePropertiesDialog.ui" line="86"/>
         <source>&lt;b&gt;Template Text&lt;/b&gt;
 &lt;p&gt;Enter the template text in this area. Every occurrence of $VAR$ will be replaced
@@ -55615,11 +55609,6 @@ cambiar a través del diálogo de preferencias.Pulse el botón de ayuda para má
         <location filename="../Templates/TemplatePropertiesDialog.py" line="42"/>
         <source>&lt;b&gt;Template name&lt;b&gt;&lt;p&gt;Enter the name of the template. Templates may be autocompleted upon this name. In order to support autocompletion. the template name must only consist of letters (a-z and A-Z), digits (0-9) and underscores (_).&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nombre de plantilla&lt;/b&gt;&lt;p&gt;Introduzca el nombre de la plantilla. Las plantillas pueden ser autocompletadas en base a este nombre. Para dar soporte a autocompletar, el nombre de plantilla debe consistir solamente en letras (a-z y A-Z) y guiones bajos (_).&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../Templates/TemplatePropertiesDialog.py" line="114"/>
-        <source>&lt;p&gt;To use variables in a template, you just have to enclose the variablename with $-characters. When you use the template, you will then be asked for a value for this variable.&lt;/p&gt;&lt;p&gt;Example template: This is a $VAR$&lt;/p&gt;&lt;p&gt;When you use this template you will be prompted for a value for the variable $VAR$. Any occurrences of $VAR$ will then be replaced with whatever you&apos;ve entered.&lt;/p&gt;&lt;p&gt;If you need a single $-character in a template, which is not used to enclose a variable, type $$(two dollar characters) instead. They will automatically be replaced with a single $-character when you use the template.&lt;/p&gt;&lt;p&gt;If you want a variables contents to be treated specially, the variablename must be followed by a &apos;:&apos; and one formatting specifier (e.g. $VAR:ml$). The supported specifiers are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;Specifies a multiline formatting. The first line of the variable contents is prefixed with the string occurring before the variable on the same line of the template. All other lines are prefixed by the same amount of whitespace as the line containing the variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Specifies a repeated line formatting. Each line of the variable contents is prefixed with the string occuring before the variable on the same line of the template.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;The following predefined variables may be used in a template:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;today&apos;s date in ISO format (YYYY-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;the current year&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;the path of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;full path of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;full path of the parent directory&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;the current file name (without directory)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;like &lt;i&gt;file_name&lt;/i&gt;, but without extension&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;the extension of the current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;the currently selected text&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Sets insertion point for cursor after template is inserted.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Sets span of selected text in template after template is inserted (used together with &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;the text of the clipboard&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;If you want to change the default delimiter to anything different, please use the configuration dialog to do so.&lt;/p&gt;</source>
-        <translation type="obsolete">&lt;p&gt;Para utilizar variables en una plantilla, solamente tiene que delimitar el nombre de variable con carácteres $. Al utilizar la plantilla, se le solicitará un valor para esta variable.&lt;/p&gt;&lt;p&gt;Ejemplo de plantilla: esto es una $VAR$&lt;/p&gt;&lt;p&gt;Al utilizar esta plantilla se le solicitará un valor para la variable $VAR$. Todas las ocurrencias de $VAR$ serán entonces reemplazadas con el valor introducido.&lt;/p&gt;&lt;p&gt;Si necesita utilizar el caracter $ en una plantilla que no vaya a ser utilizado para delimitar una variable, teclee $$ (dos carácteres dólar). Se reemplazarán automáticamente con un carácter $ único al utilizar la plantilla.&lt;/p&gt;&lt;p&gt;Si desea tratar específicamente los contenidos de alguna variable, el nombre de variable debe ser seguido por un &apos;:&apos; y un especificador de formato.(por ejemplo $VAR:ml$). Los especificadores soportados son:&lt;table&gt;&lt;tr&gt;&lt;td&gt;ml&lt;/td&gt;&lt;td&gt;A la primera línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla. Al resto de las líneas se les antepone la misma cantidad de espacios en blanco que la línea que contiene la variable.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;rl&lt;/td&gt;&lt;td&gt;Especifica un formato de repetición de líneas. A cada línea de los contenidos de la variable se le antepone la cadena que hay antes de la variable en la misma línea de la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Las siguientes variables predefinidas se pueden utilizar en una plantilla:&lt;table&gt;&lt;tr&gt;&lt;td&gt;date&lt;/td&gt;&lt;td&gt;fecha actual formato ISO (AAAA-MM-DD)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;year&lt;/td&gt;&lt;td&gt;el año actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_name&lt;/td&gt;&lt;td&gt;the name of the project (if any)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;project_path&lt;/td&gt;&lt;td&gt;el nombre del proyecto (si existe)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;path_name&lt;/td&gt;&lt;td&gt;ruta completa del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;dir_name&lt;/td&gt;&lt;td&gt;ruta completa del directorio padre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;file_name&lt;/td&gt;&lt;td&gt;nombre del archivo actual (sin directorio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;base_name&lt;/td&gt;&lt;td&gt;como &lt;i&gt;file_name&lt;/i&gt;, pero sin extensión&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ext&lt;/td&gt;&lt;td&gt;la extensión del archivo actual&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;cur_select&lt;/td&gt;&lt;td&gt;el texto seleccionado actualmente&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;insertion&lt;/td&gt;&lt;td&gt;Establece punto de inserción para el cursor despues de insertar la plantilla.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_start&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_end&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;select_end&lt;/td&gt;&lt;td&gt;Establece intervalo de texto seleccionado en la plantilla tras ser ésta insertada (usado junto a &apos;select_start&apos;).&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;clipboard&lt;/td&gt;&lt;td&gt;el texto del portapapeles&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;&lt;p&gt;Si desea cambiar el delimitador a otro distinto, por favor utilice el diálogo de configuración para hacerlo.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
