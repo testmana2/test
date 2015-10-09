@@ -12823,7 +12823,6 @@
       <keyword name="VersionControl.vcsCommandLine" id="VersionControl.vcsCommandLine" ref="eric6.VCS.VersionControl.html#VersionControl.vcsCommandLine" />
       <keyword name="VersionControl.vcsCommit" id="VersionControl.vcsCommit" ref="eric6.VCS.VersionControl.html#VersionControl.vcsCommit" />
       <keyword name="VersionControl.vcsConvertProject" id="VersionControl.vcsConvertProject" ref="eric6.VCS.VersionControl.html#VersionControl.vcsConvertProject" />
-      <keyword name="VersionControl.vcsDefaultOptions" id="VersionControl.vcsDefaultOptions" ref="eric6.VCS.VersionControl.html#VersionControl.vcsDefaultOptions" />
       <keyword name="VersionControl.vcsDiff" id="VersionControl.vcsDiff" ref="eric6.VCS.VersionControl.html#VersionControl.vcsDiff" />
       <keyword name="VersionControl.vcsExists" id="VersionControl.vcsExists" ref="eric6.VCS.VersionControl.html#VersionControl.vcsExists" />
       <keyword name="VersionControl.vcsExport" id="VersionControl.vcsExport" ref="eric6.VCS.VersionControl.html#VersionControl.vcsExport" />
@@ -12831,7 +12830,6 @@
       <keyword name="VersionControl.vcsGetOtherData" id="VersionControl.vcsGetOtherData" ref="eric6.VCS.VersionControl.html#VersionControl.vcsGetOtherData" />
       <keyword name="VersionControl.vcsGetProjectBrowserHelper" id="VersionControl.vcsGetProjectBrowserHelper" ref="eric6.VCS.VersionControl.html#VersionControl.vcsGetProjectBrowserHelper" />
       <keyword name="VersionControl.vcsGetProjectHelper" id="VersionControl.vcsGetProjectHelper" ref="eric6.VCS.VersionControl.html#VersionControl.vcsGetProjectHelper" />
-      <keyword name="VersionControl.vcsHistory" id="VersionControl.vcsHistory" ref="eric6.VCS.VersionControl.html#VersionControl.vcsHistory" />
       <keyword name="VersionControl.vcsImport" id="VersionControl.vcsImport" ref="eric6.VCS.VersionControl.html#VersionControl.vcsImport" />
       <keyword name="VersionControl.vcsInit" id="VersionControl.vcsInit" ref="eric6.VCS.VersionControl.html#VersionControl.vcsInit" />
       <keyword name="VersionControl.vcsInitConfig" id="VersionControl.vcsInitConfig" ref="eric6.VCS.VersionControl.html#VersionControl.vcsInitConfig" />

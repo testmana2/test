@@ -36,7 +36,6 @@ PTL_SOURCE = 128
 RB_SOURCE = 129
 
 SUPPORTED_TYPES = [imp.PY_SOURCE, PTL_SOURCE, RB_SOURCE]
-PARSEABLE_TYPES = ["Python", "Python2", "Python3", "Ruby"]
 TYPE_MAPPING = {
     "Python": imp.PY_SOURCE,
     "Python2": imp.PY_SOURCE,

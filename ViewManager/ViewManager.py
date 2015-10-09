@@ -3230,10 +3230,6 @@ class ViewManager(QObject):
         self.quickFindtextCombo.setInsertPolicy(QComboBox.InsertAtTop)
         self.quickFindtextCombo.lastActive = None
         self.quickFindtextCombo.lastCursorPos = None
-        self.quickFindtextCombo.leForegroundColor = \
-            self.quickFindtextCombo.lineEdit().palette().color(QPalette.Text)
-        self.quickFindtextCombo.leBackgroundColor = \
-            self.quickFindtextCombo.lineEdit().palette().color(QPalette.Base)
         self.quickFindtextCombo.lastSearchText = ""
         self.quickFindtextCombo._editor = self.quickFindtextCombo.lineEdit()
         # this allows us not to jump across searched text

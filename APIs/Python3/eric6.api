@@ -6744,8 +6744,11 @@ eric6.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_classNameCombo_ac
 eric6.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_filterEdit_textChanged?4(text)
 eric6.Project.CreateDialogCodeDialog.CreateDialogCodeDialog.on_newButton_clicked?4()
 eric6.Project.CreateDialogCodeDialog.CreateDialogCodeDialog?1(formName, project, parent=None)
+eric6.Project.CreateDialogCodeDialog.parameterNamesListRole?7
+eric6.Project.CreateDialogCodeDialog.parameterTypesListRole?7
 eric6.Project.CreateDialogCodeDialog.pyqtSignatureRole?7
 eric6.Project.CreateDialogCodeDialog.pythonSignatureRole?7
+eric6.Project.CreateDialogCodeDialog.returnTypeRole?7
 eric6.Project.CreateDialogCodeDialog.rubySignatureRole?7
 eric6.Project.DebuggerPropertiesDialog.DebuggerPropertiesDialog.on_debugClientButton_clicked?4()
 eric6.Project.DebuggerPropertiesDialog.DebuggerPropertiesDialog.on_interpreterButton_clicked?4()
@@ -8778,10 +8781,7 @@ eric6.Utilities.ClassBrowsers.rbclbr._modules?8
 eric6.Utilities.ClassBrowsers.rbclbr.readmodule_ex?4(module, path=[])
 eric6.Utilities.ClassBrowsers.readmodule?4(module, path=[], isPyFile=False)
 eric6.Utilities.CodingError?1(coding)
-eric6.Utilities.FtpUtilities.FtpDirLineParser.MacMode?7
 eric6.Utilities.FtpUtilities.FtpDirLineParser.MonthnamesNumbers?7
-eric6.Utilities.FtpUtilities.FtpDirLineParser.UnixMode?7
-eric6.Utilities.FtpUtilities.FtpDirLineParser.WindowsMode?7
 eric6.Utilities.FtpUtilities.FtpDirLineParser.parseLine?4(line)
 eric6.Utilities.FtpUtilities.FtpDirLineParser?1(parent=None)
 eric6.Utilities.MimeTypes.isTextFile?4(filename)
@@ -8815,7 +8815,6 @@ eric6.Utilities.ModuleParser.Module.getName?4()
 eric6.Utilities.ModuleParser.Module.getType?4()
 eric6.Utilities.ModuleParser.Module.scan?4(src)
 eric6.Utilities.ModuleParser.Module?1(name, file=None, type=None)
-eric6.Utilities.ModuleParser.PARSEABLE_TYPES?7
 eric6.Utilities.ModuleParser.PTL_SOURCE?7
 eric6.Utilities.ModuleParser.RB_SOURCE?7
 eric6.Utilities.ModuleParser.RbModule.addClass?4(name, _class)
@@ -9115,7 +9114,6 @@ eric6.VCS.VersionControl.VersionControl.vcsCleanup?4(name)
 eric6.VCS.VersionControl.VersionControl.vcsCommandLine?4(name)
 eric6.VCS.VersionControl.VersionControl.vcsCommit?4(name, message, noDialog=False)
 eric6.VCS.VersionControl.VersionControl.vcsConvertProject?4(vcsDataDict, project)
-eric6.VCS.VersionControl.VersionControl.vcsDefaultOptions?4()
 eric6.VCS.VersionControl.VersionControl.vcsDiff?4(name)
 eric6.VCS.VersionControl.VersionControl.vcsExists?4()
 eric6.VCS.VersionControl.VersionControl.vcsExport?4(vcsDataDict, projectDir)
@@ -9123,7 +9121,6 @@ eric6.VCS.VersionControl.VersionControl.vcsGetOptions?4()
 eric6.VCS.VersionControl.VersionControl.vcsGetOtherData?4()
 eric6.VCS.VersionControl.VersionControl.vcsGetProjectBrowserHelper?4(browser, project, isTranslationsBrowser=False)
 eric6.VCS.VersionControl.VersionControl.vcsGetProjectHelper?4(project)
-eric6.VCS.VersionControl.VersionControl.vcsHistory?4(name)
 eric6.VCS.VersionControl.VersionControl.vcsImport?4(vcsDataDict, projectDir, noDialog=False)
 eric6.VCS.VersionControl.VersionControl.vcsInit?4(vcsDir, noDialog=False)
 eric6.VCS.VersionControl.VersionControl.vcsInitConfig?4(project)

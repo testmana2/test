@@ -70,7 +70,6 @@ class VersionControl(QObject):
         self.options = {}
         self.otherData = {}
         self.canDetectBinaries = True
-        self.autoCommit = False
         
         self.statusMonitorThread = None
         self.vcsExecutionMutex = QMutex()
@@ -278,16 +277,6 @@ class VersionControl(QObject):
         """
         raise RuntimeError('Not implemented')
         
-    def vcsHistory(self, name):
-        """
-        Public method used to view the history of a file/directory in the vcs.
-        
-        @param name file/directory name to show the history for (string)
-        @exception RuntimeError to indicate that this method must be
-            implemented by a subclass
-        """
-        raise RuntimeError('Not implemented')
-        
     def vcsStatus(self, name):
         """
         Public method used to view the status of a file/directory in the vcs.
@@ -489,18 +478,6 @@ class VersionControl(QObject):
         """
         return True
     
-    def vcsDefaultOptions(self):
-        """
-        Public method used to retrieve the default options for the vcs.
-        
-        @return a dictionary with the vcs operations as key and
-            the respective options as values. The key 'global' must contain
-            the global options. The other keys must be 'commit', 'update',
-            'add', 'remove', 'diff', 'log', 'history', 'tag', 'status' and
-            'export'.
-        """
-        return self.defaultOptions
-        
     def vcsSetOptions(self, options):
         """
         Public method used to set the options for the vcs.

@@ -154,9 +154,6 @@ QObject
 <td><a href="#VersionControl.vcsConvertProject">vcsConvertProject</a></td>
 <td>Public method to convert an uncontrolled project to a version controlled project.</td>
 </tr><tr>
-<td><a href="#VersionControl.vcsDefaultOptions">vcsDefaultOptions</a></td>
-<td>Public method used to retrieve the default options for the vcs.</td>
-</tr><tr>
 <td><a href="#VersionControl.vcsDiff">vcsDiff</a></td>
 <td>Public method used to view the diff of a file/directory in the vcs.</td>
 </tr><tr>
@@ -177,9 +174,6 @@ QObject
 </tr><tr>
 <td><a href="#VersionControl.vcsGetProjectHelper">vcsGetProjectHelper</a></td>
 <td>Public method to instanciate a helper object for the project.</td>
-</tr><tr>
-<td><a href="#VersionControl.vcsHistory">vcsHistory</a></td>
-<td>Public method used to view the history of a file/directory in the vcs.</td>
 </tr><tr>
 <td><a href="#VersionControl.vcsImport">vcsImport</a></td>
 <td>Public method used to import the project into the vcs.</td>
@@ -666,20 +660,6 @@ reference to the project object
 to indicate that this method must be
             implemented by a subclass
 </dd>
-</dl><a NAME="VersionControl.vcsDefaultOptions" ID="VersionControl.vcsDefaultOptions"></a>
-<h4>VersionControl.vcsDefaultOptions</h4>
-<b>vcsDefaultOptions</b>(<i></i>)
-<p>
-        Public method used to retrieve the default options for the vcs.
-</p><dl>
-<dt>Returns:</dt>
-<dd>
-a dictionary with the vcs operations as key and
-            the respective options as values. The key 'global' must contain
-            the global options. The other keys must be 'commit', 'update',
-            'add', 'remove', 'diff', 'log', 'history', 'tag', 'status' and
-            'export'.
-</dd>
 </dl><a NAME="VersionControl.vcsDiff" ID="VersionControl.vcsDiff"></a>
 <h4>VersionControl.vcsDiff</h4>
 <b>vcsDiff</b>(<i>name</i>)
@@ -801,22 +781,6 @@ reference to the project object
 <dt>Returns:</dt>
 <dd>
 the project helper object
-</dd>
-</dl><dl>
-<dt>Raises <b>RuntimeError</b>:</dt>
-<dd>
-to indicate that this method must be
-            implemented by a subclass
-</dd>
-</dl><a NAME="VersionControl.vcsHistory" ID="VersionControl.vcsHistory"></a>
-<h4>VersionControl.vcsHistory</h4>
-<b>vcsHistory</b>(<i>name</i>)
-<p>
-        Public method used to view the history of a file/directory in the vcs.
-</p><dl>
-<dt><i>name</i></dt>
-<dd>
-file/directory name to show the history for (string)
 </dd>
 </dl><dl>
 <dt>Raises <b>RuntimeError</b>:</dt>

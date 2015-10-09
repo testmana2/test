@@ -30,11 +30,6 @@ class VcsCommandOptionsDialog(QDialog, Ui_VcsCommandOptionsDialog):
         super(VcsCommandOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
-        if Utilities.isWindowsPlatform():
-            self.optionChars = ['-', '/']
-        else:
-            self.optionChars = ['-']
-        
         opt = vcs.vcsGetOptions()
         self.globalEdit.setText(" ".join(opt['global']))
         self.commitEdit.setText(" ".join(opt['commit']))

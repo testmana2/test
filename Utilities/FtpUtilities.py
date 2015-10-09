@@ -42,10 +42,6 @@ class FtpDirLineParser(QObject):
         "dec": 12,
     }
     
-    UnixMode = 0
-    WindowsMode = 1
-    MacMode = 2
-    
     def __init__(self, parent=None):
         """
         Constructor
