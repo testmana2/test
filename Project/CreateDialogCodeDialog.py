@@ -30,6 +30,9 @@ from eric6config import getConfig
 pyqtSignatureRole = Qt.UserRole + 1
 pythonSignatureRole = Qt.UserRole + 2
 rubySignatureRole = Qt.UserRole + 3
+returnTypeRole = Qt.UserRole + 4
+parameterTypesListRole = Qt.UserRole + 5
+parameterNamesListRole = Qt.UserRole + 6
 
 
 class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
@@ -215,7 +218,7 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
             # 1. check for const
             mapped = mapped.replace("const ", "")
             
-            # 2. check fpr *
+            # 2. check for *
             mapped = mapped.replace("*", "")
             
             # 3. replace QString and QStringList
@@ -284,9 +287,14 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                 itm2.setForeground(QBrush(Qt.blue))
                                 continue
                         
-                        pyqtSignature = \
-                            ", ".join([self.__mapType(t)
-                                       for t in metaMethod.parameterTypes()])
+                        returnType = self.__mapType(
+                            metaMethod.typeName().encode())
+                        if returnType == 'void':
+                            returnType = ""
+                        parameterTypesList = [
+                            self.__mapType(t)
+                            for t in metaMethod.parameterTypes()]
+                        pyqtSignature = ", ".join(parameterTypesList)
                         
                         parameterNames = metaMethod.parameterNames()
                         if parameterNames:
@@ -295,9 +303,9 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                     parameterNames[index] = \
                                         QByteArray("p{0:d}".format(index)
                                                    .encode("utf-8"))
-                        methNamesSig = \
-                            ", ".join(
-                                [bytes(n).decode() for n in parameterNames])
+                        parameterNamesList = [bytes(n).decode()
+                                              for n in parameterNames]
+                        methNamesSig = ", ".join(parameterNamesList)
                         
                         if methNamesSig:
                             if qVersion() >= "5.0.0":
@@ -325,6 +333,11 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                                     metaMethod.signature().split("(")[0])
                         itm2.setData(pyqtSignature, pyqtSignatureRole)
                         itm2.setData(pythonSignature, pythonSignatureRole)
+                        itm2.setData(returnType, returnTypeRole)
+                        itm2.setData(parameterTypesList,
+                                     parameterTypesListRole)
+                        itm2.setData(parameterNamesList,
+                                     parameterNamesListRole)
                         
                         itm2.setFlags(Qt.ItemFlags(
                             Qt.ItemIsUserCheckable |
@@ -495,15 +508,34 @@ class CreateDialogCodeDialog(QDialog, Ui_CreateDialogCodeDialog):
                             child.data(pyqtSignatureRole))))
                     slotsCode.append('{0}def {1}:\n'.format(
                         indentStr, child.data(pythonSignatureRole)))
-                    slotsCode.append('{0}"""\n'.format(indentStr * 2))
+                    indentStr2 = indentStr * 2
+                    slotsCode.append('{0}"""\n'.format(indentStr2))
                     slotsCode.append(
                         '{0}Slot documentation goes here.\n'.format(
-                            indentStr * 2))
-                    slotsCode.append('{0}"""\n'.format(indentStr * 2))
+                            indentStr2))
+                    if child.data(returnTypeRole) or \
+                            child.data(parameterTypesListRole):
+                        slotsCode.append('{0}\n'.format(indentStr2))
+                        if child.data(parameterTypesListRole):
+                            for name, type_ in zip(
+                                child.data(parameterNamesListRole),
+                                    child.data(parameterTypesListRole)):
+                                slotsCode.append(
+                                    '{0}@param {1} DESCRIPTION\n'.format(
+                                        indentStr2, name))
+                                slotsCode.append('{0}@type {1}\n'.format(
+                                    indentStr2, type_))
+                        if child.data(returnTypeRole):
+                            slotsCode.append(
+                                '{0}@returns DESCRIPTION\n'.format(
+                                    indentStr2))
+                            slotsCode.append('{0}@rtype {1}\n'.format(
+                                indentStr2, child.data(returnTypeRole)))
+                    slotsCode.append('{0}"""\n'.format(indentStr2))
                     slotsCode.append('{0}# {1}: not implemented yet\n'.format(
-                        indentStr * 2, "TODO"))
+                        indentStr2, "TODO"))
                     slotsCode.append('{0}raise NotImplementedError\n'.format(
-                        indentStr * 2))
+                        indentStr2))
         
         if appendAtIndex == -1:
             sourceImpl.extend(slotsCode)
