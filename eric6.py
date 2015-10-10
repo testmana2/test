@@ -27,9 +27,11 @@ try:  # Only for Py2
     import StringIO as io   # __IGNORE_EXCEPTION__
     import Globals.compatibility_fixes     # __IGNORE_WARNING__
     import locale
+    coverage = 'Python'
 except ImportError:
     import io       # __IGNORE_WARNING__
     basestring = str
+    coverage = 'Python3'
 
 try:
     import sip
@@ -89,6 +91,8 @@ sys.path.insert(2, os.path.join(os.path.dirname(__file__),
                                 "ThirdParty", "Pygments"))
 sys.path.insert(2, os.path.join(os.path.dirname(__file__),
                                 "ThirdParty", "Jasy"))
+sys.path.insert(2, os.path.join(os.path.dirname(__file__),
+                                "DebugClients", coverage))
 
 from E5Gui.E5Application import E5Application
 
