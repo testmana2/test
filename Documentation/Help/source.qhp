@@ -5882,6 +5882,7 @@
       <keyword name="Hg.__checkDefaults" id="Hg.__checkDefaults" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__checkDefaults" />
       <keyword name="Hg.__getExtensionsInfo" id="Hg.__getExtensionsInfo" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__getExtensionsInfo" />
       <keyword name="Hg.__getInOutBookmarks" id="Hg.__getInOutBookmarks" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__getInOutBookmarks" />
+      <keyword name="Hg.__getMostRecentCommitMessage" id="Hg.__getMostRecentCommitMessage" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__getMostRecentCommitMessage" />
       <keyword name="Hg.__hgGetFileForRevision" id="Hg.__hgGetFileForRevision" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__hgGetFileForRevision" />
       <keyword name="Hg.__hgURL" id="Hg.__hgURL" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__hgURL" />
       <keyword name="Hg.__iniFileChanged" id="Hg.__iniFileChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__iniFileChanged" />

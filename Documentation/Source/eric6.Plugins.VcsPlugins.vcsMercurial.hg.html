@@ -83,6 +83,9 @@ VersionControl
 <td><a href="#Hg.__getInOutBookmarks">__getInOutBookmarks</a></td>
 <td>Private method to get the list of incoming or outgoing bookmarks.</td>
 </tr><tr>
+<td><a href="#Hg.__getMostRecentCommitMessage">__getMostRecentCommitMessage</a></td>
+<td>Private method to get the most recent commit message.</td>
+</tr><tr>
 <td><a href="#Hg.__hgGetFileForRevision">__hgGetFileForRevision</a></td>
 <td>Private method to get a file for a specific revision from the repository.</td>
 </tr><tr>
@@ -447,6 +450,29 @@ flag indicating to get incoming bookmarks (boolean)
 <dt>Returns:</dt>
 <dd>
 list of bookmarks (list of string)
+</dd>
+</dl><a NAME="Hg.__getMostRecentCommitMessage" ID="Hg.__getMostRecentCommitMessage"></a>
+<h4>Hg.__getMostRecentCommitMessage</h4>
+<b>__getMostRecentCommitMessage</b>(<i>repodir</i>)
+<p>
+        Private method to get the most recent commit message.
+</p><p>
+        Note: This message is extracted from the parent commit of the
+        working directory.
+</p><dl>
+<dt><i>repodir</i> (str)</dt>
+<dd>
+path containing the repository
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+most recent commit message
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
 </dd>
 </dl><a NAME="Hg.__hgGetFileForRevision" ID="Hg.__hgGetFileForRevision"></a>
 <h4>Hg.__hgGetFileForRevision</h4>

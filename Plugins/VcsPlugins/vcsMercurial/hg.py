@@ -510,12 +510,26 @@ class Hg(VersionControl):
                 if not res:
                     return
         
+        if isinstance(name, list):
+            dname, fnames = self.splitPathList(name)
+        else:
+            dname, fname = self.splitPath(name)
+        
+        # find the root of the repo
+        repodir = dname
+        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
+            repodir = os.path.dirname(repodir)
+            if os.path.splitdrive(repodir)[1] == os.sep:
+                return
+        
         if self.__commitDialog is not None:
             msg = self.__commitDialog.logMessage()
             amend = self.__commitDialog.amend()
             commitSubrepositories = self.__commitDialog.commitSubrepositories()
             self.__commitDialog.deleteLater()
             self.__commitDialog = None
+            if amend and not msg:
+                msg = self.__getMostRecentCommitMessage(repodir)
         else:
             amend = False
             commitSubrepositories = False
@@ -537,18 +551,6 @@ class Hg(VersionControl):
         if msg:
             args.append("--message")
             args.append(msg)
-        if isinstance(name, list):
-            dname, fnames = self.splitPathList(name)
-        else:
-            dname, fname = self.splitPath(name)
-        
-        # find the root of the repo
-        repodir = dname
-        while not os.path.isdir(os.path.join(repodir, self.adminDir)):
-            repodir = os.path.dirname(repodir)
-            if os.path.splitdrive(repodir)[1] == os.sep:
-                return
-        
         if self.__client:
             if isinstance(name, list):
                 self.addArguments(args, name)
@@ -578,6 +580,40 @@ class Hg(VersionControl):
                 model.updateVCSStatus(name)
             self.__forgotNames = []
         self.checkVCSStatus()
+    
+    def __getMostRecentCommitMessage(self, repodir):
+        """
+        Private method to get the most recent commit message.
+        
+        Note: This message is extracted from the parent commit of the
+        working directory.
+        
+        @param repodir path containing the repository
+        @type str
+        @return most recent commit message
+        @rtype str
+        """
+        args = self.initCommand("log")
+        args.append("--rev")
+        args.append(".")
+        args.append('--template')
+        args.append('{desc}')
+        
+        output = ""
+        if self.__client is None:
+            process = QProcess()
+            process.setWorkingDirectory(repodir)
+            process.start('hg', args)
+            procStarted = process.waitForStarted(5000)
+            if procStarted:
+                finished = process.waitForFinished(30000)
+                if finished and process.exitCode() == 0:
+                    output = str(process.readAllStandardOutput(),
+                                 self.getEncoding(), 'replace')
+        else:
+            output, error = self.__client.runcommand(args)
+        
+        return output
     
     def vcsUpdate(self, name, noDialog=False, revision=None):
         """
