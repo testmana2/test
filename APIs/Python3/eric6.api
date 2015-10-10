@@ -9083,6 +9083,7 @@ eric6.install.macPythonExe?7
 eric6.install.main?4(argv)
 eric6.install.modDir?7
 eric6.install.platBinDir?7
+eric6.install.platBinDirOld?7
 eric6.install.prepareInfoFile?4(fileName)
 eric6.install.progLanguages?7
 eric6.install.progName?7
