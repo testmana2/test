@@ -15,7 +15,6 @@ except NameError:
 
 import os
 import re
-import sys
 import difflib
 
 from PyQt5.QtCore import QDir, QTimer, QModelIndex, QFileInfo, pyqtSignal, \
