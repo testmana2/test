@@ -32,6 +32,23 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 """ Changes
+0.9.2 (2015-06-17):
+  - Fix a traceback when a global is defined in one scope, and used in another.
+
+0.9.1 (2015-06-09):
+  - Update NEWS.txt to include 0.9.0, which had been forgotten.
+
+0.9.0 (2015-05-31):
+  - Exit gracefully, not with a traceback, on SIGINT and SIGPIPE.
+  - Fix incorrect report of undefined name when using lambda expressions in
+    generator expressions.
+  - Don't crash on DOS line endings on Windows and Python 2.6.
+  - Don't report an undefined name if the 'del' which caused a name to become
+    undefined is only conditionally executed.
+  - Properly handle differences in list comprehension scope in Python 3.
+  - Improve handling of edge cases around 'global' defined variables.
+  - Report an error for 'return' outside a function.
+
 0.8.1 (2014-03-30):
   - Detect the declared encoding in Python 3.
   - Do not report redefinition of import in a local scope, if the
@@ -149,4 +166,4 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   - Improve reporting of unbound locals
 """
 
-__version__ = '0.8.1'
+__version__ = '1.0.0'

@@ -248,26 +248,6 @@ class DuplicateArgument(Message):
         self.message_args = (name,)
 
 
-class Redefined(Message):
-    """
-    Class defining the "Redefined" message.
-    """
-    message_id = 'F09'
-    message = 'redefinition of %r from line %r'
-
-    def __init__(self, filename, loc, name, orig_loc):
-        """
-        Constructor
-        
-        @param filename name of the file (string)
-        @param loc location of the issue
-        @param name name of the redefined function (string)
-        @param orig_loc location of the original definition
-        """
-        Message.__init__(self, filename, loc)
-        self.message_args = (name, orig_loc.lineno)
-
-
 class LateFutureImport(Message):
     """
     Class defining the "Late Future Import" message.
@@ -317,3 +297,13 @@ class ReturnWithArgsInsideGenerator(Message):
     """
     message_id = 'F14'
     message = '\'return\' with argument inside generator'
+
+
+class ReturnOutsideFunction(Message):
+    """
+    Class defining the "Return outside function" message.
+    
+    Indicates a return statement outside of a function/method.
+    """
+    message_id = 'F15'
+    message = '\'return\' outside function'

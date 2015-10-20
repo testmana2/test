@@ -57,6 +57,9 @@ _messages = {
     'F14': QCoreApplication.translate(
         'pyFlakes',
         "'return' with argument inside generator"),
+    'F15': QCoreApplication.translate(
+        'pyFlakes',
+        "'return' outside function"),
 }
 
 
