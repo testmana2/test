@@ -95,7 +95,8 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param sourcecode faulty line of code (string)
         @param isWarning flag indicating a warning message (boolean)
         """
-        if self.__lastFileItem is None:
+        if self.__lastFileItem is None or \
+                self.__lastFileItem.data(0, self.filenameRole) != file:
             # It's a new file
             self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
             self.__lastFileItem.setFirstColumnSpanned(True)
@@ -306,6 +307,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                 try:
                     source = Utilities.readEncodedFile(fn)[0]
                     source = Utilities.normalizeCode(source)
+                    source = source.splitlines()
                 except (UnicodeError, IOError):
                     source = ""
             else:
