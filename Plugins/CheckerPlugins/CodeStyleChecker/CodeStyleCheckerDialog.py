@@ -131,6 +131,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         if self.__lastFileItem is None:
             # It's a new file
+            # TODO: create the file item relative to the project
             self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
             self.__lastFileItem.setFirstColumnSpanned(True)
             self.__lastFileItem.setExpanded(True)

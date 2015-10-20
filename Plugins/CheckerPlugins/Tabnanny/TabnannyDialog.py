@@ -83,6 +83,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         @param line linenumber of faulty source (integer or string)
         @param sourcecode faulty line of code (string)
         """
+        # TODO: create the file item relative to the project
         itm = QTreeWidgetItem(self.resultList)
         itm.setData(0, Qt.DisplayRole, file)
         itm.setData(1, Qt.DisplayRole, line)

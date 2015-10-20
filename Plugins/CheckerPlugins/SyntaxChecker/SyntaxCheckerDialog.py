@@ -98,6 +98,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         if self.__lastFileItem is None or \
                 self.__lastFileItem.data(0, self.filenameRole) != file:
             # It's a new file
+            # TODO: create the file item relative to the project
             self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
             self.__lastFileItem.setFirstColumnSpanned(True)
             self.__lastFileItem.setExpanded(True)
