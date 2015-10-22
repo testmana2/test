@@ -66,11 +66,17 @@ QDialog, Ui_SyntaxCheckerDialog
 <td><a href="#SyntaxCheckerDialog.__clearErrors">__clearErrors</a></td>
 <td>Private method to clear all error and warning markers of open editors to be checked.</td>
 </tr><tr>
+<td><a href="#SyntaxCheckerDialog.__createErrorItem">__createErrorItem</a></td>
+<td>Private slot to create a new error item in the result list.</td>
+</tr><tr>
 <td><a href="#SyntaxCheckerDialog.__createResultItem">__createResultItem</a></td>
 <td>Private method to create an entry in the result list.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__finish">__finish</a></td>
 <td>Private slot called when the syntax check finished or the user pressed the button.</td>
+</tr><tr>
+<td><a href="#SyntaxCheckerDialog.__processError">__processError</a></td>
+<td>Private slot to process an error indication from the service.</td>
 </tr><tr>
 <td><a href="#SyntaxCheckerDialog.__processResult">__processResult</a></td>
 <td>Private slot to display the reported messages.</td>
@@ -133,13 +139,26 @@ The parent widget. (QWidget)
 <dd>
 list of files to be checked (list of string)
 </dd>
+</dl><a NAME="SyntaxCheckerDialog.__createErrorItem" ID="SyntaxCheckerDialog.__createErrorItem"></a>
+<h4>SyntaxCheckerDialog.__createErrorItem</h4>
+<b>__createErrorItem</b>(<i>filename, message</i>)
+<p>
+        Private slot to create a new error item in the result list.
+</p><dl>
+<dt><i>filename</i> (str)</dt>
+<dd>
+name of the file
+</dd><dt><i>message</i> (str)</dt>
+<dd>
+error message
+</dd>
 </dl><a NAME="SyntaxCheckerDialog.__createResultItem" ID="SyntaxCheckerDialog.__createResultItem"></a>
 <h4>SyntaxCheckerDialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, index, error, sourcecode, isWarning=False</i>)
+<b>__createResultItem</b>(<i>filename, line, index, error, sourcecode, isWarning=False</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>filename</i></dt>
 <dd>
 file name of file (string)
 </dd><dt><i>line</i></dt>
@@ -164,7 +183,20 @@ flag indicating a warning message (boolean)
 <p>
         Private slot called when the syntax check finished or the user
         pressed the button.
-</p><a NAME="SyntaxCheckerDialog.__processResult" ID="SyntaxCheckerDialog.__processResult"></a>
+</p><a NAME="SyntaxCheckerDialog.__processError" ID="SyntaxCheckerDialog.__processError"></a>
+<h4>SyntaxCheckerDialog.__processError</h4>
+<b>__processError</b>(<i>fn, msg</i>)
+<p>
+        Private slot to process an error indication from the service.
+</p><dl>
+<dt><i>fn</i> (str)</dt>
+<dd>
+filename of the file
+</dd><dt><i>msg</i> (str)</dt>
+<dd>
+error message
+</dd>
+</dl><a NAME="SyntaxCheckerDialog.__processResult" ID="SyntaxCheckerDialog.__processResult"></a>
 <h4>SyntaxCheckerDialog.__processResult</h4>
 <b>__processResult</b>(<i>fn, problems</i>)
 <p>

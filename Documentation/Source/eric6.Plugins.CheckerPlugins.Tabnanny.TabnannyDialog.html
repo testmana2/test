@@ -49,7 +49,7 @@ process.
 QDialog, Ui_TabnannyDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>None</td></tr>
+<tr><td>filenameRole</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -64,11 +64,17 @@ QDialog, Ui_TabnannyDialog
 <td><a href="#TabnannyDialog.__batchFinished">__batchFinished</a></td>
 <td>Private slot handling the completion of a batch job.</td>
 </tr><tr>
+<td><a href="#TabnannyDialog.__createErrorItem">__createErrorItem</a></td>
+<td>Private slot to create a new error item in the result list.</td>
+</tr><tr>
 <td><a href="#TabnannyDialog.__createResultItem">__createResultItem</a></td>
 <td>Private method to create an entry in the result list.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.__finish">__finish</a></td>
 <td>Private slot called when the action or the user pressed the button.</td>
+</tr><tr>
+<td><a href="#TabnannyDialog.__processError">__processError</a></td>
+<td>Private slot to process an error indication from the service.</td>
 </tr><tr>
 <td><a href="#TabnannyDialog.__processResult">__processResult</a></td>
 <td>Private slot called after perfoming a style check on one file.</td>
@@ -120,13 +126,26 @@ The parent widget (QWidget).
 <b>__batchFinished</b>(<i></i>)
 <p>
         Private slot handling the completion of a batch job.
-</p><a NAME="TabnannyDialog.__createResultItem" ID="TabnannyDialog.__createResultItem"></a>
+</p><a NAME="TabnannyDialog.__createErrorItem" ID="TabnannyDialog.__createErrorItem"></a>
+<h4>TabnannyDialog.__createErrorItem</h4>
+<b>__createErrorItem</b>(<i>filename, message</i>)
+<p>
+        Private slot to create a new error item in the result list.
+</p><dl>
+<dt><i>filename</i> (str)</dt>
+<dd>
+name of the file
+</dd><dt><i>message</i> (str)</dt>
+<dd>
+error message
+</dd>
+</dl><a NAME="TabnannyDialog.__createResultItem" ID="TabnannyDialog.__createResultItem"></a>
 <h4>TabnannyDialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, sourcecode</i>)
+<b>__createResultItem</b>(<i>filename, line, sourcecode</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>filename</i></dt>
 <dd>
 filename of file (string)
 </dd><dt><i>line</i></dt>
@@ -141,7 +160,20 @@ faulty line of code (string)
 <b>__finish</b>(<i></i>)
 <p>
         Private slot called when the action or the user pressed the button.
-</p><a NAME="TabnannyDialog.__processResult" ID="TabnannyDialog.__processResult"></a>
+</p><a NAME="TabnannyDialog.__processError" ID="TabnannyDialog.__processError"></a>
+<h4>TabnannyDialog.__processError</h4>
+<b>__processError</b>(<i>fn, msg</i>)
+<p>
+        Private slot to process an error indication from the service.
+</p><dl>
+<dt><i>fn</i> (str)</dt>
+<dd>
+filename of the file
+</dd><dt><i>msg</i> (str)</dt>
+<dd>
+error message
+</dd>
+</dl><a NAME="TabnannyDialog.__processResult" ID="TabnannyDialog.__processResult"></a>
 <h4>TabnannyDialog.__processResult</h4>
 <b>__processResult</b>(<i>fn, nok, line, error</i>)
 <p>

@@ -87,12 +87,14 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.styleCheckService = styleCheckService
         self.styleCheckService.styleChecked.connect(self.__processResult)
         self.styleCheckService.batchFinished.connect(self.__batchFinished)
+        self.styleCheckService.error.connect(self.__processError)
         self.filename = None
         
         self.noResults = True
         self.cancelled = False
         self.__lastFileItem = None
         self.__finished = True
+        self.__errorItem = None
         
         self.__fileOrFileList = ""
         self.__project = None
@@ -112,12 +114,34 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                                   self.resultList.header().sortIndicatorOrder()
                                   )
     
-    def __createResultItem(self, file, line, pos, message, fixed, autofixing,
-                           ignored):
+    def __createErrorItem(self, filename, message):
+        """
+        Private slot to create a new error item in the result list.
+        
+        @param filename name of the file
+        @type str
+        @param message error message
+        @type str
+        """
+        if self.__errorItem is None:
+            self.__errorItem = QTreeWidgetItem(self.resultList, [
+                self.tr("Errors")])
+            self.__errorItem.setExpanded(True)
+            self.__errorItem.setForeground(0, Qt.red)
+        
+        msg = "{0} ({1})".format(self.__project.getRelativePath(filename),
+                                 message)
+        if not self.resultList.findItems(msg, Qt.MatchExactly):
+            itm = QTreeWidgetItem(self.__errorItem, [msg])
+            itm.setForeground(0, Qt.red)
+            itm.setFirstColumnSpanned(True)
+    
+    def __createResultItem(self, filename, line, pos, message, fixed,
+                           autofixing, ignored):
         """
         Private method to create an entry in the result list.
         
-        @param file file name of the file (string)
+        @param filename file name of the file (string)
         @param line line number of issue (integer or string)
         @param pos character position of issue (integer or string)
         @param message message text (string)
@@ -131,11 +155,11 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         if self.__lastFileItem is None:
             # It's a new file
-            # TODO: create the file item relative to the project
-            self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
+            self.__lastFileItem = QTreeWidgetItem(self.resultList, [
+                self.__project.getRelativePath(filename)])
             self.__lastFileItem.setFirstColumnSpanned(True)
             self.__lastFileItem.setExpanded(True)
-            self.__lastFileItem.setData(0, self.filenameRole, file)
+            self.__lastFileItem.setData(0, self.filenameRole, filename)
         
         fixable = False
         code, message = message.split(None, 1)
@@ -164,7 +188,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         itm.setTextAlignment(1, Qt.AlignVCenter)
         itm.setTextAlignment(2, Qt.AlignVCenter)
         
-        itm.setData(0, self.filenameRole, file)
+        itm.setData(0, self.filenameRole, filename)
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.positionRole, int(pos))
         itm.setData(0, self.messageRole, message)
@@ -344,6 +368,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     [f for f in self.files
                      if not fnmatch.fnmatch(f, filter.strip())]
 
+        self.__errorItem = None
         self.__resetStatistics()
         self.__clearErrors(self.files)
         
@@ -494,6 +519,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         # reset the progress bar to the checked files
         self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.tr("Transferring data..."))
         QApplication.processEvents()
         
         self.__finished = False
@@ -507,6 +533,20 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.checkProgress.setMaximum(1)
         self.checkProgress.setValue(1)
         self.__finish()
+    
+    def __processError(self, fn, msg):
+        """
+        Private slot to process an error indication from the service.
+        
+        @param fn filename of the file
+        @type str
+        @param msg error message
+        @type str
+        """
+        self.__createErrorItem(fn, msg)
+        
+        if not self.__batch:
+            self.check()
     
     def __processResult(self, fn, codeStyleCheckerStats, fixes, results):
         """

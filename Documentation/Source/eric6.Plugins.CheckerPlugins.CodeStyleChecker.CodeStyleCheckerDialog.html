@@ -66,6 +66,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td><a href="#CodeStyleCheckerDialog.__clearErrors">__clearErrors</a></td>
 <td>Private method to clear all warning markers of open editors to be checked.</td>
 </tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__createErrorItem">__createErrorItem</a></td>
+<td>Private slot to create a new error item in the result list.</td>
+</tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__createResultItem">__createResultItem</a></td>
 <td>Private method to create an entry in the result list.</td>
 </tr><tr>
@@ -83,6 +86,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__modifyFixedResultItem">__modifyFixedResultItem</a></td>
 <td>Private method to modify a result list entry to show its positive fixed state.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__processError">__processError</a></td>
+<td>Private slot to process an error indication from the service.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__processResult">__processResult</a></td>
 <td>Private slot called after perfoming a style check on one file.</td>
@@ -191,13 +197,26 @@ reference to the parent widget (QWidget)
 <dd>
 list of files to be checked (list of string)
 </dd>
+</dl><a NAME="CodeStyleCheckerDialog.__createErrorItem" ID="CodeStyleCheckerDialog.__createErrorItem"></a>
+<h4>CodeStyleCheckerDialog.__createErrorItem</h4>
+<b>__createErrorItem</b>(<i>filename, message</i>)
+<p>
+        Private slot to create a new error item in the result list.
+</p><dl>
+<dt><i>filename</i> (str)</dt>
+<dd>
+name of the file
+</dd><dt><i>message</i> (str)</dt>
+<dd>
+error message
+</dd>
 </dl><a NAME="CodeStyleCheckerDialog.__createResultItem" ID="CodeStyleCheckerDialog.__createResultItem"></a>
 <h4>CodeStyleCheckerDialog.__createResultItem</h4>
-<b>__createResultItem</b>(<i>file, line, pos, message, fixed, autofixing, ignored</i>)
+<b>__createResultItem</b>(<i>filename, line, pos, message, fixed, autofixing, ignored</i>)
 <p>
         Private method to create an entry in the result list.
 </p><dl>
-<dt><i>file</i></dt>
+<dt><i>filename</i></dt>
 <dd>
 file name of the file (string)
 </dd><dt><i>line</i></dt>
@@ -287,6 +306,19 @@ text to be appended (string)
 </dd><dt><i>fixed</i></dt>
 <dd>
 flag indicating a fixed issue (boolean)
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__processError" ID="CodeStyleCheckerDialog.__processError"></a>
+<h4>CodeStyleCheckerDialog.__processError</h4>
+<b>__processError</b>(<i>fn, msg</i>)
+<p>
+        Private slot to process an error indication from the service.
+</p><dl>
+<dt><i>fn</i> (str)</dt>
+<dd>
+filename of the file
+</dd><dt><i>msg</i> (str)</dt>
+<dd>
+error message
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__processResult" ID="CodeStyleCheckerDialog.__processResult"></a>
 <h4>CodeStyleCheckerDialog.__processResult</h4>

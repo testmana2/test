@@ -320,7 +320,10 @@ class Editor(QsciScintillaCompat):
         # initialize the online syntax check timer
         try:
             self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
-            self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
+            self.syntaxCheckService.syntaxChecked.connect(
+                self.__processSyntaxCheckResult)
+            self.syntaxCheckService.error.connect(
+                self.__processSyntaxCheckError)
             self.__initOnlineSyntaxCheck()
         except KeyError:
             self.syntaxCheckService = None
@@ -5368,9 +5371,29 @@ class Editor(QsciScintillaCompat):
             self.syntaxCheckService.syntaxCheck(
                 self.filetype, self.fileName or "(Unnamed)", self.text())
 
-    def __processResult(self, fn, problems):
+    def __processSyntaxCheckError(self, fn, msg):
         """
-        Private slot to report the resulting messages.
+        Private slot to report an error message of a syntax check.
+        
+        @param fn filename of the file
+        @type str
+        @param msg error message
+        @type str
+        """
+        if fn != self.fileName and (
+                self.fileName is not None or fn != "(Unnamed)"):
+            return
+        
+        self.clearSyntaxError()
+        self.clearFlakesWarnings()
+        
+        self.toggleWarning(0, 0, True, msg)
+        
+        self.updateVerticalScrollBar()
+    
+    def __processSyntaxCheckResult(self, fn, problems):
+        """
+        Private slot to report the resulting messages of a syntax check.
         
         @param fn filename of the checked file (str)
         @param problems dictionary with the keys 'error' and 'warnings' which
@@ -6332,7 +6355,9 @@ class Editor(QsciScintillaCompat):
         
         if self.syntaxCheckService is not None:
             self.syntaxCheckService.syntaxChecked.disconnect(
-                self.__processResult)
+                self.__processSyntaxCheckResult)
+            self.syntaxCheckService.error.disconnect(
+                self.__processSyntaxCheckError)
         
         if self.spell:
             self.spell.stopIncrementalCheck()

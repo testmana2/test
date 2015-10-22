@@ -46,9 +46,11 @@ class TabnannyPlugin(QObject):
     @signal indentChecked(str, bool, str, str) emitted when the indent
         check was done.
     @signal batchFinished() emitted when a style check batch is done
+    @signal error(str, str) emitted in case of an error
     """
     indentChecked = pyqtSignal(str, bool, str, str)
     batchFinished = pyqtSignal()
+    error = pyqtSignal(str, str)
     
     def __init__(self, ui):
         """
@@ -85,7 +87,7 @@ class TabnannyPlugin(QObject):
         @param fn file name (string)
         @param msg message text (string)
         """
-        self.indentChecked.emit(fn, True, "1", msg)
+        self.error.emit(fn, msg)
     
     def serviceErrorPy2(self, fx, lang, fn, msg):
         """

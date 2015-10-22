@@ -50,9 +50,11 @@ class CodeStyleCheckerPlugin(QObject):
     @signal styleChecked(str, dict, int, list) emitted when the style check was
         done for a file.
     @signal batchFinished() emitted when a style check batch is done
+    @signal error(str, str) emitted in case of an error
     """
     styleChecked = pyqtSignal(str, dict, int, list)
     batchFinished = pyqtSignal()
+    error = pyqtSignal(str, str)
     
     def __init__(self, ui):
         """
@@ -89,8 +91,7 @@ class CodeStyleCheckerPlugin(QObject):
         @param fn file name (string)
         @param msg message text (string)
         """
-        self.styleChecked.emit(
-            fn, {}, 0, [[1, 1, '---- ' + msg, False, False, False]])
+        self.error.emit(fn, msg)
     
     def serviceErrorPy2(self, fx, lang, fn, msg):
         """

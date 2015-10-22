@@ -4180,6 +4180,7 @@ eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.batchFinished?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.batchJobDone?4(fx, lang)
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.cancelSyntaxBatchCheck?4()
+eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.error?7
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.getExtensions?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.getLanguages?4()
 eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckService.SyntaxCheckService.removeLanguage?4(lang)
@@ -4230,6 +4231,7 @@ eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.process_tokens?4(tokens)
 eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.worker?4(input, output)
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.check?4(codestring='')
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.checkBatch?4()
+eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.filenameRole?7
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_buttonBox_clicked?4(button)
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_resultList_itemActivated?4(itm, col)
 eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.TabnannyDialog.on_startButton_clicked?4()
@@ -4292,6 +4294,7 @@ eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.batchFinished?7
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.batchJobDone?4(fx, lang)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.cancelStyleBatchCheck?4()
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.deactivate?4()
+eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.error?7
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.serviceErrorPy2?4(fx, lang, fn, msg)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.serviceErrorPy3?4(fx, lang, fn, msg)
 eric6.Plugins.PluginCodeStyleChecker.CodeStyleCheckerPlugin.styleBatchCheck?4(argumentsList)
@@ -4362,6 +4365,7 @@ eric6.Plugins.PluginTabnanny.TabnannyPlugin.batchFinished?7
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.batchJobDone?4(fx, lang)
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.cancelIndentBatchCheck?4()
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.deactivate?4()
+eric6.Plugins.PluginTabnanny.TabnannyPlugin.error?7
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.indentBatchCheck?4(argumentsList)
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.indentCheck?4(lang, filename, source)
 eric6.Plugins.PluginTabnanny.TabnannyPlugin.indentChecked?7

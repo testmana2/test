@@ -2182,12 +2182,14 @@
       <keyword name="CodeStyleCheckerDialog (Module)" id="CodeStyleCheckerDialog (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html" />
       <keyword name="CodeStyleCheckerDialog.__batchFinished" id="CodeStyleCheckerDialog.__batchFinished" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__batchFinished" />
       <keyword name="CodeStyleCheckerDialog.__clearErrors" id="CodeStyleCheckerDialog.__clearErrors" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__clearErrors" />
+      <keyword name="CodeStyleCheckerDialog.__createErrorItem" id="CodeStyleCheckerDialog.__createErrorItem" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__createErrorItem" />
       <keyword name="CodeStyleCheckerDialog.__createResultItem" id="CodeStyleCheckerDialog.__createResultItem" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__createResultItem" />
       <keyword name="CodeStyleCheckerDialog.__finish" id="CodeStyleCheckerDialog.__finish" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__finish" />
       <keyword name="CodeStyleCheckerDialog.__getEol" id="CodeStyleCheckerDialog.__getEol" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__getEol" />
       <keyword name="CodeStyleCheckerDialog.__getSelectedFixableItems" id="CodeStyleCheckerDialog.__getSelectedFixableItems" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__getSelectedFixableItems" />
       <keyword name="CodeStyleCheckerDialog.__itemFixable" id="CodeStyleCheckerDialog.__itemFixable" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__itemFixable" />
       <keyword name="CodeStyleCheckerDialog.__modifyFixedResultItem" id="CodeStyleCheckerDialog.__modifyFixedResultItem" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__modifyFixedResultItem" />
+      <keyword name="CodeStyleCheckerDialog.__processError" id="CodeStyleCheckerDialog.__processError" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__processError" />
       <keyword name="CodeStyleCheckerDialog.__processResult" id="CodeStyleCheckerDialog.__processResult" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__processResult" />
       <keyword name="CodeStyleCheckerDialog.__resetStatistics" id="CodeStyleCheckerDialog.__resetStatistics" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__resetStatistics" />
       <keyword name="CodeStyleCheckerDialog.__resort" id="CodeStyleCheckerDialog.__resort" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__resort" />
@@ -4343,9 +4345,10 @@
       <keyword name="Editor.__processEndEditCommand" id="Editor.__processEndEditCommand" ref="eric6.QScintilla.Editor.html#Editor.__processEndEditCommand" />
       <keyword name="Editor.__processFlags" id="Editor.__processFlags" ref="eric6.QScintilla.Editor.html#Editor.__processFlags" />
       <keyword name="Editor.__processRequestSyncCommand" id="Editor.__processRequestSyncCommand" ref="eric6.QScintilla.Editor.html#Editor.__processRequestSyncCommand" />
-      <keyword name="Editor.__processResult" id="Editor.__processResult" ref="eric6.QScintilla.Editor.html#Editor.__processResult" />
       <keyword name="Editor.__processStartEditCommand" id="Editor.__processStartEditCommand" ref="eric6.QScintilla.Editor.html#Editor.__processStartEditCommand" />
       <keyword name="Editor.__processSyncCommand" id="Editor.__processSyncCommand" ref="eric6.QScintilla.Editor.html#Editor.__processSyncCommand" />
+      <keyword name="Editor.__processSyntaxCheckError" id="Editor.__processSyntaxCheckError" ref="eric6.QScintilla.Editor.html#Editor.__processSyntaxCheckError" />
+      <keyword name="Editor.__processSyntaxCheckResult" id="Editor.__processSyntaxCheckResult" ref="eric6.QScintilla.Editor.html#Editor.__processSyntaxCheckResult" />
       <keyword name="Editor.__projectPropertiesChanged" id="Editor.__projectPropertiesChanged" ref="eric6.QScintilla.Editor.html#Editor.__projectPropertiesChanged" />
       <keyword name="Editor.__refreshAnnotations" id="Editor.__refreshAnnotations" ref="eric6.QScintilla.Editor.html#Editor.__refreshAnnotations" />
       <keyword name="Editor.__registerImages" id="Editor.__registerImages" ref="eric6.QScintilla.Editor.html#Editor.__registerImages" />
@@ -11735,8 +11738,10 @@
       <keyword name="SyntaxCheckerDialog (Module)" id="SyntaxCheckerDialog (Module)" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html" />
       <keyword name="SyntaxCheckerDialog.__batchFinished" id="SyntaxCheckerDialog.__batchFinished" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__batchFinished" />
       <keyword name="SyntaxCheckerDialog.__clearErrors" id="SyntaxCheckerDialog.__clearErrors" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__clearErrors" />
+      <keyword name="SyntaxCheckerDialog.__createErrorItem" id="SyntaxCheckerDialog.__createErrorItem" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__createErrorItem" />
       <keyword name="SyntaxCheckerDialog.__createResultItem" id="SyntaxCheckerDialog.__createResultItem" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__createResultItem" />
       <keyword name="SyntaxCheckerDialog.__finish" id="SyntaxCheckerDialog.__finish" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__finish" />
+      <keyword name="SyntaxCheckerDialog.__processError" id="SyntaxCheckerDialog.__processError" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__processError" />
       <keyword name="SyntaxCheckerDialog.__processResult" id="SyntaxCheckerDialog.__processResult" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__processResult" />
       <keyword name="SyntaxCheckerDialog.__resort" id="SyntaxCheckerDialog.__resort" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.__resort" />
       <keyword name="SyntaxCheckerDialog.check" id="SyntaxCheckerDialog.check" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheckerDialog.html#SyntaxCheckerDialog.check" />
@@ -11837,8 +11842,10 @@
       <keyword name="TabnannyDialog (Constructor)" id="TabnannyDialog (Constructor)" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__init__" />
       <keyword name="TabnannyDialog (Module)" id="TabnannyDialog (Module)" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html" />
       <keyword name="TabnannyDialog.__batchFinished" id="TabnannyDialog.__batchFinished" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__batchFinished" />
+      <keyword name="TabnannyDialog.__createErrorItem" id="TabnannyDialog.__createErrorItem" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__createErrorItem" />
       <keyword name="TabnannyDialog.__createResultItem" id="TabnannyDialog.__createResultItem" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__createResultItem" />
       <keyword name="TabnannyDialog.__finish" id="TabnannyDialog.__finish" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__finish" />
+      <keyword name="TabnannyDialog.__processError" id="TabnannyDialog.__processError" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__processError" />
       <keyword name="TabnannyDialog.__processResult" id="TabnannyDialog.__processResult" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__processResult" />
       <keyword name="TabnannyDialog.__resort" id="TabnannyDialog.__resort" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.__resort" />
       <keyword name="TabnannyDialog.check" id="TabnannyDialog.check" ref="eric6.Plugins.CheckerPlugins.Tabnanny.TabnannyDialog.html#TabnannyDialog.check" />

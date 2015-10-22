@@ -33,6 +33,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
     """
     Class implementing a dialog to show the results of the tabnanny check run.
     """
+    filenameRole = Qt.UserRole + 1
+    
     def __init__(self, indentCheckService, parent=None):
         """
         Constructor
@@ -53,11 +55,13 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.indentCheckService = indentCheckService
         self.indentCheckService.indentChecked.connect(self.__processResult)
         self.indentCheckService.batchFinished.connect(self.__batchFinished)
+        self.indentCheckService.error.connect(self.__processError)
         self.filename = None
         
         self.noResults = True
         self.cancelled = False
         self.__finished = True
+        self.__errorItem = None
         
         self.__fileList = []
         self.__project = None
@@ -74,21 +78,44 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.resultList.sortItems(
             self.resultList.sortColumn(),
             self.resultList.header().sortIndicatorOrder())
+    
+    def __createErrorItem(self, filename, message):
+        """
+        Private slot to create a new error item in the result list.
         
-    def __createResultItem(self, file, line, sourcecode):
+        @param filename name of the file
+        @type str
+        @param message error message
+        @type str
+        """
+        if self.__errorItem is None:
+            self.__errorItem = QTreeWidgetItem(self.resultList, [
+                self.tr("Errors")])
+            self.__errorItem.setExpanded(True)
+            self.__errorItem.setForeground(0, Qt.red)
+        
+        msg = "{0} ({1})".format(self.__project.getRelativePath(filename),
+                                 message)
+        if not self.resultList.findItems(msg, Qt.MatchExactly):
+            itm = QTreeWidgetItem(self.__errorItem, [msg])
+            itm.setForeground(0, Qt.red)
+            itm.setFirstColumnSpanned(True)
+        
+    def __createResultItem(self, filename, line, sourcecode):
         """
         Private method to create an entry in the result list.
         
-        @param file filename of file (string)
+        @param filename filename of file (string)
         @param line linenumber of faulty source (integer or string)
         @param sourcecode faulty line of code (string)
         """
-        # TODO: create the file item relative to the project
         itm = QTreeWidgetItem(self.resultList)
-        itm.setData(0, Qt.DisplayRole, file)
+        itm.setData(0, Qt.DisplayRole,
+                    self.__project.getRelativePath(filename))
         itm.setData(1, Qt.DisplayRole, line)
         itm.setData(2, Qt.DisplayRole, sourcecode)
         itm.setTextAlignment(1, Qt.AlignRight)
+        itm.setData(0, self.filenameRole, filename)
         
     def prepare(self, fileList, project):
         """
@@ -139,6 +166,8 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
                     Utilities.direntries(fn, True, '*{0}'.format(ext), 0))
         else:
             self.files = [fn]
+        
+        self.__errorItem = None
         
         if len(self.files) > 0:
             self.checkProgress.setMaximum(len(self.files))
@@ -227,6 +256,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         
         # reset the progress bar to the checked files
         self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.tr("Transferring data..."))
         QApplication.processEvents()
         
         self.__finished = False
@@ -240,6 +270,20 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         self.checkProgress.setMaximum(1)
         self.checkProgress.setValue(1)
         self.__finish()
+    
+    def __processError(self, fn, msg):
+        """
+        Private slot to process an error indication from the service.
+        
+        @param fn filename of the file
+        @type str
+        @param msg error message
+        @type str
+        """
+        self.__createErrorItem(fn, msg)
+        
+        if not self.__batch:
+            self.check()
     
     def __processResult(self, fn, nok, line, error):
         """
@@ -343,7 +387,7 @@ class TabnannyDialog(QDialog, Ui_TabnannyDialog):
         if self.noResults:
             return
         
-        fn = Utilities.normabspath(itm.text(0))
+        fn = Utilities.normabspath(itm.data(0, self.filenameRole))
         lineno = int(itm.text(1))
         
         e5App().getObject("ViewManager").openSourceFile(fn, lineno)

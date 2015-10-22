@@ -28,9 +28,11 @@ class SyntaxCheckService(QObject):
     @signal syntaxChecked(str, dict) emitted when the syntax check was done for
         one file
     @signal batchFinished() emitted when a syntax check batch is done
+    @signal error(str, str) emitted in case of an error
     """
     syntaxChecked = pyqtSignal(str, dict)
     batchFinished = pyqtSignal()
+    error = pyqtSignal(str, str)
     
     def __init__(self):
         """
@@ -183,7 +185,7 @@ class SyntaxCheckService(QObject):
         @param fn file name (string)
         @param msg message text (string)
         """
-        self.syntaxChecked.emit(fn, {'warnings': [(fn, 1, 0, '', msg)]})
+        self.error.emit(fn, msg)
     
     def serviceErrorPy2(self, fx, lang, fn, msg):
         """

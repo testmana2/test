@@ -58,6 +58,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.cancelled = False
         self.__lastFileItem = None
         self.__finished = True
+        self.__errorItem = None
         
         self.__fileList = []
         self.__project = None
@@ -71,6 +72,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             self.syntaxCheckService = e5App().getObject('SyntaxCheckService')
             self.syntaxCheckService.syntaxChecked.connect(self.__processResult)
             self.syntaxCheckService.batchFinished.connect(self.__batchFinished)
+            self.syntaxCheckService.error.connect(self.__processError)
         except KeyError:
             self.syntaxCheckService = None
         self.filename = None
@@ -82,13 +84,35 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.resultList.sortItems(self.resultList.sortColumn(),
                                   self.resultList.header().sortIndicatorOrder()
                                   )
+    
+    def __createErrorItem(self, filename, message):
+        """
+        Private slot to create a new error item in the result list.
         
-    def __createResultItem(self, file, line, index, error, sourcecode,
+        @param filename name of the file
+        @type str
+        @param message error message
+        @type str
+        """
+        if self.__errorItem is None:
+            self.__errorItem = QTreeWidgetItem(self.resultList, [
+                self.tr("Errors")])
+            self.__errorItem.setExpanded(True)
+            self.__errorItem.setForeground(0, Qt.red)
+        
+        msg = "{0} ({1})".format(self.__project.getRelativePath(filename),
+                                 message)
+        if not self.resultList.findItems(msg, Qt.MatchExactly):
+            itm = QTreeWidgetItem(self.__errorItem, [msg])
+            itm.setForeground(0, Qt.red)
+            itm.setFirstColumnSpanned(True)
+        
+    def __createResultItem(self, filename, line, index, error, sourcecode,
                            isWarning=False):
         """
         Private method to create an entry in the result list.
         
-        @param file file name of file (string)
+        @param filename file name of file (string)
         @param line line number of faulty source (integer or string)
         @param index index number of fault (integer)
         @param error error text (string)
@@ -96,13 +120,13 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         @param isWarning flag indicating a warning message (boolean)
         """
         if self.__lastFileItem is None or \
-                self.__lastFileItem.data(0, self.filenameRole) != file:
+                self.__lastFileItem.data(0, self.filenameRole) != filename:
             # It's a new file
-            # TODO: create the file item relative to the project
-            self.__lastFileItem = QTreeWidgetItem(self.resultList, [file])
+            self.__lastFileItem = QTreeWidgetItem(self.resultList, [
+                self.__project.getRelativePath(filename)])
             self.__lastFileItem.setFirstColumnSpanned(True)
             self.__lastFileItem.setExpanded(True)
-            self.__lastFileItem.setData(0, self.filenameRole, file)
+            self.__lastFileItem.setData(0, self.filenameRole, filename)
         
         itm = QTreeWidgetItem(self.__lastFileItem)
         if isWarning:
@@ -112,7 +136,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         itm.setData(0, Qt.DisplayRole, line)
         itm.setData(1, Qt.DisplayRole, error)
         itm.setData(2, Qt.DisplayRole, sourcecode)
-        itm.setData(0, self.filenameRole, file)
+        itm.setData(0, self.filenameRole, filename)
         itm.setData(0, self.lineRole, int(line))
         itm.setData(0, self.indexRole, index)
         itm.setData(0, self.errorRole, error)
@@ -169,6 +193,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
             else:
                 self.files = [fn]
             
+            self.__errorItem = None
             self.__clearErrors(self.files)
             
             if codestring or len(self.files) > 0:
@@ -264,6 +289,7 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         
         # reset the progress bar to the checked files
         self.checkProgress.setValue(self.progress)
+        self.checkProgressLabel.setPath(self.tr("Transferring data..."))
         QApplication.processEvents()
         
         self.__finished = False
@@ -277,6 +303,20 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         self.checkProgress.setMaximum(1)
         self.checkProgress.setValue(1)
         self.__finish()
+    
+    def __processError(self, fn, msg):
+        """
+        Private slot to process an error indication from the service.
+        
+        @param fn filename of the file
+        @type str
+        @param msg error message
+        @type str
+        """
+        self.__createErrorItem(fn, msg)
+        
+        if not self.__batch:
+            self.check()
     
     def __processResult(self, fn, problems):
         """
