@@ -50,7 +50,7 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
             else:
                 continue
             itm = QTreeWidgetItem(self.codeTable, [code, message])
-            if code.startswith(("W", "C")):
+            if code.startswith(("W", "C", "M")):
                 itm.setIcon(0, UI.PixmapCache.getIcon("warning.png"))
             elif code.startswith("E"):
                 itm.setIcon(0, UI.PixmapCache.getIcon("syntaxError.png"))

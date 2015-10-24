@@ -166,7 +166,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         itm = QTreeWidgetItem(
             self.__lastFileItem,
             ["{0:6}".format(line), code, message])
-        if code.startswith(("W", "-", "C")):
+        if code.startswith(("W", "-", "C", "M")):
             itm.setIcon(1, UI.PixmapCache.getIcon("warning.png"))
         elif code.startswith("N"):
             itm.setIcon(1, UI.PixmapCache.getIcon("namingError.png"))
@@ -301,6 +301,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.__data["ShowIgnored"] = False
         if "MaxCodeComplexity" not in self.__data:
             self.__data["MaxCodeComplexity"] = 10
+        if "ValidEncodings" not in self.__data:
+            self.__data["ValidEncodings"] = "latin-1, utf-8"
+        if "CopyrightMinFileSize" not in self.__data or \
+                "CopyrightAuthor" not in self.__data:
+            self.__data["CopyrightMinFileSize"] = 0
+            self.__data["CopyrightAuthor"] = ""
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -315,6 +321,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.docTypeComboBox.setCurrentIndex(
             self.docTypeComboBox.findData(self.__data["DocstringType"]))
         self.complexitySpinBox.setValue(self.__data["MaxCodeComplexity"])
+        self.encodingsEdit.setText(self.__data["ValidEncodings"])
+        self.copyrightFileSizeSpinBox.setValue(
+            self.__data["CopyrightMinFileSize"])
+        self.copyrightAuthorEdit.setText(self.__data["CopyrightAuthor"])
     
     def start(self, fn, save=False, repeat=None):
         """
@@ -394,10 +404,18 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             docType = self.docTypeComboBox.itemData(
                 self.docTypeComboBox.currentIndex())
             maxCodeComplexity = self.complexitySpinBox.value()
+            miscellaneousArgs = {
+                "CodingChecker": self.encodingsEdit.text(),
+                "CopyrightChecker": {
+                    "MinFilesize": self.copyrightFileSizeSpinBox.value(),
+                    "Author": self.copyrightAuthorEdit.text(),
+                }
+            }
             
             self.__options = [excludeMessages, includeMessages, repeatMessages,
                               fixCodes, noFixCodes, fixIssues, maxLineLength,
-                              hangClosing, docType, maxCodeComplexity]
+                              hangClosing, docType, maxCodeComplexity,
+                              miscellaneousArgs]
             
             # now go through all the files
             self.progress = 0
@@ -436,7 +454,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.__lastFileItem = None
         
         if codestring:
-            source = codestring
+            source = codestring.splitlines(True)
             encoding = Utilities.get_coding(source)
         else:
             try:
@@ -677,6 +695,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 "DocstringType": self.docTypeComboBox.itemData(
                     self.docTypeComboBox.currentIndex()),
                 "MaxCodeComplexity": self.complexitySpinBox.value(),
+                "ValidEncodings": self.encodingsEdit.text(),
+                "CopyrightMinFileSize": self.copyrightFileSizeSpinBox.value(),
+                "CopyrightAuthor": self.copyrightAuthorEdit.text(),
             }
             if data != self.__data:
                 self.__data = data
@@ -850,6 +871,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             Preferences.Prefs.settings.value("PEP8/DocstringType", "pep257")))
         self.complexitySpinBox.setValue(int(Preferences.Prefs.settings.value(
             "PEP8/MaxCodeComplexity", 10)))
+        self.encodingsEdit.setText(Preferences.Prefs.settings.value(
+            "PEP8/ValidEncodings", "latin-1, utf-8"))
+        self.copyrightFileSizeSpinBox.setValue(int(
+            Preferences.Prefs.settings.value("PEP8/CopyrightMinFileSize", 0)))
+        self.copyrightAuthorEdit.setText(
+            Preferences.Prefs.settings.value("PEP8/CopyrightAuthor"))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -882,6 +909,12 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 self.docTypeComboBox.currentIndex()))
         Preferences.Prefs.settings.setValue(
             "PEP8/MaxCodeComplexity", self.complexitySpinBox.value())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/ValidEncodings", self.encodingsEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/CopyrightMinFileSize", self.copyrightFileSizeSpinBox.value())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/CopyrightAuthor", self.copyrightAuthorEdit.text())
     
     @pyqtSlot()
     def on_resetDefaultButton_clicked(self):
@@ -902,6 +935,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Preferences.Prefs.settings.setValue("PEP8/HangClosing", False)
         Preferences.Prefs.settings.setValue("PEP8/DocstringType", "pep257")
         Preferences.Prefs.settings.setValue("PEP8/MaxCodeComplexity", 10)
+        Preferences.Prefs.settings.setValue(
+            "PEP8/ValidEncodings", "latin-1, utf-8")
+        Preferences.Prefs.settings.setValue("PEP8/CopyrightMinFileSize", 0)
+        Preferences.Prefs.settings.setValue("PEP8/CopyrightAuthor", "")
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):

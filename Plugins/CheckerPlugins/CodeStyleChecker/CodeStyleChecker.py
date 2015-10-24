@@ -12,12 +12,13 @@ import multiprocessing
 
 import pep8
 from NamingStyleChecker import NamingStyleChecker
-from McCabeChecker import McCabeChecker
 
 # register the name checker
 pep8.register_check(NamingStyleChecker, NamingStyleChecker.Codes)
 
 from DocStyleChecker import DocStyleChecker
+from MiscellaneousChecker import MiscellaneousChecker
+from McCabeChecker import McCabeChecker
 
 
 def initService():
@@ -189,8 +190,8 @@ def __checkCodeStyle(filename, source, args):
             (bool), fixed (bool), autofixing (bool), fixedMsg (str)))
     """
     (excludeMessages, includeMessages, repeatMessages, fixCodes, noFixCodes,
-     fixIssues, maxLineLength, hangClosing, docType, maxComplexity, errors,
-     eol, encoding, backup) = args
+     fixIssues, maxLineLength, hangClosing, docType, maxComplexity,
+     miscellaneousArgs, errors, eol, encoding, backup) = args
     
     stats = {}
 
@@ -242,6 +243,14 @@ def __checkCodeStyle(filename, source, args):
         docStyleChecker.run()
         stats.update(docStyleChecker.counters)
         errors += docStyleChecker.errors
+        
+        # miscellaneous additional checks
+        miscellaneousChecker = MiscellaneousChecker(
+            source, filename, select, ignore, [], repeatMessages,
+            miscellaneousArgs)
+        miscellaneousChecker.run()
+        stats.update(miscellaneousChecker.counters)
+        errors += miscellaneousChecker.errors
         
         # check code complexity iaw. McCabe
         mccabeChecker = McCabeChecker(

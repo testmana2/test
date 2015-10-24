@@ -377,6 +377,33 @@ _messages = {
     "C901": QCoreApplication.translate(
         "McCabeChecker", "{0}: {1}"),
     
+    # Messages of the Miscellaneous Checker
+    # TODO: Do this right
+    "M101": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "coding magic comment not found"),
+    "M102": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "unknown encoding ({0}) found in coding magic comment"),
+    "M111": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "copyright notice not present"),
+    "M112": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "copyright notice contains invalid author"),
+    "M121": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "blind except: statement"),
+    "M131": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "found {0} formatter"),
+    "M801": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "print statement found"),
+    "M901": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "{0}: {1}"),
+    
     # CodeStyleFixer messages
     "FD111": QCoreApplication.translate(
         'CodeStyleFixer',
@@ -547,6 +574,11 @@ _messages_sample_args = {
     "E902": ["IOError"],
     "D232": ["public"],
     "D901": ["SyntaxError", "Invalid Syntax"],
+    "C101": ["foo.bar", "42"],
+    "C901": ["SyntaxError", "Invalid Syntax"],
+    "M102": ["enc42"],
+    "M131": ["%s"],
+    "M901": ["SyntaxError", "Invalid Syntax"],
     "FWRITE_ERROR": ["IOError"],
 }
 
