@@ -400,6 +400,9 @@ _messages = {
     "M801": QCoreApplication.translate(
         "MiscellaneousChecker",
         "print statement found"),
+    "M811": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "one element tuple found"),
     "M901": QCoreApplication.translate(
         "MiscellaneousChecker",
         "{0}: {1}"),

@@ -24,6 +24,7 @@ class MiscellaneousChecker(object):
         "M121",
         "M131",
         "M801",
+        "M811",
         
         "M901",
     ]
@@ -68,6 +69,7 @@ class MiscellaneousChecker(object):
             (self.__checkBlindExcept, ("M121",)),
             (self.__checkPep3101, ("M131",)),
             (self.__checkPrintStatements, ("M801",)),
+            (self.__checkTuple, ("M811", )),
         ]
         
         self.__defaultArgs = {
@@ -253,3 +255,12 @@ class MiscellaneousChecker(object):
                 getattr(node.func, 'id', None) == 'print') or \
                (hasattr(ast, 'Print') and isinstance(node, ast.Print)):
                 self.__error(node.lineno - 1, node.col_offset, "M801")
+    
+    def __checkTuple(self):
+        """
+        Private method to check for one element tuples.
+        """
+        for node in ast.walk(self.__tree):
+            if isinstance(node, ast.Tuple) and \
+                    len(node.elts) == 1:
+                self.__error(node.lineno - 1, node.col_offset, "M811")
