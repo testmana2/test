@@ -397,6 +397,42 @@ _messages = {
     "M131": QCoreApplication.translate(
         "MiscellaneousChecker",
         "found {0} formatter"),
+    "M701": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'division' missing"),
+    "M702": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'absolute_import' missing"),
+    "M703": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'with_statement' missing"),
+    "M704": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'print_function' missing"),
+    "M705": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'unicode_literals' missing"),
+    "M706": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'generator_stop' missing"),
+    "M721": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'division' present"),
+    "M722": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'absolute_import' present"),
+    "M723": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'with_statement' present"),
+    "M724": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'print_function' present"),
+    "M725": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'unicode_literals' present"),
+    "M726": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "__future__ import 'generator_stop' present"),
     "M801": QCoreApplication.translate(
         "MiscellaneousChecker",
         "print statement found"),

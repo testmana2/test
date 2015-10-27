@@ -23,6 +23,8 @@ class MiscellaneousChecker(object):
         "M111", "M112",
         "M121",
         "M131",
+        "M701", "M702", "M703", "M704", "M705", "M706",
+        "M721", "M722", "M723", "M724", "M725", "M726",
         "M801",
         "M811",
         
@@ -34,14 +36,20 @@ class MiscellaneousChecker(object):
         """
         Constructor
         
-        @param source source code to be checked (list of string)
-        @param filename name of the source file (string)
-        @param select list of selected codes (list of string)
-        @param ignore list of codes to be ignored (list of string)
-        @param expected list of expected codes (list of string)
+        @param source source code to be checked
+        @type list of str
+        @param filename name of the source file
+        @type str
+        @param select list of selected codes
+        @type list of str
+        @param ignore list of codes to be ignored
+        @type list of str
+        @param expected list of expected codes
+        @type list of str
         @param repeat flag indicating to report each occurrence of a code
-            (boolean)
-        @param args dictionary of arguments for the miscellaneous checks (dict)
+        @type bool
+        @param args dictionary of arguments for the miscellaneous checks
+        @type dict
         """
         self.__select = tuple(select)
         self.__ignore = ('',) if select else tuple(ignore)
@@ -56,6 +64,16 @@ class MiscellaneousChecker(object):
         self.__pep3101FormatRegex = re.compile(
             r'^(?:[^\'"]*[\'"][^\'"]*[\'"])*\s*%|^\s*%')
 
+        self.__availableFutureImports = {
+            # future import: (code missing, code present)
+            'division': ("M701", "M721"),
+            'absolute_import': ("M702", "M722"),
+            'with_statement': ("M703", "M723"),
+            'print_function': ("M704", "M724"),
+            'unicode_literals': ("M705", "M725"),
+            'generator_stop': ("M706", "M726"),
+        }
+        
         # statistics counters
         self.counters = {}
         
@@ -70,6 +88,9 @@ class MiscellaneousChecker(object):
             (self.__checkPep3101, ("M131",)),
             (self.__checkPrintStatements, ("M801",)),
             (self.__checkTuple, ("M811", )),
+            (self.__checkFuture, ("M701", "M702", "M703", "M704", "M705",
+                                  "M706", "M721", "M722", "M723", "M724",
+                                  "M725", "M726")),
         ]
         
         self.__defaultArgs = {
@@ -90,8 +111,10 @@ class MiscellaneousChecker(object):
         """
         Private method to check if the message code should be ignored.
 
-        @param code message code to check for (string)
-        @return flag indicating to ignore the given code (boolean)
+        @param code message code to check for
+        @type str
+        @return flag indicating to ignore the given code
+        @rtype bool
         """
         return (code.startswith(self.__ignore) and
                 not code.startswith(self.__select))
@@ -100,10 +123,14 @@ class MiscellaneousChecker(object):
         """
         Private method to record an issue.
         
-        @param lineNumber line number of the issue (integer)
-        @param offset position within line of the issue (integer)
-        @param code message code (string)
-        @param args arguments for the message (list)
+        @param lineNumber line number of the issue
+        @type int
+        @param offset position within line of the issue
+        @type int
+        @param code message code
+        @type str
+        @param args arguments for the message
+        @type list
         """
         if self.__ignoreCode(code):
             return
@@ -264,3 +291,77 @@ class MiscellaneousChecker(object):
             if isinstance(node, ast.Tuple) and \
                     len(node.elts) == 1:
                 self.__error(node.lineno - 1, node.col_offset, "M811")
+    
+    def __checkFuture(self):
+        """
+        Private method to check the __future__ imports.
+        """
+        visitor = FutureImportVisitor()
+        visitor.visit(self.__tree)
+        if not visitor.hasCode:
+            return
+        
+        present = set()
+        for importNode in visitor.futureImports:
+            for alias in importNode.names:
+                if alias.name not in self.__availableFutureImports:
+                    # unknown code
+                    continue
+                self.__error(importNode.lineno - 1, 0,
+                             self.__availableFutureImports[alias.name][1])
+                present.add(alias.name)
+        for name in self.__availableFutureImports:
+            if name not in present:
+                self.__error(0, 0,
+                             self.__availableFutureImports[name][0])
+
+
+class FutureImportVisitor(ast.NodeVisitor):
+    """
+    Class implementing a node visitor to look for __future__ imports.
+    """
+    def __init__(self):
+        """
+        Constructor
+        """
+        super(FutureImportVisitor, self).__init__()
+        self.futureImports = []
+        self.__hasCode = False
+
+    def visit_ImportFrom(self, node):
+        """
+        Public method to analyze an 'from ... import ...' node.
+        
+        @param node reference to the ImportFrom node
+        @type ast.AST
+        """
+        if node.module == '__future__':
+            self.futureImports += [node]
+
+    def visit_Expr(self, node):
+        """
+        Public method to analyze an expression node.
+        
+        @param node reference to the expression node
+        @type ast.AST
+        """
+        if not isinstance(node.value, ast.Str) or node.value.col_offset != 0:
+            self.__hasCode = True
+
+    def generic_visit(self, node):
+        """
+        Public method to analyze any other node.
+        
+        @param node reference to the node
+        @type ast.AST
+        """
+        if not isinstance(node, ast.Module):
+            self.__hasCode = True
+        super(FutureImportVisitor, self).generic_visit(node)
+
+    @property
+    def hasCode(self):
+        """
+        Public method to check for the presence of some code.
+        """
+        return self.__hasCode or self.futureImports
