@@ -40,6 +40,10 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
     codeRole = Qt.UserRole + 6
     ignoredRole = Qt.UserRole + 7
     
+    availableFutures = [
+        'division', 'absolute_import', 'with_statement',
+        'print_function', 'unicode_literals', 'generator_stop']
+    
     def __init__(self, styleCheckService, parent=None):
         """
         Constructor
@@ -63,6 +67,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         
         self.docTypeComboBox.addItem(self.tr("PEP-257"), "pep257")
         self.docTypeComboBox.addItem(self.tr("Eric"), "eric")
+        
+        self.futuresList.addItems(self.availableFutures)
         
         self.statisticsButton = self.buttonBox.addButton(
             self.tr("Statistics..."), QDialogButtonBox.ActionRole)
@@ -307,6 +313,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 "CopyrightAuthor" not in self.__data:
             self.__data["CopyrightMinFileSize"] = 0
             self.__data["CopyrightAuthor"] = ""
+        if "FutureChecker" not in self.__data:
+            self.__data["FutureChecker"] = ""
         
         self.excludeFilesEdit.setText(self.__data["ExcludeFiles"])
         self.excludeMessagesEdit.setText(self.__data["ExcludeMessages"])
@@ -325,6 +333,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.copyrightFileSizeSpinBox.setValue(
             self.__data["CopyrightMinFileSize"])
         self.copyrightAuthorEdit.setText(self.__data["CopyrightAuthor"])
+        self.__initFuturesList(self.__data["FutureChecker"])
     
     def start(self, fn, save=False, repeat=None):
         """
@@ -409,7 +418,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 "CopyrightChecker": {
                     "MinFilesize": self.copyrightFileSizeSpinBox.value(),
                     "Author": self.copyrightAuthorEdit.text(),
-                }
+                },
+                "FutureChecker": self.__getSelectedFutureImports(),
             }
             
             self.__options = [excludeMessages, includeMessages, repeatMessages,
@@ -698,6 +708,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 "ValidEncodings": self.encodingsEdit.text(),
                 "CopyrightMinFileSize": self.copyrightFileSizeSpinBox.value(),
                 "CopyrightAuthor": self.copyrightAuthorEdit.text(),
+                "FutureChecker": self.__getSelectedFutureImports(),
             }
             if data != self.__data:
                 self.__data = data
@@ -848,25 +859,25 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         Private slot to load the default configuration values.
         """
         self.excludeFilesEdit.setText(Preferences.Prefs.settings.value(
-            "PEP8/ExcludeFilePatterns"))
+            "PEP8/ExcludeFilePatterns", ""))
         self.excludeMessagesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/ExcludeMessages", pep8.DEFAULT_IGNORE))
         self.includeMessagesEdit.setText(Preferences.Prefs.settings.value(
-            "PEP8/IncludeMessages"))
+            "PEP8/IncludeMessages", ""))
         self.repeatCheckBox.setChecked(Preferences.toBool(
-            Preferences.Prefs.settings.value("PEP8/RepeatMessages")))
+            Preferences.Prefs.settings.value("PEP8/RepeatMessages", False)))
         self.fixIssuesEdit.setText(Preferences.Prefs.settings.value(
-            "PEP8/FixCodes"))
+            "PEP8/FixCodes", ""))
         self.noFixIssuesEdit.setText(Preferences.Prefs.settings.value(
             "PEP8/NoFixCodes", "E501"))
         self.fixIssuesCheckBox.setChecked(Preferences.toBool(
-            Preferences.Prefs.settings.value("PEP8/FixIssues")))
+            Preferences.Prefs.settings.value("PEP8/FixIssues", False)))
         self.ignoredCheckBox.setChecked(Preferences.toBool(
-            Preferences.Prefs.settings.value("PEP8/ShowIgnored")))
+            Preferences.Prefs.settings.value("PEP8/ShowIgnored", False)))
         self.lineLengthSpinBox.setValue(int(Preferences.Prefs.settings.value(
             "PEP8/MaxLineLength", pep8.MAX_LINE_LENGTH)))
         self.hangClosingCheckBox.setChecked(Preferences.toBool(
-            Preferences.Prefs.settings.value("PEP8/HangClosing")))
+            Preferences.Prefs.settings.value("PEP8/HangClosing", False)))
         self.docTypeComboBox.setCurrentIndex(self.docTypeComboBox.findData(
             Preferences.Prefs.settings.value("PEP8/DocstringType", "pep257")))
         self.complexitySpinBox.setValue(int(Preferences.Prefs.settings.value(
@@ -876,7 +887,9 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         self.copyrightFileSizeSpinBox.setValue(int(
             Preferences.Prefs.settings.value("PEP8/CopyrightMinFileSize", 0)))
         self.copyrightAuthorEdit.setText(
-            Preferences.Prefs.settings.value("PEP8/CopyrightAuthor"))
+            Preferences.Prefs.settings.value("PEP8/CopyrightAuthor", ""))
+        self.__initFuturesList(
+            Preferences.Prefs.settings.value("PEP8/FutureChecker", ""))
     
     @pyqtSlot()
     def on_storeDefaultButton_clicked(self):
@@ -915,6 +928,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             "PEP8/CopyrightMinFileSize", self.copyrightFileSizeSpinBox.value())
         Preferences.Prefs.settings.setValue(
             "PEP8/CopyrightAuthor", self.copyrightAuthorEdit.text())
+        Preferences.Prefs.settings.setValue(
+            "PEP8/FutureChecker", self.__getSelectedFutureImports())
     
     @pyqtSlot()
     def on_resetDefaultButton_clicked(self):
@@ -939,6 +954,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             "PEP8/ValidEncodings", "latin-1, utf-8")
         Preferences.Prefs.settings.setValue("PEP8/CopyrightMinFileSize", 0)
         Preferences.Prefs.settings.setValue("PEP8/CopyrightAuthor", "")
+        Preferences.Prefs.settings.setValue("PEP8/FutureChecker", "")
     
     @pyqtSlot(QAbstractButton)
     def on_buttonBox_clicked(self, button):
@@ -1038,3 +1054,30 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
         """
         return (itm.data(0, self.fixableRole) and
                 not itm.data(0, self.ignoredRole))
+    
+    def __initFuturesList(self, selectedFutures):
+        """
+        Private method to set the selected status of the future imports.
+        
+        @param selectedFutures comma separated list of expected future imports
+        @type str
+        """
+        if selectedFutures:
+            expectedImports = [
+                i.strip() for i in selectedFutures.split(",")
+                if bool(i.strip())]
+        else:
+            expectedImports = []
+        for row in range(self.futuresList.count()):
+            itm = self.futuresList.item(row)
+            itm.setSelected(itm.text() in expectedImports)
+    
+    def __getSelectedFutureImports(self):
+        """
+        Private method to get the expected future imports.
+        
+        @return expected future imports as a comma separated string
+        @rtype str
+        """
+        selectedFutures = [i.text() for i in self.futuresList.selectedItems()]
+        return ", ".join(selectedFutures)

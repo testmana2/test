@@ -399,40 +399,10 @@ _messages = {
         "found {0} formatter"),
     "M701": QCoreApplication.translate(
         "MiscellaneousChecker",
-        "__future__ import 'division' missing"),
+        "expected these __future__ imports: {0}; but only got: {1}"),
     "M702": QCoreApplication.translate(
         "MiscellaneousChecker",
-        "__future__ import 'absolute_import' missing"),
-    "M703": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'with_statement' missing"),
-    "M704": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'print_function' missing"),
-    "M705": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'unicode_literals' missing"),
-    "M706": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'generator_stop' missing"),
-    "M721": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'division' present"),
-    "M722": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'absolute_import' present"),
-    "M723": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'with_statement' present"),
-    "M724": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'print_function' present"),
-    "M725": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'unicode_literals' present"),
-    "M726": QCoreApplication.translate(
-        "MiscellaneousChecker",
-        "__future__ import 'generator_stop' present"),
+        "expected these __future__ imports: {0}; but got none"),
     "M801": QCoreApplication.translate(
         "MiscellaneousChecker",
         "print statement found"),
@@ -617,6 +587,8 @@ _messages_sample_args = {
     "C901": ["SyntaxError", "Invalid Syntax"],
     "M102": ["enc42"],
     "M131": ["%s"],
+    "M701": ["print_function, unicode_literals", "print_function"],
+    "M702": ["print_function, unicode_literals"],
     "M901": ["SyntaxError", "Invalid Syntax"],
     "FWRITE_ERROR": ["IOError"],
 }

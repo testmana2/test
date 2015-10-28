@@ -23,8 +23,7 @@ class MiscellaneousChecker(object):
         "M111", "M112",
         "M121",
         "M131",
-        "M701", "M702", "M703", "M704", "M705", "M706",
-        "M721", "M722", "M723", "M724", "M725", "M726",
+        "M701", "M702",
         "M801",
         "M811",
         
@@ -64,16 +63,6 @@ class MiscellaneousChecker(object):
         self.__pep3101FormatRegex = re.compile(
             r'^(?:[^\'"]*[\'"][^\'"]*[\'"])*\s*%|^\s*%')
 
-        self.__availableFutureImports = {
-            # future import: (code missing, code present)
-            'division': ("M701", "M721"),
-            'absolute_import': ("M702", "M722"),
-            'with_statement': ("M703", "M723"),
-            'print_function': ("M704", "M724"),
-            'unicode_literals': ("M705", "M725"),
-            'generator_stop': ("M706", "M726"),
-        }
-        
         # statistics counters
         self.counters = {}
         
@@ -88,9 +77,7 @@ class MiscellaneousChecker(object):
             (self.__checkPep3101, ("M131",)),
             (self.__checkPrintStatements, ("M801",)),
             (self.__checkTuple, ("M811", )),
-            (self.__checkFuture, ("M701", "M702", "M703", "M704", "M705",
-                                  "M706", "M721", "M722", "M723", "M724",
-                                  "M725", "M726")),
+            (self.__checkFuture, ("M701", "M702")),
         ]
         
         self.__defaultArgs = {
@@ -296,72 +283,34 @@ class MiscellaneousChecker(object):
         """
         Private method to check the __future__ imports.
         """
-        visitor = FutureImportVisitor()
-        visitor.visit(self.__tree)
-        if not visitor.hasCode:
+        expectedImports = set(
+            [i.strip()
+             for i in self.__args.get("FutureChecker", "").split(",")
+             if bool(i.strip())])
+        if len(expectedImports) == 0:
+            # nothing to check for; disabling the check
             return
         
-        present = set()
-        for importNode in visitor.futureImports:
-            for alias in importNode.names:
-                if alias.name not in self.__availableFutureImports:
-                    # unknown code
-                    continue
-                self.__error(importNode.lineno - 1, 0,
-                             self.__availableFutureImports[alias.name][1])
-                present.add(alias.name)
-        for name in self.__availableFutureImports:
-            if name not in present:
-                self.__error(0, 0,
-                             self.__availableFutureImports[name][0])
-
-
-class FutureImportVisitor(ast.NodeVisitor):
-    """
-    Class implementing a node visitor to look for __future__ imports.
-    """
-    def __init__(self):
-        """
-        Constructor
-        """
-        super(FutureImportVisitor, self).__init__()
-        self.futureImports = []
-        self.__hasCode = False
-
-    def visit_ImportFrom(self, node):
-        """
-        Public method to analyze an 'from ... import ...' node.
+        imports = set()
+        node = None
         
-        @param node reference to the ImportFrom node
-        @type ast.AST
-        """
-        if node.module == '__future__':
-            self.futureImports += [node]
+        for node in ast.walk(self.__tree):
+            if (isinstance(node, ast.ImportFrom) and
+                    node.module == '__future__'):
+                imports |= set(name.name for name in node.names)
+            elif isinstance(node, ast.Expr):
+                if not isinstance(node.value, ast.Str):
+                    break
+            elif not isinstance(node, ast.Module):
+                break
 
-    def visit_Expr(self, node):
-        """
-        Public method to analyze an expression node.
-        
-        @param node reference to the expression node
-        @type ast.AST
-        """
-        if not isinstance(node.value, ast.Str) or node.value.col_offset != 0:
-            self.__hasCode = True
+        if isinstance(node, ast.Module):
+            return
 
-    def generic_visit(self, node):
-        """
-        Public method to analyze any other node.
-        
-        @param node reference to the node
-        @type ast.AST
-        """
-        if not isinstance(node, ast.Module):
-            self.__hasCode = True
-        super(FutureImportVisitor, self).generic_visit(node)
-
-    @property
-    def hasCode(self):
-        """
-        Public method to check for the presence of some code.
-        """
-        return self.__hasCode or self.futureImports
+        if not (imports >= expectedImports):
+            if imports:
+                self.__error(node.lineno - 1, node.col_offset, "M701",
+                             ", ".join(expectedImports), ", ".join(imports))
+            else:
+                self.__error(node.lineno - 1, node.col_offset, "M702",
+                             ", ".join(expectedImports))
