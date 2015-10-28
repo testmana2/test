@@ -163,9 +163,16 @@ class MiscellaneousChecker(object):
             # don't do anything, if no codes were selected
             return
         
+        source = "".join(self.__source)
+        # Check type for py2: if not str it's unicode
+        if sys.version_info[0] == 2:
+            try:
+                source = source.encode('utf-8')
+            except UnicodeError:
+                pass
         try:
-            self.__tree = compile(
-                ''.join(self.__source), '', 'exec', ast.PyCF_ONLY_AST)
+            self.__tree = compile(source, self.__filename, 'exec',
+                                  ast.PyCF_ONLY_AST)
         except (SyntaxError, TypeError):
             self.__reportInvalidSyntax()
             return

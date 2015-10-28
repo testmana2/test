@@ -329,7 +329,8 @@ class DocStyleChecker(object):
             return
         
         try:
-            compile(''.join(self.__source), '', 'exec', ast.PyCF_ONLY_AST)
+            compile(''.join(self.__source), self.__filename, 'exec',
+                    ast.PyCF_ONLY_AST)
         except (SyntaxError, TypeError):
             self.__reportInvalidSyntax()
             return
