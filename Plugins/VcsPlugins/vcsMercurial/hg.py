@@ -2120,13 +2120,13 @@ class Hg(VersionControl):
                 if mode == "heads":
                     info.append(QCoreApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Head #{0}</b></td><td></td></tr>\n"""
-                        .format(index, changeset)))
+                        """<tr><td><b>Head #{0}</b></td><td></td></tr>\n""")
+                        .format(index))
                 elif mode == "parents":
                     info.append(QCoreApplication.translate(
                         "mercurial",
-                        """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n"""
-                        .format(index, changeset)))
+                        """<tr><td><b>Parent #{0}</b></td><td></td></tr>\n""")
+                        .format(index))
                 elif mode == "tip":
                     info.append(QCoreApplication.translate(
                         "mercurial",

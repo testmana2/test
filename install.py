@@ -738,7 +738,7 @@ def installEric():
         try:
             shutilCopy(name, cfg['ericDocDir'])
         except EnvironmentError:
-            print("Could not install '{1}'.".format(name))
+            print("Could not install '{0}'.".format(name))
    
     # copy some more stuff
     for name in ['default.e4k', 'default_Mac.e4k']:

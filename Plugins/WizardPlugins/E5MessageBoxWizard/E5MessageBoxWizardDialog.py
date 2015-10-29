@@ -427,8 +427,7 @@ class E5MessageBoxWizardDialog(QDialog, Ui_E5MessageBoxWizardDialog):
             btnCode = ',{0}{1}E5MessageBox.StandardButtons('.format(
                 os.linesep, istring)
         else:
-            btnCode = 'E5MessageBox.StandardButtons('.format(
-                os.linesep, istring)
+            btnCode = 'E5MessageBox.StandardButtons('
         btnCode += '{0}{1}{2})'.format(
             os.linesep, istring2, joinstring.join(buttons))
         
