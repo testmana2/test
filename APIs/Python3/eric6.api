@@ -3954,6 +3954,7 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.extractLineFlags?
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initBatchService?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.initService?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.worker?4(input, output)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.availableFutures?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.check?4(codestring='')
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.checkBatch?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.CodeStyleCheckerDialog.codeRole?7
@@ -4012,6 +4013,18 @@ eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.DocStyleContext?1(
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.McCabeChecker.Codes?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.McCabeChecker.run?4()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.McCabeChecker?1(source, filename, select, ignore, maxComplexity=10)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.MiscellaneousChecker.Codes?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.MiscellaneousChecker.FormatFieldRegex?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.MiscellaneousChecker.Formatter?7
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.MiscellaneousChecker.run?4()
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.MiscellaneousChecker?1(source, filename, select, ignore, expected, repeat, args)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor.visit_Bytes?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor.visit_Call?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor.visit_ClassDef?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor.visit_FunctionDef?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor.visit_Module?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor.visit_Str?4(node)
+eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.TextVisitor?1()
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.CamelcaseRegexp?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.Codes?7
 eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.NamingStyleChecker.LowercaseRegex?7

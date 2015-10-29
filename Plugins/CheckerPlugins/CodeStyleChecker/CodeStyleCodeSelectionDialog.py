@@ -32,6 +32,7 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
         super(CodeStyleCodeSelectionDialog, self).__init__(parent)
         self.setupUi(self)
         
+        self.codeTable.headerItem().setText(self.codeTable.columnCount(), "")
         codeList = [code.strip() for code in codes.split(",") if code.strip()]
         
         from .translations import _messages, _messages_sample_args
@@ -61,6 +62,9 @@ class CodeStyleCodeSelectionDialog(QDialog, Ui_CodeStyleCodeSelectionDialog):
             if code in codeList:
                 itm.setSelected(True)
                 codeList.remove(code)
+        self.codeTable.resizeColumnToContents(0)
+        self.codeTable.resizeColumnToContents(1)
+        self.codeTable.header().setStretchLastSection(True)
         
         self.__extraCodes = codeList[:]
     

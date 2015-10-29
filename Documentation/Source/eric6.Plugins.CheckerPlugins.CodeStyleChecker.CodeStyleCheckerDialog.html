@@ -48,7 +48,7 @@ Module implementing a dialog to show the results of the code style check.
 QDialog, Ui_CodeStyleCheckerDialog
 <h3>Class Attributes</h3>
 <table>
-<tr><td>codeRole</td></tr><tr><td>filenameRole</td></tr><tr><td>fixableRole</td></tr><tr><td>ignoredRole</td></tr><tr><td>lineRole</td></tr><tr><td>messageRole</td></tr><tr><td>positionRole</td></tr>
+<tr><td>availableFutures</td></tr><tr><td>codeRole</td></tr><tr><td>filenameRole</td></tr><tr><td>fixableRole</td></tr><tr><td>ignoredRole</td></tr><tr><td>lineRole</td></tr><tr><td>messageRole</td></tr><tr><td>positionRole</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -80,6 +80,12 @@ QDialog, Ui_CodeStyleCheckerDialog
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__getSelectedFixableItems">__getSelectedFixableItems</a></td>
 <td>Private method to extract all selected items for fixable issues.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__getSelectedFutureImports">__getSelectedFutureImports</a></td>
+<td>Private method to get the expected future imports.</td>
+</tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__initFuturesList">__initFuturesList</a></td>
+<td>Private method to set the selected status of the future imports.</td>
 </tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__itemFixable">__itemFixable</a></td>
 <td>Private method to check, if an item has a fixable issue.</td>
@@ -274,6 +280,31 @@ eol string (string)
 <dt>Returns:</dt>
 <dd>
 selected items for fixable issues (list of QTreeWidgetItem)
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__getSelectedFutureImports" ID="CodeStyleCheckerDialog.__getSelectedFutureImports"></a>
+<h4>CodeStyleCheckerDialog.__getSelectedFutureImports</h4>
+<b>__getSelectedFutureImports</b>(<i></i>)
+<p>
+        Private method to get the expected future imports.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+expected future imports as a comma separated string
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__initFuturesList" ID="CodeStyleCheckerDialog.__initFuturesList"></a>
+<h4>CodeStyleCheckerDialog.__initFuturesList</h4>
+<b>__initFuturesList</b>(<i>selectedFutures</i>)
+<p>
+        Private method to set the selected status of the future imports.
+</p><dl>
+<dt><i>selectedFutures</i> (str)</dt>
+<dd>
+comma separated list of expected future imports
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__itemFixable" ID="CodeStyleCheckerDialog.__itemFixable"></a>
 <h4>CodeStyleCheckerDialog.__itemFixable</h4>

@@ -394,9 +394,39 @@ _messages = {
     "M121": QCoreApplication.translate(
         "MiscellaneousChecker",
         "blind except: statement"),
-    "M131": QCoreApplication.translate(
+    "M601": QCoreApplication.translate(
         "MiscellaneousChecker",
         "found {0} formatter"),
+    "M611": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format string does contain unindexed parameters"),
+    "M612": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "docstring does contain unindexed parameters"),
+    "M613": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "other string does contain unindexed parameters"),
+    "M621": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call uses too large index ({0})"),
+    "M622": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call uses missing keyword ({0})"),
+    "M623": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call uses keyword arguments but no named entries"),
+    "M624": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call uses variable arguments but no numbered entries"),
+    "M625": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call uses implicit and explicit indexes together"),
+    "M631": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call provides unused index ({0})"),
+    "M632": QCoreApplication.translate(
+        "MiscellaneousChecker",
+        "format call provides unused keyword ({0})"),
     "M701": QCoreApplication.translate(
         "MiscellaneousChecker",
         "expected these __future__ imports: {0}; but only got: {1}"),
@@ -587,6 +617,10 @@ _messages_sample_args = {
     "C901": ["SyntaxError", "Invalid Syntax"],
     "M102": ["enc42"],
     "M131": ["%s"],
+    "M621": [5],
+    "M622": ["foo"],
+    "M631": [5],
+    "M632": ["foo"],
     "M701": ["print_function, unicode_literals", "print_function"],
     "M702": ["print_function, unicode_literals"],
     "M901": ["SyntaxError", "Invalid Syntax"],

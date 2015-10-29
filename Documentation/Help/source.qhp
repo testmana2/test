@@ -490,6 +490,7 @@
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html" />
+                <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html" />
                 <section title="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html" />
@@ -2187,6 +2188,8 @@
       <keyword name="CodeStyleCheckerDialog.__finish" id="CodeStyleCheckerDialog.__finish" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__finish" />
       <keyword name="CodeStyleCheckerDialog.__getEol" id="CodeStyleCheckerDialog.__getEol" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__getEol" />
       <keyword name="CodeStyleCheckerDialog.__getSelectedFixableItems" id="CodeStyleCheckerDialog.__getSelectedFixableItems" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__getSelectedFixableItems" />
+      <keyword name="CodeStyleCheckerDialog.__getSelectedFutureImports" id="CodeStyleCheckerDialog.__getSelectedFutureImports" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__getSelectedFutureImports" />
+      <keyword name="CodeStyleCheckerDialog.__initFuturesList" id="CodeStyleCheckerDialog.__initFuturesList" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__initFuturesList" />
       <keyword name="CodeStyleCheckerDialog.__itemFixable" id="CodeStyleCheckerDialog.__itemFixable" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__itemFixable" />
       <keyword name="CodeStyleCheckerDialog.__modifyFixedResultItem" id="CodeStyleCheckerDialog.__modifyFixedResultItem" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__modifyFixedResultItem" />
       <keyword name="CodeStyleCheckerDialog.__processError" id="CodeStyleCheckerDialog.__processError" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleCheckerDialog.html#CodeStyleCheckerDialog.__processError" />
@@ -8132,6 +8135,22 @@
       <keyword name="MiniScintilla.focusInEvent" id="MiniScintilla.focusInEvent" ref="eric6.QScintilla.MiniEditor.html#MiniScintilla.focusInEvent" />
       <keyword name="MiniScintilla.focusOutEvent" id="MiniScintilla.focusOutEvent" ref="eric6.QScintilla.MiniEditor.html#MiniScintilla.focusOutEvent" />
       <keyword name="MiniScintilla.getFileName" id="MiniScintilla.getFileName" ref="eric6.QScintilla.MiniEditor.html#MiniScintilla.getFileName" />
+      <keyword name="MiscellaneousChecker" id="MiscellaneousChecker" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker" />
+      <keyword name="MiscellaneousChecker (Constructor)" id="MiscellaneousChecker (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__init__" />
+      <keyword name="MiscellaneousChecker (Module)" id="MiscellaneousChecker (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html" />
+      <keyword name="MiscellaneousChecker.__checkBlindExcept" id="MiscellaneousChecker.__checkBlindExcept" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkBlindExcept" />
+      <keyword name="MiscellaneousChecker.__checkCoding" id="MiscellaneousChecker.__checkCoding" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkCoding" />
+      <keyword name="MiscellaneousChecker.__checkCopyright" id="MiscellaneousChecker.__checkCopyright" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkCopyright" />
+      <keyword name="MiscellaneousChecker.__checkFormatString" id="MiscellaneousChecker.__checkFormatString" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkFormatString" />
+      <keyword name="MiscellaneousChecker.__checkFuture" id="MiscellaneousChecker.__checkFuture" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkFuture" />
+      <keyword name="MiscellaneousChecker.__checkPep3101" id="MiscellaneousChecker.__checkPep3101" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkPep3101" />
+      <keyword name="MiscellaneousChecker.__checkPrintStatements" id="MiscellaneousChecker.__checkPrintStatements" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkPrintStatements" />
+      <keyword name="MiscellaneousChecker.__checkTuple" id="MiscellaneousChecker.__checkTuple" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkTuple" />
+      <keyword name="MiscellaneousChecker.__error" id="MiscellaneousChecker.__error" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__error" />
+      <keyword name="MiscellaneousChecker.__getFields" id="MiscellaneousChecker.__getFields" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__getFields" />
+      <keyword name="MiscellaneousChecker.__ignoreCode" id="MiscellaneousChecker.__ignoreCode" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__ignoreCode" />
+      <keyword name="MiscellaneousChecker.__reportInvalidSyntax" id="MiscellaneousChecker.__reportInvalidSyntax" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__reportInvalidSyntax" />
+      <keyword name="MiscellaneousChecker.run" id="MiscellaneousChecker.run" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.run" />
       <keyword name="Module" id="Module" ref="eric6.Utilities.ClassBrowsers.ClbrBaseClasses.html#Module" />
       <keyword name="Module" id="Module" ref="eric6.Utilities.ClassBrowsers.idlclbr.html#Module" />
       <keyword name="Module" id="Module" ref="eric6.Utilities.ClassBrowsers.rbclbr.html#Module" />
@@ -12091,6 +12110,18 @@
       <keyword name="TemplatesWriter (Constructor)" id="TemplatesWriter (Constructor)" ref="eric6.E5XML.TemplatesWriter.html#TemplatesWriter.__init__" />
       <keyword name="TemplatesWriter (Module)" id="TemplatesWriter (Module)" ref="eric6.E5XML.TemplatesWriter.html" />
       <keyword name="TemplatesWriter.writeXML" id="TemplatesWriter.writeXML" ref="eric6.E5XML.TemplatesWriter.html#TemplatesWriter.writeXML" />
+      <keyword name="TextVisitor" id="TextVisitor" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor" />
+      <keyword name="TextVisitor (Constructor)" id="TextVisitor (Constructor)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.__init__" />
+      <keyword name="TextVisitor.__addNode" id="TextVisitor.__addNode" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.__addNode" />
+      <keyword name="TextVisitor.__isBaseString" id="TextVisitor.__isBaseString" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.__isBaseString" />
+      <keyword name="TextVisitor.__visitBody" id="TextVisitor.__visitBody" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.__visitBody" />
+      <keyword name="TextVisitor.__visitDefinition" id="TextVisitor.__visitDefinition" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.__visitDefinition" />
+      <keyword name="TextVisitor.visit_Bytes" id="TextVisitor.visit_Bytes" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.visit_Bytes" />
+      <keyword name="TextVisitor.visit_Call" id="TextVisitor.visit_Call" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.visit_Call" />
+      <keyword name="TextVisitor.visit_ClassDef" id="TextVisitor.visit_ClassDef" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.visit_ClassDef" />
+      <keyword name="TextVisitor.visit_FunctionDef" id="TextVisitor.visit_FunctionDef" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.visit_FunctionDef" />
+      <keyword name="TextVisitor.visit_Module" id="TextVisitor.visit_Module" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.visit_Module" />
+      <keyword name="TextVisitor.visit_Str" id="TextVisitor.visit_Str" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#TextVisitor.visit_Str" />
       <keyword name="Token" id="Token" ref="eric6.DataViews.CodeMetrics.html#Token" />
       <keyword name="Token" id="Token" ref="eric6.E5Network.E5RFC6266.html#Token" />
       <keyword name="Token (Constructor)" id="Token (Constructor)" ref="eric6.DataViews.CodeMetrics.html#Token.__init__" />
@@ -14449,6 +14480,7 @@
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleStatisticsDialog.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.DocStyleChecker.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.McCabeChecker.html</file>
+      <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.NamingStyleChecker.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html</file>
       <file>eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html</file>

@@ -739,6 +739,7 @@ TemplateViewer QTreeWidget
 TemplatesPage ConfigurationPageBase Ui_TemplatesPage
 TemplatesReader XMLStreamReaderBase
 TemplatesWriter XMLStreamWriterBase
+TextVisitor ast.NodeVisitor
 Token str
 ToolConfigurationDialog QDialog Ui_ToolConfigurationDialog
 ToolGroupConfigurationDialog QDialog Ui_ToolGroupConfigurationDialog
