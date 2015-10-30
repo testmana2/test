@@ -632,7 +632,11 @@ def extractFlags(text):
             flags[key] = value
         else:
             # treat it as a boolean
-            flags[flag] = True
+            if flag[0] == "-":
+                # false flags start with '-'
+                flags[flag[1:]] = False
+            else:
+                flags[flag] = True
     
     return flags
 

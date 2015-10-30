@@ -93,6 +93,9 @@ QDialog, Ui_CodeStyleCheckerDialog
 <td><a href="#CodeStyleCheckerDialog.__modifyFixedResultItem">__modifyFixedResultItem</a></td>
 <td>Private method to modify a result list entry to show its positive fixed state.</td>
 </tr><tr>
+<td><a href="#CodeStyleCheckerDialog.__modifyOptions">__modifyOptions</a></td>
+<td>Private method to modify the options based on eflag: entries.</td>
+</tr><tr>
 <td><a href="#CodeStyleCheckerDialog.__processError">__processError</a></td>
 <td>Private slot to process an error indication from the service.</td>
 </tr><tr>
@@ -337,6 +340,25 @@ text to be appended (string)
 </dd><dt><i>fixed</i></dt>
 <dd>
 flag indicating a fixed issue (boolean)
+</dd>
+</dl><a NAME="CodeStyleCheckerDialog.__modifyOptions" ID="CodeStyleCheckerDialog.__modifyOptions"></a>
+<h4>CodeStyleCheckerDialog.__modifyOptions</h4>
+<b>__modifyOptions</b>(<i>source</i>)
+<p>
+        Private method to modify the options based on eflag: entries.
+</p><p>
+        This method looks for comment lines like '# eflag: noqa = M601'
+        at the end of the source in order to extend the list of excluded
+        messages for one file only.
+</p><dl>
+<dt><i>source</i></dt>
+<dd>
+source text (list of str or str)
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+list of checker options
 </dd>
 </dl><a NAME="CodeStyleCheckerDialog.__processError" ID="CodeStyleCheckerDialog.__processError"></a>
 <h4>CodeStyleCheckerDialog.__processError</h4>

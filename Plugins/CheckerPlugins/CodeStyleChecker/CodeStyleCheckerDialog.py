@@ -436,7 +436,29 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             else:
                 self.__batch = True
                 self.checkBatch()
+    
+    def __modifyOptions(self, source):
+        """
+        Private method to modify the options based on eflag: entries.
         
+        This method looks for comment lines like '# eflag: noqa = M601'
+        at the end of the source in order to extend the list of excluded
+        messages for one file only.
+        
+        @param source source text (list of str or str)
+        @return list of checker options
+        """
+        options = self.__options[:]
+        flags = Utilities.extractFlags(source)
+        if "noqa" in flags and isinstance(flags["noqa"], str):
+            excludeMessages = \
+                options[0].strip().rstrip(",")
+            if excludeMessages:
+                excludeMessages += ","
+            excludeMessages += flags["noqa"]
+            options[0] = excludeMessages
+        return options
+    
     def check(self, codestring=''):
         """
         Public method to start a style check for one file.
@@ -485,6 +507,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 ('-selected', '-default', '-guessed', '-ignore')):
             encoding = encoding.rsplit('-', 1)[0]
         
+        options = self.__modifyOptions(source)
+        
         errors = []
         self.__itms = []
         for error, itm in self.__onlyFixes.pop(self.filename, []):
@@ -492,7 +516,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
             self.__itms.append(itm)
         
         eol = self.__getEol(self.filename)
-        args = self.__options + [
+        args = options + [
             errors, eol, encoding, Preferences.getEditor("CreateBackupFile")
         ]
         self.__finished = False
@@ -532,6 +556,8 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                     ('-selected', '-default', '-guessed', '-ignore')):
                 encoding = encoding.rsplit('-', 1)[0]
             
+            options = self.__modifyOptions(source)
+            
             errors = []
             self.__itms = []
             for error, itm in self.__onlyFixes.pop(filename, []):
@@ -539,7 +565,7 @@ class CodeStyleCheckerDialog(QDialog, Ui_CodeStyleCheckerDialog):
                 self.__itms.append(itm)
             
             eol = self.__getEol(filename)
-            args = self.__options + [
+            args = options + [
                 errors, eol, encoding,
                 Preferences.getEditor("CreateBackupFile")
             ]
