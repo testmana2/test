@@ -3258,7 +3258,10 @@ class Project(QObject):
             if self.ppath and path == self.ppath:
                 return ""
             else:
-                return path[len(self.ppath) + 1:]
+                relpath = path[len(self.ppath):]
+                if relpath.startswith(("/", "\\")):
+                    relpath = relpath[1:]
+                return relpath
         else:
             return path
         
