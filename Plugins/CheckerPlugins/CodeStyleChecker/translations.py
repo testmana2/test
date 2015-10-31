@@ -378,7 +378,6 @@ _messages = {
         "McCabeChecker", "{0}: {1}"),
     
     # Messages of the Miscellaneous Checker
-    # TODO: Do this right
     "M101": QCoreApplication.translate(
         "MiscellaneousChecker",
         "coding magic comment not found"),
