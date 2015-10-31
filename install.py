@@ -1356,7 +1356,7 @@ def prepareInfoFile(fileName):
         hgOut = subprocess.check_output(["hg", "identify", "-i"])
         if sys.version_info[0] == 3:
             hgOut = hgOut.decode()
-    except (FileNotFoundError, subprocess.CalledProcessError):
+    except (OSError, subprocess.CalledProcessError):
         hgOut = ""
     if hgOut:
         hgOut = hgOut.strip()
