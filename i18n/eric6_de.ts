@@ -2937,162 +2937,137 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile und Position.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="34"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="44"/>
         <source>Exclude Files:</source>
         <translation>Ignoriere Dateien:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="41"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="51"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Gib Dateimuster getrennt durch Komma von Dateien ein, die ignoriert werden sollen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="60"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="528"/>
         <source>Press to start the code style check run</source>
         <translation>Drücken, um die Quelltextstil-Prüfung zu starten</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="63"/>
-        <source>Start</source>
-        <translation>Starten</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="70"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="538"/>
         <source>Press to fix the selected issues</source>
         <translation>Drücken, um die ausgewählten Probleme zu beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="73"/>
-        <source>Fix Selected</source>
-        <translation>Ausgewählte beheben</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="93"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="561"/>
         <source>Press to load the default values</source>
         <translation>Drücken, um Standarwerte zu laden</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="96"/>
-        <source>Load Defaults</source>
-        <translation>Standards laden</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="103"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="571"/>
         <source>Press to store the current values as defaults</source>
         <translation>Drücken, um die aktuellen Werte als Standard zu speichern</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="106"/>
-        <source>Store Defaults</source>
-        <translation>Standards speichern</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="113"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="581"/>
         <source>Press to reset the default values</source>
         <translation>Drücken, um die Standardeinstellungen zurückzusetzen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="116"/>
-        <source>Reset Defaults</source>
-        <translation>Standards löschen</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="125"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="58"/>
         <source>Exclude Messages:</source>
         <translation>Ignorierte Nachrichten:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="132"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="65"/>
         <source>Enter message codes or categories to be excluded separated by a comma</source>
         <translation>Gib die Nachrichtenschlüssel oder -kategorien für auszuschließende Nachrichten durch Kommata getrennt ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="202"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="135"/>
         <source>Press to select the message codes from a list</source>
         <translation>Drücken, um die Nachrichtenschlüssel aus einer Liste zu wählen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="146"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="79"/>
         <source>Included Messages:</source>
         <translation>Ausgewählte Nachrichten:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="153"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="86"/>
         <source>Enter message codes or categories to be included separated by a comma</source>
         <translation>Gib die Nachrichtenschlüssel oder -kategorien für ausgewählte Nachrichten durch Kommata getrennt ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="167"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="100"/>
         <source>Fix Issues:</source>
         <translation>Zu behebende Probleme:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="174"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="107"/>
         <source>Enter message codes of issues to be fixed automatically (leave empty to fix all)</source>
         <translation>Geben Sie die Nachrichtenschlüssel für automatisch zu behebende Probleme ein (leer lassen, um alle zu beheben)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="188"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="121"/>
         <source>Don&apos;t Fix Issues:</source>
         <translation>Nicht zu behebende Probleme:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="195"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="128"/>
         <source>Enter message codes of issues not to be fixed automatically</source>
         <translation>Geben Sie die Nachrichtenschlüssel für nicht automatisch zu behebende Probleme ein</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="209"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="259"/>
         <source>Max. Line Length:</source>
         <translation>Max. Zeilenlänge:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="218"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="266"/>
         <source>Enter the maximum allowed line length (PEP-8: 79 characters)</source>
         <translation>Gib die maximal zulässige Zeilenlänge ein (PEP-8: 79 Zeichen)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="252"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="319"/>
         <source>Docstring Type:</source>
         <translation>Docstring Typ:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="261"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="326"/>
         <source>Select the rule set for docstrings</source>
         <translation>Wähle den Regelsatz für Docstrings</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="283"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="300"/>
         <source>Select to allow hanging closing brackets</source>
         <translation>Auswählen, um hängende schließende Klammern zuzulassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="286"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="303"/>
         <source>Allow hanging closing brackets</source>
         <translation>Hängende schließende Klammern zulassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="338"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="144"/>
         <source>Select to repeat each message type</source>
         <translation>Auswählen, um Wiederholungen eines Nachrichtentyps zuzulassen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="341"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="147"/>
         <source>Repeat messages</source>
         <translation>Nachrichten wiederholen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="351"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="157"/>
         <source>Select to fix some issues</source>
         <translation>Auswählen, um ausgewählte Probleme zu beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="354"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="160"/>
         <source>Fix issues automatically</source>
         <translation>Probleme automatisch beheben</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="392"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="596"/>
         <source>&lt;b&gt;Result List&lt;/b&gt;
 &lt;p&gt;This list shows the results of the code style check. Double clicking
 an entry will open this entry in an editor window and position the cursor at
@@ -3103,52 +3078,52 @@ einen Eintrag öffnet ein Editorfenster und positioniert den Cursor auf die ents
 Zeile und Position.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="408"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="612"/>
         <source>File/Line</source>
         <translation>Datei/Zeile</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="413"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="617"/>
         <source>Code</source>
         <translation>Code</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="418"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="622"/>
         <source>Message</source>
         <translation>Nachricht</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="64"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="68"/>
         <source>PEP-257</source>
         <translation>PEP-257</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="65"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="69"/>
         <source>Eric</source>
         <translation>Eric</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="67"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="73"/>
         <source>Statistics...</source>
         <translation>Statistik...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="69"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="75"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Drücken, um eine Statistik für den letzten Lauf zu zeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="72"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="78"/>
         <source>Show</source>
         <translation>Zeige</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="74"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="80"/>
         <source>Press to show all files containing an issue</source>
         <translation>Drücken, um alle Dateien mit Problemen anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="498"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="552"/>
         <source>Error: {0}</source>
         <translation>Fehler: {0}</translation>
     </message>
@@ -3158,59 +3133,159 @@ Zeile und Position.&lt;/p&gt;</translation>
         <translation>Lösung: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="636"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="692"/>
         <source>No issues found.</source>
         <translation>Keine Probleme gefunden.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="439"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="643"/>
         <source>Shows the progress of the code style check</source>
         <translation>Zeigt den Fortschritt der Quelltextstil-Prüfung an</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="448"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="652"/>
         <source>%v/%m Files</source>
         <translation>%v/%m Dateien</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="364"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="170"/>
         <source>Select to show ignored issues</source>
         <translation>Auswählen, um ignorierte Probleme anzuzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="367"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="173"/>
         <source>Show ignored</source>
         <translation>Ignorierte anzeigen</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="589"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="645"/>
         <source>{0} (ignored)</source>
         <translation>{0} (ignoriert)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="483"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="537"/>
         <source>Preparing files...</source>
         <translation>Bereite Dateien vor...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="293"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="466"/>
         <source>Max. Complexity:</source>
         <translation>Max. Komplexität:</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="302"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="473"/>
         <source>Enter the maximum allowed code complexity (McCabe: 10)</source>
         <translation>Gib die maximal erlaubte Codekomplexität ein (McCabe: 10)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="128"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="134"/>
         <source>Errors</source>
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="523"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="579"/>
         <source>Transferring data...</source>
         <translation>Übertrage Daten...</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="38"/>
+        <source>Global Options</source>
+        <translation>Globale Optionen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="209"/>
+        <source>Specific Options</source>
+        <translation>Spezifische Optionen</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="251"/>
+        <source>Source Style</source>
+        <translation>Quelltextstil</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="313"/>
+        <source>Documentation Style</source>
+        <translation>Dokumentationsstil</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="349"/>
+        <source>Coding Line</source>
+        <translation>Kodierungszeile</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="355"/>
+        <source>Valid Encodings:</source>
+        <translation>Zulässige Kodierungen:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="362"/>
+        <source>Enter valid encodings separated by a comma (leave empty to use defaults)</source>
+        <translation>Gib die zulässigen Kodierungen durch Komma getrennt ein (leer lassen, um Standardwerte zu verwenden)</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="372"/>
+        <source>Copyright</source>
+        <translation>Copyright</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="378"/>
+        <source>Min. File Size:</source>
+        <translation>Min. Dateigröße:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="385"/>
+        <source>Enter the minimum size a file must have to be checked (0 for all files)</source>
+        <translation>Gib die Mindestdateigröße ein, ab der eine Datei geprüft wird (0 für alle Dateien)</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="411"/>
+        <source>Author:</source>
+        <translation>Autor:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="418"/>
+        <source>Enter a copyright author name to check for (leave empty to omit this check)</source>
+        <translation>Gib einen Copyright Autornamen ein, der überprüft werden soll (leer lassen, um diese Prüfung zu überspringen)</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="428"/>
+        <source>Future Imports</source>
+        <translation>Future Imports</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="434"/>
+        <source>Expected Imports:</source>
+        <translation>Erwartete Imports:</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="460"/>
+        <source>McCabe Complexity</source>
+        <translation>McCabe Komplexität</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="531"/>
+        <source>&amp;Start</source>
+        <translation>&amp;Starten</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="541"/>
+        <source>&amp;Fix Selected</source>
+        <translation>Ausgewählte &amp;beheben</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="564"/>
+        <source>&amp;Load Defaults</source>
+        <translation>Standards &amp;laden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="574"/>
+        <source>St&amp;ore Defaults</source>
+        <translation>Standards s&amp;peichern</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="584"/>
+        <source>&amp;Reset Defaults</source>
+        <translation>Standards lösc&amp;hen</translation>
     </message>
 </context>
 <context>
@@ -3277,147 +3352,147 @@ Zeile und Position.&lt;/p&gt;</translation>
 <context>
     <name>CodeStyleFixer</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="381"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="447"/>
         <source>Triple single quotes converted to triple double quotes.</source>
         <translation>Dreifache Einfachanführungszeichen in dreifache Doppelanführungszeichen umgewandelt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="384"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="450"/>
         <source>Introductory quotes corrected to be {0}&quot;&quot;&quot;</source>
         <translation>Einleitende Anführungszeichen in {0}&quot;&quot;&quot; korrigiert</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="387"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="453"/>
         <source>Single line docstring put on one line.</source>
         <translation>Einzeiligen Docstring auf eine Zeile gebracht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="390"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="456"/>
         <source>Period added to summary line.</source>
         <translation>Punkt an die Zusammenfassungszeile angefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="417"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="483"/>
         <source>Blank line before function/method docstring removed.</source>
         <translation>Leerzeile vor Funktions-/Methodendocstring entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="396"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="462"/>
         <source>Blank line inserted before class docstring.</source>
         <translation>Leerzeile vor Klassendocstring eingefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="399"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="465"/>
         <source>Blank line inserted after class docstring.</source>
         <translation>Leerzeile nach Klassendocstring eingefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="402"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="468"/>
         <source>Blank line inserted after docstring summary.</source>
         <translation>Leerzeile nach Docstring Zusammenfassung eingefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="405"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="471"/>
         <source>Blank line inserted after last paragraph of docstring.</source>
         <translation>Leerzeile nach letztem Abschnitt des Docstring eingefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="408"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="474"/>
         <source>Leading quotes put on separate line.</source>
         <translation>Einleitende Anführungszeichen auf separate Zeile gesetzt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="411"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="477"/>
         <source>Trailing quotes put on separate line.</source>
         <translation>Schließende Anführungszeichen auf separate Zeile gesetzt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="414"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="480"/>
         <source>Blank line before class docstring removed.</source>
         <translation>Leerzeile vor Klassendocstring entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="420"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="486"/>
         <source>Blank line after class docstring removed.</source>
         <translation>Leerzeile nach Klassendocstring entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="423"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="489"/>
         <source>Blank line after function/method docstring removed.</source>
         <translation>Leerzeile nach Funktions-/Methodendocstring entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="426"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="492"/>
         <source>Blank line after last paragraph removed.</source>
         <translation>Leerzeile nach letzten Abschnitt entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="429"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="495"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Tabulator in 4 Leerzeichen gewandelt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="432"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="498"/>
         <source>Indentation adjusted to be a multiple of four.</source>
         <translation>Einrückung auf ein Vielfaches von vier korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="435"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="501"/>
         <source>Indentation of continuation line corrected.</source>
         <translation>Einrückung der Fortsetzungszeile korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="438"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="504"/>
         <source>Indentation of closing bracket corrected.</source>
         <translation>Einrückung der schließenden Klammer korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="441"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="507"/>
         <source>Missing indentation of continuation line corrected.</source>
         <translation>Fehlende Einrückung der Fortsetzungszeile korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="444"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="510"/>
         <source>Closing bracket aligned to opening bracket.</source>
         <translation>Schließende Klammer an öffnender Klammer ausgerichtet.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="447"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="513"/>
         <source>Indentation level changed.</source>
         <translation>Einrückungsebene geändert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="450"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="516"/>
         <source>Indentation level of hanging indentation changed.</source>
         <translation>Einrückungsebene der hängenden Einrückung geändert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="453"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="519"/>
         <source>Visual indentation corrected.</source>
         <translation>Visuelle Einrückung korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="468"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="534"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Überzählige Leerzeichen gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="465"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="531"/>
         <source>Missing whitespace added.</source>
         <translation>Fehlende Leerzeichen eingefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="471"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="537"/>
         <source>Whitespace around comment sign corrected.</source>
         <translation>Leerzeichen um Kommentarzeichen korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="474"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="540"/>
         <source>One blank line inserted.</source>
         <translation>Eine Leerzeile eingefügt.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="478"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="544"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>Eine Leerzeile eingefügt.</numerusform>
@@ -3425,7 +3500,7 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="481"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="547"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>Eine überflüssige Zeile gelöscht</numerusform>
@@ -3433,77 +3508,77 @@ Zeile und Position.&lt;/p&gt;</translation>
         </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="485"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="551"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Überflüssige Leerzeilen gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="488"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="554"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Überflüssige Leerzeilen nach Funktionsdekorator gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="491"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="557"/>
         <source>Imports were put on separate lines.</source>
         <translation>Imports wurden auf separate Zeilen verteilt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="494"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="560"/>
         <source>Long lines have been shortened.</source>
         <translation>Lange Zeilen wurden gekürzt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="497"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="563"/>
         <source>Redundant backslash in brackets removed.</source>
         <translation>Redundante Backslashes in Klammern entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="503"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="569"/>
         <source>Compound statement corrected.</source>
         <translation>Compund Statement korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="506"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="572"/>
         <source>Comparison to None/True/False corrected.</source>
         <translation>Vergleich mit None/True/False korrigiert.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="509"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="575"/>
         <source>&apos;{0}&apos; argument added.</source>
         <translation>&apos;{0}&apos; Argument hinzugefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="512"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="578"/>
         <source>&apos;{0}&apos; argument removed.</source>
         <translation>&apos;{0}&apos; Argument entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="515"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="581"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Leerzeichen am Zeilenende entfernt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="518"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="584"/>
         <source>newline added to end of file.</source>
         <translation>Zeilenvorschub am Dateiende angefügt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="521"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="587"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Überflüssige Leerzeilen am Dateiende gelöscht.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="524"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="590"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>„&lt;&gt;“ durch „!=“ ersetzt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="528"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="594"/>
         <source>Could not save the file! Skipping it. Reason: {0}</source>
         <translation>Datei konnte nicht gespeichert werden! Ursache: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="582"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="659"/>
         <source> no message defined for code &apos;{0}&apos;</source>
         <translation> keine Nachricht für &apos;{0}&apos; definiert</translation>
     </message>
@@ -33581,6 +33656,114 @@ und in dieses Verzeichnis geschrieben.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
+    <name>MiscellaneousChecker</name>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="382"/>
+        <source>coding magic comment not found</source>
+        <translation>Kodierungskommentar nicht gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="385"/>
+        <source>unknown encoding ({0}) found in coding magic comment</source>
+        <translation>Unzulässige Kodierung ({0}) im Kodierungskommentar gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="388"/>
+        <source>copyright notice not present</source>
+        <translation>Copyrightvermerk nicht gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="391"/>
+        <source>copyright notice contains invalid author</source>
+        <translation>Copyrightvermerk enthält ungültigen Autor</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="394"/>
+        <source>blind except: statement</source>
+        <translation>Allgemeines Except: Statement</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="397"/>
+        <source>found {0} formatter</source>
+        <translation>{0} Format gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="400"/>
+        <source>format string does contain unindexed parameters</source>
+        <translation>Formatstring enthält nicht indizierte Parameter</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="403"/>
+        <source>docstring does contain unindexed parameters</source>
+        <translation>Dokumentationsstring enthält nicht indizierte Parameter</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="406"/>
+        <source>other string does contain unindexed parameters</source>
+        <translation>Anderer String enthält nicht indizierte Parameter</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="409"/>
+        <source>format call uses too large index ({0})</source>
+        <translation>Format Aufruf enthält zu großen Index ({0})</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="412"/>
+        <source>format call uses missing keyword ({0})</source>
+        <translation>Format Aufruf verwendet fehlendes Schlüsselwort ({0})</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="415"/>
+        <source>format call uses keyword arguments but no named entries</source>
+        <translation>Format Aufruf verwendet Schlüsselwort Argumente, enthält aber keine benannten Einträge</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="418"/>
+        <source>format call uses variable arguments but no numbered entries</source>
+        <translation>Format Aufruf verwendet variable argumente, enthält aber keine nummerierten Einträge</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="421"/>
+        <source>format call uses implicit and explicit indexes together</source>
+        <translation>Format Aufruf verwendet sowohl implizite als auch explizite Indizes</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="424"/>
+        <source>format call provides unused index ({0})</source>
+        <translation>Format Aufruf verwendet ungenutzten Index ({0})</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="427"/>
+        <source>format call provides unused keyword ({0})</source>
+        <translation>Format Aufruf verwendet ungenutztes Schlüsselwort ({0})</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="430"/>
+        <source>expected these __future__ imports: {0}; but only got: {1}</source>
+        <translation>erwartete __future__ Imports: {0}; aber nur {1} gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="433"/>
+        <source>expected these __future__ imports: {0}; but got none</source>
+        <translation>erwartete __future__ Imports: {0}; jedoch keine gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="436"/>
+        <source>print statement found</source>
+        <translation>print Statement gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="439"/>
+        <source>one element tuple found</source>
+        <translation>Tuple mit einem Element gefunden</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="442"/>
+        <source>{0}: {1}</source>
+        <translation>{0}: {1}</translation>
+    </message>
+</context>
+<context>
     <name>MouseClickDialog</name>
     <message>
         <location filename="../Preferences/MouseClickDialog.ui" line="14"/>
@@ -60072,7 +60255,7 @@ Ein Doppelklick auf einen Eintrag zeigt den zugehörigen Traceback an.&lt;/p&gt;
 <context>
     <name>Utilities</name>
     <message>
-        <location filename="../Utilities/__init__.py" line="1327"/>
+        <location filename="../Utilities/__init__.py" line="1331"/>
         <source>&lt;p&gt;You may use %-codes as placeholders in the string. Supported codes are:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;column of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;directory of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;filename of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;home directory of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;line of the cursor of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;path of the current project&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selected text of the current editor&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;username of the current user&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;the percent sign&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Sie können %-Codes als Platzhalter in der Eingabe verwenden. Unterstützte Codes sind:&lt;table&gt;&lt;tr&gt;&lt;td&gt;%C&lt;/td&gt;&lt;td&gt;Spalte des Cursor des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%D&lt;/td&gt;&lt;td&gt;Verzeichnis des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%F&lt;/td&gt;&lt;td&gt;Dateiname des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%H&lt;/td&gt;&lt;td&gt;Home-Verzeichnis des aktullen Nutzers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%L&lt;/td&gt;&lt;td&gt;Zeile des Cursor des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%P&lt;/td&gt;&lt;td&gt;Pfad des aktuellen Projektes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%S&lt;/td&gt;&lt;td&gt;selektierter Text des aktuellen Editors&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%U&lt;/td&gt;&lt;td&gt;Nutzername des aktuellen Nutzers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;das Prozentzeichen&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/p&gt;</translation>
     </message>
@@ -64959,6 +65142,20 @@ aktuellen Editors hinzugefügt wird.&lt;/p&gt;</translation>
 {2}&lt;/table&gt;&lt;/p&gt;
 </source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2143"/>
+        <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Head #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+</source>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Kopf #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/hg.py" line="2148"/>
+        <source>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Parent #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+</source>
+        <translation>&lt;tr&gt;&lt;td&gt;&lt;b&gt;Vorgänger #{0}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+</translation>
     </message>
 </context>
 <context>
