@@ -16,6 +16,10 @@ Version 6.1-snapshot-2015mmdd:
      multiple CPUs/CPU-Cores
   -- added a code complexity checker iaw. McCabe to the code style
      checker
+  -- added miscellaneous checks to the code style checker (coding
+     comment, copyright, blind except, print statements, one element
+     tuples, __future__ imports, old style string formats, string
+     format strings)
 - Debugger
   -- added signal handlers for the Python debug clients
 - Editor

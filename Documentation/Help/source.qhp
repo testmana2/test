@@ -8148,6 +8148,7 @@
       <keyword name="MiscellaneousChecker.__checkPrintStatements" id="MiscellaneousChecker.__checkPrintStatements" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkPrintStatements" />
       <keyword name="MiscellaneousChecker.__checkTuple" id="MiscellaneousChecker.__checkTuple" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__checkTuple" />
       <keyword name="MiscellaneousChecker.__error" id="MiscellaneousChecker.__error" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__error" />
+      <keyword name="MiscellaneousChecker.__getCoding" id="MiscellaneousChecker.__getCoding" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__getCoding" />
       <keyword name="MiscellaneousChecker.__getFields" id="MiscellaneousChecker.__getFields" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__getFields" />
       <keyword name="MiscellaneousChecker.__ignoreCode" id="MiscellaneousChecker.__ignoreCode" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__ignoreCode" />
       <keyword name="MiscellaneousChecker.__reportInvalidSyntax" id="MiscellaneousChecker.__reportInvalidSyntax" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.MiscellaneousChecker.html#MiscellaneousChecker.__reportInvalidSyntax" />

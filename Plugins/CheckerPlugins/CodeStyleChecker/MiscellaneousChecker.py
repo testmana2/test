@@ -193,6 +193,20 @@ class MiscellaneousChecker(object):
         for check in self.__checkers:
             check()
     
+    def __getCoding(self):
+        """
+        Private method to get the defined coding of the source.
+        
+        @return tuple containing the line number and the coding
+        @rtype tuple of int and str
+        """
+        for lineno, line in enumerate(self.__source[:2]):
+            matched = re.search('coding[:=]\s*([-\w_.]+)', line, re.IGNORECASE)
+            if matched:
+                return lineno, matched.group(1)
+        else:
+            return 0, ""
+    
     def __checkCoding(self):
         """
         Private method to check the presence of a coding line and valid
@@ -205,12 +219,10 @@ class MiscellaneousChecker(object):
                      for e in self.__args.get(
                      "CodingChecker", self.__defaultArgs["CodingChecker"])
                      .split(",")]
-        for lineno, line in enumerate(self.__source[:2]):
-            matched = re.search('coding[:=]\s*([-\w.]+)', line, re.IGNORECASE)
-            if matched:
-                if encodings and matched.group(1).lower() not in encodings:
-                    self.__error(lineno, 0, "M102", matched.group(1))
-                break
+        lineno, coding = self.__getCoding()
+        if coding:
+            if coding.lower() not in encodings:
+                self.__error(lineno, 0, "M102", coding)
         else:
             self.__error(0, 0, "M101")
     
@@ -339,14 +351,18 @@ class MiscellaneousChecker(object):
         """
         Private method to check string format strings.
         """
+        coding = self.__getCoding()[1]
+        if not coding:
+            # default to utf-8
+            coding = "utf-8"
+        
         visitor = TextVisitor()
         visitor.visit(self.__tree)
         for node in visitor.nodes:
             text = node.s
             if sys.version_info[0] > 2 and isinstance(text, bytes):
                 try:
-                    # TODO: Maybe decode using file encoding?
-                    text = text.decode('utf-8')
+                    text = text.decode(coding)
                 except UnicodeDecodeError:
                     continue
             fields, implicit, explicit = self.__getFields(text)
