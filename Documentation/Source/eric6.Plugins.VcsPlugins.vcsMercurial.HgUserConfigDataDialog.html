@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.Plugins.VcsPlugins.vcsMercurial.HgUserConfigDataDialog</h1>
+<p>
+Module implementing a dialog to enter some user data.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#HgUserConfigDataDialog">HgUserConfigDataDialog</a></td>
+<td>Class implementing a dialog to enter some user data.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="HgUserConfigDataDialog" ID="HgUserConfigDataDialog"></a>
+<h2>HgUserConfigDataDialog</h2>
+<p>
+    Class implementing a dialog to enter some user data.
+</p>
+<h3>Derived from</h3>
+QDialog, Ui_HgUserConfigDataDialog
+<h3>Class Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#HgUserConfigDataDialog.__init__">HgUserConfigDataDialog</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#HgUserConfigDataDialog.getData">getData</a></td>
+<td>Public method to retrieve the entered data.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="HgUserConfigDataDialog.__init__" ID="HgUserConfigDataDialog.__init__"></a>
+<h4>HgUserConfigDataDialog (Constructor)</h4>
+<b>HgUserConfigDataDialog</b>(<i>version=(0, 0), parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>version</i></dt>
+<dd>
+Mercurial version info (tuple of two integers)
+</dd><dt><i>parent</i></dt>
+<dd>
+reference to the parent widget (QWidget)
+</dd>
+</dl><a NAME="HgUserConfigDataDialog.getData" ID="HgUserConfigDataDialog.getData"></a>
+<h4>HgUserConfigDataDialog.getData</h4>
+<b>getData</b>(<i></i>)
+<p>
+        Public method to retrieve the entered data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tuple with user's first name, last name, email address,
+            list of activated extensions and dictionary with extension data
+            (tuple of three strings, a list of strings and a dictionary with
+             extension name as key)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>
