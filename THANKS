@@ -7,6 +7,8 @@ business some years ago.
 Andrew Bushnell of Fluent Inc. for contributing the multithreading debugger
 and a bunch of fixes to enhance the platform independance.
 
+Tobias Rzepka for providing Python2 compatibility for eric6.
+
 Henk Spaay
 Gordon Tyler
 Hans-Peter Jansen

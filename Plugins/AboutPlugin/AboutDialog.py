@@ -45,7 +45,8 @@ Detlev Offenbach
     
 Andrew Bushnell
     Multithreaded debugger
-    
+
+Alexander Barkoff   
 Alexander Darovsky
 Mikhail Terekhov
     Russian translations
@@ -76,7 +77,10 @@ business.
 Andrew Bushnell of Fluent Inc. for contributing the multithreading debugger
 and a bunch of fixes to enhance the platform independence.
 
-Alexander Darovsky and Mikhail Terekhov for providing Russian translations.
+Tobias Rzepka for providing Python2 compatibility for eric6.
+
+Alexander Barkoff, Alexander Darovsky and Mikhail Terekhov for providing
+Russian translations.
 Julien Vienne for providing French translations.
 Zdenek Böhm for providing Czech translations.
 Jaime Seuma for providing Spanish translations.
