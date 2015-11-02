@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="es">
+<!DOCTYPE TS><TS version="2.0" language="es" sourcelanguage="">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1906,8 +1905,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="145"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksMenu.py" line="151"/>
@@ -1980,8 +1979,8 @@ el botón de la derecha.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="93"/>
-        <source>Open in New &amp;Tab	Ctrl+LMB</source>
-        <translation>Abrir en Nueva &amp;Pestaña	Ctrl+LMB (botón izquierdo del ratón)</translation>
+        <source>Open in New &amp;Tab<byte value="x9"/>Ctrl+LMB</source>
+        <translation>Abrir en Nueva &amp;Pestaña<byte value="x9"/>Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
         <location filename="../Helpviewer/Bookmarks/BookmarksToolBar.py" line="104"/>
@@ -2952,19 +2951,9 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Pulsar para iniciar la comprobación de estilo de código</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="63"/>
-        <source>Start</source>
-        <translation type="obsolete">Iniciar</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="538"/>
         <source>Press to fix the selected issues</source>
         <translation>Pulsar para arreglar los problemas seleccionados</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="73"/>
-        <source>Fix Selected</source>
-        <translation type="obsolete">Arreglar seleccionados</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="561"/>
@@ -2972,29 +2961,14 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         <translation>Pulsar para cargar los valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="96"/>
-        <source>Load Defaults</source>
-        <translation type="obsolete">Cargar Valores por Defecto</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="571"/>
         <source>Press to store the current values as defaults</source>
         <translation>Pulsar para almacenar los valores actuales como valores por defecto</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="106"/>
-        <source>Store Defaults</source>
-        <translation type="obsolete">Almacenar valores por defecto</translation>
-    </message>
-    <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="581"/>
         <source>Press to reset the default values</source>
         <translation>Pulsar para resetear los valores por defecto</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="116"/>
-        <source>Reset Defaults</source>
-        <translation type="obsolete">Resetear Valores por Defecto</translation>
     </message>
     <message>
         <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.ui" line="58"/>
@@ -3376,147 +3350,147 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
 <context>
     <name>CodeStyleFixer</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="447"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="446"/>
         <source>Triple single quotes converted to triple double quotes.</source>
         <translation>Triple comilla simple convertida a triple comilla doble.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="450"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="449"/>
         <source>Introductory quotes corrected to be {0}&quot;&quot;&quot;</source>
         <translation>Comillas introductorias corregidas para ser {0}&quot;&quot;&quot;</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="453"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="452"/>
         <source>Single line docstring put on one line.</source>
         <translation>Docstrings de una sola línea puestos en una sola línea.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="456"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="455"/>
         <source>Period added to summary line.</source>
         <translation>Coma añadida a la línea de resumen.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="483"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="482"/>
         <source>Blank line before function/method docstring removed.</source>
         <translation>Línea en blanco antes de docstring de función/método eliminada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="462"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="461"/>
         <source>Blank line inserted before class docstring.</source>
         <translation>Linea en blanco insertada delante de docstring de clase.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="465"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="464"/>
         <source>Blank line inserted after class docstring.</source>
         <translation>Linea en blanco insertada detrás de docstring.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="468"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="467"/>
         <source>Blank line inserted after docstring summary.</source>
         <translation>Linea en blanco insertada detrás de docstring de resumen.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="471"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="470"/>
         <source>Blank line inserted after last paragraph of docstring.</source>
         <translation>Linea en blanco insertada detrás de último párrafo de docstring.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="474"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="473"/>
         <source>Leading quotes put on separate line.</source>
         <translation>Comillas iniciales puestas en línea separada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="477"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="476"/>
         <source>Trailing quotes put on separate line.</source>
         <translation>Comillas finales puestas en línea separada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="480"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="479"/>
         <source>Blank line before class docstring removed.</source>
         <translation>Línea en blanco antes de docstring de clase eliminada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="486"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="485"/>
         <source>Blank line after class docstring removed.</source>
         <translation>Línea en blanco detrás de docstring eliminada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="489"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="488"/>
         <source>Blank line after function/method docstring removed.</source>
         <translation>Línea en blanco detrás de docstring de función/método eliminada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="492"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="491"/>
         <source>Blank line after last paragraph removed.</source>
         <translation>Linea en blanco detrás de último párrafo eliminada.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="495"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="494"/>
         <source>Tab converted to 4 spaces.</source>
         <translation>Tabulador convertido a 4 espacios.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="498"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="497"/>
         <source>Indentation adjusted to be a multiple of four.</source>
         <translation>Indentación ajustada para ser un múltiplo de cuatro.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="501"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="500"/>
         <source>Indentation of continuation line corrected.</source>
         <translation>Indentación de línea de continuación corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="504"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="503"/>
         <source>Indentation of closing bracket corrected.</source>
         <translation>Indentación de llave de cierre corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="507"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="506"/>
         <source>Missing indentation of continuation line corrected.</source>
         <translation>Indentación inexistente en línea de continuación corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="510"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="509"/>
         <source>Closing bracket aligned to opening bracket.</source>
         <translation>Llave de cierre alineada a llave de apertura.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="513"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="512"/>
         <source>Indentation level changed.</source>
         <translation>Nivel de indentación corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="516"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="515"/>
         <source>Indentation level of hanging indentation changed.</source>
         <translation>Nivel de indentación de indentación colgante corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="519"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="518"/>
         <source>Visual indentation corrected.</source>
         <translation>Indentación visual corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="534"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="533"/>
         <source>Extraneous whitespace removed.</source>
         <translation>Eliminado espacio en blanco extraño.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="531"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="530"/>
         <source>Missing whitespace added.</source>
         <translation>Añadido espacio en blanco que faltaba.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="537"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="536"/>
         <source>Whitespace around comment sign corrected.</source>
         <translation>Espacio en blanco alrededor de signo de comentario corregido.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="540"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="539"/>
         <source>One blank line inserted.</source>
         <translation>Insertada una línea en blanco.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="544"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="543"/>
         <source>%n blank line(s) inserted.</source>
         <translation>
             <numerusform>Insertada %n línea en blanco.</numerusform>
@@ -3524,7 +3498,7 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="547"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="546"/>
         <source>%n superfluous lines removed</source>
         <translation>
             <numerusform>Eliminada %n línea en blanco sobrante</numerusform>
@@ -3532,77 +3506,77 @@ sobre una entrada, la abrirá en una ventana de edición posicionando el cursor 
         </translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="551"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="550"/>
         <source>Superfluous blank lines removed.</source>
         <translation>Eliminadas líneas en blanco sobrantes.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="554"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="553"/>
         <source>Superfluous blank lines after function decorator removed.</source>
         <translation>Eliminadas líneas en blanco sobrantes después de decorador de función.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="557"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="556"/>
         <source>Imports were put on separate lines.</source>
         <translation>Imports estaban puestos en líneas separadas.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="560"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="559"/>
         <source>Long lines have been shortened.</source>
         <translation>Líneas largas se han acortado.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="563"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="562"/>
         <source>Redundant backslash in brackets removed.</source>
         <translation>Backslash redundante en llaves eliminado.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="569"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="568"/>
         <source>Compound statement corrected.</source>
         <translation>Sentencia compuesta corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="572"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="571"/>
         <source>Comparison to None/True/False corrected.</source>
         <translation>Comparación a None/True/False corregida.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="575"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="574"/>
         <source>&apos;{0}&apos; argument added.</source>
         <translation>Añadido el argumento &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="578"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="577"/>
         <source>&apos;{0}&apos; argument removed.</source>
         <translation>Eliminado el argumento &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="581"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="580"/>
         <source>Whitespace stripped from end of line.</source>
         <translation>Espacio eliminado del final de la línea.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="584"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="583"/>
         <source>newline added to end of file.</source>
         <translation>Carácter de nueva línea añadido al final del archivo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="587"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="586"/>
         <source>Superfluous trailing blank lines removed from end of file.</source>
         <translation>Eliminadas líneas en blanco sobrantes de final de archivo.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="590"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="589"/>
         <source>&apos;&lt;&gt;&apos; replaced by &apos;!=&apos;.</source>
         <translation>&apos;&lt;&gt;&apos; reemplazado por &apos;!=&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="594"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="593"/>
         <source>Could not save the file! Skipping it. Reason: {0}</source>
         <translation>¡No se ha podido guardar el archivo! Va a ser omitido. Razón: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="659"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="658"/>
         <source> no message defined for code &apos;{0}&apos;</source>
         <translation>sin mensaje definido para el código &apos;{0}&apos;</translation>
     </message>
@@ -16267,7 +16241,7 @@ Razón: {0}</translation>
     <name>HelpBrowser</name>
     <message>
         <location filename="../Helpviewer/HelpBrowserWV.py" line="1175"/>
-        <source>Open Link in New Tab	Ctrl+LMB</source>
+        <source>Open Link in New Tab<byte value="x9"/>Ctrl+LMB</source>
         <translation>Abrir enlace en Nueva Pestaña Ctrl+LMB (botón izquierdo del ratón)</translation>
     </message>
     <message>
@@ -33686,107 +33660,107 @@ y se ubicará en este directorio.&lt;/p&gt;</translation>
 <context>
     <name>MiscellaneousChecker</name>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="382"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="381"/>
         <source>coding magic comment not found</source>
         <translation>comentario mágico de codificación no encontrado</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="385"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="384"/>
         <source>unknown encoding ({0}) found in coding magic comment</source>
         <translation>codificación desconocida ({0}) encontrada en comentario mágico de codificación</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="388"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="387"/>
         <source>copyright notice not present</source>
         <translation>nota de copyright no presente</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="391"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="390"/>
         <source>copyright notice contains invalid author</source>
         <translation>la nota de copyright contiene un autor no válido</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="394"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="393"/>
         <source>blind except: statement</source>
         <translation>sentencia except: ciega</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="397"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="396"/>
         <source>found {0} formatter</source>
         <translation>encontrado formateador {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="400"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="399"/>
         <source>format string does contain unindexed parameters</source>
         <translation>cadena de formato que contiene parámetros sin indexar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="403"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="402"/>
         <source>docstring does contain unindexed parameters</source>
         <translation>docstring cque contiene parámetros sin indexar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="406"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="405"/>
         <source>other string does contain unindexed parameters</source>
         <translation>otra cadena contiene parámetros sin indexar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="409"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="408"/>
         <source>format call uses too large index ({0})</source>
         <translation>llamada de formato usa un índice demasiado largo ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="412"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="411"/>
         <source>format call uses missing keyword ({0})</source>
         <translation>llamada de formato usa una palabra clave desaparecida ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="415"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="414"/>
         <source>format call uses keyword arguments but no named entries</source>
         <translation>llamada de formato usa argumentos de palabra clave pero sin entradas con nombre</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="418"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="417"/>
         <source>format call uses variable arguments but no numbered entries</source>
         <translation>llamada de formato usa argumentos de variable pero sin entradas numeradas</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="421"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="420"/>
         <source>format call uses implicit and explicit indexes together</source>
         <translation>llamada de formato usa juntos índices implícitos y explícitos</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="424"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="423"/>
         <source>format call provides unused index ({0})</source>
         <translation>llamada de formato proporciona índice que no se usa ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="427"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="426"/>
         <source>format call provides unused keyword ({0})</source>
         <translation>llamada de formato proporciona palabra clave que no se usa ({0})</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="430"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="429"/>
         <source>expected these __future__ imports: {0}; but only got: {1}</source>
         <translation>se esperaban estos __future__ imports: {0} pero solamente hay: {1}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="433"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="432"/>
         <source>expected these __future__ imports: {0}; but got none</source>
         <translation>se esperaban estos __future__ imports: {0}; but no hay ninguno</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="436"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="435"/>
         <source>print statement found</source>
         <translation>encontrada sentencia print</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="439"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="438"/>
         <source>one element tuple found</source>
         <translation>tupla de un elemento encontrada</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="442"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/translations.py" line="441"/>
         <source>{0}: {1}</source>
         <translation>{0}: {1}</translation>
     </message>
@@ -37096,7 +37070,7 @@ Seleccione Actualizar.</translation>
         <translation>¿Le gustaría editar las opciones de comando para VCS?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3438"/>
+        <location filename="../Project/Project.py" line="3441"/>
         <source>New project</source>
         <translation>Proyecto nuevo</translation>
     </message>
@@ -37116,7 +37090,7 @@ Seleccione Actualizar.</translation>
         <translation>Seleccione el sistema de control de versiones para el proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3452"/>
+        <location filename="../Project/Project.py" line="3455"/>
         <source>Open project</source>
         <translation>Abrir proyecto</translation>
     </message>
@@ -37126,7 +37100,7 @@ Seleccione Actualizar.</translation>
         <translation>Archivos de proyecto (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3489"/>
+        <location filename="../Project/Project.py" line="3492"/>
         <source>Save project as</source>
         <translation>Guardar proyecto como</translation>
     </message>
@@ -37159,587 +37133,587 @@ Seleccione Actualizar.</translation>
         </translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3438"/>
+        <location filename="../Project/Project.py" line="3441"/>
         <source>&amp;New...</source>
         <translation>&amp;Nuevo...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3443"/>
+        <location filename="../Project/Project.py" line="3446"/>
         <source>Generate a new project</source>
         <translation>Generar un nuevo proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3444"/>
+        <location filename="../Project/Project.py" line="3447"/>
         <source>&lt;b&gt;New...&lt;/b&gt;&lt;p&gt;This opens a dialog for entering the info for a new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nuevo...&lt;/b&gt;&lt;p&gt;Abre un diálogo para introducir la información para un nuevo proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3452"/>
+        <location filename="../Project/Project.py" line="3455"/>
         <source>&amp;Open...</source>
         <translation>&amp;Abrir...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3457"/>
+        <location filename="../Project/Project.py" line="3460"/>
         <source>Open an existing project</source>
         <translation>Abrir un proyecto existente</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3458"/>
+        <location filename="../Project/Project.py" line="3461"/>
         <source>&lt;b&gt;Open...&lt;/b&gt;&lt;p&gt;This opens an existing project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Abrir...&lt;/b&gt;&lt;p&gt;Abre un proyecto existente..&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3465"/>
+        <location filename="../Project/Project.py" line="3468"/>
         <source>Close project</source>
         <translation>Cerrar proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3465"/>
+        <location filename="../Project/Project.py" line="3468"/>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3469"/>
+        <location filename="../Project/Project.py" line="3472"/>
         <source>Close the current project</source>
         <translation>Cierra el proyecto actual</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3470"/>
+        <location filename="../Project/Project.py" line="3473"/>
         <source>&lt;b&gt;Close&lt;/b&gt;&lt;p&gt;This closes the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cerrar&lt;/b&gt;&lt;p&gt;Cierra el proyecto actualt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3477"/>
+        <location filename="../Project/Project.py" line="3480"/>
         <source>Save project</source>
         <translation>Guardar proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3653"/>
+        <location filename="../Project/Project.py" line="3656"/>
         <source>&amp;Save</source>
         <translation>&amp;Guardar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3481"/>
+        <location filename="../Project/Project.py" line="3484"/>
         <source>Save the current project</source>
         <translation>Guarda el proyecto actual</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3482"/>
+        <location filename="../Project/Project.py" line="3485"/>
         <source>&lt;b&gt;Save&lt;/b&gt;&lt;p&gt;This saves the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar&lt;/b&gt;&lt;p&gt;Guarda el proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3489"/>
+        <location filename="../Project/Project.py" line="3492"/>
         <source>Save &amp;as...</source>
         <translation>Guardar co&amp;mo...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3493"/>
+        <location filename="../Project/Project.py" line="3496"/>
         <source>Save the current project to a new file</source>
         <translation>Guardar el proyecto actual en un nuevo archivo</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3495"/>
+        <location filename="../Project/Project.py" line="3498"/>
         <source>&lt;b&gt;Save as&lt;/b&gt;&lt;p&gt;This saves the current project to a new file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar como&lt;/b&gt;&lt;p&gt;Guarda el proyecto en otro archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3504"/>
+        <location filename="../Project/Project.py" line="3507"/>
         <source>Add files to project</source>
         <translation>Agregar archivos al proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3504"/>
+        <location filename="../Project/Project.py" line="3507"/>
         <source>Add &amp;files...</source>
         <translation>&amp;Agregar archivos...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3509"/>
+        <location filename="../Project/Project.py" line="3512"/>
         <source>Add files to the current project</source>
         <translation>Añadir archivos al proyecto actual</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3511"/>
+        <location filename="../Project/Project.py" line="3514"/>
         <source>&lt;b&gt;Add files...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding files to the current project. The place to add is determined by the file extension.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir archivos...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir archivos al proyecto actual. El lugar donde se van a añadir es determinado por la extensión del nombre de archivo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3520"/>
+        <location filename="../Project/Project.py" line="3523"/>
         <source>Add directory to project</source>
         <translation>Agregar directorio al proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3520"/>
+        <location filename="../Project/Project.py" line="3523"/>
         <source>Add directory...</source>
         <translation>Agregar directorio...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3525"/>
+        <location filename="../Project/Project.py" line="3528"/>
         <source>Add a directory to the current project</source>
         <translation>Agregar directorio al proyecto actual</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3527"/>
+        <location filename="../Project/Project.py" line="3530"/>
         <source>&lt;b&gt;Add directory...&lt;/b&gt;&lt;p&gt;This opens a dialog for adding a directory to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir directorio...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir un directorio al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3535"/>
+        <location filename="../Project/Project.py" line="3538"/>
         <source>Add translation to project</source>
         <translation>Añadir traducción al proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3535"/>
+        <location filename="../Project/Project.py" line="3538"/>
         <source>Add &amp;translation...</source>
         <translation>Añadir &amp;Traducción...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3540"/>
+        <location filename="../Project/Project.py" line="3543"/>
         <source>Add a translation to the current project</source>
         <translation>Añadir una traducción al proyecto actual</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3542"/>
+        <location filename="../Project/Project.py" line="3545"/>
         <source>&lt;b&gt;Add translation...&lt;/b&gt;&lt;p&gt;This opens a dialog for add a translation to the current project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Añadir traducción...&lt;/b&gt;&lt;p&gt;Abre un diálogo para añadir una traducción al proyecto actual.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3550"/>
+        <location filename="../Project/Project.py" line="3553"/>
         <source>Search new files</source>
         <translation>Buscar archivos nuevos</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3550"/>
+        <location filename="../Project/Project.py" line="3553"/>
         <source>Searc&amp;h new files...</source>
         <translation>Bus&amp;car archivos nuevos...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3554"/>
+        <location filename="../Project/Project.py" line="3557"/>
         <source>Search new files in the project directory.</source>
         <translation>Bucar nuevos archivos en el directorio de proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3556"/>
+        <location filename="../Project/Project.py" line="3559"/>
         <source>&lt;b&gt;Search new files...&lt;/b&gt;&lt;p&gt;This searches for new files (sources, *.ui, *.idl) in the project directory and registered subdirectories.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Buscar nuevos archivos...&lt;/b&gt;&lt;p&gt;Busca nuevos archivos (fuentes, *.ui, *.idl) en el directorio del proyecto y en los subdirectorios registrados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3564"/>
+        <location filename="../Project/Project.py" line="3567"/>
         <source>Project properties</source>
         <translation>Propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3564"/>
+        <location filename="../Project/Project.py" line="3567"/>
         <source>&amp;Properties...</source>
         <translation>&amp;Propiedades...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3569"/>
+        <location filename="../Project/Project.py" line="3572"/>
         <source>Show the project properties</source>
         <translation>Ver las propiedades del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3570"/>
+        <location filename="../Project/Project.py" line="3573"/>
         <source>&lt;b&gt;Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las propiedades del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3577"/>
+        <location filename="../Project/Project.py" line="3580"/>
         <source>User project properties</source>
         <translation>Propiedades del usuario del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3577"/>
+        <location filename="../Project/Project.py" line="3580"/>
         <source>&amp;User Properties...</source>
         <translation>Propiedades del &amp;Usuario...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3582"/>
+        <location filename="../Project/Project.py" line="3585"/>
         <source>Show the user specific project properties</source>
         <translation>Muestra propiedades del proyecto específicas del usuario</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3584"/>
+        <location filename="../Project/Project.py" line="3587"/>
         <source>&lt;b&gt;User Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the user specific project properties.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Usuario...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del proyecto específicas del usuario.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3592"/>
+        <location filename="../Project/Project.py" line="3595"/>
         <source>Filetype Associations</source>
         <translation>Asociación de tipos de archivo</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3592"/>
+        <location filename="../Project/Project.py" line="3595"/>
         <source>Filetype Associations...</source>
         <translation>Asociación de tipos de archivo...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3596"/>
+        <location filename="../Project/Project.py" line="3599"/>
         <source>Show the project filetype associations</source>
         <translation>Ver las asociaciones del proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3598"/>
+        <location filename="../Project/Project.py" line="3601"/>
         <source>&lt;b&gt;Filetype Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the filetype associations of the project. These associations determine the type (source, form, interface or others) with a filename pattern. They are used when adding a file to the project and when performing a search for new files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Tipo de Archivo...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de los tipos de archivos del proyecto. Estas asociaciones determinan el tipo (fuente, formulario, interfaz u otras) con un patrón de nombres de archivo. Se usan cuando se añade un archivo al proyecto y cuando se realiza una búsqueda de nuevos archivos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3628"/>
+        <location filename="../Project/Project.py" line="3631"/>
         <source>Debugger Properties</source>
         <translation>Propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3628"/>
+        <location filename="../Project/Project.py" line="3631"/>
         <source>Debugger &amp;Properties...</source>
         <translation>&amp;Propiedades del depurador...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3632"/>
+        <location filename="../Project/Project.py" line="3635"/>
         <source>Show the debugger properties</source>
         <translation>Muestra las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3633"/>
+        <location filename="../Project/Project.py" line="3636"/>
         <source>&lt;b&gt;Debugger Properties...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Propiedades del Depurador...&lt;/b&gt;&lt;p&gt;Abre un diálogo par editar las propiedades del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3641"/>
+        <location filename="../Project/Project.py" line="3644"/>
         <source>Load</source>
         <translation>Cargar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3641"/>
+        <location filename="../Project/Project.py" line="3644"/>
         <source>&amp;Load</source>
         <translation>&amp;Cargar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3645"/>
+        <location filename="../Project/Project.py" line="3648"/>
         <source>Load the debugger properties</source>
         <translation>Cargar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3646"/>
+        <location filename="../Project/Project.py" line="3649"/>
         <source>&lt;b&gt;Load Debugger Properties&lt;/b&gt;&lt;p&gt;This loads the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Carga las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3653"/>
+        <location filename="../Project/Project.py" line="3656"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3657"/>
+        <location filename="../Project/Project.py" line="3660"/>
         <source>Save the debugger properties</source>
         <translation>Guardar propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3658"/>
+        <location filename="../Project/Project.py" line="3661"/>
         <source>&lt;b&gt;Save Debugger Properties&lt;/b&gt;&lt;p&gt;This saves the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Guarda las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3665"/>
+        <location filename="../Project/Project.py" line="3668"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3665"/>
+        <location filename="../Project/Project.py" line="3668"/>
         <source>&amp;Delete</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3669"/>
+        <location filename="../Project/Project.py" line="3672"/>
         <source>Delete the debugger properties</source>
         <translation>Borrar las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3670"/>
+        <location filename="../Project/Project.py" line="3673"/>
         <source>&lt;b&gt;Delete Debugger Properties&lt;/b&gt;&lt;p&gt;This deletes the file containing the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Borra el archivo que contiene las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3678"/>
+        <location filename="../Project/Project.py" line="3681"/>
         <source>Reset</source>
         <translation>Reiniciar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3678"/>
+        <location filename="../Project/Project.py" line="3681"/>
         <source>&amp;Reset</source>
         <translation>&amp;Reiniciar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3682"/>
+        <location filename="../Project/Project.py" line="3685"/>
         <source>Reset the debugger properties</source>
         <translation>Restablecer las propiedades del depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3683"/>
+        <location filename="../Project/Project.py" line="3686"/>
         <source>&lt;b&gt;Reset Debugger Properties&lt;/b&gt;&lt;p&gt;This resets the project specific debugger settings.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Restablecer Propiedades del Depurador&lt;/b&gt;&lt;p&gt;Restablece las opciones de configuración del depurador específicas del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3692"/>
+        <location filename="../Project/Project.py" line="3695"/>
         <source>Load session</source>
         <translation>Cargar sesión</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3696"/>
+        <location filename="../Project/Project.py" line="3699"/>
         <source>Load the projects session file.</source>
         <translation>Cargar archivo de sesión de proyectos.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3697"/>
+        <location filename="../Project/Project.py" line="3700"/>
         <source>&lt;b&gt;Load session&lt;/b&gt;&lt;p&gt;This loads the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar sesión&lt;/b&gt;&lt;p&gt;Carga el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3710"/>
+        <location filename="../Project/Project.py" line="3713"/>
         <source>Save session</source>
         <translation>Guardar sesión</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3714"/>
+        <location filename="../Project/Project.py" line="3717"/>
         <source>Save the projects session file.</source>
         <translation>Guardar archivos de sessión de proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3715"/>
+        <location filename="../Project/Project.py" line="3718"/>
         <source>&lt;b&gt;Save session&lt;/b&gt;&lt;p&gt;This saves the projects session file. The session consists of the following data.&lt;br&gt;- all open source files&lt;br&gt;- all breakpoint&lt;br&gt;- the commandline arguments&lt;br&gt;- the working directory&lt;br&gt;- the exception reporting flag&lt;/p&gt;</source>
         <translation>&lt;b&gt;Guardar sesión&lt;/b&gt;&lt;p&gt;Guarda el archivo de sesión de proyecto. La sesión consiste en los datos siguientes.&lt;br&gt;- todos los archivos de fuentes abiertos&lt;br&gt;- todos los puntos de interrupción&lt;br&gt;- todos los argumentos de línea de comandos&lt;br&gt;- el directorio de trabajo&lt;br&gt;- el flag de reporte de excepciones&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3728"/>
+        <location filename="../Project/Project.py" line="3731"/>
         <source>Delete session</source>
         <translation>Borrar sesión</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3732"/>
+        <location filename="../Project/Project.py" line="3735"/>
         <source>Delete the projects session file.</source>
         <translation>Borrar el archivo de sesión de proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3733"/>
+        <location filename="../Project/Project.py" line="3736"/>
         <source>&lt;b&gt;Delete session&lt;/b&gt;&lt;p&gt;This deletes the projects session file&lt;/p&gt;</source>
         <translation>&lt;b&gt;Borrar sesión&lt;/b&gt;&lt;p&gt;Borra el archivo de sesión del proyecto&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3742"/>
+        <location filename="../Project/Project.py" line="3745"/>
         <source>Code Metrics</source>
         <translation>Métricas de código</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3742"/>
+        <location filename="../Project/Project.py" line="3745"/>
         <source>&amp;Code Metrics...</source>
         <translation>Métricas de &amp;código...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3746"/>
+        <location filename="../Project/Project.py" line="3749"/>
         <source>Show some code metrics for the project.</source>
         <translation>Muestra algunas métricas del código para este proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3748"/>
+        <location filename="../Project/Project.py" line="3751"/>
         <source>&lt;b&gt;Code Metrics...&lt;/b&gt;&lt;p&gt;This shows some code metrics for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Métricas de Código...&lt;/b&gt;&lt;p&gt;Muestra algunas métricas de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3756"/>
+        <location filename="../Project/Project.py" line="3759"/>
         <source>Python Code Coverage</source>
         <translation>Cobertura de Código Python</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3756"/>
+        <location filename="../Project/Project.py" line="3759"/>
         <source>Code Co&amp;verage...</source>
         <translation>Co&amp;bertura de código...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3760"/>
+        <location filename="../Project/Project.py" line="3763"/>
         <source>Show code coverage information for the project.</source>
         <translation>Muestra información de cobertura de código para el proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3762"/>
+        <location filename="../Project/Project.py" line="3765"/>
         <source>&lt;b&gt;Code Coverage...&lt;/b&gt;&lt;p&gt;This shows the code coverage information for all Python files in the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cobertura de Código...&lt;/b&gt;&lt;p&gt;Muestra la información de cobertura de código para todos los archivos Python en el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4528"/>
+        <location filename="../Project/Project.py" line="4531"/>
         <source>Profile Data</source>
         <translation>Datos de perfil</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3770"/>
+        <location filename="../Project/Project.py" line="3773"/>
         <source>&amp;Profile Data...</source>
         <translation>Datos de &amp;pefil...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3774"/>
+        <location filename="../Project/Project.py" line="3777"/>
         <source>Show profiling data for the project.</source>
         <translation>Mostrar datos de profiling para el proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3776"/>
+        <location filename="../Project/Project.py" line="3779"/>
         <source>&lt;b&gt;Profile Data...&lt;/b&gt;&lt;p&gt;This shows the profiling data for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Datos de Profiling...&lt;/b&gt;&lt;p&gt;Muestra datos de profiling para el proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4582"/>
+        <location filename="../Project/Project.py" line="4585"/>
         <source>Application Diagram</source>
         <translation>Diagrama de Aplicación</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3785"/>
+        <location filename="../Project/Project.py" line="3788"/>
         <source>&amp;Application Diagram...</source>
         <translation>Diagrama de &amp;Aplicación...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3789"/>
+        <location filename="../Project/Project.py" line="3792"/>
         <source>Show a diagram of the project.</source>
         <translation>Mostrar diagrama del proyecto.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3791"/>
+        <location filename="../Project/Project.py" line="3794"/>
         <source>&lt;b&gt;Application Diagram...&lt;/b&gt;&lt;p&gt;This shows a diagram of the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Diagrama de Aplicación...&lt;/b&gt;&lt;p&gt;Muestra un diagrama del proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4740"/>
+        <location filename="../Project/Project.py" line="4743"/>
         <source>Create Package List</source>
         <translation>Crear Lista del Paquete</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3814"/>
+        <location filename="../Project/Project.py" line="3817"/>
         <source>Create &amp;Package List</source>
         <translation>Crear Lista del &amp;Paquete</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4933"/>
+        <location filename="../Project/Project.py" line="4936"/>
         <source>Create Plugin Archive</source>
         <translation>Crear Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3830"/>
+        <location filename="../Project/Project.py" line="3833"/>
         <source>Create Plugin &amp;Archive</source>
         <translation>Crear &amp;Archivo de Plugin</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3882"/>
+        <location filename="../Project/Project.py" line="3885"/>
         <source>&amp;Project</source>
         <translation>&amp;Proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3883"/>
+        <location filename="../Project/Project.py" line="3886"/>
         <source>Open &amp;Recent Projects</source>
         <translation>Abrir Proyectos &amp;Recientes</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3884"/>
+        <location filename="../Project/Project.py" line="3887"/>
         <source>&amp;Version Control</source>
         <translation>Control de &amp;Versiones</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3888"/>
+        <location filename="../Project/Project.py" line="3891"/>
         <source>Chec&amp;k</source>
         <translation>Veri&amp;ficar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3890"/>
+        <location filename="../Project/Project.py" line="3893"/>
         <source>Sho&amp;w</source>
         <translation>V&amp;er</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3891"/>
+        <location filename="../Project/Project.py" line="3894"/>
         <source>&amp;Diagrams</source>
         <translation>&amp;Diagramas</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3892"/>
+        <location filename="../Project/Project.py" line="3895"/>
         <source>Session</source>
         <translation>Sesión</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3893"/>
+        <location filename="../Project/Project.py" line="3896"/>
         <source>Source &amp;Documentation</source>
         <translation>Origen de &amp;Documentación </translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3895"/>
+        <location filename="../Project/Project.py" line="3898"/>
         <source>Debugger</source>
         <translation>Depurador</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3896"/>
+        <location filename="../Project/Project.py" line="3899"/>
         <source>Pac&amp;kagers</source>
         <translation>Empa&amp;quetadores</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4004"/>
+        <location filename="../Project/Project.py" line="4007"/>
         <source>Project</source>
         <translation>Proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4070"/>
+        <location filename="../Project/Project.py" line="4073"/>
         <source>&amp;Clear</source>
         <translation>&amp;Borrar</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4191"/>
+        <location filename="../Project/Project.py" line="4194"/>
         <source>Search New Files</source>
         <translation>Buscar nuevos archivos</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4191"/>
+        <location filename="../Project/Project.py" line="4194"/>
         <source>There were no new files found to be added.</source>
         <translation>No se han encontrado nuevos archivos para ser añadidos.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4337"/>
+        <location filename="../Project/Project.py" line="4340"/>
         <source>Version Control System</source>
         <translation>Sistema de control de versiones</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4455"/>
+        <location filename="../Project/Project.py" line="4458"/>
         <source>Coverage Data</source>
         <translation>Datos de Cobertura</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4505"/>
+        <location filename="../Project/Project.py" line="4508"/>
         <source>There is no main script defined for the current project. Aborting</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4478"/>
+        <location filename="../Project/Project.py" line="4481"/>
         <source>Code Coverage</source>
         <translation>Cobertura de codigo</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4478"/>
+        <location filename="../Project/Project.py" line="4481"/>
         <source>Please select a coverage file</source>
         <translation>Por favor seleccione un archivo de cobertura</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4528"/>
+        <location filename="../Project/Project.py" line="4531"/>
         <source>Please select a profile file</source>
         <translation>Por favor seleccione un archivo de profiling</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4582"/>
+        <location filename="../Project/Project.py" line="4585"/>
         <source>Include module names?</source>
         <translation>¿Incluir nombres de módulos?</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4700"/>
+        <location filename="../Project/Project.py" line="4703"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; already exists.&lt;/p&gt;&lt;p&gt;Overwrite it?&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; ya existe.&lt;/p&gt;&lt;p&gt;¿Desea sobreescribirlo?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4760"/>
+        <location filename="../Project/Project.py" line="4763"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; does not exist. Aborting...&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no existe. Abortando...&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4769"/>
+        <location filename="../Project/Project.py" line="4772"/>
         <source>The project does not have a main script defined. Aborting...</source>
         <translation>No hay script principal definido para el proyecto actual. Abortando...</translation>
     </message>
@@ -37749,12 +37723,12 @@ Seleccione Actualizar.</translation>
         <translation>Registrando Tipo de Proyecto</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3846"/>
+        <location filename="../Project/Project.py" line="3849"/>
         <source>Create Plugin Archive (Snapshot)</source>
         <translation>Crear un Archivo de Plugin (Snapshot)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3846"/>
+        <location filename="../Project/Project.py" line="3849"/>
         <source>Create Plugin Archive (&amp;Snapshot)</source>
         <translation>Crear un Archivo de Plugin (&amp;Snapshot)</translation>
     </message>
@@ -37774,22 +37748,22 @@ Seleccione Actualizar.</translation>
         <translation>Introduzca el patrón de ruta para los archivos de traducción (use &apos;%language%&apos; in lugar del código de idioma):</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3610"/>
+        <location filename="../Project/Project.py" line="3613"/>
         <source>Lexer Associations</source>
         <translation>Asociaciones de Analizador Léxico</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3610"/>
+        <location filename="../Project/Project.py" line="3613"/>
         <source>Lexer Associations...</source>
         <translation>Asociaciones de Analizador Léxico...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3614"/>
+        <location filename="../Project/Project.py" line="3617"/>
         <source>Show the project lexer associations (overriding defaults)</source>
         <translation>Ver las asociaciones de analizador léxico del proyecto (sobreescribiendo valores por defecto)</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3616"/>
+        <location filename="../Project/Project.py" line="3619"/>
         <source>&lt;b&gt;Lexer Associations...&lt;/b&gt;&lt;p&gt;This shows a dialog to edit the lexer associations of the project. These associations override the global lexer associations. Lexers are used to highlight the editor text.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Asociaciones de Analizador Léxico ...&lt;/b&gt;&lt;p&gt;Muestra un diálogo para editar las asociaciones de analizador léxico del proyecto. Estas asociaciones sobreescriben las asociaciones de analizador léxico globales. Los analizadores léxicos se utilizan para resaltar el texto en el editor.&lt;/p&gt;</translation>
     </message>
@@ -37904,27 +37878,27 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El directorio de proyecto &lt;b&gt;{0}&lt;/b&gt; no pudo ser creado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4337"/>
+        <location filename="../Project/Project.py" line="4340"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found.&lt;br/&gt;Disabling version control.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Deshabilitando control de versiones.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4740"/>
+        <location filename="../Project/Project.py" line="4743"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser creado.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4783"/>
+        <location filename="../Project/Project.py" line="4786"/>
         <source>&lt;p&gt;The file &lt;b&gt;PKGLIST&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo &lt;b&gt;PKGLIST&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4822"/>
+        <location filename="../Project/Project.py" line="4825"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be stored in the archive. Ignoring it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El fichero&lt;b&gt;{0}&lt;/b&gt; no ha podido ser almacenado en el archivo. Va a ser ignorado.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4891"/>
+        <location filename="../Project/Project.py" line="4894"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
@@ -37954,22 +37928,22 @@ Seleccione Actualizar.</translation>
         <translation>&lt;p&gt;El script principal &lt;b&gt;{0}&lt;/b&gt; no se ha podido crear.&lt;br/&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3799"/>
+        <location filename="../Project/Project.py" line="3802"/>
         <source>Load Diagram</source>
         <translation>Cargar Diagrama</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3799"/>
+        <location filename="../Project/Project.py" line="3802"/>
         <source>&amp;Load Diagram...</source>
         <translation>&amp;Cargar Diagrama...</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3803"/>
+        <location filename="../Project/Project.py" line="3806"/>
         <source>Load a diagram from file.</source>
         <translation>CArgar diagrama desde archivo.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3805"/>
+        <location filename="../Project/Project.py" line="3808"/>
         <source>&lt;b&gt;Load Diagram...&lt;/b&gt;&lt;p&gt;This loads a diagram from file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cargar Diagrama...&lt;/b&gt;&lt;p&gt;Carga un diagrama desde un archivo.&lt;/p&gt;</translation>
     </message>
@@ -37999,52 +37973,52 @@ Seleccione Actualizar.</translation>
         <translation>Consola PyQt5</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4326"/>
+        <location filename="../Project/Project.py" line="4329"/>
         <source>&lt;p&gt;The selected VCS &lt;b&gt;{0}&lt;/b&gt; could not be found. &lt;br/&gt;Reverting override.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El VCS seleccionado &lt;b&gt;{0}&lt;/b&gt; no ha sido encontrado.&lt;br&gt;Revirtiendo sobreescritura.&lt;/p&gt;&lt;p&gt;{1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4933"/>
+        <location filename="../Project/Project.py" line="4936"/>
         <source>&lt;p&gt;The plugin file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt; &lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin&lt;b&gt;{0}&lt;/b&gt; no puede ser leido.&lt;/p&gt;&lt;p&gt;Causa: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3819"/>
+        <location filename="../Project/Project.py" line="3822"/>
         <source>Create an initial PKGLIST file for an eric6 plugin.</source>
         <translation>Crear un archivo inicial PKGLIST para un plugin  para eric6.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3821"/>
+        <location filename="../Project/Project.py" line="3824"/>
         <source>&lt;b&gt;Create Package List&lt;/b&gt;&lt;p&gt;This creates an initial list of files to include in an eric6 plugin archive. The list is created from the project file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Lista del Paquete&lt;/b&gt;&lt;p&gt;Crea una lista inicial de archivos a incluir en un archivo para plugin de eric6. Esta lista se crea a partir del archivo de proyecto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3835"/>
+        <location filename="../Project/Project.py" line="3838"/>
         <source>Create an eric6 plugin archive file.</source>
         <translation>Crear un archivo de plugin para eric6.</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3837"/>
+        <location filename="../Project/Project.py" line="3840"/>
         <source>&lt;b&gt;Create Plugin Archive&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear Archivo de Plugin&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin para eric6 utilizando la lista de archivos dada en el archivo PKGLIST. El nombre de archivo se determina a partir del nombr del script principal.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3851"/>
+        <location filename="../Project/Project.py" line="3854"/>
         <source>Create an eric6 plugin archive file (snapshot release).</source>
         <translation>Crear un archivo de plugin de eric6 (snapshot release).</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="3853"/>
+        <location filename="../Project/Project.py" line="3856"/>
         <source>&lt;b&gt;Create Plugin Archive (Snapshot)&lt;/b&gt;&lt;p&gt;This creates an eric6 plugin archive file using the list of files given in the PKGLIST file. The archive name is built from the main script name. The version entry of the main script is modified to reflect a snapshot release.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Crear un archivo de plugin (Snapshot)&lt;/b&gt;&lt;p&gt;Crea un archivo de plugin utilizando la lista de archivos proporcionada en el archivo PKGLIST. El nombre del archivo se determina por el nombre del script principal. La entrada para la versión del script proncipal se modifica para reflejar una versión snapshot.&lt;/p&gt; </translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4796"/>
+        <location filename="../Project/Project.py" line="4799"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; could not be created.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric6 &lt;b&gt;{0}&lt;/b&gt; no ha podido ser creado. Abortando...&lt;/p&gt;&lt;p&gt;Razón: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/Project.py" line="4845"/>
+        <location filename="../Project/Project.py" line="4848"/>
         <source>&lt;p&gt;The eric6 plugin archive file &lt;b&gt;{0}&lt;/b&gt; was created successfully.&lt;/p&gt;</source>
         <translation>&lt;p&gt;El archivo de plugin de eric6 &lt;b&gt;{0}&lt;/b&gt; se ha creado satisfactoriamente.&lt;/p&gt;</translation>
     </message>
