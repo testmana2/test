@@ -353,16 +353,16 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
                     source = ""
             else:
                 source = self.source.splitlines()
-        for _fn, lineno, col, code, msg in warnings:
-            self.noResults = False
-            if source:
-                try:
-                    scr_line = source[lineno - 1].strip()
-                except IndexError:
+            for _fn, lineno, col, code, msg in warnings:
+                self.noResults = False
+                if source:
+                    try:
+                        scr_line = source[lineno - 1].strip()
+                    except IndexError:
+                        scr_line = ""
+                else:
                     scr_line = ""
-            else:
-                scr_line = ""
-            self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
+                self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
 
         self.progress += 1
         self.checkProgress.setValue(self.progress)
