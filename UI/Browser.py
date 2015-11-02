@@ -19,9 +19,11 @@ from PyQt5.QtWidgets import QTreeView, QApplication, QMenu, QAbstractItemView
 from E5Gui.E5Application import e5App
 from E5Gui import E5FileDialog, E5MessageBox
 
+from Project.ProjectBrowserModel import ProjectBrowserSimpleDirectoryItem
 from .BrowserModel import BrowserModel, BrowserDirectoryItem, \
     BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
-    BrowserClassAttributeItem, BrowserImportItem
+    BrowserClassAttributeItem, BrowserImportItem, BrowserImportsItem, \
+    BrowserSysPathItem
 from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 
 import UI.PixmapCache
@@ -307,7 +309,13 @@ class Browser(QTreeView):
         """
         index = self.indexAt(mouseEvent.pos())
         if index.isValid():
-            self._openItem()
+            itm = self.model().item(index)
+            if isinstance(itm, (
+                    BrowserDirectoryItem, BrowserImportsItem,
+                    ProjectBrowserSimpleDirectoryItem, BrowserSysPathItem)):
+                self.setExpanded(index, not self.isExpanded(index))
+            else:
+                self._openItem()
 
     def _contextMenuRequested(self, coord):
         """
