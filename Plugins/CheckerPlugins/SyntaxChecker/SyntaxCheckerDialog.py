@@ -356,7 +356,10 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         for _fn, lineno, col, code, msg in warnings:
             self.noResults = False
             if source:
-                scr_line = source[lineno - 1].strip()
+                try:
+                    scr_line = source[lineno - 1].strip()
+                except IndexError:
+                    scr_line = ""
             else:
                 scr_line = ""
             self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
