@@ -241,10 +241,13 @@ class SyntaxCheckerDialog(QDialog, Ui_SyntaxCheckerDialog):
         warnings = problems.get('warnings', [])
         if warnings:
             source = self.source.splitlines()
-        for _fn, lineno, col, code, msg in warnings:
-            self.noResults = False
-            scr_line = source[lineno - 1].strip()
-            self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
+            for _fn, lineno, col, code, msg in warnings:
+                self.noResults = False
+                try:
+                    scr_line = source[lineno - 1].strip()
+                except IndexError:
+                    scr_line = ""
+                self.__createResultItem(_fn, lineno, col, msg, scr_line, True)
 
         self.progress += 1
         self.checkProgress.setValue(self.progress)
