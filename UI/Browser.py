@@ -23,7 +23,7 @@ from Project.ProjectBrowserModel import ProjectBrowserSimpleDirectoryItem
 from .BrowserModel import BrowserModel, BrowserDirectoryItem, \
     BrowserFileItem, BrowserClassItem, BrowserMethodItem, \
     BrowserClassAttributeItem, BrowserImportItem, BrowserImportsItem, \
-    BrowserSysPathItem
+    BrowserSysPathItem, BrowserGlobalsItem
 from .BrowserSortFilterProxyModel import BrowserSortFilterProxyModel
 
 import UI.PixmapCache
@@ -312,7 +312,8 @@ class Browser(QTreeView):
             itm = self.model().item(index)
             if isinstance(itm, (
                     BrowserDirectoryItem, BrowserImportsItem,
-                    ProjectBrowserSimpleDirectoryItem, BrowserSysPathItem)):
+                    ProjectBrowserSimpleDirectoryItem, BrowserSysPathItem,
+                    BrowserGlobalsItem)):
                 self.setExpanded(index, not self.isExpanded(index))
             else:
                 self._openItem()

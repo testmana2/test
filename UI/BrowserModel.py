@@ -636,7 +636,7 @@ class BrowserModel(QAbstractItemModel):
                     .format(dict["@@Coding@@"].coding))
                 self._addItem(node, parentItem)
             if "@@Globals@@" in keys:
-                node = BrowserClassAttributesItem(
+                node = BrowserGlobalsItem(
                     parentItem,
                     dict["@@Globals@@"].globals,
                     QCoreApplication.translate("BrowserModel", "Globals"))
@@ -1738,6 +1738,22 @@ class BrowserClassAttributeItem(BrowserItem):
                 return self.lineno() > other.lineno()
         
         return BrowserItem.lessThan(self, other, column, order)
+
+
+class BrowserGlobalsItem(BrowserClassAttributesItem):
+    """
+    Class implementing the data structure for browser globals items.
+    """
+    def __init__(self, parent, attributes, text, isClass=False):
+        """
+        Constructor
+        
+        @param parent parent item
+        @param attributes list of attributes
+        @param text text to be shown by this item (string)
+        @param isClass flag indicating class attributes (boolean)
+        """
+        BrowserClassAttributesItem.__init__(self, parent, attributes, text)
 
 
 class BrowserCodingItem(BrowserItem):
