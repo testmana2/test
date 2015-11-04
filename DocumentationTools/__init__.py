@@ -7,6 +7,8 @@
 Package implementing the source code documentation tools.
 """
 
+from __future__ import unicode_literals
+
 supportedExtensionsDictForApis = {
     "Python2": [".py2", ".pyw2", ".ptl"],
     "Python3": [".py", ".pyw", ".py3", ".pyw3"],
