@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
-  <namespace>org.eric6.ide.61</namespace>
+  <namespace>org.eric6.ide.62</namespace>
   <virtualFolder>eric6</virtualFolder>
   <customFilter name="eric6">
-    <filterAttribute>6.1</filterAttribute>
+    <filterAttribute>6.2</filterAttribute>
     <filterAttribute>eric6</filterAttribute>
     <filterAttribute>ide</filterAttribute>
   </customFilter>
   <filterSection>
-    <filterAttribute>6.1</filterAttribute>
+    <filterAttribute>6.2</filterAttribute>
     <filterAttribute>eric6</filterAttribute>
     <filterAttribute>ide</filterAttribute>
     <toc>
@@ -1878,6 +1878,8 @@
       <keyword name="BrowserFileItem.moduleName" id="BrowserFileItem.moduleName" ref="eric6.UI.BrowserModel.html#BrowserFileItem.moduleName" />
       <keyword name="BrowserFileItem.name" id="BrowserFileItem.name" ref="eric6.UI.BrowserModel.html#BrowserFileItem.name" />
       <keyword name="BrowserFileItem.setName" id="BrowserFileItem.setName" ref="eric6.UI.BrowserModel.html#BrowserFileItem.setName" />
+      <keyword name="BrowserGlobalsItem" id="BrowserGlobalsItem" ref="eric6.UI.BrowserModel.html#BrowserGlobalsItem" />
+      <keyword name="BrowserGlobalsItem (Constructor)" id="BrowserGlobalsItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserGlobalsItem.__init__" />
       <keyword name="BrowserImportItem" id="BrowserImportItem" ref="eric6.UI.BrowserModel.html#BrowserImportItem" />
       <keyword name="BrowserImportItem (Constructor)" id="BrowserImportItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserImportItem.__init__" />
       <keyword name="BrowserImportItem.fileName" id="BrowserImportItem.fileName" ref="eric6.UI.BrowserModel.html#BrowserImportItem.fileName" />

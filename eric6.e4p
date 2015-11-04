@@ -10,7 +10,7 @@
   <ProgLanguage mixed="1">Python3</ProgLanguage>
   <ProjectType>PyQt5</ProjectType>
   <Description>eric6 is an integrated development environment for the Python and Ruby language. It uses the PyQt5 bindings and the QScintilla2 editor widget.</Description>
-  <Version>6.1.x</Version>
+  <Version>6.2.x</Version>
   <Author>Detlev Offenbach</Author>
   <Email>detlev@die-offenbachs.de</Email>
   <TranslationPattern>i18n/eric6_%language%.ts</TranslationPattern>
@@ -2088,7 +2088,7 @@
               <string>qtHelpFilterAttributes</string>
             </key>
             <value>
-              <string>eric6:ide:6.1</string>
+              <string>eric6:ide:6.2</string>
             </value>
             <key>
               <string>qtHelpFilterName</string>
@@ -2100,7 +2100,7 @@
               <string>qtHelpNamespace</string>
             </key>
             <value>
-              <string>org.eric6.ide.61</string>
+              <string>org.eric6.ide.62</string>
             </value>
             <key>
               <string>qtHelpOutputDirectory</string>
