@@ -1878,6 +1878,8 @@
       <keyword name="BrowserFileItem.moduleName" id="BrowserFileItem.moduleName" ref="eric6.UI.BrowserModel.html#BrowserFileItem.moduleName" />
       <keyword name="BrowserFileItem.name" id="BrowserFileItem.name" ref="eric6.UI.BrowserModel.html#BrowserFileItem.name" />
       <keyword name="BrowserFileItem.setName" id="BrowserFileItem.setName" ref="eric6.UI.BrowserModel.html#BrowserFileItem.setName" />
+      <keyword name="BrowserGlobalsItem" id="BrowserGlobalsItem" ref="eric6.UI.BrowserModel.html#BrowserGlobalsItem" />
+      <keyword name="BrowserGlobalsItem (Constructor)" id="BrowserGlobalsItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserGlobalsItem.__init__" />
       <keyword name="BrowserImportItem" id="BrowserImportItem" ref="eric6.UI.BrowserModel.html#BrowserImportItem" />
       <keyword name="BrowserImportItem (Constructor)" id="BrowserImportItem (Constructor)" ref="eric6.UI.BrowserModel.html#BrowserImportItem.__init__" />
       <keyword name="BrowserImportItem.fileName" id="BrowserImportItem.fileName" ref="eric6.UI.BrowserModel.html#BrowserImportItem.fileName" />
