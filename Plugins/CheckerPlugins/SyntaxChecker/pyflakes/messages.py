@@ -39,7 +39,7 @@ class Message(object):
         
         @return string representation of the object (string)
         """
-        return '%s:%s: %s' % (
+        return '{0}:{1}: {2}'.format(
             self.filename, self.lineno, self.message % self.message_args)
     
     def getMessageData(self):

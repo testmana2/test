@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 #
 # aes.py: implements AES - Advanced Encryption Standard
 # from the SlowAES project, http://code.google.com/p/slowaes/
@@ -667,7 +668,6 @@ class AESModeOfOperation(object):
                 if end > len(input):
                     end = len(input)
                 plaintext = self.__extractBytes(input, start, end, mode)
-                # print 'PT@%s:%s' % (j, plaintext)
                 if mode == self.ModeOfOperation["CFB"]:
                     if firstRound:
                         output = self.aes.encrypt(IV, key, size)
@@ -710,7 +710,6 @@ class AESModeOfOperation(object):
                             iput[i] = plaintext[i] ^ IV[i]
                         else:
                             iput[i] = plaintext[i] ^ ciphertext[i]
-                    # print 'IP@%s:%s' % (j, iput)
                     firstRound = False
                     ciphertext = self.aes.encrypt(iput, key, size)
                     # always 16 bytes because of the padding for CBC
@@ -851,7 +850,8 @@ def decryptData(key, data, mode=AESModeOfOperation.ModeOfOperation["CBC"]):
     """
     key = bytearray(key)
     keysize = len(key)
-    assert keysize in AES.KeySize.values(), 'invalid key size: %s' % keysize
+    assert keysize in AES.KeySize.values(), \
+        'invalid key size: {0}'.format(keysize)
     # iv is first 16 bytes
     iv = bytearray(data[:16])
     data = bytearray(data[16:])

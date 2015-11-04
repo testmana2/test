@@ -119,7 +119,7 @@ class Uid(int):
         
         @return object representation (string)
         """
-        return "Uid(%d)" % self
+        return "Uid({0:d})".format(self)
 
 
 class Data(bytes):
@@ -527,7 +527,6 @@ class PlistReader(object):
         actual_length = length * 2
         data = self.contents[
             self.currentOffset:self.currentOffset + actual_length]
-        # unpack not needed?!! data = unpack(">%ds" % (actual_length), data)[0]
         self.currentOffset += actual_length
         return data.decode('utf_16_be')
     
@@ -610,7 +609,7 @@ class HashableWrapper(object):
         
         @return object representation (string)
         """
-        return "<HashableWrapper: %s>" % [self.value]
+        return "<HashableWrapper: {0}>".format([self.value])
 
 
 class BoolWrapper(object):
@@ -631,7 +630,7 @@ class BoolWrapper(object):
         
         @return object representation (string)
         """
-        return "<BoolWrapper: %s>" % self.value
+        return "<BoolWrapper: {0}>".format(self.value)
 
 
 class PlistWriter(object):
