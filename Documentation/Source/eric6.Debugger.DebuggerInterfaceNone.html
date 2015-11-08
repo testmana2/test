@@ -37,8 +37,11 @@ Module implementing a dummy debugger interface for the debug server.
 <h3>Functions</h3>
 <table>
 <tr>
+<td><a href="#createDebuggerInterfaceNone">createDebuggerInterfaceNone</a></td>
+<td>Module function to create a debugger interface instance.</td>
+</tr><tr>
 <td><a href="#getRegistryData">getRegistryData</a></td>
-<td>Module functionto get characterising data for the debugger interface.</td>
+<td>Module functionto get characterizing data for the debugger interface.</td>
 </tr>
 </table>
 <hr /><hr />
@@ -704,16 +707,49 @@ client process object (QProcess), a flag to indicate
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="createDebuggerInterfaceNone" ID="createDebuggerInterfaceNone"></a>
+<h2>createDebuggerInterfaceNone</h2>
+<b>createDebuggerInterfaceNone</b>(<i>debugServer, passive</i>)
+<p>
+    Module function to create a debugger interface instance.
+</p><p>
+
+</p><dl>
+<dt><i>debugServer</i> (DebugServer)</dt>
+<dd>
+reference to the debug server
+</dd><dt><i>passive</i> (bool)</dt>
+<dd>
+flag indicating passive connection mode
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+instantiated debugger interface
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+DebuggerInterfacePython
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="getRegistryData" ID="getRegistryData"></a>
 <h2>getRegistryData</h2>
 <b>getRegistryData</b>(<i></i>)
 <p>
-    Module functionto get characterising data for the debugger interface.
+    Module functionto get characterizing data for the debugger interface.
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-list of the following data. Client type (string), client
-        capabilities (integer), client type association (list of strings)
+tuple containing  client type, client capabilities, client file
+        type associations and reference to creation function
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+tuple of (str, int, list of str, function)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

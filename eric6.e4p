@@ -123,17 +123,6 @@
     <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
     <Source>DebugClients/Python3/eric6dbgstub.py</Source>
     <Source>DebugClients/Python3/getpass.py</Source>
-    <Source>DebugClients/Ruby/AsyncFile.rb</Source>
-    <Source>DebugClients/Ruby/AsyncIO.rb</Source>
-    <Source>DebugClients/Ruby/Completer.rb</Source>
-    <Source>DebugClients/Ruby/Config.rb</Source>
-    <Source>DebugClients/Ruby/DebugClient.rb</Source>
-    <Source>DebugClients/Ruby/DebugClientBaseModule.rb</Source>
-    <Source>DebugClients/Ruby/DebugClientCapabilities.rb</Source>
-    <Source>DebugClients/Ruby/DebugProtocol.rb</Source>
-    <Source>DebugClients/Ruby/DebugQuit.rb</Source>
-    <Source>DebugClients/Ruby/Debuggee.rb</Source>
-    <Source>DebugClients/Ruby/__init__.rb</Source>
     <Source>DebugClients/__init__.py</Source>
     <Source>Debugger/BreakPointModel.py</Source>
     <Source>Debugger/BreakPointViewer.py</Source>
@@ -148,7 +137,6 @@
     <Source>Debugger/DebuggerInterfaceNone.py</Source>
     <Source>Debugger/DebuggerInterfacePython.py</Source>
     <Source>Debugger/DebuggerInterfacePython3.py</Source>
-    <Source>Debugger/DebuggerInterfaceRuby.py</Source>
     <Source>Debugger/EditBreakpointDialog.py</Source>
     <Source>Debugger/EditWatchpointDialog.py</Source>
     <Source>Debugger/ExceptionLogger.py</Source>
@@ -1677,8 +1665,6 @@
     <Other>APIs/Ruby/Ruby-1.8.7.bas</Other>
     <Other>APIs/Ruby/Ruby-1.9.1.api</Other>
     <Other>APIs/Ruby/Ruby-1.9.1.bas</Other>
-    <Other>APIs/Ruby/eric6.api</Other>
-    <Other>APIs/Ruby/eric6.bas</Other>
     <Other>CSSs</Other>
     <Other>CodeTemplates</Other>
     <Other>DTDs</Other>
@@ -1956,7 +1942,6 @@
             </key>
             <value>
               <list>
-                <string>Ruby</string>
                 <string>Python3</string>
               </list>
             </value>

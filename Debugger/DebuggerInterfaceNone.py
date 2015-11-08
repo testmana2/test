@@ -17,16 +17,6 @@ ClientDefaultCapabilities = 0
 ClientTypeAssociations = []
 
 
-def getRegistryData():
-    """
-    Module functionto get characterising data for the debugger interface.
-    
-    @return list of the following data. Client type (string), client
-        capabilities (integer), client type association (list of strings)
-    """
-    return ["None", ClientDefaultCapabilities, ClientTypeAssociations]
-
-
 class DebuggerInterfaceNone(QObject):
     """
     Class implementing a dummy debugger interface for the debug server.
@@ -413,3 +403,30 @@ class DebuggerInterfaceNone(QObject):
         public method to stop a unittest run.
         """
         return
+    
+
+def createDebuggerInterfaceNone(debugServer, passive):
+    """
+    Module function to create a debugger interface instance.
+    
+        
+    @param debugServer reference to the debug server
+    @type DebugServer
+    @param passive flag indicating passive connection mode
+    @type bool
+    @return instantiated debugger interface
+    @rtype DebuggerInterfacePython
+    """
+    return DebuggerInterfaceNone(debugServer, passive)
+
+
+def getRegistryData():
+    """
+    Module functionto get characterizing data for the debugger interface.
+    
+    @return tuple containing  client type, client capabilities, client file
+        type associations and reference to creation function
+    @rtype tuple of (str, int, list of str, function)
+    """
+    return ["None", ClientDefaultCapabilities, ClientTypeAssociations,
+            createDebuggerInterfaceNone]

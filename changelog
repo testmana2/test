@@ -1,6 +1,15 @@
 Change Log
 ----------
-Version 6.1-snapshot-2015mmdd:
+Version 6.2.0:
+- bug fixes
+- Debugger
+  -- added a debugger interface registry to allow debuggers being
+     implemented as plug-ins
+  -- Ruby Debugger:
+     --- removed the Ruby debugger (the interface doesn't work with recent
+         Ruby versions anymore)
+
+Version 6.1.0:
 - bug fixes
 - General
   -- added a configuration page to edit the list of mime types to

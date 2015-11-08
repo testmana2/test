@@ -29,26 +29,6 @@ from eric6config import getConfig
 
 
 ClientDefaultCapabilities = DebugClientCapabilities.HasAll
-    
-
-def getRegistryData():
-    """
-    Module function to get characterising data for the debugger interface.
-    
-    @return list of the following data. Client type (string), client
-        capabilities (integer), client type association (list of strings)
-    """
-    exts = []
-    for ext in Preferences.getDebugger("Python3Extensions").split():
-        if ext.startswith("."):
-            exts.append(ext)
-        else:
-            exts.append(".{0}".format(ext))
-    
-    if exts:
-        return ["Python3", ClientDefaultCapabilities, exts]
-    else:
-        return ["", 0, []]
 
 
 class DebuggerInterfacePython3(QObject):
@@ -1086,3 +1066,40 @@ class DebuggerInterfacePython3(QObject):
             self.qsock.write(cmd.encode('utf8', 'backslashreplace'))
         else:
             self.queue.append(cmd)
+    
+
+def createDebuggerInterfacePython3(debugServer, passive):
+    """
+    Module function to create a debugger interface instance.
+    
+        
+    @param debugServer reference to the debug server
+    @type DebugServer
+    @param passive flag indicating passive connection mode
+    @type bool
+    @return instantiated debugger interface
+    @rtype DebuggerInterfacePython
+    """
+    return DebuggerInterfacePython3(debugServer, passive)
+
+
+def getRegistryData():
+    """
+    Module function to get characterizing data for the debugger interface.
+    
+    @return tuple containing  client type, client capabilities, client file
+        type associations and reference to creation function
+    @rtype tuple of (str, int, list of str, function)
+    """
+    exts = []
+    for ext in Preferences.getDebugger("Python3Extensions").split():
+        if ext.startswith("."):
+            exts.append(ext)
+        else:
+            exts.append(".{0}".format(ext))
+    
+    if exts:
+        return ["Python3", ClientDefaultCapabilities, exts,
+                createDebuggerInterfacePython3]
+    else:
+        return ["", 0, [], None]

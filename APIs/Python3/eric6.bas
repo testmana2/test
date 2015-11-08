@@ -118,7 +118,6 @@ DebuggerGeneralPage ConfigurationPageBase Ui_DebuggerGeneralPage
 DebuggerInterfaceNone QObject
 DebuggerInterfacePython QObject
 DebuggerInterfacePython3 QObject
-DebuggerInterfaceRuby QObject
 DebuggerPropertiesDialog QDialog Ui_DebuggerPropertiesDialog
 DebuggerPropertiesReader XMLStreamReaderBase
 DebuggerPropertiesWriter XMLStreamWriterBase

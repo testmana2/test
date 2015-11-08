@@ -247,6 +247,9 @@ QTcpServer
 <td><a href="#DebugServer.__deleteWatchPoints">__deleteWatchPoints</a></td>
 <td>Private slot to delete watch expressions.</td>
 </tr><tr>
+<td><a href="#DebugServer.__findLanguageForExtension">__findLanguageForExtension</a></td>
+<td>Private method to get the language associated with a file extension.</td>
+</tr><tr>
 <td><a href="#DebugServer.__getNetworkInterfaceAndIndex">__getNetworkInterfaceAndIndex</a></td>
 <td>Private method to determine the network interface and the interface index.</td>
 </tr><tr>
@@ -260,7 +263,7 @@ QTcpServer
 <td>Private method to shut down a passive debug connection.</td>
 </tr><tr>
 <td><a href="#DebugServer.__registerDebuggerInterfaces">__registerDebuggerInterfaces</a></td>
-<td>Private method to register the available debugger interface modules.</td>
+<td>Private method to register the available internal debugger interfaces.</td>
 </tr><tr>
 <td><a href="#DebugServer.__remoteBreakpointEnable">__remoteBreakpointEnable</a></td>
 <td>Private method to enable or disable a breakpoint.</td>
@@ -348,6 +351,9 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.preferencesChanged">preferencesChanged</a></td>
 <td>Public slot to handle the preferencesChanged signal.</td>
+</tr><tr>
+<td><a href="#DebugServer.registerDebuggerInterface">registerDebuggerInterface</a></td>
+<td>Public method to register a debugger interface.</td>
 </tr><tr>
 <td><a href="#DebugServer.remoteBanner">remoteBanner</a></td>
 <td>Public slot to get the banner info of the remote client.</td>
@@ -498,6 +504,9 @@ QTcpServer
 </tr><tr>
 <td><a href="#DebugServer.startClient">startClient</a></td>
 <td>Public method to start a debug client.</td>
+</tr><tr>
+<td><a href="#DebugServer.unregisterDebuggerInterface">unregisterDebuggerInterface</a></td>
+<td>Private method to unregister a debugger interface.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -656,6 +665,26 @@ start row (integer)
 <dd>
 end row (integer)
 </dd>
+</dl><a NAME="DebugServer.__findLanguageForExtension" ID="DebugServer.__findLanguageForExtension"></a>
+<h4>DebugServer.__findLanguageForExtension</h4>
+<b>__findLanguageForExtension</b>(<i>ext</i>)
+<p>
+        Private method to get the language associated with a file extension.
+</p><dl>
+<dt><i>ext</i> (str)</dt>
+<dd>
+file extension
+</dd>
+</dl><dl>
+<dt>Returns:</dt>
+<dd>
+associated language
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
 </dl><a NAME="DebugServer.__getNetworkInterfaceAndIndex" ID="DebugServer.__getNetworkInterfaceAndIndex"></a>
 <h4>DebugServer.__getNetworkInterfaceAndIndex</h4>
 <b>__getNetworkInterfaceAndIndex</b>(<i>address</i>)
@@ -704,7 +733,7 @@ condition string (string)
 <h4>DebugServer.__registerDebuggerInterfaces</h4>
 <b>__registerDebuggerInterfaces</b>(<i></i>)
 <p>
-        Private method to register the available debugger interface modules.
+        Private method to register the available internal debugger interfaces.
 </p><a NAME="DebugServer.__remoteBreakpointEnable" ID="DebugServer.__remoteBreakpointEnable"></a>
 <h4>DebugServer.__remoteBreakpointEnable</h4>
 <b>__remoteBreakpointEnable</b>(<i>fn, line, enable</i>)
@@ -1072,7 +1101,24 @@ flag to enable exception reporting of the IDE (boolean)
 <b>preferencesChanged</b>(<i></i>)
 <p>
         Public slot to handle the preferencesChanged signal.
-</p><a NAME="DebugServer.remoteBanner" ID="DebugServer.remoteBanner"></a>
+</p><a NAME="DebugServer.registerDebuggerInterface" ID="DebugServer.registerDebuggerInterface"></a>
+<h4>DebugServer.registerDebuggerInterface</h4>
+<b>registerDebuggerInterface</b>(<i>name, getRegistryData</i>)
+<p>
+        Public method to register a debugger interface.
+</p><dl>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the debugger interface
+</dd><dt><i>getRegistryData</i> (function)</dt>
+<dd>
+reference to a function to be called
+            to get the debugger interface details. This method shall
+            return the client language, the client capabilities, the
+            list of associated file extensions and a function reference
+            to create the debugger interface (see __createDebuggerInterface())
+</dd>
+</dl><a NAME="DebugServer.remoteBanner" ID="DebugServer.remoteBanner"></a>
 <h4>DebugServer.remoteBanner</h4>
 <b>remoteBanner</b>(<i></i>)
 <p>
@@ -1803,6 +1849,16 @@ flag indicating a project related action (boolean)
 <dd>
 flag indicating to start the debugger in a
             console window (boolean)
+</dd>
+</dl><a NAME="DebugServer.unregisterDebuggerInterface" ID="DebugServer.unregisterDebuggerInterface"></a>
+<h4>DebugServer.unregisterDebuggerInterface</h4>
+<b>unregisterDebuggerInterface</b>(<i>name</i>)
+<p>
+        Private method to unregister a debugger interface.
+</p><dl>
+<dt><i>name</i> (str)</dt>
+<dd>
+name of the debugger interface
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>

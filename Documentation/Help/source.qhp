@@ -62,18 +62,6 @@
               <section title="eric6.DebugClients.Python3.eric6dbgstub" ref="eric6.DebugClients.Python3.eric6dbgstub.html" />
               <section title="eric6.DebugClients.Python3.getpass" ref="eric6.DebugClients.Python3.getpass.html" />
             </section>
-            <section title="eric6.DebugClients.Ruby" ref="index-eric6.DebugClients.Ruby.html">
-              <section title="eric6.DebugClients.Ruby.AsyncFile" ref="eric6.DebugClients.Ruby.AsyncFile.html" />
-              <section title="eric6.DebugClients.Ruby.AsyncIO" ref="eric6.DebugClients.Ruby.AsyncIO.html" />
-              <section title="eric6.DebugClients.Ruby.Completer" ref="eric6.DebugClients.Ruby.Completer.html" />
-              <section title="eric6.DebugClients.Ruby.Config" ref="eric6.DebugClients.Ruby.Config.html" />
-              <section title="eric6.DebugClients.Ruby.DebugClient" ref="eric6.DebugClients.Ruby.DebugClient.html" />
-              <section title="eric6.DebugClients.Ruby.DebugClientBaseModule" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html" />
-              <section title="eric6.DebugClients.Ruby.DebugClientCapabilities" ref="eric6.DebugClients.Ruby.DebugClientCapabilities.html" />
-              <section title="eric6.DebugClients.Ruby.DebugProtocol" ref="eric6.DebugClients.Ruby.DebugProtocol.html" />
-              <section title="eric6.DebugClients.Ruby.DebugQuit" ref="eric6.DebugClients.Ruby.DebugQuit.html" />
-              <section title="eric6.DebugClients.Ruby.Debuggee" ref="eric6.DebugClients.Ruby.Debuggee.html" />
-            </section>
           </section>
           <section title="eric6.Debugger" ref="index-eric6.Debugger.html">
             <section title="eric6.Debugger.BreakPointModel" ref="eric6.Debugger.BreakPointModel.html" />
@@ -89,7 +77,6 @@
             <section title="eric6.Debugger.DebuggerInterfaceNone" ref="eric6.Debugger.DebuggerInterfaceNone.html" />
             <section title="eric6.Debugger.DebuggerInterfacePython" ref="eric6.Debugger.DebuggerInterfacePython.html" />
             <section title="eric6.Debugger.DebuggerInterfacePython3" ref="eric6.Debugger.DebuggerInterfacePython3.html" />
-            <section title="eric6.Debugger.DebuggerInterfaceRuby" ref="eric6.Debugger.DebuggerInterfaceRuby.html" />
             <section title="eric6.Debugger.EditBreakpointDialog" ref="eric6.Debugger.EditBreakpointDialog.html" />
             <section title="eric6.Debugger.EditWatchpointDialog" ref="eric6.Debugger.EditWatchpointDialog.html" />
             <section title="eric6.Debugger.ExceptionLogger" ref="eric6.Debugger.ExceptionLogger.html" />
@@ -1086,7 +1073,6 @@
       </section>
     </toc>
     <keywords>
-      <keyword name="&lt;&lt;" id="&lt;&lt;" ref="eric6.DebugClients.Ruby.AsyncFile.html#&lt;&lt;" />
       <keyword name="AES" id="AES" ref="eric6.Utilities.crypto.py3AES.html#AES" />
       <keyword name="AES.__addRoundKey" id="AES.__addRoundKey" ref="eric6.Utilities.crypto.py3AES.html#AES.__addRoundKey" />
       <keyword name="AES.__aes_invMain" id="AES.__aes_invMain" ref="eric6.Utilities.crypto.py3AES.html#AES.__aes_invMain" />
@@ -1428,27 +1414,22 @@
       <keyword name="AssociationItem.widgetMoved" id="AssociationItem.widgetMoved" ref="eric6.Graphics.AssociationItem.html#AssociationItem.widgetMoved" />
       <keyword name="AsyncFile" id="AsyncFile" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile" />
       <keyword name="AsyncFile" id="AsyncFile" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile" />
-      <keyword name="AsyncFile" id="AsyncFile" ref="eric6.DebugClients.Ruby.AsyncFile.html#AsyncFile" />
       <keyword name="AsyncFile (Constructor)" id="AsyncFile (Constructor)" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.__init__" />
       <keyword name="AsyncFile (Constructor)" id="AsyncFile (Constructor)" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.__init__" />
       <keyword name="AsyncFile (Module)" id="AsyncFile (Module)" ref="eric6.DebugClients.Python.AsyncFile.html" />
       <keyword name="AsyncFile (Module)" id="AsyncFile (Module)" ref="eric6.DebugClients.Python3.AsyncFile.html" />
-      <keyword name="AsyncFile (Module)" id="AsyncFile (Module)" ref="eric6.DebugClients.Ruby.AsyncFile.html" />
       <keyword name="AsyncFile.__checkMode" id="AsyncFile.__checkMode" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.__checkMode" />
       <keyword name="AsyncFile.__checkMode" id="AsyncFile.__checkMode" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.__checkMode" />
       <keyword name="AsyncFile.__nWrite" id="AsyncFile.__nWrite" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.__nWrite" />
       <keyword name="AsyncFile.__nWrite" id="AsyncFile.__nWrite" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.__nWrite" />
-      <keyword name="AsyncFile.checkMode" id="AsyncFile.checkMode" ref="eric6.DebugClients.Ruby.AsyncFile.html#AsyncFile.checkMode" />
       <keyword name="AsyncFile.close" id="AsyncFile.close" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.close" />
       <keyword name="AsyncFile.close" id="AsyncFile.close" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.close" />
       <keyword name="AsyncFile.fileno" id="AsyncFile.fileno" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.fileno" />
       <keyword name="AsyncFile.fileno" id="AsyncFile.fileno" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.fileno" />
       <keyword name="AsyncFile.flush" id="AsyncFile.flush" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.flush" />
       <keyword name="AsyncFile.flush" id="AsyncFile.flush" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.flush" />
-      <keyword name="AsyncFile.initialize" id="AsyncFile.initialize" ref="eric6.DebugClients.Ruby.AsyncFile.html#AsyncFile.initialize" />
       <keyword name="AsyncFile.isatty" id="AsyncFile.isatty" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.isatty" />
       <keyword name="AsyncFile.isatty" id="AsyncFile.isatty" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.isatty" />
-      <keyword name="AsyncFile.nWrite" id="AsyncFile.nWrite" ref="eric6.DebugClients.Ruby.AsyncFile.html#AsyncFile.nWrite" />
       <keyword name="AsyncFile.pendingWrite" id="AsyncFile.pendingWrite" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.pendingWrite" />
       <keyword name="AsyncFile.pendingWrite" id="AsyncFile.pendingWrite" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.pendingWrite" />
       <keyword name="AsyncFile.read" id="AsyncFile.read" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncFile.read" />
@@ -1476,31 +1457,22 @@
       <keyword name="AsyncFile.writelines" id="AsyncFile.writelines" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncFile.writelines" />
       <keyword name="AsyncIO" id="AsyncIO" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO" />
       <keyword name="AsyncIO" id="AsyncIO" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO" />
-      <keyword name="AsyncIO" id="AsyncIO" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO" />
       <keyword name="AsyncIO (Constructor)" id="AsyncIO (Constructor)" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO.__init__" />
       <keyword name="AsyncIO (Constructor)" id="AsyncIO (Constructor)" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO.__init__" />
       <keyword name="AsyncIO (Module)" id="AsyncIO (Module)" ref="eric6.DebugClients.Python.AsyncIO.html" />
       <keyword name="AsyncIO (Module)" id="AsyncIO (Module)" ref="eric6.DebugClients.Python3.AsyncIO.html" />
-      <keyword name="AsyncIO (Module)" id="AsyncIO (Module)" ref="eric6.DebugClients.Ruby.AsyncIO.html" />
       <keyword name="AsyncIO.disconnect" id="AsyncIO.disconnect" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO.disconnect" />
       <keyword name="AsyncIO.disconnect" id="AsyncIO.disconnect" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO.disconnect" />
-      <keyword name="AsyncIO.disconnect" id="AsyncIO.disconnect" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO.disconnect" />
-      <keyword name="AsyncIO.initializeAsyncIO" id="AsyncIO.initializeAsyncIO" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO.initializeAsyncIO" />
       <keyword name="AsyncIO.readReady" id="AsyncIO.readReady" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO.readReady" />
       <keyword name="AsyncIO.readReady" id="AsyncIO.readReady" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO.readReady" />
-      <keyword name="AsyncIO.readReady" id="AsyncIO.readReady" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO.readReady" />
       <keyword name="AsyncIO.setDescriptors" id="AsyncIO.setDescriptors" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO.setDescriptors" />
       <keyword name="AsyncIO.setDescriptors" id="AsyncIO.setDescriptors" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO.setDescriptors" />
-      <keyword name="AsyncIO.setDescriptors" id="AsyncIO.setDescriptors" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO.setDescriptors" />
       <keyword name="AsyncIO.write" id="AsyncIO.write" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO.write" />
       <keyword name="AsyncIO.write" id="AsyncIO.write" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO.write" />
-      <keyword name="AsyncIO.write" id="AsyncIO.write" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO.write" />
       <keyword name="AsyncIO.writeReady" id="AsyncIO.writeReady" ref="eric6.DebugClients.Python.AsyncIO.html#AsyncIO.writeReady" />
       <keyword name="AsyncIO.writeReady" id="AsyncIO.writeReady" ref="eric6.DebugClients.Python3.AsyncIO.html#AsyncIO.writeReady" />
-      <keyword name="AsyncIO.writeReady" id="AsyncIO.writeReady" ref="eric6.DebugClients.Ruby.AsyncIO.html#AsyncIO.writeReady" />
       <keyword name="AsyncPendingWrite" id="AsyncPendingWrite" ref="eric6.DebugClients.Python.AsyncFile.html#AsyncPendingWrite" />
       <keyword name="AsyncPendingWrite" id="AsyncPendingWrite" ref="eric6.DebugClients.Python3.AsyncFile.html#AsyncPendingWrite" />
-      <keyword name="AsyncPendingWrite" id="AsyncPendingWrite" ref="eric6.DebugClients.Ruby.AsyncFile.html#AsyncPendingWrite" />
       <keyword name="Attribute" id="Attribute" ref="eric6.Utilities.ClassBrowsers.ClbrBaseClasses.html#Attribute" />
       <keyword name="Attribute" id="Attribute" ref="eric6.Utilities.ClassBrowsers.idlclbr.html#Attribute" />
       <keyword name="Attribute" id="Attribute" ref="eric6.Utilities.ClassBrowsers.jsclbr.html#Attribute" />
@@ -2138,18 +2110,6 @@
       <keyword name="ClickToFlashWhitelistDialog (Module)" id="ClickToFlashWhitelistDialog (Module)" ref="eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html" />
       <keyword name="ClickToFlashWhitelistDialog.getWhitelist" id="ClickToFlashWhitelistDialog.getWhitelist" ref="eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html#ClickToFlashWhitelistDialog.getWhitelist" />
       <keyword name="ClickToFlashWhitelistDialog.on_addButton_clicked" id="ClickToFlashWhitelistDialog.on_addButton_clicked" ref="eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html#ClickToFlashWhitelistDialog.on_addButton_clicked" />
-      <keyword name="Client" id="Client" ref="eric6.DebugClients.Ruby.Debuggee.html#Client" />
-      <keyword name="Client.eventLoop" id="Client.eventLoop" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.eventLoop" />
-      <keyword name="Client.eventPoll" id="Client.eventPoll" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.eventPoll" />
-      <keyword name="Client.initialize" id="Client.initialize" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.initialize" />
-      <keyword name="Client.printf" id="Client.printf" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf" />
-      <keyword name="Client.printf_clear_breakpoint" id="Client.printf_clear_breakpoint" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf_clear_breakpoint" />
-      <keyword name="Client.printf_clear_watchexpression" id="Client.printf_clear_watchexpression" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf_clear_watchexpression" />
-      <keyword name="Client.printf_excn" id="Client.printf_excn" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf_excn" />
-      <keyword name="Client.printf_exit" id="Client.printf_exit" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf_exit" />
-      <keyword name="Client.printf_line" id="Client.printf_line" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf_line" />
-      <keyword name="Client.printf_scriptExcn" id="Client.printf_scriptExcn" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.printf_scriptExcn" />
-      <keyword name="Client.traceRuby?" id="Client.traceRuby?" ref="eric6.DebugClients.Ruby.Debuggee.html#Client.traceRuby?" />
       <keyword name="ClosedTab" id="ClosedTab" ref="eric6.Helpviewer.ClosedTabsManager.html#ClosedTab" />
       <keyword name="ClosedTab (Constructor)" id="ClosedTab (Constructor)" ref="eric6.Helpviewer.ClosedTabsManager.html#ClosedTab.__init__" />
       <keyword name="ClosedTab.__eq__" id="ClosedTab.__eq__" ref="eric6.Helpviewer.ClosedTabsManager.html#ClosedTab.__eq__" />
@@ -2358,20 +2318,15 @@
       <keyword name="CompareWindow.eventFilter" id="CompareWindow.eventFilter" ref="eric6.UI.CompareDialog.html#CompareWindow.eventFilter" />
       <keyword name="Completer" id="Completer" ref="eric6.DebugClients.Python.FlexCompleter.html#Completer" />
       <keyword name="Completer" id="Completer" ref="eric6.DebugClients.Python3.FlexCompleter.html#Completer" />
-      <keyword name="Completer" id="Completer" ref="eric6.DebugClients.Ruby.Completer.html#Completer" />
       <keyword name="Completer (Constructor)" id="Completer (Constructor)" ref="eric6.DebugClients.Python.FlexCompleter.html#Completer.__init__" />
       <keyword name="Completer (Constructor)" id="Completer (Constructor)" ref="eric6.DebugClients.Python3.FlexCompleter.html#Completer.__init__" />
-      <keyword name="Completer (Module)" id="Completer (Module)" ref="eric6.DebugClients.Ruby.Completer.html" />
       <keyword name="Completer._callable_postfix" id="Completer._callable_postfix" ref="eric6.DebugClients.Python3.FlexCompleter.html#Completer._callable_postfix" />
       <keyword name="Completer.attr_matches" id="Completer.attr_matches" ref="eric6.DebugClients.Python.FlexCompleter.html#Completer.attr_matches" />
       <keyword name="Completer.attr_matches" id="Completer.attr_matches" ref="eric6.DebugClients.Python3.FlexCompleter.html#Completer.attr_matches" />
       <keyword name="Completer.complete" id="Completer.complete" ref="eric6.DebugClients.Python.FlexCompleter.html#Completer.complete" />
       <keyword name="Completer.complete" id="Completer.complete" ref="eric6.DebugClients.Python3.FlexCompleter.html#Completer.complete" />
-      <keyword name="Completer.complete" id="Completer.complete" ref="eric6.DebugClients.Ruby.Completer.html#Completer.complete" />
       <keyword name="Completer.global_matches" id="Completer.global_matches" ref="eric6.DebugClients.Python.FlexCompleter.html#Completer.global_matches" />
       <keyword name="Completer.global_matches" id="Completer.global_matches" ref="eric6.DebugClients.Python3.FlexCompleter.html#Completer.global_matches" />
-      <keyword name="Completer.initialize" id="Completer.initialize" ref="eric6.DebugClients.Ruby.Completer.html#Completer.initialize" />
-      <keyword name="Completer.select_message" id="Completer.select_message" ref="eric6.DebugClients.Ruby.Completer.html#Completer.select_message" />
       <keyword name="CompleterBase" id="CompleterBase" ref="eric6.QScintilla.TypingCompleters.CompleterBase.html#CompleterBase" />
       <keyword name="CompleterBase (Constructor)" id="CompleterBase (Constructor)" ref="eric6.QScintilla.TypingCompleters.CompleterBase.html#CompleterBase.__init__" />
       <keyword name="CompleterBase (Module)" id="CompleterBase (Module)" ref="eric6.QScintilla.TypingCompleters.CompleterBase.html" />
@@ -2407,7 +2362,6 @@
       <keyword name="CompleterRuby.__inSingleQuotedString" id="CompleterRuby.__inSingleQuotedString" ref="eric6.QScintilla.TypingCompleters.CompleterRuby.html#CompleterRuby.__inSingleQuotedString" />
       <keyword name="CompleterRuby.charAdded" id="CompleterRuby.charAdded" ref="eric6.QScintilla.TypingCompleters.CompleterRuby.html#CompleterRuby.charAdded" />
       <keyword name="CompleterRuby.readSettings" id="CompleterRuby.readSettings" ref="eric6.QScintilla.TypingCompleters.CompleterRuby.html#CompleterRuby.readSettings" />
-      <keyword name="Config (Module)" id="Config (Module)" ref="eric6.DebugClients.Ruby.Config.html" />
       <keyword name="Config (Module)" id="Config (Module)" ref="eric6.Debugger.Config.html" />
       <keyword name="Config (Module)" id="Config (Module)" ref="eric6.DocumentationTools.Config.html" />
       <keyword name="Config (Module)" id="Config (Module)" ref="eric6.E5XML.Config.html" />
@@ -2497,23 +2451,6 @@
       <keyword name="ContentDisposition_1" id="ContentDisposition_1" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition_1" />
       <keyword name="ContentDisposition_1 (Constructor)" id="ContentDisposition_1 (Constructor)" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition_1.__init__" />
       <keyword name="ContentDisposition_1.filename" id="ContentDisposition_1.filename" ref="eric6.E5Network.E5RFC6266.html#ContentDisposition_1.filename" />
-      <keyword name="Context" id="Context" ref="eric6.DebugClients.Ruby.Debuggee.html#Context" />
-      <keyword name="Context.clear_suspend" id="Context.clear_suspend" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.clear_suspend" />
-      <keyword name="Context.current_binding" id="Context.current_binding" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.current_binding" />
-      <keyword name="Context.current_frame" id="Context.current_frame" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.current_frame" />
-      <keyword name="Context.eventLoop" id="Context.eventLoop" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.eventLoop" />
-      <keyword name="Context.eventPoll" id="Context.eventPoll" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.eventPoll" />
-      <keyword name="Context.get_binding" id="Context.get_binding" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.get_binding" />
-      <keyword name="Context.get_frame" id="Context.get_frame" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.get_frame" />
-      <keyword name="Context.initialize" id="Context.initialize" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.initialize" />
-      <keyword name="Context.set_suspend" id="Context.set_suspend" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.set_suspend" />
-      <keyword name="Context.step_continue" id="Context.step_continue" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.step_continue" />
-      <keyword name="Context.step_out" id="Context.step_out" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.step_out" />
-      <keyword name="Context.step_over" id="Context.step_over" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.step_over" />
-      <keyword name="Context.step_quit" id="Context.step_quit" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.step_quit" />
-      <keyword name="Context.stop_next" id="Context.stop_next" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.stop_next" />
-      <keyword name="Context.suspend_all" id="Context.suspend_all" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.suspend_all" />
-      <keyword name="Context.traceRuby?" id="Context.traceRuby?" ref="eric6.DebugClients.Ruby.Debuggee.html#Context.traceRuby?" />
       <keyword name="CookieDetailsDialog" id="CookieDetailsDialog" ref="eric6.Helpviewer.CookieJar.CookieDetailsDialog.html#CookieDetailsDialog" />
       <keyword name="CookieDetailsDialog (Constructor)" id="CookieDetailsDialog (Constructor)" ref="eric6.Helpviewer.CookieJar.CookieDetailsDialog.html#CookieDetailsDialog.__init__" />
       <keyword name="CookieDetailsDialog (Module)" id="CookieDetailsDialog (Module)" ref="eric6.Helpviewer.CookieJar.CookieDetailsDialog.html" />
@@ -2668,41 +2605,6 @@
       <keyword name="DCTestResult.startTest" id="DCTestResult.startTest" ref="eric6.DebugClients.Python3.DCTestResult.html#DCTestResult.startTest" />
       <keyword name="DCTestResult.stopTest" id="DCTestResult.stopTest" ref="eric6.DebugClients.Python.DCTestResult.html#DCTestResult.stopTest" />
       <keyword name="DCTestResult.stopTest" id="DCTestResult.stopTest" ref="eric6.DebugClients.Python3.DCTestResult.html#DCTestResult.stopTest" />
-      <keyword name="DEBUGGER__" id="DEBUGGER__" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__" />
-      <keyword name="DEBUGGER__.add_break_point" id="DEBUGGER__.add_break_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.add_break_point" />
-      <keyword name="DEBUGGER__.add_watch_point" id="DEBUGGER__.add_watch_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.add_watch_point" />
-      <keyword name="DEBUGGER__.attach" id="DEBUGGER__.attach" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.attach" />
-      <keyword name="DEBUGGER__.attached?" id="DEBUGGER__.attached?" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.attached?" />
-      <keyword name="DEBUGGER__.break_points" id="DEBUGGER__.break_points" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.break_points" />
-      <keyword name="DEBUGGER__.check_break_points" id="DEBUGGER__.check_break_points" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.check_break_points" />
-      <keyword name="DEBUGGER__.check_suspend" id="DEBUGGER__.check_suspend" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.check_suspend" />
-      <keyword name="DEBUGGER__.clear_break_point" id="DEBUGGER__.clear_break_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.clear_break_point" />
-      <keyword name="DEBUGGER__.clear_watch_point" id="DEBUGGER__.clear_watch_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.clear_watch_point" />
-      <keyword name="DEBUGGER__.client" id="DEBUGGER__.client" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.client" />
-      <keyword name="DEBUGGER__.context" id="DEBUGGER__.context" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.context" />
-      <keyword name="DEBUGGER__.debug_command" id="DEBUGGER__.debug_command" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.debug_command" />
-      <keyword name="DEBUGGER__.debug_silent_eval" id="DEBUGGER__.debug_silent_eval" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.debug_silent_eval" />
-      <keyword name="DEBUGGER__.delete_break_point" id="DEBUGGER__.delete_break_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.delete_break_point" />
-      <keyword name="DEBUGGER__.delete_watch_point" id="DEBUGGER__.delete_watch_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.delete_watch_point" />
-      <keyword name="DEBUGGER__.enable_break_point" id="DEBUGGER__.enable_break_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.enable_break_point" />
-      <keyword name="DEBUGGER__.enable_watch_point" id="DEBUGGER__.enable_watch_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.enable_watch_point" />
-      <keyword name="DEBUGGER__.excn_handle" id="DEBUGGER__.excn_handle" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.excn_handle" />
-      <keyword name="DEBUGGER__.frame_set_pos" id="DEBUGGER__.frame_set_pos" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.frame_set_pos" />
-      <keyword name="DEBUGGER__.ignore_break_point" id="DEBUGGER__.ignore_break_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.ignore_break_point" />
-      <keyword name="DEBUGGER__.ignore_watch_point" id="DEBUGGER__.ignore_watch_point" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.ignore_watch_point" />
-      <keyword name="DEBUGGER__.last_thread" id="DEBUGGER__.last_thread" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.last_thread" />
-      <keyword name="DEBUGGER__.quit" id="DEBUGGER__.quit" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.quit" />
-      <keyword name="DEBUGGER__.resume" id="DEBUGGER__.resume" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.resume" />
-      <keyword name="DEBUGGER__.resume_all" id="DEBUGGER__.resume_all" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.resume_all" />
-      <keyword name="DEBUGGER__.set_client" id="DEBUGGER__.set_client" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.set_client" />
-      <keyword name="DEBUGGER__.set_last_thread" id="DEBUGGER__.set_last_thread" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.set_last_thread" />
-      <keyword name="DEBUGGER__.skip_it?" id="DEBUGGER__.skip_it?" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.skip_it?" />
-      <keyword name="DEBUGGER__.stdout" id="DEBUGGER__.stdout" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.stdout" />
-      <keyword name="DEBUGGER__.stdout=" id="DEBUGGER__.stdout=" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.stdout=" />
-      <keyword name="DEBUGGER__.suspend" id="DEBUGGER__.suspend" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.suspend" />
-      <keyword name="DEBUGGER__.thnum" id="DEBUGGER__.thnum" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.thnum" />
-      <keyword name="DEBUGGER__.trace_func" id="DEBUGGER__.trace_func" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.trace_func" />
-      <keyword name="DEBUGGER__.waiting" id="DEBUGGER__.waiting" ref="eric6.DebugClients.Ruby.Debuggee.html#DEBUGGER__.waiting" />
       <keyword name="Data" id="Data" ref="eric6.Utilities.binplistlib.html#Data" />
       <keyword name="DataViews (Package)" id="DataViews (Package)" ref="index-eric6.DataViews.html" />
       <keyword name="DebugBase" id="DebugBase" ref="eric6.DebugClients.Python.DebugBase.html#DebugBase" />
@@ -2782,16 +2684,12 @@
       <keyword name="DebugBase.user_return" id="DebugBase.user_return" ref="eric6.DebugClients.Python3.DebugBase.html#DebugBase.user_return" />
       <keyword name="DebugClient" id="DebugClient" ref="eric6.DebugClients.Python.DebugClient.html#DebugClient" />
       <keyword name="DebugClient" id="DebugClient" ref="eric6.DebugClients.Python3.DebugClient.html#DebugClient" />
-      <keyword name="DebugClient" id="DebugClient" ref="eric6.DebugClients.Ruby.DebugClient.html#DebugClient" />
       <keyword name="DebugClient (Constructor)" id="DebugClient (Constructor)" ref="eric6.DebugClients.Python.DebugClient.html#DebugClient.__init__" />
       <keyword name="DebugClient (Constructor)" id="DebugClient (Constructor)" ref="eric6.DebugClients.Python3.DebugClient.html#DebugClient.__init__" />
       <keyword name="DebugClient (Module)" id="DebugClient (Module)" ref="eric6.DebugClients.Python.DebugClient.html" />
       <keyword name="DebugClient (Module)" id="DebugClient (Module)" ref="eric6.DebugClients.Python3.DebugClient.html" />
-      <keyword name="DebugClient (Module)" id="DebugClient (Module)" ref="eric6.DebugClients.Ruby.DebugClient.html" />
-      <keyword name="DebugClient.initialize" id="DebugClient.initialize" ref="eric6.DebugClients.Ruby.DebugClient.html#DebugClient.initialize" />
       <keyword name="DebugClientBase" id="DebugClientBase" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase" />
       <keyword name="DebugClientBase" id="DebugClientBase" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase" />
-      <keyword name="DebugClientBase" id="DebugClientBase" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase" />
       <keyword name="DebugClientBase (Constructor)" id="DebugClientBase (Constructor)" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.__init__" />
       <keyword name="DebugClientBase (Constructor)" id="DebugClientBase (Constructor)" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.__init__" />
       <keyword name="DebugClientBase (Module)" id="DebugClientBase (Module)" ref="eric6.DebugClients.Python.DebugClientBase.html" />
@@ -2833,68 +2731,43 @@
       <keyword name="DebugClientBase.absPath" id="DebugClientBase.absPath" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.absPath" />
       <keyword name="DebugClientBase.attachThread" id="DebugClientBase.attachThread" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.attachThread" />
       <keyword name="DebugClientBase.attachThread" id="DebugClientBase.attachThread" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.attachThread" />
-      <keyword name="DebugClientBase.canEval?" id="DebugClientBase.canEval?" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.canEval?" />
       <keyword name="DebugClientBase.close" id="DebugClientBase.close" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.close" />
       <keyword name="DebugClientBase.close" id="DebugClientBase.close" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.close" />
-      <keyword name="DebugClientBase.completionList" id="DebugClientBase.completionList" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.completionList" />
       <keyword name="DebugClientBase.connectDebugger" id="DebugClientBase.connectDebugger" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.connectDebugger" />
       <keyword name="DebugClientBase.connectDebugger" id="DebugClientBase.connectDebugger" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.connectDebugger" />
-      <keyword name="DebugClientBase.connectDebugger" id="DebugClientBase.connectDebugger" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.connectDebugger" />
-      <keyword name="DebugClientBase.dumpVariable" id="DebugClientBase.dumpVariable" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.dumpVariable" />
-      <keyword name="DebugClientBase.dumpVariables" id="DebugClientBase.dumpVariables" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.dumpVariables" />
       <keyword name="DebugClientBase.eventLoop" id="DebugClientBase.eventLoop" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.eventLoop" />
       <keyword name="DebugClientBase.eventLoop" id="DebugClientBase.eventLoop" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.eventLoop" />
-      <keyword name="DebugClientBase.eventLoop" id="DebugClientBase.eventLoop" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.eventLoop" />
       <keyword name="DebugClientBase.eventPoll" id="DebugClientBase.eventPoll" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.eventPoll" />
       <keyword name="DebugClientBase.eventPoll" id="DebugClientBase.eventPoll" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.eventPoll" />
-      <keyword name="DebugClientBase.eventPoll" id="DebugClientBase.eventPoll" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.eventPoll" />
-      <keyword name="DebugClientBase.extractAddress" id="DebugClientBase.extractAddress" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.extractAddress" />
-      <keyword name="DebugClientBase.extractTypeAndAddress" id="DebugClientBase.extractTypeAndAddress" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.extractTypeAndAddress" />
       <keyword name="DebugClientBase.fork" id="DebugClientBase.fork" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.fork" />
       <keyword name="DebugClientBase.fork" id="DebugClientBase.fork" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.fork" />
-      <keyword name="DebugClientBase.formatVariablesList" id="DebugClientBase.formatVariablesList" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.formatVariablesList" />
-      <keyword name="DebugClientBase.generateFilterObjects" id="DebugClientBase.generateFilterObjects" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.generateFilterObjects" />
       <keyword name="DebugClientBase.getCoding" id="DebugClientBase.getCoding" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.getCoding" />
       <keyword name="DebugClientBase.getCoding" id="DebugClientBase.getCoding" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.getCoding" />
       <keyword name="DebugClientBase.getRunning" id="DebugClientBase.getRunning" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.getRunning" />
       <keyword name="DebugClientBase.getRunning" id="DebugClientBase.getRunning" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.getRunning" />
-      <keyword name="DebugClientBase.handleException" id="DebugClientBase.handleException" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.handleException" />
       <keyword name="DebugClientBase.handleLine" id="DebugClientBase.handleLine" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.handleLine" />
       <keyword name="DebugClientBase.handleLine" id="DebugClientBase.handleLine" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.handleLine" />
-      <keyword name="DebugClientBase.handleLine" id="DebugClientBase.handleLine" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.handleLine" />
-      <keyword name="DebugClientBase.inFilter?" id="DebugClientBase.inFilter?" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.inFilter?" />
-      <keyword name="DebugClientBase.initializeDebugClient" id="DebugClientBase.initializeDebugClient" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.initializeDebugClient" />
       <keyword name="DebugClientBase.input" id="DebugClientBase.input" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.input" />
       <keyword name="DebugClientBase.input" id="DebugClientBase.input" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.input" />
-      <keyword name="DebugClientBase.interact" id="DebugClientBase.interact" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.interact" />
       <keyword name="DebugClientBase.main" id="DebugClientBase.main" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.main" />
       <keyword name="DebugClientBase.main" id="DebugClientBase.main" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.main" />
-      <keyword name="DebugClientBase.main" id="DebugClientBase.main" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.main" />
       <keyword name="DebugClientBase.progTerminated" id="DebugClientBase.progTerminated" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.progTerminated" />
       <keyword name="DebugClientBase.progTerminated" id="DebugClientBase.progTerminated" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.progTerminated" />
-      <keyword name="DebugClientBase.progTerminated" id="DebugClientBase.progTerminated" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.progTerminated" />
       <keyword name="DebugClientBase.raw_input" id="DebugClientBase.raw_input" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.raw_input" />
       <keyword name="DebugClientBase.run_call" id="DebugClientBase.run_call" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.run_call" />
       <keyword name="DebugClientBase.run_call" id="DebugClientBase.run_call" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.run_call" />
       <keyword name="DebugClientBase.sessionClose" id="DebugClientBase.sessionClose" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.sessionClose" />
       <keyword name="DebugClientBase.sessionClose" id="DebugClientBase.sessionClose" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.sessionClose" />
-      <keyword name="DebugClientBase.sessionClose" id="DebugClientBase.sessionClose" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.sessionClose" />
       <keyword name="DebugClientBase.shouldSkip" id="DebugClientBase.shouldSkip" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.shouldSkip" />
       <keyword name="DebugClientBase.shouldSkip" id="DebugClientBase.shouldSkip" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.shouldSkip" />
       <keyword name="DebugClientBase.startDebugger" id="DebugClientBase.startDebugger" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.startDebugger" />
       <keyword name="DebugClientBase.startDebugger" id="DebugClientBase.startDebugger" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.startDebugger" />
       <keyword name="DebugClientBase.startProgInDebugger" id="DebugClientBase.startProgInDebugger" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.startProgInDebugger" />
       <keyword name="DebugClientBase.startProgInDebugger" id="DebugClientBase.startProgInDebugger" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.startProgInDebugger" />
-      <keyword name="DebugClientBase.startProgInDebugger" id="DebugClientBase.startProgInDebugger" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.startProgInDebugger" />
-      <keyword name="DebugClientBase.trace_func" id="DebugClientBase.trace_func" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.trace_func" />
-      <keyword name="DebugClientBase.unhandled_exception" id="DebugClientBase.unhandled_exception" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.unhandled_exception" />
       <keyword name="DebugClientBase.write" id="DebugClientBase.write" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientBase.write" />
       <keyword name="DebugClientBase.write" id="DebugClientBase.write" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientBase.write" />
-      <keyword name="DebugClientBase.write" id="DebugClientBase.write" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html#DebugClientBase.write" />
-      <keyword name="DebugClientBaseModule (Module)" id="DebugClientBaseModule (Module)" ref="eric6.DebugClients.Ruby.DebugClientBaseModule.html" />
       <keyword name="DebugClientCapabilities (Module)" id="DebugClientCapabilities (Module)" ref="eric6.DebugClients.Python.DebugClientCapabilities.html" />
       <keyword name="DebugClientCapabilities (Module)" id="DebugClientCapabilities (Module)" ref="eric6.DebugClients.Python3.DebugClientCapabilities.html" />
-      <keyword name="DebugClientCapabilities (Module)" id="DebugClientCapabilities (Module)" ref="eric6.DebugClients.Ruby.DebugClientCapabilities.html" />
       <keyword name="DebugClientCapabilities (Module)" id="DebugClientCapabilities (Module)" ref="eric6.Debugger.DebugClientCapabilities.html" />
       <keyword name="DebugClientClose" id="DebugClientClose" ref="eric6.DebugClients.Python.DebugClientBase.html#DebugClientClose" />
       <keyword name="DebugClientClose" id="DebugClientClose" ref="eric6.DebugClients.Python3.DebugClientBase.html#DebugClientClose" />
@@ -2930,10 +2803,7 @@
       <keyword name="DebugConfig (Module)" id="DebugConfig (Module)" ref="eric6.DebugClients.Python3.DebugConfig.html" />
       <keyword name="DebugProtocol (Module)" id="DebugProtocol (Module)" ref="eric6.DebugClients.Python.DebugProtocol.html" />
       <keyword name="DebugProtocol (Module)" id="DebugProtocol (Module)" ref="eric6.DebugClients.Python3.DebugProtocol.html" />
-      <keyword name="DebugProtocol (Module)" id="DebugProtocol (Module)" ref="eric6.DebugClients.Ruby.DebugProtocol.html" />
       <keyword name="DebugProtocol (Module)" id="DebugProtocol (Module)" ref="eric6.Debugger.DebugProtocol.html" />
-      <keyword name="DebugQuit" id="DebugQuit" ref="eric6.DebugClients.Ruby.DebugQuit.html#DebugQuit" />
-      <keyword name="DebugQuit (Module)" id="DebugQuit (Module)" ref="eric6.DebugClients.Ruby.DebugQuit.html" />
       <keyword name="DebugServer" id="DebugServer" ref="eric6.Debugger.DebugServer.html#DebugServer" />
       <keyword name="DebugServer (Constructor)" id="DebugServer (Constructor)" ref="eric6.Debugger.DebugServer.html#DebugServer.__init__" />
       <keyword name="DebugServer (Module)" id="DebugServer (Module)" ref="eric6.Debugger.DebugServer.html" />
@@ -2949,6 +2819,7 @@
       <keyword name="DebugServer.__createDebuggerInterface" id="DebugServer.__createDebuggerInterface" ref="eric6.Debugger.DebugServer.html#DebugServer.__createDebuggerInterface" />
       <keyword name="DebugServer.__deleteBreakPoints" id="DebugServer.__deleteBreakPoints" ref="eric6.Debugger.DebugServer.html#DebugServer.__deleteBreakPoints" />
       <keyword name="DebugServer.__deleteWatchPoints" id="DebugServer.__deleteWatchPoints" ref="eric6.Debugger.DebugServer.html#DebugServer.__deleteWatchPoints" />
+      <keyword name="DebugServer.__findLanguageForExtension" id="DebugServer.__findLanguageForExtension" ref="eric6.Debugger.DebugServer.html#DebugServer.__findLanguageForExtension" />
       <keyword name="DebugServer.__getNetworkInterfaceAndIndex" id="DebugServer.__getNetworkInterfaceAndIndex" ref="eric6.Debugger.DebugServer.html#DebugServer.__getNetworkInterfaceAndIndex" />
       <keyword name="DebugServer.__makeWatchCondition" id="DebugServer.__makeWatchCondition" ref="eric6.Debugger.DebugServer.html#DebugServer.__makeWatchCondition" />
       <keyword name="DebugServer.__newConnection" id="DebugServer.__newConnection" ref="eric6.Debugger.DebugServer.html#DebugServer.__newConnection" />
@@ -2983,6 +2854,7 @@
       <keyword name="DebugServer.isConnected" id="DebugServer.isConnected" ref="eric6.Debugger.DebugServer.html#DebugServer.isConnected" />
       <keyword name="DebugServer.passiveStartUp" id="DebugServer.passiveStartUp" ref="eric6.Debugger.DebugServer.html#DebugServer.passiveStartUp" />
       <keyword name="DebugServer.preferencesChanged" id="DebugServer.preferencesChanged" ref="eric6.Debugger.DebugServer.html#DebugServer.preferencesChanged" />
+      <keyword name="DebugServer.registerDebuggerInterface" id="DebugServer.registerDebuggerInterface" ref="eric6.Debugger.DebugServer.html#DebugServer.registerDebuggerInterface" />
       <keyword name="DebugServer.remoteBanner" id="DebugServer.remoteBanner" ref="eric6.Debugger.DebugServer.html#DebugServer.remoteBanner" />
       <keyword name="DebugServer.remoteBreakpoint" id="DebugServer.remoteBreakpoint" ref="eric6.Debugger.DebugServer.html#DebugServer.remoteBreakpoint" />
       <keyword name="DebugServer.remoteCapabilities" id="DebugServer.remoteCapabilities" ref="eric6.Debugger.DebugServer.html#DebugServer.remoteCapabilities" />
@@ -3033,6 +2905,7 @@
       <keyword name="DebugServer.signalClientVariables" id="DebugServer.signalClientVariables" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientVariables" />
       <keyword name="DebugServer.signalClientWatchConditionError" id="DebugServer.signalClientWatchConditionError" ref="eric6.Debugger.DebugServer.html#DebugServer.signalClientWatchConditionError" />
       <keyword name="DebugServer.startClient" id="DebugServer.startClient" ref="eric6.Debugger.DebugServer.html#DebugServer.startClient" />
+      <keyword name="DebugServer.unregisterDebuggerInterface" id="DebugServer.unregisterDebuggerInterface" ref="eric6.Debugger.DebugServer.html#DebugServer.unregisterDebuggerInterface" />
       <keyword name="DebugThread" id="DebugThread" ref="eric6.DebugClients.Python.DebugThread.html#DebugThread" />
       <keyword name="DebugThread" id="DebugThread" ref="eric6.DebugClients.Python3.DebugThread.html#DebugThread" />
       <keyword name="DebugThread (Constructor)" id="DebugThread (Constructor)" ref="eric6.DebugClients.Python.DebugThread.html#DebugThread.__init__" />
@@ -3156,7 +3029,6 @@
       <keyword name="DebugViewer.showVariable" id="DebugViewer.showVariable" ref="eric6.Debugger.DebugViewer.html#DebugViewer.showVariable" />
       <keyword name="DebugViewer.showVariables" id="DebugViewer.showVariables" ref="eric6.Debugger.DebugViewer.html#DebugViewer.showVariables" />
       <keyword name="DebugViewer.showVariablesTab" id="DebugViewer.showVariablesTab" ref="eric6.Debugger.DebugViewer.html#DebugViewer.showVariablesTab" />
-      <keyword name="Debuggee (Module)" id="Debuggee (Module)" ref="eric6.DebugClients.Ruby.Debuggee.html" />
       <keyword name="Debugger (Package)" id="Debugger (Package)" ref="index-eric6.Debugger.html" />
       <keyword name="DebuggerGeneralPage" id="DebuggerGeneralPage" ref="eric6.Preferences.ConfigurationPages.DebuggerGeneralPage.html#DebuggerGeneralPage" />
       <keyword name="DebuggerGeneralPage (Constructor)" id="DebuggerGeneralPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.DebuggerGeneralPage.html#DebuggerGeneralPage.__init__" />
@@ -3304,53 +3176,6 @@
       <keyword name="DebuggerInterfacePython3.shutdown" id="DebuggerInterfacePython3.shutdown" ref="eric6.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.shutdown" />
       <keyword name="DebuggerInterfacePython3.startRemote" id="DebuggerInterfacePython3.startRemote" ref="eric6.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.startRemote" />
       <keyword name="DebuggerInterfacePython3.startRemoteForProject" id="DebuggerInterfacePython3.startRemoteForProject" ref="eric6.Debugger.DebuggerInterfacePython3.html#DebuggerInterfacePython3.startRemoteForProject" />
-      <keyword name="DebuggerInterfaceRuby" id="DebuggerInterfaceRuby" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby" />
-      <keyword name="DebuggerInterfaceRuby (Constructor)" id="DebuggerInterfaceRuby (Constructor)" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.__init__" />
-      <keyword name="DebuggerInterfaceRuby (Module)" id="DebuggerInterfaceRuby (Module)" ref="eric6.Debugger.DebuggerInterfaceRuby.html" />
-      <keyword name="DebuggerInterfaceRuby.__identityTranslation" id="DebuggerInterfaceRuby.__identityTranslation" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.__identityTranslation" />
-      <keyword name="DebuggerInterfaceRuby.__parseClientLine" id="DebuggerInterfaceRuby.__parseClientLine" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.__parseClientLine" />
-      <keyword name="DebuggerInterfaceRuby.__remoteTranslation" id="DebuggerInterfaceRuby.__remoteTranslation" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.__remoteTranslation" />
-      <keyword name="DebuggerInterfaceRuby.__sendCommand" id="DebuggerInterfaceRuby.__sendCommand" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.__sendCommand" />
-      <keyword name="DebuggerInterfaceRuby.__startProcess" id="DebuggerInterfaceRuby.__startProcess" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.__startProcess" />
-      <keyword name="DebuggerInterfaceRuby.flush" id="DebuggerInterfaceRuby.flush" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.flush" />
-      <keyword name="DebuggerInterfaceRuby.getClientCapabilities" id="DebuggerInterfaceRuby.getClientCapabilities" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.getClientCapabilities" />
-      <keyword name="DebuggerInterfaceRuby.isConnected" id="DebuggerInterfaceRuby.isConnected" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.isConnected" />
-      <keyword name="DebuggerInterfaceRuby.newConnection" id="DebuggerInterfaceRuby.newConnection" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.newConnection" />
-      <keyword name="DebuggerInterfaceRuby.remoteBanner" id="DebuggerInterfaceRuby.remoteBanner" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteBanner" />
-      <keyword name="DebuggerInterfaceRuby.remoteBreakpoint" id="DebuggerInterfaceRuby.remoteBreakpoint" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteBreakpoint" />
-      <keyword name="DebuggerInterfaceRuby.remoteBreakpointEnable" id="DebuggerInterfaceRuby.remoteBreakpointEnable" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteBreakpointEnable" />
-      <keyword name="DebuggerInterfaceRuby.remoteBreakpointIgnore" id="DebuggerInterfaceRuby.remoteBreakpointIgnore" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteBreakpointIgnore" />
-      <keyword name="DebuggerInterfaceRuby.remoteCapabilities" id="DebuggerInterfaceRuby.remoteCapabilities" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteCapabilities" />
-      <keyword name="DebuggerInterfaceRuby.remoteClientSetFilter" id="DebuggerInterfaceRuby.remoteClientSetFilter" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteClientSetFilter" />
-      <keyword name="DebuggerInterfaceRuby.remoteClientVariable" id="DebuggerInterfaceRuby.remoteClientVariable" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteClientVariable" />
-      <keyword name="DebuggerInterfaceRuby.remoteClientVariables" id="DebuggerInterfaceRuby.remoteClientVariables" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteClientVariables" />
-      <keyword name="DebuggerInterfaceRuby.remoteCompletion" id="DebuggerInterfaceRuby.remoteCompletion" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteCompletion" />
-      <keyword name="DebuggerInterfaceRuby.remoteContinue" id="DebuggerInterfaceRuby.remoteContinue" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteContinue" />
-      <keyword name="DebuggerInterfaceRuby.remoteCoverage" id="DebuggerInterfaceRuby.remoteCoverage" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteCoverage" />
-      <keyword name="DebuggerInterfaceRuby.remoteEnvironment" id="DebuggerInterfaceRuby.remoteEnvironment" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteEnvironment" />
-      <keyword name="DebuggerInterfaceRuby.remoteEval" id="DebuggerInterfaceRuby.remoteEval" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteEval" />
-      <keyword name="DebuggerInterfaceRuby.remoteExec" id="DebuggerInterfaceRuby.remoteExec" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteExec" />
-      <keyword name="DebuggerInterfaceRuby.remoteLoad" id="DebuggerInterfaceRuby.remoteLoad" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteLoad" />
-      <keyword name="DebuggerInterfaceRuby.remoteProfile" id="DebuggerInterfaceRuby.remoteProfile" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteProfile" />
-      <keyword name="DebuggerInterfaceRuby.remoteRawInput" id="DebuggerInterfaceRuby.remoteRawInput" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteRawInput" />
-      <keyword name="DebuggerInterfaceRuby.remoteRun" id="DebuggerInterfaceRuby.remoteRun" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteRun" />
-      <keyword name="DebuggerInterfaceRuby.remoteSetThread" id="DebuggerInterfaceRuby.remoteSetThread" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteSetThread" />
-      <keyword name="DebuggerInterfaceRuby.remoteStatement" id="DebuggerInterfaceRuby.remoteStatement" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteStatement" />
-      <keyword name="DebuggerInterfaceRuby.remoteStep" id="DebuggerInterfaceRuby.remoteStep" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteStep" />
-      <keyword name="DebuggerInterfaceRuby.remoteStepOut" id="DebuggerInterfaceRuby.remoteStepOut" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteStepOut" />
-      <keyword name="DebuggerInterfaceRuby.remoteStepOver" id="DebuggerInterfaceRuby.remoteStepOver" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteStepOver" />
-      <keyword name="DebuggerInterfaceRuby.remoteStepQuit" id="DebuggerInterfaceRuby.remoteStepQuit" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteStepQuit" />
-      <keyword name="DebuggerInterfaceRuby.remoteThreadList" id="DebuggerInterfaceRuby.remoteThreadList" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteThreadList" />
-      <keyword name="DebuggerInterfaceRuby.remoteUTPrepare" id="DebuggerInterfaceRuby.remoteUTPrepare" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteUTPrepare" />
-      <keyword name="DebuggerInterfaceRuby.remoteUTRun" id="DebuggerInterfaceRuby.remoteUTRun" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteUTRun" />
-      <keyword name="DebuggerInterfaceRuby.remoteUTStop" id="DebuggerInterfaceRuby.remoteUTStop" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteUTStop" />
-      <keyword name="DebuggerInterfaceRuby.remoteWatchpoint" id="DebuggerInterfaceRuby.remoteWatchpoint" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteWatchpoint" />
-      <keyword name="DebuggerInterfaceRuby.remoteWatchpointEnable" id="DebuggerInterfaceRuby.remoteWatchpointEnable" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteWatchpointEnable" />
-      <keyword name="DebuggerInterfaceRuby.remoteWatchpointIgnore" id="DebuggerInterfaceRuby.remoteWatchpointIgnore" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.remoteWatchpointIgnore" />
-      <keyword name="DebuggerInterfaceRuby.setCallTraceEnabled" id="DebuggerInterfaceRuby.setCallTraceEnabled" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.setCallTraceEnabled" />
-      <keyword name="DebuggerInterfaceRuby.shutdown" id="DebuggerInterfaceRuby.shutdown" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.shutdown" />
-      <keyword name="DebuggerInterfaceRuby.startRemote" id="DebuggerInterfaceRuby.startRemote" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.startRemote" />
-      <keyword name="DebuggerInterfaceRuby.startRemoteForProject" id="DebuggerInterfaceRuby.startRemoteForProject" ref="eric6.Debugger.DebuggerInterfaceRuby.html#DebuggerInterfaceRuby.startRemoteForProject" />
       <keyword name="DebuggerPropertiesDialog" id="DebuggerPropertiesDialog" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog" />
       <keyword name="DebuggerPropertiesDialog (Constructor)" id="DebuggerPropertiesDialog (Constructor)" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog.__init__" />
       <keyword name="DebuggerPropertiesDialog (Module)" id="DebuggerPropertiesDialog (Module)" ref="eric6.Project.DebuggerPropertiesDialog.html" />
@@ -10183,7 +10008,6 @@
       <keyword name="RevisionsValidator" id="RevisionsValidator" ref="eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator" />
       <keyword name="RevisionsValidator (Constructor)" id="RevisionsValidator (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator.__init__" />
       <keyword name="RevisionsValidator.validate" id="RevisionsValidator.validate" ref="eric6.Plugins.VcsPlugins.vcsMercurial.TransplantExtension.TransplantDialog.html#RevisionsValidator.validate" />
-      <keyword name="Ruby (Package)" id="Ruby (Package)" ref="index-eric6.DebugClients.Ruby.html" />
       <keyword name="SafariImporter" id="SafariImporter" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter" />
       <keyword name="SafariImporter (Constructor)" id="SafariImporter (Constructor)" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html#SafariImporter.__init__" />
       <keyword name="SafariImporter (Module)" id="SafariImporter (Module)" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.SafariImporter.html" />
@@ -10482,8 +10306,6 @@
       <keyword name="ShortcutsWriter (Module)" id="ShortcutsWriter (Module)" ref="eric6.E5XML.ShortcutsWriter.html" />
       <keyword name="ShortcutsWriter.__writeActions" id="ShortcutsWriter.__writeActions" ref="eric6.E5XML.ShortcutsWriter.html#ShortcutsWriter.__writeActions" />
       <keyword name="ShortcutsWriter.writeXML" id="ShortcutsWriter.writeXML" ref="eric6.E5XML.ShortcutsWriter.html#ShortcutsWriter.writeXML" />
-      <keyword name="SilentObject" id="SilentObject" ref="eric6.DebugClients.Ruby.Debuggee.html#SilentObject" />
-      <keyword name="SilentObject.method_missing" id="SilentObject.method_missing" ref="eric6.DebugClients.Ruby.Debuggee.html#SilentObject.method_missing" />
       <keyword name="SingleApplication (Module)" id="SingleApplication (Module)" ref="eric6.Toolbox.SingleApplication.html" />
       <keyword name="SingleApplicationClient" id="SingleApplicationClient" ref="eric6.Toolbox.SingleApplication.html#SingleApplicationClient" />
       <keyword name="SingleApplicationClient (Constructor)" id="SingleApplicationClient (Constructor)" ref="eric6.Toolbox.SingleApplication.html#SingleApplicationClient.__init__" />
@@ -13446,7 +13268,6 @@
       <keyword name="cleanupSource" id="cleanupSource" ref="eric6.cleanupSource.html#cleanupSource" />
       <keyword name="cleanupSource" id="cleanupSource" ref="eric6.install.html#cleanupSource" />
       <keyword name="cleanupSource (Module)" id="cleanupSource (Module)" ref="eric6.cleanupSource.html" />
-      <keyword name="close" id="close" ref="eric6.DebugClients.Ruby.AsyncFile.html#close" />
       <keyword name="codeStyleBatchCheck" id="codeStyleBatchCheck" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#codeStyleBatchCheck" />
       <keyword name="codeStyleCheck" id="codeStyleCheck" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.CodeStyleChecker.html#codeStyleCheck" />
       <keyword name="compactPath" id="compactPath" ref="eric6.Utilities.__init__.html#compactPath" />
@@ -13460,7 +13281,6 @@
       <keyword name="compileUiFiles (Module)" id="compileUiFiles (Module)" ref="eric6.compileUiFiles.html" />
       <keyword name="compound_statements" id="compound_statements" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#compound_statements" />
       <keyword name="contentSniff" id="contentSniff" ref="eric6.Helpviewer.HelpBrowserWV.html#contentSniff" />
-      <keyword name="context" id="context" ref="eric6.DebugClients.Ruby.Debuggee.html#context" />
       <keyword name="context_diff" id="context_diff" ref="eric6.UI.DiffDialog.html#context_diff" />
       <keyword name="continued_indentation" id="continued_indentation" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#continued_indentation" />
       <keyword name="convertLineEnds" id="convertLineEnds" ref="eric6.Utilities.__init__.html#convertLineEnds" />
@@ -13528,6 +13348,9 @@
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric6.Plugins.PluginVcsMercurial.html#createConfigurationPage" />
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric6.Plugins.PluginVcsPySvn.html#createConfigurationPage" />
       <keyword name="createConfigurationPage" id="createConfigurationPage" ref="eric6.Plugins.PluginVcsSubversion.html#createConfigurationPage" />
+      <keyword name="createDebuggerInterfaceNone" id="createDebuggerInterfaceNone" ref="eric6.Debugger.DebuggerInterfaceNone.html#createDebuggerInterfaceNone" />
+      <keyword name="createDebuggerInterfacePython" id="createDebuggerInterfacePython" ref="eric6.Debugger.DebuggerInterfacePython.html#createDebuggerInterfacePython" />
+      <keyword name="createDebuggerInterfacePython3" id="createDebuggerInterfacePython3" ref="eric6.Debugger.DebuggerInterfacePython3.html#createDebuggerInterfacePython3" />
       <keyword name="createDefaultConfig" id="createDefaultConfig" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#createDefaultConfig" />
       <keyword name="createDefaultConfig" id="createDefaultConfig" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.html#createDefaultConfig" />
       <keyword name="createGlobalPluginsDir" id="createGlobalPluginsDir" ref="eric6.install.html#createGlobalPluginsDir" />
@@ -13560,7 +13383,6 @@
       <keyword name="dataEncrypt" id="dataEncrypt" ref="eric6.Utilities.crypto.__init__.html#dataEncrypt" />
       <keyword name="dataString" id="dataString" ref="eric6.Helpviewer.Download.DownloadUtilities.html#dataString" />
       <keyword name="dateFromTime_t" id="dateFromTime_t" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#dateFromTime_t" />
-      <keyword name="debug_thread_info" id="debug_thread_info" ref="eric6.DebugClients.Ruby.Debuggee.html#debug_thread_info" />
       <keyword name="decode" id="decode" ref="eric6.Utilities.__init__.html#decode" />
       <keyword name="decodeBytes" id="decodeBytes" ref="eric6.Utilities.__init__.html#decodeBytes" />
       <keyword name="decodeString" id="decodeString" ref="eric6.Utilities.__init__.html#decodeString" />
@@ -13605,8 +13427,6 @@
       <keyword name="eric6dbgstub (Module)" id="eric6dbgstub (Module)" ref="eric6.DebugClients.Python3.eric6dbgstub.html" />
       <keyword name="escape_entities" id="escape_entities" ref="eric6.Utilities.__init__.html#escape_entities" />
       <keyword name="escape_uentities" id="escape_uentities" ref="eric6.Utilities.__init__.html#escape_uentities" />
-      <keyword name="eventLoop" id="eventLoop" ref="eric6.DebugClients.Ruby.Debuggee.html#eventLoop" />
-      <keyword name="eventPoll" id="eventPoll" ref="eric6.DebugClients.Ruby.Debuggee.html#eventPoll" />
       <keyword name="excepthook" id="excepthook" ref="eric6.eric6.html#excepthook" />
       <keyword name="exeDisplayData" id="exeDisplayData" ref="eric6.Plugins.PluginEricapi.html#exeDisplayData" />
       <keyword name="exeDisplayData" id="exeDisplayData" ref="eric6.Plugins.PluginVcsMercurial.html#exeDisplayData" />
@@ -13629,14 +13449,12 @@
       <keyword name="factory" id="factory" ref="eric6.ViewManager.__init__.html#factory" />
       <keyword name="fetch (Module)" id="fetch (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.FetchExtension.fetch.html" />
       <keyword name="filename_match" id="filename_match" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#filename_match" />
-      <keyword name="fileno" id="fileno" ref="eric6.DebugClients.Ruby.AsyncFile.html#fileno" />
       <keyword name="filterCharsFromFilename" id="filterCharsFromFilename" ref="eric6.Helpviewer.HelpUtilities.html#filterCharsFromFilename" />
       <keyword name="findPythonInterpreters" id="findPythonInterpreters" ref="eric6.Globals.__init__.html#findPythonInterpreters" />
       <keyword name="find_module" id="find_module" ref="eric6.Utilities.ClassBrowsers.__init__.html#find_module" />
       <keyword name="find_module" id="find_module" ref="eric6.Utilities.ModuleParser.html#find_module" />
       <keyword name="find_moduleAsStr" id="find_moduleAsStr" ref="eric6.Globals.compatibility_fixes.html#find_moduleAsStr" />
       <keyword name="flashDataPathForOS" id="flashDataPathForOS" ref="eric6.Helpviewer.FlashCookieManager.FlashCookieUtilities.html#flashDataPathForOS" />
-      <keyword name="flush" id="flush" ref="eric6.DebugClients.Ruby.AsyncFile.html#flush" />
       <keyword name="formatTime" id="formatTime" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#formatTime" />
       <keyword name="format_witnesses" id="format_witnesses" ref="eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#format_witnesses" />
       <keyword name="formatargvalues" id="formatargvalues" ref="eric6.DebugClients.Python3.DebugUtilities.html#formatargvalues" />
@@ -13730,14 +13548,12 @@
       <keyword name="getRegistryData" id="getRegistryData" ref="eric6.Debugger.DebuggerInterfaceNone.html#getRegistryData" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric6.Debugger.DebuggerInterfacePython.html#getRegistryData" />
       <keyword name="getRegistryData" id="getRegistryData" ref="eric6.Debugger.DebuggerInterfacePython3.html#getRegistryData" />
-      <keyword name="getRegistryData" id="getRegistryData" ref="eric6.Debugger.DebuggerInterfaceRuby.html#getRegistryData" />
       <keyword name="getSaveFileFiltersList" id="getSaveFileFiltersList" ref="eric6.QScintilla.Lexers.__init__.html#getSaveFileFiltersList" />
       <keyword name="getSaveFileName" id="getSaveFileName" ref="eric6.E5Gui.E5FileDialog.html#getSaveFileName" />
       <keyword name="getSaveFileNameAndFilter" id="getSaveFileNameAndFilter" ref="eric6.E5Gui.E5FileDialog.html#getSaveFileNameAndFilter" />
       <keyword name="getServersPath" id="getServersPath" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#getServersPath" />
       <keyword name="getServersPath" id="getServersPath" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.html#getServersPath" />
       <keyword name="getShell" id="getShell" ref="eric6.Preferences.__init__.html#getShell" />
-      <keyword name="getSock" id="getSock" ref="eric6.DebugClients.Ruby.AsyncFile.html#getSock" />
       <keyword name="getSupportedFormats" id="getSupportedFormats" ref="eric6.QScintilla.Exporters.__init__.html#getSupportedFormats" />
       <keyword name="getSupportedLanguages" id="getSupportedLanguages" ref="eric6.QScintilla.Lexers.__init__.html#getSupportedLanguages" />
       <keyword name="getSymlinkIcon" id="getSymlinkIcon" ref="eric6.UI.PixmapCache.html#getSymlinkIcon" />
@@ -13764,13 +13580,11 @@
       <keyword name="get_coding" id="get_coding" ref="eric6.Utilities.__init__.html#get_coding" />
       <keyword name="get_codingBytes" id="get_codingBytes" ref="eric6.Utilities.__init__.html#get_codingBytes" />
       <keyword name="get_parser" id="get_parser" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#get_parser" />
-      <keyword name="get_thread" id="get_thread" ref="eric6.DebugClients.Ruby.Debuggee.html#get_thread" />
       <keyword name="getargvalues" id="getargvalues" ref="eric6.DebugClients.Python3.DebugUtilities.html#getargvalues" />
       <keyword name="getpass" id="getpass" ref="eric6.DebugClients.Python.getpass.html#getpass" />
       <keyword name="getpass" id="getpass" ref="eric6.DebugClients.Python3.getpass.html#getpass" />
       <keyword name="getpass (Module)" id="getpass (Module)" ref="eric6.DebugClients.Python.getpass.html" />
       <keyword name="getpass (Module)" id="getpass (Module)" ref="eric6.DebugClients.Python3.getpass.html" />
-      <keyword name="gets" id="gets" ref="eric6.DebugClients.Ruby.AsyncFile.html#gets" />
       <keyword name="getuser" id="getuser" ref="eric6.DebugClients.Python.getpass.html#getuser" />
       <keyword name="getuser" id="getuser" ref="eric6.DebugClients.Python3.getpass.html#getuser" />
       <keyword name="gpg (Module)" id="gpg (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.GpgExtension.gpg.html" />
@@ -13811,7 +13625,6 @@
       <keyword name="install-i18n (Module)" id="install-i18n (Module)" ref="eric6.install-i18n.html" />
       <keyword name="installEric" id="installEric" ref="eric6.install.html#installEric" />
       <keyword name="installTranslations" id="installTranslations" ref="eric6.install-i18n.html#installTranslations" />
-      <keyword name="interrupt" id="interrupt" ref="eric6.DebugClients.Ruby.Debuggee.html#interrupt" />
       <keyword name="ircFilter" id="ircFilter" ref="eric6.Network.IRC.IrcUtilities.html#ircFilter" />
       <keyword name="ircTimestamp" id="ircTimestamp" ref="eric6.Network.IRC.IrcUtilities.html#ircTimestamp" />
       <keyword name="isConfigured" id="isConfigured" ref="eric6.Preferences.__init__.html#isConfigured" />
@@ -13821,7 +13634,6 @@
       <keyword name="isTextFile" id="isTextFile" ref="eric6.Utilities.MimeTypes.html#isTextFile" />
       <keyword name="isWindowsPlatform" id="isWindowsPlatform" ref="eric6.Globals.__init__.html#isWindowsPlatform" />
       <keyword name="is_stream_binary_plist" id="is_stream_binary_plist" ref="eric6.Utilities.binplistlib.html#is_stream_binary_plist" />
-      <keyword name="isatty" id="isatty" ref="eric6.DebugClients.Ruby.AsyncFile.html#isatty" />
       <keyword name="isinpath" id="isinpath" ref="eric6.Utilities.__init__.html#isinpath" />
       <keyword name="joinAsUnicode" id="joinAsUnicode" ref="eric6.Globals.compatibility_fixes.html#joinAsUnicode" />
       <keyword name="joinext" id="joinext" ref="eric6.Utilities.__init__.html#joinext" />
@@ -13864,7 +13676,6 @@
       <keyword name="main" id="main" ref="eric6.patch_modpython.html#main" />
       <keyword name="main" id="main" ref="eric6.uninstall.html#main" />
       <keyword name="makeAppInfo" id="makeAppInfo" ref="eric6.Globals.AppInfo.html#makeAppInfo" />
-      <keyword name="make_thread_list" id="make_thread_list" ref="eric6.DebugClients.Ruby.Debuggee.html#make_thread_list" />
       <keyword name="maximum_line_length" id="maximum_line_length" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#maximum_line_length" />
       <keyword name="mccabe (Module)" id="mccabe (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.mccabe.html" />
       <keyword name="messageHandler" id="messageHandler" ref="eric6.E5Gui.E5ErrorMessage.html#messageHandler" />
@@ -13894,7 +13705,6 @@
       <keyword name="parse_udiff" id="parse_udiff" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#parse_udiff" />
       <keyword name="patch_modpython (Module)" id="patch_modpython (Module)" ref="eric6.patch_modpython.html" />
       <keyword name="pbkdf2" id="pbkdf2" ref="eric6.Utilities.crypto.py3PBKDF2.html#pbkdf2" />
-      <keyword name="pendingWrite" id="pendingWrite" ref="eric6.DebugClients.Ruby.AsyncFile.html#pendingWrite" />
       <keyword name="pep8 (Module)" id="pep8 (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html" />
       <keyword name="prepareInfoFile" id="prepareInfoFile" ref="eric6.install.html#prepareInfoFile" />
       <keyword name="prepareProcess" id="prepareProcess" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html#prepareProcess" />
@@ -13929,7 +13739,6 @@
       <keyword name="queues (Module)" id="queues (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.QueuesExtension.queues.html" />
       <keyword name="quote" id="quote" ref="eric6.Utilities.__init__.html#quote" />
       <keyword name="rbclbr (Module)" id="rbclbr (Module)" ref="eric6.Utilities.ClassBrowsers.rbclbr.html" />
-      <keyword name="read" id="read" ref="eric6.DebugClients.Ruby.AsyncFile.html#read" />
       <keyword name="readEncodedFile" id="readEncodedFile" ref="eric6.Utilities.__init__.html#readEncodedFile" />
       <keyword name="readEncodedFileWithEncoding" id="readEncodedFileWithEncoding" ref="eric6.Utilities.__init__.html#readEncodedFileWithEncoding" />
       <keyword name="readEncodedFileWithHash" id="readEncodedFileWithHash" ref="eric6.Utilities.__init__.html#readEncodedFileWithHash" />
@@ -13940,8 +13749,6 @@
       <keyword name="readStringFromStream" id="readStringFromStream" ref="eric6.Utilities.__init__.html#readStringFromStream" />
       <keyword name="readToolGroups" id="readToolGroups" ref="eric6.Preferences.__init__.html#readToolGroups" />
       <keyword name="read_config" id="read_config" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#read_config" />
-      <keyword name="readline" id="readline" ref="eric6.DebugClients.Ruby.AsyncFile.html#readline" />
-      <keyword name="readlines" id="readlines" ref="eric6.DebugClients.Ruby.AsyncFile.html#readlines" />
       <keyword name="readlines" id="readlines" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#readlines" />
       <keyword name="readlines_1" id="readlines_1" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#readlines_1" />
       <keyword name="readmodule" id="readmodule" ref="eric6.Utilities.ClassBrowsers.__init__.html#readmodule" />
@@ -13974,7 +13781,6 @@
       <keyword name="saveToolGroups" id="saveToolGroups" ref="eric6.Preferences.__init__.html#saveToolGroups" />
       <keyword name="sbsdiff" id="sbsdiff" ref="eric6.UI.CompareDialog.html#sbsdiff" />
       <keyword name="schemeFromProxyType" id="schemeFromProxyType" ref="eric6.E5Network.E5NetworkProxyFactory.html#schemeFromProxyType" />
-      <keyword name="seek" id="seek" ref="eric6.DebugClients.Ruby.AsyncFile.html#seek" />
       <keyword name="setActions" id="setActions" ref="eric6.Preferences.Shortcuts.html#setActions" />
       <keyword name="setConfigDir" id="setConfigDir" ref="eric6.Globals.__init__.html#setConfigDir" />
       <keyword name="setCooperation" id="setCooperation" ref="eric6.Preferences.__init__.html#setCooperation" />
@@ -14040,9 +13846,6 @@
       <keyword name="syntaxAndPyflakesCheck" id="syntaxAndPyflakesCheck" ref="eric6.Plugins.CheckerPlugins.SyntaxChecker.SyntaxCheck.html#syntaxAndPyflakesCheck" />
       <keyword name="tabs_obsolete" id="tabs_obsolete" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#tabs_obsolete" />
       <keyword name="tabs_or_spaces" id="tabs_or_spaces" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#tabs_or_spaces" />
-      <keyword name="tell" id="tell" ref="eric6.DebugClients.Ruby.AsyncFile.html#tell" />
-      <keyword name="thread_list" id="thread_list" ref="eric6.DebugClients.Ruby.Debuggee.html#thread_list" />
-      <keyword name="thread_list_all" id="thread_list_all" ref="eric6.DebugClients.Ruby.Debuggee.html#thread_list_all" />
       <keyword name="timeString" id="timeString" ref="eric6.Helpviewer.Download.DownloadUtilities.html#timeString" />
       <keyword name="toBool" id="toBool" ref="eric6.Globals.__init__.html#toBool" />
       <keyword name="toBool" id="toBool" ref="eric6.Preferences.__init__.html#toBool" />
@@ -14055,7 +13858,6 @@
       <keyword name="toList" id="toList" ref="eric6.Preferences.__init__.html#toList" />
       <keyword name="toNativeSeparators" id="toNativeSeparators" ref="eric6.Utilities.__init__.html#toNativeSeparators" />
       <keyword name="toSecondLevelDomain" id="toSecondLevelDomain" ref="eric6.Helpviewer.AdBlock.AdBlockRule.html#toSecondLevelDomain" />
-      <keyword name="traceRuby?" id="traceRuby?" ref="eric6.DebugClients.Ruby.Debuggee.html#traceRuby?" />
       <keyword name="trailing_blank_lines" id="trailing_blank_lines" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#trailing_blank_lines" />
       <keyword name="trailing_whitespace" id="trailing_whitespace" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.pep8.html#trailing_whitespace" />
       <keyword name="translations (Module)" id="translations (Module)" ref="eric6.Plugins.CheckerPlugins.CodeStyleChecker.translations.html" />
@@ -14098,11 +13900,9 @@
       <keyword name="worker" id="worker" ref="eric6.Plugins.CheckerPlugins.Tabnanny.Tabnanny.html#worker" />
       <keyword name="wrapperName" id="wrapperName" ref="eric6.install.html#wrapperName" />
       <keyword name="wrapperName" id="wrapperName" ref="eric6.uninstall.html#wrapperName" />
-      <keyword name="write" id="write" ref="eric6.DebugClients.Ruby.AsyncFile.html#write" />
       <keyword name="writeEncodedFile" id="writeEncodedFile" ref="eric6.Utilities.__init__.html#writeEncodedFile" />
       <keyword name="writePlist" id="writePlist" ref="eric6.Utilities.binplistlib.html#writePlist" />
       <keyword name="writePlistToBytes" id="writePlistToBytes" ref="eric6.Utilities.binplistlib.html#writePlistToBytes" />
-      <keyword name="writelines" id="writelines" ref="eric6.DebugClients.Ruby.AsyncFile.html#writelines" />
       <keyword name="yesNo" id="yesNo" ref="eric6.E5Gui.E5MessageBox.html#yesNo" />
     </keywords>
     <files>
@@ -14145,17 +13945,6 @@
       <file>eric6.DebugClients.Python3.PyProfile.html</file>
       <file>eric6.DebugClients.Python3.eric6dbgstub.html</file>
       <file>eric6.DebugClients.Python3.getpass.html</file>
-      <file>eric6.DebugClients.Ruby.AsyncFile.html</file>
-      <file>eric6.DebugClients.Ruby.AsyncIO.html</file>
-      <file>eric6.DebugClients.Ruby.Completer.html</file>
-      <file>eric6.DebugClients.Ruby.Config.html</file>
-      <file>eric6.DebugClients.Ruby.DebugClient.html</file>
-      <file>eric6.DebugClients.Ruby.DebugClientBaseModule.html</file>
-      <file>eric6.DebugClients.Ruby.DebugClientCapabilities.html</file>
-      <file>eric6.DebugClients.Ruby.DebugProtocol.html</file>
-      <file>eric6.DebugClients.Ruby.DebugQuit.html</file>
-      <file>eric6.DebugClients.Ruby.Debuggee.html</file>
-      <file>eric6.DebugClients.Ruby.__init__.html</file>
       <file>eric6.Debugger.BreakPointModel.html</file>
       <file>eric6.Debugger.BreakPointViewer.html</file>
       <file>eric6.Debugger.CallStackViewer.html</file>
@@ -14169,7 +13958,6 @@
       <file>eric6.Debugger.DebuggerInterfaceNone.html</file>
       <file>eric6.Debugger.DebuggerInterfacePython.html</file>
       <file>eric6.Debugger.DebuggerInterfacePython3.html</file>
-      <file>eric6.Debugger.DebuggerInterfaceRuby.html</file>
       <file>eric6.Debugger.EditBreakpointDialog.html</file>
       <file>eric6.Debugger.EditWatchpointDialog.html</file>
       <file>eric6.Debugger.ExceptionLogger.html</file>
@@ -14969,7 +14757,6 @@
       <file>index-eric6.DataViews.html</file>
       <file>index-eric6.DebugClients.Python.html</file>
       <file>index-eric6.DebugClients.Python3.html</file>
-      <file>index-eric6.DebugClients.Ruby.html</file>
       <file>index-eric6.DebugClients.html</file>
       <file>index-eric6.Debugger.html</file>
       <file>index-eric6.DocumentationTools.html</file>

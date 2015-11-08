@@ -30,12 +30,11 @@ import Preferences
 import Utilities
 
 
-DebuggerInterfaces = [
-    "DebuggerInterfacePython",
-    "DebuggerInterfacePython3",
-    ##    "DebuggerInterfaceRuby",
-    "DebuggerInterfaceNone",
-]
+DebuggerInterfaces = {
+    "Python": "DebuggerInterfacePython",
+    "Python3": "DebuggerInterfacePython3",
+    "None": "DebuggerInterfaceNone",
+}
 
 
 class DebugServer(QTcpServer):
@@ -161,6 +160,13 @@ class DebugServer(QTcpServer):
         """
         super(DebugServer, self).__init__()
         
+        self.__debuggerInterfaceRegistry = {}
+        # the client language is the key, a list containing the client
+        # capabilities, the list of associated file extensions, a
+        # function reference to create the debugger interface (see
+        # __createDebuggerInterface() below) and a function to be called
+        # to get the registration data as values
+        
         # create our models
         self.breakpointModel = BreakPointModel(self)
         self.watchpointModel = WatchPointModel(self)
@@ -282,44 +288,81 @@ class DebugServer(QTcpServer):
         """
         Public slot to handle the preferencesChanged signal.
         """
-        # TODO: eric 6.2: change this to call all registered debugger
-        #       interfaces getRegistryData() method ignoring the client
-        #       language and update the client capabilities and client
-        #       associations.
-        self.__registerDebuggerInterfaces()
+        registeredInterfaces = {}
+        for language in self.__debuggerInterfaceRegistry:
+            registeredInterfaces[language] = \
+                self.__debuggerInterfaceRegistry[language][-1]
+                # last entry is the registry data function
+        
+        self.__debuggerInterfaceRegistry = {}
+        for language, getRegistryData in registeredInterfaces.items():
+            self.registerDebuggerInterface(language, getRegistryData)
+        
+    def registerDebuggerInterface(self, name, getRegistryData):
+        """
+        Public method to register a debugger interface.
+        
+        @param name name of the debugger interface
+        @type str
+        @param getRegistryData reference to a function to be called
+            to get the debugger interface details. This method shall
+            return the client language, the client capabilities, the
+            list of associated file extensions and a function reference
+            to create the debugger interface (see __createDebuggerInterface())
+        @type function
+        """
+        if name in self.__debuggerInterfaceRegistry:
+            E5MessageBox.warning(
+                None,
+                self.tr("Register Debugger Interface"),
+                self.tr("""<p>The debugger interface <b>{0}</b> has already"""
+                        """ been registered. Ignoring this request.</p>"""))
+            return
+        
+        clientLanguage, clientCapabilities, clientExtensions, \
+        interfaceCreator = getRegistryData()
+        if clientLanguage:
+            self.__debuggerInterfaceRegistry[clientLanguage] = \
+                [clientCapabilities, clientExtensions, interfaceCreator, 
+                 getRegistryData]
+        
+    def unregisterDebuggerInterface(self, name):
+        """
+        Private method to unregister a debugger interface.
+        
+        @param name name of the debugger interface
+        @type str
+        """
+        if name in self.__debuggerInterfaceRegistry:
+            del self.__debuggerInterfaceRegistry[name]
+        
+    def __findLanguageForExtension(self, ext):
+        """
+        Private method to get the language associated with a file extension.
+        
+        @param ext file extension
+        @type str
+        @return associated language
+        @rtype str
+        """
+        for language in self.__debuggerInterfaceRegistry:
+            if ext in self.__debuggerInterfaceRegistry[language][1]:
+                return language
+        
+        return ""
         
     def __registerDebuggerInterfaces(self):
         """
-        Private method to register the available debugger interface modules.
+        Private method to register the available internal debugger interfaces.
         """
-        self.__clientCapabilities = {}
-        self.__clientAssociations = {}
-        # TODO: eric 6.2: Add a debugger interface registry dictionary with the
-        #       debugger name (language) as a key
-        # TODO: eric 6.2: Add a registerDebuggerInterface() method taking a
-        #       name and a getRegistryData() method. This method should be
-        #       called when a debugger backend plug-in is activated.
-        #       getRegistryData() shall return the client language, the client
-        #       capabilities, the list of associated file extensions and a
-        #       function reference to create the debugger interface (see
-        #       __createDebuggerInterface() below
-        # TODO: eric 6.2: Add an unregisterDebuggerInterface() method with a
-        #       name as parameter to revert the above.
-        
-        for interface in DebuggerInterfaces:
+        for name, interface in DebuggerInterfaces.items():
             modName = "Debugger.{0}".format(interface)
             mod = __import__(modName)
             components = modName.split('.')
             for comp in components[1:]:
                 mod = getattr(mod, comp)
             
-            clientLanguage, clientCapabilities, clientExtensions = \
-                mod.getRegistryData()
-            if clientLanguage:
-                self.__clientCapabilities[clientLanguage] = clientCapabilities
-                for extension in clientExtensions:
-                    if extension not in self.__clientAssociations:
-                        self.__clientAssociations[extension] = clientLanguage
+            self.registerDebuggerInterface(name, mod.getRegistryData)
         
     def getSupportedLanguages(self, shellOnly=False):
         """
@@ -329,7 +372,7 @@ class DebugServer(QTcpServer):
             interactive shell should be returned
         @return list of supported languages (list of strings)
         """
-        languages = list(self.__clientCapabilities.keys())
+        languages = list(self.__debuggerInterfaceRegistry.keys())
         try:
             languages.remove("None")
         except ValueError:
@@ -338,7 +381,7 @@ class DebugServer(QTcpServer):
         if shellOnly:
             languages = \
                 [lang for lang in languages
-                 if self.__clientCapabilities[lang] &
+                 if self.__debuggerInterfaceRegistry[lang][0] &
                     DebugClientCapabilities.HasShell]
         
         return languages[:]
@@ -351,12 +394,10 @@ class DebugServer(QTcpServer):
         @return tuple of extensions associated with the language
             (tuple of strings)
         """
-        extensions = []
-        for ext, lang in list(self.__clientAssociations.items()):
-            if lang == language:
-                extensions.append(ext)
-        
-        return tuple(extensions)
+        if language in self.__debuggerInterfaceRegistry:
+            return tuple(self.__debuggerInterfaceRegistry[language][1])
+        else:
+            return tuple()
         
     def __createDebuggerInterface(self, clientType=None):
         """
@@ -364,31 +405,17 @@ class DebugServer(QTcpServer):
         
         @param clientType type of the client interface to be created (string)
         """
-        # TODO: eric 6.2: make debugger interfaces be registered in order to
-        # allow to implement a debugger backend as a plug-in.
         if self.lastClientType != self.clientType or clientType is not None:
             if clientType is None:
                 clientType = self.clientType
-            if clientType == "Python2":
-                from .DebuggerInterfacePython import DebuggerInterfacePython
-                self.debuggerInterface = DebuggerInterfacePython(
-                    self, self.passive)
-            elif clientType == "Python3":
-                from .DebuggerInterfacePython3 import DebuggerInterfacePython3
-                self.debuggerInterface = DebuggerInterfacePython3(
-                    self, self.passive)
-            elif clientType == "Ruby":
-                from .DebuggerInterfaceRuby import DebuggerInterfaceRuby
-                self.debuggerInterface = DebuggerInterfaceRuby(
-                    self, self.passive)
-            elif clientType == "None":
-                from .DebuggerInterfaceNone import DebuggerInterfaceNone
-                self.debuggerInterface = DebuggerInterfaceNone(
-                    self, self.passive)
+            if clientType in self.__debuggerInterfaceRegistry:
+                self.debuggerInterface = \
+                    self.__debuggerInterfaceRegistry[clientType][2](
+                        self, self.passive)
             else:
-                from .DebuggerInterfaceNone import DebuggerInterfaceNone
-                self.debuggerInterface = DebuggerInterfaceNone(
-                    self, self.passive)
+                self.debuggerInterface = \
+                    self.__debuggerInterfaceRegistry["None"][2](
+                        self, self.passive)
                 self.clientType = "None"
         
     def __setClientType(self, clType):
@@ -674,7 +701,7 @@ class DebugServer(QTcpServer):
         @return debug client capabilities (integer)
         """
         try:
-            return self.__clientCapabilities[type]
+            return self.__debuggerInterfaceRegistry[type][0]
         except KeyError:
             return 0    # no capabilities
         
@@ -792,7 +819,7 @@ class DebugServer(QTcpServer):
                 self.__setClientType(clientType)
             else:
                 self.__setClientType(
-                    self.__clientAssociations[os.path.splitext(fn)[1]])
+                    self.__findLanguageForExtension(os.path.splitext(fn)[1]))
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject=forProject,
@@ -837,7 +864,7 @@ class DebugServer(QTcpServer):
                 self.__setClientType(clientType)
             else:
                 self.__setClientType(
-                    self.__clientAssociations[os.path.splitext(fn)[1]])
+                    self.__findLanguageForExtension(os.path.splitext(fn)[1]))
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject=forProject,
@@ -876,7 +903,7 @@ class DebugServer(QTcpServer):
                 self.__setClientType(clientType)
             else:
                 self.__setClientType(
-                    self.__clientAssociations[os.path.splitext(fn)[1]])
+                    self.__findLanguageForExtension(os.path.splitext(fn)[1]))
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject=forProject,
@@ -916,7 +943,7 @@ class DebugServer(QTcpServer):
                 self.__setClientType(clientType)
             else:
                 self.__setClientType(
-                    self.__clientAssociations[os.path.splitext(fn)[1]])
+                    self.__findLanguageForExtension(os.path.splitext(fn)[1]))
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False, forProject=forProject,
@@ -1161,7 +1188,7 @@ class DebugServer(QTcpServer):
                 self.__setClientType(clientType)
             else:
                 self.__setClientType(
-                    self.__clientAssociations[os.path.splitext(fn)[1]])
+                    self.__findLanguageForExtension(os.path.splitext(fn)[1]))
         except KeyError:
             self.__setClientType('Python3')    # assume it is a Python3 file
         self.startClient(False)
@@ -1380,7 +1407,7 @@ class DebugServer(QTcpServer):
         @param capabilities bitmaks with the client capabilities (integer)
         @param clientType type of the debug client (string)
         """
-        self.__clientCapabilities[clientType] = capabilities
+        self.__debuggerInterfaceRegistry[clientType][0] = capabilities
         self.clientCapabilities.emit(capabilities, clientType)
         
     def signalClientCompletionList(self, completionList, text):
