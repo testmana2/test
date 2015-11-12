@@ -83,7 +83,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
                 ext, Qt.MatchFlags(Qt.MatchExactly), 0)
             if itmList:
                 index = self.editorLexerList.indexOfTopLevelItem(itmList[0])
-                itm = self.editorLexerList.takeTopLevelItem(index)
+                itm = self.editorLexerList.takeTopLevelItem(index)      # __IGNORE_WARNING__
                 del itm
             QTreeWidgetItem(self.editorLexerList, [ext, lexer])
             self.editorFileExtEdit.clear()
@@ -102,7 +102,7 @@ class LexerAssociationDialog(QDialog, Ui_LexerAssociationDialog):
         itmList = self.editorLexerList.selectedItems()
         if itmList:
             index = self.editorLexerList.indexOfTopLevelItem(itmList[0])
-            itm = self.editorLexerList.takeTopLevelItem(index)
+            itm = self.editorLexerList.takeTopLevelItem(index)      # __IGNORE_WARNING__
             del itm
             
             self.editorLexerList.clearSelection()

@@ -99,7 +99,7 @@ class FeaturePermissionsDialog(QDialog, Ui_FeaturePermissionsDialog):
         Private slot to remove all geolocation entries.
         """
         while self.geoList.topLevelItemCount() > 0:
-            itm = self.geoList.takeTopLevelItem(0)
+            itm = self.geoList.takeTopLevelItem(0)      # __IGNORE_WARNING__
             del itm
         self.__updateGeoButtons()
     
@@ -128,7 +128,7 @@ class FeaturePermissionsDialog(QDialog, Ui_FeaturePermissionsDialog):
         Private slot to remove all notification entries.
         """
         while self.notifList.topLevelItemCount() > 0:
-            itm = self.notifList.takeTopLevelItem(0)
+            itm = self.notifList.takeTopLevelItem(0)    # __IGNORE_WARNING__
             del itm
         self.__updateNotifButtons()
     

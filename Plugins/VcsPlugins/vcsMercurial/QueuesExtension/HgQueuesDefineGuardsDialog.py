@@ -242,7 +242,7 @@ class HgQueuesDefineGuardsDialog(QDialog, Ui_HgQueuesDefineGuardsDialog):
         if res:
             for guardItem in self.guardsList.selectedItems():
                 row = self.guardsList.row(guardItem)
-                itm = self.guardsList.takeItem(row)
+                itm = self.guardsList.takeItem(row)        # __IGNORE_WARNING__
                 del itm
         
         self.__dirtyList = True

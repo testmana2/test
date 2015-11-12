@@ -165,7 +165,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         """
         crow = self.apiList.currentRow()
         if crow >= 0:
-            itm = self.apiList.takeItem(crow)
+            itm = self.apiList.takeItem(crow)       # __IGNORE_WARNING__
             del itm
         self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         

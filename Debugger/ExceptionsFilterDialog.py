@@ -62,7 +62,7 @@ class ExceptionsFilterDialog(QDialog, Ui_ExceptionsFilterDialog):
         Private slot to delete all exceptions of the listbox.
         """
         while self.exceptionList.count() > 0:
-            itm = self.exceptionList.takeItem(0)
+            itm = self.exceptionList.takeItem(0)    # __IGNORE_WARNING__
             del itm
 
     @pyqtSlot()

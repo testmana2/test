@@ -94,7 +94,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
                 ext, Qt.MatchFlags(Qt.MatchExactly), 0)
             if itmList:
                 index = self.editorLexerList.indexOfTopLevelItem(itmList[0])
-                itm = self.editorLexerList.takeTopLevelItem(index)
+                itm = self.editorLexerList.takeTopLevelItem(index)      # __IGNORE_WARNING__
                 del itm
             QTreeWidgetItem(self.editorLexerList, [ext, lexer])
             self.editorFileExtEdit.clear()
@@ -113,7 +113,7 @@ class EditorHighlightersPage(ConfigurationPageBase, Ui_EditorHighlightersPage):
         itmList = self.editorLexerList.selectedItems()
         if itmList:
             index = self.editorLexerList.indexOfTopLevelItem(itmList[0])
-            itm = self.editorLexerList.takeTopLevelItem(index)
+            itm = self.editorLexerList.takeTopLevelItem(index)      # __IGNORE_WARNING__
             del itm
             
             self.editorLexerList.clearSelection()

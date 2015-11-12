@@ -292,7 +292,7 @@ class DebugServer(QTcpServer):
         for language in self.__debuggerInterfaceRegistry:
             registeredInterfaces[language] = \
                 self.__debuggerInterfaceRegistry[language][-1]
-                # last entry is the registry data function
+            # last entry is the registry data function
         
         self.__debuggerInterfaceRegistry = {}
         for language, getRegistryData in registeredInterfaces.items():
@@ -320,15 +320,15 @@ class DebugServer(QTcpServer):
             return
         
         clientLanguage, clientCapabilities, clientExtensions, \
-        interfaceCreator = getRegistryData()
+            interfaceCreator = getRegistryData()
         if clientLanguage:
             self.__debuggerInterfaceRegistry[clientLanguage] = \
-                [clientCapabilities, clientExtensions, interfaceCreator, 
+                [clientCapabilities, clientExtensions, interfaceCreator,
                  getRegistryData]
         
     def unregisterDebuggerInterface(self, name):
         """
-        Private method to unregister a debugger interface.
+        Public method to unregister a debugger interface.
         
         @param name name of the debugger interface
         @type str

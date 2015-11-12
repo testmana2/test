@@ -112,7 +112,7 @@ class MultiProjectBrowser(QTreeWidget):
             parent.removeChild(itm)
             del itm
             if parent.childCount() == 0:
-                top = self.takeTopLevelItem(self.indexOfTopLevelItem(parent))
+                top = self.takeTopLevelItem(self.indexOfTopLevelItem(parent))   # __IGNORE_WARNING__
                 del top
     
     def __projectDataChanged(self, project):
