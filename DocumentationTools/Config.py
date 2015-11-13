@@ -7,8 +7,6 @@
 Module defining different default values for the documentation tools package.
 """
 
-from __future__ import unicode_literals
-
 # the default colors for the eric6 documentation generator
 eric6docDefaultColors = {
     'BodyColor': '#000000',
@@ -34,3 +32,6 @@ eric6docColorParameterNames = {
     'LinkColor': 'link-color',
 
 }
+
+#
+# eflag: noqa = M702
