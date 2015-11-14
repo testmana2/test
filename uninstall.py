@@ -192,6 +192,10 @@ def uninstallEric():
                                ]:
                 if os.path.exists(bundlePath):
                     shutil.rmtree(bundlePath)
+        
+        # TODO: ask to delete all plug-ins
+        # TODO: ask to delete configuration
+        print("\nUninstallation completed")
     except (IOError, OSError) as msg:
         sys.stderr.write(
             'Error: {0}\nTry uninstall with admin rights.\n'.format(msg))
