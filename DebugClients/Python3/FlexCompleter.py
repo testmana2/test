@@ -190,7 +190,7 @@ class Completer(object):
                     word = self._callable_postfix(
                         val, "{0}.{1}".format(expr, word))
                     matches.append(word)
-            except:
+            except Exception:
                 # some badly behaved objects pollute dir() with non-strings,
                 # which cause the completion to fail.  This way we skip the
                 # bad entries and can still continue processing the others.

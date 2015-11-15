@@ -673,7 +673,7 @@ class ProjectSourcesBrowser(ProjectBaseBrowser):
                         self.backMenu.popup(self.mapToGlobal(coord))
                 else:
                     self.backMenu.popup(self.mapToGlobal(coord))
-        except:
+        except Exception:
             pass
         
     def __showContextMenu(self):

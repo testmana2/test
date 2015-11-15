@@ -721,7 +721,7 @@ class WidgetView(QWidget):
         
         try:
             self.__widget = uic.loadUi(self.__uiFileName)
-        except:
+        except Exception:
             pass
         
         if not self.__widget:

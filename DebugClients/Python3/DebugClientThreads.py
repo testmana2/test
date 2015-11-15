@@ -186,7 +186,7 @@ class DebugClientThreads(DebugClientBase.DebugClientBase, AsyncIO):
             try:
                 for key in self.threads:
                     self.threads[key].set_quit()
-            except:
+            except Exception:
                 pass
         finally:
             if locked:

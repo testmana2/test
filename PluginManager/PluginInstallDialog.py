@@ -460,7 +460,7 @@ class PluginInstallWidget(QWidget, Ui_PluginInstallDialog):
                 self.tr(
                     "Error installing plugin. Reason: {0}").format(str(why)), \
                 False
-        except:
+        except Exception:
             sys.stderr.write("Unspecific exception installing plugin.\n")
             self.__rollback()
             return False, \

@@ -53,7 +53,7 @@ class CompleterPython(CompleterBase):
         self.__tryRX = QRegExp(r"""^[ \t]*try:""")
         self.__finallyRX = QRegExp(r"""^[ \t]*finally:""")
         self.__exceptRX = QRegExp(r"""^[ \t]*except """)
-        self.__exceptcRX = QRegExp(r"""^[ \t]*except:""")
+        self.__exceptcRX = QRegExp(r"""^[ \t]*except:""")   # __IGNORE_WARNING__
         
         self.__whileRX = QRegExp(r"""^[ \t]*while """)
         self.__forRX = QRegExp(r"""^[ \t]*for """)

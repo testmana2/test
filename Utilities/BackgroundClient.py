@@ -167,7 +167,7 @@ class BackgroundClient(object):
                         ret = 'Unknown service.'
                 
                 self.__send(fx, fn, ret)
-        except:
+        except Exception:
             exctype, excval, exctb = sys.exc_info()
             tbinfofile = io.StringIO()
             traceback.print_tb(exctb, None, tbinfofile)

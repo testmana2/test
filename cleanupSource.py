@@ -66,7 +66,7 @@ if __name__ == "__main__":
         main(sys.argv)
     except SystemExit:
         raise
-    except:
+    except Exception:
         print(
             "\nAn internal error occured.  Please report all the output of the"
             " program, \nincluding the following traceback, to"

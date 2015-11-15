@@ -53,7 +53,7 @@ class PyProfile(profile.Profile):
             timings = marshal.load(cache)
             if isinstance(timings, dict):
                 self.timings = timings
-        except:
+        except Exception:
             pass
         finally:
             cache.close()
@@ -66,7 +66,7 @@ class PyProfile(profile.Profile):
         try:
             cache = open(self.timingCache, 'wb')
             marshal.dump(self.timings, cache)
-        except:
+        except Exception:
             pass
         finally:
             cache.close()

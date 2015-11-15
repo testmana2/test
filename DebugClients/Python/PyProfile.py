@@ -57,7 +57,7 @@ class PyProfile(profile.Profile):
             cache.close()
             if isinstance(timings, type.DictType):
                 self.timings = timings
-        except:
+        except Exception:
             pass
         
     def save(self):

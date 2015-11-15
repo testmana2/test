@@ -376,7 +376,7 @@ class DebugClientBase(object):
         """
         try:
             self.set_quit()
-        except:
+        except Exception:
             pass
 
         # clean up asyncio.
@@ -772,7 +772,7 @@ class DebugClientBase(object):
                     value = eval(
                         arg, self.currentThread.getCurrentFrame().f_globals,
                         self.currentThread.getFrameLocals(0))
-                except:
+                except Exception:
                     # Report the exception and the traceback
                     try:
                         type, value, tb = sys.exc_info()
@@ -805,7 +805,7 @@ class DebugClientBase(object):
                 try:
                     code = compile(arg + '\n', '<stdin>', 'single')
                     exec code in _globals, _locals
-                except:
+                except Exception:
                     # Report the exception and the traceback
                     try:
                         type, value, tb = sys.exc_info()
@@ -877,7 +877,7 @@ class DebugClientBase(object):
                     except AttributeError:
                         self.test = unittest.defaultTestLoader\
                             .loadTestsFromModule(utModule)
-                except:
+                except Exception:
                     exc_type, exc_value, exc_tb = sys.exc_info()
                     self.write(
                         '%s%s\n' % (
@@ -996,7 +996,7 @@ class DebugClientBase(object):
                             exec code in _globals, _locals
                 except SystemExit, exc:
                     self.progTerminated(exc.code)
-                except:
+                except Exception:
                     # Report the exception and the traceback
                     try:
                         type, value, tb = sys.exc_info()
@@ -1495,7 +1495,7 @@ class DebugClientBase(object):
                                 qvar = obj
                                 qvtype = ("%s" % type(qvar))[1:-1]\
                                     .split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                         try:
                             exec 'mcdict = dict%s.__class__.__dict__' % access
@@ -1503,7 +1503,7 @@ class DebugClientBase(object):
                             if mdict and "sipThis" not in mdict.keys():  # __IGNORE_WARNING__
                                 del rvar[0:2]
                                 access = ""
-                        except:
+                        except Exception:
                             pass
                         try:
                             cdict = {}
@@ -1511,7 +1511,7 @@ class DebugClientBase(object):
                             for v in slv:   # __IGNORE_WARNING__
                                 try:
                                     exec 'cdict[v] = dict%s.%s' % (access, v)
-                                except:
+                                except Exception:
                                     pass
                             ndict.update(cdict)
                             exec 'obj = dict%s' % access
@@ -1522,7 +1522,7 @@ class DebugClientBase(object):
                                 qvar = obj
                                 qvtype = ("%s" % type(qvar))[1:-1]\
                                     .split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                     else:
                         try:
@@ -1536,7 +1536,7 @@ class DebugClientBase(object):
                                 qvar = obj
                                 qvtype = ("%s" % type(qvar))[1:-1]\
                                     .split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                         try:
                             cdict = {}
@@ -1544,7 +1544,7 @@ class DebugClientBase(object):
                             for v in slv:
                                 try:
                                     exec 'cdict[v] = dict[var[i]].%s' % v
-                                except:
+                                except Exception:
                                     pass
                             ndict.update(cdict)
                             obj = dict[var[i]]
@@ -1554,7 +1554,7 @@ class DebugClientBase(object):
                                 qvar = obj
                                 qvtype = ("%s" % type(qvar))[1:-1]\
                                     .split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                     odict = dict
                     dict = ndict
@@ -1618,7 +1618,7 @@ class DebugClientBase(object):
                         varlist.append(('...', 'list', "%d" % len(obj)))
                     elif unicode(repr(obj)).startswith('('):
                         varlist.append(('...', 'tuple', "%d" % len(obj)))
-                except:
+                except Exception:
                     pass
         
         self.write('%s%s\n' % (
@@ -1848,7 +1848,7 @@ class DebugClientBase(object):
                             rvalue = "%d" % len(value.keys())
                         else:
                             rvalue = "%d" % len(value)
-                except:
+                except Exception:
                     rvalue = ''
                 
             if formatSequences:
@@ -1899,14 +1899,14 @@ class DebugClientBase(object):
         
         try:
             comp = self.complete(text, state)
-        except:
+        except Exception:
             comp = None
         while comp is not None:
             completions.append(comp)
             state += 1
             try:
                 comp = self.complete(text, state)
-            except:
+            except Exception:
                 comp = None
             
         self.write("%s%s||%s\n" % (DebugProtocol.ResponseCompletion,
@@ -2147,7 +2147,7 @@ class DebugClientBase(object):
                     remoteAddress = ipOrHost
                 else:
                     remoteAddress = self.__resolveHost(ipOrHost)
-            except:
+            except Exception:
                 remoteAddress = None
             sys.argv = ['']
             if '' not in sys.path:

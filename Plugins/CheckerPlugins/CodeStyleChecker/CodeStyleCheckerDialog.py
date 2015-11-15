@@ -28,8 +28,8 @@ import Utilities
 from . import pep8
 
 try:
-    basestring
-except:
+    basestring          # __IGNORE_WARNING__
+except Exception:
     basestring = str    # define for Python3
 
 

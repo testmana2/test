@@ -151,7 +151,7 @@ class SpellChecker(QObject):
         
         try:
             d = enchant.DictWithPWL(lang, pwl, pel)
-        except:
+        except Exception:
             # Catch all exceptions, because if pyenchant isn't available, you
             # can't catch the enchant.DictNotFound error.
             d = None

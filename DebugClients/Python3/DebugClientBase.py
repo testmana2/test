@@ -336,7 +336,7 @@ class DebugClientBase(object):
         """
         try:
             self.set_quit()
-        except:
+        except Exception:
             pass
 
         # clean up asyncio.
@@ -776,7 +776,7 @@ class DebugClientBase(object):
                         arg,
                         self.currentThread.getCurrentFrame().f_globals,
                         self.currentThread.getFrameLocals(0))
-                except:
+                except Exception:
                     # Report the exception and the traceback
                     try:
                         type, value, tb = sys.exc_info()
@@ -810,7 +810,7 @@ class DebugClientBase(object):
                 try:
                     code = compile(arg + '\n', '<stdin>', 'single')
                     exec(code, _globals, _locals)
-                except:
+                except Exception:
                     # Report the exception and the traceback
                     try:
                         type, value, tb = sys.exc_info()
@@ -879,7 +879,7 @@ class DebugClientBase(object):
                     except AttributeError:
                         self.test = unittest.defaultTestLoader\
                             .loadTestsFromModule(utModule)
-                except:
+                except Exception:
                     exc_type, exc_value, exc_tb = sys.exc_info()
                     self.write('{0}{1}\n'.format(
                         DebugProtocol.ResponseUTPrepared,
@@ -998,7 +998,7 @@ class DebugClientBase(object):
                             exec(code, _globals, _locals)
                 except SystemExit as exc:
                     self.progTerminated(exc.code)
-                except:
+                except Exception:
                     # Report the exception and the traceback
                     try:
                         exc_type, exc_value, exc_tb = sys.exc_info()
@@ -1506,7 +1506,7 @@ class DebugClientBase(object):
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
                             ndict.update(mdict)
-                        except:
+                        except Exception:
                             pass
                         try:
                             loc = {"dict": dict}
@@ -1516,7 +1516,7 @@ class DebugClientBase(object):
                             if mdict and "sipThis" not in mdict.keys():
                                 del rvar[0:2]
                                 access = ""
-                        except:
+                        except Exception:
                             pass
                         try:
                             loc = {"cdict": {}, "dict": dict}
@@ -1527,7 +1527,7 @@ class DebugClientBase(object):
                                     loc["v"] = v
                                     exec('cdict[v] = dict{0!s}.{1!s}'.format(
                                         access, v), globals, loc)
-                                except:
+                                except Exception:
                                     pass
                             ndict.update(loc["cdict"])
                             exec('obj = dict{0!s}'.format(access),
@@ -1539,7 +1539,7 @@ class DebugClientBase(object):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                     else:
                         try:
@@ -1552,7 +1552,7 @@ class DebugClientBase(object):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                         try:
                             slv = dict[var[i]].__slots__
@@ -1564,7 +1564,7 @@ class DebugClientBase(object):
                                     exec('cdict[v] = dict[var[i]].{0!s}'
                                          .format(v),
                                          globals(), loc)
-                                except:
+                                except Exception:
                                     pass
                             ndict.update(loc["cdict"])
                             obj = dict[var[i]]
@@ -1573,7 +1573,7 @@ class DebugClientBase(object):
                                 qtVariable = True
                                 qvar = obj
                                 qvtype = str(type(qvar))[1:-1].split()[1][1:-1]
-                        except:
+                        except Exception:
                             pass
                     odict = dict
                     dict = ndict
@@ -1655,7 +1655,7 @@ class DebugClientBase(object):
                     elif repr(obj).startswith('('):
                         varlist.append(
                             ('...', 'tuple', "{0:d}".format(len(obj))))
-                except:
+                except Exception:
                     pass
         
         self.write('{0}{1}\n'.format(
@@ -1898,7 +1898,7 @@ class DebugClientBase(object):
                             rvalue = "{0:d}".format(len(value.keys()))
                         else:
                             rvalue = "{0:d}".format(len(value))
-                except:
+                except Exception:
                     rvalue = ''
             
             if formatSequences:
@@ -1949,14 +1949,14 @@ class DebugClientBase(object):
         
         try:
             comp = self.complete(text, state)
-        except:
+        except Exception:
             comp = None
         while comp is not None:
             completions.append(comp)
             state += 1
             try:
                 comp = self.complete(text, state)
-            except:
+            except Exception:
                 comp = None
         
         self.write("{0}{1}||{2}\n".format(DebugProtocol.ResponseCompletion,
@@ -2199,7 +2199,7 @@ class DebugClientBase(object):
                     remoteAddress = ipOrHost
                 else:
                     remoteAddress = self.__resolveHost(ipOrHost)
-            except:
+            except Exception:
                 remoteAddress = None
             sys.argv = ['']
             if '' not in sys.path:

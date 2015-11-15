@@ -262,7 +262,7 @@ def __syntaxAndPyflakesCheck(filename, codestring, checkFlakes=True,
             line = detail.lineno
             error = detail.msg
             return [{'error': (fn, line, 0, "", error)}]
-        except:         # this catchall is intentional
+        except:         # __IGNORE_WARNING__
             pass
     
     # pyflakes

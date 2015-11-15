@@ -585,7 +585,7 @@ class VariablesViewer(QTreeWidget):
             else:
                 try:
                     sval = eval(value)
-                except:
+                except Exception:
                     sval = value
             itm = self.__generateItem(parent, dvar, str(sval), dvtype)
         

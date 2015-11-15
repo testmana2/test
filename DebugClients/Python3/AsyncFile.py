@@ -22,7 +22,7 @@ def AsyncPendingWrite(file):
     """
     try:
         pending = file.pendingWrite()
-    except:
+    except Exception:
         pending = 0
 
     return pending

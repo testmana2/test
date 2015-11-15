@@ -69,7 +69,7 @@ class ColorDialogWizardDialog(QDialog, Ui_ColorDialogWizardDialog):
                     exec('from PyQt5.QtCore import Qt;'
                          ' QColorDialog.getColor({0}, None, "{1}")'.format(
                              coStr, self.eTitle.text()))
-                except:
+                except Exception:
                     E5MessageBox.critical(
                         self,
                         self.tr("QColorDialog Wizard Error"),

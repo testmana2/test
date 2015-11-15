@@ -394,7 +394,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.backMenu.popup(self.mapToGlobal(coord))
                 else:
                     self.backMenu.popup(self.mapToGlobal(coord))
-        except:
+        except Exception:
             pass
         
     def __showContextMenu(self):
@@ -478,7 +478,7 @@ class ProjectFormsBrowser(ProjectBaseBrowser):
                         self.hooks["open"](itm.fileName())
                     else:
                         self.designerFile.emit(itm.fileName())
-            except:
+            except Exception:
                 pass
         
     def __openFileInEditor(self):

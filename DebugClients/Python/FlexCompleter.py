@@ -225,7 +225,7 @@ class Completer(object):
                     match = "%s.%s" % (expr, word)
                     if match not in matches:
                         matches.append(match)
-            except:
+            except Exception:
                 # some badly behaved objects pollute dir() with non-strings,
                 # which cause the completion to fail.  This way we skip the
                 # bad entries and can still continue processing the others.

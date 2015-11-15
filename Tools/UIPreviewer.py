@@ -344,7 +344,7 @@ class UIPreviewer(E5MainWindow):
         # load the file
         try:
             self.mainWidget = uic.loadUi(fn)
-        except:
+        except Exception:
             pass
         
         if self.mainWidget:

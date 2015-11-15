@@ -47,7 +47,7 @@ class AsyncIO(object):
         """
         try:
             got = self.readfd.readline_p()
-        except:
+        except Exception:
             return
 
         if len(got) == 0:

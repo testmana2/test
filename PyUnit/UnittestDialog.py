@@ -332,7 +332,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 except AttributeError:
                     test = unittest.defaultTestLoader.loadTestsFromModule(
                         module)
-            except:
+            except Exception:
                 exc_type, exc_value, exc_tb = sys.exc_info()
                 E5MessageBox.critical(
                     self,

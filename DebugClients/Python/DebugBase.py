@@ -454,7 +454,7 @@ class DebugBase(bdb.Bdb):
                         continue
                     else:
                         return (b, 1)
-            except:
+            except Exception:
                 if b.special:
                     try:
                         b.values[frame][0] = 0

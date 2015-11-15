@@ -392,7 +392,7 @@ _messages = {
         "copyright notice contains invalid author"),
     "M121": QCoreApplication.translate(
         "MiscellaneousChecker",
-        "blind except: statement"),
+        "blind except: statement"),         # __IGNORE_WARNING__
     "M601": QCoreApplication.translate(
         "MiscellaneousChecker",
         "found {0} formatter"),
