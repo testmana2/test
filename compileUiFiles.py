@@ -69,3 +69,6 @@ if __name__ == "__main__":
             " program, \nincluding the following traceback, to"
             " eric-bugs@eric-ide.python-projects.org.\n")
         raise
+
+#
+# eflag: noqa = M801

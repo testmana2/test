@@ -60,7 +60,7 @@ class BackgroundService(QTcpServer):
         
         port = self.serverPort()
         ## Note: Need the port if started external in debugger:
-        print('BackgroundService listening on: {0:d}'.format(port))
+        print('BackgroundService listening on: {0:d}'.format(port))     # __IGNORE_WARNING__
         for pyName in ['Python', 'Python3']:
             interpreter = Preferences.getDebugger(
                 pyName + "Interpreter")

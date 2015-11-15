@@ -2160,7 +2160,7 @@
               <string>ExcludeMessages</string>
             </key>
             <value>
-              <string>C101, E265, M801, M811, N802, N803, N807, N808, N821, W293</string>
+              <string>C101, E265, M811, N802, N803, N807, N808, N821, W293</string>
             </value>
             <key>
               <string>FixCodes</string>

@@ -191,3 +191,6 @@ if __name__ == '__main__':
     backgroundClient = BackgroundClient(host, int(port))
     # Start the main loop
     backgroundClient.run()
+
+#
+# eflag: noqa = M801

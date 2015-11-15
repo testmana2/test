@@ -1253,3 +1253,6 @@ class PluginManager(QObject):
         ignored = self.__sslErrorHandler.sslErrorsReply(reply, errors)[0]
         if ignored == E5SslErrorHandler.NotIgnored:
             self.__downloadCancelled = True
+
+#
+# eflag: noqa = M801

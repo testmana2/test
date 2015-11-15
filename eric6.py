@@ -122,7 +122,7 @@ def handleSingleApplication(ddindex):
             client.processArgs(sys.argv[1:])
         sys.exit(0)
     elif res < 0:
-        print("eric6: {0}".format(client.errstr()))
+        print("eric6: {0}".format(client.errstr()))     # __IGNORE_WARNING__
         sys.exit(res)
 
 
@@ -183,7 +183,7 @@ def excepthook(excType, excValue, tracebackobj):
             msg = msg.encode(sys.stdout.encoding, 'replace')
             versionInfo = versionInfo.encode(sys.stdout.encoding, 'replace')
         warning = notice + msg + versionInfo
-        print(warning)
+        print(warning)                          # __IGNORE_WARNING__
     else:
         warning = notice + msg + versionInfo
         # Escape &<> otherwise it's not visible in the error dialog

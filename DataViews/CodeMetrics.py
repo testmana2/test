@@ -85,7 +85,7 @@ class Parser(object):
                 else:
                     self.__addToken(toktype, toktext, srow, scol, line)
         except tokenize.TokenError as msg:
-            print("Token Error: {0}".format(str(msg)))
+            print("Token Error: {0}".format(str(msg)))  # __IGNORE_WARNING__
             return
         
         return
@@ -174,26 +174,6 @@ class SourceStat(object):
             counters = self.counters.setdefault(id, {})
             counters[key] = counters.setdefault(key, 0) + value
 
-    def dump(self):
-        """
-        Public method used to format and print the collected statistics.
-        """
-        label_len = 79 - len(spacer) - 6 * 6
-        print(spacer + "FUNCTION / CLASS".ljust(label_len) +
-              " START   END LINES  NLOC  COMM EMPTY")
-        for id in self.identifiers + ['TOTAL ']:
-            label = id
-            counters = self.counters.get(id, {})
-            msg = spacer + label.ljust(label_len)
-
-            for key in ('start', 'end', 'lines', 'nloc', 'comments', 'empty'):
-                if counters.get(key, 0):
-                    msg += " {0:d}".format(counters[key])
-                else:
-                    msg += " " * 6
-
-            print(msg)
-
     def getCounter(self, id, key):
         """
         Public method used to get a specific counter value.
@@ -272,36 +252,3 @@ def analyze(filename, total):
               stats.getCounter('TOTAL ', 'nloc'))
 
     return stats
-    
-
-def main():
-    """
-    Module main function used when called as a script.
-    
-    Loop over all files given on the command line and collect the individual
-    and overall source code statistics.
-    """
-    import sys
-    
-    files = sys.argv[1:]
-    
-    if not files:
-        sys.exit(1)
-        
-    total = {}
-    
-    summarize(total, 'files', len(files))
-    for file in files:
-        print(file)
-        stats = analyze(file, total)
-        stats.dump()
-        
-    print("\nSummary")
-    for key in ['files', 'lines', 'bytes', 'comments',
-                'empty lines', 'non-commentary lines']:
-        print(key.ljust(20) + "{0:d}".format(total[key]))
-    
-    sys.exit(0)
-
-if __name__ == "__main__":
-    main()

@@ -1508,3 +1508,6 @@ if __name__ == "__main__":
               """ of the program,\nincluding the following traceback, to"""
               """ eric-bugs@eric-ide.python-projects.org.\n""")
         raise
+
+#
+# eflag: noqa = M801

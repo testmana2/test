@@ -200,3 +200,6 @@ def messageHandlerInstalled():
     @return flag indicating an installed message handler (boolean)
     """
     return __msgHandlerDialog is not None
+
+#
+# eflag: noqa = M801

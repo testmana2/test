@@ -236,7 +236,7 @@ class DebugBase(bdb.Bdb):
             return self.trace_dispatch
         if event == 'c_return':
             return self.trace_dispatch
-        print('bdb.Bdb.dispatch: unknown debugging event: ', repr(event))
+        print('bdb.Bdb.dispatch: unknown debugging event: ', repr(event))   # __IGNORE_WARNING__
         return self.trace_dispatch
 
     def dispatch_line(self, frame):

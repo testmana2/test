@@ -252,3 +252,6 @@ def simpleAppStartup(argv, appinfo, mwFactory, quitOnLastWindowClosed=True,
         eMsg.setMinimumSize(600, 400)
     
     return app.exec_()
+
+#
+# eflag: noqa = M801

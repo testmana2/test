@@ -306,3 +306,6 @@ def toDict(value):
         return {}
     else:
         return value
+
+#
+# eflag: noqa = M801

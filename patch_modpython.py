@@ -163,3 +163,6 @@ if __name__ == "__main__":
               """ the program,\nincluding the following traceback, to"""
               """ eric-bugs@die-offenbachs.de.\n""")
         raise
+
+#
+# eflag: noqa = M801

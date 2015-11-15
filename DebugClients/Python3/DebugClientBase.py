@@ -2169,7 +2169,7 @@ class DebugClientBase(object):
                 else:   # unknown option
                     del args[0]
             if not args:
-                print("No program given. Aborting!")
+                print("No program given. Aborting!")    # __IGNORE_WARNING__
             else:
                 if not self.noencoding:
                     self.__coding = self.defaultCoding
@@ -2210,7 +2210,7 @@ class DebugClientBase(object):
                 self.connectDebugger(port, remoteAddress, redirect)
                 self.__interact()
             else:
-                print("No network port given. Aborting...")
+                print("No network port given. Aborting...")     # __IGNORE_WARNING__
         
     def fork(self):
         """
