@@ -25,7 +25,7 @@ Uninstallation script for the eric6 IDE and all eric6 related tools.
 </p>
 <h3>Global Attributes</h3>
 <table>
-<tr><td>PythonMarkers</td></tr><tr><td>defaultMacAppBundleName</td></tr><tr><td>defaultMacAppBundlePath</td></tr><tr><td>includePythonVariant</td></tr><tr><td>progLanguages</td></tr><tr><td>progName</td></tr><tr><td>pyModDir</td></tr>
+<tr><td>PythonMarkers</td></tr><tr><td>defaultMacAppBundleName</td></tr><tr><td>defaultMacAppBundlePath</td></tr><tr><td>includePythonVariant</td></tr><tr><td>progLanguages</td></tr><tr><td>progName</td></tr><tr><td>pyModDir</td></tr><tr><td>settingsNameGlobal</td></tr><tr><td>settingsNameOrganization</td></tr>
 </table>
 <h3>Classes</h3>
 <table>
@@ -37,11 +37,23 @@ Uninstallation script for the eric6 IDE and all eric6 related tools.
 <td><a href="#exit">exit</a></td>
 <td>Exit the uninstall script.</td>
 </tr><tr>
+<td><a href="#getConfigDir">getConfigDir</a></td>
+<td>Module function to get the name of the directory storing the config data.</td>
+</tr><tr>
 <td><a href="#initGlobals">initGlobals</a></td>
 <td>Set the values of globals that need more than a simple assignment.</td>
 </tr><tr>
 <td><a href="#main">main</a></td>
 <td>The main function of the script.</td>
+</tr><tr>
+<td><a href="#removeConfigurationData">removeConfigurationData</a></td>
+<td>Remove the eric configuration directory.</td>
+</tr><tr>
+<td><a href="#removeDataDirectory">removeDataDirectory</a></td>
+<td>Remove the eric data directory.</td>
+</tr><tr>
+<td><a href="#removePluginDirectories">removePluginDirectories</a></td>
+<td>Remove the plug-in directories.</td>
 </tr><tr>
 <td><a href="#uninstallEric">uninstallEric</a></td>
 <td>Uninstall the eric files.</td>
@@ -67,6 +79,19 @@ result code to report back (integer)
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
+<a NAME="getConfigDir" ID="getConfigDir"></a>
+<h2>getConfigDir</h2>
+<b>getConfigDir</b>(<i></i>)
+<p>
+    Module function to get the name of the directory storing the config data.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+directory name of the config dir (string)
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="initGlobals" ID="initGlobals"></a>
 <h2>initGlobals</h2>
 <b>initGlobals</b>(<i></i>)
@@ -86,6 +111,30 @@ result code to report back (integer)
 list of command line arguments
 </dd>
 </dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="removeConfigurationData" ID="removeConfigurationData"></a>
+<h2>removeConfigurationData</h2>
+<b>removeConfigurationData</b>(<i></i>)
+<p>
+    Remove the eric configuration directory.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="removeDataDirectory" ID="removeDataDirectory"></a>
+<h2>removeDataDirectory</h2>
+<b>removeDataDirectory</b>(<i></i>)
+<p>
+    Remove the eric data directory.
+</p>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="removePluginDirectories" ID="removePluginDirectories"></a>
+<h2>removePluginDirectories</h2>
+<b>removePluginDirectories</b>(<i></i>)
+<p>
+    Remove the plug-in directories.
+</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="uninstallEric" ID="uninstallEric"></a>

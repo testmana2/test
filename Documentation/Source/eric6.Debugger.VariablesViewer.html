@@ -71,9 +71,6 @@ VariableItem
 <tr>
 <td><a href="#ArrayElementVarItem.__init__">ArrayElementVarItem</a></td>
 <td>Constructor</td>
-</tr><tr>
-<td><a href="#ArrayElementVarItem.key">key</a></td>
-<td>Public method generating the key for this item.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -99,21 +96,6 @@ value string (string)
 <dd>
 type string (string)
 </dd>
-</dl><a NAME="ArrayElementVarItem.key" ID="ArrayElementVarItem.key"></a>
-<h4>ArrayElementVarItem.key</h4>
-<b>key</b>(<i>column</i>)
-<p>
-        Public method generating the key for this item.
-</p><dl>
-<dt><i>column</i></dt>
-<dd>
-the column to sort on (integer)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-key of the item (string)
-</dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
@@ -138,9 +120,6 @@ SpecialVarItem
 <tr>
 <td><a href="#SpecialArrayElementVarItem.__init__">SpecialArrayElementVarItem</a></td>
 <td>Constructor</td>
-</tr><tr>
-<td><a href="#SpecialArrayElementVarItem.key">key</a></td>
-<td>Public method generating the key for this item.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -171,21 +150,6 @@ frame number (0 is the current frame) (int)
 </dd><dt><i>scope</i></dt>
 <dd>
 flag indicating global (1) or local (0) variables
-</dd>
-</dl><a NAME="SpecialArrayElementVarItem.key" ID="SpecialArrayElementVarItem.key"></a>
-<h4>SpecialArrayElementVarItem.key</h4>
-<b>key</b>(<i>column</i>)
-<p>
-        Public method generating the key for this item.
-</p><dl>
-<dt><i>column</i></dt>
-<dd>
-the column to sort on (integer)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-key of the item (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -276,9 +240,6 @@ QTreeWidgetItem
 <td><a href="#VariableItem.__init__">VariableItem</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#VariableItem.__lt__">__lt__</a></td>
-<td>Special method to check, if the item is less than the other one.</td>
-</tr><tr>
 <td><a href="#VariableItem.attachDummy">attachDummy</a></td>
 <td>Public method to attach a dummy sub item to allow for lazy population.</td>
 </tr><tr>
@@ -296,9 +257,6 @@ QTreeWidgetItem
 </tr><tr>
 <td><a href="#VariableItem.getValue">getValue</a></td>
 <td>Public method to return the value of the item.</td>
-</tr><tr>
-<td><a href="#VariableItem.key">key</a></td>
-<td>Public method generating the key for this item.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -323,21 +281,6 @@ value string (string)
 </dd><dt><i>dtype</i></dt>
 <dd>
 type string (string)
-</dd>
-</dl><a NAME="VariableItem.__lt__" ID="VariableItem.__lt__"></a>
-<h4>VariableItem.__lt__</h4>
-<b>__lt__</b>(<i>other</i>)
-<p>
-        Special method to check, if the item is less than the other one.
-</p><dl>
-<dt><i>other</i></dt>
-<dd>
-reference to item to compare against (QTreeWidgetItem)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-true, if this item is less than other (boolean)
 </dd>
 </dl><a NAME="VariableItem.attachDummy" ID="VariableItem.attachDummy"></a>
 <h4>VariableItem.attachDummy</h4>
@@ -393,21 +336,6 @@ requested data
 <dt>Returns:</dt>
 <dd>
 value of the item (string)
-</dd>
-</dl><a NAME="VariableItem.key" ID="VariableItem.key"></a>
-<h4>VariableItem.key</h4>
-<b>key</b>(<i>column</i>)
-<p>
-        Public method generating the key for this item.
-</p><dl>
-<dt><i>column</i></dt>
-<dd>
-the column to sort on (integer)
-</dd>
-</dl><dl>
-<dt>Returns:</dt>
-<dd>
-text of the column (string)
 </dd>
 </dl>
 <div align="right"><a href="#top">Up</a></div>
@@ -469,6 +397,9 @@ QTreeWidget
 </tr><tr>
 <td><a href="#VariablesViewer.__resort">__resort</a></td>
 <td>Private method to resort the tree.</td>
+</tr><tr>
+<td><a href="#VariablesViewer.__sectionClicked">__sectionClicked</a></td>
+<td>Private method handling a click onto a header section.</td>
 </tr><tr>
 <td><a href="#VariablesViewer.__showContextMenu">__showContextMenu</a></td>
 <td>Private slot to show the context menu.</td>
@@ -651,9 +582,19 @@ displaystring (string)
 </dd>
 </dl><a NAME="VariablesViewer.__resort" ID="VariablesViewer.__resort"></a>
 <h4>VariablesViewer.__resort</h4>
-<b>__resort</b>(<i></i>)
+<b>__resort</b>(<i>parent=None</i>)
 <p>
         Private method to resort the tree.
+</p><dl>
+<dt><i>parent</i> (QTreeWidgetItem)</dt>
+<dd>
+reference to a parent item
+</dd>
+</dl><a NAME="VariablesViewer.__sectionClicked" ID="VariablesViewer.__sectionClicked"></a>
+<h4>VariablesViewer.__sectionClicked</h4>
+<b>__sectionClicked</b>(<i></i>)
+<p>
+        Private method handling a click onto a header section.
 </p><a NAME="VariablesViewer.__showContextMenu" ID="VariablesViewer.__showContextMenu"></a>
 <h4>VariablesViewer.__showContextMenu</h4>
 <b>__showContextMenu</b>(<i>coord</i>)
