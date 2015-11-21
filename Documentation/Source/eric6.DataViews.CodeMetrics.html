@@ -51,9 +51,6 @@ the tokenize module is too old
 <td><a href="#analyze">analyze</a></td>
 <td>Module function used analyze the source of a Python file.</td>
 </tr><tr>
-<td><a href="#main">main</a></td>
-<td>Module main function used when called as a script.</td>
-</tr><tr>
 <td><a href="#summarize">summarize</a></td>
 <td>Module function used to collect overall statistics.</td>
 </tr>
@@ -147,9 +144,6 @@ object
 <td><a href="#SourceStat.dedent">dedent</a></td>
 <td>Public method used to decrement the indentation level.</td>
 </tr><tr>
-<td><a href="#SourceStat.dump">dump</a></td>
-<td>Public method used to format and print the collected statistics.</td>
-</tr><tr>
 <td><a href="#SourceStat.getCounter">getCounter</a></td>
 <td>Public method used to get a specific counter value.</td>
 </tr><tr>
@@ -187,12 +181,7 @@ the token to be processed (Token)
 <dd>
 raised to indicate an invalid indentation level
 </dd>
-</dl><a NAME="SourceStat.dump" ID="SourceStat.dump"></a>
-<h4>SourceStat.dump</h4>
-<b>dump</b>(<i></i>)
-<p>
-        Public method used to format and print the collected statistics.
-</p><a NAME="SourceStat.getCounter" ID="SourceStat.getCounter"></a>
+</dl><a NAME="SourceStat.getCounter" ID="SourceStat.getCounter"></a>
 <h4>SourceStat.getCounter</h4>
 <b>getCounter</b>(<i>id, key</i>)
 <p>
@@ -307,17 +296,6 @@ dictionary receiving the overall code statistics
 a statistics object with the collected code statistics (SourceStat)
 </dd>
 </dl>
-<div align="right"><a href="#top">Up</a></div>
-<hr /><hr />
-<a NAME="main" ID="main"></a>
-<h2>main</h2>
-<b>main</b>(<i></i>)
-<p>
-    Module main function used when called as a script.
-</p><p>
-    Loop over all files given on the command line and collect the individual
-    and overall source code statistics.
-</p>
 <div align="right"><a href="#top">Up</a></div>
 <hr /><hr />
 <a NAME="summarize" ID="summarize"></a>

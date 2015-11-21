@@ -1396,7 +1396,6 @@
       <keyword name="ArgumentsError.__str__" id="ArgumentsError.__str__" ref="eric6.E5Gui.E5Action.html#ArgumentsError.__str__" />
       <keyword name="ArrayElementVarItem" id="ArrayElementVarItem" ref="eric6.Debugger.VariablesViewer.html#ArrayElementVarItem" />
       <keyword name="ArrayElementVarItem (Constructor)" id="ArrayElementVarItem (Constructor)" ref="eric6.Debugger.VariablesViewer.html#ArrayElementVarItem.__init__" />
-      <keyword name="ArrayElementVarItem.key" id="ArrayElementVarItem.key" ref="eric6.Debugger.VariablesViewer.html#ArrayElementVarItem.key" />
       <keyword name="AssociationItem" id="AssociationItem" ref="eric6.Graphics.AssociationItem.html#AssociationItem" />
       <keyword name="AssociationItem (Constructor)" id="AssociationItem (Constructor)" ref="eric6.Graphics.AssociationItem.html#AssociationItem.__init__" />
       <keyword name="AssociationItem (Module)" id="AssociationItem (Module)" ref="eric6.Graphics.AssociationItem.html" />
@@ -10407,14 +10406,12 @@
       <keyword name="SourceStat" id="SourceStat" ref="eric6.DataViews.CodeMetrics.html#SourceStat" />
       <keyword name="SourceStat (Constructor)" id="SourceStat (Constructor)" ref="eric6.DataViews.CodeMetrics.html#SourceStat.__init__" />
       <keyword name="SourceStat.dedent" id="SourceStat.dedent" ref="eric6.DataViews.CodeMetrics.html#SourceStat.dedent" />
-      <keyword name="SourceStat.dump" id="SourceStat.dump" ref="eric6.DataViews.CodeMetrics.html#SourceStat.dump" />
       <keyword name="SourceStat.getCounter" id="SourceStat.getCounter" ref="eric6.DataViews.CodeMetrics.html#SourceStat.getCounter" />
       <keyword name="SourceStat.inc" id="SourceStat.inc" ref="eric6.DataViews.CodeMetrics.html#SourceStat.inc" />
       <keyword name="SourceStat.indent" id="SourceStat.indent" ref="eric6.DataViews.CodeMetrics.html#SourceStat.indent" />
       <keyword name="SourceStat.push" id="SourceStat.push" ref="eric6.DataViews.CodeMetrics.html#SourceStat.push" />
       <keyword name="SpecialArrayElementVarItem" id="SpecialArrayElementVarItem" ref="eric6.Debugger.VariablesViewer.html#SpecialArrayElementVarItem" />
       <keyword name="SpecialArrayElementVarItem (Constructor)" id="SpecialArrayElementVarItem (Constructor)" ref="eric6.Debugger.VariablesViewer.html#SpecialArrayElementVarItem.__init__" />
-      <keyword name="SpecialArrayElementVarItem.key" id="SpecialArrayElementVarItem.key" ref="eric6.Debugger.VariablesViewer.html#SpecialArrayElementVarItem.key" />
       <keyword name="SpecialVarItem" id="SpecialVarItem" ref="eric6.Debugger.VariablesViewer.html#SpecialVarItem" />
       <keyword name="SpecialVarItem (Constructor)" id="SpecialVarItem (Constructor)" ref="eric6.Debugger.VariablesViewer.html#SpecialVarItem.__init__" />
       <keyword name="SpecialVarItem.expand" id="SpecialVarItem.expand" ref="eric6.Debugger.VariablesViewer.html#SpecialVarItem.expand" />
@@ -12520,14 +12517,12 @@
       <keyword name="VariableDetailDialog (Module)" id="VariableDetailDialog (Module)" ref="eric6.Debugger.VariableDetailDialog.html" />
       <keyword name="VariableItem" id="VariableItem" ref="eric6.Debugger.VariablesViewer.html#VariableItem" />
       <keyword name="VariableItem (Constructor)" id="VariableItem (Constructor)" ref="eric6.Debugger.VariablesViewer.html#VariableItem.__init__" />
-      <keyword name="VariableItem.__lt__" id="VariableItem.__lt__" ref="eric6.Debugger.VariablesViewer.html#VariableItem.__lt__" />
       <keyword name="VariableItem.attachDummy" id="VariableItem.attachDummy" ref="eric6.Debugger.VariablesViewer.html#VariableItem.attachDummy" />
       <keyword name="VariableItem.collapse" id="VariableItem.collapse" ref="eric6.Debugger.VariablesViewer.html#VariableItem.collapse" />
       <keyword name="VariableItem.data" id="VariableItem.data" ref="eric6.Debugger.VariablesViewer.html#VariableItem.data" />
       <keyword name="VariableItem.deleteChildren" id="VariableItem.deleteChildren" ref="eric6.Debugger.VariablesViewer.html#VariableItem.deleteChildren" />
       <keyword name="VariableItem.expand" id="VariableItem.expand" ref="eric6.Debugger.VariablesViewer.html#VariableItem.expand" />
       <keyword name="VariableItem.getValue" id="VariableItem.getValue" ref="eric6.Debugger.VariablesViewer.html#VariableItem.getValue" />
-      <keyword name="VariableItem.key" id="VariableItem.key" ref="eric6.Debugger.VariablesViewer.html#VariableItem.key" />
       <keyword name="VariablesFilterDialog" id="VariablesFilterDialog" ref="eric6.Debugger.VariablesFilterDialog.html#VariablesFilterDialog" />
       <keyword name="VariablesFilterDialog (Constructor)" id="VariablesFilterDialog (Constructor)" ref="eric6.Debugger.VariablesFilterDialog.html#VariablesFilterDialog.__init__" />
       <keyword name="VariablesFilterDialog (Module)" id="VariablesFilterDialog (Module)" ref="eric6.Debugger.VariablesFilterDialog.html" />
@@ -12546,6 +12541,7 @@
       <keyword name="VariablesViewer.__generateItem" id="VariablesViewer.__generateItem" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__generateItem" />
       <keyword name="VariablesViewer.__getDispType" id="VariablesViewer.__getDispType" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__getDispType" />
       <keyword name="VariablesViewer.__resort" id="VariablesViewer.__resort" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__resort" />
+      <keyword name="VariablesViewer.__sectionClicked" id="VariablesViewer.__sectionClicked" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__sectionClicked" />
       <keyword name="VariablesViewer.__showContextMenu" id="VariablesViewer.__showContextMenu" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__showContextMenu" />
       <keyword name="VariablesViewer.__showDetails" id="VariablesViewer.__showDetails" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__showDetails" />
       <keyword name="VariablesViewer.__showVariableDetails" id="VariablesViewer.__showVariableDetails" ref="eric6.Debugger.VariablesViewer.html#VariablesViewer.__showVariableDetails" />
@@ -13474,6 +13470,7 @@
       <keyword name="getConfigData" id="getConfigData" ref="eric6.Plugins.PluginVcsSubversion.html#getConfigData" />
       <keyword name="getConfigDir" id="getConfigDir" ref="eric6.Globals.__init__.html#getConfigDir" />
       <keyword name="getConfigDir" id="getConfigDir" ref="eric6.install-i18n.html#getConfigDir" />
+      <keyword name="getConfigDir" id="getConfigDir" ref="eric6.uninstall.html#getConfigDir" />
       <keyword name="getConfigPath" id="getConfigPath" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgUtilities.html#getConfigPath" />
       <keyword name="getConfigPath" id="getConfigPath" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnUtilities.html#getConfigPath" />
       <keyword name="getConfigPath" id="getConfigPath" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnUtilities.html#getConfigPath" />
@@ -13646,7 +13643,6 @@
       <keyword name="loadTranslatorForLocale" id="loadTranslatorForLocale" ref="eric6.Toolbox.Startup.html#loadTranslatorForLocale" />
       <keyword name="loadTranslators" id="loadTranslators" ref="eric6.Toolbox.Startup.html#loadTranslators" />
       <keyword name="load_sourceAsStr" id="load_sourceAsStr" ref="eric6.Globals.compatibility_fixes.html#load_sourceAsStr" />
-      <keyword name="main" id="main" ref="eric6.DataViews.CodeMetrics.html#main" />
       <keyword name="main" id="main" ref="eric6.Plugins.WizardPlugins.QRegularExpressionWizard.QRegularExpressionWizardServer.html#main" />
       <keyword name="main" id="main" ref="eric6.cleanupSource.html#main" />
       <keyword name="main" id="main" ref="eric6.compileUiFiles.html#main" />
@@ -13763,7 +13759,10 @@
       <keyword name="relativePath" id="relativePath" ref="eric6.Utilities.__init__.html#relativePath" />
       <keyword name="relativeUniversalPath" id="relativeUniversalPath" ref="eric6.Utilities.__init__.html#relativeUniversalPath" />
       <keyword name="relpath" id="relpath" ref="eric6.Utilities.__init__.html#relpath" />
+      <keyword name="removeConfigurationData" id="removeConfigurationData" ref="eric6.uninstall.html#removeConfigurationData" />
+      <keyword name="removeDataDirectory" id="removeDataDirectory" ref="eric6.uninstall.html#removeDataDirectory" />
       <keyword name="removeMarkers" id="removeMarkers" ref="eric6.UI.CompareDialog.html#removeMarkers" />
+      <keyword name="removePluginDirectories" id="removePluginDirectories" ref="eric6.uninstall.html#removePluginDirectories" />
       <keyword name="removeProjectBrowserFlags" id="removeProjectBrowserFlags" ref="eric6.Preferences.__init__.html#removeProjectBrowserFlags" />
       <keyword name="renderTabPreview" id="renderTabPreview" ref="eric6.Helpviewer.HelpSnap.html#renderTabPreview" />
       <keyword name="resetLayout" id="resetLayout" ref="eric6.Preferences.__init__.html#resetLayout" />
