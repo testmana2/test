@@ -80,10 +80,11 @@ class ConfigurationPageBase(QWidget):
         
         if hasAlpha:
             colour = QColorDialog.getColor(
-                self.__coloursDict[colorKey][0], None, "",
+                self.__coloursDict[colorKey][0], self, "",
                 QColorDialog.ShowAlphaChannel)
         else:
-            colour = QColorDialog.getColor(self.__coloursDict[colorKey][0])
+            colour = QColorDialog.getColor(self.__coloursDict[colorKey][0],
+                                           self)
         if colour.isValid():
             size = button.iconSize()
             pm = QPixmap(size.width(), size.height())
@@ -113,7 +114,7 @@ class ConfigurationPageBase(QWidget):
             as the sample (boolean)
         @return selected font (QFont)
         """
-        font, ok = QFontDialog.getFont(fontVar)
+        font, ok = QFontDialog.getFont(fontVar, self)
         if ok:
             fontSample.setFont(font)
             if showFontInfo:
