@@ -9,17 +9,12 @@ Module implementing the Corba configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
-
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_CorbaPage import Ui_CorbaPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
@@ -34,32 +29,18 @@ class CorbaPage(ConfigurationPageBase, Ui_CorbaPage):
         self.setupUi(self)
         self.setObjectName("CorbaPage")
         
-        self.idlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.idlCompleter = E5FileCompleter(self.idlEdit)
+        self.idlPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.idlPicker.setToolTip(self.tr(
+            "Press to select the IDL compiler via a file selection dialog."))
         
         # set initial values
-        self.idlEdit.setText(Preferences.getCorba("omniidl"))
+        self.idlPicker.setText(Preferences.getCorba("omniidl"))
         
     def save(self):
         """
         Public slot to save the Corba configuration.
         """
-        Preferences.setCorba("omniidl", self.idlEdit.text())
-        
-    @pyqtSlot()
-    def on_idlButton_clicked(self):
-        """
-        Private slot to handle the IDL compiler selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select IDL compiler"),
-            self.idlEdit.text(),
-            "")
-        
-        if file:
-            self.idlEdit.setText(Utilities.toNativeSeparators(file))
+        Preferences.setCorba("omniidl", self.idlPicker.text())
     
 
 def create(dlg):

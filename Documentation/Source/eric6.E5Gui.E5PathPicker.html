@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html><head>
+<title>eric6.E5Gui.E5PathPicker</title>
+<meta charset="UTF-8">
+<style>
+body {
+    background: #EDECE6;
+    margin: 0em 1em 10em 1em;
+    color: black;
+}
+
+h1 { color: white; background: #85774A; }
+h2 { color: white; background: #85774A; }
+h3 { color: white; background: #9D936E; }
+h4 { color: white; background: #9D936E; }
+    
+a { color: #BA6D36; }
+
+</style>
+</head>
+<body><a NAME="top" ID="top"></a>
+<h1>eric6.E5Gui.E5PathPicker</h1>
+<p>
+Module implementing a path picker widget.
+</p>
+<h3>Global Attributes</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Classes</h3>
+<table>
+<tr>
+<td><a href="#E5PathPicker">E5PathPicker</a></td>
+<td>Class implementing a path picker widget consisting of a line edit and a tool button to open a file dialog.</td>
+</tr><tr>
+<td><a href="#E5PathPickerModes">E5PathPickerModes</a></td>
+<td>Class implementing the path picker modes.</td>
+</tr>
+</table>
+<h3>Functions</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<hr /><hr />
+<a NAME="E5PathPicker" ID="E5PathPicker"></a>
+<h2>E5PathPicker</h2>
+<p>
+    Class implementing a path picker widget consisting of a line edit and a
+    tool button to open a file dialog.
+</p>
+<h3>Derived from</h3>
+QWidget
+<h3>Class Attributes</h3>
+<table>
+<tr><td>DefaultMode</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#E5PathPicker.__init__">E5PathPicker</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#E5PathPicker.__showPathPickerDialog">__showPathPickerDialog</a></td>
+<td>Private slot to show the path picker dialog.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.buttonToolTip">buttonToolTip</a></td>
+<td>Public method to get the tool button tool tip.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.defaultDirectory">defaultDirectory</a></td>
+<td>Public method to get the default directory.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.editorEnabled">editorEnabled</a></td>
+<td>Public method to get the path editor's enabled state.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.editorToolTip">editorToolTip</a></td>
+<td>Public method to get the editor tool tip.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.filters">filters</a></td>
+<td>Public methods to get the filter string.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.mode">mode</a></td>
+<td>Public method to get the path picker mode.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.path">path</a></td>
+<td>Public method to get the current path.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setButtonToolTip">setButtonToolTip</a></td>
+<td>Public method to set the tool button tool tip.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setDefaultDirectory">setDefaultDirectory</a></td>
+<td>Public method to set the default directory.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setEditorEnabled">setEditorEnabled</a></td>
+<td>Public method to set the path editor's enabled state.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setEditorToolTip">setEditorToolTip</a></td>
+<td>Public method to set the editor tool tip.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setFilters">setFilters</a></td>
+<td>Public method to set the filters for the path picker dialog.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setMode">setMode</a></td>
+<td>Public method to set the path picker mode.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setPath">setPath</a></td>
+<td>Public method to set the current path.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setText">setText</a></td>
+<td>Public method to set the current path.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setWindowTitle">setWindowTitle</a></td>
+<td>Public method to set the path picker dialog window title.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.text">text</a></td>
+<td>Public method to get the current path.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.windowTitle">windowTitle</a></td>
+<td>Public method to get the path picker dialog's window title.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="E5PathPicker.__init__" ID="E5PathPicker.__init__"></a>
+<h4>E5PathPicker (Constructor)</h4>
+<b>E5PathPicker</b>(<i>parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl><a NAME="E5PathPicker.__showPathPickerDialog" ID="E5PathPicker.__showPathPickerDialog"></a>
+<h4>E5PathPicker.__showPathPickerDialog</h4>
+<b>__showPathPickerDialog</b>(<i></i>)
+<p>
+        Private slot to show the path picker dialog.
+</p><a NAME="E5PathPicker.buttonToolTip" ID="E5PathPicker.buttonToolTip"></a>
+<h4>E5PathPicker.buttonToolTip</h4>
+<b>buttonToolTip</b>(<i></i>)
+<p>
+        Public method to get the tool button tool tip.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tool tip text
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.defaultDirectory" ID="E5PathPicker.defaultDirectory"></a>
+<h4>E5PathPicker.defaultDirectory</h4>
+<b>defaultDirectory</b>(<i></i>)
+<p>
+        Public method to get the default directory.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+default directory
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.editorEnabled" ID="E5PathPicker.editorEnabled"></a>
+<h4>E5PathPicker.editorEnabled</h4>
+<b>editorEnabled</b>(<i></i>)
+<p>
+        Public method to get the path editor's enabled state.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the enabled state
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl><a NAME="E5PathPicker.editorToolTip" ID="E5PathPicker.editorToolTip"></a>
+<h4>E5PathPicker.editorToolTip</h4>
+<b>editorToolTip</b>(<i></i>)
+<p>
+        Public method to get the editor tool tip.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tool tip text
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.filters" ID="E5PathPicker.filters"></a>
+<h4>E5PathPicker.filters</h4>
+<b>filters</b>(<i></i>)
+<p>
+        Public methods to get the filter string.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+filter string
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.mode" ID="E5PathPicker.mode"></a>
+<h4>E5PathPicker.mode</h4>
+<b>mode</b>(<i></i>)
+<p>
+        Public method to get the path picker mode.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+path picker mode
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+E5PathPickerModes
+</dd>
+</dl><a NAME="E5PathPicker.path" ID="E5PathPicker.path"></a>
+<h4>E5PathPicker.path</h4>
+<b>path</b>(<i></i>)
+<p>
+        Public method to get the current path.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.setButtonToolTip" ID="E5PathPicker.setButtonToolTip"></a>
+<h4>E5PathPicker.setButtonToolTip</h4>
+<b>setButtonToolTip</b>(<i>tooltip</i>)
+<p>
+        Public method to set the tool button tool tip.
+</p><dl>
+<dt><i>tooltip</i> (str)</dt>
+<dd>
+text to be set as a tool tip
+</dd>
+</dl><a NAME="E5PathPicker.setDefaultDirectory" ID="E5PathPicker.setDefaultDirectory"></a>
+<h4>E5PathPicker.setDefaultDirectory</h4>
+<b>setDefaultDirectory</b>(<i>directory</i>)
+<p>
+        Public method to set the default directory.
+</p><dl>
+<dt><i>directory</i> (str)</dt>
+<dd>
+default directory
+</dd>
+</dl><a NAME="E5PathPicker.setEditorEnabled" ID="E5PathPicker.setEditorEnabled"></a>
+<h4>E5PathPicker.setEditorEnabled</h4>
+<b>setEditorEnabled</b>(<i>enable</i>)
+<p>
+        Public method to set the path editor's enabled state.
+</p><dl>
+<dt><i>enable</i> (bool)</dt>
+<dd>
+flag indicating the enable state
+</dd>
+</dl><a NAME="E5PathPicker.setEditorToolTip" ID="E5PathPicker.setEditorToolTip"></a>
+<h4>E5PathPicker.setEditorToolTip</h4>
+<b>setEditorToolTip</b>(<i>tooltip</i>)
+<p>
+        Public method to set the editor tool tip.
+</p><dl>
+<dt><i>tooltip</i> (str)</dt>
+<dd>
+text to be set as a tool tip
+</dd>
+</dl><a NAME="E5PathPicker.setFilters" ID="E5PathPicker.setFilters"></a>
+<h4>E5PathPicker.setFilters</h4>
+<b>setFilters</b>(<i>filters</i>)
+<p>
+        Public method to set the filters for the path picker dialog.
+</p><p>
+        Note: Multiple filters must be separated by ';;'.
+</p><dl>
+<dt><i>filters</i> (str)</dt>
+<dd>
+string containing the file filters
+</dd>
+</dl><a NAME="E5PathPicker.setMode" ID="E5PathPicker.setMode"></a>
+<h4>E5PathPicker.setMode</h4>
+<b>setMode</b>(<i>mode</i>)
+<p>
+        Public method to set the path picker mode.
+</p><dl>
+<dt><i>mode</i> (E5PathPickerModes)</dt>
+<dd>
+picker mode
+</dd>
+</dl><a NAME="E5PathPicker.setPath" ID="E5PathPicker.setPath"></a>
+<h4>E5PathPicker.setPath</h4>
+<b>setPath</b>(<i>path</i>)
+<p>
+        Public method to set the current path.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path to be set
+</dd>
+</dl><a NAME="E5PathPicker.setText" ID="E5PathPicker.setText"></a>
+<h4>E5PathPicker.setText</h4>
+<b>setText</b>(<i>path</i>)
+<p>
+        Public method to set the current path.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path to be set
+</dd>
+</dl><a NAME="E5PathPicker.setWindowTitle" ID="E5PathPicker.setWindowTitle"></a>
+<h4>E5PathPicker.setWindowTitle</h4>
+<b>setWindowTitle</b>(<i>title</i>)
+<p>
+        Public method to set the path picker dialog window title.
+</p><dl>
+<dt><i>title</i> (str)</dt>
+<dd>
+window title
+</dd>
+</dl><a NAME="E5PathPicker.text" ID="E5PathPicker.text"></a>
+<h4>E5PathPicker.text</h4>
+<b>text</b>(<i></i>)
+<p>
+        Public method to get the current path.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.windowTitle" ID="E5PathPicker.windowTitle"></a>
+<h4>E5PathPicker.windowTitle</h4>
+<b>windowTitle</b>(<i></i>)
+<p>
+        Public method to get the path picker dialog's window title.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+window title
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
+<a NAME="E5PathPickerModes" ID="E5PathPickerModes"></a>
+<h2>E5PathPickerModes</h2>
+<p>
+    Class implementing the path picker modes.
+</p>
+<h3>Derived from</h3>
+Enum
+<h3>Class Attributes</h3>
+<table>
+<tr><td>DiretoryMode</td></tr><tr><td>OpenFileMode</td></tr><tr><td>OpenFilesMode</td></tr><tr><td>SaveFileMode</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+
+<div align="right"><a href="#top">Up</a></div>
+<hr />
+</body></html>

@@ -3113,37 +3113,37 @@ linha e posição.&lt;/p&gt;</translation>
         <translation>Mensagem</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="68"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="73"/>
         <source>PEP-257</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="69"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="74"/>
         <source>Eric</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="73"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="78"/>
         <source>Statistics...</source>
         <translation>Estatísticas...</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="75"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="80"/>
         <source>Press to show some statistics for the last run</source>
         <translation>Pressionar para mostrar algumas estatísticas da última execução</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="78"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="83"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="80"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="85"/>
         <source>Press to show all files containing an issue</source>
         <translation>Pressionar para mostrar todos os ficheiros que tenham algum problema</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="552"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="557"/>
         <source>Error: {0}</source>
         <translation>Erro: {0}</translation>
     </message>
@@ -3153,7 +3153,7 @@ linha e posição.&lt;/p&gt;</translation>
         <translation>Corrigir: {0}</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="692"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="697"/>
         <source>No issues found.</source>
         <translation>Não se encontraram problemas.</translation>
     </message>
@@ -3178,12 +3178,12 @@ linha e posição.&lt;/p&gt;</translation>
         <translation>Mostrar ignorado</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="645"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="650"/>
         <source>{0} (ignored)</source>
         <translation>{0} (ignorado)</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="537"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="542"/>
         <source>Preparing files...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3198,12 +3198,12 @@ linha e posição.&lt;/p&gt;</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="134"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="139"/>
         <source>Errors</source>
         <translation type="unfinished">Erros</translation>
     </message>
     <message>
-        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="579"/>
+        <location filename="../Plugins/CheckerPlugins/CodeStyleChecker/CodeStyleCheckerDialog.py" line="584"/>
         <source>Transferring data...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4870,14 +4870,14 @@ para mostrar a página de configuração.</translation>
         <translation>Compilador IDL</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.py" line="33"/>
         <source>Press to select the IDL compiler via a file selection dialog.</source>
         <translation>Pressionar para selecionar o compilador IDL através da caixa de diálogo de seleção de ficheiros.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="43"/>
         <source>Enter the path to the IDL compiler.</source>
-        <translation>Introduzir a rota ao compilador IDL.</translation>
+        <translation type="unfinished">Introduzir a rota ao compilador IDL.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="50"/>
@@ -4887,7 +4887,7 @@ para mostrar a página de configuração.</translation>
     <message>
         <location filename="../Preferences/ConfigurationPages/CorbaPage.py" line="55"/>
         <source>Select IDL compiler</source>
-        <translation>Selecionar compilador IDL</translation>
+        <translation type="obsolete">Selecionar compilador IDL</translation>
     </message>
 </context>
 <context>
@@ -7968,6 +7968,34 @@ com o rato.&lt;/li&gt;
         <location filename="../E5Network/E5NetworkProxyFactory.py" line="224"/>
         <source>Proxy usage was activated but no proxy host for protocol &apos;{0}&apos; configured.</source>
         <translation>O uso de proxy foi ativado mas não há um anfitrião configurado para o protocolo &apos;{0}&apos;.</translation>
+    </message>
+</context>
+<context>
+    <name>E5PathPicker</name>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="70"/>
+        <source>Enter Path Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="275"/>
+        <source>Choose a file to open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="277"/>
+        <source>Choose files to open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="279"/>
+        <source>Choose a file to save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="281"/>
+        <source>Choose a directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -21176,42 +21204,42 @@ URL: {1}</source>
 <context>
     <name>HgClient</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="92"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="90"/>
         <source>The process {0} could not be started. Ensure, that it is in the search path.</source>
         <translation>Não pôde iniciar {0}.&lt;br&gt;Certifique-se de que está na rota de pesquisa.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="139"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="137"/>
         <source>Did not receive the &apos;hello&apos; message.</source>
         <translation>Não recebeu a mensagem &apos;hello&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="141"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="139"/>
         <source>Received data on unexpected channel.</source>
         <translation>Dados recebidos num canal imprevisto.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="146"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="144"/>
         <source>Bad &apos;hello&apos; message, expected &apos;capabilities: &apos; but got &apos;{0}&apos;.</source>
         <translation>Mensagem &apos;hello&apos; má, esperava-se &apos;capabilities: &apos; mas teve &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="151"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="149"/>
         <source>&apos;capabilities&apos; message did not contain any capability.</source>
         <translation>Mensagem &apos;capabilities&apos; não tinha nenhuma capacidade.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="159"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="157"/>
         <source>Bad &apos;hello&apos; message, expected &apos;encoding: &apos; but got &apos;{0}&apos;.</source>
         <translation>Mensagem &apos;hello&apos; má, esperava-se &apos;encoding: &apos; mas teve &apos;{0}&apos;.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="164"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="162"/>
         <source>&apos;encoding&apos; message did not contain any encoding.</source>
         <translation>Mensagem &apos;encoding&apos; não tinha nenhuma codificação.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="353"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgClient.py" line="351"/>
         <source>For message see output dialog.</source>
         <translation>Para a mensagem ver a caixa de diálogo da saída de comandos.</translation>
     </message>
@@ -60261,57 +60289,57 @@ Duplo clique numa entrada mostrará o respetivo rastreio.&lt;/p&gt;</translation
 <context>
     <name>VariablesViewer</name>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="321"/>
+        <location filename="../Debugger/VariablesViewer.py" line="279"/>
         <source>Global Variables</source>
         <translation>Variáveis Globais</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="322"/>
+        <location filename="../Debugger/VariablesViewer.py" line="280"/>
         <source>Globals</source>
         <translation>Globais</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="333"/>
+        <location filename="../Debugger/VariablesViewer.py" line="291"/>
         <source>Value</source>
         <translation>Valor</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="333"/>
+        <location filename="../Debugger/VariablesViewer.py" line="291"/>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="326"/>
+        <location filename="../Debugger/VariablesViewer.py" line="284"/>
         <source>&lt;b&gt;The Global Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the global variables of the debugged program.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="332"/>
+        <location filename="../Debugger/VariablesViewer.py" line="290"/>
         <source>Local Variables</source>
         <translation>Variáveis Locais</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="333"/>
+        <location filename="../Debugger/VariablesViewer.py" line="291"/>
         <source>Locals</source>
         <translation>Locais</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="337"/>
+        <location filename="../Debugger/VariablesViewer.py" line="295"/>
         <source>&lt;b&gt;The Local Variables Viewer Window&lt;/b&gt;&lt;p&gt;This window displays the local variables of the debugged program.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="367"/>
+        <location filename="../Debugger/VariablesViewer.py" line="326"/>
         <source>Show Details...</source>
         <translation>Mostrar Detalhes...</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="372"/>
+        <location filename="../Debugger/VariablesViewer.py" line="331"/>
         <source>Configure...</source>
         <translation>Configurar...</translation>
     </message>
     <message>
-        <location filename="../Debugger/VariablesViewer.py" line="580"/>
+        <location filename="../Debugger/VariablesViewer.py" line="539"/>
         <source>{0} items</source>
         <translation>{0} elementos</translation>
     </message>

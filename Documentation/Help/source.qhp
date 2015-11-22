@@ -123,6 +123,7 @@
             <section title="eric6.E5Gui.E5ModelToolBar" ref="eric6.E5Gui.E5ModelToolBar.html" />
             <section title="eric6.E5Gui.E5PassivePopup" ref="eric6.E5Gui.E5PassivePopup.html" />
             <section title="eric6.E5Gui.E5PasswordMeter" ref="eric6.E5Gui.E5PasswordMeter.html" />
+            <section title="eric6.E5Gui.E5PathPicker" ref="eric6.E5Gui.E5PathPicker.html" />
             <section title="eric6.E5Gui.E5ProgressDialog" ref="eric6.E5Gui.E5ProgressDialog.html" />
             <section title="eric6.E5Gui.E5SideBar" ref="eric6.E5Gui.E5SideBar.html" />
             <section title="eric6.E5Gui.E5SingleApplication" ref="eric6.E5Gui.E5SingleApplication.html" />
@@ -2567,7 +2568,6 @@
       <keyword name="CorbaPage" id="CorbaPage" ref="eric6.Preferences.ConfigurationPages.CorbaPage.html#CorbaPage" />
       <keyword name="CorbaPage (Constructor)" id="CorbaPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.CorbaPage.html#CorbaPage.__init__" />
       <keyword name="CorbaPage (Module)" id="CorbaPage (Module)" ref="eric6.Preferences.ConfigurationPages.CorbaPage.html" />
-      <keyword name="CorbaPage.on_idlButton_clicked" id="CorbaPage.on_idlButton_clicked" ref="eric6.Preferences.ConfigurationPages.CorbaPage.html#CorbaPage.on_idlButton_clicked" />
       <keyword name="CorbaPage.save" id="CorbaPage.save" ref="eric6.Preferences.ConfigurationPages.CorbaPage.html#CorbaPage.save" />
       <keyword name="CreateDialogCodeDialog" id="CreateDialogCodeDialog" ref="eric6.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog" />
       <keyword name="CreateDialogCodeDialog (Constructor)" id="CreateDialogCodeDialog (Constructor)" ref="eric6.Project.CreateDialogCodeDialog.html#CreateDialogCodeDialog.__init__" />
@@ -3722,6 +3722,29 @@
       <keyword name="E5PasswordMeter.setMaximum" id="E5PasswordMeter.setMaximum" ref="eric6.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setMaximum" />
       <keyword name="E5PasswordMeter.setMinimum" id="E5PasswordMeter.setMinimum" ref="eric6.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setMinimum" />
       <keyword name="E5PasswordMeter.setValue" id="E5PasswordMeter.setValue" ref="eric6.E5Gui.E5PasswordMeter.html#E5PasswordMeter.setValue" />
+      <keyword name="E5PathPicker" id="E5PathPicker" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker" />
+      <keyword name="E5PathPicker (Constructor)" id="E5PathPicker (Constructor)" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.__init__" />
+      <keyword name="E5PathPicker (Module)" id="E5PathPicker (Module)" ref="eric6.E5Gui.E5PathPicker.html" />
+      <keyword name="E5PathPicker.__showPathPickerDialog" id="E5PathPicker.__showPathPickerDialog" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.__showPathPickerDialog" />
+      <keyword name="E5PathPicker.buttonToolTip" id="E5PathPicker.buttonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.buttonToolTip" />
+      <keyword name="E5PathPicker.defaultDirectory" id="E5PathPicker.defaultDirectory" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.defaultDirectory" />
+      <keyword name="E5PathPicker.editorEnabled" id="E5PathPicker.editorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.editorEnabled" />
+      <keyword name="E5PathPicker.editorToolTip" id="E5PathPicker.editorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.editorToolTip" />
+      <keyword name="E5PathPicker.filters" id="E5PathPicker.filters" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.filters" />
+      <keyword name="E5PathPicker.mode" id="E5PathPicker.mode" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.mode" />
+      <keyword name="E5PathPicker.path" id="E5PathPicker.path" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.path" />
+      <keyword name="E5PathPicker.setButtonToolTip" id="E5PathPicker.setButtonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setButtonToolTip" />
+      <keyword name="E5PathPicker.setDefaultDirectory" id="E5PathPicker.setDefaultDirectory" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setDefaultDirectory" />
+      <keyword name="E5PathPicker.setEditorEnabled" id="E5PathPicker.setEditorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setEditorEnabled" />
+      <keyword name="E5PathPicker.setEditorToolTip" id="E5PathPicker.setEditorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setEditorToolTip" />
+      <keyword name="E5PathPicker.setFilters" id="E5PathPicker.setFilters" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setFilters" />
+      <keyword name="E5PathPicker.setMode" id="E5PathPicker.setMode" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setMode" />
+      <keyword name="E5PathPicker.setPath" id="E5PathPicker.setPath" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setPath" />
+      <keyword name="E5PathPicker.setText" id="E5PathPicker.setText" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setText" />
+      <keyword name="E5PathPicker.setWindowTitle" id="E5PathPicker.setWindowTitle" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setWindowTitle" />
+      <keyword name="E5PathPicker.text" id="E5PathPicker.text" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.text" />
+      <keyword name="E5PathPicker.windowTitle" id="E5PathPicker.windowTitle" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.windowTitle" />
+      <keyword name="E5PathPickerModes" id="E5PathPickerModes" ref="eric6.E5Gui.E5PathPicker.html#E5PathPickerModes" />
       <keyword name="E5ProgressDialog" id="E5ProgressDialog" ref="eric6.E5Gui.E5ProgressDialog.html#E5ProgressDialog" />
       <keyword name="E5ProgressDialog (Constructor)" id="E5ProgressDialog (Constructor)" ref="eric6.E5Gui.E5ProgressDialog.html#E5ProgressDialog.__init__" />
       <keyword name="E5ProgressDialog (Module)" id="E5ProgressDialog (Module)" ref="eric6.E5Gui.E5ProgressDialog.html" />
@@ -13997,6 +14020,7 @@
       <file>eric6.E5Gui.E5ModelToolBar.html</file>
       <file>eric6.E5Gui.E5PassivePopup.html</file>
       <file>eric6.E5Gui.E5PasswordMeter.html</file>
+      <file>eric6.E5Gui.E5PathPicker.html</file>
       <file>eric6.E5Gui.E5ProgressDialog.html</file>
       <file>eric6.E5Gui.E5SideBar.html</file>
       <file>eric6.E5Gui.E5SingleApplication.html</file>

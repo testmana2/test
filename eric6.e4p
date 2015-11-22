@@ -180,6 +180,7 @@
     <Source>E5Gui/E5ModelToolBar.py</Source>
     <Source>E5Gui/E5PassivePopup.py</Source>
     <Source>E5Gui/E5PasswordMeter.py</Source>
+    <Source>E5Gui/E5PathPicker.py</Source>
     <Source>E5Gui/E5ProgressDialog.py</Source>
     <Source>E5Gui/E5SideBar.py</Source>
     <Source>E5Gui/E5SingleApplication.py</Source>
@@ -1159,6 +1160,7 @@
     <Source>ThirdParty/Send2Trash/send2trash/plat_other.py</Source>
     <Source>ThirdParty/Send2Trash/send2trash/plat_win.py</Source>
     <Source>ThirdParty/__init__.py</Source>
+    <Source>ThirdParty/enum/__init__.py</Source>
     <Source>Toolbox/PyQt4ImportHook.py</Source>
     <Source>Toolbox/SingleApplication.py</Source>
     <Source>Toolbox/Startup.py</Source>
@@ -1751,6 +1753,7 @@
     <Other>ThirdParty/Pygments/pygments/LICENSE</Other>
     <Other>ThirdParty/Pygments/pygments/PKG-INFO</Other>
     <Other>ThirdParty/Send2Trash/LICENSE</Other>
+    <Other>ThirdParty/enum/LICENSE</Other>
     <Other>changelog</Other>
     <Other>default.e4k</Other>
     <Other>default_Mac.e4k</Other>
