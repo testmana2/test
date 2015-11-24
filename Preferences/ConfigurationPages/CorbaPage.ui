@@ -39,6 +39,9 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="E5PathPicker" name="idlPicker" native="true">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the path to the IDL compiler.</string>
         </property>
