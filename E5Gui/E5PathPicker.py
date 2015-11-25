@@ -16,7 +16,7 @@ try:
 except ImportError:
     from ThirdParty.enum import Enum
 
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton
 
 from . import E5FileDialog
@@ -41,8 +41,12 @@ class E5PathPicker(QWidget):
     """
     Class implementing a path picker widget consisting of a line edit and a
     tool button to open a file dialog.
+    
+    @signal textChanged(path) emitted when the entered path has changed
     """
     DefaultMode = E5PathPickerModes.OpenFileMode
+    
+    textChanged = pyqtSignal(str)
     
     def __init__(self, parent=None):
         """
@@ -76,6 +80,7 @@ class E5PathPicker(QWidget):
         self.__layout.addWidget(self.__button)
         
         self.__button.clicked.connect(self.__showPathPickerDialog)
+        self.__editor.textChanged.connect(self.textChanged)
     
     def setMode(self, mode):
         """
@@ -108,6 +113,12 @@ class E5PathPicker(QWidget):
         @rtype E5PathPickerModes
         """
         return self.__mode
+    
+    def clear(self):
+        """
+        Public method to clear the current path.
+        """
+        self.__editor.clear()
     
     def setText(self, path):
         """

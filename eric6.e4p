@@ -26,54 +26,6 @@
     <Source>DataViews/PyCoverageDialog.py</Source>
     <Source>DataViews/PyProfileDialog.py</Source>
     <Source>DataViews/__init__.py</Source>
-    <Source>DebugClients/Python/AsyncFile.py</Source>
-    <Source>DebugClients/Python/AsyncIO.py</Source>
-    <Source>DebugClients/Python/DCTestResult.py</Source>
-    <Source>DebugClients/Python/DebugBase.py</Source>
-    <Source>DebugClients/Python/DebugClient.py</Source>
-    <Source>DebugClients/Python/DebugClientBase.py</Source>
-    <Source>DebugClients/Python/DebugClientCapabilities.py</Source>
-    <Source>DebugClients/Python/DebugClientThreads.py</Source>
-    <Source>DebugClients/Python/DebugConfig.py</Source>
-    <Source>DebugClients/Python/DebugProtocol.py</Source>
-    <Source>DebugClients/Python/DebugThread.py</Source>
-    <Source>DebugClients/Python/FlexCompleter.py</Source>
-    <Source>DebugClients/Python/PyProfile.py</Source>
-    <Source>DebugClients/Python/__init__.py</Source>
-    <Source>DebugClients/Python/coverage/__init__.py</Source>
-    <Source>DebugClients/Python/coverage/__main__.py</Source>
-    <Source>DebugClients/Python/coverage/annotate.py</Source>
-    <Source>DebugClients/Python/coverage/backunittest.py</Source>
-    <Source>DebugClients/Python/coverage/backward.py</Source>
-    <Source>DebugClients/Python/coverage/bytecode.py</Source>
-    <Source>DebugClients/Python/coverage/cmdline.py</Source>
-    <Source>DebugClients/Python/coverage/collector.py</Source>
-    <Source>DebugClients/Python/coverage/config.py</Source>
-    <Source>DebugClients/Python/coverage/control.py</Source>
-    <Source>DebugClients/Python/coverage/data.py</Source>
-    <Source>DebugClients/Python/coverage/debug.py</Source>
-    <Source>DebugClients/Python/coverage/env.py</Source>
-    <Source>DebugClients/Python/coverage/execfile.py</Source>
-    <Source>DebugClients/Python/coverage/files.py</Source>
-    <Source>DebugClients/Python/coverage/html.py</Source>
-    <Source>DebugClients/Python/coverage/misc.py</Source>
-    <Source>DebugClients/Python/coverage/monkey.py</Source>
-    <Source>DebugClients/Python/coverage/parser.py</Source>
-    <Source>DebugClients/Python/coverage/phystokens.py</Source>
-    <Source>DebugClients/Python/coverage/pickle2json.py</Source>
-    <Source>DebugClients/Python/coverage/plugin.py</Source>
-    <Source>DebugClients/Python/coverage/plugin_support.py</Source>
-    <Source>DebugClients/Python/coverage/python.py</Source>
-    <Source>DebugClients/Python/coverage/pytracer.py</Source>
-    <Source>DebugClients/Python/coverage/report.py</Source>
-    <Source>DebugClients/Python/coverage/results.py</Source>
-    <Source>DebugClients/Python/coverage/summary.py</Source>
-    <Source>DebugClients/Python/coverage/templite.py</Source>
-    <Source>DebugClients/Python/coverage/test_helpers.py</Source>
-    <Source>DebugClients/Python/coverage/version.py</Source>
-    <Source>DebugClients/Python/coverage/xmlreport.py</Source>
-    <Source>DebugClients/Python/eric6dbgstub.py</Source>
-    <Source>DebugClients/Python/getpass.py</Source>
     <Source>DebugClients/Python3/AsyncFile.py</Source>
     <Source>DebugClients/Python3/AsyncIO.py</Source>
     <Source>DebugClients/Python3/DCTestResult.py</Source>
@@ -123,6 +75,54 @@
     <Source>DebugClients/Python3/coverage/xmlreport.py</Source>
     <Source>DebugClients/Python3/eric6dbgstub.py</Source>
     <Source>DebugClients/Python3/getpass.py</Source>
+    <Source>DebugClients/Python/AsyncFile.py</Source>
+    <Source>DebugClients/Python/AsyncIO.py</Source>
+    <Source>DebugClients/Python/DCTestResult.py</Source>
+    <Source>DebugClients/Python/DebugBase.py</Source>
+    <Source>DebugClients/Python/DebugClient.py</Source>
+    <Source>DebugClients/Python/DebugClientBase.py</Source>
+    <Source>DebugClients/Python/DebugClientCapabilities.py</Source>
+    <Source>DebugClients/Python/DebugClientThreads.py</Source>
+    <Source>DebugClients/Python/DebugConfig.py</Source>
+    <Source>DebugClients/Python/DebugProtocol.py</Source>
+    <Source>DebugClients/Python/DebugThread.py</Source>
+    <Source>DebugClients/Python/FlexCompleter.py</Source>
+    <Source>DebugClients/Python/PyProfile.py</Source>
+    <Source>DebugClients/Python/__init__.py</Source>
+    <Source>DebugClients/Python/coverage/__init__.py</Source>
+    <Source>DebugClients/Python/coverage/__main__.py</Source>
+    <Source>DebugClients/Python/coverage/annotate.py</Source>
+    <Source>DebugClients/Python/coverage/backunittest.py</Source>
+    <Source>DebugClients/Python/coverage/backward.py</Source>
+    <Source>DebugClients/Python/coverage/bytecode.py</Source>
+    <Source>DebugClients/Python/coverage/cmdline.py</Source>
+    <Source>DebugClients/Python/coverage/collector.py</Source>
+    <Source>DebugClients/Python/coverage/config.py</Source>
+    <Source>DebugClients/Python/coverage/control.py</Source>
+    <Source>DebugClients/Python/coverage/data.py</Source>
+    <Source>DebugClients/Python/coverage/debug.py</Source>
+    <Source>DebugClients/Python/coverage/env.py</Source>
+    <Source>DebugClients/Python/coverage/execfile.py</Source>
+    <Source>DebugClients/Python/coverage/files.py</Source>
+    <Source>DebugClients/Python/coverage/html.py</Source>
+    <Source>DebugClients/Python/coverage/misc.py</Source>
+    <Source>DebugClients/Python/coverage/monkey.py</Source>
+    <Source>DebugClients/Python/coverage/parser.py</Source>
+    <Source>DebugClients/Python/coverage/phystokens.py</Source>
+    <Source>DebugClients/Python/coverage/pickle2json.py</Source>
+    <Source>DebugClients/Python/coverage/plugin.py</Source>
+    <Source>DebugClients/Python/coverage/plugin_support.py</Source>
+    <Source>DebugClients/Python/coverage/python.py</Source>
+    <Source>DebugClients/Python/coverage/pytracer.py</Source>
+    <Source>DebugClients/Python/coverage/report.py</Source>
+    <Source>DebugClients/Python/coverage/results.py</Source>
+    <Source>DebugClients/Python/coverage/summary.py</Source>
+    <Source>DebugClients/Python/coverage/templite.py</Source>
+    <Source>DebugClients/Python/coverage/test_helpers.py</Source>
+    <Source>DebugClients/Python/coverage/version.py</Source>
+    <Source>DebugClients/Python/coverage/xmlreport.py</Source>
+    <Source>DebugClients/Python/eric6dbgstub.py</Source>
+    <Source>DebugClients/Python/getpass.py</Source>
     <Source>DebugClients/__init__.py</Source>
     <Source>Debugger/BreakPointModel.py</Source>
     <Source>Debugger/BreakPointViewer.py</Source>
@@ -759,7 +759,6 @@
     <Source>Preferences/ConfigurationPages/DebuggerGeneralPage.py</Source>
     <Source>Preferences/ConfigurationPages/DebuggerPython3Page.py</Source>
     <Source>Preferences/ConfigurationPages/DebuggerPythonPage.py</Source>
-    <Source>Preferences/ConfigurationPages/DebuggerRubyPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorAPIsPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorAutocompletionPage.py</Source>
     <Source>Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.py</Source>
@@ -1511,7 +1510,6 @@
     <Form>Preferences/ConfigurationPages/DebuggerGeneralPage.ui</Form>
     <Form>Preferences/ConfigurationPages/DebuggerPython3Page.ui</Form>
     <Form>Preferences/ConfigurationPages/DebuggerPythonPage.ui</Form>
-    <Form>Preferences/ConfigurationPages/DebuggerRubyPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorAPIsPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorAutocompletionPage.ui</Form>
     <Form>Preferences/ConfigurationPages/EditorAutocompletionQScintillaPage.ui</Form>
@@ -1654,14 +1652,14 @@
   <Interfaces/>
   <Others>
     <Other>.hgignore</Other>
-    <Other>APIs/Python/zope-2.10.7.api</Other>
-    <Other>APIs/Python/zope-2.11.2.api</Other>
-    <Other>APIs/Python/zope-3.3.1.api</Other>
     <Other>APIs/Python3/PyQt4.bas</Other>
     <Other>APIs/Python3/PyQt5.bas</Other>
     <Other>APIs/Python3/QScintilla2.bas</Other>
     <Other>APIs/Python3/eric6.api</Other>
     <Other>APIs/Python3/eric6.bas</Other>
+    <Other>APIs/Python/zope-2.10.7.api</Other>
+    <Other>APIs/Python/zope-2.11.2.api</Other>
+    <Other>APIs/Python/zope-3.3.1.api</Other>
     <Other>APIs/QSS/qss.api</Other>
     <Other>APIs/Ruby/Ruby-1.8.7.api</Other>
     <Other>APIs/Ruby/Ruby-1.8.7.bas</Other>
@@ -1670,8 +1668,8 @@
     <Other>CSSs</Other>
     <Other>CodeTemplates</Other>
     <Other>DTDs</Other>
-    <Other>DebugClients/Python/coverage/doc</Other>
     <Other>DebugClients/Python3/coverage/doc</Other>
+    <Other>DebugClients/Python/coverage/doc</Other>
     <Other>DesignerTemplates</Other>
     <Other>Dictionaries</Other>
     <Other>Documentation/Help</Other>

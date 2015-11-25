@@ -36,18 +36,14 @@
      <property name="title">
       <string>Python Interpreter for Debug Client</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="interpreterEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="E5PathPicker" name="interpreterPicker" native="true">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the path of the Python interpreter to be used by the debug client.</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="interpreterButton">
-        <property name="toolTip">
-         <string>Press to select the Python interpreter via a file selection dialog</string>
         </property>
        </widget>
       </item>
@@ -59,31 +55,7 @@
      <property name="title">
       <string>Debug Client Type</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="1" column="0" colspan="3">
-       <layout class="QHBoxLayout">
-        <item>
-         <widget class="QLineEdit" name="debugClientEdit">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="toolTip">
-           <string>Enter the path of the Debug Client to be used.  Leave empty to use the default.</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QToolButton" name="debugClientButton">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="toolTip">
-           <string>Press to select the Debug Client via a file selection dialog</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
+     <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
        <widget class="QRadioButton" name="standardButton">
         <property name="toolTip">
@@ -91,6 +63,16 @@
         </property>
         <property name="text">
          <string>Standard</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QRadioButton" name="threadedButton">
+        <property name="toolTip">
+         <string>Select the multi threaded debug client</string>
+        </property>
+        <property name="text">
+         <string>Multi Threaded</string>
         </property>
        </widget>
       </item>
@@ -104,13 +86,16 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="1">
-       <widget class="QRadioButton" name="threadedButton">
-        <property name="toolTip">
-         <string>Select the multi threaded debug client</string>
+      <item row="1" column="0" colspan="3">
+       <widget class="E5PathPicker" name="debugClientPicker" native="true">
+        <property name="enabled">
+         <bool>false</bool>
         </property>
-        <property name="text">
-         <string>Multi Threaded</string>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="toolTip">
+         <string>Enter the path of the Debug Client to be used.  Leave empty to use the default.</string>
         </property>
        </widget>
       </item>
@@ -174,14 +159,20 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>interpreterEdit</tabstop>
-  <tabstop>interpreterButton</tabstop>
+  <tabstop>interpreterPicker</tabstop>
   <tabstop>standardButton</tabstop>
   <tabstop>threadedButton</tabstop>
   <tabstop>customButton</tabstop>
-  <tabstop>debugClientEdit</tabstop>
-  <tabstop>debugClientButton</tabstop>
+  <tabstop>debugClientPicker</tabstop>
   <tabstop>sourceExtensionsEdit</tabstop>
   <tabstop>pyRedirectCheckBox</tabstop>
   <tabstop>pyNoEncodingCheckBox</tabstop>
@@ -191,16 +182,16 @@
   <connection>
    <sender>customButton</sender>
    <signal>toggled(bool)</signal>
-   <receiver>debugClientEdit</receiver>
+   <receiver>debugClientPicker</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>368</x>
-     <y>194</y>
+     <x>328</x>
+     <y>116</y>
     </hint>
     <hint type="destinationlabel">
-     <x>332</x>
-     <y>219</y>
+     <x>328</x>
+     <y>135</y>
     </hint>
    </hints>
   </connection>

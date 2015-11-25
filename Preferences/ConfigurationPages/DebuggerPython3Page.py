@@ -37,6 +37,7 @@ class DebuggerPython3Page(ConfigurationPageBase, Ui_DebuggerPython3Page):
         self.debugClientPicker.setMode(E5PathPickerModes.OpenFileMode)
         self.debugClientPicker.setToolTip(self.tr(
             "Press to select the Debug Client via a file selection dialog"))
+        self.debugClientPicker.setFilters(self.tr("Python Files (*.py *.py3)"))
         
         # set initial values
         self.interpreterPicker.setText(

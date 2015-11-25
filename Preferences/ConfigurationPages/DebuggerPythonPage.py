@@ -9,17 +9,12 @@ Module implementing the Debugger Python configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
-
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_DebuggerPythonPage import Ui_DebuggerPythonPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
@@ -34,14 +29,18 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         self.setupUi(self)
         self.setObjectName("DebuggerPythonPage")
         
-        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.interpreterPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.interpreterPicker.setToolTip(self.tr(
+            "Press to select the Python interpreter via a file selection"
+            " dialog"))
         
-        self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
-        self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
+        self.debugClientPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.debugClientPicker.setToolTip(self.tr(
+            "Press to select the Debug Client via a file selection dialog"))
+        self.debugClientPicker.setFilters(self.tr("Python Files (*.py *.py2)"))
         
         # set initial values
-        self.interpreterEdit.setText(
+        self.interpreterPicker.setText(
             Preferences.getDebugger("PythonInterpreter"))
         dct = Preferences.getDebugger("DebugClientType")
         if dct == "standard":
@@ -50,7 +49,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
             self.threadedButton.setChecked(True)
         else:
             self.customButton.setChecked(True)
-        self.debugClientEdit.setText(
+        self.debugClientPicker.setText(
             Preferences.getDebugger("DebugClient"))
         self.pyRedirectCheckBox.setChecked(
             Preferences.getDebugger("PythonRedirect"))
@@ -65,7 +64,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         """
         Preferences.setDebugger(
             "PythonInterpreter",
-            self.interpreterEdit.text())
+            self.interpreterPicker.text())
         if self.standardButton.isChecked():
             dct = "standard"
         elif self.threadedButton.isChecked():
@@ -75,7 +74,7 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         Preferences.setDebugger("DebugClientType", dct)
         Preferences.setDebugger(
             "DebugClient",
-            self.debugClientEdit.text())
+            self.debugClientPicker.text())
         Preferences.setDebugger(
             "PythonRedirect",
             self.pyRedirectCheckBox.isChecked())
@@ -85,36 +84,6 @@ class DebuggerPythonPage(ConfigurationPageBase, Ui_DebuggerPythonPage):
         Preferences.setDebugger(
             "PythonExtensions",
             self.sourceExtensionsEdit.text())
-        
-    @pyqtSlot()
-    def on_interpreterButton_clicked(self):
-        """
-        Private slot to handle the Python interpreter selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select Python interpreter for Debug Client"),
-            self.interpreterEdit.text(),
-            "")
-            
-        if file:
-            self.interpreterEdit.setText(
-                Utilities.toNativeSeparators(file))
-        
-    @pyqtSlot()
-    def on_debugClientButton_clicked(self):
-        """
-        Private slot to handle the Debug Client selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            None,
-            self.tr("Select Debug Client"),
-            self.debugClientEdit.text(),
-            self.tr("Python Files (*.py *.py2)"))
-            
-        if file:
-            self.debugClientEdit.setText(
-                Utilities.toNativeSeparators(file))
     
 
 def create(dlg):

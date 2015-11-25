@@ -765,7 +765,6 @@
               <section title="eric6.Preferences.ConfigurationPages.DebuggerGeneralPage" ref="eric6.Preferences.ConfigurationPages.DebuggerGeneralPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.DebuggerPython3Page" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html" />
               <section title="eric6.Preferences.ConfigurationPages.DebuggerPythonPage" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html" />
-              <section title="eric6.Preferences.ConfigurationPages.DebuggerRubyPage" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorAPIsPage" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorAutocompletionPage" ref="eric6.Preferences.ConfigurationPages.EditorAutocompletionPage.html" />
               <section title="eric6.Preferences.ConfigurationPages.EditorAutocompletionQScintillaPage" ref="eric6.Preferences.ConfigurationPages.EditorAutocompletionQScintillaPage.html" />
@@ -3194,20 +3193,11 @@
       <keyword name="DebuggerPython3Page" id="DebuggerPython3Page" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html#DebuggerPython3Page" />
       <keyword name="DebuggerPython3Page (Constructor)" id="DebuggerPython3Page (Constructor)" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html#DebuggerPython3Page.__init__" />
       <keyword name="DebuggerPython3Page (Module)" id="DebuggerPython3Page (Module)" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html" />
-      <keyword name="DebuggerPython3Page.on_debugClientButton_clicked" id="DebuggerPython3Page.on_debugClientButton_clicked" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html#DebuggerPython3Page.on_debugClientButton_clicked" />
-      <keyword name="DebuggerPython3Page.on_interpreterButton_clicked" id="DebuggerPython3Page.on_interpreterButton_clicked" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html#DebuggerPython3Page.on_interpreterButton_clicked" />
       <keyword name="DebuggerPython3Page.save" id="DebuggerPython3Page.save" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html#DebuggerPython3Page.save" />
       <keyword name="DebuggerPythonPage" id="DebuggerPythonPage" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html#DebuggerPythonPage" />
       <keyword name="DebuggerPythonPage (Constructor)" id="DebuggerPythonPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html#DebuggerPythonPage.__init__" />
       <keyword name="DebuggerPythonPage (Module)" id="DebuggerPythonPage (Module)" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html" />
-      <keyword name="DebuggerPythonPage.on_debugClientButton_clicked" id="DebuggerPythonPage.on_debugClientButton_clicked" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html#DebuggerPythonPage.on_debugClientButton_clicked" />
-      <keyword name="DebuggerPythonPage.on_interpreterButton_clicked" id="DebuggerPythonPage.on_interpreterButton_clicked" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html#DebuggerPythonPage.on_interpreterButton_clicked" />
       <keyword name="DebuggerPythonPage.save" id="DebuggerPythonPage.save" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html#DebuggerPythonPage.save" />
-      <keyword name="DebuggerRubyPage" id="DebuggerRubyPage" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html#DebuggerRubyPage" />
-      <keyword name="DebuggerRubyPage (Constructor)" id="DebuggerRubyPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html#DebuggerRubyPage.__init__" />
-      <keyword name="DebuggerRubyPage (Module)" id="DebuggerRubyPage (Module)" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html" />
-      <keyword name="DebuggerRubyPage.on_rubyInterpreterButton_clicked" id="DebuggerRubyPage.on_rubyInterpreterButton_clicked" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html#DebuggerRubyPage.on_rubyInterpreterButton_clicked" />
-      <keyword name="DebuggerRubyPage.save" id="DebuggerRubyPage.save" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html#DebuggerRubyPage.save" />
       <keyword name="DefaultSearchEngines (Package)" id="DefaultSearchEngines (Package)" ref="index-eric6.Helpviewer.OpenSearch.DefaultSearchEngines.html" />
       <keyword name="DeleteFilesConfirmationDialog" id="DeleteFilesConfirmationDialog" ref="eric6.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog" />
       <keyword name="DeleteFilesConfirmationDialog (Constructor)" id="DeleteFilesConfirmationDialog (Constructor)" ref="eric6.UI.DeleteFilesConfirmationDialog.html#DeleteFilesConfirmationDialog.__init__" />
@@ -3727,6 +3717,7 @@
       <keyword name="E5PathPicker (Module)" id="E5PathPicker (Module)" ref="eric6.E5Gui.E5PathPicker.html" />
       <keyword name="E5PathPicker.__showPathPickerDialog" id="E5PathPicker.__showPathPickerDialog" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.__showPathPickerDialog" />
       <keyword name="E5PathPicker.buttonToolTip" id="E5PathPicker.buttonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.buttonToolTip" />
+      <keyword name="E5PathPicker.clear" id="E5PathPicker.clear" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.clear" />
       <keyword name="E5PathPicker.defaultDirectory" id="E5PathPicker.defaultDirectory" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.defaultDirectory" />
       <keyword name="E5PathPicker.editorEnabled" id="E5PathPicker.editorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.editorEnabled" />
       <keyword name="E5PathPicker.editorToolTip" id="E5PathPicker.editorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.editorToolTip" />
@@ -4464,8 +4455,7 @@
       <keyword name="EditorAPIsPage.on_addApiFileButton_clicked" id="EditorAPIsPage.on_addApiFileButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_addApiFileButton_clicked" />
       <keyword name="EditorAPIsPage.on_addInstalledApiFileButton_clicked" id="EditorAPIsPage.on_addInstalledApiFileButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_addInstalledApiFileButton_clicked" />
       <keyword name="EditorAPIsPage.on_addPluginApiFileButton_clicked" id="EditorAPIsPage.on_addPluginApiFileButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_addPluginApiFileButton_clicked" />
-      <keyword name="EditorAPIsPage.on_apiFileButton_clicked" id="EditorAPIsPage.on_apiFileButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiFileButton_clicked" />
-      <keyword name="EditorAPIsPage.on_apiFileEdit_textChanged" id="EditorAPIsPage.on_apiFileEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiFileEdit_textChanged" />
+      <keyword name="EditorAPIsPage.on_apiFilePicker_textChanged" id="EditorAPIsPage.on_apiFilePicker_textChanged" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiFilePicker_textChanged" />
       <keyword name="EditorAPIsPage.on_apiLanguageComboBox_activated" id="EditorAPIsPage.on_apiLanguageComboBox_activated" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiLanguageComboBox_activated" />
       <keyword name="EditorAPIsPage.on_apiList_itemSelectionChanged" id="EditorAPIsPage.on_apiList_itemSelectionChanged" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_apiList_itemSelectionChanged" />
       <keyword name="EditorAPIsPage.on_deleteApiFileButton_clicked" id="EditorAPIsPage.on_deleteApiFileButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#EditorAPIsPage.on_deleteApiFileButton_clicked" />
@@ -13313,7 +13303,6 @@
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.DebuggerGeneralPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html#create" />
-      <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorAPIsPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorAutocompletionPage.html#create" />
       <keyword name="create" id="create" ref="eric6.Preferences.ConfigurationPages.EditorAutocompletionQScintillaPage.html#create" />
@@ -14512,7 +14501,6 @@
       <file>eric6.Preferences.ConfigurationPages.DebuggerGeneralPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.DebuggerPython3Page.html</file>
       <file>eric6.Preferences.ConfigurationPages.DebuggerPythonPage.html</file>
-      <file>eric6.Preferences.ConfigurationPages.DebuggerRubyPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorAPIsPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorAutocompletionPage.html</file>
       <file>eric6.Preferences.ConfigurationPages.EditorAutocompletionQScintillaPage.html</file>

@@ -47,7 +47,13 @@ Module implementing a path picker widget.
 <p>
     Class implementing a path picker widget consisting of a line edit and a
     tool button to open a file dialog.
-</p>
+</p><h3>Signals</h3>
+<dl>
+<dt>textChanged(path)</dt>
+<dd>
+emitted when the entered path has changed
+</dd>
+</dl>
 <h3>Derived from</h3>
 QWidget
 <h3>Class Attributes</h3>
@@ -69,6 +75,9 @@ QWidget
 </tr><tr>
 <td><a href="#E5PathPicker.buttonToolTip">buttonToolTip</a></td>
 <td>Public method to get the tool button tool tip.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.clear">clear</a></td>
+<td>Public method to clear the current path.</td>
 </tr><tr>
 <td><a href="#E5PathPicker.defaultDirectory">defaultDirectory</a></td>
 <td>Public method to get the default directory.</td>
@@ -156,7 +165,12 @@ tool tip text
 <dd>
 str
 </dd>
-</dl><a NAME="E5PathPicker.defaultDirectory" ID="E5PathPicker.defaultDirectory"></a>
+</dl><a NAME="E5PathPicker.clear" ID="E5PathPicker.clear"></a>
+<h4>E5PathPicker.clear</h4>
+<b>clear</b>(<i></i>)
+<p>
+        Public method to clear the current path.
+</p><a NAME="E5PathPicker.defaultDirectory" ID="E5PathPicker.defaultDirectory"></a>
 <h4>E5PathPicker.defaultDirectory</h4>
 <b>defaultDirectory</b>(<i></i>)
 <p>

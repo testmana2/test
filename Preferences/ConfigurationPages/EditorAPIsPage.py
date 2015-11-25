@@ -13,15 +13,14 @@ from PyQt5.QtCore import QDir, pyqtSlot, QFileInfo
 from PyQt5.QtWidgets import QInputDialog
 
 from E5Gui.E5Application import e5App
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog, E5MessageBox
+from E5Gui import E5MessageBox
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorAPIsPage import Ui_EditorAPIsPage
 
 import Preferences
 import Utilities
-import UI.PixmapCache
 
 
 class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
@@ -36,13 +35,15 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.setupUi(self)
         self.setObjectName("EditorAPIsPage")
         
-        self.apiFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.apiFilePicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.apiFilePicker.setToolTip(self.tr(
+            "Press to select an API file via a selection dialog"))
+        self.apiFilePicker.setFilters(self.tr(
+            "API File (*.api);;All Files (*)"))
         
         self.prepareApiButton.setText(self.tr("Compile APIs"))
         self.__currentAPI = None
         self.__inPreparation = False
-        
-        self.apiFileCompleter = E5FileCompleter(self.apiFileEdit)
         
         # set initial values
         self.pluginManager = e5App().getObject("PluginManager")
@@ -97,7 +98,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         self.apiGroup.setEnabled(True)
         self.deleteApiFileButton.setEnabled(False)
         self.addApiFileButton.setEnabled(False)
-        self.apiFileEdit.clear()
+        self.apiFilePicker.clear()
         
         for api in self.apis[self.currentApiLanguage]:
             if api:
@@ -134,28 +135,14 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
         return apis
         
     @pyqtSlot()
-    def on_apiFileButton_clicked(self):
-        """
-        Private method to select an api file.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select API file"),
-            self.apiFileEdit.text(),
-            self.tr("API File (*.api);;All Files (*)"))
-            
-        if file:
-            self.apiFileEdit.setText(Utilities.toNativeSeparators(file))
-        
-    @pyqtSlot()
     def on_addApiFileButton_clicked(self):
         """
         Private slot to add the api file displayed to the listbox.
         """
-        file = self.apiFileEdit.text()
+        file = self.apiFilePicker.text()
         if file:
             self.apiList.addItem(Utilities.toNativeSeparators(file))
-            self.apiFileEdit.clear()
+            self.apiFilePicker.clear()
         self.prepareApiButton.setEnabled(self.apiList.count() > 0)
         
     @pyqtSlot()
@@ -290,7 +277,7 @@ class EditorAPIsPage(ConfigurationPageBase, Ui_EditorAPIsPage):
             len(self.apiList.selectedItems()) > 0)
     
     @pyqtSlot(str)
-    def on_apiFileEdit_textChanged(self, txt):
+    def on_apiFilePicker_textChanged(self, txt):
         """
         Private slot to handle the entering of an API file name.
         
