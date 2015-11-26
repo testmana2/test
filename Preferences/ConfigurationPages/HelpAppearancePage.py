@@ -11,15 +11,12 @@ from __future__ import unicode_literals
 
 from PyQt5.QtCore import pyqtSlot
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpAppearancePage import Ui_HelpAppearancePage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
@@ -34,9 +31,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.setupUi(self)
         self.setObjectName("HelpAppearancePage")
         
-        self.styleSheetButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
+        self.styleSheetPicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.__displayMode = None
         
@@ -59,7 +54,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.autoLoadImagesCheckBox.setChecked(
             Preferences.getHelp("AutoLoadImages"))
         
-        self.styleSheetEdit.setText(Preferences.getHelp("UserStyleSheet"))
+        self.styleSheetPicker.setText(Preferences.getHelp("UserStyleSheet"))
         
         self.tabsCloseButtonCheckBox.setChecked(
             Preferences.getUI("SingleCloseButton"))
@@ -99,7 +94,7 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
             "AutoLoadImages",
             self.autoLoadImagesCheckBox.isChecked())
         
-        Preferences.setHelp("UserStyleSheet", self.styleSheetEdit.text())
+        Preferences.setHelp("UserStyleSheet", self.styleSheetPicker.text())
         
         self.saveColours(Preferences.setHelp)
         
@@ -128,20 +123,6 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         """
         self.fixedFont = \
             self.selectFont(self.fixedFontSample, self.fixedFont, True)
-    
-    @pyqtSlot()
-    def on_styleSheetButton_clicked(self):
-        """
-        Private slot to handle the user style sheet selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select Style Sheet"),
-            self.styleSheetEdit.text(),
-            "")
-        
-        if file:
-            self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))
     
 
 def create(dlg):

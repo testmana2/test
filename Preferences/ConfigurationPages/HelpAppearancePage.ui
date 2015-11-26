@@ -170,16 +170,18 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="styleSheetEdit">
+       <widget class="E5PathPicker" name="styleSheetPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the file name of a user style sheet</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="styleSheetButton">
-        <property name="toolTip">
-         <string>Select the user style sheet via a file selection dialog</string>
         </property>
        </widget>
       </item>
@@ -227,13 +229,22 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>standardFontButton</tabstop>
   <tabstop>fixedFontButton</tabstop>
   <tabstop>secureURLsColourButton</tabstop>
   <tabstop>autoLoadImagesCheckBox</tabstop>
-  <tabstop>styleSheetEdit</tabstop>
-  <tabstop>styleSheetButton</tabstop>
+  <tabstop>styleSheetPicker</tabstop>
+  <tabstop>tabsCloseButtonCheckBox</tabstop>
+  <tabstop>warnOnMultipleCloseCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections/>

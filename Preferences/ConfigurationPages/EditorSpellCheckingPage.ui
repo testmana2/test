@@ -232,9 +232,15 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="pwlEdit">
-           <property name="toolTip">
-            <string>Enter the filename of the personal word list</string>
+          <widget class="E5PathPicker" name="pwlPicker" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::StrongFocus</enum>
            </property>
           </widget>
          </item>
@@ -246,37 +252,29 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="pelEdit">
-           <property name="toolTip">
-            <string>Enter the filename of the personal exclude list</string>
+          <widget class="E5PathPicker" name="pelPicker" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::StrongFocus</enum>
            </property>
           </widget>
          </item>
-         <item row="2" column="0" colspan="3">
+         <item row="2" column="0" colspan="2">
           <widget class="QLabel" name="label_6">
            <property name="text">
             <string>&lt;b&gt;Note:&lt;/b&gt; leave these entries empty to use the default</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0" colspan="3">
+         <item row="3" column="0" colspan="2">
           <widget class="QLabel" name="label_7">
            <property name="text">
             <string>&lt;b&gt;Note:&lt;/b&gt; valid for all newly opened editors</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QToolButton" name="pwlButton">
-           <property name="toolTip">
-            <string>Select the personal word list file via a file selection dialog</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QToolButton" name="pelButton">
-           <property name="toolTip">
-            <string>Select the personal exclude list file via a file selection dialog</string>
            </property>
           </widget>
          </item>
@@ -360,16 +358,22 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>checkingEnabledCheckBox</tabstop>
   <tabstop>defaultLanguageCombo</tabstop>
   <tabstop>stringsOnlyCheckBox</tabstop>
   <tabstop>minimumWordSizeSlider</tabstop>
   <tabstop>spellingMarkerButton</tabstop>
-  <tabstop>pwlEdit</tabstop>
-  <tabstop>pwlButton</tabstop>
-  <tabstop>pelEdit</tabstop>
-  <tabstop>pelButton</tabstop>
+  <tabstop>pwlPicker</tabstop>
+  <tabstop>pelPicker</tabstop>
   <tabstop>enabledCheckBox</tabstop>
   <tabstop>chunkSizeSpinBox</tabstop>
  </tabstops>

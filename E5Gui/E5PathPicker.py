@@ -100,7 +100,7 @@ class E5PathPicker(QWidget):
             self.__completer = None
             
             # Set a new completer
-            if mode == E5PathPicker.DiretoryMode:
+            if mode == E5PathPickerModes.DiretoryMode:
                 self.__completer = E5DirCompleter(self.__editor)
             else:
                 self.__completer = E5FileCompleter(self.__editor)

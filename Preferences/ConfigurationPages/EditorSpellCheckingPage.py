@@ -9,17 +9,12 @@ Module implementing the Editor Spellchecking configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
-
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_EditorSpellCheckingPage import Ui_EditorSpellCheckingPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class EditorSpellCheckingPage(ConfigurationPageBase,
@@ -35,8 +30,13 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         self.setupUi(self)
         self.setObjectName("EditorSpellCheckingPage")
         
-        self.pwlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.pelButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pwlPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.pwlPicker.setFilters(self.tr(
+            "Dictionary File (*.dic);;All Files (*)"))
+        
+        self.pelPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.pelPicker.setFilters(self.tr(
+            "Dictionary File (*.dic);;All Files (*)"))
         
         from QScintilla.SpellChecker import SpellChecker
         languages = sorted(SpellChecker.getAvailableLanguages())
@@ -45,9 +45,6 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
             self.errorLabel.hide()
         else:
             self.spellingFrame.setEnabled(False)
-        
-        self.pwlFileCompleter = E5FileCompleter(self.pwlEdit, showHidden=True)
-        self.pelFileCompleter = E5FileCompleter(self.pelEdit, showHidden=True)
         
         # set initial values
         self.checkingEnabledCheckBox.setChecked(
@@ -66,9 +63,9 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
             "SpellingMarkers", self.spellingMarkerButton,
             Preferences.getEditorColour, hasAlpha=True)
         
-        self.pwlEdit.setText(
+        self.pwlPicker.setText(
             Preferences.getEditor("SpellCheckingPersonalWordList"))
-        self.pelEdit.setText(
+        self.pelPicker.setText(
             Preferences.getEditor("SpellCheckingPersonalExcludeList"))
         
         if self.spellingFrame.isEnabled():
@@ -98,42 +95,14 @@ class EditorSpellCheckingPage(ConfigurationPageBase,
         self.saveColours(Preferences.setEditorColour)
         
         Preferences.setEditor(
-            "SpellCheckingPersonalWordList", self.pwlEdit.text())
+            "SpellCheckingPersonalWordList", self.pwlPicker.text())
         Preferences.setEditor(
-            "SpellCheckingPersonalExcludeList", self.pelEdit.text())
+            "SpellCheckingPersonalExcludeList", self.pelPicker.text())
         
         Preferences.setEditor(
             "AutoSpellCheckingEnabled", self.enabledCheckBox.isChecked())
         Preferences.setEditor(
             "AutoSpellCheckChunkSize", self.chunkSizeSpinBox.value())
-    
-    @pyqtSlot()
-    def on_pwlButton_clicked(self):
-        """
-        Private method to select the personal word list file.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select personal word list"),
-            self.pwlEdit.text(),
-            self.tr("Dictionary File (*.dic);;All Files (*)"))
-            
-        if file:
-            self.pwlEdit.setText(Utilities.toNativeSeparators(file))
-    
-    @pyqtSlot()
-    def on_pelButton_clicked(self):
-        """
-        Private method to select the personal exclude list file.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select personal exclude list"),
-            self.pelEdit.text(),
-            self.tr("Dictionary File (*.dic);;All Files (*)"))
-            
-        if file:
-            self.pelEdit.setText(Utilities.toNativeSeparators(file))
 
 
 def create(dlg):

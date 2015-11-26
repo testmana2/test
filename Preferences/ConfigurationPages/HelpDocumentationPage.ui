@@ -36,28 +36,30 @@
      <property name="title">
       <string>Python 2 Documentation</string>
      </property>
-     <layout class="QGridLayout" name="_2">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="python2DocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="E5PathPicker" name="python2DocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the Python 2 documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_3">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON2DOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="python2DocDirButton">
-        <property name="toolTip">
-         <string>Press to select the Python 2 documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -69,28 +71,30 @@
      <property name="title">
       <string>Python 3 Documentation</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="pythonDocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="E5PathPicker" name="pythonDocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the Python 3 documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_2">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON3DOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="pythonDocDirButton">
-        <property name="toolTip">
-         <string>Press to select the Python 3 documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -102,28 +106,30 @@
      <property name="title">
       <string>Qt4 Documentation</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="qt4DocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="E5PathPicker" name="qt4DocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the Qt4 documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_2_2_2">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT4DOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="qt4DocDirButton">
-        <property name="toolTip">
-         <string>Press to select the Qt4 documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -135,28 +141,30 @@
      <property name="title">
       <string>Qt5 Documentation</string>
      </property>
-     <layout class="QGridLayout" name="_3">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="qt5DocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="E5PathPicker" name="qt5DocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the Qt5 documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_2_2_4">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT5DOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="qt5DocDirButton">
-        <property name="toolTip">
-         <string>Press to select the Qt5 documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -168,28 +176,30 @@
      <property name="title">
       <string>PyQt4 Documentation</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="pyqt4DocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="E5PathPicker" name="pyqt4DocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the PyQt4 documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_2_2_3">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT4DOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="pyqt4DocDirButton">
-        <property name="toolTip">
-         <string>Press to select the PyQt4 documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -201,28 +211,30 @@
      <property name="title">
       <string>PyQt5 Documentation</string>
      </property>
-     <layout class="QGridLayout" name="_4">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="pyqt5DocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="E5PathPicker" name="pyqt5DocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the PyQt5 documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_2_2_5">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="pyqt5DocDirButton">
-        <property name="toolTip">
-         <string>Press to select the PyQt5 documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -234,28 +246,30 @@
      <property name="title">
       <string>PySide Documentation</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="0" column="0">
-       <widget class="QLineEdit" name="pysideDocDirEdit">
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <widget class="E5PathPicker" name="pysideDocDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the PySide documentation directory</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QLabel" name="textLabel1_8_2_2">
         <property name="text">
          <string>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QToolButton" name="pysideDocDirButton">
-        <property name="toolTip">
-         <string>Press to select the PySide documentation directory via a dialog</string>
         </property>
        </widget>
       </item>
@@ -277,22 +291,14 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>python2DocDirEdit</tabstop>
-  <tabstop>python2DocDirButton</tabstop>
-  <tabstop>pythonDocDirEdit</tabstop>
-  <tabstop>pythonDocDirButton</tabstop>
-  <tabstop>qt4DocDirEdit</tabstop>
-  <tabstop>qt4DocDirButton</tabstop>
-  <tabstop>qt5DocDirEdit</tabstop>
-  <tabstop>qt5DocDirButton</tabstop>
-  <tabstop>pyqt4DocDirEdit</tabstop>
-  <tabstop>pyqt4DocDirButton</tabstop>
-  <tabstop>pyqt5DocDirEdit</tabstop>
-  <tabstop>pyqt5DocDirButton</tabstop>
-  <tabstop>pysideDocDirEdit</tabstop>
-  <tabstop>pysideDocDirButton</tabstop>
- </tabstops>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
