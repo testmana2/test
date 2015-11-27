@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>428</width>
-    <height>229</height>
+    <height>207</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,91 +16,36 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QGridLayout">
-   <item row="6" column="0" colspan="4">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0" colspan="4">
-    <widget class="QCheckBox" name="enabledCheckBox">
-     <property name="toolTip">
-      <string>Select, whether the breakpoint is enabled</string>
-     </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="textLabel1_2">
      <property name="text">
-      <string>Enabled</string>
-     </property>
-     <property name="checked">
-      <bool>true</bool>
+      <string>Filename:</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="4">
-    <widget class="QCheckBox" name="temporaryCheckBox">
-     <property name="toolTip">
-      <string>Select whether this is a temporary breakpoint</string>
-     </property>
-     <property name="text">
-      <string>Temporary Breakpoint</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1" colspan="3">
-    <widget class="QComboBox" name="filenameCombo">
-     <property name="toolTip">
-      <string>Enter the filename of the breakpoint</string>
-     </property>
-     <property name="editable">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1" colspan="3">
-    <widget class="QComboBox" name="conditionCombo">
+   <item row="0" column="1" colspan="2">
+    <widget class="E5ComboPathPicker" name="filenamePicker" native="true">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
-     <property name="toolTip">
-      <string>Enter or select a condition for the breakpoint</string>
+     <property name="focusPolicy">
+      <enum>Qt::WheelFocus</enum>
      </property>
-     <property name="editable">
-      <bool>true</bool>
+     <property name="toolTip">
+      <string>Enter the filename of the breakpoint</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QSpinBox" name="ignoreSpinBox">
-     <property name="toolTip">
-      <string>Enter an ignore count for the breakpoint</string>
-     </property>
-     <property name="maximum">
-      <number>9999</number>
+   <item row="1" column="0">
+    <widget class="QLabel" name="textLabel2_2">
+     <property name="text">
+      <string>Linenumber:</string>
      </property>
     </widget>
-   </item>
-   <item row="3" column="2" colspan="2">
-    <spacer>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Expanding</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>250</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
    </item>
    <item row="1" column="1">
     <widget class="QSpinBox" name="linenoSpinBox">
@@ -131,24 +76,26 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="textLabel2_2">
-     <property name="text">
-      <string>Linenumber:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="textLabel1_2">
-     <property name="text">
-      <string>Filename:</string>
-     </property>
-    </widget>
-   </item>
    <item row="2" column="0">
     <widget class="QLabel" name="textLabel1">
      <property name="text">
       <string>Condition:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QComboBox" name="conditionCombo">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="toolTip">
+      <string>Enter or select a condition for the breakpoint</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -159,10 +106,62 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="3">
-    <widget class="QToolButton" name="fileButton">
+   <item row="3" column="1">
+    <widget class="QSpinBox" name="ignoreSpinBox">
      <property name="toolTip">
-      <string>Press to open a file selection dialog</string>
+      <string>Enter an ignore count for the breakpoint</string>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>250</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0" colspan="3">
+    <widget class="QCheckBox" name="temporaryCheckBox">
+     <property name="toolTip">
+      <string>Select whether this is a temporary breakpoint</string>
+     </property>
+     <property name="text">
+      <string>Temporary Breakpoint</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="3">
+    <widget class="QCheckBox" name="enabledCheckBox">
+     <property name="toolTip">
+      <string>Select, whether the breakpoint is enabled</string>
+     </property>
+     <property name="text">
+      <string>Enabled</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>
@@ -170,10 +169,17 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5ComboPathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>filenameCombo</tabstop>
+  <tabstop>filenamePicker</tabstop>
   <tabstop>linenoSpinBox</tabstop>
-  <tabstop>fileButton</tabstop>
   <tabstop>conditionCombo</tabstop>
   <tabstop>ignoreSpinBox</tabstop>
   <tabstop>temporaryCheckBox</tabstop>

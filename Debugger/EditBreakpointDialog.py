@@ -11,16 +11,11 @@ from __future__ import unicode_literals
 
 import os.path
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_EditBreakpointDialog import Ui_EditBreakpointDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
@@ -50,10 +45,9 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             self.setObjectName(name)
         self.setModal(modal)
         
-        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.filenamePicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
-        self.filenameCompleter = E5FileCompleter(self.filenameCombo)
         
         fn, lineno = id
         
@@ -62,7 +56,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             
             # set the filename
             if fn is not None:
-                self.filenameCombo.setEditText(fn)
+                self.filenamePicker.setEditText(fn)
             
             # set the line number
             self.linenoSpinBox.setValue(lineno)
@@ -85,8 +79,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             self.temporaryCheckBox.setChecked(temp)
             self.enabledCheckBox.setChecked(enabled)
             
-            self.filenameCombo.setEnabled(False)
-            self.fileButton.setEnabled(False)
+            self.filenamePicker.setEnabled(False)
             self.linenoSpinBox.setEnabled(False)
             self.conditionCombo.setFocus()
         else:
@@ -99,8 +92,8 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             except ValueError:
                 filenameHistory.insert(0, fn)
                 curr = 0
-            self.filenameCombo.addItems(filenameHistory)
-            self.filenameCombo.setCurrentIndex(curr)
+            self.filenamePicker.addItems(filenameHistory)
+            self.filenamePicker.setCurrentIndex(curr)
             
             # set the condition
             cond = ''
@@ -118,21 +111,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
         
-    @pyqtSlot()
-    def on_fileButton_clicked(self):
-        """
-        Private slot to select a file via a file selection dialog.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select filename of the breakpoint"),
-            self.filenameCombo.currentText(),
-            "")
-            
-        if file:
-            self.filenameCombo.setEditText(Utilities.toNativeSeparators(file))
-        
-    def on_filenameCombo_editTextChanged(self, fn):
+    def on_filenamePicker_editTextChanged(self, fn):
         """
         Private slot to handle the change of the filename.
         
@@ -162,7 +141,7 @@ class EditBreakpointDialog(QDialog, Ui_EditBreakpointDialog):
             (filename, lineno, condition, temporary flag, enabled flag,
             ignore count)
         """
-        fn = self.filenameCombo.currentText()
+        fn = self.filenamePicker.currentText()
         if not fn:
             fn = None
         else:
