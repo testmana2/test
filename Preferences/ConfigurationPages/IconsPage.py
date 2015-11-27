@@ -12,15 +12,12 @@ from __future__ import unicode_literals
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QListWidgetItem
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_IconsPage import Ui_IconsPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class IconsPage(ConfigurationPageBase, Ui_IconsPage):
@@ -35,9 +32,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         self.setupUi(self)
         self.setObjectName("IconsPage")
         
-        self.iconDirectoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.iconDirectoryCompleter = E5DirCompleter(self.iconDirectoryEdit)
+        self.iconDirectoryPicker.setMode(E5PathPickerModes.DiretoryMode)
         
         # set initial values
         dirList = Preferences.getIcons("Path")[:]
@@ -66,7 +61,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             self.upButton.setEnabled(False)
             self.downButton.setEnabled(False)
             self.showIconsButton.setEnabled(
-                self.iconDirectoryEdit.text() != "")
+                self.iconDirectoryPicker.text() != "")
         else:
             maxIndex = self.iconDirectoryList.count() - 1
             self.upButton.setEnabled(row != 0)
@@ -74,11 +69,11 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             self.deleteIconDirectoryButton.setEnabled(True)
             self.showIconsButton.setEnabled(True)
         
-    def on_iconDirectoryEdit_textChanged(self, txt):
+    def on_iconDirectoryPicker_textChanged(self, txt):
         """
-        Private slot to handle the textChanged signal of the directory edit.
+        Private slot to handle the textChanged signal of the directory picker.
         
-        @param txt the text of the directory edit (string)
+        @param txt the text of the directory picker (string)
         """
         self.addIconDirectoryButton.setEnabled(txt != "")
         self.showIconsButton.setEnabled(
@@ -125,28 +120,14 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
             self.downButton.setEnabled(True)
         
     @pyqtSlot()
-    def on_iconDirectoryButton_clicked(self):
-        """
-        Private slot to select an icon directory.
-        """
-        dir = E5FileDialog.getExistingDirectory(
-            None,
-            self.tr("Select icon directory"),
-            "",
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if dir:
-            self.iconDirectoryEdit.setText(Utilities.toNativeSeparators(dir))
-        
-    @pyqtSlot()
     def on_addIconDirectoryButton_clicked(self):
         """
         Private slot to add the icon directory displayed to the listbox.
         """
-        dir = self.iconDirectoryEdit.text()
+        dir = self.iconDirectoryPicker.text()
         if dir:
             QListWidgetItem(dir, self.iconDirectoryList)
-            self.iconDirectoryEdit.clear()
+            self.iconDirectoryPicker.clear()
         row = self.iconDirectoryList.currentRow()
         self.on_iconDirectoryList_currentRowChanged(row)
         
@@ -166,7 +147,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         """
         Private slot to display a preview of an icons directory.
         """
-        dir = self.iconDirectoryEdit.text()
+        dir = self.iconDirectoryPicker.text()
         if not dir:
             itm = self.iconDirectoryList.currentItem()
             if itm is not None:

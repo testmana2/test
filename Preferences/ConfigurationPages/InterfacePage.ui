@@ -156,7 +156,7 @@
     </widget>
    </item>
    <item>
-    <layout class="QGridLayout">
+    <layout class="QGridLayout" name="gridLayout_3">
      <item row="0" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
@@ -164,7 +164,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1" colspan="2">
+     <item row="0" column="1">
       <widget class="QComboBox" name="styleComboBox">
        <property name="toolTip">
         <string>Select the interface style</string>
@@ -179,16 +179,18 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="styleSheetEdit">
-       <property name="toolTip">
-        <string>Enter the name of the style sheet file</string>
+      <widget class="E5PathPicker" name="styleSheetPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
        </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QToolButton" name="styleSheetButton">
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
        <property name="toolTip">
-        <string>Select the style sheet file via a file selection dialog</string>
+        <string>Enter the path of the style sheet file</string>
        </property>
       </widget>
      </item>
@@ -563,6 +565,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>uiBrowsersListFoldersFirstCheckBox</tabstop>
   <tabstop>uiBrowsersHideNonPublicCheckBox</tabstop>
@@ -572,8 +582,7 @@
   <tabstop>uiCaptionShowsFilenameGroupBox</tabstop>
   <tabstop>filenameLengthSpinBox</tabstop>
   <tabstop>styleComboBox</tabstop>
-  <tabstop>styleSheetEdit</tabstop>
-  <tabstop>styleSheetButton</tabstop>
+  <tabstop>styleSheetPicker</tabstop>
   <tabstop>tlTopButton</tabstop>
   <tabstop>tlLeftButton</tabstop>
   <tabstop>trTopButton</tabstop>

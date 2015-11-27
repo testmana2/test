@@ -9,18 +9,14 @@ Module implementing the Help Viewers configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QButtonGroup
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpViewersPage import Ui_HelpViewersPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
@@ -35,16 +31,13 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         self.setupUi(self)
         self.setObjectName("HelpViewersPage")
         
-        self.customViewerSelectionButton.setIcon(
-            UI.PixmapCache.getIcon("open.png"))
+        self.customViewerPicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.helpViewerGroup = QButtonGroup()
         self.helpViewerGroup.addButton(self.helpBrowserButton)
         self.helpViewerGroup.addButton(self.qtAssistantButton)
         self.helpViewerGroup.addButton(self.webBrowserButton)
         self.helpViewerGroup.addButton(self.customViewerButton)
-        
-        self.customViewerCompleter = E5FileCompleter(self.customViewerEdit)
         
         # set initial values
         hvId = Preferences.getHelp("HelpViewerType")
@@ -56,7 +49,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
             self.webBrowserButton.setChecked(True)
         else:
             self.customViewerButton.setChecked(True)
-        self.customViewerEdit.setText(
+        self.customViewerPicker.setText(
             Preferences.getHelp("CustomViewer"))
         
     def save(self):
@@ -74,63 +67,7 @@ class HelpViewersPage(ConfigurationPageBase, Ui_HelpViewersPage):
         Preferences.setHelp("HelpViewerType", hvId)
         Preferences.setHelp(
             "CustomViewer",
-            self.customViewerEdit.text())
-        
-    @pyqtSlot()
-    def on_customViewerSelectionButton_clicked(self):
-        """
-        Private slot to handle the custom viewer selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select Custom Viewer"),
-            self.customViewerEdit.text(),
-            "")
-        
-        if file:
-            self.customViewerEdit.setText(Utilities.toNativeSeparators(file))
-        
-    @pyqtSlot()
-    def on_webbrowserButton_clicked(self):
-        """
-        Private slot to handle the Web browser selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select Web-Browser"),
-            self.webbrowserEdit.text(),
-            "")
-        
-        if file:
-            self.webbrowserEdit.setText(Utilities.toNativeSeparators(file))
-        
-    @pyqtSlot()
-    def on_pdfviewerButton_clicked(self):
-        """
-        Private slot to handle the PDF viewer selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select PDF-Viewer"),
-            self.pdfviewerEdit.text(),
-            "")
-        
-        if file:
-            self.pdfviewerEdit.setText(Utilities.toNativeSeparators(file))
-        
-    @pyqtSlot()
-    def on_chmviewerButton_clicked(self):
-        """
-        Private slot to handle the CHM viewer selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select CHM-Viewer"),
-            self.chmviewerEdit.text(),
-            "")
-        
-        if file:
-            self.chmviewerEdit.setText(Utilities.toNativeSeparators(file))
+            self.customViewerPicker.text())
     
 
 def create(dlg):

@@ -11,15 +11,12 @@ from __future__ import unicode_literals
 
 from PyQt5.QtCore import pyqtSlot
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_QtPage import Ui_QtPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class QtPage(ConfigurationPageBase, Ui_QtPage):
@@ -34,12 +31,10 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         self.setupUi(self)
         self.setObjectName("QtPage")
         
-        self.qt4TransButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.qt4TransCompleter = E5DirCompleter(self.qt4TransEdit)
+        self.qt4TransPicker.setMode(E5PathPickerModes.DiretoryMode)
         
         # set initial values
-        self.qt4TransEdit.setText(Preferences.getQt("Qt4TranslationsDir"))
+        self.qt4TransPicker.setText(Preferences.getQt("Qt4TranslationsDir"))
         self.qt4PrefixEdit.setText(Preferences.getQt("QtToolsPrefix4"))
         self.qt4PostfixEdit.setText(Preferences.getQt("QtToolsPostfix4"))
         self.__updateQt4Sample()
@@ -51,26 +46,12 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         """
         Public slot to save the Qt configuration.
         """
-        Preferences.setQt("Qt4TranslationsDir", self.qt4TransEdit.text())
+        Preferences.setQt("Qt4TranslationsDir", self.qt4TransPicker.text())
         Preferences.setQt("QtToolsPrefix4", self.qt4PrefixEdit.text())
         Preferences.setQt("QtToolsPostfix4", self.qt4PostfixEdit.text())
         Preferences.setQt("PyuicIndent", self.pyuicIndentSpinBox.value())
         Preferences.setQt("PyuicFromImports",
                           self.pyuicImportsCheckBox.isChecked())
-        
-    @pyqtSlot()
-    def on_qt4TransButton_clicked(self):
-        """
-        Private slot to handle the Qt4 translations directory selection.
-        """
-        dir = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select Qt4 Translations Directory"),
-            self.qt4TransEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if dir:
-            self.qt4TransEdit.setText(Utilities.toNativeSeparators(dir))
         
     def __updateQt4Sample(self):
         """

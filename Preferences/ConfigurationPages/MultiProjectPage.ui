@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>494</width>
-    <height>359</height>
+    <height>362</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -38,20 +38,18 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLineEdit" name="workspaceEdit">
+       <widget class="E5PathPicker" name="workspacePicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the name of the workspace directory</string>
-        </property>
-        <property name="whatsThis">
-         <string>&lt;b&gt;Workspace Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the workspace. This directory is used as the default for opening or saving new files or projects.&lt;/p&gt;</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="workspaceButton">
-        <property name="toolTip">
-         <string>Select the workspace directory via a directory selection button</string>
         </property>
        </widget>
       </item>
@@ -160,9 +158,16 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>workspaceEdit</tabstop>
-  <tabstop>workspaceButton</tabstop>
+  <tabstop>workspacePicker</tabstop>
   <tabstop>openMasterAutomaticallyCheckBox</tabstop>
   <tabstop>multiProjectTimestampCheckBox</tabstop>
   <tabstop>multiProjectRecentSpinBox</tabstop>

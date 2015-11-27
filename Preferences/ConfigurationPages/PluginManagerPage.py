@@ -9,19 +9,14 @@ Module implementing the Plugin Manager configuration page.
 
 from __future__ import unicode_literals
 
-import os
-
 from PyQt5.QtCore import pyqtSlot
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_PluginManagerPage import Ui_PluginManagerPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
@@ -36,14 +31,12 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
         
-        self.downloadDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
+        self.downloadDirPicker.setMode(E5PathPickerModes.DiretoryMode)
         
         # set initial values
         self.activateExternalPluginsCheckBox.setChecked(
             Preferences.getPluginManager("ActivateExternal"))
-        self.downloadDirEdit.setText(
+        self.downloadDirPicker.setText(
             Preferences.getPluginManager("DownloadPath"))
         self.generationsSpinBox.setValue(
             Preferences.getPluginManager("KeepGenerations"))
@@ -75,7 +68,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
             self.activateExternalPluginsCheckBox.isChecked())
         Preferences.setPluginManager(
             "DownloadPath",
-            self.downloadDirEdit.text())
+            self.downloadDirPicker.text())
         Preferences.setPluginManager(
             "KeepGenerations",
             self.generationsSpinBox.value())
@@ -100,23 +93,6 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         if self.repositoryUrlEdit.text() != self.__repositoryUrl:
             Preferences.setUI(
                 "PluginRepositoryUrl6", self.repositoryUrlEdit.text())
-    
-    @pyqtSlot()
-    def on_downloadDirButton_clicked(self):
-        """
-        Private slot to handle the directory selection via dialog.
-        """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select plugins download directory"),
-            self.downloadDirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            dn = Utilities.toNativeSeparators(directory)
-            while dn.endswith(os.sep):
-                dn = dn[:-1]
-            self.downloadDirEdit.setText(dn)
     
     @pyqtSlot(bool)
     def on_repositoryUrlEditButton_toggled(self, checked):

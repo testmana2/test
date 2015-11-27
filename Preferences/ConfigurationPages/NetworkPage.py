@@ -9,20 +9,16 @@ Module implementing the Network configuration page.
 
 from __future__ import unicode_literals
 
-import os
-
 from PyQt5.QtCore import pyqtSlot
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
+
 from E5Network.E5Ftp import E5FtpProxyType
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_NetworkPage import Ui_NetworkPage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
@@ -37,9 +33,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.setupUi(self)
         self.setObjectName("NetworkPage")
         
-        self.downloadDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.downloadDirCompleter = E5DirCompleter(self.downloadDirEdit)
+        self.downloadDirPicker.setMode(E5PathPickerModes.DiretoryMode)
         
         self.ftpProxyTypeCombo.addItem(
             self.tr("No FTP Proxy"), E5FtpProxyType.NoProxy)
@@ -63,7 +57,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
             self.tr("Bluecoat Proxy"), E5FtpProxyType.Bluecoat)
         
         # set initial values
-        self.downloadDirEdit.setText(Preferences.getUI("DownloadPath"))
+        self.downloadDirPicker.setText(Preferences.getUI("DownloadPath"))
         self.requestFilenameCheckBox.setChecked(
             Preferences.getUI("RequestDownloadFilename"))
         policy = Preferences.getHelp("DownloadManagerRemovePolicy")
@@ -120,7 +114,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         """
         Preferences.setUI(
             "DownloadPath",
-            self.downloadDirEdit.text())
+            self.downloadDirPicker.text())
         Preferences.setUI(
             "RequestDownloadFilename",
             self.requestFilenameCheckBox.isChecked())
@@ -184,23 +178,6 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         Preferences.setUI(
             "ProxyAccount/Ftp",
             self.ftpProxyAccountEdit.text())
-    
-    @pyqtSlot()
-    def on_downloadDirButton_clicked(self):
-        """
-        Private slot to handle the directory selection via dialog.
-        """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select download directory"),
-            self.downloadDirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            dn = Utilities.toNativeSeparators(directory)
-            while dn.endswith(os.sep):
-                dn = dn[:-1]
-            self.downloadDirEdit.setText(dn)
     
     @pyqtSlot()
     def on_clearProxyPasswordsButton_clicked(self):

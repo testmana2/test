@@ -41,16 +41,18 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="downloadDirEdit">
+      <widget class="E5PathPicker" name="downloadDirPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
        <property name="toolTip">
         <string>Enter the plugins download directory</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="downloadDirButton">
-       <property name="toolTip">
-        <string>Select the plugins download directory via a directory selection dialog</string>
        </property>
       </widget>
      </item>
@@ -233,9 +235,16 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>downloadDirEdit</tabstop>
-  <tabstop>downloadDirButton</tabstop>
+  <tabstop>downloadDirPicker</tabstop>
   <tabstop>generationsSpinBox</tabstop>
   <tabstop>keepHiddenCheckBox</tabstop>
   <tabstop>activateExternalPluginsCheckBox</tabstop>

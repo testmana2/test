@@ -15,15 +15,13 @@ import os
 from PyQt5.QtCore import pyqtSlot, QTranslator
 from PyQt5.QtWidgets import QStyleFactory
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_InterfacePage import Ui_InterfacePage
 
 import Preferences
 import Utilities
-import UI.PixmapCache
 
 from eric6config import getConfig
 
@@ -40,9 +38,10 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         self.setupUi(self)
         self.setObjectName("InterfacePage")
         
-        self.styleSheetButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
+        self.styleSheetPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.styleSheetPicker.setFilters(self.tr(
+            "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
+            "All files (*)"))
         
         # set initial values
         self.__populateStyleCombo()
@@ -63,7 +62,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             Preferences.getUI("CaptionShowsFilename"))
         self.filenameLengthSpinBox.setValue(
             Preferences.getUI("CaptionFilenameLength"))
-        self.styleSheetEdit.setText(Preferences.getUI("StyleSheet"))
+        self.styleSheetPicker.setText(Preferences.getUI("StyleSheet"))
         
         if Preferences.getUI("TopLeftByLeft"):
             self.tlLeftButton.setChecked(True)
@@ -141,7 +140,7 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
             self.filenameLengthSpinBox.value())
         Preferences.setUI(
             "StyleSheet",
-            self.styleSheetEdit.text())
+            self.styleSheetPicker.text())
         
         # save the dockarea corner settings
         Preferences.setUI(
@@ -245,22 +244,6 @@ class InterfacePage(ConfigurationPageBase, Ui_InterfacePage):
         for locale in localeList:
             self.languageComboBox.addItem(locales[locale], locale)
         self.languageComboBox.setCurrentIndex(currentIndex)
-        
-    @pyqtSlot()
-    def on_styleSheetButton_clicked(self):
-        """
-        Private method to select the style sheet file via a dialog.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select style sheet file"),
-            self.styleSheetEdit.text(),
-            self.tr(
-                "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
-                "All files (*)"))
-        
-        if file:
-            self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))
         
     @pyqtSlot()
     def on_resetLayoutButton_clicked(self):

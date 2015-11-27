@@ -10,7 +10,7 @@
     <height>371</height>
    </rect>
   </property>
-  <layout class="QGridLayout">
+  <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="2">
     <widget class="QLabel" name="headerLabel">
      <property name="text">
@@ -38,57 +38,13 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
-    <layout class="QHBoxLayout">
-     <item>
-      <widget class="QPushButton" name="deleteIconDirectoryButton">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="toolTip">
-        <string>Press to delete the selected directory from the list</string>
-       </property>
-       <property name="text">
-        <string>Delete</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="addIconDirectoryButton">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="toolTip">
-        <string>Press to add the entered directory to the list</string>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="iconDirectoryEdit">
-       <property name="toolTip">
-        <string>Enter a directory to be added</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="iconDirectoryButton">
-       <property name="toolTip">
-        <string>Press to select an icon directory via a selection dialog</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="4" column="1">
-    <widget class="QPushButton" name="showIconsButton">
-     <property name="enabled">
-      <bool>false</bool>
+   <item row="3" column="0">
+    <widget class="QListWidget" name="iconDirectoryList">
+     <property name="toolTip">
+      <string>List of icon directories</string>
      </property>
-     <property name="text">
-      <string>Show</string>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -148,27 +104,77 @@
      </item>
     </layout>
    </item>
-   <item row="3" column="0">
-    <widget class="QListWidget" name="iconDirectoryList">
-     <property name="toolTip">
-      <string>List of icon directories</string>
+   <item row="4" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="deleteIconDirectoryButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Press to delete the selected directory from the list</string>
+       </property>
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="addIconDirectoryButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Press to add the entered directory to the list</string>
+       </property>
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="E5PathPicker" name="iconDirectoryPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="1">
+    <widget class="QPushButton" name="showIconsButton">
+     <property name="enabled">
+      <bool>false</bool>
      </property>
-     <property name="alternatingRowColors">
-      <bool>true</bool>
+     <property name="text">
+      <string>Show</string>
      </property>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>iconDirectoryList</tabstop>
   <tabstop>upButton</tabstop>
   <tabstop>downButton</tabstop>
   <tabstop>deleteIconDirectoryButton</tabstop>
-  <tabstop>iconDirectoryEdit</tabstop>
-  <tabstop>iconDirectoryButton</tabstop>
-  <tabstop>showIconsButton</tabstop>
   <tabstop>addIconDirectoryButton</tabstop>
+  <tabstop>iconDirectoryPicker</tabstop>
+  <tabstop>showIconsButton</tabstop>
  </tabstops>
  <resources/>
  <connections/>

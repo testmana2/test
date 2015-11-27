@@ -9,16 +9,13 @@ Module implementing the Multi Project configuration page.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
-
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_MultiProjectPage import Ui_MultiProjectPage
 
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 import Preferences
 import Utilities
-import UI.PixmapCache
 
 
 class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
@@ -33,7 +30,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         self.setupUi(self)
         self.setObjectName("MultiProjectPage")
         
-        self.workspaceButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.workspacePicker.setMode(E5PathPickerModes.DiretoryMode)
         
         # set initial values
         self.openMasterAutomaticallyCheckBox.setChecked(
@@ -42,7 +39,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             Preferences.getMultiProject("XMLTimestamp"))
         self.multiProjectRecentSpinBox.setValue(
             Preferences.getMultiProject("RecentNumber"))
-        self.workspaceEdit.setText(
+        self.workspacePicker.setText(
             Utilities.toNativeSeparators(
                 Preferences.getMultiProject("Workspace") or
                 Utilities.getHomeDir()))
@@ -62,24 +59,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
             self.multiProjectRecentSpinBox.value())
         Preferences.setMultiProject(
             "Workspace",
-            self.workspaceEdit.text())
-    
-    @pyqtSlot()
-    def on_workspaceButton_clicked(self):
-        """
-        Private slot to display a directory selection dialog.
-        """
-        default = self.workspaceEdit.text()
-        if default == "":
-            default = Utilities.getHomeDir()
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select Workspace Directory"),
-            default,
-            E5FileDialog.Options(0))
-        
-        if directory:
-            self.workspaceEdit.setText(Utilities.toNativeSeparators(directory))
+            self.workspacePicker.text())
     
 
 def create(dlg):
