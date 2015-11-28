@@ -15,13 +15,11 @@ import sys
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
-from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5Completers import E5DirCompleter
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_DebuggerPropertiesDialog import Ui_DebuggerPropertiesDialog
 
-import Utilities
-import UI.PixmapCache
 
 from eric6config import getConfig
 
@@ -44,27 +42,25 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.debugClientButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.interpreterButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.debugClientPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.interpreterPicker.setMode(E5PathPickerModes.OpenFileMode)
         
-        self.debugClientCompleter = E5FileCompleter(self.debugClientEdit)
-        self.interpreterCompleter = E5FileCompleter(self.interpreterEdit)
         self.translationLocalCompleter = E5DirCompleter(
             self.translationLocalEdit)
         
         self.project = project
         
         if self.project.debugProperties["INTERPRETER"]:
-            self.interpreterEdit.setText(
+            self.interpreterPicker.setText(
                 self.project.debugProperties["INTERPRETER"])
         else:
             if self.project.pdata["PROGLANGUAGE"][0] in \
                     ["Python", "Python2", "Python3"]:
-                self.interpreterEdit.setText(sys.executable)
+                self.interpreterPicker.setText(sys.executable)
             elif self.project.pdata["PROGLANGUAGE"][0] == "Ruby":
-                self.interpreterEdit.setText("/usr/bin/ruby")
+                self.interpreterPicker.setText("/usr/bin/ruby")
         if self.project.debugProperties["DEBUGCLIENT"]:
-            self.debugClientEdit.setText(
+            self.debugClientPicker.setText(
                 self.project.debugProperties["DEBUGCLIENT"])
         else:
             if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
@@ -81,7 +77,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
                     "DebugClients", "Ruby", "DebugClient.rb")
             else:
                 debugClient = ""
-            self.debugClientEdit.setText(debugClient)
+            self.debugClientPicker.setText(debugClient)
         self.debugEnvironmentOverrideCheckBox.setChecked(
             self.project.debugProperties["ENVIRONMENTOVERRIDE"])
         self.debugEnvironmentEdit.setText(
@@ -109,44 +105,24 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
         
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
-        
-    @pyqtSlot()
-    def on_interpreterButton_clicked(self):
-        """
-        Private slot to handle the interpreter selection.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select interpreter for Debug Client"),
-            self.interpreterEdit.text(),
-            "")
-            
-        if file:
-            self.interpreterEdit.setText(Utilities.toNativeSeparators(file))
 
     @pyqtSlot()
-    def on_debugClientButton_clicked(self):
+    def on_debugClientPicker_aboutToShowPathPickerDialog(self):
         """
-        Private slot to handle the Debug Client selection.
+        Private slot to perform actions before the debug client selection
+        dialog is shown. 
         """
         filters = self.project.dbgFilters[
             self.project.pdata["PROGLANGUAGE"][0]]
         filters += self.tr("All Files (*)")
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select Debug Client"),
-            self.debugClientEdit.text(),
-            filters)
-            
-        if file:
-            self.debugClientEdit.setText(Utilities.toNativeSeparators(file))
+        self.debugClientPicker.setFilters(filters)
 
     def storeData(self):
         """
         Public method to store the entered/modified data.
         """
         self.project.debugProperties["INTERPRETER"] = \
-            self.interpreterEdit.text()
+            self.interpreterPicker.text()
         if not self.project.debugProperties["INTERPRETER"]:
             if self.project.pdata["PROGLANGUAGE"][0] in \
                     ["Python", "Python2", "Python3"]:
@@ -155,7 +131,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
                 self.project.debugProperties["INTERPRETER"] = "/usr/bin/ruby"
         
         self.project.debugProperties["DEBUGCLIENT"] = \
-            self.debugClientEdit.text()
+            self.debugClientPicker.text()
         if not self.project.debugProperties["DEBUGCLIENT"]:
             if self.project.pdata["PROGLANGUAGE"][0] in ["Python", "Python2"]:
                 debugClient = os.path.join(

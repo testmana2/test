@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>350</height>
+    <height>354</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -22,7 +22,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QStackedWidget" name="pagesWidget">
      <property name="currentIndex">
@@ -59,39 +59,31 @@
       </layout>
      </widget>
      <widget class="QWidget" name="filePage">
-      <layout class="QGridLayout" name="gridLayout">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QLabel" name="iconLabel">
-         <property name="minimumSize">
-          <size>
-           <width>48</width>
-           <height>48</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>48</width>
-           <height>48</height>
-          </size>
-         </property>
-        </widget>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="iconLabel">
+           <property name="minimumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="importingFromLabel"/>
+         </item>
+        </layout>
        </item>
-       <item row="0" column="1" colspan="2">
-        <widget class="QLabel" name="importingFromLabel"/>
-       </item>
-       <item row="1" column="2">
+       <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -104,24 +96,24 @@
          </property>
         </spacer>
        </item>
-       <item row="2" column="0" colspan="3">
+       <item>
         <widget class="QLabel" name="fileLabel1">
          <property name="wordWrap">
           <bool>true</bool>
          </property>
         </widget>
        </item>
-       <item row="3" column="0" colspan="3">
+       <item>
         <widget class="QLabel" name="standardDirLabel">
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
          </property>
         </widget>
        </item>
-       <item row="4" column="0" colspan="3">
+       <item>
         <widget class="QLabel" name="fileLabel2"/>
        </item>
-       <item row="5" column="1" colspan="2">
+       <item>
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -134,24 +126,23 @@
          </property>
         </spacer>
        </item>
-       <item row="6" column="0" colspan="3">
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QLineEdit" name="fileEdit">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="toolTip">
-            <string>Shows the name of the bookmarks file or directory</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QToolButton" name="chooseButton"/>
-         </item>
-        </layout>
+       <item>
+        <widget class="E5PathPicker" name="filePicker" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::StrongFocus</enum>
+         </property>
+         <property name="toolTip">
+          <string>Enter the name of the bookmarks file or directory</string>
+         </property>
+        </widget>
        </item>
-       <item row="7" column="1">
+       <item>
         <spacer name="verticalSpacer_3">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -201,12 +192,19 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>sourcesList</tabstop>
   <tabstop>nextButton</tabstop>
   <tabstop>cancelButton</tabstop>
-  <tabstop>fileEdit</tabstop>
-  <tabstop>chooseButton</tabstop>
+  <tabstop>filePicker</tabstop>
  </tabstops>
  <resources/>
  <connections/>

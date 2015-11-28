@@ -9,18 +9,14 @@ Module implementing the Interface configuration page (variant for web browser).
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QStyleFactory
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .ConfigurationPageBase import ConfigurationPageBase
 from .Ui_HelpInterfacePage import Ui_HelpInterfacePage
 
 import Preferences
-import Utilities
-import UI.PixmapCache
 
 
 class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
@@ -36,13 +32,14 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         self.setupUi(self)
         self.setObjectName("InterfacePage")
         
-        self.styleSheetButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.styleSheetCompleter = E5FileCompleter(self.styleSheetEdit)
+        self.styleSheetPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.styleSheetPicker.setFilters(self.tr(
+            "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
+            "All files (*)"))
         
         # set initial values
         self.__populateStyleCombo()
-        self.styleSheetEdit.setText(Preferences.getUI("StyleSheet"))
+        self.styleSheetPicker.setText(Preferences.getUI("StyleSheet"))
     
     def save(self):
         """
@@ -54,7 +51,7 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         Preferences.setUI("Style", style)
         Preferences.setUI(
             "StyleSheet",
-            self.styleSheetEdit.text())
+            self.styleSheetPicker.text())
     
     def __populateStyleCombo(self):
         """
@@ -69,22 +66,6 @@ class HelpInterfacePage(ConfigurationPageBase, Ui_HelpInterfacePage):
         if currentIndex == -1:
             currentIndex = 0
         self.styleComboBox.setCurrentIndex(currentIndex)
-        
-    @pyqtSlot()
-    def on_styleSheetButton_clicked(self):
-        """
-        Private method to select the style sheet file via a dialog.
-        """
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select style sheet file"),
-            self.styleSheetEdit.text(),
-            self.tr(
-                "Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;"
-                "All files (*)"))
-        
-        if file:
-            self.styleSheetEdit.setText(Utilities.toNativeSeparators(file))
     
 
 def create(dlg):

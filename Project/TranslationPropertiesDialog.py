@@ -14,13 +14,13 @@ import os
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QListWidgetItem, QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
+from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_TranslationPropertiesDialog import Ui_TranslationPropertiesDialog
 
 import Utilities
-import UI.PixmapCache
 
 
 class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
@@ -38,14 +38,14 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         super(TranslationPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.transBinPathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.transPatternButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.transPatternPicker.setMode(E5PathPickerModes.SaveFileMode)
+        self.transPatternPicker.setDefaultDirectory(project.ppath)
+        self.transBinPathPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.transBinPathPicker.setDefaultDirectory(project.ppath)
         
         self.project = project
         self.parent = parent
         
-        self.transPatternCompleter = E5FileCompleter(self.transPatternEdit)
-        self.transBinPathCompleter = E5DirCompleter(self.transBinPathEdit)
         self.exceptionCompleter = E5FileCompleter(self.exceptionEdit)
         
         self.initFilters()
@@ -75,13 +75,13 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         try:
-            self.transPatternEdit.setText(Utilities.toNativeSeparators(
-                self.project.pdata["TRANSLATIONPATTERN"][0]))
+            self.transPatternPicker.setText(
+                self.project.pdata["TRANSLATIONPATTERN"][0])
         except IndexError:
             pass
         try:
-            self.transBinPathEdit.setText(Utilities.toNativeSeparators(
-                self.project.pdata["TRANSLATIONSBINPATH"][0]))
+            self.transBinPathPicker.setText(
+                self.project.pdata["TRANSLATIONSBINPATH"][0])
         except IndexError:
             pass
         self.exceptionsList.clear()
@@ -89,54 +89,35 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
             if texcept:
                 self.exceptionsList.addItem(texcept)
         
-    @pyqtSlot()
-    def on_transPatternButton_clicked(self):
+    @pyqtSlot(str)
+    def on_transPatternPicker_pathSelected(self, path):
         """
-        Private slot to display a file selection dialog.
-        """
-        tp = Utilities.fromNativeSeparators(self.transPatternEdit.text())
-        if "%language%" in tp:
-            tp = tp.split("%language%")[0]
-        if not os.path.isabs(tp):
-            tp = Utilities.fromNativeSeparators(
-                os.path.join(self.project.ppath, tp))
-        tsfile = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select translation file"),
-            tp,
-            "")
+        Private slot handling the selection of a translation path.
         
-        if tsfile:
-            self.transPatternEdit.setText(self.project.getRelativePath(
-                Utilities.toNativeSeparators(tsfile)))
+        @param path selected path
+        @type str
+        """
+        self.transPatternPicker.setText(self.project.getRelativePath(path))
         
     @pyqtSlot(str)
-    def on_transPatternEdit_textChanged(self, txt):
+    def on_transPatternPicker_textChanged(self, txt):
         """
         Private slot to check the translation pattern for correctness.
         
-        @param txt text of the transPatternEdit lineedit (string)
+        @param txt text of the transPatternPicker line edit (string)
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
             "%language%" in txt)
         
-    @pyqtSlot()
-    def on_transBinPathButton_clicked(self):
+    @pyqtSlot(str)
+    def on_transBinPathPicker_pathSelected(self, path):
         """
-        Private slot to display a directory selection dialog.
-        """
-        tbp = Utilities.fromNativeSeparators(self.transBinPathEdit.text())
-        if not os.path.isabs(tbp):
-            tbp = Utilities.fromNativeSeparators(
-                os.path.join(self.project.ppath, tbp))
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select directory for binary translations"),
-            tbp)
+        Private slot handling the selection of a binary translations path.
         
-        if directory:
-            self.transBinPathEdit.setText(self.project.getRelativePath(
-                Utilities.toNativeSeparators(directory)))
+        @param path selected path
+        @type str
+        """
+        self.transBinPathPicker.setText(self.project.getRelativePath(path))
         
     @pyqtSlot()
     def on_deleteExceptionButton_clicked(self):
@@ -217,14 +198,14 @@ class TranslationPropertiesDialog(QDialog, Ui_TranslationPropertiesDialog):
         """
         Public method to store the entered/modified data.
         """
-        tp = Utilities.toNativeSeparators(self.transPatternEdit.text())
+        tp = self.transPatternPicker.text()
         if tp:
             tp = self.project.getRelativePath(tp)
             self.project.pdata["TRANSLATIONPATTERN"] = [tp]
             self.project.translationsRoot = tp.split("%language%")[0]
         else:
             self.project.pdata["TRANSLATIONPATTERN"] = []
-        tp = Utilities.toNativeSeparators(self.transBinPathEdit.text())
+        tp = self.transBinPathPicker.text()
         if tp:
             tp = self.project.getRelativePath(tp)
             self.project.pdata["TRANSLATIONSBINPATH"] = [tp]

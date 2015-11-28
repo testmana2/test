@@ -31,7 +31,7 @@ class PluginManagerPage(ConfigurationPageBase, Ui_PluginManagerPage):
         self.setupUi(self)
         self.setObjectName("PluginManagerPage")
         
-        self.downloadDirPicker.setMode(E5PathPickerModes.DiretoryMode)
+        self.downloadDirPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         # set initial values
         self.activateExternalPluginsCheckBox.setChecked(

@@ -14,13 +14,11 @@ import os
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_AddProjectDialog import Ui_AddProjectDialog
 
 import Utilities
-import UI.PixmapCache
 
 
 class AddProjectDialog(QDialog, Ui_AddProjectDialog):
@@ -40,9 +38,8 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         super(AddProjectDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.fileCompleter = E5FileCompleter(self.filenameEdit)
+        self.filenamePicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.filenamePicker.setFilters(self.tr("Project Files (*.e4p)"))
         
         if categories:
             self.categoryComboBox.addItem("")
@@ -58,7 +55,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             self.setWindowTitle(self.tr("Project Properties"))
             
             self.nameEdit.setText(project['name'])
-            self.filenameEdit.setText(project['file'])
+            self.filenamePicker.setText(project['file'])
             self.descriptionEdit.setPlainText(project['description'])
             self.masterCheckBox.setChecked(project['master'])
             index = self.categoryComboBox.findText(project['category'])
@@ -66,25 +63,6 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
                 index = 0
             self.categoryComboBox.setCurrentIndex(index)
             self.uid = project["uid"]
-    
-    @pyqtSlot()
-    def on_fileButton_clicked(self):
-        """
-        Private slot to display a file selection dialog.
-        """
-        startdir = self.filenameEdit.text()
-        if startdir or self.startdir is not None:
-            if not startdir:
-                startdir = self.startdir
-            projectFile = E5FileDialog.getOpenFileName(
-                self,
-                self.tr("Add Project"),
-                startdir,
-                self.tr("Project Files (*.e4p)"))
-            
-            if projectFile:
-                self.filenameEdit.setText(
-                    Utilities.toNativeSeparators(projectFile))
     
     def getData(self):
         """
@@ -100,7 +78,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
             from PyQt5.QtCore import QUuid
             self.uid = QUuid.createUuid().toString()
         
-        filename = Utilities.toNativeSeparators(self.filenameEdit.text())
+        filename = self.filenamePicker.text()
         if not os.path.isabs(filename):
             filename = Utilities.toNativeSeparators(
                 os.path.join(self.startdir, filename))
@@ -121,7 +99,7 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         self.__updateUi()
     
     @pyqtSlot(str)
-    def on_filenameEdit_textChanged(self, txt):
+    def on_filenamePicker_textChanged(self, txt):
         """
         Private slot called when the project filename has changed.
         
@@ -134,4 +112,4 @@ class AddProjectDialog(QDialog, Ui_AddProjectDialog):
         Private method to update the dialog.
         """
         self.__okButton.setEnabled(self.nameEdit.text() != "" and
-                                   self.filenameEdit.text() != "")
+                                   self.filenamePicker.text() != "")

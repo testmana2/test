@@ -30,7 +30,7 @@ class HelpFlashCookieManagerPage(ConfigurationPageBase,
         self.setupUi(self)
         self.setObjectName("HelpFlashCookieManagerPage")
         
-        self.flashDataPathPicker.setMode(E5PathPickerModes.DiretoryMode)
+        self.flashDataPathPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         # set initial values
         self.flashDataPathPicker.setText(

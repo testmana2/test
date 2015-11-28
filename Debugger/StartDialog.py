@@ -9,15 +9,11 @@ Module implementing the Start Program dialog.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
-import Utilities
 import Preferences
-import UI.PixmapCache
 
 
 class StartDialog(QDialog):
@@ -78,22 +74,22 @@ class StartDialog(QDialog):
             from .Ui_StartProfileDialog import Ui_StartProfileDialog
             self.ui = Ui_StartProfileDialog()
         self.ui.setupUi(self)
-        self.ui.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.ui.workdirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.ui.workdirPicker.setDefaultDirectory(
+            Preferences.getMultiProject("Workspace"))
         
         self.clearButton = self.ui.buttonBox.addButton(
             self.tr("Clear Histories"), QDialogButtonBox.ActionRole)
-        
-        self.workdirCompleter = E5DirCompleter(self.ui.workdirCombo)
         
         self.setWindowTitle(caption)
         self.ui.cmdlineCombo.clear()
         self.ui.cmdlineCombo.addItems(argvList)
         if len(argvList) > 0:
             self.ui.cmdlineCombo.setCurrentIndex(0)
-        self.ui.workdirCombo.clear()
-        self.ui.workdirCombo.addItems(wdList)
+        self.ui.workdirPicker.clear()
+        self.ui.workdirPicker.addItems(wdList)
         if len(wdList) > 0:
-            self.ui.workdirCombo.setCurrentIndex(0)
+            self.ui.workdirPicker.setCurrentIndex(0)
         self.ui.environmentCombo.clear()
         self.ui.environmentCombo.addItems(envList)
         self.ui.exceptionCheckBox.setChecked(exceptions)
@@ -121,21 +117,6 @@ class StartDialog(QDialog):
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
         
-    @pyqtSlot()
-    def on_dirButton_clicked(self):
-        """
-        Private method used to open a directory selection dialog.
-        """
-        cwd = self.ui.workdirCombo.currentText()
-        d = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Working directory"),
-            cwd,
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if d:
-            self.ui.workdirCombo.setEditText(Utilities.toNativeSeparators(d))
-        
     def on_modFuncCombo_editTextChanged(self):
         """
         Private slot to enable/disable the OK button.
@@ -153,7 +134,7 @@ class StartDialog(QDialog):
             flag (boolean)
         """
         cmdLine = self.ui.cmdlineCombo.currentText()
-        workdir = self.ui.workdirCombo.currentText()
+        workdir = self.ui.workdirPicker.currentText()
         environment = self.ui.environmentCombo.currentText()
         
         return (cmdLine,
@@ -224,15 +205,15 @@ class StartDialog(QDialog):
         self.__clearHistoryLists = True
         
         cmdLine = self.ui.cmdlineCombo.currentText()
-        workdir = self.ui.workdirCombo.currentText()
+        workdir = self.ui.workdirPicker.currentText()
         environment = self.ui.environmentCombo.currentText()
         
         self.ui.cmdlineCombo.clear()
-        self.ui.workdirCombo.clear()
+        self.ui.workdirPicker.clear()
         self.ui.environmentCombo.clear()
         
         self.ui.cmdlineCombo.addItem(cmdLine)
-        self.ui.workdirCombo.addItem(workdir)
+        self.ui.workdirPicker.addItem(workdir)
         self.ui.environmentCombo.addItem(environment)
         
     def on_buttonBox_clicked(self, button):

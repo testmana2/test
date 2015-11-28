@@ -11,15 +11,11 @@ from __future__ import unicode_literals
 
 import os
 
-from PyQt5.QtCore import QDir, pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_NewDialogClassDialog import Ui_NewDialogClassDialog
-
-import UI.PixmapCache
 
 
 class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
@@ -39,31 +35,17 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         super(NewDialogClassDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.pathButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pathnamePicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)
         
-        self.pathnameCompleter = E5DirCompleter(self.pathnameEdit)
-        
         self.classnameEdit.setText(defaultClassName)
         self.filenameEdit.setText(defaultFile)
-        self.pathnameEdit.setText(QDir.toNativeSeparators(defaultPath))
+        self.pathnamePicker.setText(defaultPath)
         
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
-        
-    @pyqtSlot()
-    def on_pathButton_clicked(self):
-        """
-        Private slot called to open a directory selection dialog.
-        """
-        path = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select source directory"),
-            QDir.fromNativeSeparators(self.pathnameEdit.text()))
-        if path:
-            self.pathnameEdit.setText(QDir.toNativeSeparators(path))
         
     def __enableOkButton(self):
         """
@@ -72,7 +54,7 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         self.okButton.setEnabled(
             self.classnameEdit.text() != "" and
             self.filenameEdit.text() != "" and
-            self.pathnameEdit.text() != "")
+            self.pathnamePicker.text() != "")
         
     def on_classnameEdit_textChanged(self, text):
         """
@@ -90,9 +72,9 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         """
         self.__enableOkButton()
         
-    def on_pathnameEdit_textChanged(self, text):
+    def on_pathnamePicker_textChanged(self, text):
         """
-        Private slot called, when thext of the pathname edit has changed.
+        Private slot called, when the text of the path name has changed.
         
         @param text changed text (string)
         """
@@ -105,5 +87,5 @@ class NewDialogClassDialog(QDialog, Ui_NewDialogClassDialog):
         @return tuple giving the classname (string) and the file name (string)
         """
         return self.classnameEdit.text(), \
-            os.path.join(self.pathnameEdit.text(),
+            os.path.join(self.pathnamePicker.text(),
                          self.filenameEdit.text())

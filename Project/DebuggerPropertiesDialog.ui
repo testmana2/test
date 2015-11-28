@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>592</width>
-    <height>656</height>
+    <height>594</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,24 +16,20 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout" name="_2">
+  <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
       <string>Debug Client</string>
      </property>
-     <layout class="QHBoxLayout" name="_4">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QLineEdit" name="debugClientEdit">
+       <widget class="E5PathPicker" name="debugClientPicker" native="true">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the path of the Debug Client to be used.  Leave empty to use the default.</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="debugClientButton">
-        <property name="toolTip">
-         <string>Press to select the Debug Client via a file selection dialog</string>
         </property>
        </widget>
       </item>
@@ -45,18 +41,14 @@
      <property name="title">
       <string>Interpreter for Debug Client</string>
      </property>
-     <layout class="QHBoxLayout" name="_5">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QLineEdit" name="interpreterEdit">
+       <widget class="E5PathPicker" name="interpreterPicker" native="true">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the path of the interpreter to be used by the debug client.</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="interpreterButton">
-        <property name="toolTip">
-         <string>Press to select the interpreter via a file selection dialog</string>
         </property>
        </widget>
       </item>
@@ -262,11 +254,17 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>debugClientEdit</tabstop>
-  <tabstop>debugClientButton</tabstop>
-  <tabstop>interpreterEdit</tabstop>
-  <tabstop>interpreterButton</tabstop>
+  <tabstop>debugClientPicker</tabstop>
+  <tabstop>interpreterPicker</tabstop>
   <tabstop>debugEnvironmentOverrideCheckBox</tabstop>
   <tabstop>debugEnvironmentEdit</tabstop>
   <tabstop>remoteDebuggerGroup</tabstop>
@@ -278,6 +276,7 @@
   <tabstop>consoleDebuggerGroup</tabstop>
   <tabstop>consoleCommandEdit</tabstop>
   <tabstop>redirectCheckBox</tabstop>
+  <tabstop>noEncodingCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

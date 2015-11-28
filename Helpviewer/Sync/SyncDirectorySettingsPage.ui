@@ -34,16 +34,18 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="directoryEdit">
+       <widget class="E5PathPicker" name="directoryPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
          <string>Enter the full path of the shared directory</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QToolButton" name="directoryButton">
-        <property name="toolTip">
-         <string>Select the shared directory via a directory selection dialog</string>
         </property>
        </widget>
       </item>
@@ -65,6 +67,14 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

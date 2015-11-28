@@ -9,19 +9,13 @@ Module implementing the Spelling Properties dialog.
 
 from __future__ import unicode_literals
 
-import os
-
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_SpellingPropertiesDialog import Ui_SpellingPropertiesDialog
 
-import Utilities
 import Preferences
-import UI.PixmapCache
 
 
 class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
@@ -39,14 +33,18 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
         super(SpellingPropertiesDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.pwlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.pelButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.pwlPicker.setMode(E5PathPickerModes.SaveFileMode)
+        self.pwlPicker.setDefaultDirectory(project.ppath)
+        self.pwlPicker.setFilters(self.tr(
+            "Dictionary File (*.dic);;All Files (*)"))
+        
+        self.pelPicker.setMode(E5PathPickerModes.SaveFileMode)
+        self.pelPicker.setDefaultDirectory(project.ppath)
+        self.pelPicker.setFilters(self.tr(
+            "Dictionary File (*.dic);;All Files (*)"))
         
         self.project = project
         self.parent = parent
-        
-        self.pwlCompleter = E5FileCompleter(self.pwlEdit)
-        self.pelCompleter = E5FileCompleter(self.pelEdit)
         
         from QScintilla.SpellChecker import SpellChecker
         self.spellingComboBox.addItem(self.tr("<default>"))
@@ -69,53 +67,9 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             index = 0
         self.spellingComboBox.setCurrentIndex(index)
         if self.project.pdata["SPELLWORDS"][0]:
-            self.pwlEdit.setText(Utilities.toNativeSeparators(
-                self.project.pdata["SPELLWORDS"][0]))
+            self.pwlPicker.setText(self.project.pdata["SPELLWORDS"][0])
         if self.project.pdata["SPELLEXCLUDES"][0]:
-            self.pelEdit.setText(Utilities.toNativeSeparators(
-                self.project.pdata["SPELLEXCLUDES"][0]))
-    
-    @pyqtSlot()
-    def on_pwlButton_clicked(self):
-        """
-        Private slot to select the project word list file.
-        """
-        pwl = Utilities.fromNativeSeparators(self.pwlEdit.text())
-        if not pwl:
-            pwl = self.project.ppath
-        elif not os.path.isabs(pwl):
-            pwl = Utilities.fromNativeSeparators(
-                os.path.join(self.project.ppath, pwl))
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select project word list"),
-            pwl,
-            self.tr("Dictionary File (*.dic);;All Files (*)"))
-        
-        if file:
-            self.pwlEdit.setText(self.project.getRelativePath(
-                Utilities.toNativeSeparators(file)))
-    
-    @pyqtSlot()
-    def on_pelButton_clicked(self):
-        """
-        Private slot to select the project exclude list file.
-        """
-        pel = Utilities.fromNativeSeparators(self.pelEdit.text())
-        if not pel:
-            pel = self.project.ppath
-        elif not os.path.isabs(pel):
-            pel = Utilities.fromNativeSeparators(
-                os.path.join(self.project.ppath, pel))
-        file = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select project exclude list"),
-            pel,
-            self.tr("Dictionary File (*.dic);;All Files (*)"))
-            
-        if file:
-            self.pelEdit.setText(self.project.getRelativePath(
-                Utilities.toNativeSeparators(file)))
+            self.pelPicker.setText(self.project.pdata["SPELLEXCLUDES"][0])
     
     def storeData(self):
         """
@@ -128,6 +82,6 @@ class SpellingPropertiesDialog(QDialog, Ui_SpellingPropertiesDialog):
             self.project.pdata["SPELLLANGUAGE"] = \
                 [self.spellingComboBox.currentText()]
         self.project.pdata["SPELLWORDS"] = \
-            [self.project.getRelativePath(self.pwlEdit.text())]
+            [self.project.getRelativePath(self.pwlPicker.text())]
         self.project.pdata["SPELLEXCLUDES"] = \
-            [self.project.getRelativePath(self.pelEdit.text())]
+            [self.project.getRelativePath(self.pelPicker.text())]

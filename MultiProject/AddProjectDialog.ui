@@ -27,7 +27,7 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="1" colspan="2">
+   <item row="0" column="1">
     <widget class="QLineEdit" name="nameEdit">
      <property name="toolTip">
       <string>Enter the name of the project</string>
@@ -40,21 +40,23 @@
       <string>Project&amp;file:</string>
      </property>
      <property name="buddy">
-      <cstring>filenameEdit</cstring>
+      <cstring>filenamePicker</cstring>
      </property>
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLineEdit" name="filenameEdit">
+    <widget class="E5PathPicker" name="filenamePicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
      <property name="toolTip">
       <string>Enter the name of the project file</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QToolButton" name="fileButton">
-     <property name="toolTip">
-      <string>Select the project file via a file selection dialog</string>
      </property>
     </widget>
    </item>
@@ -71,7 +73,7 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1" colspan="2">
+   <item row="2" column="1">
     <widget class="QTextEdit" name="descriptionEdit">
      <property name="toolTip">
       <string>Enter a short description for the project</string>
@@ -94,7 +96,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1" colspan="2">
+   <item row="3" column="1">
     <widget class="QComboBox" name="categoryComboBox">
      <property name="toolTip">
       <string>Select a project category</string>
@@ -104,7 +106,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="3">
+   <item row="4" column="0" colspan="2">
     <widget class="QCheckBox" name="masterCheckBox">
      <property name="toolTip">
       <string>Select to make this project the main project</string>
@@ -114,7 +116,7 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="0" colspan="3">
+   <item row="5" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -126,14 +128,20 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>nameEdit</tabstop>
-  <tabstop>filenameEdit</tabstop>
-  <tabstop>fileButton</tabstop>
+  <tabstop>filenamePicker</tabstop>
   <tabstop>descriptionEdit</tabstop>
   <tabstop>categoryComboBox</tabstop>
   <tabstop>masterCheckBox</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

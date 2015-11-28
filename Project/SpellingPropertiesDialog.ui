@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>600</width>
-    <height>213</height>
+    <height>114</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,61 +27,66 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
+   <item row="0" column="1">
     <widget class="QComboBox" name="spellingComboBox">
      <property name="toolTip">
       <string>Select the project's language</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
+   <item row="1" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Project &amp;Word List:</string>
      </property>
      <property name="buddy">
-      <cstring>pwlEdit</cstring>
+      <cstring>pwlPicker</cstring>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QLineEdit" name="pwlEdit">
+   <item row="1" column="1">
+    <widget class="E5PathPicker" name="pwlPicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
      <property name="toolTip">
       <string>Enter the filename of the project word list</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="0">
+   <item row="2" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Project E&amp;xclude List:</string>
      </property>
      <property name="buddy">
-      <cstring>pelEdit</cstring>
+      <cstring>pelPicker</cstring>
      </property>
     </widget>
    </item>
-   <item row="5" column="0">
-    <widget class="QLineEdit" name="pelEdit">
+   <item row="2" column="1">
+    <widget class="E5PathPicker" name="pelPicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
      <property name="toolTip">
       <string>Enter the filename of the project exclude list</string>
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>2</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="7" column="0" colspan="2">
+   <item row="3" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -91,28 +96,18 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QToolButton" name="pwlButton">
-     <property name="toolTip">
-      <string>Select the project word list file via a file selection dialog</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="1">
-    <widget class="QToolButton" name="pelButton">
-     <property name="toolTip">
-      <string>Select the project exclude list file via a file selection dialog</string>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>spellingComboBox</tabstop>
-  <tabstop>pwlEdit</tabstop>
-  <tabstop>pwlButton</tabstop>
-  <tabstop>pelEdit</tabstop>
-  <tabstop>pelButton</tabstop>
   <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>

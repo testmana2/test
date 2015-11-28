@@ -114,12 +114,21 @@
         <string>Project &amp;Directory:</string>
        </property>
        <property name="buddy">
-        <cstring>dirEdit</cstring>
+        <cstring>dirPicker</cstring>
        </property>
       </widget>
      </item>
      <item row="5" column="1">
-      <widget class="QLineEdit" name="dirEdit">
+      <widget class="E5PathPicker" name="dirPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
        <property name="toolTip">
         <string>Enter the project directory</string>
        </property>
@@ -157,12 +166,21 @@
         <string>&amp;Main Script:</string>
        </property>
        <property name="buddy">
-        <cstring>mainscriptEdit</cstring>
+        <cstring>mainscriptPicker</cstring>
        </property>
       </widget>
      </item>
      <item row="7" column="1">
-      <widget class="QLineEdit" name="mainscriptEdit">
+      <widget class="E5PathPicker" name="mainscriptPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
        <property name="toolTip">
         <string>Enter the main script</string>
        </property>
@@ -292,28 +310,6 @@
        </property>
       </widget>
      </item>
-     <item row="5" column="2">
-      <widget class="QToolButton" name="dirButton">
-       <property name="toolTip">
-        <string>Show directory selection dialog</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Project Directory&lt;/b&gt;
-&lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="7" column="2">
-      <widget class="QToolButton" name="mainscriptButton">
-       <property name="toolTip">
-        <string>Show file selection dialog</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Main Script&lt;/b&gt;
-&lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item>
@@ -370,17 +366,23 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>nameEdit</tabstop>
   <tabstop>spellPropertiesButton</tabstop>
   <tabstop>languageComboBox</tabstop>
   <tabstop>mixedLanguageCheckBox</tabstop>
   <tabstop>projectTypeComboBox</tabstop>
-  <tabstop>dirEdit</tabstop>
-  <tabstop>dirButton</tabstop>
+  <tabstop>dirPicker</tabstop>
   <tabstop>versionEdit</tabstop>
-  <tabstop>mainscriptEdit</tabstop>
-  <tabstop>mainscriptButton</tabstop>
+  <tabstop>mainscriptPicker</tabstop>
   <tabstop>transPropertiesButton</tabstop>
   <tabstop>eolComboBox</tabstop>
   <tabstop>authorEdit</tabstop>
@@ -388,7 +390,6 @@
   <tabstop>descriptionEdit</tabstop>
   <tabstop>vcsCheckBox</tabstop>
   <tabstop>vcsInfoButton</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

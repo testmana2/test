@@ -14,13 +14,12 @@ import copy
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5MessageBox
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_ToolConfigurationDialog import Ui_ToolConfigurationDialog
 
 import Utilities
-import UI.PixmapCache
 
 
 class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
@@ -37,11 +36,9 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         super(ToolConfigurationDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.iconButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.executableButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.iconCompleter = E5FileCompleter(self.iconEdit)
-        self.executableCompleter = E5FileCompleter(self.executableEdit)
+        self.iconPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.iconPicker.setFilters(self.tr("Icon files (*.png)"))
+        self.executablePicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.redirectionModes = [
             ("no", self.tr("no redirection")),
@@ -86,9 +83,9 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         Private slot to clear all entry fields.
         """
-        self.executableEdit.clear()
+        self.executablePicker.clear()
         self.menuEdit.clear()
-        self.iconEdit.clear()
+        self.iconPicker.clear()
         self.argumentsEdit.clear()
         self.redirectCombo.setCurrentIndex(1)
         
@@ -98,8 +95,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         Private slot to add a new entry.
         """
         menutext = self.menuEdit.text()
-        icon = self.iconEdit.text()
-        executable = self.executableEdit.text()
+        icon = self.iconPicker.text()
+        executable = self.executablePicker.text()
         arguments = self.argumentsEdit.text()
         redirect = self.redirectionModes[self.redirectCombo.currentIndex()][0]
         
@@ -160,8 +157,8 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             return
         
         menutext = self.menuEdit.text()
-        icon = self.iconEdit.text()
-        executable = self.executableEdit.text()
+        icon = self.iconPicker.text()
+        executable = self.executablePicker.text()
         arguments = self.argumentsEdit.text()
         redirect = self.redirectionModes[self.redirectCombo.currentIndex()][0]
         
@@ -264,43 +261,23 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             'redirect': 'no',
         }
         self.toollist.append(tool)
+    
+    @pyqtSlot(str)
+    def on_executablePicker_pathSelected(self, path):
+        """
+        Private slot to check the executable after it has been selected.
         
-    @pyqtSlot()
-    def on_executableButton_clicked(self):
+        @param path path of the executable
+        @type str
         """
-        Private slot to handle the executable selection via a file selection
-        dialog.
-        """
-        execfile = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select executable"),
-            self.executableEdit.text(),
-            "")
-        if execfile:
-            execfile = Utilities.toNativeSeparators(execfile)
-            if not Utilities.isinpath(execfile):
+        if path:
+            if not Utilities.isinpath(path):
                 E5MessageBox.critical(
                     self,
                     self.tr("Select executable"),
                     self.tr(
                         "The selected file is not an executable."
                         " Please choose an executable filename."))
-                return
-            
-            self.executableEdit.setText(execfile)
-        
-    @pyqtSlot()
-    def on_iconButton_clicked(self):
-        """
-        Private slot to handle the icon selection via a file selection dialog.
-        """
-        icon = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select icon file"),
-            self.iconEdit.text(),
-            self.tr("Icon files (*.png)"))
-        if icon:
-            self.iconEdit.setText(icon)
     
     def on_toolsList_currentRowChanged(self, row):
         """
@@ -310,16 +287,16 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         if row >= 0 and row < len(self.toollist):
             if self.toollist[row]['menutext'] == '--':
-                self.executableEdit.clear()
+                self.executablePicker.clear()
                 self.menuEdit.clear()
-                self.iconEdit.clear()
+                self.iconPicker.clear()
                 self.argumentsEdit.clear()
                 self.redirectCombo.setCurrentIndex(0)
             else:
                 tool = self.toollist[row]
                 self.menuEdit.setText(tool['menutext'])
-                self.iconEdit.setText(tool['icon'])
-                self.executableEdit.setText(tool['executable'])
+                self.iconPicker.setText(tool['icon'])
+                self.executablePicker.setText(tool['executable'])
                 self.argumentsEdit.setText(tool['arguments'])
                 self.redirectCombo.setCurrentIndex(
                     self.__findModeIndex(tool['redirect']))
@@ -337,9 +314,9 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
             else:
                 self.downButton.setEnabled(False)
         else:
-            self.executableEdit.clear()
+            self.executablePicker.clear()
             self.menuEdit.clear()
-            self.iconEdit.clear()
+            self.iconPicker.clear()
             self.argumentsEdit.clear()
             self.downButton.setEnabled(False)
             self.upButton.setEnabled(False)
@@ -364,7 +341,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         self.__toolEntryChanged()
         
-    def on_iconEdit_textChanged(self, text):
+    def on_iconPicker_textChanged(self, text):
         """
         Private slot called, when the icon path was changed.
         
@@ -372,7 +349,7 @@ class ToolConfigurationDialog(QDialog, Ui_ToolConfigurationDialog):
         """
         self.__toolEntryChanged()
         
-    def on_executableEdit_textChanged(self, text):
+    def on_executablePicker_textChanged(self, text):
         """
         Private slot called, when the executable was changed.
         

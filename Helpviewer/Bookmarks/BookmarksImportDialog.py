@@ -14,15 +14,14 @@ import os
 from PyQt5.QtCore import pyqtSlot, Qt, QSize
 from PyQt5.QtWidgets import QDialog, QListWidgetItem
 
-from E5Gui import E5FileDialog, E5MessageBox
+from E5Gui import E5MessageBox
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_BookmarksImportDialog import Ui_BookmarksImportDialog
 
 from . import BookmarksImporters
 
-import Utilities
 import Globals
-import UI.PixmapCache
 
 
 class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
@@ -40,7 +39,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         super(BookmarksImportDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.chooseButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.filePicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.sourcesList.setIconSize(QSize(48, 48))
         for icon, displayText, idText in BookmarksImporters.getImporters():
@@ -64,7 +63,7 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
             self.nextButton.setEnabled(
                 len(self.sourcesList.selectedItems()) == 1)
         elif self.__currentPage == 1:
-            self.nextButton.setEnabled(self.fileEdit.text() != "")
+            self.nextButton.setEnabled(self.filePicker.text() != "")
     
     @pyqtSlot()
     def on_sourcesList_itemSelectionChanged(self):
@@ -74,38 +73,13 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
         self.__enableNextButton()
     
     @pyqtSlot(str)
-    def on_fileEdit_textChanged(self, txt):
+    def on_filePicker_textChanged(self, txt):
         """
-        Private slot handling changes of the file to import bookmarks from.
+        Private slot handling changes of the file to import bookmarks form.
         
         @param txt text of the line edit (string)
         """
         self.__enableNextButton()
-    
-    @pyqtSlot()
-    def on_chooseButton_clicked(self):
-        """
-        Private slot to choose the bookmarks file or directory.
-        """
-        if self.__selectedSource == "ie":
-            path = E5FileDialog.getExistingDirectory(
-                self,
-                self.tr("Choose Directory ..."),
-                self.__sourceDir,
-                E5FileDialog.Options(E5FileDialog.Option(0)))
-        else:
-            if Globals.isMacPlatform():
-                filter = "*{0}".format(os.path.splitext(self.__sourceFile)[1])
-            else:
-                filter = self.__sourceFile
-            path = E5FileDialog.getOpenFileName(
-                self,
-                self.tr("Choose File ..."),
-                self.__sourceDir,
-                filter)
-        
-        if path:
-            self.fileEdit.setText(Utilities.toNativeSeparators(path))
     
     @pyqtSlot()
     def on_nextButton_clicked(self):
@@ -135,13 +109,25 @@ class BookmarksImportDialog(QDialog, Ui_BookmarksImportDialog):
             self.__currentPage += 1
             self.pagesWidget.setCurrentIndex(self.__currentPage)
             self.__enableNextButton()
+            
+            if self.__selectedSource == "ie":
+                self.filePicker.setMode(E5PathPickerModes.DirectoryMode)
+            else:
+                self.filePicker.setMode(E5PathPickerModes.OpenFileMode)
+                if Globals.isMacPlatform():
+                    filter = "*{0}".format(
+                        os.path.splitext(self.__sourceFile)[1])
+                else:
+                    filter = self.__sourceFile
+                self.filePicker.setFilters(filter)
+            self.filePicker.setDefaultDirectory(self.__sourceDir)
         
         elif self.__currentPage == 1:
-            if self.fileEdit.text() == "":
+            if self.filePicker.text() == "":
                 return
             
             importer = BookmarksImporters.getImporter(self.__selectedSource)
-            importer.setPath(self.fileEdit.text())
+            importer.setPath(self.filePicker.text())
             if importer.open():
                 self.__topLevelBookmarkNode = importer.importedBookmarks()
             if importer.error():

@@ -30,7 +30,7 @@ class MultiProjectPage(ConfigurationPageBase, Ui_MultiProjectPage):
         self.setupUi(self)
         self.setObjectName("MultiProjectPage")
         
-        self.workspacePicker.setMode(E5PathPickerModes.DiretoryMode)
+        self.workspacePicker.setMode(E5PathPickerModes.DirectoryMode)
         
         # set initial values
         self.openMasterAutomaticallyCheckBox.setChecked(

@@ -15,14 +15,12 @@ from PyQt5.QtCore import QDir, pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
 from E5Gui.E5Application import e5App
-from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_PropertiesDialog import Ui_PropertiesDialog
 
 import Utilities
 import Preferences
-import UI.PixmapCache
 
 
 class PropertiesDialog(QDialog, Ui_PropertiesDialog):
@@ -43,16 +41,21 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.mainscriptButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.dirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.mainscriptPicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.project = project
         self.newProject = new
         self.transPropertiesDlg = None
         self.spellPropertiesDlg = None
         
-        self.dirCompleter = E5DirCompleter(self.dirEdit)
-        self.mainscriptCompleter = E5FileCompleter(self.mainscriptEdit)
+        patterns = []
+        for pattern, filetype in self.project.pdata["FILETYPES"].items():
+            if filetype == "SOURCES":
+                patterns.append(pattern)
+        filters = self.tr("Source Files ({0});;All Files (*)")\
+            .format(" ".join(sorted(patterns)))
+        self.mainscriptPicker.setFilters(filters)
         
         self.languageComboBox.addItems(project.getProgrammingLanguages())
         
@@ -82,13 +85,13 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
             if curIndex == -1:
                 curIndex = self.projectTypeComboBox.findData("Qt4")
             self.projectTypeComboBox.setCurrentIndex(curIndex)
-            self.dirEdit.setText(self.project.ppath)
+            self.dirPicker.setText(self.project.ppath)
             try:
                 self.versionEdit.setText(self.project.pdata["VERSION"][0])
             except IndexError:
                 pass
             try:
-                self.mainscriptEdit.setText(
+                self.mainscriptPicker.setText(
                     self.project.pdata["MAINSCRIPT"][0])
             except IndexError:
                 pass
@@ -133,7 +136,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.languageComboBox.findText("Python3"))
             self.projectTypeComboBox.setCurrentIndex(
                 self.projectTypeComboBox.findData("PyQt5"))
-            self.dirEdit.setText(self.__initPaths[0])
+            self.dirPicker.setText(self.__initPaths[0])
             self.versionEdit.setText('0.1')
             self.vcsLabel.hide()
             self.vcsInfoButton.hide()
@@ -141,8 +144,8 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
                 self.vcsCheckBox.hide()
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
-            bool(self.dirEdit.text()) and
-            Utilities.fromNativeSeparators(self.dirEdit.text()) not in
+            bool(self.dirPicker.text()) and
+            self.dirPicker.text() not in
             self.__initPaths)
     
     @pyqtSlot(str)
@@ -166,7 +169,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.projectTypeComboBox.setCurrentIndex(index)
     
     @pyqtSlot(str)
-    def on_dirEdit_textChanged(self, txt):
+    def on_dirPicker_textChanged(self, txt):
         """
         Private slot to handle a change of the project directory.
         
@@ -175,20 +178,6 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(
             bool(txt) and
             Utilities.fromNativeSeparators(txt) not in self.__initPaths)
-    
-    @pyqtSlot()
-    def on_dirButton_clicked(self):
-        """
-        Private slot to display a directory selection dialog.
-        """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select project directory"),
-            self.dirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-        
-        if directory:
-            self.dirEdit.setText(Utilities.toNativeSeparators(directory))
     
     @pyqtSlot()
     def on_spellPropertiesButton_clicked(self):
@@ -220,32 +209,31 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         if res == QDialog.Rejected:
             self.transPropertiesDlg.initDialog()  # reset the dialogs contents
     
-    @pyqtSlot()
-    def on_mainscriptButton_clicked(self):
+    @pyqtSlot(str)
+    def on_mainscriptPicker_pathSelected(self, script):
         """
-        Private slot to display a file selection dialog.
-        """
-        dir = self.dirEdit.text()
-        if not dir:
-            dir = QDir.currentPath()
-        patterns = []
-        for pattern, filetype in list(self.project.pdata["FILETYPES"].items()):
-            if filetype == "SOURCES":
-                patterns.append(pattern)
-        filters = self.tr("Source Files ({0});;All Files (*)")\
-            .format(" ".join(patterns))
-        fn = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select main script file"),
-            dir,
-            filters)
+        Private slot to check the selected main script name.
         
-        if fn:
-            ppath = self.dirEdit.text()
+        @param script name of the main script
+        @type str
+        """
+        if script:
+            ppath = self.dirPicker.text()
             if ppath:
                 ppath = QDir(ppath).absolutePath() + QDir.separator()
-                fn = fn.replace(ppath, "")
-            self.mainscriptEdit.setText(Utilities.toNativeSeparators(fn))
+                script = script.replace(ppath, "")
+            self.mainscriptPicker.setText(script)
+    
+    @pyqtSlot()
+    def on_mainscriptPicker_aboutToShowPathPickerDialog(self):
+        """
+        Private slot to perform actions before the main script selection dialog
+        is shown. 
+        """
+        path = self.dirPicker.text()
+        if not path:
+            path = QDir.currentPath()
+        self.mainscriptPicker.setDefaultDirectory(path)
     
     @pyqtSlot()
     def on_vcsInfoButton_clicked(self):
@@ -275,13 +263,13 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         
         @return data of the project directory edit (string)
         """
-        return os.path.abspath(self.dirEdit.text())
+        return os.path.abspath(self.dirPicker.text())
     
     def storeData(self):
         """
         Public method to store the entered/modified data.
         """
-        self.project.ppath = os.path.abspath(self.dirEdit.text())
+        self.project.ppath = os.path.abspath(self.dirPicker.text())
         fn = self.nameEdit.text()
         if fn:
             self.project.name = fn
@@ -290,7 +278,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
         else:
             self.project.pfile = ""
         self.project.pdata["VERSION"] = [self.versionEdit.text()]
-        fn = self.mainscriptEdit.text()
+        fn = self.mainscriptPicker.text()
         if fn:
             fn = self.project.getRelativePath(fn)
             self.project.pdata["MAINSCRIPT"] = [fn]

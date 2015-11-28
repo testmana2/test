@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>391</width>
-    <height>141</height>
+    <height>114</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,21 +20,62 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QGridLayout">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="sourceFileLabel">
+       <property name="text">
+        <string>&amp;Source Files:</string>
+       </property>
+       <property name="buddy">
+        <cstring>sourceFilesPicker</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="E5PathPicker" name="sourceFilesPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string>Enter the name of files to add separated by &quot;;&quot;</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Source Files&lt;/b&gt;
+&lt;p&gt;Enter the name of files to add to the current project separated
+by &quot;;&quot;. You may select them with a dialog by pressing 
+the button to the right.&lt;/p&gt;</string>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="targetDirLabel">
        <property name="text">
         <string>&amp;Target Directory:</string>
        </property>
        <property name="buddy">
-        <cstring>targetDirEdit</cstring>
+        <cstring>targetDirPicker</cstring>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="targetDirEdit">
+      <widget class="E5PathPicker" name="targetDirPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
        <property name="toolTip">
         <string>Enter the target directory for the file</string>
        </property>
@@ -42,45 +83,6 @@
         <string>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="sourceFileLabel">
-       <property name="text">
-        <string>&amp;Source Files:</string>
-       </property>
-       <property name="buddy">
-        <cstring>sourceFileEdit</cstring>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="sourceFileEdit">
-       <property name="toolTip">
-        <string>Enter the name of files to add separated by the path separator</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Source Files&lt;/b&gt;
-&lt;p&gt;Enter the name of files to add to the current project separated
-by the path separator. You may select them with a dialog by pressing 
-the button to the right.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QToolButton" name="sourceFileButton">
-       <property name="whatsThis">
-        <string>&lt;b&gt;Source Files&lt;/b&gt;
-&lt;p&gt;Select the source files via a files selection dialog.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QToolButton" name="targetDirButton">
-       <property name="whatsThis">
-        <string>&lt;b&gt;Target Directory&lt;/b&gt;
-&lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</string>
        </property>
       </widget>
      </item>
@@ -113,11 +115,17 @@ the button to the right.&lt;/p&gt;</string>
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>sourceFileEdit</tabstop>
-  <tabstop>sourceFileButton</tabstop>
-  <tabstop>targetDirEdit</tabstop>
-  <tabstop>targetDirButton</tabstop>
+  <tabstop>sourceFilesPicker</tabstop>
+  <tabstop>targetDirPicker</tabstop>
   <tabstop>sourcecodeCheckBox</tabstop>
  </tabstops>
  <resources/>

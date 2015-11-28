@@ -33,7 +33,7 @@ class NetworkPage(ConfigurationPageBase, Ui_NetworkPage):
         self.setupUi(self)
         self.setObjectName("NetworkPage")
         
-        self.downloadDirPicker.setMode(E5PathPickerModes.DiretoryMode)
+        self.downloadDirPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.ftpProxyTypeCombo.addItem(
             self.tr("No FTP Proxy"), E5FtpProxyType.NoProxy)

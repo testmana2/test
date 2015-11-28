@@ -21,9 +21,9 @@ from PyQt5.QtWidgets import QWidget, QDialog, QApplication, QDialogButtonBox, \
     QListWidgetItem
 
 from E5Gui.E5Application import e5App
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_UnittestDialog import Ui_UnittestDialog
 
@@ -63,7 +63,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.fileDialogButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.testsuitePicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.startButton = self.buttonBox.addButton(
             self.tr("Start"), QDialogButtonBox.ActionRole)
@@ -105,8 +105,6 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.__setProgressColor("green")
         self.progressLed.setDarkFactor(150)
         self.progressLed.off()
-        
-        self.testSuiteCompleter = E5FileCompleter(self.testsuiteComboBox)
         
         self.fileHistory = []
         self.testNameHistory = []
@@ -155,19 +153,19 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         
     def insertProg(self, prog):
         """
-        Public slot to insert the filename prog into the testsuiteComboBox
+        Public slot to insert the filename prog into the testsuitePicker
         object.
         
         @param prog filename to be inserted (string)
         """
-        # prepend the selected file to the testsuite combobox
+        # prepend the selected file to the testsuite picker
         if prog is None:
             prog = ""
         if prog in self.fileHistory:
             self.fileHistory.remove(prog)
         self.fileHistory.insert(0, prog)
-        self.testsuiteComboBox.clear()
-        self.testsuiteComboBox.addItems(self.fileHistory)
+        self.testsuitePicker.clear()
+        self.testsuitePicker.addItems(self.fileHistory)
         
     def insertTestName(self, testName):
         """
@@ -185,9 +183,9 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.testComboBox.addItems(self.testNameHistory)
         
     @pyqtSlot()
-    def on_fileDialogButton_clicked(self):
+    def on_testsuitePicker_aboutToShowPathPickerDialog(self):
         """
-        Private slot to open a file dialog.
+        Private slot called before the test suite selection dialog is shown.
         """
         if self.dbs:
             py2Extensions = \
@@ -201,19 +199,20 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
                 .format(py2Extensions, py3Extensions)
         else:
             filter = self.tr("Python Files (*.py);;All Files (*)")
-        prog = E5FileDialog.getOpenFileName(
-            self,
-            "",
-            self.testsuiteComboBox.currentText(),
-            filter)
-        
-        if not prog:
-            return
-        
-        self.insertProg(Utilities.toNativeSeparators(prog))
+        self.testsuitePicker.setFilters(filter)
         
     @pyqtSlot(str)
-    def on_testsuiteComboBox_editTextChanged(self, txt):
+    def on_testsuitePicker_pathSelected(self, suite):
+        """
+        Private slot called after a test suite has been selected.
+        
+        @param suite file name of the test suite
+        @type str
+        """
+        self.insertProg(suite)
+        
+    @pyqtSlot(str)
+    def on_testsuitePicker_editTextChanged(self, txt):
         """
         Private slot to handle changes of the test file name.
         
@@ -257,7 +256,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         if self.running:
             return
         
-        prog = self.testsuiteComboBox.currentText()
+        prog = self.testsuitePicker.currentText()
         if not prog:
             E5MessageBox.critical(
                 self,
@@ -621,7 +620,7 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
 
         # now build the dialog
         from .Ui_UnittestStacktraceDialog import Ui_UnittestStacktraceDialog
-        self.dlg = QDialog()
+        self.dlg = QDialog(self)
         ui = Ui_UnittestStacktraceDialog()
         ui.setupUi(self.dlg)
         self.dlg.traceback = ui.traceback

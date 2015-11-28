@@ -14,13 +14,9 @@ import os
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
-from E5Gui.E5Completers import E5DirCompleter, E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_AddFileDialog import Ui_AddFileDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class AddFileDialog(QDialog, Ui_AddFileDialog):
@@ -43,13 +39,11 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.targetDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.sourceFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.sourceFilesPicker.setMode(E5PathPickerModes.OpenFilesMode)
+        self.targetDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.targetDirPicker.setDefaultDirectory(startdir)
         
-        self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
-        self.sourceFileCompleter = E5FileCompleter(self.sourceFileEdit)
-        
-        self.targetDirEdit.setText(pro.ppath)
+        self.targetDirPicker.setText(pro.ppath)
         self.filter = filter
         self.ppath = pro.ppath
         self.startdir = startdir
@@ -63,32 +57,16 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         self.resize(max(self.width(), msh.width()), msh.height())
         
     @pyqtSlot()
-    def on_targetDirButton_clicked(self):
+    def on_sourceFilesPicker_aboutToShowPathPickerDialog(self):
         """
-        Private slot to display a directory selection dialog.
+        Private slot to perform actions before the source files selection
+        dialog is shown. 
         """
-        startdir = self.targetDirEdit.text()
-        if not startdir and self.startdir is not None:
-            startdir = self.startdir
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select target directory"),
-            startdir)
-            
-        if directory:
-            self.targetDirEdit.setText(Utilities.toNativeSeparators(directory))
+        path = self.targetDirPicker.text()
+        if not path:
+            path = self.startdir
+        self.sourceFilesPicker.setDefaultDirectory(path)
         
-    @pyqtSlot()
-    def on_sourceFileButton_clicked(self):
-        """
-        Private slot to display a file selection dialog.
-        """
-        dir = self.sourceFileEdit.text().split(os.pathsep, 1)[0]
-        if not dir:
-            if self.startdir is not None:
-                dir = self.startdir
-            else:
-                dir = self.targetDirEdit.text()
         if self.filter is None:
             patterns = {
                 "SOURCES": [],
@@ -158,16 +136,14 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             dfilter = self.tr("All Files (*)")
             caption = self.tr("Select files")
         else:
-            return
+            dfilter = ""
+            caption = ""
         
-        fnames = E5FileDialog.getOpenFileNames(self, caption, dir, dfilter)
-        
-        if len(fnames):
-            self.sourceFileEdit.setText(Utilities.toNativeSeparators(
-                os.pathsep.join(fnames)))
+        self.sourceFilesPicker.setWindowTitle(caption)
+        self.sourceFilesPicker.setFilters(dfilter)
         
     @pyqtSlot(str)
-    def on_sourceFileEdit_textChanged(self, sfile):
+    def on_sourceFilesPicker_textChanged(self, sfile):
         """
         Private slot to handle the source file text changed.
         
@@ -176,15 +152,15 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
         It is assumed, that the user wants to add a bunch of files to
         the project in place.
         
-        @param sfile the text of the source file line edit (string)
+        @param sfile the text of the source file picker (string)
         """
-        sfile = sfile.split(os.pathsep, 1)[0]
+        sfile = self.sourceFilesPicker.firstPath()
         if sfile.startswith(self.ppath):
             if os.path.isdir(sfile):
                 dir = sfile
             else:
                 dir = os.path.dirname(sfile)
-            self.targetDirEdit.setText(dir)
+            self.targetDirPicker.setText(dir)
         
     def getData(self):
         """
@@ -195,7 +171,6 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
             telling, whether the files shall be added as source code
         """
         return (
-            [Utilities.toNativeSeparators(f) for f in
-                self.sourceFileEdit.text().split(os.pathsep)],
-            Utilities.toNativeSeparators(self.targetDirEdit.text()),
+            self.sourceFilesPicker.paths(),
+            self.targetDirPicker.text(),
             self.sourcecodeCheckBox.isChecked())

@@ -32,6 +32,8 @@ class HelpAppearancePage(ConfigurationPageBase, Ui_HelpAppearancePage):
         self.setObjectName("HelpAppearancePage")
         
         self.styleSheetPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.styleSheetPicker.setFilters(self.tr(
+            "Cascading Style Sheets (*.css);;All files (*)"))
         
         self.__displayMode = None
         

@@ -32,7 +32,7 @@ class IconsPage(ConfigurationPageBase, Ui_IconsPage):
         self.setupUi(self)
         self.setObjectName("IconsPage")
         
-        self.iconDirectoryPicker.setMode(E5PathPickerModes.DiretoryMode)
+        self.iconDirectoryPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         # set initial values
         dirList = Preferences.getIcons("Path")[:]

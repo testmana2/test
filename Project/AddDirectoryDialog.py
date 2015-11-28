@@ -12,13 +12,9 @@ from __future__ import unicode_literals
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_AddDirectoryDialog import Ui_AddDirectoryDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
@@ -41,15 +37,13 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
             self.setObjectName(name)
         self.setupUi(self)
         
-        self.sourceDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.targetDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.sourceDirCompleter = E5DirCompleter(self.sourceDirEdit)
-        self.targetDirCompleter = E5DirCompleter(self.targetDirEdit)
+        self.sourceDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.sourceDirPicker.setDefaultDirectory(startdir)
+        self.targetDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.targetDirPicker.setDefaultDirectory(startdir)
         
         self.ppath = pro.ppath
-        self.targetDirEdit.setText(self.ppath)
-        self.startdir = startdir
+        self.targetDirPicker.setText(self.ppath)
         self.on_filterComboBox_highlighted('(*.py)')
         # enable all dialog elements
         if filter == 'source':  # it is a source file
@@ -93,52 +87,17 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         """
         if fileType.endswith('(*)'):
             self.targetDirLabel.setEnabled(False)
-            self.targetDirEdit.setEnabled(False)
-            self.targetDirButton.setEnabled(False)
+            self.targetDirPicker.setEnabled(False)
             self.recursiveCheckBox.setEnabled(False)
         else:
             self.targetDirLabel.setEnabled(True)
-            self.targetDirEdit.setEnabled(True)
-            self.targetDirButton.setEnabled(True)
+            self.targetDirPicker.setEnabled(True)
             self.recursiveCheckBox.setEnabled(True)
         
-    def __dirDialog(self, textEdit):
-        """
-        Private slot to display a directory selection dialog.
-        
-        @param textEdit field for the display of the selected directory name
-            (QLineEdit)
-        """
-        startdir = textEdit.text()
-        if not startdir and self.startdir is not None:
-            startdir = self.startdir
-        
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select directory"),
-            startdir)
-        
-        if directory:
-            textEdit.setText(Utilities.toNativeSeparators(directory))
-        
-    @pyqtSlot()
-    def on_sourceDirButton_clicked(self):
-        """
-        Private slot to handle the source dir button press.
-        """
-        self.__dirDialog(self.sourceDirEdit)
-        
-    @pyqtSlot()
-    def on_targetDirButton_clicked(self):
-        """
-        Private slot to handle the target dir button press.
-        """
-        self.__dirDialog(self.targetDirEdit)
-        
     @pyqtSlot(str)
-    def on_sourceDirEdit_textChanged(self, dir):
+    def on_sourceDirPicker_textChanged(self, dir):
         """
-        Private slot to handle the source dir text changed.
+        Private slot to handle the source directory text changed.
         
         If the entered source directory is a subdirectory of the current
         projects main directory, the target directory path is synchronized.
@@ -148,7 +107,7 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
         @param dir the text of the source directory line edit (string)
         """
         if dir.startswith(self.ppath):
-            self.targetDirEdit.setText(dir)
+            self.targetDirPicker.setText(dir)
         
     def getData(self):
         """
@@ -162,6 +121,6 @@ class AddDirectoryDialog(QDialog, Ui_AddDirectoryDialog):
             self.filterComboBox.itemData(self.filterComboBox.currentIndex())
         return (
             filetype,
-            Utilities.toNativeSeparators(self.sourceDirEdit.text()),
-            Utilities.toNativeSeparators(self.targetDirEdit.text()),
+            self.sourceDirPicker.text(),
+            self.targetDirPicker.text(),
             self.recursiveCheckBox.isChecked())

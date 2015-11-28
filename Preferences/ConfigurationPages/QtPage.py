@@ -31,7 +31,7 @@ class QtPage(ConfigurationPageBase, Ui_QtPage):
         self.setupUi(self)
         self.setObjectName("QtPage")
         
-        self.qt4TransPicker.setMode(E5PathPickerModes.DiretoryMode)
+        self.qt4TransPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         # set initial values
         self.qt4TransPicker.setText(Preferences.getQt("Qt4TranslationsDir"))
