@@ -16,16 +16,15 @@ from PyQt5.QtCore import QFileInfo, QEvent, pyqtSlot
 from PyQt5.QtGui import QTextCursor
 from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter
 from E5Gui import E5MessageBox, E5FileDialog
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_DiffDialog import Ui_DiffDialog
 from .DiffHighlighter import DiffHighlighter
 
 import Utilities
 import Preferences
-import UI.PixmapCache
 
 from difflib import SequenceMatcher
 
@@ -214,11 +213,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         super(DiffDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.file1Button.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.file2Button.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.file1Completer = E5FileCompleter(self.file1Edit)
-        self.file2Completer = E5FileCompleter(self.file2Edit)
+        self.file1Picker.setMode(E5PathPickerModes.OpenFileMode)
+        self.file2Picker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.diffButton = self.buttonBox.addButton(
             self.tr("Compare"), QDialogButtonBox.ActionRole)
@@ -246,8 +242,8 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         self.highlighter = DiffHighlighter(self.contents.document())
         
         # connect some of our widgets explicitly
-        self.file1Edit.textChanged.connect(self.__fileChanged)
-        self.file2Edit.textChanged.connect(self.__fileChanged)
+        self.file1Picker.textChanged.connect(self.__fileChanged)
+        self.file2Picker.textChanged.connect(self.__fileChanged)
         
     def show(self, filename=None):
         """
@@ -256,7 +252,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         @param filename name of a file to use as the first file (string)
         """
         if filename:
-            self.file1Edit.setText(filename)
+            self.file1Picker.setText(filename)
         super(DiffDialog, self).show()
         
     def on_buttonBox_clicked(self, button):
@@ -331,7 +327,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         Private slot to handle the Compare button press.
         """
-        self.filename1 = Utilities.toNativeSeparators(self.file1Edit.text())
+        self.filename1 = Utilities.toNativeSeparators(self.file1Picker.text())
         try:
             filemtime1 = time.ctime(os.stat(self.filename1).st_mtime)
         except IOError:
@@ -349,7 +345,7 @@ class DiffDialog(QWidget, Ui_DiffDialog):
                 .format(self.filename1))
             return
 
-        self.filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
+        self.filename2 = Utilities.toNativeSeparators(self.file2Picker.text())
         try:
             filemtime2 = time.ctime(os.stat(self.filename2).st_mtime)
         except IOError:
@@ -447,41 +443,11 @@ class DiffDialog(QWidget, Ui_DiffDialog):
         """
         Private slot to enable/disable the Compare button.
         """
-        if not self.file1Edit.text() or \
-           not self.file2Edit.text():
+        if not self.file1Picker.text() or \
+           not self.file2Picker.text():
             self.diffButton.setEnabled(False)
         else:
             self.diffButton.setEnabled(True)
-
-    def __selectFile(self, lineEdit):
-        """
-        Private slot to display a file selection dialog.
-        
-        @param lineEdit field for the display of the selected filename
-                (QLineEdit)
-        """
-        filename = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select file to compare"),
-            lineEdit.text(),
-            "")
-            
-        if filename:
-            lineEdit.setText(Utilities.toNativeSeparators(filename))
-
-    @pyqtSlot()
-    def on_file1Button_clicked(self):
-        """
-        Private slot to handle the file 1 file selection button press.
-        """
-        self.__selectFile(self.file1Edit)
-
-    @pyqtSlot()
-    def on_file2Button_clicked(self):
-        """
-        Private slot to handle the file 2 file selection button press.
-        """
-        self.__selectFile(self.file2Edit)
 
 
 class DiffWindow(E5MainWindow):

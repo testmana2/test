@@ -253,43 +253,23 @@
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_4">
-          <item>
-           <widget class="QComboBox" name="dirCombo">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="toolTip">
-             <string>Enter the directory to search in</string>
-            </property>
-            <property name="editable">
-             <bool>true</bool>
-            </property>
-            <property name="insertPolicy">
-             <enum>QComboBox::InsertAtTop</enum>
-            </property>
-            <property name="sizeAdjustPolicy">
-             <enum>QComboBox::AdjustToMinimumContentsLength</enum>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="dirSelectButton">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="toolTip">
-             <string>Select the directory via a directory selection dialog</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="E5ComboPathPicker" name="dirPicker" native="true">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::WheelFocus</enum>
+          </property>
+          <property name="toolTip">
+           <string>Enter the directory to search in</string>
+          </property>
+         </widget>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -396,6 +376,12 @@
    <extends>QLabel</extends>
    <header>E5Gui/E5SqueezeLabels.h</header>
   </customwidget>
+  <customwidget>
+   <class>E5ComboPathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>findtextCombo</tabstop>
@@ -412,12 +398,10 @@
   <tabstop>filterEdit</tabstop>
   <tabstop>projectButton</tabstop>
   <tabstop>dirButton</tabstop>
-  <tabstop>dirCombo</tabstop>
-  <tabstop>dirSelectButton</tabstop>
+  <tabstop>dirPicker</tabstop>
   <tabstop>openFilesButton</tabstop>
   <tabstop>findList</tabstop>
   <tabstop>replaceButton</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -428,8 +412,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>49</x>
-     <y>740</y>
+     <x>59</x>
+     <y>739</y>
     </hint>
     <hint type="destinationlabel">
      <x>34</x>
@@ -456,32 +440,16 @@
   <connection>
    <sender>dirButton</sender>
    <signal>toggled(bool)</signal>
-   <receiver>dirCombo</receiver>
+   <receiver>dirPicker</receiver>
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>577</x>
-     <y>151</y>
+     <x>409</x>
+     <y>144</y>
     </hint>
     <hint type="destinationlabel">
-     <x>545</x>
-     <y>183</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dirButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>dirSelectButton</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>515</x>
-     <y>146</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>563</x>
-     <y>175</y>
+     <x>408</x>
+     <y>176</y>
     </hint>
    </hints>
   </connection>

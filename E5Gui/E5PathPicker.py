@@ -37,6 +37,7 @@ class E5PathPickerModes(Enum):
     SaveFileMode = 2
     DirectoryMode = 3
 
+# TODO: Refactor the classes using a base class with common functions
 
 class E5PathPicker(QWidget):
     """
@@ -87,6 +88,8 @@ class E5PathPicker(QWidget):
         
         self.__button.clicked.connect(self.__showPathPickerDialog)
         self.__editor.textChanged.connect(self.textChanged)
+        
+        self.setFocusProxy(self.__editor)
     
     def setMode(self, mode):
         """
@@ -127,6 +130,24 @@ class E5PathPicker(QWidget):
         @rtype E5PathPickerModes
         """
         return self.__mode
+    
+    def setPickerEnabled(self, enable):
+        """
+        Public method to set the enabled state of the file dialog button.
+        
+        @param enable flag indicating the enabled state
+        @type bool
+        """
+        self.__button.setEnabled(enable)
+    
+    def isPickerEnabled(self):
+        """
+        Public method to get the file dialog button enabled state.
+        
+        @return flag indicating the enabled state
+        @rtype bool
+        """
+        return self.__button.isEnabled()
     
     def clear(self):
         """
@@ -442,6 +463,8 @@ class E5ComboPathPicker(QWidget):
         
         self.__button.clicked.connect(self.__showPathPickerDialog)
         self.__editor.editTextChanged.connect(self.editTextChanged)
+        
+        self.setFocusProxy(self.__editor)
     
     def setMode(self, mode):
         """
@@ -482,6 +505,24 @@ class E5ComboPathPicker(QWidget):
         @rtype E5PathPickerModes
         """
         return self.__mode
+    
+    def setPickerEnabled(self, enable):
+        """
+        Public method to set the enabled state of the file dialog button.
+        
+        @param enable flag indicating the enabled state
+        @type bool
+        """
+        self.__button.setEnabled(enable)
+    
+    def isPickerEnabled(self):
+        """
+        Public method to get the file dialog button enabled state.
+        
+        @return flag indicating the enabled state
+        @rtype bool
+        """
+        return self.__button.isEnabled()
     
     def clear(self):
         """
@@ -724,6 +765,24 @@ class E5ComboPathPicker(QWidget):
         @rtype str
         """
         return self.__editor.toolTip()
+    
+    def setInsertPolicy(self, policy):
+        """
+        Public method to set the insertion policy of the combo box.
+        
+        @param policy insertion policy
+        @type QComboBox.InsertPolicy
+        """
+        self.__editor.setInsertPolicy(policy)
+    
+    def setSizeAdjustPolicy(self, policy):
+        """
+        Public method to set the size adjust policy of the combo box.
+        
+        @param policy size adjust policy
+        @type QComboBox.SizeAdjustPolicy
+        """
+        self.__editor.setSizeAdjustPolicy(policy)
     
     def __showPathPickerDialog(self):
         """

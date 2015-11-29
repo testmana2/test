@@ -9,7 +9,7 @@ Module implementing the Start Program dialog.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtWidgets import QDialog, QDialogButtonBox
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QComboBox
 
 from E5Gui.E5PathPicker import E5PathPickerModes
 
@@ -77,6 +77,9 @@ class StartDialog(QDialog):
         self.ui.workdirPicker.setMode(E5PathPickerModes.DirectoryMode)
         self.ui.workdirPicker.setDefaultDirectory(
             Preferences.getMultiProject("Workspace"))
+        self.ui.workdirPicker.setInsertPolicy(QComboBox.InsertAtTop)
+        self.ui.workdirPicker.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLength)
         
         self.clearButton = self.ui.buttonBox.addButton(
             self.tr("Clear Histories"), QDialogButtonBox.ActionRole)

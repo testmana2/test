@@ -21,15 +21,14 @@ from PyQt5.QtCore import QTimer, QEvent, pyqtSlot
 from PyQt5.QtGui import QColor, QFontMetrics, QBrush, QTextCursor
 from PyQt5.QtWidgets import QWidget, QApplication, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5MessageBox
 from E5Gui.E5MainWindow import E5MainWindow
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 import UI.PixmapCache
 
 from .Ui_CompareDialog import Ui_CompareDialog
 
-import Utilities
 import Preferences
 
 
@@ -102,11 +101,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         super(CompareDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.file1Button.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.file2Button.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.file1Completer = E5FileCompleter(self.file1Edit)
-        self.file2Completer = E5FileCompleter(self.file2Edit)
+        self.file1Picker.setMode(E5PathPickerModes.OpenFileMode)
+        self.file2Picker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.diffButton = self.buttonBox.addButton(
             self.tr("Compare"), QDialogButtonBox.ActionRole)
@@ -150,8 +146,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         self.cReplacedFormat.setBackground(QBrush(QColor(190, 190, 237)))
         
         # connect some of our widgets explicitly
-        self.file1Edit.textChanged.connect(self.__fileChanged)
-        self.file2Edit.textChanged.connect(self.__fileChanged)
+        self.file1Picker.textChanged.connect(self.__fileChanged)
+        self.file2Picker.textChanged.connect(self.__fileChanged)
         self.vsb1.valueChanged.connect(self.__scrollBarMoved)
         self.vsb1.valueChanged.connect(self.vsb2.setValue)
         self.vsb2.valueChanged.connect(self.vsb1.setValue)
@@ -163,8 +159,8 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         
         if len(files) == 2:
             self.filesGroup.hide()
-            self.file1Edit.setText(files[0][1])
-            self.file2Edit.setText(files[1][1])
+            self.file1Picker.setText(files[0][1])
+            self.file2Picker.setText(files[1][1])
             self.file1Label.setText(files[0][0])
             self.file2Label.setText(files[1][0])
             self.diffButton.hide()
@@ -180,7 +176,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         @param filename name of a file to use as the first file (string)
         """
         if filename:
-            self.file1Edit.setText(filename)
+            self.file1Picker.setText(filename)
         super(CompareDialog, self).show()
         
     def __appendText(self, pane, linenumber, line, format, interLine=False):
@@ -230,7 +226,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         Private slot to handle the Compare button press.
         """
-        filename1 = Utilities.toNativeSeparators(self.file1Edit.text())
+        filename1 = self.file1Picker.text()
         try:
             f1 = open(filename1, "r", encoding="utf-8")
             lines1 = f1.readlines()
@@ -244,7 +240,7 @@ class CompareDialog(QWidget, Ui_CompareDialog):
                 .format(filename1))
             return
 
-        filename2 = Utilities.toNativeSeparators(self.file2Edit.text())
+        filename2 = self.file2Picker.text()
         try:
             f2 = open(filename2, "r", encoding="utf-8")
             lines2 = f2.readlines()
@@ -274,10 +270,10 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         else:
             self.file1Button.hide()
             self.file2Button.hide()
-            self.file1Edit.setText(name1)
-            self.file1Edit.setReadOnly(True)
-            self.file2Edit.setText(name2)
-            self.file2Edit.setReadOnly(True)
+            self.file1Picker.setText(name1)
+            self.file1Picker.setReadOnly(True)
+            self.file2Picker.setText(name2)
+            self.file2Picker.setReadOnly(True)
         self.diffButton.setEnabled(False)
         self.diffButton.hide()
         
@@ -430,41 +426,11 @@ class CompareDialog(QWidget, Ui_CompareDialog):
         """
         Private slot to enable/disable the Compare button.
         """
-        if not self.file1Edit.text() or \
-           not self.file2Edit.text():
+        if not self.file1Picker.text() or \
+           not self.file2Picker.text():
             self.diffButton.setEnabled(False)
         else:
             self.diffButton.setEnabled(True)
-
-    def __selectFile(self, lineEdit):
-        """
-        Private slot to display a file selection dialog.
-        
-        @param lineEdit field for the display of the selected filename
-                (QLineEdit)
-        """
-        filename = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select file to compare"),
-            lineEdit.text(),
-            "")
-            
-        if filename:
-            lineEdit.setText(Utilities.toNativeSeparators(filename))
-
-    @pyqtSlot()
-    def on_file1Button_clicked(self):
-        """
-        Private slot to handle the file 1 file selection button press.
-        """
-        self.__selectFile(self.file1Edit)
-
-    @pyqtSlot()
-    def on_file2Button_clicked(self):
-        """
-        Private slot to handle the file 2 file selection button press.
-        """
-        self.__selectFile(self.file2Edit)
 
     @pyqtSlot(bool)
     def on_synchronizeCheckBox_toggled(self, sync):

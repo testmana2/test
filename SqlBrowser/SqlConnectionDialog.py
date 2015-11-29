@@ -13,13 +13,9 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 from PyQt5.QtSql import QSqlDatabase
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_SqlConnectionDialog import Ui_SqlConnectionDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
@@ -35,9 +31,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         super(SqlConnectionDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.databaseFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.databaseFileCompleter = E5FileCompleter()
+        self.databasePicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
@@ -68,13 +62,11 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         driver = self.driverCombo.currentText()
         if driver.startswith("QSQLITE"):
-            self.databaseEdit.setCompleter(self.databaseFileCompleter)
-            self.databaseFileButton.setEnabled(True)
+            self.databasePicker.setPickerEnabled(True)
         else:
-            self.databaseEdit.setCompleter(None)
-            self.databaseFileButton.setEnabled(False)
+            self.databasePicker.setPickerEnabled(False)
         
-        if self.databaseEdit.text() == "" or driver == "":
+        if self.databasePicker.text() == "" or driver == "":
             self.okButton.setEnabled(False)
         else:
             self.okButton.setEnabled(True)
@@ -89,28 +81,13 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         self.__updateDialog()
     
     @pyqtSlot(str)
-    def on_databaseEdit_textChanged(self, txt):
+    def on_databasePicker_textChanged(self, txt):
         """
         Private slot handling the change of the database name.
         
         @param txt text of the edit (string)
         """
         self.__updateDialog()
-    
-    @pyqtSlot()
-    def on_databaseFileButton_clicked(self):
-        """
-        Private slot to open a database file via a file selection dialog.
-        """
-        startdir = self.databaseEdit.text()
-        dbFile = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select Database File"),
-            startdir,
-            self.tr("All Files (*)"))
-        
-        if dbFile:
-            self.databaseEdit.setText(Utilities.toNativeSeparators(dbFile))
     
     def getData(self):
         """
@@ -122,7 +99,7 @@ class SqlConnectionDialog(QDialog, Ui_SqlConnectionDialog):
         """
         return (
             self.driverCombo.currentText(),
-            self.databaseEdit.text(),
+            self.databasePicker.text(),
             self.usernameEdit.text(),
             self.passwordEdit.text(),
             self.hostnameEdit.text(),

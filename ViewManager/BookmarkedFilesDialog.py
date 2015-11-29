@@ -13,13 +13,9 @@ from PyQt5.QtCore import QFileInfo, Qt, pyqtSlot
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QListWidgetItem, QDialog
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_BookmarkedFilesDialog import Ui_BookmarkedFilesDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
@@ -36,9 +32,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         super(BookmarkedFilesDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.fileCompleter = E5FileCompleter(self.fileEdit)
+        self.filePicker.setMode(E5PathPickerModes.OpenFileMode)
         
         self.bookmarks = bookmarks[:]
         for bookmark in self.bookmarks:
@@ -49,7 +43,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         if len(self.bookmarks):
             self.filesList.setCurrentRow(0)
         
-    def on_fileEdit_textChanged(self, txt):
+    def on_filePicker_textChanged(self, txt):
         """
         Private slot to handle the textChanged signal of the file edit.
         
@@ -67,7 +61,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         @param row the current row (integer)
         """
         if row == -1:
-            self.fileEdit.clear()
+            self.filePicker.clear()
             self.downButton.setEnabled(False)
             self.upButton.setEnabled(False)
             self.deleteButton.setEnabled(False)
@@ -80,20 +74,19 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
             self.changeButton.setEnabled(True)
             
             bookmark = self.bookmarks[row]
-            self.fileEdit.setText(bookmark)
+            self.filePicker.setText(bookmark)
         
     @pyqtSlot()
     def on_addButton_clicked(self):
         """
         Private slot to add a new entry.
         """
-        bookmark = self.fileEdit.text()
+        bookmark = self.filePicker.text()
         if bookmark:
-            bookmark = Utilities.toNativeSeparators(bookmark)
             itm = QListWidgetItem(bookmark, self.filesList)
             if not QFileInfo(bookmark).exists():
                 itm.setBackground(QColor(Qt.red))
-            self.fileEdit.clear()
+            self.filePicker.clear()
             self.bookmarks.append(bookmark)
         row = self.filesList.currentRow()
         self.on_filesList_currentRowChanged(row)
@@ -104,8 +97,7 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         Private slot to change an entry.
         """
         row = self.filesList.currentRow()
-        bookmark = self.fileEdit.text()
-        bookmark = Utilities.toNativeSeparators(bookmark)
+        bookmark = self.filePicker.text()
         self.bookmarks[row] = bookmark
         itm = self.filesList.item(row)
         itm.setText(bookmark)
@@ -166,16 +158,6 @@ class BookmarkedFilesDialog(QDialog, Ui_BookmarkedFilesDialog):
         else:
             self.upButton.setEnabled(True)
         self.downButton.setEnabled(True)
-        
-    @pyqtSlot()
-    def on_fileButton_clicked(self):
-        """
-        Private slot to handle the file selection via a file selection dialog.
-        """
-        bookmark = E5FileDialog.getOpenFileName()
-        if bookmark:
-            bookmark = Utilities.toNativeSeparators(bookmark)
-            self.fileEdit.setText(bookmark)
         
     def getBookmarkedFiles(self):
         """

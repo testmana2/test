@@ -16,14 +16,12 @@ from PyQt5.QtCore import pyqtSignal, pyqtSlot
 from PyQt5.QtWidgets import QWidget, QHeaderView, QApplication, \
     QDialogButtonBox, QTreeWidgetItem
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_FindFileNameDialog import Ui_FindFileNameDialog
 
 from Utilities import direntries
 import Utilities
-import UI.PixmapCache
 
 
 class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
@@ -50,9 +48,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         super(FindFileNameDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.searchDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.searchDirCompleter = E5DirCompleter(self.searchDirEdit)
+        self.searchDirPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.fileList.headerItem().setText(self.fileList.columnCount(), "")
         
@@ -119,8 +115,8 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         
         searchPaths = []
         if self.searchDirCheckBox.isChecked() and \
-           self.searchDirEdit.text() != "":
-            searchPaths.append(self.searchDirEdit.text())
+           self.searchDirPicker.text() != "":
+            searchPaths.append(self.searchDirPicker.text())
         if self.projectCheckBox.isChecked():
             searchPaths.append(self.project.ppath)
         if self.syspathCheckBox.isChecked():
@@ -185,7 +181,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         """
         self.__searchFile()
         
-    def on_searchDirEdit_textChanged(self, text):
+    def on_searchDirPicker_textChanged(self, text):
         """
         Private slot to handle the textChanged signal of the search directory
         edit.
@@ -196,21 +192,6 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         if self.searchDirCheckBox.isChecked():
             self.__searchFile()
         
-    @pyqtSlot()
-    def on_searchDirButton_clicked(self):
-        """
-        Private slot to handle the clicked signal of the search directory
-        selection button.
-        """
-        searchDir = E5FileDialog.getExistingDirectory(
-            None,
-            self.tr("Select search directory"),
-            self.searchDirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-        
-        if searchDir:
-            self.searchDirEdit.setText(Utilities.toNativeSeparators(searchDir))
-        
     def on_searchDirCheckBox_toggled(self, checked):
         """
         Private slot to handle the toggled signal of the search directory
@@ -218,7 +199,7 @@ class FindFileNameDialog(QWidget, Ui_FindFileNameDialog):
         
         @param checked flag indicating the state of the checkbox (boolean)
         """
-        if self.searchDirEdit.text():
+        if self.searchDirPicker.text():
             self.__searchFile()
         
     def on_projectCheckBox_toggled(self, checked):

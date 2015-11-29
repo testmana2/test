@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Find File</string>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="textLabel1">
      <property name="text">
@@ -59,7 +59,7 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QCheckBox" name="searchDirCheckBox">
        <property name="enabled">
@@ -74,16 +74,18 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="searchDirEdit">
+      <widget class="E5PathPicker" name="searchDirPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
        <property name="toolTip">
         <string>Enter the directory, the file should be searched in</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="searchDirButton">
-       <property name="toolTip">
-        <string>Press to select the directory, the file should be searched in</string>
        </property>
       </widget>
      </item>
@@ -151,11 +153,18 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>fileNameEdit</tabstop>
   <tabstop>fileExtEdit</tabstop>
-  <tabstop>searchDirEdit</tabstop>
-  <tabstop>searchDirButton</tabstop>
+  <tabstop>searchDirPicker</tabstop>
   <tabstop>searchDirCheckBox</tabstop>
   <tabstop>projectCheckBox</tabstop>
   <tabstop>syspathCheckBox</tabstop>

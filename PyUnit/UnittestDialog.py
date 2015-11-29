@@ -18,7 +18,7 @@ import os
 from PyQt5.QtCore import pyqtSignal, QEvent, Qt, pyqtSlot
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QWidget, QDialog, QApplication, QDialogButtonBox, \
-    QListWidgetItem
+    QListWidgetItem, QComboBox
 
 from E5Gui.E5Application import e5App
 from E5Gui import E5MessageBox
@@ -64,6 +64,9 @@ class UnittestDialog(QWidget, Ui_UnittestDialog):
         self.setupUi(self)
         
         self.testsuitePicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.testsuitePicker.setInsertPolicy(QComboBox.InsertAtTop)
+        self.testsuitePicker.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLength)
         
         self.startButton = self.buttonBox.addButton(
             self.tr("Start"), QDialogButtonBox.ActionRole)

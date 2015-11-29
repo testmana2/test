@@ -15,16 +15,16 @@ import re
 from PyQt5.QtCore import pyqtSignal, Qt, pyqtSlot
 from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import QDialog, QApplication, QMenu, QDialogButtonBox, \
-    QTreeWidgetItem
+    QTreeWidgetItem, QComboBox
 
 from E5Gui.E5Application import e5App
-from E5Gui import E5MessageBox, E5FileDialog
+from E5Gui import E5MessageBox
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_FindFileDialog import Ui_FindFileDialog
 
 import Utilities
 import Preferences
-import UI.PixmapCache
 
 
 class FindFileDialog(QDialog, Ui_FindFileDialog):
@@ -60,7 +60,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         self.setupUi(self)
         self.setWindowFlags(Qt.Window)
         
-        self.dirSelectButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.dirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.dirPicker.setInsertPolicy(QComboBox.InsertAtTop)
+        self.dirPicker.setSizeAdjustPolicy(
+            QComboBox.AdjustToMinimumContentsLength)
         
         self.__replaceMode = replaceMode
         
@@ -99,7 +102,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 "FindFileDialog/DirectoryHistory"))
         self.findtextCombo.addItems(self.searchHistory)
         self.replacetextCombo.addItems(self.replaceHistory)
-        self.dirCombo.addItems(self.dirHistory)
+        self.dirPicker.addItems(self.dirHistory)
         
         self.project = project
         
@@ -209,10 +212,10 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         """
         self.__enableFindButton()
         
-    def on_dirCombo_editTextChanged(self, text):
+    def on_dirPicker_editTextChanged(self, text):
         """
         Private slot to handle the textChanged signal of the directory
-        combo box.
+        picker.
         
         @param text (ignored)
         """
@@ -256,9 +259,9 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
            (self.__replaceMode and
             self.replacetextCombo.currentText() == "") or \
            (self.dirButton.isChecked() and
-            (self.dirCombo.currentText() == "" or
+            (self.dirPicker.currentText() == "" or
              not os.path.exists(os.path.abspath(
-                self.dirCombo.currentText())))) or \
+                self.dirPicker.currentText())))) or \
            (self.filterCheckBox.isChecked() and self.filterEdit.text() == ""):
             self.findButton.setEnabled(False)
             self.buttonBox.button(QDialogButtonBox.Close).setDefault(True)
@@ -344,7 +347,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 filterString = "|".join(filters)
                 filterRe = re.compile(filterString)
             files = self.__getFileList(
-                os.path.abspath(self.dirCombo.currentText()),
+                os.path.abspath(self.dirPicker.currentText()),
                 filterRe)
         elif self.openFilesButton.isChecked():
             vm = e5App().getObject("ViewManager")
@@ -404,12 +407,12 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
                 self.replaceHistory[:30])
         
         if self.dirButton.isChecked():
-            searchDir = self.dirCombo.currentText()
+            searchDir = self.dirPicker.currentText()
             if searchDir in self.dirHistory:
                 self.dirHistory.remove(searchDir)
             self.dirHistory.insert(0, searchDir)
-            self.dirCombo.clear()
-            self.dirCombo.addItems(self.dirHistory)
+            self.dirPicker.clear()
+            self.dirPicker.addItems(self.dirHistory)
             Preferences.Prefs.settings.setValue(
                 "FindFileDialog/DirectoryHistory",
                 self.dirHistory[:30])
@@ -544,20 +547,6 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         else:
             self.sourceFile.emit(fn, line, "", start, end)
         
-    @pyqtSlot()
-    def on_dirSelectButton_clicked(self):
-        """
-        Private slot to display a directory selection dialog.
-        """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select directory"),
-            self.dirCombo.currentText(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            self.dirCombo.setEditText(Utilities.toNativeSeparators(directory))
-        
     def __getFileList(self, path, filterRe):
         """
         Private method to get a list of files to search.
@@ -583,7 +572,7 @@ class FindFileDialog(QDialog, Ui_FindFileDialog):
         @param searchDir name of the directory to search in (string)
         """
         self.dirButton.setChecked(True)
-        self.dirCombo.setEditText(Utilities.toNativeSeparators(searchDir))
+        self.dirPicker.setEditText(Utilities.toNativeSeparators(searchDir))
         
     def setOpenFiles(self):
         """
