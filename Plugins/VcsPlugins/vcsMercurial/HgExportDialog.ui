@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>456</width>
-    <height>301</height>
+    <width>450</width>
+    <height>350</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,24 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="directoryEdit"/>
+      <widget class="E5PathPicker" name="directoryPicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string>Enter the target name</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Target name&lt;/b&gt;
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
@@ -36,7 +53,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1" colspan="2">
+     <item row="1" column="1">
       <widget class="QLineEdit" name="patternEdit">
        <property name="toolTip">
         <string>Enter the file name pattern for the export files</string>
@@ -64,9 +81,12 @@ here. Valid recognized patterns are:&lt;/p&gt;
        <property name="text">
         <string>Changesets:</string>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
       </widget>
      </item>
-     <item row="2" column="1" colspan="2">
+     <item row="2" column="1">
       <widget class="QPlainTextEdit" name="changesetsEdit">
        <property name="toolTip">
         <string>Enter changesets by number, id, range or revset expression one per line</string>
@@ -76,13 +96,6 @@ here. Valid recognized patterns are:&lt;/p&gt;
        </property>
        <property name="lineWrapMode">
         <enum>QPlainTextEdit::NoWrap</enum>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QToolButton" name="directoryButton">
-       <property name="toolTip">
-        <string>Press to select the export directory via a directory selection dialog</string>
        </property>
       </widget>
      </item>
@@ -134,16 +147,22 @@ here. Valid recognized patterns are:&lt;/p&gt;
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>directoryEdit</tabstop>
-  <tabstop>directoryButton</tabstop>
+  <tabstop>directoryPicker</tabstop>
   <tabstop>patternEdit</tabstop>
   <tabstop>changesetsEdit</tabstop>
   <tabstop>switchParentCheckBox</tabstop>
   <tabstop>textCheckBox</tabstop>
   <tabstop>datesCheckBox</tabstop>
   <tabstop>gitCheckBox</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

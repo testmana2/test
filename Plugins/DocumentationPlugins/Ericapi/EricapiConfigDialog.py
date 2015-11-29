@@ -16,12 +16,10 @@ import copy
 from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_EricapiConfigDialog import Ui_EricapiConfigDialog
 import Utilities
-import UI.PixmapCache
 import DocumentationTools
 
 from eric6config import getConfig
@@ -42,8 +40,13 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         super(EricapiConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.outputFileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.outputFilePicker.setMode(E5PathPickerModes.SaveFileMode)
+        self.outputFilePicker.setDefaultDirectory(project.getProjectPath())
+        self.outputFilePicker.setFilters(self.tr(
+            "API files (*.api);;All files (*)"))
+        
+        self.ignoreDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.ignoreDirPicker.setDefaultDirectory(project.getProjectPath())
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         for language in sorted(
@@ -65,13 +68,10 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         self.parameters['outputFile'] = \
             Utilities.toNativeSeparators(self.parameters['outputFile'])
         
-        self.outputFileCompleter = E5FileCompleter(self.outputFileEdit)
-        self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
-        
         self.recursionCheckBox.setChecked(self.parameters['useRecursion'])
         self.includePrivateCheckBox.setChecked(
             self.parameters['includePrivate'])
-        self.outputFileEdit.setText(self.parameters['outputFile'])
+        self.outputFilePicker.setText(self.parameters['outputFile'])
         self.baseEdit.setText(self.parameters['basePackage'])
         self.ignoreDirsList.clear()
         for d in self.parameters['ignoreDirectories']:
@@ -181,63 +181,48 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         return (args, parms)
 
     @pyqtSlot()
-    def on_outputFileButton_clicked(self):
+    def on_outputFilePicker_aboutToShowPathPickerDialog(self):
         """
-        Private slot to select the output file.
-        
-        It displays a file selection dialog to
-        select the file the api is written to.
+        Private slot called before the file selection dialog is shown.
         """
-        startFile = Utilities.fromNativeSeparators(self.outputFileEdit.text())
+        startFile = self.outputFilePicker.text()
         if not startFile:
-            startPath = Utilities.fromNativeSeparators(
-                self.project.getProjectPath())
-            startFile = (startPath + "/" +
-                         self.project.getProjectName() + ".api")
-        filename = E5FileDialog.getSaveFileName(
-            self,
-            self.tr("Select output file"),
-            startFile,
-            self.tr("API files (*.api);;All files (*)"))
-            
-        if filename:
-            # make it relative, if it is in a subdirectory of the project path
-            fn = Utilities.toNativeSeparators(filename)
-            fn = self.project.getRelativePath(fn)
-            self.outputFileEdit.setText(fn)
+            self.outputFilePicker.setText(
+                self.project.getProjectName() + ".api")
+    
+    @pyqtSlot(str)
+    def on_outputFilePicker_pathSelected(self, path):
+        """
+        Private slot handling the selection of an output file.
+        
+        @param path path of the output file
+        @type str
+        """
+        # make it relative, if it is in a subdirectory of the project path
+        fn = self.project.getRelativePath(path)
+        self.outputFilePicker.setText(fn)
 
-    def on_outputFileEdit_textChanged(self, filename):
+    def on_outputFilePicker_textChanged(self, filename):
         """
         Private slot to enable/disable the "OK" button.
         
         @param filename name of the file (string)
         """
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(filename != "")
-
-    @pyqtSlot()
-    def on_ignoreDirButton_clicked(self):
+    
+    @pyqtSlot(str)
+    def on_ignoreDirPicker_pathSelected(self, path):
         """
-        Private slot to select a directory to be ignored.
+        Private slot handling the selection of a directory to be ignored.
         
-        It displays a directory selection dialog to
-        select a directory to be ignored.
+        @param path path of the directory to be ignored
+        @type str
         """
-        startDir = Utilities.fromNativeSeparators(self.ignoreDirEdit.text())
-        if not startDir:
-            startDir = self.ppath
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select directory to exclude"),
-            startDir,
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            # make it relative, if it is a subdirectory of the project path
-            dn = Utilities.toNativeSeparators(directory)
-            dn = self.project.getRelativePath(dn)
-            while dn.endswith(os.sep):
-                dn = dn[:-1]
-            self.ignoreDirEdit.setText(dn)
+        # make it relative, if it is in a subdirectory of the project path
+        dn = self.project.getRelativePath(path)
+        while dn.endswith(os.sep):
+            dn = dn[:-1]
+        self.ignoreDirPicker.setText(dn)
     
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -247,10 +232,10 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         The directory in the ignore directories
         line edit is moved to the listbox above and the edit is cleared.
         """
-        basename = os.path.basename(self.ignoreDirEdit.text())
+        basename = os.path.basename(self.ignoreDirPicker.text())
         if basename:
             self.ignoreDirsList.addItem(basename)
-            self.ignoreDirEdit.clear()
+            self.ignoreDirPicker.clear()
 
     @pyqtSlot()
     def on_deleteButton_clicked(self):
@@ -269,7 +254,7 @@ class EricapiConfigDialog(QDialog, Ui_EricapiConfigDialog):
         self.parameters['useRecursion'] = self.recursionCheckBox.isChecked()
         self.parameters['includePrivate'] = \
             self.includePrivateCheckBox.isChecked()
-        outfile = self.outputFileEdit.text()
+        outfile = self.outputFilePicker.text()
         if outfile != '':
             outfile = os.path.normpath(outfile)
         self.parameters['outputFile'] = outfile

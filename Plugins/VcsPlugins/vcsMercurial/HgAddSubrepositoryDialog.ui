@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>550</width>
-    <height>142</height>
+    <height>124</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,27 +23,25 @@
       <string>&amp;Path within Project:</string>
      </property>
      <property name="buddy">
-      <cstring>pathEdit</cstring>
+      <cstring>pathPicker</cstring>
      </property>
     </widget>
    </item>
    <item row="0" column="1">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLineEdit" name="pathEdit">
-       <property name="toolTip">
-        <string>Enter the path of the sub-repository relative to the project</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="pathButton">
-       <property name="toolTip">
-        <string>Select the path of the sub-repository with a directory selection dialog</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="E5PathPicker" name="pathPicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string>Enter the path of the sub-repository relative to the project</string>
+     </property>
+    </widget>
    </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_2">
@@ -108,12 +106,18 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>pathEdit</tabstop>
-  <tabstop>pathButton</tabstop>
+  <tabstop>pathPicker</tabstop>
   <tabstop>typeCombo</tabstop>
   <tabstop>urlEdit</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>380</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -164,22 +164,20 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLineEdit" name="patchFileEdit">
-       <property name="toolTip">
-        <string>Enter the name of the patch file</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="patchFileButton">
-       <property name="toolTip">
-        <string>Press to select the patch file via a file selection dialog</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="E5PathPicker" name="patchFilePicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string>Enter the name of the patch file</string>
+     </property>
+    </widget>
    </item>
    <item row="3" column="0" colspan="2">
     <widget class="QCheckBox" name="forceCheckBox">
@@ -203,16 +201,22 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>noCommitCheckBox</tabstop>
   <tabstop>messageEdit</tabstop>
   <tabstop>dateEdit</tabstop>
   <tabstop>userEdit</tabstop>
   <tabstop>stripSpinBox</tabstop>
-  <tabstop>patchFileEdit</tabstop>
-  <tabstop>patchFileButton</tabstop>
+  <tabstop>patchFilePicker</tabstop>
   <tabstop>forceCheckBox</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

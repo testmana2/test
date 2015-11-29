@@ -14,13 +14,10 @@ import os
 from PyQt5.QtCore import pyqtSlot, QDir
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui import E5FileDialog
-from E5Gui.E5Completers import E5DirCompleter
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_HgExportDialog import Ui_HgExportDialog
 
-import Utilities
-import UI.PixmapCache
 
 
 class HgExportDialog(QDialog, Ui_HgExportDialog):
@@ -36,15 +33,13 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         super(HgExportDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.directoryButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.directoryPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(False)
         
-        self.__directoryCompleter = E5DirCompleter(self.directoryEdit)
-        
         # set default values for directory and pattern
         self.patternEdit.setText("%b_%r_%h_%n_of_%N.diff")
-        self.directoryEdit.setText(QDir.tempPath())
+        self.directoryPicker.setText(QDir.tempPath())
     
     def __updateOK(self):
         """
@@ -52,7 +47,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         """
         enabled = True
         
-        if self.directoryEdit.text() == "":
+        if self.directoryPicker.text() == "":
             enabled = False
         elif self.patternEdit.text() == "":
             enabled = False
@@ -62,27 +57,13 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         self.buttonBox.button(QDialogButtonBox.Ok).setEnabled(enabled)
     
     @pyqtSlot(str)
-    def on_directoryEdit_textChanged(self, txt):
+    def on_directoryPicker_textChanged(self, txt):
         """
         Private slot to react on changes of the export directory edit.
         
         @param txt contents of the line edit (string)
         """
         self.__updateOK()
-    
-    @pyqtSlot()
-    def on_directoryButton_clicked(self):
-        """
-        Private slot called by pressing the export directory selection button.
-        """
-        dn = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Export Patches"),
-            self.directoryEdit.text(),
-            E5FileDialog.Options(E5FileDialog.Option(0)))
-        
-        if dn:
-            self.directoryEdit.setText(Utilities.toNativeSeparators(dn))
     
     @pyqtSlot(str)
     def on_patternEdit_textChanged(self, txt):
@@ -112,7 +93,7 @@ class HgExportDialog(QDialog, Ui_HgExportDialog):
         """
         return (
             os.path.join(
-                Utilities.toNativeSeparators(self.directoryEdit.text()),
+                self.directoryPicker.text(),
                 self.patternEdit.text()),
             self.changesetsEdit.toPlainText().splitlines(),
             self.switchParentCheckBox.isChecked(),

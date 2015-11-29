@@ -17,14 +17,12 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QColorDialog
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_EricdocConfigDialog import Ui_EricdocConfigDialog
 from DocumentationTools.Config import eric6docDefaultColors, \
     eric6docColorParameterNames
 import Utilities
-import UI.PixmapCache
 
 from eric6config import getConfig
 
@@ -44,10 +42,19 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         super(EricdocConfigDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.outputDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.ignoreDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.cssButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.qtHelpDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
+        self.outputDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.outputDirPicker.setDefaultDirectory(project.getProjectPath())
+        
+        self.ignoreDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.ignoreDirPicker.setDefaultDirectory(project.getProjectPath())
+        
+        self.cssPicker.setMode(E5PathPickerModes.OpenFileMode)
+        self.cssPicker.setDefaultDirectory(getConfig('ericCSSDir'))
+        self.cssPicker.setFilters(self.tr(
+            "Style sheet (*.css);;All files (*)"))
+        
+        self.qtHelpDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.qtHelpDirPicker.setDefaultDirectory(project.getProjectPath())
         
         self.__okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         
@@ -100,18 +107,14 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.ppath = project.getProjectPath()
         self.project = project
         
-        self.outputDirCompleter = E5DirCompleter(self.outputDirEdit)
-        self.ignoreDirCompleter = E5DirCompleter(self.ignoreDirEdit)
-        self.qtHelpDirCompleter = E5DirCompleter(self.qtHelpDirEdit)
-        
         self.recursionCheckBox.setChecked(self.parameters['useRecursion'])
         self.noindexCheckBox.setChecked(self.parameters['noindex'])
         self.noemptyCheckBox.setChecked(self.parameters['noempty'])
-        self.outputDirEdit.setText(self.parameters['outputDirectory'])
+        self.outputDirPicker.setText(self.parameters['outputDirectory'])
         self.ignoreDirsList.clear()
         for d in self.parameters['ignoreDirectories']:
             self.ignoreDirsList.addItem(d)
-        self.cssEdit.setText(self.parameters['cssFile'])
+        self.cssPicker.setText(self.parameters['cssFile'])
         self.sourceExtEdit.setText(
             ", ".join(self.parameters['sourceExtensions']))
         self.excludeFilesEdit.setText(
@@ -119,7 +122,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.sample.setHtml(self.sampleText.format(**self.colors))
         
         self.qtHelpGroup.setChecked(self.parameters['qtHelpEnabled'])
-        self.qtHelpDirEdit.setText(self.parameters['qtHelpOutputDirectory'])
+        self.qtHelpDirPicker.setText(self.parameters['qtHelpOutputDirectory'])
         self.qtHelpNamespaceEdit.setText(self.parameters['qtHelpNamespace'])
         self.qtHelpFolderEdit.setText(self.parameters['qtHelpVirtualFolder'])
         self.qtHelpFilterNameEdit.setText(self.parameters['qtHelpFilterName'])
@@ -290,56 +293,34 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             args.append('--create-qhc')
         
         return (args, parms)
-
-    @pyqtSlot()
-    def on_outputDirButton_clicked(self):
+    
+    @pyqtSlot(str)
+    def on_outputDirPicker_pathSelected(self, path):
         """
-        Private slot to select the output directory.
+        Private slot handling the selection of an output directory.
         
-        It displays a directory selection dialog to
-        select the directory the documentations is written to.
+        @param path path of the output directory
+        @type str
         """
-        startDir = Utilities.fromNativeSeparators(self.outputDirEdit.text())
-        if not startDir:
-            startDir = Utilities.fromNativeSeparators(self.ppath)
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select output directory"),
-            startDir,
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            # make it relative, if it is a subdirectory of the project path
-            dn = Utilities.toNativeSeparators(directory)
-            dn = self.project.getRelativePath(dn)
-            while dn.endswith(os.sep):
-                dn = dn[:-1]
-            self.outputDirEdit.setText(dn)
-
-    @pyqtSlot()
-    def on_ignoreDirButton_clicked(self):
+        # make it relative, if it is in a subdirectory of the project path
+        dn = self.project.getRelativePath(path)
+        while dn.endswith(os.sep):
+            dn = dn[:-1]
+        self.outputDirPicker.setText(dn)
+    
+    @pyqtSlot(str)
+    def on_ignoreDirPicker_pathSelected(self, path):
         """
-        Private slot to select a directory to be ignored.
+        Private slot handling the selection of a directory to be ignored.
         
-        It displays a directory selection dialog to
-        select a directory to be ignored.
+        @param path path of the directory to be ignored
+        @type str
         """
-        startDir = Utilities.fromNativeSeparators(self.ignoreDirEdit.text())
-        if not startDir:
-            startDir = self.ppath
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select directory to exclude"),
-            startDir,
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            # make it relative, if it is a subdirectory of the project path
-            dn = Utilities.toNativeSeparators(directory)
-            dn = self.project.getRelativePath(dn)
-            while dn.endswith(os.sep):
-                dn = dn[:-1]
-            self.ignoreDirEdit.setText(dn)
+        # make it relative, if it is in a subdirectory of the project path
+        dn = self.project.getRelativePath(path)
+        while dn.endswith(os.sep):
+            dn = dn[:-1]
+        self.ignoreDirPicker.setText(dn)
 
     @pyqtSlot()
     def on_addButton_clicked(self):
@@ -349,10 +330,10 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         The directory in the ignore directories
         line edit is moved to the listbox above and the edit is cleared.
         """
-        basename = os.path.basename(self.ignoreDirEdit.text())
+        basename = os.path.basename(self.ignoreDirPicker.text())
         if basename:
             self.ignoreDirsList.addItem(basename)
-            self.ignoreDirEdit.clear()
+            self.ignoreDirPicker.clear()
 
     @pyqtSlot()
     def on_deleteButton_clicked(self):
@@ -361,23 +342,18 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         itm = self.ignoreDirsList.takeItem(self.ignoreDirsList.currentRow())
         del itm
-
-    @pyqtSlot()
-    def on_cssButton_clicked(self):
+    
+    @pyqtSlot(str)
+    def on_cssPicker_pathSelected(self, path):
         """
-        Private slot to select a css style sheet.
+        Private slot handling the selection of a css style sheet.
+        
+        @param path path of the css style sheet
+        @type str
         """
-        cssFile = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select CSS style sheet"),
-            getConfig('ericCSSDir'),
-            self.tr("Style sheet (*.css);;All files (*)"))
-            
-        if cssFile:
-            # make it relative, if it is in a subdirectory of the project path
-            cf = Utilities.toNativeSeparators(cssFile)
-            cf = self.project.getRelativePath(cf)
-            self.cssEdit.setText(cf)
+        # make it relative, if it is in a subdirectory of the project path
+        cf = self.project.getRelativePath(path)
+        self.cssPicker.setText(cf)
 
     def __selectColor(self, colorKey):
         """
@@ -508,27 +484,20 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         """
         self.__checkQtHelpOptions()
     
-    @pyqtSlot()
-    def on_qtHelpDirButton_clicked(self):
+    @pyqtSlot(str)
+    def on_qtHelpDirPicker_pathSelected(self, path):
         """
-        Private slot to select the output directory for the QtHelp files.
+        Private slot handling the selection of the output directory for the
+        QtHelp files.
         
-        It displays a directory selection dialog to
-        select the directory the QtHelp files are written to.
+        @param path path of the the output directory for the QtHelp files
+        @type str
         """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select output directory for QtHelp files"),
-            self.qtHelpDirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-        if directory:
-            # make it relative, if it is a subdirectory of the project path
-            dn = Utilities.toNativeSeparators(directory)
-            dn = self.project.getRelativePath(dn)
-            while dn.endswith(os.sep):
-                dn = dn[:-1]
-            self.qtHelpDirEdit.setText(dn)
+        # make it relative, if it is in a subdirectory of the project path
+        dn = self.project.getRelativePath(path)
+        while dn.endswith(os.sep):
+            dn = dn[:-1]
+        self.qtHelpDirPicker.setText(dn)
     
     def accept(self):
         """
@@ -539,7 +508,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
         self.parameters['useRecursion'] = self.recursionCheckBox.isChecked()
         self.parameters['noindex'] = self.noindexCheckBox.isChecked()
         self.parameters['noempty'] = self.noemptyCheckBox.isChecked()
-        outdir = self.outputDirEdit.text()
+        outdir = self.outputDirPicker.text()
         if outdir != '':
             outdir = os.path.normpath(outdir)
             if outdir.endswith(os.sep):
@@ -550,7 +519,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             itm = self.ignoreDirsList.item(row)
             self.parameters['ignoreDirectories'].append(
                 os.path.normpath(itm.text()))
-        cssFile = self.cssEdit.text()
+        cssFile = self.cssPicker.text()
         if cssFile != '':
             cssFile = os.path.normpath(cssFile)
         self.parameters['cssFile'] = cssFile
@@ -562,7 +531,7 @@ class EricdocConfigDialog(QDialog, Ui_EricdocConfigDialog):
             [pattern.strip() for pattern in patterns]
         
         self.parameters['qtHelpEnabled'] = self.qtHelpGroup.isChecked()
-        self.parameters['qtHelpOutputDirectory'] = self.qtHelpDirEdit.text()
+        self.parameters['qtHelpOutputDirectory'] = self.qtHelpDirPicker.text()
         self.parameters['qtHelpNamespace'] = self.qtHelpNamespaceEdit.text()
         self.parameters['qtHelpVirtualFolder'] = self.qtHelpFolderEdit.text()
         self.parameters['qtHelpFilterName'] = self.qtHelpFilterNameEdit.text()

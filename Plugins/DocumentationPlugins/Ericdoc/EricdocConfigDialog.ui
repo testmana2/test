@@ -26,9 +26,9 @@
       <attribute name="title">
        <string>General</string>
       </attribute>
-      <layout class="QVBoxLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <layout class="QHBoxLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
           <widget class="QLabel" name="TextLabel6">
            <property name="text">
@@ -37,19 +37,18 @@
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="outputDirEdit">
+          <widget class="E5PathPicker" name="outputDirPicker" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::StrongFocus</enum>
+           </property>
            <property name="toolTip">
             <string>Enter an output directory</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QToolButton" name="outputDirButton">
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="toolTip">
-            <string>Press to open a directory selection dialog</string>
            </property>
           </widget>
          </item>
@@ -163,17 +162,16 @@
        </item>
        <item>
         <widget class="QGroupBox" name="groupBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>2</verstretch>
+          </sizepolicy>
+         </property>
          <property name="title">
           <string>Exclude Directories</string>
          </property>
-         <layout class="QGridLayout">
-          <item row="1" column="2">
-           <widget class="QLineEdit" name="ignoreDirEdit">
-            <property name="toolTip">
-             <string>Enter a directory basename to be ignored</string>
-            </property>
-           </widget>
-          </item>
+         <layout class="QGridLayout" name="gridLayout_2">
           <item row="1" column="1">
            <widget class="QPushButton" name="addButton">
             <property name="toolTip">
@@ -194,20 +192,32 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="0" colspan="4">
+          <item row="0" column="0" colspan="3">
            <widget class="QListWidget" name="ignoreDirsList">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>3</verstretch>
+             </sizepolicy>
+            </property>
             <property name="toolTip">
              <string>List of directory basenames to be ignored</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="3">
-           <widget class="QToolButton" name="ignoreDirButton">
+          <item row="1" column="2">
+           <widget class="E5PathPicker" name="ignoreDirPicker" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
+             <enum>Qt::StrongFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Press to open a directory selection dialog</string>
+             <string>Enter a directory basename to be ignored</string>
             </property>
            </widget>
           </item>
@@ -226,21 +236,20 @@
          <property name="title">
           <string>Style Sheet</string>
          </property>
-         <layout class="QHBoxLayout">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="QLineEdit" name="cssEdit">
+           <widget class="E5PathPicker" name="cssPicker" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
             <property name="toolTip">
              <string>Enter the filename of a CSS style sheet. Leave empty to use the colours defined below.</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="cssButton">
-            <property name="focusPolicy">
-             <enum>Qt::NoFocus</enum>
-            </property>
-            <property name="toolTip">
-             <string>Press to open a file selection dialog</string>
             </property>
            </widget>
           </item>
@@ -383,25 +392,20 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QLineEdit" name="qtHelpDirEdit">
-              <property name="toolTip">
-               <string>Enter an output directory</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="qtHelpDirButton">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="toolTip">
-               <string>Press to open a directory selection dialog</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="E5PathPicker" name="qtHelpDirPicker" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Enter an output directory</string>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_2">
@@ -483,7 +487,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1">
+          <item row="7" column="0" colspan="2">
            <spacer name="verticalSpacer">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -517,19 +521,27 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>tabWidget</tabstop>
-  <tabstop>outputDirEdit</tabstop>
+  <tabstop>outputDirPicker</tabstop>
   <tabstop>sourceExtEdit</tabstop>
   <tabstop>recursionCheckBox</tabstop>
   <tabstop>noindexCheckBox</tabstop>
   <tabstop>noemptyCheckBox</tabstop>
   <tabstop>excludeFilesEdit</tabstop>
   <tabstop>ignoreDirsList</tabstop>
-  <tabstop>ignoreDirEdit</tabstop>
+  <tabstop>ignoreDirPicker</tabstop>
   <tabstop>addButton</tabstop>
   <tabstop>deleteButton</tabstop>
-  <tabstop>cssEdit</tabstop>
+  <tabstop>cssPicker</tabstop>
   <tabstop>bodyFgButton</tabstop>
   <tabstop>bodyBgButton</tabstop>
   <tabstop>l1FgButton</tabstop>
@@ -541,14 +553,13 @@
   <tabstop>linkFgButton</tabstop>
   <tabstop>sample</tabstop>
   <tabstop>qtHelpGroup</tabstop>
-  <tabstop>qtHelpDirEdit</tabstop>
+  <tabstop>qtHelpDirPicker</tabstop>
   <tabstop>qtHelpNamespaceEdit</tabstop>
   <tabstop>qtHelpFolderEdit</tabstop>
   <tabstop>qtHelpFilterNameEdit</tabstop>
   <tabstop>qtHelpFilterAttributesEdit</tabstop>
   <tabstop>qtHelpTitleEdit</tabstop>
   <tabstop>qtHelpGenerateCollectionCheckBox</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

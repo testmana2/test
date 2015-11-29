@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>143</height>
+    <height>144</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <bool>true</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" colspan="4">
+   <item row="0" column="0" colspan="3">
     <widget class="E5SqueezeLabelPath" name="currentProjectLabel"/>
    </item>
    <item row="1" column="0">
@@ -28,16 +28,18 @@
     </widget>
    </item>
    <item row="1" column="1" colspan="2">
-    <widget class="QLineEdit" name="newProjectEdit">
+    <widget class="E5PathPicker" name="newProjectPicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
      <property name="toolTip">
       <string>Enter the directory name of the new project directory</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QToolButton" name="newProjectButton">
-     <property name="toolTip">
-      <string>Press to select the new project directory name via a directory selection dialog</string>
      </property>
     </widget>
    </item>
@@ -67,7 +69,7 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="2" colspan="2">
+   <item row="2" column="2">
     <spacer name="horizontalSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -87,14 +89,14 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1" colspan="3">
+   <item row="3" column="1" colspan="2">
     <widget class="QLineEdit" name="lfFilePatternsEdit">
      <property name="toolTip">
       <string>Enter file patterns (space separated) for files to be treated as Large Files</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="4">
+   <item row="4" column="0" colspan="3">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -108,17 +110,21 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
    <class>E5SqueezeLabelPath</class>
    <extends>QLabel</extends>
    <header>E5Gui/E5SqueezeLabels.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>newProjectEdit</tabstop>
-  <tabstop>newProjectButton</tabstop>
+  <tabstop>newProjectPicker</tabstop>
   <tabstop>lfFileSizeSpinBox</tabstop>
   <tabstop>lfFilePatternsEdit</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

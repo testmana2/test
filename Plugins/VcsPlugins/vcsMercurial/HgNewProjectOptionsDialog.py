@@ -15,15 +15,13 @@ import os
 from PyQt5.QtCore import pyqtSlot, QDir
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_HgNewProjectOptionsDialog import Ui_HgNewProjectOptionsDialog
 from .Config import ConfigHgProtocols
 
 import Utilities
 import Preferences
-import UI.PixmapCache
 
 
 class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
@@ -41,17 +39,14 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         super(HgNewProjectOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.projectDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
-        self.vcsProjectDirCompleter = E5DirCompleter(self.vcsProjectDirEdit)
+        self.vcsProjectDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.vcsUrlPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.protocolCombo.addItems(ConfigHgProtocols)
         
         hd = Utilities.toNativeSeparators(QDir.homePath())
         hd = os.path.join(hd, 'hgroot')
-        self.vcsUrlEdit.setText(hd)
+        self.vcsUrlPicker.setText(hd)
         
         self.vcs = vcs
         
@@ -65,8 +60,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             Utilities.fromNativeSeparators(ipath),
             Utilities.fromNativeSeparators(ipath) + "/",
         ]
-        self.vcsProjectDirEdit.setText(
-            Utilities.toNativeSeparators(self.__initPaths[0]))
+        self.vcsProjectDirPicker.setText(self.__initPaths[0])
         
         self.lfNoteLabel.setVisible(self.vcs.isExtensionActive("largefiles"))
         self.largeCheckBox.setVisible(self.vcs.isExtensionActive("largefiles"))
@@ -79,7 +73,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
-    def on_vcsProjectDirEdit_textChanged(self, txt):
+    def on_vcsProjectDirPicker_textChanged(self, txt):
         """
         Private slot to handle a change of the project directory.
         
@@ -89,37 +83,6 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             bool(txt) and
             Utilities.fromNativeSeparators(txt) not in self.__initPaths)
     
-    @pyqtSlot()
-    def on_vcsUrlButton_clicked(self):
-        """
-        Private slot to display a selection dialog.
-        """
-        if self.protocolCombo.currentText() == "file://":
-            directory = E5FileDialog.getExistingDirectory(
-                self,
-                self.tr("Select Repository-Directory"),
-                self.vcsUrlEdit.text(),
-                E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-            if directory:
-                self.vcsUrlEdit.setText(
-                    Utilities.toNativeSeparators(directory))
-    
-    @pyqtSlot()
-    def on_projectDirButton_clicked(self):
-        """
-        Private slot to display a directory selection dialog.
-        """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select Project Directory"),
-            self.vcsProjectDirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-        
-        if directory:
-            self.vcsProjectDirEdit.setText(
-                Utilities.toNativeSeparators(directory))
-    
     @pyqtSlot(str)
     def on_protocolCombo_activated(self, protocol):
         """
@@ -127,19 +90,19 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
         
         @param protocol name of the selected protocol (string)
         """
-        self.vcsUrlButton.setEnabled(protocol == "file://")
+        self.vcsUrlPicker.setPickerEnabled(protocol == "file://")
         if protocol == "file://":
-            self.networkPath = self.vcsUrlEdit.text()
-            self.vcsUrlEdit.setText(self.localPath)
+            self.networkPath = self.vcsUrlPicker.text()
+            self.vcsUrlPicker.setText(self.localPath)
             self.localProtocol = True
         else:
             if self.localProtocol:
-                self.localPath = self.vcsUrlEdit.text()
-                self.vcsUrlEdit.setText(self.networkPath)
+                self.localPath = self.vcsUrlPicker.text()
+                self.vcsUrlPicker.setText(self.networkPath)
                 self.localProtocol = False
     
     @pyqtSlot(str)
-    def on_vcsUrlEdit_textChanged(self, txt):
+    def on_vcsUrlPicker_textChanged(self, txt):
         """
         Private slot to handle changes of the URL.
         
@@ -156,7 +119,7 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             containing the data entered.
         """
         scheme = self.protocolCombo.currentText()
-        url = self.vcsUrlEdit.text()
+        url = self.vcsUrlPicker.text()
         if scheme == "file://" and url[0] not in ["\\", "/"]:
             url = "/{0}".format(url)
         vcsdatadict = {
@@ -164,4 +127,4 @@ class HgNewProjectOptionsDialog(QDialog, Ui_HgNewProjectOptionsDialog):
             "revision": self.vcsRevisionEdit.text(),
             "largefiles": self.largeCheckBox.isChecked(),
         }
-        return (self.vcsProjectDirEdit.text(), vcsdatadict)
+        return (self.vcsProjectDirPicker.text(), vcsdatadict)

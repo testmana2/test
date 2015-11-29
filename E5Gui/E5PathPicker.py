@@ -16,7 +16,7 @@ try:
 except ImportError:
     from ThirdParty.enum import Enum
 
-from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtCore import pyqtSignal, Qt, QFileInfo
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton
 
 from . import E5FileDialog
@@ -35,7 +35,8 @@ class E5PathPickerModes(Enum):
     OpenFileMode = 0
     OpenFilesMode = 1
     SaveFileMode = 2
-    DirectoryMode = 3
+    SaveFileEnsureExtensionMode = 3
+    DirectoryMode = 4
 
 # TODO: Refactor the classes using a base class with common functions
 
@@ -312,6 +313,15 @@ class E5PathPicker(QWidget):
         """
         return self.__filters
     
+    def setNameFilters(self, filters):
+        """
+        Public method to set the name filters for the completer.
+        
+        @param filter list of file name filters
+        @type list of str
+        """
+        self.__editor.completer().model().setNameFilters(filters)
+    
     def setButtonToolTip(self, tooltip):
         """
         Public method to set the tool button tool tip.
@@ -360,7 +370,9 @@ class E5PathPicker(QWidget):
                 windowTitle = self.tr("Choose a file to open")
             elif self.__mode == E5PathPickerModes.OpenFilesMode:
                 windowTitle = self.tr("Choose files to open")
-            elif self.__mode == E5PathPickerModes.SaveFileMode:
+            elif self.__mode in [
+                E5PathPickerModes.SaveFileMode,
+                    E5PathPickerModes.SaveFileEnsureExtensionMode]:
                 windowTitle = self.tr("Choose a file to save")
             elif self.__mode == E5PathPickerModes.DirectoryMode:
                 windowTitle = self.tr("Choose a directory")
@@ -399,6 +411,21 @@ class E5PathPicker(QWidget):
                 self.__filters,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             path = Utilities.toNativeSeparators(path)
+        elif self.__mode == E5PathPickerModes.SaveFileEnsureExtensionMode:
+            path, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+                self,
+                windowTitle,
+                directory,
+                self.__filters,
+                None,
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+            path = Utilities.toNativeSeparators(path)
+            if path:
+                ext = QFileInfo(path).suffix()
+                if not ext:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        path += ex
         elif self.__mode == E5PathPickerModes.DirectoryMode:
             path = E5FileDialog.getExistingDirectory(
                 self,
@@ -835,6 +862,21 @@ class E5ComboPathPicker(QWidget):
                 self.__filters,
                 E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
             path = Utilities.toNativeSeparators(path)
+        elif self.__mode == E5PathPickerModes.SaveFileEnsureExtensionMode:
+            path, selectedFilter = E5FileDialog.getSaveFileNameAndFilter(
+                self,
+                windowTitle,
+                directory,
+                self.__filters,
+                None,
+                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
+            path = Utilities.toNativeSeparators(path)
+            if path:
+                ext = QFileInfo(path).suffix()
+                if not ext:
+                    ex = selectedFilter.split("(*")[1].split(")")[0]
+                    if ex:
+                        path += ex
         elif self.__mode == E5PathPickerModes.DirectoryMode:
             path = E5FileDialog.getExistingDirectory(
                 self,

@@ -18,31 +18,30 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QGridLayout">
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="outputFileEdit">
-       <property name="toolTip">
-        <string>Enter an output filename</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Output Filename&lt;/b&gt;&lt;p&gt;Enter the filename of the output file. A '%L' placeholder is replaced by the language of the API file.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
       <widget class="QLabel" name="TextLabel6">
        <property name="text">
         <string>Output File:</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="2">
-      <widget class="QToolButton" name="outputFileButton">
+     <item>
+      <widget class="E5PathPicker" name="outputFilePicker" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="focusPolicy">
-        <enum>Qt::NoFocus</enum>
+        <enum>Qt::StrongFocus</enum>
        </property>
        <property name="toolTip">
-        <string>Press to open a file selection dialog</string>
+        <string>Enter an output filename</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;b&gt;Output Filename&lt;/b&gt;&lt;p&gt;Enter the filename of the output file. A '%L' placeholder is replaced by the language of the API file.&lt;/p&gt;</string>
        </property>
       </widget>
      </item>
@@ -178,21 +177,11 @@
      <property name="title">
       <string>Exclude Directories</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="1" column="2">
-       <widget class="QLineEdit" name="ignoreDirEdit">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="3">
+       <widget class="QListWidget" name="ignoreDirsList">
         <property name="toolTip">
-         <string>Enter a directory basename to be ignored</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="addButton">
-        <property name="toolTip">
-         <string>Press to add the entered directory to the list</string>
-        </property>
-        <property name="text">
-         <string>Add</string>
+         <string>List of directory basenames to be ignored</string>
         </property>
        </widget>
       </item>
@@ -206,20 +195,29 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0" colspan="4">
-       <widget class="QListWidget" name="ignoreDirsList">
+      <item row="1" column="1">
+       <widget class="QPushButton" name="addButton">
         <property name="toolTip">
-         <string>List of directory basenames to be ignored</string>
+         <string>Press to add the entered directory to the list</string>
+        </property>
+        <property name="text">
+         <string>Add</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
-       <widget class="QToolButton" name="ignoreDirButton">
+      <item row="1" column="2">
+       <widget class="E5PathPicker" name="ignoreDirPicker" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
+         <enum>Qt::StrongFocus</enum>
         </property>
         <property name="toolTip">
-         <string>Press to open a directory selection dialog</string>
+         <string>Enter a directory basename to be ignored</string>
         </property>
        </widget>
       </item>
@@ -240,19 +238,26 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>outputFileEdit</tabstop>
+  <tabstop>outputFilePicker</tabstop>
   <tabstop>languagesList</tabstop>
   <tabstop>sourceExtEdit</tabstop>
   <tabstop>recursionCheckBox</tabstop>
   <tabstop>includePrivateCheckBox</tabstop>
   <tabstop>baseEdit</tabstop>
   <tabstop>excludeFilesEdit</tabstop>
-  <tabstop>ignoreDirEdit</tabstop>
+  <tabstop>ignoreDirPicker</tabstop>
   <tabstop>addButton</tabstop>
   <tabstop>ignoreDirsList</tabstop>
   <tabstop>deleteButton</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

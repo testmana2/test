@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>167</height>
+    <height>149</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,16 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="archiveEdit">
+    <widget class="E5PathPicker" name="archivePicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
      <property name="toolTip">
       <string>Enter the file name of the archive</string>
      </property>
@@ -38,7 +47,7 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1" colspan="2">
+   <item row="1" column="1">
     <widget class="QComboBox" name="typeComboBox">
      <property name="toolTip">
       <string>Select the archive type</string>
@@ -52,14 +61,14 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1" colspan="2">
+   <item row="2" column="1">
     <widget class="QLineEdit" name="prefixEdit">
      <property name="toolTip">
       <string>Enter the directory prefix for the files in the archive</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="0" colspan="3">
+   <item row="3" column="0" colspan="2">
     <widget class="QCheckBox" name="subReposCheckBox">
      <property name="toolTip">
       <string>Select to recurse into subrepositories</string>
@@ -69,7 +78,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="3">
+   <item row="4" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -79,22 +88,21 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="2">
-    <widget class="QToolButton" name="archiveButton">
-     <property name="toolTip">
-      <string>Press to select the archive file name via a file selection dialog</string>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>archiveEdit</tabstop>
-  <tabstop>archiveButton</tabstop>
+  <tabstop>archivePicker</tabstop>
   <tabstop>typeComboBox</tabstop>
   <tabstop>prefixEdit</tabstop>
   <tabstop>subReposCheckBox</tabstop>
-  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

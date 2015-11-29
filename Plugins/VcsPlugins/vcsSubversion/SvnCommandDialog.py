@@ -9,16 +9,13 @@ Module implementing the Subversion command dialog.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_SvnCommandDialog import Ui_SvnCommandDialog
 
 import Utilities
-import UI.PixmapCache
 
 
 class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
@@ -41,9 +38,7 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         super(SvnCommandDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.workdirCompleter = E5DirCompleter(self.workdirCombo)
+        self.workdirPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.okButton = self.buttonBox.button(QDialogButtonBox.Ok)
         self.okButton.setEnabled(False)
@@ -52,10 +47,10 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         self.commandCombo.addItems(argvList)
         if len(argvList) > 0:
             self.commandCombo.setCurrentIndex(0)
-        self.workdirCombo.clear()
-        self.workdirCombo.addItems(wdList)
+        self.workdirPicker.clear()
+        self.workdirPicker.addItems(wdList)
         if len(wdList) > 0:
-            self.workdirCombo.setCurrentIndex(0)
+            self.workdirPicker.setCurrentIndex(0)
         self.projectDirLabel.setText(ppath)
         
         # modify some what's this help texts
@@ -66,23 +61,6 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         
         msh = self.minimumSizeHint()
         self.resize(max(self.width(), msh.width()), msh.height())
-        
-    @pyqtSlot()
-    def on_dirButton_clicked(self):
-        """
-        Private method used to open a directory selection dialog.
-        """
-        cwd = self.workdirCombo.currentText()
-        if not cwd:
-            cwd = self.projectDirLabel.text()
-        d = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Working directory"),
-            cwd,
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-        
-        if d:
-            self.workdirCombo.setEditText(Utilities.toNativeSeparators(d))
         
     def on_commandCombo_editTextChanged(self, text):
         """
@@ -99,4 +77,4 @@ class SvnCommandDialog(QDialog, Ui_SvnCommandDialog):
         @return a tuple of argv, workdir
         """
         return (self.commandCombo.currentText(),
-                self.workdirCombo.currentText())
+                self.workdirPicker.currentText())
