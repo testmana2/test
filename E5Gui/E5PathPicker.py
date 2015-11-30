@@ -37,6 +37,7 @@ class E5PathPickerModes(Enum):
     SaveFileMode = 2
     SaveFileEnsureExtensionMode = 3
     DirectoryMode = 4
+    NoMode = 100
 
 # TODO: Refactor the classes using a base class with common functions
 
@@ -50,7 +51,7 @@ class E5PathPicker(QWidget):
         file dialog
     @signal aboutToShowPathPickerDialog emitted before the file dialog is shown
     """
-    DefaultMode = E5PathPickerModes.OpenFileMode
+    DefaultMode = E5PathPickerModes.NoMode
     
     textChanged = pyqtSignal(str)
     pathSelected = pyqtSignal(str)
@@ -91,6 +92,7 @@ class E5PathPicker(QWidget):
         self.__editor.textChanged.connect(self.textChanged)
         
         self.setFocusProxy(self.__editor)
+        self.__button.setEnabled(self.__mode != E5PathPickerModes.NoMode)
     
     def setMode(self, mode):
         """
@@ -109,19 +111,21 @@ class E5PathPicker(QWidget):
             self.__editor.setCompleter(None)
             self.__completer = None
             
-            # Set a new completer
-            if mode == E5PathPickerModes.DirectoryMode:
-                self.__completer = E5DirCompleter(self.__editor)
-            else:
-                self.__completer = E5FileCompleter(self.__editor)
-            
-            # set inactive text
-            if mode == E5PathPickerModes.OpenFilesMode:
-                self.__editor.setInactiveText(
-                    self.tr("Enter Path Names separated by ';'"))
-            else:
-                self.__editor.setInactiveText(
-                    self.tr("Enter Path Name"))
+            if mode != E5PathPickerModes.NoMode:
+                # Set a new completer
+                if mode == E5PathPickerModes.DirectoryMode:
+                    self.__completer = E5DirCompleter(self.__editor)
+                else:
+                    self.__completer = E5FileCompleter(self.__editor)
+                
+                # set inactive text
+                if mode == E5PathPickerModes.OpenFilesMode:
+                    self.__editor.setInactiveText(
+                        self.tr("Enter Path Names separated by ';'"))
+                else:
+                    self.__editor.setInactiveText(
+                        self.tr("Enter Path Name"))
+        self.__button.setEnabled(self.__mode != E5PathPickerModes.NoMode)
     
     def mode(self):
         """
@@ -362,6 +366,9 @@ class E5PathPicker(QWidget):
         """
         Private slot to show the path picker dialog.
         """
+        if self.__mode == E5PathPickerModes.NoMode:
+            return
+        
         self.aboutToShowPathPickerDialog.emit()
         
         windowTitle = self.__windowTitle
@@ -451,7 +458,7 @@ class E5ComboPathPicker(QWidget):
         file dialog
     @signal aboutToShowPathPickerDialog emitted before the file dialog is shown
     """
-    DefaultMode = E5PathPickerModes.OpenFileMode
+    DefaultMode = E5PathPickerModes.NoMode
     
     editTextChanged = pyqtSignal(str)
     pathSelected = pyqtSignal(str)
@@ -492,6 +499,7 @@ class E5ComboPathPicker(QWidget):
         self.__editor.editTextChanged.connect(self.editTextChanged)
         
         self.setFocusProxy(self.__editor)
+        self.__button.setEnabled(self.__mode != E5PathPickerModes.NoMode)
     
     def setMode(self, mode):
         """
@@ -510,19 +518,21 @@ class E5ComboPathPicker(QWidget):
             self.__editor.setCompleter(None)
             self.__completer = None
             
-            # Set a new completer
-            if mode == E5PathPickerModes.DirectoryMode:
-                self.__completer = E5DirCompleter(self.__editor)
-            else:
-                self.__completer = E5FileCompleter(self.__editor)
-            
-            # set inactive text
-            if mode == E5PathPickerModes.OpenFilesMode:
-                self.__editor.setInactiveText(
-                    self.tr("Enter Path Names separated by ';'"))
-            else:
-                self.__editor.setInactiveText(
-                    self.tr("Enter Path Name"))
+            if mode != E5PathPickerModes.NoMode:
+                # Set a new completer
+                if mode == E5PathPickerModes.DirectoryMode:
+                    self.__completer = E5DirCompleter(self.__editor)
+                else:
+                    self.__completer = E5FileCompleter(self.__editor)
+                
+                # set inactive text
+                if mode == E5PathPickerModes.OpenFilesMode:
+                    self.__editor.setInactiveText(
+                        self.tr("Enter Path Names separated by ';'"))
+                else:
+                    self.__editor.setInactiveText(
+                        self.tr("Enter Path Name"))
+        self.__button.setEnabled(self.__mode != E5PathPickerModes.NoMode)
     
     def mode(self):
         """
@@ -815,6 +825,9 @@ class E5ComboPathPicker(QWidget):
         """
         Private slot to show the path picker dialog.
         """
+        if self.__mode == E5PathPickerModes.NoMode:
+            return
+        
         self.aboutToShowPathPickerDialog.emit()
         
         windowTitle = self.__windowTitle
