@@ -16,62 +16,56 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
-   <item>
-    <layout class="QGridLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="textLabel1">
-       <property name="text">
-        <string>Source:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="sourceEdit">
-       <property name="toolTip">
-        <string>Shows the name of the source</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Source name&lt;/b&gt;
-&lt;p&gt;This field shows the name of the source.&lt;/p&gt;</string>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="targetEdit">
-       <property name="toolTip">
-        <string>Enter the target name</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Target name&lt;/b&gt;
-&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="textLabel2">
-       <property name="text">
-        <string>Target:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QToolButton" name="dirButton">
-       <property name="toolTip">
-        <string>Press to open a selection dialog</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;b&gt;Target directory&lt;/b&gt;
-&lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="textLabel1">
+     <property name="text">
+      <string>Source:</string>
+     </property>
+    </widget>
    </item>
-   <item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="sourceEdit">
+     <property name="toolTip">
+      <string>Shows the name of the source</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;b&gt;Source name&lt;/b&gt;
+&lt;p&gt;This field shows the name of the source.&lt;/p&gt;</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="textLabel2">
+     <property name="text">
+      <string>Target:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="E5PathPicker" name="targetPicker" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::StrongFocus</enum>
+     </property>
+     <property name="toolTip">
+      <string>Enter the target name</string>
+     </property>
+     <property name="whatsThis">
+      <string>&lt;b&gt;Target name&lt;/b&gt;
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
     <widget class="QCheckBox" name="forceCheckBox">
      <property name="toolTip">
       <string>Select to force the operation</string>
@@ -81,7 +75,7 @@
      </property>
     </widget>
    </item>
-   <item>
+   <item row="3" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -95,12 +89,18 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
-  <tabstop>targetEdit</tabstop>
-  <tabstop>dirButton</tabstop>
-  <tabstop>forceCheckBox</tabstop>
-  <tabstop>buttonBox</tabstop>
   <tabstop>sourceEdit</tabstop>
+  <tabstop>targetPicker</tabstop>
+  <tabstop>forceCheckBox</tabstop>
  </tabstops>
  <resources/>
  <connections>

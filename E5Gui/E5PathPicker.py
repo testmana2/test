@@ -37,6 +37,7 @@ class E5PathPickerModes(Enum):
     SaveFileMode = 2
     SaveFileEnsureExtensionMode = 3
     DirectoryMode = 4
+    CustomMode = 99
     NoMode = 100
 
 # TODO: Refactor the classes using a base class with common functions
@@ -50,12 +51,15 @@ class E5PathPicker(QWidget):
     @signal pathSelected(path) emitted after a path has been selected via the
         file dialog
     @signal aboutToShowPathPickerDialog emitted before the file dialog is shown
+    @signal pickerButtonClicked emitted when the picker button was pressed and
+        the widget mode is custom
     """
     DefaultMode = E5PathPickerModes.NoMode
     
     textChanged = pyqtSignal(str)
     pathSelected = pyqtSignal(str)
     aboutToShowPathPickerDialog = pyqtSignal()
+    pickerButtonClicked = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -369,6 +373,10 @@ class E5PathPicker(QWidget):
         if self.__mode == E5PathPickerModes.NoMode:
             return
         
+        if self.__mode == E5PathPickerModes.CustomMode:
+            self.pickerButtonClicked.emit()
+            return
+        
         self.aboutToShowPathPickerDialog.emit()
         
         windowTitle = self.__windowTitle
@@ -457,12 +465,15 @@ class E5ComboPathPicker(QWidget):
     @signal pathSelected(path) emitted after a path has been selected via the
         file dialog
     @signal aboutToShowPathPickerDialog emitted before the file dialog is shown
+    @signal pickerButtonClicked emitted when the picker button was pressed and
+        the widget mode is custom
     """
     DefaultMode = E5PathPickerModes.NoMode
     
     editTextChanged = pyqtSignal(str)
     pathSelected = pyqtSignal(str)
     aboutToShowPathPickerDialog = pyqtSignal()
+    pickerButtonClicked = pyqtSignal()
     
     def __init__(self, parent=None):
         """
@@ -826,6 +837,10 @@ class E5ComboPathPicker(QWidget):
         Private slot to show the path picker dialog.
         """
         if self.__mode == E5PathPickerModes.NoMode:
+            return
+        
+        if self.__mode == E5PathPickerModes.CustomMode:
+            self.pickerButtonClicked.emit()
             return
         
         self.aboutToShowPathPickerDialog.emit()

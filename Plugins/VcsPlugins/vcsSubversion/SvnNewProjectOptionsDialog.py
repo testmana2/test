@@ -15,15 +15,13 @@ import os
 from PyQt5.QtCore import QDir, pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_SvnNewProjectOptionsDialog import Ui_SvnNewProjectOptionsDialog
 from .Config import ConfigSvnProtocols
 
 import Utilities
 import Preferences
-import UI.PixmapCache
 
 
 class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
@@ -41,11 +39,8 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         super(SvnNewProjectOptionsDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.vcsUrlButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        self.projectDirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.vcsDirectoryCompleter = E5DirCompleter(self.vcsUrlEdit)
-        self.vcsProjectDirCompleter = E5DirCompleter(self.vcsProjectDirEdit)
+        self.vcsProjectDirPicker.setMode(E5PathPickerModes.DirectoryMode)
+        self.vcsUrlPicker.setMode(E5PathPickerModes.DirectoryMode)
         
         self.protocolCombo.addItems(ConfigSvnProtocols)
         
@@ -53,7 +48,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         
         hd = Utilities.toNativeSeparators(QDir.homePath())
         hd = os.path.join(hd, 'subversionroot')
-        self.vcsUrlEdit.setText(hd)
+        self.vcsUrlPicker.setText(hd)
         
         self.localPath = hd
         self.networkPath = "localhost/"
@@ -65,8 +60,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
             Utilities.fromNativeSeparators(ipath),
             Utilities.fromNativeSeparators(ipath) + "/",
         ]
-        self.vcsProjectDirEdit.setText(
-            Utilities.toNativeSeparators(self.__initPaths[0]))
+        self.vcsProjectDirPicker.setText(self.__initPaths[0])
         
         self.resize(self.width(), self.minimumSizeHint().height())
         
@@ -76,7 +70,7 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         self.resize(max(self.width(), msh.width()), msh.height())
     
     @pyqtSlot(str)
-    def on_vcsProjectDirEdit_textChanged(self, txt):
+    def on_vcsProjectDirPicker_textChanged(self, txt):
         """
         Private slot to handle a change of the project directory.
         
@@ -86,49 +80,22 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
             bool(txt) and
             Utilities.fromNativeSeparators(txt) not in self.__initPaths)
         
-    @pyqtSlot()
-    def on_vcsUrlButton_clicked(self):
+    def on_vcsUrlPicker_pickerButtonClicked(self):
         """
-        Private slot to display a selection dialog.
+        Private slot to display a repository browser dialog.
         """
-        if self.protocolCombo.currentText() == "file://":
-            directory = E5FileDialog.getExistingDirectory(
-                self,
-                self.tr("Select Repository-Directory"),
-                self.vcsUrlEdit.text(),
-                E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-            
-            if directory:
-                self.vcsUrlEdit.setText(
-                    Utilities.toNativeSeparators(directory))
-        else:
-            from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
-            dlg = SvnRepoBrowserDialog(self.vcs, mode="select", parent=self)
-            dlg.start(
-                self.protocolCombo.currentText() + self.vcsUrlEdit.text())
-            if dlg.exec_() == QDialog.Accepted:
-                url = dlg.getSelectedUrl()
-                if url:
-                    protocol = url.split("://")[0]
-                    path = url.split("://")[1]
-                    self.protocolCombo.setCurrentIndex(
-                        self.protocolCombo.findText(protocol + "://"))
-                    self.vcsUrlEdit.setText(path)
-        
-    @pyqtSlot()
-    def on_projectDirButton_clicked(self):
-        """
-        Private slot to display a directory selection dialog.
-        """
-        directory = E5FileDialog.getExistingDirectory(
-            self,
-            self.tr("Select Project Directory"),
-            self.vcsProjectDirEdit.text(),
-            E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-        
-        if directory:
-            self.vcsProjectDirEdit.setText(
-                Utilities.toNativeSeparators(directory))
+        from .SvnRepoBrowserDialog import SvnRepoBrowserDialog
+        dlg = SvnRepoBrowserDialog(self.vcs, mode="select", parent=self)
+        dlg.start(
+            self.protocolCombo.currentText() + self.vcsUrlPicker.text())
+        if dlg.exec_() == QDialog.Accepted:
+            url = dlg.getSelectedUrl()
+            if url:
+                protocol = url.split("://")[0]
+                path = url.split("://")[1]
+                self.protocolCombo.setCurrentIndex(
+                    self.protocolCombo.findText(protocol + "://"))
+                self.vcsUrlPicker.setText(path)
         
     def on_layoutCheckBox_toggled(self, checked):
         """
@@ -149,19 +116,21 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
         @param protocol selected protocol (string)
         """
         if protocol == "file://":
-            self.networkPath = self.vcsUrlEdit.text()
-            self.vcsUrlEdit.setText(self.localPath)
+            self.networkPath = self.vcsUrlPicker.text()
+            self.vcsUrlPicker.setText(self.localPath)
             self.vcsUrlLabel.setText(self.tr("Pat&h:"))
             self.localProtocol = True
+            self.vcsUrlPicker.setMode(E5PathPickerModes.DirectoryMode)
         else:
             if self.localProtocol:
-                self.localPath = self.vcsUrlEdit.text()
-                self.vcsUrlEdit.setText(self.networkPath)
+                self.localPath = self.vcsUrlPicker.text()
+                self.vcsUrlPicker.setText(self.networkPath)
                 self.vcsUrlLabel.setText(self.tr("&URL:"))
                 self.localProtocol = False
+                self.vcsUrlPicker.setMode(E5PathPickerModes.CustomMode)
     
     @pyqtSlot(str)
-    def on_vcsUrlEdit_textChanged(self, txt):
+    def on_vcsUrlPicker_textChanged(self, txt):
         """
         Private slot to handle changes of the URL.
         
@@ -178,10 +147,10 @@ class SvnNewProjectOptionsDialog(QDialog, Ui_SvnNewProjectOptionsDialog):
             containing the data entered.
         """
         scheme = self.protocolCombo.currentText()
-        url = self.vcsUrlEdit.text()
+        url = self.vcsUrlPicker.text()
         vcsdatadict = {
             "url": '{0}{1}'.format(scheme, url),
             "tag": self.vcsTagEdit.text(),
             "standardLayout": self.layoutCheckBox.isChecked(),
         }
-        return (self.vcsProjectDirEdit.text(), vcsdatadict)
+        return (self.vcsProjectDirPicker.text(), vcsdatadict)

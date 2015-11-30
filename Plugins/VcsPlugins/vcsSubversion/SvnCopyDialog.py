@@ -14,13 +14,9 @@ import os.path
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog, QDialogButtonBox
 
-from E5Gui.E5Completers import E5FileCompleter, E5DirCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_SvnCopyDialog import Ui_SvnCopyDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
@@ -40,13 +36,11 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         super(SvnCopyDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.dirButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
         self.source = source
         if os.path.isdir(self.source):
-            self.targetCompleter = E5DirCompleter(self.targetEdit)
+            self.targetPicker.setMode(E5PathPickerModes.DirectoryMode)
         else:
-            self.targetCompleter = E5FileCompleter(self.targetEdit)
+            self.targetPicker.setMode(E5PathPickerModes.SaveFileMode)
         
         if move:
             self.setWindowTitle(self.tr('Subversion Move'))
@@ -68,38 +62,14 @@ class SvnCopyDialog(QDialog, Ui_SvnCopyDialog):
         @return the target name (string) and a flag indicating
             the operation should be enforced (boolean)
         """
-        target = self.targetEdit.text()
+        target = self.targetPicker.text()
         if not os.path.isabs(target):
             sourceDir = os.path.dirname(self.sourceEdit.text())
             target = os.path.join(sourceDir, target)
-        return (Utilities.toNativeSeparators(target),
-                self.forceCheckBox.isChecked())
-        
-    @pyqtSlot()
-    def on_dirButton_clicked(self):
-        """
-        Private slot to handle the button press for selecting the target via a
-        selection dialog.
-        """
-        if os.path.isdir(self.source):
-            target = E5FileDialog.getExistingDirectory(
-                None,
-                self.tr("Select target"),
-                self.targetEdit.text(),
-                E5FileDialog.Options(E5FileDialog.ShowDirsOnly))
-        else:
-            target = E5FileDialog.getSaveFileName(
-                None,
-                self.tr("Select target"),
-                self.targetEdit.text(),
-                "",
-                E5FileDialog.Options(E5FileDialog.DontConfirmOverwrite))
-        
-        if target:
-            self.targetEdit.setText(Utilities.toNativeSeparators(target))
+        return (target, self.forceCheckBox.isChecked())
     
     @pyqtSlot(str)
-    def on_targetEdit_textChanged(self, txt):
+    def on_targetPicker_textChanged(self, txt):
         """
         Private slot to handle changes of the target.
         
