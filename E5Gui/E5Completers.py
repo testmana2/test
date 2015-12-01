@@ -9,6 +9,8 @@ Module implementing various kinds of completers.
 
 from __future__ import unicode_literals
 
+import os
+
 from PyQt5.QtCore import QDir, Qt, QStringListModel
 from PyQt5.QtWidgets import QCompleter, QFileSystemModel
 
@@ -48,6 +50,26 @@ class E5FileCompleter(QCompleter):
             self.setCaseSensitivity(Qt.CaseInsensitive)
         if parent:
             parent.setCompleter(self)
+    
+    def setRootPath(self, path):
+        """
+        Public method to set the root path of the model.
+        
+        @param path root path for the model
+        @type str
+        """
+        if not os.path.isdir(path):
+            path = os.path.dirname(path)
+        self.__model.setRootPath(path)
+    
+    def rootPath(self):
+        """
+        Public method to get the root path of the model.
+        
+        @return root path of the model
+        @rtype str
+        """
+        return self.__model.rootPath()
 
 
 class E5DirCompleter(QCompleter):
@@ -82,6 +104,26 @@ class E5DirCompleter(QCompleter):
             self.setCaseSensitivity(Qt.CaseInsensitive)
         if parent:
             parent.setCompleter(self)
+    
+    def setRootPath(self, path):
+        """
+        Public method to set the root path of the model.
+        
+        @param path root path for the model
+        @type str
+        """
+        if not os.path.isdir(path):
+            path = os.path.dirname(path)
+        self.__model.setRootPath(path)
+    
+    def rootPath(self):
+        """
+        Public method to get the root path of the model.
+        
+        @return root path of the model
+        @rtype str
+        """
+        return self.__model.rootPath()
 
 
 class E5StringListCompleter(QCompleter):
