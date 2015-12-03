@@ -17,7 +17,7 @@ except ImportError:
     from ThirdParty.enum import Enum
 
 from PyQt5.QtCore import pyqtSignal, Qt, QFileInfo
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton,  QSizePolicy
 
 from . import E5FileDialog
 from .E5LineEdit import E5ClearableLineEdit
@@ -93,10 +93,24 @@ class E5PathPicker(QWidget):
         self.__layout.addWidget(self.__button)
         
         self.__button.clicked.connect(self.__showPathPickerDialog)
+        self.__editor.textEdited.connect(self.__pathEdited)
         self.__editor.textChanged.connect(self.textChanged)
         
         self.setFocusProxy(self.__editor)
+        self.setFocusPolicy(Qt.StrongFocus)
+        self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        
         self.__button.setEnabled(self.__mode != E5PathPickerModes.NoMode)
+    
+    def __pathEdited(self, path):
+        """
+        Private slot handling editing of the path.
+        
+        @param path current text of the path line edit
+        @type str
+        """
+        if self.__completer and not self.__completer.popup().isVisible():
+            self.__completer.setRootPath(Utilities.toNativeSeparators(path))
     
     def setMode(self, mode):
         """
@@ -110,10 +124,11 @@ class E5PathPicker(QWidget):
         oldMode = self.__mode
         self.__mode = mode
         
-        if mode != oldMode:
-            # Remove current completer
-            self.__editor.setCompleter(None)
-            self.__completer = None
+        if mode != oldMode or not self.__completer:
+            if self.__completer:
+                # Remove current completer
+                self.__editor.setCompleter(None)
+                self.__completer = None
             
             if mode != E5PathPickerModes.NoMode:
                 # Set a new completer
@@ -174,7 +189,10 @@ class E5PathPicker(QWidget):
         if self.__mode == E5PathPickerModes.OpenFilesMode:
             self.__editor.setText(path)
         else:
-            self.__editor.setText(Utilities.toNativeSeparators(path))
+            path = Utilities.toNativeSeparators(path)
+            self.__editor.setText(path)
+            if self.__completer:
+                self.__completer.setRootPath(path)
     
     def text(self):
         """
@@ -487,7 +505,6 @@ class E5ComboPathPicker(QWidget):
         self.__mode = E5PathPicker.DefaultMode
         self.__editorEnabled = True
         
-        self.__completer = None
         self.__filters = ""
         self.__defaultDirectory = ""
         self.__windowTitle = ""
@@ -510,6 +527,9 @@ class E5ComboPathPicker(QWidget):
         self.__editor.editTextChanged.connect(self.editTextChanged)
         
         self.setFocusProxy(self.__editor)
+        self.setFocusPolicy(Qt.StrongFocus)
+        self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        
         self.__button.setEnabled(self.__mode != E5PathPickerModes.NoMode)
     
     def setMode(self, mode):
@@ -525,17 +545,7 @@ class E5ComboPathPicker(QWidget):
         self.__mode = mode
         
         if mode != oldMode:
-            # Remove current completer
-            self.__editor.setCompleter(None)
-            self.__completer = None
-            
             if mode != E5PathPickerModes.NoMode:
-                # Set a new completer
-                if mode == E5PathPickerModes.DirectoryMode:
-                    self.__completer = E5DirCompleter(self.__editor)
-                else:
-                    self.__completer = E5FileCompleter(self.__editor)
-                
                 # set inactive text
                 if mode == E5PathPickerModes.OpenFilesMode:
                     self.__editor.setInactiveText(
